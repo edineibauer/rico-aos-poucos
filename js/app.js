@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('nav ul li a');
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
-      navMenu.classList.remove('active');
+      if (navMenu) navMenu.classList.remove('active');
     });
   });
 
@@ -54,7 +54,146 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Renderiza gráfico de pizza se existir
   renderPieChart();
+
+  // Inicializa carrossel da home se existir
+  initHomeCarousel();
 });
+
+/**
+ * Carrossel da Home Page
+ */
+function initHomeCarousel() {
+  const carousel = document.querySelector('.spotlight-carousel');
+  if (!carousel) return;
+
+  const slides = carousel.querySelectorAll('.carousel-slide');
+  const indicators = carousel.querySelectorAll('.indicator');
+  const prevBtn = carousel.querySelector('.carousel-btn.prev');
+  const nextBtn = carousel.querySelector('.carousel-btn.next');
+
+  if (slides.length === 0) return;
+
+  let currentIndex = 0;
+  let autoplayInterval;
+  const autoplayDelay = 6000; // 6 segundos
+
+  // Função para ir para um slide específico
+  function goToSlide(index) {
+    // Remove classes de todos os slides
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active', 'prev');
+      if (i < index) {
+        slide.classList.add('prev');
+      }
+    });
+
+    // Atualiza indicadores
+    indicators.forEach((indicator, i) => {
+      indicator.classList.toggle('active', i === index);
+    });
+
+    // Ativa o slide atual
+    slides[index].classList.add('active');
+    currentIndex = index;
+  }
+
+  // Próximo slide
+  function nextSlide() {
+    const next = (currentIndex + 1) % slides.length;
+    goToSlide(next);
+  }
+
+  // Slide anterior
+  function prevSlide() {
+    const prev = (currentIndex - 1 + slides.length) % slides.length;
+    goToSlide(prev);
+  }
+
+  // Inicia autoplay
+  function startAutoplay() {
+    stopAutoplay();
+    autoplayInterval = setInterval(nextSlide, autoplayDelay);
+  }
+
+  // Para autoplay
+  function stopAutoplay() {
+    if (autoplayInterval) {
+      clearInterval(autoplayInterval);
+    }
+  }
+
+  // Event listeners para botões
+  if (prevBtn) {
+    prevBtn.addEventListener('click', () => {
+      prevSlide();
+      startAutoplay(); // Reinicia o timer
+    });
+  }
+
+  if (nextBtn) {
+    nextBtn.addEventListener('click', () => {
+      nextSlide();
+      startAutoplay(); // Reinicia o timer
+    });
+  }
+
+  // Event listeners para indicadores
+  indicators.forEach((indicator, index) => {
+    indicator.addEventListener('click', () => {
+      goToSlide(index);
+      startAutoplay(); // Reinicia o timer
+    });
+  });
+
+  // Pausa autoplay quando o mouse está sobre o carrossel
+  carousel.addEventListener('mouseenter', stopAutoplay);
+  carousel.addEventListener('mouseleave', startAutoplay);
+
+  // Suporte a touch/swipe
+  let touchStartX = 0;
+  let touchEndX = 0;
+
+  carousel.addEventListener('touchstart', (e) => {
+    touchStartX = e.changedTouches[0].screenX;
+    stopAutoplay();
+  }, { passive: true });
+
+  carousel.addEventListener('touchend', (e) => {
+    touchEndX = e.changedTouches[0].screenX;
+    handleSwipe();
+    startAutoplay();
+  }, { passive: true });
+
+  function handleSwipe() {
+    const swipeThreshold = 50;
+    const diff = touchStartX - touchEndX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        nextSlide(); // Swipe para esquerda = próximo
+      } else {
+        prevSlide(); // Swipe para direita = anterior
+      }
+    }
+  }
+
+  // Suporte a teclas de seta
+  document.addEventListener('keydown', (e) => {
+    if (document.querySelector('.home-page')) {
+      if (e.key === 'ArrowRight') {
+        nextSlide();
+        startAutoplay();
+      } else if (e.key === 'ArrowLeft') {
+        prevSlide();
+        startAutoplay();
+      }
+    }
+  });
+
+  // Inicia o carrossel
+  goToSlide(0);
+  startAutoplay();
+}
 
 /**
  * Renderiza gráfico de pizza em CSS/SVG

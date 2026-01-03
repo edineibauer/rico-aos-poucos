@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Rico aos Poucos - Seu guia para investimentos inteligentes. Análises de mercado, alocação de carteira e educação financeira para todos os perfis de investidor.">
+  <meta name="keywords" content="investimentos, finanças pessoais, carteira de investimentos, renda variável, renda fixa, educação financeira">
+  <meta name="author" content="Rico aos Poucos">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Rico aos Poucos - Investimentos Inteligentes">
+  <meta property="og:description" content="Seu guia para investimentos inteligentes. Análises de mercado, alocação de carteira e educação financeira.">
+  <meta property="og:type" content="website">
+
+  <title>Rico aos Poucos - Investimentos Inteligentes</title>
+
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="/" class="logo">
+        <div class="logo-icon">📈</div>
+        <span>Rico aos Poucos</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="/" class="active">Início</a></li>
+          <li><a href="carteira/">Carteira</a></li>
+          <li><a href="macroeconomia/">Cenário Macro</a></li>
+          <li><a href="ativos/">Ativos</a></li>
+          <li><a href="artigos/">Artigos</a></li>
+          <li><a href="sobre/">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <h1>Rico aos Poucos</h1>
+      <p class="subtitle">
+        Construindo patrimônio de forma consciente e sustentável.
+        Análises, estratégias e visões de mercado para ajudar você a tomar melhores decisões de investimento.
+      </p>
+
+      <div class="last-update">
+        🕐 Última atualização: <span class="date">03 de Janeiro de 2026</span>
+      </div>
+
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-value" id="stat-artigos">--</div>
+          <div class="stat-label">Artigos Publicados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="stat-ativos">--</div>
+          <div class="stat-label">Ativos Analisados</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-value" id="stat-atualizacoes">--</div>
+          <div class="stat-label">Atualizações em 2026</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Aviso Importante -->
+  <section class="container">
+    <div class="disclaimer">
+      <h4>⚠️ Aviso Importante</h4>
+      <p>
+        Este conteúdo representa apenas minhas opiniões pessoais e visão de mercado.
+        <strong>Não é recomendação de investimento.</strong> Sempre faça sua própria análise
+        e consulte profissionais certificados antes de tomar decisões financeiras.
+        Investimentos envolvem riscos, incluindo possível perda de capital.
+      </p>
+    </div>
+  </section>
+
+  <!-- Navegação Principal -->
+  <section class="container">
+    <div class="section-header">
+      <h2>Explore o Conteúdo</h2>
+      <p>Escolha por onde começar sua jornada de conhecimento</p>
+    </div>
+
+    <div class="cards-grid">
+      <!-- Card Carteira -->
+      <a href="carteira/" class="card">
+        <div class="card-icon">💼</div>
+        <h3>Carteira Recomendada</h3>
+        <p>
+          Veja minha visão atual de alocação ideal para diferentes perfis de investidor.
+          Porcentagens, classes de ativos e justificativas.
+        </p>
+        <span class="card-link">Ver alocação →</span>
+      </a>
+
+      <!-- Card Cenário Macro -->
+      <a href="macroeconomia/" class="card">
+        <div class="card-icon">🌍</div>
+        <h3>Cenário Macroeconômico</h3>
+        <p>
+          Análise do cenário econômico atual: inflação, juros, câmbio, cenário político
+          e como isso pode impactar seus investimentos.
+        </p>
+        <span class="card-link">Ver análise →</span>
+      </a>
+
+      <!-- Card Ativos -->
+      <a href="ativos/" class="card">
+        <div class="card-icon">📊</div>
+        <h3>Análise de Ativos</h3>
+        <p>
+          Minha visão sobre ativos específicos: ações, FIIs, ETFs, criptomoedas.
+          Onde estou otimista, neutro ou pessimista.
+        </p>
+        <span class="card-link">Ver ativos →</span>
+      </a>
+
+      <!-- Card Artigos -->
+      <a href="artigos/" class="card">
+        <div class="card-icon">📝</div>
+        <h3>Artigos e Conteúdos</h3>
+        <p>
+          Textos educativos, análises aprofundadas, teses de investimento e
+          reflexões sobre o mercado financeiro.
+        </p>
+        <span class="card-link">Ver artigos →</span>
+      </a>
+
+      <!-- Card Iniciantes -->
+      <a href="artigos/?nivel=iniciante" class="card">
+        <div class="card-icon">🎓</div>
+        <h3>Para Iniciantes</h3>
+        <p>
+          Novo no mundo dos investimentos? Comece por aqui com conteúdos
+          didáticos e explicações simples.
+        </p>
+        <span class="card-link">Começar →</span>
+      </a>
+
+      <!-- Card Sobre -->
+      <a href="sobre/" class="card">
+        <div class="card-icon">👤</div>
+        <h3>Sobre o Projeto</h3>
+        <p>
+          Conheça a filosofia por trás do "Rico aos Poucos", minha história
+          e o propósito deste projeto.
+        </p>
+        <span class="card-link">Conhecer →</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- Perfis de Investidor -->
+  <section class="container" id="perfis">
+    <div class="section-header">
+      <h2>Qual é o seu Perfil?</h2>
+      <p>Entenda seu perfil de investidor para acessar conteúdos mais adequados para você</p>
+    </div>
+
+    <div class="perfil-cards">
+      <!-- Conservador -->
+      <div class="perfil-card conservador">
+        <h3>🛡️ Conservador</h3>
+        <p class="perfil-desc">
+          Prioriza segurança e preservação de capital. Aceita retornos menores em troca de menor volatilidade.
+        </p>
+        <ul>
+          <li><span>Renda Fixa</span> <span>70-90%</span></li>
+          <li><span>Renda Variável</span> <span>5-20%</span></li>
+          <li><span>Alternativos</span> <span>0-10%</span></li>
+        </ul>
+        <p class="mt-2" style="font-size: 0.85rem; color: var(--text-muted);">
+          Ideal para: reserva de emergência, objetivos de curto prazo, investidores próximos à aposentadoria.
+        </p>
+      </div>
+
+      <!-- Moderado -->
+      <div class="perfil-card moderado">
+        <h3>⚖️ Moderado</h3>
+        <p class="perfil-desc">
+          Busca equilíbrio entre segurança e crescimento. Aceita alguma volatilidade por melhores retornos.
+        </p>
+        <ul>
+          <li><span>Renda Fixa</span> <span>40-60%</span></li>
+          <li><span>Renda Variável</span> <span>30-50%</span></li>
+          <li><span>Alternativos</span> <span>5-15%</span></li>
+        </ul>
+        <p class="mt-2" style="font-size: 0.85rem; color: var(--text-muted);">
+          Ideal para: objetivos de médio prazo (3-10 anos), construção de patrimônio gradual.
+        </p>
+      </div>
+
+      <!-- Arrojado -->
+      <div class="perfil-card arrojado">
+        <h3>🚀 Arrojado</h3>
+        <p class="perfil-desc">
+          Foco em crescimento agressivo. Aceita alta volatilidade em busca de retornos maiores no longo prazo.
+        </p>
+        <ul>
+          <li><span>Renda Fixa</span> <span>10-30%</span></li>
+          <li><span>Renda Variável</span> <span>50-70%</span></li>
+          <li><span>Alternativos</span> <span>10-25%</span></li>
+        </ul>
+        <p class="mt-2" style="font-size: 0.85rem; color: var(--text-muted);">
+          Ideal para: investidores jovens, objetivos de longo prazo (10+ anos), patrimônio em crescimento.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Últimas Atualizações -->
+  <section class="container">
+    <div class="section-header">
+      <h2>Últimas Atualizações</h2>
+      <p>Conteúdos mais recentes e atualizações importantes</p>
+    </div>
+
+    <div class="artigos-list">
+      <!-- Placeholder para artigos que serão adicionados -->
+      <div class="artigo-item" style="justify-content: center; padding: 40px;">
+        <div style="text-align: center;">
+          <p style="color: var(--text-muted); font-size: 1.1rem;">
+            📚 Novos conteúdos serão publicados em breve!
+          </p>
+          <p style="color: var(--text-secondary); margin-top: 10px;">
+            Acompanhe esta página para as últimas atualizações sobre investimentos.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center mt-3">
+      <a href="artigos/" class="btn btn-outline">Ver todos os artigos →</a>
+    </div>
+  </section>
+
+  <!-- Filosofia -->
+  <section class="container">
+    <div class="section-header">
+      <h2>A Filosofia "Rico aos Poucos"</h2>
+    </div>
+
+    <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));">
+      <div class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 16px;">⏳</div>
+        <h3>Paciência</h3>
+        <p>Riqueza se constrói ao longo de anos e décadas, não de semanas. Foco no longo prazo.</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 16px;">📖</div>
+        <h3>Conhecimento</h3>
+        <p>Antes de investir em qualquer ativo, invista em você mesmo. Educação é o melhor investimento.</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 16px;">🎯</div>
+        <h3>Consistência</h3>
+        <p>Aportes regulares e disciplina são mais importantes que timing de mercado perfeito.</p>
+      </div>
+
+      <div class="card" style="text-align: center;">
+        <div class="card-icon" style="margin: 0 auto 16px;">🧠</div>
+        <h3>Racionalidade</h3>
+        <p>Decisões baseadas em análise, não em emoções. O mercado premia quem pensa no longo prazo.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>📈 Rico aos Poucos</h3>
+        <p>
+          Construindo patrimônio de forma consciente, um passo de cada vez.
+          Conteúdo educativo sobre investimentos e finanças pessoais.
+        </p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="/">Início</a></li>
+          <li><a href="carteira/">Carteira</a></li>
+          <li><a href="macroeconomia/">Cenário Macro</a></li>
+          <li><a href="ativos/">Ativos</a></li>
+          <li><a href="artigos/">Artigos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="artigos/?nivel=iniciante">Para Iniciantes</a></li>
+          <li><a href="artigos/?nivel=avancado">Avançado</a></li>
+          <li><a href="sobre/">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        Rico aos Poucos © 2026 - Este site não oferece recomendações de investimento.
+        <br>Todo conteúdo é apenas para fins educacionais e representa opiniões pessoais.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    // Atualiza estatísticas da home (será dinâmico futuramente)
+    document.getElementById('stat-artigos').textContent = '0';
+    document.getElementById('stat-ativos').textContent = '0';
+    document.getElementById('stat-atualizacoes').textContent = '1';
+  </script>
+</body>
+</html>

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Artigos e Conteúdos - Textos educativos sobre investimentos e finanças pessoais.">
+  <title>Artigos e Conteúdos - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="../" class="logo">
+        <div class="logo-icon">📈</div>
+        <span>Rico aos Poucos</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../carteira/">Carteira</a></li>
+          <li><a href="../macroeconomia/">Cenário Macro</a></li>
+          <li><a href="../ativos/">Ativos</a></li>
+          <li><a href="../artigos/" class="active">Artigos</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb mt-3">
+      <a href="../">Início</a>
+      <span>/</span>
+      <span>Artigos</span>
+    </div>
+
+    <!-- Header da página -->
+    <div class="section-header mt-3">
+      <h1>Artigos e Conteúdos</h1>
+      <p>Textos educativos, análises aprofundadas e reflexões sobre investimentos</p>
+    </div>
+
+    <!-- Filtros -->
+    <section class="mt-3">
+      <h3 style="margin-bottom: 16px;">Filtrar por Nível</h3>
+      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px;">
+        <button class="btn btn-outline filter-btn active" data-filter="todos" onclick="filterByNivel('todos')">
+          Todos
+        </button>
+        <button class="btn btn-outline filter-btn" data-filter="iniciante" onclick="filterByNivel('iniciante')">
+          🎓 Iniciante
+        </button>
+        <button class="btn btn-outline filter-btn" data-filter="intermediario" onclick="filterByNivel('intermediario')">
+          📊 Intermediário
+        </button>
+        <button class="btn btn-outline filter-btn" data-filter="avancado" onclick="filterByNivel('avancado')">
+          🚀 Avançado
+        </button>
+      </div>
+    </section>
+
+    <!-- Lista de Artigos -->
+    <section class="mb-4">
+      <h2 style="margin-bottom: 24px;">📝 Todos os Artigos</h2>
+
+      <div class="artigos-list" id="artigos-container">
+        <!-- Placeholder inicial -->
+        <div class="artigo-item" style="justify-content: center; padding: 60px 20px;">
+          <div style="text-align: center;">
+            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
+            <h3 style="margin-bottom: 12px;">Em breve, novos conteúdos!</h3>
+            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">
+              Estou preparando artigos educativos sobre investimentos, finanças pessoais
+              e análises de mercado. Volte em breve para conferir!
+            </p>
+          </div>
+        </div>
+
+        <!-- Template para artigos futuros:
+        <a href="exemplo-artigo.html" class="artigo-item" data-nivel="iniciante">
+          <div class="artigo-date">
+            <div class="day">03</div>
+            <div class="month">Jan</div>
+          </div>
+          <div class="artigo-content">
+            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
+              <span class="nivel-badge iniciante">🎓 Iniciante</span>
+            </div>
+            <h3>Título do Artigo</h3>
+            <p>
+              Descrição breve do artigo explicando sobre o que ele fala
+              e o que o leitor vai aprender.
+            </p>
+            <div class="artigo-tags">
+              <span class="tag">Renda Fixa</span>
+              <span class="tag">Educação</span>
+            </div>
+          </div>
+        </a>
+        -->
+      </div>
+    </section>
+
+    <!-- Categorias -->
+    <section class="mt-4 mb-4">
+      <h2 style="margin-bottom: 24px;">📁 Categorias</h2>
+
+      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
+        <div class="card" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto 16px;">🎓</div>
+          <h3>Educação Financeira</h3>
+          <p>Conceitos básicos para iniciantes</p>
+          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto 16px;">🏦</div>
+          <h3>Renda Fixa</h3>
+          <p>Tesouro, CDBs, LCIs e mais</p>
+          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto 16px;">📈</div>
+          <h3>Renda Variável</h3>
+          <p>Ações, FIIs e ETFs</p>
+          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto 16px;">🌍</div>
+          <h3>Macroeconomia</h3>
+          <p>Análises do cenário econômico</p>
+          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto 16px;">💡</div>
+          <h3>Estratégias</h3>
+          <p>Táticas e filosofias de investimento</p>
+          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+        </div>
+
+        <div class="card" style="text-align: center;">
+          <div class="card-icon" style="margin: 0 auto 16px;">🧠</div>
+          <h3>Psicologia</h3>
+          <p>Comportamento e vieses cognitivos</p>
+          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>📈 Rico aos Poucos</h3>
+        <p>Construindo patrimônio de forma consciente, um passo de cada vez.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../carteira/">Carteira</a></li>
+          <li><a href="../macroeconomia/">Cenário Macro</a></li>
+          <li><a href="../ativos/">Ativos</a></li>
+          <li><a href="../artigos/">Artigos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="../artigos/?nivel=iniciante">Para Iniciantes</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        Rico aos Poucos © 2026 - Conteúdo educacional, não é recomendação de investimento.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Carteira Recomendada - Alocação ideal de investimentos para diferentes perfis de investidor.">
+  <title>Carteira Recomendada - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="../" class="logo">
+        <div class="logo-icon">📈</div>
+        <span>Rico aos Poucos</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../carteira/" class="active">Carteira</a></li>
+          <li><a href="../macroeconomia/">Cenário Macro</a></li>
+          <li><a href="../ativos/">Ativos</a></li>
+          <li><a href="../artigos/">Artigos</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb mt-3">
+      <a href="../">Início</a>
+      <span>/</span>
+      <span>Carteira Recomendada</span>
+    </div>
+
+    <!-- Header da página -->
+    <div class="section-header mt-3">
+      <h1>Carteira Recomendada</h1>
+      <p>Minha visão atual de alocação ideal de investimentos, atualizada conforme o cenário muda</p>
+      <div class="last-update mt-2">
+        🕐 Última atualização: <span class="date">03 de Janeiro de 2026</span>
+      </div>
+    </div>
+
+    <!-- Aviso -->
+    <div class="disclaimer">
+      <h4>⚠️ Lembre-se</h4>
+      <p>
+        Esta alocação reflete minha opinião pessoal e não é recomendação de investimento.
+        A carteira ideal varia conforme seu perfil, objetivos, idade e situação financeira.
+        Consulte um profissional certificado.
+      </p>
+    </div>
+
+    <!-- Perfil Moderado (Default) -->
+    <section id="moderado" class="mt-4">
+      <h2 style="margin-bottom: 24px;">📊 Alocação para Perfil Moderado</h2>
+      <p style="color: var(--text-secondary); margin-bottom: 30px;">
+        Esta é a alocação que considero equilibrada para o momento atual do mercado.
+        Ajuste as proporções conforme seu perfil (mais conservador = mais renda fixa, mais arrojado = mais renda variável).
+      </p>
+
+      <div class="alocacao-container">
+        <!-- Gráfico de Pizza -->
+        <div class="chart-container">
+          <h3 style="margin-bottom: 20px;">Distribuição por Classe</h3>
+
+          <div class="chart-placeholder">
+            <div class="pie-chart"
+                 data-values="45,30,15,10"
+                 data-colors="#1a5f4a,#2d8a6e,#f4a261,#e76f51">
+            </div>
+          </div>
+
+          <div class="alocacao-list">
+            <div class="alocacao-item">
+              <div class="alocacao-color" style="background: #1a5f4a;"></div>
+              <div class="alocacao-info">
+                <span>Renda Fixa</span>
+                <span class="alocacao-percent">45%</span>
+              </div>
+            </div>
+            <div class="alocacao-item">
+              <div class="alocacao-color" style="background: #2d8a6e;"></div>
+              <div class="alocacao-info">
+                <span>Renda Variável Brasil</span>
+                <span class="alocacao-percent">30%</span>
+              </div>
+            </div>
+            <div class="alocacao-item">
+              <div class="alocacao-color" style="background: #f4a261;"></div>
+              <div class="alocacao-info">
+                <span>Renda Variável Exterior</span>
+                <span class="alocacao-percent">15%</span>
+              </div>
+            </div>
+            <div class="alocacao-item">
+              <div class="alocacao-color" style="background: #e76f51;"></div>
+              <div class="alocacao-info">
+                <span>Alternativos</span>
+                <span class="alocacao-percent">10%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Detalhes -->
+        <div class="alocacao-details">
+          <h3>Detalhamento por Classe</h3>
+
+          <div class="detail-item">
+            <div class="detail-header">
+              <h4>🏦 Renda Fixa (45%)</h4>
+              <span class="detail-sentiment neutral">Neutro</span>
+            </div>
+            <p>
+              Com juros ainda elevados, a renda fixa continua atrativa. Foco em títulos pós-fixados
+              e indexados à inflação. Evitar pré-fixados longos por enquanto.
+            </p>
+            <ul style="margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li>Tesouro Selic (liquidez): 15%</li>
+              <li>Tesouro IPCA+: 20%</li>
+              <li>CDBs/LCIs/LCAs: 10%</li>
+            </ul>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-header">
+              <h4>🇧🇷 Renda Variável Brasil (30%)</h4>
+              <span class="detail-sentiment bullish">Otimista</span>
+            </div>
+            <p>
+              Bolsa brasileira segue descontada em termos históricos. Boas oportunidades em
+              empresas de qualidade, pagadoras de dividendos e com baixo endividamento.
+            </p>
+            <ul style="margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li>Ações (stock picking): 15%</li>
+              <li>Fundos Imobiliários: 10%</li>
+              <li>ETFs (BOVA11, SMAL11): 5%</li>
+            </ul>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-header">
+              <h4>🌎 Renda Variável Exterior (15%)</h4>
+              <span class="detail-sentiment neutral">Neutro</span>
+            </div>
+            <p>
+              Diversificação geográfica essencial. Foco em ETFs globais para exposição
+              a economias desenvolvidas e dolarização parcial da carteira.
+            </p>
+            <ul style="margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li>ETFs EUA (IVVB11, NASD11): 10%</li>
+              <li>ETFs Globais: 5%</li>
+            </ul>
+          </div>
+
+          <div class="detail-item">
+            <div class="detail-header">
+              <h4>💎 Alternativos (10%)</h4>
+              <span class="detail-sentiment neutral">Neutro</span>
+            </div>
+            <p>
+              Posição pequena em ativos alternativos para diversificação e potencial
+              de retornos descorrelacionados.
+            </p>
+            <ul style="margin-top: 12px; font-size: 0.9rem; color: var(--text-secondary);">
+              <li>Criptomoedas (BTC, ETH): 5%</li>
+              <li>Ouro/Commodities: 5%</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Variações por Perfil -->
+    <section class="mt-4">
+      <h2 style="margin-bottom: 24px;">🎯 Ajustes por Perfil</h2>
+
+      <div class="perfil-cards">
+        <div class="perfil-card conservador">
+          <h3>🛡️ Conservador</h3>
+          <p class="perfil-desc">Para quem prioriza segurança e tem menor tolerância a risco</p>
+          <ul>
+            <li><span>Renda Fixa</span> <span>70-80%</span></li>
+            <li><span>RV Brasil</span> <span>10-15%</span></li>
+            <li><span>RV Exterior</span> <span>5-10%</span></li>
+            <li><span>Alternativos</span> <span>0-5%</span></li>
+          </ul>
+        </div>
+
+        <div class="perfil-card moderado">
+          <h3>⚖️ Moderado</h3>
+          <p class="perfil-desc">Equilíbrio entre segurança e crescimento</p>
+          <ul>
+            <li><span>Renda Fixa</span> <span>40-50%</span></li>
+            <li><span>RV Brasil</span> <span>25-35%</span></li>
+            <li><span>RV Exterior</span> <span>10-20%</span></li>
+            <li><span>Alternativos</span> <span>5-10%</span></li>
+          </ul>
+        </div>
+
+        <div class="perfil-card arrojado">
+          <h3>🚀 Arrojado</h3>
+          <p class="perfil-desc">Foco em crescimento agressivo de longo prazo</p>
+          <ul>
+            <li><span>Renda Fixa</span> <span>15-25%</span></li>
+            <li><span>RV Brasil</span> <span>35-45%</span></li>
+            <li><span>RV Exterior</span> <span>20-30%</span></li>
+            <li><span>Alternativos</span> <span>10-20%</span></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Histórico de Mudanças -->
+    <section class="mt-4 mb-4">
+      <h2 style="margin-bottom: 24px;">📝 Histórico de Alterações</h2>
+
+      <div class="artigos-list">
+        <div class="artigo-item">
+          <div class="artigo-date">
+            <div class="day">03</div>
+            <div class="month">Jan</div>
+          </div>
+          <div class="artigo-content">
+            <h3>Carteira Inicial - Janeiro 2026</h3>
+            <p>
+              Primeira versão da carteira recomendada publicada. Cenário de juros ainda
+              elevados favorece renda fixa, mas bolsa brasileira apresenta boas oportunidades.
+            </p>
+            <div class="artigo-tags">
+              <span class="tag">Criação</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>📈 Rico aos Poucos</h3>
+        <p>Construindo patrimônio de forma consciente, um passo de cada vez.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../carteira/">Carteira</a></li>
+          <li><a href="../macroeconomia/">Cenário Macro</a></li>
+          <li><a href="../ativos/">Ativos</a></li>
+          <li><a href="../artigos/">Artigos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="../artigos/?nivel=iniciante">Para Iniciantes</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        Rico aos Poucos © 2026 - Conteúdo educacional, não é recomendação de investimento.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>

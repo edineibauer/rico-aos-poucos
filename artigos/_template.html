@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="[DESCRICAO_DO_ARTIGO]">
+  <title>[TITULO_DO_ARTIGO] - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <a href="../" class="logo">
+        <div class="logo-icon">📈</div>
+        <span>Rico aos Poucos</span>
+      </a>
+
+      <button class="menu-toggle" aria-label="Menu">☰</button>
+
+      <nav>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../carteira/">Carteira</a></li>
+          <li><a href="../macroeconomia/">Cenário Macro</a></li>
+          <li><a href="../ativos/">Ativos</a></li>
+          <li><a href="../artigos/" class="active">Artigos</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Breadcrumb -->
+    <div class="breadcrumb mt-3">
+      <a href="../">Início</a>
+      <span>/</span>
+      <a href="../artigos/">Artigos</a>
+      <span>/</span>
+      <span>[TITULO_CURTO]</span>
+    </div>
+
+    <!-- Artigo -->
+    <article class="article-page">
+      <div class="article-header">
+        <span class="nivel-badge [NIVEL_CLASSE]">[NIVEL_EMOJI] [NIVEL_TEXTO]</span>
+        <h1>[TITULO_DO_ARTIGO]</h1>
+        <div class="article-meta">
+          <span>📅 [DATA_PUBLICACAO]</span>
+          <span>⏱️ [TEMPO_LEITURA] min de leitura</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+        <!-- CONTEUDO DO ARTIGO AQUI -->
+
+        <h2>Introdução</h2>
+        <p>
+          [TEXTO_INTRODUCAO]
+        </p>
+
+        <h2>Seção 1</h2>
+        <p>
+          [TEXTO_SECAO_1]
+        </p>
+
+        <h2>Seção 2</h2>
+        <p>
+          [TEXTO_SECAO_2]
+        </p>
+
+        <h2>Conclusão</h2>
+        <p>
+          [TEXTO_CONCLUSAO]
+        </p>
+      </div>
+
+      <!-- Tags -->
+      <div class="artigo-tags mt-3">
+        <span class="tag">[TAG_1]</span>
+        <span class="tag">[TAG_2]</span>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer mt-4">
+        <h4>⚠️ Aviso</h4>
+        <p>
+          Este artigo representa minha opinião pessoal e não é recomendação de investimento.
+          Faça sua própria análise antes de tomar qualquer decisão.
+        </p>
+      </div>
+
+      <!-- Navegação -->
+      <div class="mt-4" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+        <a href="../artigos/" class="btn btn-outline">← Voltar para Artigos</a>
+        <button onclick="sharePage()" class="btn btn-outline">📤 Compartilhar</button>
+      </div>
+    </article>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>📈 Rico aos Poucos</h3>
+        <p>Construindo patrimônio de forma consciente, um passo de cada vez.</p>
+      </div>
+
+      <div class="footer-links">
+        <h4>Navegação</h4>
+        <ul>
+          <li><a href="../">Início</a></li>
+          <li><a href="../carteira/">Carteira</a></li>
+          <li><a href="../macroeconomia/">Cenário Macro</a></li>
+          <li><a href="../ativos/">Ativos</a></li>
+          <li><a href="../artigos/">Artigos</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-links">
+        <h4>Conteúdo</h4>
+        <ul>
+          <li><a href="../artigos/?nivel=iniciante">Para Iniciantes</a></li>
+          <li><a href="../sobre/">Sobre</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>
+        Rico aos Poucos © 2026 - Conteúdo educacional, não é recomendação de investimento.
+      </p>
+    </div>
+  </footer>
+
+  <script src="../js/app.js"></script>
+</body>
+</html>
+
+<!--
+INSTRUÇÕES PARA USO DESTE TEMPLATE:
+
+Substitua os seguintes placeholders:
+- [TITULO_DO_ARTIGO] = Título completo do artigo
+- [TITULO_CURTO] = Versão curta para breadcrumb
+- [DESCRICAO_DO_ARTIGO] = Descrição para SEO (máx 160 caracteres)
+- [DATA_PUBLICACAO] = Data no formato "03 de Janeiro de 2026"
+- [TEMPO_LEITURA] = Estimativa em minutos
+
+Para o nível:
+- Iniciante: [NIVEL_CLASSE]=iniciante, [NIVEL_EMOJI]=🎓, [NIVEL_TEXTO]=Iniciante
+- Intermediário: [NIVEL_CLASSE]=intermediario, [NIVEL_EMOJI]=📊, [NIVEL_TEXTO]=Intermediário
+- Avançado: [NIVEL_CLASSE]=avancado, [NIVEL_EMOJI]=🚀, [NIVEL_TEXTO]=Avançado
+
+Salve o arquivo com nome descritivo usando hífens:
+Exemplo: por-que-investir-em-renda-fixa.html
+-->

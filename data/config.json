@@ -1,0 +1,63 @@
+{
+  "site": {
+    "nome": "Rico aos Poucos",
+    "descricao": "Construindo patrimônio de forma consciente e sustentável",
+    "autor": "Rico aos Poucos",
+    "ultimaAtualizacao": "2026-01-03"
+  },
+  "estatisticas": {
+    "totalArtigos": 0,
+    "totalAtivosAnalisados": 0,
+    "atualizacoesEm2026": 1
+  },
+  "carteiraAtual": {
+    "ultimaAtualizacao": "2026-01-03",
+    "perfilModerado": {
+      "rendaFixa": 45,
+      "rendaVariavelBrasil": 30,
+      "rendaVariavelExterior": 15,
+      "alternativos": 10
+    },
+    "detalhamento": {
+      "rendaFixa": {
+        "tesouroSelic": 15,
+        "tesouroIPCA": 20,
+        "cdbLciLca": 10
+      },
+      "rendaVariavelBrasil": {
+        "acoes": 15,
+        "fiis": 10,
+        "etfs": 5
+      },
+      "rendaVariavelExterior": {
+        "etfsEUA": 10,
+        "etfsGlobais": 5
+      },
+      "alternativos": {
+        "cripto": 5,
+        "ouro": 5
+      }
+    }
+  },
+  "sentimentos": {
+    "rendaFixa": "neutral",
+    "rendaVariavelBrasil": "bullish",
+    "rendaVariavelExterior": "neutral",
+    "alternativos": "neutral"
+  },
+  "artigos": [],
+  "ativos": {
+    "acoes": [],
+    "fiis": [],
+    "etfs": [],
+    "cripto": []
+  },
+  "setores": {
+    "bancos": { "sentimento": "neutral", "comentario": "" },
+    "energia": { "sentimento": "neutral", "comentario": "" },
+    "varejo": { "sentimento": "neutral", "comentario": "" },
+    "construcao": { "sentimento": "neutral", "comentario": "" },
+    "commodities": { "sentimento": "neutral", "comentario": "" },
+    "tecnologia": { "sentimento": "neutral", "comentario": "" }
+  }
+}

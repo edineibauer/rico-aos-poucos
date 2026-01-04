@@ -974,8 +974,7 @@ body.home-page {
 }
 
 .app-header,
-.app-footer,
-.breaking-news {
+.app-footer {
   padding-left: 20px;
   padding-right: 20px;
 }
@@ -1233,7 +1232,7 @@ body.home-page {
   display: flex;
   align-items: center;
   gap: 14px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .card-icon-box {
@@ -1298,6 +1297,8 @@ body.home-page {
 }
 
 .card-badge {
+  display: inline-block;
+  margin-top: 6px;
   padding: 4px 8px;
   background: rgba(26, 95, 74, 0.25);
   border: 1px solid rgba(26, 95, 74, 0.4);
@@ -1307,13 +1308,12 @@ body.home-page {
   color: var(--primary-light);
   text-transform: uppercase;
   letter-spacing: 0.3px;
-  flex-shrink: 0;
   white-space: nowrap;
 }
 
 /* Card Body */
 .card-body {
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 /* Card Footer */
@@ -1426,7 +1426,7 @@ body.home-page {
   stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
 }
 .ring-segment.seg-ibov {
-  stroke: #f85149;
+  stroke: #f0c14b;
   stroke-dasharray: calc(var(--percent) * 2.51) 251;
   stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
 }
@@ -1452,7 +1452,7 @@ body.home-page {
 .expectativas-visual {
   display: flex;
   align-items: flex-start;
-  gap: 20px;
+  gap: 16px;
 }
 
 .setores-legend {
@@ -1510,8 +1510,8 @@ body.home-page {
   display: flex;
   justify-content: center;
   gap: 24px;
-  margin-top: 16px;
-  padding-top: 16px;
+  margin-top: 12px;
+  padding-top: 12px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -1895,8 +1895,7 @@ body.home-page {
   }
 
   .app-header,
-  .app-footer,
-  .breaking-news {
+  .app-footer {
     padding-left: 16px;
     padding-right: 16px;
   }

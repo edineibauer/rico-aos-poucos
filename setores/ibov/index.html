@@ -3,9 +3,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Analise do setor IBOV - Expectativas e sentimento do canal Rico aos Poucos.">
+  <meta name="description" content="Analise do setor IBOV - Acoes brasileiras. Sentimento neutro com cautela para 2026.">
   <title>IBOV - Expectativas do Canal - Rico aos Poucos</title>
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .fatores-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) {
+      .fatores-grid { grid-template-columns: 1fr; }
+    }
+    .fator-positivo, .fator-negativo {
+      padding: 16px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .fator-positivo {
+      background: rgba(63, 185, 80, 0.08);
+      border-color: rgba(63, 185, 80, 0.3);
+    }
+    .fator-negativo {
+      background: rgba(248, 81, 73, 0.08);
+      border-color: rgba(248, 81, 73, 0.3);
+    }
+    .fator-positivo h4 { color: var(--bullish); }
+    .fator-negativo h4 { color: var(--bearish); }
+    .stat-box {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      margin: 16px 0;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--neutral);
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      margin-top: 4px;
+    }
+    .timeline-mini {
+      display: flex;
+      gap: 16px;
+      margin: 20px 0;
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .timeline-item-mini {
+      flex: 1;
+      min-width: 200px;
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border-left: 3px solid var(--primary-light);
+    }
+    .timeline-item-mini.warning {
+      border-left-color: var(--neutral);
+    }
+    .timeline-item-mini h5 {
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      margin-bottom: 4px;
+    }
+  </style>
 </head>
 <body>
   <div class="page-container">
@@ -28,62 +94,136 @@
           <div class="setor-icon-large">📈</div>
           <div class="setor-hero-info">
             <div class="setor-badges">
-              <span class="sentimento-badge bearish">Pessimista</span>
+              <span class="sentimento-badge neutral">Neutro</span>
               <span class="prazo-badge">Medio Prazo (1-2 anos)</span>
             </div>
-            <h1>IBOV</h1>
-            <p class="setor-desc">Acoes brasileiras e indice Bovespa - exposicao a economia brasileira e empresas listadas.</p>
+            <h1>IBOV - Acoes Brasileiras</h1>
+            <p class="setor-desc">Indice Bovespa e acoes brasileiras. Exposicao a economia domestica e empresas listadas na B3.</p>
           </div>
         </div>
 
-        <div class="exposicao-card bearish">
+        <div class="exposicao-card neutral">
           <div class="exposicao-header">
             <h3>Exposicao Recomendada</h3>
             <span class="exposicao-percent">15%</span>
           </div>
           <div class="exposicao-bar-large">
-            <div class="exposicao-fill-large bearish" style="--width: 15%"></div>
+            <div class="exposicao-fill-large neutral" style="--width: 15%"></div>
           </div>
-          <p class="exposicao-note">Mantendo posicao reduzida devido ao cenario desafiador.</p>
+          <p class="exposicao-note">Posicao moderada. Momento de cautela, nao de euforia.</p>
         </div>
       </div>
     </section>
 
     <section class="racional-section">
       <div class="container">
-        <h2>Por que estamos pessimistas?</h2>
+        <h2>⚖️ Por que estamos Neutros?</h2>
 
-        <div class="racional-content">
-          <div class="racional-card">
-            <div class="racional-icon">💸</div>
-            <h4>Cenario Fiscal</h4>
-            <p>Incertezas sobre a trajetoria fiscal do governo pressionam o mercado de acoes brasileiro.</p>
+        <p style="color: var(--text-secondary); margin-bottom: 24px; line-height: 1.7;">
+          O Ibovespa teve um ano excepcional em 2025, com alta de <strong>34%</strong> — o melhor desempenho desde 2016.
+          Depois dessa esticada, a margem para subir mais diminui, e os riscos no horizonte sao consideraveis.
+        </p>
+
+        <div class="stat-box">
+          <div class="stat-number">+34%</div>
+          <div class="stat-label">Valorizacao do Ibovespa em 2025</div>
+        </div>
+
+        <h3 style="margin: 32px 0 16px;">Balanca de Riscos</h3>
+
+        <div class="fatores-grid">
+          <div class="fator-positivo">
+            <h4>✅ Gatilhos Positivos</h4>
+            <ul style="margin-top: 12px; padding-left: 16px; line-height: 1.8; font-size: 0.9rem;">
+              <li>Expectativa de queda da Selic</li>
+              <li>Fluxo estrangeiro positivo (R$ 28 bi)</li>
+              <li>Brasil considerado "barato"</li>
+              <li>Diferencial de juros atrativo</li>
+            </ul>
           </div>
-
-          <div class="racional-card">
-            <div class="racional-icon">📊</div>
-            <h4>Juros Elevados</h4>
-            <p>Selic alta encarece o credito e reduz o valor presente dos fluxos futuros das empresas.</p>
-          </div>
-
-          <div class="racional-card">
-            <div class="racional-icon">🌍</div>
-            <h4>Fluxo Estrangeiro</h4>
-            <p>Investidores estrangeiros tem preferido outros mercados emergentes com melhor perspectiva.</p>
+          <div class="fator-negativo">
+            <h4>❌ Gatilhos Negativos</h4>
+            <ul style="margin-top: 12px; padding-left: 16px; line-height: 1.8; font-size: 0.9rem;">
+              <li>Mercado ja precificou Selic</li>
+              <li>Eleicoes 2026 (+volatilidade)</li>
+              <li>Dolar pode fortalecer</li>
+              <li>Risco de correcao nos EUA</li>
+              <li>Saida de investidores locais</li>
+            </ul>
           </div>
         </div>
 
-        <div class="disclaimer-inline">
-          <span class="disclaimer-icon">⚠️</span>
-          <p>Esta analise reflete a opiniao do canal e nao constitui recomendacao de investimento. Acoes tem alta volatilidade.</p>
+        <h3 style="margin: 32px 0 16px;">📅 O que esperar em 2026</h3>
+
+        <div class="timeline-mini">
+          <div class="timeline-item-mini">
+            <h5>1º SEMESTRE</h5>
+            <strong style="color: var(--bullish);">Janela de Oportunidade</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px;">
+              Inicio do ciclo de cortes da Selic. Fluxo ainda positivo.
+            </p>
+          </div>
+          <div class="timeline-item-mini warning">
+            <h5>2º SEMESTRE</h5>
+            <strong style="color: var(--neutral);">Incerteza Eleitoral</strong>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 8px;">
+              Definicao de candidaturas. Volatilidade historicamente +14% maior.
+            </p>
+          </div>
+        </div>
+
+        <div class="racional-content" style="margin-top: 32px;">
+          <div class="racional-card">
+            <div class="racional-icon">💹</div>
+            <h4>Selic: Ja Precificada?</h4>
+            <p>O mercado ja espera queda para 12% ao fim de 2026. Se nao acontecer ou demorar, pode haver frustracao.</p>
+          </div>
+
+          <div class="racional-card">
+            <div class="racional-icon">🗳️</div>
+            <h4>Ano Eleitoral</h4>
+            <p>Eleicoes presidenciais trazem incerteza. Historicamente, volatilidade aumenta 14% nesses anos.</p>
+          </div>
+
+          <div class="racional-card">
+            <div class="racional-icon">🇺🇸</div>
+            <h4>Risco Externo</h4>
+            <p>S&P 500 esticado, risco de bolha da IA. Uma correcao nos EUA afetaria o Brasil.</p>
+          </div>
+        </div>
+
+        <div class="disclaimer-inline" style="margin-top: 32px;">
+          <span class="disclaimer-icon">💡</span>
+          <p><strong>Recomendacao:</strong> Quem ja lucrou deveria considerar realizar parte. Quem quer entrar, fazer com cautela e escala menor, diversificando bem.</p>
         </div>
       </div>
     </section>
 
     <section class="ativos-section">
       <div class="container">
-        <h2>Exemplos de Ativos</h2>
-        <p class="section-subtitle">Instrumentos que dao exposicao a este setor</p>
+        <h2>🎯 Setores que Podem se Destacar</h2>
+        <p class="section-subtitle">Mesmo com cenario neutro, alguns setores podem performar melhor</p>
+
+        <div class="ativos-lista">
+          <div class="ativo-item">
+            <div class="ativo-nome">Varejo</div>
+            <div class="ativo-tipo">Beneficia da queda de juros</div>
+          </div>
+          <div class="ativo-item">
+            <div class="ativo-nome">Construcao Civil</div>
+            <div class="ativo-tipo">Financiamentos mais baratos</div>
+          </div>
+          <div class="ativo-item">
+            <div class="ativo-nome">Small Caps</div>
+            <div class="ativo-tipo">Mais sensiveis a juros</div>
+          </div>
+          <div class="ativo-item">
+            <div class="ativo-nome">Financeiro</div>
+            <div class="ativo-tipo">Resiliente em varios cenarios</div>
+          </div>
+        </div>
+
+        <h3 style="margin-top: 32px;">Instrumentos de Exposicao</h3>
 
         <div class="ativos-lista">
           <div class="ativo-item">
@@ -91,16 +231,16 @@
             <div class="ativo-tipo">ETF Ibovespa</div>
           </div>
           <div class="ativo-item">
+            <div class="ativo-nome">SMAL11</div>
+            <div class="ativo-tipo">ETF Small Caps</div>
+          </div>
+          <div class="ativo-item">
             <div class="ativo-nome">PIBB11</div>
             <div class="ativo-tipo">ETF IBrX-50</div>
           </div>
           <div class="ativo-item">
-            <div class="ativo-nome">Acoes individuais</div>
-            <div class="ativo-tipo">Stock Picking</div>
-          </div>
-          <div class="ativo-item">
-            <div class="ativo-nome">Small caps</div>
-            <div class="ativo-tipo">SMAL11</div>
+            <div class="ativo-nome">Acoes Individuais</div>
+            <div class="ativo-tipo">Stock Picking seletivo</div>
           </div>
         </div>
       </div>
@@ -108,21 +248,21 @@
 
     <section class="publicacoes-section">
       <div class="container">
-        <h2>Publicacoes sobre este Setor</h2>
-        <p class="section-subtitle">Historico de analises e mudancas de sentimento</p>
+        <h2>📝 Analise Completa</h2>
+        <p class="section-subtitle">Leia nossa analise detalhada sobre acoes brasileiras em 2026</p>
 
         <div class="publicacoes-lista">
-          <div class="publicacao-item">
+          <a href="../../artigos/acoes-brasileiras-2026-analise.html" class="publicacao-item" style="text-decoration: none; color: inherit; display: block;">
             <div class="publicacao-data">
               <span class="pub-dia">04</span>
               <span class="pub-mes">Jan 2026</span>
             </div>
             <div class="publicacao-content">
-              <div class="publicacao-badge bearish">Pessimista</div>
-              <h4>Bolsa brasileira: momento de cautela</h4>
-              <p>Juros altos e incerteza fiscal pesam sobre as acoes brasileiras.</p>
+              <div class="publicacao-badge neutral">Neutro</div>
+              <h4>Acoes Brasileiras em 2026: Hora de Cautela?</h4>
+              <p>Analise completa com fontes, dados e recomendacoes sobre o cenario para o Ibovespa.</p>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </section>

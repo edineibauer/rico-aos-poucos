@@ -3,156 +3,310 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="[DESCRICAO_DO_ARTIGO]">
-  <title>[TITULO_DO_ARTIGO] - Rico aos Poucos</title>
+  <meta name="description" content="{{DESCRICAO_SEO}}">
+  <title>{{TITULO}} - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    /* Estilos especificos do artigo */
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-header {
+      margin-bottom: 32px;
+    }
+    .article-header h1 {
+      font-size: 2rem;
+      margin: 16px 0;
+      line-height: 1.3;
+    }
+    .article-meta {
+      display: flex;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .article-content {
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .article-content h2 {
+      color: var(--text-primary);
+      margin: 32px 0 16px;
+      font-size: 1.4rem;
+    }
+    .article-content h3 {
+      color: var(--text-primary);
+      margin: 24px 0 12px;
+      font-size: 1.1rem;
+    }
+    .article-content p {
+      margin-bottom: 16px;
+    }
+    .article-content ul, .article-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    .article-content li {
+      margin-bottom: 8px;
+    }
+    .stat-box {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .callout {
+      background: linear-gradient(135deg, rgba(26, 95, 74, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(26, 95, 74, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .callout.warning {
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(240, 193, 75, 0.3);
+    }
+    .fonte-box {
+      background: var(--bg-tertiary);
+      border-left: 3px solid var(--primary-light);
+      padding: 12px 16px;
+      margin: 16px 0;
+      font-size: 0.85rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .fonte-box a {
+      color: var(--primary-light);
+    }
+    .disclaimer {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .disclaimer h4 {
+      margin-bottom: 8px;
+      color: var(--neutral);
+    }
+    .referencias {
+      margin-top: 40px;
+      padding-top: 24px;
+      border-top: 1px solid var(--border-color);
+    }
+    .referencias ul {
+      list-style: none;
+      padding: 0;
+    }
+    .referencias li {
+      margin-bottom: 8px;
+    }
+    .referencias a {
+      font-size: 0.85rem;
+    }
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      margin-top: 40px;
+      flex-wrap: wrap;
+    }
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .nivel-badge.iniciante {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+    .nivel-badge.intermediario {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+    .nivel-badge.avancado {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <a href="../" class="logo">
-        <div class="logo-icon">📈</div>
-        <span>Rico aos Poucos</span>
-      </a>
+  <div class="page-container">
 
-      <button class="menu-toggle" aria-label="Menu">☰</button>
+    <header class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../">Inicio</a>
+          <span>/</span>
+          <a href="./">Artigos</a>
+          <span>/</span>
+          <span>{{TITULO_CURTO}}</span>
+        </nav>
+      </div>
+    </header>
 
-      <nav>
-        <ul>
-          <li><a href="../">Início</a></li>
-          <li><a href="../carteira/">Carteira</a></li>
-          <li><a href="../macroeconomia/">Cenário Macro</a></li>
-          <li><a href="../ativos/">Ativos</a></li>
-          <li><a href="../artigos/" class="active">Artigos</a></li>
-          <li><a href="../sobre/">Sobre</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+    <article class="article-container">
 
-  <main class="container">
-    <!-- Breadcrumb -->
-    <div class="breadcrumb mt-3">
-      <a href="../">Início</a>
-      <span>/</span>
-      <a href="../artigos/">Artigos</a>
-      <span>/</span>
-      <span>[TITULO_CURTO]</span>
-    </div>
-
-    <!-- Artigo -->
-    <article class="article-page">
+      <!-- Cabecalho do Artigo -->
       <div class="article-header">
-        <span class="nivel-badge [NIVEL_CLASSE]">[NIVEL_EMOJI] [NIVEL_TEXTO]</span>
-        <h1>[TITULO_DO_ARTIGO]</h1>
+        <span class="nivel-badge {{NIVEL}}">{{NIVEL_EMOJI}} {{NIVEL_TEXTO}}</span>
+        <h1>{{TITULO}}</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">
+          {{SUBTITULO}}
+        </p>
         <div class="article-meta">
-          <span>📅 [DATA_PUBLICACAO]</span>
-          <span>⏱️ [TEMPO_LEITURA] min de leitura</span>
+          <span>📅 {{DATA}}</span>
+          <span>⏱️ {{TEMPO_LEITURA}} min de leitura</span>
         </div>
       </div>
 
+      <!-- Conteudo do Artigo -->
       <div class="article-content">
-        <!-- CONTEUDO DO ARTIGO AQUI -->
 
-        <h2>Introdução</h2>
+        <!-- SECAO: Destaque Principal (opcional) -->
+        <div class="stat-box">
+          <div class="stat-number">{{ESTATISTICA}}</div>
+          <div class="stat-label">{{ESTATISTICA_LABEL}}</div>
+        </div>
+
+        <!-- SECAO: Introducao -->
+        <h2>{{SECAO_1_TITULO}}</h2>
         <p>
-          [TEXTO_INTRODUCAO]
+          {{SECAO_1_CONTEUDO}}
         </p>
 
-        <h2>Seção 1</h2>
+        <!-- SECAO: Desenvolvimento -->
+        <h2>{{SECAO_2_TITULO}}</h2>
         <p>
-          [TEXTO_SECAO_1]
+          {{SECAO_2_CONTEUDO}}
         </p>
 
-        <h2>Seção 2</h2>
+        <!-- Callout informativo -->
+        <div class="callout">
+          <h3>{{CALLOUT_TITULO}}</h3>
+          <p>{{CALLOUT_CONTEUDO}}</p>
+        </div>
+
+        <!-- Fonte -->
+        <div class="fonte-box">
+          📊 <strong>Fonte:</strong> {{FONTE_TEXTO}}
+          <a href="{{FONTE_URL}}" target="_blank">{{FONTE_NOME}}</a>
+        </div>
+
+        <!-- SECAO: Conclusao -->
+        <h2>{{SECAO_CONCLUSAO_TITULO}}</h2>
         <p>
-          [TEXTO_SECAO_2]
+          {{SECAO_CONCLUSAO_CONTEUDO}}
         </p>
 
-        <h2>Conclusão</h2>
-        <p>
-          [TEXTO_CONCLUSAO]
-        </p>
-      </div>
-
-      <!-- Tags -->
-      <div class="artigo-tags mt-3">
-        <span class="tag">[TAG_1]</span>
-        <span class="tag">[TAG_2]</span>
       </div>
 
       <!-- Disclaimer -->
-      <div class="disclaimer mt-4">
-        <h4>⚠️ Aviso</h4>
+      <div class="disclaimer">
+        <h4>⚠️ Aviso Importante</h4>
         <p>
-          Este artigo representa minha opinião pessoal e não é recomendação de investimento.
-          Faça sua própria análise antes de tomar qualquer decisão.
+          Esta analise reflete a opiniao do canal Rico aos Poucos e <strong>nao constitui
+          recomendacao de investimento</strong>. Faca sua propria analise e consulte um
+          profissional antes de investir.
         </p>
       </div>
 
-      <!-- Navegação -->
-      <div class="mt-4" style="display: flex; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
-        <a href="../artigos/" class="btn btn-outline">← Voltar para Artigos</a>
-        <button onclick="sharePage()" class="btn btn-outline">📤 Compartilhar</button>
+      <!-- Referencias -->
+      <div class="referencias">
+        <h3>📚 Referencias e Fontes</h3>
+        <ul>
+          <li><a href="{{REF_1_URL}}" target="_blank">{{REF_1_TITULO}}</a></li>
+          <li><a href="{{REF_2_URL}}" target="_blank">{{REF_2_TITULO}}</a></li>
+        </ul>
       </div>
+
+      <!-- Navegacao -->
+      <div class="nav-buttons">
+        <a href="./" class="btn btn-outline">← Todos os Artigos</a>
+        <a href="../setores/" class="btn btn-outline">🎯 Expectativas</a>
+      </div>
+
     </article>
-  </main>
 
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <h3>📈 Rico aos Poucos</h3>
-        <p>Construindo patrimônio de forma consciente, um passo de cada vez.</p>
+    <footer class="page-footer">
+      <div class="container">
+        <p class="footer-disclaimer">Rico aos Poucos © 2026 - Conteudo educacional</p>
       </div>
+    </footer>
 
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="../">Início</a></li>
-          <li><a href="../carteira/">Carteira</a></li>
-          <li><a href="../macroeconomia/">Cenário Macro</a></li>
-          <li><a href="../ativos/">Ativos</a></li>
-          <li><a href="../artigos/">Artigos</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Conteúdo</h4>
-        <ul>
-          <li><a href="../artigos/?nivel=iniciante">Para Iniciantes</a></li>
-          <li><a href="../sobre/">Sobre</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>
-        Rico aos Poucos © 2026 - Conteúdo educacional, não é recomendação de investimento.
-      </p>
-    </div>
-  </footer>
-
-  <script src="../js/app.js"></script>
+  </div>
 </body>
 </html>
 
 <!--
-INSTRUÇÕES PARA USO DESTE TEMPLATE:
+================================================================================
+GUIA DE USO DESTE TEMPLATE
+================================================================================
 
-Substitua os seguintes placeholders:
-- [TITULO_DO_ARTIGO] = Título completo do artigo
-- [TITULO_CURTO] = Versão curta para breadcrumb
-- [DESCRICAO_DO_ARTIGO] = Descrição para SEO (máx 160 caracteres)
-- [DATA_PUBLICACAO] = Data no formato "03 de Janeiro de 2026"
-- [TEMPO_LEITURA] = Estimativa em minutos
+1. COPIE este arquivo e renomeie para o slug do artigo:
+   Exemplo: meu-novo-artigo.html
 
-Para o nível:
-- Iniciante: [NIVEL_CLASSE]=iniciante, [NIVEL_EMOJI]=🎓, [NIVEL_TEXTO]=Iniciante
-- Intermediário: [NIVEL_CLASSE]=intermediario, [NIVEL_EMOJI]=📊, [NIVEL_TEXTO]=Intermediário
-- Avançado: [NIVEL_CLASSE]=avancado, [NIVEL_EMOJI]=🚀, [NIVEL_TEXTO]=Avançado
+2. SUBSTITUA os placeholders {{...}}:
 
-Salve o arquivo com nome descritivo usando hífens:
-Exemplo: por-que-investir-em-renda-fixa.html
+   CABECALHO:
+   - {{TITULO}} = Titulo completo do artigo
+   - {{TITULO_CURTO}} = Versao curta para breadcrumb
+   - {{SUBTITULO}} = Frase que resume o artigo
+   - {{DESCRICAO_SEO}} = Descricao para Google (max 160 caracteres)
+   - {{DATA}} = Data no formato "04 de Janeiro de 2026"
+   - {{TEMPO_LEITURA}} = Minutos estimados
+
+   NIVEL (escolha um):
+   - iniciante: {{NIVEL}}=iniciante, {{NIVEL_EMOJI}}=🎓, {{NIVEL_TEXTO}}=Iniciante
+   - intermediario: {{NIVEL}}=intermediario, {{NIVEL_EMOJI}}=📊, {{NIVEL_TEXTO}}=Intermediario
+   - avancado: {{NIVEL}}=avancado, {{NIVEL_EMOJI}}=🚀, {{NIVEL_TEXTO}}=Avancado
+
+   CONTEUDO:
+   - {{ESTATISTICA}} = Numero em destaque (ex: +34%)
+   - {{ESTATISTICA_LABEL}} = Explicacao da estatistica
+   - {{SECAO_X_TITULO}} = Titulos das secoes
+   - {{SECAO_X_CONTEUDO}} = Conteudo das secoes
+
+   FONTES:
+   - {{FONTE_TEXTO}} = Texto antes do link
+   - {{FONTE_URL}} = URL da fonte
+   - {{FONTE_NOME}} = Nome da fonte
+
+3. ADICIONE ao data/artigos.json:
+
+   {
+     "id": "meu-novo-artigo",
+     "titulo": "Titulo do Artigo",
+     "subtitulo": "Subtitulo",
+     "descricao": "Descricao para listagem",
+     "arquivo": "meu-novo-artigo.html",
+     "nivel": "intermediario",
+     "categoria": "renda-variavel",
+     "tags": ["tag1", "tag2"],
+     "dataPublicacao": "2026-01-05",
+     "tempoLeitura": 8,
+     "destaque": false,
+     "setorRelacionado": null
+   }
+
+4. COMMIT e PUSH para o repositorio
+
+================================================================================
 -->

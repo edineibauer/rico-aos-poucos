@@ -3,194 +3,386 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Artigos e Conteúdos - Textos educativos sobre investimentos e finanças pessoais.">
-  <title>Artigos e Conteúdos - Rico aos Poucos</title>
+  <meta name="description" content="Artigos e Analises - Textos educativos sobre investimentos e financas pessoais.">
+  <title>Artigos e Analises - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .artigos-list {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .artigo-item {
+      display: flex;
+      gap: 20px;
+      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+    .artigo-item:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+    }
+    .artigo-item.destaque {
+      border-left: 3px solid var(--primary-light);
+      background: linear-gradient(135deg, rgba(26, 95, 74, 0.1) 0%, var(--bg-card) 100%);
+    }
+    .artigo-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-width: 60px;
+      padding: 12px;
+      background: var(--bg-tertiary);
+      border-radius: 8px;
+    }
+    .artigo-date .day {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+    .artigo-date .month {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+    .artigo-content {
+      flex: 1;
+    }
+    .artigo-content h3 {
+      margin: 8px 0;
+      font-size: 1.1rem;
+      color: var(--text-primary);
+    }
+    .artigo-content p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+    .artigo-meta {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+    .artigo-tags {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .artigo-tags .tag {
+      font-size: 0.7rem;
+      padding: 3px 8px;
+      background: var(--bg-tertiary);
+      border-radius: 4px;
+      color: var(--text-muted);
+    }
+    .tempo-leitura {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .nivel-badge.iniciante {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+    .nivel-badge.intermediario {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+    .nivel-badge.avancado {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+    .filter-btn {
+      padding: 8px 16px;
+      border-radius: 20px;
+      font-size: 0.85rem;
+    }
+    .filter-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: white;
+    }
+    .categorias-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 16px;
+    }
+    .categoria-card {
+      text-align: center;
+      padding: 24px 16px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+    .categoria-card:hover {
+      border-color: var(--primary-light);
+    }
+    .categoria-card .icone {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .categoria-card h3 {
+      font-size: 1rem;
+      margin-bottom: 4px;
+    }
+    .categoria-card p {
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      margin-bottom: 12px;
+    }
+    .categoria-card .count {
+      font-size: 0.75rem;
+      padding: 4px 12px;
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      color: var(--text-muted);
+    }
+    .empty-state {
+      text-align: center;
+      padding: 60px 20px;
+    }
+    .empty-state .icone {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    .loading {
+      text-align: center;
+      padding: 40px;
+      color: var(--text-muted);
+    }
+    @media (max-width: 600px) {
+      .artigo-item {
+        flex-direction: column;
+        gap: 12px;
+      }
+      .artigo-date {
+        flex-direction: row;
+        gap: 8px;
+        width: fit-content;
+      }
+    }
+  </style>
 </head>
 <body>
-  <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <a href="../" class="logo">
-        <div class="logo-icon">📈</div>
-        <span>Rico aos Poucos</span>
-      </a>
+  <div class="page-container">
 
-      <button class="menu-toggle" aria-label="Menu">☰</button>
-
-      <nav>
-        <ul>
-          <li><a href="../">Início</a></li>
-          <li><a href="../carteira/">Carteira</a></li>
-          <li><a href="../macroeconomia/">Cenário Macro</a></li>
-          <li><a href="../ativos/">Ativos</a></li>
-          <li><a href="../artigos/" class="active">Artigos</a></li>
-          <li><a href="../sobre/">Sobre</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <!-- Breadcrumb -->
-    <div class="breadcrumb mt-3">
-      <a href="../">Início</a>
-      <span>/</span>
-      <span>Artigos</span>
-    </div>
-
-    <!-- Header da página -->
-    <div class="section-header mt-3">
-      <h1>Artigos e Conteúdos</h1>
-      <p>Textos educativos, análises aprofundadas e reflexões sobre investimentos</p>
-    </div>
-
-    <!-- Filtros -->
-    <section class="mt-3">
-      <h3 style="margin-bottom: 16px;">Filtrar por Nível</h3>
-      <div style="display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 30px;">
-        <button class="btn btn-outline filter-btn active" data-filter="todos" onclick="filterByNivel('todos')">
-          Todos
-        </button>
-        <button class="btn btn-outline filter-btn" data-filter="iniciante" onclick="filterByNivel('iniciante')">
-          🎓 Iniciante
-        </button>
-        <button class="btn btn-outline filter-btn" data-filter="intermediario" onclick="filterByNivel('intermediario')">
-          📊 Intermediário
-        </button>
-        <button class="btn btn-outline filter-btn" data-filter="avancado" onclick="filterByNivel('avancado')">
-          🚀 Avançado
-        </button>
+    <header class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../">Inicio</a>
+          <span>/</span>
+          <span>Artigos</span>
+        </nav>
       </div>
-    </section>
+    </header>
 
-    <!-- Lista de Artigos -->
-    <section class="mb-4">
-      <h2 style="margin-bottom: 24px;">📝 Todos os Artigos</h2>
+    <main class="container" style="padding: 24px 20px;">
 
-      <div class="artigos-list" id="artigos-container">
-        <!-- Placeholder inicial -->
-        <div class="artigo-item" style="justify-content: center; padding: 60px 20px;">
-          <div style="text-align: center;">
-            <div style="font-size: 4rem; margin-bottom: 20px;">📚</div>
-            <h3 style="margin-bottom: 12px;">Em breve, novos conteúdos!</h3>
-            <p style="color: var(--text-secondary); max-width: 500px; margin: 0 auto;">
-              Estou preparando artigos educativos sobre investimentos, finanças pessoais
-              e análises de mercado. Volte em breve para conferir!
+      <div class="section-header" style="margin-bottom: 32px;">
+        <h1>Artigos e Analises</h1>
+        <p style="color: var(--text-secondary);">Textos educativos, analises aprofundadas e reflexoes sobre investimentos</p>
+      </div>
+
+      <!-- Filtros -->
+      <section style="margin-bottom: 32px;">
+        <h3 style="margin-bottom: 16px; font-size: 1rem;">Filtrar por Nivel</h3>
+        <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+          <button class="btn btn-outline filter-btn active" data-filter="todos" onclick="filterArtigos('todos')">
+            Todos
+          </button>
+          <button class="btn btn-outline filter-btn" data-filter="iniciante" onclick="filterArtigos('iniciante')">
+            🎓 Iniciante
+          </button>
+          <button class="btn btn-outline filter-btn" data-filter="intermediario" onclick="filterArtigos('intermediario')">
+            📊 Intermediario
+          </button>
+          <button class="btn btn-outline filter-btn" data-filter="avancado" onclick="filterArtigos('avancado')">
+            🚀 Avancado
+          </button>
+        </div>
+      </section>
+
+      <!-- Lista de Artigos -->
+      <section style="margin-bottom: 48px;">
+        <h2 style="margin-bottom: 20px;">📝 Artigos Recentes</h2>
+        <div class="artigos-list" id="artigos-container">
+          <div class="loading">Carregando artigos...</div>
+        </div>
+      </section>
+
+      <!-- Categorias -->
+      <section>
+        <h2 style="margin-bottom: 20px;">📁 Categorias</h2>
+        <div class="categorias-grid" id="categorias-container">
+          <div class="loading">Carregando categorias...</div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer class="page-footer" style="margin-top: 48px;">
+      <div class="container">
+        <p class="footer-disclaimer">Rico aos Poucos © 2026 - Conteudo educacional, nao e recomendacao de investimento</p>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    // Dados globais
+    let artigosData = null;
+    let filtroAtual = 'todos';
+
+    // Meses em portugues
+    const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
+
+    // Niveis
+    const niveis = {
+      iniciante: { emoji: '🎓', label: 'Iniciante' },
+      intermediario: { emoji: '📊', label: 'Intermediario' },
+      avancado: { emoji: '🚀', label: 'Avancado' }
+    };
+
+    // Carregar dados do JSON
+    async function carregarArtigos() {
+      try {
+        const response = await fetch('../data/artigos.json');
+        if (!response.ok) throw new Error('Erro ao carregar artigos');
+        artigosData = await response.json();
+        renderizarArtigos();
+        renderizarCategorias();
+      } catch (error) {
+        console.error('Erro:', error);
+        document.getElementById('artigos-container').innerHTML = `
+          <div class="empty-state">
+            <div class="icone">⚠️</div>
+            <h3>Erro ao carregar artigos</h3>
+            <p style="color: var(--text-secondary);">Tente recarregar a pagina.</p>
+          </div>
+        `;
+      }
+    }
+
+    // Formatar data
+    function formatarData(dataStr) {
+      const data = new Date(dataStr);
+      return {
+        dia: data.getDate().toString().padStart(2, '0'),
+        mes: meses[data.getMonth()]
+      };
+    }
+
+    // Renderizar artigos
+    function renderizarArtigos() {
+      const container = document.getElementById('artigos-container');
+
+      // Filtrar artigos
+      let artigos = artigosData.artigos;
+      if (filtroAtual !== 'todos') {
+        artigos = artigos.filter(a => a.nivel === filtroAtual);
+      }
+
+      // Ordenar por data (mais recentes primeiro)
+      artigos.sort((a, b) => new Date(b.dataPublicacao) - new Date(a.dataPublicacao));
+
+      if (artigos.length === 0) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="icone">📚</div>
+            <h3>Nenhum artigo encontrado</h3>
+            <p style="color: var(--text-secondary);">
+              ${filtroAtual === 'todos'
+                ? 'Em breve, novos conteudos!'
+                : 'Nao ha artigos neste nivel ainda.'}
             </p>
           </div>
-        </div>
+        `;
+        return;
+      }
 
-        <!-- Template para artigos futuros:
-        <a href="exemplo-artigo.html" class="artigo-item" data-nivel="iniciante">
-          <div class="artigo-date">
-            <div class="day">03</div>
-            <div class="month">Jan</div>
-          </div>
-          <div class="artigo-content">
-            <div style="display: flex; gap: 8px; margin-bottom: 8px;">
-              <span class="nivel-badge iniciante">🎓 Iniciante</span>
+      container.innerHTML = artigos.map(artigo => {
+        const data = formatarData(artigo.dataPublicacao);
+        const nivel = niveis[artigo.nivel];
+        const destaqueClass = artigo.destaque ? 'destaque' : '';
+
+        return `
+          <a href="${artigo.arquivo}" class="artigo-item ${destaqueClass}" data-nivel="${artigo.nivel}">
+            <div class="artigo-date">
+              <span class="day">${data.dia}</span>
+              <span class="month">${data.mes}</span>
             </div>
-            <h3>Título do Artigo</h3>
-            <p>
-              Descrição breve do artigo explicando sobre o que ele fala
-              e o que o leitor vai aprender.
-            </p>
-            <div class="artigo-tags">
-              <span class="tag">Renda Fixa</span>
-              <span class="tag">Educação</span>
+            <div class="artigo-content">
+              <span class="nivel-badge ${artigo.nivel}">${nivel.emoji} ${nivel.label}</span>
+              <h3>${artigo.titulo}</h3>
+              <p>${artigo.descricao}</p>
+              <div class="artigo-meta">
+                <span class="tempo-leitura">⏱️ ${artigo.tempoLeitura} min</span>
+                <div class="artigo-tags">
+                  ${artigo.tags.map(tag => `<span class="tag">${tag}</span>`).join('')}
+                </div>
+              </div>
             </div>
-          </div>
-        </a>
-        -->
-      </div>
-    </section>
+          </a>
+        `;
+      }).join('');
+    }
 
-    <!-- Categorias -->
-    <section class="mt-4 mb-4">
-      <h2 style="margin-bottom: 24px;">📁 Categorias</h2>
+    // Renderizar categorias
+    function renderizarCategorias() {
+      const container = document.getElementById('categorias-container');
+      const categorias = artigosData.categorias;
 
-      <div class="cards-grid" style="grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));">
-        <div class="card" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 16px;">🎓</div>
-          <h3>Educação Financeira</h3>
-          <p>Conceitos básicos para iniciantes</p>
-          <span class="tag" style="margin-top: 12px;">0 artigos</span>
+      // Contar artigos por categoria
+      const contagem = {};
+      artigosData.artigos.forEach(artigo => {
+        contagem[artigo.categoria] = (contagem[artigo.categoria] || 0) + 1;
+      });
+
+      container.innerHTML = Object.values(categorias).map(cat => `
+        <div class="categoria-card">
+          <div class="icone">${cat.icone}</div>
+          <h3>${cat.nome}</h3>
+          <p>${cat.descricao}</p>
+          <span class="count">${contagem[cat.id] || 0} artigo${(contagem[cat.id] || 0) !== 1 ? 's' : ''}</span>
         </div>
+      `).join('');
+    }
 
-        <div class="card" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 16px;">🏦</div>
-          <h3>Renda Fixa</h3>
-          <p>Tesouro, CDBs, LCIs e mais</p>
-          <span class="tag" style="margin-top: 12px;">0 artigos</span>
-        </div>
+    // Filtrar artigos por nivel
+    function filterArtigos(nivel) {
+      filtroAtual = nivel;
 
-        <div class="card" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 16px;">📈</div>
-          <h3>Renda Variável</h3>
-          <p>Ações, FIIs e ETFs</p>
-          <span class="tag" style="margin-top: 12px;">0 artigos</span>
-        </div>
+      // Atualizar botoes
+      document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.classList.remove('active');
+        if (btn.dataset.filter === nivel) {
+          btn.classList.add('active');
+        }
+      });
 
-        <div class="card" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 16px;">🌍</div>
-          <h3>Macroeconomia</h3>
-          <p>Análises do cenário econômico</p>
-          <span class="tag" style="margin-top: 12px;">0 artigos</span>
-        </div>
+      renderizarArtigos();
+    }
 
-        <div class="card" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 16px;">💡</div>
-          <h3>Estratégias</h3>
-          <p>Táticas e filosofias de investimento</p>
-          <span class="tag" style="margin-top: 12px;">0 artigos</span>
-        </div>
-
-        <div class="card" style="text-align: center;">
-          <div class="card-icon" style="margin: 0 auto 16px;">🧠</div>
-          <h3>Psicologia</h3>
-          <p>Comportamento e vieses cognitivos</p>
-          <span class="tag" style="margin-top: 12px;">0 artigos</span>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer>
-    <div class="footer-content">
-      <div class="footer-brand">
-        <h3>📈 Rico aos Poucos</h3>
-        <p>Construindo patrimônio de forma consciente, um passo de cada vez.</p>
-      </div>
-
-      <div class="footer-links">
-        <h4>Navegação</h4>
-        <ul>
-          <li><a href="../">Início</a></li>
-          <li><a href="../carteira/">Carteira</a></li>
-          <li><a href="../macroeconomia/">Cenário Macro</a></li>
-          <li><a href="../ativos/">Ativos</a></li>
-          <li><a href="../artigos/">Artigos</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-links">
-        <h4>Conteúdo</h4>
-        <ul>
-          <li><a href="../artigos/?nivel=iniciante">Para Iniciantes</a></li>
-          <li><a href="../sobre/">Sobre</a></li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p>
-        Rico aos Poucos © 2026 - Conteúdo educacional, não é recomendação de investimento.
-      </p>
-    </div>
-  </footer>
-
-  <script src="../js/app.js"></script>
+    // Inicializar
+    document.addEventListener('DOMContentLoaded', carregarArtigos);
+  </script>
 </body>
 </html>

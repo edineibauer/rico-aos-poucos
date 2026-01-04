@@ -1,0 +1,60 @@
+{
+  "ultimaAtualizacao": "2026-01-04",
+  "versao": "1.0",
+
+  "categorias": {
+    "renda-variavel": {
+      "id": "renda-variavel",
+      "nome": "Renda Variavel",
+      "icone": "📈",
+      "descricao": "Acoes, FIIs e ETFs"
+    },
+    "renda-fixa": {
+      "id": "renda-fixa",
+      "nome": "Renda Fixa",
+      "icone": "🏦",
+      "descricao": "Tesouro, CDBs, LCIs e mais"
+    },
+    "macroeconomia": {
+      "id": "macroeconomia",
+      "nome": "Macroeconomia",
+      "icone": "🌍",
+      "descricao": "Analises do cenario economico"
+    },
+    "educacao": {
+      "id": "educacao",
+      "nome": "Educacao Financeira",
+      "icone": "🎓",
+      "descricao": "Conceitos basicos para iniciantes"
+    },
+    "estrategias": {
+      "id": "estrategias",
+      "nome": "Estrategias",
+      "icone": "💡",
+      "descricao": "Taticas e filosofias de investimento"
+    },
+    "psicologia": {
+      "id": "psicologia",
+      "nome": "Psicologia",
+      "icone": "🧠",
+      "descricao": "Comportamento e vieses cognitivos"
+    }
+  },
+
+  "artigos": [
+    {
+      "id": "acoes-brasileiras-2026-analise",
+      "titulo": "Acoes Brasileiras em 2026: Hora de Cautela?",
+      "subtitulo": "Ibovespa bateu recordes em 2025, mas os riscos aumentaram",
+      "descricao": "Analise completa do cenario para acoes brasileiras. O Ibovespa subiu 34% em 2025, mas quais sao os riscos e oportunidades para 2026?",
+      "arquivo": "acoes-brasileiras-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-variavel",
+      "tags": ["acoes", "ibovespa", "selic", "eleicoes"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 8,
+      "destaque": true,
+      "setorRelacionado": "ibov"
+    }
+  ]
+}

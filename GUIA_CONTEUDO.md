@@ -227,6 +227,83 @@ Para exibicao no HTML:
 
 ---
 
+## Procedimento: Adicionar Novo Artigo
+
+O sistema de artigos e **dinamico**. A pagina `artigos/index.html` carrega automaticamente
+os artigos do arquivo `data/artigos.json`.
+
+### Passo 1: Criar o arquivo HTML do artigo
+
+1. Copie `artigos/_template.html` para um novo arquivo
+2. Renomeie para o slug do artigo: `meu-novo-artigo.html`
+3. Substitua todos os placeholders `{{...}}` com seu conteudo
+
+**Placeholders principais:**
+- `{{TITULO}}` - Titulo completo
+- `{{TITULO_CURTO}}` - Versao curta para breadcrumb
+- `{{SUBTITULO}}` - Frase que resume o artigo
+- `{{DESCRICAO_SEO}}` - Descricao para Google (max 160 caracteres)
+- `{{DATA}}` - "04 de Janeiro de 2026"
+- `{{TEMPO_LEITURA}}` - Minutos estimados
+- `{{NIVEL}}` - iniciante | intermediario | avancado
+- `{{NIVEL_EMOJI}}` - 🎓 | 📊 | 🚀
+- `{{NIVEL_TEXTO}}` - Iniciante | Intermediario | Avancado
+
+### Passo 2: Adicionar ao indice JSON
+
+Edite `data/artigos.json` e adicione o novo artigo no array `artigos`:
+
+```json
+{
+  "id": "meu-novo-artigo",
+  "titulo": "Titulo do Artigo",
+  "subtitulo": "Subtitulo ou frase de impacto",
+  "descricao": "Descricao para aparecer na listagem de artigos",
+  "arquivo": "meu-novo-artigo.html",
+  "nivel": "intermediario",
+  "categoria": "renda-variavel",
+  "tags": ["tag1", "tag2", "tag3"],
+  "dataPublicacao": "2026-01-05",
+  "tempoLeitura": 8,
+  "destaque": false,
+  "setorRelacionado": null
+}
+```
+
+**Campos importantes:**
+- `id` - Identificador unico (slug)
+- `arquivo` - Nome do arquivo HTML
+- `nivel` - iniciante | intermediario | avancado
+- `categoria` - Uma das categorias do JSON (renda-variavel, renda-fixa, macroeconomia, etc)
+- `tags` - Array de palavras-chave
+- `destaque` - Se true, aparece com borda destacada
+- `setorRelacionado` - Se o artigo e sobre um setor especifico (dolar, ibov, etc)
+
+### Passo 3: Commit e Push
+
+```bash
+git add artigos/meu-novo-artigo.html data/artigos.json
+git commit -m "feat: Adiciona artigo sobre XYZ"
+git push
+```
+
+A pagina de artigos sera atualizada automaticamente ao carregar.
+
+---
+
+## Categorias de Artigos Disponiveis
+
+| ID | Nome | Icone |
+|----|------|-------|
+| renda-variavel | Renda Variavel | 📈 |
+| renda-fixa | Renda Fixa | 🏦 |
+| macroeconomia | Macroeconomia | 🌍 |
+| educacao | Educacao Financeira | 🎓 |
+| estrategias | Estrategias | 💡 |
+| psicologia | Psicologia | 🧠 |
+
+---
+
 ## Observacoes Finais
 
 1. O app nao usa banco de dados - tudo e estatico em arquivos JSON/HTML

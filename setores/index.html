@@ -78,13 +78,8 @@
             </div>
             <div class="summary-card neutral">
               <span class="summary-icon">➡️</span>
-              <span class="summary-value">2</span>
+              <span class="summary-value">3</span>
               <span class="summary-label">Neutros</span>
-            </div>
-            <div class="summary-card bearish">
-              <span class="summary-icon">📉</span>
-              <span class="summary-value">1</span>
-              <span class="summary-label">Pessimista</span>
             </div>
           </div>
         </div>
@@ -175,18 +170,18 @@
           </a>
 
           <!-- IBOV -->
-          <a href="ibov/" class="setor-card bearish">
+          <a href="ibov/" class="setor-card neutral">
             <div class="setor-card-header">
               <div class="setor-card-icon">📈</div>
               <div class="setor-card-info">
                 <h3>IBOV</h3>
                 <span class="setor-card-desc">Acoes brasileiras e indice Bovespa</span>
               </div>
-              <div class="setor-card-badge bearish">Pessimista</div>
+              <div class="setor-card-badge neutral">Neutro</div>
             </div>
             <div class="setor-card-body">
               <div class="exposicao-bar">
-                <div class="exposicao-fill bearish" style="--width: 15%"></div>
+                <div class="exposicao-fill" style="--width: 15%"></div>
               </div>
               <div class="exposicao-info">
                 <span class="exposicao-label">Exposicao recomendada</span>
@@ -291,6 +286,19 @@
               <span class="date-month">Jan 2026</span>
             </div>
             <div class="timeline-content">
+              <h4>IBOV passa para Neutro</h4>
+              <p>Ibovespa subiu 34% em 2025. Mercado ja precificou queda da Selic. Balanca de riscos equilibrada.</p>
+              <div class="timeline-changes">
+                <span class="change-badge neutral">IBOV: Pessimista → Neutro</span>
+              </div>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-day">04</span>
+              <span class="date-month">Jan 2026</span>
+            </div>
+            <div class="timeline-content">
               <h4>Lancamento do App</h4>
               <p>Primeira versao das expectativas do canal com analise dos 7 setores principais.</p>
               <div class="timeline-changes">
@@ -342,7 +350,7 @@
           { percent: 30, color: '#1a5f4a' }, // IPCA+
           { percent: 15, color: '#3fb950' }, // Dolar
           { percent: 15, color: '#a371f7' }, // FIIs
-          { percent: 15, color: '#f85149' }, // IBOV
+          { percent: 15, color: '#f0c14b' }, // IBOV (neutro)
           { percent: 10, color: '#f0c14b' }, // Ouro
           { percent: 10, color: '#58a6ff' }, // TLT
           { percent: 5, color: '#f7931a' }   // Bitcoin

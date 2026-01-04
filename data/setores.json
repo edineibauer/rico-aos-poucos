@@ -39,10 +39,10 @@
       "nome": "TLT",
       "icone": "📊",
       "descricao": "Titulos longos do tesouro americano (20+ anos)",
-      "sentimento": "neutral",
+      "sentimento": "bullish",
       "exposicaoRecomendada": 10,
       "exemplosAtivos": ["TLT", "GOVT", "BND", "Tesouro americano direto"],
-      "cor": "#58a6ff"
+      "cor": "#3fb950"
     },
     "fiis": {
       "id": "fiis",
@@ -79,6 +79,14 @@
   "ordemExibicao": ["tesouro-ipca", "dolar", "fiis", "ibov", "ouro", "tlt", "bitcoin"],
 
   "historicoSentimentos": [
+    {
+      "data": "2026-01-04",
+      "titulo": "TLT muda para Otimista",
+      "descricao": "Precos historicamente baixos, risco limitado, ativo de protecao. Dolar + dividendo + potencial de alta = retorno atrativo.",
+      "alteracoes": {
+        "tlt": { "de": "neutral", "para": "bullish" }
+      }
+    },
     {
       "data": "2026-01-04",
       "titulo": "IPCA+ muda para Neutro",

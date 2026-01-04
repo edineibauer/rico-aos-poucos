@@ -1,0 +1,97 @@
+{
+  "ultimaAtualizacao": "2026-01-04",
+  "versao": "1.0",
+  "disclaimer": "As expectativas apresentadas refletem a opiniao do canal Rico aos Poucos e nao constituem recomendacao de investimento. Sao analises de medio prazo (1-2 anos) baseadas em cenarios macroeconomicos.",
+
+  "setores": {
+    "dolar": {
+      "id": "dolar",
+      "nome": "Dolar",
+      "icone": "💵",
+      "descricao": "Moeda americana e exposicao cambial",
+      "sentimento": "bullish",
+      "exposicaoRecomendada": 15,
+      "exemplosAtivos": ["Tesouro Selic via corretora internacional", "ETFs de renda fixa americana", "Stocks americanas"],
+      "cor": "#3fb950"
+    },
+    "ouro": {
+      "id": "ouro",
+      "nome": "Ouro",
+      "icone": "🥇",
+      "descricao": "Metal precioso como reserva de valor",
+      "sentimento": "bullish",
+      "exposicaoRecomendada": 10,
+      "exemplosAtivos": ["GOLD11", "IAU", "GLD", "Ouro fisico"],
+      "cor": "#f0c14b"
+    },
+    "bitcoin": {
+      "id": "bitcoin",
+      "nome": "Bitcoin",
+      "icone": "₿",
+      "descricao": "Criptomoeda como ativo de reserva digital",
+      "sentimento": "bullish",
+      "exposicaoRecomendada": 5,
+      "exemplosAtivos": ["Bitcoin direto", "BITH11", "IBIT", "FBTC"],
+      "cor": "#f7931a"
+    },
+    "tlt": {
+      "id": "tlt",
+      "nome": "TLT",
+      "icone": "📊",
+      "descricao": "Titulos longos do tesouro americano (20+ anos)",
+      "sentimento": "neutral",
+      "exposicaoRecomendada": 10,
+      "exemplosAtivos": ["TLT", "GOVT", "BND", "Tesouro americano direto"],
+      "cor": "#58a6ff"
+    },
+    "fiis": {
+      "id": "fiis",
+      "nome": "FIIs",
+      "icone": "🏢",
+      "descricao": "Fundos Imobiliarios brasileiros",
+      "sentimento": "neutral",
+      "exposicaoRecomendada": 15,
+      "exemplosAtivos": ["HGLG11", "XPML11", "VISC11", "KNRI11", "MXRF11"],
+      "cor": "#a371f7"
+    },
+    "ibov": {
+      "id": "ibov",
+      "nome": "IBOV",
+      "icone": "📈",
+      "descricao": "Acoes brasileiras e indice Bovespa",
+      "sentimento": "bearish",
+      "exposicaoRecomendada": 15,
+      "exemplosAtivos": ["BOVA11", "PIBB11", "Acoes individuais", "Small caps"],
+      "cor": "#f85149"
+    },
+    "tesouro-ipca": {
+      "id": "tesouro-ipca",
+      "nome": "Tesouro IPCA+",
+      "icone": "🏦",
+      "descricao": "Titulos publicos atrelados a inflacao",
+      "sentimento": "bullish",
+      "exposicaoRecomendada": 30,
+      "exemplosAtivos": ["Tesouro IPCA+ 2029", "Tesouro IPCA+ 2035", "Tesouro IPCA+ 2045"],
+      "cor": "#1a5f4a"
+    }
+  },
+
+  "ordemExibicao": ["tesouro-ipca", "dolar", "fiis", "ibov", "ouro", "tlt", "bitcoin"],
+
+  "historicoSentimentos": [
+    {
+      "data": "2026-01-04",
+      "titulo": "Lancamento do App",
+      "descricao": "Primeira versao das expectativas do canal",
+      "alteracoes": {
+        "dolar": { "de": null, "para": "bullish" },
+        "ouro": { "de": null, "para": "bullish" },
+        "bitcoin": { "de": null, "para": "bullish" },
+        "tlt": { "de": null, "para": "neutral" },
+        "fiis": { "de": null, "para": "neutral" },
+        "ibov": { "de": null, "para": "bearish" },
+        "tesouro-ipca": { "de": null, "para": "bullish" }
+      }
+    }
+  ]
+}

@@ -46,10 +46,6 @@
 
     <!-- Breaking News - Horizontal Slider -->
     <section class="breaking-news">
-      <div class="breaking-label">
-        <span class="breaking-icon">⚡</span>
-        <span>Breaking</span>
-      </div>
       <div class="news-slider" id="newsSlider">
         <div class="news-track">
           <div class="news-item" data-type="bullish">
@@ -80,178 +76,147 @@
     <!-- Main Content - Cards de Resumo -->
     <section class="app-content">
 
-      <!-- Card Principal - Minha Carteira -->
-      <a href="carteira/" class="summary-card card-featured">
+      <!-- Card Principal - Expectativas do Canal -->
+      <a href="setores/" class="summary-card card-featured">
         <div class="card-header">
           <div class="card-icon-box">
-            <span>💼</span>
+            <span>🎯</span>
           </div>
           <div class="card-title-group">
-            <h2>Minha Carteira</h2>
-            <span class="card-subtitle">Alocação recomendada</span>
+            <h2>Expectativas do Canal</h2>
+            <span class="card-subtitle">Sentimento por setor</span>
           </div>
-          <div class="card-badge">Perfil Moderado</div>
+          <div class="card-badge">Medio Prazo</div>
         </div>
         <div class="card-body">
-          <div class="allocation-visual">
+          <div class="expectativas-visual">
             <div class="allocation-ring">
               <svg viewBox="0 0 100 100">
                 <circle class="ring-bg" cx="50" cy="50" r="40"/>
-                <circle class="ring-segment seg-1" cx="50" cy="50" r="40" style="--percent: 45; --offset: 0;"/>
-                <circle class="ring-segment seg-2" cx="50" cy="50" r="40" style="--percent: 30; --offset: 45;"/>
-                <circle class="ring-segment seg-3" cx="50" cy="50" r="40" style="--percent: 15; --offset: 75;"/>
-                <circle class="ring-segment seg-4" cx="50" cy="50" r="40" style="--percent: 10; --offset: 90;"/>
+                <circle class="ring-segment seg-ipca" cx="50" cy="50" r="40" style="--percent: 30; --offset: 0;"/>
+                <circle class="ring-segment seg-dolar" cx="50" cy="50" r="40" style="--percent: 15; --offset: 30;"/>
+                <circle class="ring-segment seg-fiis" cx="50" cy="50" r="40" style="--percent: 15; --offset: 45;"/>
+                <circle class="ring-segment seg-ibov" cx="50" cy="50" r="40" style="--percent: 15; --offset: 60;"/>
+                <circle class="ring-segment seg-ouro" cx="50" cy="50" r="40" style="--percent: 10; --offset: 75;"/>
+                <circle class="ring-segment seg-tlt" cx="50" cy="50" r="40" style="--percent: 10; --offset: 85;"/>
+                <circle class="ring-segment seg-btc" cx="50" cy="50" r="40" style="--percent: 5; --offset: 95;"/>
               </svg>
               <div class="ring-center">
-                <span class="ring-value">4</span>
-                <span class="ring-label">Classes</span>
+                <span class="ring-value">7</span>
+                <span class="ring-label">Setores</span>
               </div>
             </div>
-            <div class="allocation-legend">
-              <div class="legend-item">
-                <span class="legend-dot" style="--color: var(--primary)"></span>
-                <span class="legend-name">Renda Fixa</span>
-                <span class="legend-value">45%</span>
+            <div class="setores-legend">
+              <div class="setor-item bullish">
+                <span class="setor-icon">🏦</span>
+                <span class="setor-name">IPCA+</span>
+                <span class="setor-exp">30%</span>
               </div>
-              <div class="legend-item">
-                <span class="legend-dot" style="--color: var(--bullish)"></span>
-                <span class="legend-name">RV Brasil</span>
-                <span class="legend-value">30%</span>
+              <div class="setor-item bullish">
+                <span class="setor-icon">💵</span>
+                <span class="setor-name">Dolar</span>
+                <span class="setor-exp">15%</span>
               </div>
-              <div class="legend-item">
-                <span class="legend-dot" style="--color: var(--secondary)"></span>
-                <span class="legend-name">RV Exterior</span>
-                <span class="legend-value">15%</span>
+              <div class="setor-item neutral">
+                <span class="setor-icon">🏢</span>
+                <span class="setor-name">FIIs</span>
+                <span class="setor-exp">15%</span>
               </div>
-              <div class="legend-item">
-                <span class="legend-dot" style="--color: var(--accent)"></span>
-                <span class="legend-name">Alternativos</span>
-                <span class="legend-value">10%</span>
+              <div class="setor-item bearish">
+                <span class="setor-icon">📈</span>
+                <span class="setor-name">IBOV</span>
+                <span class="setor-exp">15%</span>
               </div>
+              <div class="setor-item bullish">
+                <span class="setor-icon">🥇</span>
+                <span class="setor-name">Ouro</span>
+                <span class="setor-exp">10%</span>
+              </div>
+              <div class="setor-item neutral">
+                <span class="setor-icon">📊</span>
+                <span class="setor-name">TLT</span>
+                <span class="setor-exp">10%</span>
+              </div>
+              <div class="setor-item bullish">
+                <span class="setor-icon">₿</span>
+                <span class="setor-name">BTC</span>
+                <span class="setor-exp">5%</span>
+              </div>
+            </div>
+          </div>
+          <div class="sentimento-resumo">
+            <div class="sentimento-stat bullish">
+              <span class="sentimento-count">4</span>
+              <span class="sentimento-label">Otimistas</span>
+            </div>
+            <div class="sentimento-stat neutral">
+              <span class="sentimento-count">2</span>
+              <span class="sentimento-label">Neutros</span>
+            </div>
+            <div class="sentimento-stat bearish">
+              <span class="sentimento-count">1</span>
+              <span class="sentimento-label">Pessimista</span>
             </div>
           </div>
         </div>
         <div class="card-footer">
-          <span class="footer-action">Ver detalhes</span>
+          <span class="footer-action">Ver analise completa</span>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </a>
 
-      <!-- Grid de Cards Secundários -->
-      <div class="cards-grid-2">
+      <!-- Links Secundarios - Macro e Ativos em segundo plano -->
+      <div class="cards-grid-2 secondary-links">
 
-        <!-- Card Cenário Macro -->
-        <a href="macroeconomia/" class="summary-card card-macro">
-          <div class="card-header">
-            <div class="card-icon-box macro">
-              <span>🌍</span>
-            </div>
-            <div class="card-title-group">
-              <h2>Cenário Macro</h2>
-              <span class="card-subtitle">Economia & Mercados</span>
-            </div>
+        <!-- Card Publicacoes -->
+        <a href="artigos/" class="summary-card card-compact">
+          <div class="card-icon-box articles">
+            <span>📝</span>
           </div>
-          <div class="card-body">
-            <div class="macro-indicators">
-              <div class="indicator-item">
-                <span class="indicator-label">Selic</span>
-                <span class="indicator-value bearish">14,25%</span>
-              </div>
-              <div class="indicator-item">
-                <span class="indicator-label">IPCA</span>
-                <span class="indicator-value neutral">4,8%</span>
-              </div>
-              <div class="indicator-item">
-                <span class="indicator-label">Dólar</span>
-                <span class="indicator-value bearish">R$ 6,20</span>
-              </div>
-            </div>
-            <div class="sentiment-bar">
-              <div class="sentiment-fill bearish" style="--width: 65%"></div>
-            </div>
-            <span class="sentiment-label">Cautela recomendada</span>
+          <div class="card-title-group">
+            <h2>Publicacoes</h2>
+            <span class="card-subtitle">Artigos & Analises</span>
           </div>
-          <div class="card-footer">
-            <span class="footer-action">Analisar cenário</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
-        <!-- Card Análise de Ativos -->
-        <a href="ativos/" class="summary-card card-ativos">
-          <div class="card-header">
-            <div class="card-icon-box ativos">
-              <span>📊</span>
-            </div>
-            <div class="card-title-group">
-              <h2>Ativos</h2>
-              <span class="card-subtitle">Análises & Setores</span>
-            </div>
+        <!-- Card Sobre -->
+        <a href="sobre/" class="summary-card card-compact">
+          <div class="card-icon-box about">
+            <span>💡</span>
           </div>
-          <div class="card-body">
-            <div class="sectors-preview">
-              <div class="sector-chip bullish">
-                <span class="chip-icon">📈</span>
-                <span>Energia</span>
-              </div>
-              <div class="sector-chip bullish">
-                <span class="chip-icon">📈</span>
-                <span>Bancos</span>
-              </div>
-              <div class="sector-chip bearish">
-                <span class="chip-icon">📉</span>
-                <span>Varejo</span>
-              </div>
-              <div class="sector-chip bearish">
-                <span class="chip-icon">📉</span>
-                <span>Construção</span>
-              </div>
-            </div>
-            <div class="sectors-summary">
-              <div class="summary-stat">
-                <span class="stat-number bullish">4</span>
-                <span class="stat-text">Otimistas</span>
-              </div>
-              <div class="summary-divider"></div>
-              <div class="summary-stat">
-                <span class="stat-number bearish">3</span>
-                <span class="stat-text">Pessimistas</span>
-              </div>
-            </div>
+          <div class="card-title-group">
+            <h2>Sobre o Canal</h2>
+            <span class="card-subtitle">Filosofia & Metodo</span>
           </div>
-          <div class="card-footer">
-            <span class="footer-action">Explorar setores</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
       </div>
 
-      <!-- Segunda linha de cards -->
+      <!-- Links terciarios -->
       <div class="cards-grid-3">
 
-        <!-- Card Publicações -->
-        <a href="artigos/" class="summary-card card-small card-articles">
-          <div class="card-icon-box articles">
-            <span>📝</span>
+        <!-- Card Cenario Macro -->
+        <a href="macroeconomia/" class="summary-card card-small card-macro">
+          <div class="card-icon-box macro">
+            <span>🌍</span>
           </div>
           <div class="card-info">
-            <h3>Publicações</h3>
-            <span class="card-meta">Artigos & Análises</span>
+            <h3>Macro</h3>
+            <span class="card-meta">Cenario Economico</span>
           </div>
-          <div class="card-indicator">
-            <span class="indicator-badge">Em breve</span>
-          </div>
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
-        <!-- Card Sobre -->
-        <a href="sobre/" class="summary-card card-small card-about">
-          <div class="card-icon-box about">
-            <span>💡</span>
+        <!-- Card Ativos -->
+        <a href="ativos/" class="summary-card card-small card-ativos">
+          <div class="card-icon-box ativos">
+            <span>📊</span>
           </div>
           <div class="card-info">
-            <h3>Sobre</h3>
-            <span class="card-meta">Filosofia & Método</span>
+            <h3>Ativos</h3>
+            <span class="card-meta">Analises</span>
           </div>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -263,7 +228,7 @@
           </div>
           <div class="card-info">
             <h3>Iniciantes</h3>
-            <span class="card-meta">Comece por aqui</span>
+            <span class="card-meta">Comece aqui</span>
           </div>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>

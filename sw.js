@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rico-aos-poucos-v2';
+const CACHE_NAME = 'rico-aos-poucos-v3';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -12,6 +12,10 @@ const urlsToCache = [
   '/setores/index.html',
   '/artigos/',
   '/artigos/index.html',
+  '/desempenho/',
+  '/desempenho/index.html',
+  '/carteira/',
+  '/carteira/index.html',
   '/sobre/',
   '/data/artigos.json',
   '/data/setores.json'

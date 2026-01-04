@@ -9,14 +9,22 @@
   <title>Expectativas do Canal - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .app-header-inner {
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header igual ao home */
+    .app-header {
       display: flex;
       align-items: center;
       gap: 12px;
-      padding: 16px 20px;
+      padding: 14px 20px;
       background: var(--bg-secondary);
       border-bottom: 1px solid var(--border-color);
     }
+
     .header-back {
       display: flex;
       align-items: center;
@@ -28,444 +36,502 @@
       color: var(--text-primary);
       text-decoration: none;
       transition: all 0.3s ease;
+      flex-shrink: 0;
     }
+
     .header-back:hover {
       background: rgba(255, 255, 255, 0.1);
     }
+
     .header-back svg {
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       stroke: currentColor;
       stroke-width: 2;
       fill: none;
     }
-    .header-title-group {
-      flex: 1;
+
+    .app-logo {
+      position: relative;
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
     }
-    .header-title {
-      font-size: 1.1rem;
+
+    .logo-icon {
+      font-size: 1.4rem;
+    }
+
+    .app-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .app-subtitle {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Exposicao Section - Topo */
+    .exposicao-section {
+      margin-bottom: 24px;
+    }
+
+    .exposicao-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .exposicao-title {
+      font-size: 1rem;
       font-weight: 600;
       color: var(--text-primary);
       margin: 0;
     }
-    .header-subtitle {
+
+    .exposicao-stats {
+      display: flex;
+      gap: 12px;
+    }
+
+    .stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .stat-pill.bullish {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+
+    .stat-pill.neutral {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    /* Barras horizontais */
+    .bar-chart {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bar-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 10px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .bar-item:hover {
+      border-color: var(--primary-light);
+      transform: translateX(4px);
+    }
+
+    .bar-icon {
+      font-size: 1.2rem;
+      width: 28px;
+      text-align: center;
+      flex-shrink: 0;
+    }
+
+    .bar-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .bar-name {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 4px;
+    }
+
+    .bar-track {
+      height: 6px;
+      background: var(--bg-tertiary);
+      border-radius: 3px;
+      overflow: hidden;
+    }
+
+    .bar-fill {
+      height: 100%;
+      border-radius: 3px;
+      transition: width 0.5s ease;
+    }
+
+    .bar-fill.bullish { background: var(--bullish); }
+    .bar-fill.neutral { background: var(--neutral); }
+
+    .bar-percent {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      min-width: 40px;
+      text-align: right;
+    }
+
+    .bar-sentiment {
+      font-size: 0.65rem;
+      padding: 3px 8px;
+      border-radius: 8px;
+      font-weight: 600;
+      flex-shrink: 0;
+    }
+
+    .bar-sentiment.bullish {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+
+    .bar-sentiment.neutral {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    /* Disclaimer compacto */
+    .disclaimer-compact {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding: 12px 14px;
+      background: rgba(240, 193, 75, 0.08);
+      border: 1px solid rgba(240, 193, 75, 0.2);
+      border-radius: 10px;
+      margin-bottom: 24px;
+    }
+
+    .disclaimer-compact .icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .disclaimer-compact p {
       font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    /* Timeline Section */
+    .timeline-section {
+      margin-top: 24px;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 12px;
+    }
+
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .timeline-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+
+    .timeline-date {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 40px;
+    }
+
+    .timeline-date .day {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-light);
+      line-height: 1;
+    }
+
+    .timeline-date .month {
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+    }
+
+    .timeline-content {
+      flex: 1;
+    }
+
+    .timeline-content h4 {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0 0 4px;
+    }
+
+    .timeline-content p {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      margin: 0 0 8px;
+      line-height: 1.4;
+    }
+
+    .change-badges {
+      display: flex;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .change-badge {
+      font-size: 0.6rem;
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-weight: 600;
+    }
+
+    .change-badge.bullish {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+
+    .change-badge.neutral {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    /* Footer */
+    .page-footer {
+      padding: 16px 20px;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+    }
+
+    .footer-text {
+      font-size: 0.7rem;
       color: var(--text-muted);
     }
   </style>
 </head>
 <body>
-  <div class="page-container">
+  <div class="page-wrapper">
 
-    <!-- Header -->
-    <header class="app-header-inner">
+    <!-- Header igual ao home com back button -->
+    <header class="app-header">
       <a href="../" class="header-back">
         <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       </a>
-      <div class="header-title-group">
-        <h1 class="header-title">Expectativas do Canal</h1>
-        <span class="header-subtitle">Sentimento por setor</span>
+      <div class="app-logo">
+        <svg viewBox="0 0 100 100" width="36" height="36">
+          <defs>
+            <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a5f4a"/>
+              <stop offset="100%" style="stop-color:#0d1117"/>
+            </linearGradient>
+            <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#3fb950"/>
+              <stop offset="100%" style="stop-color:#2d8a6e"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+          <text x="10" y="68" font-family="Arial" font-size="42" font-weight="700" fill="url(#txt)">R</text>
+          <text x="38" y="68" font-family="Arial" font-size="28" font-weight="600" fill="#f0f6fc" opacity="0.7">a</text>
+          <text x="56" y="68" font-family="Arial" font-size="42" font-weight="700" fill="url(#txt)">P</text>
+          <rect x="10" y="76" width="80" height="3" rx="1.5" fill="#3fb950" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="app-title-group">
+        <h1 class="app-name">Rico aos Poucos</h1>
+        <span class="app-subtitle">Expectativas do Canal</span>
       </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="setores-hero">
-      <div class="container">
-        <div class="hero-content">
-          <div class="hero-badge">
-            <span class="badge-icon">🎯</span>
-            <span>Visao de Medio Prazo (1-2 anos)</span>
-          </div>
-          <h1>Expectativas do Canal</h1>
-          <p class="hero-subtitle">
-            Nossa visao sobre os principais setores de investimento. Estas sao
-            <strong>opinioes do canal</strong> baseadas em analise macroeconomica,
-            nao constituindo recomendacao de investimento.
-          </p>
-        </div>
+    <!-- Main Content -->
+    <main class="main-content">
 
-        <!-- Disclaimer importante -->
-        <div class="disclaimer-box">
-          <div class="disclaimer-icon">⚠️</div>
-          <div class="disclaimer-content">
-            <h4>Importante</h4>
-            <p>
-              As expectativas aqui apresentadas refletem a opiniao pessoal do canal Rico aos Poucos
-              e <strong>nao sao recomendacoes de investimento</strong>. Sao analises de medio prazo
-              (1-2 anos) que podem mudar conforme o cenario economico evolui. Sempre faca sua
-              propria pesquisa antes de investir.
-            </p>
-          </div>
-        </div>
+      <!-- Disclaimer compacto -->
+      <div class="disclaimer-compact">
+        <span class="icon">⚠️</span>
+        <p>Opinioes do canal, nao sao recomendacoes de investimento. Visao de medio prazo (1-2 anos) sujeita a mudancas.</p>
       </div>
-    </section>
 
-    <!-- Resumo de Alocacao -->
-    <section class="alocacao-resumo">
-      <div class="container">
-        <div class="resumo-header">
-          <h2>Exposicao Recomendada</h2>
-          <p>Distribuicao sugerida entre os setores (total: 100%)</p>
-        </div>
-
-        <div class="alocacao-chart-container">
-          <div class="pie-chart-wrapper">
-            <div class="pie-chart-large" id="setoresChart"></div>
-            <div class="chart-center-label">
-              <span class="center-value">100%</span>
-              <span class="center-text">Total</span>
-            </div>
-          </div>
-
-          <div class="sentimento-summary">
-            <div class="summary-card bullish">
-              <span class="summary-icon">📈</span>
-              <span class="summary-value">4</span>
-              <span class="summary-label">Otimistas</span>
-            </div>
-            <div class="summary-card neutral">
-              <span class="summary-icon">➡️</span>
-              <span class="summary-value">3</span>
-              <span class="summary-label">Neutros</span>
-            </div>
+      <!-- Exposicao Recomendada - Grafico de barras -->
+      <section class="exposicao-section">
+        <div class="exposicao-header">
+          <h2 class="exposicao-title">Exposicao Recomendada</h2>
+          <div class="exposicao-stats">
+            <span class="stat-pill bullish">4 Otimistas</span>
+            <span class="stat-pill neutral">3 Neutros</span>
           </div>
         </div>
-      </div>
-    </section>
 
-    <!-- Lista de Setores -->
-    <section class="setores-lista">
-      <div class="container">
-        <h2>Setores Analisados</h2>
-        <p class="section-subtitle">Clique em cada setor para ver a analise completa e historico de publicacoes</p>
-
-        <div class="setores-grid">
-
-          <!-- Tesouro IPCA+ -->
-          <a href="tesouro-ipca/" class="setor-card neutral">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">🏦</div>
-              <div class="setor-card-info">
-                <h3>Tesouro IPCA+</h3>
-                <span class="setor-card-desc">Titulos publicos atrelados a inflacao</span>
-              </div>
-              <div class="setor-card-badge neutral">Neutro</div>
+        <div class="bar-chart">
+          <a href="tesouro-ipca/" class="bar-item">
+            <span class="bar-icon">🏦</span>
+            <div class="bar-info">
+              <div class="bar-name">Tesouro IPCA+</div>
+              <div class="bar-track"><div class="bar-fill neutral" style="width: 30%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 30%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">30%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">30%</span>
+            <span class="bar-sentiment neutral">Neutro</span>
           </a>
 
-          <!-- Dolar -->
-          <a href="dolar/" class="setor-card bullish">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">💵</div>
-              <div class="setor-card-info">
-                <h3>Dolar</h3>
-                <span class="setor-card-desc">Moeda americana e exposicao cambial</span>
-              </div>
-              <div class="setor-card-badge bullish">Otimista</div>
+          <a href="dolar/" class="bar-item">
+            <span class="bar-icon">💵</span>
+            <div class="bar-info">
+              <div class="bar-name">Dolar</div>
+              <div class="bar-track"><div class="bar-fill bullish" style="width: 15%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 15%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">15%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">15%</span>
+            <span class="bar-sentiment bullish">Otimista</span>
           </a>
 
-          <!-- FIIs -->
-          <a href="fiis/" class="setor-card neutral">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">🏢</div>
-              <div class="setor-card-info">
-                <h3>FIIs</h3>
-                <span class="setor-card-desc">Fundos Imobiliarios brasileiros</span>
-              </div>
-              <div class="setor-card-badge neutral">Neutro</div>
+          <a href="fiis/" class="bar-item">
+            <span class="bar-icon">🏢</span>
+            <div class="bar-info">
+              <div class="bar-name">FIIs</div>
+              <div class="bar-track"><div class="bar-fill neutral" style="width: 15%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 15%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">15%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">15%</span>
+            <span class="bar-sentiment neutral">Neutro</span>
           </a>
 
-          <!-- IBOV -->
-          <a href="ibov/" class="setor-card neutral">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">📈</div>
-              <div class="setor-card-info">
-                <h3>IBOV</h3>
-                <span class="setor-card-desc">Acoes brasileiras e indice Bovespa</span>
-              </div>
-              <div class="setor-card-badge neutral">Neutro</div>
+          <a href="ibov/" class="bar-item">
+            <span class="bar-icon">📈</span>
+            <div class="bar-info">
+              <div class="bar-name">IBOV</div>
+              <div class="bar-track"><div class="bar-fill neutral" style="width: 15%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 15%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">15%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">15%</span>
+            <span class="bar-sentiment neutral">Neutro</span>
           </a>
 
-          <!-- Ouro -->
-          <a href="ouro/" class="setor-card bullish">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">🥇</div>
-              <div class="setor-card-info">
-                <h3>Ouro</h3>
-                <span class="setor-card-desc">Metal precioso como reserva de valor</span>
-              </div>
-              <div class="setor-card-badge bullish">Otimista</div>
+          <a href="ouro/" class="bar-item">
+            <span class="bar-icon">🥇</span>
+            <div class="bar-info">
+              <div class="bar-name">Ouro</div>
+              <div class="bar-track"><div class="bar-fill bullish" style="width: 10%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 10%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">10%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">10%</span>
+            <span class="bar-sentiment bullish">Otimista</span>
           </a>
 
-          <!-- TLT -->
-          <a href="tlt/" class="setor-card bullish">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">📊</div>
-              <div class="setor-card-info">
-                <h3>TLT</h3>
-                <span class="setor-card-desc">Titulos longos do tesouro americano</span>
-              </div>
-              <div class="setor-card-badge bullish">Otimista</div>
+          <a href="tlt/" class="bar-item">
+            <span class="bar-icon">📊</span>
+            <div class="bar-info">
+              <div class="bar-name">TLT</div>
+              <div class="bar-track"><div class="bar-fill bullish" style="width: 10%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 10%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">10%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">10%</span>
+            <span class="bar-sentiment bullish">Otimista</span>
           </a>
 
-          <!-- Bitcoin -->
-          <a href="bitcoin/" class="setor-card bullish">
-            <div class="setor-card-header">
-              <div class="setor-card-icon">₿</div>
-              <div class="setor-card-info">
-                <h3>Bitcoin</h3>
-                <span class="setor-card-desc">Criptomoeda como ativo de reserva digital</span>
-              </div>
-              <div class="setor-card-badge bullish">Otimista</div>
+          <a href="bitcoin/" class="bar-item">
+            <span class="bar-icon">₿</span>
+            <div class="bar-info">
+              <div class="bar-name">Bitcoin</div>
+              <div class="bar-track"><div class="bar-fill bullish" style="width: 5%"></div></div>
             </div>
-            <div class="setor-card-body">
-              <div class="exposicao-bar">
-                <div class="exposicao-fill" style="--width: 5%"></div>
-              </div>
-              <div class="exposicao-info">
-                <span class="exposicao-label">Exposicao recomendada</span>
-                <span class="exposicao-value">5%</span>
-              </div>
-            </div>
-            <div class="setor-card-footer">
-              <span class="footer-text">Ver analise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </div>
+            <span class="bar-percent">5%</span>
+            <span class="bar-sentiment bullish">Otimista</span>
           </a>
-
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- Historico de Mudancas -->
-    <section class="historico-section">
-      <div class="container">
-        <h2>Historico de Atualizacoes</h2>
-        <p class="section-subtitle">Linha do tempo das mudancas de sentimento</p>
+      <!-- Timeline de mudancas -->
+      <section class="timeline-section">
+        <h3 class="section-title">Historico de Mudancas</h3>
 
         <div class="timeline">
           <div class="timeline-item">
             <div class="timeline-date">
-              <span class="date-day">04</span>
-              <span class="date-month">Jan 2026</span>
+              <span class="day">04</span>
+              <span class="month">Jan</span>
             </div>
             <div class="timeline-content">
               <h4>TLT muda para Otimista</h4>
-              <p>Precos historicamente baixos, risco limitado, ativo de protecao. Dolar + dividendo + potencial de alta = retorno atrativo.</p>
-              <div class="timeline-changes">
-                <span class="change-badge bullish">TLT: Neutro → Otimista</span>
+              <p>Precos historicamente baixos, risco limitado, ativo de protecao.</p>
+              <div class="change-badges">
+                <span class="change-badge bullish">Neutro → Otimista</span>
               </div>
             </div>
           </div>
+
           <div class="timeline-item">
             <div class="timeline-date">
-              <span class="date-day">04</span>
-              <span class="date-month">Jan 2026</span>
+              <span class="day">04</span>
+              <span class="month">Jan</span>
             </div>
             <div class="timeline-content">
               <h4>IPCA+ muda para Neutro</h4>
-              <p>Taxas altas (IPCA+7%), mas risco fiscal real. Marcacao a mercado pode ser negativa. Prefira prazos curtos.</p>
-              <div class="timeline-changes">
-                <span class="change-badge neutral">IPCA+: Otimista → Neutro</span>
+              <p>Taxas altas mas risco fiscal real. Marcacao a mercado pode ser negativa.</p>
+              <div class="change-badges">
+                <span class="change-badge neutral">Otimista → Neutro</span>
               </div>
             </div>
           </div>
+
           <div class="timeline-item">
             <div class="timeline-date">
-              <span class="date-day">04</span>
-              <span class="date-month">Jan 2026</span>
-            </div>
-            <div class="timeline-content">
-              <h4>Nova analise: FIIs Neutros</h4>
-              <p>Bom para renda passiva, mas precos esticados. Mercado ja precificou corte de Selic. Esperando correcao.</p>
-              <div class="timeline-changes">
-                <span class="change-badge neutral">FIIs: Neutro (mantido)</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">
-              <span class="date-day">04</span>
-              <span class="date-month">Jan 2026</span>
-            </div>
-            <div class="timeline-content">
-              <h4>Nova analise: Dolar Otimista</h4>
-              <p>Dolar caiu 11% em 2025 (maior queda desde 2016). Carry trade, risco fiscal e papel de ativo de refugio favorecem valorizacao.</p>
-              <div class="timeline-changes">
-                <span class="change-badge bullish">Dolar: Otimista (mantido)</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">
-              <span class="date-day">04</span>
-              <span class="date-month">Jan 2026</span>
-            </div>
-            <div class="timeline-content">
-              <h4>IBOV passa para Neutro</h4>
-              <p>Ibovespa subiu 34% em 2025. Mercado ja precificou queda da Selic. Balanca de riscos equilibrada.</p>
-              <div class="timeline-changes">
-                <span class="change-badge neutral">IBOV: Pessimista → Neutro</span>
-              </div>
-            </div>
-          </div>
-          <div class="timeline-item">
-            <div class="timeline-date">
-              <span class="date-day">04</span>
-              <span class="date-month">Jan 2026</span>
+              <span class="day">04</span>
+              <span class="month">Jan</span>
             </div>
             <div class="timeline-content">
               <h4>Lancamento do App</h4>
-              <p>Primeira versao das expectativas do canal com analise dos 7 setores principais.</p>
-              <div class="timeline-changes">
+              <p>Primeira versao das expectativas do canal.</p>
+              <div class="change-badges">
                 <span class="change-badge bullish">+4 Otimistas</span>
                 <span class="change-badge neutral">+3 Neutros</span>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="historico-note">
-          <p>
-            <strong>Nota:</strong> Este historico sera atualizado conforme houver mudancas
-            nos sentimentos. Acompanhe as publicacoes de cada setor para entender o
-            racional por tras das alteracoes.
-          </p>
-        </div>
-      </div>
-    </section>
+    </main>
 
     <!-- Footer -->
     <footer class="page-footer">
-      <div class="container">
-        <div class="footer-nav">
-          <a href="../" class="back-link">
-            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            <span>Voltar ao inicio</span>
-          </a>
-        </div>
-        <p class="footer-disclaimer">
-          Conteudo educacional - Nao e recomendacao de investimento
-        </p>
-        <div class="footer-version">
-          <span>Ultima atualizacao: Janeiro 2026</span>
-        </div>
-      </div>
+      <p class="footer-text">Conteudo educacional - Nao e recomendacao de investimento</p>
     </footer>
 
   </div>
-
-  <script src="../js/app.js"></script>
-  <script>
-    // Renderiza grafico de pizza para setores
-    document.addEventListener('DOMContentLoaded', function() {
-      const chart = document.getElementById('setoresChart');
-      if (chart) {
-        const segments = [
-          { percent: 30, color: '#1a5f4a' }, // IPCA+
-          { percent: 15, color: '#3fb950' }, // Dolar
-          { percent: 15, color: '#a371f7' }, // FIIs
-          { percent: 15, color: '#f0c14b' }, // IBOV (neutro)
-          { percent: 10, color: '#f0c14b' }, // Ouro
-          { percent: 10, color: '#3fb950' }, // TLT (otimista)
-          { percent: 5, color: '#f7931a' }   // Bitcoin
-        ];
-
-        let currentAngle = 0;
-        let gradientParts = [];
-
-        segments.forEach(seg => {
-          const nextAngle = currentAngle + (seg.percent * 3.6);
-          gradientParts.push(`${seg.color} ${currentAngle}deg ${nextAngle}deg`);
-          currentAngle = nextAngle;
-        });
-
-        chart.style.background = `conic-gradient(${gradientParts.join(', ')})`;
-      }
-    });
-  </script>
 </body>
 </html>

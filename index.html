@@ -12,6 +12,15 @@
   <meta property="og:description" content="Seu guia para investimentos inteligentes. Análises de mercado, alocação de carteira e educação financeira.">
   <meta property="og:type" content="website">
 
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Rico aos Poucos">
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="apple-touch-icon" href="icon-192.png">
+
   <title>Rico aos Poucos - Investimentos Inteligentes</title>
 
   <link rel="stylesheet" href="css/style.css">
@@ -36,7 +45,6 @@
       </div>
       <div class="app-title-group">
         <h1 class="app-name">Rico aos Poucos</h1>
-        <span class="app-tagline">Investimentos Inteligentes</span>
       </div>
       <div class="app-status">
         <span class="status-dot"></span>
@@ -48,22 +56,22 @@
     <section class="breaking-news">
       <div class="news-slider" id="newsSlider">
         <div class="news-track">
-          <div class="news-item" data-type="bullish">
-            <span class="news-badge bullish">Mudanca</span>
-            <span class="news-title">TLT muda para Otimista - precos baixos, baixo risco</span>
-          </div>
-          <div class="news-item" data-type="neutral">
+          <a href="artigos/tlt-2026-analise.html" class="news-item" data-type="bullish">
+            <span class="news-badge bullish">TLT</span>
+            <span class="news-title">Muda para Otimista - precos baixos, baixo risco</span>
+          </a>
+          <a href="artigos/tesouro-ipca-2026-analise.html" class="news-item" data-type="neutral">
             <span class="news-badge neutral">IPCA+</span>
             <span class="news-title">Neutro - risco fiscal real</span>
-          </div>
-          <div class="news-item" data-type="bullish">
+          </a>
+          <a href="artigos/dolar-2026-analise.html" class="news-item" data-type="bullish">
             <span class="news-badge bullish">Dolar</span>
             <span class="news-title">Otimistas apos queda de 11% em 2025</span>
-          </div>
-          <div class="news-item" data-type="neutral">
+          </a>
+          <a href="artigos/fiis-2026-analise.html" class="news-item" data-type="neutral">
             <span class="news-badge neutral">FIIs</span>
             <span class="news-title">Renda passiva - precos esticados</span>
-          </div>
+          </a>
         </div>
       </div>
       <div class="slider-indicators" id="sliderIndicators"></div>
@@ -73,8 +81,8 @@
     <section class="app-content">
 
       <!-- Card Principal - Expectativas do Canal -->
-      <a href="setores/" class="summary-card card-featured">
-        <div class="card-header">
+      <div class="summary-card card-featured card-expectativas">
+        <a href="setores/" class="card-header">
           <div class="card-icon-box">
             <span>🎯</span>
           </div>
@@ -83,10 +91,10 @@
             <span class="card-subtitle">Sentimento por setor</span>
             <div class="card-badge">Medio Prazo</div>
           </div>
-        </div>
+        </a>
         <div class="card-body">
           <div class="expectativas-visual">
-            <div class="allocation-ring">
+            <a href="setores/" class="allocation-ring">
               <svg viewBox="0 0 100 100">
                 <circle class="ring-bg" cx="50" cy="50" r="40"/>
                 <circle class="ring-segment seg-ipca" cx="50" cy="50" r="40" style="--percent: 30; --offset: 0;"/>
@@ -101,46 +109,46 @@
                 <span class="ring-value">7</span>
                 <span class="ring-label">Setores</span>
               </div>
-            </div>
+            </a>
             <div class="setores-legend">
-              <div class="setor-item neutral">
+              <a href="setores/tesouro-ipca/" class="setor-item neutral">
                 <span class="setor-icon">🏦</span>
                 <span class="setor-name">IPCA+</span>
                 <span class="setor-exp">30%</span>
-              </div>
-              <div class="setor-item bullish">
+              </a>
+              <a href="setores/dolar/" class="setor-item bullish">
                 <span class="setor-icon">💵</span>
                 <span class="setor-name">Dolar</span>
                 <span class="setor-exp">15%</span>
-              </div>
-              <div class="setor-item neutral">
+              </a>
+              <a href="setores/fiis/" class="setor-item neutral">
                 <span class="setor-icon">🏢</span>
                 <span class="setor-name">FIIs</span>
                 <span class="setor-exp">15%</span>
-              </div>
-              <div class="setor-item neutral">
+              </a>
+              <a href="setores/ibov/" class="setor-item neutral">
                 <span class="setor-icon">📈</span>
                 <span class="setor-name">IBOV</span>
                 <span class="setor-exp">15%</span>
-              </div>
-              <div class="setor-item bullish">
+              </a>
+              <a href="setores/ouro/" class="setor-item bullish">
                 <span class="setor-icon">🥇</span>
                 <span class="setor-name">Ouro</span>
                 <span class="setor-exp">10%</span>
-              </div>
-              <div class="setor-item bullish">
+              </a>
+              <a href="setores/tlt/" class="setor-item bullish">
                 <span class="setor-icon">📊</span>
                 <span class="setor-name">TLT</span>
                 <span class="setor-exp">10%</span>
-              </div>
-              <div class="setor-item bullish">
+              </a>
+              <a href="setores/bitcoin/" class="setor-item bullish">
                 <span class="setor-icon">₿</span>
                 <span class="setor-name">BTC</span>
                 <span class="setor-exp">5%</span>
-              </div>
+              </a>
             </div>
           </div>
-          <div class="sentimento-resumo">
+          <a href="setores/" class="sentimento-resumo">
             <div class="sentimento-stat bullish">
               <span class="sentimento-count">4</span>
               <span class="sentimento-label">Otimistas</span>
@@ -149,13 +157,13 @@
               <span class="sentimento-count">3</span>
               <span class="sentimento-label">Neutros</span>
             </div>
-          </div>
+          </a>
         </div>
-        <div class="card-footer">
+        <a href="setores/" class="card-footer">
           <span class="footer-action">Ver analise completa</span>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </div>
-      </a>
+        </a>
+      </div>
 
       <!-- Links Secundarios - Macro e Ativos em segundo plano -->
       <div class="cards-grid-2 secondary-links">
@@ -243,6 +251,55 @@
 
   </main>
 
+  <!-- PWA Install Banner -->
+  <div class="pwa-install-banner" id="pwaInstallBanner">
+    <div class="pwa-install-content">
+      <span class="pwa-icon">📲</span>
+      <div class="pwa-text">
+        <strong>Instale o App</strong>
+        <span>Acesse offline e mais rapido</span>
+      </div>
+    </div>
+    <button class="pwa-install-btn" id="pwaInstallBtn">Instalar</button>
+    <button class="pwa-close-btn" id="pwaCloseBtn">✕</button>
+  </div>
+
   <script src="js/app.js"></script>
+  <script>
+    // PWA Install
+    let deferredPrompt;
+    const installBanner = document.getElementById('pwaInstallBanner');
+    const installBtn = document.getElementById('pwaInstallBtn');
+    const closeBtn = document.getElementById('pwaCloseBtn');
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!localStorage.getItem('pwaInstallDismissed')) {
+        installBanner.classList.add('show');
+      }
+    });
+
+    installBtn?.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        deferredPrompt = null;
+        installBanner.classList.remove('show');
+      }
+    });
+
+    closeBtn?.addEventListener('click', () => {
+      installBanner.classList.remove('show');
+      localStorage.setItem('pwaInstallDismissed', 'true');
+    });
+
+    // Service Worker
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('sw.js').catch(() => {});
+      });
+    }
+  </script>
 </body>
 </html>

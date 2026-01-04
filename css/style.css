@@ -1116,6 +1116,9 @@ body.home-page {
   flex-shrink: 0;
   max-width: 320px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .news-item:hover {
@@ -1471,6 +1474,14 @@ body.home-page {
   background: rgba(255, 255, 255, 0.03);
   border-left: 3px solid transparent;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.setor-item:hover {
+  transform: translateX(2px);
+  filter: brightness(1.2);
 }
 
 .setor-item.bullish {
@@ -3385,4 +3396,140 @@ body.home-page {
 .card-compact:hover .arrow-icon {
   opacity: 1;
   transform: translateX(4px);
+}
+
+/* ==========================================
+   Card Expectativas - Links Individuais
+   ========================================== */
+
+.card-expectativas {
+  cursor: default;
+}
+
+.card-expectativas .card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-expectativas .card-header:hover .card-title-group h2 {
+  color: var(--primary-light);
+}
+
+.card-expectativas .card-body {
+  width: 100%;
+}
+
+.card-expectativas .allocation-ring {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-expectativas .sentimento-resumo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-expectativas .card-footer {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   PWA Install Banner
+   ========================================== */
+
+.pwa-install-banner {
+  position: fixed;
+  bottom: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  transition: bottom 0.4s ease;
+  max-width: calc(100% - 32px);
+}
+
+.pwa-install-banner.show {
+  bottom: 20px;
+}
+
+.pwa-install-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pwa-icon {
+  font-size: 1.5rem;
+}
+
+.pwa-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pwa-text strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.pwa-text span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pwa-install-btn {
+  padding: 8px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.pwa-install-btn:hover {
+  background: var(--primary-light);
+}
+
+.pwa-close-btn {
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.pwa-close-btn:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .pwa-install-banner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .pwa-install-content {
+    flex: 1;
+    min-width: 200px;
+  }
 }

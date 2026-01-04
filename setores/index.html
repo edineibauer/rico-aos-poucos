@@ -225,6 +225,13 @@
       color: var(--neutral);
     }
 
+    .bar-sentiment.bearish {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+
+    .bar-fill.bearish { background: var(--bearish); }
+
     /* Disclaimer compacto */
     .disclaimer-compact {
       display: flex;
@@ -338,6 +345,11 @@
       color: var(--neutral);
     }
 
+    .change-badge.bearish {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+
     /* Footer */
     .page-footer {
       padding: 12px 16px;
@@ -405,7 +417,7 @@
         <div class="exposicao-header">
           <h2 class="exposicao-title">Exposicao Recomendada</h2>
           <div class="exposicao-stats">
-            <span class="stat-pill bullish">4 Otimistas</span>
+            <span class="stat-pill bullish">3 Otimistas</span>
             <span class="stat-pill neutral">3 Neutros</span>
           </div>
         </div>
@@ -475,10 +487,10 @@
             <span class="bar-icon">₿</span>
             <div class="bar-info">
               <div class="bar-name">Bitcoin</div>
-              <div class="bar-track"><div class="bar-fill bullish" style="width: 5%"></div></div>
+              <div class="bar-track"><div class="bar-fill bearish" style="width: 0%"></div></div>
             </div>
-            <span class="bar-percent">5%</span>
-            <span class="bar-sentiment bullish">Otimista</span>
+            <span class="bar-percent">0%</span>
+            <span class="bar-sentiment bearish">Pessimista</span>
           </a>
         </div>
       </section>
@@ -488,6 +500,20 @@
         <h3 class="section-title">Historico de Mudancas</h3>
 
         <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="day">04</span>
+              <span class="month">Jan</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Bitcoin muda para Pessimista</h4>
+              <p>Fim de ciclo, risco Strategy, exposicao zerada.</p>
+              <div class="change-badges">
+                <span class="change-badge bearish">Otimista → Pessimista</span>
+              </div>
+            </div>
+          </div>
+
           <div class="timeline-item">
             <div class="timeline-date">
               <span class="day">04</span>

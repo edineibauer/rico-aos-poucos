@@ -1,24 +1,19 @@
-const CACHE_NAME = 'rico-aos-poucos-v3';
+const CACHE_NAME = 'rico-aos-poucos-v4';
 const urlsToCache = [
-  '/',
-  '/index.html',
-  '/css/style.css',
-  '/js/app.js',
-  '/manifest.json',
-  '/favicon.svg',
-  '/icon-192.png',
-  '/icon-512.png',
-  '/setores/',
-  '/setores/index.html',
-  '/artigos/',
-  '/artigos/index.html',
-  '/desempenho/',
-  '/desempenho/index.html',
-  '/carteira/',
-  '/carteira/index.html',
-  '/sobre/',
-  '/data/artigos.json',
-  '/data/setores.json'
+  './',
+  './index.html',
+  './css/style.css',
+  './js/app.js',
+  './manifest.json',
+  './favicon.svg',
+  './icon-192.png',
+  './icon-512.png',
+  './setores/index.html',
+  './artigos/index.html',
+  './desempenho/index.html',
+  './carteira/index.html',
+  './sobre/index.html',
+  './data/artigos.json'
 ];
 
 self.addEventListener('install', (event) => {
@@ -60,7 +55,7 @@ self.addEventListener('fetch', (event) => {
           })
           .catch(() => {
             if (event.request.destination === 'document') {
-              return caches.match('/index.html');
+              return caches.match('./index.html');
             }
           });
       })

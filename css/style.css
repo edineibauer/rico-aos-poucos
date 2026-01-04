@@ -1841,6 +1841,26 @@ body.home-page {
   margin-top: auto;
 }
 
+.footer-youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #ff4444;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-youtube:hover {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff6666;
+}
+
 .footer-disclaimer {
   font-size: 0.75rem;
   color: var(--text-muted);

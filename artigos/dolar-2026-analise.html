@@ -4,6 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Por que estamos otimistas com o dolar em 2026. Analise do cenario cambial apos queda de 11% em 2025.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+  <link rel="manifest" href="../manifest.json">
   <title>Dolar em 2026: Por que Estamos Otimistas - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
@@ -204,21 +208,38 @@
   </style>
 </head>
 <body>
-  <div class="page-container">
+  <div class="page-wrapper" style="min-height:100vh;display:flex;flex-direction:column;">
 
-    <header class="page-header">
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="../">Inicio</a>
-          <span>/</span>
-          <a href="./">Artigos</a>
-          <span>/</span>
-          <span>Dolar 2026</span>
-        </nav>
+    <header class="app-header" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color);">
+      <a href="./" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.05);border-radius:10px;color:var(--text-primary);text-decoration:none;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div style="width:36px;height:36px;flex-shrink:0;">
+        <svg viewBox="0 0 100 100" width="36" height="36">
+          <defs>
+            <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a5f4a"/>
+              <stop offset="100%" style="stop-color:#0d1117"/>
+            </linearGradient>
+            <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#3fb950"/>
+              <stop offset="100%" style="stop-color:#2d8a6e"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+          <text x="10" y="68" font-family="Arial" font-size="42" font-weight="700" fill="url(#txt)">R</text>
+          <text x="38" y="68" font-family="Arial" font-size="28" font-weight="600" fill="#f0f6fc" opacity="0.7">a</text>
+          <text x="56" y="68" font-family="Arial" font-size="42" font-weight="700" fill="url(#txt)">P</text>
+          <rect x="10" y="76" width="80" height="3" rx="1.5" fill="#3fb950" opacity="0.8"/>
+        </svg>
+      </div>
+      <div style="flex:1;min-width:0;">
+        <h1 style="font-size:1rem;font-weight:600;color:var(--text-primary);margin:0;">Rico aos Poucos</h1>
+        <span style="font-size:0.7rem;color:var(--text-muted);">Artigo</span>
       </div>
     </header>
 
-    <article class="article-container">
+    <article class="article-container" style="flex:1;">
 
       <!-- Cabecalho do Artigo -->
       <div class="article-header">

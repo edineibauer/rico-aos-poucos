@@ -4,371 +4,549 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="TLT em 2026: Oportunidade de compra em precos historicamente baixos. Baixo risco com potencial de valorizacao.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+  <link rel="manifest" href="../manifest.json">
   <title>TLT em 2026: Oportunidade em Precos Baixos - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    .article-container {
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header padronizado */
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .header-back:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-back svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .app-logo {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .app-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .app-subtitle {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 16px 20px;
       max-width: 800px;
       margin: 0 auto;
-      padding: 40px 20px;
+      width: 100%;
     }
+
+    /* Article Header */
     .article-header {
-      margin-bottom: 32px;
+      margin-bottom: 24px;
     }
+
     .article-header h1 {
-      font-size: 2rem;
-      margin: 16px 0;
+      font-size: 1.5rem;
+      margin: 12px 0 8px;
       line-height: 1.3;
+      color: var(--text-primary);
     }
+
+    .article-lead {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
     .article-meta {
       display: flex;
-      gap: 16px;
+      gap: 12px;
       color: var(--text-muted);
-      font-size: 0.9rem;
+      font-size: 0.75rem;
       flex-wrap: wrap;
     }
+
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .nivel-badge.intermediario {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    /* Article Content */
     .article-content {
-      line-height: 1.8;
+      line-height: 1.7;
       color: var(--text-secondary);
     }
+
     .article-content h2 {
       color: var(--text-primary);
-      margin: 32px 0 16px;
-      font-size: 1.4rem;
+      margin: 24px 0 12px;
+      font-size: 1.2rem;
     }
+
     .article-content h3 {
       color: var(--text-primary);
-      margin: 24px 0 12px;
-      font-size: 1.1rem;
+      margin: 20px 0 10px;
+      font-size: 1rem;
     }
+
     .article-content p {
-      margin-bottom: 16px;
+      margin-bottom: 14px;
+      font-size: 0.9rem;
     }
+
     .article-content ul, .article-content ol {
-      margin-bottom: 16px;
-      padding-left: 24px;
+      margin-bottom: 14px;
+      padding-left: 20px;
     }
+
     .article-content li {
-      margin-bottom: 8px;
+      margin-bottom: 6px;
+      font-size: 0.9rem;
     }
+
+    /* Stat box */
     .stat-box {
       background: var(--bg-tertiary);
-      border-radius: 12px;
-      padding: 24px;
+      border-radius: 10px;
+      padding: 20px;
       text-align: center;
-      margin: 24px 0;
+      margin: 20px 0;
     }
+
     .stat-number {
-      font-size: 2.5rem;
+      font-size: 1.8rem;
       font-weight: 700;
       color: var(--bullish);
     }
+
     .stat-label {
       color: var(--text-muted);
-      font-size: 0.9rem;
-      margin-top: 8px;
+      font-size: 0.8rem;
+      margin-top: 4px;
     }
+
+    /* Stats grid */
     .stats-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 16px;
-      margin: 24px 0;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 20px 0;
     }
+
     .stat-item {
       background: var(--bg-tertiary);
-      border-radius: 12px;
-      padding: 20px;
+      border-radius: 10px;
+      padding: 14px 10px;
       text-align: center;
     }
+
     .stat-item .value {
-      font-size: 1.5rem;
+      font-size: 1.3rem;
       font-weight: 700;
       color: var(--primary-light);
     }
-    .stat-item .value.bullish {
-      color: var(--bullish);
-    }
+
+    .stat-item .value.bullish { color: var(--bullish); }
+    .stat-item .value.bearish { color: var(--bearish); }
+
     .stat-item .label {
-      font-size: 0.8rem;
+      font-size: 0.65rem;
       color: var(--text-muted);
       margin-top: 4px;
     }
+
+    /* Callout */
     .callout {
-      background: linear-gradient(135deg, rgba(63, 185, 80, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
-      border: 1px solid rgba(63, 185, 80, 0.3);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 24px 0;
+      background: linear-gradient(135deg, rgba(63, 185, 80, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(63, 185, 80, 0.25);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 20px 0;
     }
+
+    .callout h3 {
+      margin: 0 0 8px;
+      font-size: 0.9rem;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
     .callout.warning {
       background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
-      border-color: rgba(240, 193, 75, 0.3);
+      border-color: rgba(240, 193, 75, 0.25);
     }
+
+    /* Math box */
     .math-box {
       background: var(--bg-tertiary);
-      border-radius: 12px;
-      padding: 24px;
-      margin: 24px 0;
+      border-radius: 10px;
+      padding: 16px;
+      margin: 20px 0;
     }
+
     .math-box h4 {
-      margin-bottom: 16px;
+      margin-bottom: 12px;
       color: var(--text-primary);
+      font-size: 0.9rem;
     }
+
     .math-row {
       display: flex;
       justify-content: space-between;
-      padding: 8px 0;
+      padding: 6px 0;
       border-bottom: 1px solid var(--border-color);
+      font-size: 0.85rem;
     }
+
     .math-row:last-child {
       border-bottom: none;
       font-weight: 700;
       color: var(--bullish);
     }
+
+    /* Disclaimer */
     .disclaimer {
       background: var(--bg-tertiary);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 20px;
-      margin-top: 40px;
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 24px;
     }
+
     .disclaimer h4 {
       margin-bottom: 8px;
       color: var(--neutral);
+      font-size: 0.85rem;
     }
+
+    .disclaimer p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    /* Nav buttons */
     .nav-buttons {
       display: flex;
       justify-content: space-between;
-      gap: 16px;
-      margin-top: 40px;
+      gap: 12px;
+      margin-top: 24px;
       flex-wrap: wrap;
     }
-    .nivel-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 12px;
-      border-radius: 12px;
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
       font-size: 0.8rem;
       font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
     }
-    .nivel-badge.intermediario {
-      background: rgba(240, 193, 75, 0.15);
-      color: var(--neutral);
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-light);
+      color: var(--text-primary);
+    }
+
+    /* Footer */
+    .page-footer {
+      padding: 16px 20px;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+    }
+
+    .footer-text {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
     }
   </style>
 </head>
 <body>
-  <div class="page-container">
+  <div class="page-wrapper">
 
-    <header class="page-header">
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="../">Inicio</a>
-          <span>/</span>
-          <a href="./">Artigos</a>
-          <span>/</span>
-          <span>TLT 2026</span>
-        </nav>
+    <!-- Header padronizado -->
+    <header class="app-header">
+      <a href="./" class="header-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div class="app-logo">
+        <svg viewBox="0 0 100 100" width="36" height="36">
+          <defs>
+            <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#1a5f4a"/>
+              <stop offset="100%" style="stop-color:#0d1117"/>
+            </linearGradient>
+            <linearGradient id="txt" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#3fb950"/>
+              <stop offset="100%" style="stop-color:#2d8a6e"/>
+            </linearGradient>
+          </defs>
+          <rect width="100" height="100" rx="22" fill="url(#bg)"/>
+          <text x="10" y="68" font-family="Arial" font-size="42" font-weight="700" fill="url(#txt)">R</text>
+          <text x="38" y="68" font-family="Arial" font-size="28" font-weight="600" fill="#f0f6fc" opacity="0.7">a</text>
+          <text x="56" y="68" font-family="Arial" font-size="42" font-weight="700" fill="url(#txt)">P</text>
+          <rect x="10" y="76" width="80" height="3" rx="1.5" fill="#3fb950" opacity="0.8"/>
+        </svg>
+      </div>
+      <div class="app-title-group">
+        <h1 class="app-name">Rico aos Poucos</h1>
+        <span class="app-subtitle">Artigo</span>
       </div>
     </header>
 
-    <article class="article-container">
+    <!-- Main Content -->
+    <main class="main-content">
 
-      <div class="article-header">
-        <span class="nivel-badge intermediario">📊 Intermediario</span>
-        <h1>TLT em 2026: Oportunidade em Precos Baixos</h1>
-        <p style="color: var(--text-secondary); font-size: 1.1rem;">
-          Titulos longos americanos em precos historicamente baixos - baixo risco com potencial de valorizacao
-        </p>
-        <div class="article-meta">
-          <span>📅 04 de Janeiro de 2026</span>
-          <span>⏱️ 6 min de leitura</span>
-        </div>
-      </div>
-
-      <div class="article-content">
-
-        <div class="stat-box">
-          <div class="stat-number">Otimista</div>
-          <div class="stat-label">Mudanca de Neutro para Otimista</div>
-        </div>
-
-        <p>
-          Estamos mudando nosso sentimento sobre o TLT de <strong>Neutro para Otimista</strong>.
-          Os titulos longos do tesouro americano estao em precos historicamente baixos,
-          oferecendo uma oportunidade de entrada com <strong>baixo risco e potencial de valorizacao</strong>.
-        </p>
-
-        <h2>Por que Agora?</h2>
-
-        <p>
-          O TLT e os titulos longos americanos sofreram quedas significativas nos ultimos anos
-          devido ao ciclo de alta de juros do Fed. Isso criou uma situacao onde:
-        </p>
-
-        <ul>
-          <li><strong>Precos historicamente baixos:</strong> Oportunidade de compra</li>
-          <li><strong>Quedas futuras limitadas:</strong> O downside esta bem controlado</li>
-          <li><strong>Potencial de alta:</strong> Quando juros cairem ou houver flight to quality</li>
-        </ul>
-
-        <h2>A Matematica do Investimento</h2>
-
-        <div class="math-box">
-          <h4>Potencial de Retorno em 1-2 Anos</h4>
-          <div class="math-row">
-            <span>Valorizacao do dolar vs real (media historica)</span>
-            <span>+8%</span>
-          </div>
-          <div class="math-row">
-            <span>Dividendo liquido do TLT</span>
-            <span>+3%</span>
-          </div>
-          <div class="math-row">
-            <span>Potencial valorizacao do titulo</span>
-            <span>+5-10%</span>
-          </div>
-          <div class="math-row">
-            <span>Retorno potencial total</span>
-            <span>+16-21%</span>
+      <article>
+        <div class="article-header">
+          <span class="nivel-badge intermediario">Intermediario</span>
+          <h1>TLT em 2026: Oportunidade em Precos Baixos</h1>
+          <p class="article-lead">
+            Titulos longos americanos em precos historicamente baixos - baixo risco com potencial de valorizacao
+          </p>
+          <div class="article-meta">
+            <span>04 Jan 2026</span>
+            <span>6 min</span>
           </div>
         </div>
 
-        <p>
-          Mesmo que o TLT ande de lado, a combinacao de <strong>valorizacao do dolar</strong>
-          frente ao real e o <strong>dividendo de ~3%</strong> ja oferece um retorno atrativo
-          de aproximadamente 11% ao ano.
-        </p>
+        <div class="article-content">
 
-        <h2>Ativo de Protecao</h2>
+          <div class="stat-box">
+            <div class="stat-number">Otimista</div>
+            <div class="stat-label">Mudanca de Neutro para Otimista</div>
+          </div>
 
-        <div class="callout">
-          <h3>🛡️ Flight to Quality</h3>
           <p>
-            Historicamente, quando ha crises ou correcoes de mercado, investidores fogem para
-            ativos de baixo risco como titulos do tesouro americano. Se a bolha de IA estourar
-            em 2026-2027, o TLT tende a <strong>valorizar ou pelo menos manter valor</strong>.
+            Estamos mudando nosso sentimento sobre o TLT de <strong>Neutro para Otimista</strong>.
+            Os titulos longos do tesouro americano estao em precos historicamente baixos,
+            oferecendo uma oportunidade de entrada com <strong>baixo risco e potencial de valorizacao</strong>.
+          </p>
+
+          <h2>Por que Agora?</h2>
+
+          <p>
+            O TLT e os titulos longos americanos sofreram quedas significativas nos ultimos anos
+            devido ao ciclo de alta de juros do Fed. Isso criou uma situacao onde:
+          </p>
+
+          <ul>
+            <li><strong>Precos historicamente baixos:</strong> Oportunidade de compra</li>
+            <li><strong>Quedas futuras limitadas:</strong> O downside esta bem controlado</li>
+            <li><strong>Potencial de alta:</strong> Quando juros cairem ou houver flight to quality</li>
+          </ul>
+
+          <h2>A Matematica do Investimento</h2>
+
+          <div class="math-box">
+            <h4>Potencial de Retorno em 1-2 Anos</h4>
+            <div class="math-row">
+              <span>Valorizacao do dolar vs real</span>
+              <span>+8%</span>
+            </div>
+            <div class="math-row">
+              <span>Dividendo liquido do TLT</span>
+              <span>+3%</span>
+            </div>
+            <div class="math-row">
+              <span>Potencial valorizacao do titulo</span>
+              <span>+5-10%</span>
+            </div>
+            <div class="math-row">
+              <span>Retorno potencial total</span>
+              <span>+16-21%</span>
+            </div>
+          </div>
+
+          <p>
+            Mesmo que o TLT ande de lado, a combinacao de <strong>valorizacao do dolar</strong>
+            frente ao real e o <strong>dividendo de ~3%</strong> ja oferece um retorno atrativo.
+          </p>
+
+          <h2>Ativo de Protecao</h2>
+
+          <div class="callout">
+            <h3>Flight to Quality</h3>
+            <p>
+              Historicamente, quando ha crises ou correcoes de mercado, investidores fogem para
+              ativos de baixo risco como titulos do tesouro americano. Se a bolha de IA estourar
+              em 2026-2027, o TLT tende a <strong>valorizar ou manter valor</strong>.
+            </p>
+          </div>
+
+          <p>
+            Isso faz do TLT um ativo de <strong>dupla funcao</strong>:
+          </p>
+
+          <ol>
+            <li><strong>Protecao:</strong> Segura valor ou valoriza em crises</li>
+            <li><strong>Retorno:</strong> Dividendos + potencial de valorizacao</li>
+          </ol>
+
+          <h2>Cenario de Estouro da Bolha de IA</h2>
+
+          <p>
+            Acreditamos que em 2026-2027 pode haver uma correcao significativa nos ativos de risco:
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="value bullish">↑</div>
+              <div class="label">Dolar sobe</div>
+            </div>
+            <div class="stat-item">
+              <div class="value bullish">↑</div>
+              <div class="label">TLT sobe</div>
+            </div>
+            <div class="stat-item">
+              <div class="value bullish">↑</div>
+              <div class="label">Ouro sobe</div>
+            </div>
+            <div class="stat-item">
+              <div class="value bearish">↓</div>
+              <div class="label">Acoes caem</div>
+            </div>
+          </div>
+
+          <h2>Risco Controlado</h2>
+
+          <p>
+            O principal argumento para nosso otimismo e que o <strong>risco de perda esta limitado</strong>:
+          </p>
+
+          <ul>
+            <li>TLT ja caiu significativamente - downside limitado</li>
+            <li>Dolar ja caiu 11% em 2025 - recuperacao provavel</li>
+            <li>Titulos do tesouro americano sao os mais seguros do mundo</li>
+            <li>Mesmo andando de lado, dividendos + dolar dao retorno</li>
+          </ul>
+
+          <div class="callout warning">
+            <h3>Ressalvas</h3>
+            <p>
+              O TLT pode ficar 1-3 anos andando de lado antes de ter a alta esperada.
+              E um investimento para quem tem <strong>paciencia e horizonte de medio prazo</strong>.
+            </p>
+          </div>
+
+          <h2>Alocacao Recomendada</h2>
+
+          <p>
+            Mantemos a recomendacao de <strong>10% de exposicao em TLT</strong>, podendo ir ate 15-20%
+            para investidores mais conservadores.
+          </p>
+
+          <h2>Conclusao</h2>
+
+          <p>
+            Mudamos nosso sentimento para <strong>Otimista</strong> porque:
+          </p>
+
+          <ol>
+            <li>Precos historicamente baixos</li>
+            <li>Risco de queda muito limitado</li>
+            <li>Potencial de valorizacao se juros cairem</li>
+            <li>Dividendo + dolar ja dao retorno atrativo</li>
+            <li>Protecao para cenario de crise</li>
+          </ol>
+
+        </div>
+
+        <div class="disclaimer">
+          <h4>Aviso Importante</h4>
+          <p>
+            Esta analise reflete a opiniao do canal Rico aos Poucos e <strong>nao constitui
+            recomendacao de investimento</strong>. Titulos longos tem volatilidade de marcacao
+            a mercado. Consulte um profissional antes de investir.
           </p>
         </div>
 
-        <p>
-          Isso faz do TLT um ativo de <strong>dupla funcao</strong>:
-        </p>
-
-        <ol>
-          <li><strong>Protecao:</strong> Segura valor ou valoriza em crises</li>
-          <li><strong>Retorno:</strong> Dividendos + potencial de valorizacao</li>
-        </ol>
-
-        <h2>Cenario de Estouro da Bolha de IA</h2>
-
-        <p>
-          Acreditamos que em 2026-2027 pode haver uma correcao significativa nos ativos de risco,
-          especialmente acoes de tecnologia e criptomoedas. Nesse cenario:
-        </p>
-
-        <div class="stats-grid">
-          <div class="stat-item">
-            <div class="value bullish">↑</div>
-            <div class="label">Dolar sobe</div>
-          </div>
-          <div class="stat-item">
-            <div class="value bullish">↑</div>
-            <div class="label">TLT sobe</div>
-          </div>
-          <div class="stat-item">
-            <div class="value bullish">↑</div>
-            <div class="label">Ouro sobe</div>
-          </div>
-          <div class="stat-item">
-            <div class="value" style="color: var(--bearish);">↓</div>
-            <div class="label">Acoes caem</div>
-          </div>
+        <div class="nav-buttons">
+          <a href="./" class="btn btn-outline">← Artigos</a>
+          <a href="../setores/tlt/" class="btn btn-outline">Setor TLT →</a>
         </div>
 
-        <p>
-          Ter TLT na carteira e uma forma de <strong>protecao contra esse cenario</strong>,
-          enquanto ainda oferece retorno em cenarios normais.
-        </p>
+      </article>
 
-        <h2>Risco Controlado</h2>
+    </main>
 
-        <p>
-          O principal argumento para nosso otimismo e que o <strong>risco de perda esta bem limitado</strong>:
-        </p>
-
-        <ul>
-          <li>TLT ja caiu significativamente - downside limitado</li>
-          <li>Dolar ja caiu 11% em 2025 - recuperacao provavel</li>
-          <li>Titulos do tesouro americano sao os mais seguros do mundo</li>
-          <li>Mesmo andando de lado, dividendos + dolar dao retorno</li>
-        </ul>
-
-        <div class="callout warning">
-          <h3>⚠️ Ressalvas</h3>
-          <p>
-            O TLT pode ficar 1-3 anos andando de lado antes de ter a alta esperada.
-            E um investimento para quem tem <strong>paciencia e horizonte de medio prazo</strong>.
-            Nao espere valorizacao imediata.
-          </p>
-        </div>
-
-        <h2>Alocacao Recomendada</h2>
-
-        <p>
-          Mantemos a recomendacao de <strong>10% de exposicao em TLT</strong>, podendo ir ate 15-20%
-          para investidores mais conservadores. Esta e uma alocacao que:
-        </p>
-
-        <ul>
-          <li>Oferece protecao em cenarios de crise</li>
-          <li>Gera renda passiva via dividendos</li>
-          <li>Esta em dolar (diversificacao cambial)</li>
-          <li>Tem baixo risco de perda significativa</li>
-        </ul>
-
-        <h2>Conclusao</h2>
-
-        <p>
-          Mudamos nosso sentimento para <strong>Otimista</strong> porque:
-        </p>
-
-        <ol>
-          <li>Precos historicamente baixos - oportunidade de entrada</li>
-          <li>Risco de queda muito limitado</li>
-          <li>Potencial de valorizacao se juros cairem ou houver crise</li>
-          <li>Dividendo de ~3% + valorizacao do dolar ja dao retorno atrativo</li>
-          <li>Ativo de protecao para cenario de estouro da bolha de IA</li>
-        </ol>
-
-        <p>
-          Para investidores conservadores que buscam <strong>baixo risco com potencial de retorno</strong>,
-          o TLT e uma excelente opcao no momento atual.
-        </p>
-
-      </div>
-
-      <div class="disclaimer">
-        <h4>⚠️ Aviso Importante</h4>
-        <p>
-          Esta analise reflete a opiniao do canal Rico aos Poucos e <strong>nao constitui
-          recomendacao de investimento</strong>. Titulos longos tem volatilidade de marcacao
-          a mercado. Consulte um profissional antes de investir.
-        </p>
-      </div>
-
-      <div class="nav-buttons">
-        <a href="./" class="btn btn-outline">← Todos os Artigos</a>
-        <a href="../setores/tlt/" class="btn btn-outline">📊 Setor TLT</a>
-      </div>
-
-    </article>
-
+    <!-- Footer -->
     <footer class="page-footer">
-      <div class="container">
-        <p class="footer-disclaimer">Rico aos Poucos © 2026 - Conteudo educacional</p>
-      </div>
+      <p class="footer-text">Rico aos Poucos - Conteudo educacional</p>
     </footer>
 
   </div>

@@ -3444,10 +3444,10 @@ body.home-page {
 
 .pwa-install-banner {
   position: fixed;
-  bottom: -100px;
+  bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  display: flex;
+  display: none;
   align-items: center;
   gap: 16px;
   padding: 12px 16px;
@@ -3456,12 +3456,11 @@ body.home-page {
   border-radius: 16px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
   z-index: 9999;
-  transition: bottom 0.4s ease;
   max-width: calc(100% - 32px);
 }
 
 .pwa-install-banner.show {
-  bottom: 20px;
+  display: flex;
 }
 
 .pwa-install-content {

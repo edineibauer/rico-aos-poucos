@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Expectativas do Canal Rico aos Poucos - Analise de sentimento por setor para investimentos de medio prazo.">
+  <title>Expectativas do Canal - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <div class="page-container">
+
+    <!-- Header com navegacao -->
+    <header class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../">Inicio</a>
+          <span>/</span>
+          <span>Expectativas do Canal</span>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="setores-hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-badge">
+            <span class="badge-icon">🎯</span>
+            <span>Visao de Medio Prazo (1-2 anos)</span>
+          </div>
+          <h1>Expectativas do Canal</h1>
+          <p class="hero-subtitle">
+            Nossa visao sobre os principais setores de investimento. Estas sao
+            <strong>opinioes do canal</strong> baseadas em analise macroeconomica,
+            nao constituindo recomendacao de investimento.
+          </p>
+        </div>
+
+        <!-- Disclaimer importante -->
+        <div class="disclaimer-box">
+          <div class="disclaimer-icon">⚠️</div>
+          <div class="disclaimer-content">
+            <h4>Importante</h4>
+            <p>
+              As expectativas aqui apresentadas refletem a opiniao pessoal do canal Rico aos Poucos
+              e <strong>nao sao recomendacoes de investimento</strong>. Sao analises de medio prazo
+              (1-2 anos) que podem mudar conforme o cenario economico evolui. Sempre faca sua
+              propria pesquisa antes de investir.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Resumo de Alocacao -->
+    <section class="alocacao-resumo">
+      <div class="container">
+        <div class="resumo-header">
+          <h2>Exposicao Recomendada</h2>
+          <p>Distribuicao sugerida entre os setores (total: 100%)</p>
+        </div>
+
+        <div class="alocacao-chart-container">
+          <div class="pie-chart-wrapper">
+            <div class="pie-chart-large" id="setoresChart"></div>
+            <div class="chart-center-label">
+              <span class="center-value">100%</span>
+              <span class="center-text">Total</span>
+            </div>
+          </div>
+
+          <div class="sentimento-summary">
+            <div class="summary-card bullish">
+              <span class="summary-icon">📈</span>
+              <span class="summary-value">4</span>
+              <span class="summary-label">Otimistas</span>
+            </div>
+            <div class="summary-card neutral">
+              <span class="summary-icon">➡️</span>
+              <span class="summary-value">2</span>
+              <span class="summary-label">Neutros</span>
+            </div>
+            <div class="summary-card bearish">
+              <span class="summary-icon">📉</span>
+              <span class="summary-value">1</span>
+              <span class="summary-label">Pessimista</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lista de Setores -->
+    <section class="setores-lista">
+      <div class="container">
+        <h2>Setores Analisados</h2>
+        <p class="section-subtitle">Clique em cada setor para ver a analise completa e historico de publicacoes</p>
+
+        <div class="setores-grid">
+
+          <!-- Tesouro IPCA+ -->
+          <a href="tesouro-ipca/" class="setor-card bullish">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">🏦</div>
+              <div class="setor-card-info">
+                <h3>Tesouro IPCA+</h3>
+                <span class="setor-card-desc">Titulos publicos atrelados a inflacao</span>
+              </div>
+              <div class="setor-card-badge bullish">Otimista</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill" style="--width: 30%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">30%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Dolar -->
+          <a href="dolar/" class="setor-card bullish">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">💵</div>
+              <div class="setor-card-info">
+                <h3>Dolar</h3>
+                <span class="setor-card-desc">Moeda americana e exposicao cambial</span>
+              </div>
+              <div class="setor-card-badge bullish">Otimista</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill" style="--width: 15%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">15%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- FIIs -->
+          <a href="fiis/" class="setor-card neutral">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">🏢</div>
+              <div class="setor-card-info">
+                <h3>FIIs</h3>
+                <span class="setor-card-desc">Fundos Imobiliarios brasileiros</span>
+              </div>
+              <div class="setor-card-badge neutral">Neutro</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill" style="--width: 15%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">15%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- IBOV -->
+          <a href="ibov/" class="setor-card bearish">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">📈</div>
+              <div class="setor-card-info">
+                <h3>IBOV</h3>
+                <span class="setor-card-desc">Acoes brasileiras e indice Bovespa</span>
+              </div>
+              <div class="setor-card-badge bearish">Pessimista</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill bearish" style="--width: 15%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">15%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Ouro -->
+          <a href="ouro/" class="setor-card bullish">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">🥇</div>
+              <div class="setor-card-info">
+                <h3>Ouro</h3>
+                <span class="setor-card-desc">Metal precioso como reserva de valor</span>
+              </div>
+              <div class="setor-card-badge bullish">Otimista</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill" style="--width: 10%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">10%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- TLT -->
+          <a href="tlt/" class="setor-card neutral">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">📊</div>
+              <div class="setor-card-info">
+                <h3>TLT</h3>
+                <span class="setor-card-desc">Titulos longos do tesouro americano</span>
+              </div>
+              <div class="setor-card-badge neutral">Neutro</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill" style="--width: 10%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">10%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+          <!-- Bitcoin -->
+          <a href="bitcoin/" class="setor-card bullish">
+            <div class="setor-card-header">
+              <div class="setor-card-icon">₿</div>
+              <div class="setor-card-info">
+                <h3>Bitcoin</h3>
+                <span class="setor-card-desc">Criptomoeda como ativo de reserva digital</span>
+              </div>
+              <div class="setor-card-badge bullish">Otimista</div>
+            </div>
+            <div class="setor-card-body">
+              <div class="exposicao-bar">
+                <div class="exposicao-fill" style="--width: 5%"></div>
+              </div>
+              <div class="exposicao-info">
+                <span class="exposicao-label">Exposicao recomendada</span>
+                <span class="exposicao-value">5%</span>
+              </div>
+            </div>
+            <div class="setor-card-footer">
+              <span class="footer-text">Ver analise completa</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Historico de Mudancas -->
+    <section class="historico-section">
+      <div class="container">
+        <h2>Historico de Atualizacoes</h2>
+        <p class="section-subtitle">Linha do tempo das mudancas de sentimento</p>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="date-day">04</span>
+              <span class="date-month">Jan 2026</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Lancamento do App</h4>
+              <p>Primeira versao das expectativas do canal com analise dos 7 setores principais.</p>
+              <div class="timeline-changes">
+                <span class="change-badge bullish">+4 Otimistas</span>
+                <span class="change-badge neutral">+2 Neutros</span>
+                <span class="change-badge bearish">+1 Pessimista</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="historico-note">
+          <p>
+            <strong>Nota:</strong> Este historico sera atualizado conforme houver mudancas
+            nos sentimentos. Acompanhe as publicacoes de cada setor para entender o
+            racional por tras das alteracoes.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <div class="container">
+        <div class="footer-nav">
+          <a href="../" class="back-link">
+            <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+            <span>Voltar ao inicio</span>
+          </a>
+        </div>
+        <p class="footer-disclaimer">
+          Conteudo educacional - Nao e recomendacao de investimento
+        </p>
+        <div class="footer-version">
+          <span>Ultima atualizacao: Janeiro 2026</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="../js/app.js"></script>
+  <script>
+    // Renderiza grafico de pizza para setores
+    document.addEventListener('DOMContentLoaded', function() {
+      const chart = document.getElementById('setoresChart');
+      if (chart) {
+        const segments = [
+          { percent: 30, color: '#1a5f4a' }, // IPCA+
+          { percent: 15, color: '#3fb950' }, // Dolar
+          { percent: 15, color: '#a371f7' }, // FIIs
+          { percent: 15, color: '#f85149' }, // IBOV
+          { percent: 10, color: '#f0c14b' }, // Ouro
+          { percent: 10, color: '#58a6ff' }, // TLT
+          { percent: 5, color: '#f7931a' }   // Bitcoin
+        ];
+
+        let currentAngle = 0;
+        let gradientParts = [];
+
+        segments.forEach(seg => {
+          const nextAngle = currentAngle + (seg.percent * 3.6);
+          gradientParts.push(`${seg.color} ${currentAngle}deg ${nextAngle}deg`);
+          currentAngle = nextAngle;
+        });
+
+        chart.style.background = `conic-gradient(${gradientParts.join(', ')})`;
+      }
+    });
+  </script>
+</body>
+</html>

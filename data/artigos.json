@@ -43,6 +43,20 @@
 
   "artigos": [
     {
+      "id": "fiis-2026-analise",
+      "titulo": "FIIs em 2026: Renda Passiva com Cautela",
+      "subtitulo": "Bons para geracao de renda, mas precos ja esticados",
+      "descricao": "Analise de FIIs para 2026. Yields atrativos, mas mercado ja precificou corte de Selic. Potencial de valorizacao limitado.",
+      "arquivo": "fiis-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-variavel",
+      "tags": ["fiis", "fundos imobiliarios", "renda passiva", "dividendos"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 6,
+      "destaque": true,
+      "setorRelacionado": "fiis"
+    },
+    {
       "id": "dolar-2026-analise",
       "titulo": "Dolar em 2026: Por que Estamos Otimistas",
       "subtitulo": "Apos queda de 11% em 2025, vemos oportunidade de valorizacao",
@@ -53,7 +67,7 @@
       "tags": ["dolar", "cambio", "carry trade", "selic", "refugio"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 7,
-      "destaque": true,
+      "destaque": false,
       "setorRelacionado": "dolar"
     },
     {

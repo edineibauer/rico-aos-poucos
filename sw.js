@@ -1,11 +1,18 @@
-const CACHE_NAME = 'rico-aos-poucos-v1';
+const CACHE_NAME = 'rico-aos-poucos-v2';
 const urlsToCache = [
   '/',
   '/index.html',
   '/css/style.css',
   '/js/app.js',
+  '/manifest.json',
+  '/favicon.svg',
+  '/icon-192.png',
+  '/icon-512.png',
   '/setores/',
+  '/setores/index.html',
   '/artigos/',
+  '/artigos/index.html',
+  '/sobre/',
   '/data/artigos.json',
   '/data/setores.json'
 ];

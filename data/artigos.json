@@ -43,6 +43,20 @@
 
   "artigos": [
     {
+      "id": "dolar-2026-analise",
+      "titulo": "Dolar em 2026: Por que Estamos Otimistas",
+      "subtitulo": "Apos queda de 11% em 2025, vemos oportunidade de valorizacao",
+      "descricao": "Analise completa do cenario cambial. Dolar caiu 11% em 2025, mas carry trade, risco fiscal e papel de ativo de refugio favorecem valorizacao.",
+      "arquivo": "dolar-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "macroeconomia",
+      "tags": ["dolar", "cambio", "carry trade", "selic", "refugio"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 7,
+      "destaque": true,
+      "setorRelacionado": "dolar"
+    },
+    {
       "id": "acoes-brasileiras-2026-analise",
       "titulo": "Acoes Brasileiras em 2026: Hora de Cautela?",
       "subtitulo": "Ibovespa bateu recordes em 2025, mas os riscos aumentaram",
@@ -53,7 +67,7 @@
       "tags": ["acoes", "ibovespa", "selic", "eleicoes"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 8,
-      "destaque": true,
+      "destaque": false,
       "setorRelacionado": "ibov"
     }
   ]

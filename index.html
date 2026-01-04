@@ -17,257 +17,270 @@
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="home-page">
-  <!-- Overlay de fundo animado -->
-  <div class="bg-overlay">
-    <div class="bg-gradient-orb orb-1"></div>
-    <div class="bg-gradient-orb orb-2"></div>
-    <div class="bg-gradient-orb orb-3"></div>
+  <!-- Parallax Background Layers -->
+  <div class="parallax-bg">
+    <div class="parallax-layer layer-1" data-speed="0.1"></div>
+    <div class="parallax-layer layer-2" data-speed="0.3"></div>
+    <div class="parallax-layer layer-3" data-speed="0.5"></div>
+    <div class="parallax-particles" data-speed="0.2"></div>
   </div>
 
-  <!-- Container principal - Hub de navegação -->
-  <main class="hub-container">
+  <!-- Container principal do App -->
+  <main class="app-container">
 
-    <!-- Header minimalista -->
-    <header class="hub-header">
-      <div class="logo-minimal">
-        <span class="logo-icon-mini">📈</span>
-        <span class="logo-text">Rico aos Poucos</span>
+    <!-- Header do App -->
+    <header class="app-header">
+      <div class="app-logo">
+        <div class="logo-pulse"></div>
+        <span class="logo-icon">📈</span>
       </div>
-      <div class="header-actions">
-        <span class="update-badge">
-          <span class="pulse-dot"></span>
-          Atualizado hoje
-        </span>
+      <div class="app-title-group">
+        <h1 class="app-name">Rico aos Poucos</h1>
+        <span class="app-tagline">Investimentos Inteligentes</span>
+      </div>
+      <div class="app-status">
+        <span class="status-dot"></span>
+        <span class="status-text">Live</span>
       </div>
     </header>
 
-    <!-- Área de conteúdo principal -->
-    <div class="hub-content">
-
-      <!-- Coluna esquerda - Destaque principal -->
-      <section class="hub-spotlight">
-        <div class="spotlight-carousel">
-          <div class="carousel-container">
-            <!-- Slides de destaque -->
-            <div class="carousel-slide active" data-index="0">
-              <div class="slide-badge">Novidade</div>
-              <h2 class="slide-title">Bem-vindo ao Rico aos Poucos</h2>
-              <p class="slide-text">Construa patrimônio de forma consciente. Análises, estratégias e visões de mercado para decisões inteligentes.</p>
-              <a href="sobre/" class="slide-cta">
-                Saiba mais
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <div class="carousel-slide" data-index="1">
-              <div class="slide-badge bullish">Otimista</div>
-              <h2 class="slide-title">Renda Fixa Pós-Fixada</h2>
-              <p class="slide-text">Com a Selic em patamares elevados, títulos pós-fixados continuam atrativos para proteção e rentabilidade.</p>
-              <a href="carteira/" class="slide-cta">
-                Ver carteira
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
-
-            <div class="carousel-slide" data-index="2">
-              <div class="slide-badge bearish">Alerta</div>
-              <h2 class="slide-title">Atenção ao Câmbio</h2>
-              <p class="slide-text">Volatilidade do dólar exige cautela. Entenda o cenário macroeconômico antes de tomar decisões.</p>
-              <a href="macroeconomia/" class="slide-cta">
-                Ver análise
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </a>
-            </div>
+    <!-- Breaking News - Horizontal Slider -->
+    <section class="breaking-news">
+      <div class="breaking-label">
+        <span class="breaking-icon">⚡</span>
+        <span>Breaking</span>
+      </div>
+      <div class="news-slider" id="newsSlider">
+        <div class="news-track">
+          <div class="news-item" data-type="bullish">
+            <span class="news-badge bullish">Alta</span>
+            <span class="news-title">Selic mantida em 14,25% - Renda fixa segue atrativa</span>
           </div>
-
-          <!-- Indicadores do carrossel -->
-          <div class="carousel-indicators">
-            <button class="indicator active" data-index="0"></button>
-            <button class="indicator" data-index="1"></button>
-            <button class="indicator" data-index="2"></button>
+          <div class="news-item" data-type="bearish">
+            <span class="news-badge bearish">Alerta</span>
+            <span class="news-title">Dólar ultrapassa R$ 6,20 com tensões fiscais</span>
           </div>
-
-          <!-- Navegação do carrossel -->
-          <div class="carousel-nav">
-            <button class="carousel-btn prev" aria-label="Anterior">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M15 18l-6-6 6-6"/>
-              </svg>
-            </button>
-            <button class="carousel-btn next" aria-label="Próximo">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l6-6-6-6"/>
-              </svg>
-            </button>
+          <div class="news-item" data-type="neutral">
+            <span class="news-badge neutral">Info</span>
+            <span class="news-title">Nova carteira recomendada para Janeiro/2025</span>
+          </div>
+          <div class="news-item" data-type="bullish">
+            <span class="news-badge bullish">Alta</span>
+            <span class="news-title">Tesouro IPCA+ com taxas históricas acima de 7%</span>
+          </div>
+          <div class="news-item" data-type="bearish">
+            <span class="news-badge bearish">Alerta</span>
+            <span class="news-title">Varejo e construção civil sofrem com juros altos</span>
           </div>
         </div>
-      </section>
+      </div>
+      <div class="slider-indicators" id="sliderIndicators"></div>
+    </section>
 
-      <!-- Coluna direita - Grid de navegação -->
-      <section class="hub-navigation">
-        <div class="nav-grid">
+    <!-- Main Content - Cards de Resumo -->
+    <section class="app-content">
 
-          <!-- Carteira do Canal -->
-          <a href="carteira/" class="nav-card card-primary">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="card-icon-wrapper">
-                <span class="card-icon">💼</span>
-              </div>
-              <div class="card-info">
-                <h3>Carteira do Canal</h3>
-                <p>Alocação recomendada</p>
-              </div>
-              <div class="card-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-preview">
-              <div class="mini-chart">
-                <div class="chart-segment" style="--percent: 45; --color: var(--primary)"></div>
-                <div class="chart-segment" style="--percent: 30; --color: var(--bullish)"></div>
-                <div class="chart-segment" style="--percent: 25; --color: var(--secondary)"></div>
-              </div>
-            </div>
-          </a>
-
-          <!-- Setores Otimistas -->
-          <a href="ativos/?sentimento=bullish" class="nav-card card-bullish">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="card-icon-wrapper bullish">
-                <span class="card-icon">📈</span>
-              </div>
-              <div class="card-info">
-                <h3>Setores Otimistas</h3>
-                <p>Visão positiva do canal</p>
-              </div>
-              <div class="card-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-tags">
-              <span class="mini-tag">Renda Fixa</span>
-              <span class="mini-tag">Energia</span>
-            </div>
-          </a>
-
-          <!-- Setores Pessimistas -->
-          <a href="ativos/?sentimento=bearish" class="nav-card card-bearish">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="card-icon-wrapper bearish">
-                <span class="card-icon">📉</span>
-              </div>
-              <div class="card-info">
-                <h3>Setores Pessimistas</h3>
-                <p>Cautela recomendada</p>
-              </div>
-              <div class="card-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-tags">
-              <span class="mini-tag bearish">Varejo</span>
-              <span class="mini-tag bearish">Construção</span>
-            </div>
-          </a>
-
-          <!-- Publicações -->
-          <a href="artigos/" class="nav-card card-articles">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="card-icon-wrapper">
-                <span class="card-icon">📝</span>
-              </div>
-              <div class="card-info">
-                <h3>Publicações</h3>
-                <p>Artigos e análises</p>
-              </div>
-              <div class="card-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="card-counter">
-              <span class="counter-value">Em breve</span>
-            </div>
-          </a>
-
-          <!-- Em Tendência -->
-          <a href="ativos/" class="nav-card card-trending">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="card-icon-wrapper trending">
-                <span class="card-icon">🔥</span>
-              </div>
-              <div class="card-info">
-                <h3>Em Tendência</h3>
-                <p>O que está em alta</p>
-              </div>
-              <div class="card-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="trending-ticker">
-              <span class="ticker-item">Selic</span>
-              <span class="ticker-divider">•</span>
-              <span class="ticker-item">Tesouro</span>
-            </div>
-          </a>
-
-          <!-- Em Alerta -->
-          <a href="macroeconomia/" class="nav-card card-alert">
-            <div class="card-glow"></div>
-            <div class="card-content">
-              <div class="card-icon-wrapper alert">
-                <span class="card-icon">⚠️</span>
-              </div>
-              <div class="card-info">
-                <h3>Em Alerta</h3>
-                <p>Atenção necessária</p>
-              </div>
-              <div class="card-arrow">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M5 12h14M12 5l7 7-7 7"/>
-                </svg>
-              </div>
-            </div>
-            <div class="alert-indicator">
-              <span class="alert-pulse"></span>
-              <span class="alert-text">Câmbio volátil</span>
-            </div>
-          </a>
-
+      <!-- Card Principal - Minha Carteira -->
+      <a href="carteira/" class="summary-card card-featured">
+        <div class="card-header">
+          <div class="card-icon-box">
+            <span>💼</span>
+          </div>
+          <div class="card-title-group">
+            <h2>Minha Carteira</h2>
+            <span class="card-subtitle">Alocação recomendada</span>
+          </div>
+          <div class="card-badge">Perfil Moderado</div>
         </div>
-      </section>
+        <div class="card-body">
+          <div class="allocation-visual">
+            <div class="allocation-ring">
+              <svg viewBox="0 0 100 100">
+                <circle class="ring-bg" cx="50" cy="50" r="40"/>
+                <circle class="ring-segment seg-1" cx="50" cy="50" r="40" style="--percent: 45; --offset: 0;"/>
+                <circle class="ring-segment seg-2" cx="50" cy="50" r="40" style="--percent: 30; --offset: 45;"/>
+                <circle class="ring-segment seg-3" cx="50" cy="50" r="40" style="--percent: 15; --offset: 75;"/>
+                <circle class="ring-segment seg-4" cx="50" cy="50" r="40" style="--percent: 10; --offset: 90;"/>
+              </svg>
+              <div class="ring-center">
+                <span class="ring-value">4</span>
+                <span class="ring-label">Classes</span>
+              </div>
+            </div>
+            <div class="allocation-legend">
+              <div class="legend-item">
+                <span class="legend-dot" style="--color: var(--primary)"></span>
+                <span class="legend-name">Renda Fixa</span>
+                <span class="legend-value">45%</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="--color: var(--bullish)"></span>
+                <span class="legend-name">RV Brasil</span>
+                <span class="legend-value">30%</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="--color: var(--secondary)"></span>
+                <span class="legend-name">RV Exterior</span>
+                <span class="legend-value">15%</span>
+              </div>
+              <div class="legend-item">
+                <span class="legend-dot" style="--color: var(--accent)"></span>
+                <span class="legend-name">Alternativos</span>
+                <span class="legend-value">10%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card-footer">
+          <span class="footer-action">Ver detalhes</span>
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
 
-    </div>
+      <!-- Grid de Cards Secundários -->
+      <div class="cards-grid-2">
 
-    <!-- Footer minimalista -->
-    <footer class="hub-footer">
-      <p class="disclaimer-mini">
+        <!-- Card Cenário Macro -->
+        <a href="macroeconomia/" class="summary-card card-macro">
+          <div class="card-header">
+            <div class="card-icon-box macro">
+              <span>🌍</span>
+            </div>
+            <div class="card-title-group">
+              <h2>Cenário Macro</h2>
+              <span class="card-subtitle">Economia & Mercados</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="macro-indicators">
+              <div class="indicator-item">
+                <span class="indicator-label">Selic</span>
+                <span class="indicator-value bearish">14,25%</span>
+              </div>
+              <div class="indicator-item">
+                <span class="indicator-label">IPCA</span>
+                <span class="indicator-value neutral">4,8%</span>
+              </div>
+              <div class="indicator-item">
+                <span class="indicator-label">Dólar</span>
+                <span class="indicator-value bearish">R$ 6,20</span>
+              </div>
+            </div>
+            <div class="sentiment-bar">
+              <div class="sentiment-fill bearish" style="--width: 65%"></div>
+            </div>
+            <span class="sentiment-label">Cautela recomendada</span>
+          </div>
+          <div class="card-footer">
+            <span class="footer-action">Analisar cenário</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+        <!-- Card Análise de Ativos -->
+        <a href="ativos/" class="summary-card card-ativos">
+          <div class="card-header">
+            <div class="card-icon-box ativos">
+              <span>📊</span>
+            </div>
+            <div class="card-title-group">
+              <h2>Ativos</h2>
+              <span class="card-subtitle">Análises & Setores</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <div class="sectors-preview">
+              <div class="sector-chip bullish">
+                <span class="chip-icon">📈</span>
+                <span>Energia</span>
+              </div>
+              <div class="sector-chip bullish">
+                <span class="chip-icon">📈</span>
+                <span>Bancos</span>
+              </div>
+              <div class="sector-chip bearish">
+                <span class="chip-icon">📉</span>
+                <span>Varejo</span>
+              </div>
+              <div class="sector-chip bearish">
+                <span class="chip-icon">📉</span>
+                <span>Construção</span>
+              </div>
+            </div>
+            <div class="sectors-summary">
+              <div class="summary-stat">
+                <span class="stat-number bullish">4</span>
+                <span class="stat-text">Otimistas</span>
+              </div>
+              <div class="summary-divider"></div>
+              <div class="summary-stat">
+                <span class="stat-number bearish">3</span>
+                <span class="stat-text">Pessimistas</span>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer">
+            <span class="footer-action">Explorar setores</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </div>
+        </a>
+
+      </div>
+
+      <!-- Segunda linha de cards -->
+      <div class="cards-grid-3">
+
+        <!-- Card Publicações -->
+        <a href="artigos/" class="summary-card card-small card-articles">
+          <div class="card-icon-box articles">
+            <span>📝</span>
+          </div>
+          <div class="card-info">
+            <h3>Publicações</h3>
+            <span class="card-meta">Artigos & Análises</span>
+          </div>
+          <div class="card-indicator">
+            <span class="indicator-badge">Em breve</span>
+          </div>
+        </a>
+
+        <!-- Card Sobre -->
+        <a href="sobre/" class="summary-card card-small card-about">
+          <div class="card-icon-box about">
+            <span>💡</span>
+          </div>
+          <div class="card-info">
+            <h3>Sobre</h3>
+            <span class="card-meta">Filosofia & Método</span>
+          </div>
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+        <!-- Card Iniciantes -->
+        <a href="artigos/?nivel=iniciante" class="summary-card card-small card-beginners">
+          <div class="card-icon-box beginners">
+            <span>🎯</span>
+          </div>
+          <div class="card-info">
+            <h3>Iniciantes</h3>
+            <span class="card-meta">Comece por aqui</span>
+          </div>
+          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- Footer do App -->
+    <footer class="app-footer">
+      <p class="footer-disclaimer">
         Conteúdo educacional • Não é recomendação de investimento
       </p>
-      <div class="footer-links-mini">
-        <a href="sobre/">Sobre</a>
-        <span class="divider">•</span>
-        <a href="artigos/?nivel=iniciante">Iniciantes</a>
+      <div class="footer-version">
+        <span>v1.0</span>
+        <span class="separator">•</span>
+        <span>Janeiro 2025</span>
       </div>
     </footer>
 

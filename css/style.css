@@ -1426,7 +1426,7 @@ body.home-page {
   stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
 }
 .ring-segment.seg-ibov {
-  stroke: #f85149;
+  stroke: #f0c14b;
   stroke-dasharray: calc(var(--percent) * 2.51) 251;
   stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
 }

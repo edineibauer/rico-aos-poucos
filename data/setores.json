@@ -59,10 +59,10 @@
       "nome": "IBOV",
       "icone": "📈",
       "descricao": "Acoes brasileiras e indice Bovespa",
-      "sentimento": "bearish",
+      "sentimento": "neutral",
       "exposicaoRecomendada": 15,
       "exemplosAtivos": ["BOVA11", "PIBB11", "Acoes individuais", "Small caps"],
-      "cor": "#f85149"
+      "cor": "#f0c14b"
     },
     "tesouro-ipca": {
       "id": "tesouro-ipca",
@@ -79,6 +79,14 @@
   "ordemExibicao": ["tesouro-ipca", "dolar", "fiis", "ibov", "ouro", "tlt", "bitcoin"],
 
   "historicoSentimentos": [
+    {
+      "data": "2026-01-04",
+      "titulo": "Atualizacao IBOV para Neutro",
+      "descricao": "Ibovespa subiu 34% em 2025, mercado ja precificou queda da Selic. Balanca de riscos equilibrada com leve tendencia negativa.",
+      "alteracoes": {
+        "ibov": { "de": "bearish", "para": "neutral" }
+      }
+    },
     {
       "data": "2026-01-04",
       "titulo": "Lancamento do App",

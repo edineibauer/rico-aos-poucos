@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Analise completa do cenario para acoes brasileiras em 2026. Ibovespa bateu topos historicos, mas quais sao os riscos e oportunidades?">
+  <title>Acoes Brasileiras em 2026: Hora de Cautela? - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .stat-highlight {
+      background: linear-gradient(135deg, rgba(26, 95, 74, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(26, 95, 74, 0.3);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 3rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #3fb950, #58a6ff);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .stat-label {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin: 24px 0;
+    }
+    @media (max-width: 600px) {
+      .pros-cons { grid-template-columns: 1fr; }
+    }
+    .pros-card, .cons-card {
+      padding: 20px;
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+    .pros-card {
+      background: rgba(63, 185, 80, 0.08);
+      border-color: rgba(63, 185, 80, 0.3);
+    }
+    .cons-card {
+      background: rgba(248, 81, 73, 0.08);
+      border-color: rgba(248, 81, 73, 0.3);
+    }
+    .pros-card h4, .cons-card h4 {
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .pros-card ul, .cons-card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .pros-card li, .cons-card li {
+      padding: 8px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.9rem;
+    }
+    .chart-placeholder {
+      background: var(--bg-tertiary);
+      border: 1px dashed var(--border-color);
+      border-radius: 12px;
+      padding: 40px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .chart-placeholder span {
+      font-size: 2rem;
+      display: block;
+      margin-bottom: 12px;
+    }
+    .fonte-box {
+      background: var(--bg-tertiary);
+      border-left: 3px solid var(--primary-light);
+      padding: 16px;
+      margin: 16px 0;
+      font-size: 0.85rem;
+      border-radius: 0 8px 8px 0;
+    }
+    .fonte-box a {
+      color: var(--primary-light);
+    }
+    .callout-box {
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(240, 193, 75, 0.3);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .callout-box h3 {
+      color: var(--neutral);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .timeline {
+      position: relative;
+      padding-left: 30px;
+      margin: 24px 0;
+    }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 8px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--border-color);
+    }
+    .timeline-item {
+      position: relative;
+      padding-bottom: 24px;
+    }
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -26px;
+      top: 4px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: var(--primary-light);
+      border: 2px solid var(--bg-primary);
+    }
+    .timeline-date {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+    .veredicto-box {
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 2px solid rgba(240, 193, 75, 0.4);
+      border-radius: 16px;
+      padding: 32px;
+      margin: 32px 0;
+      text-align: center;
+    }
+    .veredicto-badge {
+      display: inline-block;
+      background: rgba(240, 193, 75, 0.2);
+      border: 1px solid var(--neutral);
+      color: var(--neutral);
+      padding: 8px 20px;
+      border-radius: 20px;
+      font-weight: 600;
+      font-size: 1.1rem;
+      margin-bottom: 16px;
+    }
+  </style>
+</head>
+<body>
+  <div class="page-container">
+
+    <header class="page-header">
+      <div class="container">
+        <nav class="breadcrumb">
+          <a href="../">Inicio</a>
+          <span>/</span>
+          <a href="./">Artigos</a>
+          <span>/</span>
+          <span>Acoes Brasileiras 2026</span>
+        </nav>
+      </div>
+    </header>
+
+    <article class="article-page" style="padding: 40px 20px;">
+      <div class="container" style="max-width: 800px;">
+
+        <!-- Header do Artigo -->
+        <div class="article-header" style="margin-bottom: 40px;">
+          <span class="nivel-badge intermediario">📊 Intermediario</span>
+          <h1 style="font-size: 2.2rem; margin: 16px 0;">Acoes Brasileiras em 2026: Hora de Cautela?</h1>
+          <p style="color: var(--text-secondary); font-size: 1.1rem; line-height: 1.6;">
+            O Ibovespa bateu recordes historicos em 2025, mas a margem para novas altas diminuiu. Entenda por que estamos neutros para este setor.
+          </p>
+          <div class="article-meta" style="margin-top: 16px; color: var(--text-muted); font-size: 0.9rem;">
+            <span>📅 04 de Janeiro de 2026</span>
+            <span style="margin: 0 12px;">|</span>
+            <span>⏱️ 8 min de leitura</span>
+          </div>
+        </div>
+
+        <!-- Destaque Principal -->
+        <div class="stat-highlight">
+          <div class="stat-number">+34%</div>
+          <div class="stat-label">Valorizacao do Ibovespa em 2025 — melhor ano desde 2016</div>
+        </div>
+
+        <div class="fonte-box">
+          📊 <strong>Fonte:</strong> O Ibovespa encerrou 2025 aos 161.125 pontos, com alta acumulada de 33,95%.
+          <a href="https://www.suno.com.br/noticias/ibovespa-fecha-2025-alta-melhor-desempenho-mt/" target="_blank">Suno Noticias</a>
+        </div>
+
+        <!-- Introducao -->
+        <h2>🎯 O Cenario Atual</h2>
+        <p>
+          O ano de 2025 foi excepcional para a bolsa brasileira. Com uma alta de quase 34%, o Ibovespa
+          registrou seu melhor desempenho em nove anos, renovando maximas historicas e chegando a
+          bater 165.035 pontos no intradia.
+        </p>
+        <p>
+          <strong>Mas aqui esta o ponto:</strong> depois de uma esticada tao expressiva, a margem
+          para continuar subindo naturalmente diminui. E os riscos no horizonte sao consideraveis.
+        </p>
+
+        <!-- Grafico Placeholder -->
+        <div class="chart-placeholder">
+          <span>📈</span>
+          <p style="color: var(--text-secondary);">Ibovespa: De 120 mil para 161 mil pontos em 2025</p>
+          <p style="font-size: 0.8rem; color: var(--text-muted);">Maior sequencia de valorizacao desde o Plano Real (1994)</p>
+        </div>
+
+        <!-- Callout -->
+        <div class="callout-box">
+          <h3>⚖️ Nosso Veredito: NEUTRO</h3>
+          <p>
+            Nao estamos otimistas, mas tambem nao estamos pessimistas. A balanca esta equilibrada,
+            com uma <strong>leve tendencia de risco para baixo</strong>. Quem fez lucro deveria
+            considerar realizar parte e ficar mais atento.
+          </p>
+        </div>
+
+        <!-- Pros e Cons -->
+        <h2>⚡ Gatilhos Positivos vs Negativos</h2>
+
+        <div class="pros-cons">
+          <div class="pros-card">
+            <h4>✅ Fatores Positivos</h4>
+            <ul>
+              <li><strong>Queda da Selic:</strong> Expectativa de cortes a partir de janeiro/2026</li>
+              <li><strong>Fluxo estrangeiro:</strong> R$ 28,4 bi em 2025 vs saida de R$ 32 bi em 2024</li>
+              <li><strong>Valuations atrativos:</strong> Brasil "muito barato" segundo Pimco</li>
+              <li><strong>Diferencial de juros:</strong> Selic 15% atrai carry trade</li>
+            </ul>
+          </div>
+          <div class="cons-card">
+            <h4>❌ Fatores Negativos</h4>
+            <ul>
+              <li><strong>Mercado ja precificou:</strong> Alta da Selic pode nao vir ou demorar</li>
+              <li><strong>Dolar forte:</strong> Tendencia de fortalecimento em 2026</li>
+              <li><strong>Eleicoes 2026:</strong> Volatilidade historica +14% em anos eleitorais</li>
+              <li><strong>Risco EUA:</strong> S&P 500 esticado, possivel correcao global</li>
+              <li><strong>Saida de locais:</strong> Institucionais retiraram R$ 50 bi em 2025</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="fonte-box">
+          📊 <strong>Fontes:</strong>
+          <a href="https://portal.febraban.org.br/noticia/4354/pt-br/" target="_blank">Febraban</a> |
+          <a href="https://www.infomoney.com.br/mercados/entrada-de-capital-estrangeiro-na-b3-pode-ter-maior-saldo-em-dois-anos/" target="_blank">InfoMoney</a> |
+          <a href="https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/acoes/entre-cautela-e-oportunidade-o-que-esperar-do-mercado-de-acoes-em-2026/" target="_blank">B3</a>
+        </div>
+
+        <!-- Selic -->
+        <h2>📉 A Questao da Selic</h2>
+
+        <p>
+          Muitos influenciadores estao dizendo: <em>"Nao e ano para renda fixa, a Selic vai cair!"</em>
+        </p>
+        <p>
+          E verdade que o mercado espera cortes. A mediana do Focus projeta Selic em <strong>12,13%</strong>
+          ao fim de 2026. Mas aqui esta nossa preocupacao:
+        </p>
+
+        <div class="stat-highlight">
+          <div class="stat-number" style="font-size: 2rem;">85,7%</div>
+          <div class="stat-label">dos bancos esperam queda da Selic no 1º trimestre de 2026</div>
+        </div>
+
+        <p>
+          <strong>O problema:</strong> quando praticamente todo mundo espera a mesma coisa, o mercado
+          ja precifica isso. As acoes <em>ja subiram</em> com base nessa expectativa. Se a Selic nao
+          cair — ou cair menos que o esperado — pode haver frustracao e realizacao de lucros.
+        </p>
+
+        <div class="fonte-box">
+          📊 <strong>Fonte:</strong> Pesquisa de Economia Bancaria da
+          <a href="https://portal.febraban.org.br/noticia/4354/pt-br/" target="_blank">Febraban</a>
+        </div>
+
+        <!-- Eleicoes -->
+        <h2>🗳️ O Fator Eleicoes</h2>
+
+        <p>
+          2026 e ano de eleicoes presidenciais. Historicamente, isso significa:
+        </p>
+
+        <div class="stat-highlight">
+          <div class="stat-number" style="font-size: 2rem;">+14%</div>
+          <div class="stat-label">aumento medio na volatilidade do Ibovespa em anos eleitorais</div>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">1º Semestre 2026</div>
+            <strong>Janela de oportunidade</strong>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Inicio do ciclo de corte de juros, fluxo estrangeiro ainda positivo</p>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-date">2º Semestre 2026</div>
+            <strong>Incerteza domina</strong>
+            <p style="color: var(--text-secondary); font-size: 0.9rem;">Definicao de candidaturas, volatilidade elevada, investidores cautelosos</p>
+          </div>
+        </div>
+
+        <div class="fonte-box">
+          📊 <strong>Fonte:</strong>
+          <a href="https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/acoes/entre-cautela-e-oportunidade-o-que-esperar-do-mercado-de-acoes-em-2026/" target="_blank">B3 Bora Investir</a>
+        </div>
+
+        <!-- Risco EUA -->
+        <h2>🇺🇸 O Elefante na Sala: Mercado Americano</h2>
+
+        <p>
+          O S&P 500 esta sendo negociado a <strong>22,4x lucros projetados</strong> — um premio de
+          30% sobre a media historica de 17,1x. Alguns analistas falam em bolha da IA.
+        </p>
+
+        <div class="stat-highlight">
+          <div class="stat-number" style="font-size: 2rem;">54%</div>
+          <div class="stat-label">dos gestores acreditam haver uma bolha de IA (pesquisa BofA)</div>
+        </div>
+
+        <p>
+          Se o mercado americano fizer uma correcao significativa (algo entre 10% e 20% seria
+          considerado "natural" por grandes bancos), <strong>isso vai respingar no Brasil</strong>.
+        </p>
+
+        <div class="fonte-box">
+          📊 <strong>Fontes:</strong>
+          <a href="https://www.infomoney.com.br/mercados/entre-o-rali-da-ia-e-o-medo-de-bolha-o-cenario-que-pode-sacudir-wall-street-em-2026/" target="_blank">InfoMoney</a> |
+          <a href="https://www.bloomberg.com/news/articles/2025-12-22/medo-de-bolha-e-de-perder-rali-sinalizam-volatilidade-em-acoes" target="_blank">Bloomberg</a>
+        </div>
+
+        <!-- Veredicto Final -->
+        <div class="veredicto-box">
+          <div class="veredicto-badge">📊 SENTIMENTO: NEUTRO</div>
+          <h3 style="margin-bottom: 16px;">Nossa Recomendacao</h3>
+          <p style="font-size: 1.1rem; line-height: 1.7;">
+            Quem <strong>ja tem lucro</strong> deveria considerar realizar parte da posicao.
+            Quem quer <strong>entrar agora</strong> deve fazer isso com cautela, em escala menor,
+            diversificando bem e pesquisando setores especificos que podem se beneficiar
+            (como consumo e small caps) quando a Selic de fato cair.
+          </p>
+          <p style="color: var(--text-muted); margin-top: 16px; font-size: 0.9rem;">
+            Exposicao recomendada: <strong>15%</strong> da carteira
+          </p>
+        </div>
+
+        <!-- Setores -->
+        <h2>🎯 E as Acoes Individuais?</h2>
+
+        <p>
+          Importante: mesmo com o setor em geral neutro, <strong>acoes especificas podem performar
+          muito bem</strong>. Os setores que tendem a se beneficiar da queda de juros sao:
+        </p>
+
+        <ul style="padding-left: 20px; line-height: 2;">
+          <li><strong>Varejo:</strong> Consumo aquece com credito mais barato</li>
+          <li><strong>Construcao Civil:</strong> Financiamentos mais acessiveis</li>
+          <li><strong>Small Caps:</strong> Mais sensíveis a juros, maior potencial</li>
+          <li><strong>Setor Financeiro:</strong> Bem posicionado independente do cenario</li>
+        </ul>
+
+        <p>
+          Por outro lado, setores mais defensivos como <strong>energia, saneamento e utilities</strong>
+          podem ser opcoes para quem quer exposicao a acoes com menor volatilidade.
+        </p>
+
+        <!-- Conclusao -->
+        <h2>📝 Resumo Executivo</h2>
+
+        <div style="background: var(--bg-card); border-radius: 12px; padding: 24px; margin: 24px 0;">
+          <ol style="padding-left: 20px; line-height: 2.2;">
+            <li>Ibovespa teve alta de 34% em 2025 — melhor ano desde 2016</li>
+            <li>Mercado ja precificou boa parte da queda da Selic</li>
+            <li>Ano eleitoral traz volatilidade adicional</li>
+            <li>Risco de correcao nos EUA pode afetar Brasil</li>
+            <li>Balanca equilibrada, com leve tendencia de risco para baixo</li>
+            <li>Momento de <strong>cautela</strong>, nao de euforia</li>
+          </ol>
+        </div>
+
+        <!-- Disclaimer -->
+        <div class="disclaimer" style="margin-top: 40px;">
+          <h4>⚠️ Aviso Importante</h4>
+          <p>
+            Esta analise reflete a opiniao do canal Rico aos Poucos e <strong>nao constitui
+            recomendacao de investimento</strong>. Acoes sao ativos de renda variavel com alta
+            volatilidade. Faca sua propria analise e consulte um profissional antes de investir.
+          </p>
+        </div>
+
+        <!-- Referencias -->
+        <div style="margin-top: 40px; padding-top: 24px; border-top: 1px solid var(--border-color);">
+          <h3>📚 Referencias e Fontes</h3>
+          <ul style="font-size: 0.85rem; line-height: 2; color: var(--text-secondary);">
+            <li><a href="https://www.suno.com.br/noticias/ibovespa-fecha-2025-alta-melhor-desempenho-mt/" target="_blank">Suno - Ibovespa fecha 2025 em alta</a></li>
+            <li><a href="https://portal.febraban.org.br/noticia/4354/pt-br/" target="_blank">Febraban - Pesquisa de Economia Bancaria</a></li>
+            <li><a href="https://www.infomoney.com.br/mercados/entrada-de-capital-estrangeiro-na-b3-pode-ter-maior-saldo-em-dois-anos/" target="_blank">InfoMoney - Fluxo estrangeiro na B3</a></li>
+            <li><a href="https://borainvestir.b3.com.br/tipos-de-investimentos/renda-variavel/acoes/entre-cautela-e-oportunidade-o-que-esperar-do-mercado-de-acoes-em-2026/" target="_blank">B3 - O que esperar de 2026</a></li>
+            <li><a href="https://www.bloomberglinea.com.br/mercados/o-que-esperar-para-o-dolar-em-2026-segundo-bank-of-america-citi-e-itau/" target="_blank">Bloomberg Linea - Dolar em 2026</a></li>
+            <li><a href="https://www.infomoney.com.br/mercados/entre-o-rali-da-ia-e-o-medo-de-bolha-o-cenario-que-pode-sacudir-wall-street-em-2026/" target="_blank">InfoMoney - Risco de bolha nos EUA</a></li>
+            <li><a href="https://www.cnnbrasil.com.br/economia/mercado/ibovespa-deve-ser-pautado-por-selic-e-eleicoes-em-2026-dizem-especialistas/" target="_blank">CNN Brasil - Ibovespa em 2026</a></li>
+          </ul>
+        </div>
+
+        <!-- Navegacao -->
+        <div style="margin-top: 40px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 16px;">
+          <a href="../setores/ibov/" class="btn btn-outline">📈 Ver Setor IBOV</a>
+          <a href="../setores/" class="btn btn-outline">🎯 Todas as Expectativas</a>
+        </div>
+
+      </div>
+    </article>
+
+    <footer class="page-footer">
+      <div class="container">
+        <p class="footer-disclaimer">Rico aos Poucos © 2026 - Conteudo educacional, nao e recomendacao de investimento</p>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>

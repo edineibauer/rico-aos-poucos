@@ -69,16 +69,24 @@
       "nome": "Tesouro IPCA+",
       "icone": "🏦",
       "descricao": "Titulos publicos atrelados a inflacao",
-      "sentimento": "bullish",
+      "sentimento": "neutral",
       "exposicaoRecomendada": 30,
       "exemplosAtivos": ["Tesouro IPCA+ 2029", "Tesouro IPCA+ 2035", "Tesouro IPCA+ 2045"],
-      "cor": "#1a5f4a"
+      "cor": "#f0c14b"
     }
   },
 
   "ordemExibicao": ["tesouro-ipca", "dolar", "fiis", "ibov", "ouro", "tlt", "bitcoin"],
 
   "historicoSentimentos": [
+    {
+      "data": "2026-01-04",
+      "titulo": "IPCA+ muda para Neutro",
+      "descricao": "Taxas altas (IPCA+7%), mas risco fiscal real. Marcacao a mercado pode ser negativa se cenario piorar. Prefira prazos curtos.",
+      "alteracoes": {
+        "tesouro-ipca": { "de": "bullish", "para": "neutral" }
+      }
+    },
     {
       "data": "2026-01-04",
       "titulo": "Nova analise: FIIs neutros",

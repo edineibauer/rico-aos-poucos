@@ -93,92 +93,6 @@ header {
   backdrop-filter: blur(10px);
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--text-primary);
-}
-
-.logo-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 1.2rem;
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 8px;
-}
-
-nav ul li a {
-  padding: 10px 18px;
-  border-radius: var(--border-radius);
-  color: var(--text-secondary);
-  font-weight: 500;
-  transition: var(--transition);
-}
-
-nav ul li a:hover,
-nav ul li a.active {
-  background: var(--bg-tertiary);
-  color: var(--text-primary);
-}
-
-/* Menu Mobile */
-.menu-toggle {
-  display: none;
-  background: none;
-  border: none;
-  color: var(--text-primary);
-  font-size: 1.5rem;
-  cursor: pointer;
-}
-
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: block;
-  }
-
-  nav ul {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    flex-direction: column;
-    background: var(--bg-secondary);
-    border-bottom: 1px solid var(--border-color);
-    padding: 20px;
-  }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li a {
-    display: block;
-    padding: 15px;
-  }
-}
-
 /* ==========================================
    Hero Section
    ========================================== */
@@ -478,14 +392,6 @@ section {
   width: 250px;
   height: 250px;
   margin: 0 auto 30px;
-  position: relative;
-}
-
-/* Gráfico de Pizza em CSS */
-.pie-chart {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
   position: relative;
 }
 
@@ -1024,10 +930,6 @@ body.home-page {
   flex-shrink: 0;
 }
 
-.logo-icon {
-  font-size: 1.8rem;
-}
-
 .app-title-group {
   flex: 1;
 }
@@ -1469,103 +1371,6 @@ body.home-page {
   gap: 24px;
 }
 
-.allocation-ring {
-  position: relative;
-  width: 120px;
-  height: 120px;
-  flex-shrink: 0;
-}
-
-.allocation-ring svg {
-  width: 100%;
-  height: 100%;
-  transform: rotate(-90deg);
-}
-
-.ring-bg {
-  fill: none;
-  stroke: rgba(255, 255, 255, 0.05);
-  stroke-width: 10;
-}
-
-.ring-segment {
-  fill: none;
-  stroke-width: 10;
-  stroke-linecap: round;
-  transition: stroke-dasharray 1s ease;
-}
-
-.ring-segment.seg-1 {
-  stroke: var(--primary);
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-
-.ring-segment.seg-2 {
-  stroke: var(--bullish);
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-
-.ring-segment.seg-3 {
-  stroke: var(--secondary);
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-
-.ring-segment.seg-4 {
-  stroke: var(--accent);
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-
-/* Segmentos para setores */
-.ring-segment.seg-ipca {
-  stroke: #1a5f4a;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-dolar {
-  stroke: #3fb950;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-fiis {
-  stroke: #a371f7;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-ibov {
-  stroke: #f0c14b;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-ouro {
-  stroke: #f0c14b;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-tlt {
-  stroke: #58a6ff;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-btc {
-  stroke: #f7931a;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-caixa {
-  stroke: #2ea043;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-.ring-segment.seg-imoveis {
-  stroke: #8b5cf6;
-  stroke-dasharray: calc(var(--percent) * 2.51) 251;
-  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
-}
-
 /* ==========================================
    Card Expectativas do Canal
    ========================================== */
@@ -1691,29 +1496,6 @@ body.home-page {
   }
 }
 
-.ring-center {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-}
-
-.ring-value {
-  display: block;
-  font-size: 1.8rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  line-height: 1;
-}
-
-.ring-label {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
 .allocation-legend {
   flex: 1;
   display: flex;
@@ -1772,59 +1554,6 @@ body.home-page {
 
 .cards-grid-2 .card-title-group h2 {
   font-size: 1rem;
-}
-
-/* Macro Card Specifics */
-.macro-indicators {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 14px;
-}
-
-.indicator-item {
-  text-align: center;
-}
-
-.indicator-label {
-  display: block;
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  margin-bottom: 4px;
-}
-
-.indicator-value {
-  font-size: 0.95rem;
-  font-weight: 700;
-}
-
-.indicator-value.bullish { color: var(--bullish); }
-.indicator-value.bearish { color: var(--bearish); }
-.indicator-value.neutral { color: var(--neutral); }
-
-.sentiment-bar {
-  height: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 2px;
-  overflow: hidden;
-  margin-bottom: 8px;
-}
-
-.sentiment-fill {
-  height: 100%;
-  width: var(--width);
-  border-radius: 2px;
-  transition: width 1s ease;
-}
-
-.sentiment-fill.bullish { background: var(--bullish); }
-.sentiment-fill.bearish { background: var(--bearish); }
-.sentiment-fill.neutral { background: var(--neutral); }
-
-.sentiment-label {
-  font-size: 0.75rem;
-  color: var(--text-muted);
 }
 
 /* Ativos Card Specifics */
@@ -1890,67 +1619,6 @@ body.home-page {
   width: 1px;
   height: 30px;
   background: rgba(255, 255, 255, 0.1);
-}
-
-/* ==========================================
-   Cards Grid 3 Columns
-   ========================================== */
-.cards-grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 12px;
-}
-
-.card-small {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  padding: 18px 14px;
-  gap: 12px;
-}
-
-.card-small .card-icon-box {
-  width: 44px;
-  height: 44px;
-  font-size: 1.3rem;
-}
-
-.card-small .card-info h3 {
-  font-size: 0.9rem;
-  font-weight: 600;
-  margin: 0 0 2px;
-  color: var(--text-primary);
-}
-
-.card-small .card-meta {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-}
-
-.card-small .arrow-icon {
-  width: 18px;
-  height: 18px;
-  opacity: 0;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.card-small:hover .arrow-icon {
-  opacity: 1;
-}
-
-.card-indicator {
-  margin-top: auto;
-}
-
-.indicator-badge {
-  padding: 4px 10px;
-  background: rgba(240, 193, 75, 0.15);
-  border-radius: 6px;
-  font-size: 0.65rem;
-  font-weight: 600;
-  color: var(--neutral);
-  text-transform: uppercase;
 }
 
 /* ==========================================
@@ -2026,9 +1694,6 @@ body.home-page {
 .card-featured { animation-delay: 0.3s; }
 .cards-grid-2 .summary-card:nth-child(1) { animation-delay: 0.4s; }
 .cards-grid-2 .summary-card:nth-child(2) { animation-delay: 0.5s; }
-.cards-grid-3 .summary-card:nth-child(1) { animation-delay: 0.6s; }
-.cards-grid-3 .summary-card:nth-child(2) { animation-delay: 0.65s; }
-.cards-grid-3 .summary-card:nth-child(3) { animation-delay: 0.7s; }
 
 @keyframes cardAppear {
   from {
@@ -2083,37 +1748,9 @@ body.home-page {
     gap: 12px;
   }
 
-  .cards-grid-3 {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-  }
-
-  .card-small {
-    padding: 14px 10px;
-  }
-
-  .card-small .card-icon-box {
-    width: 38px;
-    height: 38px;
-    font-size: 1.1rem;
-  }
-
-  .card-small .card-info h3 {
-    font-size: 0.8rem;
-  }
-
-  .card-small .card-meta {
-    display: none;
-  }
-
   .allocation-visual {
     flex-direction: column;
     text-align: center;
-  }
-
-  .allocation-ring {
-    width: 140px;
-    height: 140px;
   }
 
   .allocation-legend {
@@ -2121,16 +1758,6 @@ body.home-page {
     flex-wrap: wrap;
     justify-content: center;
     gap: 12px;
-  }
-}
-
-@media (max-width: 380px) {
-  .cards-grid-3 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .card-small:last-child {
-    grid-column: span 2;
   }
 }
 
@@ -2205,14 +1832,6 @@ body.home-page {
   position: relative;
   width: 220px;
   height: 220px;
-}
-
-.pie-chart-large {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  position: relative;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .chart-center-label {
@@ -2644,19 +2263,6 @@ body.home-page {
   justify-content: center;
   gap: 40px;
   flex-wrap: wrap;
-}
-
-.pie-chart-wrapper {
-  position: relative;
-  width: 200px;
-  height: 200px;
-}
-
-.pie-chart-large {
-  width: 100%;
-  height: 100%;
-  border-radius: 50%;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
 }
 
 .sentimento-summary {
@@ -3568,11 +3174,6 @@ body.home-page {
   width: 100%;
 }
 
-.card-expectativas .allocation-ring {
-  text-decoration: none;
-  color: inherit;
-}
-
 .card-expectativas .sentimento-resumo {
   text-decoration: none;
   color: inherit;
@@ -3594,34 +3195,6 @@ body.home-page {
   padding-top: 14px;
   border-top: 1px solid rgba(255, 255, 255, 0.06);
   gap: 16px;
-}
-
-.footer-link-action {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: var(--primary-light);
-  font-size: 0.9rem;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.footer-link-action:hover {
-  color: var(--primary);
-}
-
-.footer-link-action .arrow-icon {
-  width: 16px;
-  height: 16px;
-}
-
-.footer-link-action.footer-secondary {
-  color: var(--text-muted);
-}
-
-.footer-link-action.footer-secondary:hover {
-  color: var(--text-secondary);
 }
 
 /* ==========================================

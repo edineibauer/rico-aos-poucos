@@ -49,10 +49,7 @@
       <div class="app-title-group">
         <h1 class="app-name">Rico aos Poucos</h1>
       </div>
-      <div class="app-status">
-        <span class="status-dot"></span>
-        <span class="status-text">Live</span>
-      </div>
+      <div id="langSelector"></div>
     </header>
 
     <!-- Breaking News - Horizontal Slider -->
@@ -94,9 +91,9 @@
             <span>🎯</span>
           </div>
           <div class="card-title-group">
-            <h2>Expectativas do Canal</h2>
-            <span class="card-subtitle">Sentimento por setor</span>
-            <div class="card-badge">Medio Prazo</div>
+            <h2 data-i18n="home.expectations">Expectativas do Canal</h2>
+            <span class="card-subtitle" data-i18n="home.sentimentBySector">Sentimento por setor</span>
+            <div class="card-badge" data-i18n="home.mediumTerm">Médio Prazo</div>
           </div>
         </a>
         <div class="card-body">
@@ -173,25 +170,25 @@
           <a href="setores/" class="sentimento-resumo">
             <div class="sentimento-stat bullish">
               <span class="sentimento-count">3</span>
-              <span class="sentimento-label">Otimistas</span>
+              <span class="sentimento-label" data-i18n="sentiments.bullishPlural">Otimistas</span>
             </div>
             <div class="sentimento-stat neutral">
               <span class="sentimento-count">5</span>
-              <span class="sentimento-label">Neutros</span>
+              <span class="sentimento-label" data-i18n="sentiments.neutralPlural">Neutros</span>
             </div>
             <div class="sentimento-stat bearish">
               <span class="sentimento-count">2</span>
-              <span class="sentimento-label">Pessimistas</span>
+              <span class="sentimento-label" data-i18n="sentiments.bearishPlural">Pessimistas</span>
             </div>
           </a>
         </div>
         <div class="card-footer-multi">
           <a href="setores/" class="footer-link-action">
-            <span class="footer-action">Ver análise completa</span>
+            <span class="footer-action" data-i18n="home.seeFullAnalysis">Ver análise completa</span>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
           <a href="desempenho/" class="footer-link-action footer-secondary">
-            <span class="footer-action">📊 Desempenho</span>
+            <span class="footer-action">📊 <span data-i18n="home.performance">Desempenho</span></span>
             <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
           </a>
         </div>
@@ -207,9 +204,9 @@
             <span class="youtube-badge">YouTube</span>
           </div>
           <div class="youtube-info">
-            <h2>Canal no YouTube</h2>
-            <span class="card-subtitle">Vídeos e análises em tempo real</span>
-            <span class="youtube-cta">Assistir agora →</span>
+            <h2 data-i18n="home.youtubeChannel">Canal no YouTube</h2>
+            <span class="card-subtitle" data-i18n="home.youtubeSubtitle">Vídeos e análises em tempo real</span>
+            <span class="youtube-cta"><span data-i18n="home.watchNow">Assistir agora</span> →</span>
           </div>
         </div>
       </a>
@@ -223,8 +220,8 @@
             <span>📝</span>
           </div>
           <div class="card-title-group">
-            <h2>Publicações</h2>
-            <span class="card-subtitle">Artigos & Análises</span>
+            <h2 data-i18n="home.publications">Publicações</h2>
+            <span class="card-subtitle" data-i18n="home.articlesAnalysis">Artigos & Análises</span>
           </div>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -235,8 +232,8 @@
             <span>🌍</span>
           </div>
           <div class="card-title-group">
-            <h2>Macro</h2>
-            <span class="card-subtitle">Cenário Econômico</span>
+            <h2 data-i18n="home.macro">Macro</h2>
+            <span class="card-subtitle" data-i18n="home.economicScenario">Cenário Econômico</span>
           </div>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
@@ -249,8 +246,8 @@
           <span>📊</span>
         </div>
         <div class="card-title-group">
-          <h2>Ativos</h2>
-          <span class="card-subtitle">Análises Individuais</span>
+          <h2 data-i18n="home.assets">Ativos</h2>
+          <span class="card-subtitle" data-i18n="home.individualAnalysis">Análises Individuais</span>
         </div>
         <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
       </a>
@@ -261,16 +258,16 @@
     <footer class="app-footer">
       <div class="footer-links">
         <a href="sobre/" class="footer-link">
-          <span>💡</span> Sobre o Canal
+          <span>💡</span> <span data-i18n="nav.about">Sobre o Canal</span>
         </a>
       </div>
-      <p class="footer-disclaimer">
+      <p class="footer-disclaimer" data-i18n="common.disclaimer">
         Conteúdo educacional • Não é recomendação de investimento
       </p>
       <div class="footer-version">
-        <span>v1.0</span>
+        <span data-i18n="footer.version">v1.0</span>
         <span class="separator">•</span>
-        <span>Janeiro 2026</span>
+        <span data-i18n="footer.date">Janeiro 2026</span>
       </div>
     </footer>
 
@@ -281,14 +278,15 @@
     <div class="pwa-install-content">
       <span class="pwa-icon">📲</span>
       <div class="pwa-text">
-        <strong>Instale o App</strong>
-        <span>Acesse offline e mais rapido</span>
+        <strong data-i18n="pwa.installApp">Instale o App</strong>
+        <span data-i18n="pwa.accessOffline">Acesse offline e mais rápido</span>
       </div>
     </div>
-    <button class="pwa-install-btn" id="pwaInstallBtn">Instalar</button>
+    <button class="pwa-install-btn" id="pwaInstallBtn" data-i18n="pwa.install">Instalar</button>
     <button class="pwa-close-btn" id="pwaCloseBtn">✕</button>
   </div>
 
+  <script src="js/i18n.js"></script>
   <script src="js/app.js"></script>
   <script>
     // PWA Install

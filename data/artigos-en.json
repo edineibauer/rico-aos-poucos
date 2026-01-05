@@ -1,0 +1,130 @@
+{
+  "ultimaAtualizacao": "2026-01-04",
+  "versao": "1.0",
+
+  "categorias": {
+    "renda-variavel": {
+      "id": "renda-variavel",
+      "nome": "Equities",
+      "icone": "📈",
+      "descricao": "Stocks, REITs and ETFs"
+    },
+    "renda-fixa": {
+      "id": "renda-fixa",
+      "nome": "Fixed Income",
+      "icone": "🏦",
+      "descricao": "Bonds, Treasury and more"
+    },
+    "macroeconomia": {
+      "id": "macroeconomia",
+      "nome": "Macroeconomics",
+      "icone": "🌍",
+      "descricao": "Economic scenario analysis"
+    },
+    "educacao": {
+      "id": "educacao",
+      "nome": "Financial Education",
+      "icone": "🎓",
+      "descricao": "Basic concepts for beginners"
+    },
+    "estrategias": {
+      "id": "estrategias",
+      "nome": "Strategies",
+      "icone": "💡",
+      "descricao": "Investment tactics and philosophies"
+    },
+    "psicologia": {
+      "id": "psicologia",
+      "nome": "Psychology",
+      "icone": "🧠",
+      "descricao": "Behavior and cognitive biases"
+    }
+  },
+
+  "artigos": [
+    {
+      "id": "bitcoin-2026-analise",
+      "titulo": "Bitcoin in 2026: Why We're Out",
+      "subtitulo": "End of cycle, historical correction pattern and systemic risks",
+      "descricao": "Changed from Bullish to Bearish. End of bull cycle, Strategy risk and zero crypto exposure.",
+      "arquivo": "bitcoin-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "macroeconomia",
+      "tags": ["bitcoin", "crypto", "cycle", "strategy", "bear market"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 8,
+      "destaque": true,
+      "setorRelacionado": "bitcoin"
+    },
+    {
+      "id": "tlt-2026-analise",
+      "titulo": "TLT in 2026: Opportunity at Low Prices",
+      "subtitulo": "Long-term US Treasury bonds with low risk and upside potential",
+      "descricao": "Changed from Neutral to Bullish. Historically low prices, protection asset, dollar-denominated returns.",
+      "arquivo": "tlt-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-fixa",
+      "tags": ["tlt", "treasury", "bonds", "protection"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 6,
+      "destaque": true,
+      "setorRelacionado": "tlt"
+    },
+    {
+      "id": "tesouro-ipca-2026-analise",
+      "titulo": "Treasury IPCA+ in 2026: High Rates, Real Risk",
+      "subtitulo": "IPCA+7% is attractive, but fiscal risk is embedded",
+      "descricao": "Changed from Bullish to Neutral. Historic rates, but mark-to-market risk if scenario worsens.",
+      "arquivo": "tesouro-ipca-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-fixa",
+      "tags": ["treasury", "ipca", "fixed income", "fiscal risk"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 7,
+      "destaque": false,
+      "setorRelacionado": "tesouro-ipca"
+    },
+    {
+      "id": "fiis-2026-analise",
+      "titulo": "REITs in 2026: Passive Income with Caution",
+      "subtitulo": "Good for income generation, but prices already stretched",
+      "descricao": "REIT analysis for 2026. Attractive yields, but market has priced in Selic cuts. Limited upside potential.",
+      "arquivo": "fiis-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-variavel",
+      "tags": ["reits", "real estate", "passive income", "dividends"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 6,
+      "destaque": false,
+      "setorRelacionado": "fiis"
+    },
+    {
+      "id": "dolar-2026-analise",
+      "titulo": "Dollar in 2026: Why We're Bullish",
+      "subtitulo": "After 11% drop in 2025, we see appreciation opportunity",
+      "descricao": "Complete currency scenario analysis. Dollar fell 11% in 2025, but carry trade, fiscal risk and safe-haven status favor appreciation.",
+      "arquivo": "dolar-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "macroeconomia",
+      "tags": ["dollar", "forex", "carry trade", "selic", "safe haven"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 7,
+      "destaque": false,
+      "setorRelacionado": "dolar"
+    },
+    {
+      "id": "acoes-brasileiras-2026-analise",
+      "titulo": "Brazilian Stocks in 2026: Time for Caution?",
+      "subtitulo": "Ibovespa hit records in 2025, but risks have increased",
+      "descricao": "Complete analysis of Brazilian stocks scenario. Ibovespa rose 34% in 2025, but what are the risks and opportunities for 2026?",
+      "arquivo": "acoes-brasileiras-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-variavel",
+      "tags": ["stocks", "ibovespa", "selic", "elections"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 8,
+      "destaque": false,
+      "setorRelacionado": "ibov"
+    }
+  ]
+}

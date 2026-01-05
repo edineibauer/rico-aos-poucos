@@ -396,7 +396,7 @@
 
     async function carregarArtigos() {
       try {
-        const response = await fetch('../../data/artigos.json');
+        const response = await fetch('../../data/artigos-es.json');
         if (!response.ok) throw new Error('Error');
         artigosData = await response.json();
 
@@ -456,7 +456,7 @@
         const destaqueClass = artigo.destaque ? 'destaque' : '';
 
         return `
-          <a href="../../artigos/${artigo.arquivo.replace('./', '')}" class="artigo-card ${destaqueClass}" data-nivel="${artigo.nivel}">
+          <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass}" data-nivel="${artigo.nivel}">
             <div class="artigo-date">
               <span class="day">${data.dia}</span>
               <span class="month">${data.mes}</span>

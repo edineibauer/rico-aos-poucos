@@ -1,0 +1,130 @@
+{
+  "ultimaAtualizacao": "2026-01-04",
+  "versao": "1.0",
+
+  "categorias": {
+    "renda-variavel": {
+      "id": "renda-variavel",
+      "nome": "Renta Variable",
+      "icone": "📈",
+      "descricao": "Acciones, FIIs y ETFs"
+    },
+    "renda-fixa": {
+      "id": "renda-fixa",
+      "nome": "Renta Fija",
+      "icone": "🏦",
+      "descricao": "Bonos, Tesoro y mas"
+    },
+    "macroeconomia": {
+      "id": "macroeconomia",
+      "nome": "Macroeconomia",
+      "icone": "🌍",
+      "descricao": "Analisis del escenario economico"
+    },
+    "educacao": {
+      "id": "educacao",
+      "nome": "Educacion Financiera",
+      "icone": "🎓",
+      "descricao": "Conceptos basicos para principiantes"
+    },
+    "estrategias": {
+      "id": "estrategias",
+      "nome": "Estrategias",
+      "icone": "💡",
+      "descricao": "Tacticas y filosofias de inversion"
+    },
+    "psicologia": {
+      "id": "psicologia",
+      "nome": "Psicologia",
+      "icone": "🧠",
+      "descricao": "Comportamiento y sesgos cognitivos"
+    }
+  },
+
+  "artigos": [
+    {
+      "id": "bitcoin-2026-analise",
+      "titulo": "Bitcoin en 2026: Por que Estamos Fuera",
+      "subtitulo": "Fin de ciclo, patron historico de correccion y riesgos sistemicos",
+      "descricao": "Cambio de Alcista a Bajista. Fin de ciclo alcista, riesgo Strategy y exposicion cero a criptomonedas.",
+      "arquivo": "bitcoin-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "macroeconomia",
+      "tags": ["bitcoin", "criptomonedas", "ciclo", "strategy", "mercado bajista"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 8,
+      "destaque": true,
+      "setorRelacionado": "bitcoin"
+    },
+    {
+      "id": "tlt-2026-analise",
+      "titulo": "TLT en 2026: Oportunidad a Precios Bajos",
+      "subtitulo": "Bonos del Tesoro americano a largo plazo con bajo riesgo y potencial alcista",
+      "descricao": "Cambio de Neutro a Alcista. Precios historicamente bajos, activo de proteccion, rendimiento en dolares.",
+      "arquivo": "tlt-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-fixa",
+      "tags": ["tlt", "tesoro americano", "bonos", "proteccion"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 6,
+      "destaque": true,
+      "setorRelacionado": "tlt"
+    },
+    {
+      "id": "tesouro-ipca-2026-analise",
+      "titulo": "Tesoro IPCA+ en 2026: Tasas Altas, Riesgo Real",
+      "subtitulo": "IPCA+7% es atractivo, pero el riesgo fiscal esta incorporado",
+      "descricao": "Cambio de Alcista a Neutro. Tasas historicas, pero riesgo de marcacion a mercado negativa si el escenario empeora.",
+      "arquivo": "tesouro-ipca-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-fixa",
+      "tags": ["tesoro", "ipca", "renta fija", "riesgo fiscal"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 7,
+      "destaque": false,
+      "setorRelacionado": "tesouro-ipca"
+    },
+    {
+      "id": "fiis-2026-analise",
+      "titulo": "FIIs en 2026: Renta Pasiva con Cautela",
+      "subtitulo": "Buenos para generacion de renta, pero precios ya estirados",
+      "descricao": "Analisis de FIIs para 2026. Yields atractivos, pero el mercado ya precio el corte de Selic. Potencial de valorizacion limitado.",
+      "arquivo": "fiis-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-variavel",
+      "tags": ["fiis", "fondos inmobiliarios", "renta pasiva", "dividendos"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 6,
+      "destaque": false,
+      "setorRelacionado": "fiis"
+    },
+    {
+      "id": "dolar-2026-analise",
+      "titulo": "Dolar en 2026: Por que Somos Alcistas",
+      "subtitulo": "Tras caida del 11% en 2025, vemos oportunidad de valorizacion",
+      "descricao": "Analisis completo del escenario cambiario. El dolar cayo 11% en 2025, pero carry trade, riesgo fiscal y papel de activo refugio favorecen valorizacion.",
+      "arquivo": "dolar-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "macroeconomia",
+      "tags": ["dolar", "cambio", "carry trade", "selic", "refugio"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 7,
+      "destaque": false,
+      "setorRelacionado": "dolar"
+    },
+    {
+      "id": "acoes-brasileiras-2026-analise",
+      "titulo": "Acciones Brasilenas en 2026: Hora de Cautela?",
+      "subtitulo": "Ibovespa batió records en 2025, pero los riesgos aumentaron",
+      "descricao": "Analisis completo del escenario para acciones brasilenas. El Ibovespa subio 34% en 2025, pero cuales son los riesgos y oportunidades para 2026?",
+      "arquivo": "acoes-brasileiras-2026-analise.html",
+      "nivel": "intermediario",
+      "categoria": "renda-variavel",
+      "tags": ["acciones", "ibovespa", "selic", "elecciones"],
+      "dataPublicacao": "2026-01-04",
+      "tempoLeitura": 8,
+      "destaque": false,
+      "setorRelacionado": "ibov"
+    }
+  ]
+}

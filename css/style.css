@@ -1428,6 +1428,16 @@ body.home-page {
   stroke-dasharray: calc(var(--percent) * 2.51) 251;
   stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
 }
+.ring-segment.seg-caixa {
+  stroke: #2ea043;
+  stroke-dasharray: calc(var(--percent) * 2.51) 251;
+  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
+}
+.ring-segment.seg-imoveis {
+  stroke: #8b5cf6;
+  stroke-dasharray: calc(var(--percent) * 2.51) 251;
+  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
+}
 
 /* ==========================================
    Card Expectativas do Canal

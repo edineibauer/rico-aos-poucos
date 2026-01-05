@@ -25,34 +25,43 @@ const I18n = {
   /**
    * Detect the base path of the site (for GitHub Pages compatibility)
    * Example: /rico-aos-poucos/ on GitHub Pages, or / locally
+   *
+   * The base path is only present when hosting on GitHub Pages with a repo name
+   * e.g., https://username.github.io/repo-name/ has base path /repo-name
+   * But https://ricoaospoucos.com/ has no base path (root)
    */
   detectBasePath() {
-    const path = window.location.pathname;
+    // Check canonical URL to determine if site is at root or subdirectory
+    const canonical = document.querySelector('link[rel="canonical"]')?.href;
+    if (canonical) {
+      try {
+        const canonicalUrl = new URL(canonical);
+        const canonicalPath = canonicalUrl.pathname;
+        const currentPath = window.location.pathname;
 
-    // Check if we're on GitHub Pages with a repo name in the path
-    // Pattern: /repo-name/... or /repo-name/en/... or /repo-name/es/...
-    const match = path.match(/^(\/[^\/]+)\/(en\/|es\/|index\.html|$)/);
+        // If canonical shows site at root domain (e.g., ricoaospoucos.com/...)
+        // then there's no base path
+        if (canonicalUrl.hostname.includes('ricoaospoucos') ||
+            canonicalUrl.hostname.includes('github.io') === false) {
+          return '';
+        }
 
-    if (match) {
-      // We found a base path like /rico-aos-poucos
-      return match[1];
-    }
+        // For GitHub Pages: extract base path from canonical
+        // e.g., canonical: /repo-name/page/ -> base path: /repo-name
+        const canonicalParts = canonicalPath.split('/').filter(p => p && p !== 'en' && p !== 'es');
+        const currentParts = currentPath.split('/').filter(p => p && p !== 'en' && p !== 'es');
 
-    // Check for base path before language folders
-    const langMatch = path.match(/^(\/[^\/]+)\/(?:en|es)(?:\/|$)/);
-    if (langMatch) {
-      return langMatch[1];
-    }
-
-    // Check if path starts with a known repo-like pattern (not en/es)
-    const parts = path.split('/').filter(p => p);
-    if (parts.length > 0 && parts[0] !== 'en' && parts[0] !== 'es') {
-      // Check if this looks like a GitHub Pages repo path
-      // by seeing if /repo-name/en/ or /repo-name/es/ exists in the path structure
-      const firstPart = '/' + parts[0];
-      if (path.includes(firstPart + '/en/') || path.includes(firstPart + '/es/') ||
-          document.querySelector('link[rel="canonical"]')?.href.includes(parts[0])) {
-        return firstPart;
+        // If both have same first part, it might be the base path (GitHub Pages repo name)
+        if (canonicalParts.length > 0 && currentParts.length > 0 &&
+            canonicalParts[0] === currentParts[0]) {
+          // Only consider it a base path if it looks like a repo name
+          // and the canonical URL is from github.io
+          if (canonicalUrl.hostname.includes('github.io')) {
+            return '/' + canonicalParts[0];
+          }
+        }
+      } catch (e) {
+        // URL parsing failed, continue with fallback
       }
     }
 

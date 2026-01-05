@@ -347,7 +347,7 @@
         <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
       </a>
       <div class="app-logo">
-        <svg viewBox="139 146 746 733" width="36" height="36"><rect x="139" y="146" width="746" height="733" rx="60" fill="white"/>
+        <svg viewBox="139 146 746 733" width="36" height="36"><rect x="139" y="146" width="746" height="733" rx="150" ry="150" fill="white"/>
           <path d="M 853.50 877.64 C849.37,878.74 789.73,878.96 512.00,878.90 C483.48,878.89 457.31,878.89 433.29,878.89 C175.79,878.87 165.70,878.87 159.58,873.94 C158.76,873.28 158.01,872.53 156.75,871.68 C149.93,867.09 143.36,858.69 140.63,851.06 C139.12,846.87 138.99,819.22 138.97,513.00 C138.97,486.99 138.97,462.96 138.96,440.77 C138.92,181.35 138.92,172.47 143.25,167.04 C143.78,166.38 144.36,165.78 145.02,164.78 C151.12,155.57 160.49,149.28 171.50,147.01 C174.90,146.31 284.97,146.06 515.00,146.24 L 853.50 146.50 L 860.74 149.89 C868.71,153.63 876.28,160.70 879.89,167.79 C880.37,168.72 880.80,169.40 881.19,170.10 C885.02,177.00 885.02,186.02 884.99,452.88 C884.98,470.73 884.98,489.73 884.98,509.96 C884.97,722.13 884.61,838.95 883.96,843.50 C882.66,852.59 878.86,860.25 872.48,866.64 C866.83,872.30 861.13,875.60 853.50,877.64 Z" fill="rgb(26,49,78)"/>
           <path d="M 428.56 530.00 C404.55,552.75 395.95,560.53 397.35,558.25" fill="rgb(175,120,40)"/>
         </svg>
@@ -356,6 +356,7 @@
         <h1 class="app-name">Rico aos Poucos</h1>
         <span class="app-subtitle">Articles & Analysis</span>
       </div>
+      <div id="langSelector"></div>
     </header>
 
     <main class="main-content">
@@ -373,12 +374,20 @@
 
     </main>
 
-    <footer class="page-footer">
-      <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="footer-youtube">
-        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1 1.8 2 2.1 1.9.5 9.5.5 9.5.5s7.6 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
-        YouTube
-      </a>
-      <p class="footer-text">Rico aos Poucos - Educational content</p>
+    <footer class="app-footer">
+      <div class="footer-links">
+        <a href="../../en/sobre/" class="footer-link">
+          <span>💡</span> <span data-i18n="nav.about">About Us</span>
+        </a>
+      </div>
+      <p class="footer-disclaimer" data-i18n="common.disclaimer">
+        Educational content • Not investment advice
+      </p>
+      <div class="footer-version">
+        <span data-i18n="footer.version">v1.0</span>
+        <span class="separator">•</span>
+        <span data-i18n="footer.date">January 2026</span>
+      </div>
     </footer>
 
   </div>
@@ -490,5 +499,6 @@
 
     document.addEventListener('DOMContentLoaded', carregarArtigos);
   </script>
+  <script src="../../js/i18n.js"></script>
 </body>
 </html>

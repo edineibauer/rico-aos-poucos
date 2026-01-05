@@ -3457,6 +3457,185 @@ body.home-page {
 }
 
 /* ==========================================
+   Card Footer Multi Links
+   ========================================== */
+
+.card-footer-multi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 16px;
+}
+
+.footer-link-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--primary-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-link-action:hover {
+  color: var(--primary);
+}
+
+.footer-link-action .arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-link-action.footer-secondary {
+  color: var(--text-muted);
+}
+
+.footer-link-action.footer-secondary:hover {
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   YouTube Card
+   ========================================== */
+
+.card-youtube {
+  display: block;
+  margin-top: 16px;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card-youtube:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-card-content {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.youtube-thumbnail {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  height: 68px;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.youtube-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.youtube-play-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.card-youtube:hover .youtube-play-btn {
+  background: #ff0000;
+  transform: scale(1.1);
+}
+
+.youtube-play-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+}
+
+.youtube-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.youtube-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.youtube-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.youtube-info .card-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.youtube-cta {
+  font-size: 0.85rem;
+  color: #ff0000;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.card-youtube:hover .youtube-cta {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Footer Links
+   ========================================== */
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-link span {
+  font-size: 1rem;
+}
+
+/* ==========================================
    PWA Install Banner
    ========================================== */
 

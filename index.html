@@ -185,26 +185,37 @@
             </div>
           </a>
         </div>
-        <a href="setores/" class="card-footer">
-          <span class="footer-action">Ver analise completa</span>
-          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+        <div class="card-footer-multi">
+          <a href="setores/" class="footer-link-action">
+            <span class="footer-action">Ver análise completa</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="desempenho/" class="footer-link-action footer-secondary">
+            <span class="footer-action">📊 Desempenho</span>
+            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </div>
       </div>
 
-      <!-- Links Secundarios - Macro e Ativos em segundo plano -->
-      <div class="cards-grid-2 secondary-links">
+      <!-- Card YouTube -->
+      <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="summary-card card-youtube">
+        <div class="youtube-card-content">
+          <div class="youtube-thumbnail" id="youtubeThumbnail">
+            <div class="youtube-play-btn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            </div>
+            <span class="youtube-badge">YouTube</span>
+          </div>
+          <div class="youtube-info">
+            <h2>Canal no YouTube</h2>
+            <span class="card-subtitle">Vídeos e análises em tempo real</span>
+            <span class="youtube-cta">Assistir agora →</span>
+          </div>
+        </div>
+      </a>
 
-        <!-- Card Desempenho -->
-        <a href="desempenho/" class="summary-card card-compact">
-          <div class="card-icon-box" style="background:rgba(63,185,80,0.15);">
-            <span>📊</span>
-          </div>
-          <div class="card-title-group">
-            <h2>Desempenho</h2>
-            <span class="card-subtitle">Resultados da Carteira</span>
-          </div>
-          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
+      <!-- Links Secundarios -->
+      <div class="cards-grid-2 secondary-links">
 
         <!-- Card Publicacoes -->
         <a href="artigos/" class="summary-card card-compact">
@@ -212,92 +223,47 @@
             <span>📝</span>
           </div>
           <div class="card-title-group">
-            <h2>Publicacoes</h2>
-            <span class="card-subtitle">Artigos & Analises</span>
+            <h2>Publicações</h2>
+            <span class="card-subtitle">Artigos & Análises</span>
           </div>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
-      </div>
-
-      <!-- Links Secundarios 2 -->
-      <div class="cards-grid-2 secondary-links" style="margin-top:12px;">
-
-        <!-- Card Sobre -->
-        <a href="sobre/" class="summary-card card-compact">
-          <div class="card-icon-box about">
-            <span>💡</span>
-          </div>
-          <div class="card-title-group">
-            <h2>Sobre o Canal</h2>
-            <span class="card-subtitle">Filosofia & Metodo</span>
-          </div>
-          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
-        <!-- Card Carteira -->
-        <a href="carteira/" class="summary-card card-compact">
-          <div class="card-icon-box">
-            <span>💼</span>
-          </div>
-          <div class="card-title-group">
-            <h2>Carteira</h2>
-            <span class="card-subtitle">Alocacao Detalhada</span>
-          </div>
-          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
-      </div>
-
-      <!-- Links terciarios -->
-      <div class="cards-grid-3">
-
-        <!-- Card Cenario Macro -->
-        <a href="macroeconomia/" class="summary-card card-small card-macro">
+        <!-- Card Macro -->
+        <a href="macroeconomia/" class="summary-card card-compact">
           <div class="card-icon-box macro">
             <span>🌍</span>
           </div>
-          <div class="card-info">
-            <h3>Macro</h3>
-            <span class="card-meta">Cenario Economico</span>
-          </div>
-          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
-        <!-- Card Ativos -->
-        <a href="ativos/" class="summary-card card-small card-ativos">
-          <div class="card-icon-box ativos">
-            <span>📊</span>
-          </div>
-          <div class="card-info">
-            <h3>Ativos</h3>
-            <span class="card-meta">Analises</span>
-          </div>
-          <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-
-        <!-- Card Iniciantes -->
-        <a href="artigos/?nivel=iniciante" class="summary-card card-small card-beginners">
-          <div class="card-icon-box beginners">
-            <span>🎯</span>
-          </div>
-          <div class="card-info">
-            <h3>Iniciantes</h3>
-            <span class="card-meta">Comece aqui</span>
+          <div class="card-title-group">
+            <h2>Macro</h2>
+            <span class="card-subtitle">Cenário Econômico</span>
           </div>
           <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
 
       </div>
+
+      <!-- Card Ativos -->
+      <a href="ativos/" class="summary-card card-compact" style="margin-top:12px;">
+        <div class="card-icon-box ativos">
+          <span>📊</span>
+        </div>
+        <div class="card-title-group">
+          <h2>Ativos</h2>
+          <span class="card-subtitle">Análises Individuais</span>
+        </div>
+        <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
 
     </section>
 
     <!-- Footer do App -->
     <footer class="app-footer">
-      <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="footer-youtube">
-        <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1 1.8 2 2.1 1.9.5 9.5.5 9.5.5s7.6 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
-        YouTube
-      </a>
+      <div class="footer-links">
+        <a href="sobre/" class="footer-link">
+          <span>💡</span> Sobre o Canal
+        </a>
+      </div>
       <p class="footer-disclaimer">
         Conteúdo educacional • Não é recomendação de investimento
       </p>

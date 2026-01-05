@@ -31,41 +31,24 @@ const I18n = {
    * But https://ricoaospoucos.com/ has no base path (root)
    */
   detectBasePath() {
-    // Check canonical URL to determine if site is at root or subdirectory
-    const canonical = document.querySelector('link[rel="canonical"]')?.href;
-    if (canonical) {
-      try {
-        const canonicalUrl = new URL(canonical);
-        const canonicalPath = canonicalUrl.pathname;
-        const currentPath = window.location.pathname;
+    const hostname = window.location.hostname;
+    const path = window.location.pathname;
 
-        // If canonical shows site at root domain (e.g., ricoaospoucos.com/...)
-        // then there's no base path
-        if (canonicalUrl.hostname.includes('ricoaospoucos') ||
-            canonicalUrl.hostname.includes('github.io') === false) {
-          return '';
+    // If we're on GitHub Pages (*.github.io), detect the repo name from the path
+    if (hostname.endsWith('.github.io') || hostname.endsWith('.github.io.')) {
+      // The first part of the path is the repo name (base path)
+      const parts = path.split('/').filter(p => p);
+      if (parts.length > 0) {
+        // Check if the first segment is NOT a language folder
+        // The repo name comes before any language prefix
+        const firstPart = parts[0];
+        if (firstPart !== 'en' && firstPart !== 'es') {
+          return '/' + firstPart;
         }
-
-        // For GitHub Pages: extract base path from canonical
-        // e.g., canonical: /repo-name/page/ -> base path: /repo-name
-        const canonicalParts = canonicalPath.split('/').filter(p => p && p !== 'en' && p !== 'es');
-        const currentParts = currentPath.split('/').filter(p => p && p !== 'en' && p !== 'es');
-
-        // If both have same first part, it might be the base path (GitHub Pages repo name)
-        if (canonicalParts.length > 0 && currentParts.length > 0 &&
-            canonicalParts[0] === currentParts[0]) {
-          // Only consider it a base path if it looks like a repo name
-          // and the canonical URL is from github.io
-          if (canonicalUrl.hostname.includes('github.io')) {
-            return '/' + canonicalParts[0];
-          }
-        }
-      } catch (e) {
-        // URL parsing failed, continue with fallback
       }
     }
 
-    // Default: no base path (site at root)
+    // For custom domains (like ricoaospoucos.com) or localhost, no base path needed
     return '';
   },
 

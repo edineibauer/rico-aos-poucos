@@ -27,37 +27,43 @@ O app tem como foco principal:
 
 ```
 rico-aos-poucos/
-├── index.html                    # Pagina inicial do app
+├── index.html                    # Pagina inicial (PT-BR)
+├── en/                          # Versao em ingles
+│   ├── index.html
+│   ├── setores/
+│   ├── artigos/
+│   └── desempenho/
+├── es/                          # Versao em espanhol
+│   ├── index.html
+│   ├── setores/
+│   ├── artigos/
+│   └── desempenho/
 ├── css/
 │   └── style.css                # Estilos globais
 ├── js/
-│   └── app.js                   # JavaScript principal
+│   ├── app.js                   # JavaScript principal
+│   └── i18n.js                  # Sistema de idiomas
 ├── data/
-│   ├── config.json              # Configuracoes gerais
-│   ├── setores.json             # Dados dos setores e sentimentos
-│   └── publicacoes/             # Publicacoes por setor
-│       ├── dolar/
-│       │   └── index.json       # Lista de publicacoes do setor
-│       ├── ouro/
-│       ├── bitcoin/
-│       ├── tlt/
-│       ├── fiis/
-│       ├── ibov/
-│       └── tesouro-ipca/
-├── setores/
-│   ├── index.html               # Visao geral dos setores
+│   ├── artigos.json             # Metadados dos artigos (PT-BR)
+│   ├── artigos-en.json          # Metadados dos artigos (EN)
+│   └── artigos-es.json          # Metadados dos artigos (ES)
+├── setores/                     # Paginas dos setores (PT-BR)
+│   ├── index.html
 │   ├── dolar/
-│   │   └── index.html           # Pagina do setor Dolar
-│   ├── ouro/
-│   ├── bitcoin/
+│   ├── caixa/
 │   ├── tlt/
+│   ├── imoveis/
 │   ├── fiis/
+│   ├── tesouro-ipca/
 │   ├── ibov/
-│   └── tesouro-ipca/
-├── artigos/                     # Publicacoes gerais
-├── carteira/                    # Alocacao de carteira (secundario)
-├── macroeconomia/               # Cenario macro (secundario)
-├── ativos/                      # Analise de ativos (secundario)
+│   ├── ouro/
+│   ├── sp500/
+│   └── bitcoin/
+├── artigos/                     # Artigos e analises (PT-BR)
+├── desempenho/                  # Performance da carteira
+├── carteira/                    # Alocacao de carteira
+├── macroeconomia/               # Cenario macro
+├── ativos/                      # Analise de ativos
 ├── sobre/                       # Sobre o canal
 └── .nojekyll                    # Marker para GitHub Pages
 ```
@@ -66,38 +72,51 @@ rico-aos-poucos/
 
 ### Alterar Sentimento de um Setor
 
-1. Editar `data/setores.json`:
-   - Alterar o campo `sentimento` do setor desejado (`bullish`, `neutral`, `bearish`)
-   - Atualizar `exposicaoRecomendada` se necessario (total deve ser 100%)
-   - Adicionar entrada no `historicoSentimentos`
-
-2. Atualizar a pagina do setor em `setores/[setor]/index.html`:
+1. Atualizar a pagina do setor em `setores/[setor]/index.html`:
    - Alterar a classe do badge (`.bullish`, `.neutral`, `.bearish`)
    - Atualizar o texto "Por que estamos [sentimento]?"
    - Adicionar nova publicacao na lista
 
-3. Atualizar a home `index.html`:
+2. Atualizar versoes em outros idiomas:
+   - `en/setores/[setor]/index.html`
+   - `es/setores/[setor]/index.html`
+
+3. Atualizar a home `index.html` (e versoes en/es):
    - Ajustar os contadores de sentimento no card principal
    - Atualizar as classes dos itens `.setor-item`
 
-4. Atualizar `setores/index.html`:
+4. Atualizar `setores/index.html` (e versoes en/es):
    - Ajustar badge e barra de exposicao do setor alterado
 
-### Adicionar Nova Publicacao
+### Adicionar Novo Artigo
 
-1. Adicionar entrada em `data/publicacoes/[setor]/index.json`:
+1. Criar o arquivo HTML do artigo em `artigos/[nome-do-artigo].html`
+
+2. Adicionar entrada em `data/artigos.json`:
 ```json
 {
-  "id": "2026-02-15-nova-analise",
-  "data": "2026-02-15",
-  "titulo": "Titulo da Nova Publicacao",
-  "resumo": "Breve resumo do conteudo...",
-  "sentimentoNaData": "bullish",
-  "arquivo": "2026-02-15-nova-analise.html"
+  "id": "nome-do-artigo",
+  "titulo": "Titulo do Artigo",
+  "subtitulo": "Subtitulo explicativo",
+  "descricao": "Descricao breve...",
+  "arquivo": "nome-do-artigo.html",
+  "nivel": "intermediario",
+  "categoria": "macroeconomia",
+  "tags": ["tag1", "tag2"],
+  "dataPublicacao": "2026-02-15",
+  "tempoLeitura": 8,
+  "destaque": false
 }
 ```
 
-2. Adicionar o HTML da publicacao na pagina do setor `setores/[setor]/index.html`:
+3. Criar versoes traduzidas:
+   - `en/artigos/[nome-do-artigo].html`
+   - `es/artigos/[nome-do-artigo].html`
+   - Adicionar entradas em `data/artigos-en.json` e `data/artigos-es.json`
+
+### Adicionar Publicacao na Pagina do Setor
+
+Adicionar o HTML na pagina do setor `setores/[setor]/index.html`:
 ```html
 <div class="publicacao-item">
   <div class="publicacao-data">
@@ -110,20 +129,6 @@ rico-aos-poucos/
     <p>Breve resumo do conteudo...</p>
   </div>
 </div>
-```
-
-### Atualizar Historico de Sentimentos
-
-Adicionar entrada em `data/setores.json` no array `historicoSentimentos`:
-```json
-{
-  "data": "2026-02-15",
-  "titulo": "Mudanca de visao para FIIs",
-  "descricao": "FIIs passam de neutro para otimista com sinalizacao de corte de juros.",
-  "alteracoes": {
-    "fiis": { "de": "neutral", "para": "bullish" }
-  }
-}
 ```
 
 ## Legendas de Sentimento

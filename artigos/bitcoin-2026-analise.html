@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Bitcoin em 2026: Fim de ciclo, risco elevado e exposicao zero. Analise do cenario pessimista para criptomoedas.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+  <link rel="manifest" href="../manifest.json">
+  <title>Bitcoin em 2026: Por que Estamos Fora - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header padronizado */
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .header-back:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-back svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .app-logo {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .app-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .app-subtitle {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 16px 20px;
+      max-width: 800px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Article Header */
+    .article-header {
+      margin-bottom: 24px;
+    }
+
+    .article-header h1 {
+      font-size: 1.5rem;
+      margin: 12px 0 8px;
+      line-height: 1.3;
+      color: var(--text-primary);
+    }
+
+    .article-lead {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-bottom: 12px;
+    }
+
+    .article-meta {
+      display: flex;
+      gap: 12px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 10px;
+      border-radius: 10px;
+      font-size: 0.7rem;
+      font-weight: 600;
+    }
+
+    .nivel-badge.intermediario {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    /* Article Content */
+    .article-content {
+      line-height: 1.7;
+      color: var(--text-secondary);
+    }
+
+    .article-content h2 {
+      color: var(--text-primary);
+      margin: 24px 0 12px;
+      font-size: 1.2rem;
+    }
+
+    .article-content h3 {
+      color: var(--text-primary);
+      margin: 20px 0 10px;
+      font-size: 1rem;
+    }
+
+    .article-content p {
+      margin-bottom: 14px;
+      font-size: 0.9rem;
+    }
+
+    .article-content ul, .article-content ol {
+      margin-bottom: 14px;
+      padding-left: 20px;
+    }
+
+    .article-content li {
+      margin-bottom: 6px;
+      font-size: 0.9rem;
+    }
+
+    /* Stat box */
+    .stat-box {
+      background: var(--bg-tertiary);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .stat-box.bearish {
+      background: linear-gradient(135deg, rgba(248, 81, 73, 0.15) 0%, var(--bg-tertiary) 100%);
+      border: 1px solid rgba(248, 81, 73, 0.3);
+    }
+
+    .stat-number {
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--bearish);
+    }
+
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 4px;
+    }
+
+    /* Stats grid */
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .stat-item {
+      background: var(--bg-tertiary);
+      border-radius: 10px;
+      padding: 14px 10px;
+      text-align: center;
+    }
+
+    .stat-item .value {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+    .stat-item .value.bullish { color: var(--bullish); }
+    .stat-item .value.bearish { color: var(--bearish); }
+    .stat-item .value.neutral { color: var(--neutral); }
+
+    .stat-item .label {
+      font-size: 0.65rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    /* Callout */
+    .callout {
+      background: linear-gradient(135deg, rgba(63, 185, 80, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(63, 185, 80, 0.25);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 20px 0;
+    }
+
+    .callout h3 {
+      margin: 0 0 8px;
+      font-size: 0.9rem;
+    }
+
+    .callout p {
+      margin: 0;
+      font-size: 0.85rem;
+    }
+
+    .callout.warning {
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(240, 193, 75, 0.25);
+    }
+
+    .callout.danger {
+      background: linear-gradient(135deg, rgba(248, 81, 73, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(248, 81, 73, 0.25);
+    }
+
+    /* Risk box */
+    .risk-box {
+      background: var(--bg-tertiary);
+      border-radius: 10px;
+      padding: 16px;
+      margin: 20px 0;
+      border-left: 3px solid var(--bearish);
+    }
+
+    .risk-box h4 {
+      margin-bottom: 12px;
+      color: var(--bearish);
+      font-size: 0.9rem;
+    }
+
+    .risk-row {
+      display: flex;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border-color);
+      font-size: 0.85rem;
+    }
+
+    .risk-row:last-child {
+      border-bottom: none;
+    }
+
+    .risk-row .label {
+      color: var(--text-secondary);
+    }
+
+    .risk-row .value {
+      font-weight: 600;
+      color: var(--bearish);
+    }
+
+    /* Source link */
+    .source-link {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      border-bottom: 1px dotted var(--text-muted);
+    }
+
+    .source-link:hover {
+      color: var(--primary-light);
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      padding: 16px;
+      margin-top: 24px;
+    }
+
+    .disclaimer h4 {
+      margin-bottom: 8px;
+      color: var(--neutral);
+      font-size: 0.85rem;
+    }
+
+    .disclaimer p {
+      font-size: 0.8rem;
+      margin: 0;
+    }
+
+    /* Nav buttons */
+    .nav-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-outline {
+      background: transparent;
+      border: 1px solid var(--border-color);
+      color: var(--text-secondary);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--primary-light);
+      color: var(--text-primary);
+    }
+
+    /* Footer */
+    .page-footer {
+      padding: 12px 16px;
+      text-align: center;
+      border-top: 1px solid var(--border-color);
+      background: var(--bg-secondary);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .footer-youtube {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 10px;
+      background: rgba(255, 0, 0, 0.1);
+      border: 1px solid rgba(255, 0, 0, 0.2);
+      border-radius: 6px;
+      color: #ff4444;
+      font-size: 0.7rem;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .footer-text {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    @media (max-width: 480px) {
+      .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <!-- Header padronizado -->
+    <header class="app-header">
+      <a href="./" class="header-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div class="app-logo">
+        <svg viewBox="139 146 746 733" width="36" height="36"><rect x="139" y="146" width="746" height="733" rx="60" fill="white"/>
+          <path d="M 853.50 877.64 C849.37,878.74 789.73,878.96 512.00,878.90 C483.48,878.89 457.31,878.89 433.29,878.89 C175.79,878.87 165.70,878.87 159.58,873.94 C158.76,873.28 158.01,872.53 156.75,871.68 C149.93,867.09 143.36,858.69 140.63,851.06 C139.12,846.87 138.99,819.22 138.97,513.00 C138.97,486.99 138.97,462.96 138.96,440.77 C138.92,181.35 138.92,172.47 143.25,167.04 C143.78,166.38 144.36,165.78 145.02,164.78 C151.12,155.57 160.49,149.28 171.50,147.01 C174.90,146.31 284.97,146.06 515.00,146.24 L 853.50 146.50 L 860.74 149.89 C868.71,153.63 876.28,160.70 879.89,167.79 C880.37,168.72 880.80,169.40 881.19,170.10 C885.02,177.00 885.02,186.02 884.99,452.88 C884.98,470.73 884.98,489.73 884.98,509.96 C884.97,722.13 884.61,838.95 883.96,843.50 C882.66,852.59 878.86,860.25 872.48,866.64 C866.83,872.30 861.13,875.60 853.50,877.64 ZM 189.00 238.88 L 189.00 648.00 L 271.00 648.00 L 271.00 484.00 L 295.62 484.00 L 297.21 488.75 C298.08,491.36 304.28,509.48 310.98,529.00 C322.72,563.21 331.67,589.50 345.11,629.25 L 351.45 648.00 L 710.00 648.00 L 710.00 486.31 L 737.25 485.69 C775.74,484.80 791.44,482.17 809.68,473.54 C820.62,468.36 825.89,464.84 834.06,457.29 C849.28,443.19 858.60,423.63 862.45,397.68 C864.51,383.81 864.53,350.09 862.49,336.54 C853.94,279.82 816.67,245.40 758.00,240.06 C751.45,239.46 719.51,239.01 683.75,239.00 L 621.00 239.00 L 620.98 317.50 L 598.74 326.44 C586.51,331.36 571.19,337.61 564.71,340.32 C558.40,342.96 554.92,344.00 554.57,345.68 C554.22,347.36 556.99,349.68 563.16,354.85 C564.36,355.86 565.68,356.97 567.14,358.21 L 577.90 367.35 L 568.02 377.92 C562.58,383.74 550.26,396.34 540.63,405.93 L 523.12 423.35 L 516.44 417.43 C512.76,414.17 507.08,409.29 503.81,406.58 L 497.88 401.67 L 495.60 404.08 C494.34,405.41 490.00,410.10 485.95,414.50 C473.49,428.04 384.56,520.00 383.92,520.00 C383.60,520.00 379.92,510.89 375.75,499.75 C371.58,488.61 367.89,478.78 367.54,477.90 C367.03,476.63 368.71,475.66 375.84,473.11 C401.44,463.95 421.75,444.57 431.24,420.24 C441.47,394.02 443.61,347.13 435.95,317.23 C430.99,297.88 423.85,284.78 411.15,271.71 C395.94,256.06 377.81,247.18 350.00,241.74 C340.11,239.80 335.15,239.66 264.25,239.28 ZM 327.74 419.68 C321.97,421.33 273.12,422.87 271.75,421.44 C271.34,421.02 271.00,393.97 271.00,361.33 L 271.00 302.00 L 294.75 302.02 C320.87,302.04 328.62,303.05 337.42,307.59 C350.50,314.34 355.87,324.92 358.02,348.14 C359.84,367.81 357.15,389.86 351.58,400.83 C346.39,411.09 339.91,416.21 327.74,419.68 ZM 755.55 422.72 C749.95,424.30 712.01,425.77 710.75,424.45 C710.34,424.02 710.00,396.29 710.00,362.83 L 710.00 302.00 L 728.05 302.00 C750.08,302.00 757.32,303.36 765.94,309.12 C776.22,315.99 781.04,326.16 783.15,345.43 C784.57,358.47 783.73,382.34 781.51,392.00 C780.56,396.12 778.19,402.55 776.25,406.27 C771.57,415.27 765.87,419.80 755.55,422.72 Z" fill="rgb(26,49,78)"/>
+          <path d="M 428.56 530.00 C404.55,552.75 395.95,560.53 397.35,558.25 C397.77,557.56 397.69,557.00 397.17,557.00 C396.22,557.00 387.98,535.64 387.99,533.23 C388.01,531.15 495.81,419.76 498.30,419.26 C498.96,419.12 504.62,423.51 510.87,429.01 C517.13,434.50 522.56,439.00 522.94,439.00 C523.32,439.00 529.43,433.04 536.51,425.75 C543.59,418.46 559.39,402.38 571.62,390.00 C590.14,371.27 593.67,367.25 592.68,366.00 C592.03,365.17 587.56,360.96 582.75,356.63 C577.94,352.30 574.00,348.43 574.00,348.04 C574.00,347.65 580.41,344.94 588.25,342.02 C620.85,329.87 647.10,320.05 656.32,316.54 C661.72,314.49 666.28,312.97 666.45,313.16 C666.63,313.34 665.49,320.48 663.94,329.00 C662.38,337.52 660.40,348.55 659.54,353.50 C658.68,358.45 656.38,371.50 654.43,382.50 C652.48,393.50 650.48,404.92 649.97,407.89 C649.47,410.85 648.84,413.49 648.58,413.76 C648.08,414.26 644.43,411.22 631.56,399.59 L 623.91 392.67 L 619.70 396.61 C617.39,398.78 612.12,403.67 608.00,407.47 C603.88,411.28 596.67,418.03 592.00,422.48 C587.33,426.92 573.38,439.98 561.00,451.51 C548.62,463.03 535.47,475.34 531.78,478.87 L 525.05 485.28 L 513.11 474.64 C506.54,468.79 500.74,464.00 500.21,464.00 C498.92,464.00 474.20,486.77 428.56,530.00 ZM 637.00 434.00 L 637.00 625.00 L 571.00 625.00 L 571.00 568.25 C571.00,537.04 571.30,499.80 571.66,485.49 L 572.31 459.48 L 587.85 446.74 L 603.39 434.00 ZM 552.00 497.22 L 552.00 625.00 L 488.00 625.00 L 488.00 495.11 L 498.25 495.56 C503.89,495.80 518.29,496.28 530.25,496.61 ZM 469.00 539.00 L 469.00 625.00 L 421.19 625.00 L 419.69 620.75 C418.87,618.41 414.33,605.99 409.60,593.15 L 401.00 569.79 L 404.25 566.02 C406.04,563.94 411.97,557.01 417.44,550.62 L 427.38 539.00 Z" fill="rgb(175,120,40)"/>
+        </svg>
+      </div>
+      <div class="app-title-group">
+        <h1 class="app-name">Rico aos Poucos</h1>
+        <span class="app-subtitle">Artigo</span>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+
+      <article>
+        <div class="article-header">
+          <span class="nivel-badge intermediario">Intermediario</span>
+          <h1>Bitcoin em 2026: Por que Estamos Fora</h1>
+          <p class="article-lead">
+            Fim de ciclo, padrao historico de correcao e riscos sistemicos. Exposicao recomendada: 0%
+          </p>
+          <div class="article-meta">
+            <span>04 Jan 2026</span>
+            <span>8 min</span>
+          </div>
+        </div>
+
+        <div class="article-content">
+
+          <div class="stat-box bearish">
+            <div class="stat-number">Pessimista</div>
+            <div class="stat-label">Mudanca de Otimista para Pessimista - Exposicao: 0%</div>
+          </div>
+
+          <p>
+            Estamos mudando nosso sentimento sobre Bitcoin e criptomoedas de <strong>Otimista para Pessimista</strong>.
+            Acreditamos que estamos no <strong>fim de um ciclo de alta</strong> e que o padrao historico
+            de correcoes severas tende a se repetir nos proximos 1-2 anos.
+          </p>
+
+          <h2>O Padrao Historico Esta se Repetindo</h2>
+
+          <p>
+            O Bitcoin historicamente segue um ciclo de 4 anos atrelado aos halvings. Apos cada halving,
+            o preco sobe por 12-18 meses e depois corrige fortemente:
+          </p>
+
+          <div class="stats-grid">
+            <div class="stat-item">
+              <div class="value bearish">-73%</div>
+              <div class="label">Correcao 2018</div>
+            </div>
+            <div class="stat-item">
+              <div class="value bearish">-65%</div>
+              <div class="label">Correcao 2022</div>
+            </div>
+            <div class="stat-item">
+              <div class="value neutral">2026?</div>
+              <div class="label">Proximo ciclo</div>
+            </div>
+          </div>
+
+          <p>
+            O Bitcoin atingiu sua maxima de <strong>$126.000 em outubro de 2025</strong> e ja caiu cerca de 30%
+            desde entao. Segundo a <a href="https://www.coindesk.com" class="source-link">CoinDesk</a>,
+            2025 foi o <strong>primeiro ano pos-halving a fechar no vermelho</strong> na historia do Bitcoin.
+          </p>
+
+          <div class="callout danger">
+            <h3>Sinal de Alerta</h3>
+            <p>
+              A CryptoQuant identificou que o bear market comecou em novembro de 2025, enquanto o Bitcoin
+              ainda negociava acima de $108.000. Os indicadores on-chain apontam para uma <strong>fase de
+              distribuicao tardia</strong>.
+            </p>
+          </div>
+
+          <h2>Mais Espaco para Queda do que para Alta</h2>
+
+          <p>
+            Vemos <strong>pouca margem para alta</strong> e <strong>muita margem para queda</strong>:
+          </p>
+
+          <ul>
+            <li>O ciclo de alta ja aconteceu - de $16.000 (2022) para $126.000 (2025)</li>
+            <li>Correcoes historicas variam de 65% a 80%</li>
+            <li>Fluxos de ETF estao diminuindo - grandes compradores recuando</li>
+            <li>Volatilidade e liquidez reduzida aumentam riscos</li>
+          </ul>
+
+          <p>
+            Analistas citados pela <a href="https://www.ig.com" class="source-link">IG</a> indicam que
+            o Bitcoin pode oscilar entre $65.000 e $75.000 em 2026, enquanto cenarios mais pessimistas
+            apontam para niveis de <strong>$45.000 ou menos</strong>.
+          </p>
+
+          <h2>Correlacao com Acoes Americanas</h2>
+
+          <p>
+            Acreditamos que o Bitcoin tende a <strong>seguir o caminho das acoes americanas</strong>.
+            Se houver uma correcao significativa nos mercados de risco (estouro da bolha de IA, por exemplo),
+            as criptomoedas provavelmente acompanharao o movimento de queda.
+          </p>
+
+          <p>
+            Diferente do ouro ou do TLT, o Bitcoin <strong>nao funciona como ativo de protecao</strong>
+            em momentos de crise. Pelo contrario, tende a cair junto com ativos de risco.
+          </p>
+
+          <h2>O Risco Strategy (MicroStrategy)</h2>
+
+          <p>
+            Um fator de risco adicional que preocupa e a <strong>Strategy</strong> (antiga MicroStrategy),
+            maior detentora corporativa de Bitcoin do mundo:
+          </p>
+
+          <div class="risk-box">
+            <h4>Numeros da Strategy</h4>
+            <div class="risk-row">
+              <span class="label">Bitcoin detido</span>
+              <span class="value">671.268 BTC</span>
+            </div>
+            <div class="risk-row">
+              <span class="label">% de todos os BTC</span>
+              <span class="value">3,2%</span>
+            </div>
+            <div class="risk-row">
+              <span class="label">Divida em bonds conversiveis</span>
+              <span class="value">$8,2 bilhoes</span>
+            </div>
+            <div class="risk-row">
+              <span class="label">Gastos anuais (juros/dividendos)</span>
+              <span class="value">$779 milhoes</span>
+            </div>
+            <div class="risk-row">
+              <span class="label">Receita do negocio de software</span>
+              <span class="value">$460 milhoes</span>
+            </div>
+          </div>
+
+          <p>
+            Segundo analise do <a href="https://beincrypto.com" class="source-link">BeInCrypto</a> e
+            <a href="https://finance.yahoo.com" class="source-link">Yahoo Finance</a>, a Strategy
+            representa um <strong>risco sistemico real</strong> para o mercado de criptomoedas.
+          </p>
+
+          <div class="callout warning">
+            <h3>Cenario de Risco</h3>
+            <p>
+              Uma queda de 30% no preco do Bitcoin reduziria o valor das reservas da Strategy em
+              <strong>$16,5 bilhoes</strong>. Em caso de estresse extremo, a empresa poderia ser
+              forcada a vender Bitcoin a precos de liquidacao, amplificando a queda.
+            </p>
+          </div>
+
+          <p>
+            Analistas estimam a probabilidade de colapso da Strategy em 2026 entre <strong>10-20%</strong>.
+            Se isso ocorrer, o impacto poderia ser maior que o colapso da FTX em 2022.
+          </p>
+
+          <h2>Narrativas Positivas vs Realidade</h2>
+
+          <p>
+            Existem narrativas positivas para o Bitcoin (adocao institucional, ETFs, escassez programada),
+            mas tambem existem riscos reais que o mercado parece ignorar:
+          </p>
+
+          <ul>
+            <li><strong>ETFs nao garantem alta:</strong> Fluxos podem reverter rapidamente</li>
+            <li><strong>Institucional nao e hodler:</strong> Fundos realizam lucros</li>
+            <li><strong>Volatilidade extrema:</strong> Quedas de 70-80% sao historicamente normais</li>
+            <li><strong>Correlacao com risco:</strong> Cai junto com acoes em crises</li>
+          </ul>
+
+          <h2>Nossa Decisao: Exposicao Zero</h2>
+
+          <p>
+            Diante deste cenario, decidimos reduzir nossa exposicao recomendada em criptomoedas
+            de 5% para <strong>0%</strong>. Os motivos:
+          </p>
+
+          <ol>
+            <li>Padrao historico de correcao apos ciclo de alta</li>
+            <li>Mais espaco para queda do que para alta</li>
+            <li>Risco sistemico da Strategy</li>
+            <li>Correlacao com acoes americanas (que tambem vemos com cautela)</li>
+            <li>Nao funciona como protecao em crises</li>
+          </ol>
+
+          <div class="stat-box">
+            <div class="stat-number" style="color: var(--text-primary);">0%</div>
+            <div class="stat-label">Exposicao Recomendada em Criptomoedas</div>
+          </div>
+
+          <h2>Quando Voltariamos?</h2>
+
+          <p>
+            Podemos reconsiderar exposicao a criptomoedas se:
+          </p>
+
+          <ul>
+            <li>Ocorrer uma correcao significativa (50%+ de queda)</li>
+            <li>Surgir um novo ciclo de acumulacao</li>
+            <li>Riscos sistemicos forem resolvidos</li>
+            <li>Correlacao com acoes diminuir</li>
+          </ul>
+
+          <p>
+            Por enquanto, preferimos <strong>ficar de fora</strong> e observar o mercado.
+            Volatilidade extrema e incerteza nao combinam com nossa filosofia de protecao
+            de patrimonio.
+          </p>
+
+          <h2>Conclusao</h2>
+
+          <p>
+            Mudamos nosso sentimento para <strong>Pessimista</strong> e zeramos a exposicao porque:
+          </p>
+
+          <ol>
+            <li>Estamos no fim de um ciclo de alta</li>
+            <li>Padrao historico aponta para correcao significativa</li>
+            <li>Mais margem para queda do que para alta</li>
+            <li>Riscos sistemicos (Strategy) sao reais</li>
+            <li>Correlacao com acoes americanas em momento de cautela</li>
+          </ol>
+
+        </div>
+
+        <div class="disclaimer">
+          <h4>Aviso Importante</h4>
+          <p>
+            Esta analise reflete a opiniao do canal Rico aos Poucos e <strong>nao constitui
+            recomendacao de investimento</strong>. Criptomoedas sao ativos de altissima volatilidade.
+            Consulte um profissional antes de tomar decisoes de investimento.
+          </p>
+        </div>
+
+        <div class="nav-buttons">
+          <a href="./" class="btn btn-outline">← Artigos</a>
+          <a href="../setores/bitcoin/" class="btn btn-outline">Setor Bitcoin →</a>
+        </div>
+
+      </article>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer">
+      <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="footer-youtube">
+        <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1 1.8 2 2.1 1.9.5 9.5.5 9.5.5s7.6 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
+        YouTube
+      </a>
+      <p class="footer-text">Rico aos Poucos - Conteudo educacional</p>
+    </footer>
+
+  </div>
+</body>
+</html>

@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "code": "en",
+    "name": "English",
+    "flag": "🇺🇸"
+  },
+  "common": {
+    "appName": "Rico aos Poucos",
+    "tagline": "Smart Investments",
+    "disclaimer": "Educational content • Not investment advice",
+    "back": "Back",
+    "seeMore": "See more",
+    "readMore": "Read more",
+    "loading": "Loading..."
+  },
+  "nav": {
+    "home": "Home",
+    "sectors": "Sectors",
+    "performance": "Performance",
+    "articles": "Articles",
+    "about": "About"
+  },
+  "home": {
+    "expectations": "Channel Expectations",
+    "sentimentBySector": "Sentiment by sector",
+    "mediumTerm": "Medium Term",
+    "seeFullAnalysis": "See full analysis",
+    "performance": "Performance",
+    "youtubeChannel": "YouTube Channel",
+    "youtubeSubtitle": "Videos and real-time analysis",
+    "watchNow": "Watch now",
+    "publications": "Publications",
+    "articlesAnalysis": "Articles & Analysis",
+    "macro": "Macro",
+    "economicScenario": "Economic Scenario",
+    "assets": "Assets",
+    "individualAnalysis": "Individual Analysis",
+    "sectors": "Sectors"
+  },
+  "sentiments": {
+    "bullish": "Bullish",
+    "neutral": "Neutral",
+    "bearish": "Bearish",
+    "bullishPlural": "Bullish",
+    "neutralPlural": "Neutral",
+    "bearishPlural": "Bearish"
+  },
+  "sectors": {
+    "title": "Channel Expectations",
+    "recommendedExposure": "Recommended Exposure",
+    "changeHistory": "Change History",
+    "portfolioPerformance": "Portfolio Performance",
+    "seeFullHistory": "See full history",
+    "month": "Month",
+    "accumulated": "Accumulated",
+    "vsCDI": "vs CDI",
+    "disclaimer": "Channel opinions, not investment recommendations. Medium-term view (1-2 years) subject to change.",
+    "backToSectors": "Back to Sectors"
+  },
+  "sectorNames": {
+    "dolar": "Dollar",
+    "caixa": "Cash",
+    "tlt": "TLT",
+    "imoveis": "Real Estate",
+    "fiis": "REITs",
+    "ipca": "Inflation-Linked",
+    "ibov": "Brazilian Stocks",
+    "ouro": "Gold",
+    "sp500": "S&P500",
+    "bitcoin": "Bitcoin"
+  },
+  "sectorDescriptions": {
+    "dolar": "Currency exposure and USD assets",
+    "caixa": "Liquidity for opportunities",
+    "tlt": "Long-term US Treasury bonds",
+    "imoveis": "Physical real estate via auction",
+    "fiis": "Brazilian Real Estate Funds",
+    "ipca": "Inflation-linked Treasury",
+    "ibov": "Brazilian stocks",
+    "ouro": "Precious metal - protection",
+    "sp500": "US stocks",
+    "bitcoin": "Cryptocurrency"
+  },
+  "sectorPages": {
+    "whyBullish": "Why are we bullish?",
+    "whyNeutral": "Why are we neutral?",
+    "whyBearish": "Why are we bearish?",
+    "assetExamples": "Asset Examples",
+    "instrumentsExposure": "Instruments that provide exposure to this sector",
+    "alternativesRecommended": "Recommended Alternatives",
+    "insteadOf": "Instead of {sector}, we prefer:",
+    "publicationsAbout": "Publications about this Sector",
+    "analysisHistory": "History of analysis and sentiment changes",
+    "termMedium": "Medium Term (1-2 years)",
+    "termMediumLong": "Medium/Long Term"
+  },
+  "performance": {
+    "title": "Portfolio Performance",
+    "subtitle": "Tracking channel recommendations",
+    "portfolio": "Portfolio",
+    "totalReturn": "Total Return",
+    "start": "Start",
+    "annualReturn": "Annual Return",
+    "monthReturn": "Month Return",
+    "recommendedAllocation": "Recommended Allocation",
+    "referenceIndices": "Reference Indices",
+    "baseValues": "Base values in January/2026",
+    "monthlyHistory": "Monthly History",
+    "clickForDetails": "Click on a month for details",
+    "monthAllocation": "Month Allocation",
+    "sectorVariation": "Sector Variation",
+    "closingPrices": "Closing Prices",
+    "monthResult": "Month Result",
+    "portfolioReturnMonth": "Portfolio Return for the Month",
+    "theoreticalPortfolio": "Theoretical portfolio started in January 2026 with R$ 100,000. Values reflect variation in indices for each asset class, not specific assets. This tracking serves as proof of concept for channel recommendations."
+  },
+  "news": {
+    "pessimistic": "Bearish",
+    "endOfCycle": "end of cycle, 0% exposure",
+    "changesTo": "Changes to",
+    "lowPrices": "low prices, low risk",
+    "fiscalRisk": "real fiscal risk",
+    "optimisticAfterDrop": "Bullish after 11% drop in 2025",
+    "passiveIncome": "Passive income",
+    "stretchedPrices": "stretched prices"
+  },
+  "footer": {
+    "version": "v1.0",
+    "date": "January 2026"
+  },
+  "pwa": {
+    "installApp": "Install App",
+    "accessOffline": "Access offline and faster",
+    "install": "Install"
+  }
+}

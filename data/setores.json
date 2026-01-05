@@ -39,10 +39,10 @@
       "nome": "TLT",
       "icone": "📊",
       "descricao": "Titulos longos do tesouro americano (20+ anos)",
-      "sentimento": "neutral",
+      "sentimento": "bullish",
       "exposicaoRecomendada": 10,
       "exemplosAtivos": ["TLT", "GOVT", "BND", "Tesouro americano direto"],
-      "cor": "#58a6ff"
+      "cor": "#3fb950"
     },
     "fiis": {
       "id": "fiis",
@@ -69,16 +69,44 @@
       "nome": "Tesouro IPCA+",
       "icone": "🏦",
       "descricao": "Titulos publicos atrelados a inflacao",
-      "sentimento": "bullish",
+      "sentimento": "neutral",
       "exposicaoRecomendada": 30,
       "exemplosAtivos": ["Tesouro IPCA+ 2029", "Tesouro IPCA+ 2035", "Tesouro IPCA+ 2045"],
-      "cor": "#1a5f4a"
+      "cor": "#f0c14b"
     }
   },
 
   "ordemExibicao": ["tesouro-ipca", "dolar", "fiis", "ibov", "ouro", "tlt", "bitcoin"],
 
   "historicoSentimentos": [
+    {
+      "data": "2026-01-04",
+      "titulo": "TLT muda para Otimista",
+      "descricao": "Precos historicamente baixos, risco limitado, ativo de protecao. Dolar + dividendo + potencial de alta = retorno atrativo.",
+      "alteracoes": {
+        "tlt": { "de": "neutral", "para": "bullish" }
+      }
+    },
+    {
+      "data": "2026-01-04",
+      "titulo": "IPCA+ muda para Neutro",
+      "descricao": "Taxas altas (IPCA+7%), mas risco fiscal real. Marcacao a mercado pode ser negativa se cenario piorar. Prefira prazos curtos.",
+      "alteracoes": {
+        "tesouro-ipca": { "de": "bullish", "para": "neutral" }
+      }
+    },
+    {
+      "data": "2026-01-04",
+      "titulo": "Nova analise: FIIs neutros",
+      "descricao": "FIIs bons para renda passiva, mas precos esticados. Mercado ja precificou corte de Selic. Esperando correcao para aumentar posicao.",
+      "alteracoes": {}
+    },
+    {
+      "data": "2026-01-04",
+      "titulo": "Nova analise: Dolar otimista",
+      "descricao": "Dolar caiu 11% em 2025 (maior queda desde 2016). Vemos como oportunidade: carry trade, risco fiscal e papel de ativo de refugio favorecem valorizacao.",
+      "alteracoes": {}
+    },
     {
       "data": "2026-01-04",
       "titulo": "Atualizacao IBOV para Neutro",

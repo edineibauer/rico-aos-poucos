@@ -3,22 +3,31 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Analise do setor Dolar - Expectativas e sentimento do canal Rico aos Poucos.">
-  <title>Dolar - Expectativas do Canal - Rico aos Poucos</title>
+  <meta name="description" content="Análise do setor Dólar - Expectativas e sentimento do canal Rico aos Poucos.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <title>Dólar - Expectativas do Canal - Rico aos Poucos</title>
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .app-header-inner{display:flex;align-items:center;gap:12px;padding:16px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color)}
+    .header-back{display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.05);border-radius:10px;color:var(--text-primary);text-decoration:none;transition:all 0.3s ease}
+    .header-back:hover{background:rgba(255,255,255,0.1)}
+    .header-back svg{width:20px;height:20px;stroke:currentColor;stroke-width:2;fill:none}
+    .header-title-group{flex:1}
+    .header-title{font-size:1.1rem;font-weight:600;color:var(--text-primary);margin:0}
+    .header-subtitle{font-size:0.75rem;color:var(--text-muted)}
+  </style>
 </head>
 <body>
   <div class="page-container">
 
-    <header class="page-header">
-      <div class="container">
-        <nav class="breadcrumb">
-          <a href="../../">Inicio</a>
-          <span>/</span>
-          <a href="../">Expectativas</a>
-          <span>/</span>
-          <span>Dolar</span>
-        </nav>
+    <header class="app-header-inner">
+      <a href="../" class="header-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div class="header-title-group">
+        <h1 class="header-title">Dólar</h1>
+        <span class="header-subtitle">Expectativas do Canal</span>
       </div>
     </header>
 
@@ -29,22 +38,22 @@
           <div class="setor-hero-info">
             <div class="setor-badges">
               <span class="sentimento-badge bullish">Otimista</span>
-              <span class="prazo-badge">Medio Prazo (1-2 anos)</span>
+              <span class="prazo-badge">Médio Prazo (1-2 anos)</span>
             </div>
-            <h1>Dolar</h1>
-            <p class="setor-desc">Exposicao cambial e ativos em moeda americana - diversificacao geografica e protecao contra desvalorizacao do real.</p>
+            <h1>Dólar</h1>
+            <p class="setor-desc">Exposição cambial e ativos em moeda americana - diversificação geográfica e proteção contra desvalorização do real.</p>
           </div>
         </div>
 
         <div class="exposicao-card">
           <div class="exposicao-header">
-            <h3>Exposicao Recomendada</h3>
-            <span class="exposicao-percent">15%</span>
+            <h3>Exposição Recomendada</h3>
+            <span class="exposicao-percent">25%</span>
           </div>
           <div class="exposicao-bar-large">
-            <div class="exposicao-fill-large" style="--width: 15%"></div>
+            <div class="exposicao-fill-large" style="--width: 25%"></div>
           </div>
-          <p class="exposicao-note">Diversificacao cambial fundamental em cenario de incerteza fiscal.</p>
+          <p class="exposicao-note">Dólar + rendimento de ~10% ao ano via stablecoins (Coinbase/Nexo). Sem IOF, proteção cambial.</p>
         </div>
       </div>
     </section>
@@ -55,27 +64,33 @@
 
         <div class="racional-content">
           <div class="racional-card">
-            <div class="racional-icon">🌎</div>
-            <h4>Diversificacao Geografica</h4>
-            <p>Exposicao ao dolar reduz a dependencia da economia brasileira e protege contra riscos locais.</p>
+            <div class="racional-icon">📉</div>
+            <h4>Queda de 11% em 2025</h4>
+            <p>Dólar recuou 11,17% em 2025 (maior queda desde 2016). Vemos isso como ponto de entrada, não mudança de tendência.</p>
           </div>
 
           <div class="racional-card">
-            <div class="racional-icon">📈</div>
-            <h4>Cenario Fiscal Brasileiro</h4>
-            <p>Incertezas fiscais e gastos publicos elevados criam pressao sobre o real no medio prazo.</p>
+            <div class="racional-icon">🛡️</div>
+            <h4>Ativo de Refúgio</h4>
+            <p>Em crises e correções de mercado, capital global flui para o dólar. Com riscos no horizonte (bolha IA, cripto), dólar se fortalece.</p>
+          </div>
+
+          <div class="racional-card">
+            <div class="racional-icon">🇧🇷</div>
+            <h4>Redução da Selic</h4>
+            <p>Com Selic caindo de 15% para ~12%, carry trade diminui e capital estrangeiro sai do Brasil, pressionando o real.</p>
           </div>
 
           <div class="racional-card">
             <div class="racional-icon">💰</div>
-            <h4>Juros Americanos</h4>
-            <p>Juros ainda elevados nos EUA tornam ativos em dolar atrativos mesmo para renda fixa conservadora.</p>
+            <h4>USD + 10% ao ano</h4>
+            <p>Via stablecoins (USDC/USDT) em plataformas como Coinbase ou Nexo. Sem IOF, rendimento em dólar.</p>
           </div>
         </div>
 
         <div class="disclaimer-inline">
           <span class="disclaimer-icon">⚠️</span>
-          <p>Esta analise reflete a opiniao do canal e nao constitui recomendacao de investimento. Exposicao cambial tem volatilidade.</p>
+          <p>Esta análise reflete a opinião do canal e não constitui recomendação de investimento. Exposição cambial tem volatilidade.</p>
         </div>
       </div>
     </section>
@@ -83,9 +98,17 @@
     <section class="ativos-section">
       <div class="container">
         <h2>Exemplos de Ativos</h2>
-        <p class="section-subtitle">Instrumentos que dao exposicao a este setor</p>
+        <p class="section-subtitle">Instrumentos que dão exposição a este setor</p>
 
         <div class="ativos-lista">
+          <div class="ativo-item">
+            <div class="ativo-nome">USDC na Coinbase</div>
+            <div class="ativo-tipo">Stablecoin + ~10% a.a.</div>
+          </div>
+          <div class="ativo-item">
+            <div class="ativo-nome">USDT/USDC na Nexo</div>
+            <div class="ativo-tipo">Stablecoin + rendimento</div>
+          </div>
           <div class="ativo-item">
             <div class="ativo-nome">Conta em corretora internacional</div>
             <div class="ativo-tipo">Investimento Direto</div>
@@ -94,22 +117,14 @@
             <div class="ativo-nome">ETFs de renda fixa americana</div>
             <div class="ativo-tipo">ETF</div>
           </div>
-          <div class="ativo-item">
-            <div class="ativo-nome">Acoes americanas</div>
-            <div class="ativo-tipo">Stocks</div>
-          </div>
-          <div class="ativo-item">
-            <div class="ativo-nome">BDRs de ETFs americanos</div>
-            <div class="ativo-tipo">BDR</div>
-          </div>
         </div>
       </div>
     </section>
 
     <section class="publicacoes-section">
       <div class="container">
-        <h2>Publicacoes sobre este Setor</h2>
-        <p class="section-subtitle">Historico de analises e mudancas de sentimento</p>
+        <h2>Publicações sobre este Setor</h2>
+        <p class="section-subtitle">Histórico de análises e mudanças de sentimento</p>
 
         <div class="publicacoes-lista">
           <div class="publicacao-item">
@@ -119,8 +134,20 @@
             </div>
             <div class="publicacao-content">
               <div class="publicacao-badge bullish">Otimista</div>
-              <h4>Por que estamos otimistas com o Dolar</h4>
-              <p>Analise inicial do cenario cambial e expectativas para os proximos 1-2 anos.</p>
+              <h4>Dólar em 2026: Por que Estamos Otimistas</h4>
+              <p>Após queda de 11% em 2025, vemos oportunidade. Análise completa do cenário cambial com foco em carry trade, risco fiscal e ativo de refúgio.</p>
+              <a href="../../artigos/dolar-2026-analise.html" style="color: var(--primary-light); font-size: 0.9rem;">Ler artigo completo →</a>
+            </div>
+          </div>
+          <div class="publicacao-item">
+            <div class="publicacao-data">
+              <span class="pub-dia">04</span>
+              <span class="pub-mes">Jan 2026</span>
+            </div>
+            <div class="publicacao-content">
+              <div class="publicacao-badge bullish">Otimista</div>
+              <h4>Lançamento do App</h4>
+              <p>Primeira análise do setor com sentimento otimista. Diversificação geográfica fundamental.</p>
             </div>
           </div>
         </div>
@@ -135,7 +162,7 @@
             <span>Voltar para Setores</span>
           </a>
         </div>
-        <p class="footer-disclaimer">Conteudo educacional - Nao e recomendacao de investimento</p>
+        <p class="footer-disclaimer">Conteúdo educacional - Não é recomendação de investimento</p>
       </div>
     </footer>
 

@@ -991,29 +991,9 @@ body.home-page {
 }
 
 .app-logo {
-  position: relative;
-  width: 52px;
-  height: 52px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(26, 95, 74, 0.4);
-}
-
-.logo-pulse {
-  position: absolute;
-  inset: -4px;
-  border-radius: 20px;
-  border: 2px solid var(--primary-light);
-  opacity: 0;
-  animation: logoPulse 3s ease-in-out infinite;
-}
-
-@keyframes logoPulse {
-  0%, 100% { opacity: 0; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(1.1); }
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
 }
 
 .logo-icon {
@@ -1072,6 +1052,105 @@ body.home-page {
 }
 
 /* ==========================================
+   Language Selector
+   ========================================== */
+
+.lang-selector {
+  position: relative;
+}
+
+.lang-current {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-primary);
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.lang-current:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-light);
+}
+
+.lang-flag {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.lang-code {
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.lang-arrow {
+  opacity: 0.6;
+  transition: transform 0.2s ease;
+}
+
+.lang-dropdown.open + .lang-current .lang-arrow,
+.lang-current:focus + .lang-dropdown .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 140px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.lang-dropdown.open {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.lang-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 14px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.lang-option:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-primary);
+}
+
+.lang-option.active {
+  background: rgba(63, 185, 80, 0.1);
+  color: var(--primary-light);
+}
+
+.lang-option .lang-name {
+  flex: 1;
+}
+
+/* ==========================================
    Breaking News Slider
    ========================================== */
 .breaking-news {
@@ -1116,6 +1195,9 @@ body.home-page {
   flex-shrink: 0;
   max-width: 320px;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
 .news-item:hover {
@@ -1445,6 +1527,16 @@ body.home-page {
   stroke-dasharray: calc(var(--percent) * 2.51) 251;
   stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
 }
+.ring-segment.seg-caixa {
+  stroke: #2ea043;
+  stroke-dasharray: calc(var(--percent) * 2.51) 251;
+  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
+}
+.ring-segment.seg-imoveis {
+  stroke: #8b5cf6;
+  stroke-dasharray: calc(var(--percent) * 2.51) 251;
+  stroke-dashoffset: calc(-1 * var(--offset) * 2.51);
+}
 
 /* ==========================================
    Card Expectativas do Canal
@@ -1471,6 +1563,14 @@ body.home-page {
   background: rgba(255, 255, 255, 0.03);
   border-left: 3px solid transparent;
   transition: all 0.3s ease;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+.setor-item:hover {
+  transform: translateX(2px);
+  filter: brightness(1.2);
 }
 
 .setor-item.bullish {
@@ -1486,6 +1586,14 @@ body.home-page {
 .setor-item.bearish {
   border-left-color: var(--bearish);
   background: rgba(248, 81, 73, 0.08);
+}
+
+.setor-item.zero {
+  opacity: 0.6;
+}
+
+.setor-item.zero .setor-exp {
+  color: var(--text-muted);
 }
 
 .setor-icon {
@@ -1828,6 +1936,26 @@ body.home-page {
   padding-top: 16px;
   padding-bottom: 16px;
   margin-top: auto;
+}
+
+.footer-youtube {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: rgba(255, 0, 0, 0.1);
+  border: 1px solid rgba(255, 0, 0, 0.2);
+  border-radius: 8px;
+  color: #ff4444;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-youtube:hover {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff6666;
 }
 
 .footer-disclaimer {
@@ -3385,4 +3513,318 @@ body.home-page {
 .card-compact:hover .arrow-icon {
   opacity: 1;
   transform: translateX(4px);
+}
+
+/* ==========================================
+   Card Expectativas - Links Individuais
+   ========================================== */
+
+.card-expectativas {
+  cursor: default;
+}
+
+.card-expectativas .card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-expectativas .card-header:hover .card-title-group h2 {
+  color: var(--primary-light);
+}
+
+.card-expectativas .card-body {
+  width: 100%;
+}
+
+.card-expectativas .allocation-ring {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-expectativas .sentimento-resumo {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-expectativas .card-footer {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ==========================================
+   Card Footer Multi Links
+   ========================================== */
+
+.card-footer-multi {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  gap: 16px;
+}
+
+.footer-link-action {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: var(--primary-light);
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.footer-link-action:hover {
+  color: var(--primary);
+}
+
+.footer-link-action .arrow-icon {
+  width: 16px;
+  height: 16px;
+}
+
+.footer-link-action.footer-secondary {
+  color: var(--text-muted);
+}
+
+.footer-link-action.footer-secondary:hover {
+  color: var(--text-secondary);
+}
+
+/* ==========================================
+   YouTube Card
+   ========================================== */
+
+.card-youtube {
+  display: block;
+  margin-top: 16px;
+  padding: 0;
+  overflow: hidden;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.card-youtube:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+}
+
+.youtube-card-content {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+}
+
+.youtube-thumbnail {
+  position: relative;
+  flex-shrink: 0;
+  width: 120px;
+  height: 68px;
+  background: linear-gradient(135deg, #ff0000 0%, #cc0000 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.youtube-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.youtube-play-btn {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.7);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  transition: all 0.3s ease;
+}
+
+.card-youtube:hover .youtube-play-btn {
+  background: #ff0000;
+  transform: scale(1.1);
+}
+
+.youtube-play-btn svg {
+  width: 20px;
+  height: 20px;
+  margin-left: 2px;
+}
+
+.youtube-badge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  font-size: 0.65rem;
+  font-weight: 600;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.youtube-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
+}
+
+.youtube-info h2 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.youtube-info .card-subtitle {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.youtube-cta {
+  font-size: 0.85rem;
+  color: #ff0000;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+.card-youtube:hover .youtube-cta {
+  text-decoration: underline;
+}
+
+/* ==========================================
+   Footer Links
+   ========================================== */
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 12px;
+}
+
+.footer-link {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+}
+
+.footer-link span {
+  font-size: 1rem;
+}
+
+/* ==========================================
+   PWA Install Banner
+   ========================================== */
+
+.pwa-install-banner {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: none;
+  align-items: center;
+  gap: 16px;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+  z-index: 9999;
+  max-width: calc(100% - 32px);
+}
+
+.pwa-install-banner.show {
+  display: flex;
+}
+
+.pwa-install-content {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.pwa-icon {
+  font-size: 1.5rem;
+}
+
+.pwa-text {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pwa-text strong {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.pwa-text span {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.pwa-install-btn {
+  padding: 8px 20px;
+  background: var(--primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.pwa-install-btn:hover {
+  background: var(--primary-light);
+}
+
+.pwa-close-btn {
+  padding: 6px 10px;
+  background: transparent;
+  color: var(--text-muted);
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.pwa-close-btn:hover {
+  color: var(--text-primary);
+}
+
+@media (max-width: 480px) {
+  .pwa-install-banner {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .pwa-install-content {
+    flex: 1;
+    min-width: 200px;
+  }
 }

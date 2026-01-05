@@ -3,36 +3,7 @@
  * ======================================
  */
 
-// Toggle Menu Mobile
 document.addEventListener('DOMContentLoaded', function() {
-  const menuToggle = document.querySelector('.menu-toggle');
-  const navMenu = document.querySelector('nav ul');
-
-  if (menuToggle && navMenu) {
-    menuToggle.addEventListener('click', function() {
-      navMenu.classList.toggle('active');
-    });
-  }
-
-  // Fecha menu ao clicar em um link (mobile)
-  const navLinks = document.querySelectorAll('nav ul li a');
-  navLinks.forEach(link => {
-    link.addEventListener('click', () => {
-      if (navMenu) navMenu.classList.remove('active');
-    });
-  });
-
-  // Marca item ativo no menu baseado na URL atual
-  const currentPath = window.location.pathname;
-  navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (currentPath.includes(href) && href !== '/') {
-      link.classList.add('active');
-    } else if (currentPath === '/' && href === '/') {
-      link.classList.add('active');
-    }
-  });
-
   // Animação de fade-in nos elementos
   const observerOptions = {
     threshold: 0.1,
@@ -48,15 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }, observerOptions);
 
-  document.querySelectorAll('.card, .artigo-item, .perfil-card').forEach(el => {
+  document.querySelectorAll('.card, .artigo-item, .summary-card').forEach(el => {
     observer.observe(el);
   });
-
-  // Renderiza gráfico de pizza se existir
-  renderPieChart();
-
-  // Inicializa carrossel da home se existir
-  initHomeCarousel();
 
   // Inicializa parallax background
   initParallaxBackground();
@@ -64,175 +29,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // Inicializa breaking news slider
   initBreakingNewsSlider();
 });
-
-/**
- * Carrossel da Home Page
- */
-function initHomeCarousel() {
-  const carousel = document.querySelector('.spotlight-carousel');
-  if (!carousel) return;
-
-  const slides = carousel.querySelectorAll('.carousel-slide');
-  const indicators = carousel.querySelectorAll('.indicator');
-  const prevBtn = carousel.querySelector('.carousel-btn.prev');
-  const nextBtn = carousel.querySelector('.carousel-btn.next');
-
-  if (slides.length === 0) return;
-
-  let currentIndex = 0;
-  let autoplayInterval;
-  const autoplayDelay = 6000; // 6 segundos
-
-  // Função para ir para um slide específico
-  function goToSlide(index) {
-    // Remove classes de todos os slides
-    slides.forEach((slide, i) => {
-      slide.classList.remove('active', 'prev');
-      if (i < index) {
-        slide.classList.add('prev');
-      }
-    });
-
-    // Atualiza indicadores
-    indicators.forEach((indicator, i) => {
-      indicator.classList.toggle('active', i === index);
-    });
-
-    // Ativa o slide atual
-    slides[index].classList.add('active');
-    currentIndex = index;
-  }
-
-  // Próximo slide
-  function nextSlide() {
-    const next = (currentIndex + 1) % slides.length;
-    goToSlide(next);
-  }
-
-  // Slide anterior
-  function prevSlide() {
-    const prev = (currentIndex - 1 + slides.length) % slides.length;
-    goToSlide(prev);
-  }
-
-  // Inicia autoplay
-  function startAutoplay() {
-    stopAutoplay();
-    autoplayInterval = setInterval(nextSlide, autoplayDelay);
-  }
-
-  // Para autoplay
-  function stopAutoplay() {
-    if (autoplayInterval) {
-      clearInterval(autoplayInterval);
-    }
-  }
-
-  // Event listeners para botões
-  if (prevBtn) {
-    prevBtn.addEventListener('click', () => {
-      prevSlide();
-      startAutoplay(); // Reinicia o timer
-    });
-  }
-
-  if (nextBtn) {
-    nextBtn.addEventListener('click', () => {
-      nextSlide();
-      startAutoplay(); // Reinicia o timer
-    });
-  }
-
-  // Event listeners para indicadores
-  indicators.forEach((indicator, index) => {
-    indicator.addEventListener('click', () => {
-      goToSlide(index);
-      startAutoplay(); // Reinicia o timer
-    });
-  });
-
-  // Pausa autoplay quando o mouse está sobre o carrossel
-  carousel.addEventListener('mouseenter', stopAutoplay);
-  carousel.addEventListener('mouseleave', startAutoplay);
-
-  // Suporte a touch/swipe
-  let touchStartX = 0;
-  let touchEndX = 0;
-
-  carousel.addEventListener('touchstart', (e) => {
-    touchStartX = e.changedTouches[0].screenX;
-    stopAutoplay();
-  }, { passive: true });
-
-  carousel.addEventListener('touchend', (e) => {
-    touchEndX = e.changedTouches[0].screenX;
-    handleSwipe();
-    startAutoplay();
-  }, { passive: true });
-
-  function handleSwipe() {
-    const swipeThreshold = 50;
-    const diff = touchStartX - touchEndX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) {
-        nextSlide(); // Swipe para esquerda = próximo
-      } else {
-        prevSlide(); // Swipe para direita = anterior
-      }
-    }
-  }
-
-  // Suporte a teclas de seta
-  document.addEventListener('keydown', (e) => {
-    if (document.querySelector('.home-page')) {
-      if (e.key === 'ArrowRight') {
-        nextSlide();
-        startAutoplay();
-      } else if (e.key === 'ArrowLeft') {
-        prevSlide();
-        startAutoplay();
-      }
-    }
-  });
-
-  // Inicia o carrossel
-  goToSlide(0);
-  startAutoplay();
-}
-
-/**
- * Renderiza gráfico de pizza em CSS/SVG
- */
-function renderPieChart() {
-  const chartContainer = document.querySelector('.pie-chart');
-  if (!chartContainer) return;
-
-  // Dados do gráfico vêm do data-attribute ou são padrão
-  const dataStr = chartContainer.getAttribute('data-values');
-  const colorsStr = chartContainer.getAttribute('data-colors');
-
-  if (!dataStr) return;
-
-  const values = dataStr.split(',').map(Number);
-  const colors = colorsStr ? colorsStr.split(',') : [
-    '#1a5f4a', '#2d8a6e', '#f4a261', '#e76f51', '#58a6ff', '#f0c14b'
-  ];
-
-  const total = values.reduce((a, b) => a + b, 0);
-  let currentAngle = 0;
-
-  let gradientParts = [];
-  values.forEach((value, index) => {
-    const percentage = (value / total) * 100;
-    const nextAngle = currentAngle + (value / total) * 360;
-
-    gradientParts.push(`${colors[index]} ${currentAngle}deg ${nextAngle}deg`);
-    currentAngle = nextAngle;
-  });
-
-  chartContainer.style.background = `conic-gradient(${gradientParts.join(', ')})`;
-}
 
 /**
  * Smooth scroll para âncoras

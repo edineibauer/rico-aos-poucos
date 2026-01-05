@@ -125,7 +125,7 @@
       color: var(--text-primary);
     }
 
-    /* Alocacao Atual */
+    /* Alocação Atual */
     .alocacao-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
@@ -173,7 +173,7 @@
       color: var(--accent);
     }
 
-    /* Historico Mensal */
+    /* Histórico Mensal */
     .historico-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
@@ -239,7 +239,7 @@
       background: rgba(63, 185, 80, 0.1);
     }
 
-    /* Indices de Referencia */
+    /* Índices de Referência */
     .indices-card {
       background: var(--bg-secondary);
       border: 1px solid var(--border-color);
@@ -326,7 +326,7 @@
       color: var(--text-tertiary);
     }
 
-    /* Historico Row Clickable */
+    /* Histórico Row Clickable */
     .historico-row {
       cursor: pointer;
       transition: background 0.2s;
@@ -471,14 +471,14 @@
     <!-- Header -->
     <div class="desempenho-header">
       <h1>Desempenho da Carteira</h1>
-      <p>Acompanhamento das recomendacoes do canal</p>
+      <p>Acompanhamento das recomendações do canal</p>
     </div>
 
     <!-- Resumo Principal -->
     <div class="resumo-card">
       <div class="resumo-principal">
         <div class="valor-atual">
-          <div class="label">Patrimonio</div>
+          <div class="label">Patrimônio</div>
           <div class="valor" id="patrimonioAtual">R$ 100.000</div>
         </div>
         <div class="retorno-total">
@@ -488,7 +488,7 @@
       </div>
       <div class="metricas-grid">
         <div class="metrica-item">
-          <div class="label">Inicio</div>
+          <div class="label">Início</div>
           <div class="valor">Jan/2026</div>
         </div>
         <div class="metrica-item">
@@ -496,7 +496,7 @@
           <div class="valor" id="retornoAnual">0,00%</div>
         </div>
         <div class="metrica-item">
-          <div class="label">Retorno Mes</div>
+          <div class="label">Retorno Mês</div>
           <div class="valor" id="retornoMes">0,00%</div>
         </div>
       </div>
@@ -505,18 +505,18 @@
     <!-- Info Box -->
     <div class="info-box">
       <p>
-        <strong>Carteira teorica iniciada em Janeiro de 2026 com R$ 100.000.</strong>
-        Os valores refletem a variacao dos indices de cada classe de ativo, nao de ativos especificos.
-        Este acompanhamento serve como prova de conceito das recomendacoes do canal.
+        <strong>Carteira teórica iniciada em Janeiro de 2026 com R$ 100.000.</strong>
+        Os valores refletem a variação dos índices de cada classe de ativo, não de ativos específicos.
+        Este acompanhamento serve como prova de conceito das recomendações do canal.
       </p>
     </div>
 
-    <!-- Alocacao Atual -->
+    <!-- Alocação Atual -->
     <div class="alocacao-card">
-      <h2>Alocacao Recomendada</h2>
+      <h2>Alocação Recomendada</h2>
       <div class="alocacao-grid">
         <div class="alocacao-item">
-          <span class="nome">Dolar</span>
+          <span class="nome">Dólar</span>
           <span class="percent">25%</span>
         </div>
         <div class="alocacao-item">
@@ -528,7 +528,7 @@
           <span class="percent">15%</span>
         </div>
         <div class="alocacao-item">
-          <span class="nome">Imoveis</span>
+          <span class="nome">Imóveis</span>
           <span class="percent">15%</span>
         </div>
         <div class="alocacao-item">
@@ -546,13 +546,13 @@
       </div>
     </div>
 
-    <!-- Indices de Referencia (Base) -->
+    <!-- Índices de Referência (Base) -->
     <div class="indices-card">
-      <h2>Indices de Referencia</h2>
+      <h2>Índices de Referência</h2>
       <p class="subtitle">Valores base em Janeiro/2026</p>
       <div class="indices-grid">
         <div class="indice-item">
-          <div class="nome">Dolar</div>
+          <div class="nome">Dólar</div>
           <div class="valor">R$ 6,18</div>
           <div class="data">02/01/2026</div>
         </div>
@@ -594,15 +594,15 @@
       </div>
     </div>
 
-    <!-- Historico Mensal (ultimo card) -->
+    <!-- Histórico Mensal (último card) -->
     <div class="historico-card">
-      <h2>Historico Mensal</h2>
-      <p class="subtitle">Clique em um mes para ver detalhes</p>
+      <h2>Histórico Mensal</h2>
+      <p class="subtitle">Clique em um mês para ver detalhes</p>
       <table class="historico-table">
         <thead>
           <tr>
-            <th>Mes</th>
-            <th>Patrimonio</th>
+            <th>Mês</th>
+            <th>Patrimônio</th>
             <th style="text-align:right">Retorno</th>
           </tr>
         </thead>
@@ -610,7 +610,7 @@
           <tr class="inicio historico-row" onclick="openMonthModal('2026-01')">
             <td class="mes">Jan/2026</td>
             <td class="valor">R$ 100.000,00</td>
-            <td class="retorno neutro">Inicio</td>
+            <td class="retorno neutro">Início</td>
           </tr>
         </tbody>
       </table>
@@ -618,11 +618,11 @@
 
     <!-- Disclaimer -->
     <div class="disclaimer-compact">
-      <p>Conteudo educacional. Nao e recomendacao de investimento.</p>
+      <p>Conteúdo educacional. Não é recomendação de investimento.</p>
     </div>
   </main>
 
-  <!-- Modal Detalhes do Mes -->
+  <!-- Modal Detalhes do Mês -->
   <div class="month-modal" id="monthModal">
     <div class="month-modal-content">
       <div class="modal-header">
@@ -631,19 +631,19 @@
       </div>
       <div class="modal-body">
         <div class="modal-section">
-          <h4>Alocacao do Mes</h4>
+          <h4>Alocação do Mês</h4>
           <div id="modalAlocacao" class="modal-alocacao"></div>
         </div>
         <div class="modal-section">
-          <h4>Variacao por Setor</h4>
+          <h4>Variação por Setor</h4>
           <div id="modalVariacao" class="modal-variacao"></div>
         </div>
         <div class="modal-section">
-          <h4>Precos de Fechamento</h4>
+          <h4>Preços de Fechamento</h4>
           <div id="modalPrecos" class="modal-precos"></div>
         </div>
         <div class="modal-section">
-          <h4>Resultado do Mes</h4>
+          <h4>Resultado do Mês</h4>
           <div id="modalResultado" class="modal-resultado"></div>
         </div>
       </div>
@@ -668,7 +668,7 @@
         data: '2026-01',
         patrimonio: 100000
       },
-      // Historico mensal com alocacao, precos e variacao
+      // Histórico mensal com alocação, preços e variação
       meses: {
         '2026-01': {
           nome: 'Janeiro 2026',
@@ -706,7 +706,7 @@
       }
     };
 
-    // Funcao para formatar valores
+    // Função para formatar valores
     function formatCurrency(value) {
       return new Intl.NumberFormat('pt-BR', {
         style: 'currency',
@@ -743,20 +743,20 @@
 
       document.getElementById('modalTitle').textContent = mes.nome;
 
-      // Alocacao
+      // Alocação
       const alocacaoHtml = Object.entries(mes.alocacao).map(([key, val]) =>
         `<div class="modal-item"><span class="nome">${key.toUpperCase()}</span><span class="valor">${(val * 100).toFixed(0)}%</span></div>`
       ).join('');
       document.getElementById('modalAlocacao').innerHTML = alocacaoHtml;
 
-      // Variacao
+      // Variação
       const variacaoHtml = Object.entries(mes.variacao).map(([key, val]) => {
         const classe = val > 0 ? 'positivo' : val < 0 ? 'negativo' : 'neutro';
         return `<div class="modal-item"><span class="nome">${key.toUpperCase()}</span><span class="valor ${classe}">${formatPercent(val)}</span></div>`;
       }).join('');
       document.getElementById('modalVariacao').innerHTML = variacaoHtml;
 
-      // Precos
+      // Preços
       const precosHtml = Object.entries(mes.precos).map(([key, val]) =>
         `<div class="modal-item"><span class="nome">${key.toUpperCase()}</span><span class="valor">${val}</span></div>`
       ).join('');
@@ -765,7 +765,7 @@
       // Resultado
       const classe = mes.retorno > 0 ? 'positivo' : mes.retorno < 0 ? 'negativo' : 'neutro';
       document.getElementById('modalResultado').innerHTML = `
-        <div class="label">Retorno da Carteira no Mes</div>
+        <div class="label">Retorno da Carteira no Mês</div>
         <div class="valor ${classe}">${formatPercent(mes.retorno)}</div>
       `;
 

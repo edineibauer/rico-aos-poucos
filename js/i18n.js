@@ -1,186 +1,116 @@
 /**
  * Internationalization (i18n) Module for Rico aos Poucos
- * Supports: pt-BR (default), en, es
+ * Supports: pt-BR (default at /), en (at /en/), es (at /es/)
+ * Uses URL-based language routing for SEO
  */
 
 const I18n = {
-  // Available languages
+  // Available languages with their URL prefixes
   languages: {
-    'pt-BR': { code: 'pt-BR', name: 'Português', flag: '🇧🇷', file: 'pt-br.json' },
-    'en': { code: 'en', name: 'English', flag: '🇺🇸', file: 'en.json' },
-    'es': { code: 'es', name: 'Español', flag: '🇪🇸', file: 'es.json' }
+    'pt-BR': { code: 'pt-BR', name: 'Português', flag: '🇧🇷', prefix: '', file: 'pt-br.json' },
+    'en': { code: 'en', name: 'English', flag: '🇺🇸', prefix: '/en', file: 'en.json' },
+    'es': { code: 'es', name: 'Español', flag: '🇪🇸', prefix: '/es', file: 'es.json' }
   },
 
   // Default language
   defaultLang: 'pt-BR',
 
-  // Current language
+  // Current language (detected from URL)
   currentLang: null,
-
-  // Loaded translations
-  translations: {},
-
-  // Base path for language files
-  basePath: '',
 
   /**
    * Initialize the i18n system
    */
-  async init() {
-    // Detect base path (relative to current page)
-    this.basePath = this.detectBasePath();
+  init() {
+    // Detect current language from URL
+    this.currentLang = this.detectLanguageFromURL();
 
-    // Get saved language or detect from browser
-    const savedLang = localStorage.getItem('rico-lang');
-    const browserLang = navigator.language;
+    // Save to localStorage
+    localStorage.setItem('rico-lang', this.currentLang);
 
-    let lang = savedLang;
-    if (!lang) {
-      // Try to match browser language
-      if (browserLang.startsWith('pt')) lang = 'pt-BR';
-      else if (browserLang.startsWith('es')) lang = 'es';
-      else if (browserLang.startsWith('en')) lang = 'en';
-      else lang = this.defaultLang;
-    }
-
-    await this.setLanguage(lang);
+    // Render language selector
     this.renderLanguageSelector();
+
+    // Check if we should redirect based on saved preference
+    this.checkRedirect();
   },
 
   /**
-   * Detect base path relative to language folder
+   * Detect language from current URL path
    */
-  detectBasePath() {
+  detectLanguageFromURL() {
     const path = window.location.pathname;
-    const depth = (path.match(/\//g) || []).length - 1;
 
-    // Handle different page depths
-    if (path === '/' || path.endsWith('/index.html') && depth <= 1) {
-      return './';
+    if (path.startsWith('/en/') || path === '/en') {
+      return 'en';
+    } else if (path.startsWith('/es/') || path === '/es') {
+      return 'es';
     }
-
-    // Count directory depth and go up
-    let basePath = '';
-    for (let i = 0; i < depth; i++) {
-      basePath += '../';
-    }
-    return basePath || './';
+    return 'pt-BR';
   },
 
   /**
-   * Load language file
+   * Check if we need to redirect based on saved language preference
+   * Only redirects on first visit to root
    */
-  async loadLanguage(langCode) {
-    const langInfo = this.languages[langCode];
-    if (!langInfo) {
-      console.warn(`Language ${langCode} not supported, falling back to default`);
-      return this.loadLanguage(this.defaultLang);
-    }
+  checkRedirect() {
+    const savedLang = localStorage.getItem('rico-lang');
+    const currentLang = this.detectLanguageFromURL();
+    const path = window.location.pathname;
 
-    try {
-      const response = await fetch(`${this.basePath}lang/${langInfo.file}`);
-      if (!response.ok) throw new Error(`Failed to load ${langInfo.file}`);
-      return await response.json();
-    } catch (error) {
-      console.error('Error loading language file:', error);
-      if (langCode !== this.defaultLang) {
-        return this.loadLanguage(this.defaultLang);
+    // Only auto-redirect if user is on root and has a saved preference
+    if (path === '/' || path === '/index.html') {
+      if (savedLang && savedLang !== 'pt-BR' && savedLang !== currentLang) {
+        const langInfo = this.languages[savedLang];
+        if (langInfo) {
+          window.location.href = langInfo.prefix + '/';
+        }
       }
-      return {};
     }
   },
 
   /**
-   * Set current language
+   * Get the equivalent URL for a different language
    */
-  async setLanguage(langCode) {
+  getURLForLanguage(targetLang) {
+    const currentLang = this.detectLanguageFromURL();
+    const currentPrefix = this.languages[currentLang]?.prefix || '';
+    const targetPrefix = this.languages[targetLang]?.prefix || '';
+
+    let path = window.location.pathname;
+
+    // Remove current language prefix
+    if (currentPrefix && path.startsWith(currentPrefix)) {
+      path = path.substring(currentPrefix.length) || '/';
+    }
+
+    // Add target language prefix
+    if (targetPrefix) {
+      path = targetPrefix + path;
+    }
+
+    // Ensure path starts with /
+    if (!path.startsWith('/')) {
+      path = '/' + path;
+    }
+
+    return path;
+  },
+
+  /**
+   * Change language (redirects to the new language URL)
+   */
+  setLanguage(langCode) {
     if (!this.languages[langCode]) {
       langCode = this.defaultLang;
     }
 
-    this.translations = await this.loadLanguage(langCode);
-    this.currentLang = langCode;
+    // Save preference
     localStorage.setItem('rico-lang', langCode);
 
-    // Update HTML lang attribute
-    document.documentElement.lang = langCode;
-
-    // Translate page
-    this.translatePage();
-
-    // Update selector if exists
-    this.updateSelectorDisplay();
-
-    // Dispatch event for custom handlers
-    window.dispatchEvent(new CustomEvent('languageChanged', { detail: { lang: langCode } }));
-  },
-
-  /**
-   * Get translation by key path
-   * Example: t('home.expectations') returns "Expectativas do Canal"
-   */
-  t(keyPath, replacements = {}) {
-    const keys = keyPath.split('.');
-    let value = this.translations;
-
-    for (const key of keys) {
-      if (value && typeof value === 'object' && key in value) {
-        value = value[key];
-      } else {
-        console.warn(`Translation not found: ${keyPath}`);
-        return keyPath;
-      }
-    }
-
-    // Handle replacements like {sector}
-    if (typeof value === 'string') {
-      Object.keys(replacements).forEach(key => {
-        value = value.replace(`{${key}}`, replacements[key]);
-      });
-    }
-
-    return value;
-  },
-
-  /**
-   * Translate all elements with data-i18n attribute
-   */
-  translatePage() {
-    // Translate text content
-    document.querySelectorAll('[data-i18n]').forEach(el => {
-      const key = el.getAttribute('data-i18n');
-      const translation = this.t(key);
-      if (translation !== key) {
-        el.textContent = translation;
-      }
-    });
-
-    // Translate placeholders
-    document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
-      const key = el.getAttribute('data-i18n-placeholder');
-      const translation = this.t(key);
-      if (translation !== key) {
-        el.placeholder = translation;
-      }
-    });
-
-    // Translate titles
-    document.querySelectorAll('[data-i18n-title]').forEach(el => {
-      const key = el.getAttribute('data-i18n-title');
-      const translation = this.t(key);
-      if (translation !== key) {
-        el.title = translation;
-      }
-    });
-
-    // Translate aria-labels
-    document.querySelectorAll('[data-i18n-aria]').forEach(el => {
-      const key = el.getAttribute('data-i18n-aria');
-      const translation = this.t(key);
-      if (translation !== key) {
-        el.setAttribute('aria-label', translation);
-      }
-    });
+    // Redirect to the new language URL
+    const newURL = this.getURLForLanguage(langCode);
+    window.location.href = newURL;
   },
 
   /**
@@ -217,7 +147,7 @@ const I18n = {
     const toggle = document.getElementById('langToggle');
     const dropdown = document.getElementById('langDropdown');
 
-    toggle.addEventListener('click', (e) => {
+    toggle?.addEventListener('click', (e) => {
       e.stopPropagation();
       dropdown.classList.toggle('open');
     });
@@ -226,37 +156,16 @@ const I18n = {
       btn.addEventListener('click', (e) => {
         e.stopPropagation();
         const lang = btn.getAttribute('data-lang');
-        this.setLanguage(lang);
+        if (lang !== this.currentLang) {
+          this.setLanguage(lang);
+        }
         dropdown.classList.remove('open');
       });
     });
 
     // Close dropdown when clicking outside
     document.addEventListener('click', () => {
-      dropdown.classList.remove('open');
-    });
-  },
-
-  /**
-   * Update selector display after language change
-   */
-  updateSelectorDisplay() {
-    const toggle = document.getElementById('langToggle');
-    if (!toggle) return;
-
-    const current = this.languages[this.currentLang];
-    toggle.innerHTML = `
-      <span class="lang-flag">${current.flag}</span>
-      <span class="lang-code">${current.code.split('-')[0].toUpperCase()}</span>
-      <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12">
-        <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
-      </svg>
-    `;
-
-    // Update active state in dropdown
-    document.querySelectorAll('.lang-option').forEach(btn => {
-      const lang = btn.getAttribute('data-lang');
-      btn.classList.toggle('active', lang === this.currentLang);
+      dropdown?.classList.remove('open');
     });
   },
 
@@ -265,6 +174,13 @@ const I18n = {
    */
   getCurrentLanguage() {
     return this.languages[this.currentLang];
+  },
+
+  /**
+   * Get saved language preference
+   */
+  getSavedLanguage() {
+    return localStorage.getItem('rico-lang') || this.defaultLang;
   }
 };
 

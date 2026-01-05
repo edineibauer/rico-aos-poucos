@@ -6,28 +6,69 @@ App/Site de investimentos com análises de mercado e expectativas por setor.
 ## Padrões de Idioma (i18n) - OBRIGATÓRIO
 
 ### Idiomas Suportados
-- **pt-BR** (Português do Brasil) - PADRÃO
-- **en** (English)
-- **es** (Español)
+- **pt-BR** (Português do Brasil) - PADRÃO (raiz `/`)
+- **en** (English) - Pasta `/en/`
+- **es** (Español) - Pasta `/es/`
 
-### Requisitos
-1. Todo novo conteúdo DEVE ser criado nos 3 idiomas
-2. Arquivos de tradução: `lang/pt-br.json`, `lang/en.json`, `lang/es.json`
-3. Usar atributo `data-i18n="chave.subchave"` em elementos HTML traduzíveis
-4. Incluir `<script src="js/i18n.js">` em todas as páginas
-
-### Estrutura de Tradução
-```html
-<!-- Exemplo de uso -->
-<h2 data-i18n="home.expectations">Expectativas do Canal</h2>
-<span data-i18n="sentiments.bullish">Otimista</span>
+### Estrutura de URLs
+```
+/              → Português (padrão)
+/en/           → English
+/es/           → Español
+/setores/      → Setores PT-BR
+/en/setores/   → Sectors EN
+/es/setores/   → Sectores ES
 ```
 
-### Adicionando Novas Traduções
-1. Adicionar chave em `lang/pt-br.json`
-2. Adicionar tradução em `lang/en.json`
-3. Adicionar tradução em `lang/es.json`
-4. Usar `data-i18n="chave"` no HTML
+### Requisitos
+1. Todo novo conteúdo DEVE ter versões nos 3 idiomas
+2. Cada idioma tem sua própria pasta com páginas separadas
+3. Incluir `<script src="js/i18n.js">` para seletor de idioma
+4. Idioma salvo em localStorage (`rico-lang`)
+
+### Adicionando Novas Páginas
+1. Criar página em `/` (português)
+2. Criar versão em `/en/` (inglês)
+3. Criar versão em `/es/` (espanhol)
+4. Adicionar hreflang tags em todas as versões
+5. Adicionar ao sitemap.xml
+
+## SEO - OBRIGATÓRIO
+
+### Meta Tags Obrigatórias
+```html
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://ricoaospoucos.com/[path]">
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com/[path]">
+<link rel="alternate" hreflang="en" href="https://ricoaospoucos.com/en/[path]">
+<link rel="alternate" hreflang="es" href="https://ricoaospoucos.com/es/[path]">
+<link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com/[path]">
+
+<!-- Open Graph -->
+<meta property="og:title" content="[Título]">
+<meta property="og:description" content="[Descrição]">
+<meta property="og:type" content="website">
+<meta property="og:url" content="[URL]">
+<meta property="og:locale" content="[pt_BR|en_US|es_ES]">
+<meta property="og:site_name" content="Rico aos Poucos">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="[Título]">
+<meta name="twitter:description" content="[Descrição]">
+```
+
+### JSON-LD Structured Data
+Adicionar em todas as páginas:
+- WebSite schema
+- Organization schema
+- Article schema (para artigos)
+
+### Arquivos SEO
+- `sitemap.xml` - Atualizar ao criar novas páginas
+- `robots.txt` - Referência ao sitemap
 
 ## Estrutura de Setores
 
@@ -62,3 +103,4 @@ Publicações podem ter `destaque: true` para aparecer na home em carrossel hori
 - Usar acentos do português brasileiro em todo conteúdo PT-BR
 - Manter consistência visual entre páginas
 - Testar em 3 idiomas antes de commitar
+- Atualizar sitemap.xml ao criar novas páginas

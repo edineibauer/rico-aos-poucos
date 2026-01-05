@@ -25,38 +25,30 @@ const I18n = {
   /**
    * Detect the base path of the site (for GitHub Pages compatibility)
    * Example: /rico-aos-poucos/ on GitHub Pages, or / locally
+   *
+   * The base path is only present when hosting on GitHub Pages with a repo name
+   * e.g., https://username.github.io/repo-name/ has base path /repo-name
+   * But https://ricoaospoucos.com/ has no base path (root)
    */
   detectBasePath() {
+    const hostname = window.location.hostname;
     const path = window.location.pathname;
 
-    // Check if we're on GitHub Pages with a repo name in the path
-    // Pattern: /repo-name/... or /repo-name/en/... or /repo-name/es/...
-    const match = path.match(/^(\/[^\/]+)\/(en\/|es\/|index\.html|$)/);
-
-    if (match) {
-      // We found a base path like /rico-aos-poucos
-      return match[1];
-    }
-
-    // Check for base path before language folders
-    const langMatch = path.match(/^(\/[^\/]+)\/(?:en|es)(?:\/|$)/);
-    if (langMatch) {
-      return langMatch[1];
-    }
-
-    // Check if path starts with a known repo-like pattern (not en/es)
-    const parts = path.split('/').filter(p => p);
-    if (parts.length > 0 && parts[0] !== 'en' && parts[0] !== 'es') {
-      // Check if this looks like a GitHub Pages repo path
-      // by seeing if /repo-name/en/ or /repo-name/es/ exists in the path structure
-      const firstPart = '/' + parts[0];
-      if (path.includes(firstPart + '/en/') || path.includes(firstPart + '/es/') ||
-          document.querySelector('link[rel="canonical"]')?.href.includes(parts[0])) {
-        return firstPart;
+    // If we're on GitHub Pages (*.github.io), detect the repo name from the path
+    if (hostname.endsWith('.github.io') || hostname.endsWith('.github.io.')) {
+      // The first part of the path is the repo name (base path)
+      const parts = path.split('/').filter(p => p);
+      if (parts.length > 0) {
+        // Check if the first segment is NOT a language folder
+        // The repo name comes before any language prefix
+        const firstPart = parts[0];
+        if (firstPart !== 'en' && firstPart !== 'es') {
+          return '/' + firstPart;
+        }
       }
     }
 
-    // Default: no base path (site at root)
+    // For custom domains (like ricoaospoucos.com) or localhost, no base path needed
     return '';
   },
 

@@ -5,77 +5,25 @@ Siga estas instrucoes para manter a consistencia do projeto.
 
 ---
 
-## Estrutura de Dados Principal
+## Estrutura do Projeto
 
-### Arquivo: `data/setores.json`
+O app e totalmente estatico, com paginas HTML separadas para cada idioma:
 
-Este e o arquivo central que controla os sentimentos e exposicoes de todos os setores.
+- `/` - Portugues (padrao)
+- `/en/` - Ingles
+- `/es/` - Espanhol
 
-```json
-{
-  "ultimaAtualizacao": "2026-01-04",
-  "versao": "1.0",
-
-  "setores": {
-    "dolar": {
-      "id": "dolar",
-      "nome": "Dolar",
-      "icone": "💵",
-      "descricao": "Moeda americana e exposicao cambial",
-      "sentimento": "bullish",           // bullish | neutral | bearish
-      "exposicaoRecomendada": 15,        // Percentual (total deve ser 100)
-      "exemplosAtivos": ["ETFs", "Stocks"],
-      "cor": "#3fb950"
-    }
-    // ... outros setores
-  },
-
-  "ordemExibicao": ["tesouro-ipca", "dolar", "fiis", "ibov", "ouro", "tlt", "bitcoin"],
-
-  "historicoSentimentos": [
-    {
-      "data": "2026-01-04",
-      "titulo": "Titulo da mudanca",
-      "descricao": "Descricao do que mudou",
-      "alteracoes": {
-        "setor": { "de": "bullish", "para": "neutral" }
-      }
-    }
-  ]
-}
-```
+Cada idioma tem sua propria estrutura de pastas com paginas independentes.
 
 ---
 
 ## Procedimento: Mudar Sentimento de um Setor
 
-Quando o sentimento sobre um setor mudar, siga estes passos:
+Quando o sentimento sobre um setor mudar, atualize todas as versoes de idioma:
 
-### Passo 1: Atualizar `data/setores.json`
+### Passo 1: Atualizar `index.html` (home) - todos os idiomas
 
-```json
-// Alterar o sentimento do setor
-"fiis": {
-  "sentimento": "bullish",  // Era "neutral", agora e "bullish"
-  "exposicaoRecomendada": 20  // Atualizar se necessario
-}
-
-// Adicionar ao historico
-"historicoSentimentos": [
-  {
-    "data": "2026-02-15",
-    "titulo": "FIIs passam para otimista",
-    "descricao": "Com sinalizacao de corte de juros, FIIs ficam mais atrativos.",
-    "alteracoes": {
-      "fiis": { "de": "neutral", "para": "bullish" }
-    }
-  }
-]
-```
-
-### Passo 2: Atualizar `index.html` (home)
-
-Localizar o card de Expectativas e atualizar:
+Arquivos: `index.html`, `en/index.html`, `es/index.html`
 
 1. A classe do `.setor-item` correspondente:
 ```html
@@ -93,13 +41,12 @@ Localizar o card de Expectativas e atualizar:
     <span class="sentimento-count">1</span>  <!-- Diminuiu de 2 para 1 -->
     <span class="sentimento-label">Neutros</span>
   </div>
-  <!-- ... -->
 </div>
 ```
 
-### Passo 3: Atualizar `setores/index.html`
+### Passo 2: Atualizar `setores/index.html` - todos os idiomas
 
-Localizar o card do setor e atualizar:
+Arquivos: `setores/index.html`, `en/setores/index.html`, `es/setores/index.html`
 
 1. A classe do card:
 ```html
@@ -113,28 +60,23 @@ Localizar o card do setor e atualizar:
 
 3. Os contadores no resumo de sentimento
 
-### Passo 4: Atualizar `setores/[setor]/index.html`
+### Passo 3: Atualizar `setores/[setor]/index.html` - todos os idiomas
 
-Na pagina individual do setor:
+Arquivos para cada setor em PT, EN e ES.
 
 1. Badge de sentimento:
 ```html
 <span class="sentimento-badge bullish">Otimista</span>
 ```
 
-2. Card de exposicao (remover classe neutral se havia):
-```html
-<div class="exposicao-card">  <!-- Remover classe "neutral" -->
-```
-
-3. Titulo da secao de racional:
+2. Titulo da secao de racional:
 ```html
 <h2>Por que estamos otimistas?</h2>  <!-- Atualizar pergunta -->
 ```
 
-4. Atualizar os 3 cards de racional com novos argumentos
+3. Atualizar os cards de racional com novos argumentos
 
-5. Adicionar nova publicacao na lista:
+4. Adicionar nova publicacao na lista:
 ```html
 <div class="publicacao-item">
   <div class="publicacao-data">
@@ -149,42 +91,15 @@ Na pagina individual do setor:
 </div>
 ```
 
-### Passo 5: Atualizar `data/publicacoes/[setor]/index.json`
-
-Adicionar a nova publicacao:
-```json
-{
-  "id": "2026-02-15-mudanca-sentimento",
-  "data": "2026-02-15",
-  "titulo": "FIIs passam para otimista",
-  "resumo": "Com sinalizacao de corte de juros...",
-  "sentimentoNaData": "bullish",
-  "arquivo": "2026-02-15-mudanca-sentimento.html"
-}
-```
-
----
-
-## Procedimento: Adicionar Publicacao sem Mudar Sentimento
-
-Quando quiser adicionar uma analise sem alterar o sentimento:
-
-### Passo 1: Atualizar `data/publicacoes/[setor]/index.json`
-
-### Passo 2: Adicionar HTML na pagina `setores/[setor]/index.html`
-
-A nova publicacao deve ser adicionada NO TOPO da lista `.publicacoes-lista`.
-
 ---
 
 ## Procedimento: Atualizar Exposicao Recomendada
 
 Se mudar apenas a exposicao (percentual), sem mudar sentimento:
 
-1. Atualizar `data/setores.json` - campo `exposicaoRecomendada`
-2. Atualizar `index.html` - valores no card de Expectativas
-3. Atualizar `setores/index.html` - valores nas barras e percentuais
-4. Atualizar `setores/[setor]/index.html` - percentual no card de exposicao
+1. Atualizar `index.html` - valores no card de Expectativas (PT, EN, ES)
+2. Atualizar `setores/index.html` - valores nas barras e percentuais (PT, EN, ES)
+3. Atualizar `setores/[setor]/index.html` - percentual no card de exposicao (PT, EN, ES)
 
 **IMPORTANTE**: A soma de todas as exposicoes deve ser sempre 100%.
 
@@ -200,37 +115,9 @@ Se mudar apenas a exposicao (percentual), sem mudar sentimento:
 
 ---
 
-## Checklist de Atualizacao
-
-Use este checklist ao fazer alteracoes:
-
-- [ ] Atualizei `data/setores.json`
-- [ ] Atualizei o card de Expectativas em `index.html`
-- [ ] Atualizei os contadores de sentimento em `index.html`
-- [ ] Atualizei `setores/index.html`
-- [ ] Atualizei a pagina do setor `setores/[setor]/index.html`
-- [ ] Adicionei publicacao em `data/publicacoes/[setor]/index.json`
-- [ ] Verifiquei que exposicoes somam 100%
-- [ ] Commit com mensagem descritiva
-- [ ] Push para o branch do GitHub Pages
-
----
-
-## Formato de Data
-
-Use sempre o formato ISO para datas nos JSONs:
-- `"2026-01-04"` (YYYY-MM-DD)
-
-Para exibicao no HTML:
-- Dia: `04`
-- Mes: `Jan 2026`
-
----
-
 ## Procedimento: Adicionar Novo Artigo
 
-O sistema de artigos e **dinamico**. A pagina `artigos/index.html` carrega automaticamente
-os artigos do arquivo `data/artigos.json`.
+O sistema de artigos carrega dinamicamente do arquivo JSON.
 
 ### Passo 1: Criar o arquivo HTML do artigo
 
@@ -246,12 +133,17 @@ os artigos do arquivo `data/artigos.json`.
 - `{{DATA}}` - "04 de Janeiro de 2026"
 - `{{TEMPO_LEITURA}}` - Minutos estimados
 - `{{NIVEL}}` - iniciante | intermediario | avancado
-- `{{NIVEL_EMOJI}}` - 🎓 | 📊 | 🚀
+- `{{NIVEL_EMOJI}}` - iniciante | intermediario | avancado
 - `{{NIVEL_TEXTO}}` - Iniciante | Intermediario | Avancado
 
-### Passo 2: Adicionar ao indice JSON
+### Passo 2: Adicionar ao indice JSON (todos os idiomas)
 
-Edite `data/artigos.json` e adicione o novo artigo no array `artigos`:
+Edite os arquivos:
+- `data/artigos.json` (PT)
+- `data/artigos-en.json` (EN)
+- `data/artigos-es.json` (ES)
+
+Adicione o novo artigo no array `artigos`:
 
 ```json
 {
@@ -270,20 +162,17 @@ Edite `data/artigos.json` e adicione o novo artigo no array `artigos`:
 }
 ```
 
-**Campos importantes:**
-- `id` - Identificador unico (slug)
-- `arquivo` - Nome do arquivo HTML
-- `nivel` - iniciante | intermediario | avancado
-- `categoria` - Uma das categorias do JSON (renda-variavel, renda-fixa, macroeconomia, etc)
-- `tags` - Array de palavras-chave
-- `destaque` - Se true, aparece com borda destacada
-- `setorRelacionado` - Se o artigo e sobre um setor especifico (dolar, ibov, etc)
+### Passo 3: Criar versoes traduzidas
 
-### Passo 3: Commit e Push
+1. Crie o artigo em ingles: `en/artigos/meu-novo-artigo.html`
+2. Crie o artigo em espanhol: `es/artigos/meu-novo-artigo.html`
+3. Adicione as entradas nos JSONs de cada idioma
+
+### Passo 4: Commit e Push
 
 ```bash
-git add artigos/meu-novo-artigo.html data/artigos.json
-git commit -m "feat: Adiciona artigo sobre XYZ"
+git add .
+git commit -m "feat: Adiciona artigo sobre XYZ em todos os idiomas"
 git push
 ```
 
@@ -295,22 +184,54 @@ A pagina de artigos sera atualizada automaticamente ao carregar.
 
 | ID | Nome | Icone |
 |----|------|-------|
-| renda-variavel | Renda Variavel | 📈 |
-| renda-fixa | Renda Fixa | 🏦 |
-| macroeconomia | Macroeconomia | 🌍 |
-| educacao | Educacao Financeira | 🎓 |
-| estrategias | Estrategias | 💡 |
-| psicologia | Psicologia | 🧠 |
+| renda-variavel | Renda Variavel | chart-emoji |
+| renda-fixa | Renda Fixa | bank-emoji |
+| macroeconomia | Macroeconomia | globe-emoji |
+| educacao | Educacao Financeira | graduation-emoji |
+| estrategias | Estrategias | bulb-emoji |
+| psicologia | Psicologia | brain-emoji |
+
+---
+
+## Checklist de Atualizacao
+
+Use este checklist ao fazer alteracoes de sentimento:
+
+- [ ] Atualizei `index.html` (PT, EN, ES)
+- [ ] Atualizei `setores/index.html` (PT, EN, ES)
+- [ ] Atualizei `setores/[setor]/index.html` (PT, EN, ES)
+- [ ] Verifiquei que exposicoes somam 100%
+- [ ] Commit com mensagem descritiva
+- [ ] Push para o branch do GitHub Pages
+
+Checklist para novos artigos:
+
+- [ ] Criei artigo em PT, EN, ES
+- [ ] Atualizei `data/artigos.json`
+- [ ] Atualizei `data/artigos-en.json`
+- [ ] Atualizei `data/artigos-es.json`
+- [ ] Commit e push
+
+---
+
+## Formato de Data
+
+Use sempre o formato ISO para datas nos JSONs:
+- `"2026-01-04"` (YYYY-MM-DD)
+
+Para exibicao no HTML:
+- Dia: `04`
+- Mes: `Jan 2026`
 
 ---
 
 ## Observacoes Finais
 
-1. O app nao usa banco de dados - tudo e estatico em arquivos JSON/HTML
+1. O app nao usa banco de dados - tudo e estatico em arquivos HTML/JSON
 2. Alteracoes sao publicadas via commit/push para GitHub Pages
-3. Mantenha o historico de sentimentos para rastreabilidade
-4. Sempre inclua disclaimer de que nao e recomendacao de investimento
-5. Visao e de medio prazo (1-2 anos) - mencionar isso nas publicacoes
+3. Sempre inclua disclaimer de que nao e recomendacao de investimento
+4. Visao e de medio prazo (1-2 anos) - mencionar isso nas publicacoes
+5. **Todo conteudo deve existir em 3 idiomas: PT, EN, ES**
 
 ---
 

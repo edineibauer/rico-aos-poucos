@@ -2,14 +2,15 @@
  * Internationalization (i18n) Module for Rico aos Poucos
  * Supports: pt-BR (default at /), en (at /en/), es (at /es/)
  * Uses URL-based language routing for SEO
+ * Compatible with GitHub Pages subdirectory hosting
  */
 
 const I18n = {
-  // Available languages with their URL prefixes
+  // Available languages with their folder names
   languages: {
-    'pt-BR': { code: 'pt-BR', name: 'Português', flag: '🇧🇷', prefix: '', file: 'pt-br.json' },
-    'en': { code: 'en', name: 'English', flag: '🇺🇸', prefix: '/en', file: 'en.json' },
-    'es': { code: 'es', name: 'Español', flag: '🇪🇸', prefix: '/es', file: 'es.json' }
+    'pt-BR': { code: 'pt-BR', name: 'Português', flag: '🇧🇷', folder: '', file: 'pt-br.json' },
+    'en': { code: 'en', name: 'English', flag: '🇺🇸', folder: 'en', file: 'en.json' },
+    'es': { code: 'es', name: 'Español', flag: '🇪🇸', folder: 'es', file: 'es.json' }
   },
 
   // Default language
@@ -18,10 +19,54 @@ const I18n = {
   // Current language (detected from URL)
   currentLang: null,
 
+  // Base path of the site (detected automatically)
+  basePath: '',
+
+  /**
+   * Detect the base path of the site (for GitHub Pages compatibility)
+   * Example: /rico-aos-poucos/ on GitHub Pages, or / locally
+   */
+  detectBasePath() {
+    const path = window.location.pathname;
+
+    // Check if we're on GitHub Pages with a repo name in the path
+    // Pattern: /repo-name/... or /repo-name/en/... or /repo-name/es/...
+    const match = path.match(/^(\/[^\/]+)\/(en\/|es\/|index\.html|$)/);
+
+    if (match) {
+      // We found a base path like /rico-aos-poucos
+      return match[1];
+    }
+
+    // Check for base path before language folders
+    const langMatch = path.match(/^(\/[^\/]+)\/(?:en|es)(?:\/|$)/);
+    if (langMatch) {
+      return langMatch[1];
+    }
+
+    // Check if path starts with a known repo-like pattern (not en/es)
+    const parts = path.split('/').filter(p => p);
+    if (parts.length > 0 && parts[0] !== 'en' && parts[0] !== 'es') {
+      // Check if this looks like a GitHub Pages repo path
+      // by seeing if /repo-name/en/ or /repo-name/es/ exists in the path structure
+      const firstPart = '/' + parts[0];
+      if (path.includes(firstPart + '/en/') || path.includes(firstPart + '/es/') ||
+          document.querySelector('link[rel="canonical"]')?.href.includes(parts[0])) {
+        return firstPart;
+      }
+    }
+
+    // Default: no base path (site at root)
+    return '';
+  },
+
   /**
    * Initialize the i18n system
    */
   init() {
+    // Detect base path first
+    this.basePath = this.detectBasePath();
+
     // Detect current language from URL
     this.currentLang = this.detectLanguageFromURL();
 
@@ -41,12 +86,57 @@ const I18n = {
   detectLanguageFromURL() {
     const path = window.location.pathname;
 
-    if (path.startsWith('/en/') || path === '/en') {
+    // Remove base path to get the relative path
+    let relativePath = path;
+    if (this.basePath && path.startsWith(this.basePath)) {
+      relativePath = path.substring(this.basePath.length);
+    }
+
+    // Normalize: ensure starts with /
+    if (!relativePath.startsWith('/')) {
+      relativePath = '/' + relativePath;
+    }
+
+    if (relativePath.startsWith('/en/') || relativePath === '/en') {
       return 'en';
-    } else if (path.startsWith('/es/') || path === '/es') {
+    } else if (relativePath.startsWith('/es/') || relativePath === '/es') {
       return 'es';
     }
     return 'pt-BR';
+  },
+
+  /**
+   * Get the relative path within the current language (without base path and language folder)
+   */
+  getRelativePath() {
+    const path = window.location.pathname;
+    let relativePath = path;
+
+    // Remove base path
+    if (this.basePath && path.startsWith(this.basePath)) {
+      relativePath = path.substring(this.basePath.length);
+    }
+
+    // Normalize
+    if (!relativePath.startsWith('/')) {
+      relativePath = '/' + relativePath;
+    }
+
+    // Remove language folder
+    if (relativePath.startsWith('/en/')) {
+      relativePath = relativePath.substring(3);
+    } else if (relativePath.startsWith('/es/')) {
+      relativePath = relativePath.substring(3);
+    } else if (relativePath === '/en' || relativePath === '/es') {
+      relativePath = '/';
+    }
+
+    // Ensure starts with /
+    if (!relativePath.startsWith('/')) {
+      relativePath = '/' + relativePath;
+    }
+
+    return relativePath;
   },
 
   /**
@@ -56,14 +146,15 @@ const I18n = {
   checkRedirect() {
     const savedLang = localStorage.getItem('rico-lang');
     const currentLang = this.detectLanguageFromURL();
-    const path = window.location.pathname;
+    const relativePath = this.getRelativePath();
 
     // Only auto-redirect if user is on root and has a saved preference
-    if (path === '/' || path === '/index.html') {
+    if (relativePath === '/' || relativePath === '/index.html') {
       if (savedLang && savedLang !== 'pt-BR' && savedLang !== currentLang) {
         const langInfo = this.languages[savedLang];
-        if (langInfo) {
-          window.location.href = langInfo.prefix + '/';
+        if (langInfo && langInfo.folder) {
+          const newURL = this.basePath + '/' + langInfo.folder + '/';
+          window.location.href = newURL;
         }
       }
     }
@@ -73,28 +164,27 @@ const I18n = {
    * Get the equivalent URL for a different language
    */
   getURLForLanguage(targetLang) {
-    const currentLang = this.detectLanguageFromURL();
-    const currentPrefix = this.languages[currentLang]?.prefix || '';
-    const targetPrefix = this.languages[targetLang]?.prefix || '';
+    const relativePath = this.getRelativePath();
+    const targetFolder = this.languages[targetLang]?.folder || '';
 
-    let path = window.location.pathname;
-
-    // Remove current language prefix
-    if (currentPrefix && path.startsWith(currentPrefix)) {
-      path = path.substring(currentPrefix.length) || '/';
+    let newPath;
+    if (targetFolder) {
+      // Target is en or es
+      newPath = this.basePath + '/' + targetFolder + relativePath;
+    } else {
+      // Target is pt-BR (default, no folder)
+      newPath = this.basePath + relativePath;
     }
 
-    // Add target language prefix
-    if (targetPrefix) {
-      path = targetPrefix + path;
+    // Clean up double slashes
+    newPath = newPath.replace(/\/+/g, '/');
+
+    // Ensure starts with /
+    if (!newPath.startsWith('/')) {
+      newPath = '/' + newPath;
     }
 
-    // Ensure path starts with /
-    if (!path.startsWith('/')) {
-      path = '/' + path;
-    }
-
-    return path;
+    return newPath;
   },
 
   /**

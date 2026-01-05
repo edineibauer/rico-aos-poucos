@@ -1489,6 +1489,14 @@ body.home-page {
   background: rgba(248, 81, 73, 0.08);
 }
 
+.setor-item.zero {
+  opacity: 0.6;
+}
+
+.setor-item.zero .setor-exp {
+  color: var(--text-muted);
+}
+
 .setor-icon {
   font-size: 1rem;
   flex-shrink: 0;

@@ -3519,6 +3519,58 @@ body.home-page {
    DESKTOP STYLES - Tablets e Laptops
    ========================================== */
 @media (min-width: 768px) {
+  /* HOME PAGE - Layout desktop com header/footer full-width */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body.home-page .app-header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  body.home-page .app-header,
+  body.home-page .app-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Conteúdo interno do header e footer centralizado */
+  body.home-page .app-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  body.home-page .app-header > * {
+    max-width: 900px;
+  }
+
+  /* Wrapper para conteúdo do header */
+  body.home-page .app-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    max-width: 100%;
+    padding: 16px 40px;
+  }
+
+  body.home-page .app-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 20px 40px;
+  }
+
+  /* Breaking news e content centralizados */
+  body.home-page .breaking-news,
+  body.home-page .app-content {
+    max-width: 900px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
   /* Container geral */
   .container {
     max-width: 1000px;
@@ -3579,25 +3631,29 @@ body.home-page {
    DESKTOP STYLES - Laptops e Desktops
    ========================================== */
 @media (min-width: 1024px) {
-  /* Home Page - App Container */
-  .app-container {
-    max-width: 900px;
-    gap: 16px;
+  /* HOME PAGE - Layout desktop expandido */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+    gap: 0;
   }
 
-  .app-content {
-    padding: 0 32px;
+  body.home-page .app-header {
+    padding: 20px 60px;
   }
 
-  .app-header,
-  .app-footer {
-    padding-left: 32px;
-    padding-right: 32px;
+  body.home-page .app-footer {
+    padding: 24px 60px;
   }
 
-  .app-header {
-    padding-top: 20px;
-    padding-bottom: 12px;
+  /* Conteúdo centralizado com max-width maior */
+  body.home-page .breaking-news,
+  body.home-page .app-content {
+    max-width: 1000px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
   }
 
   .app-logo {
@@ -3662,6 +3718,17 @@ body.home-page {
 
   .setor-name {
     font-size: 0.85rem;
+  }
+
+  /* Card footer buttons - fix para desktop */
+  .card-footer-multi {
+    flex-wrap: nowrap;
+  }
+
+  .card-footer-multi .btn {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
   }
 
   .setor-exp {
@@ -3824,25 +3891,25 @@ body.home-page {
     padding: 0 48px;
   }
 
-  /* Home page - Layout expandido para telas grandes */
-  .app-container {
+  /* HOME PAGE - Layout expandido para telas grandes */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body.home-page .app-header {
+    padding: 24px 80px;
+  }
+
+  body.home-page .app-footer {
+    padding: 28px 80px;
+  }
+
+  body.home-page .breaking-news,
+  body.home-page .app-content {
     max-width: 1100px;
-    gap: 20px;
-  }
-
-  .app-content {
-    padding: 0 48px;
-  }
-
-  .app-header,
-  .app-footer {
     padding-left: 48px;
     padding-right: 48px;
-  }
-
-  .app-header {
-    padding-top: 28px;
-    padding-bottom: 16px;
   }
 
   .app-logo {
@@ -4030,16 +4097,23 @@ body.home-page {
    Extra Large Desktops (1600px+)
    ========================================== */
 @media (min-width: 1600px) {
-  .app-container {
+  /* HOME PAGE */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body.home-page .app-header {
+    padding: 28px 100px;
+  }
+
+  body.home-page .app-footer {
+    padding: 32px 100px;
+  }
+
+  body.home-page .breaking-news,
+  body.home-page .app-content {
     max-width: 1200px;
-  }
-
-  .app-content {
-    padding: 0 60px;
-  }
-
-  .app-header,
-  .app-footer {
     padding-left: 60px;
     padding-right: 60px;
   }
@@ -4056,7 +4130,6 @@ body.home-page {
   .setor-item {
     padding: 16px 18px;
   }
-}
 
   /* Racional 4 columns */
   .racional-content {

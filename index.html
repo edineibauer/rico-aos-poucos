@@ -451,6 +451,11 @@
         item.addEventListener('click', () => {
           stopAutoRotate();
           activateItem(index);
+          // Scroll suave para o featured (mobile)
+          const pubFeatured = document.getElementById('pubFeatured');
+          if (pubFeatured && window.innerWidth < 768) {
+            pubFeatured.scrollIntoView({ behavior: 'smooth', block: 'center' });
+          }
           startAutoRotate();
         });
       });

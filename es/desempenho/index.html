@@ -464,6 +464,64 @@
       font-weight: 700;
       color: var(--text-primary);
     }
+
+    /* Desktop Styles */
+    @media (min-width: 768px) {
+      .desempenho-container {
+        max-width: 900px;
+        padding: 0 32px 40px;
+      }
+      .desempenho-header h1 {
+        font-size: 1.8rem;
+      }
+      .resumo-card, .alocacao-card, .historico-card, .indices-card {
+        padding: 24px;
+      }
+      .valor-atual .valor {
+        font-size: 2.5rem;
+      }
+      .metricas-grid {
+        gap: 24px;
+      }
+      .alocacao-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .indices-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .desempenho-container {
+        max-width: 1100px;
+        padding: 0 40px 48px;
+      }
+      .desempenho-header h1 {
+        font-size: 2rem;
+      }
+      .resumo-card, .alocacao-card, .historico-card, .indices-card {
+        padding: 28px;
+        border-radius: 20px;
+      }
+      .valor-atual .valor {
+        font-size: 2.8rem;
+      }
+      .alocacao-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .month-modal-content {
+        max-width: 600px;
+      }
+      .modal-alocacao, .modal-variacao, .modal-precos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .desempenho-container {
+        max-width: 1200px;
+      }
+    }
   </style>
 </head>
 <body class="desempenho-page">

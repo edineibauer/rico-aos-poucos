@@ -337,6 +337,56 @@
         padding: 6px 12px;
       }
     }
+
+    /* Desktop Styles */
+    @media (min-width: 768px) {
+      .main-content {
+        max-width: 900px;
+        padding: 20px 32px;
+      }
+      .filters-row {
+        justify-content: center;
+        gap: 12px;
+      }
+      .filter-chip {
+        padding: 10px 18px;
+        font-size: 0.85rem;
+      }
+      .artigo-card {
+        padding: 20px;
+      }
+      .artigo-titulo {
+        font-size: 1.05rem;
+      }
+      .artigo-desc {
+        font-size: 0.85rem;
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        max-width: 1100px;
+        padding: 24px 40px;
+      }
+      .artigos-list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+      }
+      .artigo-card {
+        padding: 20px;
+        height: 100%;
+      }
+      .artigo-titulo {
+        font-size: 1.1rem;
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .main-content {
+        max-width: 1200px;
+      }
+    }
   </style>
 </head>
 <body>

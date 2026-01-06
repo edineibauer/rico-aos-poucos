@@ -3428,6 +3428,7 @@ body.home-page {
   color: var(--text-primary);
 }
 
+/* PWA Banner - Mobile melhorado */
 @media (max-width: 480px) {
   .pwa-install-banner {
     flex-wrap: wrap;
@@ -3438,6 +3439,79 @@ body.home-page {
   .pwa-install-content {
     flex: 1;
     min-width: 200px;
+  }
+}
+
+/* PWA Banner - Design melhorado para mobile */
+@media (max-width: 767px) {
+  .pwa-install-banner {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+    max-width: none;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(63, 185, 80, 0.2);
+  }
+
+  .pwa-install-banner.show {
+    animation: slideUpBanner 0.4s ease-out;
+  }
+
+  @keyframes slideUpBanner {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .pwa-icon {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .pwa-text strong {
+    font-size: 1rem;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .pwa-text span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  .pwa-install-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    font-size: 0.95rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 95, 74, 0.4);
+  }
+
+  .pwa-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+}
+
+/* PWA Banner - Esconder em desktop */
+@media (min-width: 768px) {
+  .pwa-install-banner {
+    display: none !important;
   }
 }
 
@@ -3750,9 +3824,186 @@ body.home-page {
     padding: 0 48px;
   }
 
-  /* Home page */
+  /* Home page - Layout expandido para telas grandes */
   .app-container {
-    max-width: 1000px;
+    max-width: 1100px;
+    gap: 20px;
+  }
+
+  .app-content {
+    padding: 0 48px;
+  }
+
+  .app-header,
+  .app-footer {
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  .app-header {
+    padding-top: 28px;
+    padding-bottom: 16px;
+  }
+
+  .app-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .app-logo svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .app-name {
+    font-size: 1.8rem;
+  }
+
+  /* Breaking news expandido */
+  .breaking-news {
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+
+  .news-item {
+    padding: 14px 24px;
+    max-width: 420px;
+    border-radius: 16px;
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+  }
+
+  .news-badge {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  /* Summary Cards - mais espaçosos */
+  .summary-card {
+    padding: 36px;
+    border-radius: 28px;
+  }
+
+  .card-icon-box {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+    border-radius: 18px;
+  }
+
+  .card-title-group h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card-badge {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
+  /* Setores legend - 5 columns para telas muito grandes */
+  .setores-legend {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+
+  .setor-item {
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .setor-icon {
+    font-size: 1.3rem;
+  }
+
+  .setor-name {
+    font-size: 0.9rem;
+  }
+
+  .setor-exp {
+    font-size: 0.85rem;
+  }
+
+  /* Sentimento resumo */
+  .sentimento-resumo {
+    gap: 48px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .sentimento-count {
+    font-size: 2rem;
+  }
+
+  .sentimento-label {
+    font-size: 0.8rem;
+  }
+
+  /* YouTube card - design expandido */
+  .card-youtube {
+    border-radius: 28px;
+  }
+
+  .youtube-card-content {
+    gap: 32px;
+    padding: 28px 32px;
+  }
+
+  .youtube-icon-area {
+    width: 100px;
+    height: 100px;
+  }
+
+  .youtube-logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .youtube-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .youtube-info .card-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .youtube-cta {
+    font-size: 1rem;
+  }
+
+  /* Card footer buttons */
+  .card-footer-multi {
+    gap: 16px;
+  }
+
+  .card-footer-multi .btn {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .app-footer {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    gap: 14px;
+  }
+
+  .footer-link {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+
+  .footer-disclaimer {
+    font-size: 0.9rem;
+  }
+
+  .footer-version {
+    font-size: 0.8rem;
   }
 
   /* Setores grid - 3 columns */
@@ -3773,6 +4024,39 @@ body.home-page {
   .setores-hero h1 {
     font-size: 3rem;
   }
+}
+
+/* ==========================================
+   Extra Large Desktops (1600px+)
+   ========================================== */
+@media (min-width: 1600px) {
+  .app-container {
+    max-width: 1200px;
+  }
+
+  .app-content {
+    padding: 0 60px;
+  }
+
+  .app-header,
+  .app-footer {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .summary-card {
+    padding: 40px;
+  }
+
+  .setores-legend {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+
+  .setor-item {
+    padding: 16px 18px;
+  }
+}
 
   /* Racional 4 columns */
   .racional-content {

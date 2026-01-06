@@ -1,4 +1,4 @@
-const CACHE_NAME = 'rico-aos-poucos-v6';
+const CACHE_NAME = 'rico-aos-poucos-v7';
 
 // Lista fixa de recursos para cache (apenas estes serão cacheados)
 const STATIC_CACHE = [

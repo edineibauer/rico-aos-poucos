@@ -1,6 +1,6 @@
 {
-  "ultimaAtualizacao": "2026-01-04",
-  "versao": "1.0",
+  "ultimaAtualizacao": "2026-01-06",
+  "versao": "1.1",
 
   "categorias": {
     "renda-variavel": {
@@ -42,6 +42,20 @@
   },
 
   "artigos": [
+    {
+      "id": "strategy-mstr-2026-analise",
+      "titulo": "Strategy (MSTR): O Risco Sistemico do Bitcoin",
+      "subtitulo": "Analise completa da empresa que apostou tudo em Bitcoin",
+      "descricao": "A Strategy detem 3,2% de todo Bitcoin. Analisamos a estrutura de divida, cenarios de crise e se pode ser o proximo FTX.",
+      "arquivo": "strategy-mstr-2026-analise.html",
+      "nivel": "avancado",
+      "categoria": "macroeconomia",
+      "tags": ["strategy", "microstrategy", "mstr", "bitcoin", "risco sistemico", "michael saylor"],
+      "dataPublicacao": "2026-01-06",
+      "tempoLeitura": 12,
+      "destaque": true,
+      "setorRelacionado": "bitcoin"
+    },
     {
       "id": "bitcoin-2026-analise",
       "titulo": "Bitcoin em 2026: Por que Estamos Fora",

@@ -3761,13 +3761,29 @@ body.home-page {
   }
 
   /* Card Expectativas menor à esquerda */
-  .card-expectativas {
+  .home-cards-grid .card-expectativas {
     height: fit-content;
   }
 
+  /* Setores legend dentro do grid - forçar 2 colunas para caber todos */
+  .home-cards-grid .card-expectativas .setores-legend {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
   /* Card Publicações maior à direita */
-  .card-publicacoes {
+  .home-cards-grid .card-publicacoes {
     height: fit-content;
+  }
+
+  /* Pub-featured sempre 100% largura */
+  .pub-featured {
+    width: 100%;
+  }
+
+  .pub-featured-link {
+    width: 100%;
+    min-height: 140px;
   }
 
   /* Container geral */

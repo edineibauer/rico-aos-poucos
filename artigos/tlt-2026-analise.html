@@ -352,6 +352,25 @@
         grid-template-columns: repeat(2, 1fr);
       }
     }
+
+    /* Desktop - manter logo consistente */
+    @media (min-width: 768px) {
+      .main-content { max-width: 900px; padding: 20px 32px; }
+      .article-header h1 { font-size: 1.8rem; }
+      .article-content p { font-size: 0.95rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .app-logo { width: 36px; height: 36px; }
+      .app-logo svg { width: 36px; height: 36px; }
+      .main-content { max-width: 1000px; padding: 24px 40px; }
+      .article-header h1 { font-size: 2rem; }
+      .article-content h2 { font-size: 1.4rem; }
+    }
+
+    @media (min-width: 1400px) {
+      .main-content { max-width: 1100px; }
+    }
   </style>
 </head>
 <body>

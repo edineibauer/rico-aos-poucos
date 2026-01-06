@@ -263,7 +263,7 @@
         Educational content • Not investment advice
       </p>
       <div class="footer-version">
-        <span>v1.1</span>
+        <span>v1.2</span>
         <span class="separator">•</span>
         <span>January 2026</span>
       </div>
@@ -318,7 +318,16 @@
     // Service Worker
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', () => {
-        navigator.serviceWorker.register('../sw.js').catch(() => {});
+        navigator.serviceWorker.register('../sw.js')
+          .then((reg) => {
+            // Wait 100ms after load to cache pages in background
+            setTimeout(() => {
+              if (reg.active) {
+                reg.active.postMessage({ type: 'CACHE_PAGES' });
+              }
+            }, 100);
+          })
+          .catch(() => {});
       });
     }
   </script>

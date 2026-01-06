@@ -446,11 +446,11 @@
         item.addEventListener('click', () => {
           stopAutoRotate();
           activateItem(index);
-          // Smooth scroll to publications card (mobile)
+          // Smooth scroll to frame featured (mobile)
           if (window.innerWidth < 768) {
-            const cardPub = document.querySelector('.card-publicacoes');
-            if (cardPub) {
-              cardPub.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            const pubFeatured = document.getElementById('pubFeatured');
+            if (pubFeatured) {
+              pubFeatured.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
           }
           startAutoRotate();

@@ -1,4 +1,4 @@
-const APP_VERSION = '1.5';
+const APP_VERSION = '1.6';
 const CACHE_NAME = `rico-aos-poucos-v${APP_VERSION}`;
 
 // Recursos críticos - cacheados na instalação (mínimo para funcionar)

@@ -136,101 +136,167 @@
     <!-- Contenido Principal -->
     <section class="app-content">
 
-      <!-- Card Principal - Expectativas del Canal -->
-      <div class="summary-card card-featured card-expectativas">
-        <a href="setores/" class="card-header">
-          <div class="card-icon-box">
-            <span>🎯</span>
-          </div>
-          <div class="card-title-group">
-            <h2>Expectativas del Canal</h2>
-            <span class="card-subtitle">Sentimiento por sector</span>
-            <div class="card-badge">Mediano Plazo</div>
-          </div>
-        </a>
-        <div class="card-body">
-          <div class="expectativas-visual">
-            <div class="setores-legend">
-              <a href="setores/dolar/" class="setor-item bullish">
-                <span class="setor-icon">💲</span>
-                <span class="setor-name">Dólar</span>
-                <span class="setor-exp">25%</span>
-              </a>
-              <a href="setores/caixa/" class="setor-item bullish">
-                <span class="setor-icon">💵</span>
-                <span class="setor-name">Efectivo</span>
-                <span class="setor-exp">20%</span>
-              </a>
-              <a href="setores/tlt/" class="setor-item bullish">
-                <span class="setor-icon">📊</span>
-                <span class="setor-name">TLT</span>
-                <span class="setor-exp">15%</span>
-              </a>
-              <a href="setores/imoveis/" class="setor-item neutral">
-                <span class="setor-icon">🏠</span>
-                <span class="setor-name">Inmuebles</span>
-                <span class="setor-exp">15%</span>
-              </a>
-              <a href="setores/fiis/" class="setor-item neutral">
-                <span class="setor-icon">🏢</span>
-                <span class="setor-name">FIIs</span>
-                <span class="setor-exp">10%</span>
-              </a>
-              <a href="setores/tesouro-ipca/" class="setor-item neutral">
-                <span class="setor-icon">🏦</span>
-                <span class="setor-name">IPCA+</span>
-                <span class="setor-exp">10%</span>
-              </a>
-              <a href="setores/ibov/" class="setor-item neutral">
-                <span class="setor-icon">📈</span>
-                <span class="setor-name">IBOV</span>
-                <span class="setor-exp">5%</span>
-              </a>
-              <a href="setores/ouro/" class="setor-item neutral zero">
-                <span class="setor-icon">🥇</span>
-                <span class="setor-name">Oro</span>
-                <span class="setor-exp">0%</span>
-              </a>
-              <a href="setores/sp500/" class="setor-item bearish zero">
-                <span class="setor-icon">🇺🇸</span>
-                <span class="setor-name">S&P500</span>
-                <span class="setor-exp">0%</span>
-              </a>
-              <a href="setores/bitcoin/" class="setor-item bearish zero">
-                <span class="setor-icon">₿</span>
-                <span class="setor-name">Bitcoin</span>
-                <span class="setor-exp">0%</span>
-              </a>
+      <!-- Diseño Desktop: dos cards lado a lado -->
+      <div class="home-cards-grid">
+
+        <!-- Card Expectativas del Canal (menor, izquierda) -->
+        <div class="summary-card card-featured card-expectativas">
+          <a href="setores/" class="card-header">
+            <div class="card-icon-box">
+              <span>🎯</span>
             </div>
-          </div>
-          <a href="setores/" class="sentimento-resumo">
-            <div class="sentimento-stat bullish">
-              <span class="sentimento-count">3</span>
-              <span class="sentimento-label">Optimistas</span>
-            </div>
-            <div class="sentimento-stat neutral">
-              <span class="sentimento-count">5</span>
-              <span class="sentimento-label">Neutrales</span>
-            </div>
-            <div class="sentimento-stat bearish">
-              <span class="sentimento-count">2</span>
-              <span class="sentimento-label">Pesimistas</span>
+            <div class="card-title-group">
+              <h2>Expectativas del Canal</h2>
+              <span class="card-subtitle">Sentimiento por sector</span>
+              <div class="card-badge">Mediano Plazo</div>
             </div>
           </a>
+          <div class="card-body">
+            <div class="expectativas-visual">
+              <div class="setores-legend">
+                <a href="setores/dolar/" class="setor-item bullish">
+                  <span class="setor-icon">💲</span>
+                  <span class="setor-name">Dólar</span>
+                  <span class="setor-exp">25%</span>
+                </a>
+                <a href="setores/caixa/" class="setor-item bullish">
+                  <span class="setor-icon">💵</span>
+                  <span class="setor-name">Efectivo</span>
+                  <span class="setor-exp">20%</span>
+                </a>
+                <a href="setores/tlt/" class="setor-item bullish">
+                  <span class="setor-icon">📊</span>
+                  <span class="setor-name">TLT</span>
+                  <span class="setor-exp">15%</span>
+                </a>
+                <a href="setores/imoveis/" class="setor-item neutral">
+                  <span class="setor-icon">🏠</span>
+                  <span class="setor-name">Inmuebles</span>
+                  <span class="setor-exp">15%</span>
+                </a>
+                <a href="setores/fiis/" class="setor-item neutral">
+                  <span class="setor-icon">🏢</span>
+                  <span class="setor-name">FIIs</span>
+                  <span class="setor-exp">10%</span>
+                </a>
+                <a href="setores/tesouro-ipca/" class="setor-item neutral">
+                  <span class="setor-icon">🏦</span>
+                  <span class="setor-name">IPCA+</span>
+                  <span class="setor-exp">10%</span>
+                </a>
+                <a href="setores/ibov/" class="setor-item neutral">
+                  <span class="setor-icon">📈</span>
+                  <span class="setor-name">IBOV</span>
+                  <span class="setor-exp">5%</span>
+                </a>
+                <a href="setores/ouro/" class="setor-item neutral zero">
+                  <span class="setor-icon">🥇</span>
+                  <span class="setor-name">Oro</span>
+                  <span class="setor-exp">0%</span>
+                </a>
+                <a href="setores/sp500/" class="setor-item bearish zero">
+                  <span class="setor-icon">🇺🇸</span>
+                  <span class="setor-name">S&P500</span>
+                  <span class="setor-exp">0%</span>
+                </a>
+                <a href="setores/bitcoin/" class="setor-item bearish zero">
+                  <span class="setor-icon">₿</span>
+                  <span class="setor-name">Bitcoin</span>
+                  <span class="setor-exp">0%</span>
+                </a>
+              </div>
+            </div>
+            <a href="setores/" class="sentimento-resumo">
+              <div class="sentimento-stat bullish">
+                <span class="sentimento-count">3</span>
+                <span class="sentimento-label">Optimistas</span>
+              </div>
+              <div class="sentimento-stat neutral">
+                <span class="sentimento-count">5</span>
+                <span class="sentimento-label">Neutrales</span>
+              </div>
+              <div class="sentimento-stat bearish">
+                <span class="sentimento-count">2</span>
+                <span class="sentimento-label">Pesimistas</span>
+              </div>
+            </a>
+          </div>
+          <div class="card-footer-multi">
+            <a href="setores/" class="btn btn-primary">
+              <span>Ver análisis completo</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="desempenho/" class="btn btn-secondary">
+              <span>📊 Rendimiento</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
-        <div class="card-footer-multi">
-          <a href="setores/" class="btn btn-primary">
-            <span>Ver análisis completo</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
-          <a href="desempenho/" class="btn btn-secondary">
-            <span>📊 Rendimiento</span>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+
+        <!-- Card Publicaciones/Noticias (mayor, derecha) -->
+        <div class="summary-card card-featured card-publicacoes">
+          <div class="card-header">
+            <div class="card-icon-box">
+              <span>📰</span>
+            </div>
+            <div class="card-title-group">
+              <h2>Publicaciones</h2>
+              <span class="card-subtitle">Análisis y artículos</span>
+            </div>
+          </div>
+          <div class="card-body">
+            <!-- Publicación destacada (activa) -->
+            <div class="pub-featured" id="pubFeatured">
+              <a href="artigos/tlt-2026-analise.html" class="pub-featured-link" id="pubFeaturedLink">
+                <div class="pub-featured-badge bullish" id="pubFeaturedBadge">TLT</div>
+                <h3 class="pub-featured-title" id="pubFeaturedTitle">TLT 2026: Cambio a Optimista</h3>
+                <p class="pub-featured-excerpt" id="pubFeaturedExcerpt">Precios bajos y bajo riesgo hacen de los bonos largos estadounidenses una oportunidad interesante para 2026.</p>
+                <span class="pub-featured-cta">
+                  <span>Leer más</span>
+                  <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </span>
+              </a>
+            </div>
+
+            <!-- Lista de publicaciones (índice) -->
+            <div class="pub-list" id="pubList">
+              <button class="pub-list-item active" data-index="0" data-href="artigos/tlt-2026-analise.html" data-badge="TLT" data-type="bullish" data-title="TLT 2026: Cambio a Optimista" data-excerpt="Precios bajos y bajo riesgo hacen de los bonos largos estadounidenses una oportunidad interesante para 2026.">
+                <span class="pub-list-badge bullish">TLT</span>
+                <span class="pub-list-title">TLT 2026: Cambio a Optimista</span>
+              </button>
+              <button class="pub-list-item" data-index="1" data-href="artigos/bitcoin-2026-analise.html" data-badge="BTC" data-type="bearish" data-title="Bitcoin 2026: Fin de Ciclo" data-excerpt="Análisis completo del ciclo de Bitcoin y por qué somos pesimistas con exposición cero para 2026.">
+                <span class="pub-list-badge bearish">BTC</span>
+                <span class="pub-list-title">Bitcoin 2026: Fin de Ciclo</span>
+              </button>
+              <button class="pub-list-item" data-index="2" data-href="artigos/dolar-2026-analise.html" data-badge="USD" data-type="bullish" data-title="Dólar 2026: Optimistas tras caída" data-excerpt="Tras una caída del 11% en 2025, vemos oportunidad de valorización del dólar frente al real en 2026.">
+                <span class="pub-list-badge bullish">USD</span>
+                <span class="pub-list-title">Dólar 2026: Optimistas tras caída</span>
+              </button>
+              <button class="pub-list-item" data-index="3" data-href="artigos/fiis-2026-analise.html" data-badge="FIIs" data-type="neutral" data-title="FIIs 2026: Renta Pasiva" data-excerpt="Fondos inmobiliarios con precios estirados pero aún interesantes para renta pasiva.">
+                <span class="pub-list-badge neutral">FIIs</span>
+                <span class="pub-list-title">FIIs 2026: Renta Pasiva</span>
+              </button>
+              <button class="pub-list-item" data-index="4" data-href="artigos/tesouro-ipca-2026-analise.html" data-badge="IPCA+" data-type="neutral" data-title="Tesoro IPCA+ 2026: Riesgo Fiscal" data-excerpt="Análisis del Tesoro IPCA+ considerando el escenario fiscal brasileño actual.">
+                <span class="pub-list-badge neutral">IPCA+</span>
+                <span class="pub-list-title">Tesoro IPCA+ 2026: Riesgo Fiscal</span>
+              </button>
+              <button class="pub-list-item" data-index="5" data-href="artigos/acoes-brasileiras-2026-analise.html" data-badge="IBOV" data-type="neutral" data-title="Acciones Brasileñas 2026" data-excerpt="Perspectivas para el mercado de acciones brasileño en 2026.">
+                <span class="pub-list-badge neutral">IBOV</span>
+                <span class="pub-list-title">Acciones Brasileñas 2026</span>
+              </button>
+            </div>
+          </div>
+          <div class="card-footer">
+            <a href="artigos/" class="btn btn-primary">
+              <span>Ver todos los artículos</span>
+              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
+
       </div>
 
-      <!-- Card YouTube -->
+      <!-- Card YouTube (fuera del grid, ancho completo) -->
       <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="summary-card card-youtube">
         <div class="youtube-card-content">
           <div class="youtube-icon-area">
@@ -263,7 +329,7 @@
         Contenido educativo • No es asesoramiento de inversión
       </p>
       <div class="footer-version">
-        <span>v1.2</span>
+        <span>v1.3</span>
         <span class="separator">•</span>
         <span>Enero 2026</span>
       </div>
@@ -330,6 +396,74 @@
           .catch(() => {});
       });
     }
+
+    // Carrusel de Publicaciones
+    (function() {
+      const pubList = document.getElementById('pubList');
+      const pubFeaturedLink = document.getElementById('pubFeaturedLink');
+      const pubFeaturedBadge = document.getElementById('pubFeaturedBadge');
+      const pubFeaturedTitle = document.getElementById('pubFeaturedTitle');
+      const pubFeaturedExcerpt = document.getElementById('pubFeaturedExcerpt');
+
+      if (!pubList) return;
+
+      const items = pubList.querySelectorAll('.pub-list-item');
+      let currentIndex = 0;
+      let autoRotateInterval;
+
+      function activateItem(index) {
+        const item = items[index];
+        if (!item) return;
+
+        items.forEach(i => i.classList.remove('active'));
+        item.classList.add('active');
+
+        const href = item.dataset.href;
+        const badge = item.dataset.badge;
+        const type = item.dataset.type;
+        const title = item.dataset.title;
+        const excerpt = item.dataset.excerpt;
+
+        pubFeaturedLink.href = href;
+        pubFeaturedBadge.textContent = badge;
+        pubFeaturedBadge.className = 'pub-featured-badge ' + type;
+        pubFeaturedTitle.textContent = title;
+        pubFeaturedExcerpt.textContent = excerpt;
+
+        pubFeaturedLink.style.opacity = '0';
+        setTimeout(() => {
+          pubFeaturedLink.style.opacity = '1';
+        }, 50);
+
+        currentIndex = index;
+      }
+
+      function nextItem() {
+        const nextIndex = (currentIndex + 1) % items.length;
+        activateItem(nextIndex);
+      }
+
+      function startAutoRotate() {
+        autoRotateInterval = setInterval(nextItem, 7000);
+      }
+
+      function stopAutoRotate() {
+        clearInterval(autoRotateInterval);
+      }
+
+      items.forEach((item, index) => {
+        item.addEventListener('click', () => {
+          stopAutoRotate();
+          activateItem(index);
+          startAutoRotate();
+        });
+      });
+
+      pubList.addEventListener('mouseenter', stopAutoRotate);
+      pubList.addEventListener('mouseleave', startAutoRotate);
+
+      startAutoRotate();
+    })();
   </script>
 </body>
 </html>

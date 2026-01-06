@@ -454,8 +454,10 @@
           // Scroll suave para enquadrar o card de publicações (mobile)
           if (window.innerWidth < 768) {
             const cardPub = document.querySelector('.card-publicacoes');
+            const header = document.querySelector('.app-header');
             if (cardPub) {
-              const top = cardPub.getBoundingClientRect().top + window.scrollY - 10;
+              const headerHeight = header ? header.offsetHeight : 0;
+              const top = cardPub.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
               window.scrollTo({ top: top, behavior: 'smooth' });
             }
           }

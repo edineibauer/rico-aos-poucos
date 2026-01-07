@@ -17,7 +17,7 @@ const Comments = {
   DISQUS_SHORTNAME: 'ricoaospoucos',
 
   // Whether Disqus has been configured (set to true after setup)
-  DISQUS_CONFIGURED: false,
+  DISQUS_CONFIGURED: true,
 
   // Get unique identifier for current page
   getPageIdentifier() {

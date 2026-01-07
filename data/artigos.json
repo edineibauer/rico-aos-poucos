@@ -1,13 +1,13 @@
 {
-  "ultimaAtualizacao": "2026-01-04",
-  "versao": "1.0",
+  "ultimaAtualizacao": "2026-01-07",
+  "versao": "1.4",
 
   "categorias": {
     "renda-variavel": {
       "id": "renda-variavel",
-      "nome": "Renda Variavel",
+      "nome": "Renda Variável",
       "icone": "📈",
-      "descricao": "Acoes, FIIs e ETFs"
+      "descricao": "Ações, FIIs e ETFs"
     },
     "renda-fixa": {
       "id": "renda-fixa",
@@ -19,19 +19,19 @@
       "id": "macroeconomia",
       "nome": "Macroeconomia",
       "icone": "🌍",
-      "descricao": "Analises do cenario economico"
+      "descricao": "Análises do cenário econômico"
     },
     "educacao": {
       "id": "educacao",
-      "nome": "Educacao Financeira",
+      "nome": "Educação Financeira",
       "icone": "🎓",
-      "descricao": "Conceitos basicos para iniciantes"
+      "descricao": "Conceitos básicos para iniciantes"
     },
     "estrategias": {
       "id": "estrategias",
-      "nome": "Estrategias",
+      "nome": "Estratégias",
       "icone": "💡",
-      "descricao": "Taticas e filosofias de investimento"
+      "descricao": "Táticas e filosofias de investimento"
     },
     "psicologia": {
       "id": "psicologia",
@@ -43,10 +43,94 @@
 
   "artigos": [
     {
+      "id": "inflacao-o-imposto-invisivel-2026",
+      "titulo": "Inflação: O Imposto Invisível Que Corrói Seu Dinheiro",
+      "subtitulo": "Por que o IPCA não reflete a inflação real",
+      "descricao": "Entenda o que é inflação, por que ela existe e por que o IPCA oficial não conta toda a verdade. Descubra como calcular a inflação real que você sente no bolso.",
+      "arquivo": "inflacao-o-imposto-invisivel-2026.html",
+      "nivel": "iniciante",
+      "categoria": "educacao",
+      "tags": ["inflação", "IPCA", "poder de compra", "economia", "iniciante", "IGP-M", "preços"],
+      "dataPublicacao": "2026-01-07",
+      "tempoLeitura": 18,
+      "destaque": true,
+      "setorRelacionado": null
+    },
+    {
+      "id": "oportunidades-mercado-ineficiencias-2026",
+      "titulo": "Onde Estão as Oportunidades Reais do Mercado?",
+      "subtitulo": "Ineficiências em small caps e reações a notícias",
+      "descricao": "Apesar do mercado precificar tudo, existem oportunidades reais. Entenda onde surgem ineficiências em small caps, reações a notícias e como identificá-las.",
+      "arquivo": "oportunidades-mercado-ineficiencias-2026.html",
+      "nivel": "intermediario",
+      "categoria": "estrategias",
+      "tags": ["mercado eficiente", "EMH", "small caps", "oportunidades", "behavioral finance", "value investing"],
+      "dataPublicacao": "2026-01-07",
+      "tempoLeitura": 10,
+      "destaque": true,
+      "setorRelacionado": null
+    },
+    {
+      "id": "risco-retorno-investimentos-2026",
+      "titulo": "Risco e Retorno: O Que Ninguém Te Conta",
+      "subtitulo": "Por que brasileiros apostam tanto? Quando arriscar mais?",
+      "descricao": "Entenda a relação entre risco e retorno em investimentos. Por que bets e loterias atraem tanto? Quando faz sentido arriscar mais e quando proteger seu patrimônio.",
+      "arquivo": "risco-retorno-investimentos-2026.html",
+      "nivel": "iniciante",
+      "categoria": "educacao",
+      "tags": ["risco", "retorno", "bets", "apostas", "loteria", "patrimônio", "diversificação"],
+      "dataPublicacao": "2026-01-07",
+      "tempoLeitura": 12,
+      "destaque": true,
+      "setorRelacionado": null
+    },
+    {
+      "id": "quanto-tempo-para-ficar-rico-2026",
+      "titulo": "Quanto Tempo Leva Para Ficar Rico Investindo?",
+      "subtitulo": "A verdade matemática que ninguém conta",
+      "descricao": "Simulação realista com inflação, aportes mensais e juros compostos. Por que investir não enriquece rápido e onde você deveria investir primeiro.",
+      "arquivo": "quanto-tempo-para-ficar-rico-2026.html",
+      "nivel": "iniciante",
+      "categoria": "educacao",
+      "tags": ["juros compostos", "inflação", "iniciante", "quanto investir", "independência financeira", "renda"],
+      "dataPublicacao": "2026-01-06",
+      "tempoLeitura": 15,
+      "destaque": true,
+      "setorRelacionado": null
+    },
+    {
+      "id": "bitcoin-proposta-vs-realidade-2026",
+      "titulo": "Bitcoin: Da Proposta Original à Realidade de 2026",
+      "subtitulo": "Análise crítica do valor intrínseco, ciclos e futuro",
+      "descricao": "O Bitcoin nasceu para ser moeda de pagamento. Virou ativo especulativo. Análise da proposta de Satoshi vs realidade, valor intrínseco e ciclos decrescentes.",
+      "arquivo": "bitcoin-proposta-vs-realidade-2026.html",
+      "nivel": "avancado",
+      "categoria": "macroeconomia",
+      "tags": ["bitcoin", "satoshi", "valor intrínseco", "ciclos", "ouro digital", "warren buffett"],
+      "dataPublicacao": "2026-01-06",
+      "tempoLeitura": 18,
+      "destaque": true,
+      "setorRelacionado": "bitcoin"
+    },
+    {
+      "id": "strategy-mstr-2026-analise",
+      "titulo": "Strategy (MSTR): O Risco Sistêmico do Bitcoin",
+      "subtitulo": "Análise completa da empresa que apostou tudo em Bitcoin",
+      "descricao": "A Strategy detém 3,2% de todo Bitcoin. Analisamos a estrutura de dívida, cenários de crise e se pode ser o próximo FTX.",
+      "arquivo": "strategy-mstr-2026-analise.html",
+      "nivel": "avancado",
+      "categoria": "macroeconomia",
+      "tags": ["strategy", "microstrategy", "mstr", "bitcoin", "risco sistêmico", "michael saylor"],
+      "dataPublicacao": "2026-01-06",
+      "tempoLeitura": 12,
+      "destaque": true,
+      "setorRelacionado": "bitcoin"
+    },
+    {
       "id": "bitcoin-2026-analise",
       "titulo": "Bitcoin em 2026: Por que Estamos Fora",
-      "subtitulo": "Fim de ciclo, padrao historico de correcao e riscos sistemicos",
-      "descricao": "Mudanca de Otimista para Pessimista. Fim de ciclo de alta, risco Strategy e exposicao zerada para criptomoedas.",
+      "subtitulo": "Fim de ciclo, padrão histórico de correção e riscos sistêmicos",
+      "descricao": "Mudança de Otimista para Pessimista. Fim de ciclo de alta, risco Strategy e exposição zerada para criptomoedas.",
       "arquivo": "bitcoin-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "macroeconomia",
@@ -58,13 +142,13 @@
     },
     {
       "id": "tlt-2026-analise",
-      "titulo": "TLT em 2026: Oportunidade em Precos Baixos",
-      "subtitulo": "Titulos longos americanos com baixo risco e potencial de alta",
-      "descricao": "Mudanca de Neutro para Otimista. Precos historicamente baixos, ativo de protecao, retorno em dolar.",
+      "titulo": "TLT em 2026: Oportunidade em Preços Baixos",
+      "subtitulo": "Títulos longos americanos com baixo risco e potencial de alta",
+      "descricao": "Mudança de Neutro para Otimista. Preços historicamente baixos, ativo de proteção, retorno em dólar.",
       "arquivo": "tlt-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-fixa",
-      "tags": ["tlt", "tesouro americano", "bonds", "protecao"],
+      "tags": ["tlt", "tesouro americano", "bonds", "proteção"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 6,
       "destaque": true,
@@ -73,8 +157,8 @@
     {
       "id": "tesouro-ipca-2026-analise",
       "titulo": "Tesouro IPCA+ em 2026: Taxas Altas, Risco Real",
-      "subtitulo": "IPCA+7% e atrativo, mas risco fiscal embutido",
-      "descricao": "Mudanca de Otimista para Neutro. Taxas historicas, mas risco de marcacao a mercado negativa se cenario piorar.",
+      "subtitulo": "IPCA+7% é atrativo, mas risco fiscal embutido",
+      "descricao": "Mudança de Otimista para Neutro. Taxas históricas, mas risco de marcação a mercado negativa se cenário piorar.",
       "arquivo": "tesouro-ipca-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-fixa",
@@ -87,12 +171,12 @@
     {
       "id": "fiis-2026-analise",
       "titulo": "FIIs em 2026: Renda Passiva com Cautela",
-      "subtitulo": "Bons para geracao de renda, mas precos ja esticados",
-      "descricao": "Analise de FIIs para 2026. Yields atrativos, mas mercado ja precificou corte de Selic. Potencial de valorizacao limitado.",
+      "subtitulo": "Bons para geração de renda, mas preços já esticados",
+      "descricao": "Análise de FIIs para 2026. Yields atrativos, mas mercado já precificou corte de Selic. Potencial de valorização limitado.",
       "arquivo": "fiis-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-variavel",
-      "tags": ["fiis", "fundos imobiliarios", "renda passiva", "dividendos"],
+      "tags": ["fiis", "fundos imobiliários", "renda passiva", "dividendos"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 6,
       "destaque": false,
@@ -100,13 +184,13 @@
     },
     {
       "id": "dolar-2026-analise",
-      "titulo": "Dolar em 2026: Por que Estamos Otimistas",
-      "subtitulo": "Apos queda de 11% em 2025, vemos oportunidade de valorizacao",
-      "descricao": "Analise completa do cenario cambial. Dolar caiu 11% em 2025, mas carry trade, risco fiscal e papel de ativo de refugio favorecem valorizacao.",
+      "titulo": "Dólar em 2026: Por que Estamos Otimistas",
+      "subtitulo": "Após queda de 11% em 2025, vemos oportunidade de valorização",
+      "descricao": "Análise completa do cenário cambial. Dólar caiu 11% em 2025, mas carry trade, risco fiscal e papel de ativo de refúgio favorecem valorização.",
       "arquivo": "dolar-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "macroeconomia",
-      "tags": ["dolar", "cambio", "carry trade", "selic", "refugio"],
+      "tags": ["dólar", "câmbio", "carry trade", "selic", "refúgio"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 7,
       "destaque": false,
@@ -114,13 +198,13 @@
     },
     {
       "id": "acoes-brasileiras-2026-analise",
-      "titulo": "Acoes Brasileiras em 2026: Hora de Cautela?",
+      "titulo": "Ações Brasileiras em 2026: Hora de Cautela?",
       "subtitulo": "Ibovespa bateu recordes em 2025, mas os riscos aumentaram",
-      "descricao": "Analise completa do cenario para acoes brasileiras. O Ibovespa subiu 34% em 2025, mas quais sao os riscos e oportunidades para 2026?",
+      "descricao": "Análise completa do cenário para ações brasileiras. O Ibovespa subiu 34% em 2025, mas quais são os riscos e oportunidades para 2026?",
       "arquivo": "acoes-brasileiras-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-variavel",
-      "tags": ["acoes", "ibovespa", "selic", "eleicoes"],
+      "tags": ["ações", "ibovespa", "selic", "eleições"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 8,
       "destaque": false,

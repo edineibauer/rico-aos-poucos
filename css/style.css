@@ -982,6 +982,84 @@ body.home-page {
 }
 
 /* ==========================================
+   Page Header (internal pages)
+   ========================================== */
+.page-wrapper .app-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  background: var(--bg-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.header-back {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+  flex-shrink: 0;
+}
+
+.header-back:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.header-back svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+.page-wrapper .app-logo {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.page-wrapper .app-title-group {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.page-wrapper .app-name {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  background: none;
+  -webkit-background-clip: unset;
+  -webkit-text-fill-color: unset;
+  background-clip: unset;
+}
+
+.page-wrapper .app-subtitle {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* ==========================================
    Language Selector
    ========================================== */
 
@@ -3185,6 +3263,222 @@ body.home-page {
 }
 
 /* ==========================================
+   Home Cards Grid - Layout Desktop
+   ========================================== */
+
+.home-cards-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* ==========================================
+   Card Publicações - Carrossel
+   ========================================== */
+
+.card-publicacoes {
+  cursor: default;
+}
+
+.card-publicacoes .card-header {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card-publicacoes .card-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+/* Featured publication */
+.pub-featured {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.pub-featured-link {
+  display: block;
+  padding: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.3s ease;
+}
+
+.pub-featured-link:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.pub-featured-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.pub-featured-badge.bullish {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--bullish);
+}
+
+.pub-featured-badge.bearish {
+  background: rgba(248, 81, 73, 0.15);
+  color: var(--bearish);
+}
+
+.pub-featured-badge.neutral {
+  background: rgba(214, 164, 45, 0.15);
+  color: var(--neutral);
+}
+
+.pub-featured-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+.pub-featured-excerpt {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.pub-featured-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--primary-light);
+}
+
+.pub-featured-cta svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+}
+
+/* Publications loading state */
+.pub-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  gap: 12px;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+.pub-loading-spinner {
+  width: 24px;
+  height: 24px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: pub-spin 0.8s linear infinite;
+}
+
+@keyframes pub-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.pub-empty {
+  text-align: center;
+  padding: 30px 20px;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+/* Publications list */
+.pub-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pub-list-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.pub-list-item:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.pub-list-item.active {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+}
+
+.pub-list-badge {
+  flex-shrink: 0;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.pub-list-badge.bullish {
+  background: rgba(63, 185, 80, 0.15);
+  color: var(--bullish);
+}
+
+.pub-list-badge.bearish {
+  background: rgba(248, 81, 73, 0.15);
+  color: var(--bearish);
+}
+
+.pub-list-badge.neutral {
+  background: rgba(214, 164, 45, 0.15);
+  color: var(--neutral);
+}
+
+.pub-list-title {
+  flex: 1;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pub-list-item.active .pub-list-title {
+  color: var(--text-primary);
+}
+
+.card-publicacoes .card-footer {
+  padding-top: 14px;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+/* ==========================================
    Card Footer Multi Links
    ========================================== */
 
@@ -3428,6 +3722,7 @@ body.home-page {
   color: var(--text-primary);
 }
 
+/* PWA Banner - Mobile melhorado */
 @media (max-width: 480px) {
   .pwa-install-banner {
     flex-wrap: wrap;
@@ -3438,5 +3733,1670 @@ body.home-page {
   .pwa-install-content {
     flex: 1;
     min-width: 200px;
+  }
+}
+
+/* PWA Banner - Design melhorado para mobile */
+@media (max-width: 767px) {
+  .pwa-install-banner {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    transform: none;
+    max-width: none;
+    padding: 16px 20px;
+    background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+    border: 1px solid var(--primary);
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(63, 185, 80, 0.2);
+  }
+
+  .pwa-install-banner.show {
+    animation: slideUpBanner 0.4s ease-out;
+  }
+
+  @keyframes slideUpBanner {
+    from {
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .pwa-icon {
+    font-size: 2rem;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    padding: 12px;
+    border-radius: 14px;
+  }
+
+  .pwa-text strong {
+    font-size: 1rem;
+    color: var(--text-primary);
+    display: block;
+    margin-bottom: 2px;
+  }
+
+  .pwa-text span {
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+  }
+
+  .pwa-install-btn {
+    padding: 12px 24px;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    font-size: 0.95rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(26, 95, 74, 0.4);
+  }
+
+  .pwa-close-btn {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px;
+    font-size: 1.2rem;
+  }
+}
+
+/* PWA Banner - Esconder em desktop */
+@media (min-width: 768px) {
+  .pwa-install-banner {
+    display: none !important;
+  }
+}
+
+/* ==========================================
+   DESKTOP STYLES - Tablets e Laptops
+   ========================================== */
+@media (min-width: 768px) {
+  /* HOME PAGE - Layout desktop com header/footer full-width */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body.home-page .app-header {
+    background: var(--bg-secondary);
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  body.home-page .app-header,
+  body.home-page .app-footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* Conteúdo interno do header e footer centralizado */
+  body.home-page .app-header {
+    display: flex;
+    justify-content: center;
+  }
+
+  body.home-page .app-header > * {
+    max-width: 900px;
+  }
+
+  /* Wrapper para conteúdo do header */
+  body.home-page .app-header {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 16px;
+    max-width: 100%;
+    padding: 16px 40px;
+  }
+
+  body.home-page .app-footer {
+    background: var(--bg-secondary);
+    border-top: 1px solid var(--border-color);
+    padding: 20px 40px;
+  }
+
+  /* Breaking news e content centralizados */
+  body.home-page .breaking-news,
+  body.home-page .app-content {
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+
+  /* Home cards grid - duas colunas no desktop */
+  .home-cards-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.3fr;
+    gap: 20px;
+    align-items: start;
+  }
+
+  /* Card Expectativas menor à esquerda */
+  .home-cards-grid .card-expectativas {
+    height: fit-content;
+  }
+
+  /* Setores legend dentro do grid - forçar 2 colunas para caber todos */
+  .home-cards-grid .card-expectativas .setores-legend {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 6px;
+  }
+
+  /* Card Publicações maior à direita */
+  .home-cards-grid .card-publicacoes {
+    height: fit-content;
+  }
+
+  /* Pub-featured sempre 100% largura */
+  .pub-featured {
+    width: 100%;
+  }
+
+  .pub-featured-link {
+    width: 100%;
+    min-height: 140px;
+  }
+
+  /* Container geral */
+  .container {
+    max-width: 1000px;
+    padding: 0 32px;
+  }
+
+  /* Hero sections */
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .hero .subtitle {
+    font-size: 1.4rem;
+    max-width: 700px;
+  }
+
+  /* Section headers */
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Disclaimer box */
+  .disclaimer-box {
+    max-width: 900px;
+    padding: 24px 32px;
+  }
+
+  /* Setores grid */
+  .setores-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Racional content */
+  .racional-content {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  /* Timeline */
+  .timeline {
+    max-width: 800px;
+  }
+
+  /* Publicações lista */
+  .publicacoes-lista {
+    max-width: 800px;
+  }
+
+  /* Ativos lista */
+  .ativos-lista {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* ==========================================
+   DESKTOP STYLES - Laptops e Desktops
+   ========================================== */
+@media (min-width: 1024px) {
+  /* HOME PAGE - Layout desktop expandido */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+    gap: 0;
+  }
+
+  body.home-page .app-header {
+    padding: 20px 60px;
+  }
+
+  body.home-page .app-footer {
+    padding: 24px 60px;
+  }
+
+  /* Conteúdo centralizado com max-width maior */
+  body.home-page .breaking-news,
+  body.home-page .app-content {
+    max-width: 1200px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+  }
+
+  /* Home cards grid - proporções maiores */
+  .home-cards-grid {
+    grid-template-columns: 1fr 1.4fr;
+    gap: 24px;
+  }
+
+  .app-logo {
+    width: 44px;
+    height: 44px;
+  }
+
+  .app-logo svg {
+    width: 44px;
+    height: 44px;
+  }
+
+  .app-name {
+    font-size: 1.6rem;
+  }
+
+  /* Breaking news */
+  .breaking-news {
+    padding-top: 8px;
+    padding-bottom: 12px;
+  }
+
+  .news-item {
+    padding: 12px 20px;
+    max-width: 380px;
+  }
+
+  .news-title {
+    font-size: 0.9rem;
+  }
+
+  /* Summary Cards */
+  .summary-card {
+    padding: 28px;
+    border-radius: 24px;
+  }
+
+  .card-icon-box {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+    border-radius: 16px;
+  }
+
+  .card-title-group h2 {
+    font-size: 1.25rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.85rem;
+  }
+
+  /* Setores legend grid - 3 columns on desktop */
+  .setores-legend {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  .setor-item {
+    padding: 12px 14px;
+  }
+
+  .setor-name {
+    font-size: 0.85rem;
+  }
+
+  /* Card footer buttons - fix para desktop */
+  .card-footer-multi {
+    flex-wrap: nowrap;
+  }
+
+  .card-footer-multi .btn {
+    flex: 1;
+    min-width: 0;
+    white-space: nowrap;
+  }
+
+  .setor-exp {
+    font-size: 0.8rem;
+  }
+
+  /* Sentimento resumo */
+  .sentimento-resumo {
+    gap: 32px;
+    margin-top: 16px;
+    padding-top: 16px;
+  }
+
+  .sentimento-count {
+    font-size: 1.8rem;
+  }
+
+  .sentimento-label {
+    font-size: 0.75rem;
+  }
+
+  /* YouTube card */
+  .youtube-card-content {
+    gap: 24px;
+    padding: 24px;
+  }
+
+  .youtube-icon-area {
+    width: 80px;
+    height: 80px;
+  }
+
+  .youtube-logo {
+    width: 56px;
+    height: 56px;
+  }
+
+  .youtube-info h2 {
+    font-size: 1.15rem;
+  }
+
+  .youtube-cta {
+    font-size: 0.9rem;
+  }
+
+  /* Card footer buttons */
+  .card-footer-multi .btn {
+    padding: 12px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Footer */
+  .app-footer {
+    padding-top: 20px;
+    padding-bottom: 24px;
+    gap: 10px;
+  }
+
+  .footer-disclaimer {
+    font-size: 0.85rem;
+  }
+
+  /* Page content */
+  .main-content {
+    max-width: 1000px;
+    padding: 20px 32px;
+  }
+
+  /* Artigos list */
+  .artigos-list {
+    gap: 16px;
+  }
+
+  .artigo-card {
+    padding: 20px;
+  }
+
+  .artigo-titulo {
+    font-size: 1.05rem;
+  }
+
+  /* Setores hero */
+  .setores-hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  /* Setor individual hero */
+  .setor-hero-content {
+    gap: 32px;
+  }
+
+  .setor-icon-large {
+    width: 100px;
+    height: 100px;
+    font-size: 3rem;
+    border-radius: 24px;
+  }
+
+  .setor-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .setor-desc {
+    font-size: 1.1rem;
+  }
+
+  /* Exposição card */
+  .exposicao-card {
+    padding: 32px;
+  }
+
+  .exposicao-percent {
+    font-size: 2.5rem;
+  }
+
+  /* Setor cards */
+  .setor-card {
+    padding: 28px;
+  }
+
+  .setor-card-icon {
+    width: 56px;
+    height: 56px;
+    font-size: 1.8rem;
+  }
+
+  .setor-card-info h3 {
+    font-size: 1.2rem;
+  }
+
+  /* Racional cards */
+  .racional-card {
+    padding: 28px;
+  }
+
+  .racional-icon {
+    font-size: 2.5rem;
+  }
+
+  .racional-card h4 {
+    font-size: 1.1rem;
+  }
+
+  .racional-card p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ==========================================
+   DESKTOP STYLES - Telas Grandes
+   ========================================== */
+@media (min-width: 1400px) {
+  /* Container máximo */
+  .container {
+    max-width: 1200px;
+    padding: 0 48px;
+  }
+
+  /* HOME PAGE - Layout expandido para telas grandes */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body.home-page .app-header {
+    padding: 24px 80px;
+  }
+
+  body.home-page .app-footer {
+    padding: 28px 80px;
+  }
+
+  body.home-page .breaking-news,
+  body.home-page .app-content {
+    max-width: 1300px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  /* Home cards grid - proporções para telas grandes */
+  .home-cards-grid {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 28px;
+  }
+
+  .app-logo {
+    width: 52px;
+    height: 52px;
+  }
+
+  .app-logo svg {
+    width: 52px;
+    height: 52px;
+  }
+
+  .app-name {
+    font-size: 1.8rem;
+  }
+
+  /* Breaking news expandido */
+  .breaking-news {
+    padding-top: 12px;
+    padding-bottom: 16px;
+  }
+
+  .news-item {
+    padding: 14px 24px;
+    max-width: 420px;
+    border-radius: 16px;
+  }
+
+  .news-title {
+    font-size: 0.95rem;
+  }
+
+  .news-badge {
+    padding: 5px 12px;
+    font-size: 0.7rem;
+  }
+
+  /* Summary Cards - mais espaçosos */
+  .summary-card {
+    padding: 36px;
+    border-radius: 28px;
+  }
+
+  .card-icon-box {
+    width: 64px;
+    height: 64px;
+    font-size: 2rem;
+    border-radius: 18px;
+  }
+
+  .card-title-group h2 {
+    font-size: 1.4rem;
+  }
+
+  .card-subtitle {
+    font-size: 0.9rem;
+  }
+
+  .card-badge {
+    font-size: 0.7rem;
+    padding: 5px 12px;
+  }
+
+  /* Setores legend - 5 columns para telas muito grandes */
+  .setores-legend {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 14px;
+  }
+
+  .setor-item {
+    padding: 14px 16px;
+    border-radius: 14px;
+  }
+
+  .setor-icon {
+    font-size: 1.3rem;
+  }
+
+  .setor-name {
+    font-size: 0.9rem;
+  }
+
+  .setor-exp {
+    font-size: 0.85rem;
+  }
+
+  /* Sentimento resumo */
+  .sentimento-resumo {
+    gap: 48px;
+    margin-top: 20px;
+    padding-top: 20px;
+  }
+
+  .sentimento-count {
+    font-size: 2rem;
+  }
+
+  .sentimento-label {
+    font-size: 0.8rem;
+  }
+
+  /* YouTube card - design expandido */
+  .card-youtube {
+    border-radius: 28px;
+  }
+
+  .youtube-card-content {
+    gap: 32px;
+    padding: 28px 32px;
+  }
+
+  .youtube-icon-area {
+    width: 100px;
+    height: 100px;
+  }
+
+  .youtube-logo {
+    width: 64px;
+    height: 64px;
+  }
+
+  .youtube-info h2 {
+    font-size: 1.3rem;
+  }
+
+  .youtube-info .card-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .youtube-cta {
+    font-size: 1rem;
+  }
+
+  /* Card footer buttons */
+  .card-footer-multi {
+    gap: 16px;
+  }
+
+  .card-footer-multi .btn {
+    padding: 14px 24px;
+    font-size: 0.95rem;
+  }
+
+  /* Footer */
+  .app-footer {
+    padding-top: 24px;
+    padding-bottom: 32px;
+    gap: 14px;
+  }
+
+  .footer-link {
+    font-size: 0.95rem;
+    padding: 10px 18px;
+  }
+
+  .footer-disclaimer {
+    font-size: 0.9rem;
+  }
+
+  .footer-version {
+    font-size: 0.8rem;
+  }
+
+  /* Setores grid - 3 columns */
+  .setores-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* 4 columns para ativos */
+  .ativos-lista {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Hero larger */
+  .hero h1 {
+    font-size: 4rem;
+  }
+
+  .setores-hero h1 {
+    font-size: 3rem;
+  }
+}
+
+/* ==========================================
+   Extra Large Desktops (1600px+)
+   ========================================== */
+@media (min-width: 1600px) {
+  /* HOME PAGE */
+  body.home-page .app-container {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  body.home-page .app-header {
+    padding: 28px 100px;
+  }
+
+  body.home-page .app-footer {
+    padding: 32px 100px;
+  }
+
+  body.home-page .breaking-news,
+  body.home-page .app-content {
+    max-width: 1400px;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  /* Home cards grid - proporções para telas extra grandes */
+  .home-cards-grid {
+    grid-template-columns: 1fr 1.6fr;
+    gap: 32px;
+  }
+
+  .summary-card {
+    padding: 40px;
+  }
+
+  .setores-legend {
+    grid-template-columns: repeat(5, 1fr);
+    gap: 16px;
+  }
+
+  .setor-item {
+    padding: 16px 18px;
+  }
+
+  /* Racional 4 columns */
+  .racional-content {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ==========================================
+   DESKTOP - Melhorias de Layout Específicas
+   ========================================== */
+@media (min-width: 1024px) {
+  /* Home page - Layout side by side para cards secundários */
+  .app-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* Card featured - full width with better spacing */
+  .card-featured {
+    padding: 32px;
+  }
+
+  .card-featured .card-header {
+    gap: 20px;
+    margin-bottom: 20px;
+  }
+
+  /* Parallax ajuste para desktop */
+  .layer-1 {
+    background:
+      radial-gradient(ellipse 800px 800px at 10% 20%, rgba(26, 95, 74, 0.4) 0%, transparent 70%),
+      radial-gradient(ellipse 600px 600px at 90% 80%, rgba(45, 138, 110, 0.3) 0%, transparent 70%);
+  }
+
+  .layer-2 {
+    background:
+      radial-gradient(ellipse 500px 500px at 80% 30%, rgba(244, 162, 97, 0.25) 0%, transparent 70%),
+      radial-gradient(ellipse 450px 450px at 20% 70%, rgba(231, 111, 81, 0.2) 0%, transparent 70%);
+  }
+}
+
+/* ==========================================
+   Páginas internas - Desktop improvements
+   ========================================== */
+@media (min-width: 768px) {
+  /* Headers de página */
+  .app-header {
+    padding: 16px 24px;
+  }
+
+  .header-back {
+    width: 40px;
+    height: 40px;
+  }
+
+  .app-title-group .app-name {
+    font-size: 1.1rem;
+  }
+
+  /* Bar chart items - setores page */
+  .bar-item {
+    padding: 12px 16px;
+    gap: 14px;
+  }
+
+  .bar-icon {
+    font-size: 1.4rem;
+    width: 32px;
+  }
+
+  .bar-name {
+    font-size: 0.9rem;
+  }
+
+  /* Timeline items */
+  .timeline-item {
+    padding: 14px;
+  }
+
+  .timeline-date .day {
+    font-size: 1.3rem;
+  }
+
+  .timeline-content h4 {
+    font-size: 0.95rem;
+  }
+
+  /* Desempenho card */
+  .desempenho-card {
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  /* Pages with inline styles - increase max-width */
+  .page-wrapper .main-content {
+    max-width: 1000px;
+  }
+
+  /* Bar chart - setores page - two columns */
+  .bar-chart {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+
+  /* Timeline section side by side with exposure */
+  .exposicao-section {
+    margin-bottom: 24px;
+  }
+
+  /* Desempenho preview */
+  .desempenho-preview {
+    margin-top: 24px;
+  }
+
+  /* Page footer */
+  .page-footer {
+    padding: 16px 24px;
+  }
+}
+
+/* =================================
+   Comments Section (Disqus)
+   ================================= */
+
+/* Container outside main needs alignment */
+#comments-container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+  #comments-container {
+    max-width: 900px;
+    padding: 0 32px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #comments-container {
+    max-width: 1000px;
+    padding: 0 40px 40px;
+  }
+}
+
+.comments-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.comments-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comments-title::before {
+  content: '💬';
+}
+
+.comments-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 20px;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+.comments-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: comments-spin 0.8s linear infinite;
+}
+
+@keyframes comments-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Comment count link styling */
+.comment-count {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.comment-count::before {
+  content: '💬';
+  font-size: 0.7rem;
+}
+
+.comment-count:hover {
+  color: var(--primary-light);
+}
+
+/* Disqus thread customization */
+#disqus_thread {
+  margin-top: 16px;
+}
+
+/* Comments error/info message */
+.comments-info {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.comments-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.comments-info p:last-child {
+  margin-bottom: 0;
+}
+
+.comments-info a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.comments-info a:hover {
+  text-decoration: underline;
+}
+
+/* YouTube comments redirect */
+.comments-youtube {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.comments-youtube p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.comments-youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FF0000;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.25);
+}
+
+.comments-youtube-btn:hover {
+  background: #CC0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35);
+}
+
+.comments-youtube-btn svg {
+  flex-shrink: 0;
+}
+
+.comments-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}
+
+/* ========================================
+   CALCULADORA DE INVESTIMENTOS
+   ======================================== */
+
+/* Calculator Page Content */
+.calc-page-content {
+  padding: 16px 20px;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Intro Card */
+.intro-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.intro-card h1 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.intro-lead {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+  margin: 0 0 16px 0;
+}
+
+.intro-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.intro-list li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.intro-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.intro-list li span:last-child {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.intro-list li strong {
+  color: var(--text-primary);
+}
+
+/* Calculator Section */
+.calc-section {
+  padding: 0 0 32px;
+}
+
+#calculadora-container {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+/* Fields Row (side by side) */
+.calc-fields-row {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.calc-fields-row .calc-field {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Mode Buttons */
+.calc-modes {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.calc-mode-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.calc-mode-btn:hover {
+  border-color: var(--primary-light);
+}
+
+.calc-mode-btn.active {
+  border-color: var(--primary-light);
+  background: rgba(212, 160, 23, 0.1);
+}
+
+.calc-mode-btn .mode-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.calc-mode-btn .mode-text {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.calc-mode-btn .mode-text strong {
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.calc-mode-btn .mode-text small {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+/* Calculator Form */
+.calc-form {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.calc-field {
+  margin-bottom: 20px;
+}
+
+.calc-field label {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.calc-info-link {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--primary-light);
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.calc-info-link:hover {
+  text-decoration: underline;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: border-color 0.2s ease;
+}
+
+.input-group:focus-within {
+  border-color: var(--primary-light);
+}
+
+.input-prefix,
+.input-suffix {
+  padding: 12px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  background: var(--bg-tertiary);
+  flex-shrink: 0;
+}
+
+.input-group input {
+  flex: 1;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  min-width: 0;
+}
+
+.input-group input::-webkit-outer-spin-button,
+.input-group input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-group input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.input-row {
+  display: flex;
+  gap: 12px;
+}
+
+.input-row .input-group {
+  flex: 1;
+}
+
+/* Calculate Button */
+.calc-btn {
+  width: 100%;
+  padding: 16px;
+  background: var(--primary-light);
+  color: #000;
+  border: none;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  margin-top: 8px;
+}
+
+.calc-btn:hover {
+  background: #e8b82a;
+  box-shadow: 0 0 0 3px rgba(212, 160, 23, 0.25);
+}
+
+.calc-btn:active {
+  background: #c9a01e;
+  transform: scale(0.98);
+}
+
+/* Results */
+.calc-result {
+  margin-top: 24px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+}
+
+.calc-result h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin: 0 0 20px 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.result-main {
+  text-align: center;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(212, 160, 23, 0.15) 0%, rgba(212, 160, 23, 0.05) 100%);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.result-main .result-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+}
+
+.result-main .result-label {
+  font-size: 1rem;
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+.result-main .result-note {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 8px;
+}
+
+.result-secondary {
+  text-align: center;
+  padding: 20px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.result-secondary .result-value-secondary {
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.result-secondary .result-label {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.result-secondary .result-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+}
+
+.result-info {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.result-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin: 0 0 12px 0;
+}
+
+.result-info p:last-child {
+  margin-bottom: 0;
+}
+
+.result-details {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.result-detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.result-detail .detail-label {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+}
+
+.result-detail .detail-value {
+  color: var(--text-primary);
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.result-detail .detail-value.highlight {
+  color: var(--success-color);
+}
+
+/* Projection Table */
+.result-projection {
+  margin-top: 20px;
+}
+
+.result-projection h4 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 12px 0;
+}
+
+.projection-table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+}
+
+.projection-header,
+.projection-row {
+  display: grid;
+  grid-template-columns: 60px 1fr 1fr 1fr;
+  gap: 8px;
+  padding: 12px;
+}
+
+.projection-header {
+  background: var(--bg-secondary);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.projection-row {
+  background: var(--bg-tertiary);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.projection-row:nth-child(odd) {
+  background: var(--bg-secondary);
+}
+
+.projection-row .year-col {
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+.projection-row .balance-col {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.projection-row .monthly-col {
+  color: var(--text-secondary);
+}
+
+.projection-row .real-col {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+/* Card Calculadora na Home */
+.card-calculadora {
+  background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+.card-calculadora:hover {
+  border-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.calc-card-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.calc-card-icon {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-gold) 100%);
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.75rem;
+  flex-shrink: 0;
+}
+
+.calc-card-title {
+  flex: 1;
+}
+
+.calc-card-title h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.calc-card-title span {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.calc-card-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.calc-feature {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  background: var(--bg-secondary);
+  border-radius: 20px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.calc-feature span:first-child {
+  font-size: 0.9rem;
+}
+
+.calc-card-cta {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary-light);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.calc-card-cta svg {
+  width: 20px;
+  height: 20px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.2s ease;
+}
+
+.card-calculadora:hover .calc-card-cta svg {
+  transform: translateX(4px);
+}
+
+/* Desktop Layout */
+@media (min-width: 768px) {
+  .calc-page-content {
+    padding: 24px 32px;
+  }
+
+  .intro-card {
+    padding: 32px;
+  }
+
+  .intro-card h1 {
+    font-size: 1.75rem;
+  }
+
+  .intro-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .intro-list li {
+    flex: 1;
+    min-width: 200px;
+  }
+
+  .calc-modes {
+    flex-direction: row;
+  }
+
+  .calc-mode-btn {
+    flex: 1;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .calc-mode-btn .mode-icon {
+    font-size: 2rem;
+    margin-bottom: 8px;
+  }
+
+  .calc-mode-btn .mode-text {
+    align-items: center;
+  }
+
+  .calc-form {
+    padding: 32px;
+  }
+
+  .calc-result {
+    padding: 32px;
+  }
+
+  .result-main .result-value {
+    font-size: 3rem;
+  }
+
+  .projection-header,
+  .projection-row {
+    grid-template-columns: 80px 1fr 1fr 1fr;
+    padding: 14px 16px;
+  }
+}
+
+/* Mobile adjustments */
+@media (max-width: 480px) {
+  .result-main .result-value {
+    font-size: 2rem;
+  }
+
+  .projection-header,
+  .projection-row {
+    grid-template-columns: 45px 1fr 1fr 1fr;
+    font-size: 0.75rem;
+    padding: 10px 8px;
+  }
+
+  .calc-mode-btn {
+    padding: 14px 16px;
+  }
+
+  .calc-mode-btn .mode-text strong {
+    font-size: 0.95rem;
+  }
+
+  .calc-fields-row {
+    flex-direction: column;
+  }
+
+  .calc-fields-row .calc-field {
+    margin-bottom: 20px;
+  }
+
+  .calc-fields-row .calc-field:last-child {
+    margin-bottom: 0;
   }
 }

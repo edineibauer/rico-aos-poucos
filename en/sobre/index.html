@@ -15,10 +15,35 @@
     .header-back:hover { background: rgba(255,255,255,0.1); }
     .header-back svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; }
     .app-logo { width: 36px; height: 36px; flex-shrink: 0; }
+    .app-logo svg { width: 36px; height: 36px; }
     .app-title-group { flex: 1; min-width: 0; }
     .app-name { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 0; }
     .app-subtitle { font-size: 0.7rem; color: var(--text-secondary); }
     .content-area { flex: 1; padding: 20px; max-width: 800px; margin: 0 auto; width: 100%; }
+
+    /* Desktop Styles */
+    @media (min-width: 768px) {
+      .content-area { padding: 32px; max-width: 900px; }
+      .article-header h1 { font-size: 2rem; }
+      .article-content h2 { font-size: 1.5rem; }
+      .article-content p { font-size: 1rem; line-height: 1.8; }
+      .article-content ul li { font-size: 1rem; }
+    }
+
+    @media (min-width: 1024px) {
+      .app-logo { width: 36px; height: 36px; }
+      .app-logo svg { width: 36px; height: 36px; }
+      .content-area { padding: 40px; max-width: 1000px; }
+      .article-header h1 { font-size: 2.4rem; }
+      .article-content { font-size: 1.05rem; }
+      .article-content h2 { font-size: 1.6rem; margin-top: 2.5rem; }
+      .article-content h3 { font-size: 1.3rem; }
+      .disclaimer { padding: 24px; }
+    }
+
+    @media (min-width: 1400px) {
+      .content-area { max-width: 1100px; }
+    }
   </style>
 </head>
 <body>
@@ -154,18 +179,10 @@
     </main>
 
     <!-- Footer -->
-    <footer class="app-footer">
-      <p class="footer-disclaimer">
-        Educational content • Not investment advice
-      </p>
-      <div class="footer-version">
-        <span>v1.0</span>
-        <span class="separator">•</span>
-        <span>January 2026</span>
-      </div>
-    </footer>
+    <div id="footer-container"></div>
   </div>
 
+  <script src="../../js/footer.js"></script>
   <script src="../../js/i18n.js"></script>
 </body>
 </html>

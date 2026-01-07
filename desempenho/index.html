@@ -7,19 +7,19 @@
 
   <!-- SEO -->
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ricoaospoucos.com/desempenho/">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/desempenho/">
 
   <!-- Hreflang -->
-  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com/desempenho/">
-  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com/en/desempenho/">
-  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com/es/desempenho/">
-  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com/desempenho/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/desempenho/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/desempenho/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/desempenho/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/desempenho/">
 
   <!-- Open Graph -->
   <meta property="og:title" content="Desempenho da Carteira - Rico aos Poucos">
   <meta property="og:description" content="Acompanhe mês a mês o resultado das recomendações do canal.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ricoaospoucos.com/desempenho/">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/desempenho/">
   <meta property="og:locale" content="pt_BR">
 
   <!-- PWA -->
@@ -464,6 +464,64 @@
       font-weight: 700;
       color: var(--text-primary);
     }
+
+    /* Desktop Styles */
+    @media (min-width: 768px) {
+      .desempenho-container {
+        max-width: 900px;
+        padding: 0 32px 40px;
+      }
+      .desempenho-header h1 {
+        font-size: 1.8rem;
+      }
+      .resumo-card, .alocacao-card, .historico-card, .indices-card {
+        padding: 24px;
+      }
+      .valor-atual .valor {
+        font-size: 2.5rem;
+      }
+      .metricas-grid {
+        gap: 24px;
+      }
+      .alocacao-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .indices-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .desempenho-container {
+        max-width: 1100px;
+        padding: 0 40px 48px;
+      }
+      .desempenho-header h1 {
+        font-size: 2rem;
+      }
+      .resumo-card, .alocacao-card, .historico-card, .indices-card {
+        padding: 28px;
+        border-radius: 20px;
+      }
+      .valor-atual .valor {
+        font-size: 2.8rem;
+      }
+      .alocacao-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+      .month-modal-content {
+        max-width: 600px;
+      }
+      .modal-alocacao, .modal-variacao, .modal-precos {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (min-width: 1400px) {
+      .desempenho-container {
+        max-width: 1200px;
+      }
+    }
   </style>
 </head>
 <body class="desempenho-page">
@@ -673,22 +731,9 @@
   </div>
 
   <!-- Footer do App -->
-  <footer class="app-footer">
-    <div class="footer-links">
-      <a href="../sobre/" class="footer-link">
-        <span>💡</span> <span data-i18n="nav.about">Sobre o Canal</span>
-      </a>
-    </div>
-    <p class="footer-disclaimer" data-i18n="common.disclaimer">
-      Conteúdo educacional • Não é recomendação de investimento
-    </p>
-    <div class="footer-version">
-      <span data-i18n="footer.version">v1.0</span>
-      <span class="separator">•</span>
-      <span data-i18n="footer.date">Janeiro 2026</span>
-    </div>
-  </footer>
+  <div id="footer-container"></div>
 
+  <script src="../js/footer.js"></script>
   <script src="../js/i18n.js"></script>
   <script>
     // Dados da carteira - sera atualizado mensalmente

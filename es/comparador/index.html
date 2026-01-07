@@ -431,18 +431,47 @@
     <section class="tab-content" id="tab-diversificacao">
       <div class="section-header">
         <h2>Simulador de Cartera Diversificada</h2>
-        <p>Arme su cartera con rebalanceo por tolerancia y descubra si diversificar ganó a las apuestas individuales.</p>
+        <p>Arme su cartera personalizada, defina tolerancias y vea si el rebalanceo generó más ganancias. Incluye cálculo de impuestos y precio promedio.</p>
       </div>
 
       <div class="comparador-config">
+        <!-- Configuraciones de Período y Valor -->
         <div class="config-row">
           <div class="config-field">
-            <label for="periodoDiversif">Período</label>
-            <select id="periodoDiversif">
-              <option value="5">Últimos 5 años</option>
-              <option value="10" selected>Últimos 10 años</option>
-              <option value="15">Últimos 15 años</option>
-              <option value="20">Últimos 20 años</option>
+            <label for="anoInicioDiversif">Año inicial</label>
+            <select id="anoInicioDiversif">
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015" selected>2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="anoFimDiversif">Año final</label>
+            <select id="anoFimDiversif">
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025" selected>2025</option>
             </select>
           </div>
           <div class="config-field">
@@ -454,7 +483,21 @@
           </div>
         </div>
 
-        <!-- Custom Allocation Section -->
+        <div class="config-row">
+          <div class="config-field">
+            <label for="inflacaoCustom">
+              Inflación promedio (a.a.)
+              <a href="../../publicacoes/artigo-leiloes-inflacao/" class="info-link" title="Entienda cómo la inflación afecta sus inversiones">ℹ️</a>
+            </label>
+            <div class="input-group">
+              <input type="number" id="inflacaoCustom" value="6" min="0" max="30" step="0.5">
+              <span class="input-suffix">%</span>
+            </div>
+            <small class="field-hint">Deje 0 para usar inflación real (IPCA)</small>
+          </div>
+        </div>
+
+        <!-- Asignación Personalizada -->
         <div class="alocacao-section">
           <div class="alocacao-header">
             <h4>Arme Su Cartera</h4>
@@ -465,115 +508,48 @@
           </div>
 
           <div class="alocacao-grid" id="alocacaoGrid">
+            <!-- Renta Variable Brasil -->
             <div class="alocacao-item" data-ativo="ibovespa">
               <div class="ativo-info">
-                <span class="ativo-icon">📈</span>
+                <span class="ativo-cor" style="background: #3b82f6"></span>
                 <span class="ativo-nome">Ibovespa</span>
               </div>
               <div class="ativo-inputs">
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="20" min="0" max="100">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100" step="1">
                     <span>%</span>
                   </div>
                 </div>
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
                     <span>%</span>
                   </div>
                 </div>
               </div>
             </div>
 
+            <!-- Renta Fija -->
             <div class="alocacao-item" data-ativo="cdi">
               <div class="ativo-info">
-                <span class="ativo-icon">💰</span>
-                <span class="ativo-nome">CDI</span>
+                <span class="ativo-cor" style="background: #ec4899"></span>
+                <span class="ativo-nome">Caja / CDI</span>
               </div>
               <div class="ativo-inputs">
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="20" min="0" max="100">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="20" min="0" max="100" step="1">
                     <span>%</span>
                   </div>
                 </div>
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
-                    <span>%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="alocacao-item" data-ativo="fii_ifix">
-              <div class="ativo-info">
-                <span class="ativo-icon">🏢</span>
-                <span class="ativo-nome">REITs (IFIX)</span>
-              </div>
-              <div class="ativo-inputs">
-                <div class="input-group-mini">
-                  <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="15" min="0" max="100">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="input-group-mini">
-                  <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
-                    <span>%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="alocacao-item" data-ativo="dolar">
-              <div class="ativo-info">
-                <span class="ativo-icon">💵</span>
-                <span class="ativo-nome">Dólar</span>
-              </div>
-              <div class="ativo-inputs">
-                <div class="input-group-mini">
-                  <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="15" min="0" max="100">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="input-group-mini">
-                  <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
-                    <span>%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            <div class="alocacao-item" data-ativo="ouro">
-              <div class="ativo-info">
-                <span class="ativo-icon">🥇</span>
-                <span class="ativo-nome">Oro</span>
-              </div>
-              <div class="ativo-inputs">
-                <div class="input-group-mini">
-                  <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="10" min="0" max="100">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="input-group-mini">
-                  <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
                     <span>%</span>
                   </div>
                 </div>
@@ -582,21 +558,92 @@
 
             <div class="alocacao-item" data-ativo="tesouro_ipca">
               <div class="ativo-info">
-                <span class="ativo-icon">📜</span>
+                <span class="ativo-cor" style="background: #06b6d4"></span>
                 <span class="ativo-nome">Tesouro IPCA+</span>
               </div>
               <div class="ativo-inputs">
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="10" min="0" max="100">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100" step="1">
                     <span>%</span>
                   </div>
                 </div>
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Inmobiliario -->
+            <div class="alocacao-item" data-ativo="fii_ifix">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #8b5cf6"></span>
+                <span class="ativo-nome">REITs (IFIX)</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-mini">
+                  <label>Asignación</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="imoveis_fipezap">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #14b8a6"></span>
+                <span class="ativo-nome">Inmuebles (FipeZap)</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-mini">
+                  <label>Asignación</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Internacional -->
+            <div class="alocacao-item" data-ativo="dolar">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #22c55e"></span>
+                <span class="ativo-nome">Dólar</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-mini">
+                  <label>Asignación</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="15" min="0" max="100" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
                     <span>%</span>
                   </div>
                 </div>
@@ -605,21 +652,91 @@
 
             <div class="alocacao-item" data-ativo="sp500_brl">
               <div class="ativo-info">
-                <span class="ativo-icon">🇺🇸</span>
-                <span class="ativo-nome">S&P 500</span>
+                <span class="ativo-cor" style="background: #ef4444"></span>
+                <span class="ativo-nome">S&P 500 (en R$)</span>
               </div>
               <div class="ativo-inputs">
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="10" min="0" max="100">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100" step="1">
                     <span>%</span>
                   </div>
                 </div>
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="tlt_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #0ea5e9"></span>
+                <span class="ativo-nome">TLT (Tesoro EUA)</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-mini">
+                  <label>Asignación</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Commodities y Alternativos -->
+            <div class="alocacao-item" data-ativo="ouro">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #eab308"></span>
+                <span class="ativo-nome">Oro</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-mini">
+                  <label>Asignación</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="bitcoin_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #f7931a"></span>
+                <span class="ativo-nome">Bitcoin</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-mini">
+                  <label>Asignación</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="5" min="0" max="100" step="1">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="10" min="0" max="50" step="1">
                     <span>%</span>
                   </div>
                 </div>
@@ -628,27 +745,29 @@
 
             <div class="alocacao-item" data-ativo="poupanca">
               <div class="ativo-info">
-                <span class="ativo-icon">🏦</span>
+                <span class="ativo-cor" style="background: #f97316"></span>
                 <span class="ativo-nome">Ahorro</span>
               </div>
               <div class="ativo-inputs">
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Asignación</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-percent" value="0" min="0" max="100">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
                     <span>%</span>
                   </div>
                 </div>
-                <div class="input-group-mini">
+                <div class="input-mini">
                   <label>Tolerancia</label>
-                  <div class="input-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                  <div class="input-group-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
                     <span>%</span>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+
+          <p class="alocacao-dica">Defina el % deseado para cada activo y la tolerancia. Cuando un activo supere el límite (asignación + tolerancia), se rebalanceará con deducción de impuestos.</p>
         </div>
 
         <button class="btn-comparar" id="btnDiversif">
@@ -660,37 +779,58 @@
       </div>
 
       <div class="comparador-resultados" id="resultadosDiversif" style="display: none;">
-        <!-- Main Comparison: With vs Without Rebalancing -->
-        <div class="resultado-card" id="comparativoPrincipal"></div>
+        <!-- Comparación Principal -->
+        <div class="resultado-card destaque-card">
+          <h3>¿Valió la Pena Rebalancear?</h3>
+          <div class="comparativo-principal" id="comparativoPrincipal"></div>
+        </div>
 
-        <!-- Chart with rebalancing points -->
+        <!-- Valor Neto Final -->
+        <div class="resultado-card">
+          <h3>Valor Neto (después de venta total)</h3>
+          <div class="valor-liquido-container" id="valorLiquidoContainer"></div>
+        </div>
+
+        <!-- Evolución de la Cartera -->
         <div class="resultado-card">
           <h3>Evolución de la Cartera</h3>
+          <div class="chart-toggle">
+            <button class="toggle-btn active" data-view="nominal" id="btnNominalDiversif">Nominal</button>
+            <button class="toggle-btn" data-view="real" id="btnRealDiversif">Valor Real</button>
+          </div>
           <div class="chart-container" id="chartDiversif"></div>
           <div class="chart-legenda" id="chartLegenda"></div>
         </div>
 
-        <!-- Semester History Table -->
-        <div class="resultado-card" id="historicoContainer">
+        <!-- Historial de Rebalanceos -->
+        <div class="resultado-card">
           <h3>Historial Semestre a Semestre</h3>
-          <div class="table-scroll" id="tabelaHistorico"></div>
+          <div class="historico-container" id="historicoContainer">
+            <div class="table-scroll">
+              <table class="tabela-historico" id="tabelaHistorico">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
         </div>
 
-        <!-- Ranking: Diversification vs Individual -->
+        <!-- Ranking -->
         <div class="resultado-card">
-          <h3>Ranking: ¿Dónde Quedó Su Cartera?</h3>
+          <h3>Ranking: ¿Dónde Quedó la Diversificación?</h3>
+          <p class="ranking-subtitle">Comparando su cartera diversificada con cada activo individualmente</p>
           <div class="ranking-container" id="rankingDiversif"></div>
         </div>
 
-        <!-- Detailed Metrics -->
+        <!-- Métricas de Riesgo -->
         <div class="resultado-card">
           <h3>Métricas de Riesgo y Retorno</h3>
           <div class="metricas-grid" id="metricasGrid"></div>
         </div>
 
-        <!-- Conclusions -->
+        <!-- Conclusiones -->
         <div class="resultado-card conclusoes-card">
-          <h3>Conclusiones sobre Rebalanceo</h3>
+          <h3>Conclusiones de la Simulación</h3>
           <div class="conclusoes-lista" id="conclusoesDiversif"></div>
         </div>
       </div>

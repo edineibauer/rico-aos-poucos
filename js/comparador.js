@@ -6,6 +6,7 @@
 const Comparador = {
   dados: null,
   currentTab: 'historico',
+  chartViewDiversif: 'nominal',
   chartColors: {
     ibovespa: '#3b82f6',
     dolar: '#22c55e',
@@ -15,7 +16,9 @@ const Comparador = {
     poupanca: '#f97316',
     cdi: '#ec4899',
     sp500_brl: '#ef4444',
-    imoveis_fipezap: '#14b8a6'
+    imoveis_fipezap: '#14b8a6',
+    bitcoin_brl: '#f7931a',
+    tlt_brl: '#0ea5e9'
   },
   assetNames: {
     ibovespa: 'Ibovespa',
@@ -24,9 +27,25 @@ const Comparador = {
     fii_ifix: 'FIIs (IFIX)',
     tesouro_ipca: 'Tesouro IPCA+',
     poupanca: 'Poupança',
-    cdi: 'CDI',
+    cdi: 'Caixa/CDI',
     sp500_brl: 'S&P 500 (R$)',
-    imoveis_fipezap: 'Imóveis'
+    imoveis_fipezap: 'Imóveis',
+    bitcoin_brl: 'Bitcoin',
+    tlt_brl: 'TLT (Tesouro EUA)'
+  },
+  // Taxas de IR por tipo de ativo
+  taxasIR: {
+    ibovespa: 0.15, // 15% ganho de capital
+    fii_ifix: 0.20, // 20% ganho de capital
+    sp500_brl: 0.15,
+    bitcoin_brl: 0.15,
+    ouro: 0.15,
+    dolar: 0.15,
+    tesouro_ipca: 0.15, // IR regressivo simplificado
+    cdi: 0.15,
+    tlt_brl: 0.15,
+    imoveis_fipezap: 0.15,
+    poupanca: 0 // isenta
   },
 
   async init() {
@@ -973,9 +992,17 @@ const Comparador = {
   },
 
   simularDiversificacao() {
-    const periodo = parseInt(document.getElementById('periodoDiversif').value);
+    const anoInicio = parseInt(document.getElementById('anoInicioDiversif').value);
+    const anoFim = parseInt(document.getElementById('anoFimDiversif').value);
     const valorInicial = this.parseCurrency(document.getElementById('valorDiversif').value) || 100000;
+    const inflacaoCustom = parseFloat(document.getElementById('inflacaoCustom').value) || 0;
     const alocacaoConfig = this.getAlocacaoConfig();
+
+    // Validar período
+    if (anoFim <= anoInicio) {
+      alert('O ano final deve ser maior que o ano inicial.');
+      return;
+    }
 
     // Validar alocação
     const totalAlocacao = Object.values(alocacaoConfig).reduce((sum, c) => sum + c.alocacao, 0);
@@ -989,53 +1016,90 @@ const Comparador = {
       return;
     }
 
-    const anoAtual = new Date().getFullYear();
-    const anoInicio = anoAtual - periodo;
-    const dadosFiltrados = this.dados.anos.filter(d => d.ano > anoInicio && d.ano <= anoAtual);
+    // Filtrar dados pelo intervalo personalizado
+    const dadosFiltrados = this.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
 
     if (dadosFiltrados.length === 0) {
       alert('Não há dados suficientes para o período selecionado.');
       return;
     }
 
-    // Simular COM rebalanceamento
+    // Verificar se algum ativo selecionado não tem dados no período
+    const ativosComDados = Object.keys(alocacaoConfig).filter(ativo => {
+      return dadosFiltrados.some(d => d[ativo] !== null && d[ativo] !== undefined);
+    });
+
+    if (ativosComDados.length < Object.keys(alocacaoConfig).length) {
+      const ativosSemDados = Object.keys(alocacaoConfig).filter(a => !ativosComDados.includes(a));
+      alert(`Alguns ativos não têm dados para o período selecionado: ${ativosSemDados.map(a => this.assetNames[a]).join(', ')}. Por favor, ajuste a alocação ou o período.`);
+      return;
+    }
+
+    // Simular COM rebalanceamento (inclui impostos e preço médio)
     const resultadoComRebal = this.simularCarteiraComRebalanceamento(
-      alocacaoConfig, dadosFiltrados, valorInicial
+      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom
     );
 
     // Simular SEM rebalanceamento (buy and hold)
     const resultadoSemRebal = this.simularCarteiraSemRebalanceamento(
-      alocacaoConfig, dadosFiltrados, valorInicial
+      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom
     );
 
     // Simular cada ativo individual para ranking
-    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial);
+    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial, inflacaoCustom);
 
     // Calcular inflação acumulada
-    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados);
+    const inflacaoAcumulada = inflacaoCustom > 0
+      ? Math.pow(1 + inflacaoCustom / 100, dadosFiltrados.length) - 1
+      : this.calcularInflacaoAcumulada(dadosFiltrados) / 100;
+
+    // Salvar resultados para toggle de gráfico
+    this._diversifData = { resultadoComRebal, resultadoSemRebal, inflacaoCustom };
 
     // Mostrar resultados
     document.getElementById('resultadosDiversif').style.display = 'block';
 
     this.renderComparativoPrincipal(resultadoComRebal, resultadoSemRebal);
+    this.renderValorLiquido(resultadoComRebal, resultadoSemRebal);
     this.renderChartDiversifNovo(resultadoComRebal, resultadoSemRebal);
     this.renderHistoricoSemestral(resultadoComRebal);
-    this.renderRankingDiversifNovo(resultadoComRebal, resultadosIndividuais, inflacaoAcumulada);
+    this.renderRankingDiversifNovo(resultadoComRebal, resultadosIndividuais, inflacaoAcumulada * 100);
     this.renderMetricasDiversifNovo(resultadoComRebal, resultadoSemRebal, alocacaoConfig);
     this.renderConclusoesDiversifNovo(resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig);
+
+    // Bind toggle buttons
+    document.getElementById('btnNominalDiversif')?.addEventListener('click', () => {
+      this.chartViewDiversif = 'nominal';
+      document.getElementById('btnNominalDiversif').classList.add('active');
+      document.getElementById('btnRealDiversif').classList.remove('active');
+      this.renderChartDiversifNovo(resultadoComRebal, resultadoSemRebal);
+    });
+    document.getElementById('btnRealDiversif')?.addEventListener('click', () => {
+      this.chartViewDiversif = 'real';
+      document.getElementById('btnRealDiversif').classList.add('active');
+      document.getElementById('btnNominalDiversif').classList.remove('active');
+      this.renderChartDiversifNovo(resultadoComRebal, resultadoSemRebal);
+    });
 
     document.getElementById('resultadosDiversif').scrollIntoView({ behavior: 'smooth' });
   },
 
-  simularCarteiraComRebalanceamento(config, dados, valorInicial) {
+  simularCarteiraComRebalanceamento(config, dados, valorInicial, inflacaoCustom = 0) {
     const ativos = Object.keys(config);
     const historico = [];
     let inflacaoAcumulada = 1;
 
-    // Inicializar carteira
+    // Inicializar carteira com preço médio
     let carteira = {};
+    let precoMedio = {}; // Controle de preço médio por ativo
+    let custoTotal = {}; // Custo total investido por ativo
+    let totalImpostosPagos = 0;
+
     ativos.forEach(ativo => {
-      carteira[ativo] = valorInicial * (config[ativo].alocacao / 100);
+      const valorAlocado = valorInicial * (config[ativo].alocacao / 100);
+      carteira[ativo] = valorAlocado;
+      precoMedio[ativo] = 1; // Preço inicial normalizado = 1
+      custoTotal[ativo] = valorAlocado;
     });
 
     const evolucao = [{
@@ -1043,13 +1107,21 @@ const Comparador = {
       ano: dados[0].ano - 1,
       semestre: 2,
       valor: valorInicial,
+      valorReal: valorInicial,
       carteira: { ...carteira },
       rebalanceou: false,
-      movimentacoes: []
+      movimentacoes: [],
+      impostosPagos: 0
     }];
 
     let totalRebalanceamentos = 0;
     const retornosSemestrais = [];
+
+    // Preço de mercado relativo (começa em 1)
+    let precoMercado = {};
+    ativos.forEach(ativo => {
+      precoMercado[ativo] = 1;
+    });
 
     // Processar cada ano
     dados.forEach((dadoAno, anoIndex) => {
@@ -1058,6 +1130,7 @@ const Comparador = {
         const periodoLabel = `${dadoAno.ano} S${sem}`;
         const movimentacoes = [];
         let rebalanceou = false;
+        let impostoPeriodo = 0;
 
         // Aplicar retorno semestral (metade do anual) para cada ativo
         let valorAntes = 0;
@@ -1076,6 +1149,7 @@ const Comparador = {
           // Retorno semestral aproximado
           const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
           carteira[ativo] *= (1 + retornoSemestral);
+          precoMercado[ativo] *= (1 + retornoSemestral);
         });
 
         // Calcular valor total após retornos
@@ -1089,7 +1163,8 @@ const Comparador = {
         retornosSemestrais.push(retornoSemestre);
 
         // Atualizar inflação (semestral)
-        const inflacaoSemestral = Math.pow(1 + dadoAno.inflacao_ipca / 100, 0.5) - 1;
+        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
+        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
         inflacaoAcumulada *= (1 + inflacaoSemestral);
 
         // Verificar necessidade de rebalanceamento
@@ -1122,10 +1197,6 @@ const Comparador = {
           rebalanceou = true;
           totalRebalanceamentos++;
 
-          // Ordenar: primeiro vende quem está acima, depois compra quem está abaixo
-          const acimaMeta = foraTolerancia.filter(a => a.diferenca > 0).sort((a, b) => b.diferenca - a.diferenca);
-          const abaixoMeta = foraTolerancia.filter(a => a.diferenca < 0).sort((a, b) => a.diferenca - b.diferenca);
-
           // Rebalancear para as alocações desejadas
           ativos.forEach(ativo => {
             const valorDesejado = valorTotal * (config[ativo].alocacao / 100);
@@ -1133,17 +1204,73 @@ const Comparador = {
             const diferenca = valorDesejado - valorAtual;
 
             if (Math.abs(diferenca) > 1) { // Ignorar diferenças menores que R$1
-              movimentacoes.push({
-                ativo,
-                tipo: diferenca > 0 ? 'compra' : 'venda',
-                valor: Math.abs(diferenca),
-                de: alocacoesAtuais[ativo].toFixed(1),
-                para: config[ativo].alocacao.toFixed(1)
-              });
-            }
+              if (diferenca < 0) {
+                // VENDA - calcular ganho de capital e imposto
+                const qtdVendida = Math.abs(diferenca) / precoMercado[ativo];
+                const custoVenda = qtdVendida * precoMedio[ativo];
+                const lucroVenda = Math.abs(diferenca) - custoVenda;
+                const taxaIR = this.taxasIR[ativo] || 0.15;
+                let impostoVenda = 0;
 
-            carteira[ativo] = valorDesejado;
+                if (lucroVenda > 0) {
+                  impostoVenda = lucroVenda * taxaIR;
+                  impostoPeriodo += impostoVenda;
+                  totalImpostosPagos += impostoVenda;
+                }
+
+                // Atualizar custo total proporcionalmente
+                const proporcaoVendida = Math.abs(diferenca) / valorAtual;
+                custoTotal[ativo] *= (1 - proporcaoVendida);
+
+                movimentacoes.push({
+                  ativo,
+                  tipo: 'venda',
+                  valor: Math.abs(diferenca),
+                  de: alocacoesAtuais[ativo].toFixed(1),
+                  para: config[ativo].alocacao.toFixed(1),
+                  precoMercado: precoMercado[ativo].toFixed(4),
+                  precoMedio: precoMedio[ativo].toFixed(4),
+                  lucro: lucroVenda,
+                  imposto: impostoVenda
+                });
+
+                // Aplicar imposto (reduz o valor disponível para rebalanceamento)
+                carteira[ativo] = valorAtual - Math.abs(diferenca);
+              } else {
+                // COMPRA - atualizar preço médio
+                const qtdComprada = diferenca / precoMercado[ativo];
+                const qtdAtual = carteira[ativo] / precoMercado[ativo];
+
+                // Novo preço médio ponderado
+                const custoAnterior = custoTotal[ativo];
+                custoTotal[ativo] = custoAnterior + diferenca;
+                precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
+
+                movimentacoes.push({
+                  ativo,
+                  tipo: 'compra',
+                  valor: diferenca,
+                  de: alocacoesAtuais[ativo].toFixed(1),
+                  para: config[ativo].alocacao.toFixed(1),
+                  precoMercado: precoMercado[ativo].toFixed(4),
+                  precoMedio: precoMedio[ativo].toFixed(4)
+                });
+
+                carteira[ativo] = valorAtual + diferenca;
+              }
+            }
           });
+
+          // Recalcular valor total após impostos
+          valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0) - impostoPeriodo;
+
+          // Ajustar carteira proporcionalmente pelo imposto pago
+          if (impostoPeriodo > 0) {
+            const fatorReducao = valorTotal / (valorTotal + impostoPeriodo);
+            ativos.forEach(ativo => {
+              carteira[ativo] *= fatorReducao;
+            });
+          }
         }
 
         historico.push({
@@ -1156,7 +1283,8 @@ const Comparador = {
           alocacoes: { ...alocacoesAtuais },
           rebalanceou,
           movimentacoes,
-          inflacao: dadoAno.inflacao_ipca / 2 // Semestral
+          impostosPagos: impostoPeriodo,
+          inflacao: inflacaoAnual / 2
         });
 
         evolucao.push({
@@ -1166,8 +1294,12 @@ const Comparador = {
           valor: valorTotal,
           valorReal: valorTotal / inflacaoAcumulada,
           carteira: { ...carteira },
+          precoMercado: { ...precoMercado },
+          precoMedio: { ...precoMedio },
+          custoTotal: { ...custoTotal },
           rebalanceou,
-          movimentacoes
+          movimentacoes,
+          impostosPagos: impostoPeriodo
         });
       }
     });
@@ -1187,12 +1319,36 @@ const Comparador = {
       if (drawdown > maxDrawdown) maxDrawdown = drawdown;
     });
 
+    // Calcular valor líquido se vender tudo hoje
+    let valorLiquido = 0;
+    let impostoVendaTotal = 0;
+    const ultimoEstado = evolucao[evolucao.length - 1];
+
+    ativos.forEach(ativo => {
+      const valorAtivo = carteira[ativo];
+      const custo = custoTotal[ativo];
+      const lucro = valorAtivo - custo;
+      const taxaIR = this.taxasIR[ativo] || 0.15;
+
+      if (lucro > 0) {
+        impostoVendaTotal += lucro * taxaIR;
+      }
+      valorLiquido += valorAtivo;
+    });
+
+    valorLiquido -= impostoVendaTotal;
+
     return {
       evolucao,
       historico,
       valorInicial,
       valorFinal,
       valorReal,
+      valorLiquido,
+      impostoVendaTotal,
+      totalImpostosPagos,
+      custoTotal: { ...custoTotal },
+      precoMedio: { ...precoMedio },
       retornoNominal,
       retornoReal,
       volatilidade,
@@ -1203,19 +1359,23 @@ const Comparador = {
     };
   },
 
-  simularCarteiraSemRebalanceamento(config, dados, valorInicial) {
+  simularCarteiraSemRebalanceamento(config, dados, valorInicial, inflacaoCustom = 0) {
     const ativos = Object.keys(config);
     let inflacaoAcumulada = 1;
+    let custoTotal = {};
 
     // Inicializar carteira
     let carteira = {};
     ativos.forEach(ativo => {
-      carteira[ativo] = valorInicial * (config[ativo].alocacao / 100);
+      const valorAlocado = valorInicial * (config[ativo].alocacao / 100);
+      carteira[ativo] = valorAlocado;
+      custoTotal[ativo] = valorAlocado;
     });
 
     const evolucao = [{
       periodo: `${dados[0].ano - 1} S2`,
-      valor: valorInicial
+      valor: valorInicial,
+      valorReal: valorInicial
     }];
 
     const retornosSemestrais = [];
@@ -1239,11 +1399,14 @@ const Comparador = {
         const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
         retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
 
-        const inflacaoSemestral = Math.pow(1 + dadoAno.inflacao_ipca / 100, 0.5) - 1;
+        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
+        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
         inflacaoAcumulada *= (1 + inflacaoSemestral);
 
         evolucao.push({
           periodo: `${dadoAno.ano} S${sem}`,
+          ano: dadoAno.ano,
+          semestre: sem,
           valor: valorTotal,
           valorReal: valorTotal / inflacaoAcumulada
         });
@@ -1264,29 +1427,167 @@ const Comparador = {
       if (drawdown > maxDrawdown) maxDrawdown = drawdown;
     });
 
+    // Calcular valor líquido se vender tudo (buy and hold)
+    let valorLiquido = 0;
+    let impostoVendaTotal = 0;
+
+    ativos.forEach(ativo => {
+      const valorAtivo = carteira[ativo];
+      const custo = custoTotal[ativo];
+      const lucro = valorAtivo - custo;
+      const taxaIR = this.taxasIR[ativo] || 0.15;
+
+      if (lucro > 0) {
+        impostoVendaTotal += lucro * taxaIR;
+      }
+      valorLiquido += valorAtivo;
+    });
+
+    valorLiquido -= impostoVendaTotal;
+
     return {
       evolucao,
       valorInicial,
       valorFinal,
       valorReal,
+      valorLiquido,
+      impostoVendaTotal,
       retornoNominal,
       retornoReal,
       volatilidade,
       maxDrawdown,
-      sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0
+      sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0,
+      inflacaoAcumulada: (inflacaoAcumulada - 1) * 100
     };
   },
 
-  simularAtivosIndividuais(dados, valorInicial) {
-    const ativos = ['ibovespa', 'cdi', 'fii_ifix', 'dolar', 'ouro', 'tesouro_ipca', 'sp500_brl', 'poupanca'];
+  simularAtivosIndividuais(dados, valorInicial, inflacaoCustom = 0) {
+    const ativos = ['ibovespa', 'cdi', 'fii_ifix', 'dolar', 'ouro', 'tesouro_ipca', 'sp500_brl', 'poupanca', 'bitcoin_brl', 'tlt_brl', 'imoveis_fipezap'];
     const resultados = {};
 
     ativos.forEach(ativo => {
-      const resultado = this.calcularEvolucao(ativo, dados, valorInicial);
-      resultados[ativo] = resultado;
+      // Verificar se há dados para este ativo
+      const temDados = dados.some(d => d[ativo] !== null && d[ativo] !== undefined);
+      if (temDados) {
+        const resultado = this.calcularEvolucaoCustom(ativo, dados, valorInicial, inflacaoCustom);
+        resultados[ativo] = resultado;
+      }
     });
 
     return resultados;
+  },
+
+  calcularEvolucaoCustom(ativo, dados, valorInicial, inflacaoCustom = 0) {
+    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    let valorNominal = valorInicial;
+    let inflacaoAcumulada = 1;
+
+    dados.forEach(d => {
+      let retorno = d[ativo];
+
+      if (ativo === 'ibovespa' && d.ibovespa_dividendos) {
+        retorno = d.ibovespa + d.ibovespa_dividendos;
+      }
+
+      if (retorno === null || retorno === undefined) {
+        retorno = 0;
+      }
+
+      valorNominal *= (1 + retorno / 100);
+      const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoAnual / 100);
+
+      evolucao.push({
+        ano: d.ano,
+        nominal: valorNominal,
+        real: valorNominal / inflacaoAcumulada
+      });
+    });
+
+    const retornoNominal = ((valorNominal / valorInicial) - 1) * 100;
+    const valorReal = valorNominal / inflacaoAcumulada;
+    const retornoReal = ((valorReal / valorInicial) - 1) * 100;
+
+    return {
+      evolucao,
+      valorFinalNominal: valorNominal,
+      valorFinalReal: valorReal,
+      retornoNominal,
+      retornoReal,
+      ganhouDaInflacao: retornoReal > 0
+    };
+  },
+
+  renderValorLiquido(comRebal, semRebal) {
+    const container = document.getElementById('valorLiquidoContainer');
+    if (!container) return;
+
+    const diferencaLiquido = comRebal.valorLiquido - semRebal.valorLiquido;
+    const valorRealLiquidoCom = comRebal.valorLiquido / (1 + comRebal.inflacaoAcumulada / 100);
+    const valorRealLiquidoSem = semRebal.valorLiquido / (1 + semRebal.inflacaoAcumulada / 100);
+
+    container.innerHTML = `
+      <div class="valor-liquido-grid">
+        <div class="valor-liquido-box">
+          <h4>Com Rebalanceamento</h4>
+          <div class="valor-item">
+            <span class="label">Valor bruto:</span>
+            <span class="value">${this.formatCurrency(comRebal.valorFinal)}</span>
+          </div>
+          <div class="valor-item">
+            <span class="label">IR sobre lucro (se vender):</span>
+            <span class="value text-red">-${this.formatCurrency(comRebal.impostoVendaTotal)}</span>
+          </div>
+          <div class="valor-item">
+            <span class="label">IR pago nos rebalanceamentos:</span>
+            <span class="value text-red">-${this.formatCurrency(comRebal.totalImpostosPagos)}</span>
+          </div>
+          <div class="valor-item destaque">
+            <span class="label">💰 Valor líquido:</span>
+            <span class="value">${this.formatCurrency(comRebal.valorLiquido)}</span>
+          </div>
+          <div class="valor-item">
+            <span class="label">Valor real (poder de compra):</span>
+            <span class="value ${valorRealLiquidoCom > comRebal.valorInicial ? 'text-green' : 'text-red'}">
+              ${this.formatCurrency(valorRealLiquidoCom)}
+            </span>
+          </div>
+        </div>
+
+        <div class="valor-liquido-box">
+          <h4>Sem Rebalanceamento (Buy & Hold)</h4>
+          <div class="valor-item">
+            <span class="label">Valor bruto:</span>
+            <span class="value">${this.formatCurrency(semRebal.valorFinal)}</span>
+          </div>
+          <div class="valor-item">
+            <span class="label">IR sobre lucro (se vender):</span>
+            <span class="value text-red">-${this.formatCurrency(semRebal.impostoVendaTotal)}</span>
+          </div>
+          <div class="valor-item">
+            <span class="label">IR pago nos rebalanceamentos:</span>
+            <span class="value text-green">R$ 0,00</span>
+          </div>
+          <div class="valor-item destaque">
+            <span class="label">💰 Valor líquido:</span>
+            <span class="value">${this.formatCurrency(semRebal.valorLiquido)}</span>
+          </div>
+          <div class="valor-item">
+            <span class="label">Valor real (poder de compra):</span>
+            <span class="value ${valorRealLiquidoSem > semRebal.valorInicial ? 'text-green' : 'text-red'}">
+              ${this.formatCurrency(valorRealLiquidoSem)}
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="valor-liquido-conclusao ${diferencaLiquido > 0 ? 'positivo' : 'negativo'}">
+        ${diferencaLiquido > 0
+          ? `✅ Mesmo após impostos, rebalancear gerou <strong>${this.formatCurrency(diferencaLiquido)}</strong> a mais líquido.`
+          : `⚠️ Considerando impostos, buy & hold gerou <strong>${this.formatCurrency(Math.abs(diferencaLiquido))}</strong> a mais líquido.`
+        }
+      </div>
+    `;
   },
 
   renderComparativoPrincipal(comRebal, semRebal) {
@@ -1333,13 +1634,17 @@ const Comparador = {
     const height = 350;
     const padding = { top: 20, right: 100, bottom: 40, left: 80 };
 
+    // Usar valor nominal ou real baseado no toggle
+    const useReal = this.chartViewDiversif === 'real';
+    const getVal = (e) => useReal ? (e.valorReal || e.valor) : e.valor;
+
     const maxVal = Math.max(
-      ...comRebal.evolucao.map(e => e.valor),
-      ...semRebal.evolucao.map(e => e.valor)
+      ...comRebal.evolucao.map(e => getVal(e)),
+      ...semRebal.evolucao.map(e => getVal(e))
     );
     const minVal = Math.min(
-      ...comRebal.evolucao.map(e => e.valor),
-      ...semRebal.evolucao.map(e => e.valor)
+      ...comRebal.evolucao.map(e => getVal(e)),
+      ...semRebal.evolucao.map(e => getVal(e))
     ) * 0.95;
 
     const pontos = comRebal.evolucao.length;
@@ -1356,11 +1661,17 @@ const Comparador = {
       svg += `<text x="${padding.left - 10}" y="${y + 4}" text-anchor="end" fill="#888" font-size="10">${this.formatCurrency(val).replace('R$', '')}</text>`;
     }
 
+    // Linha do valor inicial (para referência em valor real)
+    if (useReal) {
+      svg += `<line x1="${padding.left}" y1="${yScale(comRebal.valorInicial)}" x2="${width - padding.right}" y2="${yScale(comRebal.valorInicial)}" stroke="#666" stroke-dasharray="4,4" opacity="0.5"/>`;
+      svg += `<text x="${padding.left + 5}" y="${yScale(comRebal.valorInicial) - 5}" fill="#666" font-size="9">Valor inicial</text>`;
+    }
+
     // Linha SEM rebalanceamento (tracejada)
     let pathSem = '';
     semRebal.evolucao.forEach((e, i) => {
       const x = xScale(i);
-      const y = yScale(e.valor);
+      const y = yScale(getVal(e));
       pathSem += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
     });
     svg += `<path d="${pathSem}" stroke="#888" stroke-width="2" stroke-dasharray="8,4" fill="none"/>`;
@@ -1369,7 +1680,7 @@ const Comparador = {
     let pathCom = '';
     comRebal.evolucao.forEach((e, i) => {
       const x = xScale(i);
-      const y = yScale(e.valor);
+      const y = yScale(getVal(e));
       pathCom += i === 0 ? `M ${x} ${y}` : ` L ${x} ${y}`;
 
       // Marcar pontos de rebalanceamento
@@ -1382,8 +1693,8 @@ const Comparador = {
     // Labels finais
     const lastCom = comRebal.evolucao[comRebal.evolucao.length - 1];
     const lastSem = semRebal.evolucao[semRebal.evolucao.length - 1];
-    svg += `<text x="${width - padding.right + 8}" y="${yScale(lastCom.valor) + 4}" fill="#2d8a6e" font-size="11" font-weight="600">C/ Rebal</text>`;
-    svg += `<text x="${width - padding.right + 8}" y="${yScale(lastSem.valor) + 4}" fill="#888" font-size="11" font-weight="600">S/ Rebal</text>`;
+    svg += `<text x="${width - padding.right + 8}" y="${yScale(getVal(lastCom)) + 4}" fill="#2d8a6e" font-size="11" font-weight="600">C/ Rebal</text>`;
+    svg += `<text x="${width - padding.right + 8}" y="${yScale(getVal(lastSem)) + 4}" fill="#888" font-size="11" font-weight="600">S/ Rebal</text>`;
 
     // X axis - mostrar anos
     const anosUnicos = [...new Set(comRebal.evolucao.map(e => e.ano))];
@@ -1398,7 +1709,9 @@ const Comparador = {
     container.innerHTML = svg;
 
     // Legenda
+    const modoLabel = useReal ? '(Valor Real - descontada inflação)' : '(Valor Nominal)';
     legendaContainer.innerHTML = `
+      <div class="legenda-modo">${modoLabel}</div>
       <div class="legenda-item-chart">
         <div class="legenda-cor" style="background: #2d8a6e"></div>
         <span>Com rebalanceamento</span>
@@ -1421,9 +1734,9 @@ const Comparador = {
     thead.innerHTML = `
       <tr>
         <th>Período</th>
-        <th>Patrimônio</th>
+        <th>Patrimônio (Nominal)</th>
+        <th>Patrimônio (Real)</th>
         <th>Variação</th>
-        <th>Rebalanceou?</th>
         <th>Movimentações</th>
       </tr>
     `;
@@ -1438,19 +1751,33 @@ const Comparador = {
       if (h.movimentacoes && h.movimentacoes.length > 0) {
         movimentacoesTexto = h.movimentacoes.map(m => {
           const icon = m.tipo === 'compra' ? '🟢' : '🔴';
-          return `${icon} ${this.assetNames[m.ativo]}: ${m.de}% → ${m.para}%`;
+          const valorFormatado = this.formatCurrency(m.valor);
+
+          let detalhe = `${icon} ${this.assetNames[m.ativo]}: ${m.de}% → ${m.para}% (${valorFormatado})`;
+
+          // Mostrar preço e imposto para vendas
+          if (m.tipo === 'venda' && m.lucro !== undefined) {
+            if (m.lucro > 0) {
+              detalhe += `<br><small style="color: var(--text-muted)">Lucro: ${this.formatCurrency(m.lucro)} | IR: ${this.formatCurrency(m.imposto)}</small>`;
+            }
+          }
+
+          return detalhe;
         }).join('<br>');
+
+        // Mostrar total de imposto do período se houver
+        if (h.impostosPagos > 0) {
+          movimentacoesTexto += `<br><strong style="color: var(--danger)">IR pago: ${this.formatCurrency(h.impostosPagos)}</strong>`;
+        }
       }
 
       html += `
-        <tr>
+        <tr class="${h.rebalanceou ? 'row-rebalanceou' : ''}">
           <td>${h.periodo}</td>
           <td>${this.formatCurrency(h.valor)}</td>
+          <td>${this.formatCurrency(h.valorReal)}</td>
           <td class="${variacaoPercent >= 0 ? 'text-green' : 'text-red'}">
             ${variacaoPercent >= 0 ? '+' : ''}${variacaoPercent.toFixed(2)}%
-          </td>
-          <td class="${h.rebalanceou ? 'rebalanceou' : 'sem-rebal'}">
-            ${h.rebalanceou ? '⚖️ Sim' : 'Não'}
           </td>
           <td style="font-size: 0.8rem">${movimentacoesTexto}</td>
         </tr>

@@ -236,45 +236,17 @@
         <!-- Card Publicaciones/Noticias (mayor, derecha) -->
         <div class="summary-card card-featured card-publicacoes">
           <div class="card-body">
-            <!-- Publicación destacada (activa) -->
+            <!-- Publicación destacada (cargado dinámicamente) -->
             <div class="pub-featured" id="pubFeatured">
-              <a href="artigos/risco-retorno-investimentos-2026.html" class="pub-featured-link" id="pubFeaturedLink">
-                <div class="pub-featured-badge neutral" id="pubFeaturedBadge">EDU</div>
-                <h3 class="pub-featured-title" id="pubFeaturedTitle">Riesgo y Retorno: Lo Que Nadie Te Cuenta</h3>
-                <p class="pub-featured-excerpt" id="pubFeaturedExcerpt">Por que la gente apuesta a pesar de las probabilidades? Cuando arriesgar mas? La matematica detras de las decisiones financieras.</p>
-                <span class="pub-featured-cta">
-                  <span>Leer más</span>
-                  <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                </span>
-              </a>
+              <div class="pub-loading">
+                <span class="pub-loading-spinner"></span>
+                <span>Cargando...</span>
+              </div>
             </div>
 
-            <!-- Lista de publicaciones (índice) - últimas 6 -->
+            <!-- Lista de publicaciones (cargado dinámicamente) -->
             <div class="pub-list" id="pubList">
-              <button class="pub-list-item active" data-index="0" data-href="artigos/risco-retorno-investimentos-2026.html" data-badge="EDU" data-type="neutral" data-title="Riesgo y Retorno: Lo Que Nadie Te Cuenta" data-excerpt="Por que la gente apuesta a pesar de las probabilidades? Cuando arriesgar mas? La matematica detras de las decisiones financieras.">
-                <span class="pub-list-badge neutral">EDU</span>
-                <span class="pub-list-title">Riesgo y Retorno: Lo Que Nadie Te Cuenta</span>
-              </button>
-              <button class="pub-list-item" data-index="1" data-href="artigos/quanto-tempo-para-ficar-rico-2026.html" data-badge="EDU" data-type="neutral" data-title="Cuanto Tiempo Se Tarda en Hacerse Rico?" data-excerpt="La verdad matematica sobre enriquecerse con inversiones. Simulaciones reales con inflacion, aportes e interes compuesto.">
-                <span class="pub-list-badge neutral">EDU</span>
-                <span class="pub-list-title">Cuanto Tiempo Se Tarda en Hacerse Rico?</span>
-              </button>
-              <button class="pub-list-item" data-index="2" data-href="artigos/bitcoin-proposta-vs-realidade-2026.html" data-badge="BTC" data-type="bearish" data-title="Bitcoin: De la Propuesta Original a la Realidad" data-excerpt="Análisis crítico del valor intrínseco, ciclos decrecientes y el futuro del Bitcoin. De moneda de pago a activo especulativo.">
-                <span class="pub-list-badge bearish">BTC</span>
-                <span class="pub-list-title">Bitcoin: De la Propuesta a la Realidad</span>
-              </button>
-              <button class="pub-list-item" data-index="3" data-href="artigos/strategy-mstr-2026-analise.html" data-badge="MSTR" data-type="bearish" data-title="Strategy (MSTR): El Riesgo Sistémico" data-excerpt="Strategy posee el 3,2% de todo Bitcoin. Analizamos la estructura de deuda, escenarios de crisis y si puede ser el próximo FTX.">
-                <span class="pub-list-badge bearish">MSTR</span>
-                <span class="pub-list-title">Strategy (MSTR): El Riesgo Sistémico</span>
-              </button>
-              <button class="pub-list-item" data-index="4" data-href="artigos/tlt-2026-analise.html" data-badge="TLT" data-type="bullish" data-title="TLT 2026: Cambio a Optimista" data-excerpt="Precios bajos y bajo riesgo hacen de los bonos largos estadounidenses una oportunidad interesante para 2026.">
-                <span class="pub-list-badge bullish">TLT</span>
-                <span class="pub-list-title">TLT 2026: Cambio a Optimista</span>
-              </button>
-              <button class="pub-list-item" data-index="5" data-href="artigos/bitcoin-2026-analise.html" data-badge="BTC" data-type="bearish" data-title="Bitcoin 2026: Fin de Ciclo" data-excerpt="Análisis completo del ciclo de Bitcoin y por qué somos pesimistas con exposición cero para 2026.">
-                <span class="pub-list-badge bearish">BTC</span>
-                <span class="pub-list-title">Bitcoin 2026: Fin de Ciclo</span>
-              </button>
+              <!-- Contenido cargado via JS de data/artigos.json -->
             </div>
           </div>
           <div class="card-footer">
@@ -375,83 +347,7 @@
       });
     }
 
-    // Carrusel de Publicaciones
-    (function() {
-      const pubList = document.getElementById('pubList');
-      const pubFeaturedLink = document.getElementById('pubFeaturedLink');
-      const pubFeaturedBadge = document.getElementById('pubFeaturedBadge');
-      const pubFeaturedTitle = document.getElementById('pubFeaturedTitle');
-      const pubFeaturedExcerpt = document.getElementById('pubFeaturedExcerpt');
-
-      if (!pubList) return;
-
-      const items = pubList.querySelectorAll('.pub-list-item');
-      let currentIndex = 0;
-      let autoRotateInterval;
-
-      function activateItem(index) {
-        const item = items[index];
-        if (!item) return;
-
-        items.forEach(i => i.classList.remove('active'));
-        item.classList.add('active');
-
-        const href = item.dataset.href;
-        const badge = item.dataset.badge;
-        const type = item.dataset.type;
-        const title = item.dataset.title;
-        const excerpt = item.dataset.excerpt;
-
-        pubFeaturedLink.href = href;
-        pubFeaturedBadge.textContent = badge;
-        pubFeaturedBadge.className = 'pub-featured-badge ' + type;
-        pubFeaturedTitle.textContent = title;
-        pubFeaturedExcerpt.textContent = excerpt;
-
-        pubFeaturedLink.style.opacity = '0';
-        setTimeout(() => {
-          pubFeaturedLink.style.opacity = '1';
-        }, 50);
-
-        currentIndex = index;
-      }
-
-      function nextItem() {
-        const nextIndex = (currentIndex + 1) % items.length;
-        activateItem(nextIndex);
-      }
-
-      function startAutoRotate() {
-        autoRotateInterval = setInterval(nextItem, 7000);
-      }
-
-      function stopAutoRotate() {
-        clearInterval(autoRotateInterval);
-      }
-
-      items.forEach((item, index) => {
-        item.addEventListener('click', () => {
-          stopAutoRotate();
-          activateItem(index);
-          // Scroll suave para enquadrar el card de publicaciones (mobile)
-          if (window.innerWidth < 768) {
-            const cardPub = document.querySelector('.card-publicacoes');
-            const header = document.querySelector('.app-header');
-            if (cardPub) {
-              const headerHeight = header ? header.offsetHeight : 0;
-              const top = cardPub.getBoundingClientRect().top + window.scrollY - headerHeight - 10;
-              window.scrollTo({ top: top, behavior: 'smooth' });
-            }
-          }
-          startAutoRotate();
-        });
-      });
-
-      pubList.addEventListener('mouseenter', stopAutoRotate);
-      pubList.addEventListener('mouseleave', startAutoRotate);
-
-      startAutoRotate();
-    })();
   </script>
+  <script src="../js/publicacoes.js"></script>
 </body>
 </html>

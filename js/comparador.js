@@ -101,6 +101,31 @@ const Comparador = {
       });
     });
 
+    // Duelo buttons (Frente a Frente)
+    document.querySelectorAll('.duelo-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.duelo-btn').forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+      });
+    });
+
+    // Botão iniciar duelo
+    document.getElementById('btnDuelo')?.addEventListener('click', () => this.iniciarDuelo());
+
+    // Toggle nominal/real no duelo
+    document.getElementById('btnNominalDuelo')?.addEventListener('click', () => {
+      document.getElementById('btnNominalDuelo').classList.add('active');
+      document.getElementById('btnRealDuelo').classList.remove('active');
+      this.dueloViewReal = false;
+      this.atualizarChartDuelo();
+    });
+    document.getElementById('btnRealDuelo')?.addEventListener('click', () => {
+      document.getElementById('btnRealDuelo').classList.add('active');
+      document.getElementById('btnNominalDuelo').classList.remove('active');
+      this.dueloViewReal = true;
+      this.atualizarChartDuelo();
+    });
+
     // Chart toggle
     document.querySelectorAll('.toggle-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -2403,6 +2428,507 @@ const Comparador = {
     const media = retornos.reduce((a, b) => a + b, 0) / retornos.length;
     const variancia = retornos.reduce((acc, r) => acc + Math.pow(r - media, 2), 0) / retornos.length;
     return Math.sqrt(variancia);
+  },
+
+  // ==========================================
+  // FRENTE A FRENTE (Duelo de Ativos)
+  // ==========================================
+
+  dueloConfigs: {
+    'ibov-sp500': {
+      ativo1: { key: 'ibovespa', nome: 'Ibovespa', icone: '🇧🇷', cor: '#3b82f6' },
+      ativo2: { key: 'sp500_brl', nome: 'S&P 500 (R$)', icone: '🇺🇸', cor: '#ef4444' },
+      titulo: 'Ibovespa vs S&P 500',
+      descricao: 'Bolsa brasileira contra a americana, ambas em reais'
+    },
+    'ouro-bitcoin': {
+      ativo1: { key: 'ouro', nome: 'Ouro', icone: '🥇', cor: '#eab308' },
+      ativo2: { key: 'bitcoin_brl', nome: 'Bitcoin', icone: '₿', cor: '#f7931a' },
+      titulo: 'Ouro vs Bitcoin',
+      descricao: 'Reserva de valor tradicional vs digital'
+    },
+    'ipca-tlt': {
+      ativo1: { key: 'tesouro_ipca', nome: 'IPCA+', icone: '🇧🇷', cor: '#06b6d4' },
+      ativo2: { key: 'tlt_brl', nome: 'TLT (R$)', icone: '🇺🇸', cor: '#0ea5e9' },
+      titulo: 'IPCA+ vs TLT',
+      descricao: 'Tesouro brasileiro vs Tesouro americano'
+    },
+    'ibov-cdi': {
+      ativo1: { key: 'ibovespa', nome: 'Ibovespa', icone: '📈', cor: '#3b82f6' },
+      ativo2: { key: 'cdi', nome: 'CDI', icone: '💰', cor: '#ec4899' },
+      titulo: 'Ibovespa vs CDI',
+      descricao: 'Renda variável contra renda fixa'
+    },
+    'dolar-ouro': {
+      ativo1: { key: 'dolar', nome: 'Dólar', icone: '💵', cor: '#22c55e' },
+      ativo2: { key: 'ouro', nome: 'Ouro', icone: '🥇', cor: '#eab308' },
+      titulo: 'Dólar vs Ouro',
+      descricao: 'Duas proteções cambiais clássicas'
+    },
+    'fii-imovel': {
+      ativo1: { key: 'fii_ifix', nome: 'FIIs (IFIX)', icone: '📊', cor: '#8b5cf6' },
+      ativo2: { key: 'imoveis_fipezap', nome: 'Imóveis', icone: '🏠', cor: '#14b8a6' },
+      titulo: 'FII vs Imóvel Físico',
+      descricao: 'Fundos imobiliários vs imóvel físico'
+    }
+  },
+
+  dueloViewReal: false,
+  chartDuelo: null,
+  dueloResultados: null,
+
+  iniciarDuelo() {
+    const dueloSelecionado = document.querySelector('.duelo-btn.active')?.dataset.duelo || 'ibov-sp500';
+    const anoInicio = parseInt(document.getElementById('anoInicioDuelo').value);
+    const anoFim = parseInt(document.getElementById('anoFimDuelo').value);
+    const valorInicial = this.parseCurrency(document.getElementById('valorDuelo').value) || 100000;
+    const inflacaoCustom = parseFloat(document.getElementById('inflacaoDuelo').value) || 0;
+
+    if (anoInicio >= anoFim) {
+      alert('O ano inicial deve ser menor que o ano final.');
+      return;
+    }
+
+    const config = this.dueloConfigs[dueloSelecionado];
+    if (!config) return;
+
+    // Filtrar dados pelo período
+    const dadosPeriodo = this.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+
+    if (dadosPeriodo.length === 0) {
+      alert('Não há dados disponíveis para o período selecionado.');
+      return;
+    }
+
+    // Calcular evolução para ambos os ativos
+    const resultado1 = this.calcularEvolucaoDuelo(config.ativo1.key, dadosPeriodo, valorInicial, inflacaoCustom);
+    const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, inflacaoCustom);
+
+    // Armazenar resultados para o toggle nominal/real
+    this.dueloResultados = {
+      config,
+      resultado1,
+      resultado2,
+      valorInicial,
+      anoInicio,
+      anoFim,
+      inflacaoCustom,
+      dadosPeriodo
+    };
+
+    // Mostrar resultados
+    document.getElementById('resultadosDuelo').style.display = 'block';
+    document.getElementById('dueloTitulo').textContent = config.titulo;
+
+    // Renderizar componentes
+    this.renderPlacarDuelo(config, resultado1, resultado2);
+    this.renderChartDuelo();
+    this.renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo);
+    this.renderMetricasDuelo(config, resultado1, resultado2);
+    this.renderConclusaoDuelo(config, resultado1, resultado2);
+
+    // Scroll para resultados
+    document.getElementById('resultadosDuelo').scrollIntoView({ behavior: 'smooth' });
+  },
+
+  calcularEvolucaoDuelo(ativoKey, dados, valorInicial, inflacaoCustom = 0) {
+    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    let valorNominal = valorInicial;
+    let inflacaoAcumulada = 1;
+    const retornosAnuais = [];
+    let anosPositivos = 0;
+    let maxDrawdown = 0;
+    let peakValue = valorInicial;
+
+    dados.forEach(d => {
+      let retorno = d[ativoKey];
+
+      // Incluir dividendos para Ibovespa
+      if (ativoKey === 'ibovespa' && d.ibovespa_dividendos) {
+        retorno = d.ibovespa + d.ibovespa_dividendos;
+      }
+
+      if (retorno === null || retorno === undefined) {
+        retorno = 0;
+      }
+
+      retornosAnuais.push(retorno);
+      if (retorno > 0) anosPositivos++;
+
+      valorNominal *= (1 + retorno / 100);
+      const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoAnual / 100);
+
+      // Calcular drawdown
+      if (valorNominal > peakValue) peakValue = valorNominal;
+      const drawdown = (peakValue - valorNominal) / peakValue * 100;
+      if (drawdown > maxDrawdown) maxDrawdown = drawdown;
+
+      evolucao.push({
+        ano: d.ano,
+        nominal: valorNominal,
+        real: valorNominal / inflacaoAcumulada,
+        retornoAno: retorno
+      });
+    });
+
+    const retornoNominal = ((valorNominal / valorInicial) - 1) * 100;
+    const valorReal = valorNominal / inflacaoAcumulada;
+    const retornoReal = ((valorReal / valorInicial) - 1) * 100;
+    const mediaAnual = retornosAnuais.reduce((a, b) => a + b, 0) / retornosAnuais.length;
+    const volatilidade = this.calcularVolatilidade(retornosAnuais);
+
+    return {
+      evolucao,
+      valorFinalNominal: valorNominal,
+      valorFinalReal: valorReal,
+      retornoNominal,
+      retornoReal,
+      mediaAnual,
+      volatilidade,
+      maxDrawdown,
+      anosPositivos,
+      totalAnos: dados.length,
+      retornosAnuais
+    };
+  },
+
+  renderPlacarDuelo(config, resultado1, resultado2) {
+    const container = document.getElementById('dueloPlacar');
+    const vencedor1 = resultado1.retornoReal > resultado2.retornoReal;
+    const diferenca = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);
+    const diferencaPercent = Math.abs(resultado1.retornoReal - resultado2.retornoReal);
+
+    container.innerHTML = `
+      <div class="duelo-lado ${vencedor1 ? 'vencedor' : 'perdedor'}">
+        <div class="lado-icone">${config.ativo1.icone}</div>
+        <div class="lado-nome">${config.ativo1.nome}</div>
+        <div class="lado-valor">${this.formatCurrency(resultado1.valorFinalReal)}</div>
+        <div class="lado-retorno ${resultado1.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+          ${this.formatPercent(resultado1.retornoReal)} real
+        </div>
+        ${vencedor1 ? '<div class="lado-badge">Vencedor</div>' : ''}
+      </div>
+
+      <div class="duelo-centro">
+        <div class="vs-text">VS</div>
+        <div class="diferenca">
+          Diferença: <strong>${this.formatCurrency(diferenca)}</strong><br>
+          (${this.formatPercent(diferencaPercent)})
+        </div>
+      </div>
+
+      <div class="duelo-lado ${!vencedor1 ? 'vencedor' : 'perdedor'}">
+        <div class="lado-icone">${config.ativo2.icone}</div>
+        <div class="lado-nome">${config.ativo2.nome}</div>
+        <div class="lado-valor">${this.formatCurrency(resultado2.valorFinalReal)}</div>
+        <div class="lado-retorno ${resultado2.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+          ${this.formatPercent(resultado2.retornoReal)} real
+        </div>
+        ${!vencedor1 ? '<div class="lado-badge">Vencedor</div>' : ''}
+      </div>
+    `;
+  },
+
+  renderChartDuelo() {
+    if (!this.dueloResultados) return;
+
+    const { config, resultado1, resultado2 } = this.dueloResultados;
+    const ctx = document.getElementById('chartDuelo');
+    const useReal = this.dueloViewReal;
+
+    const labels = resultado1.evolucao.map(e => e.ano);
+    const data1 = resultado1.evolucao.map(e => useReal ? e.real : e.nominal);
+    const data2 = resultado2.evolucao.map(e => useReal ? e.real : e.nominal);
+
+    if (this.chartDuelo) {
+      this.chartDuelo.destroy();
+    }
+
+    this.chartDuelo = new Chart(ctx, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: config.ativo1.nome,
+            data: data1,
+            borderColor: config.ativo1.cor,
+            backgroundColor: config.ativo1.cor + '20',
+            borderWidth: 3,
+            tension: 0.3,
+            fill: false,
+            pointRadius: 4,
+            pointHoverRadius: 6
+          },
+          {
+            label: config.ativo2.nome,
+            data: data2,
+            borderColor: config.ativo2.cor,
+            backgroundColor: config.ativo2.cor + '20',
+            borderWidth: 3,
+            tension: 0.3,
+            fill: false,
+            pointRadius: 4,
+            pointHoverRadius: 6
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#8b949e',
+              usePointStyle: true,
+              padding: 20
+            }
+          },
+          tooltip: {
+            backgroundColor: '#1c2128',
+            titleColor: '#f0f6fc',
+            bodyColor: '#8b949e',
+            borderColor: '#30363d',
+            borderWidth: 1,
+            callbacks: {
+              label: (ctx) => `${ctx.dataset.label}: ${this.formatCurrency(ctx.parsed.y)}`
+            }
+          },
+          title: {
+            display: true,
+            text: useReal ? 'Valor Real (descontada inflação)' : 'Valor Nominal',
+            color: '#8b949e',
+            font: { size: 14 }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: '#30363d' },
+            ticks: { color: '#8b949e' }
+          },
+          y: {
+            grid: { color: '#30363d' },
+            ticks: {
+              color: '#8b949e',
+              callback: (value) => this.formatCurrency(value)
+            }
+          }
+        }
+      }
+    });
+  },
+
+  atualizarChartDuelo() {
+    this.renderChartDuelo();
+  },
+
+  renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo) {
+    const tabela = document.getElementById('tabelaDuelo');
+    const thead = tabela.querySelector('thead');
+    const tbody = tabela.querySelector('tbody');
+
+    thead.innerHTML = `
+      <tr>
+        <th>Ano</th>
+        <th>${config.ativo1.nome}</th>
+        <th>${config.ativo2.nome}</th>
+        <th>Inflação (IPCA)</th>
+        <th>Vencedor do Ano</th>
+      </tr>
+    `;
+
+    let html = '';
+    dadosPeriodo.forEach((d, i) => {
+      const retorno1 = resultado1.retornosAnuais[i];
+      const retorno2 = resultado2.retornosAnuais[i];
+      const vencedorAno = retorno1 > retorno2 ? config.ativo1.nome :
+                         retorno2 > retorno1 ? config.ativo2.nome : 'Empate';
+
+      html += `
+        <tr>
+          <td>${d.ano}</td>
+          <td class="${retorno1 >= 0 ? 'valor-positivo' : 'valor-negativo'}">
+            ${this.formatPercent(retorno1)}
+          </td>
+          <td class="${retorno2 >= 0 ? 'valor-positivo' : 'valor-negativo'}">
+            ${this.formatPercent(retorno2)}
+          </td>
+          <td>${this.formatPercent(d.inflacao_ipca)}</td>
+          <td class="${vencedorAno === config.ativo1.nome ? 'ano-vencedor' : vencedorAno === config.ativo2.nome ? 'ano-vencedor' : ''}">
+            ${vencedorAno}
+          </td>
+        </tr>
+      `;
+    });
+
+    tbody.innerHTML = html;
+  },
+
+  renderMetricasDuelo(config, resultado1, resultado2) {
+    const container = document.getElementById('metricasDuelo');
+
+    container.innerHTML = `
+      <div class="metrica-card">
+        <h4>Retorno Total</h4>
+        <div class="metrica-grid">
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo1.nome}</div>
+            <div class="metrica-valor ${resultado1.retornoNominal >= 0 ? 'positivo' : 'negativo'}">
+              ${this.formatPercent(resultado1.retornoNominal)}
+            </div>
+          </div>
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo2.nome}</div>
+            <div class="metrica-valor ${resultado2.retornoNominal >= 0 ? 'positivo' : 'negativo'}">
+              ${this.formatPercent(resultado2.retornoNominal)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metrica-card">
+        <h4>Retorno Real (após inflação)</h4>
+        <div class="metrica-grid">
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo1.nome}</div>
+            <div class="metrica-valor ${resultado1.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+              ${this.formatPercent(resultado1.retornoReal)}
+            </div>
+          </div>
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo2.nome}</div>
+            <div class="metrica-valor ${resultado2.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+              ${this.formatPercent(resultado2.retornoReal)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metrica-card">
+        <h4>Média Anual</h4>
+        <div class="metrica-grid">
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo1.nome}</div>
+            <div class="metrica-valor ${resultado1.mediaAnual >= 0 ? 'positivo' : 'negativo'}">
+              ${this.formatPercent(resultado1.mediaAnual)}
+            </div>
+          </div>
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo2.nome}</div>
+            <div class="metrica-valor ${resultado2.mediaAnual >= 0 ? 'positivo' : 'negativo'}">
+              ${this.formatPercent(resultado2.mediaAnual)}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metrica-card">
+        <h4>Volatilidade (Risco)</h4>
+        <div class="metrica-grid">
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo1.nome}</div>
+            <div class="metrica-valor">${this.formatPercent(resultado1.volatilidade)}</div>
+          </div>
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo2.nome}</div>
+            <div class="metrica-valor">${this.formatPercent(resultado2.volatilidade)}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metrica-card">
+        <h4>Max Drawdown (Maior Queda)</h4>
+        <div class="metrica-grid">
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo1.nome}</div>
+            <div class="metrica-valor negativo">-${this.formatPercent(resultado1.maxDrawdown)}</div>
+          </div>
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo2.nome}</div>
+            <div class="metrica-valor negativo">-${this.formatPercent(resultado2.maxDrawdown)}</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="metrica-card">
+        <h4>Anos Positivos</h4>
+        <div class="metrica-grid">
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo1.nome}</div>
+            <div class="metrica-valor">${resultado1.anosPositivos}/${resultado1.totalAnos}</div>
+          </div>
+          <div class="metrica-item">
+            <div class="metrica-nome">${config.ativo2.nome}</div>
+            <div class="metrica-valor">${resultado2.anosPositivos}/${resultado2.totalAnos}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  },
+
+  renderConclusaoDuelo(config, resultado1, resultado2) {
+    const container = document.getElementById('conclusaoDuelo');
+    const vencedor = resultado1.retornoReal > resultado2.retornoReal ? config.ativo1 : config.ativo2;
+    const perdedor = resultado1.retornoReal > resultado2.retornoReal ? config.ativo2 : config.ativo1;
+    const resVencedor = resultado1.retornoReal > resultado2.retornoReal ? resultado1 : resultado2;
+    const resPerdedor = resultado1.retornoReal > resultado2.retornoReal ? resultado2 : resultado1;
+
+    const diferenca = Math.abs(resultado1.retornoReal - resultado2.retornoReal);
+    const diferencaValor = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);
+
+    // Contagem de vitórias anuais
+    let vitorias1 = 0, vitorias2 = 0;
+    resultado1.retornosAnuais.forEach((r, i) => {
+      if (r > resultado2.retornosAnuais[i]) vitorias1++;
+      else if (r < resultado2.retornosAnuais[i]) vitorias2++;
+    });
+
+    const vitoriasMelhor = resultado1.retornoReal > resultado2.retornoReal ? vitorias1 : vitorias2;
+    const vitoriasPior = resultado1.retornoReal > resultado2.retornoReal ? vitorias2 : vitorias1;
+
+    // Análise de risco-retorno
+    const sharpe1 = resultado1.volatilidade > 0 ? resultado1.retornoReal / resultado1.volatilidade : 0;
+    const sharpe2 = resultado2.volatilidade > 0 ? resultado2.retornoReal / resultado2.volatilidade : 0;
+    const melhorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo1.nome : config.ativo2.nome;
+
+    let analiseExtra = '';
+
+    // Análise específica por tipo de duelo
+    if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'sp500_brl') {
+      analiseExtra = `<p><strong>Contexto:</strong> A comparação inclui o efeito cambial, já que o S&P 500 está convertido para reais. Em períodos de desvalorização do real, o S&P 500 tende a se beneficiar duplamente: pela valorização das ações americanas e pela alta do dólar.</p>`;
+    } else if (config.ativo1.key === 'ouro' && config.ativo2.key === 'bitcoin_brl') {
+      analiseExtra = `<p><strong>Contexto:</strong> O ouro é um ativo milenar com volatilidade moderada, enquanto o Bitcoin é um ativo jovem com volatilidade extrema. A comparação histórica é limitada pela existência recente do Bitcoin em reais (desde 2011).</p>`;
+    } else if (config.ativo1.key === 'tesouro_ipca' && config.ativo2.key === 'tlt_brl') {
+      analiseExtra = `<p><strong>Contexto:</strong> O Tesouro IPCA+ protege contra a inflação brasileira, enquanto o TLT (ETF de títulos longos americanos) está exposto ao risco de juros dos EUA e à variação cambial.</p>`;
+    } else if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'cdi') {
+      analiseExtra = `<p><strong>Contexto:</strong> Este é o clássico debate brasileiro: vale a pena o risco da bolsa quando o CDI paga tão bem? Historicamente, o Brasil tem juros altos, o que torna essa comparação particularmente relevante.</p>`;
+    } else if (config.ativo1.key === 'fii_ifix' && config.ativo2.key === 'imoveis_fipezap') {
+      analiseExtra = `<p><strong>Contexto:</strong> Os FIIs oferecem liquidez e diversificação, mas podem ser mais voláteis. O imóvel físico tem custos adicionais (IPTU, manutenção, vacância) não totalmente capturados pelo índice FipeZap.</p>`;
+    }
+
+    container.innerHTML = `
+      <div class="vencedor-badge">🏆 ${vencedor.nome} venceu o duelo!</div>
+
+      <p>No período analisado, <strong>${vencedor.nome}</strong> gerou um retorno real de <strong>${this.formatPercent(resVencedor.retornoReal)}</strong>, superando <strong>${perdedor.nome}</strong> que rendeu <strong>${this.formatPercent(resPerdedor.retornoReal)}</strong>.</p>
+
+      <p>A diferença final foi de <strong>${this.formatCurrency(diferencaValor)}</strong> em valor real, ou ${this.formatPercent(diferenca)} em retorno.</p>
+
+      <p>Ano a ano, <strong>${vencedor.nome}</strong> venceu em ${vitoriasMelhor} dos ${resultado1.totalAnos} anos, enquanto <strong>${perdedor.nome}</strong> venceu em ${vitoriasPior} anos.</p>
+
+      <p><strong>Sobre o risco:</strong> ${config.ativo1.nome} teve volatilidade de ${this.formatPercent(resultado1.volatilidade)} e drawdown máximo de ${this.formatPercent(resultado1.maxDrawdown)}. ${config.ativo2.nome} teve volatilidade de ${this.formatPercent(resultado2.volatilidade)} e drawdown máximo de ${this.formatPercent(resultado2.maxDrawdown)}. Considerando risco e retorno, <strong>${melhorRiscoRetorno}</strong> teve a melhor relação.</p>
+
+      ${analiseExtra}
+
+      <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
+        <strong>Lembre-se:</strong> Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais e não constitui recomendação de investimento.
+      </p>
+    `;
   }
 };
 

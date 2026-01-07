@@ -76,8 +76,8 @@
         <span class="tab-text">Comparador Histórico</span>
       </button>
       <button class="nav-tab" data-tab="fii-imovel">
-        <span class="tab-icon">🏠</span>
-        <span class="tab-text">REIT vs Inmueble</span>
+        <span class="tab-icon">⚔️</span>
+        <span class="tab-text">Frente a Frente</span>
       </button>
       <button class="nav-tab" data-tab="decomposicao">
         <span class="tab-icon">🔍</span>
@@ -217,159 +217,160 @@
       </div>
     </section>
 
-    <!-- Tab Content: REIT vs Property -->
+    <!-- Tab Content: Frente a Frente -->
     <section class="tab-content" id="tab-fii-imovel">
       <div class="section-header">
-        <h2>REIT vs Inmueble Físico</h2>
-        <p>La comparación que nadie hace bien. Con todos los costos, vacancia e impuestos.</p>
+        <h2>Frente a Frente</h2>
+        <p>Compare activos similares usando datos históricos reales. Descubra quién ganó en cada período.</p>
       </div>
 
-      <div class="comparador-dual">
-        <!-- Property Column -->
-        <div class="dual-column">
-          <div class="column-header imovel">
-            <span class="column-icon">🏠</span>
-            <h3>Inmueble Físico</h3>
-          </div>
-          <div class="column-form">
-            <div class="form-field">
-              <label>Valor del inmueble</label>
-              <div class="input-group">
-                <span class="input-prefix">R$</span>
-                <input type="text" id="imovelValor" value="500000" inputmode="numeric">
+      <div class="comparador-config">
+        <!-- Selección del Duelo -->
+        <div class="duelo-selector">
+          <h4>Elija el duelo:</h4>
+          <div class="duelo-grid">
+            <button class="duelo-btn active" data-duelo="ibov-sp500">
+              <div class="duelo-versus">
+                <span class="duelo-icon">🇧🇷</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🇺🇸</span>
               </div>
-            </div>
-            <div class="form-field">
-              <label>Alquiler mensual bruto</label>
-              <div class="input-group">
-                <span class="input-prefix">R$</span>
-                <input type="text" id="imovelAluguel" value="2500" inputmode="numeric">
+              <span class="duelo-name">Ibovespa vs S&P 500</span>
+              <span class="duelo-desc">Bolsa brasileña vs americana</span>
+            </button>
+            <button class="duelo-btn" data-duelo="ouro-bitcoin">
+              <div class="duelo-versus">
+                <span class="duelo-icon">🥇</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">₿</span>
               </div>
-            </div>
-            <div class="form-field">
-              <label>Vacancia promedio (% del año)</label>
-              <div class="input-group">
-                <input type="text" id="imovelVacancia" value="8" inputmode="decimal">
-                <span class="input-suffix">%</span>
+              <span class="duelo-name">Oro vs Bitcoin</span>
+              <span class="duelo-desc">Reserva tradicional vs digital</span>
+            </button>
+            <button class="duelo-btn" data-duelo="ipca-tlt">
+              <div class="duelo-versus">
+                <span class="duelo-icon">🇧🇷</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🇺🇸</span>
               </div>
-            </div>
-            <div class="form-field">
-              <label>Impuesto predial anual</label>
-              <div class="input-group">
-                <span class="input-prefix">R$</span>
-                <input type="text" id="imovelIptu" value="5000" inputmode="numeric">
+              <span class="duelo-name">IPCA+ vs TLT</span>
+              <span class="duelo-desc">Bonos BR vs Bonos EE.UU.</span>
+            </button>
+            <button class="duelo-btn" data-duelo="ibov-cdi">
+              <div class="duelo-versus">
+                <span class="duelo-icon">📈</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">💰</span>
               </div>
-            </div>
-            <div class="form-field">
-              <label>Mantenimiento anual</label>
-              <div class="input-group">
-                <span class="input-prefix">R$</span>
-                <input type="text" id="imovelManutencao" value="7500" inputmode="numeric">
+              <span class="duelo-name">Ibovespa vs CDI</span>
+              <span class="duelo-desc">Renta variable vs fija</span>
+            </button>
+            <button class="duelo-btn" data-duelo="dolar-ouro">
+              <div class="duelo-versus">
+                <span class="duelo-icon">💵</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🥇</span>
               </div>
-            </div>
+              <span class="duelo-name">Dólar vs Oro</span>
+              <span class="duelo-desc">Protecciones cambiarias</span>
+            </button>
+            <button class="duelo-btn" data-duelo="fii-imovel">
+              <div class="duelo-versus">
+                <span class="duelo-icon">📊</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🏠</span>
+              </div>
+              <span class="duelo-name">FII vs Inmueble</span>
+              <span class="duelo-desc">Fondos vs físico</span>
+            </button>
           </div>
         </div>
 
-        <!-- REIT Column -->
-        <div class="dual-column">
-          <div class="column-header fii">
-            <span class="column-icon">📊</span>
-            <h3>Fondo Inmobiliario</h3>
-          </div>
-          <div class="column-form">
-            <div class="form-field">
-              <label>Valor invertido en REITs</label>
-              <div class="input-group">
-                <span class="input-prefix">R$</span>
-                <input type="text" id="fiiValor" value="500000" inputmode="numeric">
-              </div>
-            </div>
-            <div class="form-field">
-              <label>Dividend Yield anual</label>
-              <div class="input-group">
-                <input type="text" id="fiiDY" value="9" inputmode="decimal">
-                <span class="input-suffix">%</span>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>Valorización esperada (a.a.)</label>
-              <div class="input-group">
-                <input type="text" id="fiiValorizacao" value="3" inputmode="decimal">
-                <span class="input-suffix">%</span>
-              </div>
-            </div>
-            <div class="form-field">
-              <label>Tasa de administración</label>
-              <div class="input-group">
-                <input type="text" id="fiiTaxa" value="0.8" inputmode="decimal">
-                <span class="input-suffix">%</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="config-extras">
+        <!-- Configuraciones del período -->
         <div class="config-row">
           <div class="config-field">
-            <label for="periodoFII">Período de análisis</label>
-            <select id="periodoFII">
-              <option value="5">5 años</option>
-              <option value="10" selected>10 años</option>
-              <option value="15">15 años</option>
-              <option value="20">20 años</option>
+            <label for="anoInicioDuelo">Año inicial</label>
+            <select id="anoInicioDuelo">
+              <option value="2005">2005</option>
+              <option value="2010">2010</option>
+              <option value="2015" selected>2015</option>
+              <option value="2020">2020</option>
             </select>
           </div>
           <div class="config-field">
-            <label for="inflacaoFII">Inflación anual estimada</label>
+            <label for="anoFimDuelo">Año final</label>
+            <select id="anoFimDuelo">
+              <option value="2015">2015</option>
+              <option value="2020">2020</option>
+              <option value="2025" selected>2025</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorDuelo">Valor inicial</label>
             <div class="input-group">
-              <input type="text" id="inflacaoFII" value="5" inputmode="decimal">
-              <span class="input-suffix">%</span>
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorDuelo" value="100000" inputmode="numeric">
             </div>
           </div>
           <div class="config-field">
-            <label for="valorizacaoImovel">Valorización inmueble (a.a.)</label>
+            <label for="inflacaoDuelo">Inflación promedio (a.a.)</label>
             <div class="input-group">
-              <input type="text" id="valorizacaoImovel" value="5" inputmode="decimal">
+              <input type="number" id="inflacaoDuelo" value="6" min="0" max="30" step="0.5">
               <span class="input-suffix">%</span>
             </div>
+            <small class="field-hint">Use 0 para inflación real (IPCA)</small>
           </div>
         </div>
+
+        <button class="btn-comparar" id="btnDuelo">
+          <span>Iniciar Duelo</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
       </div>
 
-      <button class="btn-comparar" id="btnCompararFII">
-        <span>Comparar REIT vs Inmueble</span>
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M5 12h14M12 5l7 7-7 7"/>
-        </svg>
-      </button>
-
-      <!-- REIT vs Property Results -->
-      <div class="comparador-resultados" id="resultadosFII" style="display: none;">
-        <div class="resultado-card">
-          <h3>Comparativo de Rendimientos</h3>
-          <div class="chart-container" id="chartFII"></div>
+      <!-- Resultados del Duelo -->
+      <div class="comparador-resultados" id="resultadosDuelo" style="display: none;">
+        <!-- Marcador Principal -->
+        <div class="resultado-card destaque-card">
+          <h3 id="dueloTitulo">Resultado del Duelo</h3>
+          <div class="duelo-placar" id="dueloPlacar"></div>
         </div>
 
+        <!-- Evolución Comparativa -->
         <div class="resultado-card">
-          <h3>Análisis Capa por Capa</h3>
-          <div class="camadas-grid" id="camadasGrid"></div>
-        </div>
-
-        <div class="resultado-card dual-resultado">
-          <div class="dual-box imovel-box">
-            <h4>Inmueble Físico</h4>
-            <div class="resultado-valores" id="resultadoImovel"></div>
+          <h3>Evolución del Patrimonio</h3>
+          <div class="chart-toggle">
+            <button class="toggle-btn active" id="btnNominalDuelo">Nominal</button>
+            <button class="toggle-btn" id="btnRealDuelo">Valor Real</button>
           </div>
-          <div class="dual-box fii-box">
-            <h4>Fondo Inmobiliario</h4>
-            <div class="resultado-valores" id="resultadoFII"></div>
+          <div class="chart-container" style="height: 350px;">
+            <canvas id="chartDuelo"></canvas>
           </div>
         </div>
 
+        <!-- Tabla Año a Año -->
+        <div class="resultado-card">
+          <h3>Retorno Año a Año</h3>
+          <div class="table-scroll">
+            <table class="tabela-duelo" id="tabelaDuelo">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Métricas Detalladas -->
+        <div class="resultado-card">
+          <h3>Métricas Detalladas</h3>
+          <div class="metricas-duelo" id="metricasDuelo"></div>
+        </div>
+
+        <!-- Conclusión -->
         <div class="resultado-card conclusoes-card">
-          <h3>Veredicto</h3>
-          <div class="conclusoes-lista" id="conclusoesFII"></div>
+          <h3>Análisis Final</h3>
+          <div id="conclusaoDuelo"></div>
         </div>
       </div>
     </section>

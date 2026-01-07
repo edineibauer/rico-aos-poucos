@@ -7209,3 +7209,352 @@ body.home-page {
     padding: 8px 10px;
   }
 }
+
+/* ========================================
+   FRENTE A FRENTE (Duelo de Ativos)
+   ======================================== */
+
+.duelo-selector {
+  margin-bottom: 24px;
+}
+
+.duelo-selector h4 {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin: 0 0 16px;
+  font-weight: 600;
+}
+
+.duelo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 12px;
+}
+
+.duelo-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px 12px;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.duelo-btn:hover {
+  border-color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.1);
+}
+
+.duelo-btn.active {
+  border-color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.15);
+  box-shadow: 0 0 0 3px rgba(45, 138, 110, 0.2);
+}
+
+.duelo-versus {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.duelo-icon {
+  font-size: 1.5rem;
+}
+
+.duelo-vs {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+}
+
+.duelo-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.duelo-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Placar do Duelo */
+.duelo-placar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.duelo-lado {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+  padding: 24px 20px;
+  border-radius: 16px;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.duelo-lado.vencedor {
+  border-color: #22c55e;
+  background: rgba(34, 197, 94, 0.1);
+  box-shadow: 0 0 20px rgba(34, 197, 94, 0.2);
+}
+
+.duelo-lado.perdedor {
+  opacity: 0.7;
+}
+
+.duelo-lado .lado-icone {
+  font-size: 2.5rem;
+  margin-bottom: 12px;
+}
+
+.duelo-lado .lado-nome {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.duelo-lado .lado-valor {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  margin-bottom: 4px;
+}
+
+.duelo-lado .lado-retorno {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.duelo-lado .lado-retorno.positivo {
+  color: #22c55e;
+}
+
+.duelo-lado .lado-retorno.negativo {
+  color: #ef4444;
+}
+
+.duelo-lado .lado-badge {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.duelo-lado.vencedor .lado-badge {
+  background: #22c55e;
+  color: #fff;
+}
+
+.duelo-centro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+}
+
+.duelo-centro .vs-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text-muted);
+}
+
+.duelo-centro .diferenca {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  text-align: center;
+}
+
+.duelo-centro .diferenca strong {
+  color: var(--primary-light);
+}
+
+/* Tabela do Duelo */
+.tabela-duelo {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-duelo th,
+.tabela-duelo td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabela-duelo th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tabela-duelo th:first-child,
+.tabela-duelo td:first-child {
+  text-align: left;
+}
+
+.tabela-duelo tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tabela-duelo .ano-vencedor {
+  position: relative;
+}
+
+.tabela-duelo .ano-vencedor::after {
+  content: '🏆';
+  font-size: 0.7rem;
+  position: absolute;
+  top: 2px;
+  right: 8px;
+}
+
+.tabela-duelo .valor-positivo {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.tabela-duelo .valor-negativo {
+  color: #ef4444;
+}
+
+/* Métricas do Duelo */
+.metricas-duelo {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.metrica-card {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+.metrica-card h4 {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0 0 12px;
+  font-weight: 600;
+}
+
+.metrica-grid {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.metrica-item {
+  flex: 1;
+  text-align: center;
+}
+
+.metrica-item .metrica-nome {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-bottom: 4px;
+}
+
+.metrica-item .metrica-valor {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.metrica-item .metrica-valor.positivo {
+  color: #22c55e;
+}
+
+.metrica-item .metrica-valor.negativo {
+  color: #ef4444;
+}
+
+/* Conclusão do Duelo */
+#conclusaoDuelo {
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+#conclusaoDuelo .vencedor-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 16px;
+  background: rgba(34, 197, 94, 0.15);
+  color: #22c55e;
+}
+
+#conclusaoDuelo p {
+  margin-bottom: 12px;
+}
+
+#conclusaoDuelo strong {
+  color: var(--text-primary);
+}
+
+/* Responsivo Duelo */
+@media (max-width: 640px) {
+  .duelo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .duelo-btn {
+    padding: 12px 8px;
+  }
+
+  .duelo-icon {
+    font-size: 1.2rem;
+  }
+
+  .duelo-name {
+    font-size: 0.8rem;
+  }
+
+  .duelo-desc {
+    display: none;
+  }
+
+  .duelo-placar {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .duelo-lado {
+    min-width: 100%;
+  }
+
+  .duelo-centro {
+    flex-direction: row;
+    padding: 8px;
+  }
+
+  .duelo-centro .vs-text {
+    font-size: 1rem;
+  }
+
+  .metricas-duelo {
+    grid-template-columns: 1fr;
+  }
+}

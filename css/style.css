@@ -6929,6 +6929,160 @@ body.home-page {
   }
 }
 
+/* ==========================================
+   Diversificação Presets (Nova aba)
+   ========================================== */
+.diversif-presets {
+  margin: 24px 0;
+}
+
+.diversif-presets h4 {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.preset-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.preset-btn {
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.preset-btn:hover {
+  border-color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.1);
+}
+
+.preset-btn.active {
+  border-color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.15);
+  box-shadow: 0 0 0 2px rgba(45, 138, 110, 0.2);
+}
+
+.preset-icon {
+  font-size: 1.5rem;
+}
+
+.preset-name {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+}
+
+.preset-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Tabela de resultados diversificação */
+.tabela-diversif-novo {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+}
+
+.tabela-diversif-novo th,
+.tabela-diversif-novo td {
+  padding: 12px 16px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabela-diversif-novo th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.tabela-diversif-novo tr:hover {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.tabela-diversif-novo tr.destaque-row {
+  background: rgba(45, 138, 110, 0.1);
+  font-weight: 600;
+}
+
+.tabela-diversif-novo tr.destaque-row td {
+  border-bottom: 2px solid var(--primary-light);
+}
+
+.tabela-diversif-novo .valor-positivo {
+  color: #22c55e;
+}
+
+.tabela-diversif-novo .valor-negativo {
+  color: #ef4444;
+}
+
+.tabela-diversif-novo .estrategia-tag {
+  background: var(--primary-light);
+  color: #fff;
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+/* Conclusão Diversificação */
+.conclusao-diversif {
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.conclusao-diversif .resultado-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.conclusao-diversif .resultado-badge.positivo {
+  background: rgba(34, 197, 94, 0.2);
+  color: #22c55e;
+}
+
+.conclusao-diversif .resultado-badge.negativo {
+  background: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.conclusao-diversif .resultado-badge.neutro {
+  background: rgba(234, 179, 8, 0.2);
+  color: #eab308;
+}
+
+.conclusao-diversif p {
+  color: var(--text-secondary);
+  line-height: 1.7;
+  margin-bottom: 12px;
+}
+
+.conclusao-diversif p:last-child {
+  margin-bottom: 0;
+}
+
 @media (max-width: 480px) {
   .comparador-config,
   .resultado-card {

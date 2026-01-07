@@ -74,6 +74,15 @@ const Comparador = {
     document.getElementById('btnCompararFII')?.addEventListener('click', () => this.compararFIIImovel());
     document.getElementById('btnDecompor')?.addEventListener('click', () => this.decomporRetorno());
     document.getElementById('btnDiversif')?.addEventListener('click', () => this.simularDiversificacao());
+    document.getElementById('btnDiversifNovo')?.addEventListener('click', () => this.simularDiversificacaoNovo());
+
+    // Preset buttons for new Diversificação tab
+    document.querySelectorAll('.preset-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+      });
+    });
 
     // Chart toggle
     document.querySelectorAll('.toggle-btn').forEach(btn => {
@@ -1993,6 +2002,319 @@ const Comparador = {
     });
 
     container.innerHTML = html;
+  },
+
+  // ==========================================
+  // NOVA ABA DIVERSIFICAÇÃO VS FOCO ÚNICO
+  // ==========================================
+  simularDiversificacaoNovo() {
+    const anoInicio = parseInt(document.getElementById('anoInicioDiversifNovo').value);
+    const anoFim = parseInt(document.getElementById('anoFimDiversifNovo').value);
+    const valorInicialStr = document.getElementById('valorDiversifNovo').value;
+    const valorInicial = parseFloat(valorInicialStr.replace(/\./g, '').replace(',', '.')) || 100000;
+
+    // Pegar preset selecionado
+    const presetAtivo = document.querySelector('.preset-btn.active');
+    const preset = presetAtivo ? presetAtivo.dataset.preset : '5050';
+
+    // Definir estratégias baseado no preset
+    const estrategias = this.getEstrategiasDiversif(preset);
+
+    // Filtrar dados pelo período
+    const dadosFiltrados = this.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+
+    if (dadosFiltrados.length === 0) {
+      alert('Não há dados suficientes para o período selecionado.');
+      return;
+    }
+
+    // Calcular retorno de cada estratégia
+    const resultados = [];
+
+    // Primeiro: estratégia diversificada (a principal)
+    const estrategiaDiversificada = estrategias.diversificada;
+    const retornoDiversificada = this.calcularRetornoEstrategia(estrategiaDiversificada, dadosFiltrados, valorInicial);
+    resultados.push({
+      nome: estrategiaDiversificada.nome,
+      alocacao: estrategiaDiversificada.alocacao,
+      isDiversificada: true,
+      ...retornoDiversificada
+    });
+
+    // Depois: cada ativo individual
+    estrategias.individuais.forEach(ativo => {
+      const alocacao = { [ativo]: 100 };
+      const retorno = this.calcularRetornoEstrategia({ nome: this.assetNames[ativo], alocacao }, dadosFiltrados, valorInicial);
+      resultados.push({
+        nome: this.assetNames[ativo],
+        alocacao,
+        isDiversificada: false,
+        ...retorno
+      });
+    });
+
+    // Ordenar por retorno real (maior primeiro)
+    resultados.sort((a, b) => b.retornoReal - a.retornoReal);
+
+    // Encontrar posição da estratégia diversificada no ranking
+    const posicaoDiversificada = resultados.findIndex(r => r.isDiversificada) + 1;
+    const totalEstrategias = resultados.length;
+
+    // Mostrar resultados
+    document.getElementById('resultadosDiversifNovo').style.display = 'block';
+
+    // Renderizar tabela
+    this.renderTabelaDiversifNovo(resultados, valorInicial);
+
+    // Renderizar gráfico
+    this.renderChartDiversifNovo(resultados, dadosFiltrados, valorInicial);
+
+    // Renderizar conclusão
+    this.renderConclusaoDiversifNovo(resultados, posicaoDiversificada, totalEstrategias, estrategiaDiversificada.nome);
+  },
+
+  getEstrategiasDiversif(preset) {
+    switch (preset) {
+      case '5050':
+        return {
+          diversificada: {
+            nome: '50% Ibov + 50% CDI',
+            alocacao: { ibovespa: 50, cdi: 50 }
+          },
+          individuais: ['ibovespa', 'cdi']
+        };
+      case '3ativos':
+        return {
+          diversificada: {
+            nome: '33% Ibov + 33% CDI + 33% Dólar',
+            alocacao: { ibovespa: 33.33, cdi: 33.33, dolar: 33.34 }
+          },
+          individuais: ['ibovespa', 'cdi', 'dolar']
+        };
+      case '4ativos':
+        return {
+          diversificada: {
+            nome: '25% Ibov + 25% CDI + 25% Dólar + 25% Ouro',
+            alocacao: { ibovespa: 25, cdi: 25, dolar: 25, ouro: 25 }
+          },
+          individuais: ['ibovespa', 'cdi', 'dolar', 'ouro']
+        };
+      case 'global':
+        return {
+          diversificada: {
+            nome: '50% Brasil + 50% EUA',
+            alocacao: { ibovespa: 25, cdi: 25, sp500_brl: 25, tlt_brl: 25 }
+          },
+          individuais: ['ibovespa', 'cdi', 'sp500_brl', 'tlt_brl']
+        };
+      default:
+        return this.getEstrategiasDiversif('5050');
+    }
+  },
+
+  calcularRetornoEstrategia(estrategia, dados, valorInicial) {
+    let valorAtual = valorInicial;
+    const evolucao = [valorInicial];
+    let inflacaoAcumulada = 1;
+
+    dados.forEach(ano => {
+      let retornoAno = 0;
+
+      // Calcular retorno ponderado do ano
+      Object.entries(estrategia.alocacao).forEach(([ativo, peso]) => {
+        const retornoAtivo = ano[ativo] || 0;
+        retornoAno += (retornoAtivo * peso / 100);
+      });
+
+      valorAtual = valorAtual * (1 + retornoAno / 100);
+      evolucao.push(valorAtual);
+
+      inflacaoAcumulada *= (1 + (ano.inflacao_ipca || 0) / 100);
+    });
+
+    const retornoNominal = ((valorAtual / valorInicial) - 1) * 100;
+    const valorReal = valorAtual / inflacaoAcumulada;
+    const retornoReal = ((valorReal / valorInicial) - 1) * 100;
+
+    // Calcular volatilidade
+    const retornosAnuais = [];
+    for (let i = 1; i < evolucao.length; i++) {
+      retornosAnuais.push((evolucao[i] / evolucao[i - 1] - 1) * 100);
+    }
+    const volatilidade = this.calcularVolatilidade(retornosAnuais);
+
+    return {
+      valorFinal: valorAtual,
+      valorReal,
+      retornoNominal,
+      retornoReal,
+      volatilidade,
+      evolucao
+    };
+  },
+
+  renderTabelaDiversifNovo(resultados, valorInicial) {
+    const container = document.getElementById('tabelaDiversifNovo');
+
+    let html = `
+      <table class="tabela-diversif-novo">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Estratégia</th>
+            <th>Valor Final</th>
+            <th>Retorno Nominal</th>
+            <th>Retorno Real</th>
+            <th>Volatilidade</th>
+          </tr>
+        </thead>
+        <tbody>
+    `;
+
+    resultados.forEach((r, i) => {
+      const isDestaque = r.isDiversificada;
+      const retornoRealClass = r.retornoReal >= 0 ? 'valor-positivo' : 'valor-negativo';
+
+      html += `
+        <tr class="${isDestaque ? 'destaque-row' : ''}">
+          <td>${i + 1}º</td>
+          <td>
+            ${r.nome}
+            ${isDestaque ? '<span class="estrategia-tag">Diversificada</span>' : ''}
+          </td>
+          <td>${this.formatCurrency(r.valorFinal)}</td>
+          <td>${this.formatPercent(r.retornoNominal)}</td>
+          <td class="${retornoRealClass}">${this.formatPercent(r.retornoReal)}</td>
+          <td>${this.formatPercent(r.volatilidade)}</td>
+        </tr>
+      `;
+    });
+
+    html += '</tbody></table>';
+    container.innerHTML = html;
+  },
+
+  renderChartDiversifNovo(resultados, dados, valorInicial) {
+    const canvas = document.getElementById('chartDiversifNovo');
+    if (!canvas) return;
+
+    const ctx = canvas.getContext('2d');
+
+    // Destruir gráfico existente se houver
+    if (this.chartDiversifNovo) {
+      this.chartDiversifNovo.destroy();
+    }
+
+    const labels = [dados[0].ano - 1, ...dados.map(d => d.ano)];
+
+    const datasets = resultados.map((r, i) => {
+      const cores = ['#2d8a6e', '#3b82f6', '#ec4899', '#22c55e', '#eab308'];
+      const cor = r.isDiversificada ? '#2d8a6e' : cores[(i % cores.length)];
+
+      return {
+        label: r.nome,
+        data: r.evolucao,
+        borderColor: cor,
+        backgroundColor: r.isDiversificada ? 'rgba(45, 138, 110, 0.1)' : 'transparent',
+        borderWidth: r.isDiversificada ? 3 : 2,
+        tension: 0.4,
+        fill: r.isDiversificada,
+        pointRadius: 0
+      };
+    });
+
+    this.chartDiversifNovo = new Chart(ctx, {
+      type: 'line',
+      data: { labels, datasets },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        interaction: {
+          mode: 'index',
+          intersect: false
+        },
+        plugins: {
+          legend: {
+            position: 'bottom',
+            labels: {
+              color: '#8b949e',
+              usePointStyle: true,
+              padding: 20
+            }
+          },
+          tooltip: {
+            backgroundColor: '#1c2128',
+            titleColor: '#f0f6fc',
+            bodyColor: '#8b949e',
+            borderColor: '#30363d',
+            borderWidth: 1,
+            callbacks: {
+              label: (ctx) => `${ctx.dataset.label}: ${this.formatCurrency(ctx.parsed.y)}`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: '#30363d' },
+            ticks: { color: '#8b949e' }
+          },
+          y: {
+            grid: { color: '#30363d' },
+            ticks: {
+              color: '#8b949e',
+              callback: (value) => this.formatCurrency(value)
+            }
+          }
+        }
+      }
+    });
+  },
+
+  renderConclusaoDiversifNovo(resultados, posicao, total, nomeEstrategia) {
+    const container = document.getElementById('conclusaoDiversifNovo');
+    const estrategiaDiversificada = resultados.find(r => r.isDiversificada);
+    const melhorIndividual = resultados.find(r => !r.isDiversificada);
+
+    let badge, mensagem;
+
+    if (posicao === 1) {
+      badge = '<div class="resultado-badge positivo">✅ Diversificação venceu!</div>';
+      mensagem = `
+        <p>A estratégia diversificada <strong>${nomeEstrategia}</strong> teve o melhor retorno real do período, superando todos os ativos individuais.</p>
+        <p>Isso demonstra que, neste período específico, a diversificação não só protegeu como também maximizou os ganhos.</p>
+      `;
+    } else if (posicao <= Math.ceil(total / 2)) {
+      badge = '<div class="resultado-badge neutro">⚖️ Diversificação protegeu</div>';
+      mensagem = `
+        <p>A estratégia diversificada ficou em <strong>${posicao}º lugar</strong> entre ${total} opções.</p>
+        <p>Embora não tenha sido a melhor escolha, a diversificação evitou o pior cenário. Se você tivesse concentrado em <strong>${melhorIndividual.nome}</strong>, teria ganho mais. Mas você não teria como saber isso no início.</p>
+        <p>A diferença para o melhor ativo foi de ${this.formatPercent(melhorIndividual.retornoReal - estrategiaDiversificada.retornoReal)}.</p>
+      `;
+    } else {
+      badge = '<div class="resultado-badge negativo">❌ Diversificação não foi ideal</div>';
+      mensagem = `
+        <p>A estratégia diversificada ficou em <strong>${posicao}º lugar</strong> entre ${total} opções.</p>
+        <p>Neste período específico, concentrar em um único ativo teria sido melhor. Porém, isso só pode ser determinado olhando para o passado.</p>
+        <p>Lembre-se: a diversificação protege contra o desconhecido. Escolher o melhor ativo é impossível de antemão.</p>
+      `;
+    }
+
+    // Adicionar análise de volatilidade
+    const volDiversificada = estrategiaDiversificada.volatilidade;
+    const volMelhor = melhorIndividual.volatilidade;
+
+    if (volDiversificada < volMelhor) {
+      mensagem += `
+        <p><strong>Sobre o risco:</strong> A carteira diversificada teve volatilidade de ${this.formatPercent(volDiversificada)}, enquanto ${melhorIndividual.nome} teve ${this.formatPercent(volMelhor)}. Menos volatilidade significa noites mais tranquilas.</p>
+      `;
+    }
+
+    container.innerHTML = `
+      <div class="conclusao-diversif">
+        ${badge}
+        ${mensagem}
+      </div>
+    `;
   },
 
   calcularVolatilidade(retornos) {

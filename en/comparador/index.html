@@ -84,8 +84,12 @@
         <span class="tab-text">Decomposition</span>
       </button>
       <button class="nav-tab" data-tab="diversificacao">
-        <span class="tab-icon">⚖️</span>
+        <span class="tab-icon">📊</span>
         <span class="tab-text">Diversification</span>
+      </button>
+      <button class="nav-tab" data-tab="rebalanceamento">
+        <span class="tab-icon">⚖️</span>
+        <span class="tab-text">Rebalancing</span>
       </button>
     </nav>
 
@@ -433,11 +437,99 @@
       </div>
     </section>
 
-    <!-- Tab Content: Diversification -->
+    <!-- Tab Content: Diversification (NEW) -->
     <section class="tab-content" id="tab-diversificacao">
       <div class="section-header">
-        <h2>Diversified Portfolio Simulator</h2>
-        <p>Build your custom portfolio, set tolerances, and see if rebalancing generated more gains. Includes tax calculations and average price tracking.</p>
+        <h2>Diversification vs Single Focus</h2>
+        <p>Find out if diversifying really protects or if focusing on a single asset would be better. Compare diversified portfolios against individual assets.</p>
+      </div>
+
+      <div class="comparador-config">
+        <div class="config-row">
+          <div class="config-field">
+            <label for="anoInicioDiversifNovo">Start year</label>
+            <select id="anoInicioDiversifNovo">
+              <option value="2005">2005</option>
+              <option value="2010">2010</option>
+              <option value="2015" selected>2015</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="anoFimDiversifNovo">End year</label>
+            <select id="anoFimDiversifNovo">
+              <option value="2020">2020</option>
+              <option value="2025" selected>2025</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorDiversifNovo">Initial value</label>
+            <div class="input-group">
+              <span class="currency-prefix">R$</span>
+              <input type="text" id="valorDiversifNovo" value="100.000" class="currency-input">
+            </div>
+          </div>
+        </div>
+
+        <div class="diversif-presets">
+          <h4>Choose a strategy to compare:</h4>
+          <div class="preset-grid">
+            <button class="preset-btn active" data-preset="5050">
+              <span class="preset-icon">⚖️</span>
+              <span class="preset-name">50% Ibov + 50% CDI</span>
+              <span class="preset-desc">Classic equities + fixed income</span>
+            </button>
+            <button class="preset-btn" data-preset="3ativos">
+              <span class="preset-icon">🔺</span>
+              <span class="preset-name">33% Ibov + 33% CDI + 33% Dollar</span>
+              <span class="preset-desc">Currency protection</span>
+            </button>
+            <button class="preset-btn" data-preset="4ativos">
+              <span class="preset-icon">🔷</span>
+              <span class="preset-name">25% each (Ibov, CDI, Dollar, Gold)</span>
+              <span class="preset-desc">Broad diversification</span>
+            </button>
+            <button class="preset-btn" data-preset="global">
+              <span class="preset-icon">🌎</span>
+              <span class="preset-name">50% Brazil + 50% USA</span>
+              <span class="preset-desc">25% Ibov + 25% CDI + 25% S&P + 25% TLT</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnDiversifNovo">
+          <span>Compare Strategies</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="resultados-diversif-novo" id="resultadosDiversifNovo" style="display: none;">
+        <div class="resultado-card">
+          <h3>Result: Diversification vs Individual Assets</h3>
+          <div id="tabelaDiversifNovo"></div>
+        </div>
+
+        <div class="resultado-card">
+          <h3>Comparative Evolution</h3>
+          <div class="chart-container">
+            <canvas id="chartDiversifNovo"></canvas>
+          </div>
+        </div>
+
+        <div class="resultado-card conclusoes-card">
+          <h3>Conclusion: Was diversifying worth it?</h3>
+          <div id="conclusaoDiversifNovo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Rebalancing -->
+    <section class="tab-content" id="tab-rebalanceamento">
+      <div class="section-header">
+        <h2>Rebalancing Simulator</h2>
+        <p>Build your custom portfolio, set tolerances, and see if rebalancing generated more gains than buy-and-hold. Includes tax calculations and average price tracking.</p>
       </div>
 
       <div class="comparador-config">

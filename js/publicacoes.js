@@ -97,8 +97,8 @@ const Publicacoes = {
         return;
       }
 
-      // Render the list (max 5 items)
-      this.renderList(pubList, destaques.slice(0, 5));
+      // Render the list (max 6 items)
+      this.renderList(pubList, destaques.slice(0, 6));
 
       // Render featured (first article)
       this.renderFeatured(pubFeatured, destaques[0]);

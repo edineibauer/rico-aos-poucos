@@ -5304,6 +5304,40 @@ body.home-page {
   transform: translateX(4px);
 }
 
+/* Home Bottom Row - Calculadora + YouTube lado a lado */
+.home-bottom-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .home-bottom-row {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .home-bottom-row .card-calculadora {
+    flex: 1;
+  }
+
+  .home-bottom-row .card-youtube {
+    flex: 1;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-bottom-row {
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .home-bottom-row {
+    gap: 28px;
+  }
+}
+
 /* Desktop Layout */
 @media (min-width: 768px) {
   .calc-page-content {

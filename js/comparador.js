@@ -91,6 +91,16 @@ const Comparador = {
       input.addEventListener('input', () => this.atualizarTotalAlocacaoNovo());
     });
 
+    // Preset buttons for Rebalancing tab
+    document.querySelectorAll('.preset-btn-rebal').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.preset-btn-rebal').forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+        const preset = e.currentTarget.dataset.preset;
+        this.aplicarPresetRebalanceamento(preset);
+      });
+    });
+
     // Chart toggle
     document.querySelectorAll('.toggle-btn').forEach(btn => {
       btn.addEventListener('click', (e) => {
@@ -2037,6 +2047,28 @@ const Comparador = {
     this.atualizarTotalAlocacaoNovo();
   },
 
+  // Aplicar preset no rebalanceamento
+  aplicarPresetRebalanceamento(preset) {
+    const presets = {
+      '5050': { ibovespa: 50, cdi: 50, dolar: 0, ouro: 0, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 0, tlt_brl: 0, imoveis_fipezap: 0, bitcoin_brl: 0 },
+      '3ativos': { ibovespa: 33, cdi: 33, dolar: 34, ouro: 0, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 0, tlt_brl: 0, imoveis_fipezap: 0, bitcoin_brl: 0 },
+      '4ativos': { ibovespa: 25, cdi: 25, dolar: 25, ouro: 25, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 0, tlt_brl: 0, imoveis_fipezap: 0, bitcoin_brl: 0 },
+      'global': { ibovespa: 25, cdi: 25, dolar: 0, ouro: 0, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 25, tlt_brl: 25, imoveis_fipezap: 0, bitcoin_brl: 0 }
+    };
+
+    const alocacao = presets[preset] || presets['5050'];
+
+    document.querySelectorAll('#alocacaoGrid .alocacao-item').forEach(item => {
+      const ativo = item.dataset.ativo;
+      const inputPercent = item.querySelector('.aloc-percent');
+      if (inputPercent && alocacao[ativo] !== undefined) {
+        inputPercent.value = alocacao[ativo];
+      }
+    });
+
+    this.atualizarTotalAlocacao();
+  },
+
   // Atualizar total de alocação
   atualizarTotalAlocacaoNovo() {
     let total = 0;
@@ -2150,7 +2182,7 @@ const Comparador = {
     this.renderTabelaDiversifNovo(resultados, valorInicial);
 
     // Renderizar gráfico
-    this.renderChartDiversifNovo(resultados, dadosFiltrados, valorInicial);
+    this.renderChartDiversificacao(resultados, dadosFiltrados, valorInicial);
 
     // Renderizar conclusão
     this.renderConclusaoDiversifNovo(resultados, posicaoDiversificada, totalEstrategias, nomeEstrategia);
@@ -2243,15 +2275,15 @@ const Comparador = {
     container.innerHTML = html;
   },
 
-  renderChartDiversifNovo(resultados, dados, valorInicial) {
+  renderChartDiversificacao(resultados, dados, valorInicial) {
     const canvas = document.getElementById('chartDiversifNovo');
     if (!canvas) return;
 
     const ctx = canvas.getContext('2d');
 
     // Destruir gráfico existente se houver
-    if (this.chartDiversifNovo) {
-      this.chartDiversifNovo.destroy();
+    if (this.chartDiversificacao) {
+      this.chartDiversificacao.destroy();
     }
 
     const labels = [dados[0].ano - 1, ...dados.map(d => d.ano)];
@@ -2272,7 +2304,7 @@ const Comparador = {
       };
     });
 
-    this.chartDiversifNovo = new Chart(ctx, {
+    this.chartDiversificacao = new Chart(ctx, {
       type: 'line',
       data: { labels, datasets },
       options: {

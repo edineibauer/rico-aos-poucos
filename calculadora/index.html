@@ -2,8 +2,8 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-  <meta name="description" content="Calculadora de investimentos com ajuste inflacionário. Descubra quanto investir por mês ou quanto vai acumular considerando inflação e juros compostos.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora de investimentos com ajuste inflacionário. Descubra quanto investir por mês, quanto vai acumular ou quanto tempo levará.">
   <meta name="keywords" content="calculadora investimentos, juros compostos, inflação, aporte mensal, planejamento financeiro">
   <meta name="author" content="Rico aos Poucos">
   <meta name="robots" content="index, follow">
@@ -17,7 +17,7 @@
 
   <!-- Open Graph -->
   <meta property="og:title" content="Calculadora de Investimentos | Rico aos Poucos">
-  <meta property="og:description" content="Calcule quanto investir por mês ou quanto vai acumular, considerando inflação e juros compostos.">
+  <meta property="og:description" content="Calcule quanto investir por mês, quanto vai acumular ou quanto tempo levará, considerando inflação e juros compostos.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ricoaospoucos.com.br/calculadora/">
   <meta property="og:locale" content="pt_BR">
@@ -26,7 +26,7 @@
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Calculadora de Investimentos | Rico aos Poucos">
-  <meta name="twitter:description" content="Calcule quanto investir por mês ou quanto vai acumular, considerando inflação e juros compostos.">
+  <meta name="twitter:description" content="Calcule quanto investir, quanto acumular ou quanto tempo levará.">
 
   <!-- PWA -->
   <meta name="theme-color" content="#0d1117">
@@ -44,7 +44,7 @@
     "@context": "https://schema.org",
     "@type": "WebApplication",
     "name": "Calculadora de Investimentos",
-    "description": "Calculadora de investimentos com ajuste inflacionário. Descubra quanto investir por mês ou quanto vai acumular.",
+    "description": "Calculadora de investimentos com ajuste inflacionário.",
     "url": "https://ricoaospoucos.com.br/calculadora/",
     "applicationCategory": "FinanceApplication",
     "operatingSystem": "All",
@@ -61,58 +61,52 @@
   }
   </script>
 </head>
-<body class="page-calculadora">
-  <main class="app-container">
-    <!-- Header -->
-    <header class="page-header">
-      <a href="../" class="back-btn" aria-label="Voltar">
-        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M19 12H5M12 19l-7-7 7-7"/>
-        </svg>
-      </a>
-      <div class="header-title">
-        <h1>Calculadora de Investimentos</h1>
-        <span class="header-subtitle">Com ajuste inflacionário</span>
-      </div>
-      <div id="langSelector"></div>
-    </header>
+<body>
+  <div class="page-wrapper">
 
-    <!-- Introdução -->
-    <section class="intro-section">
-      <div class="intro-card">
-        <h2>Planeje seus investimentos de forma realista</h2>
-        <p>
-          Esta calculadora considera o <strong>efeito da inflação</strong> nos seus investimentos.
-          Isso significa que:
+    <!-- Header padronizado -->
+    <header id="article-header" class="app-header"></header>
+
+    <!-- Main Content -->
+    <main class="main-content calc-page-content">
+
+      <!-- Introdução -->
+      <section class="intro-card">
+        <h1>Calculadora de Investimentos</h1>
+        <p class="intro-lead">
+          Planeje seus investimentos considerando o <strong>efeito real da inflação</strong>.
         </p>
         <ul class="intro-list">
           <li>
             <span class="intro-icon">📈</span>
-            <span><strong>Aportes crescentes:</strong> Seu aporte mensal começa em um valor e cresce junto com a inflação, mantendo seu poder de compra</span>
+            <span><strong>Aportes crescentes:</strong> Valor inicial reajustado mensalmente pela inflação</span>
           </li>
           <li>
             <span class="intro-icon">🎯</span>
-            <span><strong>Objetivo real:</strong> Quando você define um objetivo de R$ 300 mil, calculamos quanto isso será em valores futuros</span>
+            <span><strong>Objetivo real:</strong> R$ 300 mil hoje = valor maior no futuro</span>
           </li>
           <li>
             <span class="intro-icon">💡</span>
-            <span><strong>Valores equivalentes:</strong> Mostramos sempre quanto o valor final representa em poder de compra de hoje</span>
+            <span><strong>Valores equivalentes:</strong> Sempre mostramos o poder de compra atual</span>
           </li>
         </ul>
-      </div>
-    </section>
+      </section>
 
-    <!-- Calculadora -->
-    <section class="calc-section">
-      <div id="calculadora-container"></div>
-    </section>
+      <!-- Calculadora -->
+      <section class="calc-section">
+        <div id="calculadora-container"></div>
+      </section>
+
+    </main>
 
     <!-- Footer -->
     <div id="footer-container"></div>
-  </main>
+
+  </div>
 
   <script src="../js/footer.js"></script>
   <script src="../js/i18n.js"></script>
+  <script src="../js/article-header.js"></script>
   <script src="../js/calculadora.js"></script>
 </body>
 </html>

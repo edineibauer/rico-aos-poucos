@@ -17,9 +17,11 @@ const Calculadora = {
   translations: {
     'pt-BR': {
       mode1Title: 'Quanto preciso investir por mês?',
-      mode1Desc: 'Descubra o aporte mensal necessário para atingir seu objetivo',
+      mode1Desc: 'Descubra o aporte mensal necessário',
       mode2Title: 'Quanto vou acumular?',
-      mode2Desc: 'Descubra quanto terá no futuro com seus aportes mensais',
+      mode2Desc: 'Descubra quanto terá no futuro',
+      mode3Title: 'Quanto tempo irá levar?',
+      mode3Desc: 'Descubra o prazo para atingir seu objetivo',
       goalLabel: 'Objetivo (valor em reais de hoje)',
       goalPlaceholder: 'Ex: 300000',
       timeLabel: 'Tempo de investimento',
@@ -33,25 +35,30 @@ const Calculadora = {
       calculate: 'Calcular',
       resultTitle: 'Resultado',
       monthlyNeeded: 'Aporte mensal inicial necessário',
-      monthlyNeededNote: 'Esse valor será reajustado mensalmente pela inflação',
+      monthlyNeededNote: 'Reajustado mensalmente pela inflação',
       finalAmount: 'Montante final (nominal)',
       realValue: 'Valor equivalente hoje',
       realValueNote: 'Poder de compra em valores de hoje',
       totalInvested: 'Total investido',
       totalReturn: 'Rendimento total',
-      inflationNote: 'Os aportes começam em {valor} e são reajustados pela inflação de {inflacao}% ao ano. No último mês, seu aporte será de aproximadamente {valorFinal}.',
-      goalNote: 'Seu objetivo de {objetivo} em valores de hoje equivale a {objetivoAjustado} em {anos} anos, considerando a inflação.',
+      timeNeeded: 'Tempo necessário',
+      timeNeededNote: 'Para atingir seu objetivo com ajuste inflacionário',
+      inflationNote: 'Aportes começam em {valor} e são reajustados pela inflação de {inflacao}% ao ano. No último mês, será aproximadamente {valorFinal}.',
+      goalNote: 'Seu objetivo de {objetivo} em valores de hoje equivale a {objetivoAjustado} em {anos} anos.',
       projectionTitle: 'Projeção ano a ano',
       yearCol: 'Ano',
       balanceCol: 'Saldo',
       monthlyCol: 'Aporte/mês',
-      realCol: 'Valor real'
+      realCol: 'Valor real',
+      and: 'e'
     },
     'en': {
-      mode1Title: 'How much do I need to invest per month?',
-      mode1Desc: 'Discover the monthly contribution needed to reach your goal',
+      mode1Title: 'How much to invest monthly?',
+      mode1Desc: 'Find the required monthly contribution',
       mode2Title: 'How much will I accumulate?',
-      mode2Desc: 'Discover how much you will have in the future with your monthly contributions',
+      mode2Desc: 'Find out your future amount',
+      mode3Title: 'How long will it take?',
+      mode3Desc: 'Find the time to reach your goal',
       goalLabel: 'Goal (value in today\'s dollars)',
       goalPlaceholder: 'Ex: 300000',
       timeLabel: 'Investment time',
@@ -65,25 +72,30 @@ const Calculadora = {
       calculate: 'Calculate',
       resultTitle: 'Result',
       monthlyNeeded: 'Required initial monthly contribution',
-      monthlyNeededNote: 'This value will be adjusted monthly for inflation',
+      monthlyNeededNote: 'Adjusted monthly for inflation',
       finalAmount: 'Final amount (nominal)',
       realValue: 'Equivalent value today',
       realValueNote: 'Purchasing power in today\'s values',
       totalInvested: 'Total invested',
       totalReturn: 'Total return',
-      inflationNote: 'Contributions start at {valor} and are adjusted for inflation of {inflacao}% per year. In the last month, your contribution will be approximately {valorFinal}.',
-      goalNote: 'Your goal of {objetivo} in today\'s values equals {objetivoAjustado} in {anos} years, considering inflation.',
+      timeNeeded: 'Time needed',
+      timeNeededNote: 'To reach your goal with inflation adjustment',
+      inflationNote: 'Contributions start at {valor} and are adjusted for inflation of {inflacao}% per year. In the last month, it will be approximately {valorFinal}.',
+      goalNote: 'Your goal of {objetivo} in today\'s values equals {objetivoAjustado} in {anos} years.',
       projectionTitle: 'Year by year projection',
       yearCol: 'Year',
       balanceCol: 'Balance',
       monthlyCol: 'Monthly',
-      realCol: 'Real value'
+      realCol: 'Real value',
+      and: 'and'
     },
     'es': {
-      mode1Title: '¿Cuánto necesito invertir por mes?',
-      mode1Desc: 'Descubre el aporte mensual necesario para alcanzar tu objetivo',
+      mode1Title: '¿Cuánto invertir mensualmente?',
+      mode1Desc: 'Descubre el aporte mensual necesario',
       mode2Title: '¿Cuánto voy a acumular?',
-      mode2Desc: 'Descubre cuánto tendrás en el futuro con tus aportes mensuales',
+      mode2Desc: 'Descubre cuánto tendrás en el futuro',
+      mode3Title: '¿Cuánto tiempo llevará?',
+      mode3Desc: 'Descubre el plazo para alcanzar tu objetivo',
       goalLabel: 'Objetivo (valor en pesos de hoy)',
       goalPlaceholder: 'Ej: 300000',
       timeLabel: 'Tiempo de inversión',
@@ -97,24 +109,27 @@ const Calculadora = {
       calculate: 'Calcular',
       resultTitle: 'Resultado',
       monthlyNeeded: 'Aporte mensual inicial necesario',
-      monthlyNeededNote: 'Este valor será reajustado mensualmente por la inflación',
+      monthlyNeededNote: 'Ajustado mensualmente por la inflación',
       finalAmount: 'Monto final (nominal)',
       realValue: 'Valor equivalente hoy',
       realValueNote: 'Poder adquisitivo en valores de hoy',
       totalInvested: 'Total invertido',
       totalReturn: 'Rendimiento total',
-      inflationNote: 'Los aportes comienzan en {valor} y se ajustan por la inflación de {inflacao}% anual. En el último mes, tu aporte será aproximadamente {valorFinal}.',
-      goalNote: 'Tu objetivo de {objetivo} en valores de hoy equivale a {objetivoAjustado} en {anos} años, considerando la inflación.',
+      timeNeeded: 'Tiempo necesario',
+      timeNeededNote: 'Para alcanzar tu objetivo con ajuste inflacionario',
+      inflationNote: 'Aportes comienzan en {valor} y se ajustan por inflación de {inflacao}% anual. En el último mes, será aproximadamente {valorFinal}.',
+      goalNote: 'Tu objetivo de {objetivo} en valores de hoy equivale a {objetivoAjustado} en {anos} años.',
       projectionTitle: 'Proyección año a año',
       yearCol: 'Año',
       balanceCol: 'Saldo',
       monthlyCol: 'Aporte/mes',
-      realCol: 'Valor real'
+      realCol: 'Valor real',
+      and: 'y'
     }
   },
 
   currentLang: 'pt-BR',
-  currentMode: 1, // 1 = calcular aporte, 2 = calcular montante
+  currentMode: 1, // 1 = aporte, 2 = montante, 3 = tempo
 
   init() {
     this.detectLanguage();
@@ -180,6 +195,13 @@ const Calculadora = {
             <small>${this.t('mode2Desc')}</small>
           </span>
         </button>
+        <button class="calc-mode-btn" data-mode="3">
+          <span class="mode-icon">⏱️</span>
+          <span class="mode-text">
+            <strong>${this.t('mode3Title')}</strong>
+            <small>${this.t('mode3Desc')}</small>
+          </span>
+        </button>
       </div>
 
       <div class="calc-form" id="calcForm">
@@ -207,33 +229,33 @@ const Calculadora = {
 
         <div class="calc-field">
           <label for="tempo">${this.t('timeLabel')}</label>
-          <div class="input-row">
+          <div class="input-group">
+            <input type="number" id="tempoAnos" value="${d.tempoAnos}" min="1" max="50">
+            <span class="input-suffix">${this.t('years')}</span>
+          </div>
+        </div>
+
+        <div class="calc-fields-row">
+          <div class="calc-field">
+            <label for="rentabilidade">${this.t('returnLabel')}</label>
             <div class="input-group">
-              <input type="number" id="tempoAnos" value="${d.tempoAnos}" min="1" max="50">
-              <span class="input-suffix">${this.t('years')}</span>
+              <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
+              <span class="input-suffix">%</span>
             </div>
           </div>
-        </div>
 
-        <div class="calc-field">
-          <label for="rentabilidade">${this.t('returnLabel')}</label>
-          <div class="input-group">
-            <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
-            <span class="input-suffix">% / ${this.t('months').slice(0, 3)}</span>
-          </div>
-        </div>
-
-        <div class="calc-field">
-          <label for="inflacao">${this.t('inflationLabel')}</label>
-          <div class="input-group">
-            <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
-            <span class="input-suffix">% / ${this.t('years').slice(0, 3)}</span>
+          <div class="calc-field">
+            <label for="inflacao">${this.t('inflationLabel')}</label>
+            <div class="input-group">
+              <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
+              <span class="input-suffix">%</span>
+            </div>
           </div>
         </div>
 
         <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
       `;
-    } else {
+    } else if (this.currentMode === 2) {
       // Modo: Calcular montante final
       return `
         <div class="calc-field">
@@ -246,27 +268,66 @@ const Calculadora = {
 
         <div class="calc-field">
           <label for="tempo">${this.t('timeLabel')}</label>
-          <div class="input-row">
+          <div class="input-group">
+            <input type="number" id="tempoAnos" value="${d.tempoAnos}" min="1" max="50">
+            <span class="input-suffix">${this.t('years')}</span>
+          </div>
+        </div>
+
+        <div class="calc-fields-row">
+          <div class="calc-field">
+            <label for="rentabilidade">${this.t('returnLabel')}</label>
             <div class="input-group">
-              <input type="number" id="tempoAnos" value="${d.tempoAnos}" min="1" max="50">
-              <span class="input-suffix">${this.t('years')}</span>
+              <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label for="inflacao">${this.t('inflationLabel')}</label>
+            <div class="input-group">
+              <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
+              <span class="input-suffix">%</span>
             </div>
           </div>
         </div>
 
+        <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
+      `;
+    } else {
+      // Modo 3: Calcular tempo necessário
+      return `
         <div class="calc-field">
-          <label for="rentabilidade">${this.t('returnLabel')}</label>
+          <label for="objetivo">${this.t('goalLabel')}</label>
           <div class="input-group">
-            <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
-            <span class="input-suffix">% / ${this.t('months').slice(0, 3)}</span>
+            <span class="input-prefix">R$</span>
+            <input type="number" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}">
           </div>
         </div>
 
         <div class="calc-field">
-          <label for="inflacao">${this.t('inflationLabel')}</label>
+          <label for="aporte">${this.t('monthlyLabel')}</label>
           <div class="input-group">
-            <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
-            <span class="input-suffix">% / ${this.t('years').slice(0, 3)}</span>
+            <span class="input-prefix">R$</span>
+            <input type="number" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}">
+          </div>
+        </div>
+
+        <div class="calc-fields-row">
+          <div class="calc-field">
+            <label for="rentabilidade">${this.t('returnLabel')}</label>
+            <div class="input-group">
+              <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label for="inflacao">${this.t('inflationLabel')}</label>
+            <div class="input-group">
+              <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
+              <span class="input-suffix">%</span>
+            </div>
           </div>
         </div>
 
@@ -320,22 +381,22 @@ const Calculadora = {
   },
 
   calculate() {
-    const tempoAnos = parseFloat(document.getElementById('tempoAnos')?.value) || 10;
     const rentabilidadeMensal = parseFloat(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
     const inflacaoAnual = parseFloat(document.getElementById('inflacao')?.value) / 100 || 0.07;
 
     // Inflação mensal: (1 + anual)^(1/12) - 1
     const inflacaoMensal = Math.pow(1 + inflacaoAnual, 1/12) - 1;
-    const meses = tempoAnos * 12;
 
     if (this.currentMode === 1) {
       // Calcular aporte necessário para atingir objetivo
+      const tempoAnos = parseFloat(document.getElementById('tempoAnos')?.value) || 10;
       const objetivoHoje = parseFloat(document.getElementById('objetivo')?.value) || 300000;
+      const meses = tempoAnos * 12;
 
       // Objetivo ajustado pela inflação (valor nominal futuro)
       const objetivoAjustado = objetivoHoje * Math.pow(1 + inflacaoAnual, tempoAnos);
 
-      // Calcular aporte inicial necessário usando busca binária
+      // Calcular aporte inicial necessário
       const aporteInicial = this.calcularAporteNecessario(objetivoAjustado, meses, rentabilidadeMensal, inflacaoMensal);
 
       this.showResult({
@@ -350,9 +411,11 @@ const Calculadora = {
         inflacaoMensal
       });
 
-    } else {
+    } else if (this.currentMode === 2) {
       // Calcular montante final dado um aporte
+      const tempoAnos = parseFloat(document.getElementById('tempoAnos')?.value) || 10;
       const aporteInicial = parseFloat(document.getElementById('aporte')?.value) || 1000;
+      const meses = tempoAnos * 12;
 
       const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal);
 
@@ -373,6 +436,23 @@ const Calculadora = {
         inflacaoMensal,
         aportesPorAno: resultado.aportesPorAno,
         saldosPorAno: resultado.saldosPorAno
+      });
+
+    } else {
+      // Modo 3: Calcular tempo necessário
+      const objetivoHoje = parseFloat(document.getElementById('objetivo')?.value) || 300000;
+      const aporteInicial = parseFloat(document.getElementById('aporte')?.value) || 1000;
+
+      const resultado = this.calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual);
+
+      this.showResult({
+        mode: 3,
+        ...resultado,
+        objetivoHoje,
+        aporteInicial,
+        rentabilidadeMensal,
+        inflacaoAnual,
+        inflacaoMensal
       });
     }
   },
@@ -399,6 +479,74 @@ const Calculadora = {
     }
 
     return aporteInicial;
+  },
+
+  calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual) {
+    // Simula mês a mês até atingir o objetivo (considerando inflação no objetivo)
+    let saldo = 0;
+    let totalInvestido = 0;
+    let aporteAtual = aporteInicial;
+    let mes = 0;
+    const maxMeses = 600; // 50 anos limite
+    const aportesPorAno = [];
+    const saldosPorAno = [];
+
+    while (mes < maxMeses) {
+      mes++;
+
+      // Aplicar rendimento no saldo existente
+      saldo = saldo * (1 + rentabilidadeMensal);
+
+      // Adicionar aporte do mês
+      saldo += aporteAtual;
+      totalInvestido += aporteAtual;
+
+      // Calcular objetivo ajustado para este mês
+      const anosDecorridos = mes / 12;
+      const objetivoAjustado = objetivoHoje * Math.pow(1 + inflacaoAnual, anosDecorridos);
+
+      // Guardar valores ao final de cada ano
+      if (mes % 12 === 0) {
+        const ano = mes / 12;
+        aportesPorAno.push({ ano, aporte: aporteAtual });
+        saldosPorAno.push({ ano, saldo });
+      }
+
+      // Verificar se atingiu o objetivo
+      if (saldo >= objetivoAjustado) {
+        const anos = Math.floor(mes / 12);
+        const mesesRestantes = mes % 12;
+
+        return {
+          meses: mes,
+          anos,
+          mesesRestantes,
+          montanteFinal: saldo,
+          objetivoAjustado,
+          totalInvestido,
+          aporteFinal: aporteAtual,
+          aportesPorAno,
+          saldosPorAno
+        };
+      }
+
+      // Reajustar aporte pela inflação para o próximo mês
+      aporteAtual = aporteAtual * (1 + inflacaoMensal);
+    }
+
+    // Não atingiu em 50 anos
+    return {
+      meses: maxMeses,
+      anos: 50,
+      mesesRestantes: 0,
+      montanteFinal: saldo,
+      objetivoAjustado: objetivoHoje * Math.pow(1 + inflacaoAnual, 50),
+      totalInvestido,
+      aporteFinal: aporteAtual,
+      aportesPorAno,
+      saldosPorAno,
+      naoAtingiu: true
+    };
   },
 
   simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal) {
@@ -483,7 +631,7 @@ const Calculadora = {
 
         ${this.renderProjection(simulacao.saldosPorAno, simulacao.aportesPorAno, data.inflacaoAnual)}
       `;
-    } else {
+    } else if (data.mode === 2) {
       // Resultado do modo 2: Calcular montante final
       html += `
         <div class="result-main">
@@ -518,6 +666,59 @@ const Calculadora = {
 
         ${this.renderProjection(data.saldosPorAno, data.aportesPorAno, data.inflacaoAnual)}
       `;
+    } else {
+      // Resultado do modo 3: Calcular tempo necessário
+      const tempoFormatado = data.mesesRestantes > 0
+        ? `${data.anos} ${this.t('years')} ${this.t('and')} ${data.mesesRestantes} ${this.t('months')}`
+        : `${data.anos} ${this.t('years')}`;
+
+      if (data.naoAtingiu) {
+        html += `
+          <div class="result-main result-warning">
+            <div class="result-value">+50 ${this.t('years')}</div>
+            <div class="result-label">${this.t('timeNeeded')}</div>
+            <div class="result-note">Com os parâmetros informados, o objetivo não será atingido em 50 anos. Considere aumentar o aporte ou a rentabilidade.</div>
+          </div>
+        `;
+      } else {
+        html += `
+          <div class="result-main">
+            <div class="result-value">${tempoFormatado}</div>
+            <div class="result-label">${this.t('timeNeeded')}</div>
+            <div class="result-note">${this.t('timeNeededNote')}</div>
+          </div>
+
+          <div class="result-info">
+            <p>${this.t('inflationNote')
+              .replace('{valor}', this.formatCurrency(data.aporteInicial))
+              .replace('{inflacao}', (data.inflacaoAnual * 100).toFixed(1))
+              .replace('{valorFinal}', this.formatCurrency(data.aporteFinal))
+            }</p>
+            <p>${this.t('goalNote')
+              .replace('{objetivo}', this.formatCurrency(data.objetivoHoje))
+              .replace('{objetivoAjustado}', this.formatCurrency(data.objetivoAjustado))
+              .replace('{anos}', data.anos)
+            }</p>
+          </div>
+
+          <div class="result-details">
+            <div class="result-detail">
+              <span class="detail-label">${this.t('finalAmount')}</span>
+              <span class="detail-value">${this.formatCurrency(data.montanteFinal)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">${this.t('totalInvested')}</span>
+              <span class="detail-value">${this.formatCurrency(data.totalInvestido)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">${this.t('totalReturn')}</span>
+              <span class="detail-value highlight">${this.formatCurrency(data.montanteFinal - data.totalInvestido)}</span>
+            </div>
+          </div>
+
+          ${this.renderProjection(data.saldosPorAno, data.aportesPorAno, data.inflacaoAnual)}
+        `;
+      }
     }
 
     resultDiv.innerHTML = html;

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="description" content="Investment calculator with inflation adjustment. Find out how much to invest per month or how much you will accumulate considering inflation and compound interest.">
+  <meta name="keywords" content="investment calculator, compound interest, inflation, monthly contribution, financial planning">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/en/calculadora/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/calculadora/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/calculadora/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/calculadora/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/calculadora/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Investment Calculator | Rico aos Poucos">
+  <meta property="og:description" content="Calculate how much to invest monthly or how much you will accumulate, considering inflation and compound interest.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/en/calculadora/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Investment Calculator | Rico aos Poucos">
+  <meta name="twitter:description" content="Calculate how much to invest monthly or how much you will accumulate, considering inflation and compound interest.">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <title>Investment Calculator | Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Investment Calculator",
+    "description": "Investment calculator with inflation adjustment. Find out how much to invest per month or how much you will accumulate.",
+    "url": "https://ricoaospoucos.com.br/en/calculadora/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "All",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    }
+  }
+  </script>
+</head>
+<body class="page-calculadora">
+  <main class="app-container">
+    <!-- Header -->
+    <header class="page-header">
+      <a href="../" class="back-btn" aria-label="Back">
+        <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M19 12H5M12 19l-7-7 7-7"/>
+        </svg>
+      </a>
+      <div class="header-title">
+        <h1>Investment Calculator</h1>
+        <span class="header-subtitle">With inflation adjustment</span>
+      </div>
+      <div id="langSelector"></div>
+    </header>
+
+    <!-- Introduction -->
+    <section class="intro-section">
+      <div class="intro-card">
+        <h2>Plan your investments realistically</h2>
+        <p>
+          This calculator considers the <strong>effect of inflation</strong> on your investments.
+          This means:
+        </p>
+        <ul class="intro-list">
+          <li>
+            <span class="intro-icon">📈</span>
+            <span><strong>Growing contributions:</strong> Your monthly contribution starts at one value and grows with inflation, maintaining your purchasing power</span>
+          </li>
+          <li>
+            <span class="intro-icon">🎯</span>
+            <span><strong>Real goal:</strong> When you set a goal of $300,000, we calculate what that will be in future values</span>
+          </li>
+          <li>
+            <span class="intro-icon">💡</span>
+            <span><strong>Equivalent values:</strong> We always show how much the final value represents in today's purchasing power</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Calculator -->
+    <section class="calc-section">
+      <div id="calculadora-container"></div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+  </main>
+
+  <script src="../../js/footer.js"></script>
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/calculadora.js"></script>
+</body>
+</html>

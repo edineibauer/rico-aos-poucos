@@ -28,7 +28,7 @@ const I18n = {
    *
    * The base path is only present when hosting on GitHub Pages with a repo name
    * e.g., https://username.github.io/repo-name/ has base path /repo-name
-   * But https://ricoaospoucos.com/ has no base path (root)
+   * But https://ricoaospoucos.com.br/ has no base path (root)
    */
   detectBasePath() {
     const hostname = window.location.hostname;
@@ -48,7 +48,7 @@ const I18n = {
       }
     }
 
-    // For custom domains (like ricoaospoucos.com) or localhost, no base path needed
+    // For custom domains (like ricoaospoucos.com.br) or localhost, no base path needed
     return '';
   },
 

@@ -38,13 +38,13 @@ App/Site de investimentos com análises de mercado e expectativas por setor.
 ### Meta Tags Obrigatórias
 ```html
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://ricoaospoucos.com/[path]">
+<link rel="canonical" href="https://ricoaospoucos.com.br/[path]">
 
 <!-- Hreflang -->
-<link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com/[path]">
-<link rel="alternate" hreflang="en" href="https://ricoaospoucos.com/en/[path]">
-<link rel="alternate" hreflang="es" href="https://ricoaospoucos.com/es/[path]">
-<link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com/[path]">
+<link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/[path]">
+<link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/[path]">
+<link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/[path]">
+<link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/[path]">
 
 <!-- Open Graph -->
 <meta property="og:title" content="[Título]">

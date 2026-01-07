@@ -4520,3 +4520,83 @@ body.home-page {
     padding: 16px 24px;
   }
 }
+
+/* =================================
+   Comments Section (Disqus)
+   ================================= */
+
+.comments-section {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--border-color);
+}
+
+.comments-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comments-title::before {
+  content: '💬';
+}
+
+.comments-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 40px 20px;
+  color: var(--text-tertiary);
+  font-size: 0.9rem;
+}
+
+.comments-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-color);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: comments-spin 0.8s linear infinite;
+}
+
+@keyframes comments-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Comment count link styling */
+.comment-count {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.comment-count::before {
+  content: '💬';
+  font-size: 0.7rem;
+}
+
+.comment-count:hover {
+  color: var(--primary-light);
+}
+
+/* Disqus thread customization */
+#disqus_thread {
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Dark theme adjustments for Disqus */
+#disqus_thread iframe {
+  color-scheme: dark;
+}

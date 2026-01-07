@@ -4525,6 +4525,27 @@ body.home-page {
    Comments Section (Disqus)
    ================================= */
 
+/* Container outside main needs alignment */
+#comments-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+}
+
+@media (min-width: 768px) {
+  #comments-container {
+    max-width: 900px;
+    padding: 0 32px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  #comments-container {
+    max-width: 1000px;
+    padding: 0 40px 40px;
+  }
+}
+
 .comments-section {
   margin-top: 32px;
   padding-top: 24px;
@@ -4591,12 +4612,34 @@ body.home-page {
 
 /* Disqus thread customization */
 #disqus_thread {
-  background: var(--bg-tertiary);
-  border-radius: 12px;
-  padding: 20px;
+  margin-top: 16px;
 }
 
-/* Dark theme adjustments for Disqus */
-#disqus_thread iframe {
-  color-scheme: dark;
+/* Comments error/info message */
+.comments-info {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+}
+
+.comments-info p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin: 0 0 12px 0;
+  line-height: 1.5;
+}
+
+.comments-info p:last-child {
+  margin-bottom: 0;
+}
+
+.comments-info a {
+  color: var(--primary-light);
+  text-decoration: none;
+}
+
+.comments-info a:hover {
+  text-decoration: underline;
 }

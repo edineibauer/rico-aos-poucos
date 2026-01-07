@@ -8,15 +8,19 @@
  * 3. Update DISQUS_SHORTNAME below with your shortname
  * 4. Enable guest commenting in Disqus admin panel:
  *    Settings > Community > Guest Commenting = ON
+ * 5. Set dark theme in Disqus admin:
+ *    Settings > General > Color Scheme = Dark
  */
 
 const Comments = {
   // CHANGE THIS to your Disqus shortname after registering at disqus.com
   DISQUS_SHORTNAME: 'ricoaospoucos',
 
+  // Whether Disqus has been configured (set to true after setup)
+  DISQUS_CONFIGURED: false,
+
   // Get unique identifier for current page
   getPageIdentifier() {
-    // Use the filename as identifier for consistency across languages
     const path = window.location.pathname;
     const filename = path.split('/').pop().replace('.html', '');
     return filename;
@@ -24,7 +28,6 @@ const Comments = {
 
   // Get canonical URL for the article
   getPageUrl() {
-    // Use canonical link if available, otherwise current URL
     const canonical = document.querySelector('link[rel="canonical"]');
     if (canonical) {
       return canonical.href;
@@ -34,7 +37,7 @@ const Comments = {
 
   // Get page title
   getPageTitle() {
-    const titleEl = document.querySelector('h1');
+    const titleEl = document.querySelector('article h1') || document.querySelector('h1');
     return titleEl ? titleEl.textContent : document.title;
   },
 
@@ -47,14 +50,20 @@ const Comments = {
         title: 'Comments',
         loading: 'Loading comments...',
         enable: 'Please enable JavaScript to view comments.',
-        link: 'comments powered by Disqus'
+        link: 'comments powered by Disqus',
+        setupTitle: 'Comments coming soon',
+        setupMsg: 'The comments section is being configured.',
+        setupNote: 'Soon you will be able to share your opinion on this article.'
       };
     } else if (path.includes('/es/')) {
       return {
         title: 'Comentarios',
         loading: 'Cargando comentarios...',
         enable: 'Por favor habilite JavaScript para ver los comentarios.',
-        link: 'comentarios de Disqus'
+        link: 'comentarios de Disqus',
+        setupTitle: 'Comentarios próximamente',
+        setupMsg: 'La sección de comentarios está siendo configurada.',
+        setupNote: 'Pronto podrás compartir tu opinión sobre este artículo.'
       };
     }
 
@@ -62,8 +71,27 @@ const Comments = {
       title: 'Comentários',
       loading: 'Carregando comentários...',
       enable: 'Por favor habilite o JavaScript para ver os comentários.',
-      link: 'comentários por Disqus'
+      link: 'comentários por Disqus',
+      setupTitle: 'Comentários em breve',
+      setupMsg: 'A seção de comentários está sendo configurada.',
+      setupNote: 'Em breve você poderá compartilhar sua opinião sobre este artigo.'
     };
+  },
+
+  // Render setup pending message
+  renderSetupPending() {
+    const t = this.getTranslations();
+
+    return `
+      <section class="comments-section">
+        <h3 class="comments-title">${t.title}</h3>
+        <div class="comments-info">
+          <p><strong>${t.setupTitle}</strong></p>
+          <p>${t.setupMsg}</p>
+          <p>${t.setupNote}</p>
+        </div>
+      </section>
+    `;
   },
 
   // Render comments section HTML
@@ -102,6 +130,21 @@ const Comments = {
     const s = d.createElement('script');
     s.src = `https://${this.DISQUS_SHORTNAME}.disqus.com/embed.js`;
     s.setAttribute('data-timestamp', +new Date());
+
+    // Handle load error
+    s.onerror = () => {
+      const thread = document.getElementById('disqus_thread');
+      if (thread) {
+        const t = this.getTranslations();
+        thread.innerHTML = `
+          <div class="comments-info">
+            <p><strong>${t.setupTitle}</strong></p>
+            <p>${t.setupMsg}</p>
+          </div>
+        `;
+      }
+    };
+
     (d.head || d.body).appendChild(s);
   },
 
@@ -109,6 +152,12 @@ const Comments = {
   init() {
     const container = document.getElementById('comments-container');
     if (!container) return;
+
+    // If Disqus is not configured, show pending message
+    if (!this.DISQUS_CONFIGURED) {
+      container.innerHTML = this.renderSetupPending();
+      return;
+    }
 
     // Render the comments section
     container.innerHTML = this.render();
@@ -118,9 +167,12 @@ const Comments = {
   },
 
   // Load comment counts for multiple articles
-  // Usage: Comments.loadCounts(['article-id-1', 'article-id-2'])
   loadCounts(callback) {
-    // Load Disqus count script
+    if (!this.DISQUS_CONFIGURED) {
+      if (callback) callback();
+      return;
+    }
+
     const s = document.createElement('script');
     s.id = 'dsq-count-scr';
     s.src = `https://${this.DISQUS_SHORTNAME}.disqus.com/count.js`;
@@ -134,8 +186,10 @@ const Comments = {
   },
 
   // Get comment count for a specific article
-  // Returns a span element that Disqus will populate
   getCountElement(articleId, href) {
+    if (!this.DISQUS_CONFIGURED) {
+      return '';
+    }
     return `<a href="${href}#disqus_thread" data-disqus-identifier="${articleId}" class="comment-count"></a>`;
   }
 };

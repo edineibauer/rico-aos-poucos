@@ -81,7 +81,14 @@ const Comparador = {
       btn.addEventListener('click', (e) => {
         document.querySelectorAll('.preset-btn').forEach(b => b.classList.remove('active'));
         e.currentTarget.classList.add('active');
+        const preset = e.currentTarget.dataset.preset;
+        this.aplicarPresetDiversif(preset);
       });
+    });
+
+    // Update total allocation when inputs change
+    document.querySelectorAll('.aloc-percent-novo').forEach(input => {
+      input.addEventListener('input', () => this.atualizarTotalAlocacaoNovo());
     });
 
     // Chart toggle
@@ -2007,18 +2014,94 @@ const Comparador = {
   // ==========================================
   // NOVA ABA DIVERSIFICAÇÃO VS FOCO ÚNICO
   // ==========================================
+
+  // Aplicar preset nos inputs
+  aplicarPresetDiversif(preset) {
+    const presets = {
+      '5050': { ibovespa: 50, cdi: 50, dolar: 0, ouro: 0, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 0, tlt_brl: 0 },
+      '3ativos': { ibovespa: 33, cdi: 33, dolar: 34, ouro: 0, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 0, tlt_brl: 0 },
+      '4ativos': { ibovespa: 25, cdi: 25, dolar: 25, ouro: 25, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 0, tlt_brl: 0 },
+      'global': { ibovespa: 25, cdi: 25, dolar: 0, ouro: 0, fii_ifix: 0, tesouro_ipca: 0, sp500_brl: 25, tlt_brl: 25 }
+    };
+
+    const alocacao = presets[preset] || presets['5050'];
+
+    document.querySelectorAll('#alocacaoGridNovo .alocacao-item-simple').forEach(item => {
+      const ativo = item.dataset.ativo;
+      const input = item.querySelector('.aloc-percent-novo');
+      if (input && alocacao[ativo] !== undefined) {
+        input.value = alocacao[ativo];
+      }
+    });
+
+    this.atualizarTotalAlocacaoNovo();
+  },
+
+  // Atualizar total de alocação
+  atualizarTotalAlocacaoNovo() {
+    let total = 0;
+    document.querySelectorAll('.aloc-percent-novo').forEach(input => {
+      total += parseFloat(input.value) || 0;
+    });
+
+    const display = document.getElementById('alocacaoTotalNovo');
+    if (display) {
+      display.textContent = total + '%';
+      display.style.color = total === 100 ? '#22c55e' : (total > 100 ? '#ef4444' : '#eab308');
+    }
+  },
+
+  // Ler alocação dos inputs
+  lerAlocacaoNovo() {
+    const alocacao = {};
+    const ativos = [];
+
+    document.querySelectorAll('#alocacaoGridNovo .alocacao-item-simple').forEach(item => {
+      const ativo = item.dataset.ativo;
+      const input = item.querySelector('.aloc-percent-novo');
+      const valor = parseFloat(input.value) || 0;
+
+      if (valor > 0) {
+        alocacao[ativo] = valor;
+        ativos.push(ativo);
+      }
+    });
+
+    return { alocacao, ativos };
+  },
+
+  // Gerar nome da estratégia baseado na alocação
+  gerarNomeEstrategia(alocacao) {
+    const partes = [];
+    Object.entries(alocacao).forEach(([ativo, peso]) => {
+      const nomeAtivo = this.assetNames[ativo] || ativo;
+      const nomeSimples = nomeAtivo.split(' ')[0].replace('(', '').replace(')', '');
+      partes.push(`${peso}% ${nomeSimples}`);
+    });
+    return partes.join(' + ');
+  },
+
   simularDiversificacaoNovo() {
     const anoInicio = parseInt(document.getElementById('anoInicioDiversifNovo').value);
     const anoFim = parseInt(document.getElementById('anoFimDiversifNovo').value);
     const valorInicialStr = document.getElementById('valorDiversifNovo').value;
-    const valorInicial = parseFloat(valorInicialStr.replace(/\./g, '').replace(',', '.')) || 100000;
+    const valorInicial = parseFloat(valorInicialStr.toString().replace(/\./g, '').replace(',', '.')) || 100000;
+    const inflacaoCustom = parseFloat(document.getElementById('inflacaoDiversifNovo').value) || 0;
 
-    // Pegar preset selecionado
-    const presetAtivo = document.querySelector('.preset-btn.active');
-    const preset = presetAtivo ? presetAtivo.dataset.preset : '5050';
+    // Ler alocação dos inputs
+    const { alocacao, ativos } = this.lerAlocacaoNovo();
 
-    // Definir estratégias baseado no preset
-    const estrategias = this.getEstrategiasDiversif(preset);
+    // Validar alocação
+    const totalAlocacao = Object.values(alocacao).reduce((a, b) => a + b, 0);
+    if (totalAlocacao === 0) {
+      alert('Defina pelo menos uma alocação para comparar.');
+      return;
+    }
+
+    if (ativos.length < 2) {
+      alert('Selecione pelo menos 2 ativos para comparar diversificação.');
+      return;
+    }
 
     // Filtrar dados pelo período
     const dadosFiltrados = this.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
@@ -2031,23 +2114,23 @@ const Comparador = {
     // Calcular retorno de cada estratégia
     const resultados = [];
 
-    // Primeiro: estratégia diversificada (a principal)
-    const estrategiaDiversificada = estrategias.diversificada;
-    const retornoDiversificada = this.calcularRetornoEstrategia(estrategiaDiversificada, dadosFiltrados, valorInicial);
+    // Estratégia diversificada (a principal)
+    const nomeEstrategia = this.gerarNomeEstrategia(alocacao);
+    const retornoDiversificada = this.calcularRetornoEstrategia({ nome: nomeEstrategia, alocacao }, dadosFiltrados, valorInicial, inflacaoCustom);
     resultados.push({
-      nome: estrategiaDiversificada.nome,
-      alocacao: estrategiaDiversificada.alocacao,
+      nome: nomeEstrategia,
+      alocacao,
       isDiversificada: true,
       ...retornoDiversificada
     });
 
-    // Depois: cada ativo individual
-    estrategias.individuais.forEach(ativo => {
-      const alocacao = { [ativo]: 100 };
-      const retorno = this.calcularRetornoEstrategia({ nome: this.assetNames[ativo], alocacao }, dadosFiltrados, valorInicial);
+    // Cada ativo individual
+    ativos.forEach(ativo => {
+      const alocacaoIndividual = { [ativo]: 100 };
+      const retorno = this.calcularRetornoEstrategia({ nome: this.assetNames[ativo], alocacao: alocacaoIndividual }, dadosFiltrados, valorInicial, inflacaoCustom);
       resultados.push({
         nome: this.assetNames[ativo],
-        alocacao,
+        alocacao: alocacaoIndividual,
         isDiversificada: false,
         ...retorno
       });
@@ -2070,49 +2153,13 @@ const Comparador = {
     this.renderChartDiversifNovo(resultados, dadosFiltrados, valorInicial);
 
     // Renderizar conclusão
-    this.renderConclusaoDiversifNovo(resultados, posicaoDiversificada, totalEstrategias, estrategiaDiversificada.nome);
+    this.renderConclusaoDiversifNovo(resultados, posicaoDiversificada, totalEstrategias, nomeEstrategia);
+
+    // Scroll para resultados
+    document.getElementById('resultadosDiversifNovo').scrollIntoView({ behavior: 'smooth', block: 'start' });
   },
 
-  getEstrategiasDiversif(preset) {
-    switch (preset) {
-      case '5050':
-        return {
-          diversificada: {
-            nome: '50% Ibov + 50% CDI',
-            alocacao: { ibovespa: 50, cdi: 50 }
-          },
-          individuais: ['ibovespa', 'cdi']
-        };
-      case '3ativos':
-        return {
-          diversificada: {
-            nome: '33% Ibov + 33% CDI + 33% Dólar',
-            alocacao: { ibovespa: 33.33, cdi: 33.33, dolar: 33.34 }
-          },
-          individuais: ['ibovespa', 'cdi', 'dolar']
-        };
-      case '4ativos':
-        return {
-          diversificada: {
-            nome: '25% Ibov + 25% CDI + 25% Dólar + 25% Ouro',
-            alocacao: { ibovespa: 25, cdi: 25, dolar: 25, ouro: 25 }
-          },
-          individuais: ['ibovespa', 'cdi', 'dolar', 'ouro']
-        };
-      case 'global':
-        return {
-          diversificada: {
-            nome: '50% Brasil + 50% EUA',
-            alocacao: { ibovespa: 25, cdi: 25, sp500_brl: 25, tlt_brl: 25 }
-          },
-          individuais: ['ibovespa', 'cdi', 'sp500_brl', 'tlt_brl']
-        };
-      default:
-        return this.getEstrategiasDiversif('5050');
-    }
-  },
-
-  calcularRetornoEstrategia(estrategia, dados, valorInicial) {
+  calcularRetornoEstrategia(estrategia, dados, valorInicial, inflacaoCustom = 0) {
     let valorAtual = valorInicial;
     const evolucao = [valorInicial];
     let inflacaoAcumulada = 1;
@@ -2129,7 +2176,9 @@ const Comparador = {
       valorAtual = valorAtual * (1 + retornoAno / 100);
       evolucao.push(valorAtual);
 
-      inflacaoAcumulada *= (1 + (ano.inflacao_ipca || 0) / 100);
+      // Usar inflação customizada ou real
+      const inflacaoAno = inflacaoCustom > 0 ? inflacaoCustom : (ano.inflacao_ipca || 0);
+      inflacaoAcumulada *= (1 + inflacaoAno / 100);
     });
 
     const retornoNominal = ((valorAtual / valorInicial) - 1) * 100;

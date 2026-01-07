@@ -465,14 +465,22 @@
           <div class="config-field">
             <label for="valorDiversifNovo">Valor inicial</label>
             <div class="input-group">
-              <span class="currency-prefix">R$</span>
-              <input type="text" id="valorDiversifNovo" value="100.000" class="currency-input">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorDiversifNovo" value="100000" inputmode="numeric">
             </div>
+          </div>
+          <div class="config-field">
+            <label for="inflacaoDiversifNovo">Inflación promedio (a.a.)</label>
+            <div class="input-group">
+              <input type="number" id="inflacaoDiversifNovo" value="6" min="0" max="30" step="0.5">
+              <span class="input-suffix">%</span>
+            </div>
+            <small class="field-hint">Ponga 0 para usar inflación real (IPCA)</small>
           </div>
         </div>
 
         <div class="diversif-presets">
-          <h4>Elija una estrategia para comparar:</h4>
+          <h4>Estrategias predefinidas (clic para aplicar):</h4>
           <div class="preset-grid">
             <button class="preset-btn active" data-preset="5050">
               <span class="preset-icon">⚖️</span>
@@ -497,6 +505,107 @@
           </div>
         </div>
 
+        <!-- Asignación Personalizada -->
+        <div class="alocacao-section">
+          <div class="alocacao-header">
+            <h4>Personalice su Cartera Diversificada</h4>
+            <div class="alocacao-total">
+              <span>Asignación total:</span>
+              <span id="alocacaoTotalNovo" class="total-value">100%</span>
+            </div>
+          </div>
+
+          <div class="alocacao-grid-simple" id="alocacaoGridNovo">
+            <div class="alocacao-item-simple" data-ativo="ibovespa">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #3b82f6"></span>
+                <span class="ativo-nome">Ibovespa</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="50" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="cdi">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #ec4899"></span>
+                <span class="ativo-nome">Caja / CDI</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="50" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="dolar">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #22c55e"></span>
+                <span class="ativo-nome">Dólar</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="ouro">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #eab308"></span>
+                <span class="ativo-nome">Oro</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="fii_ifix">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #8b5cf6"></span>
+                <span class="ativo-nome">FIIs (IFIX)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="tesouro_ipca">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #06b6d4"></span>
+                <span class="ativo-nome">Tesouro IPCA+</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="sp500_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #ef4444"></span>
+                <span class="ativo-nome">S&P 500 (en R$)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="tlt_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #0ea5e9"></span>
+                <span class="ativo-nome">TLT (Tesoro EE.UU.)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
         <button class="btn-comparar" id="btnDiversifNovo">
           <span>Comparar Estrategias</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -513,7 +622,7 @@
 
         <div class="resultado-card">
           <h3>Evolución Comparativa</h3>
-          <div class="chart-container">
+          <div class="chart-container" style="height: 350px;">
             <canvas id="chartDiversifNovo"></canvas>
           </div>
         </div>
@@ -922,6 +1031,7 @@
 
   </div>
 
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   <script src="../../js/footer.js"></script>
   <script src="../../js/page-header.js"></script>
   <script src="../../js/i18n.js"></script>

@@ -13,7 +13,6 @@ const Comparador = {
     ouro: '#eab308',
     fii_ifix: '#8b5cf6',
     tesouro_ipca: '#06b6d4',
-    poupanca: '#f97316',
     cdi: '#ec4899',
     sp500_brl: '#ef4444',
     imoveis_fipezap: '#14b8a6',
@@ -26,7 +25,6 @@ const Comparador = {
     ouro: 'Ouro',
     fii_ifix: 'FIIs (IFIX)',
     tesouro_ipca: 'Tesouro IPCA+',
-    poupanca: 'Poupança',
     cdi: 'Caixa/CDI',
     sp500_brl: 'S&P 500 (R$)',
     imoveis_fipezap: 'Imóveis',
@@ -44,8 +42,7 @@ const Comparador = {
     tesouro_ipca: 0.15, // IR regressivo simplificado
     cdi: 0.15,
     tlt_brl: 0.15,
-    imoveis_fipezap: 0.15,
-    poupanca: 0 // isenta
+    imoveis_fipezap: 0.15
   },
 
   async init() {
@@ -462,18 +459,9 @@ const Comparador = {
       }
     }
 
-    // Conclusão 4: Poupança
-    if (resultados.poupanca && resultados.poupanca.retornoReal < 0) {
-      conclusoes.push({
-        tipo: 'error',
-        icon: '💸',
-        texto: `A <strong>poupança perdeu poder de compra</strong> no período. Quem deixou dinheiro lá ficou mais pobre em termos reais.`
-      });
-    }
-
-    // Conclusão 5: Renda variável vs fixa
+    // Conclusão 4: Renda variável vs fixa
     const rv = ranking.filter(r => ['ibovespa', 'fii_ifix', 'sp500_brl'].includes(r.ativo));
-    const rf = ranking.filter(r => ['cdi', 'tesouro_ipca', 'poupanca'].includes(r.ativo));
+    const rf = ranking.filter(r => ['cdi', 'tesouro_ipca'].includes(r.ativo));
     if (rv.length > 0 && rf.length > 0) {
       const mediaRV = rv.reduce((acc, r) => acc + r.retornoReal, 0) / rv.length;
       const mediaRF = rf.reduce((acc, r) => acc + r.retornoReal, 0) / rf.length;
@@ -1462,7 +1450,7 @@ const Comparador = {
   },
 
   simularAtivosIndividuais(dados, valorInicial, inflacaoCustom = 0) {
-    const ativos = ['ibovespa', 'cdi', 'fii_ifix', 'dolar', 'ouro', 'tesouro_ipca', 'sp500_brl', 'poupanca', 'bitcoin_brl', 'tlt_brl', 'imoveis_fipezap'];
+    const ativos = ['ibovespa', 'cdi', 'fii_ifix', 'dolar', 'ouro', 'tesouro_ipca', 'sp500_brl', 'bitcoin_brl', 'tlt_brl', 'imoveis_fipezap'];
     const resultados = {};
 
     ativos.forEach(ativo => {

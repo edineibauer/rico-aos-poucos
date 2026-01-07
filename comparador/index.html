@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <title>Comparador Brutal de Investimentos | Rico aos Poucos</title>
   <meta name="description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade descontando inflação, impostos e custos. FII vs Imóvel, Bolsa vs Dólar, análise honesta.">
-
+  <meta name="keywords" content="comparador investimentos, ganho real, inflação, impostos, FII, imóvel, bolsa, dólar, diversificação">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ricoaospoucos.com.br/comparador/">
+
+  <!-- Hreflang Tags -->
   <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/comparador/">
   <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/comparador/">
   <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/comparador/">
   <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/comparador/">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Comparador Brutal de Investimentos | Rico aos Poucos">
   <meta property="og:description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade.">
   <meta property="og:type" content="website">
@@ -20,13 +23,20 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Rico aos Poucos">
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Comparador Brutal de Investimentos">
+  <meta name="twitter:title" content="Comparador Brutal de Investimentos | Rico aos Poucos">
   <meta name="twitter:description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade.">
 
-  <link rel="stylesheet" href="../css/style.css">
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="manifest" href="../manifest.json">
-  <link rel="icon" type="image/svg+xml" href="../img/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <title>Comparador Brutal de Investimentos | Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
 
   <script type="application/ld+json">
   {
@@ -134,11 +144,6 @@
               <input type="checkbox" value="tesouro_ipca">
               <span class="checkbox-custom"></span>
               <span>Tesouro IPCA+</span>
-            </label>
-            <label class="asset-checkbox">
-              <input type="checkbox" value="poupanca">
-              <span class="checkbox-custom"></span>
-              <span>Poupança</span>
             </label>
             <label class="asset-checkbox">
               <input type="checkbox" value="cdi">
@@ -382,7 +387,6 @@
               <option value="ouro">Ouro</option>
               <option value="fii_ifix">FIIs (IFIX)</option>
               <option value="tesouro_ipca">Tesouro IPCA+</option>
-              <option value="poupanca">Poupança</option>
               <option value="cdi">CDI</option>
               <option value="sp500_brl">S&P 500 (em R$)</option>
             </select>
@@ -745,28 +749,6 @@
               </div>
             </div>
 
-            <div class="alocacao-item" data-ativo="poupanca">
-              <div class="ativo-info">
-                <span class="ativo-cor" style="background: #f97316"></span>
-                <span class="ativo-nome">Poupança</span>
-              </div>
-              <div class="ativo-inputs">
-                <div class="input-mini">
-                  <label>Alocação</label>
-                  <div class="input-group-mini">
-                    <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="input-mini">
-                  <label>Tolerância</label>
-                  <div class="input-group-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
-                    <span>%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <p class="alocacao-dica">Defina a % desejada de cada ativo e a tolerância. Quando um ativo ultrapassar o limite (alocação + tolerância), será rebalanceado com dedução de impostos.</p>

@@ -3,16 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="robots" content="index, follow">
-  <title>Brutal Investment Comparator | Rico aos Poucos</title>
   <meta name="description" content="Compare investments by real net gain. Discover who really won after discounting inflation, taxes, and costs. REITs vs Real Estate, Stocks vs Dollar, honest analysis.">
-
+  <meta name="keywords" content="investment comparator, real gain, inflation, taxes, REITs, real estate, stocks, dollar, diversification">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ricoaospoucos.com.br/en/comparador/">
+
+  <!-- Hreflang Tags -->
   <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/comparador/">
   <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/comparador/">
   <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/comparador/">
   <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/comparador/">
 
+  <!-- Open Graph -->
   <meta property="og:title" content="Brutal Investment Comparator | Rico aos Poucos">
   <meta property="og:description" content="Compare investments by real net gain. Discover who really won.">
   <meta property="og:type" content="website">
@@ -20,13 +23,20 @@
   <meta property="og:locale" content="en_US">
   <meta property="og:site_name" content="Rico aos Poucos">
 
+  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Brutal Investment Comparator">
+  <meta name="twitter:title" content="Brutal Investment Comparator | Rico aos Poucos">
   <meta name="twitter:description" content="Compare investments by real net gain. Discover who really won.">
 
-  <link rel="stylesheet" href="../../css/style.css">
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="manifest" href="../../manifest.json">
-  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+  <title>Brutal Investment Comparator | Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
 
   <script type="application/ld+json">
   {
@@ -134,11 +144,6 @@
               <input type="checkbox" value="tesouro_ipca">
               <span class="checkbox-custom"></span>
               <span>Treasury IPCA+</span>
-            </label>
-            <label class="asset-checkbox">
-              <input type="checkbox" value="poupanca">
-              <span class="checkbox-custom"></span>
-              <span>Savings</span>
             </label>
             <label class="asset-checkbox">
               <input type="checkbox" value="cdi">
@@ -382,7 +387,6 @@
               <option value="ouro">Gold</option>
               <option value="fii_ifix">REITs (IFIX)</option>
               <option value="tesouro_ipca">Treasury IPCA+</option>
-              <option value="poupanca">Savings</option>
               <option value="cdi">CDI</option>
               <option value="sp500_brl">S&P 500 (in BRL)</option>
             </select>
@@ -745,28 +749,6 @@
               </div>
             </div>
 
-            <div class="alocacao-item" data-ativo="poupanca">
-              <div class="ativo-info">
-                <span class="ativo-cor" style="background: #f97316"></span>
-                <span class="ativo-nome">Savings</span>
-              </div>
-              <div class="ativo-inputs">
-                <div class="input-mini">
-                  <label>Allocation</label>
-                  <div class="input-group-mini">
-                    <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="input-mini">
-                  <label>Tolerance</label>
-                  <div class="input-group-mini">
-                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50" step="1">
-                    <span>%</span>
-                  </div>
-                </div>
-              </div>
-            </div>
           </div>
 
           <p class="alocacao-dica">Set the desired % for each asset and tolerance. When an asset exceeds the limit (allocation + tolerance), it will be rebalanced with tax deduction.</p>

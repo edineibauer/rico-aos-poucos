@@ -5208,6 +5208,90 @@ body.home-page {
   font-weight: 500;
 }
 
+/* Financial Independence Mode Styles */
+.result-margin-section {
+  margin-top: 24px;
+  padding: 20px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+}
+
+.result-margin-section h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-bottom: 8px;
+}
+
+.result-margin-section .result-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+
+.result-margin-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.margin-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.margin-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.margin-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* FI Projection Table */
+.fi-projection .projection-header,
+.fi-projection .projection-row {
+  grid-template-columns: 60px 1fr 1fr 1fr;
+}
+
+.projection-row.fi-achieved {
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 3px solid #22c55e;
+}
+
+.projection-row .capital-col {
+  color: var(--text-secondary);
+}
+
+.projection-row .income-col {
+  color: var(--primary-light);
+  font-weight: 500;
+}
+
+@media (max-width: 480px) {
+  .result-margin-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .margin-item {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .margin-item:last-child {
+    border-bottom: none;
+  }
+}
+
 /* Card Calculadora na Home */
 .card-calculadora {
   background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);

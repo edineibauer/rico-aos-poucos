@@ -9,6 +9,7 @@ const Calculadora = {
     objetivo: 300000,
     tempoAnos: 10,
     aporteMensal: 1000,
+    valorInicial: 0, // Valor que já possui
     rentabilidadeMensal: 1.0, // % ao mês
     inflacaoAnual: 7.0 // % ao ano
   },
@@ -29,9 +30,12 @@ const Calculadora = {
       months: 'meses',
       monthlyLabel: 'Aporte mensal inicial',
       monthlyPlaceholder: 'Ex: 1000',
+      initialLabel: 'Valor inicial (já possui)',
+      initialPlaceholder: 'Ex: 10000',
       returnLabel: 'Rentabilidade mensal',
       returnPlaceholder: 'Ex: 1.0',
       inflationLabel: 'Inflação anual estimada',
+      inflationLink: 'O que é inflação?',
       calculate: 'Calcular',
       resultTitle: 'Resultado',
       monthlyNeeded: 'Aporte mensal inicial necessário',
@@ -66,9 +70,12 @@ const Calculadora = {
       months: 'months',
       monthlyLabel: 'Initial monthly contribution',
       monthlyPlaceholder: 'Ex: 1000',
+      initialLabel: 'Initial amount (already have)',
+      initialPlaceholder: 'Ex: 10000',
       returnLabel: 'Monthly return',
       returnPlaceholder: 'Ex: 1.0',
       inflationLabel: 'Estimated annual inflation',
+      inflationLink: 'What is inflation?',
       calculate: 'Calculate',
       resultTitle: 'Result',
       monthlyNeeded: 'Required initial monthly contribution',
@@ -103,9 +110,12 @@ const Calculadora = {
       months: 'meses',
       monthlyLabel: 'Aporte mensual inicial',
       monthlyPlaceholder: 'Ej: 1000',
+      initialLabel: 'Valor inicial (ya tienes)',
+      initialPlaceholder: 'Ej: 10000',
       returnLabel: 'Rentabilidad mensual',
       returnPlaceholder: 'Ej: 1.0',
       inflationLabel: 'Inflación anual estimada',
+      inflationLink: '¿Qué es la inflación?',
       calculate: 'Calcular',
       resultTitle: 'Resultado',
       monthlyNeeded: 'Aporte mensual inicial necesario',
@@ -213,8 +223,19 @@ const Calculadora = {
     `;
   },
 
+  getInflationArticleLink() {
+    const lang = this.currentLang;
+    if (lang === 'en') {
+      return '../artigos/inflacao-o-imposto-invisivel-2026.html';
+    } else if (lang === 'es') {
+      return '../artigos/inflacao-o-imposto-invisivel-2026.html';
+    }
+    return '../artigos/inflacao-o-imposto-invisivel-2026.html';
+  },
+
   renderForm() {
     const d = this.defaults;
+    const inflationLink = this.getInflationArticleLink();
 
     if (this.currentMode === 1) {
       // Modo: Calcular aporte necessário
@@ -224,6 +245,14 @@ const Calculadora = {
           <div class="input-group">
             <span class="input-prefix">R$</span>
             <input type="number" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}">
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label for="valorInicial">${this.t('initialLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="number" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}">
           </div>
         </div>
 
@@ -245,7 +274,7 @@ const Calculadora = {
           </div>
 
           <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')}</label>
+            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
             <div class="input-group">
               <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
               <span class="input-suffix">%</span>
@@ -258,6 +287,14 @@ const Calculadora = {
     } else if (this.currentMode === 2) {
       // Modo: Calcular montante final
       return `
+        <div class="calc-field">
+          <label for="valorInicial">${this.t('initialLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="number" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}">
+          </div>
+        </div>
+
         <div class="calc-field">
           <label for="aporte">${this.t('monthlyLabel')}</label>
           <div class="input-group">
@@ -284,7 +321,7 @@ const Calculadora = {
           </div>
 
           <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')}</label>
+            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
             <div class="input-group">
               <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
               <span class="input-suffix">%</span>
@@ -306,6 +343,14 @@ const Calculadora = {
         </div>
 
         <div class="calc-field">
+          <label for="valorInicial">${this.t('initialLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="number" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}">
+          </div>
+        </div>
+
+        <div class="calc-field">
           <label for="aporte">${this.t('monthlyLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
@@ -323,7 +368,7 @@ const Calculadora = {
           </div>
 
           <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')}</label>
+            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
             <div class="input-group">
               <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
               <span class="input-suffix">%</span>
@@ -383,6 +428,7 @@ const Calculadora = {
   calculate() {
     const rentabilidadeMensal = parseFloat(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
     const inflacaoAnual = parseFloat(document.getElementById('inflacao')?.value) / 100 || 0.07;
+    const valorInicial = parseFloat(document.getElementById('valorInicial')?.value) || 0;
 
     // Inflação mensal: (1 + anual)^(1/12) - 1
     const inflacaoMensal = Math.pow(1 + inflacaoAnual, 1/12) - 1;
@@ -397,11 +443,12 @@ const Calculadora = {
       const objetivoAjustado = objetivoHoje * Math.pow(1 + inflacaoAnual, tempoAnos);
 
       // Calcular aporte inicial necessário
-      const aporteInicial = this.calcularAporteNecessario(objetivoAjustado, meses, rentabilidadeMensal, inflacaoMensal);
+      const aporteInicial = this.calcularAporteNecessario(objetivoAjustado, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
 
       this.showResult({
         mode: 1,
         aporteInicial,
+        valorInicial,
         objetivoHoje,
         objetivoAjustado,
         tempoAnos,
@@ -417,7 +464,7 @@ const Calculadora = {
       const aporteInicial = parseFloat(document.getElementById('aporte')?.value) || 1000;
       const meses = tempoAnos * 12;
 
-      const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal);
+      const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
 
       // Valor real (poder de compra hoje)
       const valorReal = resultado.montanteFinal / Math.pow(1 + inflacaoAnual, tempoAnos);
@@ -425,6 +472,7 @@ const Calculadora = {
       this.showResult({
         mode: 2,
         aporteInicial,
+        valorInicial,
         montanteFinal: resultado.montanteFinal,
         valorReal,
         totalInvestido: resultado.totalInvestido,
@@ -443,13 +491,14 @@ const Calculadora = {
       const objetivoHoje = parseFloat(document.getElementById('objetivo')?.value) || 300000;
       const aporteInicial = parseFloat(document.getElementById('aporte')?.value) || 1000;
 
-      const resultado = this.calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual);
+      const resultado = this.calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial);
 
       this.showResult({
         mode: 3,
         ...resultado,
         objetivoHoje,
         aporteInicial,
+        valorInicial,
         rentabilidadeMensal,
         inflacaoAnual,
         inflacaoMensal
@@ -457,7 +506,7 @@ const Calculadora = {
     }
   },
 
-  calcularAporteNecessario(objetivoFinal, meses, rentabilidadeMensal, inflacaoMensal) {
+  calcularAporteNecessario(objetivoFinal, meses, rentabilidadeMensal, inflacaoMensal, valorInicial = 0) {
     // Busca binária para encontrar o aporte inicial
     let min = 0;
     let max = objetivoFinal;
@@ -465,7 +514,7 @@ const Calculadora = {
 
     for (let i = 0; i < 100; i++) {
       aporteInicial = (min + max) / 2;
-      const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal);
+      const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
 
       if (Math.abs(resultado.montanteFinal - objetivoFinal) < 1) {
         break;
@@ -481,10 +530,10 @@ const Calculadora = {
     return aporteInicial;
   },
 
-  calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual) {
+  calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial = 0) {
     // Simula mês a mês até atingir o objetivo (considerando inflação no objetivo)
-    let saldo = 0;
-    let totalInvestido = 0;
+    let saldo = valorInicial;
+    let totalInvestido = valorInicial;
     let aporteAtual = aporteInicial;
     let mes = 0;
     const maxMeses = 600; // 50 anos limite
@@ -549,9 +598,9 @@ const Calculadora = {
     };
   },
 
-  simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal) {
-    let saldo = 0;
-    let totalInvestido = 0;
+  simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal, valorInicial = 0) {
+    let saldo = valorInicial;
+    let totalInvestido = valorInicial;
     let aporteAtual = aporteInicial;
     const aportesPorAno = [];
     const saldosPorAno = [];

@@ -4933,6 +4933,18 @@ body.home-page {
   margin-bottom: 8px;
 }
 
+.calc-info-link {
+  font-size: 0.75rem;
+  font-weight: 400;
+  color: var(--primary-light);
+  text-decoration: none;
+  margin-left: 8px;
+}
+
+.calc-info-link:hover {
+  text-decoration: underline;
+}
+
 .input-group {
   display: flex;
   align-items: center;

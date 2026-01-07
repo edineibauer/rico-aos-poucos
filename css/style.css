@@ -4645,3 +4645,54 @@ body.home-page {
 .comments-info a:hover {
   text-decoration: underline;
 }
+
+/* YouTube comments redirect */
+.comments-youtube {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 32px 24px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.comments-youtube p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.comments-youtube-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: #FF0000;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.25);
+}
+
+.comments-youtube-btn:hover {
+  background: #CC0000;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.35);
+}
+
+.comments-youtube-btn svg {
+  flex-shrink: 0;
+}
+
+.comments-note {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  margin-top: 4px;
+}

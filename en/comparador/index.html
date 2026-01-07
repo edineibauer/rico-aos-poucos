@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="index, follow">
+  <title>Brutal Investment Comparator | Rico aos Poucos</title>
+  <meta name="description" content="Compare investments by real net gain. Discover who really won after discounting inflation, taxes, and costs. REITs vs Real Estate, Stocks vs Dollar, honest analysis.">
+
+  <link rel="canonical" href="https://ricoaospoucos.com.br/en/comparador/">
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/comparador/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/comparador/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/comparador/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/comparador/">
+
+  <meta property="og:title" content="Brutal Investment Comparator | Rico aos Poucos">
+  <meta property="og:description" content="Compare investments by real net gain. Discover who really won.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/en/comparador/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Brutal Investment Comparator">
+  <meta name="twitter:description" content="Compare investments by real net gain. Discover who really won.">
+
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../../img/favicon.svg">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Brutal Investment Comparator",
+    "description": "Tool for comparing investments by real net gain",
+    "url": "https://ricoaospoucos.com.br/en/comparador/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div id="page-header"></div>
+
+  <main class="container comparador-page">
+    <!-- Hero Section -->
+    <section class="comparador-hero">
+      <div class="hero-badge">Brutal Analysis</div>
+      <h1>Who Really Won?</h1>
+      <p class="hero-subtitle">Not every rise creates value. Not every return is a gain.</p>
+      <p class="hero-desc">Compare investments by <strong>real net gain</strong>, discounting inflation, taxes, costs, and risks. Visually understand if there was <strong>value creation</strong> or just monetary correction.</p>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="comparador-nav">
+      <button class="nav-tab active" data-tab="historico">
+        <span class="tab-icon">📊</span>
+        <span class="tab-text">Historical Comparator</span>
+      </button>
+      <button class="nav-tab" data-tab="fii-imovel">
+        <span class="tab-icon">🏠</span>
+        <span class="tab-text">REIT vs Property</span>
+      </button>
+      <button class="nav-tab" data-tab="decomposicao">
+        <span class="tab-icon">🔍</span>
+        <span class="tab-text">Decomposition</span>
+      </button>
+      <button class="nav-tab" data-tab="diversificacao">
+        <span class="tab-icon">⚖️</span>
+        <span class="tab-text">Diversification</span>
+      </button>
+    </nav>
+
+    <!-- Tab Content: Historical Comparator -->
+    <section class="tab-content active" id="tab-historico">
+      <div class="section-header">
+        <h2>Brutal Historical Comparator</h2>
+        <p>Who really gained more over the years? See the real return after inflation.</p>
+      </div>
+
+      <!-- Configuration -->
+      <div class="comparador-config">
+        <div class="config-row">
+          <div class="config-field">
+            <label for="periodo">Analysis period</label>
+            <select id="periodo">
+              <option value="5">Last 5 years</option>
+              <option value="10" selected>Last 10 years</option>
+              <option value="15">Last 15 years</option>
+              <option value="20">Last 20 years</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorInicial">Initial investment</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorInicial" value="100000" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+
+        <div class="config-assets">
+          <label>Assets to compare:</label>
+          <div class="asset-checkboxes">
+            <label class="asset-checkbox">
+              <input type="checkbox" value="ibovespa" checked>
+              <span class="checkbox-custom"></span>
+              <span>Ibovespa</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="dolar" checked>
+              <span class="checkbox-custom"></span>
+              <span>Dollar</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="ouro" checked>
+              <span class="checkbox-custom"></span>
+              <span>Gold</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="fii_ifix" checked>
+              <span class="checkbox-custom"></span>
+              <span>REITs (IFIX)</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="tesouro_ipca">
+              <span class="checkbox-custom"></span>
+              <span>Treasury IPCA+</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="poupanca">
+              <span class="checkbox-custom"></span>
+              <span>Savings</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="cdi">
+              <span class="checkbox-custom"></span>
+              <span>CDI</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="sp500_brl">
+              <span class="checkbox-custom"></span>
+              <span>S&P 500 (in BRL)</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnComparar">
+          <span>Compare Now</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Results -->
+      <div class="comparador-resultados" id="resultados" style="display: none;">
+        <!-- Main Chart -->
+        <div class="resultado-card">
+          <h3>Portfolio Evolution</h3>
+          <div class="chart-toggle">
+            <button class="toggle-btn active" data-view="nominal">Nominal</button>
+            <button class="toggle-btn" data-view="real">Real Value</button>
+          </div>
+          <div class="chart-container" id="chartEvolucao"></div>
+          <p class="chart-nota">* Real value = purchasing power in today's reais, adjusted for inflation</p>
+        </div>
+
+        <!-- Final Ranking -->
+        <div class="resultado-card">
+          <h3>Ranking: Who Really Won</h3>
+          <div class="ranking-container" id="rankingContainer"></div>
+        </div>
+
+        <!-- Detailed Table -->
+        <div class="resultado-card">
+          <h3>Detailed Analysis</h3>
+          <div class="table-scroll">
+            <table class="tabela-comparativo" id="tabelaComparativo">
+              <thead>
+                <tr>
+                  <th>Asset</th>
+                  <th>Final Nominal Value</th>
+                  <th>Final Real Value</th>
+                  <th>Nominal Return</th>
+                  <th>Real Return</th>
+                  <th>Beat Inflation?</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Automatic Conclusions -->
+        <div class="resultado-card conclusoes-card">
+          <h3>Analysis Conclusions</h3>
+          <div class="conclusoes-lista" id="conclusoesLista"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: REIT vs Property -->
+    <section class="tab-content" id="tab-fii-imovel">
+      <div class="section-header">
+        <h2>REIT vs Physical Property</h2>
+        <p>The comparison nobody does right. With all costs, vacancy, and taxes.</p>
+      </div>
+
+      <div class="comparador-dual">
+        <!-- Property Column -->
+        <div class="dual-column">
+          <div class="column-header imovel">
+            <span class="column-icon">🏠</span>
+            <h3>Physical Property</h3>
+          </div>
+          <div class="column-form">
+            <div class="form-field">
+              <label>Property value</label>
+              <div class="input-group">
+                <span class="input-prefix">R$</span>
+                <input type="text" id="imovelValor" value="500000" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Monthly gross rent</label>
+              <div class="input-group">
+                <span class="input-prefix">R$</span>
+                <input type="text" id="imovelAluguel" value="2500" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Average vacancy (% per year)</label>
+              <div class="input-group">
+                <input type="text" id="imovelVacancia" value="8" inputmode="decimal">
+                <span class="input-suffix">%</span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Annual property tax</label>
+              <div class="input-group">
+                <span class="input-prefix">R$</span>
+                <input type="text" id="imovelIptu" value="5000" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Annual maintenance</label>
+              <div class="input-group">
+                <span class="input-prefix">R$</span>
+                <input type="text" id="imovelManutencao" value="7500" inputmode="numeric">
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- REIT Column -->
+        <div class="dual-column">
+          <div class="column-header fii">
+            <span class="column-icon">📊</span>
+            <h3>Real Estate Fund</h3>
+          </div>
+          <div class="column-form">
+            <div class="form-field">
+              <label>Value invested in REITs</label>
+              <div class="input-group">
+                <span class="input-prefix">R$</span>
+                <input type="text" id="fiiValor" value="500000" inputmode="numeric">
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Annual Dividend Yield</label>
+              <div class="input-group">
+                <input type="text" id="fiiDY" value="9" inputmode="decimal">
+                <span class="input-suffix">%</span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Expected appreciation (p.a.)</label>
+              <div class="input-group">
+                <input type="text" id="fiiValorizacao" value="3" inputmode="decimal">
+                <span class="input-suffix">%</span>
+              </div>
+            </div>
+            <div class="form-field">
+              <label>Management fee</label>
+              <div class="input-group">
+                <input type="text" id="fiiTaxa" value="0.8" inputmode="decimal">
+                <span class="input-suffix">%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="config-extras">
+        <div class="config-row">
+          <div class="config-field">
+            <label for="periodoFII">Analysis period</label>
+            <select id="periodoFII">
+              <option value="5">5 years</option>
+              <option value="10" selected>10 years</option>
+              <option value="15">15 years</option>
+              <option value="20">20 years</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="inflacaoFII">Estimated annual inflation</label>
+            <div class="input-group">
+              <input type="text" id="inflacaoFII" value="5" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+          <div class="config-field">
+            <label for="valorizacaoImovel">Property appreciation (p.a.)</label>
+            <div class="input-group">
+              <input type="text" id="valorizacaoImovel" value="5" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <button class="btn-comparar" id="btnCompararFII">
+        <span>Compare REIT vs Property</span>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M5 12h14M12 5l7 7-7 7"/>
+        </svg>
+      </button>
+
+      <!-- REIT vs Property Results -->
+      <div class="comparador-resultados" id="resultadosFII" style="display: none;">
+        <div class="resultado-card">
+          <h3>Income Comparison</h3>
+          <div class="chart-container" id="chartFII"></div>
+        </div>
+
+        <div class="resultado-card">
+          <h3>Layer by Layer Analysis</h3>
+          <div class="camadas-grid" id="camadasGrid"></div>
+        </div>
+
+        <div class="resultado-card dual-resultado">
+          <div class="dual-box imovel-box">
+            <h4>Physical Property</h4>
+            <div class="resultado-valores" id="resultadoImovel"></div>
+          </div>
+          <div class="dual-box fii-box">
+            <h4>Real Estate Fund</h4>
+            <div class="resultado-valores" id="resultadoFII"></div>
+          </div>
+        </div>
+
+        <div class="resultado-card conclusoes-card">
+          <h3>Verdict</h3>
+          <div class="conclusoes-lista" id="conclusoesFII"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Decomposition -->
+    <section class="tab-content" id="tab-decomposicao">
+      <div class="section-header">
+        <h2>Return Decomposition</h2>
+        <p>Why did this asset go up? How much was merit and how much was monetary correction?</p>
+      </div>
+
+      <div class="comparador-config">
+        <div class="config-row">
+          <div class="config-field">
+            <label for="ativoDecomp">Asset to analyze</label>
+            <select id="ativoDecomp">
+              <option value="ibovespa">Ibovespa</option>
+              <option value="dolar">Dollar</option>
+              <option value="ouro">Gold</option>
+              <option value="fii_ifix">REITs (IFIX)</option>
+              <option value="tesouro_ipca">Treasury IPCA+</option>
+              <option value="poupanca">Savings</option>
+              <option value="cdi">CDI</option>
+              <option value="sp500_brl">S&P 500 (in BRL)</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="periodoDecomp">Period</label>
+            <select id="periodoDecomp">
+              <option value="5">Last 5 years</option>
+              <option value="10" selected>Last 10 years</option>
+              <option value="15">Last 15 years</option>
+              <option value="20">Last 20 years</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnDecompor">
+          <span>Decompose Return</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="comparador-resultados" id="resultadosDecomp" style="display: none;">
+        <div class="resultado-card">
+          <h3>Return Decomposition</h3>
+          <div class="decomp-chart" id="decompChart"></div>
+          <div class="decomp-legenda">
+            <span class="legenda-item verde">Real Gain</span>
+            <span class="legenda-item cinza">Inflation</span>
+            <span class="legenda-item vermelho">Losses/Costs</span>
+          </div>
+        </div>
+
+        <div class="resultado-card">
+          <h3>Analysis by Component</h3>
+          <div class="decomp-detalhes" id="decompDetalhes"></div>
+        </div>
+
+        <div class="resultado-card conclusoes-card">
+          <h3>What does this mean?</h3>
+          <div class="conclusoes-lista" id="conclusoesDecomp"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Diversification -->
+    <section class="tab-content" id="tab-diversificacao">
+      <div class="section-header">
+        <h2>Diversification vs Concentration</h2>
+        <p>Did diversifying help or hurt? Test different strategies with real data.</p>
+      </div>
+
+      <div class="comparador-config">
+        <div class="estrategias-grid">
+          <div class="estrategia-card">
+            <label class="estrategia-checkbox">
+              <input type="checkbox" value="100_acoes" checked>
+              <span class="checkbox-custom"></span>
+            </label>
+            <div class="estrategia-info">
+              <h4>100% Stocks</h4>
+              <p>All capital in Ibovespa</p>
+            </div>
+          </div>
+          <div class="estrategia-card">
+            <label class="estrategia-checkbox">
+              <input type="checkbox" value="100_rf" checked>
+              <span class="checkbox-custom"></span>
+            </label>
+            <div class="estrategia-info">
+              <h4>100% Fixed Income</h4>
+              <p>All capital in CDI</p>
+            </div>
+          </div>
+          <div class="estrategia-card">
+            <label class="estrategia-checkbox">
+              <input type="checkbox" value="60_40" checked>
+              <span class="checkbox-custom"></span>
+            </label>
+            <div class="estrategia-info">
+              <h4>60/40 Portfolio</h4>
+              <p>60% Stocks + 40% FI</p>
+            </div>
+          </div>
+          <div class="estrategia-card">
+            <label class="estrategia-checkbox">
+              <input type="checkbox" value="diversificada" checked>
+              <span class="checkbox-custom"></span>
+            </label>
+            <div class="estrategia-info">
+              <h4>Diversified</h4>
+              <p>Stocks + FI + REITs + Dollar + Gold</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="config-row">
+          <div class="config-field">
+            <label for="periodoDiversif">Period</label>
+            <select id="periodoDiversif">
+              <option value="5">Last 5 years</option>
+              <option value="10" selected>Last 10 years</option>
+              <option value="15">Last 15 years</option>
+              <option value="20">Last 20 years</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorDiversif">Initial value</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorDiversif" value="100000" inputmode="numeric">
+            </div>
+          </div>
+          <div class="config-field">
+            <label for="rebalanceamento">Rebalancing</label>
+            <select id="rebalanceamento">
+              <option value="none">No rebalancing</option>
+              <option value="anual" selected>Annual</option>
+              <option value="semestral">Semi-annual</option>
+            </select>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnDiversif">
+          <span>Simulate Strategies</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="comparador-resultados" id="resultadosDiversif" style="display: none;">
+        <div class="resultado-card">
+          <h3>Strategy Evolution</h3>
+          <div class="chart-container" id="chartDiversif"></div>
+        </div>
+
+        <div class="resultado-card">
+          <h3>Risk and Return Metrics</h3>
+          <div class="metricas-grid" id="metricasGrid"></div>
+        </div>
+
+        <div class="resultado-card">
+          <h3>Final Ranking</h3>
+          <div class="ranking-container" id="rankingDiversif"></div>
+        </div>
+
+        <div class="resultado-card conclusoes-card">
+          <h3>Conclusions on Diversification</h3>
+          <div class="conclusoes-lista" id="conclusoesDiversif"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="disclaimer-section">
+      <p><strong>Important notice:</strong> The past does not predict the future, but it reveals patterns and limits. This tool does not constitute investment advice. Historical data are approximations and may contain inaccuracies. Consult a professional before making financial decisions.</p>
+    </section>
+  </main>
+
+  <div id="footer-container"></div>
+
+  <script src="../../js/footer.js"></script>
+  <script src="../../js/page-header.js"></script>
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/comparador.js"></script>
+</body>
+</html>

@@ -185,6 +185,130 @@ const Calculadora = {
     }).format(value);
   },
 
+  // Máscara para campos monetários (formato brasileiro: 1.234,56)
+  maskCurrency(input) {
+    input.addEventListener('input', (e) => {
+      let value = e.target.value;
+
+      // Remove tudo que não é dígito
+      value = value.replace(/\D/g, '');
+
+      // Se vazio, deixa vazio
+      if (value === '') {
+        e.target.value = '';
+        return;
+      }
+
+      // Converte para número (centavos)
+      let numValue = parseInt(value, 10);
+
+      // Formata com 2 casas decimais
+      let formatted = (numValue / 100).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+      e.target.value = formatted;
+    });
+
+    // Formatar valor inicial se existir
+    if (input.value && input.value !== '0') {
+      const numValue = parseFloat(input.value);
+      if (!isNaN(numValue) && numValue > 0) {
+        input.value = numValue.toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+      } else {
+        input.value = '';
+      }
+    } else {
+      input.value = '';
+    }
+  },
+
+  // Máscara para campos de porcentagem (formato: 7,00)
+  maskPercentage(input) {
+    input.addEventListener('input', (e) => {
+      let value = e.target.value;
+
+      // Remove tudo que não é dígito
+      value = value.replace(/\D/g, '');
+
+      // Se vazio, deixa vazio
+      if (value === '') {
+        e.target.value = '';
+        return;
+      }
+
+      // Converte para número (centésimos)
+      let numValue = parseInt(value, 10);
+
+      // Limita a 9999 (99,99%)
+      if (numValue > 9999) numValue = 9999;
+
+      // Formata com 2 casas decimais
+      let formatted = (numValue / 100).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+
+      e.target.value = formatted;
+    });
+
+    // Formatar valor inicial
+    if (input.value) {
+      const numValue = parseFloat(input.value);
+      if (!isNaN(numValue)) {
+        input.value = numValue.toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+      }
+    }
+  },
+
+  // Parser para valores monetários mascarados
+  parseCurrency(value) {
+    if (!value || value === '') return 0;
+    // Remove pontos (separador de milhar) e troca vírgula por ponto
+    const cleaned = value.toString().replace(/\./g, '').replace(',', '.');
+    return parseFloat(cleaned) || 0;
+  },
+
+  // Parser para valores de porcentagem mascarados
+  parsePercentage(value) {
+    if (!value || value === '') return 0;
+    // Troca vírgula por ponto
+    const cleaned = value.toString().replace(',', '.');
+    return parseFloat(cleaned) || 0;
+  },
+
+  // Aplicar máscaras aos campos do formulário
+  applyMasks() {
+    // Campos monetários
+    const currencyFields = ['objetivo', 'valorInicial', 'aporte'];
+    currencyFields.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) this.maskCurrency(input);
+    });
+
+    // Campos de porcentagem
+    const percentFields = ['rentabilidade', 'inflacao'];
+    percentFields.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) this.maskPercentage(input);
+    });
+
+    // Campo de anos (apenas números inteiros)
+    const tempoInput = document.getElementById('tempoAnos');
+    if (tempoInput) {
+      tempoInput.addEventListener('input', (e) => {
+        e.target.value = e.target.value.replace(/\D/g, '');
+      });
+    }
+  },
+
   renderCalculator() {
     const container = document.getElementById('calculadora-container');
     if (!container) return;
@@ -221,6 +345,9 @@ const Calculadora = {
       <div class="calc-result" id="calcResult" style="display: none;">
       </div>
     `;
+
+    // Aplicar máscaras aos campos
+    this.applyMasks();
   },
 
   getInflationArticleLink() {
@@ -244,7 +371,7 @@ const Calculadora = {
           <label for="objetivo">${this.t('goalLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}">
+            <input type="text" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
@@ -252,14 +379,14 @@ const Calculadora = {
           <label for="valorInicial">${this.t('initialLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}">
+            <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
         <div class="calc-field">
           <label for="tempo">${this.t('timeLabel')}</label>
           <div class="input-group">
-            <input type="number" id="tempoAnos" value="${d.tempoAnos}" min="1" max="50">
+            <input type="text" id="tempoAnos" value="${d.tempoAnos}" inputmode="numeric">
             <span class="input-suffix">${this.t('years')}</span>
           </div>
         </div>
@@ -268,7 +395,7 @@ const Calculadora = {
           <div class="calc-field">
             <label for="rentabilidade">${this.t('returnLabel')}</label>
             <div class="input-group">
-              <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
+              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -276,7 +403,7 @@ const Calculadora = {
           <div class="calc-field">
             <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
             <div class="input-group">
-              <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
+              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -291,7 +418,7 @@ const Calculadora = {
           <label for="valorInicial">${this.t('initialLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}">
+            <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
@@ -299,14 +426,14 @@ const Calculadora = {
           <label for="aporte">${this.t('monthlyLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}">
+            <input type="text" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
         <div class="calc-field">
           <label for="tempo">${this.t('timeLabel')}</label>
           <div class="input-group">
-            <input type="number" id="tempoAnos" value="${d.tempoAnos}" min="1" max="50">
+            <input type="text" id="tempoAnos" value="${d.tempoAnos}" inputmode="numeric">
             <span class="input-suffix">${this.t('years')}</span>
           </div>
         </div>
@@ -315,7 +442,7 @@ const Calculadora = {
           <div class="calc-field">
             <label for="rentabilidade">${this.t('returnLabel')}</label>
             <div class="input-group">
-              <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
+              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -323,7 +450,7 @@ const Calculadora = {
           <div class="calc-field">
             <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
             <div class="input-group">
-              <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
+              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -338,7 +465,7 @@ const Calculadora = {
           <label for="objetivo">${this.t('goalLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}">
+            <input type="text" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
@@ -346,7 +473,7 @@ const Calculadora = {
           <label for="valorInicial">${this.t('initialLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}">
+            <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
@@ -354,7 +481,7 @@ const Calculadora = {
           <label for="aporte">${this.t('monthlyLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="number" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}">
+            <input type="text" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
@@ -362,7 +489,7 @@ const Calculadora = {
           <div class="calc-field">
             <label for="rentabilidade">${this.t('returnLabel')}</label>
             <div class="input-group">
-              <input type="number" id="rentabilidade" value="${d.rentabilidadeMensal}" step="0.1" min="0" max="10">
+              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -370,7 +497,7 @@ const Calculadora = {
           <div class="calc-field">
             <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
             <div class="input-group">
-              <input type="number" id="inflacao" value="${d.inflacaoAnual}" step="0.1" min="0" max="30">
+              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
               <span class="input-suffix">%</span>
             </div>
           </div>
@@ -416,6 +543,8 @@ const Calculadora = {
     const form = document.getElementById('calcForm');
     if (form) {
       form.innerHTML = this.renderForm();
+      // Aplicar máscaras aos novos campos
+      this.applyMasks();
     }
 
     // Esconder resultado anterior
@@ -426,17 +555,17 @@ const Calculadora = {
   },
 
   calculate() {
-    const rentabilidadeMensal = parseFloat(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
-    const inflacaoAnual = parseFloat(document.getElementById('inflacao')?.value) / 100 || 0.07;
-    const valorInicial = parseFloat(document.getElementById('valorInicial')?.value) || 0;
+    const rentabilidadeMensal = this.parsePercentage(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
+    const inflacaoAnual = this.parsePercentage(document.getElementById('inflacao')?.value) / 100 || 0.07;
+    const valorInicial = this.parseCurrency(document.getElementById('valorInicial')?.value) || 0;
 
     // Inflação mensal: (1 + anual)^(1/12) - 1
     const inflacaoMensal = Math.pow(1 + inflacaoAnual, 1/12) - 1;
 
     if (this.currentMode === 1) {
       // Calcular aporte necessário para atingir objetivo
-      const tempoAnos = parseFloat(document.getElementById('tempoAnos')?.value) || 10;
-      const objetivoHoje = parseFloat(document.getElementById('objetivo')?.value) || 300000;
+      const tempoAnos = parseInt(document.getElementById('tempoAnos')?.value) || 10;
+      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
       const meses = tempoAnos * 12;
 
       // Objetivo ajustado pela inflação (valor nominal futuro)
@@ -460,8 +589,8 @@ const Calculadora = {
 
     } else if (this.currentMode === 2) {
       // Calcular montante final dado um aporte
-      const tempoAnos = parseFloat(document.getElementById('tempoAnos')?.value) || 10;
-      const aporteInicial = parseFloat(document.getElementById('aporte')?.value) || 1000;
+      const tempoAnos = parseInt(document.getElementById('tempoAnos')?.value) || 10;
+      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
       const meses = tempoAnos * 12;
 
       const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
@@ -488,8 +617,8 @@ const Calculadora = {
 
     } else {
       // Modo 3: Calcular tempo necessário
-      const objetivoHoje = parseFloat(document.getElementById('objetivo')?.value) || 300000;
-      const aporteInicial = parseFloat(document.getElementById('aporte')?.value) || 1000;
+      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
+      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
 
       const resultado = this.calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial);
 

@@ -16,7 +16,7 @@ const Publicacoes = {
     'sp500': { badge: 'S&P', type: 'neutral' },
     'ouro': { badge: 'OURO', type: 'neutral' },
     'caixa': { badge: 'CDI', type: 'bullish' },
-    'imoveis': { badge: 'IMOV', type: 'neutral' },
+    'imoveis': { badge: 'IMOV', type: 'bullish' },
     // By category (fallback)
     'educacao': { badge: 'EDU', type: 'neutral' },
     'estrategias': { badge: 'EST', type: 'neutral' },

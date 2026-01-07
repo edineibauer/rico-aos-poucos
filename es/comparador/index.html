@@ -430,54 +430,11 @@
     <!-- Tab Content: Diversification -->
     <section class="tab-content" id="tab-diversificacao">
       <div class="section-header">
-        <h2>Diversificación vs Concentración</h2>
-        <p>¿Diversificar ayudó o perjudicó? Pruebe diferentes estrategias con datos reales.</p>
+        <h2>Simulador de Cartera Diversificada</h2>
+        <p>Arme su cartera con rebalanceo por tolerancia y descubra si diversificar ganó a las apuestas individuales.</p>
       </div>
 
       <div class="comparador-config">
-        <div class="estrategias-grid">
-          <div class="estrategia-card">
-            <label class="estrategia-checkbox">
-              <input type="checkbox" value="100_acoes" checked>
-              <span class="checkbox-custom"></span>
-            </label>
-            <div class="estrategia-info">
-              <h4>100% Acciones</h4>
-              <p>Todo el capital en Ibovespa</p>
-            </div>
-          </div>
-          <div class="estrategia-card">
-            <label class="estrategia-checkbox">
-              <input type="checkbox" value="100_rf" checked>
-              <span class="checkbox-custom"></span>
-            </label>
-            <div class="estrategia-info">
-              <h4>100% Renta Fija</h4>
-              <p>Todo el capital en CDI</p>
-            </div>
-          </div>
-          <div class="estrategia-card">
-            <label class="estrategia-checkbox">
-              <input type="checkbox" value="60_40" checked>
-              <span class="checkbox-custom"></span>
-            </label>
-            <div class="estrategia-info">
-              <h4>Cartera 60/40</h4>
-              <p>60% Acciones + 40% RF</p>
-            </div>
-          </div>
-          <div class="estrategia-card">
-            <label class="estrategia-checkbox">
-              <input type="checkbox" value="diversificada" checked>
-              <span class="checkbox-custom"></span>
-            </label>
-            <div class="estrategia-info">
-              <h4>Diversificada</h4>
-              <p>Acciones + RF + REITs + Dólar + Oro</p>
-            </div>
-          </div>
-        </div>
-
         <div class="config-row">
           <div class="config-field">
             <label for="periodoDiversif">Período</label>
@@ -495,18 +452,207 @@
               <input type="text" id="valorDiversif" value="100000" inputmode="numeric">
             </div>
           </div>
-          <div class="config-field">
-            <label for="rebalanceamento">Rebalanceo</label>
-            <select id="rebalanceamento">
-              <option value="none">Sin rebalanceo</option>
-              <option value="anual" selected>Anual</option>
-              <option value="semestral">Semestral</option>
-            </select>
+        </div>
+
+        <!-- Custom Allocation Section -->
+        <div class="alocacao-section">
+          <div class="alocacao-header">
+            <h4>Arme Su Cartera</h4>
+            <div class="alocacao-total">
+              <span>Asignación total:</span>
+              <span id="alocacaoTotal" class="total-value">0%</span>
+            </div>
+          </div>
+
+          <div class="alocacao-grid" id="alocacaoGrid">
+            <div class="alocacao-item" data-ativo="ibovespa">
+              <div class="ativo-info">
+                <span class="ativo-icon">📈</span>
+                <span class="ativo-nome">Ibovespa</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="20" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="cdi">
+              <div class="ativo-info">
+                <span class="ativo-icon">💰</span>
+                <span class="ativo-nome">CDI</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="20" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="fii_ifix">
+              <div class="ativo-info">
+                <span class="ativo-icon">🏢</span>
+                <span class="ativo-nome">REITs (IFIX)</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="15" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="dolar">
+              <div class="ativo-info">
+                <span class="ativo-icon">💵</span>
+                <span class="ativo-nome">Dólar</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="15" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="ouro">
+              <div class="ativo-info">
+                <span class="ativo-icon">🥇</span>
+                <span class="ativo-nome">Oro</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="tesouro_ipca">
+              <div class="ativo-info">
+                <span class="ativo-icon">📜</span>
+                <span class="ativo-nome">Tesouro IPCA+</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="sp500_brl">
+              <div class="ativo-info">
+                <span class="ativo-icon">🇺🇸</span>
+                <span class="ativo-nome">S&P 500</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="10" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="poupanca">
+              <div class="ativo-info">
+                <span class="ativo-icon">🏦</span>
+                <span class="ativo-nome">Ahorro</span>
+              </div>
+              <div class="ativo-inputs">
+                <div class="input-group-mini">
+                  <label>Asignación</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-percent" value="0" min="0" max="100">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="input-group-mini">
+                  <label>Tolerancia</label>
+                  <div class="input-mini">
+                    <input type="number" class="aloc-tolerancia" value="5" min="0" max="50">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         <button class="btn-comparar" id="btnDiversif">
-          <span>Simular Estrategias</span>
+          <span>Simular Cartera</span>
           <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M5 12h14M12 5l7 7-7 7"/>
           </svg>
@@ -514,23 +660,37 @@
       </div>
 
       <div class="comparador-resultados" id="resultadosDiversif" style="display: none;">
+        <!-- Main Comparison: With vs Without Rebalancing -->
+        <div class="resultado-card" id="comparativoPrincipal"></div>
+
+        <!-- Chart with rebalancing points -->
         <div class="resultado-card">
-          <h3>Evolución de las Estrategias</h3>
+          <h3>Evolución de la Cartera</h3>
           <div class="chart-container" id="chartDiversif"></div>
+          <div class="chart-legenda" id="chartLegenda"></div>
         </div>
 
+        <!-- Semester History Table -->
+        <div class="resultado-card" id="historicoContainer">
+          <h3>Historial Semestre a Semestre</h3>
+          <div class="table-scroll" id="tabelaHistorico"></div>
+        </div>
+
+        <!-- Ranking: Diversification vs Individual -->
+        <div class="resultado-card">
+          <h3>Ranking: ¿Dónde Quedó Su Cartera?</h3>
+          <div class="ranking-container" id="rankingDiversif"></div>
+        </div>
+
+        <!-- Detailed Metrics -->
         <div class="resultado-card">
           <h3>Métricas de Riesgo y Retorno</h3>
           <div class="metricas-grid" id="metricasGrid"></div>
         </div>
 
-        <div class="resultado-card">
-          <h3>Ranking Final</h3>
-          <div class="ranking-container" id="rankingDiversif"></div>
-        </div>
-
+        <!-- Conclusions -->
         <div class="resultado-card conclusoes-card">
-          <h3>Conclusiones sobre Diversificación</h3>
+          <h3>Conclusiones sobre Rebalanceo</h3>
           <div class="conclusoes-lista" id="conclusoesDiversif"></div>
         </div>
       </div>

@@ -120,6 +120,28 @@
   letter-spacing: 0.5px;
 }
 
+.comp2-info-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--border-color);
+  color: var(--text-muted);
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-decoration: none;
+  margin-left: 4px;
+  vertical-align: middle;
+  transition: background 0.2s, color 0.2s;
+}
+
+.comp2-info-link:hover {
+  background: var(--primary-light);
+  color: var(--bg-primary);
+}
+
 .comp2-field select,
 .comp2-field input {
   background: var(--bg-tertiary);

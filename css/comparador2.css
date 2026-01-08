@@ -14,10 +14,11 @@
   border-right: 1px solid var(--border-color);
   padding: 16px 8px;
   position: sticky;
-  top: 0;
-  height: 100vh;
+  top: 64px; /* Account for fixed header */
+  height: calc(100vh - 64px);
   display: flex;
   flex-direction: column;
+  overflow-y: auto;
 }
 
 .comp2-nav {
@@ -804,6 +805,67 @@
   color: var(--text-muted);
 }
 
+/* Conclusions Card */
+.comp2-conclusoes {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.comp2-conclusoes h3 {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 16px;
+}
+
+.conclusao-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  margin-bottom: 8px;
+}
+
+.conclusao-item.success {
+  background: rgba(34, 197, 94, 0.1);
+  border-left: 3px solid var(--bullish);
+}
+
+.conclusao-item.error {
+  background: rgba(248, 81, 73, 0.1);
+  border-left: 3px solid var(--bearish);
+}
+
+.conclusao-item.warning {
+  background: rgba(234, 179, 8, 0.1);
+  border-left: 3px solid #eab308;
+}
+
+.conclusao-item.info {
+  background: rgba(88, 166, 255, 0.1);
+  border-left: 3px solid var(--primary-light);
+}
+
+.conclusao-icon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.conclusao-item p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.conclusao-item p strong {
+  color: var(--text-primary);
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .comp2-main {
@@ -815,24 +877,237 @@
     bottom: 0;
     left: 0;
     right: 0;
+    top: auto;
     height: auto;
     flex-direction: row;
-    padding: 8px 16px;
+    padding: 6px 8px;
+    padding-bottom: calc(6px + env(safe-area-inset-bottom));
     border-right: none;
     border-top: 1px solid var(--border-color);
     z-index: 100;
     background: var(--bg-primary);
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.3);
   }
 
   .comp2-nav {
     flex-direction: row;
     justify-content: space-around;
     width: 100%;
+    gap: 0;
   }
 
   .comp2-nav-btn {
+    padding: 8px 6px;
+    font-size: 0.55rem;
+    flex: 1;
+    border-radius: 8px;
+  }
+
+  .comp2-nav-btn svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .comp2-nav-btn span {
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 60px;
+  }
+
+  .comp2-content {
+    padding: 12px;
+    padding-bottom: 90px; /* Space for bottom nav */
+  }
+
+  .comp2-config {
+    padding: 12px 14px;
+    border-radius: 12px;
+  }
+
+  .comp2-config-row {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 12px;
+  }
+
+  .comp2-field {
+    width: 100%;
+  }
+
+  .comp2-field label {
+    font-size: 0.7rem;
+  }
+
+  .comp2-field select,
+  .comp2-field input {
+    padding: 12px;
+    font-size: 1rem;
+  }
+
+  .comp2-btn-run {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  .comp2-assets {
+    margin-top: 12px;
+    padding-top: 12px;
+  }
+
+  .comp2-chip {
     padding: 8px 12px;
-    font-size: 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .comp2-card {
+    padding: 14px;
+    border-radius: 12px;
+  }
+
+  .comp2-card h3 {
+    font-size: 1rem;
+  }
+
+  .comp2-stats {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .comp2-stat {
+    padding: 12px;
+  }
+
+  .duelo-scoreboard {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .duelo-player {
+    max-width: 100%;
+    width: 100%;
+    padding: 12px;
+    background: var(--bg-tertiary);
+    border-radius: 12px;
+  }
+
+  .player-icon {
+    font-size: 2rem;
+  }
+
+  .player-return {
+    font-size: 1.3rem;
+  }
+
+  .duelo-vs-big {
+    font-size: 1rem;
+    padding: 8px 0;
+  }
+
+  .comp2-duelo-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .comp2-duelo-btn {
+    padding: 10px 8px;
+  }
+
+  .duelo-icons {
+    font-size: 1.1rem;
+  }
+
+  .duelo-title {
+    font-size: 0.7rem;
+  }
+
+  .comp2-comparison {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .comparison-box {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .comp2-allocation {
+    grid-template-columns: 1fr;
+  }
+
+  .alloc-item input[type="range"] {
+    height: 8px;
+  }
+
+  .alloc-item input[type="range"]::-webkit-slider-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  .comp2-presets {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .comp2-preset {
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 0.75rem;
+  }
+
+  .comp2-pattern-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+  }
+
+  .comp2-pattern-btn {
+    padding: 10px 6px;
+  }
+
+  .pattern-year {
+    font-size: 0.65rem;
+  }
+
+  .pattern-name {
+    font-size: 0.7rem;
+  }
+
+  .pattern-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .pattern-header h2 {
+    font-size: 1.1rem;
+  }
+
+  .pattern-detail table {
+    font-size: 0.75rem;
+  }
+
+  .pattern-detail th,
+  .pattern-detail td {
+    padding: 6px 8px;
+  }
+
+  .conclusao-item {
+    padding: 10px;
+  }
+
+  .conclusao-item p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .comp2-nav-btn {
+    padding: 6px 4px;
+    font-size: 0.5rem;
   }
 
   .comp2-nav-btn svg {
@@ -840,55 +1115,12 @@
     height: 18px;
   }
 
-  .comp2-content {
-    padding: 16px;
-    padding-bottom: 80px; /* Space for bottom nav */
-  }
-
-  .comp2-config-row {
-    flex-direction: column;
-    align-items: stretch;
-  }
-
-  .comp2-field {
-    width: 100%;
-  }
-
-  .comp2-btn-run {
-    width: 100%;
-    justify-content: center;
-    margin-top: 8px;
-  }
-
-  .comp2-stats {
-    grid-template-columns: 1fr;
-  }
-
-  .duelo-scoreboard {
-    flex-direction: column;
-    gap: 16px;
-  }
-
-  .duelo-vs-big {
-    font-size: 1.2rem;
-  }
-
-  .comp2-comparison {
-    flex-direction: column;
-  }
-
-  .comp2-allocation {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 480px) {
   .comp2-assets {
     gap: 6px;
   }
 
   .comp2-chip {
-    padding: 5px 10px;
+    padding: 6px 10px;
     font-size: 0.75rem;
   }
 
@@ -897,6 +1129,11 @@
   }
 
   .comp2-pattern-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .comp2-toggle button {
+    padding: 8px 10px;
+    font-size: 0.75rem;
   }
 }

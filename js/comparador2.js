@@ -319,6 +319,7 @@ const Comparador2 = {
     this.renderChartEvolucao(resultados, dadosFiltrados, valorInicial);
     this.renderRanking(resultados, inflacaoAcumulada);
     this.renderStats(resultados, inflacaoAcumulada);
+    this.renderConclusoes(resultados, inflacaoAcumulada);
   },
 
   renderChartEvolucao(resultados, dados, valorInicial) {
@@ -440,6 +441,86 @@ const Comparador2 = {
     if (statMelhor) statMelhor.textContent = Comparador.assetNames[melhor.ativo] || melhor.ativo;
     if (statPior) statPior.textContent = Comparador.assetNames[pior.ativo] || pior.ativo;
     if (statInflacao) statInflacao.textContent = this.formatPercent(inflacaoAcumulada);
+  },
+
+  renderConclusoes(resultados, inflacaoAcumulada) {
+    const container = document.getElementById('comp2Conclusoes');
+    const lista = document.getElementById('comp2ConclusoesLista');
+    if (!container || !lista) return;
+
+    const conclusoes = [];
+    const ranking = Object.entries(resultados)
+      .map(([ativo, data]) => ({ ativo, ...data }))
+      .sort((a, b) => b.retornoReal - a.retornoReal);
+
+    // Conclusão 1: Vencedor
+    const vencedor = ranking[0];
+    conclusoes.push({
+      tipo: 'success',
+      icon: '✅',
+      texto: `<strong>${Comparador.assetNames[vencedor.ativo] || vencedor.ativo}</strong> foi o grande vencedor com retorno real de <strong>${this.formatPercent(vencedor.retornoReal)}</strong>.`
+    });
+
+    // Conclusão 2: Perdedores
+    const perdedores = ranking.filter(r => r.retornoReal < 0);
+    if (perdedores.length > 0) {
+      const nomes = perdedores.map(p => Comparador.assetNames[p.ativo] || p.ativo).join(', ');
+      conclusoes.push({
+        tipo: 'error',
+        icon: '❌',
+        texto: `${nomes} <strong>perderam para a inflação</strong>, ou seja, destruíram valor real.`
+      });
+    }
+
+    // Conclusão 3: Correlação dólar/ibovespa
+    if (resultados.ibovespa && resultados.dolar) {
+      const dolarNominal = resultados.dolar.retornoNominal;
+      if (dolarNominal > 30) {
+        conclusoes.push({
+          tipo: 'warning',
+          icon: '⚠️',
+          texto: `O dólar subiu <strong>${this.formatPercent(dolarNominal)}</strong>. Parte da alta do Ibovespa pode ser apenas <strong>correção da desvalorização do real</strong>, não geração de valor.`
+        });
+      }
+    }
+
+    // Conclusão 4: Renda variável vs fixa
+    const rv = ranking.filter(r => ['ibovespa', 'fii_ifix', 'sp500_brl'].includes(r.ativo));
+    const rf = ranking.filter(r => ['cdi', 'tesouro_ipca'].includes(r.ativo));
+    if (rv.length > 0 && rf.length > 0) {
+      const mediaRV = rv.reduce((acc, r) => acc + r.retornoReal, 0) / rv.length;
+      const mediaRF = rf.reduce((acc, r) => acc + r.retornoReal, 0) / rf.length;
+      if (mediaRF > mediaRV) {
+        conclusoes.push({
+          tipo: 'info',
+          icon: '📊',
+          texto: `Neste período, a <strong>renda fixa superou a renda variável</strong> em média. Nem sempre correr mais risco compensa.`
+        });
+      }
+    }
+
+    // Conclusão 5: Bitcoin se presente
+    if (resultados.bitcoin_brl && resultados.bitcoin_brl.retornoReal > 100) {
+      conclusoes.push({
+        tipo: 'warning',
+        icon: '₿',
+        texto: `Bitcoin teve retorno extraordinário de <strong>${this.formatPercent(resultados.bitcoin_brl.retornoReal)}</strong>, mas lembre-se da <strong>volatilidade extrema</strong> e das quedas de 70-80% em bear markets.`
+      });
+    }
+
+    // Renderizar
+    let html = '';
+    conclusoes.forEach(c => {
+      html += `
+        <div class="conclusao-item ${c.tipo}">
+          <span class="conclusao-icon">${c.icon}</span>
+          <p>${c.texto}</p>
+        </div>
+      `;
+    });
+
+    lista.innerHTML = html;
+    container.style.display = 'block';
   },
 
   // ==========================================
@@ -907,31 +988,34 @@ const Comparador2 = {
         html += `<div class="pattern-detail">${crise.contexto}</div>`;
       }
 
-      // Tabela de impacto nos ativos
-      if (crise.ativos) {
+      // Tabela de impacto nos ativos (usa 'impacto' ou 'ativos')
+      const impactoData = crise.impacto || crise.ativos;
+      if (impactoData && impactoData.length > 0) {
         html += `
-          <h4 style="margin-top: 20px; margin-bottom: 12px; color: var(--text-primary);">Impacto nos Ativos</h4>
+          <h4 style="margin-top: 20px; margin-bottom: 12px; color: var(--text-primary);">📊 Impacto nos Ativos</h4>
           <div style="overflow-x: auto;">
             <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
               <thead>
                 <tr style="background: var(--bg-tertiary);">
-                  <th style="padding: 10px; text-align: left; border-bottom: 1px solid var(--border-color);">Ativo</th>
-                  <th style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color);">Queda Máxima</th>
-                  <th style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color);">Recuperação</th>
-                  <th style="padding: 10px; text-align: left; border-bottom: 1px solid var(--border-color);">Comportamento</th>
+                  <th style="padding: 10px; text-align: left; border-bottom: 1px solid var(--border-color); color: var(--text-primary);">Ativo</th>
+                  <th style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color); color: var(--text-primary);">Variação</th>
+                  <th style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color); color: var(--text-primary);">Recuperação</th>
+                  <th style="padding: 10px; text-align: left; border-bottom: 1px solid var(--border-color); color: var(--text-primary);">Comportamento</th>
                 </tr>
               </thead>
               <tbody>
         `;
 
-        crise.ativos.forEach(ativo => {
-          const isNegative = ativo.queda && parseFloat(ativo.queda) < 0;
+        impactoData.forEach(item => {
+          const queda = item.queda;
+          const isNegative = typeof queda === 'number' ? queda < 0 : (queda && queda.toString().includes('-'));
+          const quedaStr = typeof queda === 'number' ? (queda >= 0 ? '+' + queda + '%' : queda + '%') : (queda || '-');
           html += `
             <tr>
-              <td style="padding: 10px; border-bottom: 1px solid var(--border-color);">${ativo.nome}</td>
-              <td style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color); color: ${isNegative ? 'var(--bearish)' : 'var(--bullish)'};">${ativo.queda || '-'}</td>
-              <td style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color);">${ativo.recuperacao || '-'}</td>
-              <td style="padding: 10px; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">${ativo.comportamento || '-'}</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-color); color: var(--text-primary);">${item.ativo || item.nome}</td>
+              <td style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color); color: ${isNegative ? 'var(--bearish)' : 'var(--bullish)'}; font-weight: 600;">${quedaStr}</td>
+              <td style="padding: 10px; text-align: center; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">${item.recuperacao || '-'}</td>
+              <td style="padding: 10px; border-bottom: 1px solid var(--border-color); color: var(--text-secondary);">${item.comportamento || '-'}</td>
             </tr>
           `;
         });
@@ -942,53 +1026,64 @@ const Comparador2 = {
       // Sinais de alerta
       if (crise.sinais && crise.sinais.length > 0) {
         html += `
-          <h4 style="margin-top: 20px; margin-bottom: 12px; color: var(--text-primary);">⚠️ Sinais de Alerta</h4>
+          <h4 style="margin-top: 24px; margin-bottom: 12px; color: var(--text-primary);">⚠️ Sinais de Alerta</h4>
           <ul style="margin-left: 20px; color: var(--text-secondary);">
-            ${crise.sinais.map(s => `<li style="margin-bottom: 6px;">${s}</li>`).join('')}
+            ${crise.sinais.map(s => `<li style="margin-bottom: 8px;">${s}</li>`).join('')}
           </ul>
         `;
       }
 
-      // Lições
-      if (crise.licoes) {
-        html += `
-          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 20px;">
-        `;
+      // Cards de lições (evitar, proteger, oportunidade são arrays diretos)
+      const hasLicoes = (crise.evitar?.length > 0) || (crise.proteger?.length > 0) || (crise.oportunidade?.length > 0);
+      if (hasLicoes) {
+        html += `<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px; margin-top: 24px;">`;
 
-        if (crise.licoes.evitar && crise.licoes.evitar.length > 0) {
+        if (crise.evitar && crise.evitar.length > 0) {
           html += `
-            <div style="padding: 12px; background: rgba(248, 81, 73, 0.1); border-radius: 8px; border-left: 3px solid var(--bearish);">
-              <h5 style="color: var(--bearish); margin-bottom: 8px;">❌ O que evitar</h5>
+            <div style="padding: 16px; background: rgba(248, 81, 73, 0.1); border-radius: 12px; border-left: 4px solid var(--bearish);">
+              <h5 style="color: var(--bearish); margin-bottom: 12px; font-size: 0.95rem;">❌ O que evitar</h5>
               <ul style="margin-left: 16px; font-size: 0.85rem; color: var(--text-secondary);">
-                ${crise.licoes.evitar.map(l => `<li style="margin-bottom: 4px;">${l}</li>`).join('')}
+                ${crise.evitar.map(l => `<li style="margin-bottom: 6px;">${l}</li>`).join('')}
               </ul>
             </div>
           `;
         }
 
-        if (crise.licoes.proteger && crise.licoes.proteger.length > 0) {
+        if (crise.proteger && crise.proteger.length > 0) {
           html += `
-            <div style="padding: 12px; background: rgba(88, 166, 255, 0.1); border-radius: 8px; border-left: 3px solid var(--primary-light);">
-              <h5 style="color: var(--primary-light); margin-bottom: 8px;">🛡️ Como se proteger</h5>
+            <div style="padding: 16px; background: rgba(88, 166, 255, 0.1); border-radius: 12px; border-left: 4px solid var(--primary-light);">
+              <h5 style="color: var(--primary-light); margin-bottom: 12px; font-size: 0.95rem;">🛡️ Como se proteger</h5>
               <ul style="margin-left: 16px; font-size: 0.85rem; color: var(--text-secondary);">
-                ${crise.licoes.proteger.map(l => `<li style="margin-bottom: 4px;">${l}</li>`).join('')}
+                ${crise.proteger.map(l => `<li style="margin-bottom: 6px;">${l}</li>`).join('')}
               </ul>
             </div>
           `;
         }
 
-        if (crise.licoes.oportunidade && crise.licoes.oportunidade.length > 0) {
+        if (crise.oportunidade && crise.oportunidade.length > 0) {
           html += `
-            <div style="padding: 12px; background: rgba(34, 197, 94, 0.1); border-radius: 8px; border-left: 3px solid var(--bullish);">
-              <h5 style="color: var(--bullish); margin-bottom: 8px;">💰 Oportunidades</h5>
+            <div style="padding: 16px; background: rgba(34, 197, 94, 0.1); border-radius: 12px; border-left: 4px solid var(--bullish);">
+              <h5 style="color: var(--bullish); margin-bottom: 12px; font-size: 0.95rem;">💰 Oportunidades</h5>
               <ul style="margin-left: 16px; font-size: 0.85rem; color: var(--text-secondary);">
-                ${crise.licoes.oportunidade.map(l => `<li style="margin-bottom: 4px;">${l}</li>`).join('')}
+                ${crise.oportunidade.map(l => `<li style="margin-bottom: 6px;">${l}</li>`).join('')}
               </ul>
             </div>
           `;
         }
 
         html += '</div>';
+      }
+
+      // Conclusões
+      if (crise.conclusoes && crise.conclusoes.length > 0) {
+        html += `
+          <h4 style="margin-top: 24px; margin-bottom: 12px; color: var(--text-primary);">📝 Conclusões</h4>
+          <div style="background: var(--bg-tertiary); border-radius: 12px; padding: 16px;">
+            <ul style="margin-left: 16px; color: var(--text-secondary);">
+              ${crise.conclusoes.map(c => `<li style="margin-bottom: 8px;">${c}</li>`).join('')}
+            </ul>
+          </div>
+        `;
       }
 
       contentEl.innerHTML = html;

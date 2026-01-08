@@ -44,11 +44,11 @@
             </svg>
             <span>Histórico</span>
           </button>
-          <button class="comp2-nav-btn" data-tab="duelo" title="Frente a Frente">
+          <button class="comp2-nav-btn" data-tab="duelo" title="Comparar Ativos">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M4 4l7.07 17.07 2.51-7.39 7.39-2.51L4 4z"/><path d="M15 15l6 6"/>
+              <path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M21 21l-7-7"/><path d="M3 21l7-7"/><path d="M16 21h5v-5"/><path d="M8 21H3v-5"/>
             </svg>
-            <span>Duelo</span>
+            <span>Comparar</span>
           </button>
           <button class="comp2-nav-btn" data-tab="carteira" title="Carteira Diversificada">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -56,11 +56,11 @@
             </svg>
             <span>Carteira</span>
           </button>
-          <button class="comp2-nav-btn" data-tab="rebalancear" title="Rebalanceamento">
+          <button class="comp2-nav-btn" data-tab="rebalancear" title="Simulador de Rebalanceamento">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="9"/>
+              <path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4"/><path d="M3 9h18"/><path d="M3 15h18"/>
             </svg>
-            <span>Rebalancear</span>
+            <span>Simulador</span>
           </button>
           <button class="comp2-nav-btn" data-tab="padroes" title="Padrões Históricos">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -184,6 +184,12 @@
                   <span class="stat-label">Inflação período</span>
                   <span class="stat-value" id="statInflacao">--</span>
                 </div>
+              </div>
+
+              <!-- Conclusões -->
+              <div class="comp2-conclusoes" id="comp2Conclusoes" style="display: none;">
+                <h3>Conclusões</h3>
+                <div id="comp2ConclusoesLista"></div>
               </div>
             </div>
           </div>

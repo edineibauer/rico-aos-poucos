@@ -3476,70 +3476,214 @@ const Comparador = {
     },
     ia: {
       nome: 'Bolha de IA?',
-      periodo: '2023-202X?',
-      descricao: 'A alta das ações de IA desde 2023 lembra outras bolhas tecnológicas. Será que estamos em uma?',
+      periodo: '2023-2027?',
+      descricao: 'A concentração extrema em "Magnificent 7" e valuations esticados lembram bolhas anteriores. Capital Economics prevê estouro em 2026. Análise de janeiro/2026.',
       contexto: `
-        <p><strong>Situação atual:</strong> Desde o lançamento do ChatGPT (nov/2022), ações relacionadas a IA explodiram. Nvidia subiu 800%+. "Magnificent 7" (Apple, Microsoft, Google, Amazon, Meta, Tesla, Nvidia) concentram retornos.</p>
-        <p><strong>Paralelos preocupantes:</strong> Concentração extrema em poucas ações, P/L esticados, promessas de "transformação de tudo", investidores de varejo entrando em massa.</p>
-        <p><strong>Diferenças da bolha .com:</strong> Empresas de IA hoje têm lucros reais, modelos de negócio comprovados, e balanços sólidos. A tecnologia funciona e gera receita.</p>
+        <div style="margin-bottom: 24px; padding: 12px 16px; background: rgba(88, 166, 255, 0.1); border-radius: 8px; border-left: 4px solid var(--conservador);">
+          <strong>📅 Data desta análise:</strong> Janeiro de 2026<br>
+          <strong>📊 Dados:</strong> Mag 7 = $21.5 trilhões market cap | 75% dos ganhos do S&P 500 desde out/2022
+        </div>
+
+        <h4 style="color: var(--primary-light); margin-bottom: 16px;">📈 SITUAÇÃO ATUAL (Jan/2026)</h4>
+        <div class="bitcoin-ciclos">
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Concentração Recorde</span>
+              <span class="ciclo-badge queda">RISCO</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>30% do S&P 500</strong> e <strong>20% do MSCI World</strong> em apenas 5 empresas - maior concentração em 50 anos.<br>
+              P/L Shiller acima de 40x pela primeira vez desde a bolha .com. Nvidia subiu 800%+ desde 2022.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--neutral);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Capex vs Receita: O Problema</span>
+              <span class="ciclo-badge" style="background: rgba(240, 193, 75, 0.2); color: var(--neutral);">ALERTA</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Capex em IA:</strong> ~$520 bilhões em 2026 (Alphabet, Amazon, Meta, Microsoft, Oracle)<br>
+              <strong>Receita OpenAI:</strong> $13 bi (2025), projeção $100 bi (2027)<br>
+              <strong>Gap:</strong> Investimento massivo com retorno ainda incerto. Meta, Alphabet e Oracle precisam levantar $86 bi só em 2026.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bullish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Diferenças da Bolha .com</span>
+              <span class="ciclo-badge alta">POSITIVO</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>2000:</strong> Cisco a 200x P/L, empresas sem receita<br>
+              <strong>2026:</strong> Nvidia a ~50x P/L, Mag 7 a ~28x (metade de 2000)<br>
+              Empresas têm lucros reais, balanços sólidos. A tecnologia funciona e gera receita.
+            </p>
+          </div>
+        </div>
+
+        <h4 style="color: var(--primary-light); margin: 24px 0 16px;">🎯 GATILHOS POTENCIAIS DA CORREÇÃO</h4>
+        <div class="bitcoin-ciclos">
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">1. Desaceleração de Lucros (2026-2027)</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              Crescimento de lucros do Mag 7 cai para 18% em 2026 (mais lento em 4 anos).<br>
+              Depreciação dos data centers começa a pesar. Convergência com S&P 500 reduz prêmio de valuation.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2. Crise de Dívida Tech</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              Oracle vendeu $18 bi em bonds → ação caiu 37%. Empresas dependentes de dívida para capex.<br>
+              Se juros subirem ou crédito apertar, o ciclo de investimento pode quebrar.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">3. Competição + Commoditização</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>DeepSeek (jan/2025):</strong> IA chinesa derrubou Nvidia 17% em um dia.<br>
+              Modelos open-source commoditizam LLMs. Margens de IA podem colapsar como aconteceu com PCs.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">4. Decepção de Produtividade</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              Se IA não entregar ganhos reais de produtividade nas empresas, narrativa de "transformação" perde força.<br>
+              ROI dos investimentos em IA sendo questionado por CFOs.
+            </p>
+          </div>
+        </div>
+
+        <h4 style="color: var(--primary-light); margin: 24px 0 16px;">📅 PREVISÕES POR ANO</h4>
+        <div class="bitcoin-ciclos">
+          <div class="ciclo-card" style="border-left: 4px solid var(--neutral);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2026 - Ano de Transição</span>
+              <span class="ciclo-badge" style="background: rgba(240, 193, 75, 0.2); color: var(--neutral);">ALERTA</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Previsão:</strong> Crescimento de lucros desacelera. Mercado começa a "separar vencedores de perdedores".<br>
+              <strong>Catalisador:</strong> Resultados trimestrais abaixo das expectativas ou guidance fraco.<br>
+              <strong>Ação:</strong> Rebalancear portfólio. Reduzir concentração em Mag 7. Aumentar small caps e valor.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2027 - Janela de Correção</span>
+              <span class="ciclo-badge queda">QUEDA</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Previsão:</strong> Capital Economics e outros preveem correção significativa entre 2026-2027.<br>
+              <strong>Magnitude esperada:</strong> Mag 7: -30% a -50%. Nasdaq: -25% a -40%. S&P 500: -15% a -25%.<br>
+              <strong>Ação:</strong> Ter caixa para comprar na queda. Não vender no pânico.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bullish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2028+ - Reestruturação</span>
+              <span class="ciclo-badge alta">OPORTUNIDADE</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Previsão:</strong> Sobreviventes com margens reais e dados proprietários lideram novo ciclo.<br>
+              <strong>Rotação:</strong> Capital flui para "IA vertical" (aplicações específicas) vs "IA horizontal" (LLMs genéricos).<br>
+              <strong>Ação:</strong> Comprar vencedores a valuations razoáveis. Evitar "IA me-too".
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top: 16px; padding: 12px; background: rgba(248, 81, 73, 0.1); border-radius: 8px; border-left: 4px solid var(--bearish);">
+          <strong>⚠️ AVISO:</strong> Previsões baseadas em análises de Capital Economics, Bank of America, Goldman Sachs, JP Morgan e padrões históricos. Bolhas podem inflar mais antes de estourar. Use como guia, não como certeza.
+        </p>
       `,
       impacto: [
-        { ativo: 'Magnificent 7', queda: '?', recuperacao: '?', comportamento: 'Se comportam como mercado próprio' },
-        { ativo: 'S&P 500', queda: '?', recuperacao: '?', comportamento: 'Dominado por big techs' },
-        { ativo: 'Small Caps', queda: '?', recuperacao: '?', comportamento: 'Podem se beneficiar de rotação' },
-        { ativo: 'Ouro', queda: '?', recuperacao: '?', comportamento: 'Hedge tradicional' },
-        { ativo: 'Renda Fixa', queda: '?', recuperacao: '?', comportamento: 'Se juros subirem mais' }
+        { ativo: 'Nvidia', queda: -40, recuperacao: '2-3 anos', comportamento: 'Mais exposta: 800%+ de alta, P/L ~50x' },
+        { ativo: 'Mag 7 (média)', queda: -35, recuperacao: '2-3 anos', comportamento: 'Correção de múltiplos, lucros sustentam' },
+        { ativo: 'Nasdaq', queda: -30, recuperacao: '2-3 anos', comportamento: 'Concentrado em tech, sofre junto' },
+        { ativo: 'S&P 500', queda: -20, recuperacao: '1-2 anos', comportamento: 'Diluído por outros setores' },
+        { ativo: 'Small Caps EUA', queda: -10, recuperacao: '1 ano', comportamento: 'BENEFICIADO: rotação de capital' },
+        { ativo: 'Bonds/TLT', queda: '+15', recuperacao: '-', comportamento: 'BENEFICIADO: flight to quality' },
+        { ativo: 'Ouro', queda: '+10', recuperacao: '-', comportamento: 'BENEFICIADO: hedge tradicional' },
+        { ativo: 'Europa/Emergentes', queda: -5, recuperacao: '1 ano', comportamento: 'Menos expostos, podem subir relativamente' }
       ],
       sinais: [
-        'Nvidia com P/L acima de 60x',
-        'Empresas adicionando "AI" ao nome para valorizar',
-        'Toda startup é "powered by AI"',
-        'Concentração extrema em poucas ações',
-        'Euforia generalizada sobre a tecnologia'
+        '🔴 TOPO: P/L Shiller acima de 40x (nível de 2000)',
+        '🔴 TOPO: 75% dos ganhos do S&P em 7 ações',
+        '🔴 TOPO: Capex de IA ($520bi) >> Receitas de IA ($13bi)',
+        '🔴 TOPO: "Toda empresa é de IA agora"',
+        '🔴 TOPO: Empresas emitindo dívida massiva para IA (Oracle $18bi)',
+        '🟡 TRANSIÇÃO: Crescimento de lucros Mag 7 desacelerando (18% em 2026)',
+        '🟡 TRANSIÇÃO: Competição chinesa (DeepSeek) pressionando margens',
+        '🟢 FUNDO: P/L volta para 15-20x',
+        '🟢 FUNDO: "IA foi só hype" na mídia',
+        '🟢 FUNDO: Demissões em massa em big techs'
       ],
       evitar: [
-        'All-in em Mag 7 ou só tech',
-        'Empresas de IA sem receita ou produto real',
-        'Ignorar valuations esticados',
-        'Assumir que "dessa vez é diferente"'
+        '🚫 Concentração >30% em Mag 7 ou tech EUA',
+        '🚫 Empresas de "IA" sem receita real (só narrativa)',
+        '🚫 Assumir que "dessa vez é diferente"',
+        '🚫 Ignorar a desaceleração de crescimento de lucros',
+        '🚫 Comprar mais tech após quedas de 10-15% (pode cair mais)',
+        '🚫 ETFs market-cap weighted (muito concentrados em big tech)'
       ],
       proteger: [
-        'Diversificar para além de tech americana',
-        'Ter exposição a small caps e valor',
-        'Manter posição em renda fixa',
-        'Ter parte em mercados emergentes e Europa'
+        '✅ Rebalancear: reduzir Mag 7, aumentar small caps e valor',
+        '✅ Estratégia "barbell": tech de qualidade + defensivos (saúde, consumo)',
+        '✅ 15-25% em bonds de qualidade (TLT, Tesouro)',
+        '✅ 5-10% em ouro como hedge',
+        '✅ Diversificação geográfica: Europa, Ásia, emergentes',
+        '✅ ETFs equal-weighted ao invés de market-cap weighted',
+        '✅ Caixa (10-20%) para comprar na correção',
+        '✅ Distinguir "criadores de IA" vs "adotantes de IA"'
       ],
       oportunidade: [
-        'Se a bolha estourar: comprar empresas de qualidade baratas',
-        'Setores não-tech podem liderar próximo ciclo',
-        'IA industrial (não só software)',
-        'Infraestrutura de IA (energia, chips, data centers)'
+        '💰 Small caps EUA: valuations atrativos, beneficiam de corte de juros',
+        '💰 Ações de valor: rotação histórica após correções de growth',
+        '💰 Infraestrutura de IA: energia, data centers, refrigeração',
+        '💰 IA vertical: aplicações específicas com margens altas',
+        '💰 Saúde e consumo: defensivos que se beneficiam de rotação',
+        '💰 Europa e mercados emergentes: desconto em relação a EUA',
+        '💰 Após correção: Mag 7 de qualidade a preços razoáveis'
       ],
       conclusoes: [
-        'Sinais de bolha existem, mas fundamentos são melhores que em 2000',
-        'Concentração de mercado é arriscada',
-        'IA é real, mas não todas as empresas vão vencer',
-        'Diversificação protege contra correções setoriais',
-        'Prepare-se para cenários, não preveja'
+        'ANÁLISE: Janeiro/2026 - Sinais de bolha presentes, mas fundamentos melhores que 2000',
+        'TIMING: Correção esperada entre H2/2026 e 2027',
+        'MAGNITUDE: Mag 7 pode cair 30-50%, S&P 500 15-25%',
+        'GATILHOS: Desaceleração de lucros, crise de dívida, competição, decepção de produtividade',
+        'PROTEÇÃO: Diversificar, rebalancear, ter caixa, bonds e ouro',
+        'OPORTUNIDADE: Small caps, valor, defensivos, infraestrutura de IA',
+        'IA é real, mas valuations estão esticados - nem todas empresas vencerão'
       ],
       cenarios: {
         pior: {
-          titulo: 'Estouro da Bolha',
-          descricao: 'Receitas de IA decepcionam, juros altos por muito tempo, recessão nos EUA.',
-          impacto: 'Mag 7 cai 50-70%, Nasdaq cai 40-50%',
+          titulo: 'Crash + Recessão (2026-2027)',
+          descricao: 'Receitas de IA decepcionam, crise de dívida em big techs, recessão nos EUA. Ciclo se retroalimenta.',
+          impacto: 'Mag 7: -50% a -70%. Nasdaq: -40% a -50%. S&P 500: -25% a -35%. Small caps e bonds sobem.',
           probabilidade: '20%'
         },
         provavel: {
-          titulo: 'Correção Saudável + Continuidade',
-          descricao: 'Correção de 20-30% seguida de rotação para outras ações. IA continua crescendo, mas com múltiplos menores.',
-          impacto: 'Mercado lateral por 1-2 anos, depois retoma alta',
-          probabilidade: '55%'
+          titulo: 'Correção Controlada + Rotação',
+          descricao: 'Correção de 25-40% em tech. Rotação para small caps, valor e defensivos. IA continua, mas com múltiplos menores.',
+          impacto: 'Mag 7: -30% a -40%. Mercado lateral 1-2 anos. Small caps e valor lideram recuperação.',
+          probabilidade: '50%'
         },
         melhor: {
-          titulo: 'Produtividade Real',
-          descricao: 'IA de fato aumenta produtividade, receitas superam expectativas, corte de juros.',
-          impacto: 'Alta continua com volatilidade, mas sem crash',
-          probabilidade: '25%'
+          titulo: 'Soft Landing + Expansão',
+          descricao: 'IA entrega produtividade real, lucros superam expectativas, Fed corta juros. Correções pontuais mas sem crash.',
+          impacto: 'Volatilidade alta mas sem bear market. Mag 7 lateraliza enquanto mercado amplo sobe.',
+          probabilidade: '30%'
         }
       }
     }

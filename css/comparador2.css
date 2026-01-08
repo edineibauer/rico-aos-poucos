@@ -1041,6 +1041,12 @@
     gap: 12px;
   }
 
+  .comp2-config-row .comp2-btn-run {
+    order: 99; /* Always last on mobile */
+    width: 100%;
+    margin-top: 8px;
+  }
+
   .comp2-field {
     width: 100%;
   }

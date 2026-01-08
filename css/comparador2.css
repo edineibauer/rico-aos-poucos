@@ -381,6 +381,7 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 12px;
+  margin-top: 16px;
 }
 
 .comp2-stat {

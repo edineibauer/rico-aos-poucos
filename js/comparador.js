@@ -3317,78 +3317,154 @@ const Comparador = {
               </div>
             </div>
           </div>
+
+          <div class="ciclo-card alta" style="border: 2px solid var(--bullish); background: rgba(63, 185, 80, 0.1);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Ciclo 4: 2024-2025 (ATUAL)</span>
+              <span class="ciclo-badge alta">EM ANDAMENTO</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor positivo">+~500%?</div>
+                <div class="ciclo-stat-label">Projeção alta</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$16k → $?</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">~20 meses</div>
+                <div class="ciclo-stat-label">Desde halving</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        <p style="margin-top: 20px;"><strong>Padrão de enfraquecimento:</strong> As altas estão diminuindo (+9.900% → +2.900% → +1.600%), mas as quedas também (-86% → -84% → -77%). Isso indica maturação do ativo.</p>
+        <p style="margin-top: 20px;"><strong>Padrão de enfraquecimento:</strong> As altas estão diminuindo (+9.900% → +2.900% → +1.600% → ~500%?), mas as quedas também (-86% → -84% → -77% → ~65%?). Isso indica maturação do ativo.</p>
 
-        <p><strong>Onde estamos agora (Jan/2026):</strong> ~20 meses após o halving de abril/2024. Historicamente, picos ocorrem entre 12-18 meses pós-halving. Estamos na zona de possível topo ou início de correção.</p>
+        <h4 style="margin-top: 24px; color: var(--primary-light);">📅 PREVISÕES POR ANO (baseadas em padrões históricos)</h4>
+
+        <div class="bitcoin-ciclos" style="margin-top: 16px;">
+          <div class="ciclo-card" style="border-left: 4px solid var(--neutral);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2026 - Zona de Topo/Início Correção</span>
+              <span class="ciclo-badge" style="background: rgba(240, 193, 75, 0.2); color: var(--neutral);">ALERTA</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Padrão histórico:</strong> ~20-24 meses após halving é zona de pico. Estamos em janeiro/2026 = 20 meses pós-halving.<br>
+              <strong>Previsão:</strong> Se seguir o padrão, o topo pode já ter ocorrido ou ocorrerá em Q1-Q2/2026. Após o topo, início de correção gradual.<br>
+              <strong>Ação sugerida:</strong> Realizar lucros parciais. Não comprar mais. Preparar para bear market.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2027 - Bear Market (Correção Forte)</span>
+              <span class="ciclo-badge queda">QUEDA</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Padrão histórico:</strong> 2-3 anos após halving = queda de 60-85% do pico. Anos de correção: 2014, 2018, 2022.<br>
+              <strong>Previsão:</strong> Queda de 50-70% do topo. Se pico foi $120k-$150k, pode cair para $40k-$60k. Pânico na mídia, "Bitcoin está morto".<br>
+              <strong>Ação sugerida:</strong> NÃO VENDER no pânico. Acumular gradualmente via DCA se tiver caixa.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bearish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2028 - Fundo/Acumulação + Halving</span>
+              <span class="ciclo-badge" style="background: rgba(88, 166, 255, 0.2); color: var(--conservador);">HALVING</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Padrão histórico:</strong> ~4 anos após halving anterior = próximo halving. 2028 terá o 5º halving (provavelmente abril/2028).<br>
+              <strong>Previsão:</strong> Primeiro semestre: possível continuação do bear ou fundo. Segundo semestre: início de acumulação pré-halving.<br>
+              <strong>Ação sugerida:</strong> MELHOR MOMENTO para acumular. Preços baixos + proximidade do halving = setup ideal.
+            </p>
+          </div>
+
+          <div class="ciclo-card" style="border-left: 4px solid var(--bullish);">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">2029 - Início do Ciclo 5 (Nova Alta)</span>
+              <span class="ciclo-badge alta">ALTA</span>
+            </div>
+            <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
+              <strong>Padrão histórico:</strong> 6-18 meses pós-halving = fase de alta. Anos de alta: 2013, 2017, 2021, 2025.<br>
+              <strong>Previsão:</strong> Nova alta de 100-300% em relação ao fundo de 2027-2028. Retornos menores que ciclos anteriores (maturação).<br>
+              <strong>Ação sugerida:</strong> Manter posição acumulada. Definir alvos de venda parcial para 2029-2030.
+            </p>
+          </div>
+        </div>
+
+        <p style="margin-top: 16px; padding: 12px; background: rgba(248, 81, 73, 0.1); border-radius: 8px; border-left: 4px solid var(--bearish);">
+          <strong>⚠️ AVISO:</strong> Estas são previsões baseadas em padrões passados. Ciclos podem se alongar, encurtar ou quebrar completamente. Use como guia, não como garantia. Eventos macro (regulação, crise global, adoção institucional) podem alterar tudo.
+        </p>
       `,
       impacto: [
         { ativo: 'Ciclo 1 (2013)', queda: -86, recuperacao: '2 anos', comportamento: 'Alta +9.900% | Queda $1.100→$170' },
         { ativo: 'Ciclo 2 (2017)', queda: -84, recuperacao: '3 anos', comportamento: 'Alta +2.900% | Queda $20k→$3.2k' },
         { ativo: 'Ciclo 3 (2021)', queda: -77, recuperacao: '2 anos', comportamento: 'Alta +1.600% | Queda $69k→$16k' },
-        { ativo: 'Tendência', queda: '↓', recuperacao: '↓', comportamento: 'Altas e quedas menores (maturação)' },
-        { ativo: 'Altcoins', queda: -95, recuperacao: 'Maioria nunca', comportamento: '80%+ das altcoins morrem no bear' }
+        { ativo: 'Ciclo 4 (2025)', queda: '?', recuperacao: '?', comportamento: 'EM ANDAMENTO - ~20 meses pós-halving' },
+        { ativo: 'Tendência', queda: '↓', recuperacao: '↓', comportamento: 'Altas e quedas menores a cada ciclo' }
       ],
       sinais: [
         '🔴 TOPO: Preço subindo >100% em poucos meses',
         '🔴 TOPO: Google Trends "Bitcoin" explodindo',
         '🔴 TOPO: Amigos/família perguntando sobre crypto',
         '🔴 TOPO: Altcoins de meme em alta vertical',
-        '🔴 TOPO: 12-18 meses após o halving',
+        '🔴 TOPO: 12-18 meses após o halving (ESTAMOS AQUI - JAN/2026)',
         '🟢 FUNDO: Preço lateral por 6+ meses',
         '🟢 FUNDO: "Bitcoin está morto" na mídia',
         '🟢 FUNDO: Capitulação de mineradores'
       ],
       evitar: [
-        'Comprar quando preço está parabólico (>100% em meses)',
-        'All-in em qualquer momento - sempre usar DCA',
-        'Altcoins que já subiram 1000%+',
-        'Alavancagem - liquidações destroem patrimônio',
-        'Deixar em exchanges (risco FTX, Mt.Gox)',
-        'Vender no pânico durante bear market'
+        '🚫 Comprar AGORA se preço está parabólico (estamos ~20 meses pós-halving)',
+        '🚫 All-in em qualquer momento - sempre usar DCA',
+        '🚫 Altcoins que já subiram 1000%+',
+        '🚫 Alavancagem - liquidações destroem patrimônio',
+        '🚫 Deixar em exchanges (risco FTX, Mt.Gox)',
+        '🚫 Vender no pânico durante bear market (2027)'
       ],
       proteger: [
-        'DCA (Dollar Cost Average) ao longo do ciclo',
-        'Cold wallet (hardware wallet) para custódia',
-        'Plano de saída ANTES da euforia (ex: vender 20% a cada 50% alta)',
-        'Máximo 5-10% do patrimônio total em crypto',
-        'Aceitar que vai cair 70%+ após o pico',
-        'Estudar ciclos passados antes de investir'
+        '✅ Se tem lucro agora: realizar parcialmente (20-50%)',
+        '✅ Guardar caixa para comprar no bear market 2027-2028',
+        '✅ Cold wallet (hardware wallet) para custódia',
+        '✅ Plano de saída ANTES da euforia',
+        '✅ Máximo 5-10% do patrimônio total em crypto',
+        '✅ Aceitar que vai cair 60-70% após o pico'
       ],
       oportunidade: [
-        'Melhor: 6-12 meses ANTES do halving (acumulação)',
-        'Segundo melhor: bear market, após 50%+ de queda',
-        'Bitcoin é mais seguro que altcoins (menor queda, sempre recuperou)',
-        'Usar ciclos como guia, não como garantia',
-        'Rebalancear: vender parte no bull, comprar no bear'
+        '💰 AGORA (Jan/2026): Realizar lucros, não comprar mais',
+        '💰 2027: Começar DCA quando cair 50%+ do topo',
+        '💰 2028: Acumulação forte - ano do halving',
+        '💰 Próximo ciclo de compra ideal: H2/2027 a H1/2028',
+        '💰 Bitcoin é mais seguro que altcoins (menor queda, sempre recuperou)'
       ],
       conclusoes: [
-        'Ciclos de ~4 anos se repetiram 3x - padrão forte, mas não garantia',
-        'Quedas de 70-85% são NORMAIS após cada pico',
+        'MOMENTO ATUAL: ~20 meses pós-halving = zona de topo histórico',
+        'PREVISÃO 2026: Possível topo ou início de correção',
+        'PREVISÃO 2027: Bear market, queda de 50-70%',
+        'PREVISÃO 2028: Fundo + 5º halving = momento de comprar',
+        'PREVISÃO 2029: Nova alta (Ciclo 5)',
         'Altas cada vez menores (retornos decrescentes)',
         'Quedas cada vez menores (maturação do ativo)',
-        'Comprar no medo extremo, reduzir na euforia',
-        'Altcoins são cassino - 80%+ morrem a cada ciclo',
-        'Só invista o que pode perder 100% e manter 4+ anos'
+        'Padrão se repetiu 3x, mas não é garantia para o futuro'
       ],
       cenarios: {
         pior: {
-          titulo: 'Superciclo de Baixa',
-          descricao: 'Regulação global coordenada, proibição em economias importantes, ou falha sistêmica (hack de exchange top 3).',
-          impacto: 'Queda 85-90% com recuperação de 5+ anos. Pior: ciclos param de funcionar.',
+          titulo: 'Ciclo Quebra (2026-2029)',
+          descricao: 'Regulação global agressiva, crise de liquidez, ou falha sistêmica fazem os ciclos pararem de funcionar.',
+          impacto: '2026-27: Queda de 80%+. 2028-29: Não há recuperação significativa. Bitcoin se torna ativo de nicho.',
           probabilidade: '10%'
         },
         provavel: {
           titulo: 'Ciclo Tradicional com Maturação',
-          descricao: 'Alta de 150-300% pós-halving 2024, pico Q4/2025 a Q2/2026, correção de 60-75%.',
-          impacto: 'Pico: $120k-$180k | Correção: $40k-$60k | Menor volatilidade.',
+          descricao: '2026: Topo/correção inicial. 2027: Bear market (-60-70%). 2028: Fundo + halving. 2029: Nova alta (+100-200%).',
+          impacto: 'Pico 2025-26: $100k-$150k. Fundo 2027-28: $35k-$60k. Pico 2029-30: $150k-$250k.',
           probabilidade: '55%'
         },
         melhor: {
-          titulo: 'Adoção Institucional Massiva',
-          descricao: 'ETFs spot, reservas de bancos centrais, Bitcoin como "ouro digital" aceito globalmente.',
-          impacto: 'Ciclos suaves (queda 40-50%), menor volatilidade, valorização gradual.',
+          titulo: 'Superciclo Institucional',
+          descricao: 'ETFs, reservas de bancos centrais e adoção corporativa suavizam ciclos. Correções menores, crescimento mais estável.',
+          impacto: '2026-27: Correção de apenas 40-50%. 2028-29: Alta gradual. Volatilidade reduzida permanentemente.',
           probabilidade: '35%'
         }
       }

@@ -112,6 +112,17 @@ const Comparador = {
     // Botão iniciar duelo
     document.getElementById('btnDuelo')?.addEventListener('click', () => this.iniciarDuelo());
 
+    // Crises buttons
+    document.querySelectorAll('.crise-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        document.querySelectorAll('.crise-btn').forEach(b => b.classList.remove('active'));
+        e.currentTarget.classList.add('active');
+      });
+    });
+
+    // Botão analisar crise
+    document.getElementById('btnCrises')?.addEventListener('click', () => this.analisarCrise());
+
     // Toggle nominal/real no duelo
     document.getElementById('btnNominalDuelo')?.addEventListener('click', () => {
       document.getElementById('btnNominalDuelo').classList.add('active');
@@ -2964,6 +2975,517 @@ const Comparador = {
       <p style="margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--border-color); color: var(--text-muted); font-size: 0.9rem;">
         <strong>Lembre-se:</strong> Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais e não constitui recomendação de investimento.
       </p>
+    `;
+  },
+
+  // ==========================================
+  // HISTÓRICO DE CRISES
+  // ==========================================
+
+  // Dados históricos das crises
+  dadosCrises: {
+    dotcom: {
+      nome: 'Bolha Ponto Com',
+      periodo: '2000-2002',
+      descricao: 'O estouro da bolha das empresas de internet foi uma das maiores correções da história. Empresas sem lucro eram avaliadas em bilhões apenas por terem ".com" no nome.',
+      contexto: `
+        <p><strong>O que aconteceu:</strong> Entre 1995 e 2000, o índice Nasdaq subiu mais de 400%. Empresas como Pets.com, Webvan e TheGlobe.com valiam bilhões sem nunca terem dado lucro. Em março de 2000, a bolha estourou.</p>
+        <p><strong>Gatilho:</strong> O Fed começou a subir juros em 1999. Investidores perceberam que empresas sem modelo de negócio sustentável não sobreviveriam ao crédito mais caro.</p>
+        <p><strong>Duração:</strong> A queda durou até outubro de 2002. O Nasdaq levou 15 anos para recuperar o pico de 2000.</p>
+      `,
+      impacto: [
+        { ativo: 'S&P 500', queda: -49, recuperacao: '5 anos', comportamento: 'Caiu junto, mas menos que Nasdaq' },
+        { ativo: 'Nasdaq', queda: -78, recuperacao: '15 anos', comportamento: 'Epicentro da crise' },
+        { ativo: 'Ibovespa', queda: -44, recuperacao: '4 anos', comportamento: 'Seguiu mercados globais' },
+        { ativo: 'Ouro', queda: +2, recuperacao: '-', comportamento: 'Lateral, porto seguro fraco' },
+        { ativo: 'Dólar (vs Real)', queda: +53, recuperacao: '-', comportamento: 'Fuga para segurança' },
+        { ativo: 'Renda Fixa EUA', queda: +35, recuperacao: '-', comportamento: 'Grande vencedor (queda de juros)' }
+      ],
+      sinais: [
+        'P/L médio do Nasdaq acima de 100x',
+        'IPOs de empresas sem receita subindo 200%+ no primeiro dia',
+        'Taxistas e cabelereiros dando dicas de ações tech',
+        'Empresas adicionando ".com" ao nome só para valorizar',
+        'Fed subindo juros agressivamente'
+      ],
+      evitar: [
+        'Empresas sem lucro com valuations esticados',
+        'Ações que subiram 1000%+ em poucos anos',
+        'Setores onde "dessa vez é diferente"',
+        'Concentração em um único setor quente'
+      ],
+      proteger: [
+        'Manter 20-30% em renda fixa de qualidade',
+        'Diversificar geograficamente',
+        'Preferir empresas com lucro real e fluxo de caixa',
+        'Ter reserva em moeda forte'
+      ],
+      oportunidade: [
+        'Comprar empresas de qualidade durante o pânico',
+        'Empresas tech sobreviventes (Amazon caiu 90% e voltou)',
+        'Renda fixa se beneficia da queda de juros',
+        'Fundos de valor superam growth na recuperação'
+      ],
+      conclusoes: [
+        'Bolhas de tecnologia podem durar anos, mas sempre estouram',
+        'Empresas sem fundamentos sólidos desaparecem',
+        'Quem sobrevive pode se tornar gigante (Amazon, Apple)',
+        'Diversificação e paciência são essenciais',
+        'O mercado pode ficar irracional mais tempo do que você aguenta'
+      ]
+    },
+    subprime: {
+      nome: 'Crise Subprime (2008)',
+      periodo: '2007-2009',
+      descricao: 'A crise financeira global de 2008 foi causada pelo colapso do mercado imobiliário americano e a quebra de grandes bancos.',
+      contexto: `
+        <p><strong>O que aconteceu:</strong> Bancos americanos emprestaram trilhões para pessoas sem condições de pagar (subprime). Esses empréstimos foram empacotados em títulos "seguros" e vendidos globalmente. Quando os calotes começaram, o sistema financeiro quase colapsou.</p>
+        <p><strong>Gatilho:</strong> A quebra do Lehman Brothers em setembro de 2008 gerou pânico global. O crédito congelou e empresas sólidas não conseguiam financiamento.</p>
+        <p><strong>Duração:</strong> A queda mais aguda foi de outubro/2007 a março/2009 (~17 meses). S&P 500 recuperou em ~4 anos.</p>
+      `,
+      impacto: [
+        { ativo: 'S&P 500', queda: -57, recuperacao: '4 anos', comportamento: 'Queda severa, bancos lideraram' },
+        { ativo: 'Ibovespa', queda: -60, recuperacao: '6 anos', comportamento: 'Emergentes sofreram mais' },
+        { ativo: 'Ouro', queda: +25, recuperacao: '-', comportamento: 'Porto seguro clássico funcionou' },
+        { ativo: 'Dólar (vs Real)', queda: +48, recuperacao: '-', comportamento: 'Fuga para segurança' },
+        { ativo: 'CDI', queda: +12, recuperacao: '-', comportamento: 'Selic subiu, depois caiu' },
+        { ativo: 'FIIs (IFIX)', queda: -35, recuperacao: '3 anos', comportamento: 'Imóveis foram epicentro nos EUA' }
+      ],
+      sinais: [
+        'Preços de imóveis subindo muito acima da renda',
+        'Empréstimos sendo dados sem comprovação de renda',
+        'Bancos com alavancagem de 30:1 ou mais',
+        'Títulos AAA pagando pouco spread sobre treasury',
+        'Economistas dizendo que "imóvel nunca cai"'
+      ],
+      evitar: [
+        'Ações de bancos muito alavancados',
+        'Setor imobiliário em bolha',
+        'Títulos de crédito estruturado complexos',
+        'Concentração em um único país emergente'
+      ],
+      proteger: [
+        'Manter ouro como hedge (5-10%)',
+        'Ter parte em dólar ou ativos dolarizados',
+        'Preferir empresas com pouca dívida',
+        'Títulos do governo de países AAA'
+      ],
+      oportunidade: [
+        'Comprar ações de qualidade no fundo (março 2009)',
+        'Empresas com caixa forte sobrevivem e crescem',
+        'Imóveis nos EUA ficaram muito baratos',
+        'Crédito corporativo de alta qualidade'
+      ],
+      conclusoes: [
+        'Crises de crédito são as mais perigosas',
+        'Ouro funciona como porto seguro em pânico',
+        'Dólar se fortalece em crises globais',
+        'Comprar no pânico gera os melhores retornos',
+        'Bancos centrais eventualmente salvam o sistema'
+      ]
+    },
+    brasil2015: {
+      nome: 'Crise Brasil (2014-2016)',
+      periodo: '2014-2016',
+      descricao: 'Combinação de recessão econômica, crise política (Lava Jato, impeachment) e colapso das commodities.',
+      contexto: `
+        <p><strong>O que aconteceu:</strong> O Brasil entrou na pior recessão de sua história. PIB caiu ~7% em dois anos. Desemprego disparou para 14%. A Petrobras perdeu 90% do valor. O país perdeu o grau de investimento.</p>
+        <p><strong>Gatilhos:</strong> Fim do ciclo de commodities, escândalos de corrupção (Petrobras), pedaladas fiscais, impeachment de Dilma, instabilidade política generalizada.</p>
+        <p><strong>Duração:</strong> Ibovespa caiu de janeiro/2014 a janeiro/2016. Recuperou em 2017-2018.</p>
+      `,
+      impacto: [
+        { ativo: 'Ibovespa', queda: -44, recuperacao: '4 anos', comportamento: 'Epicentro local da crise' },
+        { ativo: 'Dólar (vs Real)', queda: +72, recuperacao: '-', comportamento: 'Real derreteu de R$2,20 para R$4+' },
+        { ativo: 'FIIs (IFIX)', queda: -18, recuperacao: '2 anos', comportamento: 'Menor queda, renda protegeu' },
+        { ativo: 'CDI', queda: +45, recuperacao: '-', comportamento: 'Selic foi a 14,25%!' },
+        { ativo: 'Tesouro IPCA+', queda: -15, recuperacao: '2 anos', comportamento: 'Marcação a mercado negativa' },
+        { ativo: 'S&P 500 (em R$)', queda: +45, recuperacao: '-', comportamento: 'Subiu em reais pelo câmbio' }
+      ],
+      sinais: [
+        'Déficit fiscal crescente e maquiado',
+        'Intervenções constantes no preço dos combustíveis',
+        'Inflação subindo apesar de preços controlados',
+        'Investigações de corrupção em estatais',
+        'Rebaixamento de rating por agências'
+      ],
+      evitar: [
+        'Ações de estatais em governos intervencionistas',
+        'Títulos pré-fixados longos com juros baixos',
+        'Concentração 100% em ativos brasileiros',
+        'Empresas muito alavancadas'
+      ],
+      proteger: [
+        'Ter pelo menos 20-30% em dólar/ativos externos',
+        'CDI é rei em crises brasileiras (juros altos)',
+        'FIIs de tijolo com contratos longos',
+        'Evitar duration longa em renda fixa'
+      ],
+      oportunidade: [
+        'Comprar Ibovespa no fundo (janeiro 2016)',
+        'FIIs pagando DY de 12-15%',
+        'Empresas exportadoras se beneficiam do câmbio',
+        'Tesouro IPCA+ com taxas de 7-8%'
+      ],
+      conclusoes: [
+        'Brasil tem crises próprias além das globais',
+        'Diversificação internacional é essencial',
+        'CDI/Selic protege bem em crises locais',
+        'Câmbio é o primeiro a reagir',
+        'Crises políticas podem durar mais que econômicas'
+      ]
+    },
+    covid: {
+      nome: 'COVID-19',
+      periodo: '2020',
+      descricao: 'A pandemia causou a queda mais rápida da história dos mercados, seguida da recuperação mais rápida também.',
+      contexto: `
+        <p><strong>O que aconteceu:</strong> Em fevereiro-março de 2020, os mercados globais despencaram com a propagação do COVID-19. O S&P 500 caiu 34% em apenas 33 dias. Países fecharam economias inteiras.</p>
+        <p><strong>Resposta:</strong> Bancos centrais injetaram trilhões na economia. Juros foram zerados. Governos distribuíram dinheiro diretamente às pessoas.</p>
+        <p><strong>Duração:</strong> A queda durou apenas ~1 mês (fev-mar 2020). S&P 500 já estava em novas máximas em agosto de 2020.</p>
+      `,
+      impacto: [
+        { ativo: 'S&P 500', queda: -34, recuperacao: '5 meses', comportamento: 'Queda rápida, recuperação mais rápida' },
+        { ativo: 'Ibovespa', queda: -47, recuperacao: '12 meses', comportamento: 'Emergentes sofreram mais' },
+        { ativo: 'Bitcoin', queda: -53, recuperacao: '2 meses', comportamento: 'Queda seguida de explosão' },
+        { ativo: 'Ouro', queda: -12, recuperacao: '1 mês', comportamento: 'Queda inicial, depois ATH' },
+        { ativo: 'Dólar (vs Real)', queda: +40, recuperacao: '-', comportamento: 'Fuga para segurança' },
+        { ativo: 'Tesouro IPCA+', queda: -8, recuperacao: '4 meses', comportamento: 'Volatilidade seguida de ganhos' }
+      ],
+      sinais: [
+        'Vírus se espalhando rapidamente na China',
+        'Quarentenas em cidades inteiras',
+        'Cancelamento de eventos globais',
+        'VIX (índice do medo) disparando',
+        'Circuit breakers sendo acionados'
+      ],
+      evitar: [
+        'Vender no pânico (maior erro de 2020)',
+        'Apostar contra bancos centrais',
+        'Ignorar setores mais afetados (turismo, varejo físico)',
+        'Ficar 100% em caixa por medo'
+      ],
+      proteger: [
+        'Ter caixa para aproveitar quedas',
+        'Diversificação geográfica',
+        'Empresas com balanço forte sobrevivem',
+        'Um pouco de ouro como hedge'
+      ],
+      oportunidade: [
+        'Comprar na queda (23 março foi o fundo)',
+        'Empresas de tecnologia e e-commerce',
+        'Bitcoin e ativos digitais',
+        'FIIs muito descontados'
+      ],
+      conclusoes: [
+        'Crises de saúde/choque são rápidas',
+        'Bancos centrais salvam mercados rapidamente',
+        'Quem tinha caixa ganhou fortuna',
+        'Não vender no pânico é crucial',
+        'Algumas tendências aceleram (digitalização)'
+      ]
+    },
+    bitcoin: {
+      nome: 'Ciclos do Bitcoin',
+      periodo: 'Ciclos de ~4 anos',
+      descricao: 'O Bitcoin segue ciclos previsíveis ligados ao halving (redução da emissão pela metade a cada 4 anos).',
+      contexto: `
+        <p><strong>O padrão:</strong> Historicamente, o Bitcoin faz uma alta explosiva 12-18 meses após cada halving, seguida de uma correção de 70-85%. Este ciclo se repetiu em 2013, 2017, 2021.</p>
+        <p><strong>Halvings:</strong> 2012, 2016, 2020, 2024 (abril). Cada halving reduz a emissão de novos bitcoins pela metade, criando pressão de oferta.</p>
+        <p><strong>Próximo ciclo:</strong> Com o halving de abril/2024, o padrão sugere potencial alta até 2025, seguido de correção em 2026-2027.</p>
+      `,
+      impacto: [
+        { ativo: 'Bitcoin (Ciclo 1)', queda: -86, recuperacao: '2 anos', comportamento: '2013: $1.100 → $170' },
+        { ativo: 'Bitcoin (Ciclo 2)', queda: -84, recuperacao: '3 anos', comportamento: '2017: $20.000 → $3.200' },
+        { ativo: 'Bitcoin (Ciclo 3)', queda: -77, recuperacao: '2 anos', comportamento: '2021: $69.000 → $16.000' },
+        { ativo: 'Altcoins', queda: -95, recuperacao: 'Várias nunca', comportamento: 'Muito mais arriscadas' },
+        { ativo: 'Ações Crypto', queda: -90, recuperacao: 'Variável', comportamento: 'Correlação alta com BTC' }
+      ],
+      sinais: [
+        'Preço subindo parabolicamente (>100% em meses)',
+        'Mainstream media falando de crypto',
+        'Novos investidores entrando em massa',
+        'Altcoins de meme explodindo',
+        '12-18 meses após o halving'
+      ],
+      evitar: [
+        'Comprar no pico de euforia',
+        'All-in em altcoins obscuras',
+        'Alavancagem em crypto',
+        'FOMO (fear of missing out)'
+      ],
+      proteger: [
+        'DCA (compras regulares) durante bear market',
+        'Manter em cold wallet, não em exchanges',
+        'Ter plano de saída parcial em altas',
+        'Nunca mais de 5-10% do patrimônio'
+      ],
+      oportunidade: [
+        'Comprar durante bear markets (~1 ano após pico)',
+        'Acumular nas quedas de 50%+',
+        'Bitcoin é mais seguro que altcoins',
+        'Ciclo de halving como guia'
+      ],
+      conclusoes: [
+        'Bitcoin tem ciclos relativamente previsíveis',
+        'Quedas de 70-80% são "normais"',
+        'Comprar no medo, vender na ganância',
+        'Altcoins são muito mais arriscadas',
+        'Só invista o que pode perder 100%'
+      ],
+      cenarios: {
+        pior: {
+          titulo: 'Bear Market Prolongado',
+          descricao: 'Regulação agressiva global, proibições em países relevantes, ou hack massivo de exchange importante.',
+          impacto: 'Queda de 85-90% que leva 4+ anos para recuperar',
+          probabilidade: '15%'
+        },
+        provavel: {
+          titulo: 'Ciclo Tradicional',
+          descricao: 'Alta pós-halving 2024, pico em 2025, correção em 2026.',
+          impacto: 'Alta de 200-400% seguida de queda de 70-80%',
+          probabilidade: '60%'
+        },
+        melhor: {
+          titulo: 'Adoção Institucional Acelerada',
+          descricao: 'ETFs spot aprovados, reserva estratégica de países, adoção corporativa.',
+          impacto: 'Ciclos mais suaves, queda limitada a 50-60%',
+          probabilidade: '25%'
+        }
+      }
+    },
+    ia: {
+      nome: 'Bolha de IA?',
+      periodo: '2023-202X?',
+      descricao: 'A alta das ações de IA desde 2023 lembra outras bolhas tecnológicas. Será que estamos em uma?',
+      contexto: `
+        <p><strong>Situação atual:</strong> Desde o lançamento do ChatGPT (nov/2022), ações relacionadas a IA explodiram. Nvidia subiu 800%+. "Magnificent 7" (Apple, Microsoft, Google, Amazon, Meta, Tesla, Nvidia) concentram retornos.</p>
+        <p><strong>Paralelos preocupantes:</strong> Concentração extrema em poucas ações, P/L esticados, promessas de "transformação de tudo", investidores de varejo entrando em massa.</p>
+        <p><strong>Diferenças da bolha .com:</strong> Empresas de IA hoje têm lucros reais, modelos de negócio comprovados, e balanços sólidos. A tecnologia funciona e gera receita.</p>
+      `,
+      impacto: [
+        { ativo: 'Magnificent 7', queda: '?', recuperacao: '?', comportamento: 'Se comportam como mercado próprio' },
+        { ativo: 'S&P 500', queda: '?', recuperacao: '?', comportamento: 'Dominado por big techs' },
+        { ativo: 'Small Caps', queda: '?', recuperacao: '?', comportamento: 'Podem se beneficiar de rotação' },
+        { ativo: 'Ouro', queda: '?', recuperacao: '?', comportamento: 'Hedge tradicional' },
+        { ativo: 'Renda Fixa', queda: '?', recuperacao: '?', comportamento: 'Se juros subirem mais' }
+      ],
+      sinais: [
+        'Nvidia com P/L acima de 60x',
+        'Empresas adicionando "AI" ao nome para valorizar',
+        'Toda startup é "powered by AI"',
+        'Concentração extrema em poucas ações',
+        'Euforia generalizada sobre a tecnologia'
+      ],
+      evitar: [
+        'All-in em Mag 7 ou só tech',
+        'Empresas de IA sem receita ou produto real',
+        'Ignorar valuations esticados',
+        'Assumir que "dessa vez é diferente"'
+      ],
+      proteger: [
+        'Diversificar para além de tech americana',
+        'Ter exposição a small caps e valor',
+        'Manter posição em renda fixa',
+        'Ter parte em mercados emergentes e Europa'
+      ],
+      oportunidade: [
+        'Se a bolha estourar: comprar empresas de qualidade baratas',
+        'Setores não-tech podem liderar próximo ciclo',
+        'IA industrial (não só software)',
+        'Infraestrutura de IA (energia, chips, data centers)'
+      ],
+      conclusoes: [
+        'Sinais de bolha existem, mas fundamentos são melhores que em 2000',
+        'Concentração de mercado é arriscada',
+        'IA é real, mas não todas as empresas vão vencer',
+        'Diversificação protege contra correções setoriais',
+        'Prepare-se para cenários, não preveja'
+      ],
+      cenarios: {
+        pior: {
+          titulo: 'Estouro da Bolha',
+          descricao: 'Receitas de IA decepcionam, juros altos por muito tempo, recessão nos EUA.',
+          impacto: 'Mag 7 cai 50-70%, Nasdaq cai 40-50%',
+          probabilidade: '20%'
+        },
+        provavel: {
+          titulo: 'Correção Saudável + Continuidade',
+          descricao: 'Correção de 20-30% seguida de rotação para outras ações. IA continua crescendo, mas com múltiplos menores.',
+          impacto: 'Mercado lateral por 1-2 anos, depois retoma alta',
+          probabilidade: '55%'
+        },
+        melhor: {
+          titulo: 'Produtividade Real',
+          descricao: 'IA de fato aumenta produtividade, receitas superam expectativas, corte de juros.',
+          impacto: 'Alta continua com volatilidade, mas sem crash',
+          probabilidade: '25%'
+        }
+      }
+    }
+  },
+
+  analisarCrise() {
+    const criseId = document.querySelector('.crise-btn.active')?.dataset.crise || 'dotcom';
+    const crise = this.dadosCrises[criseId];
+
+    if (!crise) return;
+
+    // Mostrar resultados
+    document.getElementById('resultadosCrises').style.display = 'block';
+
+    // Renderizar conteúdo
+    this.renderCriseTitulo(crise);
+    this.renderCriseResumo(crise);
+    this.renderCriseContexto(crise);
+    this.renderTabelaCrise(crise);
+    this.renderChartCrise(crise);
+    this.renderSinaisAlerta(crise);
+    this.renderLicoes(crise);
+    this.renderCenarios(crise);
+    this.renderConclusoesCrise(crise);
+
+    // Scroll para resultados
+    document.getElementById('resultadosCrises').scrollIntoView({ behavior: 'smooth' });
+  },
+
+  renderCriseTitulo(crise) {
+    document.getElementById('criseTitulo').textContent = crise.nome + ' (' + crise.periodo + ')';
+  },
+
+  renderCriseResumo(crise) {
+    document.getElementById('criseResumo').innerHTML = `
+      <p class="crise-descricao">${crise.descricao}</p>
+    `;
+  },
+
+  renderCriseContexto(crise) {
+    document.getElementById('criseContexto').innerHTML = crise.contexto;
+  },
+
+  renderTabelaCrise(crise) {
+    const tbody = document.querySelector('#tabelaCrise tbody');
+    tbody.innerHTML = crise.impacto.map(item => `
+      <tr>
+        <td><strong>${item.ativo}</strong></td>
+        <td class="${typeof item.queda === 'number' ? (item.queda < 0 ? 'negativo' : 'positivo') : ''}">
+          ${typeof item.queda === 'number' ? (item.queda > 0 ? '+' : '') + item.queda + '%' : item.queda}
+        </td>
+        <td>${item.recuperacao}</td>
+        <td>${item.comportamento}</td>
+      </tr>
+    `).join('');
+  },
+
+  renderChartCrise(crise) {
+    const ctx = document.getElementById('chartCrise');
+    if (!ctx) return;
+
+    // Destruir chart anterior se existir
+    if (this.chartCrise) {
+      this.chartCrise.destroy();
+    }
+
+    // Dados para o gráfico - simula linha do tempo da crise
+    const ativos = crise.impacto.filter(a => typeof a.queda === 'number');
+    const labels = ativos.map(a => a.ativo);
+    const quedas = ativos.map(a => a.queda);
+
+    this.chartCrise = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: labels,
+        datasets: [{
+          label: 'Variação durante a crise (%)',
+          data: quedas,
+          backgroundColor: quedas.map(q => q < 0 ? 'rgba(239, 68, 68, 0.7)' : 'rgba(34, 197, 94, 0.7)'),
+          borderColor: quedas.map(q => q < 0 ? 'rgba(239, 68, 68, 1)' : 'rgba(34, 197, 94, 1)'),
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: (ctx) => `${ctx.raw > 0 ? '+' : ''}${ctx.raw}%`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { color: 'rgba(255,255,255,0.1)' },
+            ticks: {
+              color: '#9ca3af',
+              callback: (v) => v + '%'
+            }
+          },
+          y: {
+            grid: { display: false },
+            ticks: { color: '#9ca3af' }
+          }
+        }
+      }
+    });
+  },
+
+  renderSinaisAlerta(crise) {
+    document.getElementById('sinaisAlerta').innerHTML = `
+      <ul class="sinais-lista">
+        ${crise.sinais.map(s => `<li><span class="sinal-icon">⚠️</span> ${s}</li>`).join('')}
+      </ul>
+    `;
+  },
+
+  renderLicoes(crise) {
+    document.getElementById('licoesEvitar').innerHTML = crise.evitar.map(l => `<li>${l}</li>`).join('');
+    document.getElementById('licoesProteger').innerHTML = crise.proteger.map(l => `<li>${l}</li>`).join('');
+    document.getElementById('licoesOportunidade').innerHTML = crise.oportunidade.map(l => `<li>${l}</li>`).join('');
+  },
+
+  renderCenarios(crise) {
+    const cardCenarios = document.getElementById('cardCenarios');
+
+    if (crise.cenarios) {
+      cardCenarios.style.display = 'block';
+
+      document.getElementById('cenarioPior').innerHTML = `
+        <p><strong>${crise.cenarios.pior.titulo}</strong></p>
+        <p>${crise.cenarios.pior.descricao}</p>
+        <p class="cenario-impacto"><strong>Impacto:</strong> ${crise.cenarios.pior.impacto}</p>
+        <p class="cenario-prob">Probabilidade estimada: ${crise.cenarios.pior.probabilidade}</p>
+      `;
+
+      document.getElementById('cenarioProvavel').innerHTML = `
+        <p><strong>${crise.cenarios.provavel.titulo}</strong></p>
+        <p>${crise.cenarios.provavel.descricao}</p>
+        <p class="cenario-impacto"><strong>Impacto:</strong> ${crise.cenarios.provavel.impacto}</p>
+        <p class="cenario-prob">Probabilidade estimada: ${crise.cenarios.provavel.probabilidade}</p>
+      `;
+
+      document.getElementById('cenarioMelhor').innerHTML = `
+        <p><strong>${crise.cenarios.melhor.titulo}</strong></p>
+        <p>${crise.cenarios.melhor.descricao}</p>
+        <p class="cenario-impacto"><strong>Impacto:</strong> ${crise.cenarios.melhor.impacto}</p>
+        <p class="cenario-prob">Probabilidade estimada: ${crise.cenarios.melhor.probabilidade}</p>
+      `;
+    } else {
+      cardCenarios.style.display = 'none';
+    }
+  },
+
+  renderConclusoesCrise(crise) {
+    document.getElementById('conclusoesCrise').innerHTML = `
+      <ul class="conclusoes-lista">
+        ${crise.conclusoes.map(c => `
+          <li class="conclusao-item">
+            <span class="conclusao-icon">✓</span>
+            <span>${c}</span>
+          </li>
+        `).join('')}
+      </ul>
     `;
   }
 };

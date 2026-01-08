@@ -91,6 +91,10 @@
         <span class="tab-icon">⚖️</span>
         <span class="tab-text">Rebalancing</span>
       </button>
+      <button class="nav-tab" data-tab="crises">
+        <span class="tab-icon">📉</span>
+        <span class="tab-text">Crisis History</span>
+      </button>
     </nav>
 
     <!-- Tab Content: Historical Comparator -->
@@ -935,6 +939,169 @@
         <div class="resultado-card conclusoes-card">
           <h3>Simulation Conclusions</h3>
           <div class="conclusoes-lista" id="conclusoesDiversif"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Crisis History -->
+    <section class="tab-content" id="tab-crises">
+      <div class="section-header">
+        <h2>Has This Happened Before?</h2>
+        <p>When markets crash, nobody knows what to do. But history repeats. See how different assets behaved in past crises and prepare for the next ones.</p>
+      </div>
+
+      <div class="comparador-config">
+        <!-- Event Selection -->
+        <div class="crises-selector">
+          <h4>Choose a historical event:</h4>
+          <div class="crises-grid">
+            <button class="crise-btn active" data-crise="dotcom">
+              <div class="crise-header">
+                <span class="crise-icon">💻</span>
+                <span class="crise-ano">2000-2002</span>
+              </div>
+              <span class="crise-name">Dot-Com Bubble</span>
+              <span class="crise-desc">Internet companies crash</span>
+            </button>
+            <button class="crise-btn" data-crise="subprime">
+              <div class="crise-header">
+                <span class="crise-icon">🏠</span>
+                <span class="crise-ano">2008</span>
+              </div>
+              <span class="crise-name">Subprime Crisis</span>
+              <span class="crise-desc">Global housing collapse</span>
+            </button>
+            <button class="crise-btn" data-crise="brasil2015">
+              <div class="crise-header">
+                <span class="crise-icon">🇧🇷</span>
+                <span class="crise-ano">2014-2016</span>
+              </div>
+              <span class="crise-name">Brazil Crisis</span>
+              <span class="crise-desc">Recession + political crisis</span>
+            </button>
+            <button class="crise-btn" data-crise="covid">
+              <div class="crise-header">
+                <span class="crise-icon">🦠</span>
+                <span class="crise-ano">2020</span>
+              </div>
+              <span class="crise-name">COVID-19</span>
+              <span class="crise-desc">Global pandemic</span>
+            </button>
+            <button class="crise-btn" data-crise="bitcoin">
+              <div class="crise-header">
+                <span class="crise-icon">₿</span>
+                <span class="crise-ano">Cycles</span>
+              </div>
+              <span class="crise-name">Bitcoin Cycles</span>
+              <span class="crise-desc">Halving patterns</span>
+            </button>
+            <button class="crise-btn" data-crise="ia">
+              <div class="crise-header">
+                <span class="crise-icon">🤖</span>
+                <span class="crise-ano">202X?</span>
+              </div>
+              <span class="crise-name">AI Bubble?</span>
+              <span class="crise-desc">Potential scenario</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnCrises">
+          <span>Analyze Event</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Crisis Analysis Results -->
+      <div class="comparador-resultados" id="resultadosCrises" style="display: none;">
+        <!-- Main Event Card -->
+        <div class="resultado-card destaque-card">
+          <h3 id="criseTitulo">Event Analysis</h3>
+          <div class="crise-resumo" id="criseResumo"></div>
+        </div>
+
+        <!-- What happened -->
+        <div class="resultado-card">
+          <h3>What Happened?</h3>
+          <div class="crise-contexto" id="criseContexto"></div>
+        </div>
+
+        <!-- Asset Impact -->
+        <div class="resultado-card">
+          <h3>Asset Impact</h3>
+          <div class="table-scroll">
+            <table class="tabela-crise" id="tabelaCrise">
+              <thead>
+                <tr>
+                  <th>Asset</th>
+                  <th>Max Drop</th>
+                  <th>Recovery Time</th>
+                  <th>Behavior</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Recovery Chart -->
+        <div class="resultado-card">
+          <h3>Recovery Timeline</h3>
+          <div class="chart-container" style="height: 350px;">
+            <canvas id="chartCrise"></canvas>
+          </div>
+        </div>
+
+        <!-- Warning Signs -->
+        <div class="resultado-card">
+          <h3>Warning Signs (before the event)</h3>
+          <div class="sinais-alerta" id="sinaisAlerta"></div>
+        </div>
+
+        <!-- Lessons Learned -->
+        <div class="resultado-card">
+          <h3>Lessons for Investors</h3>
+          <div class="licoes-grid" id="licoesGrid">
+            <div class="licao-card evitar">
+              <h4>⚠️ What to avoid</h4>
+              <ul id="licoesEvitar"></ul>
+            </div>
+            <div class="licao-card proteger">
+              <h4>🛡️ How to protect</h4>
+              <ul id="licoesProteger"></ul>
+            </div>
+            <div class="licao-card oportunidade">
+              <h4>💰 Opportunities</h4>
+              <ul id="licoesOportunidade"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Future Scenarios -->
+        <div class="resultado-card" id="cardCenarios" style="display: none;">
+          <h3>Possible Scenarios</h3>
+          <div class="cenarios-grid" id="cenariosGrid">
+            <div class="cenario-card pessimista">
+              <h4>🔴 Worst Case</h4>
+              <div id="cenarioPior"></div>
+            </div>
+            <div class="cenario-card neutro">
+              <h4>🟡 Most Likely</h4>
+              <div id="cenarioProvavel"></div>
+            </div>
+            <div class="cenario-card otimista">
+              <h4>🟢 Best Case</h4>
+              <div id="cenarioMelhor"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusion -->
+        <div class="resultado-card conclusoes-card">
+          <h3>Summary: How to Prepare</h3>
+          <div class="conclusoes-lista" id="conclusoesCrise"></div>
         </div>
       </div>
     </section>

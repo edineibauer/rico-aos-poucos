@@ -7558,3 +7558,306 @@ body.home-page {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================
+   HISTÓRICO DE CRISES
+   ========================================== */
+
+.crises-selector {
+  margin-bottom: 24px;
+}
+
+.crises-selector h4 {
+  margin-bottom: 16px;
+  color: var(--text-color);
+}
+
+.crises-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 12px;
+}
+
+.crise-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 16px 12px;
+  background: var(--bg-tertiary);
+  border: 2px solid var(--border-color);
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.crise-btn:hover {
+  border-color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.1);
+}
+
+.crise-btn.active {
+  border-color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.15);
+  box-shadow: 0 0 0 3px rgba(45, 138, 110, 0.2);
+}
+
+.crise-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.crise-icon {
+  font-size: 1.5rem;
+}
+
+.crise-ano {
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: var(--bg-secondary);
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.crise-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-color);
+}
+
+.crise-desc {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+/* Resumo da crise */
+.crise-resumo {
+  padding: 16px;
+}
+
+.crise-descricao {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+/* Contexto */
+.crise-contexto {
+  padding: 16px;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+}
+
+.crise-contexto p {
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+.crise-contexto p:last-child {
+  margin-bottom: 0;
+}
+
+/* Tabela de crise */
+.tabela-crise {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-crise th,
+.tabela-crise td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabela-crise th {
+  background: var(--bg-tertiary);
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.tabela-crise td.positivo {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.tabela-crise td.negativo {
+  color: var(--vermelho);
+  font-weight: 600;
+}
+
+/* Sinais de alerta */
+.sinais-alerta {
+  padding: 16px;
+}
+
+.sinais-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sinais-lista li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.sinais-lista li:last-child {
+  margin-bottom: 0;
+}
+
+.sinal-icon {
+  font-size: 1.2rem;
+}
+
+/* Lições grid */
+.licoes-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 16px;
+}
+
+.licao-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+}
+
+.licao-card h4 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.licao-card.evitar {
+  border-left: 4px solid var(--vermelho);
+}
+
+.licao-card.proteger {
+  border-left: 4px solid var(--azul);
+}
+
+.licao-card.oportunidade {
+  border-left: 4px solid var(--verde);
+}
+
+.licao-card ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.licao-card li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.licao-card li:last-child {
+  margin-bottom: 0;
+}
+
+/* Cenários grid */
+.cenarios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 16px;
+}
+
+.cenario-card {
+  padding: 20px;
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+}
+
+.cenario-card h4 {
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.cenario-card.pessimista {
+  border-top: 4px solid var(--vermelho);
+}
+
+.cenario-card.neutro {
+  border-top: 4px solid var(--amarelo);
+}
+
+.cenario-card.otimista {
+  border-top: 4px solid var(--verde);
+}
+
+.cenario-card p {
+  margin-bottom: 8px;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.cenario-impacto {
+  color: var(--text-color) !important;
+  font-weight: 500;
+}
+
+.cenario-prob {
+  font-size: 0.85rem;
+  color: var(--text-muted) !important;
+  font-style: italic;
+}
+
+/* Conclusões crise */
+#conclusoesCrise .conclusoes-lista {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#conclusoesCrise .conclusao-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+#conclusoesCrise .conclusao-icon {
+  color: var(--primary-light);
+  font-weight: bold;
+}
+
+/* Responsivo crises */
+@media (max-width: 768px) {
+  .crises-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .crise-btn {
+    padding: 12px 8px;
+  }
+
+  .crise-icon {
+    font-size: 1.2rem;
+  }
+
+  .crise-name {
+    font-size: 0.8rem;
+  }
+
+  .crise-desc {
+    display: none;
+  }
+
+  .licoes-grid,
+  .cenarios-grid {
+    grid-template-columns: 1fr;
+  }
+}

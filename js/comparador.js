@@ -3325,22 +3325,27 @@ const Comparador = {
             </div>
             <div class="ciclo-detalhes">
               <div class="ciclo-stat">
-                <div class="ciclo-stat-valor positivo">+~500%?</div>
-                <div class="ciclo-stat-label">Projeção alta</div>
+                <div class="ciclo-stat-valor positivo">+575%</div>
+                <div class="ciclo-stat-label">Alta até ATH</div>
               </div>
               <div class="ciclo-stat">
-                <div class="ciclo-stat-valor">$16k → $?</div>
-                <div class="ciclo-stat-label">Preço</div>
+                <div class="ciclo-stat-valor">$16k → $108k</div>
+                <div class="ciclo-stat-label">Preço (ATH)</div>
               </div>
               <div class="ciclo-stat">
                 <div class="ciclo-stat-valor">~20 meses</div>
-                <div class="ciclo-stat-label">Desde halving</div>
+                <div class="ciclo-stat-label">Pós-halving</div>
               </div>
             </div>
           </div>
         </div>
 
-        <p style="margin-top: 20px;"><strong>Padrão de enfraquecimento:</strong> As altas estão diminuindo (+9.900% → +2.900% → +1.600% → ~500%?), mas as quedas também (-86% → -84% → -77% → ~65%?). Isso indica maturação do ativo.</p>
+        <p style="margin-top: 20px;"><strong>Padrão de enfraquecimento:</strong> As altas estão diminuindo (+9.900% → +2.900% → +1.600% → +575%), mas as quedas também (-86% → -84% → -77% → ~65%?). Isso indica maturação do ativo.</p>
+
+        <div style="margin-top: 24px; padding: 12px 16px; background: rgba(88, 166, 255, 0.1); border-radius: 8px; border-left: 4px solid var(--conservador);">
+          <strong>📅 Data desta análise:</strong> Janeiro de 2026 (~20 meses após halving de abril/2024)<br>
+          <strong>📊 ATH atual:</strong> ~$108.000 (dez/2025)
+        </div>
 
         <h4 style="margin-top: 24px; color: var(--primary-light);">📅 PREVISÕES POR ANO (baseadas em padrões históricos)</h4>
 
@@ -3364,7 +3369,7 @@ const Comparador = {
             </div>
             <p style="margin: 12px 0; color: var(--text-primary); line-height: 1.6;">
               <strong>Padrão histórico:</strong> 2-3 anos após halving = queda de 60-85% do pico. Anos de correção: 2014, 2018, 2022.<br>
-              <strong>Previsão:</strong> Queda de 50-70% do topo. Se pico foi $120k-$150k, pode cair para $40k-$60k. Pânico na mídia, "Bitcoin está morto".<br>
+              <strong>Previsão:</strong> Queda de 50-70% do ATH ($108k). Projeção de fundo: $35k-$55k. Pânico na mídia, "Bitcoin está morto".<br>
               <strong>Ação sugerida:</strong> NÃO VENDER no pânico. Acumular gradualmente via DCA se tiver caixa.
             </p>
           </div>
@@ -3402,7 +3407,7 @@ const Comparador = {
         { ativo: 'Ciclo 1 (2013)', queda: -86, recuperacao: '2 anos', comportamento: 'Alta +9.900% | Queda $1.100→$170' },
         { ativo: 'Ciclo 2 (2017)', queda: -84, recuperacao: '3 anos', comportamento: 'Alta +2.900% | Queda $20k→$3.2k' },
         { ativo: 'Ciclo 3 (2021)', queda: -77, recuperacao: '2 anos', comportamento: 'Alta +1.600% | Queda $69k→$16k' },
-        { ativo: 'Ciclo 4 (2025)', queda: '?', recuperacao: '?', comportamento: 'EM ANDAMENTO - ~20 meses pós-halving' },
+        { ativo: 'Ciclo 4 (2025)', queda: '?', recuperacao: '?', comportamento: 'Alta +575% | ATH $108k (dez/2025)' },
         { ativo: 'Tendência', queda: '↓', recuperacao: '↓', comportamento: 'Altas e quedas menores a cada ciclo' }
       ],
       sinais: [
@@ -3410,13 +3415,13 @@ const Comparador = {
         '🔴 TOPO: Google Trends "Bitcoin" explodindo',
         '🔴 TOPO: Amigos/família perguntando sobre crypto',
         '🔴 TOPO: Altcoins de meme em alta vertical',
-        '🔴 TOPO: 12-18 meses após o halving (ESTAMOS AQUI - JAN/2026)',
+        '🔴 TOPO: 12-20 meses após halving = zona de pico (jan/2026: ~20 meses)',
         '🟢 FUNDO: Preço lateral por 6+ meses',
         '🟢 FUNDO: "Bitcoin está morto" na mídia',
         '🟢 FUNDO: Capitulação de mineradores'
       ],
       evitar: [
-        '🚫 Comprar AGORA se preço está parabólico (estamos ~20 meses pós-halving)',
+        '🚫 Comprar em jan/2026: ~20 meses pós-halving, ATH recente de $108k',
         '🚫 All-in em qualquer momento - sempre usar DCA',
         '🚫 Altcoins que já subiram 1000%+',
         '🚫 Alavancagem - liquidações destroem patrimônio',
@@ -3432,15 +3437,15 @@ const Comparador = {
         '✅ Aceitar que vai cair 60-70% após o pico'
       ],
       oportunidade: [
-        '💰 AGORA (Jan/2026): Realizar lucros, não comprar mais',
+        '💰 Jan/2026 (data análise): Realizar lucros, ATH $108k atingido',
         '💰 2027: Começar DCA quando cair 50%+ do topo',
         '💰 2028: Acumulação forte - ano do halving',
         '💰 Próximo ciclo de compra ideal: H2/2027 a H1/2028',
         '💰 Bitcoin é mais seguro que altcoins (menor queda, sempre recuperou)'
       ],
       conclusoes: [
-        'MOMENTO ATUAL: ~20 meses pós-halving = zona de topo histórico',
-        'PREVISÃO 2026: Possível topo ou início de correção',
+        'ANÁLISE: Janeiro/2026, ~20 meses pós-halving, ATH $108k (dez/2025)',
+        'PREVISÃO 2026: Possível topo já atingido, início de correção',
         'PREVISÃO 2027: Bear market, queda de 50-70%',
         'PREVISÃO 2028: Fundo + 5º halving = momento de comprar',
         'PREVISÃO 2029: Nova alta (Ciclo 5)',
@@ -3458,7 +3463,7 @@ const Comparador = {
         provavel: {
           titulo: 'Ciclo Tradicional com Maturação',
           descricao: '2026: Topo/correção inicial. 2027: Bear market (-60-70%). 2028: Fundo + halving. 2029: Nova alta (+100-200%).',
-          impacto: 'Pico 2025-26: $100k-$150k. Fundo 2027-28: $35k-$60k. Pico 2029-30: $150k-$250k.',
+          impacto: 'ATH: $108k (dez/2025). Fundo 2027-28: $35k-$55k. Pico 2029-30: $150k-$200k.',
           probabilidade: '55%'
         },
         melhor: {

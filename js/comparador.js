@@ -1019,12 +1019,14 @@ const Comparador = {
 
   getAlocacaoConfig() {
     const config = {};
+    // Tolerância global (válida para alta e baixa)
+    const toleranciaGlobal = parseFloat(document.getElementById('toleranciaGlobal')?.value) || 10;
+
     document.querySelectorAll('.alocacao-item').forEach(item => {
       const ativo = item.dataset.ativo;
       const alocacao = parseFloat(item.querySelector('.aloc-percent').value) || 0;
-      const tolerancia = parseFloat(item.querySelector('.aloc-tolerancia').value) || 5;
       if (alocacao > 0) {
-        config[ativo] = { alocacao, tolerancia };
+        config[ativo] = { alocacao, tolerancia: toleranciaGlobal };
       }
     });
     return config;

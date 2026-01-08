@@ -79,10 +79,6 @@
         <span class="tab-icon">⚔️</span>
         <span class="tab-text">Frente a Frente</span>
       </button>
-      <button class="nav-tab" data-tab="decomposicao">
-        <span class="tab-icon">🔍</span>
-        <span class="tab-text">Decomposição</span>
-      </button>
       <button class="nav-tab" data-tab="diversificacao">
         <span class="tab-icon">📊</span>
         <span class="tab-text">Diversificação</span>
@@ -379,70 +375,7 @@
       </div>
     </section>
 
-    <!-- Tab Content: Decomposição -->
-    <section class="tab-content" id="tab-decomposicao">
-      <div class="section-header">
-        <h2>Decomposição do Retorno</h2>
-        <p>Por que esse ativo subiu? Quanto foi mérito e quanto foi correção monetária?</p>
-      </div>
-
-      <div class="comparador-config">
-        <div class="config-row">
-          <div class="config-field">
-            <label for="ativoDecomp">Ativo para analisar</label>
-            <select id="ativoDecomp">
-              <option value="ibovespa">Ibovespa</option>
-              <option value="dolar">Dólar</option>
-              <option value="ouro">Ouro</option>
-              <option value="fii_ifix">FIIs (IFIX)</option>
-              <option value="tesouro_ipca">Tesouro IPCA+</option>
-              <option value="cdi">CDI</option>
-              <option value="sp500_brl">S&P 500 (em R$)</option>
-            </select>
-          </div>
-          <div class="config-field">
-            <label for="periodoDecomp">Período</label>
-            <select id="periodoDecomp">
-              <option value="5">Últimos 5 anos</option>
-              <option value="10" selected>Últimos 10 anos</option>
-              <option value="15">Últimos 15 anos</option>
-              <option value="20">Últimos 20 anos</option>
-            </select>
-          </div>
-        </div>
-
-        <button class="btn-comparar" id="btnDecompor">
-          <span>Decompor Retorno</span>
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </button>
-      </div>
-
-      <div class="comparador-resultados" id="resultadosDecomp" style="display: none;">
-        <div class="resultado-card">
-          <h3>Decomposição do Retorno</h3>
-          <div class="decomp-chart" id="decompChart"></div>
-          <div class="decomp-legenda">
-            <span class="legenda-item verde">Ganho Real</span>
-            <span class="legenda-item cinza">Inflação</span>
-            <span class="legenda-item vermelho">Perdas/Custos</span>
-          </div>
-        </div>
-
-        <div class="resultado-card">
-          <h3>Análise por Componente</h3>
-          <div class="decomp-detalhes" id="decompDetalhes"></div>
-        </div>
-
-        <div class="resultado-card conclusoes-card">
-          <h3>O que isso significa?</h3>
-          <div class="conclusoes-lista" id="conclusoesDecomp"></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Tab Content: Diversificação (NOVO) -->
+    <!-- Tab Content: Diversificação -->
     <section class="tab-content" id="tab-diversificacao">
       <div class="section-header">
         <h2>Diversificação vs Foco Único</h2>

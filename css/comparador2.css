@@ -694,6 +694,110 @@
   margin-top: 12px;
 }
 
+.comp2-field-hint {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  display: block;
+  margin-top: 4px;
+}
+
+/* Table styles */
+.table-scroll {
+  overflow-x: auto;
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.comp2-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.comp2-table th,
+.comp2-table td {
+  padding: 10px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.comp2-table th {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.comp2-table td {
+  color: var(--text-secondary);
+}
+
+.comp2-table .positivo {
+  color: var(--bullish);
+}
+
+.comp2-table .negativo {
+  color: var(--bearish);
+}
+
+.comp2-table .vencedor {
+  background: rgba(34, 197, 94, 0.1);
+  font-weight: 600;
+}
+
+/* Métricas Grid */
+.comp2-metricas {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.metrica-card {
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  padding: 16px;
+}
+
+.metrica-card h4 {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.metrica-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.metrica-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.metrica-nome {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.metrica-valor {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metrica-valor.positivo {
+  color: var(--bullish);
+}
+
+.metrica-valor.negativo {
+  color: var(--bearish);
+}
+
 /* Pattern Grid */
 .comp2-pattern-grid {
   display: grid;

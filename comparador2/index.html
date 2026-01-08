@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade descontando inflação.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/comparador2/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/comparador2/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/comparador2/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/comparador2/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/comparador2/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Comparador de Investimentos v2 | Rico aos Poucos">
+  <meta property="og:description" content="Compare investimentos pelo ganho real líquido.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/comparador2/">
+  <meta property="og:locale" content="pt_BR">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <title>Comparador v2 | Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/comparador2.css">
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="page-header" data-subtitle="Comparador v2"></header>
+
+    <main class="comp2-main">
+      <!-- Sidebar Navigation -->
+      <aside class="comp2-sidebar">
+        <nav class="comp2-nav">
+          <button class="comp2-nav-btn active" data-tab="historico" title="Comparador Histórico">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>
+            </svg>
+            <span>Histórico</span>
+          </button>
+          <button class="comp2-nav-btn" data-tab="duelo" title="Frente a Frente">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 4l7.07 17.07 2.51-7.39 7.39-2.51L4 4z"/><path d="M15 15l6 6"/>
+            </svg>
+            <span>Duelo</span>
+          </button>
+          <button class="comp2-nav-btn" data-tab="carteira" title="Carteira Diversificada">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"/><path d="M12 2a10 10 0 0 1 0 20"/><path d="M12 2v20"/><path d="M2 12h20"/>
+            </svg>
+            <span>Carteira</span>
+          </button>
+          <button class="comp2-nav-btn" data-tab="rebalancear" title="Rebalanceamento">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M12 3v18"/><path d="M3 12h18"/><circle cx="12" cy="12" r="9"/>
+            </svg>
+            <span>Rebalancear</span>
+          </button>
+          <button class="comp2-nav-btn" data-tab="padroes" title="Padrões Históricos">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 20h20"/><path d="M5 20V10"/><path d="M9 20V4"/><path d="M13 20v-8"/><path d="M17 20V8"/><path d="M21 20v-4"/>
+            </svg>
+            <span>Padrões</span>
+          </button>
+        </nav>
+      </aside>
+
+      <!-- Main Content Area -->
+      <div class="comp2-content">
+
+        <!-- Tab: Comparador Histórico -->
+        <section class="comp2-tab active" id="comp2-historico">
+          <div class="comp2-panel">
+            <!-- Config inline -->
+            <div class="comp2-config">
+              <div class="comp2-config-row">
+                <div class="comp2-field">
+                  <label>Período</label>
+                  <select id="comp2Periodo">
+                    <option value="5">5 anos</option>
+                    <option value="10" selected>10 anos</option>
+                    <option value="15">15 anos</option>
+                    <option value="20">20 anos</option>
+                  </select>
+                </div>
+                <div class="comp2-field">
+                  <label>Valor inicial</label>
+                  <div class="comp2-input-group">
+                    <span>R$</span>
+                    <input type="text" id="comp2Valor" value="100.000" inputmode="numeric">
+                  </div>
+                </div>
+                <button class="comp2-btn-run" id="comp2BtnRun">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="5 3 19 12 5 21 5 3"/>
+                  </svg>
+                  Comparar
+                </button>
+              </div>
+
+              <!-- Asset chips -->
+              <div class="comp2-assets">
+                <button class="comp2-chip active" data-asset="ibovespa">
+                  <span class="chip-dot" style="background:#3b82f6"></span>Ibovespa
+                </button>
+                <button class="comp2-chip active" data-asset="dolar">
+                  <span class="chip-dot" style="background:#22c55e"></span>Dólar
+                </button>
+                <button class="comp2-chip active" data-asset="ouro">
+                  <span class="chip-dot" style="background:#eab308"></span>Ouro
+                </button>
+                <button class="comp2-chip active" data-asset="fii_ifix">
+                  <span class="chip-dot" style="background:#8b5cf6"></span>FIIs
+                </button>
+                <button class="comp2-chip" data-asset="cdi">
+                  <span class="chip-dot" style="background:#ec4899"></span>CDI
+                </button>
+                <button class="comp2-chip" data-asset="tesouro_ipca">
+                  <span class="chip-dot" style="background:#06b6d4"></span>IPCA+
+                </button>
+                <button class="comp2-chip" data-asset="sp500_brl">
+                  <span class="chip-dot" style="background:#ef4444"></span>S&P 500
+                </button>
+                <button class="comp2-chip" data-asset="tlt_brl">
+                  <span class="chip-dot" style="background:#0ea5e9"></span>TLT
+                </button>
+                <button class="comp2-chip" data-asset="imoveis_fipezap">
+                  <span class="chip-dot" style="background:#14b8a6"></span>Imóveis
+                </button>
+                <button class="comp2-chip" data-asset="bitcoin_brl">
+                  <span class="chip-dot" style="background:#f7931a"></span>Bitcoin
+                </button>
+              </div>
+            </div>
+
+            <!-- Results -->
+            <div class="comp2-results" id="comp2Results">
+              <!-- Chart -->
+              <div class="comp2-card comp2-chart-card">
+                <div class="comp2-card-header">
+                  <h3>Evolução do Patrimônio</h3>
+                  <div class="comp2-toggle">
+                    <button class="active" data-view="nominal">Nominal</button>
+                    <button data-view="real">Real</button>
+                  </div>
+                </div>
+                <div class="comp2-chart" id="comp2Chart">
+                  <div class="comp2-chart-placeholder">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" opacity="0.3">
+                      <path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/>
+                    </svg>
+                    <p>Selecione os ativos e clique em "Comparar"</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Ranking Grid -->
+              <div class="comp2-card">
+                <h3>Ranking de Retorno Real</h3>
+                <div class="comp2-ranking" id="comp2Ranking">
+                  <div class="comp2-ranking-empty">
+                    <p>Os resultados aparecerão aqui</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Quick Stats -->
+              <div class="comp2-stats" id="comp2Stats">
+                <div class="comp2-stat">
+                  <span class="stat-label">Melhor ativo</span>
+                  <span class="stat-value" id="statMelhor">--</span>
+                </div>
+                <div class="comp2-stat">
+                  <span class="stat-label">Pior ativo</span>
+                  <span class="stat-value" id="statPior">--</span>
+                </div>
+                <div class="comp2-stat">
+                  <span class="stat-label">Inflação período</span>
+                  <span class="stat-value" id="statInflacao">--</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Duelo (Frente a Frente) -->
+        <section class="comp2-tab" id="comp2-duelo">
+          <div class="comp2-panel">
+            <div class="comp2-config">
+              <div class="comp2-config-row">
+                <div class="comp2-field">
+                  <label>Período</label>
+                  <div class="comp2-period-btns">
+                    <button class="active" data-years="5">5a</button>
+                    <button data-years="10">10a</button>
+                    <button data-years="15">15a</button>
+                  </div>
+                </div>
+                <div class="comp2-field">
+                  <label>Valor</label>
+                  <div class="comp2-input-group">
+                    <span>R$</span>
+                    <input type="text" id="comp2DueloValor" value="100.000">
+                  </div>
+                </div>
+              </div>
+
+              <!-- Duelo Quick Picks -->
+              <div class="comp2-duelo-grid">
+                <button class="comp2-duelo-btn active" data-duelo="ibov-sp500">
+                  <div class="duelo-icons">
+                    <span>🇧🇷</span><span class="vs">×</span><span>🇺🇸</span>
+                  </div>
+                  <span class="duelo-title">Ibov vs S&P</span>
+                </button>
+                <button class="comp2-duelo-btn" data-duelo="ouro-bitcoin">
+                  <div class="duelo-icons">
+                    <span>🥇</span><span class="vs">×</span><span>₿</span>
+                  </div>
+                  <span class="duelo-title">Ouro vs BTC</span>
+                </button>
+                <button class="comp2-duelo-btn" data-duelo="ipca-tlt">
+                  <div class="duelo-icons">
+                    <span>📈</span><span class="vs">×</span><span>📉</span>
+                  </div>
+                  <span class="duelo-title">IPCA+ vs TLT</span>
+                </button>
+                <button class="comp2-duelo-btn" data-duelo="ibov-cdi">
+                  <div class="duelo-icons">
+                    <span>📊</span><span class="vs">×</span><span>💰</span>
+                  </div>
+                  <span class="duelo-title">Ibov vs CDI</span>
+                </button>
+                <button class="comp2-duelo-btn" data-duelo="fii-imovel">
+                  <div class="duelo-icons">
+                    <span>🏢</span><span class="vs">×</span><span>🏠</span>
+                  </div>
+                  <span class="duelo-title">FII vs Imóvel</span>
+                </button>
+                <button class="comp2-duelo-btn" data-duelo="dolar-ouro">
+                  <div class="duelo-icons">
+                    <span>💵</span><span class="vs">×</span><span>🥇</span>
+                  </div>
+                  <span class="duelo-title">Dólar vs Ouro</span>
+                </button>
+              </div>
+            </div>
+
+            <!-- Duelo Result -->
+            <div class="comp2-duelo-result" id="comp2DueloResult">
+              <div class="duelo-scoreboard">
+                <div class="duelo-player left">
+                  <span class="player-icon">🇧🇷</span>
+                  <span class="player-name">Ibovespa</span>
+                  <span class="player-return positivo">+142%</span>
+                </div>
+                <div class="duelo-vs-big">VS</div>
+                <div class="duelo-player right winner">
+                  <span class="player-icon">🇺🇸</span>
+                  <span class="player-name">S&P 500</span>
+                  <span class="player-return positivo">+287%</span>
+                  <span class="winner-badge">VENCEDOR</span>
+                </div>
+              </div>
+              <div class="duelo-chart" id="comp2DueloChart"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Carteira -->
+        <section class="comp2-tab" id="comp2-carteira">
+          <div class="comp2-panel">
+            <div class="comp2-config">
+              <div class="comp2-config-row">
+                <div class="comp2-field">
+                  <label>Período</label>
+                  <select id="comp2CarteiraPeriodo">
+                    <option value="5">5 anos</option>
+                    <option value="10" selected>10 anos</option>
+                  </select>
+                </div>
+                <div class="comp2-field">
+                  <label>Valor inicial</label>
+                  <div class="comp2-input-group">
+                    <span>R$</span>
+                    <input type="text" id="comp2CarteiraValor" value="100.000">
+                  </div>
+                </div>
+                <button class="comp2-btn-run" id="comp2BtnCarteira">Simular</button>
+              </div>
+
+              <!-- Presets -->
+              <div class="comp2-presets">
+                <button class="comp2-preset active" data-preset="5050">50/50 Ibov+CDI</button>
+                <button class="comp2-preset" data-preset="3ativos">33% cada (3)</button>
+                <button class="comp2-preset" data-preset="4ativos">25% cada (4)</button>
+                <button class="comp2-preset" data-preset="global">BR + EUA</button>
+              </div>
+
+              <!-- Allocation sliders -->
+              <div class="comp2-allocation" id="comp2Allocation">
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#3b82f6"></span>
+                    <span class="alloc-name">Ibovespa</span>
+                    <span class="alloc-pct">50%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="50" data-asset="ibovespa">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#ec4899"></span>
+                    <span class="alloc-name">CDI</span>
+                    <span class="alloc-pct">50%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="50" data-asset="cdi">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#22c55e"></span>
+                    <span class="alloc-name">Dólar</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="dolar">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#eab308"></span>
+                    <span class="alloc-name">Ouro</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="ouro">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#8b5cf6"></span>
+                    <span class="alloc-name">FIIs</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="fii_ifix">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#ef4444"></span>
+                    <span class="alloc-name">S&P 500</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="sp500_brl">
+                </div>
+                <div class="alloc-total">
+                  <span>Total:</span>
+                  <span id="allocTotal">100%</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="comp2-results" id="comp2CarteiraResults">
+              <div class="comp2-card">
+                <h3>Carteira vs Ativos Individuais</h3>
+                <div class="comp2-chart" id="comp2CarteiraChart"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Rebalancear -->
+        <section class="comp2-tab" id="comp2-rebalancear">
+          <div class="comp2-panel">
+            <div class="comp2-config">
+              <div class="comp2-config-row">
+                <div class="comp2-field">
+                  <label>Período</label>
+                  <select id="comp2RebalPeriodo">
+                    <option value="5">5 anos</option>
+                    <option value="10" selected>10 anos</option>
+                  </select>
+                </div>
+                <div class="comp2-field">
+                  <label>Tolerância</label>
+                  <div class="comp2-input-group">
+                    <input type="number" id="comp2Tolerancia" value="5" min="1" max="20">
+                    <span>%</span>
+                  </div>
+                </div>
+                <button class="comp2-btn-run" id="comp2BtnRebal">Simular</button>
+              </div>
+              <p class="comp2-hint">Rebalanceia quando qualquer ativo desviar além da tolerância</p>
+            </div>
+
+            <div class="comp2-results">
+              <div class="comp2-card">
+                <h3>Com Rebalanceamento vs Buy & Hold</h3>
+                <div class="comp2-comparison" id="comp2RebalComparison">
+                  <div class="comparison-box">
+                    <span class="comparison-label">Com Rebalanceamento</span>
+                    <span class="comparison-value positivo">R$ 245.000</span>
+                    <span class="comparison-pct">+145%</span>
+                  </div>
+                  <div class="comparison-vs">vs</div>
+                  <div class="comparison-box">
+                    <span class="comparison-label">Buy & Hold</span>
+                    <span class="comparison-value">R$ 230.000</span>
+                    <span class="comparison-pct">+130%</span>
+                  </div>
+                </div>
+                <div class="comp2-chart" id="comp2RebalChart"></div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Tab: Padrões Históricos -->
+        <section class="comp2-tab" id="comp2-padroes">
+          <div class="comp2-panel">
+            <div class="comp2-config">
+              <!-- Crisis/Pattern selector -->
+              <div class="comp2-pattern-grid">
+                <button class="comp2-pattern-btn active" data-pattern="dotcom">
+                  <span class="pattern-year">2000</span>
+                  <span class="pattern-name">Bolha .com</span>
+                </button>
+                <button class="comp2-pattern-btn" data-pattern="subprime">
+                  <span class="pattern-year">2008</span>
+                  <span class="pattern-name">Subprime</span>
+                </button>
+                <button class="comp2-pattern-btn" data-pattern="brasil2015">
+                  <span class="pattern-year">2015</span>
+                  <span class="pattern-name">Crise BR</span>
+                </button>
+                <button class="comp2-pattern-btn" data-pattern="covid">
+                  <span class="pattern-year">2020</span>
+                  <span class="pattern-name">COVID-19</span>
+                </button>
+                <button class="comp2-pattern-btn" data-pattern="bitcoin">
+                  <span class="pattern-year">Ciclos</span>
+                  <span class="pattern-name">Bitcoin</span>
+                </button>
+                <button class="comp2-pattern-btn alert" data-pattern="ia">
+                  <span class="pattern-year">2026?</span>
+                  <span class="pattern-name">Bolha IA</span>
+                </button>
+              </div>
+            </div>
+
+            <div class="comp2-results" id="comp2PatternResults">
+              <div class="comp2-card">
+                <div class="pattern-header" id="patternHeader">
+                  <h2>Bolha das .com</h2>
+                  <span class="pattern-period">2000-2002</span>
+                </div>
+                <div class="pattern-content" id="patternContent">
+                  <p>Selecione um padrão histórico acima para ver a análise detalhada.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </div>
+    </main>
+
+    <footer id="page-footer"></footer>
+  </div>
+
+  <script src="../js/components.js"></script>
+  <script src="../js/comparador.js"></script>
+  <script src="../js/comparador2.js"></script>
+  <script src="../js/i18n.js"></script>
+</body>
+</html>

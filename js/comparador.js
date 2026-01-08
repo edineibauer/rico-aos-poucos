@@ -3187,69 +3187,209 @@ const Comparador = {
     bitcoin: {
       nome: 'Ciclos do Bitcoin',
       periodo: 'Ciclos de ~4 anos',
-      descricao: 'O Bitcoin segue ciclos previsíveis ligados ao halving (redução da emissão pela metade a cada 4 anos).',
+      descricao: 'O Bitcoin segue ciclos previsíveis de ~4 anos ligados ao halving. Entender esses padrões pode transformar volatilidade extrema em oportunidade calculada.',
       contexto: `
-        <p><strong>O padrão:</strong> Historicamente, o Bitcoin faz uma alta explosiva 12-18 meses após cada halving, seguida de uma correção de 70-85%. Este ciclo se repetiu em 2013, 2017, 2021.</p>
-        <p><strong>Halvings:</strong> 2012, 2016, 2020, 2024 (abril). Cada halving reduz a emissão de novos bitcoins pela metade, criando pressão de oferta.</p>
-        <p><strong>Próximo ciclo:</strong> Com o halving de abril/2024, o padrão sugere potencial alta até 2025, seguido de correção em 2026-2027.</p>
+        <p><strong>O Ciclo do Halving:</strong> A cada ~4 anos, a emissão de novos Bitcoins cai pela metade. Isso cria um choque de oferta que historicamente precede altas explosivas.</p>
+
+        <div class="bitcoin-ciclos">
+          <div class="ciclo-card alta">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Ciclo 1: 2012-2013</span>
+              <span class="ciclo-badge alta">ALTA</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor positivo">+9.900%</div>
+                <div class="ciclo-stat-label">Alta total</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$12 → $1.100</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">12 meses</div>
+                <div class="ciclo-stat-label">Duração alta</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ciclo-card queda">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Correção 2014-2015</span>
+              <span class="ciclo-badge queda">QUEDA</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor negativo">-86%</div>
+                <div class="ciclo-stat-label">Queda máxima</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$1.100 → $170</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">~2 anos</div>
+                <div class="ciclo-stat-label">Recuperação</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ciclo-card alta">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Ciclo 2: 2016-2017</span>
+              <span class="ciclo-badge alta">ALTA</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor positivo">+2.900%</div>
+                <div class="ciclo-stat-label">Alta total</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$650 → $20k</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">18 meses</div>
+                <div class="ciclo-stat-label">Duração alta</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ciclo-card queda">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Correção 2018-2019</span>
+              <span class="ciclo-badge queda">QUEDA</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor negativo">-84%</div>
+                <div class="ciclo-stat-label">Queda máxima</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$20k → $3.2k</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">~3 anos</div>
+                <div class="ciclo-stat-label">Recuperação</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ciclo-card alta">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Ciclo 3: 2020-2021</span>
+              <span class="ciclo-badge alta">ALTA</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor positivo">+1.600%</div>
+                <div class="ciclo-stat-label">Alta total</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$4k → $69k</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">18 meses</div>
+                <div class="ciclo-stat-label">Duração alta</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="ciclo-card queda">
+            <div class="ciclo-header">
+              <span class="ciclo-titulo">Correção 2022-2023</span>
+              <span class="ciclo-badge queda">QUEDA</span>
+            </div>
+            <div class="ciclo-detalhes">
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor negativo">-77%</div>
+                <div class="ciclo-stat-label">Queda máxima</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">$69k → $16k</div>
+                <div class="ciclo-stat-label">Preço</div>
+              </div>
+              <div class="ciclo-stat">
+                <div class="ciclo-stat-valor">~2 anos</div>
+                <div class="ciclo-stat-label">Recuperação</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p style="margin-top: 20px;"><strong>Padrão de enfraquecimento:</strong> As altas estão diminuindo (+9.900% → +2.900% → +1.600%), mas as quedas também (-86% → -84% → -77%). Isso indica maturação do ativo.</p>
+
+        <p><strong>Onde estamos agora (Jan/2026):</strong> ~20 meses após o halving de abril/2024. Historicamente, picos ocorrem entre 12-18 meses pós-halving. Estamos na zona de possível topo ou início de correção.</p>
       `,
       impacto: [
-        { ativo: 'Bitcoin (Ciclo 1)', queda: -86, recuperacao: '2 anos', comportamento: '2013: $1.100 → $170' },
-        { ativo: 'Bitcoin (Ciclo 2)', queda: -84, recuperacao: '3 anos', comportamento: '2017: $20.000 → $3.200' },
-        { ativo: 'Bitcoin (Ciclo 3)', queda: -77, recuperacao: '2 anos', comportamento: '2021: $69.000 → $16.000' },
-        { ativo: 'Altcoins', queda: -95, recuperacao: 'Várias nunca', comportamento: 'Muito mais arriscadas' },
-        { ativo: 'Ações Crypto', queda: -90, recuperacao: 'Variável', comportamento: 'Correlação alta com BTC' }
+        { ativo: 'Ciclo 1 (2013)', queda: -86, recuperacao: '2 anos', comportamento: 'Alta +9.900% | Queda $1.100→$170' },
+        { ativo: 'Ciclo 2 (2017)', queda: -84, recuperacao: '3 anos', comportamento: 'Alta +2.900% | Queda $20k→$3.2k' },
+        { ativo: 'Ciclo 3 (2021)', queda: -77, recuperacao: '2 anos', comportamento: 'Alta +1.600% | Queda $69k→$16k' },
+        { ativo: 'Tendência', queda: '↓', recuperacao: '↓', comportamento: 'Altas e quedas menores (maturação)' },
+        { ativo: 'Altcoins', queda: -95, recuperacao: 'Maioria nunca', comportamento: '80%+ das altcoins morrem no bear' }
       ],
       sinais: [
-        'Preço subindo parabolicamente (>100% em meses)',
-        'Mainstream media falando de crypto',
-        'Novos investidores entrando em massa',
-        'Altcoins de meme explodindo',
-        '12-18 meses após o halving'
+        '🔴 TOPO: Preço subindo >100% em poucos meses',
+        '🔴 TOPO: Google Trends "Bitcoin" explodindo',
+        '🔴 TOPO: Amigos/família perguntando sobre crypto',
+        '🔴 TOPO: Altcoins de meme em alta vertical',
+        '🔴 TOPO: 12-18 meses após o halving',
+        '🟢 FUNDO: Preço lateral por 6+ meses',
+        '🟢 FUNDO: "Bitcoin está morto" na mídia',
+        '🟢 FUNDO: Capitulação de mineradores'
       ],
       evitar: [
-        'Comprar no pico de euforia',
-        'All-in em altcoins obscuras',
-        'Alavancagem em crypto',
-        'FOMO (fear of missing out)'
+        'Comprar quando preço está parabólico (>100% em meses)',
+        'All-in em qualquer momento - sempre usar DCA',
+        'Altcoins que já subiram 1000%+',
+        'Alavancagem - liquidações destroem patrimônio',
+        'Deixar em exchanges (risco FTX, Mt.Gox)',
+        'Vender no pânico durante bear market'
       ],
       proteger: [
-        'DCA (compras regulares) durante bear market',
-        'Manter em cold wallet, não em exchanges',
-        'Ter plano de saída parcial em altas',
-        'Nunca mais de 5-10% do patrimônio'
+        'DCA (Dollar Cost Average) ao longo do ciclo',
+        'Cold wallet (hardware wallet) para custódia',
+        'Plano de saída ANTES da euforia (ex: vender 20% a cada 50% alta)',
+        'Máximo 5-10% do patrimônio total em crypto',
+        'Aceitar que vai cair 70%+ após o pico',
+        'Estudar ciclos passados antes de investir'
       ],
       oportunidade: [
-        'Comprar durante bear markets (~1 ano após pico)',
-        'Acumular nas quedas de 50%+',
-        'Bitcoin é mais seguro que altcoins',
-        'Ciclo de halving como guia'
+        'Melhor: 6-12 meses ANTES do halving (acumulação)',
+        'Segundo melhor: bear market, após 50%+ de queda',
+        'Bitcoin é mais seguro que altcoins (menor queda, sempre recuperou)',
+        'Usar ciclos como guia, não como garantia',
+        'Rebalancear: vender parte no bull, comprar no bear'
       ],
       conclusoes: [
-        'Bitcoin tem ciclos relativamente previsíveis',
-        'Quedas de 70-80% são "normais"',
-        'Comprar no medo, vender na ganância',
-        'Altcoins são muito mais arriscadas',
-        'Só invista o que pode perder 100%'
+        'Ciclos de ~4 anos se repetiram 3x - padrão forte, mas não garantia',
+        'Quedas de 70-85% são NORMAIS após cada pico',
+        'Altas cada vez menores (retornos decrescentes)',
+        'Quedas cada vez menores (maturação do ativo)',
+        'Comprar no medo extremo, reduzir na euforia',
+        'Altcoins são cassino - 80%+ morrem a cada ciclo',
+        'Só invista o que pode perder 100% e manter 4+ anos'
       ],
       cenarios: {
         pior: {
-          titulo: 'Bear Market Prolongado',
-          descricao: 'Regulação agressiva global, proibições em países relevantes, ou hack massivo de exchange importante.',
-          impacto: 'Queda de 85-90% que leva 4+ anos para recuperar',
-          probabilidade: '15%'
+          titulo: 'Superciclo de Baixa',
+          descricao: 'Regulação global coordenada, proibição em economias importantes, ou falha sistêmica (hack de exchange top 3).',
+          impacto: 'Queda 85-90% com recuperação de 5+ anos. Pior: ciclos param de funcionar.',
+          probabilidade: '10%'
         },
         provavel: {
-          titulo: 'Ciclo Tradicional',
-          descricao: 'Alta pós-halving 2024, pico em 2025, correção em 2026.',
-          impacto: 'Alta de 200-400% seguida de queda de 70-80%',
-          probabilidade: '60%'
+          titulo: 'Ciclo Tradicional com Maturação',
+          descricao: 'Alta de 150-300% pós-halving 2024, pico Q4/2025 a Q2/2026, correção de 60-75%.',
+          impacto: 'Pico: $120k-$180k | Correção: $40k-$60k | Menor volatilidade.',
+          probabilidade: '55%'
         },
         melhor: {
-          titulo: 'Adoção Institucional Acelerada',
-          descricao: 'ETFs spot aprovados, reserva estratégica de países, adoção corporativa.',
-          impacto: 'Ciclos mais suaves, queda limitada a 50-60%',
-          probabilidade: '25%'
+          titulo: 'Adoção Institucional Massiva',
+          descricao: 'ETFs spot, reservas de bancos centrais, Bitcoin como "ouro digital" aceito globalmente.',
+          impacto: 'Ciclos suaves (queda 40-50%), menor volatilidade, valorização gradual.',
+          probabilidade: '35%'
         }
       }
     },

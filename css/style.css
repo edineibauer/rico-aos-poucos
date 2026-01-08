@@ -7569,12 +7569,13 @@ body.home-page {
 
 .crises-selector h4 {
   margin-bottom: 16px;
-  color: var(--text-color);
+  color: var(--text-primary);
+  font-size: 1.1rem;
 }
 
 .crises-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
   gap: 12px;
 }
 
@@ -7582,25 +7583,27 @@ body.home-page {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 6px;
-  padding: 16px 12px;
-  background: var(--bg-tertiary);
+  gap: 8px;
+  padding: 18px 14px;
+  background: var(--bg-card);
   border: 2px solid var(--border-color);
   border-radius: 12px;
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: center;
+  color: var(--text-primary);
 }
 
 .crise-btn:hover {
   border-color: var(--primary-light);
-  background: rgba(45, 138, 110, 0.1);
+  background: rgba(45, 138, 110, 0.15);
+  transform: translateY(-2px);
 }
 
 .crise-btn.active {
   border-color: var(--primary-light);
-  background: rgba(45, 138, 110, 0.15);
-  box-shadow: 0 0 0 3px rgba(45, 138, 110, 0.2);
+  background: rgba(45, 138, 110, 0.2);
+  box-shadow: 0 0 0 3px rgba(45, 138, 110, 0.25);
 }
 
 .crise-header {
@@ -7610,144 +7613,185 @@ body.home-page {
 }
 
 .crise-icon {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
 .crise-ano {
-  font-size: 0.7rem;
-  font-weight: 600;
-  color: var(--text-muted);
-  background: var(--bg-secondary);
-  padding: 2px 6px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: var(--primary-light);
+  background: rgba(45, 138, 110, 0.2);
+  padding: 3px 8px;
   border-radius: 4px;
 }
 
 .crise-name {
-  font-weight: 600;
-  font-size: 0.9rem;
-  color: var(--text-color);
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--text-primary);
 }
 
 .crise-desc {
   font-size: 0.75rem;
-  color: var(--text-muted);
+  color: var(--text-secondary);
+  line-height: 1.3;
 }
 
 /* Resumo da crise */
 .crise-resumo {
-  padding: 16px;
+  padding: 20px;
+  background: linear-gradient(135deg, rgba(45, 138, 110, 0.1), rgba(45, 138, 110, 0.05));
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-light);
 }
 
 .crise-descricao {
-  font-size: 1.1rem;
-  line-height: 1.6;
-  color: var(--text-color);
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: var(--text-primary);
+  margin: 0;
 }
 
 /* Contexto */
 .crise-contexto {
-  padding: 16px;
-  background: var(--bg-tertiary);
-  border-radius: 8px;
+  padding: 20px;
+  background: var(--bg-card);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
 }
 
 .crise-contexto p {
-  margin-bottom: 12px;
-  line-height: 1.6;
+  margin-bottom: 16px;
+  line-height: 1.7;
+  color: var(--text-primary);
 }
 
 .crise-contexto p:last-child {
   margin-bottom: 0;
 }
 
+.crise-contexto strong {
+  color: var(--primary-light);
+}
+
 /* Tabela de crise */
 .tabela-crise {
   width: 100%;
   border-collapse: collapse;
+  background: var(--bg-card);
+  border-radius: 8px;
+  overflow: hidden;
 }
 
 .tabela-crise th,
 .tabela-crise td {
-  padding: 12px;
+  padding: 14px 12px;
   text-align: left;
   border-bottom: 1px solid var(--border-color);
 }
 
 .tabela-crise th {
   background: var(--bg-tertiary);
-  font-weight: 600;
-  color: var(--text-muted);
-  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--text-secondary);
+  font-size: 0.8rem;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.tabela-crise td {
+  color: var(--text-primary);
+}
+
+.tabela-crise tr:hover {
+  background: rgba(45, 138, 110, 0.05);
 }
 
 .tabela-crise td.positivo {
-  color: var(--verde);
-  font-weight: 600;
+  color: var(--bullish);
+  font-weight: 700;
 }
 
 .tabela-crise td.negativo {
-  color: var(--vermelho);
-  font-weight: 600;
+  color: var(--bearish);
+  font-weight: 700;
 }
 
 /* Sinais de alerta */
 .sinais-alerta {
-  padding: 16px;
+  padding: 0;
 }
 
 .sinais-lista {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 10px;
 }
 
 .sinais-lista li {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 12px;
-  background: var(--bg-tertiary);
-  border-radius: 8px;
-  margin-bottom: 8px;
-}
-
-.sinais-lista li:last-child {
-  margin-bottom: 0;
+  gap: 14px;
+  padding: 14px 16px;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border-left: 3px solid var(--neutral);
+  color: var(--text-primary);
+  line-height: 1.5;
 }
 
 .sinal-icon {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
+  flex-shrink: 0;
 }
 
 /* Lições grid */
 .licoes-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
 }
 
 .licao-card {
-  padding: 20px;
+  padding: 24px;
   border-radius: 12px;
-  background: var(--bg-tertiary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
 }
 
 .licao-card h4 {
-  margin-bottom: 12px;
-  font-size: 1rem;
+  margin-bottom: 16px;
+  font-size: 1.05rem;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .licao-card.evitar {
-  border-left: 4px solid var(--vermelho);
+  border-left: 4px solid var(--bearish);
+}
+
+.licao-card.evitar h4 {
+  color: var(--bearish);
 }
 
 .licao-card.proteger {
-  border-left: 4px solid var(--azul);
+  border-left: 4px solid var(--conservador);
+}
+
+.licao-card.proteger h4 {
+  color: var(--conservador);
 }
 
 .licao-card.oportunidade {
-  border-left: 4px solid var(--verde);
+  border-left: 4px solid var(--bullish);
+}
+
+.licao-card.oportunidade h4 {
+  color: var(--bullish);
 }
 
 .licao-card ul {
@@ -7756,9 +7800,9 @@ body.home-page {
 }
 
 .licao-card li {
-  margin-bottom: 8px;
-  line-height: 1.5;
-  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--text-primary);
 }
 
 .licao-card li:last-child {
@@ -7768,48 +7812,69 @@ body.home-page {
 /* Cenários grid */
 .cenarios-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .cenario-card {
-  padding: 20px;
+  padding: 24px;
   border-radius: 12px;
-  background: var(--bg-tertiary);
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
 }
 
 .cenario-card h4 {
-  margin-bottom: 12px;
-  font-size: 1rem;
+  margin-bottom: 16px;
+  font-size: 1.1rem;
+  color: var(--text-primary);
 }
 
 .cenario-card.pessimista {
-  border-top: 4px solid var(--vermelho);
+  border-top: 4px solid var(--bearish);
+}
+
+.cenario-card.pessimista h4 {
+  color: var(--bearish);
 }
 
 .cenario-card.neutro {
-  border-top: 4px solid var(--amarelo);
+  border-top: 4px solid var(--neutral);
+}
+
+.cenario-card.neutro h4 {
+  color: var(--neutral);
 }
 
 .cenario-card.otimista {
-  border-top: 4px solid var(--verde);
+  border-top: 4px solid var(--bullish);
+}
+
+.cenario-card.otimista h4 {
+  color: var(--bullish);
 }
 
 .cenario-card p {
-  margin-bottom: 8px;
-  line-height: 1.5;
-  color: var(--text-secondary);
+  margin-bottom: 10px;
+  line-height: 1.6;
+  color: var(--text-primary);
 }
 
 .cenario-impacto {
-  color: var(--text-color) !important;
-  font-weight: 500;
+  color: var(--text-primary) !important;
+  font-weight: 600;
+  padding: 10px 12px;
+  background: var(--bg-tertiary);
+  border-radius: 6px;
+  margin-top: 12px !important;
 }
 
 .cenario-prob {
-  font-size: 0.85rem;
-  color: var(--text-muted) !important;
+  font-size: 0.9rem;
+  color: var(--text-secondary) !important;
   font-style: italic;
+  margin-top: 8px !important;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
 }
 
 /* Conclusões crise */
@@ -7817,21 +7882,112 @@ body.home-page {
   list-style: none;
   padding: 0;
   margin: 0;
+  display: grid;
+  gap: 10px;
 }
 
 #conclusoesCrise .conclusao-item {
   display: flex;
   align-items: flex-start;
-  gap: 12px;
-  padding: 12px 16px;
-  background: var(--bg-tertiary);
-  border-radius: 8px;
-  margin-bottom: 8px;
+  gap: 14px;
+  padding: 16px 18px;
+  background: var(--bg-card);
+  border-radius: 10px;
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  line-height: 1.5;
 }
 
 #conclusoesCrise .conclusao-icon {
   color: var(--primary-light);
   font-weight: bold;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Padrões do Bitcoin - seção especial */
+.bitcoin-ciclos {
+  display: grid;
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.ciclo-card {
+  background: var(--bg-card);
+  border-radius: 12px;
+  padding: 20px;
+  border: 1px solid var(--border-color);
+}
+
+.ciclo-card.alta {
+  border-left: 4px solid var(--bullish);
+}
+
+.ciclo-card.queda {
+  border-left: 4px solid var(--bearish);
+}
+
+.ciclo-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.ciclo-titulo {
+  font-weight: 700;
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.ciclo-badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+}
+
+.ciclo-badge.alta {
+  background: rgba(63, 185, 80, 0.2);
+  color: var(--bullish);
+}
+
+.ciclo-badge.queda {
+  background: rgba(248, 81, 73, 0.2);
+  color: var(--bearish);
+}
+
+.ciclo-detalhes {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 12px;
+}
+
+.ciclo-stat {
+  text-align: center;
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border-radius: 8px;
+}
+
+.ciclo-stat-valor {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.ciclo-stat-valor.positivo {
+  color: var(--bullish);
+}
+
+.ciclo-stat-valor.negativo {
+  color: var(--bearish);
+}
+
+.ciclo-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 4px;
 }
 
 /* Responsivo crises */
@@ -7841,15 +7997,15 @@ body.home-page {
   }
 
   .crise-btn {
-    padding: 12px 8px;
+    padding: 14px 10px;
   }
 
   .crise-icon {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
   }
 
   .crise-name {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
   }
 
   .crise-desc {
@@ -7859,5 +8015,9 @@ body.home-page {
   .licoes-grid,
   .cenarios-grid {
     grid-template-columns: 1fr;
+  }
+
+  .ciclo-detalhes {
+    grid-template-columns: repeat(2, 1fr);
   }
 }

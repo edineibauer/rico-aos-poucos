@@ -1770,15 +1770,29 @@ const Comparador = {
     const thead = document.querySelector('#tabelaHistorico thead');
     const tbody = document.querySelector('#tabelaHistorico tbody');
 
-    thead.innerHTML = `
+    // Obter lista de ativos do primeiro registro com alocações
+    const primeiroComAlocacoes = resultado.historico.find(h => h.alocacoes && Object.keys(h.alocacoes).length > 0);
+    const ativos = primeiroComAlocacoes ? Object.keys(primeiroComAlocacoes.alocacoes) : [];
+
+    // Criar cabeçalho com colunas para cada ativo
+    let theadHtml = `
       <tr>
         <th>Período</th>
-        <th>Patrimônio (Nominal)</th>
-        <th>Patrimônio (Real)</th>
-        <th>Variação</th>
-        <th>Movimentações</th>
-      </tr>
-    `;
+        <th>Patrimônio</th>
+        <th>Variação</th>`;
+
+    // Adicionar coluna para cada ativo selecionado
+    ativos.forEach(ativo => {
+      const cor = this.chartColors[ativo] || '#888';
+      const nome = this.assetNames[ativo] || ativo;
+      theadHtml += `<th style="white-space: nowrap;">
+        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: ${cor}; margin-right: 4px;"></span>
+        ${nome}
+      </th>`;
+    });
+
+    theadHtml += `<th>Movimentações</th></tr>`;
+    thead.innerHTML = theadHtml;
 
     let html = '';
     resultado.historico.forEach((h, i) => {
@@ -1810,17 +1824,37 @@ const Comparador = {
         }
       }
 
+      // Linha da tabela
       html += `
         <tr class="${h.rebalanceou ? 'row-rebalanceou' : ''}">
           <td>${h.periodo}</td>
           <td>${this.formatCurrency(h.valor)}</td>
-          <td>${this.formatCurrency(h.valorReal)}</td>
           <td class="${variacaoPercent >= 0 ? 'text-green' : 'text-red'}">
             ${variacaoPercent >= 0 ? '+' : ''}${variacaoPercent.toFixed(2)}%
-          </td>
-          <td style="font-size: 0.8rem">${movimentacoesTexto}</td>
-        </tr>
-      `;
+          </td>`;
+
+      // Adicionar célula para cada ativo com sua alocação atual
+      ativos.forEach(ativo => {
+        const alocacao = h.alocacoes ? h.alocacoes[ativo] : null;
+        if (alocacao !== null && alocacao !== undefined) {
+          const cor = this.chartColors[ativo] || '#888';
+          // Criar mini barra de progresso visual
+          const larguraBarra = Math.min(alocacao, 100);
+          html += `<td style="white-space: nowrap;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="flex: 1; min-width: 40px; max-width: 60px; height: 6px; background: var(--bg-tertiary); border-radius: 3px; overflow: hidden;">
+                <div style="width: ${larguraBarra}%; height: 100%; background: ${cor}; border-radius: 3px;"></div>
+              </div>
+              <span style="font-weight: 500; font-size: 0.85rem;">${alocacao.toFixed(1)}%</span>
+            </div>
+          </td>`;
+        } else {
+          html += `<td style="color: var(--text-muted);">-</td>`;
+        }
+      });
+
+      html += `<td style="font-size: 0.8rem">${movimentacoesTexto}</td>
+        </tr>`;
     });
 
     tbody.innerHTML = html;

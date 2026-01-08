@@ -161,9 +161,21 @@ const Comparador2 = {
   },
 
   bindRunButtons() {
+    // Histórico - desktop e mobile
     document.getElementById('comp2BtnRun')?.addEventListener('click', () => this.compararHistorico());
+    document.getElementById('comp2BtnRunMobile')?.addEventListener('click', () => this.compararHistorico());
+
+    // Duelo/Comparar - desktop e mobile
+    document.getElementById('comp2BtnDuelo')?.addEventListener('click', () => this.iniciarDuelo());
+    document.getElementById('comp2BtnDueloMobile')?.addEventListener('click', () => this.iniciarDuelo());
+
+    // Carteira - desktop e mobile
     document.getElementById('comp2BtnCarteira')?.addEventListener('click', () => this.simularCarteira());
+    document.getElementById('comp2BtnCarteiraMobile')?.addEventListener('click', () => this.simularCarteira());
+
+    // Rebalancear - desktop e mobile
     document.getElementById('comp2BtnRebal')?.addEventListener('click', () => this.simularRebalanceamento());
+    document.getElementById('comp2BtnRebalMobile')?.addEventListener('click', () => this.simularRebalanceamento());
   },
 
   bindToggleButtons() {

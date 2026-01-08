@@ -142,8 +142,14 @@
   color: var(--bg-primary);
 }
 
-/* Full width button (placed after all filters) */
-.comp2-btn-full {
+/* Desktop button - inline style */
+.comp2-btn-desktop {
+  margin-top: 16px;
+}
+
+/* Mobile button - full width, hidden on desktop */
+.comp2-btn-mobile {
+  display: none;
   width: 100%;
   margin-top: 16px;
   justify-content: center;
@@ -1095,6 +1101,15 @@
     justify-content: center;
     padding: 14px 20px;
     font-size: 1rem;
+  }
+
+  /* Show mobile button, hide desktop button */
+  .comp2-btn-desktop {
+    display: none;
+  }
+
+  .comp2-btn-mobile {
+    display: flex;
   }
 
   .comp2-assets {

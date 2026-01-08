@@ -161,21 +161,10 @@ const Comparador2 = {
   },
 
   bindRunButtons() {
-    // Histórico - desktop e mobile
     document.getElementById('comp2BtnRun')?.addEventListener('click', () => this.compararHistorico());
-    document.getElementById('comp2BtnRunMobile')?.addEventListener('click', () => this.compararHistorico());
-
-    // Duelo/Comparar - desktop e mobile
     document.getElementById('comp2BtnDuelo')?.addEventListener('click', () => this.iniciarDuelo());
-    document.getElementById('comp2BtnDueloMobile')?.addEventListener('click', () => this.iniciarDuelo());
-
-    // Carteira - desktop e mobile
     document.getElementById('comp2BtnCarteira')?.addEventListener('click', () => this.simularCarteira());
-    document.getElementById('comp2BtnCarteiraMobile')?.addEventListener('click', () => this.simularCarteira());
-
-    // Rebalancear - desktop e mobile
     document.getElementById('comp2BtnRebal')?.addEventListener('click', () => this.simularRebalanceamento());
-    document.getElementById('comp2BtnRebalMobile')?.addEventListener('click', () => this.simularRebalanceamento());
   },
 
   bindToggleButtons() {
@@ -545,11 +534,10 @@ const Comparador2 = {
     }
 
     const dueloSelecionado = document.querySelector('.comp2-duelo-btn.active')?.dataset.duelo || 'ibov-sp500';
-    const periodBtn = document.querySelector('.comp2-period-btns button.active');
-    const years = periodBtn ? parseInt(periodBtn.dataset.years) : 5;
 
-    const anoFim = new Date().getFullYear();
-    const anoInicio = anoFim - years;
+    // Usar os seletores de ano
+    const anoInicio = parseInt(document.getElementById('comp2DueloAnoInicio')?.value) || 2015;
+    const anoFim = parseInt(document.getElementById('comp2DueloAnoFim')?.value) || 2025;
 
     const valorStr = document.getElementById('comp2DueloValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
@@ -634,6 +622,9 @@ const Comparador2 = {
   renderPlacarDuelo(config, resultado1, resultado2) {
     const container = document.getElementById('comp2DueloResult');
     if (!container) return;
+
+    // Mostrar o container de resultados
+    container.style.display = 'block';
 
     const vencedor1 = resultado1.retornoReal > resultado2.retornoReal;
     const diferenca = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);

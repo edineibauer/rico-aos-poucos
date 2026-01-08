@@ -35,7 +35,7 @@
   background: transparent;
   border: none;
   border-radius: 12px;
-  color: var(--text-muted);
+  color: var(--text-secondary);
   cursor: pointer;
   transition: all 0.2s ease;
   font-size: 0.65rem;
@@ -350,6 +350,7 @@
 
 .ranking-name {
   font-weight: 500;
+  color: var(--text-primary);
 }
 
 .ranking-return {
@@ -471,7 +472,7 @@
 .duelo-title {
   font-size: 0.8rem;
   font-weight: 500;
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 /* Duelo Result */
@@ -507,6 +508,7 @@
 .player-name {
   font-weight: 600;
   font-size: 1rem;
+  color: var(--text-primary);
 }
 
 .player-return {
@@ -732,6 +734,53 @@
 
 .pattern-name {
   font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Pattern Content */
+.pattern-detail {
+  color: var(--text-secondary);
+  line-height: 1.6;
+}
+
+.pattern-detail h3,
+.pattern-detail h4 {
+  color: var(--text-primary);
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.pattern-detail ul,
+.pattern-detail ol {
+  margin-left: 20px;
+  margin-bottom: 12px;
+}
+
+.pattern-detail li {
+  margin-bottom: 6px;
+}
+
+.pattern-detail strong {
+  color: var(--text-primary);
+}
+
+.pattern-detail table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+}
+
+.pattern-detail th,
+.pattern-detail td {
+  padding: 8px 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.pattern-detail th {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
   font-weight: 600;
 }
 

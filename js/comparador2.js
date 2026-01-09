@@ -60,6 +60,7 @@ const Comparador2 = {
     this.bindPeriodButtons();
     this.bindRunButtons();
     this.bindToggleButtons();
+    this.applyPercentageMasks();
     this.waitForData();
   },
 
@@ -240,6 +241,11 @@ const Comparador2 = {
     return parseFloat(value.toString().replace(/\./g, '').replace(',', '.')) || 0;
   },
 
+  parsePercentage(value) {
+    if (!value || value === '') return 0;
+    return parseFloat(value.toString().replace(',', '.')) || 0;
+  },
+
   formatCurrency(value) {
     return new Intl.NumberFormat('pt-BR', {
       style: 'currency', currency: 'BRL',
@@ -249,6 +255,56 @@ const Comparador2 = {
 
   formatPercent(value, decimals = 2) {
     return value.toFixed(decimals) + '%';
+  },
+
+  // Máscara para campos de porcentagem (ex: 4,50)
+  maskPercentage(input) {
+    input.addEventListener('input', (e) => {
+      let value = e.target.value.replace(/[^\d]/g, '');
+      if (value === '') { e.target.value = ''; return; }
+      let numValue = parseInt(value, 10);
+      if (numValue > 9999) numValue = 9999; // Máximo 99,99%
+      e.target.value = (numValue / 100).toLocaleString('pt-BR', {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2
+      });
+    });
+
+    // Formatar valor inicial se existir
+    if (input.value && input.value !== '') {
+      const numValue = parseFloat(input.value.toString().replace(',', '.'));
+      if (!isNaN(numValue)) {
+        input.value = numValue.toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+      }
+    }
+  },
+
+  // Aplicar máscaras em todos os campos de porcentagem
+  applyPercentageMasks() {
+    const percentageInputIds = [
+      // Aba Histórico
+      'comp2DolarExtra',
+      'comp2RendaMaisTaxa',
+      // Aba Duelo
+      'comp2DueloDolarExtra',
+      'comp2DueloRendaMaisTaxa',
+      'comp2DueloInflacao',
+      // Aba Carteira
+      'comp2CarteiraDolarExtra',
+      'comp2CarteiraRendaMaisTaxa',
+      'comp2CarteiraInflacao',
+      // Aba Rebalancear
+      'comp2RebalDolarExtra',
+      'comp2RebalRendaMaisTaxa'
+    ];
+
+    percentageInputIds.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) this.maskPercentage(input);
+    });
   },
 
   calcularInflacaoAcumulada(dados) {
@@ -385,8 +441,8 @@ const Comparador2 = {
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
     // Ler valores de ajuste
-    const dolarExtra = parseFloat(document.getElementById('comp2DolarExtra')?.value) || 0;
-    const rendaMaisTaxa = parseFloat(document.getElementById('comp2RendaMaisTaxa')?.value) || 6;
+    const dolarExtra = this.parsePercentage(document.getElementById('comp2DolarExtra')?.value) || 0;
+    const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RendaMaisTaxa')?.value) || 6;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
@@ -652,8 +708,8 @@ const Comparador2 = {
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
     // Ler valores de ajuste
-    const dolarExtra = parseFloat(document.getElementById('comp2DueloDolarExtra')?.value) || 0;
-    const rendaMaisTaxa = parseFloat(document.getElementById('comp2DueloRendaMaisTaxa')?.value) || 6;
+    const dolarExtra = this.parsePercentage(document.getElementById('comp2DueloDolarExtra')?.value) || 0;
+    const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2DueloRendaMaisTaxa')?.value) || 6;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
@@ -1000,8 +1056,8 @@ const Comparador2 = {
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
     // Ler valores de ajuste
-    const dolarExtra = parseFloat(document.getElementById('comp2CarteiraDolarExtra')?.value) || 0;
-    const rendaMaisTaxa = parseFloat(document.getElementById('comp2CarteiraRendaMaisTaxa')?.value) || 6;
+    const dolarExtra = this.parsePercentage(document.getElementById('comp2CarteiraDolarExtra')?.value) || 0;
+    const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2CarteiraRendaMaisTaxa')?.value) || 6;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
@@ -1280,8 +1336,8 @@ const Comparador2 = {
     const tolerancia = parseFloat(document.getElementById('comp2Tolerancia')?.value) || 10;
 
     // Ler valores de ajuste
-    const dolarExtra = parseFloat(document.getElementById('comp2RebalDolarExtra')?.value) || 0;
-    const rendaMaisTaxa = parseFloat(document.getElementById('comp2RebalRendaMaisTaxa')?.value) || 6;
+    const dolarExtra = this.parsePercentage(document.getElementById('comp2RebalDolarExtra')?.value) || 0;
+    const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RebalRendaMaisTaxa')?.value) || 6;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;

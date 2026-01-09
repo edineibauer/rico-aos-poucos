@@ -16,7 +16,7 @@ const Publicacoes = {
     'sp500': { badge: 'S&P', type: 'neutral' },
     'ouro': { badge: 'OURO', type: 'neutral' },
     'caixa': { badge: 'CDI', type: 'bullish' },
-    'imoveis': { badge: 'IMOV', type: 'neutral' },
+    'imoveis': { badge: 'IMOV', type: 'bullish' },
     // By category (fallback)
     'educacao': { badge: 'EDU', type: 'neutral' },
     'estrategias': { badge: 'EST', type: 'neutral' },
@@ -97,8 +97,8 @@ const Publicacoes = {
         return;
       }
 
-      // Render the list
-      this.renderList(pubList, destaques);
+      // Render the list (max 6 items)
+      this.renderList(pubList, destaques.slice(0, 6));
 
       // Render featured (first article)
       this.renderFeatured(pubFeatured, destaques[0]);

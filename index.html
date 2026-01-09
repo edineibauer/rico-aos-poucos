@@ -169,7 +169,7 @@
                   <span class="setor-name">TLT</span>
                   <span class="setor-exp">15%</span>
                 </a>
-                <a href="setores/imoveis/" class="setor-item neutral">
+                <a href="setores/imoveis/" class="setor-item bullish">
                   <span class="setor-icon">🏠</span>
                   <span class="setor-name">Imoveis</span>
                   <span class="setor-exp">15%</span>
@@ -208,11 +208,11 @@
             </div>
             <a href="setores/" class="sentimento-resumo">
               <div class="sentimento-stat bullish">
-                <span class="sentimento-count">3</span>
+                <span class="sentimento-count">4</span>
                 <span class="sentimento-label" data-i18n="sentiments.bullishPlural">Otimistas</span>
               </div>
               <div class="sentimento-stat neutral">
-                <span class="sentimento-count">5</span>
+                <span class="sentimento-count">4</span>
                 <span class="sentimento-label" data-i18n="sentiments.neutralPlural">Neutros</span>
               </div>
               <div class="sentimento-stat bearish">
@@ -259,8 +259,10 @@
 
       </div>
 
-      <!-- Card Calculadora de Investimentos -->
-      <a href="calculadora/" class="card-calculadora">
+      <!-- Cards Row: Calculadora + YouTube lado a lado no desktop -->
+      <div class="home-bottom-row">
+        <!-- Card Calculadora de Investimentos -->
+        <a href="calculadora/" class="card-calculadora">
         <div class="calc-card-header">
           <div class="calc-card-icon">🧮</div>
           <div class="calc-card-title">
@@ -275,6 +277,26 @@
         </div>
         <div class="calc-card-cta">
           <span data-i18n="home.useCalculator">Usar calculadora</span>
+          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </div>
+      </a>
+
+        <!-- Card Comparador de Investimentos -->
+        <a href="comparador/" class="card-calculadora card-comparador">
+        <div class="calc-card-header">
+          <div class="calc-card-icon">⚖️</div>
+          <div class="calc-card-title">
+            <h3 data-i18n="home.comparatorTitle">Comparador de Investimentos</h3>
+            <span data-i18n="home.comparatorSubtitle">Quem ganhou de verdade?</span>
+          </div>
+        </div>
+        <div class="calc-card-features">
+          <span class="calc-feature"><span>📊</span> <span data-i18n="home.compFeature1">Retorno real</span></span>
+          <span class="calc-feature"><span>⚔️</span> <span data-i18n="home.compFeature2">Frente a frente</span></span>
+          <span class="calc-feature"><span>🔄</span> <span data-i18n="home.compFeature3">Rebalanceamento</span></span>
+        </div>
+        <div class="calc-card-cta">
+          <span data-i18n="home.useComparator">Comparar ativos</span>
           <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </div>
       </a>
@@ -298,6 +320,7 @@
           </div>
         </div>
       </a>
+      </div>
 
     </section>
 

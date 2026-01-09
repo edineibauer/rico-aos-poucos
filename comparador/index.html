@@ -1,0 +1,1095 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade descontando inflação, impostos e custos. FII vs Imóvel, Bolsa vs Dólar, análise honesta.">
+  <meta name="keywords" content="comparador investimentos, ganho real, inflação, impostos, FII, imóvel, bolsa, dólar, diversificação">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/comparador/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/comparador/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/comparador/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/comparador/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/comparador/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Comparador Brutal de Investimentos | Rico aos Poucos">
+  <meta property="og:description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/comparador/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Comparador Brutal de Investimentos | Rico aos Poucos">
+  <meta name="twitter:description" content="Compare investimentos pelo ganho real líquido. Descubra quem ganhou de verdade.">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+
+  <title>Comparador Brutal de Investimentos | Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Comparador Brutal de Investimentos",
+    "description": "Ferramenta para comparar investimentos pelo ganho real líquido",
+    "url": "https://ricoaospoucos.com.br/comparador/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    }
+  }
+  </script>
+</head>
+<body>
+  <div class="page-wrapper">
+
+    <header id="page-header" data-subtitle="Comparador de Investimentos"></header>
+
+    <main class="main-content comparador-page">
+    <!-- Hero Section -->
+    <section class="comparador-hero">
+      <div class="hero-badge">Análise Brutal</div>
+      <h1>Quem Ganhou de Verdade?</h1>
+      <p class="hero-subtitle">Nem toda alta gera valor. Nem todo rendimento é ganho.</p>
+      <p class="hero-desc">Compare investimentos pelo <strong>ganho real líquido</strong>, descontando inflação, impostos, custos e riscos. Entenda visualmente se houve <strong>geração de valor</strong> ou apenas correção monetária.</p>
+    </section>
+
+    <!-- Navigation Tabs -->
+    <nav class="comparador-nav">
+      <button class="nav-tab active" data-tab="historico">
+        <span class="tab-icon">📊</span>
+        <span class="tab-text">Comparador Histórico</span>
+      </button>
+      <button class="nav-tab" data-tab="fii-imovel">
+        <span class="tab-icon">⚔️</span>
+        <span class="tab-text">Frente a Frente</span>
+      </button>
+      <button class="nav-tab" data-tab="diversificacao">
+        <span class="tab-icon">📊</span>
+        <span class="tab-text">Diversificação</span>
+      </button>
+      <button class="nav-tab" data-tab="rebalanceamento">
+        <span class="tab-icon">⚖️</span>
+        <span class="tab-text">Rebalanceamento</span>
+      </button>
+      <button class="nav-tab" data-tab="crises">
+        <span class="tab-icon">📉</span>
+        <span class="tab-text">Padrões Históricos</span>
+      </button>
+    </nav>
+
+    <!-- Tab Content: Comparador Histórico -->
+    <section class="tab-content active" id="tab-historico">
+      <div class="section-header">
+        <h2>Comparador Histórico Brutal</h2>
+        <p>Quem ganhou mais de verdade nos últimos anos? Veja o retorno real após inflação.</p>
+      </div>
+
+      <!-- Configurações -->
+      <div class="comparador-config">
+        <div class="config-row">
+          <div class="config-field">
+            <label for="periodo">Período de análise</label>
+            <select id="periodo">
+              <option value="5">Últimos 5 anos</option>
+              <option value="10" selected>Últimos 10 anos</option>
+              <option value="15">Últimos 15 anos</option>
+              <option value="20">Últimos 20 anos</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorInicial">Valor inicial investido</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorInicial" value="100000" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+
+        <div class="config-assets">
+          <label>Ativos para comparar:</label>
+          <div class="asset-checkboxes">
+            <label class="asset-checkbox">
+              <input type="checkbox" value="ibovespa" checked>
+              <span class="checkbox-custom"></span>
+              <span>Ibovespa</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="dolar" checked>
+              <span class="checkbox-custom"></span>
+              <span>Dólar</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="ouro" checked>
+              <span class="checkbox-custom"></span>
+              <span>Ouro</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="fii_ifix" checked>
+              <span class="checkbox-custom"></span>
+              <span>FIIs (IFIX)</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="tesouro_ipca">
+              <span class="checkbox-custom"></span>
+              <span>Tesouro IPCA+</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="cdi">
+              <span class="checkbox-custom"></span>
+              <span>CDI</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="sp500_brl">
+              <span class="checkbox-custom"></span>
+              <span>S&P 500 (em R$)</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="tlt_brl">
+              <span class="checkbox-custom"></span>
+              <span>TLT (Tesouro EUA)</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="imoveis_fipezap">
+              <span class="checkbox-custom"></span>
+              <span>Imóveis (FipeZap)</span>
+            </label>
+            <label class="asset-checkbox">
+              <input type="checkbox" value="bitcoin_brl">
+              <span class="checkbox-custom"></span>
+              <span>Bitcoin</span>
+            </label>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnComparar">
+          <span>Comparar Agora</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Resultados -->
+      <div class="comparador-resultados" id="resultados" style="display: none;">
+        <!-- Gráfico Principal -->
+        <div class="resultado-card">
+          <h3>Evolução do Patrimônio</h3>
+          <div class="chart-toggle">
+            <button class="toggle-btn active" data-view="nominal">Nominal</button>
+            <button class="toggle-btn" data-view="real">Valor Real</button>
+          </div>
+          <div class="chart-container" id="chartEvolucao"></div>
+          <p class="chart-nota">* Valor real = poder de compra em reais de hoje, descontada a inflação</p>
+        </div>
+
+        <!-- Ranking Final -->
+        <div class="resultado-card">
+          <h3>Ranking: Quem Ganhou de Verdade</h3>
+          <div class="ranking-container" id="rankingContainer"></div>
+        </div>
+
+        <!-- Tabela Detalhada -->
+        <div class="resultado-card">
+          <h3>Análise Detalhada</h3>
+          <div class="table-scroll">
+            <table class="tabela-comparativo" id="tabelaComparativo">
+              <thead>
+                <tr>
+                  <th>Ativo</th>
+                  <th>Valor Final Nominal</th>
+                  <th>Valor Final Real</th>
+                  <th>Retorno Nominal</th>
+                  <th>Retorno Real</th>
+                  <th>Ganhou da Inflação?</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Conclusões Automáticas -->
+        <div class="resultado-card conclusoes-card">
+          <h3>Conclusões da Análise</h3>
+          <div class="conclusoes-lista" id="conclusoesLista"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Frente a Frente -->
+    <section class="tab-content" id="tab-fii-imovel">
+      <div class="section-header">
+        <h2>Frente a Frente</h2>
+        <p>Compare ativos similares usando dados históricos reais. Descubra quem venceu em cada período.</p>
+      </div>
+
+      <div class="comparador-config">
+        <!-- Seleção do Comparativo -->
+        <div class="duelo-selector">
+          <h4>Escolha o duelo:</h4>
+          <div class="duelo-grid">
+            <button class="duelo-btn active" data-duelo="ibov-sp500">
+              <div class="duelo-versus">
+                <span class="duelo-icon">🇧🇷</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🇺🇸</span>
+              </div>
+              <span class="duelo-name">Ibovespa vs S&P 500</span>
+              <span class="duelo-desc">Bolsa brasileira vs americana</span>
+            </button>
+            <button class="duelo-btn" data-duelo="ouro-bitcoin">
+              <div class="duelo-versus">
+                <span class="duelo-icon">🥇</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">₿</span>
+              </div>
+              <span class="duelo-name">Ouro vs Bitcoin</span>
+              <span class="duelo-desc">Reserva tradicional vs digital</span>
+            </button>
+            <button class="duelo-btn" data-duelo="ipca-tlt">
+              <div class="duelo-versus">
+                <span class="duelo-icon">🇧🇷</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🇺🇸</span>
+              </div>
+              <span class="duelo-name">IPCA+ vs TLT</span>
+              <span class="duelo-desc">Tesouro BR vs Tesouro EUA</span>
+            </button>
+            <button class="duelo-btn" data-duelo="ibov-cdi">
+              <div class="duelo-versus">
+                <span class="duelo-icon">📈</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">💰</span>
+              </div>
+              <span class="duelo-name">Ibovespa vs CDI</span>
+              <span class="duelo-desc">Renda variável vs fixa</span>
+            </button>
+            <button class="duelo-btn" data-duelo="dolar-ouro">
+              <div class="duelo-versus">
+                <span class="duelo-icon">💵</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🥇</span>
+              </div>
+              <span class="duelo-name">Dólar vs Ouro</span>
+              <span class="duelo-desc">Proteções cambiais</span>
+            </button>
+            <button class="duelo-btn" data-duelo="fii-imovel">
+              <div class="duelo-versus">
+                <span class="duelo-icon">📊</span>
+                <span class="duelo-vs">vs</span>
+                <span class="duelo-icon">🏠</span>
+              </div>
+              <span class="duelo-name">FII vs Imóvel</span>
+              <span class="duelo-desc">Fundos vs físico</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Configurações do período -->
+        <div class="config-row">
+          <div class="config-field">
+            <label for="anoInicioDuelo">Ano inicial</label>
+            <select id="anoInicioDuelo">
+              <option value="2005">2005</option>
+              <option value="2010">2010</option>
+              <option value="2015" selected>2015</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="anoFimDuelo">Ano final</label>
+            <select id="anoFimDuelo">
+              <option value="2015">2015</option>
+              <option value="2020">2020</option>
+              <option value="2025" selected>2025</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorDuelo">Valor inicial</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorDuelo" value="100000" inputmode="numeric">
+            </div>
+          </div>
+          <div class="config-field">
+            <label for="inflacaoDuelo">Inflação média (a.a.)</label>
+            <div class="input-group">
+              <input type="number" id="inflacaoDuelo" value="6" min="0" max="30" step="0.5">
+              <span class="input-suffix">%</span>
+            </div>
+            <small class="field-hint">Deixe 0 para usar inflação real (IPCA)</small>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnDuelo">
+          <span>Iniciar Duelo</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Resultados do Duelo -->
+      <div class="comparador-resultados" id="resultadosDuelo" style="display: none;">
+        <!-- Placar Principal -->
+        <div class="resultado-card destaque-card">
+          <h3 id="dueloTitulo">Resultado do Duelo</h3>
+          <div class="duelo-placar" id="dueloPlacar"></div>
+        </div>
+
+        <!-- Evolução Comparativa -->
+        <div class="resultado-card">
+          <h3>Evolução do Patrimônio</h3>
+          <div class="chart-toggle">
+            <button class="toggle-btn active" id="btnNominalDuelo">Nominal</button>
+            <button class="toggle-btn" id="btnRealDuelo">Valor Real</button>
+          </div>
+          <div class="chart-container" style="height: 350px;">
+            <canvas id="chartDuelo"></canvas>
+          </div>
+        </div>
+
+        <!-- Tabela Ano a Ano -->
+        <div class="resultado-card">
+          <h3>Retorno Ano a Ano</h3>
+          <div class="table-scroll">
+            <table class="tabela-duelo" id="tabelaDuelo">
+              <thead></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Métricas Detalhadas -->
+        <div class="resultado-card">
+          <h3>Métricas Detalhadas</h3>
+          <div class="metricas-duelo" id="metricasDuelo"></div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="resultado-card conclusoes-card">
+          <h3>Análise Final</h3>
+          <div id="conclusaoDuelo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Diversificação -->
+    <section class="tab-content" id="tab-diversificacao">
+      <div class="section-header">
+        <h2>Diversificação vs Foco Único</h2>
+        <p>Descubra se diversificar realmente protege ou se concentrar em um único ativo seria melhor. Compare carteiras diversificadas contra ativos individuais.</p>
+      </div>
+
+      <div class="comparador-config">
+        <div class="config-row">
+          <div class="config-field">
+            <label for="anoInicioDiversifNovo">Ano inicial</label>
+            <select id="anoInicioDiversifNovo">
+              <option value="2005">2005</option>
+              <option value="2010">2010</option>
+              <option value="2015" selected>2015</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="anoFimDiversifNovo">Ano final</label>
+            <select id="anoFimDiversifNovo">
+              <option value="2020">2020</option>
+              <option value="2025" selected>2025</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorDiversifNovo">Valor inicial</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorDiversifNovo" value="100000" inputmode="numeric">
+            </div>
+          </div>
+          <div class="config-field">
+            <label for="inflacaoDiversifNovo">Inflação média (a.a.)</label>
+            <div class="input-group">
+              <input type="number" id="inflacaoDiversifNovo" value="6" min="0" max="30" step="0.5">
+              <span class="input-suffix">%</span>
+            </div>
+            <small class="field-hint">Deixe 0 para usar inflação real (IPCA)</small>
+          </div>
+        </div>
+
+        <div class="diversif-presets">
+          <h4>Estratégias pré-definidas (clique para aplicar):</h4>
+          <div class="preset-grid">
+            <button class="preset-btn active" data-preset="5050">
+              <span class="preset-icon">⚖️</span>
+              <span class="preset-name">50% Ibov + 50% CDI</span>
+              <span class="preset-desc">Clássica renda variável + fixa</span>
+            </button>
+            <button class="preset-btn" data-preset="3ativos">
+              <span class="preset-icon">🔺</span>
+              <span class="preset-name">33% Ibov + 33% CDI + 33% Dólar</span>
+              <span class="preset-desc">Proteção cambial</span>
+            </button>
+            <button class="preset-btn" data-preset="4ativos">
+              <span class="preset-icon">🔷</span>
+              <span class="preset-name">25% cada (Ibov, CDI, Dólar, Ouro)</span>
+              <span class="preset-desc">Diversificação ampla</span>
+            </button>
+            <button class="preset-btn" data-preset="global">
+              <span class="preset-icon">🌎</span>
+              <span class="preset-name">50% Brasil + 50% EUA</span>
+              <span class="preset-desc">25% Ibov + 25% CDI + 25% S&P + 25% TLT</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Alocação Personalizada -->
+        <div class="alocacao-section">
+          <div class="alocacao-header">
+            <h4>Personalize sua Carteira Diversificada</h4>
+            <div class="alocacao-total">
+              <span>Alocação total:</span>
+              <span id="alocacaoTotalNovo" class="total-value">100%</span>
+            </div>
+          </div>
+
+          <div class="alocacao-grid-simple" id="alocacaoGridNovo">
+            <div class="alocacao-item-simple" data-ativo="ibovespa">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #3b82f6"></span>
+                <span class="ativo-nome">Ibovespa</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="50" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="cdi">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #ec4899"></span>
+                <span class="ativo-nome">Caixa / CDI</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="50" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="dolar">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #22c55e"></span>
+                <span class="ativo-nome">Dólar</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="ouro">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #eab308"></span>
+                <span class="ativo-nome">Ouro</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="fii_ifix">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #8b5cf6"></span>
+                <span class="ativo-nome">FIIs (IFIX)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="tesouro_ipca">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #06b6d4"></span>
+                <span class="ativo-nome">Tesouro IPCA+</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="sp500_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #ef4444"></span>
+                <span class="ativo-nome">S&P 500 (em R$)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="tlt_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #0ea5e9"></span>
+                <span class="ativo-nome">TLT (Tesouro EUA)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="imoveis_fipezap">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #14b8a6"></span>
+                <span class="ativo-nome">Imóveis (FipeZap)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item-simple" data-ativo="bitcoin_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #f7931a"></span>
+                <span class="ativo-nome">Bitcoin</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent-novo" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnDiversifNovo">
+          <span>Comparar Estratégias</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="resultados-diversif-novo" id="resultadosDiversifNovo" style="display: none;">
+        <div class="resultado-card">
+          <h3>Resultado: Diversificação vs Ativos Individuais</h3>
+          <div id="tabelaDiversifNovo"></div>
+        </div>
+
+        <div class="resultado-card">
+          <h3>Evolução Comparativa</h3>
+          <div class="chart-container" style="height: 350px;">
+            <canvas id="chartDiversifNovo"></canvas>
+          </div>
+        </div>
+
+        <div class="resultado-card conclusoes-card">
+          <h3>Conclusão: Diversificar valeu a pena?</h3>
+          <div id="conclusaoDiversifNovo"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Rebalanceamento -->
+    <section class="tab-content" id="tab-rebalanceamento">
+      <div class="section-header">
+        <h2>Simulador de Rebalanceamento</h2>
+        <p>Monte sua carteira, defina tolerâncias e veja se o rebalanceamento periódico gerou mais ganhos do que buy-and-hold. Inclui cálculo de impostos e preço médio.</p>
+      </div>
+
+      <div class="comparador-config">
+        <!-- Configurações de Período e Valor -->
+        <div class="config-row">
+          <div class="config-field">
+            <label for="anoInicioDiversif">Ano inicial</label>
+            <select id="anoInicioDiversif">
+              <option value="2005">2005</option>
+              <option value="2006">2006</option>
+              <option value="2007">2007</option>
+              <option value="2008">2008</option>
+              <option value="2009">2009</option>
+              <option value="2010">2010</option>
+              <option value="2011">2011</option>
+              <option value="2012">2012</option>
+              <option value="2013">2013</option>
+              <option value="2014">2014</option>
+              <option value="2015" selected>2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="anoFimDiversif">Ano final</label>
+            <select id="anoFimDiversif">
+              <option value="2015">2015</option>
+              <option value="2016">2016</option>
+              <option value="2017">2017</option>
+              <option value="2018">2018</option>
+              <option value="2019">2019</option>
+              <option value="2020">2020</option>
+              <option value="2021">2021</option>
+              <option value="2022">2022</option>
+              <option value="2023">2023</option>
+              <option value="2024">2024</option>
+              <option value="2025" selected>2025</option>
+            </select>
+          </div>
+          <div class="config-field">
+            <label for="valorDiversif">Valor inicial</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorDiversif" value="100000" inputmode="numeric">
+            </div>
+          </div>
+        </div>
+
+        <div class="config-row">
+          <div class="config-field">
+            <label for="inflacaoCustom">
+              Inflação média (a.a.)
+              <a href="../publicacoes/artigo-leiloes-inflacao/" class="info-link" title="Entenda como a inflação afeta seus investimentos">ℹ️</a>
+            </label>
+            <div class="input-group">
+              <input type="number" id="inflacaoCustom" value="6" min="0" max="30" step="0.5">
+              <span class="input-suffix">%</span>
+            </div>
+            <small class="field-hint">Deixe 0 para usar inflação real (IPCA)</small>
+          </div>
+          <div class="config-field">
+            <label for="toleranciaGlobal">
+              Tolerância para rebalancear
+            </label>
+            <div class="input-group">
+              <span class="input-prefix">±</span>
+              <input type="number" id="toleranciaGlobal" value="10" min="1" max="50" step="1">
+              <span class="input-suffix">%</span>
+            </div>
+            <small class="field-hint">Rebalanceia quando desviar acima ou abaixo</small>
+          </div>
+        </div>
+
+        <div class="diversif-presets">
+          <h4>Estratégias pré-definidas (clique para aplicar):</h4>
+          <div class="preset-grid">
+            <button class="preset-btn-rebal active" data-preset="5050">
+              <span class="preset-icon">⚖️</span>
+              <span class="preset-name">50% Ibov + 50% CDI</span>
+              <span class="preset-desc">Clássica renda variável + fixa</span>
+            </button>
+            <button class="preset-btn-rebal" data-preset="3ativos">
+              <span class="preset-icon">🔺</span>
+              <span class="preset-name">33% Ibov + 33% CDI + 33% Dólar</span>
+              <span class="preset-desc">Proteção cambial</span>
+            </button>
+            <button class="preset-btn-rebal" data-preset="4ativos">
+              <span class="preset-icon">🔷</span>
+              <span class="preset-name">25% cada (Ibov, CDI, Dólar, Ouro)</span>
+              <span class="preset-desc">Diversificação ampla</span>
+            </button>
+            <button class="preset-btn-rebal" data-preset="global">
+              <span class="preset-icon">🌎</span>
+              <span class="preset-name">50% Brasil + 50% EUA</span>
+              <span class="preset-desc">25% Ibov + 25% CDI + 25% S&P + 25% TLT</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Alocação Personalizada -->
+        <div class="alocacao-section">
+          <div class="alocacao-header">
+            <h4>Monte sua Carteira</h4>
+            <div class="alocacao-total">
+              <span>Alocação total:</span>
+              <span id="alocacaoTotal" class="total-value">0%</span>
+            </div>
+          </div>
+
+          <div class="alocacao-grid" id="alocacaoGrid">
+            <!-- Renda Variável Brasil -->
+            <div class="alocacao-item" data-ativo="ibovespa">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #3b82f6"></span>
+                <span class="ativo-nome">Ibovespa</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="50" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <!-- Renda Fixa -->
+            <div class="alocacao-item" data-ativo="cdi">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #ec4899"></span>
+                <span class="ativo-nome">Caixa / CDI</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="50" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="tesouro_ipca">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #06b6d4"></span>
+                <span class="ativo-nome">Tesouro IPCA+</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <!-- Imobiliário -->
+            <div class="alocacao-item" data-ativo="fii_ifix">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #8b5cf6"></span>
+                <span class="ativo-nome">FIIs (IFIX)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="imoveis_fipezap">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #14b8a6"></span>
+                <span class="ativo-nome">Imóveis (FipeZap)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <!-- Internacional -->
+            <div class="alocacao-item" data-ativo="dolar">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #22c55e"></span>
+                <span class="ativo-nome">Dólar</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="sp500_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #ef4444"></span>
+                <span class="ativo-nome">S&P 500 (em R$)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="tlt_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #0ea5e9"></span>
+                <span class="ativo-nome">TLT (Tesouro EUA)</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <!-- Commodities e Alternativos -->
+            <div class="alocacao-item" data-ativo="ouro">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #eab308"></span>
+                <span class="ativo-nome">Ouro</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+            <div class="alocacao-item" data-ativo="bitcoin_brl">
+              <div class="ativo-info">
+                <span class="ativo-cor" style="background: #f7931a"></span>
+                <span class="ativo-nome">Bitcoin</span>
+              </div>
+              <div class="input-group-mini">
+                <input type="number" class="aloc-percent" value="0" min="0" max="100" step="1">
+                <span>%</span>
+              </div>
+            </div>
+
+          </div>
+
+          <p class="alocacao-dica">Defina a % desejada de cada ativo. Quando qualquer ativo desviar além da tolerância configurada (para cima ou para baixo), a carteira será rebalanceada.</p>
+        </div>
+
+        <button class="btn-comparar" id="btnDiversif">
+          <span>Simular Carteira</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <div class="comparador-resultados" id="resultadosDiversif" style="display: none;">
+        <!-- Comparativo Principal -->
+        <div class="resultado-card destaque-card">
+          <h3>Rebalanceamento Valeu a Pena?</h3>
+          <div class="comparativo-principal" id="comparativoPrincipal"></div>
+        </div>
+
+        <!-- Valor Líquido Final -->
+        <div class="resultado-card">
+          <h3>Valor Líquido (após venda total)</h3>
+          <div class="valor-liquido-container" id="valorLiquidoContainer"></div>
+        </div>
+
+        <!-- Evolução do Patrimônio -->
+        <div class="resultado-card">
+          <h3>Evolução do Patrimônio</h3>
+          <div class="chart-toggle">
+            <button class="toggle-btn active" data-view="nominal" id="btnNominalDiversif">Nominal</button>
+            <button class="toggle-btn" data-view="real" id="btnRealDiversif">Valor Real</button>
+          </div>
+          <div class="chart-container" id="chartDiversif"></div>
+          <div class="chart-legenda" id="chartLegenda"></div>
+        </div>
+
+        <!-- Histórico de Rebalanceamentos -->
+        <div class="resultado-card">
+          <h3>Histórico Semestre a Semestre</h3>
+          <div class="historico-container" id="historicoContainer">
+            <div class="table-scroll">
+              <table class="tabela-historico" id="tabelaHistorico">
+                <thead></thead>
+                <tbody></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Ranking: Diversificação vs Ativos Individuais -->
+        <div class="resultado-card">
+          <h3>Ranking: Onde a Diversificação Ficou?</h3>
+          <p class="ranking-subtitle">Comparando sua carteira diversificada com cada ativo individualmente</p>
+          <div class="ranking-container" id="rankingDiversif"></div>
+        </div>
+
+        <!-- Métricas de Risco -->
+        <div class="resultado-card">
+          <h3>Métricas de Risco e Retorno</h3>
+          <div class="metricas-grid" id="metricasGrid"></div>
+        </div>
+
+        <!-- Conclusões -->
+        <div class="resultado-card conclusoes-card">
+          <h3>Conclusões da Simulação</h3>
+          <div class="conclusoes-lista" id="conclusoesDiversif"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Tab Content: Histórico de Crises -->
+    <section class="tab-content" id="tab-crises">
+      <div class="section-header">
+        <h2>Isso Já Aconteceu Antes?</h2>
+        <p>Quando o mercado cai, ninguém sabe o que fazer. Mas a história se repete. Veja como diferentes ativos se comportaram em crises passadas e prepare-se para as próximas.</p>
+      </div>
+
+      <div class="comparador-config">
+        <!-- Seleção do Evento -->
+        <div class="crises-selector">
+          <h4>Escolha um evento histórico:</h4>
+          <div class="crises-grid">
+            <button class="crise-btn active" data-crise="dotcom">
+              <div class="crise-header">
+                <span class="crise-icon">💻</span>
+                <span class="crise-ano">2000-2002</span>
+              </div>
+              <span class="crise-name">Bolha Ponto Com</span>
+              <span class="crise-desc">Estouro das empresas de internet</span>
+            </button>
+            <button class="crise-btn" data-crise="subprime">
+              <div class="crise-header">
+                <span class="crise-icon">🏠</span>
+                <span class="crise-ano">2008</span>
+              </div>
+              <span class="crise-name">Crise Subprime</span>
+              <span class="crise-desc">Colapso imobiliário global</span>
+            </button>
+            <button class="crise-btn" data-crise="brasil2015">
+              <div class="crise-header">
+                <span class="crise-icon">🇧🇷</span>
+                <span class="crise-ano">2014-2016</span>
+              </div>
+              <span class="crise-name">Crise Brasil</span>
+              <span class="crise-desc">Recessão + crise política</span>
+            </button>
+            <button class="crise-btn" data-crise="covid">
+              <div class="crise-header">
+                <span class="crise-icon">🦠</span>
+                <span class="crise-ano">2020</span>
+              </div>
+              <span class="crise-name">COVID-19</span>
+              <span class="crise-desc">Pandemia global</span>
+            </button>
+            <button class="crise-btn" data-crise="bitcoin">
+              <div class="crise-header">
+                <span class="crise-icon">₿</span>
+                <span class="crise-ano">Ciclos</span>
+              </div>
+              <span class="crise-name">Ciclos do Bitcoin</span>
+              <span class="crise-desc">Padrões de halving</span>
+            </button>
+            <button class="crise-btn" data-crise="ia">
+              <div class="crise-header">
+                <span class="crise-icon">🤖</span>
+                <span class="crise-ano">202X?</span>
+              </div>
+              <span class="crise-name">Bolha de IA?</span>
+              <span class="crise-desc">Cenário potencial</span>
+            </button>
+          </div>
+        </div>
+
+        <button class="btn-comparar" id="btnCrises">
+          <span>Analisar Evento</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Resultados da Análise de Crise -->
+      <div class="comparador-resultados" id="resultadosCrises" style="display: none;">
+        <!-- Card Principal do Evento -->
+        <div class="resultado-card destaque-card">
+          <h3 id="criseTitulo">Análise do Evento</h3>
+          <div class="crise-resumo" id="criseResumo"></div>
+        </div>
+
+        <!-- O que aconteceu -->
+        <div class="resultado-card">
+          <h3>O Que Aconteceu?</h3>
+          <div class="crise-contexto" id="criseContexto"></div>
+        </div>
+
+        <!-- Impacto nos Ativos -->
+        <div class="resultado-card">
+          <h3>Impacto nos Ativos</h3>
+          <div class="table-scroll">
+            <table class="tabela-crise" id="tabelaCrise">
+              <thead>
+                <tr>
+                  <th>Ativo</th>
+                  <th>Queda Máxima</th>
+                  <th>Tempo Recuperação</th>
+                  <th>Comportamento</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- Gráfico de Recuperação -->
+        <div class="resultado-card">
+          <h3>Linha do Tempo da Recuperação</h3>
+          <div class="chart-container" style="height: 350px;">
+            <canvas id="chartCrise"></canvas>
+          </div>
+        </div>
+
+        <!-- Sinais de Alerta -->
+        <div class="resultado-card">
+          <h3>Sinais de Alerta (antes do evento)</h3>
+          <div class="sinais-alerta" id="sinaisAlerta"></div>
+        </div>
+
+        <!-- Lições Aprendidas -->
+        <div class="resultado-card">
+          <h3>Lições para o Investidor</h3>
+          <div class="licoes-grid" id="licoesGrid">
+            <div class="licao-card evitar">
+              <h4>⚠️ O que evitar</h4>
+              <ul id="licoesEvitar"></ul>
+            </div>
+            <div class="licao-card proteger">
+              <h4>🛡️ Como se proteger</h4>
+              <ul id="licoesProteger"></ul>
+            </div>
+            <div class="licao-card oportunidade">
+              <h4>💰 Oportunidades</h4>
+              <ul id="licoesOportunidade"></ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Cenários Futuros (para eventos potenciais) -->
+        <div class="resultado-card" id="cardCenarios" style="display: none;">
+          <h3>Cenários Possíveis</h3>
+          <div class="cenarios-grid" id="cenariosGrid">
+            <div class="cenario-card pessimista">
+              <h4>🔴 Pior Cenário</h4>
+              <div id="cenarioPior"></div>
+            </div>
+            <div class="cenario-card neutro">
+              <h4>🟡 Cenário Provável</h4>
+              <div id="cenarioProvavel"></div>
+            </div>
+            <div class="cenario-card otimista">
+              <h4>🟢 Melhor Cenário</h4>
+              <div id="cenarioMelhor"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Conclusão -->
+        <div class="resultado-card conclusoes-card">
+          <h3>Resumo: Como se Preparar</h3>
+          <div class="conclusoes-lista" id="conclusoesCrise"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Disclaimer -->
+    <section class="disclaimer-section">
+      <p><strong>Aviso importante:</strong> O passado não prevê o futuro, mas revela padrões e limites. Esta ferramenta não constitui recomendação de investimento. Dados históricos são aproximações e podem conter imprecisões. Consulte um profissional antes de tomar decisões financeiras.</p>
+    </section>
+    </main>
+
+    <div id="footer-container"></div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/page-header.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/comparador.js"></script>
+</body>
+</html>

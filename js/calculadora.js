@@ -23,6 +23,8 @@ const Calculadora = {
       mode2Desc: 'Descubra quanto terá no futuro',
       mode3Title: 'Quanto tempo irá levar?',
       mode3Desc: 'Descubra o prazo para atingir seu objetivo',
+      mode4Title: 'Independência Financeira',
+      mode4Desc: 'Quando poderei viver de renda?',
       goalLabel: 'Objetivo (valor em reais de hoje)',
       goalPlaceholder: 'Ex: 300000',
       timeLabel: 'Tempo de investimento',
@@ -54,7 +56,25 @@ const Calculadora = {
       balanceCol: 'Saldo',
       monthlyCol: 'Aporte/mês',
       realCol: 'Valor real',
-      and: 'e'
+      and: 'e',
+      // Mode 4 - Financial Independence
+      passiveIncomeLabel: 'Renda passiva mensal desejada (valores de hoje)',
+      passiveIncomePlaceholder: 'Ex: 5000',
+      fiResultTitle: 'Independência Financeira',
+      fiTimeNeeded: 'Tempo para independência financeira',
+      fiCapitalNeeded: 'Capital necessário',
+      fiCapitalNeededNote: 'Para gerar a renda desejada com a rentabilidade informada',
+      fiPassiveIncome: 'Renda passiva mensal',
+      fiPassiveIncomeNote: 'Valor em reais de hoje',
+      fiCapitalAdjusted: 'Capital ajustado (nominal)',
+      fiCapitalAdjustedNote: 'Considerando inflação no período',
+      fiMarginTitle: 'Simulação com margem de segurança (+30%)',
+      fiMarginNote: 'Para imprevistos, reinvestimento e crescimento patrimonial',
+      fiMarginIncome: 'Renda com margem',
+      fiMarginCapital: 'Capital necessário',
+      fiMarginTime: 'Tempo necessário',
+      fiNeverReach: 'Com os parâmetros atuais, a independência financeira não será atingida em 50 anos. Aumente o aporte ou reduza a renda desejada.',
+      perMonth: '/mês'
     },
     'en': {
       mode1Title: 'How much to invest monthly?',
@@ -63,6 +83,8 @@ const Calculadora = {
       mode2Desc: 'Find out your future amount',
       mode3Title: 'How long will it take?',
       mode3Desc: 'Find the time to reach your goal',
+      mode4Title: 'Financial Independence',
+      mode4Desc: 'When can I live off investments?',
       goalLabel: 'Goal (value in today\'s dollars)',
       goalPlaceholder: 'Ex: 300000',
       timeLabel: 'Investment time',
@@ -94,7 +116,25 @@ const Calculadora = {
       balanceCol: 'Balance',
       monthlyCol: 'Monthly',
       realCol: 'Real value',
-      and: 'and'
+      and: 'and',
+      // Mode 4 - Financial Independence
+      passiveIncomeLabel: 'Desired monthly passive income (today\'s values)',
+      passiveIncomePlaceholder: 'Ex: 5000',
+      fiResultTitle: 'Financial Independence',
+      fiTimeNeeded: 'Time to financial independence',
+      fiCapitalNeeded: 'Required capital',
+      fiCapitalNeededNote: 'To generate desired income with the informed return rate',
+      fiPassiveIncome: 'Monthly passive income',
+      fiPassiveIncomeNote: 'Value in today\'s dollars',
+      fiCapitalAdjusted: 'Adjusted capital (nominal)',
+      fiCapitalAdjustedNote: 'Considering inflation over the period',
+      fiMarginTitle: 'Simulation with safety margin (+30%)',
+      fiMarginNote: 'For emergencies, reinvestment and wealth growth',
+      fiMarginIncome: 'Income with margin',
+      fiMarginCapital: 'Required capital',
+      fiMarginTime: 'Time needed',
+      fiNeverReach: 'With current parameters, financial independence won\'t be reached in 50 years. Increase contribution or reduce desired income.',
+      perMonth: '/month'
     },
     'es': {
       mode1Title: '¿Cuánto invertir mensualmente?',
@@ -103,6 +143,8 @@ const Calculadora = {
       mode2Desc: 'Descubre cuánto tendrás en el futuro',
       mode3Title: '¿Cuánto tiempo llevará?',
       mode3Desc: 'Descubre el plazo para alcanzar tu objetivo',
+      mode4Title: 'Independencia Financiera',
+      mode4Desc: '¿Cuándo podré vivir de rentas?',
       goalLabel: 'Objetivo (valor en pesos de hoy)',
       goalPlaceholder: 'Ej: 300000',
       timeLabel: 'Tiempo de inversión',
@@ -134,7 +176,25 @@ const Calculadora = {
       balanceCol: 'Saldo',
       monthlyCol: 'Aporte/mes',
       realCol: 'Valor real',
-      and: 'y'
+      and: 'y',
+      // Mode 4 - Financial Independence
+      passiveIncomeLabel: 'Ingreso pasivo mensual deseado (valores de hoy)',
+      passiveIncomePlaceholder: 'Ej: 5000',
+      fiResultTitle: 'Independencia Financiera',
+      fiTimeNeeded: 'Tiempo para independencia financiera',
+      fiCapitalNeeded: 'Capital necesario',
+      fiCapitalNeededNote: 'Para generar el ingreso deseado con la rentabilidad informada',
+      fiPassiveIncome: 'Ingreso pasivo mensual',
+      fiPassiveIncomeNote: 'Valor en pesos de hoy',
+      fiCapitalAdjusted: 'Capital ajustado (nominal)',
+      fiCapitalAdjustedNote: 'Considerando inflación en el período',
+      fiMarginTitle: 'Simulación con margen de seguridad (+30%)',
+      fiMarginNote: 'Para imprevistos, reinversión y crecimiento patrimonial',
+      fiMarginIncome: 'Ingreso con margen',
+      fiMarginCapital: 'Capital necesario',
+      fiMarginTime: 'Tiempo necesario',
+      fiNeverReach: 'Con los parámetros actuales, la independencia financiera no se alcanzará en 50 años. Aumente el aporte o reduzca el ingreso deseado.',
+      perMonth: '/mes'
     }
   },
 
@@ -287,7 +347,7 @@ const Calculadora = {
   // Aplicar máscaras aos campos do formulário
   applyMasks() {
     // Campos monetários
-    const currencyFields = ['objetivo', 'valorInicial', 'aporte'];
+    const currencyFields = ['objetivo', 'valorInicial', 'aporte', 'rendaPassiva'];
     currencyFields.forEach(id => {
       const input = document.getElementById(id);
       if (input) this.maskCurrency(input);
@@ -334,6 +394,13 @@ const Calculadora = {
           <span class="mode-text">
             <strong>${this.t('mode3Title')}</strong>
             <small>${this.t('mode3Desc')}</small>
+          </span>
+        </button>
+        <button class="calc-mode-btn" data-mode="4">
+          <span class="mode-icon">🏖️</span>
+          <span class="mode-text">
+            <strong>${this.t('mode4Title')}</strong>
+            <small>${this.t('mode4Desc')}</small>
           </span>
         </button>
       </div>
@@ -458,7 +525,7 @@ const Calculadora = {
 
         <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
       `;
-    } else {
+    } else if (this.currentMode === 3) {
       // Modo 3: Calcular tempo necessário
       return `
         <div class="calc-field">
@@ -466,6 +533,53 @@ const Calculadora = {
           <div class="input-group">
             <span class="input-prefix">R$</span>
             <input type="text" id="objetivo" value="${d.objetivo}" placeholder="${this.t('goalPlaceholder')}" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label for="valorInicial">${this.t('initialLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="calc-field">
+          <label for="aporte">${this.t('monthlyLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="text" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}" inputmode="numeric">
+          </div>
+        </div>
+
+        <div class="calc-fields-row">
+          <div class="calc-field">
+            <label for="rentabilidade">${this.t('returnLabel')}</label>
+            <div class="input-group">
+              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+
+          <div class="calc-field">
+            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+            <div class="input-group">
+              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
+      `;
+    } else {
+      // Modo 4: Independência Financeira
+      return `
+        <div class="calc-field">
+          <label for="rendaPassiva">${this.t('passiveIncomeLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="text" id="rendaPassiva" value="5000" placeholder="${this.t('passiveIncomePlaceholder')}" inputmode="numeric">
           </div>
         </div>
 
@@ -615,7 +729,7 @@ const Calculadora = {
         saldosPorAno: resultado.saldosPorAno
       });
 
-    } else {
+    } else if (this.currentMode === 3) {
       // Modo 3: Calcular tempo necessário
       const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
       const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
@@ -631,6 +745,34 @@ const Calculadora = {
         rentabilidadeMensal,
         inflacaoAnual,
         inflacaoMensal
+      });
+    } else {
+      // Modo 4: Independência Financeira
+      const rendaPassivaHoje = this.parseCurrency(document.getElementById('rendaPassiva')?.value) || 5000;
+      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+
+      // Calcular para renda exata
+      const resultadoExato = this.calcularIndependenciaFinanceira(
+        rendaPassivaHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial
+      );
+
+      // Calcular com margem de 30%
+      const rendaComMargem = rendaPassivaHoje * 1.3;
+      const resultadoMargem = this.calcularIndependenciaFinanceira(
+        rendaComMargem, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial
+      );
+
+      this.showResult({
+        mode: 4,
+        rendaPassivaHoje,
+        rendaComMargem,
+        aporteInicial,
+        valorInicial,
+        rentabilidadeMensal,
+        inflacaoAnual,
+        inflacaoMensal,
+        resultadoExato,
+        resultadoMargem
       });
     }
   },
@@ -762,6 +904,98 @@ const Calculadora = {
     };
   },
 
+  // Calcular independência financeira com ajuste inflacionário iterativo
+  calcularIndependenciaFinanceira(rendaPassivaHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial = 0) {
+    // Capital necessário hoje para gerar a renda passiva desejada
+    const capitalHoje = rendaPassivaHoje / rentabilidadeMensal;
+
+    // Simula mês a mês até que o patrimônio possa gerar a renda ajustada pela inflação
+    let saldo = valorInicial;
+    let totalInvestido = valorInicial;
+    let aporteAtual = aporteInicial;
+    let mes = 0;
+    const maxMeses = 600; // 50 anos limite
+    const aportesPorAno = [];
+    const saldosPorAno = [];
+
+    while (mes < maxMeses) {
+      mes++;
+
+      // Aplicar rendimento no saldo existente
+      saldo = saldo * (1 + rentabilidadeMensal);
+
+      // Adicionar aporte do mês
+      saldo += aporteAtual;
+      totalInvestido += aporteAtual;
+
+      // Calcular capital necessário ajustado para este mês
+      // A renda desejada cresce com a inflação, então o capital necessário também
+      const anosDecorridos = mes / 12;
+      const rendaAjustada = rendaPassivaHoje * Math.pow(1 + inflacaoAnual, anosDecorridos);
+      const capitalNecessario = rendaAjustada / rentabilidadeMensal;
+
+      // Guardar valores ao final de cada ano
+      if (mes % 12 === 0) {
+        const ano = mes / 12;
+        aportesPorAno.push({ ano, aporte: aporteAtual });
+        saldosPorAno.push({ ano, saldo, capitalNecessario, rendaAjustada });
+      }
+
+      // Verificar se atingiu o capital necessário
+      if (saldo >= capitalNecessario) {
+        const anos = Math.floor(mes / 12);
+        const mesesRestantes = mes % 12;
+
+        // Renda que o patrimônio pode gerar mensalmente
+        const rendaGerada = saldo * rentabilidadeMensal;
+        const rendaGeradaReal = rendaGerada / Math.pow(1 + inflacaoAnual, anosDecorridos);
+
+        return {
+          meses: mes,
+          anos,
+          mesesRestantes,
+          capitalFinal: saldo,
+          capitalNecessario,
+          capitalHoje,
+          rendaPassivaHoje,
+          rendaAjustada,
+          rendaGerada,
+          rendaGeradaReal,
+          totalInvestido,
+          aporteFinal: aporteAtual,
+          aportesPorAno,
+          saldosPorAno,
+          naoAtingiu: false
+        };
+      }
+
+      // Reajustar aporte pela inflação para o próximo mês
+      aporteAtual = aporteAtual * (1 + inflacaoMensal);
+    }
+
+    // Não atingiu em 50 anos
+    const rendaAjustada50 = rendaPassivaHoje * Math.pow(1 + inflacaoAnual, 50);
+    const capitalNecessario50 = rendaAjustada50 / rentabilidadeMensal;
+
+    return {
+      meses: maxMeses,
+      anos: 50,
+      mesesRestantes: 0,
+      capitalFinal: saldo,
+      capitalNecessario: capitalNecessario50,
+      capitalHoje,
+      rendaPassivaHoje,
+      rendaAjustada: rendaAjustada50,
+      rendaGerada: saldo * rentabilidadeMensal,
+      rendaGeradaReal: (saldo * rentabilidadeMensal) / Math.pow(1 + inflacaoAnual, 50),
+      totalInvestido,
+      aporteFinal: aporteAtual,
+      aportesPorAno,
+      saldosPorAno,
+      naoAtingiu: true
+    };
+  },
+
   showResult(data) {
     const resultDiv = document.getElementById('calcResult');
     if (!resultDiv) return;
@@ -844,7 +1078,7 @@ const Calculadora = {
 
         ${this.renderProjection(data.saldosPorAno, data.aportesPorAno, data.inflacaoAnual)}
       `;
-    } else {
+    } else if (data.mode === 3) {
       // Resultado do modo 3: Calcular tempo necessário
       const tempoFormatado = data.mesesRestantes > 0
         ? `${data.anos} ${this.t('years')} ${this.t('and')} ${data.mesesRestantes} ${this.t('months')}`
@@ -897,6 +1131,84 @@ const Calculadora = {
           ${this.renderProjection(data.saldosPorAno, data.aportesPorAno, data.inflacaoAnual)}
         `;
       }
+    } else {
+      // Resultado do modo 4: Independência Financeira
+      const exato = data.resultadoExato;
+      const margem = data.resultadoMargem;
+
+      const tempoExatoFormatado = exato.mesesRestantes > 0
+        ? `${exato.anos} ${this.t('years')} ${this.t('and')} ${exato.mesesRestantes} ${this.t('months')}`
+        : `${exato.anos} ${this.t('years')}`;
+
+      const tempoMargemFormatado = margem.mesesRestantes > 0
+        ? `${margem.anos} ${this.t('years')} ${this.t('and')} ${margem.mesesRestantes} ${this.t('months')}`
+        : `${margem.anos} ${this.t('years')}`;
+
+      if (exato.naoAtingiu) {
+        html += `
+          <div class="result-main result-warning">
+            <div class="result-value">+50 ${this.t('years')}</div>
+            <div class="result-label">${this.t('fiTimeNeeded')}</div>
+            <div class="result-note">${this.t('fiNeverReach')}</div>
+          </div>
+        `;
+      } else {
+        html = `<h3>${this.t('fiResultTitle')}</h3>`;
+
+        html += `
+          <div class="result-main">
+            <div class="result-value">${tempoExatoFormatado}</div>
+            <div class="result-label">${this.t('fiTimeNeeded')}</div>
+          </div>
+
+          <div class="result-secondary">
+            <div class="result-value-secondary">${this.formatCurrency(data.rendaPassivaHoje)}${this.t('perMonth')}</div>
+            <div class="result-label">${this.t('fiPassiveIncome')}</div>
+            <div class="result-note">${this.t('fiPassiveIncomeNote')}</div>
+          </div>
+
+          <div class="result-details">
+            <div class="result-detail">
+              <span class="detail-label">${this.t('fiCapitalNeeded')}</span>
+              <span class="detail-value">${this.formatCurrency(exato.capitalHoje)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">${this.t('fiCapitalAdjusted')}</span>
+              <span class="detail-value">${this.formatCurrency(exato.capitalNecessario)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">${this.t('totalInvested')}</span>
+              <span class="detail-value">${this.formatCurrency(exato.totalInvestido)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">${this.t('totalReturn')}</span>
+              <span class="detail-value highlight">${this.formatCurrency(exato.capitalFinal - exato.totalInvestido)}</span>
+            </div>
+          </div>
+
+          <div class="result-margin-section">
+            <h4>${this.t('fiMarginTitle')}</h4>
+            <p class="result-note">${this.t('fiMarginNote')}</p>
+
+            <div class="result-margin-grid">
+              <div class="margin-item">
+                <span class="margin-label">${this.t('fiMarginIncome')}</span>
+                <span class="margin-value">${this.formatCurrency(data.rendaComMargem)}${this.t('perMonth')}</span>
+              </div>
+              <div class="margin-item">
+                <span class="margin-label">${this.t('fiMarginCapital')}</span>
+                <span class="margin-value">${this.formatCurrency(margem.capitalNecessario)}</span>
+              </div>
+              <div class="margin-item">
+                <span class="margin-label">${this.t('fiMarginTime')}</span>
+                <span class="margin-value">${margem.naoAtingiu ? '+50 ' + this.t('years') : tempoMargemFormatado}</span>
+              </div>
+            </div>
+          </div>
+
+          ${this.renderFIProjection(exato.saldosPorAno, exato.aportesPorAno, data.inflacaoAnual)}
+        `;
+      }
     }
 
     resultDiv.innerHTML = html;
@@ -933,6 +1245,61 @@ const Calculadora = {
           <span class="balance-col">${this.formatCurrency(saldo)}</span>
           <span class="monthly-col">${this.formatCurrency(aporte)}</span>
           <span class="real-col">${this.formatCurrency(valorReal)}</span>
+        </div>
+      `;
+    }
+
+    html += '</div></div>';
+    return html;
+  },
+
+  // Projeção específica para independência financeira
+  renderFIProjection(saldosPorAno, aportesPorAno, inflacaoAnual) {
+    if (!saldosPorAno.length) return '';
+
+    const fiProjectionTitle = {
+      'pt-BR': 'Projeção para independência',
+      'en': 'Independence projection',
+      'es': 'Proyección de independencia'
+    }[this.currentLang] || 'Projeção para independência';
+
+    const fiCapitalCol = {
+      'pt-BR': 'Capital necessário',
+      'en': 'Required capital',
+      'es': 'Capital necesario'
+    }[this.currentLang] || 'Capital necessário';
+
+    const fiIncomeCol = {
+      'pt-BR': 'Renda alvo',
+      'en': 'Target income',
+      'es': 'Ingreso objetivo'
+    }[this.currentLang] || 'Renda alvo';
+
+    let html = `
+      <div class="result-projection">
+        <h4>${fiProjectionTitle}</h4>
+        <div class="projection-table fi-projection">
+          <div class="projection-header">
+            <span>${this.t('yearCol')}</span>
+            <span>${this.t('balanceCol')}</span>
+            <span>${fiCapitalCol}</span>
+            <span>${fiIncomeCol}</span>
+          </div>
+    `;
+
+    for (let i = 0; i < saldosPorAno.length; i++) {
+      const ano = saldosPorAno[i].ano;
+      const saldo = saldosPorAno[i].saldo;
+      const capitalNecessario = saldosPorAno[i].capitalNecessario;
+      const rendaAjustada = saldosPorAno[i].rendaAjustada;
+      const atingiu = saldo >= capitalNecessario;
+
+      html += `
+        <div class="projection-row ${atingiu ? 'fi-achieved' : ''}">
+          <span class="year-col">${ano}</span>
+          <span class="balance-col">${this.formatCurrency(saldo)}</span>
+          <span class="capital-col">${this.formatCurrency(capitalNecessario)}</span>
+          <span class="income-col">${this.formatCurrency(rendaAjustada)}</span>
         </div>
       `;
     }

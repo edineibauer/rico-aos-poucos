@@ -17,7 +17,8 @@ const Comparador = {
     sp500_brl: '#ef4444',
     imoveis_fipezap: '#14b8a6',
     bitcoin_brl: '#f7931a',
-    tlt_brl: '#0ea5e9'
+    tlt_brl: '#0ea5e9',
+    renda_mais: '#7c3aed'
   },
   assetNames: {
     ibovespa: 'Ibovespa',
@@ -29,7 +30,8 @@ const Comparador = {
     sp500_brl: 'S&P 500 (R$)',
     imoveis_fipezap: 'Imóveis',
     bitcoin_brl: 'Bitcoin',
-    tlt_brl: 'TLT (Tesouro EUA)'
+    tlt_brl: 'TLT (Tesouro EUA)',
+    renda_mais: 'Renda+ 2065'
   },
   // Taxas de IR por tipo de ativo
   taxasIR: {
@@ -42,7 +44,8 @@ const Comparador = {
     tesouro_ipca: 0.15, // IR regressivo simplificado
     cdi: 0.15,
     tlt_brl: 0.15,
-    imoveis_fipezap: 0.15
+    imoveis_fipezap: 0.15,
+    renda_mais: 0.15
   },
 
   async init() {

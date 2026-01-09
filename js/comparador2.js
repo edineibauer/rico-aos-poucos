@@ -61,6 +61,7 @@ const Comparador2 = {
     this.bindRunButtons();
     this.bindToggleButtons();
     this.applyPercentageMasks();
+    this.applyCurrencyMasks();
     this.waitForData();
   },
 
@@ -304,6 +305,41 @@ const Comparador2 = {
     percentageInputIds.forEach(id => {
       const input = document.getElementById(id);
       if (input) this.maskPercentage(input);
+    });
+  },
+
+  // Máscara para campos monetários (formato brasileiro: 100.000)
+  maskCurrency(input) {
+    input.addEventListener('input', (e) => {
+      let value = e.target.value;
+      // Remove tudo exceto dígitos
+      value = value.replace(/\D/g, '');
+      // Formata com pontos como separador de milhar
+      if (value) {
+        value = parseInt(value, 10).toLocaleString('pt-BR');
+      }
+      e.target.value = value;
+    });
+
+    // Formatar valor inicial
+    let initialValue = input.value.replace(/\D/g, '');
+    if (initialValue) {
+      input.value = parseInt(initialValue, 10).toLocaleString('pt-BR');
+    }
+  },
+
+  // Aplicar máscaras em todos os campos monetários
+  applyCurrencyMasks() {
+    const currencyInputIds = [
+      'comp2Valor',
+      'comp2DueloValor',
+      'comp2CarteiraValor',
+      'comp2RebalValor'
+    ];
+
+    currencyInputIds.forEach(id => {
+      const input = document.getElementById(id);
+      if (input) this.maskCurrency(input);
     });
   },
 

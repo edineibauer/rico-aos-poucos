@@ -887,38 +887,124 @@ const Comparador2 = {
     });
 
     // Adicionar resumo
-    const resultsContainer = document.getElementById('comp2CarteiraResults');
-    if (resultsContainer) {
-      const carteira = resultados.carteira;
-      const resumoHtml = `
-        <div class="comp2-card" style="margin-top: 16px;">
-          <h3>Resultado da Carteira</h3>
-          <div class="comp2-stats-grid">
-            <div class="comp2-stat-box">
-              <div class="stat-label">Valor Final</div>
-              <div class="stat-value">${this.formatCurrency(carteira.valorFinalNominal)}</div>
-            </div>
-            <div class="comp2-stat-box">
-              <div class="stat-label">Retorno Nominal</div>
-              <div class="stat-value ${carteira.retornoNominal >= 0 ? 'positivo' : 'negativo'}">
-                ${carteira.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoNominal)}
-              </div>
-            </div>
-            <div class="comp2-stat-box">
-              <div class="stat-label">Retorno Real</div>
-              <div class="stat-value ${carteira.retornoReal >= 0 ? 'positivo' : 'negativo'}">
-                ${carteira.retornoReal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoReal)}
-              </div>
-            </div>
+    const carteira = resultados.carteira;
+    const statsContainer = document.getElementById('comp2CarteiraStats');
+    const resumoCard = document.getElementById('comp2CarteiraResumo');
+    if (statsContainer && resumoCard) {
+      statsContainer.innerHTML = `
+        <div class="comp2-stat-box">
+          <div class="stat-label">Valor Final</div>
+          <div class="stat-value">${this.formatCurrency(carteira.valorFinalNominal)}</div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Retorno Nominal</div>
+          <div class="stat-value ${carteira.retornoNominal >= 0 ? 'positivo' : 'negativo'}">
+            ${carteira.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoNominal)}
+          </div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Retorno Real</div>
+          <div class="stat-value ${carteira.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+            ${carteira.retornoReal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoReal)}
           </div>
         </div>
       `;
-      // Inserir após o gráfico
-      const chartCard = resultsContainer.querySelector('.comp2-card');
-      if (chartCard && !resultsContainer.querySelector('.resultado-resumo')) {
-        chartCard.insertAdjacentHTML('afterend', `<div class="resultado-resumo">${resumoHtml}</div>`);
+      resumoCard.style.display = 'block';
+    }
+
+    // Adicionar conclusões
+    this.renderConclusoesCarteira(resultados, alocacao, inflacaoAcumulada);
+  },
+
+  renderConclusoesCarteira(resultados, alocacao, inflacaoAcumulada) {
+    const container = document.getElementById('comp2CarteiraConclusoesLista');
+    const card = document.getElementById('comp2CarteiraConclusoes');
+    if (!container || !card) return;
+
+    const conclusoes = [];
+    const carteira = resultados.carteira;
+
+    // Criar ranking dos ativos individuais
+    const ranking = Object.keys(alocacao)
+      .filter(ativo => resultados[ativo])
+      .map(ativo => ({
+        ativo,
+        nome: Comparador.assetNames[ativo] || ativo,
+        retornoReal: resultados[ativo].retornoReal,
+        retornoNominal: resultados[ativo].retornoNominal
+      }))
+      .sort((a, b) => b.retornoReal - a.retornoReal);
+
+    // Conclusão 1: Carteira vs melhor ativo
+    if (ranking.length > 0) {
+      const melhor = ranking[0];
+      if (carteira.retornoReal > melhor.retornoReal) {
+        conclusoes.push({
+          tipo: 'success',
+          icon: '🎯',
+          texto: `A <strong>carteira diversificada superou</strong> todos os ativos individuais, incluindo ${melhor.nome}.`
+        });
+      } else {
+        const diff = melhor.retornoReal - carteira.retornoReal;
+        conclusoes.push({
+          tipo: 'info',
+          icon: '📊',
+          texto: `<strong>${melhor.nome}</strong> foi o melhor ativo com ${this.formatPercent(melhor.retornoReal)} real, superando a carteira em ${this.formatPercent(diff)}.`
+        });
       }
     }
+
+    // Conclusão 2: Carteira vs inflação
+    if (carteira.retornoReal > 0) {
+      conclusoes.push({
+        tipo: 'success',
+        icon: '✅',
+        texto: `A carteira <strong>bateu a inflação</strong> com retorno real de ${this.formatPercent(carteira.retornoReal)}.`
+      });
+    } else {
+      conclusoes.push({
+        tipo: 'error',
+        icon: '❌',
+        texto: `A carteira <strong>perdeu para a inflação</strong>. Retorno real de ${this.formatPercent(carteira.retornoReal)}.`
+      });
+    }
+
+    // Conclusão 3: Ativos que perderam para inflação
+    const perdedores = ranking.filter(r => r.retornoReal < 0);
+    if (perdedores.length > 0 && perdedores.length < ranking.length) {
+      const nomes = perdedores.map(p => p.nome).join(', ');
+      conclusoes.push({
+        tipo: 'warning',
+        icon: '⚠️',
+        texto: `${nomes} <strong>perderam para a inflação</strong> isoladamente, mas a diversificação amenizou o impacto.`
+      });
+    }
+
+    // Conclusão 4: Benefício da diversificação
+    if (ranking.length >= 2) {
+      const pior = ranking[ranking.length - 1];
+      if (carteira.retornoReal > pior.retornoReal) {
+        conclusoes.push({
+          tipo: 'info',
+          icon: '🛡️',
+          texto: `A <strong>diversificação protegeu</strong> você do pior cenário (${pior.nome}: ${this.formatPercent(pior.retornoReal)}).`
+        });
+      }
+    }
+
+    // Renderizar
+    let html = '';
+    conclusoes.forEach(c => {
+      html += `
+        <div class="conclusao-item ${c.tipo}">
+          <span class="conclusao-icon">${c.icon}</span>
+          <p>${c.texto}</p>
+        </div>
+      `;
+    });
+
+    container.innerHTML = html;
+    card.style.display = 'block';
   },
 
   // ==========================================

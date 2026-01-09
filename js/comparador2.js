@@ -1169,7 +1169,6 @@ const Comparador2 = {
     const valorStr = document.getElementById('comp2RebalValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
     const tolerancia = parseFloat(document.getElementById('comp2Tolerancia')?.value) || 10;
-    const inflacaoCustom = parseFloat(document.getElementById('comp2RebalInflacao')?.value) || 0;
 
     // Coletar alocações
     const alocacaoConfig = {};
@@ -1216,19 +1215,19 @@ const Comparador2 = {
 
     // Simular COM rebalanceamento
     const resultadoComRebal = this.simularCarteiraComRebalanceamento(
-      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom
+      alocacaoConfig, dadosFiltrados, valorInicial, 0
     );
 
     // Simular SEM rebalanceamento (buy and hold)
     const resultadoSemRebal = this.simularCarteiraSemRebalanceamento(
-      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom
+      alocacaoConfig, dadosFiltrados, valorInicial, 0
     );
 
     // Simular cada ativo individual para ranking
-    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial, inflacaoCustom);
+    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial, 0);
 
     // Salvar para toggle do gráfico
-    this.rebalData = { resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig, inflacaoCustom };
+    this.rebalData = { resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig };
 
     // Mostrar resultados
     document.getElementById('comp2RebalResults').style.display = 'block';
@@ -1690,10 +1689,6 @@ const Comparador2 = {
         <div class="stat-label">Máx. Drawdown (B&H)</div>
         <div class="stat-value negativo">-${this.formatPercent(semRebal.maxDrawdown)}</div>
       </div>
-      <div class="comp2-stat-box">
-        <div class="stat-label">Inflação Período</div>
-        <div class="stat-value">${this.formatPercent(comRebal.inflacaoAcumulada)}</div>
-      </div>
       <div class="comp2-stat-box" style="grid-column: span 2;">
         <div class="stat-label">Ativos na Carteira</div>
         <div class="stat-value" style="font-size: 0.9rem;">${nomeAtivos}</div>
@@ -1758,22 +1753,7 @@ const Comparador2 = {
       });
     }
 
-    // 5. Ganho real
-    if (comRebal.retornoReal > 0) {
-      conclusoes.push({
-        tipo: 'success',
-        icon: '💰',
-        texto: `Sua carteira gerou <strong>${this.formatPercent(comRebal.retornoReal)}</strong> de ganho real acima da inflação (${this.formatPercent(comRebal.inflacaoAcumulada)} no período).`
-      });
-    } else {
-      conclusoes.push({
-        tipo: 'error',
-        icon: '📉',
-        texto: `Sua carteira perdeu <strong>${this.formatPercent(Math.abs(comRebal.retornoReal))}</strong> em termos reais. A inflação de ${this.formatPercent(comRebal.inflacaoAcumulada)} corroeu os ganhos.`
-      });
-    }
-
-    // 6. Número de rebalanceamentos
+    // 5. Número de rebalanceamentos
     if (comRebal.totalRebalanceamentos > 0) {
       const custoIR = comRebal.totalImpostosPagos > 0
         ? ` gerando <strong>${this.formatCurrency(comRebal.totalImpostosPagos)}</strong> em IR`

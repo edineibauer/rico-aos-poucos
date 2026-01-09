@@ -1472,7 +1472,7 @@ const Comparador2 = {
     this.renderRebalComparison(resultadoComRebal, resultadoSemRebal);
     this.renderRebalChart();
     this.renderRebalMetricas(resultadoComRebal, resultadoSemRebal, alocacaoConfig);
-    this.renderHistoricoSemestral(resultadoComRebal);
+    this.renderHistoricoMensal(resultadoComRebal);
     this.renderRebalConclusoes(resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig);
 
     // Bind toggle buttons
@@ -1511,9 +1511,7 @@ const Comparador2 = {
     });
 
     const evolucao = [{
-      periodo: `${dados[0].ano - 1} S2`,
-      ano: dados[0].ano - 1,
-      semestre: 2,
+      periodo: 'Início',
       valor: valorInicial,
       valorReal: valorInicial
     }];
@@ -1522,153 +1520,144 @@ const Comparador2 = {
     const historico = [];
 
     let totalRebalanceamentos = 0;
-    const retornosSemestrais = [];
+    const retornosMensais = [];
     let precoMercado = {};
     ativos.forEach(ativo => { precoMercado[ativo] = 1; });
 
-    // Processar cada ano
-    dados.forEach((dadoAno, indexAno) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação (Renda+ 2065)
-      const dadoAnoAnterior = indexAno > 0 ? dados[indexAno - 1] : null;
+    // Processar cada mês
+    dados.forEach((dadoMes, indexMes) => {
+      // Obter dado do mês anterior para cálculos que precisam de variação (Renda+ 2065)
+      const dadoMesAnterior = indexMes > 0 ? dados[indexMes - 1] : null;
 
-      for (let sem = 1; sem <= 2; sem++) {
-        const periodoLabel = `${dadoAno.ano} S${sem}`;
-        let rebalanceou = false;
-        let impostoPeriodo = 0;
-        const movimentacoes = [];
+      const periodoLabel = dadoMes.periodo || `${dadoMes.ano}`;
+      let rebalanceou = false;
+      let impostoPeriodo = 0;
+      const movimentacoes = [];
 
-        // Valor antes do retorno
-        let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
+      // Valor antes do retorno
+      let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
 
-        // Aplicar retorno semestral para cada ativo
+      // Aplicar retorno mensal para cada ativo
+      ativos.forEach(ativo => {
+        // Usar função de retorno ajustado (já é mensal)
+        const retornoMensal = this.getRetornoAjustado(ativo, dadoMes, dolarExtra, rendaMaisTaxa, dadoMesAnterior);
+        carteira[ativo] *= (1 + retornoMensal / 100);
+        precoMercado[ativo] *= (1 + retornoMensal / 100);
+      });
+
+      let valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
+      retornosMensais.push((valorTotal / valorAntes - 1) * 100);
+
+      // Atualizar inflação
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom / 12 : dadoMes.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
+
+      // Verificar necessidade de rebalanceamento
+      const alocacoesAtuais = {};
+      ativos.forEach(ativo => {
+        alocacoesAtuais[ativo] = (carteira[ativo] / valorTotal) * 100;
+      });
+
+      const foraTolerancia = ativos.filter(ativo => {
+        const atual = alocacoesAtuais[ativo];
+        const desejada = config[ativo].alocacao;
+        const tolerancia = config[ativo].tolerancia;
+        return Math.abs(atual - desejada) > tolerancia;
+      });
+
+      // Executar rebalanceamento se necessário
+      if (foraTolerancia.length > 0) {
+        rebalanceou = true;
+        totalRebalanceamentos++;
+
         ativos.forEach(ativo => {
-          // Usar função de retorno ajustado
-          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa, dadoAnoAnterior);
+          const valorDesejado = valorTotal * (config[ativo].alocacao / 100);
+          const valorAtual = carteira[ativo];
+          const diferenca = valorDesejado - valorAtual;
 
-          const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
-          carteira[ativo] *= (1 + retornoSemestral);
-          precoMercado[ativo] *= (1 + retornoSemestral);
-        });
-
-        let valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
-        retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
-
-        // Atualizar inflação
-        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
-        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
-        inflacaoAcumulada *= (1 + inflacaoSemestral);
-
-        // Verificar necessidade de rebalanceamento
-        const alocacoesAtuais = {};
-        ativos.forEach(ativo => {
-          alocacoesAtuais[ativo] = (carteira[ativo] / valorTotal) * 100;
-        });
-
-        const foraTolerancia = ativos.filter(ativo => {
-          const atual = alocacoesAtuais[ativo];
-          const desejada = config[ativo].alocacao;
-          const tolerancia = config[ativo].tolerancia;
-          return Math.abs(atual - desejada) > tolerancia;
-        });
-
-        // Executar rebalanceamento se necessário
-        if (foraTolerancia.length > 0) {
-          rebalanceou = true;
-          totalRebalanceamentos++;
-
-          ativos.forEach(ativo => {
-            const valorDesejado = valorTotal * (config[ativo].alocacao / 100);
-            const valorAtual = carteira[ativo];
-            const diferenca = valorDesejado - valorAtual;
-
-            if (Math.abs(diferenca) > 1) {
-              if (diferenca < 0) {
-                // VENDA - calcular ganho de capital e imposto
-                const lucroVenda = Math.abs(diferenca) - (Math.abs(diferenca) / precoMercado[ativo]) * precoMedio[ativo];
-                const taxaIR = Comparador.taxasIR?.[ativo] || 0.15;
-                let impostoVenda = 0;
-                if (lucroVenda > 0) {
-                  impostoVenda = lucroVenda * taxaIR;
-                  impostoPeriodo += impostoVenda;
-                  totalImpostosPagos += impostoVenda;
-                }
-                const proporcaoVendida = Math.abs(diferenca) / valorAtual;
-                custoTotal[ativo] *= (1 - proporcaoVendida);
-
-                movimentacoes.push({
-                  ativo,
-                  tipo: 'venda',
-                  valor: Math.abs(diferenca),
-                  de: alocacoesAtuais[ativo].toFixed(1),
-                  para: config[ativo].alocacao.toFixed(1),
-                  lucro: lucroVenda,
-                  imposto: impostoVenda
-                });
-
-                carteira[ativo] = valorAtual - Math.abs(diferenca);
-              } else {
-                // COMPRA - atualizar preço médio
-                const qtdComprada = diferenca / precoMercado[ativo];
-                const qtdAtual = carteira[ativo] / precoMercado[ativo];
-                custoTotal[ativo] += diferenca;
-                precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
-
-                movimentacoes.push({
-                  ativo,
-                  tipo: 'compra',
-                  valor: diferenca,
-                  de: alocacoesAtuais[ativo].toFixed(1),
-                  para: config[ativo].alocacao.toFixed(1)
-                });
-
-                carteira[ativo] = valorAtual + diferenca;
+          if (Math.abs(diferenca) > 1) {
+            if (diferenca < 0) {
+              // VENDA - calcular ganho de capital e imposto
+              const lucroVenda = Math.abs(diferenca) - (Math.abs(diferenca) / precoMercado[ativo]) * precoMedio[ativo];
+              const taxaIR = Comparador.taxasIR?.[ativo] || 0.15;
+              let impostoVenda = 0;
+              if (lucroVenda > 0) {
+                impostoVenda = lucroVenda * taxaIR;
+                impostoPeriodo += impostoVenda;
+                totalImpostosPagos += impostoVenda;
               }
+              const proporcaoVendida = Math.abs(diferenca) / valorAtual;
+              custoTotal[ativo] *= (1 - proporcaoVendida);
+
+              movimentacoes.push({
+                ativo,
+                tipo: 'venda',
+                valor: Math.abs(diferenca),
+                de: alocacoesAtuais[ativo].toFixed(1),
+                para: config[ativo].alocacao.toFixed(1),
+                lucro: lucroVenda,
+                imposto: impostoVenda
+              });
+
+              carteira[ativo] = valorAtual - Math.abs(diferenca);
+            } else {
+              // COMPRA - atualizar preço médio
+              const qtdComprada = diferenca / precoMercado[ativo];
+              const qtdAtual = carteira[ativo] / precoMercado[ativo];
+              custoTotal[ativo] += diferenca;
+              precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
+
+              movimentacoes.push({
+                ativo,
+                tipo: 'compra',
+                valor: diferenca,
+                de: alocacoesAtuais[ativo].toFixed(1),
+                para: config[ativo].alocacao.toFixed(1)
+              });
+
+              carteira[ativo] = valorAtual + diferenca;
             }
-          });
-
-          // Recalcular valor total após impostos
-          valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0) - impostoPeriodo;
-          if (impostoPeriodo > 0) {
-            const fatorReducao = valorTotal / (valorTotal + impostoPeriodo);
-            ativos.forEach(ativo => { carteira[ativo] *= fatorReducao; });
           }
+        });
+
+        // Recalcular valor total após impostos
+        valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0) - impostoPeriodo;
+        if (impostoPeriodo > 0) {
+          const fatorReducao = valorTotal / (valorTotal + impostoPeriodo);
+          ativos.forEach(ativo => { carteira[ativo] *= fatorReducao; });
         }
-
-        // Recalcular alocações finais do período
-        const alocacoesFinais = {};
-        ativos.forEach(ativo => {
-          alocacoesFinais[ativo] = (carteira[ativo] / valorTotal) * 100;
-        });
-
-        evolucao.push({
-          periodo: periodoLabel,
-          ano: dadoAno.ano,
-          semestre: sem,
-          valor: valorTotal,
-          valorReal: valorTotal / inflacaoAcumulada,
-          rebalanceou
-        });
-
-        // Adicionar ao histórico detalhado
-        historico.push({
-          periodo: periodoLabel,
-          ano: dadoAno.ano,
-          semestre: sem,
-          valor: valorTotal,
-          valorReal: valorTotal / inflacaoAcumulada,
-          alocacoes: { ...alocacoesFinais },
-          rebalanceou,
-          movimentacoes,
-          impostosPagos: impostoPeriodo
-        });
       }
+
+      // Recalcular alocações finais do período
+      const alocacoesFinais = {};
+      ativos.forEach(ativo => {
+        alocacoesFinais[ativo] = (carteira[ativo] / valorTotal) * 100;
+      });
+
+      evolucao.push({
+        periodo: periodoLabel,
+        valor: valorTotal,
+        valorReal: valorTotal / inflacaoAcumulada,
+        rebalanceou
+      });
+
+      // Adicionar ao histórico detalhado
+      historico.push({
+        periodo: periodoLabel,
+        valor: valorTotal,
+        valorReal: valorTotal / inflacaoAcumulada,
+        alocacoes: { ...alocacoesFinais },
+        rebalanceou,
+        movimentacoes,
+        impostosPagos: impostoPeriodo
+      });
     });
 
     const valorFinal = evolucao[evolucao.length - 1].valor;
     const retornoNominal = ((valorFinal / valorInicial) - 1) * 100;
     const valorReal = valorFinal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
-    const volatilidade = this.calcularVolatilidade(retornosSemestrais);
+    const volatilidade = this.calcularVolatilidade(retornosMensais);
 
     // Calcular max drawdown
     let maxDrawdown = 0, peakValue = valorInicial;
@@ -1710,50 +1699,43 @@ const Comparador2 = {
     });
 
     const evolucao = [{
-      periodo: `${dados[0].ano - 1} S2`,
+      periodo: 'Início',
       valor: valorInicial,
       valorReal: valorInicial
     }];
 
-    const retornosSemestrais = [];
+    const retornosMensais = [];
 
-    dados.forEach((dadoAno, indexAno) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação (Renda+ 2065)
-      const dadoAnoAnterior = indexAno > 0 ? dados[indexAno - 1] : null;
+    dados.forEach((dadoMes, indexMes) => {
+      // Obter dado do mês anterior para cálculos que precisam de variação (Renda+ 2065)
+      const dadoMesAnterior = indexMes > 0 ? dados[indexMes - 1] : null;
 
-      for (let sem = 1; sem <= 2; sem++) {
-        let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
+      let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
 
-        ativos.forEach(ativo => {
-          // Usar função de retorno ajustado
-          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa, dadoAnoAnterior);
+      ativos.forEach(ativo => {
+        // Usar função de retorno ajustado (já é mensal)
+        const retornoMensal = this.getRetornoAjustado(ativo, dadoMes, dolarExtra, rendaMaisTaxa, dadoMesAnterior);
+        carteira[ativo] *= (1 + retornoMensal / 100);
+      });
 
-          const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
-          carteira[ativo] *= (1 + retornoSemestral);
-        });
+      const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
+      retornosMensais.push((valorTotal / valorAntes - 1) * 100);
 
-        const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
-        retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom / 12 : dadoMes.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
 
-        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
-        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
-        inflacaoAcumulada *= (1 + inflacaoSemestral);
-
-        evolucao.push({
-          periodo: `${dadoAno.ano} S${sem}`,
-          ano: dadoAno.ano,
-          semestre: sem,
-          valor: valorTotal,
-          valorReal: valorTotal / inflacaoAcumulada
-        });
-      }
+      evolucao.push({
+        periodo: dadoMes.periodo || `${dadoMes.ano}`,
+        valor: valorTotal,
+        valorReal: valorTotal / inflacaoAcumulada
+      });
     });
 
     const valorFinal = evolucao[evolucao.length - 1].valor;
     const retornoNominal = ((valorFinal / valorInicial) - 1) * 100;
     const valorReal = valorFinal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
-    const volatilidade = this.calcularVolatilidade(retornosSemestrais);
+    const volatilidade = this.calcularVolatilidade(retornosMensais);
 
     let maxDrawdown = 0, peakValue = valorInicial;
     evolucao.forEach(e => {
@@ -2022,7 +2004,7 @@ const Comparador2 = {
     container.innerHTML = html;
   },
 
-  renderHistoricoSemestral(resultado) {
+  renderHistoricoMensal(resultado) {
     const thead = document.querySelector('#comp2RebalHistorico thead');
     const tbody = document.querySelector('#comp2RebalHistorico tbody');
     if (!thead || !tbody) return;

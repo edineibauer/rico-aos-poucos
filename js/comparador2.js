@@ -426,7 +426,10 @@ const Comparador2 = {
             <div class="ranking-return ${isPositive ? 'positivo' : 'negativo'}">
               ${isPositive ? '+' : ''}${this.formatPercent(item.retornoReal)} real
             </div>
-            <div style="font-size: 0.75rem; color: var(--text-muted);">
+            <div style="font-size: 0.85rem; color: var(--text-primary);">
+              ${this.formatCurrency(item.valorFinalReal)}
+            </div>
+            <div style="font-size: 0.7rem; color: var(--text-muted);">
               ${this.formatPercent(item.retornoNominal)} nominal
             </div>
           </div>

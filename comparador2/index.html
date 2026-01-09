@@ -634,24 +634,11 @@
                     <option value="2018">2018</option>
                     <option value="2019">2019</option>
                     <option value="2020">2020</option>
-                    <option value="2021">2021</option>
-                    <option value="2022">2022</option>
-                    <option value="2023">2023</option>
-                    <option value="2024">2024</option>
                   </select>
                 </div>
                 <div class="comp2-field">
                   <label>Ano final</label>
                   <select id="comp2RebalAnoFim">
-                    <option value="2006">2006</option>
-                    <option value="2007">2007</option>
-                    <option value="2008">2008</option>
-                    <option value="2009">2009</option>
-                    <option value="2010">2010</option>
-                    <option value="2011">2011</option>
-                    <option value="2012">2012</option>
-                    <option value="2013">2013</option>
-                    <option value="2014">2014</option>
                     <option value="2015">2015</option>
                     <option value="2016">2016</option>
                     <option value="2017">2017</option>
@@ -666,6 +653,13 @@
                   </select>
                 </div>
                 <div class="comp2-field">
+                  <label>Valor inicial</label>
+                  <div class="comp2-input-group">
+                    <span>R$</span>
+                    <input type="text" id="comp2RebalValor" value="100.000" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="comp2-field">
                   <label>Tolerância</label>
                   <div class="comp2-input-group">
                     <span>±</span>
@@ -676,39 +670,136 @@
                 <div class="comp2-field">
                   <label>Inflação (a.a.) <a href="/artigos/inflacao-o-imposto-invisivel-2026.html" class="comp2-info-link" title="Entenda como a inflação afeta seus investimentos">?</a></label>
                   <div class="comp2-input-group">
-                    <input type="number" id="comp2RebalInflacao" value="6" min="0" max="30" step="0.5">
+                    <input type="number" id="comp2RebalInflacao" value="0" min="0" max="30" step="0.5">
                     <span>%</span>
                   </div>
                 </div>
               </div>
-              <p class="comp2-hint">Rebalanceia quando qualquer ativo desviar além da tolerância</p>
+              <p class="comp2-hint">Deixe inflação 0 para usar IPCA real. Rebalanceia quando desviar além da tolerância.</p>
+
+              <!-- Presets -->
+              <div class="comp2-presets" id="comp2RebalPresets">
+                <button class="comp2-preset active" data-preset="5050">⚖️ 50/50 Ibov+CDI</button>
+                <button class="comp2-preset" data-preset="3ativos">🔺 33% cada (3)</button>
+                <button class="comp2-preset" data-preset="4ativos">🔷 25% cada (4)</button>
+                <button class="comp2-preset" data-preset="global">🌎 BR + EUA</button>
+              </div>
+
+              <!-- Allocation sliders -->
+              <div class="comp2-allocation" id="comp2RebalAllocation">
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#3b82f6"></span>
+                    <span class="alloc-name">Ibovespa</span>
+                    <span class="alloc-pct">50%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="50" data-asset="ibovespa">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#ec4899"></span>
+                    <span class="alloc-name">CDI</span>
+                    <span class="alloc-pct">50%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="50" data-asset="cdi">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#22c55e"></span>
+                    <span class="alloc-name">Dólar</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="dolar">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#eab308"></span>
+                    <span class="alloc-name">Ouro</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="ouro">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#8b5cf6"></span>
+                    <span class="alloc-name">FIIs</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="fii_ifix">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#06b6d4"></span>
+                    <span class="alloc-name">IPCA+</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="tesouro_ipca">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#ef4444"></span>
+                    <span class="alloc-name">S&P 500</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="sp500_brl">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#0ea5e9"></span>
+                    <span class="alloc-name">TLT</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="tlt_brl">
+                </div>
+                <div class="alloc-total">
+                  <span>Total:</span>
+                  <span id="comp2RebalTotal">100%</span>
+                </div>
+              </div>
 
               <!-- Action button -->
               <button class="comp2-btn-run" id="comp2BtnRebal">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <polygon points="5 3 19 12 5 21 5 3"/>
                 </svg>
-                Simular
+                Simular Rebalanceamento
               </button>
             </div>
 
-            <div class="comp2-results">
+            <!-- Results -->
+            <div class="comp2-results" id="comp2RebalResults" style="display: none;">
+              <!-- Comparativo Principal -->
               <div class="comp2-card">
-                <h3>Com Rebalanceamento vs Buy & Hold</h3>
-                <div class="comp2-comparison" id="comp2RebalComparison">
-                  <div class="comparison-box">
-                    <span class="comparison-label">Com Rebalanceamento</span>
-                    <span class="comparison-value positivo">R$ 245.000</span>
-                    <span class="comparison-pct">+145%</span>
-                  </div>
-                  <div class="comparison-vs">vs</div>
-                  <div class="comparison-box">
-                    <span class="comparison-label">Buy & Hold</span>
-                    <span class="comparison-value">R$ 230.000</span>
-                    <span class="comparison-pct">+130%</span>
+                <h3>⚖️ Comparativo: Rebalanceamento vs Buy & Hold</h3>
+                <div class="comp2-comparison" id="comp2RebalComparison"></div>
+              </div>
+
+              <!-- Gráfico -->
+              <div class="comp2-card">
+                <div class="comp2-card-header">
+                  <h3>📈 Evolução do Patrimônio</h3>
+                  <div class="comp2-toggle">
+                    <button class="active" data-view="nominal" id="comp2RebalBtnNominal">Nominal</button>
+                    <button data-view="real" id="comp2RebalBtnReal">Real</button>
                   </div>
                 </div>
-                <div class="comp2-chart" id="comp2RebalChart"></div>
+                <div class="comp2-chart" id="comp2RebalChart" style="min-height: 300px;"></div>
+                <div class="comp2-chart-legend">
+                  <span><span class="legend-line solid"></span> Com rebalanceamento</span>
+                  <span><span class="legend-line dashed"></span> Buy & Hold</span>
+                </div>
+              </div>
+
+              <!-- Métricas -->
+              <div class="comp2-card" id="comp2RebalMetricas">
+                <h3>📊 Métricas Detalhadas</h3>
+                <div class="comp2-stats-grid" id="comp2RebalStats"></div>
+              </div>
+
+              <!-- Conclusões -->
+              <div class="comp2-conclusoes" id="comp2RebalConclusoes">
+                <h3>💡 Conclusões</h3>
+                <div id="comp2RebalConclusoesLista"></div>
               </div>
             </div>
           </div>

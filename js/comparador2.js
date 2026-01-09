@@ -106,32 +106,53 @@ const Comparador2 = {
   },
 
   bindPresets() {
-    document.querySelectorAll('.comp2-preset').forEach(btn => {
+    // Carteira tab presets
+    document.querySelectorAll('.comp2-presets:not(#comp2RebalPresets) .comp2-preset').forEach(btn => {
       btn.addEventListener('click', () => {
-        document.querySelectorAll('.comp2-preset').forEach(b => b.classList.remove('active'));
+        btn.closest('.comp2-presets').querySelectorAll('.comp2-preset').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
-        this.applyPreset(btn.dataset.preset);
+        this.applyPreset(btn.dataset.preset, 'comp2Allocation', 'allocTotal');
+      });
+    });
+
+    // Rebalancear tab presets
+    document.querySelectorAll('#comp2RebalPresets .comp2-preset').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('#comp2RebalPresets .comp2-preset').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        this.applyPreset(btn.dataset.preset, 'comp2RebalAllocation', 'comp2RebalTotal');
       });
     });
   },
 
   bindAllocationSliders() {
-    document.querySelectorAll('.comp2-allocation input[type="range"]').forEach(slider => {
+    // Carteira tab sliders
+    document.querySelectorAll('#comp2Allocation input[type="range"]').forEach(slider => {
       slider.addEventListener('input', (e) => {
         const item = e.target.closest('.alloc-item');
         const pctEl = item.querySelector('.alloc-pct');
         pctEl.textContent = `${e.target.value}%`;
-        this.updateAllocationTotal();
+        this.updateAllocationTotal('comp2Allocation', 'allocTotal');
+      });
+    });
+
+    // Rebalancear tab sliders
+    document.querySelectorAll('#comp2RebalAllocation input[type="range"]').forEach(slider => {
+      slider.addEventListener('input', (e) => {
+        const item = e.target.closest('.alloc-item');
+        const pctEl = item.querySelector('.alloc-pct');
+        pctEl.textContent = `${e.target.value}%`;
+        this.updateAllocationTotal('comp2RebalAllocation', 'comp2RebalTotal');
       });
     });
   },
 
-  updateAllocationTotal() {
+  updateAllocationTotal(containerId, totalElId) {
     let total = 0;
-    document.querySelectorAll('.comp2-allocation input[type="range"]').forEach(slider => {
+    document.querySelectorAll(`#${containerId} input[type="range"]`).forEach(slider => {
       total += parseInt(slider.value) || 0;
     });
-    const totalEl = document.getElementById('allocTotal');
+    const totalEl = document.getElementById(totalElId);
     if (totalEl) {
       totalEl.textContent = `${total}%`;
       totalEl.style.color = total === 100 ? 'var(--bullish)' : total > 100 ? 'var(--bearish)' : 'var(--text-primary)';
@@ -182,7 +203,7 @@ const Comparador2 = {
     });
   },
 
-  applyPreset(preset) {
+  applyPreset(preset, containerId = 'comp2Allocation', totalElId = 'allocTotal') {
     const presets = {
       '5050': { ibovespa: 50, cdi: 50 },
       '3ativos': { ibovespa: 33, cdi: 33, dolar: 34 },
@@ -192,7 +213,7 @@ const Comparador2 = {
     const allocation = presets[preset];
     if (!allocation) return;
 
-    document.querySelectorAll('.comp2-allocation input[type="range"]').forEach(slider => {
+    document.querySelectorAll(`#${containerId} input[type="range"]`).forEach(slider => {
       const asset = slider.dataset.asset;
       const value = allocation[asset] || 0;
       slider.value = value;
@@ -200,7 +221,7 @@ const Comparador2 = {
       const pctEl = item.querySelector('.alloc-pct');
       if (pctEl) pctEl.textContent = `${value}%`;
     });
-    this.updateAllocationTotal();
+    this.updateAllocationTotal(containerId, totalElId);
   },
 
   // ==========================================
@@ -1010,42 +1031,609 @@ const Comparador2 = {
   // ==========================================
   // ABA 4: REBALANCEAMENTO
   // ==========================================
+  rebalViewMode: 'nominal',
+  rebalData: null,
+
   simularRebalanceamento() {
-    // Por enquanto, usar valores demonstrativos
-    // TODO: Implementar lógica completa de rebalanceamento igual ao original
-    const comparisonEl = document.getElementById('comp2RebalComparison');
-    const chartEl = document.getElementById('comp2RebalChart');
+    if (!Comparador.dados?.anos) {
+      alert('Dados ainda não carregados. Aguarde...');
+      return;
+    }
 
-    if (!comparisonEl) return;
+    // Ler configurações
+    const anoInicio = parseInt(document.getElementById('comp2RebalAnoInicio')?.value) || 2015;
+    const anoFim = parseInt(document.getElementById('comp2RebalAnoFim')?.value) || 2025;
+    const valorStr = document.getElementById('comp2RebalValor')?.value || '100.000';
+    const valorInicial = this.parseCurrency(valorStr) || 100000;
+    const tolerancia = parseFloat(document.getElementById('comp2Tolerancia')?.value) || 10;
+    const inflacaoCustom = parseFloat(document.getElementById('comp2RebalInflacao')?.value) || 0;
 
-    const valorInicial = 100000;
-    const comRebal = valorInicial * 2.45;
-    const semRebal = valorInicial * 2.30;
+    // Coletar alocações
+    const alocacaoConfig = {};
+    let totalPct = 0;
+    document.querySelectorAll('#comp2RebalAllocation input[type="range"]').forEach(slider => {
+      const pct = parseInt(slider.value) || 0;
+      if (pct > 0) {
+        alocacaoConfig[slider.dataset.asset] = {
+          alocacao: pct,
+          tolerancia: tolerancia
+        };
+        totalPct += pct;
+      }
+    });
 
-    comparisonEl.innerHTML = `
-      <div class="comparison-box">
+    if (totalPct === 0) {
+      alert('Configure a alocação da carteira (total deve ser 100%).');
+      return;
+    }
+
+    if (Math.abs(totalPct - 100) > 1) {
+      alert(`A alocação total deve ser 100% (atual: ${totalPct}%)`);
+      return;
+    }
+
+    // Filtrar dados pelo período
+    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+
+    if (dadosFiltrados.length === 0) {
+      alert('Não há dados suficientes para o período selecionado.');
+      return;
+    }
+
+    // Verificar se todos os ativos têm dados
+    const ativosComDados = Object.keys(alocacaoConfig).filter(ativo => {
+      return dadosFiltrados.some(d => d[ativo] !== null && d[ativo] !== undefined);
+    });
+
+    if (ativosComDados.length < Object.keys(alocacaoConfig).length) {
+      const ativosSemDados = Object.keys(alocacaoConfig).filter(a => !ativosComDados.includes(a));
+      alert(`Alguns ativos não têm dados para o período: ${ativosSemDados.map(a => Comparador.assetNames[a]).join(', ')}`);
+      return;
+    }
+
+    // Simular COM rebalanceamento
+    const resultadoComRebal = this.simularCarteiraComRebalanceamento(
+      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom
+    );
+
+    // Simular SEM rebalanceamento (buy and hold)
+    const resultadoSemRebal = this.simularCarteiraSemRebalanceamento(
+      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom
+    );
+
+    // Simular cada ativo individual para ranking
+    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial, inflacaoCustom);
+
+    // Salvar para toggle do gráfico
+    this.rebalData = { resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig, inflacaoCustom };
+
+    // Mostrar resultados
+    document.getElementById('comp2RebalResults').style.display = 'block';
+
+    // Renderizar componentes
+    this.renderRebalComparison(resultadoComRebal, resultadoSemRebal);
+    this.renderRebalChart();
+    this.renderRebalMetricas(resultadoComRebal, resultadoSemRebal, alocacaoConfig);
+    this.renderRebalConclusoes(resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig);
+
+    // Bind toggle buttons
+    document.getElementById('comp2RebalBtnNominal')?.addEventListener('click', () => {
+      this.rebalViewMode = 'nominal';
+      document.getElementById('comp2RebalBtnNominal').classList.add('active');
+      document.getElementById('comp2RebalBtnReal').classList.remove('active');
+      this.renderRebalChart();
+    });
+    document.getElementById('comp2RebalBtnReal')?.addEventListener('click', () => {
+      this.rebalViewMode = 'real';
+      document.getElementById('comp2RebalBtnReal').classList.add('active');
+      document.getElementById('comp2RebalBtnNominal').classList.remove('active');
+      this.renderRebalChart();
+    });
+
+    // Scroll para resultados
+    document.getElementById('comp2RebalResults').scrollIntoView({ behavior: 'smooth' });
+  },
+
+  simularCarteiraComRebalanceamento(config, dados, valorInicial, inflacaoCustom = 0) {
+    const ativos = Object.keys(config);
+    let inflacaoAcumulada = 1;
+
+    // Inicializar carteira
+    let carteira = {};
+    let precoMedio = {};
+    let custoTotal = {};
+    let totalImpostosPagos = 0;
+
+    ativos.forEach(ativo => {
+      const valorAlocado = valorInicial * (config[ativo].alocacao / 100);
+      carteira[ativo] = valorAlocado;
+      precoMedio[ativo] = 1;
+      custoTotal[ativo] = valorAlocado;
+    });
+
+    const evolucao = [{
+      periodo: `${dados[0].ano - 1} S2`,
+      ano: dados[0].ano - 1,
+      semestre: 2,
+      valor: valorInicial,
+      valorReal: valorInicial
+    }];
+
+    let totalRebalanceamentos = 0;
+    const retornosSemestrais = [];
+    let precoMercado = {};
+    ativos.forEach(ativo => { precoMercado[ativo] = 1; });
+
+    // Processar cada ano
+    dados.forEach(dadoAno => {
+      for (let sem = 1; sem <= 2; sem++) {
+        const periodoLabel = `${dadoAno.ano} S${sem}`;
+        let rebalanceou = false;
+        let impostoPeriodo = 0;
+
+        // Valor antes do retorno
+        let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
+
+        // Aplicar retorno semestral para cada ativo
+        ativos.forEach(ativo => {
+          let retornoAnual = dadoAno[ativo];
+          if (ativo === 'ibovespa' && dadoAno.ibovespa_dividendos) {
+            retornoAnual = dadoAno.ibovespa + dadoAno.ibovespa_dividendos;
+          }
+          if (retornoAnual === null || retornoAnual === undefined) retornoAnual = 0;
+
+          const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
+          carteira[ativo] *= (1 + retornoSemestral);
+          precoMercado[ativo] *= (1 + retornoSemestral);
+        });
+
+        let valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
+        retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
+
+        // Atualizar inflação
+        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
+        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
+        inflacaoAcumulada *= (1 + inflacaoSemestral);
+
+        // Verificar necessidade de rebalanceamento
+        const alocacoesAtuais = {};
+        ativos.forEach(ativo => {
+          alocacoesAtuais[ativo] = (carteira[ativo] / valorTotal) * 100;
+        });
+
+        const foraTolerancia = ativos.filter(ativo => {
+          const atual = alocacoesAtuais[ativo];
+          const desejada = config[ativo].alocacao;
+          const tolerancia = config[ativo].tolerancia;
+          return Math.abs(atual - desejada) > tolerancia;
+        });
+
+        // Executar rebalanceamento se necessário
+        if (foraTolerancia.length > 0) {
+          rebalanceou = true;
+          totalRebalanceamentos++;
+
+          ativos.forEach(ativo => {
+            const valorDesejado = valorTotal * (config[ativo].alocacao / 100);
+            const valorAtual = carteira[ativo];
+            const diferenca = valorDesejado - valorAtual;
+
+            if (Math.abs(diferenca) > 1) {
+              if (diferenca < 0) {
+                // VENDA - calcular ganho de capital e imposto
+                const lucroVenda = Math.abs(diferenca) - (Math.abs(diferenca) / precoMercado[ativo]) * precoMedio[ativo];
+                const taxaIR = Comparador.taxasIR?.[ativo] || 0.15;
+                if (lucroVenda > 0) {
+                  impostoPeriodo += lucroVenda * taxaIR;
+                  totalImpostosPagos += lucroVenda * taxaIR;
+                }
+                const proporcaoVendida = Math.abs(diferenca) / valorAtual;
+                custoTotal[ativo] *= (1 - proporcaoVendida);
+                carteira[ativo] = valorAtual - Math.abs(diferenca);
+              } else {
+                // COMPRA - atualizar preço médio
+                const qtdComprada = diferenca / precoMercado[ativo];
+                const qtdAtual = carteira[ativo] / precoMercado[ativo];
+                custoTotal[ativo] += diferenca;
+                precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
+                carteira[ativo] = valorAtual + diferenca;
+              }
+            }
+          });
+
+          // Recalcular valor total após impostos
+          valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0) - impostoPeriodo;
+          if (impostoPeriodo > 0) {
+            const fatorReducao = valorTotal / (valorTotal + impostoPeriodo);
+            ativos.forEach(ativo => { carteira[ativo] *= fatorReducao; });
+          }
+        }
+
+        evolucao.push({
+          periodo: periodoLabel,
+          ano: dadoAno.ano,
+          semestre: sem,
+          valor: valorTotal,
+          valorReal: valorTotal / inflacaoAcumulada,
+          rebalanceou
+        });
+      }
+    });
+
+    const valorFinal = evolucao[evolucao.length - 1].valor;
+    const retornoNominal = ((valorFinal / valorInicial) - 1) * 100;
+    const valorReal = valorFinal / inflacaoAcumulada;
+    const retornoReal = ((valorReal / valorInicial) - 1) * 100;
+    const volatilidade = this.calcularVolatilidade(retornosSemestrais);
+
+    // Calcular max drawdown
+    let maxDrawdown = 0, peakValue = valorInicial;
+    evolucao.forEach(e => {
+      if (e.valor > peakValue) peakValue = e.valor;
+      const drawdown = (peakValue - e.valor) / peakValue * 100;
+      if (drawdown > maxDrawdown) maxDrawdown = drawdown;
+    });
+
+    // Calcular valor líquido
+    let valorLiquido = 0, impostoVendaTotal = 0;
+    ativos.forEach(ativo => {
+      const valorAtivo = carteira[ativo];
+      const custo = custoTotal[ativo];
+      const lucro = valorAtivo - custo;
+      if (lucro > 0) impostoVendaTotal += lucro * (Comparador.taxasIR?.[ativo] || 0.15);
+      valorLiquido += valorAtivo;
+    });
+    valorLiquido -= impostoVendaTotal;
+
+    return {
+      evolucao, valorInicial, valorFinal, valorReal, valorLiquido, impostoVendaTotal,
+      totalImpostosPagos, retornoNominal, retornoReal, volatilidade, maxDrawdown,
+      sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0,
+      totalRebalanceamentos, inflacaoAcumulada: (inflacaoAcumulada - 1) * 100
+    };
+  },
+
+  simularCarteiraSemRebalanceamento(config, dados, valorInicial, inflacaoCustom = 0) {
+    const ativos = Object.keys(config);
+    let inflacaoAcumulada = 1;
+    let custoTotal = {};
+    let carteira = {};
+
+    ativos.forEach(ativo => {
+      const valorAlocado = valorInicial * (config[ativo].alocacao / 100);
+      carteira[ativo] = valorAlocado;
+      custoTotal[ativo] = valorAlocado;
+    });
+
+    const evolucao = [{
+      periodo: `${dados[0].ano - 1} S2`,
+      valor: valorInicial,
+      valorReal: valorInicial
+    }];
+
+    const retornosSemestrais = [];
+
+    dados.forEach(dadoAno => {
+      for (let sem = 1; sem <= 2; sem++) {
+        let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
+
+        ativos.forEach(ativo => {
+          let retornoAnual = dadoAno[ativo];
+          if (ativo === 'ibovespa' && dadoAno.ibovespa_dividendos) {
+            retornoAnual = dadoAno.ibovespa + dadoAno.ibovespa_dividendos;
+          }
+          if (retornoAnual === null || retornoAnual === undefined) retornoAnual = 0;
+
+          const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
+          carteira[ativo] *= (1 + retornoSemestral);
+        });
+
+        const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
+        retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
+
+        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
+        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
+        inflacaoAcumulada *= (1 + inflacaoSemestral);
+
+        evolucao.push({
+          periodo: `${dadoAno.ano} S${sem}`,
+          ano: dadoAno.ano,
+          semestre: sem,
+          valor: valorTotal,
+          valorReal: valorTotal / inflacaoAcumulada
+        });
+      }
+    });
+
+    const valorFinal = evolucao[evolucao.length - 1].valor;
+    const retornoNominal = ((valorFinal / valorInicial) - 1) * 100;
+    const valorReal = valorFinal / inflacaoAcumulada;
+    const retornoReal = ((valorReal / valorInicial) - 1) * 100;
+    const volatilidade = this.calcularVolatilidade(retornosSemestrais);
+
+    let maxDrawdown = 0, peakValue = valorInicial;
+    evolucao.forEach(e => {
+      if (e.valor > peakValue) peakValue = e.valor;
+      const drawdown = (peakValue - e.valor) / peakValue * 100;
+      if (drawdown > maxDrawdown) maxDrawdown = drawdown;
+    });
+
+    let valorLiquido = 0, impostoVendaTotal = 0;
+    ativos.forEach(ativo => {
+      const valorAtivo = carteira[ativo];
+      const custo = custoTotal[ativo];
+      const lucro = valorAtivo - custo;
+      if (lucro > 0) impostoVendaTotal += lucro * (Comparador.taxasIR?.[ativo] || 0.15);
+      valorLiquido += valorAtivo;
+    });
+    valorLiquido -= impostoVendaTotal;
+
+    return {
+      evolucao, valorInicial, valorFinal, valorReal, valorLiquido, impostoVendaTotal,
+      retornoNominal, retornoReal, volatilidade, maxDrawdown,
+      sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0,
+      inflacaoAcumulada: (inflacaoAcumulada - 1) * 100
+    };
+  },
+
+  simularAtivosIndividuais(dados, valorInicial, inflacaoCustom = 0) {
+    const ativos = ['ibovespa', 'cdi', 'fii_ifix', 'dolar', 'ouro', 'tesouro_ipca', 'sp500_brl', 'bitcoin_brl', 'tlt_brl', 'imoveis_fipezap'];
+    const resultados = {};
+
+    ativos.forEach(ativo => {
+      const temDados = dados.some(d => d[ativo] !== null && d[ativo] !== undefined);
+      if (temDados) {
+        const resultado = this.calcularEvolucao(ativo, dados, valorInicial);
+        resultados[ativo] = resultado;
+      }
+    });
+
+    return resultados;
+  },
+
+  renderRebalComparison(comRebal, semRebal) {
+    const container = document.getElementById('comp2RebalComparison');
+    if (!container) return;
+
+    const diferencaValor = comRebal.valorFinal - semRebal.valorFinal;
+    const diferencaPct = comRebal.retornoNominal - semRebal.retornoNominal;
+    const venceuRebal = diferencaValor > 0;
+
+    container.innerHTML = `
+      <div class="comparison-box ${venceuRebal ? 'winner' : ''}">
+        <span class="comparison-icon">⚖️</span>
         <span class="comparison-label">Com Rebalanceamento</span>
-        <span class="comparison-value positivo">${this.formatCurrency(comRebal)}</span>
-        <span class="comparison-pct">+${((comRebal / valorInicial - 1) * 100).toFixed(0)}%</span>
+        <span class="comparison-value ${comRebal.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatCurrency(comRebal.valorFinal)}</span>
+        <span class="comparison-pct">${comRebal.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(comRebal.retornoNominal)} nominal</span>
+        <span class="comparison-detail">${comRebal.retornoReal >= 0 ? '+' : ''}${this.formatPercent(comRebal.retornoReal)} real</span>
+        ${venceuRebal ? '<span class="winner-tag">VENCEDOR</span>' : ''}
       </div>
-      <div class="comparison-vs">vs</div>
-      <div class="comparison-box">
+      <div class="comparison-vs">
+        <span>VS</span>
+        <span class="diff-label">Diferença:</span>
+        <span class="diff-value ${venceuRebal ? 'positivo' : 'negativo'}">${venceuRebal ? '+' : ''}${this.formatCurrency(diferencaValor)}</span>
+      </div>
+      <div class="comparison-box ${!venceuRebal ? 'winner' : ''}">
+        <span class="comparison-icon">📦</span>
         <span class="comparison-label">Buy & Hold</span>
-        <span class="comparison-value">${this.formatCurrency(semRebal)}</span>
-        <span class="comparison-pct">+${((semRebal / valorInicial - 1) * 100).toFixed(0)}%</span>
+        <span class="comparison-value ${semRebal.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatCurrency(semRebal.valorFinal)}</span>
+        <span class="comparison-pct">${semRebal.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(semRebal.retornoNominal)} nominal</span>
+        <span class="comparison-detail">${semRebal.retornoReal >= 0 ? '+' : ''}${this.formatPercent(semRebal.retornoReal)} real</span>
+        ${!venceuRebal ? '<span class="winner-tag">VENCEDOR</span>' : ''}
       </div>
     `;
+  },
 
-    if (chartEl) {
-      chartEl.innerHTML = `
-        <div style="display: flex; align-items: center; justify-content: center; height: 200px; color: var(--text-muted);">
-          <div style="text-align: center;">
-            <p>Diferença: <strong style="color: var(--bullish);">+${(((comRebal / semRebal) - 1) * 100).toFixed(1)}%</strong></p>
-            <p style="font-size: 0.85rem; margin-top: 8px;">Configure sua carteira na aba "Rebalancear" do comparador original para simulação completa</p>
-          </div>
+  renderRebalChart() {
+    if (!this.rebalData) return;
+
+    const container = document.getElementById('comp2RebalChart');
+    if (!container) return;
+
+    const { resultadoComRebal, resultadoSemRebal } = this.rebalData;
+    const viewKey = this.rebalViewMode === 'real' ? 'valorReal' : 'valor';
+
+    container.innerHTML = '';
+    const canvas = document.createElement('canvas');
+    container.appendChild(canvas);
+
+    if (this.charts.rebal) {
+      this.charts.rebal.destroy();
+    }
+
+    const labels = resultadoComRebal.evolucao.map(e => e.periodo);
+
+    this.charts.rebal = new Chart(canvas, {
+      type: 'line',
+      data: {
+        labels,
+        datasets: [
+          {
+            label: 'Com Rebalanceamento',
+            data: resultadoComRebal.evolucao.map(e => e[viewKey]),
+            borderColor: '#22c55e',
+            backgroundColor: 'rgba(34, 197, 94, 0.1)',
+            fill: true,
+            tension: 0.3,
+            borderWidth: 2.5
+          },
+          {
+            label: 'Buy & Hold',
+            data: resultadoSemRebal.evolucao.map(e => e[viewKey]),
+            borderColor: '#6b7280',
+            backgroundColor: 'transparent',
+            borderDash: [5, 5],
+            tension: 0.3,
+            borderWidth: 2
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: true, position: 'bottom', labels: { color: '#c9d1d9' } },
+          tooltip: { callbacks: { label: (ctx) => ctx.dataset.label + ': ' + this.formatCurrency(ctx.parsed.y) } }
+        },
+        scales: {
+          x: { grid: { color: 'rgba(139, 148, 158, 0.1)' }, ticks: { color: '#8b949e', maxTicksLimit: 10 } },
+          y: { grid: { color: 'rgba(139, 148, 158, 0.1)' }, ticks: { color: '#8b949e', callback: (v) => 'R$ ' + (v/1000).toFixed(0) + 'k' } }
+        }
+      }
+    });
+  },
+
+  renderRebalMetricas(comRebal, semRebal, config) {
+    const container = document.getElementById('comp2RebalStats');
+    if (!container) return;
+
+    const ativos = Object.keys(config);
+    const nomeAtivos = ativos.map(a => Comparador.assetNames[a] || a).join(', ');
+
+    container.innerHTML = `
+      <div class="comp2-stat-box">
+        <div class="stat-label">Valor Inicial</div>
+        <div class="stat-value">${this.formatCurrency(comRebal.valorInicial)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Valor Final (c/ Rebal)</div>
+        <div class="stat-value ${comRebal.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatCurrency(comRebal.valorFinal)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Valor Líquido</div>
+        <div class="stat-value">${this.formatCurrency(comRebal.valorLiquido)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">IR Pago (Rebal)</div>
+        <div class="stat-value negativo">${this.formatCurrency(comRebal.totalImpostosPagos)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Rebalanceamentos</div>
+        <div class="stat-value">${comRebal.totalRebalanceamentos}×</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Volatilidade (c/ Rebal)</div>
+        <div class="stat-value">${this.formatPercent(comRebal.volatilidade)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Volatilidade (B&H)</div>
+        <div class="stat-value">${this.formatPercent(semRebal.volatilidade)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Máx. Drawdown (c/ Rebal)</div>
+        <div class="stat-value negativo">-${this.formatPercent(comRebal.maxDrawdown)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Máx. Drawdown (B&H)</div>
+        <div class="stat-value negativo">-${this.formatPercent(semRebal.maxDrawdown)}</div>
+      </div>
+      <div class="comp2-stat-box">
+        <div class="stat-label">Inflação Período</div>
+        <div class="stat-value">${this.formatPercent(comRebal.inflacaoAcumulada)}</div>
+      </div>
+      <div class="comp2-stat-box" style="grid-column: span 2;">
+        <div class="stat-label">Ativos na Carteira</div>
+        <div class="stat-value" style="font-size: 0.9rem;">${nomeAtivos}</div>
+      </div>
+    `;
+  },
+
+  renderRebalConclusoes(comRebal, semRebal, ativos, config) {
+    const container = document.getElementById('comp2RebalConclusoesLista');
+    if (!container) return;
+
+    const conclusoes = [];
+
+    // 1. Rebalanceamento valeu a pena?
+    const diferencaRebal = comRebal.valorFinal - semRebal.valorFinal;
+    if (diferencaRebal > 0) {
+      conclusoes.push({
+        tipo: 'success',
+        icon: '✅',
+        texto: `O rebalanceamento gerou <strong>${this.formatCurrency(diferencaRebal)}</strong> a mais que o buy-and-hold. Valeu a pena manter a disciplina.`
+      });
+    } else {
+      conclusoes.push({
+        tipo: 'warning',
+        icon: '⚠️',
+        texto: `O buy-and-hold teria gerado <strong>${this.formatCurrency(Math.abs(diferencaRebal))}</strong> a mais. Neste período, rebalancear não compensou financeiramente.`
+      });
+    }
+
+    // 2. Comparar volatilidade
+    if (comRebal.volatilidade < semRebal.volatilidade) {
+      const reducaoVol = ((semRebal.volatilidade - comRebal.volatilidade) / semRebal.volatilidade * 100).toFixed(0);
+      conclusoes.push({
+        tipo: 'info',
+        icon: '📊',
+        texto: `O rebalanceamento reduziu a volatilidade em <strong>${reducaoVol}%</strong>, suavizando as oscilações da carteira.`
+      });
+    }
+
+    // 3. Comparar com ativos individuais
+    const ativosArray = Object.entries(ativos).map(([k, v]) => ({ nome: Comparador.assetNames[k], ...v }));
+    ativosArray.sort((a, b) => b.retornoReal - a.retornoReal);
+    if (ativosArray.length > 0) {
+      const melhorAtivo = ativosArray[0];
+      const piorAtivo = ativosArray[ativosArray.length - 1];
+      const ativosVencidos = ativosArray.filter(a => a.retornoReal < comRebal.retornoReal).length;
+      const percentualVencidos = (ativosVencidos / ativosArray.length * 100).toFixed(0);
+
+      conclusoes.push({
+        tipo: 'info',
+        icon: '🏆',
+        texto: `Sua carteira superou <strong>${percentualVencidos}%</strong> dos ativos individuais. O melhor foi ${melhorAtivo.nome} (+${this.formatPercent(melhorAtivo.retornoReal)}) e o pior foi ${piorAtivo.nome} (${this.formatPercent(piorAtivo.retornoReal)}).`
+      });
+    }
+
+    // 4. Proteção nas quedas
+    if (comRebal.maxDrawdown < semRebal.maxDrawdown) {
+      conclusoes.push({
+        tipo: 'success',
+        icon: '🛡️',
+        texto: `O rebalanceamento reduziu a perda máxima: <strong>${this.formatPercent(comRebal.maxDrawdown)}</strong> vs ${this.formatPercent(semRebal.maxDrawdown)} sem rebalancear.`
+      });
+    }
+
+    // 5. Ganho real
+    if (comRebal.retornoReal > 0) {
+      conclusoes.push({
+        tipo: 'success',
+        icon: '💰',
+        texto: `Sua carteira gerou <strong>${this.formatPercent(comRebal.retornoReal)}</strong> de ganho real acima da inflação (${this.formatPercent(comRebal.inflacaoAcumulada)} no período).`
+      });
+    } else {
+      conclusoes.push({
+        tipo: 'error',
+        icon: '📉',
+        texto: `Sua carteira perdeu <strong>${this.formatPercent(Math.abs(comRebal.retornoReal))}</strong> em termos reais. A inflação de ${this.formatPercent(comRebal.inflacaoAcumulada)} corroeu os ganhos.`
+      });
+    }
+
+    // 6. Número de rebalanceamentos
+    if (comRebal.totalRebalanceamentos > 0) {
+      const custoIR = comRebal.totalImpostosPagos > 0
+        ? ` gerando <strong>${this.formatCurrency(comRebal.totalImpostosPagos)}</strong> em IR`
+        : '';
+      conclusoes.push({
+        tipo: 'info',
+        icon: '⚖️',
+        texto: `Foram necessários <strong>${comRebal.totalRebalanceamentos} rebalanceamentos</strong> para manter a carteira dentro das tolerâncias${custoIR}.`
+      });
+    }
+
+    // Renderizar
+    let html = '';
+    conclusoes.forEach(c => {
+      html += `
+        <div class="conclusao-item ${c.tipo}">
+          <span class="conclusao-icon">${c.icon}</span>
+          <p>${c.texto}</p>
         </div>
       `;
-    }
+    });
+
+    container.innerHTML = html;
   },
 
   // ==========================================

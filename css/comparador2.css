@@ -758,6 +758,85 @@
 .comparison-vs {
   font-weight: 600;
   color: var(--text-muted);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.comparison-vs span:first-child {
+  font-size: 1.2rem;
+}
+
+.comparison-icon {
+  font-size: 1.5rem;
+  margin-bottom: 4px;
+}
+
+.comparison-box.winner {
+  background: rgba(34, 197, 94, 0.15);
+  border: 2px solid var(--bullish);
+}
+
+.comparison-detail {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.winner-tag {
+  background: var(--bullish);
+  color: #000;
+  font-size: 0.65rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-top: 8px;
+}
+
+.diff-label {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.diff-value {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.diff-value.positivo {
+  color: var(--bullish);
+}
+
+.diff-value.negativo {
+  color: var(--bearish);
+}
+
+/* Chart legend */
+.comp2-chart-legend {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 12px;
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.legend-line {
+  display: inline-block;
+  width: 24px;
+  height: 3px;
+  margin-right: 8px;
+  vertical-align: middle;
+  border-radius: 2px;
+}
+
+.legend-line.solid {
+  background: #22c55e;
+}
+
+.legend-line.dashed {
+  background: linear-gradient(90deg, #6b7280 0%, #6b7280 50%, transparent 50%, transparent 100%);
+  background-size: 8px 3px;
 }
 
 /* Hint text */

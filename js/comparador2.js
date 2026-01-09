@@ -774,10 +774,10 @@ const Comparador2 = {
     const valorStr = document.getElementById('comp2CarteiraValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
-    // Coletar alocações
+    // Coletar alocações (apenas da aba Carteira)
     const alocacao = {};
     let totalPct = 0;
-    document.querySelectorAll('.comp2-allocation input[type="range"]').forEach(slider => {
+    document.querySelectorAll('#comp2Allocation input[type="range"]').forEach(slider => {
       const pct = parseInt(slider.value) || 0;
       if (pct > 0) {
         alocacao[slider.dataset.asset] = pct / 100;

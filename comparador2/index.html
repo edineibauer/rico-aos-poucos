@@ -173,9 +173,6 @@
                 <button class="comp2-chip" data-asset="cdi">
                   <span class="chip-dot" style="background:#ec4899"></span>CDI
                 </button>
-                <button class="comp2-chip" data-asset="tesouro_ipca">
-                  <span class="chip-dot" style="background:#06b6d4"></span>IPCA+
-                </button>
                 <button class="comp2-chip" data-asset="renda_mais">
                   <span class="chip-dot" style="background:#7c3aed"></span>Renda+ 2065
                 </button>
@@ -594,14 +591,6 @@
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#06b6d4"></span>
-                    <span class="alloc-name">IPCA+</span>
-                    <span class="alloc-pct">0%</span>
-                  </div>
-                  <input type="range" min="0" max="100" value="0" data-asset="tesouro_ipca">
-                </div>
-                <div class="alloc-item">
-                  <div class="alloc-header">
                     <span class="alloc-dot" style="background:#7c3aed"></span>
                     <span class="alloc-name">Renda+ 2065</span>
                     <span class="alloc-pct">0%</span>
@@ -717,7 +706,7 @@
                   <label>Tolerância</label>
                   <div class="comp2-input-group">
                     <span>±</span>
-                    <input type="number" id="comp2Tolerancia" value="10" min="1" max="50">
+                    <input type="text" id="comp2Tolerancia" value="10" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -793,14 +782,6 @@
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#06b6d4"></span>
-                    <span class="alloc-name">IPCA+</span>
-                    <span class="alloc-pct">0%</span>
-                  </div>
-                  <input type="range" min="0" max="100" value="0" data-asset="tesouro_ipca">
-                </div>
-                <div class="alloc-item">
-                  <div class="alloc-header">
                     <span class="alloc-dot" style="background:#7c3aed"></span>
                     <span class="alloc-name">Renda+ 2065</span>
                     <span class="alloc-pct">0%</span>
@@ -822,6 +803,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="tlt_brl">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#f7931a"></span>
+                    <span class="alloc-name">Bitcoin</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="bitcoin_brl">
                 </div>
                 <div class="alloc-total">
                   <span>Total:</span>

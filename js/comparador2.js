@@ -299,7 +299,8 @@ const Comparador2 = {
       'comp2CarteiraInflacao',
       // Aba Rebalancear
       'comp2RebalDolarExtra',
-      'comp2RebalRendaMaisTaxa'
+      'comp2RebalRendaMaisTaxa',
+      'comp2Tolerancia'
     ];
 
     percentageInputIds.forEach(id => {
@@ -1370,7 +1371,7 @@ const Comparador2 = {
     const anoFim = parseInt(document.getElementById('comp2RebalAnoFim')?.value) || 2025;
     const valorStr = document.getElementById('comp2RebalValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
-    const tolerancia = parseFloat(document.getElementById('comp2Tolerancia')?.value) || 10;
+    const tolerancia = this.parsePercentage(document.getElementById('comp2Tolerancia')?.value) || 10;
 
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2RebalDolarExtra')?.value) || 0;

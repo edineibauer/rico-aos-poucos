@@ -64,6 +64,8 @@ const Comparador2 = {
         // Mostrar conteúdo inicial
         setTimeout(() => {
           this.showPattern('dotcom');
+          // Auto-iniciar duelo com IBOV vs S&P500
+          this.iniciarDuelo();
         }, 300);
       } else {
         setTimeout(checkData, 100);
@@ -581,9 +583,12 @@ const Comparador2 = {
     // Armazenar para toggle
     this.dueloResultados = { config, resultado1, resultado2, valorInicial, anoInicio, anoFim, dadosPeriodo };
 
-    // Renderizar
+    // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);
     this.renderChartDuelo();
+    this.renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo);
+    this.renderMetricasDuelo(config, resultado1, resultado2);
+    this.renderConclusaoDuelo(config, resultado1, resultado2);
   },
 
   calcularEvolucaoDuelo(ativoKey, dados, valorInicial, inflacaoCustom = 0) {
@@ -625,6 +630,7 @@ const Comparador2 = {
     const valorReal = valorNominal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
     const mediaAnual = retornosAnuais.reduce((a, b) => a + b, 0) / retornosAnuais.length;
+    const volatilidade = this.calcularVolatilidade(retornosAnuais);
 
     return {
       evolucao,
@@ -633,6 +639,7 @@ const Comparador2 = {
       retornoNominal,
       retornoReal,
       mediaAnual,
+      volatilidade,
       maxDrawdown,
       anosPositivos,
       totalAnos: dados.length,
@@ -642,65 +649,188 @@ const Comparador2 = {
 
   renderPlacarDuelo(config, resultado1, resultado2) {
     const container = document.getElementById('comp2DueloResult');
-    if (!container) return;
+    const placar = document.getElementById('comp2DueloPlacar');
+    if (!container || !placar) return;
 
     // Mostrar o container de resultados
     container.style.display = 'block';
 
     const vencedor1 = resultado1.retornoReal > resultado2.retornoReal;
-    const diferenca = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);
     const diferencaPercent = Math.abs(resultado1.retornoReal - resultado2.retornoReal);
 
-    container.innerHTML = `
-      <div class="duelo-scoreboard">
-        <div class="duelo-player ${vencedor1 ? 'winner' : ''}">
-          <span class="player-icon">${config.ativo1.icone}</span>
-          <span class="player-name">${config.ativo1.nome}</span>
-          <span class="player-return ${resultado1.retornoReal >= 0 ? 'positivo' : 'negativo'}">
-            ${resultado1.retornoReal >= 0 ? '+' : ''}${this.formatPercent(resultado1.retornoReal)} real
-          </span>
-          <div style="font-size: 0.8rem; color: var(--text-muted);">
-            ${this.formatCurrency(resultado1.valorFinalReal)}
-          </div>
-          ${vencedor1 ? '<span class="winner-badge">VENCEDOR</span>' : ''}
+    placar.innerHTML = `
+      <div class="duelo-player ${vencedor1 ? 'winner' : ''}">
+        <span class="player-icon">${config.ativo1.icone}</span>
+        <span class="player-name">${config.ativo1.nome}</span>
+        <span class="player-return ${resultado1.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+          ${resultado1.retornoReal >= 0 ? '+' : ''}${this.formatPercent(resultado1.retornoReal)} real
+        </span>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">
+          ${this.formatCurrency(resultado1.valorFinalReal)}
         </div>
-        <div class="duelo-vs-big">
-          VS
-          <div style="font-size: 0.7rem; margin-top: 8px; color: var(--text-muted);">
-            Diferença: ${this.formatPercent(diferencaPercent)}
-          </div>
-        </div>
-        <div class="duelo-player ${!vencedor1 ? 'winner' : ''}">
-          <span class="player-icon">${config.ativo2.icone}</span>
-          <span class="player-name">${config.ativo2.nome}</span>
-          <span class="player-return ${resultado2.retornoReal >= 0 ? 'positivo' : 'negativo'}">
-            ${resultado2.retornoReal >= 0 ? '+' : ''}${this.formatPercent(resultado2.retornoReal)} real
-          </span>
-          <div style="font-size: 0.8rem; color: var(--text-muted);">
-            ${this.formatCurrency(resultado2.valorFinalReal)}
-          </div>
-          ${!vencedor1 ? '<span class="winner-badge">VENCEDOR</span>' : ''}
+        ${vencedor1 ? '<span class="winner-badge">VENCEDOR</span>' : ''}
+      </div>
+      <div class="duelo-vs-big">
+        VS
+        <div style="font-size: 0.7rem; margin-top: 8px; color: var(--text-muted);">
+          Diferença: ${this.formatPercent(diferencaPercent)}
         </div>
       </div>
-      <div id="comp2DueloChart" style="height: 250px; margin-top: 16px;"></div>
-      <div style="margin-top: 16px; padding: 12px; background: var(--bg-tertiary); border-radius: 8px;">
-        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px; font-size: 0.85rem;">
-          <div>
-            <div style="color: var(--text-muted); margin-bottom: 4px;">Retorno Nominal</div>
-            <div><strong>${config.ativo1.nome}:</strong> ${this.formatPercent(resultado1.retornoNominal)}</div>
-            <div><strong>${config.ativo2.nome}:</strong> ${this.formatPercent(resultado2.retornoNominal)}</div>
-          </div>
-          <div>
-            <div style="color: var(--text-muted); margin-bottom: 4px;">Máx. Drawdown</div>
-            <div><strong>${config.ativo1.nome}:</strong> -${this.formatPercent(resultado1.maxDrawdown)}</div>
-            <div><strong>${config.ativo2.nome}:</strong> -${this.formatPercent(resultado2.maxDrawdown)}</div>
-          </div>
+      <div class="duelo-player ${!vencedor1 ? 'winner' : ''}">
+        <span class="player-icon">${config.ativo2.icone}</span>
+        <span class="player-name">${config.ativo2.nome}</span>
+        <span class="player-return ${resultado2.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+          ${resultado2.retornoReal >= 0 ? '+' : ''}${this.formatPercent(resultado2.retornoReal)} real
+        </span>
+        <div style="font-size: 0.8rem; color: var(--text-muted);">
+          ${this.formatCurrency(resultado2.valorFinalReal)}
+        </div>
+        ${!vencedor1 ? '<span class="winner-badge">VENCEDOR</span>' : ''}
+      </div>
+    `;
+  },
+
+  renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo) {
+    const tabela = document.getElementById('comp2DueloTabela');
+    if (!tabela) return;
+
+    const thead = tabela.querySelector('thead');
+    const tbody = tabela.querySelector('tbody');
+
+    thead.innerHTML = `
+      <tr>
+        <th>Ano</th>
+        <th>${config.ativo1.nome}</th>
+        <th>${config.ativo2.nome}</th>
+        <th>Inflação</th>
+        <th>Vencedor</th>
+      </tr>
+    `;
+
+    let html = '';
+    dadosPeriodo.forEach((d, i) => {
+      const retorno1 = resultado1.retornosAnuais[i];
+      const retorno2 = resultado2.retornosAnuais[i];
+      const vencedorAno = retorno1 > retorno2 ? config.ativo1.nome :
+                         retorno2 > retorno1 ? config.ativo2.nome : 'Empate';
+
+      html += `
+        <tr>
+          <td>${d.ano}</td>
+          <td class="${retorno1 >= 0 ? 'text-green' : 'text-red'}">
+            ${this.formatPercent(retorno1)}
+          </td>
+          <td class="${retorno2 >= 0 ? 'text-green' : 'text-red'}">
+            ${this.formatPercent(retorno2)}
+          </td>
+          <td>${this.formatPercent(d.inflacao_ipca)}</td>
+          <td><strong>${vencedorAno}</strong></td>
+        </tr>
+      `;
+    });
+
+    tbody.innerHTML = html;
+  },
+
+  renderMetricasDuelo(config, resultado1, resultado2) {
+    const container = document.getElementById('comp2DueloMetricas');
+    if (!container) return;
+
+    container.innerHTML = `
+      <div class="comp2-stats-grid">
+        <div class="comp2-stat-box">
+          <div class="stat-label">Retorno Nominal</div>
+          <div class="stat-value">${config.ativo1.nome}: <span class="${resultado1.retornoNominal >= 0 ? 'positivo' : 'negativo'}">${this.formatPercent(resultado1.retornoNominal)}</span></div>
+          <div class="stat-value">${config.ativo2.nome}: <span class="${resultado2.retornoNominal >= 0 ? 'positivo' : 'negativo'}">${this.formatPercent(resultado2.retornoNominal)}</span></div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Retorno Real</div>
+          <div class="stat-value">${config.ativo1.nome}: <span class="${resultado1.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatPercent(resultado1.retornoReal)}</span></div>
+          <div class="stat-value">${config.ativo2.nome}: <span class="${resultado2.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatPercent(resultado2.retornoReal)}</span></div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Média Anual</div>
+          <div class="stat-value">${config.ativo1.nome}: ${this.formatPercent(resultado1.mediaAnual)}</div>
+          <div class="stat-value">${config.ativo2.nome}: ${this.formatPercent(resultado2.mediaAnual)}</div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Volatilidade</div>
+          <div class="stat-value">${config.ativo1.nome}: ${this.formatPercent(resultado1.volatilidade)}</div>
+          <div class="stat-value">${config.ativo2.nome}: ${this.formatPercent(resultado2.volatilidade)}</div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Max Drawdown</div>
+          <div class="stat-value negativo">${config.ativo1.nome}: -${this.formatPercent(resultado1.maxDrawdown)}</div>
+          <div class="stat-value negativo">${config.ativo2.nome}: -${this.formatPercent(resultado2.maxDrawdown)}</div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Anos Positivos</div>
+          <div class="stat-value">${config.ativo1.nome}: ${resultado1.anosPositivos}/${resultado1.totalAnos}</div>
+          <div class="stat-value">${config.ativo2.nome}: ${resultado2.anosPositivos}/${resultado2.totalAnos}</div>
         </div>
       </div>
     `;
+  },
 
-    // Renderizar gráfico após o HTML estar no DOM
-    setTimeout(() => this.renderChartDuelo(), 50);
+  renderConclusaoDuelo(config, resultado1, resultado2) {
+    const container = document.getElementById('comp2DueloConclusaoLista');
+    if (!container) return;
+
+    const vencedor = resultado1.retornoReal > resultado2.retornoReal ? config.ativo1 : config.ativo2;
+    const perdedor = resultado1.retornoReal > resultado2.retornoReal ? config.ativo2 : config.ativo1;
+    const resVencedor = resultado1.retornoReal > resultado2.retornoReal ? resultado1 : resultado2;
+    const resPerdedor = resultado1.retornoReal > resultado2.retornoReal ? resultado2 : resultado1;
+
+    const diferenca = Math.abs(resultado1.retornoReal - resultado2.retornoReal);
+    const diferencaValor = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);
+
+    // Contagem de vitórias anuais
+    let vitorias1 = 0, vitorias2 = 0;
+    resultado1.retornosAnuais.forEach((r, i) => {
+      if (r > resultado2.retornosAnuais[i]) vitorias1++;
+      else if (r < resultado2.retornosAnuais[i]) vitorias2++;
+    });
+
+    const vitoriasMelhor = resultado1.retornoReal > resultado2.retornoReal ? vitorias1 : vitorias2;
+    const vitoriasPior = resultado1.retornoReal > resultado2.retornoReal ? vitorias2 : vitorias1;
+
+    // Análise de risco-retorno
+    const sharpe1 = resultado1.volatilidade > 0 ? resultado1.retornoReal / resultado1.volatilidade : 0;
+    const sharpe2 = resultado2.volatilidade > 0 ? resultado2.retornoReal / resultado2.volatilidade : 0;
+    const melhorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo1.nome : config.ativo2.nome;
+
+    let analiseExtra = '';
+
+    // Análise específica por tipo de duelo
+    if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'sp500_brl') {
+      analiseExtra = `<div class="conclusao-item info"><span class="conclusao-icon">🌎</span><p>A comparação inclui o efeito cambial. Em períodos de desvalorização do real, o S&P 500 se beneficia duplamente: valorização das ações americanas e alta do dólar.</p></div>`;
+    } else if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'cdi') {
+      analiseExtra = `<div class="conclusao-item info"><span class="conclusao-icon">💡</span><p>O clássico debate brasileiro: vale a pena o risco da bolsa quando o CDI paga tão bem? Historicamente, o Brasil tem juros altos, tornando essa comparação particularmente relevante.</p></div>`;
+    }
+
+    container.innerHTML = `
+      <div class="conclusao-item success">
+        <span class="conclusao-icon">🏆</span>
+        <p><strong>${vencedor.nome}</strong> venceu o duelo com retorno real de <strong>${this.formatPercent(resVencedor.retornoReal)}</strong>, superando ${perdedor.nome} que rendeu ${this.formatPercent(resPerdedor.retornoReal)}.</p>
+      </div>
+      <div class="conclusao-item info">
+        <span class="conclusao-icon">💰</span>
+        <p>A diferença final foi de <strong>${this.formatCurrency(diferencaValor)}</strong> em valor real (${this.formatPercent(diferenca)} em retorno).</p>
+      </div>
+      <div class="conclusao-item info">
+        <span class="conclusao-icon">📊</span>
+        <p>Ano a ano, <strong>${vencedor.nome}</strong> venceu em ${vitoriasMelhor} dos ${resultado1.totalAnos} anos, enquanto ${perdedor.nome} venceu em ${vitoriasPior} anos.</p>
+      </div>
+      <div class="conclusao-item ${resultado1.volatilidade < resultado2.volatilidade ? 'success' : 'warning'}">
+        <span class="conclusao-icon">⚖️</span>
+        <p>Considerando risco e retorno, <strong>${melhorRiscoRetorno}</strong> teve a melhor relação (Sharpe).</p>
+      </div>
+      ${analiseExtra}
+      <div class="conclusao-item" style="background: var(--bg-tertiary); border-left-color: var(--text-muted);">
+        <span class="conclusao-icon">⚠️</span>
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais.</p>
+      </div>
+    `;
   },
 
   renderChartDuelo() {

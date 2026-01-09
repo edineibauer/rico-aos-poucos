@@ -341,17 +341,18 @@ const Comparador2 = {
       return retornoCupom;
     }
 
-    // Variação da taxa de juros de mercado (usando SELIC como proxy)
-    // A taxa do título IPCA+ acompanha aproximadamente a SELIC real
-    // Taxa real = SELIC nominal - expectativa de inflação
-    // Simplificação: usamos a variação absoluta da SELIC
-    const variacaoTaxa = (selicAtual - selicAnterior) / 100; // Em decimal
+    // Fórmula de precificação de títulos que garante preços sempre positivos
+    // Preço = Valor / (1 + taxa)^duration
+    // Razão de preços = ((1 + taxa_anterior) / (1 + taxa_atual))^duration
+    // Esta fórmula nunca produz valores negativos pois é uma razão de números positivos
+    const taxaAnterior = selicAnterior / 100;
+    const taxaAtual = selicAtual / 100;
 
-    // Variação de preço do título baseada na duration
-    // Fórmula: ΔPreço ≈ -Duration × ΔTaxa
-    // Se taxa subiu 2% (0.02), preço cai: -16 × 0.02 = -32%
-    // Se taxa caiu 2% (0.02), preço sobe: -16 × (-0.02) = +32%
-    const variacaoPreco = -duration * variacaoTaxa * 100; // Em percentual
+    // Razão de preços: se taxa subiu, preço cai; se taxa caiu, preço sobe
+    const razaoPreco = Math.pow((1 + taxaAnterior) / (1 + taxaAtual), duration);
+
+    // Variação em percentual (nunca inferior a -100%)
+    const variacaoPreco = (razaoPreco - 1) * 100;
 
     // Retorno total = cupom + variação de preço
     const retornoTotal = retornoCupom + variacaoPreco;

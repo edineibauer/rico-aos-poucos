@@ -893,20 +893,20 @@ const Comparador2 = {
       const resumoHtml = `
         <div class="comp2-card" style="margin-top: 16px;">
           <h3>Resultado da Carteira</h3>
-          <div style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 12px;">
-            <div style="text-align: center; padding: 12px; background: var(--bg-tertiary); border-radius: 8px;">
-              <div style="color: var(--text-muted); font-size: 0.75rem;">Valor Final</div>
-              <div style="font-size: 1.1rem; font-weight: 600;">${this.formatCurrency(carteira.valorFinalNominal)}</div>
+          <div class="comp2-stats-grid">
+            <div class="comp2-stat-box">
+              <div class="stat-label">Valor Final</div>
+              <div class="stat-value">${this.formatCurrency(carteira.valorFinalNominal)}</div>
             </div>
-            <div style="text-align: center; padding: 12px; background: var(--bg-tertiary); border-radius: 8px;">
-              <div style="color: var(--text-muted); font-size: 0.75rem;">Retorno Nominal</div>
-              <div style="font-size: 1.1rem; font-weight: 600; color: ${carteira.retornoNominal >= 0 ? 'var(--bullish)' : 'var(--bearish)'};">
+            <div class="comp2-stat-box">
+              <div class="stat-label">Retorno Nominal</div>
+              <div class="stat-value ${carteira.retornoNominal >= 0 ? 'positivo' : 'negativo'}">
                 ${carteira.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoNominal)}
               </div>
             </div>
-            <div style="text-align: center; padding: 12px; background: var(--bg-tertiary); border-radius: 8px;">
-              <div style="color: var(--text-muted); font-size: 0.75rem;">Retorno Real</div>
-              <div style="font-size: 1.1rem; font-weight: 600; color: ${carteira.retornoReal >= 0 ? 'var(--bullish)' : 'var(--bearish)'};">
+            <div class="comp2-stat-box">
+              <div class="stat-label">Retorno Real</div>
+              <div class="stat-value ${carteira.retornoReal >= 0 ? 'positivo' : 'negativo'}">
                 ${carteira.retornoReal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoReal)}
               </div>
             </div>

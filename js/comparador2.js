@@ -381,36 +381,39 @@ const Comparador2 = {
    * Quando SELIC sobe: preço cai (variação negativa)
    * Quando SELIC cai: preço sobe (variação positiva)
    */
-  simularRetornoRendaMais(dadoAno, taxaFixa, selicAnterior = null) {
+  simularRetornoRendaMais(dadoMes, taxaFixaAnual, selicAnterior = null) {
     // Duration modificada para um título Renda+ 2065
     // Títulos de longo prazo têm duration alta, gerando alta volatilidade
     const duration = 16;
 
-    const ipca = dadoAno.inflacao_ipca || 5;
-    const selicAtual = dadoAno.selic_media || 10;
+    const ipcaMensal = dadoMes.inflacao_ipca || 0.5; // IPCA já é mensal nos dados
+    const selicAtual = dadoMes.selic_meta || 10; // SELIC meta anual
 
-    // Retorno do cupom: IPCA + taxa fixa informada pelo usuário
-    const retornoCupom = ipca + taxaFixa;
+    // Converter taxa fixa anual para mensal: (1 + taxa_anual)^(1/12) - 1
+    const taxaFixaMensal = (Math.pow(1 + taxaFixaAnual / 100, 1/12) - 1) * 100;
 
-    // Se não temos SELIC anterior, usar apenas o cupom (primeiro ano)
+    // Retorno do cupom mensal: IPCA mensal + taxa fixa mensal
+    const retornoCupom = ipcaMensal + taxaFixaMensal;
+
+    // Se não temos SELIC anterior, usar apenas o cupom (primeiro mês)
     if (selicAnterior === null) {
       return retornoCupom;
     }
 
     // Fórmula de precificação de títulos que garante preços sempre positivos
-    // Preço = Valor / (1 + taxa)^duration
-    // Razão de preços = ((1 + taxa_anterior) / (1 + taxa_atual))^duration
-    // Esta fórmula nunca produz valores negativos pois é uma razão de números positivos
+    // Usar taxas anuais para calcular variação de preço (duration é anual)
+    // Converter para decimais
     const taxaAnterior = selicAnterior / 100;
     const taxaAtual = selicAtual / 100;
 
     // Razão de preços: se taxa subiu, preço cai; se taxa caiu, preço sobe
-    const razaoPreco = Math.pow((1 + taxaAnterior) / (1 + taxaAtual), duration);
+    // Escalar para variação mensal (dividir por 12)
+    const razaoPreco = Math.pow((1 + taxaAnterior) / (1 + taxaAtual), duration / 12);
 
     // Variação em percentual (nunca inferior a -100%)
     const variacaoPreco = (razaoPreco - 1) * 100;
 
-    // Retorno total = cupom + variação de preço
+    // Retorno total mensal = cupom mensal + variação de preço mensal
     const retornoTotal = retornoCupom + variacaoPreco;
 
     return retornoTotal;
@@ -422,7 +425,7 @@ const Comparador2 = {
   getRetornoAjustado(ativo, dadoAno, dolarExtra = 0, rendaMaisTaxa = 6, dadoAnoAnterior = null) {
     // Ativo especial: Renda+ 2065 (simulado)
     if (ativo === 'renda_mais') {
-      const selicAnterior = dadoAnoAnterior ? dadoAnoAnterior.selic_media : null;
+      const selicAnterior = dadoAnoAnterior ? dadoAnoAnterior.selic_meta : null;
       return this.simularRetornoRendaMais(dadoAno, rendaMaisTaxa, selicAnterior);
     }
 
@@ -430,10 +433,12 @@ const Comparador2 = {
     let retorno = dadoAno[ativo];
     if (retorno === null || retorno === undefined) retorno = 0;
 
-    // Aplicar ajuste extra para o dólar
+    // Aplicar ajuste extra para o dólar (converter taxa anual para mensal)
     if (ativo === 'dolar' && dolarExtra > 0) {
-      // Composição: (1 + retorno_dolar) × (1 + rendimento_extra) - 1
-      const retornoComposto = (1 + retorno / 100) * (1 + dolarExtra / 100) - 1;
+      // Converter taxa anual para mensal: (1 + taxa_anual)^(1/12) - 1
+      const taxaMensal = Math.pow(1 + dolarExtra / 100, 1/12) - 1;
+      // Composição: (1 + retorno_dolar) × (1 + rendimento_mensal) - 1
+      const retornoComposto = (1 + retorno / 100) * (1 + taxaMensal) - 1;
       retorno = retornoComposto * 100;
     }
 

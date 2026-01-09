@@ -801,10 +801,11 @@ const Comparador2 = {
     const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano > anoInicio && d.ano <= anoAtual);
 
     // Calcular evolução da carteira e ativos individuais
+    // Todos começam do mesmo valor inicial para comparação justa no gráfico
     const resultados = { carteira: this.calcularEvolucaoCarteira(alocacao, dadosFiltrados, valorInicial) };
 
     Object.keys(alocacao).forEach(ativo => {
-      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial * alocacao[ativo]);
+      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial);
     });
 
     const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados);

@@ -259,52 +259,58 @@ const Comparador2 = {
 
   /**
    * Simula o retorno do Tesouro Renda+ 2065 (título de longo prazo)
-   * Baseado na variação das taxas de juros e na duration do título
-   * Duration aproximada: 15-20 anos (título com vencimento em 2065)
+   * Baseado na variação das taxas de juros (SELIC) e na duration do título
+   *
+   * Duration modificada do Renda+ 2065: aproximadamente 15-18 anos
+   * Fórmula: Retorno = Cupom + Variação de Preço
+   *   - Cupom = IPCA + Taxa Fixa (ex: 6%)
+   *   - Variação de Preço ≈ -Duration × (Taxa_final - Taxa_inicial)
+   *
+   * Quando SELIC sobe: preço cai (variação negativa)
+   * Quando SELIC cai: preço sobe (variação positiva)
    */
-  simularRetornoRendaMais(dadoAno, taxaFixa) {
-    // Duration média para um título Renda+ 2065 (aproximadamente 15-18 anos de duration modificada)
+  simularRetornoRendaMais(dadoAno, taxaFixa, selicAnterior = null) {
+    // Duration modificada para um título Renda+ 2065
+    // Títulos de longo prazo têm duration alta, gerando alta volatilidade
     const duration = 16;
 
-    // Usar a variação da SELIC como proxy para a variação da taxa do título
-    // Quando a SELIC sobe, o preço do título cai (e vice-versa)
+    const ipca = dadoAno.inflacao_ipca || 5;
     const selicAtual = dadoAno.selic_media || 10;
 
-    // Retorno base: IPCA + taxa fixa (cupom do título)
-    const ipca = dadoAno.inflacao_ipca || 5;
+    // Retorno do cupom: IPCA + taxa fixa informada pelo usuário
     const retornoCupom = ipca + taxaFixa;
 
-    // Variação de preço baseada na mudança das taxas
-    // Usamos os dados históricos do tesouro_ipca como referência de volatilidade
-    // mas ajustamos para a maior duration do Renda+ 2065
-    const retornoTesouroIpca = dadoAno.tesouro_ipca || 0;
-
-    // O Renda+ 2065 tem volatilidade aproximadamente 1.5-2x maior que títulos IPCA+ médios
-    // devido à duration muito longa
-    const fatorVolatilidade = 1.6;
-
-    // Se temos dados históricos do tesouro_ipca, usamos como base
-    // O retorno é composto pelo cupom + variação de preço
-    if (retornoTesouroIpca !== 0) {
-      // Estimar a variação de preço proporcional à volatilidade
-      const variacaoPrecoBase = retornoTesouroIpca - (ipca + 5.5); // 5.5% é taxa média histórica
-      const variacaoPrecoAjustada = variacaoPrecoBase * fatorVolatilidade;
-
-      // Retorno total = cupom + variação de preço ajustada
-      return retornoCupom + variacaoPrecoAjustada;
+    // Se não temos SELIC anterior, usar apenas o cupom (primeiro ano)
+    if (selicAnterior === null) {
+      return retornoCupom;
     }
 
-    // Fallback: usar apenas o cupom se não houver dados
-    return retornoCupom;
+    // Variação da taxa de juros de mercado (usando SELIC como proxy)
+    // A taxa do título IPCA+ acompanha aproximadamente a SELIC real
+    // Taxa real = SELIC nominal - expectativa de inflação
+    // Simplificação: usamos a variação absoluta da SELIC
+    const variacaoTaxa = (selicAtual - selicAnterior) / 100; // Em decimal
+
+    // Variação de preço do título baseada na duration
+    // Fórmula: ΔPreço ≈ -Duration × ΔTaxa
+    // Se taxa subiu 2% (0.02), preço cai: -16 × 0.02 = -32%
+    // Se taxa caiu 2% (0.02), preço sobe: -16 × (-0.02) = +32%
+    const variacaoPreco = -duration * variacaoTaxa * 100; // Em percentual
+
+    // Retorno total = cupom + variação de preço
+    const retornoTotal = retornoCupom + variacaoPreco;
+
+    return retornoTotal;
   },
 
   /**
    * Obtém o retorno de um ativo, aplicando ajustes quando necessário
    */
-  getRetornoAjustado(ativo, dadoAno, dolarExtra = 0, rendaMaisTaxa = 6) {
+  getRetornoAjustado(ativo, dadoAno, dolarExtra = 0, rendaMaisTaxa = 6, dadoAnoAnterior = null) {
     // Ativo especial: Renda+ 2065 (simulado)
     if (ativo === 'renda_mais') {
-      return this.simularRetornoRendaMais(dadoAno, rendaMaisTaxa);
+      const selicAnterior = dadoAnoAnterior ? dadoAnoAnterior.selic_media : null;
+      return this.simularRetornoRendaMais(dadoAno, rendaMaisTaxa, selicAnterior);
     }
 
     // Obter retorno base do ativo
@@ -326,9 +332,12 @@ const Comparador2 = {
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
 
-    dados.forEach(d => {
+    dados.forEach((d, index) => {
+      // Obter dado do ano anterior para cálculos que precisam de variação
+      const dadoAnterior = index > 0 ? dados[index - 1] : null;
+
       // Usar função de retorno ajustado
-      const retorno = this.getRetornoAjustado(ativo, d, dolarExtra, rendaMaisTaxa);
+      const retorno = this.getRetornoAjustado(ativo, d, dolarExtra, rendaMaisTaxa, dadoAnterior);
 
       valorNominal *= (1 + retorno / 100);
       inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
@@ -685,9 +694,12 @@ const Comparador2 = {
     let maxDrawdown = 0;
     let peakValue = valorInicial;
 
-    dados.forEach(d => {
+    dados.forEach((d, index) => {
+      // Obter dado do ano anterior para cálculos que precisam de variação
+      const dadoAnterior = index > 0 ? dados[index - 1] : null;
+
       // Usar função de retorno ajustado
-      const retorno = this.getRetornoAjustado(ativoKey, d, dolarExtra, rendaMaisTaxa);
+      const retorno = this.getRetornoAjustado(ativoKey, d, dolarExtra, rendaMaisTaxa, dadoAnterior);
 
       retornosAnuais.push(retorno);
       if (retorno > 0) anosPositivos++;
@@ -1037,11 +1049,14 @@ const Comparador2 = {
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
 
-    dados.forEach(d => {
+    dados.forEach((d, index) => {
+      // Obter dado do ano anterior para cálculos que precisam de variação
+      const dadoAnterior = index > 0 ? dados[index - 1] : null;
+
       let retornoCarteira = 0;
       Object.entries(alocacao).forEach(([ativo, peso]) => {
         // Usar função de retorno ajustado
-        const retorno = this.getRetornoAjustado(ativo, d, dolarExtra, rendaMaisTaxa);
+        const retorno = this.getRetornoAjustado(ativo, d, dolarExtra, rendaMaisTaxa, dadoAnterior);
         retornoCarteira += retorno * peso;
       });
 
@@ -1394,7 +1409,10 @@ const Comparador2 = {
     ativos.forEach(ativo => { precoMercado[ativo] = 1; });
 
     // Processar cada ano
-    dados.forEach(dadoAno => {
+    dados.forEach((dadoAno, indexAno) => {
+      // Obter dado do ano anterior para cálculos que precisam de variação (Renda+ 2065)
+      const dadoAnoAnterior = indexAno > 0 ? dados[indexAno - 1] : null;
+
       for (let sem = 1; sem <= 2; sem++) {
         const periodoLabel = `${dadoAno.ano} S${sem}`;
         let rebalanceou = false;
@@ -1407,7 +1425,7 @@ const Comparador2 = {
         // Aplicar retorno semestral para cada ativo
         ativos.forEach(ativo => {
           // Usar função de retorno ajustado
-          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa);
+          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa, dadoAnoAnterior);
 
           const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
           carteira[ativo] *= (1 + retornoSemestral);
@@ -1581,13 +1599,16 @@ const Comparador2 = {
 
     const retornosSemestrais = [];
 
-    dados.forEach(dadoAno => {
+    dados.forEach((dadoAno, indexAno) => {
+      // Obter dado do ano anterior para cálculos que precisam de variação (Renda+ 2065)
+      const dadoAnoAnterior = indexAno > 0 ? dados[indexAno - 1] : null;
+
       for (let sem = 1; sem <= 2; sem++) {
         let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
 
         ativos.forEach(ativo => {
           // Usar função de retorno ajustado
-          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa);
+          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa, dadoAnoAnterior);
 
           const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
           carteira[ativo] *= (1 + retornoSemestral);

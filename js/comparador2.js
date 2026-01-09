@@ -258,9 +258,6 @@ const Comparador2 = {
 
     dados.forEach(d => {
       let retorno = d[ativo];
-      if (ativo === 'ibovespa' && d.ibovespa_dividendos) {
-        retorno = d.ibovespa + d.ibovespa_dividendos;
-      }
       if (retorno === null || retorno === undefined) retorno = 0;
 
       valorNominal *= (1 + retorno / 100);
@@ -602,9 +599,6 @@ const Comparador2 = {
 
     dados.forEach(d => {
       let retorno = d[ativoKey];
-      if (ativoKey === 'ibovespa' && d.ibovespa_dividendos) {
-        retorno = d.ibovespa + d.ibovespa_dividendos;
-      }
       if (retorno === null || retorno === undefined) retorno = 0;
 
       retornosAnuais.push(retorno);
@@ -952,9 +946,6 @@ const Comparador2 = {
       let retornoCarteira = 0;
       Object.entries(alocacao).forEach(([ativo, peso]) => {
         let retorno = d[ativo];
-        if (ativo === 'ibovespa' && d.ibovespa_dividendos) {
-          retorno = d.ibovespa + d.ibovespa_dividendos;
-        }
         if (retorno === null || retorno === undefined) retorno = 0;
         retornoCarteira += retorno * peso;
       });
@@ -1313,9 +1304,6 @@ const Comparador2 = {
         // Aplicar retorno semestral para cada ativo
         ativos.forEach(ativo => {
           let retornoAnual = dadoAno[ativo];
-          if (ativo === 'ibovespa' && dadoAno.ibovespa_dividendos) {
-            retornoAnual = dadoAno.ibovespa + dadoAno.ibovespa_dividendos;
-          }
           if (retornoAnual === null || retornoAnual === undefined) retornoAnual = 0;
 
           const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
@@ -1496,9 +1484,6 @@ const Comparador2 = {
 
         ativos.forEach(ativo => {
           let retornoAnual = dadoAno[ativo];
-          if (ativo === 'ibovespa' && dadoAno.ibovespa_dividendos) {
-            retornoAnual = dadoAno.ibovespa + dadoAno.ibovespa_dividendos;
-          }
           if (retornoAnual === null || retornoAnual === undefined) retornoAnual = 0;
 
           const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;

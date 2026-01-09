@@ -293,11 +293,6 @@ const Comparador = {
     dados.forEach(d => {
       let retorno = d[ativo];
 
-      // Tratamento especial para ibovespa (inclui dividendos)
-      if (ativo === 'ibovespa' && d.ibovespa_dividendos) {
-        retorno = d.ibovespa + d.ibovespa_dividendos;
-      }
-
       // Se não há dados para este ativo neste ano, mantém o valor
       if (retorno === null || retorno === undefined) {
         retorno = 0;
@@ -856,9 +851,6 @@ const Comparador = {
 
     dadosFiltrados.forEach(d => {
       let retorno = d[ativo];
-      if (ativo === 'ibovespa' && d.ibovespa_dividendos) {
-        retorno = d.ibovespa + d.ibovespa_dividendos;
-      }
       if (retorno !== null && retorno !== undefined) {
         retornoAcumulado *= (1 + retorno / 100);
       }
@@ -1192,9 +1184,6 @@ const Comparador = {
 
         ativos.forEach(ativo => {
           let retornoAnual = dadoAno[ativo];
-          if (ativo === 'ibovespa' && dadoAno.ibovespa_dividendos) {
-            retornoAnual = dadoAno.ibovespa + dadoAno.ibovespa_dividendos;
-          }
           if (retornoAnual === null || retornoAnual === undefined) {
             retornoAnual = 0;
           }
@@ -1438,9 +1427,6 @@ const Comparador = {
 
         ativos.forEach(ativo => {
           let retornoAnual = dadoAno[ativo];
-          if (ativo === 'ibovespa' && dadoAno.ibovespa_dividendos) {
-            retornoAnual = dadoAno.ibovespa + dadoAno.ibovespa_dividendos;
-          }
           if (retornoAnual === null || retornoAnual === undefined) {
             retornoAnual = 0;
           }
@@ -1536,10 +1522,6 @@ const Comparador = {
 
     dados.forEach(d => {
       let retorno = d[ativo];
-
-      if (ativo === 'ibovespa' && d.ibovespa_dividendos) {
-        retorno = d.ibovespa + d.ibovespa_dividendos;
-      }
 
       if (retorno === null || retorno === undefined) {
         retorno = 0;
@@ -2590,10 +2572,6 @@ const Comparador = {
     dados.forEach(d => {
       let retorno = d[ativoKey];
 
-      // Incluir dividendos para Ibovespa
-      if (ativoKey === 'ibovespa' && d.ibovespa_dividendos) {
-        retorno = d.ibovespa + d.ibovespa_dividendos;
-      }
 
       if (retorno === null || retorno === undefined) {
         retorno = 0;

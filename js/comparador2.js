@@ -1290,6 +1290,9 @@ const Comparador2 = {
 
     // Adicionar conclusões
     this.renderConclusoesCarteira(resultados, alocacao, inflacaoAcumulada);
+
+    // Adicionar análise de diversificação
+    this.renderAnaliseDiversificacao(resultados, alocacao);
   },
 
   renderConclusoesCarteira(resultados, alocacao, inflacaoAcumulada) {
@@ -1378,6 +1381,194 @@ const Comparador2 = {
         </div>
       `;
     });
+
+    container.innerHTML = html;
+    card.style.display = 'block';
+  },
+
+  renderAnaliseDiversificacao(resultados, alocacao) {
+    const container = document.getElementById('comp2DiversificacaoContent');
+    const card = document.getElementById('comp2CarteiraDiversificacao');
+    if (!container || !card) return;
+
+    // Calcular volatilidade (desvio padrão dos retornos mensais)
+    const calcularVolatilidade = (evolucao) => {
+      if (!evolucao || evolucao.length < 2) return 0;
+      const retornosMensais = [];
+      for (let i = 1; i < evolucao.length; i++) {
+        const retorno = ((evolucao[i].nominal / evolucao[i - 1].nominal) - 1) * 100;
+        retornosMensais.push(retorno);
+      }
+      if (retornosMensais.length === 0) return 0;
+      const media = retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length;
+      const variancia = retornosMensais.reduce((acc, r) => acc + Math.pow(r - media, 2), 0) / retornosMensais.length;
+      return Math.sqrt(variancia);
+    };
+
+    // Calcular máxima queda (drawdown)
+    const calcularMaxDrawdown = (evolucao) => {
+      if (!evolucao || evolucao.length < 2) return 0;
+      let maxDrawdown = 0;
+      let picoNominal = evolucao[0].nominal;
+      for (let i = 1; i < evolucao.length; i++) {
+        if (evolucao[i].nominal > picoNominal) {
+          picoNominal = evolucao[i].nominal;
+        }
+        const drawdown = ((picoNominal - evolucao[i].nominal) / picoNominal) * 100;
+        if (drawdown > maxDrawdown) {
+          maxDrawdown = drawdown;
+        }
+      }
+      return maxDrawdown;
+    };
+
+    // Coletar dados de todos os ativos
+    const carteira = resultados.carteira;
+    const dadosAtivos = Object.keys(alocacao)
+      .filter(ativo => resultados[ativo])
+      .map(ativo => ({
+        ativo,
+        nome: Comparador.assetNames[ativo] || ativo,
+        peso: alocacao[ativo],
+        retornoReal: resultados[ativo].retornoReal,
+        retornoNominal: resultados[ativo].retornoNominal,
+        volatilidade: calcularVolatilidade(resultados[ativo].evolucao),
+        maxDrawdown: calcularMaxDrawdown(resultados[ativo].evolucao)
+      }))
+      .sort((a, b) => b.retornoReal - a.retornoReal);
+
+    const volatilidadeCarteira = calcularVolatilidade(carteira.evolucao);
+    const maxDrawdownCarteira = calcularMaxDrawdown(carteira.evolucao);
+    const volatilidadeMedia = dadosAtivos.reduce((acc, a) => acc + a.volatilidade * (a.peso / 100), 0);
+
+    // Encontrar melhor e pior ativo
+    const melhorAtivo = dadosAtivos[0];
+    const piorAtivo = dadosAtivos[dadosAtivos.length - 1];
+    const posicaoCarteira = dadosAtivos.filter(a => a.retornoReal >= carteira.retornoReal).length;
+
+    // HTML da tabela de ativos
+    let html = `
+      <div class="diversificacao-tabela">
+        <h4>Desempenho Individual dos Ativos</h4>
+        <table class="tabela-ativos">
+          <thead>
+            <tr>
+              <th>Ativo</th>
+              <th>Peso</th>
+              <th>Retorno Real</th>
+              <th>Volatilidade</th>
+              <th>Máx. Queda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="linha-carteira">
+              <td><strong>📊 Carteira</strong></td>
+              <td>100%</td>
+              <td class="${carteira.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+                ${carteira.retornoReal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoReal)}
+              </td>
+              <td>${this.formatPercent(volatilidadeCarteira)}</td>
+              <td class="negativo">-${this.formatPercent(maxDrawdownCarteira)}</td>
+            </tr>
+    `;
+
+    dadosAtivos.forEach((ativo, idx) => {
+      const isMelhor = idx === 0;
+      const isPior = idx === dadosAtivos.length - 1;
+      const classeDestaque = isMelhor ? 'melhor-ativo' : (isPior ? 'pior-ativo' : '');
+      html += `
+        <tr class="${classeDestaque}">
+          <td>${isMelhor ? '🏆 ' : (isPior ? '⚠️ ' : '')}${ativo.nome}</td>
+          <td>${ativo.peso}%</td>
+          <td class="${ativo.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+            ${ativo.retornoReal >= 0 ? '+' : ''}${this.formatPercent(ativo.retornoReal)}
+          </td>
+          <td>${this.formatPercent(ativo.volatilidade)}</td>
+          <td class="negativo">-${this.formatPercent(ativo.maxDrawdown)}</td>
+        </tr>
+      `;
+    });
+
+    html += `
+          </tbody>
+        </table>
+      </div>
+    `;
+
+    // Análise de benefícios da diversificação
+    const reducaoVolatilidade = ((volatilidadeMedia - volatilidadeCarteira) / volatilidadeMedia) * 100;
+    const diferencaMelhor = carteira.retornoReal - melhorAtivo.retornoReal;
+    const diferencaPior = carteira.retornoReal - piorAtivo.retornoReal;
+
+    html += `
+      <div class="diversificacao-analise">
+        <h4>🎯 Benefícios da Diversificação</h4>
+        <div class="analise-metricas">
+          <div class="metrica-box ${reducaoVolatilidade > 0 ? 'positiva' : 'neutra'}">
+            <span class="metrica-valor">${reducaoVolatilidade > 0 ? '-' : ''}${Math.abs(reducaoVolatilidade).toFixed(1)}%</span>
+            <span class="metrica-label">Redução de Volatilidade</span>
+            <span class="metrica-detalhe">vs. média ponderada dos ativos</span>
+          </div>
+          <div class="metrica-box">
+            <span class="metrica-valor">#${posicaoCarteira + 1}</span>
+            <span class="metrica-label">Posição no Ranking</span>
+            <span class="metrica-detalhe">de ${dadosAtivos.length + 1} opções</span>
+          </div>
+          <div class="metrica-box ${diferencaPior > 0 ? 'positiva' : 'negativa'}">
+            <span class="metrica-valor">${diferencaPior >= 0 ? '+' : ''}${this.formatPercent(diferencaPior)}</span>
+            <span class="metrica-label">vs. Pior Ativo</span>
+            <span class="metrica-detalhe">${piorAtivo.nome}</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Explicação educacional
+    html += `
+      <div class="diversificacao-explicacao">
+        <h4>📚 Entendendo a Diversificação</h4>
+        <div class="explicacao-content">
+          <p><strong>Por que a carteira não foi a melhor opção?</strong></p>
+          <p>
+            Em retrospectiva, concentrar 100% em <strong>${melhorAtivo.nome}</strong> teria gerado
+            <span class="positivo">${this.formatPercent(melhorAtivo.retornoReal)}</span> de retorno real,
+            superando a carteira em <span class="destaque">${this.formatPercent(Math.abs(diferencaMelhor))}</span>.
+          </p>
+
+          <p><strong>Mas por que diversificar faz sentido?</strong></p>
+          <ul>
+            <li>
+              <strong>Proteção contra o pior cenário:</strong> Se você tivesse investido apenas em
+              <strong>${piorAtivo.nome}</strong>, teria obtido apenas
+              <span class="${piorAtivo.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatPercent(piorAtivo.retornoReal)}</span>.
+              A carteira ficou <strong>${this.formatPercent(diferencaPior)}</strong> à frente.
+            </li>
+            <li>
+              <strong>Menor volatilidade:</strong> A carteira teve volatilidade mensal de
+              <strong>${this.formatPercent(volatilidadeCarteira)}</strong>, ${reducaoVolatilidade > 0 ?
+              `que é <strong>${reducaoVolatilidade.toFixed(1)}% menor</strong> que a média ponderada dos ativos` :
+              `similar à média dos ativos`}.
+              Isso significa menos "susto" nos meses de queda.
+            </li>
+            <li>
+              <strong>Máxima queda controlada:</strong> O maior tombo da carteira foi de
+              <strong>${this.formatPercent(maxDrawdownCarteira)}</strong>, enquanto alguns ativos
+              individuais chegaram a cair muito mais.
+            </li>
+          </ul>
+
+          <div class="explicacao-conclusao">
+            <p>
+              <strong>💡 Conclusão:</strong> Diversificar nunca será a melhor escolha <em>em retrospectiva</em>,
+              pois sempre haverá um ativo que superou os demais. Porém, diversificar também nunca será a pior escolha.
+              Você abre mão de potenciais ganhos extraordinários em troca de <strong>previsibilidade</strong>,
+              <strong>menor volatilidade</strong> e <strong>proteção contra cenários adversos</strong> —
+              essencial para quem busca construir patrimônio de forma consistente no longo prazo.
+            </p>
+          </div>
+        </div>
+      </div>
+    `;
 
     container.innerHTML = html;
     card.style.display = 'block';

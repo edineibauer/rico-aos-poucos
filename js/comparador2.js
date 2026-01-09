@@ -65,10 +65,29 @@ const Comparador2 = {
     this.waitForData();
   },
 
+  // Função auxiliar para parsear período (YYYY-MM) para objeto {ano, mes}
+  parsePeriodo(valor) {
+    const [ano, mes] = valor.split('-').map(Number);
+    return { ano, mes };
+  },
+
+  // Filtrar dados mensais por período
+  filtrarDadosMensais(periodoInicio, periodoFim) {
+    const inicio = this.parsePeriodo(periodoInicio);
+    const fim = this.parsePeriodo(periodoFim);
+
+    return Comparador.dadosMensais.meses.filter(d => {
+      const dataInicio = inicio.ano * 12 + inicio.mes;
+      const dataFim = fim.ano * 12 + fim.mes;
+      const dataMes = d.ano * 12 + d.mes;
+      return dataMes >= dataInicio && dataMes <= dataFim;
+    });
+  },
+
   waitForData() {
     const checkData = () => {
-      if (typeof Comparador !== 'undefined' && Comparador.dados && Comparador.dados.anos) {
-        console.log('Comparador2: Dados carregados, inicializando...');
+      if (typeof Comparador !== 'undefined' && Comparador.dadosMensais && Comparador.dadosMensais.meses) {
+        console.log('Comparador2: Dados mensais carregados, inicializando...');
         // Mostrar conteúdo inicial
         setTimeout(() => {
           this.showPattern('dotcom');
@@ -422,12 +441,15 @@ const Comparador2 = {
   },
 
   calcularEvolucao(ativo, dados, valorInicial, dolarExtra = 0, rendaMaisTaxa = 6) {
-    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    // Usar periodo para dados mensais
+    const primeiroRegistro = dados[0];
+    const periodoInicial = primeiroRegistro.periodo || `${primeiroRegistro.ano}`;
+    const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
 
     dados.forEach((d, index) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação
+      // Obter dado do mês anterior para cálculos que precisam de variação
       const dadoAnterior = index > 0 ? dados[index - 1] : null;
 
       // Usar função de retorno ajustado
@@ -437,7 +459,7 @@ const Comparador2 = {
       inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
 
       evolucao.push({
-        ano: d.ano,
+        periodo: d.periodo || `${d.ano}`,
         nominal: valorNominal,
         real: valorNominal / inflacaoAcumulada
       });
@@ -468,13 +490,13 @@ const Comparador2 = {
   // ABA 1: COMPARADOR HISTÓRICO
   // ==========================================
   compararHistorico() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
-    const anoInicio = parseInt(document.getElementById('comp2AnoInicio')?.value || 2015);
-    const anoFim = parseInt(document.getElementById('comp2AnoFim')?.value || 2025);
+    const periodoInicio = document.getElementById('comp2PeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2PeriodoFim')?.value || '2024-12';
     const valorStr = document.getElementById('comp2Valor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
@@ -497,8 +519,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período selecionado
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período selecionado
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     if (dadosFiltrados.length === 0) {
       alert('Não há dados suficientes para o período selecionado.');
@@ -540,7 +562,8 @@ const Comparador2 = {
       this.charts.main.destroy();
     }
 
-    const anos = [dados[0].ano - 1, ...dados.map(d => d.ano)];
+    // Usar período para labels (dados mensais)
+    const periodos = ['Início', ...dados.map(d => d.periodo || `${d.ano}`)];
     const datasets = [];
 
     Object.entries(resultados).forEach(([ativo, data]) => {
@@ -558,7 +581,7 @@ const Comparador2 = {
 
     this.charts.main = new Chart(canvas, {
       type: 'line',
-      data: { labels: anos, datasets },
+      data: { labels: periodos, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -731,16 +754,16 @@ const Comparador2 = {
   // ABA 2: DUELO (FRENTE A FRENTE)
   // ==========================================
   iniciarDuelo() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
     const dueloSelecionado = document.querySelector('.comp2-duelo-btn.active')?.dataset.duelo || 'ibov-sp500';
 
-    // Usar os seletores de ano
-    const anoInicio = parseInt(document.getElementById('comp2DueloAnoInicio')?.value) || 2015;
-    const anoFim = parseInt(document.getElementById('comp2DueloAnoFim')?.value) || 2025;
+    // Usar os seletores de período
+    const periodoInicio = document.getElementById('comp2DueloPeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2DueloPeriodoFim')?.value || '2024-12';
 
     const valorStr = document.getElementById('comp2DueloValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
@@ -756,8 +779,8 @@ const Comparador2 = {
     const config = this.dueloConfigs[dueloSelecionado];
     if (!config) return;
 
-    // Filtrar dados pelo período
-    const dadosPeriodo = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período
+    const dadosPeriodo = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     if (dadosPeriodo.length === 0) {
       alert('Não há dados disponíveis para o período selecionado.');
@@ -780,45 +803,45 @@ const Comparador2 = {
   },
 
   calcularEvolucaoDuelo(ativoKey, dados, valorInicial, inflacaoCustom = 0, dolarExtra = 0, rendaMaisTaxa = 6) {
-    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
-    const retornosAnuais = [];
-    let anosPositivos = 0;
+    const retornosMensais = [];
+    let mesesPositivos = 0;
     let maxDrawdown = 0;
     let peakValue = valorInicial;
 
     dados.forEach((d, index) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação
+      // Obter dado do mês anterior para cálculos que precisam de variação
       const dadoAnterior = index > 0 ? dados[index - 1] : null;
 
       // Usar função de retorno ajustado
       const retorno = this.getRetornoAjustado(ativoKey, d, dolarExtra, rendaMaisTaxa, dadoAnterior);
 
-      retornosAnuais.push(retorno);
-      if (retorno > 0) anosPositivos++;
+      retornosMensais.push(retorno);
+      if (retorno > 0) mesesPositivos++;
 
       valorNominal *= (1 + retorno / 100);
-      const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
-      inflacaoAcumulada *= (1 + inflacaoAnual / 100);
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
 
       if (valorNominal > peakValue) peakValue = valorNominal;
       const drawdown = (peakValue - valorNominal) / peakValue * 100;
       if (drawdown > maxDrawdown) maxDrawdown = drawdown;
 
       evolucao.push({
-        ano: d.ano,
+        periodo: d.periodo || `${d.ano}`,
         nominal: valorNominal,
         real: valorNominal / inflacaoAcumulada,
-        retornoAno: retorno
+        retornoPeriodo: retorno
       });
     });
 
     const retornoNominal = ((valorNominal / valorInicial) - 1) * 100;
     const valorReal = valorNominal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
-    const mediaAnual = retornosAnuais.reduce((a, b) => a + b, 0) / retornosAnuais.length;
-    const volatilidade = this.calcularVolatilidade(retornosAnuais);
+    const mediaMensal = retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length;
+    const volatilidade = this.calcularVolatilidade(retornosMensais);
 
     return {
       evolucao,
@@ -826,12 +849,12 @@ const Comparador2 = {
       valorFinalReal: valorReal,
       retornoNominal,
       retornoReal,
-      mediaAnual,
+      mediaMensal,
       volatilidade,
       maxDrawdown,
-      anosPositivos,
-      totalAnos: dados.length,
-      retornosAnuais
+      mesesPositivos,
+      totalMeses: dados.length,
+      retornosMensais
     };
   },
 
@@ -1044,7 +1067,7 @@ const Comparador2 = {
     this.charts.duelo = new Chart(canvas, {
       type: 'line',
       data: {
-        labels: anos,
+        labels: periodos,
         datasets: [
           {
             label: config.ativo1.nome,
@@ -1083,13 +1106,13 @@ const Comparador2 = {
   // ABA 3: CARTEIRA DIVERSIFICADA
   // ==========================================
   simularCarteira() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
-    const anoInicio = parseInt(document.getElementById('comp2CarteiraAnoInicio')?.value || 2015);
-    const anoFim = parseInt(document.getElementById('comp2CarteiraAnoFim')?.value || 2025);
+    const periodoInicio = document.getElementById('comp2CarteiraPeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2CarteiraPeriodoFim')?.value || '2024-12';
     const valorStr = document.getElementById('comp2CarteiraValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
@@ -1122,8 +1145,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período selecionado
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período selecionado
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     // Calcular evolução da carteira e ativos individuais
     // Todos começam do mesmo valor inicial para comparação justa no gráfico
@@ -1139,12 +1162,12 @@ const Comparador2 = {
   },
 
   calcularEvolucaoCarteira(alocacao, dados, valorInicial, dolarExtra = 0, rendaMaisTaxa = 6) {
-    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
 
     dados.forEach((d, index) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação
+      // Obter dado do mês anterior para cálculos que precisam de variação
       const dadoAnterior = index > 0 ? dados[index - 1] : null;
 
       let retornoCarteira = 0;
@@ -1158,7 +1181,7 @@ const Comparador2 = {
       inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
 
       evolucao.push({
-        ano: d.ano,
+        periodo: d.periodo || `${d.ano}`,
         nominal: valorNominal,
         real: valorNominal / inflacaoAcumulada
       });
@@ -1186,7 +1209,8 @@ const Comparador2 = {
       this.charts.carteira.destroy();
     }
 
-    const anos = [dados[0].ano - 1, ...dados.map(d => d.ano)];
+    // Usar período para labels (dados mensais)
+    const periodos = ['Início', ...dados.map(d => d.periodo || `${d.ano}`)];
     const datasets = [];
 
     // Carteira primeiro (destaque)
@@ -1218,7 +1242,7 @@ const Comparador2 = {
 
     this.charts.carteira = new Chart(canvas, {
       type: 'line',
-      data: { labels: anos, datasets },
+      data: { labels: periodos, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -1361,14 +1385,14 @@ const Comparador2 = {
   rebalData: null,
 
   simularRebalanceamento() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
     // Ler configurações
-    const anoInicio = parseInt(document.getElementById('comp2RebalAnoInicio')?.value) || 2015;
-    const anoFim = parseInt(document.getElementById('comp2RebalAnoFim')?.value) || 2025;
+    const periodoInicio = document.getElementById('comp2RebalPeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2RebalPeriodoFim')?.value || '2024-12';
     const valorStr = document.getElementById('comp2RebalValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
     const tolerancia = this.parsePercentage(document.getElementById('comp2Tolerancia')?.value) || 10;
@@ -1405,8 +1429,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     if (dadosFiltrados.length === 0) {
       alert('Não há dados suficientes para o período selecionado.');

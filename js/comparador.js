@@ -56,8 +56,13 @@ const Comparador = {
 
   async loadData() {
     try {
+      // Carregar dados anuais
       const response = await fetch('../data/historico-investimentos.json');
       this.dados = await response.json();
+
+      // Carregar dados mensais
+      const responseMensal = await fetch('../data/historico-mensal.json');
+      this.dadosMensais = await responseMensal.json();
     } catch (error) {
       console.error('Erro ao carregar dados:', error);
     }

@@ -1115,6 +1115,7 @@ const Comparador2 = {
     this.renderRebalComparison(resultadoComRebal, resultadoSemRebal);
     this.renderRebalChart();
     this.renderRebalMetricas(resultadoComRebal, resultadoSemRebal, alocacaoConfig);
+    this.renderHistoricoSemestral(resultadoComRebal);
     this.renderRebalConclusoes(resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig);
 
     // Bind toggle buttons
@@ -1160,6 +1161,9 @@ const Comparador2 = {
       valorReal: valorInicial
     }];
 
+    // Histórico detalhado para tabela
+    const historico = [];
+
     let totalRebalanceamentos = 0;
     const retornosSemestrais = [];
     let precoMercado = {};
@@ -1171,6 +1175,7 @@ const Comparador2 = {
         const periodoLabel = `${dadoAno.ano} S${sem}`;
         let rebalanceou = false;
         let impostoPeriodo = 0;
+        const movimentacoes = [];
 
         // Valor antes do retorno
         let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
@@ -1224,12 +1229,25 @@ const Comparador2 = {
                 // VENDA - calcular ganho de capital e imposto
                 const lucroVenda = Math.abs(diferenca) - (Math.abs(diferenca) / precoMercado[ativo]) * precoMedio[ativo];
                 const taxaIR = Comparador.taxasIR?.[ativo] || 0.15;
+                let impostoVenda = 0;
                 if (lucroVenda > 0) {
-                  impostoPeriodo += lucroVenda * taxaIR;
-                  totalImpostosPagos += lucroVenda * taxaIR;
+                  impostoVenda = lucroVenda * taxaIR;
+                  impostoPeriodo += impostoVenda;
+                  totalImpostosPagos += impostoVenda;
                 }
                 const proporcaoVendida = Math.abs(diferenca) / valorAtual;
                 custoTotal[ativo] *= (1 - proporcaoVendida);
+
+                movimentacoes.push({
+                  ativo,
+                  tipo: 'venda',
+                  valor: Math.abs(diferenca),
+                  de: alocacoesAtuais[ativo].toFixed(1),
+                  para: config[ativo].alocacao.toFixed(1),
+                  lucro: lucroVenda,
+                  imposto: impostoVenda
+                });
+
                 carteira[ativo] = valorAtual - Math.abs(diferenca);
               } else {
                 // COMPRA - atualizar preço médio
@@ -1237,6 +1255,15 @@ const Comparador2 = {
                 const qtdAtual = carteira[ativo] / precoMercado[ativo];
                 custoTotal[ativo] += diferenca;
                 precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
+
+                movimentacoes.push({
+                  ativo,
+                  tipo: 'compra',
+                  valor: diferenca,
+                  de: alocacoesAtuais[ativo].toFixed(1),
+                  para: config[ativo].alocacao.toFixed(1)
+                });
+
                 carteira[ativo] = valorAtual + diferenca;
               }
             }
@@ -1250,6 +1277,12 @@ const Comparador2 = {
           }
         }
 
+        // Recalcular alocações finais do período
+        const alocacoesFinais = {};
+        ativos.forEach(ativo => {
+          alocacoesFinais[ativo] = (carteira[ativo] / valorTotal) * 100;
+        });
+
         evolucao.push({
           periodo: periodoLabel,
           ano: dadoAno.ano,
@@ -1257,6 +1290,19 @@ const Comparador2 = {
           valor: valorTotal,
           valorReal: valorTotal / inflacaoAcumulada,
           rebalanceou
+        });
+
+        // Adicionar ao histórico detalhado
+        historico.push({
+          periodo: periodoLabel,
+          ano: dadoAno.ano,
+          semestre: sem,
+          valor: valorTotal,
+          valorReal: valorTotal / inflacaoAcumulada,
+          alocacoes: { ...alocacoesFinais },
+          rebalanceou,
+          movimentacoes,
+          impostosPagos: impostoPeriodo
         });
       }
     });
@@ -1287,7 +1333,7 @@ const Comparador2 = {
     valorLiquido -= impostoVendaTotal;
 
     return {
-      evolucao, valorInicial, valorFinal, valorReal, valorLiquido, impostoVendaTotal,
+      evolucao, historico, valorInicial, valorFinal, valorReal, valorLiquido, impostoVendaTotal,
       totalImpostosPagos, retornoNominal, retornoReal, volatilidade, maxDrawdown,
       sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0,
       totalRebalanceamentos, inflacaoAcumulada: (inflacaoAcumulada - 1) * 100
@@ -1635,6 +1681,101 @@ const Comparador2 = {
     });
 
     container.innerHTML = html;
+  },
+
+  renderHistoricoSemestral(resultado) {
+    const thead = document.querySelector('#comp2RebalHistorico thead');
+    const tbody = document.querySelector('#comp2RebalHistorico tbody');
+    if (!thead || !tbody) return;
+
+    // Obter lista de ativos do primeiro registro com alocações
+    const primeiroComAlocacoes = resultado.historico.find(h => h.alocacoes && Object.keys(h.alocacoes).length > 0);
+    const ativos = primeiroComAlocacoes ? Object.keys(primeiroComAlocacoes.alocacoes) : [];
+
+    // Criar cabeçalho com colunas para cada ativo
+    let theadHtml = `
+      <tr>
+        <th>Período</th>
+        <th>Patrimônio</th>
+        <th>Variação</th>`;
+
+    // Adicionar coluna para cada ativo selecionado
+    ativos.forEach(ativo => {
+      const cor = Comparador.chartColors[ativo] || '#888';
+      const nome = Comparador.assetNames[ativo] || ativo;
+      theadHtml += `<th style="white-space: nowrap;">
+        <span style="display: inline-block; width: 8px; height: 8px; border-radius: 50%; background: ${cor}; margin-right: 4px;"></span>
+        ${nome}
+      </th>`;
+    });
+
+    theadHtml += `<th>Movimentações</th></tr>`;
+    thead.innerHTML = theadHtml;
+
+    let html = '';
+    resultado.historico.forEach((h, i) => {
+      const variacaoPercent = i > 0
+        ? ((h.valor / resultado.historico[i-1].valor) - 1) * 100
+        : 0;
+
+      let movimentacoesTexto = '-';
+      if (h.movimentacoes && h.movimentacoes.length > 0) {
+        movimentacoesTexto = h.movimentacoes.map(m => {
+          const icon = m.tipo === 'compra' ? '🟢' : '🔴';
+          const valorFormatado = this.formatCurrency(m.valor);
+
+          let detalhe = `${icon} ${Comparador.assetNames[m.ativo]}: ${m.de}% → ${m.para}% (${valorFormatado})`;
+
+          // Mostrar lucro e imposto para vendas
+          if (m.tipo === 'venda' && m.lucro !== undefined) {
+            if (m.lucro > 0) {
+              detalhe += `<br><small style="color: var(--text-muted)">Lucro: ${this.formatCurrency(m.lucro)} | IR: ${this.formatCurrency(m.imposto)}</small>`;
+            }
+          }
+
+          return detalhe;
+        }).join('<br>');
+
+        // Mostrar total de imposto do período se houver
+        if (h.impostosPagos > 0) {
+          movimentacoesTexto += `<br><strong style="color: var(--danger)">IR pago: ${this.formatCurrency(h.impostosPagos)}</strong>`;
+        }
+      }
+
+      // Linha da tabela
+      html += `
+        <tr class="${h.rebalanceou ? 'row-rebalanceou' : ''}">
+          <td>${h.periodo}</td>
+          <td>${this.formatCurrency(h.valor)}</td>
+          <td class="${variacaoPercent >= 0 ? 'text-green' : 'text-red'}">
+            ${variacaoPercent >= 0 ? '+' : ''}${variacaoPercent.toFixed(2)}%
+          </td>`;
+
+      // Adicionar célula para cada ativo com sua alocação atual
+      ativos.forEach(ativo => {
+        const alocacao = h.alocacoes ? h.alocacoes[ativo] : null;
+        if (alocacao !== null && alocacao !== undefined) {
+          const cor = Comparador.chartColors[ativo] || '#888';
+          // Criar mini barra de progresso visual
+          const larguraBarra = Math.min(alocacao, 100);
+          html += `<td style="white-space: nowrap;">
+            <div style="display: flex; align-items: center; gap: 6px;">
+              <div style="flex: 1; min-width: 40px; max-width: 60px; height: 6px; background: var(--bg-tertiary); border-radius: 3px; overflow: hidden;">
+                <div style="width: ${larguraBarra}%; height: 100%; background: ${cor}; border-radius: 3px;"></div>
+              </div>
+              <span style="font-weight: 500; font-size: 0.85rem;">${alocacao.toFixed(1)}%</span>
+            </div>
+          </td>`;
+        } else {
+          html += `<td style="color: var(--text-muted);">-</td>`;
+        }
+      });
+
+      html += `<td style="font-size: 0.8rem">${movimentacoesTexto}</td>
+        </tr>`;
+    });
+
+    tbody.innerHTML = html;
   },
 
   // ==========================================

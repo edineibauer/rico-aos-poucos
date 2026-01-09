@@ -138,6 +138,23 @@
                   </div>
                 </div>
               </div>
+              <div class="comp2-config-row comp2-adjustments">
+                <div class="comp2-field">
+                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="number" id="comp2DolarExtra" value="0" min="0" max="20" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="comp2-field">
+                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
+                  <div class="comp2-input-group">
+                    <span>IPCA+</span>
+                    <input type="number" id="comp2RendaMaisTaxa" value="6" min="3" max="12" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
 
               <!-- Asset chips -->
               <div class="comp2-assets">
@@ -158,6 +175,9 @@
                 </button>
                 <button class="comp2-chip" data-asset="tesouro_ipca">
                   <span class="chip-dot" style="background:#06b6d4"></span>IPCA+
+                </button>
+                <button class="comp2-chip" data-asset="renda_mais">
+                  <span class="chip-dot" style="background:#7c3aed"></span>Renda+ 2065
                 </button>
                 <button class="comp2-chip" data-asset="sp500_brl">
                   <span class="chip-dot" style="background:#ef4444"></span>S&P 500
@@ -304,6 +324,23 @@
                   <label>Inflação (a.a.) <a href="/artigos/inflacao-o-imposto-invisivel-2026.html" class="comp2-info-link" title="Entenda como a inflação afeta seus investimentos">?</a></label>
                   <div class="comp2-input-group">
                     <input type="number" id="comp2DueloInflacao" value="6" min="0" max="30" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
+              <div class="comp2-config-row comp2-adjustments">
+                <div class="comp2-field">
+                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="number" id="comp2DueloDolarExtra" value="0" min="0" max="20" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="comp2-field">
+                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
+                  <div class="comp2-input-group">
+                    <span>IPCA+</span>
+                    <input type="number" id="comp2DueloRendaMaisTaxa" value="6" min="3" max="12" step="0.5">
                     <span>%</span>
                   </div>
                 </div>
@@ -479,6 +516,23 @@
                   </div>
                 </div>
               </div>
+              <div class="comp2-config-row comp2-adjustments">
+                <div class="comp2-field">
+                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="number" id="comp2CarteiraDolarExtra" value="0" min="0" max="20" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="comp2-field">
+                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
+                  <div class="comp2-input-group">
+                    <span>IPCA+</span>
+                    <input type="number" id="comp2CarteiraRendaMaisTaxa" value="6" min="3" max="12" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
 
               <!-- Presets -->
               <div class="comp2-presets">
@@ -545,6 +599,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="tesouro_ipca">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#7c3aed"></span>
+                    <span class="alloc-name">Renda+ 2065</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="renda_mais">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -660,6 +722,23 @@
                   </div>
                 </div>
               </div>
+              <div class="comp2-config-row comp2-adjustments">
+                <div class="comp2-field">
+                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="number" id="comp2RebalDolarExtra" value="0" min="0" max="20" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="comp2-field">
+                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
+                  <div class="comp2-input-group">
+                    <span>IPCA+</span>
+                    <input type="number" id="comp2RebalRendaMaisTaxa" value="6" min="3" max="12" step="0.5">
+                    <span>%</span>
+                  </div>
+                </div>
+              </div>
               <p class="comp2-hint">Rebalanceia quando desviar além da tolerância definida.</p>
 
               <!-- Presets -->
@@ -719,6 +798,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="tesouro_ipca">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#7c3aed"></span>
+                    <span class="alloc-name">Renda+ 2065</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="renda_mais">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">

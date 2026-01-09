@@ -106,6 +106,39 @@
   flex-wrap: wrap;
 }
 
+/* Adjustment Fields Row */
+.comp2-config-row.comp2-adjustments {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--border-color);
+}
+
+.comp2-config-row.comp2-adjustments .comp2-field label {
+  color: var(--accent-purple, #a78bfa);
+}
+
+/* Tooltip Icon */
+.comp2-tooltip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--bg-tertiary);
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  cursor: help;
+  text-decoration: none;
+  vertical-align: middle;
+  margin-left: 4px;
+}
+
+.comp2-tooltip:hover {
+  background: var(--primary-light);
+  color: var(--bg-primary);
+}
+
 .comp2-field {
   display: flex;
   flex-direction: column;
@@ -1191,6 +1224,19 @@
     flex-direction: column;
     align-items: stretch;
     gap: 12px;
+  }
+
+  /* Keep adjustment fields in a row on mobile when there are only 2 fields */
+  .comp2-config-row.comp2-adjustments {
+    flex-direction: row;
+    gap: 8px;
+    padding-top: 10px;
+    margin-top: 10px;
+  }
+
+  .comp2-config-row.comp2-adjustments .comp2-field {
+    flex: 1;
+    min-width: 0;
   }
 
   .comp2-field {

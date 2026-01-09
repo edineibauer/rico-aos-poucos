@@ -300,7 +300,8 @@ const Comparador2 = {
       return;
     }
 
-    const periodo = parseInt(document.getElementById('comp2Periodo')?.value || 10);
+    const anoInicio = parseInt(document.getElementById('comp2AnoInicio')?.value || 2015);
+    const anoFim = parseInt(document.getElementById('comp2AnoFim')?.value || 2025);
     const valorStr = document.getElementById('comp2Valor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
@@ -315,10 +316,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período
-    const anoAtual = new Date().getFullYear();
-    const anoInicio = anoAtual - periodo;
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano > anoInicio && d.ano <= anoAtual);
+    // Filtrar dados pelo período selecionado
+    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
 
     if (dadosFiltrados.length === 0) {
       alert('Não há dados suficientes para o período selecionado.');
@@ -894,7 +893,8 @@ const Comparador2 = {
       return;
     }
 
-    const periodo = parseInt(document.getElementById('comp2CarteiraPeriodo')?.value || 10);
+    const anoInicio = parseInt(document.getElementById('comp2CarteiraAnoInicio')?.value || 2015);
+    const anoFim = parseInt(document.getElementById('comp2CarteiraAnoFim')?.value || 2025);
     const valorStr = document.getElementById('comp2CarteiraValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
@@ -919,10 +919,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados
-    const anoAtual = new Date().getFullYear();
-    const anoInicio = anoAtual - periodo;
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano > anoInicio && d.ano <= anoAtual);
+    // Filtrar dados pelo período selecionado
+    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
 
     // Calcular evolução da carteira e ativos individuais
     // Todos começam do mesmo valor inicial para comparação justa no gráfico

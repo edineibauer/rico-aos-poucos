@@ -797,7 +797,7 @@ const Comparador2 = {
     const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, 0, dolarExtra, rendaMaisTaxa);
 
     // Armazenar para toggle
-    this.dueloResultados = { config, resultado1, resultado2, valorInicial, anoInicio, anoFim, dadosPeriodo };
+    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo };
 
     // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);

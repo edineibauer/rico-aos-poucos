@@ -5147,6 +5147,14 @@ body.home-page {
   color: var(--success-color);
 }
 
+.result-detail .detail-value.positive {
+  color: var(--success-color, #22c55e);
+}
+
+.result-detail .detail-value.negative {
+  color: var(--error-color, #ef4444);
+}
+
 /* Projection Table */
 .result-projection {
   margin-top: 20px;
@@ -5292,6 +5300,213 @@ body.home-page {
 
   .margin-item:last-child {
     border-bottom: none;
+  }
+}
+
+/* Portfolio Mode Styles */
+.calc-portfolio-intro {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  border-left: 3px solid var(--primary-light);
+}
+
+.calc-portfolio-intro h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.calc-portfolio-intro p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.calc-allocation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.calc-allocation .alloc-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calc-allocation .alloc-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calc-allocation .alloc-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.calc-allocation .alloc-name {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.calc-allocation .alloc-pct {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 40px;
+  text-align: right;
+}
+
+.calc-allocation input[type="range"] {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  outline: none;
+}
+
+.calc-allocation input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.calc-allocation input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.calc-allocation input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  cursor: pointer;
+  border: none;
+}
+
+.calc-allocation .alloc-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+.calc-allocation .alloc-total span:first-child {
+  color: var(--text-secondary);
+}
+
+/* Portfolio Result Metrics */
+.result-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin: 16px 0;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric-value.positive {
+  color: var(--success-color, #22c55e);
+}
+
+.metric-value.negative {
+  color: var(--error-color, #ef4444);
+}
+
+/* Portfolio Projection Table */
+.portfolio-projection .projection-header,
+.portfolio-projection .projection-row {
+  grid-template-columns: 80px 1fr 1fr 80px;
+}
+
+.projection-row .return-col {
+  text-align: right;
+  font-weight: 500;
+}
+
+.projection-row .return-col.positive {
+  color: var(--success-color, #22c55e);
+}
+
+.projection-row .return-col.negative {
+  color: var(--error-color, #ef4444);
+}
+
+.projection-row.final-row {
+  background: rgba(88, 166, 255, 0.1);
+  border-top: 2px solid var(--primary-light);
+  font-weight: 600;
+}
+
+.calc-loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .result-metrics {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .metric-item {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .metric-item:last-child {
+    border-bottom: none;
+  }
+
+  .portfolio-projection .projection-header,
+  .portfolio-projection .projection-row {
+    grid-template-columns: 70px 1fr 1fr 60px;
+    font-size: 0.8rem;
   }
 }
 

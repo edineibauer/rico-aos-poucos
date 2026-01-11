@@ -480,11 +480,9 @@ const Comparador2 = {
       // Aba Duelo
       'comp2DueloDolarExtra',
       'comp2DueloRendaMaisTaxa',
-      'comp2DueloInflacao',
       // Aba Carteira
       'comp2CarteiraDolarExtra',
       'comp2CarteiraRendaMaisTaxa',
-      'comp2CarteiraInflacao',
       // Aba Rebalancear
       'comp2RebalDolarExtra',
       'comp2RebalRendaMaisTaxa',

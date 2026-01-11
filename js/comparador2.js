@@ -802,7 +802,7 @@ const Comparador2 = {
     // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);
     this.renderChartDuelo();
-    this.renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo);
+    this.renderTabelaDuelo(config, resultado1, resultado2);
     this.renderMetricasDuelo(config, resultado1, resultado2);
     this.renderConclusaoDuelo(config, resultado1, resultado2);
   },
@@ -848,6 +848,43 @@ const Comparador2 = {
     const mediaMensal = retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length;
     const volatilidade = this.calcularVolatilidade(retornosMensais);
 
+    // Agregar retornos por ano para a tabela
+    const retornosPorAno = {};
+    dados.forEach((d, i) => {
+      const ano = d.ano;
+      if (!retornosPorAno[ano]) {
+        retornosPorAno[ano] = { retornos: [], inflacoes: [] };
+      }
+      retornosPorAno[ano].retornos.push(retornosMensais[i]);
+      retornosPorAno[ano].inflacoes.push(d.inflacao_ipca || 0);
+    });
+
+    // Calcular retorno anual composto
+    const anosDisponiveis = Object.keys(retornosPorAno).map(Number).sort((a, b) => a - b);
+    const retornosAnuais = anosDisponiveis.map(ano => {
+      const retornosDoAno = retornosPorAno[ano].retornos;
+      // Retorno composto do ano
+      let retornoComposto = 1;
+      retornosDoAno.forEach(r => {
+        retornoComposto *= (1 + r / 100);
+      });
+      return (retornoComposto - 1) * 100;
+    });
+
+    const inflacaoAnual = anosDisponiveis.map(ano => {
+      const inflacoesDoAno = retornosPorAno[ano].inflacoes;
+      let inflacaoComposta = 1;
+      inflacoesDoAno.forEach(i => {
+        inflacaoComposta *= (1 + i / 100);
+      });
+      return (inflacaoComposta - 1) * 100;
+    });
+
+    const anosPositivos = retornosAnuais.filter(r => r > 0).length;
+    const mediaAnual = retornosAnuais.length > 0
+      ? retornosAnuais.reduce((a, b) => a + b, 0) / retornosAnuais.length
+      : 0;
+
     return {
       evolucao,
       valorFinalNominal: valorNominal,
@@ -855,11 +892,17 @@ const Comparador2 = {
       retornoNominal,
       retornoReal,
       mediaMensal,
+      mediaAnual,
       volatilidade,
       maxDrawdown,
       mesesPositivos,
       totalMeses: dados.length,
-      retornosMensais
+      retornosMensais,
+      retornosAnuais,
+      inflacaoAnual,
+      anosDisponiveis,
+      anosPositivos,
+      totalAnos: anosDisponiveis.length
     };
   },
 
@@ -906,7 +949,7 @@ const Comparador2 = {
     `;
   },
 
-  renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo) {
+  renderTabelaDuelo(config, resultado1, resultado2) {
     const tabela = document.getElementById('comp2DueloTabela');
     if (!tabela) return;
 
@@ -924,22 +967,23 @@ const Comparador2 = {
     `;
 
     let html = '';
-    dadosPeriodo.forEach((d, i) => {
+    resultado1.anosDisponiveis.forEach((ano, i) => {
       const retorno1 = resultado1.retornosAnuais[i];
       const retorno2 = resultado2.retornosAnuais[i];
+      const inflacao = resultado1.inflacaoAnual[i];
       const vencedorAno = retorno1 > retorno2 ? config.ativo1.nome :
                          retorno2 > retorno1 ? config.ativo2.nome : 'Empate';
 
       html += `
         <tr>
-          <td>${d.ano}</td>
+          <td>${ano}</td>
           <td class="${retorno1 >= 0 ? 'text-green' : 'text-red'}">
             ${this.formatPercent(retorno1)}
           </td>
           <td class="${retorno2 >= 0 ? 'text-green' : 'text-red'}">
             ${this.formatPercent(retorno2)}
           </td>
-          <td>${this.formatPercent(d.inflacao_ipca)}</td>
+          <td>${this.formatPercent(inflacao)}</td>
           <td><strong>${vencedorAno}</strong></td>
         </tr>
       `;
@@ -1066,7 +1110,8 @@ const Comparador2 = {
       this.charts.duelo.destroy();
     }
 
-    const anos = [dadosPeriodo[0].ano - 1, ...dadosPeriodo.map(d => d.ano)];
+    // Usar labels dos períodos da evolução
+    const periodos = resultado1.evolucao.map(e => e.periodo);
     const view = this.dueloViewReal ? 'real' : 'nominal';
 
     this.charts.duelo = new Chart(canvas, {

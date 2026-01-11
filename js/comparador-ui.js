@@ -145,6 +145,33 @@ const Comparador2 = {
       // Apply allocation
       this.applyAllocation(savedAllocation, containerId, totalElId);
 
+      // Apply extra yield fields
+      const rawPortfolio = this.getRawPortfolio();
+      if (rawPortfolio) {
+        // Determine field IDs based on tab
+        const isRebalTab = containerId === 'comp2RebalAllocation';
+        const dolarExtraId = isRebalTab ? 'comp2RebalDolarExtra' : 'comp2CarteiraDolarExtra';
+        const rendaMaisTaxaId = isRebalTab ? 'comp2RebalRendaMaisTaxa' : 'comp2CarteiraRendaMaisTaxa';
+
+        // Fill Dólar extra yield
+        const dolarExtraInput = document.getElementById(dolarExtraId);
+        if (dolarExtraInput && rawPortfolio.dolar_extra) {
+          dolarExtraInput.value = rawPortfolio.dolar_extra.toLocaleString('pt-BR', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+
+        // Fill Renda+ taxa (IPCA+ extra yield)
+        const rendaMaisTaxaInput = document.getElementById(rendaMaisTaxaId);
+        if (rendaMaisTaxaInput && rawPortfolio.ipca_extra) {
+          rendaMaisTaxaInput.value = rawPortfolio.ipca_extra.toLocaleString('pt-BR', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+      }
+
       // Activate "Minha Carteira" button
       const presetsContainer = document.querySelector(presetsSelector);
       if (presetsContainer) {
@@ -152,6 +179,16 @@ const Comparador2 = {
         const myPortfolioBtn = presetsContainer.querySelector('[data-preset="myportfolio"]');
         if (myPortfolioBtn) myPortfolioBtn.classList.add('active');
       }
+    }
+  },
+
+  // Get raw portfolio from localStorage (including extra yield values)
+  getRawPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
     }
   },
 
@@ -325,6 +362,30 @@ const Comparador2 = {
       const savedAllocation = this.getSavedPortfolio();
       if (savedAllocation && Object.keys(savedAllocation).length > 0) {
         this.applyAllocation(savedAllocation, containerId, totalElId);
+
+        // Also apply extra yield fields
+        const rawPortfolio = this.getRawPortfolio();
+        if (rawPortfolio) {
+          const isRebalTab = containerId === 'comp2RebalAllocation';
+          const dolarExtraId = isRebalTab ? 'comp2RebalDolarExtra' : 'comp2CarteiraDolarExtra';
+          const rendaMaisTaxaId = isRebalTab ? 'comp2RebalRendaMaisTaxa' : 'comp2CarteiraRendaMaisTaxa';
+
+          const dolarExtraInput = document.getElementById(dolarExtraId);
+          if (dolarExtraInput && rawPortfolio.dolar_extra) {
+            dolarExtraInput.value = rawPortfolio.dolar_extra.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            });
+          }
+
+          const rendaMaisTaxaInput = document.getElementById(rendaMaisTaxaId);
+          if (rendaMaisTaxaInput && rawPortfolio.ipca_extra) {
+            rendaMaisTaxaInput.value = rawPortfolio.ipca_extra.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            });
+          }
+        }
       } else {
         // No portfolio saved - open portfolio modal if available
         if (typeof window.openPortfolioModal === 'function') {

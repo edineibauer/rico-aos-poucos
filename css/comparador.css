@@ -680,6 +680,23 @@
   color: var(--text-primary);
 }
 
+/* Minha Carteira preset button */
+.comp2-preset-myportfolio {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: var(--text-secondary);
+}
+
+.comp2-preset-myportfolio:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.comp2-preset-myportfolio.active {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.6);
+  color: var(--text-primary);
+}
+
 /* Allocation Sliders */
 .comp2-allocation {
   display: grid;

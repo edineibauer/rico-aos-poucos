@@ -62,7 +62,20 @@ const Comparador2 = {
     this.bindToggleButtons();
     this.applyPercentageMasks();
     this.applyCurrencyMasks();
+    this.bindPortfolioEvents();
     this.waitForData();
+  },
+
+  // Listen for portfolio updates from the user menu
+  bindPortfolioEvents() {
+    window.addEventListener('portfolioUpdated', () => {
+      // If Carteira tab is active, reload portfolio
+      if (this.currentTab === 'carteira') {
+        this.loadSavedPortfolioToTab('comp2Allocation', 'allocTotal');
+      } else if (this.currentTab === 'rebalancear') {
+        this.loadSavedPortfolioToTab('comp2RebalAllocation', 'comp2RebalTotal', '#comp2RebalPresets');
+      }
+    });
   },
 
   // Função auxiliar para parsear período (YYYY-MM) para objeto {ano, mes}
@@ -114,8 +127,32 @@ const Comparador2 = {
         const tabEl = document.getElementById(`comp2-${tab}`);
         if (tabEl) tabEl.classList.add('active');
         this.currentTab = tab;
+
+        // Auto-load saved portfolio when clicking on Carteira or Rebalancear tabs
+        if (tab === 'carteira' && this.hasSavedPortfolio()) {
+          this.loadSavedPortfolioToTab('comp2Allocation', 'allocTotal');
+        } else if (tab === 'rebalancear' && this.hasSavedPortfolio()) {
+          this.loadSavedPortfolioToTab('comp2RebalAllocation', 'comp2RebalTotal', '#comp2RebalPresets');
+        }
       });
     });
+  },
+
+  // Load saved portfolio and activate "Minha Carteira" button
+  loadSavedPortfolioToTab(containerId, totalElId, presetsSelector = '.comp2-presets:not(#comp2RebalPresets)') {
+    const savedAllocation = this.getSavedPortfolio();
+    if (savedAllocation && Object.keys(savedAllocation).length > 0) {
+      // Apply allocation
+      this.applyAllocation(savedAllocation, containerId, totalElId);
+
+      // Activate "Minha Carteira" button
+      const presetsContainer = document.querySelector(presetsSelector);
+      if (presetsContainer) {
+        presetsContainer.querySelectorAll('.comp2-preset').forEach(b => b.classList.remove('active'));
+        const myPortfolioBtn = presetsContainer.querySelector('[data-preset="myportfolio"]');
+        if (myPortfolioBtn) myPortfolioBtn.classList.add('active');
+      }
+    }
   },
 
   bindAssetChips() {
@@ -232,7 +269,73 @@ const Comparador2 = {
     });
   },
 
+  // Asset name mapping from portfolio modal to comparador
+  portfolioToComparadorMap: {
+    dolar: 'dolar',
+    caixa: 'cdi',
+    tlt: 'tlt_brl',
+    imoveis: 'imoveis_fipezap',
+    fiis: 'fii_ifix',
+    ipca: 'renda_mais',
+    ibov: 'ibovespa',
+    ouro: 'ouro',
+    sp500: 'sp500_brl',
+    bitcoin: 'bitcoin_brl'
+  },
+
+  // Get saved portfolio from localStorage and convert to comparador format
+  getSavedPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      if (!saved) return null;
+
+      const portfolio = JSON.parse(saved);
+      const comparadorAllocation = {};
+
+      Object.entries(portfolio).forEach(([key, value]) => {
+        // Skip extra yield keys (like dolar_extra)
+        if (key.endsWith('_extra')) return;
+
+        const comparadorKey = this.portfolioToComparadorMap[key];
+        if (comparadorKey && value > 0) {
+          comparadorAllocation[comparadorKey] = value;
+        }
+      });
+
+      return comparadorAllocation;
+    } catch (e) {
+      console.error('Erro ao carregar carteira:', e);
+      return null;
+    }
+  },
+
+  // Check if user has saved portfolio
+  hasSavedPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      return saved !== null && saved !== '{}';
+    } catch (e) {
+      return false;
+    }
+  },
+
   applyPreset(preset, containerId = 'comp2Allocation', totalElId = 'allocTotal') {
+    // Handle 'myportfolio' preset
+    if (preset === 'myportfolio') {
+      const savedAllocation = this.getSavedPortfolio();
+      if (savedAllocation && Object.keys(savedAllocation).length > 0) {
+        this.applyAllocation(savedAllocation, containerId, totalElId);
+      } else {
+        // No portfolio saved - open portfolio modal if available
+        if (typeof window.openPortfolioModal === 'function') {
+          window.openPortfolioModal();
+        } else {
+          alert('Nenhuma carteira salva. Configure sua carteira no menu do usuário.');
+        }
+      }
+      return;
+    }
+
     const presets = {
       '5050': { ibovespa: 50, cdi: 50 },
       '3ativos': { ibovespa: 33, cdi: 33, dolar: 34 },
@@ -242,6 +345,11 @@ const Comparador2 = {
     const allocation = presets[preset];
     if (!allocation) return;
 
+    this.applyAllocation(allocation, containerId, totalElId);
+  },
+
+  // Apply allocation to sliders
+  applyAllocation(allocation, containerId = 'comp2Allocation', totalElId = 'allocTotal') {
     document.querySelectorAll(`#${containerId} input[type="range"]`).forEach(slider => {
       const asset = slider.dataset.asset;
       const value = allocation[asset] || 0;

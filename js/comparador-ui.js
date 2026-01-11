@@ -1970,7 +1970,10 @@ const Comparador2 = {
         const atual = alocacoesAtuais[ativo];
         const desejada = config[ativo].alocacao;
         const tolerancia = config[ativo].tolerancia;
-        return Math.abs(atual - desejada) > tolerancia;
+        // Tolerância relativa: se alocação alvo é 5% e tolerância é 50%,
+        // rebalanceia quando cair abaixo de 2.5% ou subir acima de 7.5%
+        const desvioRelativo = Math.abs(atual - desejada) / desejada * 100;
+        return desvioRelativo > tolerancia;
       });
 
       // Executar rebalanceamento se necessário

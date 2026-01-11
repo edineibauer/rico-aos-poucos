@@ -1063,6 +1063,299 @@ body.home-page {
 }
 
 /* ==========================================
+   Header Actions (User Menu + Lang Selector)
+   ========================================== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* User Menu */
+.user-menu-container {
+  position: relative;
+}
+
+.user-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-light);
+}
+
+.user-menu-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.user-menu-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.user-menu-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.user-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.user-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.user-menu-item svg {
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   Portfolio Modal
+   ========================================== */
+.portfolio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-modal-content {
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-modal.active .portfolio-modal-content {
+  transform: scale(1);
+}
+
+.portfolio-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.portfolio-modal-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.portfolio-modal-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.portfolio-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.portfolio-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.portfolio-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.portfolio-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.portfolio-slider-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  align-items: center;
+  gap: 12px;
+}
+
+.portfolio-slider-label {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.portfolio-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  outline: none;
+}
+
+.portfolio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.portfolio-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.portfolio-slider-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+.portfolio-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.portfolio-total-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.portfolio-total-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.portfolio-total-value.valid {
+  color: var(--bullish);
+}
+
+.portfolio-total-value.invalid {
+  color: var(--bearish);
+}
+
+.portfolio-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+.portfolio-btn-primary,
+.portfolio-btn-secondary {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portfolio-btn-primary {
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+}
+
+.portfolio-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.portfolio-btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.portfolio-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-muted);
+}
+
+/* ==========================================
    Language Selector
    ========================================== */
 
@@ -4946,6 +5239,92 @@ body.home-page {
 
 .calc-info-link:hover {
   text-decoration: underline;
+}
+
+/* Return Type Toggle */
+.return-type-field {
+  margin-bottom: 20px;
+}
+
+.return-type-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.return-type-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.return-type-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--text-muted);
+}
+
+.return-type-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.return-input-container {
+  min-height: 46px;
+}
+
+.portfolio-return-display {
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.portfolio-configured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.portfolio-mini-summary {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.portfolio-edit-btn,
+.portfolio-setup-btn {
+  padding: 6px 12px;
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.portfolio-edit-btn:hover,
+.portfolio-setup-btn:hover {
+  opacity: 0.9;
+}
+
+.portfolio-setup-btn {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.9rem;
 }
 
 .input-group {

@@ -75,35 +75,13 @@ const Calculadora = {
       fiMarginTime: 'Tempo necessário',
       fiNeverReach: 'Com os parâmetros atuais, a independência financeira não será atingida em 50 anos. Aumente o aporte ou reduza a renda desejada.',
       perMonth: '/mês',
-      // Mode 5 - Historical Portfolio
-      mode5Title: 'Carteira Histórica',
-      mode5Desc: 'Simule com retornos reais do passado',
-      portfolioTitle: 'Monte sua Carteira',
-      portfolioDesc: 'Defina a alocação de cada ativo (total deve ser 100%)',
-      periodLabel: 'Período histórico',
-      periodStart: 'Início',
-      periodEnd: 'Fim',
-      allocationTotal: 'Total',
-      portfolioSimulate: 'Simular Carteira',
-      portfolioResult: 'Resultado da Simulação Histórica',
-      portfolioNote: 'Simulação baseada em dados reais de {periodo}',
-      portfolioFinalNominal: 'Valor final (nominal)',
-      portfolioFinalReal: 'Valor final (real)',
-      portfolioTotalInvested: 'Total investido',
-      portfolioTotalReturn: 'Retorno total',
-      portfolioReturnReal: 'Retorno real',
-      portfolioMonthlyAvg: 'Retorno médio mensal',
-      portfolioVolatility: 'Volatilidade mensal',
-      portfolioMaxDrawdown: 'Máxima queda',
-      portfolioProjection: 'Evolução mês a mês',
-      portfolioMonth: 'Mês',
-      portfolioContribution: 'Aporte',
-      portfolioBalance: 'Saldo',
-      portfolioRealValue: 'Valor real',
-      portfolioReturn: 'Retorno',
-      portfolioLoadingData: 'Carregando dados históricos...',
-      portfolioNoData: 'Não há dados disponíveis para o período selecionado.',
-      portfolioInvalidAlloc: 'A alocação total deve ser 100%'
+      // Return type toggle
+      returnTypeFixed: 'Rentabilidade fixa',
+      returnTypePortfolio: 'Minha Carteira',
+      returnTypeLabel: 'Tipo de rentabilidade',
+      noPortfolioSet: 'Configure sua carteira',
+      portfolioSummary: 'Carteira configurada',
+      editPortfolio: 'Editar'
     },
     'en': {
       mode1Title: 'How much to invest monthly?',
@@ -164,35 +142,13 @@ const Calculadora = {
       fiMarginTime: 'Time needed',
       fiNeverReach: 'With current parameters, financial independence won\'t be reached in 50 years. Increase contribution or reduce desired income.',
       perMonth: '/month',
-      // Mode 5 - Historical Portfolio
-      mode5Title: 'Historical Portfolio',
-      mode5Desc: 'Simulate with real past returns',
-      portfolioTitle: 'Build Your Portfolio',
-      portfolioDesc: 'Set allocation for each asset (total must be 100%)',
-      periodLabel: 'Historical period',
-      periodStart: 'Start',
-      periodEnd: 'End',
-      allocationTotal: 'Total',
-      portfolioSimulate: 'Simulate Portfolio',
-      portfolioResult: 'Historical Simulation Result',
-      portfolioNote: 'Simulation based on real data from {periodo}',
-      portfolioFinalNominal: 'Final value (nominal)',
-      portfolioFinalReal: 'Final value (real)',
-      portfolioTotalInvested: 'Total invested',
-      portfolioTotalReturn: 'Total return',
-      portfolioReturnReal: 'Real return',
-      portfolioMonthlyAvg: 'Average monthly return',
-      portfolioVolatility: 'Monthly volatility',
-      portfolioMaxDrawdown: 'Maximum drawdown',
-      portfolioProjection: 'Month by month evolution',
-      portfolioMonth: 'Month',
-      portfolioContribution: 'Contribution',
-      portfolioBalance: 'Balance',
-      portfolioRealValue: 'Real value',
-      portfolioReturn: 'Return',
-      portfolioLoadingData: 'Loading historical data...',
-      portfolioNoData: 'No data available for the selected period.',
-      portfolioInvalidAlloc: 'Total allocation must be 100%'
+      // Return type toggle
+      returnTypeFixed: 'Fixed return',
+      returnTypePortfolio: 'My Portfolio',
+      returnTypeLabel: 'Return type',
+      noPortfolioSet: 'Set up your portfolio',
+      portfolioSummary: 'Portfolio configured',
+      editPortfolio: 'Edit'
     },
     'es': {
       mode1Title: '¿Cuánto invertir mensualmente?',
@@ -253,45 +209,85 @@ const Calculadora = {
       fiMarginTime: 'Tiempo necesario',
       fiNeverReach: 'Con los parámetros actuales, la independencia financiera no se alcanzará en 50 años. Aumente el aporte o reduzca el ingreso deseado.',
       perMonth: '/mes',
-      // Mode 5 - Historical Portfolio
-      mode5Title: 'Cartera Histórica',
-      mode5Desc: 'Simula con retornos reales del pasado',
-      portfolioTitle: 'Arma tu Cartera',
-      portfolioDesc: 'Define la asignación de cada activo (total debe ser 100%)',
-      periodLabel: 'Período histórico',
-      periodStart: 'Inicio',
-      periodEnd: 'Fin',
-      allocationTotal: 'Total',
-      portfolioSimulate: 'Simular Cartera',
-      portfolioResult: 'Resultado de Simulación Histórica',
-      portfolioNote: 'Simulación basada en datos reales de {periodo}',
-      portfolioFinalNominal: 'Valor final (nominal)',
-      portfolioFinalReal: 'Valor final (real)',
-      portfolioTotalInvested: 'Total invertido',
-      portfolioTotalReturn: 'Retorno total',
-      portfolioReturnReal: 'Retorno real',
-      portfolioMonthlyAvg: 'Retorno promedio mensual',
-      portfolioVolatility: 'Volatilidad mensual',
-      portfolioMaxDrawdown: 'Máxima caída',
-      portfolioProjection: 'Evolución mes a mes',
-      portfolioMonth: 'Mes',
-      portfolioContribution: 'Aporte',
-      portfolioBalance: 'Saldo',
-      portfolioRealValue: 'Valor real',
-      portfolioReturn: 'Retorno',
-      portfolioLoadingData: 'Cargando datos históricos...',
-      portfolioNoData: 'No hay datos disponibles para el período seleccionado.',
-      portfolioInvalidAlloc: 'La asignación total debe ser 100%'
+      // Return type toggle
+      returnTypeFixed: 'Rentabilidad fija',
+      returnTypePortfolio: 'Mi Cartera',
+      returnTypeLabel: 'Tipo de rentabilidad',
+      noPortfolioSet: 'Configura tu cartera',
+      portfolioSummary: 'Cartera configurada',
+      editPortfolio: 'Editar'
     }
   },
 
   currentLang: 'pt-BR',
   currentMode: 1, // 1 = aporte, 2 = montante, 3 = tempo
+  usePortfolio: false, // true = usar carteira, false = rentabilidade fixa
 
   init() {
     this.detectLanguage();
+    this.loadPortfolioPreference();
     this.renderCalculator();
     this.bindEvents();
+  },
+
+  loadPortfolioPreference() {
+    // Check if user has a saved portfolio
+    const portfolio = this.getPortfolio();
+    // Default to fixed return, but remember if user chose portfolio
+    const savedPref = localStorage.getItem('rico-calc-use-portfolio');
+    this.usePortfolio = savedPref === 'true' && portfolio !== null;
+  },
+
+  getPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
+  },
+
+  openPortfolioModal() {
+    // Trigger the portfolio modal from PageHeader
+    if (window.PageHeader && typeof window.PageHeader.openPortfolioModal === 'function') {
+      window.PageHeader.openPortfolioModal();
+    }
+  },
+
+  // Expected monthly returns by asset class (historical averages in %)
+  // These are approximate long-term averages for Brazilian investors
+  assetExpectedReturns: {
+    dolar: 0.8,      // USD appreciation + dollar yield
+    caixa: 0.9,      // CDI/Selic
+    tlt: 0.6,        // US Treasury bonds in BRL
+    imoveis: 0.7,    // Real estate
+    fiis: 0.8,       // REITs
+    ipca: 0.8,       // IPCA+ bonds
+    ibov: 1.0,       // Ibovespa
+    ouro: 0.7,       // Gold in BRL
+    sp500: 1.1,      // S&P 500 in BRL
+    bitcoin: 2.0     // Bitcoin (high volatility)
+  },
+
+  getPortfolioExpectedReturn() {
+    const portfolio = this.getPortfolio();
+    if (!portfolio) return this.defaults.rentabilidadeMensal;
+
+    let totalWeight = 0;
+    let weightedReturn = 0;
+
+    Object.entries(portfolio).forEach(([asset, pct]) => {
+      const expectedReturn = this.assetExpectedReturns[asset] || 0.8;
+      weightedReturn += (pct / 100) * expectedReturn;
+      totalWeight += pct;
+    });
+
+    // If portfolio doesn't sum to 100%, normalize
+    if (totalWeight > 0 && totalWeight !== 100) {
+      weightedReturn = (weightedReturn / totalWeight) * 100;
+    }
+
+    return weightedReturn || this.defaults.rentabilidadeMensal;
   },
 
   detectLanguage() {
@@ -332,9 +328,57 @@ const Calculadora = {
     }).format(value);
   },
 
-  formatPercent(value) {
-    const sign = value >= 0 ? '+' : '';
-    return `${sign}${value.toFixed(2)}%`;
+  renderReturnField() {
+    const d = this.defaults;
+    const portfolio = this.getPortfolio();
+    const hasPortfolio = portfolio !== null && Object.keys(portfolio).length > 0;
+
+    // Get portfolio summary if exists
+    let portfolioSummaryHtml = '';
+    if (hasPortfolio) {
+      const assets = Object.entries(portfolio)
+        .filter(([_, pct]) => pct > 0)
+        .map(([asset, pct]) => `${asset}: ${pct}%`)
+        .slice(0, 3);
+      const moreCount = Object.keys(portfolio).filter(k => portfolio[k] > 0).length - 3;
+      let summary = assets.join(', ');
+      if (moreCount > 0) summary += ` +${moreCount}`;
+      portfolioSummaryHtml = `<span class="portfolio-mini-summary">${summary}</span>`;
+    }
+
+    return `
+      <div class="calc-field return-type-field">
+        <label>${this.t('returnTypeLabel')}</label>
+        <div class="return-type-toggle">
+          <button type="button" class="return-type-btn ${!this.usePortfolio ? 'active' : ''}" data-type="fixed">
+            ${this.t('returnTypeFixed')}
+          </button>
+          <button type="button" class="return-type-btn ${this.usePortfolio ? 'active' : ''}" data-type="portfolio">
+            ${this.t('returnTypePortfolio')}
+          </button>
+        </div>
+
+        <div class="return-input-container" id="returnInputContainer">
+          ${!this.usePortfolio ? `
+            <div class="input-group">
+              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+          ` : `
+            <div class="portfolio-return-display" id="portfolioReturnDisplay">
+              ${hasPortfolio ? `
+                <div class="portfolio-configured">
+                  ${portfolioSummaryHtml}
+                  <button type="button" class="portfolio-edit-btn" id="editPortfolioBtn">${this.t('editPortfolio')}</button>
+                </div>
+              ` : `
+                <button type="button" class="portfolio-setup-btn" id="setupPortfolioBtn">${this.t('noPortfolioSet')}</button>
+              `}
+            </div>
+          `}
+        </div>
+      </div>
+    `;
   },
 
   // Máscara para campos monetários (formato brasileiro: 1.234,56)
@@ -495,13 +539,6 @@ const Calculadora = {
             <small>${this.t('mode4Desc')}</small>
           </span>
         </button>
-        <button class="calc-mode-btn" data-mode="5">
-          <span class="mode-icon">📊</span>
-          <span class="mode-text">
-            <strong>${this.t('mode5Title')}</strong>
-            <small>${this.t('mode5Desc')}</small>
-          </span>
-        </button>
       </div>
 
       <div class="calc-form" id="calcForm">
@@ -557,21 +594,13 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
@@ -604,21 +633,13 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
@@ -651,21 +672,13 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
@@ -698,141 +711,17 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
         <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
-      `;
-    } else {
-      // Modo 5: Carteira Histórica
-      return `
-        <div class="calc-portfolio-intro">
-          <h3>${this.t('portfolioTitle')}</h3>
-          <p>${this.t('portfolioDesc')}</p>
-        </div>
-
-        <div class="calc-field">
-          <label for="valorInicial">${this.t('initialLabel')}</label>
-          <div class="input-group">
-            <span class="input-prefix">R$</span>
-            <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
-          </div>
-        </div>
-
-        <div class="calc-field">
-          <label for="aporte">${this.t('monthlyLabel')}</label>
-          <div class="input-group">
-            <span class="input-prefix">R$</span>
-            <input type="text" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}" inputmode="numeric">
-          </div>
-        </div>
-
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label>${this.t('periodStart')}</label>
-            <input type="month" id="periodoInicio" value="2015-01" min="2005-01" max="2025-12">
-          </div>
-          <div class="calc-field">
-            <label>${this.t('periodEnd')}</label>
-            <input type="month" id="periodoFim" value="2024-12" min="2005-01" max="2025-12">
-          </div>
-        </div>
-
-        <div class="calc-allocation" id="calcAllocation">
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#3b82f6"></span>
-              <span class="alloc-name">Ibovespa</span>
-              <span class="alloc-pct">10%</span>
-            </div>
-            <input type="range" min="0" max="100" value="10" data-asset="ibovespa">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#ec4899"></span>
-              <span class="alloc-name">Caixa/CDI</span>
-              <span class="alloc-pct">20%</span>
-            </div>
-            <input type="range" min="0" max="100" value="20" data-asset="cdi">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#22c55e"></span>
-              <span class="alloc-name">Dólar</span>
-              <span class="alloc-pct">15%</span>
-            </div>
-            <input type="range" min="0" max="100" value="15" data-asset="dolar">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#eab308"></span>
-              <span class="alloc-name">Ouro</span>
-              <span class="alloc-pct">10%</span>
-            </div>
-            <input type="range" min="0" max="100" value="10" data-asset="ouro">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#8b5cf6"></span>
-              <span class="alloc-name">FIIs</span>
-              <span class="alloc-pct">15%</span>
-            </div>
-            <input type="range" min="0" max="100" value="15" data-asset="fii_ifix">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#ef4444"></span>
-              <span class="alloc-name">S&P 500</span>
-              <span class="alloc-pct">10%</span>
-            </div>
-            <input type="range" min="0" max="100" value="10" data-asset="sp500_brl">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#14b8a6"></span>
-              <span class="alloc-name">Imóveis</span>
-              <span class="alloc-pct">10%</span>
-            </div>
-            <input type="range" min="0" max="100" value="10" data-asset="imoveis_fipezap">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#0ea5e9"></span>
-              <span class="alloc-name">TLT</span>
-              <span class="alloc-pct">5%</span>
-            </div>
-            <input type="range" min="0" max="100" value="5" data-asset="tlt_brl">
-          </div>
-          <div class="alloc-item">
-            <div class="alloc-header">
-              <span class="alloc-dot" style="background:#f7931a"></span>
-              <span class="alloc-name">Bitcoin</span>
-              <span class="alloc-pct">5%</span>
-            </div>
-            <input type="range" min="0" max="100" value="5" data-asset="bitcoin_brl">
-          </div>
-          <div class="alloc-total">
-            <span>${this.t('allocationTotal')}:</span>
-            <span id="allocTotal">100%</span>
-          </div>
-        </div>
-
-        <button class="calc-btn" id="btnCalcular">${this.t('portfolioSimulate')}</button>
       `;
     }
   },
@@ -850,6 +739,18 @@ const Calculadora = {
       if (e.target.id === 'btnCalcular') {
         this.calculate();
       }
+
+      // Toggle de tipo de retorno (fixo vs carteira)
+      if (e.target.closest('.return-type-btn')) {
+        const btn = e.target.closest('.return-type-btn');
+        const type = btn.dataset.type;
+        this.setReturnType(type);
+      }
+
+      // Botão editar/configurar carteira
+      if (e.target.id === 'editPortfolioBtn' || e.target.id === 'setupPortfolioBtn') {
+        this.openPortfolioModal();
+      }
     });
 
     // Calcular ao pressionar Enter
@@ -858,6 +759,79 @@ const Calculadora = {
         this.calculate();
       }
     });
+
+    // Escutar evento de portfolio atualizado
+    window.addEventListener('portfolioUpdated', () => {
+      if (this.usePortfolio) {
+        this.refreshReturnField();
+      }
+    });
+  },
+
+  setReturnType(type) {
+    const isPortfolio = type === 'portfolio';
+
+    // If selecting portfolio and no portfolio exists, open the modal
+    if (isPortfolio && !this.getPortfolio()) {
+      this.openPortfolioModal();
+      return;
+    }
+
+    this.usePortfolio = isPortfolio;
+    localStorage.setItem('rico-calc-use-portfolio', isPortfolio ? 'true' : 'false');
+
+    // Update the toggle buttons
+    document.querySelectorAll('.return-type-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.dataset.type === type);
+    });
+
+    // Refresh the return input container
+    this.refreshReturnField();
+  },
+
+  refreshReturnField() {
+    const container = document.getElementById('returnInputContainer');
+    if (!container) return;
+
+    const d = this.defaults;
+    const portfolio = this.getPortfolio();
+    const hasPortfolio = portfolio !== null && Object.keys(portfolio).length > 0;
+
+    // Get portfolio summary if exists
+    let portfolioSummaryHtml = '';
+    if (hasPortfolio) {
+      const assets = Object.entries(portfolio)
+        .filter(([_, pct]) => pct > 0)
+        .map(([asset, pct]) => `${asset}: ${pct}%`)
+        .slice(0, 3);
+      const moreCount = Object.keys(portfolio).filter(k => portfolio[k] > 0).length - 3;
+      let summary = assets.join(', ');
+      if (moreCount > 0) summary += ` +${moreCount}`;
+      portfolioSummaryHtml = `<span class="portfolio-mini-summary">${summary}</span>`;
+    }
+
+    if (!this.usePortfolio) {
+      container.innerHTML = `
+        <div class="input-group">
+          <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
+          <span class="input-suffix">%</span>
+        </div>
+      `;
+      this.applyMasks();
+    } else {
+      container.innerHTML = `
+        <div class="portfolio-return-display" id="portfolioReturnDisplay">
+          ${hasPortfolio ? `
+            <div class="portfolio-configured">
+              ${portfolioSummaryHtml}
+              <button type="button" class="portfolio-edit-btn" id="editPortfolioBtn">${this.t('editPortfolio')}</button>
+            </div>
+          ` : `
+            <button type="button" class="portfolio-setup-btn" id="setupPortfolioBtn">${this.t('noPortfolioSet')}</button>
+          `}
+        </div>
+      `;
+    }
   },
 
   setMode(mode) {
@@ -874,11 +848,6 @@ const Calculadora = {
       form.innerHTML = this.renderForm();
       // Aplicar máscaras aos novos campos
       this.applyMasks();
-
-      // Bind de sliders para modo 5
-      if (mode === 5) {
-        this.bindAllocationSliders();
-      }
     }
 
     // Esconder resultado anterior
@@ -888,33 +857,15 @@ const Calculadora = {
     }
   },
 
-  bindAllocationSliders() {
-    document.querySelectorAll('#calcAllocation input[type="range"]').forEach(slider => {
-      slider.addEventListener('input', (e) => {
-        const value = parseInt(e.target.value);
-        const pctSpan = e.target.parentElement.querySelector('.alloc-pct');
-        if (pctSpan) {
-          pctSpan.textContent = value + '%';
-        }
-        this.updateAllocationTotal();
-      });
-    });
-  },
-
-  updateAllocationTotal() {
-    let total = 0;
-    document.querySelectorAll('#calcAllocation input[type="range"]').forEach(slider => {
-      total += parseInt(slider.value) || 0;
-    });
-    const totalSpan = document.getElementById('allocTotal');
-    if (totalSpan) {
-      totalSpan.textContent = total + '%';
-      totalSpan.style.color = total === 100 ? 'var(--bullish, #22c55e)' : 'var(--bearish, #ef4444)';
-    }
-  },
-
   calculate() {
-    const rentabilidadeMensal = this.parsePercentage(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
+    // Get rentabilidade based on whether using portfolio or fixed return
+    let rentabilidadeMensal;
+    if (this.usePortfolio) {
+      rentabilidadeMensal = this.getPortfolioExpectedReturn() / 100;
+    } else {
+      rentabilidadeMensal = this.parsePercentage(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
+    }
+
     const inflacaoAnual = this.parsePercentage(document.getElementById('inflacao')?.value) / 100 || 0.07;
     const valorInicial = this.parseCurrency(document.getElementById('valorInicial')?.value) || 0;
 
@@ -1019,185 +970,7 @@ const Calculadora = {
         resultadoExato,
         resultadoMargem
       });
-    } else if (this.currentMode === 5) {
-      // Modo 5: Carteira Histórica
-      this.calculatePortfolio();
     }
-  },
-
-  async calculatePortfolio() {
-    // Verificar alocação total
-    let totalAlloc = 0;
-    const alocacao = {};
-    document.querySelectorAll('#calcAllocation input[type="range"]').forEach(slider => {
-      const pct = parseInt(slider.value) || 0;
-      if (pct > 0) {
-        alocacao[slider.dataset.asset] = pct / 100;
-        totalAlloc += pct;
-      }
-    });
-
-    if (Math.abs(totalAlloc - 100) > 1) {
-      alert(this.t('portfolioInvalidAlloc'));
-      return;
-    }
-
-    // Ler valores
-    const valorInicial = this.parseCurrency(document.getElementById('valorInicial')?.value) || 0;
-    const aporteMensal = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
-    const periodoInicio = document.getElementById('periodoInicio')?.value || '2015-01';
-    const periodoFim = document.getElementById('periodoFim')?.value || '2024-12';
-
-    // Carregar dados históricos se ainda não carregados
-    if (!this.dadosMensais) {
-      const resultEl = document.getElementById('calcResult');
-      if (resultEl) {
-        resultEl.style.display = 'block';
-        resultEl.innerHTML = `<div class="calc-loading"><p>${this.t('portfolioLoadingData')}</p></div>`;
-      }
-
-      try {
-        const response = await fetch('../data/historico-mensal.json');
-        this.dadosMensais = await response.json();
-      } catch (error) {
-        console.error('Erro ao carregar dados:', error);
-        alert(this.t('portfolioNoData'));
-        return;
-      }
-    }
-
-    // Filtrar dados pelo período
-    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
-
-    if (dadosFiltrados.length === 0) {
-      alert(this.t('portfolioNoData'));
-      return;
-    }
-
-    // Simular carteira com aportes mensais
-    const resultado = this.simularCarteiraComAportes(alocacao, dadosFiltrados, valorInicial, aporteMensal);
-
-    this.showResult({
-      mode: 5,
-      valorInicial,
-      aporteMensal,
-      periodoInicio,
-      periodoFim,
-      alocacao,
-      resultado,
-      dadosFiltrados
-    });
-  },
-
-  filtrarDadosMensais(periodoInicio, periodoFim) {
-    if (!this.dadosMensais?.meses) return [];
-
-    const [anoInicio, mesInicio] = periodoInicio.split('-').map(Number);
-    const [anoFim, mesFim] = periodoFim.split('-').map(Number);
-
-    return this.dadosMensais.meses.filter(d => {
-      const dataInicio = anoInicio * 12 + mesInicio;
-      const dataFim = anoFim * 12 + mesFim;
-      const dataMes = d.ano * 12 + d.mes;
-      return dataMes >= dataInicio && dataMes <= dataFim;
-    });
-  },
-
-  simularCarteiraComAportes(alocacao, dados, valorInicial, aporteMensal) {
-    const evolucao = [{
-      periodo: 'Início',
-      nominal: valorInicial,
-      real: valorInicial,
-      aporte: 0,
-      retorno: 0
-    }];
-
-    let saldo = valorInicial;
-    let totalInvestido = valorInicial;
-    let inflacaoAcumulada = 1;
-    const retornosMensais = [];
-    let maxDrawdown = 0;
-    let peakValue = valorInicial;
-
-    dados.forEach((d, index) => {
-      // Calcular retorno da carteira neste mês
-      let retornoCarteira = 0;
-      Object.entries(alocacao).forEach(([ativo, peso]) => {
-        const retornoAtivo = this.getRetornoAtivo(ativo, d);
-        retornoCarteira += retornoAtivo * peso;
-      });
-
-      retornosMensais.push(retornoCarteira);
-
-      // Aplicar retorno no saldo existente
-      saldo = saldo * (1 + retornoCarteira / 100);
-
-      // Adicionar aporte mensal
-      saldo += aporteMensal;
-      totalInvestido += aporteMensal;
-
-      // Calcular inflação acumulada
-      const inflacaoMensal = d.inflacao_ipca || 0;
-      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
-
-      // Calcular drawdown
-      if (saldo > peakValue) peakValue = saldo;
-      const drawdown = (peakValue - saldo) / peakValue * 100;
-      if (drawdown > maxDrawdown) maxDrawdown = drawdown;
-
-      evolucao.push({
-        periodo: d.periodo || `${d.mes}/${d.ano}`,
-        nominal: saldo,
-        real: saldo / inflacaoAcumulada,
-        aporte: aporteMensal,
-        retorno: retornoCarteira
-      });
-    });
-
-    // Calcular estatísticas
-    const retornoNominal = ((saldo / totalInvestido) - 1) * 100;
-    const valorReal = saldo / inflacaoAcumulada;
-    const retornoReal = ((valorReal / totalInvestido) - 1) * 100;
-    const mediaMensal = retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length;
-    const volatilidade = this.calcularVolatilidade(retornosMensais);
-
-    return {
-      evolucao,
-      valorFinalNominal: saldo,
-      valorFinalReal: valorReal,
-      totalInvestido,
-      retornoNominal,
-      retornoReal,
-      mediaMensal,
-      volatilidade,
-      maxDrawdown,
-      meses: dados.length
-    };
-  },
-
-  getRetornoAtivo(ativo, dadoMes) {
-    // Mapear nome do ativo para campo no JSON
-    const mapeamento = {
-      'ibovespa': 'ibovespa',
-      'cdi': 'cdi',
-      'dolar': 'dolar',
-      'ouro': 'ouro',
-      'fii_ifix': 'fii_ifix',
-      'sp500_brl': 'sp500_brl',
-      'imoveis_fipezap': 'imoveis_fipezap',
-      'tlt_brl': 'tlt_brl',
-      'bitcoin_brl': 'bitcoin_brl'
-    };
-
-    const campo = mapeamento[ativo] || ativo;
-    return dadoMes[campo] || 0;
-  },
-
-  calcularVolatilidade(retornos) {
-    if (!retornos || retornos.length < 2) return 0;
-    const media = retornos.reduce((a, b) => a + b, 0) / retornos.length;
-    const variancia = retornos.reduce((acc, r) => acc + Math.pow(r - media, 2), 0) / retornos.length;
-    return Math.sqrt(variancia);
   },
 
   calcularAporteNecessario(objetivoFinal, meses, rentabilidadeMensal, inflacaoMensal, valorInicial = 0) {
@@ -1632,60 +1405,6 @@ const Calculadora = {
           ${this.renderFIProjection(exato.saldosPorAno, exato.aportesPorAno, data.inflacaoAnual)}
         `;
       }
-    } else if (data.mode === 5) {
-      // Resultado do modo 5: Carteira Histórica
-      const r = data.resultado;
-      const periodoTexto = `${data.periodoInicio} a ${data.periodoFim}`;
-
-      html = `<h3>${this.t('portfolioResult')}</h3>`;
-
-      html += `
-        <div class="result-info">
-          <p>${this.t('portfolioNote').replace('{periodo}', periodoTexto)}</p>
-        </div>
-
-        <div class="result-main">
-          <div class="result-value">${this.formatCurrency(r.valorFinalNominal)}</div>
-          <div class="result-label">${this.t('portfolioFinalNominal')}</div>
-        </div>
-
-        <div class="result-secondary">
-          <div class="result-value-secondary">${this.formatCurrency(r.valorFinalReal)}</div>
-          <div class="result-label">${this.t('portfolioFinalReal')}</div>
-        </div>
-
-        <div class="result-details">
-          <div class="result-detail">
-            <span class="detail-label">${this.t('portfolioTotalInvested')}</span>
-            <span class="detail-value">${this.formatCurrency(r.totalInvestido)}</span>
-          </div>
-          <div class="result-detail">
-            <span class="detail-label">${this.t('portfolioTotalReturn')}</span>
-            <span class="detail-value highlight">${this.formatPercent(r.retornoNominal)}</span>
-          </div>
-          <div class="result-detail">
-            <span class="detail-label">${this.t('portfolioReturnReal')}</span>
-            <span class="detail-value ${r.retornoReal >= 0 ? 'positive' : 'negative'}">${this.formatPercent(r.retornoReal)}</span>
-          </div>
-        </div>
-
-        <div class="result-metrics">
-          <div class="metric-item">
-            <span class="metric-label">${this.t('portfolioMonthlyAvg')}</span>
-            <span class="metric-value">${r.mediaMensal.toFixed(2)}%</span>
-          </div>
-          <div class="metric-item">
-            <span class="metric-label">${this.t('portfolioVolatility')}</span>
-            <span class="metric-value">${r.volatilidade.toFixed(2)}%</span>
-          </div>
-          <div class="metric-item">
-            <span class="metric-label">${this.t('portfolioMaxDrawdown')}</span>
-            <span class="metric-value negative">-${r.maxDrawdown.toFixed(2)}%</span>
-          </div>
-        </div>
-
-        ${this.renderPortfolioProjection(r.evolucao)}
-      `;
     }
 
     resultDiv.innerHTML = html;
@@ -1777,58 +1496,6 @@ const Calculadora = {
           <span class="balance-col">${this.formatCurrency(saldo)}</span>
           <span class="capital-col">${this.formatCurrency(capitalNecessario)}</span>
           <span class="income-col">${this.formatCurrency(rendaAjustada)}</span>
-        </div>
-      `;
-    }
-
-    html += '</div></div>';
-    return html;
-  },
-
-  // Projeção para carteira histórica
-  renderPortfolioProjection(evolucao) {
-    if (!evolucao || evolucao.length < 2) return '';
-
-    let html = `
-      <div class="result-projection">
-        <h4>${this.t('portfolioProjection')}</h4>
-        <div class="projection-table portfolio-projection">
-          <div class="projection-header">
-            <span>${this.t('portfolioMonth')}</span>
-            <span>${this.t('portfolioBalance')}</span>
-            <span>${this.t('portfolioRealValue')}</span>
-            <span>${this.t('portfolioReturn')}</span>
-          </div>
-    `;
-
-    // Mostrar apenas alguns pontos para não sobrecarregar (a cada 6 meses ou menos se período curto)
-    const step = evolucao.length > 24 ? 6 : (evolucao.length > 12 ? 3 : 1);
-
-    for (let i = 0; i < evolucao.length; i += step) {
-      const e = evolucao[i];
-      const retornoClass = e.retorno >= 0 ? 'positive' : 'negative';
-
-      html += `
-        <div class="projection-row">
-          <span class="month-col">${e.periodo}</span>
-          <span class="balance-col">${this.formatCurrency(e.nominal)}</span>
-          <span class="real-col">${this.formatCurrency(e.real)}</span>
-          <span class="return-col ${retornoClass}">${e.retorno !== 0 ? this.formatPercent(e.retorno) : '-'}</span>
-        </div>
-      `;
-    }
-
-    // Sempre mostrar o último se não foi incluído
-    if ((evolucao.length - 1) % step !== 0) {
-      const e = evolucao[evolucao.length - 1];
-      const retornoClass = e.retorno >= 0 ? 'positive' : 'negative';
-
-      html += `
-        <div class="projection-row final-row">
-          <span class="month-col">${e.periodo}</span>
-          <span class="balance-col">${this.formatCurrency(e.nominal)}</span>
-          <span class="real-col">${this.formatCurrency(e.real)}</span>
-          <span class="return-col ${retornoClass}">${e.retorno !== 0 ? this.formatPercent(e.retorno) : '-'}</span>
         </div>
       `;
     }

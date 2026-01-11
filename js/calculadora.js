@@ -1554,7 +1554,7 @@ const Calculadora = {
           ${this.renderProjection(data.saldosPorAno, data.aportesPorAno, data.inflacaoAnual)}
         `;
       }
-    } else {
+    } else if (data.mode === 4) {
       // Resultado do modo 4: Independência Financeira
       const exato = data.resultadoExato;
       const margem = data.resultadoMargem;

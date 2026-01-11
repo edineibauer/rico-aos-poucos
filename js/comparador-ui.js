@@ -803,7 +803,7 @@ const Comparador2 = {
               ${isPositive ? '+' : ''}${this.formatPercent(item.retornoReal)} real
             </div>
             <div style="font-size: 0.85rem; color: var(--text-primary);">
-              ${this.formatCurrency(item.valorFinalReal)}
+              ${this.formatCurrency(item.valorFinalNominal)}
             </div>
             <div style="font-size: 0.7rem; color: var(--text-muted);">
               ${this.formatPercent(item.retornoNominal)} nominal

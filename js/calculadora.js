@@ -276,8 +276,23 @@ const Calculadora = {
     let totalWeight = 0;
     let weightedReturn = 0;
 
-    Object.entries(portfolio).forEach(([asset, pct]) => {
-      const expectedReturn = this.assetExpectedReturns[asset] || 0.8;
+    Object.entries(portfolio).forEach(([key, value]) => {
+      // Skip the _extra keys, they're handled with the main asset
+      if (key.endsWith('_extra')) return;
+
+      const asset = key;
+      const pct = value;
+      let expectedReturn = this.assetExpectedReturns[asset] || 0.8;
+
+      // Add extra yield if exists (convert annual to monthly)
+      const extraYieldAnnual = portfolio[`${asset}_extra`] || 0;
+      if (extraYieldAnnual > 0) {
+        // Convert annual extra yield to monthly: (1 + annual)^(1/12) - 1
+        // Approximation for small values: annual / 12
+        const extraYieldMonthly = extraYieldAnnual / 12;
+        expectedReturn += extraYieldMonthly;
+      }
+
       weightedReturn += (pct / 100) * expectedReturn;
       totalWeight += pct;
     });

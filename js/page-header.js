@@ -192,6 +192,8 @@ const PageHeader = {
         save: 'Salvar Carteira',
         cancel: 'Cancelar',
         clear: 'Limpar',
+        extraYield: '+ % a.a.',
+        extraYieldPlaceholder: 'Ex: 5',
         assets: {
           dolar: 'Dolar',
           caixa: 'Caixa (CDI)',
@@ -212,6 +214,8 @@ const PageHeader = {
         save: 'Save Portfolio',
         cancel: 'Cancel',
         clear: 'Clear',
+        extraYield: '+ % p.a.',
+        extraYieldPlaceholder: 'Ex: 5',
         assets: {
           dolar: 'Dollar',
           caixa: 'Cash (CDI)',
@@ -232,6 +236,8 @@ const PageHeader = {
         save: 'Guardar Cartera',
         cancel: 'Cancelar',
         clear: 'Limpiar',
+        extraYield: '+ % a.a.',
+        extraYieldPlaceholder: 'Ej: 5',
         assets: {
           dolar: 'Dolar',
           caixa: 'Caja (CDI)',
@@ -249,15 +255,24 @@ const PageHeader = {
 
     const t = translations[lang] || translations['pt-BR'];
     const assets = ['dolar', 'caixa', 'tlt', 'imoveis', 'fiis', 'ipca', 'ibov', 'ouro', 'sp500', 'bitcoin'];
+    const assetsWithExtraYield = ['dolar', 'ipca']; // Assets that have extra yield input
 
     let slidersHTML = '';
     assets.forEach(asset => {
+      const hasExtraYield = assetsWithExtraYield.includes(asset);
       slidersHTML += `
-        <div class="portfolio-slider-row">
+        <div class="portfolio-slider-row ${hasExtraYield ? 'has-extra-yield' : ''}">
           <label class="portfolio-slider-label">${t.assets[asset]}</label>
           <input type="range" class="portfolio-slider" id="portfolio-${asset}"
                  min="0" max="100" value="0" data-asset="${asset}">
           <span class="portfolio-slider-value" id="portfolio-${asset}-value">0%</span>
+          ${hasExtraYield ? `
+            <div class="portfolio-extra-yield">
+              <input type="number" class="portfolio-extra-input" id="portfolio-${asset}-extra"
+                     min="0" max="20" step="0.5" value="0" placeholder="${t.extraYieldPlaceholder}">
+              <span class="portfolio-extra-label">${t.extraYield}</span>
+            </div>
+          ` : ''}
         </div>
       `;
     });
@@ -335,6 +350,10 @@ const PageHeader = {
         const valueSpan = document.getElementById(`${slider.id}-value`);
         if (valueSpan) valueSpan.textContent = '0%';
       });
+      // Clear extra yield inputs
+      document.querySelectorAll('.portfolio-extra-input').forEach(input => {
+        input.value = 0;
+      });
       this.updatePortfolioTotal();
     });
 
@@ -380,6 +399,13 @@ const PageHeader = {
       slider.value = value;
       const valueSpan = document.getElementById(`${slider.id}-value`);
       if (valueSpan) valueSpan.textContent = `${value}%`;
+
+      // Load extra yield if exists
+      const extraInput = document.getElementById(`portfolio-${asset}-extra`);
+      if (extraInput) {
+        const extraValue = saved?.[`${asset}_extra`] || 0;
+        extraInput.value = extraValue;
+      }
     });
 
     this.updatePortfolioTotal();
@@ -401,6 +427,15 @@ const PageHeader = {
         portfolio[asset] = value;
       }
       total += value;
+
+      // Save extra yield if exists
+      const extraInput = document.getElementById(`portfolio-${asset}-extra`);
+      if (extraInput) {
+        const extraValue = parseFloat(extraInput.value) || 0;
+        if (extraValue > 0) {
+          portfolio[`${asset}_extra`] = extraValue;
+        }
+      }
     });
 
     localStorage.setItem('rico-portfolio', JSON.stringify(portfolio));

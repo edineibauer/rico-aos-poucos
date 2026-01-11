@@ -1244,9 +1244,51 @@ body.home-page {
   gap: 12px;
 }
 
+.portfolio-slider-row.has-extra-yield {
+  grid-template-columns: 100px 1fr 50px 110px;
+}
+
 .portfolio-slider-label {
   font-size: 0.9rem;
   color: var(--text-primary);
+}
+
+.portfolio-extra-yield {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.portfolio-extra-input {
+  width: 50px;
+  padding: 6px 8px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.portfolio-extra-input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+.portfolio-extra-input::-webkit-inner-spin-button,
+.portfolio-extra-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.portfolio-extra-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.portfolio-extra-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
 }
 
 .portfolio-slider {

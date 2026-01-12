@@ -912,7 +912,8 @@ const Calculadora = {
     if (this.currentMode === 1) {
       // Calcular aporte necessário para atingir objetivo
       const tempoAnos = parseInt(document.getElementById('tempoAnos')?.value) || 10;
-      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
+      const objetivoField = document.getElementById('objetivo');
+      const objetivoHoje = objetivoField?.value ? this.parseCurrency(objetivoField.value) : 300000;
       const meses = tempoAnos * 12;
 
       // Objetivo ajustado pela inflação (valor nominal futuro)
@@ -937,7 +938,8 @@ const Calculadora = {
     } else if (this.currentMode === 2) {
       // Calcular montante final dado um aporte
       const tempoAnos = parseInt(document.getElementById('tempoAnos')?.value) || 10;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+      const aporteField = document.getElementById('aporte');
+      const aporteInicial = aporteField?.value ? this.parseCurrency(aporteField.value) : 1000;
       const meses = tempoAnos * 12;
 
       const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
@@ -964,8 +966,10 @@ const Calculadora = {
 
     } else if (this.currentMode === 3) {
       // Modo 3: Calcular tempo necessário
-      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+      const objetivoField = document.getElementById('objetivo');
+      const objetivoHoje = objetivoField?.value ? this.parseCurrency(objetivoField.value) : 300000;
+      const aporteField = document.getElementById('aporte');
+      const aporteInicial = aporteField?.value ? this.parseCurrency(aporteField.value) : 1000;
 
       const resultado = this.calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial);
 
@@ -981,8 +985,10 @@ const Calculadora = {
       });
     } else if (this.currentMode === 4) {
       // Modo 4: Independência Financeira
-      const rendaPassivaHoje = this.parseCurrency(document.getElementById('rendaPassiva')?.value) || 5000;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+      const rendaPassivaField = document.getElementById('rendaPassiva');
+      const rendaPassivaHoje = rendaPassivaField?.value ? this.parseCurrency(rendaPassivaField.value) : 5000;
+      const aporteField = document.getElementById('aporte');
+      const aporteInicial = aporteField?.value ? this.parseCurrency(aporteField.value) : 1000;
 
       // Calcular para renda exata
       const resultadoExato = this.calcularIndependenciaFinanceira(

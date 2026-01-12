@@ -73,6 +73,7 @@ const Calculadora = {
       fiMarginIncome: 'Renda com margem',
       fiMarginCapital: 'Capital necessário',
       fiMarginTime: 'Tempo necessário',
+      fiMarginTimeShort: 'considerando margem de segurança (+30%)',
       fiNeverReach: 'Com os parâmetros atuais, a independência financeira não será atingida em 50 anos. Aumente o aporte ou reduza a renda desejada.',
       perMonth: '/mês'
     },
@@ -133,6 +134,7 @@ const Calculadora = {
       fiMarginIncome: 'Income with margin',
       fiMarginCapital: 'Required capital',
       fiMarginTime: 'Time needed',
+      fiMarginTimeShort: 'with safety margin (+30%)',
       fiNeverReach: 'With current parameters, financial independence won\'t be reached in 50 years. Increase contribution or reduce desired income.',
       perMonth: '/month'
     },
@@ -193,6 +195,7 @@ const Calculadora = {
       fiMarginIncome: 'Ingreso con margen',
       fiMarginCapital: 'Capital necesario',
       fiMarginTime: 'Tiempo necesario',
+      fiMarginTimeShort: 'con margen de seguridad (+30%)',
       fiNeverReach: 'Con los parámetros actuales, la independencia financiera no se alcanzará en 50 años. Aumente el aporte o reduzca el ingreso deseado.',
       perMonth: '/mes'
     }
@@ -1149,6 +1152,7 @@ const Calculadora = {
           <div class="result-main">
             <div class="result-value">${tempoExatoFormatado}</div>
             <div class="result-label">${this.t('fiTimeNeeded')}</div>
+            <div class="result-margin-inline">${margem.naoAtingiu ? '+50 ' + this.t('years') : tempoMargemFormatado} ${this.t('fiMarginTimeShort')}</div>
           </div>
 
           <div class="result-secondary">

@@ -5493,6 +5493,13 @@ body.home-page {
   margin-top: 8px;
 }
 
+.result-main .result-margin-inline {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  font-weight: 400;
+}
+
 .result-secondary {
   text-align: center;
   padding: 20px;

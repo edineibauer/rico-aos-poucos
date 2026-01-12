@@ -9,6 +9,24 @@
  */
 
 const PageHeader = {
+  // User menu translations
+  userMenuTranslations: {
+    'pt-BR': {
+      myPortfolio: 'Minha Carteira',
+      editPortfolio: 'Editar Carteira',
+      noPortfolio: 'Nenhuma carteira configurada'
+    },
+    'en': {
+      myPortfolio: 'My Portfolio',
+      editPortfolio: 'Edit Portfolio',
+      noPortfolio: 'No portfolio configured'
+    },
+    'es': {
+      myPortfolio: 'Mi Cartera',
+      editPortfolio: 'Editar Cartera',
+      noPortfolio: 'Ninguna cartera configurada'
+    }
+  },
   // Logo SVG inline
   logoSVG: `
     <svg viewBox="0 0 1024 1024" width="36" height="36">
@@ -44,6 +62,26 @@ const PageHeader = {
   },
 
   /**
+   * Get current language
+   */
+  getLang() {
+    const saved = localStorage.getItem('rico-lang');
+    if (saved) return saved;
+    const path = window.location.pathname;
+    if (path.startsWith('/en/')) return 'en';
+    if (path.startsWith('/es/')) return 'es';
+    return 'pt-BR';
+  },
+
+  /**
+   * Get translation
+   */
+  t(key) {
+    const lang = this.getLang();
+    return this.userMenuTranslations[lang]?.[key] || this.userMenuTranslations['pt-BR'][key];
+  },
+
+  /**
    * Render the header HTML
    * @param {string} subtitle - The page subtitle to display
    */
@@ -61,7 +99,27 @@ const PageHeader = {
         <h1 class="app-name">Rico aos Poucos</h1>
         <span class="app-subtitle">${subtitle}</span>
       </div>
-      <div id="langSelector"></div>
+      <div class="header-actions">
+        <div class="user-menu-container">
+          <button class="user-menu-btn" id="userMenuBtn" aria-label="${this.t('myPortfolio')}">
+            <svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+              <circle cx="12" cy="7" r="4"/>
+            </svg>
+          </button>
+          <div class="user-menu-dropdown" id="userMenuDropdown">
+            <button class="user-menu-item" id="editPortfolioBtn">
+              <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"/>
+                <path d="M2 17l10 5 10-5"/>
+                <path d="M2 12l10 5 10-5"/>
+              </svg>
+              <span>${this.t('myPortfolio')}</span>
+            </button>
+          </div>
+        </div>
+        <div id="langSelector"></div>
+      </div>
     `;
   },
 
@@ -80,6 +138,322 @@ const PageHeader = {
 
     // Render the header content
     container.innerHTML = this.render(subtitle);
+
+    // Bind user menu events
+    this.bindUserMenu();
+
+    // Create portfolio modal
+    this.createPortfolioModal();
+  },
+
+  /**
+   * Bind user menu toggle events
+   */
+  bindUserMenu() {
+    const btn = document.getElementById('userMenuBtn');
+    const dropdown = document.getElementById('userMenuDropdown');
+    const editBtn = document.getElementById('editPortfolioBtn');
+
+    if (btn && dropdown) {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.toggle('active');
+      });
+
+      document.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+      });
+
+      dropdown.addEventListener('click', (e) => {
+        e.stopPropagation();
+      });
+    }
+
+    if (editBtn) {
+      editBtn.addEventListener('click', () => {
+        dropdown.classList.remove('active');
+        this.openPortfolioModal();
+      });
+    }
+  },
+
+  /**
+   * Create the portfolio modal
+   */
+  createPortfolioModal() {
+    if (document.getElementById('portfolioModal')) return;
+
+    const lang = this.getLang();
+    const translations = {
+      'pt-BR': {
+        title: 'Minha Carteira de Investimentos',
+        subtitle: 'Configure a distribuicao da sua carteira',
+        total: 'Total',
+        save: 'Salvar Carteira',
+        cancel: 'Cancelar',
+        clear: 'Limpar',
+        extraYield: '+ % a.a.',
+        extraYieldPlaceholder: 'Ex: 5',
+        assets: {
+          dolar: 'Dolar',
+          caixa: 'Caixa (CDI)',
+          tlt: 'TLT (Bonds)',
+          imoveis: 'Imoveis',
+          fiis: 'FIIs',
+          ipca: 'IPCA+',
+          ibov: 'Ibovespa',
+          ouro: 'Ouro',
+          sp500: 'S&P 500',
+          bitcoin: 'Bitcoin'
+        }
+      },
+      'en': {
+        title: 'My Investment Portfolio',
+        subtitle: 'Configure your portfolio allocation',
+        total: 'Total',
+        save: 'Save Portfolio',
+        cancel: 'Cancel',
+        clear: 'Clear',
+        extraYield: '+ % p.a.',
+        extraYieldPlaceholder: 'Ex: 5',
+        assets: {
+          dolar: 'Dollar',
+          caixa: 'Cash (CDI)',
+          tlt: 'TLT (Bonds)',
+          imoveis: 'Real Estate',
+          fiis: 'REITs',
+          ipca: 'IPCA+',
+          ibov: 'Ibovespa',
+          ouro: 'Gold',
+          sp500: 'S&P 500',
+          bitcoin: 'Bitcoin'
+        }
+      },
+      'es': {
+        title: 'Mi Cartera de Inversiones',
+        subtitle: 'Configure la distribucion de su cartera',
+        total: 'Total',
+        save: 'Guardar Cartera',
+        cancel: 'Cancelar',
+        clear: 'Limpiar',
+        extraYield: '+ % a.a.',
+        extraYieldPlaceholder: 'Ej: 5',
+        assets: {
+          dolar: 'Dolar',
+          caixa: 'Caja (CDI)',
+          tlt: 'TLT (Bonos)',
+          imoveis: 'Inmuebles',
+          fiis: 'FIIs',
+          ipca: 'IPCA+',
+          ibov: 'Ibovespa',
+          ouro: 'Oro',
+          sp500: 'S&P 500',
+          bitcoin: 'Bitcoin'
+        }
+      }
+    };
+
+    const t = translations[lang] || translations['pt-BR'];
+    const assets = ['dolar', 'caixa', 'tlt', 'imoveis', 'fiis', 'ipca', 'ibov', 'ouro', 'sp500', 'bitcoin'];
+    const assetsWithExtraYield = ['dolar', 'ipca']; // Assets that have extra yield input
+
+    let slidersHTML = '';
+    assets.forEach(asset => {
+      const hasExtraYield = assetsWithExtraYield.includes(asset);
+      slidersHTML += `
+        <div class="portfolio-slider-row ${hasExtraYield ? 'has-extra-yield' : ''}">
+          <label class="portfolio-slider-label">${t.assets[asset]}</label>
+          <input type="range" class="portfolio-slider" id="portfolio-${asset}"
+                 min="0" max="100" value="0" data-asset="${asset}">
+          <span class="portfolio-slider-value" id="portfolio-${asset}-value">0%</span>
+          ${hasExtraYield ? `
+            <div class="portfolio-extra-yield">
+              <input type="number" class="portfolio-extra-input" id="portfolio-${asset}-extra"
+                     min="0" max="20" step="0.5" value="0" placeholder="${t.extraYieldPlaceholder}">
+              <span class="portfolio-extra-label">${t.extraYield}</span>
+            </div>
+          ` : ''}
+        </div>
+      `;
+    });
+
+    const modal = document.createElement('div');
+    modal.id = 'portfolioModal';
+    modal.className = 'portfolio-modal';
+    modal.innerHTML = `
+      <div class="portfolio-modal-content">
+        <div class="portfolio-modal-header">
+          <h2>${t.title}</h2>
+          <p>${t.subtitle}</p>
+          <button class="portfolio-modal-close" id="portfolioModalClose">&times;</button>
+        </div>
+        <div class="portfolio-modal-body">
+          <div class="portfolio-sliders">
+            ${slidersHTML}
+          </div>
+          <div class="portfolio-total-row">
+            <span class="portfolio-total-label">${t.total}:</span>
+            <span class="portfolio-total-value" id="portfolioTotalValue">0%</span>
+          </div>
+        </div>
+        <div class="portfolio-modal-footer">
+          <button class="portfolio-btn-secondary" id="portfolioClearBtn">${t.clear}</button>
+          <button class="portfolio-btn-secondary" id="portfolioCancelBtn">${t.cancel}</button>
+          <button class="portfolio-btn-primary" id="portfolioSaveBtn">${t.save}</button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Bind modal events
+    this.bindPortfolioModal();
+  },
+
+  /**
+   * Bind portfolio modal events
+   */
+  bindPortfolioModal() {
+    const modal = document.getElementById('portfolioModal');
+    const closeBtn = document.getElementById('portfolioModalClose');
+    const cancelBtn = document.getElementById('portfolioCancelBtn');
+    const saveBtn = document.getElementById('portfolioSaveBtn');
+    const clearBtn = document.getElementById('portfolioClearBtn');
+    const sliders = document.querySelectorAll('.portfolio-slider');
+
+    // Close modal
+    const closeModal = () => {
+      modal.classList.remove('active');
+    };
+
+    closeBtn?.addEventListener('click', closeModal);
+    cancelBtn?.addEventListener('click', closeModal);
+    modal?.addEventListener('click', (e) => {
+      if (e.target === modal) closeModal();
+    });
+
+    // Update totals on slider change
+    sliders.forEach(slider => {
+      slider.addEventListener('input', () => {
+        const valueSpan = document.getElementById(`${slider.id}-value`);
+        if (valueSpan) {
+          valueSpan.textContent = `${slider.value}%`;
+        }
+        this.updatePortfolioTotal();
+      });
+    });
+
+    // Clear all
+    clearBtn?.addEventListener('click', () => {
+      sliders.forEach(slider => {
+        slider.value = 0;
+        const valueSpan = document.getElementById(`${slider.id}-value`);
+        if (valueSpan) valueSpan.textContent = '0%';
+      });
+      // Clear extra yield inputs
+      document.querySelectorAll('.portfolio-extra-input').forEach(input => {
+        input.value = 0;
+      });
+      this.updatePortfolioTotal();
+    });
+
+    // Save portfolio
+    saveBtn?.addEventListener('click', () => {
+      this.savePortfolio();
+      closeModal();
+    });
+  },
+
+  /**
+   * Update portfolio total display
+   */
+  updatePortfolioTotal() {
+    const sliders = document.querySelectorAll('.portfolio-slider');
+    let total = 0;
+    sliders.forEach(slider => {
+      total += parseInt(slider.value) || 0;
+    });
+
+    const totalSpan = document.getElementById('portfolioTotalValue');
+    if (totalSpan) {
+      totalSpan.textContent = `${total}%`;
+      totalSpan.classList.toggle('valid', total === 100);
+      totalSpan.classList.toggle('invalid', total !== 100);
+    }
+  },
+
+  /**
+   * Open portfolio modal
+   */
+  openPortfolioModal() {
+    const modal = document.getElementById('portfolioModal');
+    if (!modal) return;
+
+    // Load saved portfolio
+    const saved = this.getPortfolio();
+    const sliders = document.querySelectorAll('.portfolio-slider');
+
+    sliders.forEach(slider => {
+      const asset = slider.dataset.asset;
+      const value = saved?.[asset] || 0;
+      slider.value = value;
+      const valueSpan = document.getElementById(`${slider.id}-value`);
+      if (valueSpan) valueSpan.textContent = `${value}%`;
+
+      // Load extra yield if exists
+      const extraInput = document.getElementById(`portfolio-${asset}-extra`);
+      if (extraInput) {
+        const extraValue = saved?.[`${asset}_extra`] || 0;
+        extraInput.value = extraValue;
+      }
+    });
+
+    this.updatePortfolioTotal();
+    modal.classList.add('active');
+  },
+
+  /**
+   * Save portfolio to localStorage
+   */
+  savePortfolio() {
+    const sliders = document.querySelectorAll('.portfolio-slider');
+    const portfolio = {};
+    let total = 0;
+
+    sliders.forEach(slider => {
+      const asset = slider.dataset.asset;
+      const value = parseInt(slider.value) || 0;
+      if (value > 0) {
+        portfolio[asset] = value;
+      }
+      total += value;
+
+      // Save extra yield if exists
+      const extraInput = document.getElementById(`portfolio-${asset}-extra`);
+      if (extraInput) {
+        const extraValue = parseFloat(extraInput.value) || 0;
+        if (extraValue > 0) {
+          portfolio[`${asset}_extra`] = extraValue;
+        }
+      }
+    });
+
+    localStorage.setItem('rico-portfolio', JSON.stringify(portfolio));
+
+    // Dispatch event for other components to react
+    window.dispatchEvent(new CustomEvent('portfolioUpdated', { detail: portfolio }));
+  },
+
+  /**
+   * Get saved portfolio from localStorage
+   */
+  getPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      return saved ? JSON.parse(saved) : null;
+    } catch {
+      return null;
+    }
   }
 };
 

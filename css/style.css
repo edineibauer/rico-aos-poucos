@@ -1063,6 +1063,341 @@ body.home-page {
 }
 
 /* ==========================================
+   Header Actions (User Menu + Lang Selector)
+   ========================================== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* User Menu */
+.user-menu-container {
+  position: relative;
+}
+
+.user-menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-color);
+  border-radius: 50%;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.user-menu-btn:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: var(--primary-light);
+}
+
+.user-menu-btn svg {
+  width: 20px;
+  height: 20px;
+}
+
+.user-menu-dropdown {
+  position: absolute;
+  top: calc(100% + 8px);
+  right: 0;
+  min-width: 180px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-lg);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+  z-index: 1000;
+}
+
+.user-menu-dropdown.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.user-menu-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.user-menu-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.user-menu-item svg {
+  color: var(--text-muted);
+}
+
+/* ==========================================
+   Portfolio Modal
+   ========================================== */
+.portfolio-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.portfolio-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.portfolio-modal-content {
+  width: 90%;
+  max-width: 500px;
+  max-height: 90vh;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transform: scale(0.95);
+  transition: transform 0.3s ease;
+}
+
+.portfolio-modal.active .portfolio-modal-content {
+  transform: scale(1);
+}
+
+.portfolio-modal-header {
+  padding: 20px;
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.portfolio-modal-header h2 {
+  font-size: 1.25rem;
+  margin-bottom: 4px;
+}
+
+.portfolio-modal-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.portfolio-modal-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 32px;
+  height: 32px;
+  background: none;
+  border: none;
+  color: var(--text-muted);
+  font-size: 1.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.portfolio-modal-close:hover {
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text-primary);
+}
+
+.portfolio-modal-body {
+  padding: 20px;
+  overflow-y: auto;
+  flex: 1;
+}
+
+.portfolio-sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.portfolio-slider-row {
+  display: grid;
+  grid-template-columns: 100px 1fr 50px;
+  align-items: center;
+  gap: 12px;
+}
+
+.portfolio-slider-row.has-extra-yield {
+  grid-template-columns: 100px 1fr 50px 110px;
+}
+
+.portfolio-slider-label {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.portfolio-extra-yield {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.portfolio-extra-input {
+  width: 50px;
+  padding: 6px 8px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  text-align: center;
+}
+
+.portfolio-extra-input:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
+.portfolio-extra-input::-webkit-inner-spin-button,
+.portfolio-extra-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.portfolio-extra-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+.portfolio-extra-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+.portfolio-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  outline: none;
+}
+
+.portfolio-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.portfolio-slider::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.portfolio-slider::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  background: var(--primary-light);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.portfolio-slider-value {
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-align: right;
+  color: var(--text-secondary);
+}
+
+.portfolio-total-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.portfolio-total-label {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.portfolio-total-value {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.portfolio-total-value.valid {
+  color: var(--bullish);
+}
+
+.portfolio-total-value.invalid {
+  color: var(--bearish);
+}
+
+.portfolio-modal-footer {
+  display: flex;
+  gap: 12px;
+  padding: 16px 20px;
+  border-top: 1px solid var(--border-color);
+  background: var(--bg-tertiary);
+}
+
+.portfolio-btn-primary,
+.portfolio-btn-secondary {
+  flex: 1;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.portfolio-btn-primary {
+  background: var(--primary-gradient);
+  border: none;
+  color: white;
+}
+
+.portfolio-btn-primary:hover {
+  opacity: 0.9;
+}
+
+.portfolio-btn-secondary {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.portfolio-btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--text-muted);
+}
+
+/* ==========================================
    Language Selector
    ========================================== */
 
@@ -4948,6 +5283,92 @@ body.home-page {
   text-decoration: underline;
 }
 
+/* Return Type Toggle */
+.return-type-field {
+  margin-bottom: 20px;
+}
+
+.return-type-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.return-type-btn {
+  flex: 1;
+  padding: 10px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.return-type-btn:hover {
+  background: var(--bg-secondary);
+  border-color: var(--text-muted);
+}
+
+.return-type-btn.active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.return-input-container {
+  min-height: 46px;
+}
+
+.portfolio-return-display {
+  padding: 12px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+}
+
+.portfolio-configured {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.portfolio-mini-summary {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.portfolio-edit-btn,
+.portfolio-setup-btn {
+  padding: 6px 12px;
+  background: var(--primary);
+  border: none;
+  border-radius: 6px;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.portfolio-edit-btn:hover,
+.portfolio-setup-btn:hover {
+  opacity: 0.9;
+}
+
+.portfolio-setup-btn {
+  width: 100%;
+  padding: 10px 16px;
+  font-size: 0.9rem;
+}
+
 .input-group {
   display: flex;
   align-items: center;
@@ -5072,6 +5493,13 @@ body.home-page {
   margin-top: 8px;
 }
 
+.result-main .result-margin-inline {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-top: 12px;
+  font-weight: 400;
+}
+
 .result-secondary {
   text-align: center;
   padding: 20px;
@@ -5145,6 +5573,14 @@ body.home-page {
 
 .result-detail .detail-value.highlight {
   color: var(--success-color);
+}
+
+.result-detail .detail-value.positive {
+  color: var(--success-color, #22c55e);
+}
+
+.result-detail .detail-value.negative {
+  color: var(--error-color, #ef4444);
 }
 
 /* Projection Table */
@@ -5295,6 +5731,213 @@ body.home-page {
   }
 }
 
+/* Portfolio Mode Styles */
+.calc-portfolio-intro {
+  margin-bottom: 16px;
+  padding: 16px;
+  background: var(--bg-tertiary);
+  border-radius: 12px;
+  border-left: 3px solid var(--primary-light);
+}
+
+.calc-portfolio-intro h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0 0 8px 0;
+}
+
+.calc-portfolio-intro p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.calc-allocation {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.calc-allocation .alloc-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.calc-allocation .alloc-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calc-allocation .alloc-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.calc-allocation .alloc-name {
+  flex: 1;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.calc-allocation .alloc-pct {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  min-width: 40px;
+  text-align: right;
+}
+
+.calc-allocation input[type="range"] {
+  width: 100%;
+  height: 6px;
+  -webkit-appearance: none;
+  appearance: none;
+  background: var(--bg-tertiary);
+  border-radius: 3px;
+  outline: none;
+}
+
+.calc-allocation input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.calc-allocation input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+.calc-allocation input[type="range"]::-moz-range-thumb {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: var(--primary-light);
+  cursor: pointer;
+  border: none;
+}
+
+.calc-allocation .alloc-total {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  margin-top: 8px;
+  border-top: 1px solid var(--border-color);
+  font-weight: 600;
+}
+
+.calc-allocation .alloc-total span:first-child {
+  color: var(--text-secondary);
+}
+
+/* Portfolio Result Metrics */
+.result-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  margin: 16px 0;
+}
+
+.metric-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: center;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.metric-value {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.metric-value.positive {
+  color: var(--success-color, #22c55e);
+}
+
+.metric-value.negative {
+  color: var(--error-color, #ef4444);
+}
+
+/* Portfolio Projection Table */
+.portfolio-projection .projection-header,
+.portfolio-projection .projection-row {
+  grid-template-columns: 80px 1fr 1fr 80px;
+}
+
+.projection-row .return-col {
+  text-align: right;
+  font-weight: 500;
+}
+
+.projection-row .return-col.positive {
+  color: var(--success-color, #22c55e);
+}
+
+.projection-row .return-col.negative {
+  color: var(--error-color, #ef4444);
+}
+
+.projection-row.final-row {
+  background: rgba(88, 166, 255, 0.1);
+  border-top: 2px solid var(--primary-light);
+  font-weight: 600;
+}
+
+.calc-loading {
+  text-align: center;
+  padding: 40px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 768px) {
+  .result-metrics {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .metric-item {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-color);
+  }
+
+  .metric-item:last-child {
+    border-bottom: none;
+  }
+
+  .portfolio-projection .projection-header,
+  .portfolio-projection .projection-row {
+    grid-template-columns: 70px 1fr 1fr 60px;
+    font-size: 0.8rem;
+  }
+}
+
 /* Card Calculadora na Home */
 .card-calculadora {
   background: linear-gradient(135deg, var(--bg-tertiary) 0%, var(--bg-secondary) 100%);
@@ -5391,7 +6034,7 @@ body.home-page {
   transform: translateX(4px);
 }
 
-/* Home Bottom Row - Calculadora + YouTube lado a lado */
+/* Home Bottom Row - Ferramentas + YouTube lado a lado */
 .home-bottom-row {
   display: flex;
   flex-direction: column;
@@ -5405,11 +6048,11 @@ body.home-page {
   }
 
   .home-bottom-row .card-calculadora {
-    flex: 1;
+    flex: 7;
   }
 
   .home-bottom-row .card-youtube {
-    flex: 1;
+    flex: 5;
   }
 }
 

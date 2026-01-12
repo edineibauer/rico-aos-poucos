@@ -13,7 +13,8 @@ const Comparador2 = {
   // Configurações de ajuste para ativos
   ajustes: {
     dolarExtra: 0,        // Rendimento extra anual do dólar (%)
-    rendaMaisTaxa: 6      // Taxa fixa do Tesouro Renda+ (IPCA+X%)
+    rendaMaisTaxa: 6,     // Taxa fixa do Tesouro Renda+ (IPCA+X%)
+    imoveisRenda: 0       // Rendimento anual líquido de aluguel (% do valor do imóvel)
   },
 
   // Configurações de duelo (igual ao original)
@@ -62,13 +63,63 @@ const Comparador2 = {
     this.bindToggleButtons();
     this.applyPercentageMasks();
     this.applyCurrencyMasks();
+    this.bindPortfolioEvents();
+    this.handleUrlHash();
     this.waitForData();
+  },
+
+  // Handle URL hash to open specific tab (e.g., #calculadora)
+  handleUrlHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const tabBtn = document.querySelector(`.comp2-nav-btn[data-tab="${hash}"]`);
+      if (tabBtn) {
+        // Simulate click to switch tab
+        document.querySelectorAll('.comp2-nav-btn').forEach(b => b.classList.remove('active'));
+        tabBtn.classList.add('active');
+        document.querySelectorAll('.comp2-tab').forEach(t => t.classList.remove('active'));
+        const tabEl = document.getElementById(`comp2-${hash}`);
+        if (tabEl) tabEl.classList.add('active');
+        this.currentTab = hash;
+      }
+    }
+  },
+
+  // Listen for portfolio updates from the user menu
+  bindPortfolioEvents() {
+    window.addEventListener('portfolioUpdated', () => {
+      // If Carteira tab is active, reload portfolio
+      if (this.currentTab === 'carteira') {
+        this.loadSavedPortfolioToTab('comp2Allocation', 'allocTotal');
+      } else if (this.currentTab === 'rebalancear') {
+        this.loadSavedPortfolioToTab('comp2RebalAllocation', 'comp2RebalTotal', '#comp2RebalPresets');
+      }
+    });
+  },
+
+  // Função auxiliar para parsear período (YYYY-MM) para objeto {ano, mes}
+  parsePeriodo(valor) {
+    const [ano, mes] = valor.split('-').map(Number);
+    return { ano, mes };
+  },
+
+  // Filtrar dados mensais por período
+  filtrarDadosMensais(periodoInicio, periodoFim) {
+    const inicio = this.parsePeriodo(periodoInicio);
+    const fim = this.parsePeriodo(periodoFim);
+
+    return Comparador.dadosMensais.meses.filter(d => {
+      const dataInicio = inicio.ano * 12 + inicio.mes;
+      const dataFim = fim.ano * 12 + fim.mes;
+      const dataMes = d.ano * 12 + d.mes;
+      return dataMes >= dataInicio && dataMes <= dataFim;
+    });
   },
 
   waitForData() {
     const checkData = () => {
-      if (typeof Comparador !== 'undefined' && Comparador.dados && Comparador.dados.anos) {
-        console.log('Comparador2: Dados carregados, inicializando...');
+      if (typeof Comparador !== 'undefined' && Comparador.dadosMensais && Comparador.dadosMensais.meses) {
+        console.log('Comparador2: Dados mensais carregados, inicializando...');
         // Mostrar conteúdo inicial
         setTimeout(() => {
           this.showPattern('dotcom');
@@ -95,8 +146,69 @@ const Comparador2 = {
         const tabEl = document.getElementById(`comp2-${tab}`);
         if (tabEl) tabEl.classList.add('active');
         this.currentTab = tab;
+
+        // Auto-load saved portfolio when clicking on Carteira or Rebalancear tabs
+        if (tab === 'carteira' && this.hasSavedPortfolio()) {
+          this.loadSavedPortfolioToTab('comp2Allocation', 'allocTotal');
+        } else if (tab === 'rebalancear' && this.hasSavedPortfolio()) {
+          this.loadSavedPortfolioToTab('comp2RebalAllocation', 'comp2RebalTotal', '#comp2RebalPresets');
+        }
       });
     });
+  },
+
+  // Load saved portfolio and activate "Minha Carteira" button
+  loadSavedPortfolioToTab(containerId, totalElId, presetsSelector = '.comp2-presets:not(#comp2RebalPresets)') {
+    const savedAllocation = this.getSavedPortfolio();
+    if (savedAllocation && Object.keys(savedAllocation).length > 0) {
+      // Apply allocation
+      this.applyAllocation(savedAllocation, containerId, totalElId);
+
+      // Apply extra yield fields
+      const rawPortfolio = this.getRawPortfolio();
+      if (rawPortfolio) {
+        // Determine field IDs based on tab
+        const isRebalTab = containerId === 'comp2RebalAllocation';
+        const dolarExtraId = isRebalTab ? 'comp2RebalDolarExtra' : 'comp2CarteiraDolarExtra';
+        const rendaMaisTaxaId = isRebalTab ? 'comp2RebalRendaMaisTaxa' : 'comp2CarteiraRendaMaisTaxa';
+
+        // Fill Dólar extra yield
+        const dolarExtraInput = document.getElementById(dolarExtraId);
+        if (dolarExtraInput && rawPortfolio.dolar_extra) {
+          dolarExtraInput.value = rawPortfolio.dolar_extra.toLocaleString('pt-BR', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+
+        // Fill Renda+ taxa (IPCA+ extra yield)
+        const rendaMaisTaxaInput = document.getElementById(rendaMaisTaxaId);
+        if (rendaMaisTaxaInput && rawPortfolio.ipca_extra) {
+          rendaMaisTaxaInput.value = rawPortfolio.ipca_extra.toLocaleString('pt-BR', {
+            minimumFractionDigits: 2,
+            maximumFractionDigits: 2
+          });
+        }
+      }
+
+      // Activate "Minha Carteira" button
+      const presetsContainer = document.querySelector(presetsSelector);
+      if (presetsContainer) {
+        presetsContainer.querySelectorAll('.comp2-preset').forEach(b => b.classList.remove('active'));
+        const myPortfolioBtn = presetsContainer.querySelector('[data-preset="myportfolio"]');
+        if (myPortfolioBtn) myPortfolioBtn.classList.add('active');
+      }
+    }
+  },
+
+  // Get raw portfolio from localStorage (including extra yield values)
+  getRawPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      return saved ? JSON.parse(saved) : null;
+    } catch (e) {
+      return null;
+    }
   },
 
   bindAssetChips() {
@@ -213,7 +325,97 @@ const Comparador2 = {
     });
   },
 
+  // Asset name mapping from portfolio modal to comparador
+  portfolioToComparadorMap: {
+    dolar: 'dolar',
+    caixa: 'cdi',
+    tlt: 'tlt_brl',
+    imoveis: 'imoveis_fipezap',
+    fiis: 'fii_ifix',
+    ipca: 'renda_mais',
+    ibov: 'ibovespa',
+    ouro: 'ouro',
+    sp500: 'sp500_brl',
+    bitcoin: 'bitcoin_brl'
+  },
+
+  // Get saved portfolio from localStorage and convert to comparador format
+  getSavedPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      if (!saved) return null;
+
+      const portfolio = JSON.parse(saved);
+      const comparadorAllocation = {};
+
+      Object.entries(portfolio).forEach(([key, value]) => {
+        // Skip extra yield keys (like dolar_extra)
+        if (key.endsWith('_extra')) return;
+
+        const comparadorKey = this.portfolioToComparadorMap[key];
+        if (comparadorKey && value > 0) {
+          comparadorAllocation[comparadorKey] = value;
+        }
+      });
+
+      return comparadorAllocation;
+    } catch (e) {
+      console.error('Erro ao carregar carteira:', e);
+      return null;
+    }
+  },
+
+  // Check if user has saved portfolio
+  hasSavedPortfolio() {
+    try {
+      const saved = localStorage.getItem('rico-portfolio');
+      return saved !== null && saved !== '{}';
+    } catch (e) {
+      return false;
+    }
+  },
+
   applyPreset(preset, containerId = 'comp2Allocation', totalElId = 'allocTotal') {
+    // Handle 'myportfolio' preset
+    if (preset === 'myportfolio') {
+      const savedAllocation = this.getSavedPortfolio();
+      if (savedAllocation && Object.keys(savedAllocation).length > 0) {
+        this.applyAllocation(savedAllocation, containerId, totalElId);
+
+        // Also apply extra yield fields
+        const rawPortfolio = this.getRawPortfolio();
+        if (rawPortfolio) {
+          const isRebalTab = containerId === 'comp2RebalAllocation';
+          const dolarExtraId = isRebalTab ? 'comp2RebalDolarExtra' : 'comp2CarteiraDolarExtra';
+          const rendaMaisTaxaId = isRebalTab ? 'comp2RebalRendaMaisTaxa' : 'comp2CarteiraRendaMaisTaxa';
+
+          const dolarExtraInput = document.getElementById(dolarExtraId);
+          if (dolarExtraInput && rawPortfolio.dolar_extra) {
+            dolarExtraInput.value = rawPortfolio.dolar_extra.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            });
+          }
+
+          const rendaMaisTaxaInput = document.getElementById(rendaMaisTaxaId);
+          if (rendaMaisTaxaInput && rawPortfolio.ipca_extra) {
+            rendaMaisTaxaInput.value = rawPortfolio.ipca_extra.toLocaleString('pt-BR', {
+              minimumFractionDigits: 2,
+              maximumFractionDigits: 2
+            });
+          }
+        }
+      } else {
+        // No portfolio saved - open portfolio modal if available
+        if (typeof window.openPortfolioModal === 'function') {
+          window.openPortfolioModal();
+        } else {
+          alert('Nenhuma carteira salva. Configure sua carteira no menu do usuário.');
+        }
+      }
+      return;
+    }
+
     const presets = {
       '5050': { ibovespa: 50, cdi: 50 },
       '3ativos': { ibovespa: 33, cdi: 33, dolar: 34 },
@@ -223,6 +425,11 @@ const Comparador2 = {
     const allocation = presets[preset];
     if (!allocation) return;
 
+    this.applyAllocation(allocation, containerId, totalElId);
+  },
+
+  // Apply allocation to sliders
+  applyAllocation(allocation, containerId = 'comp2Allocation', totalElId = 'allocTotal') {
     document.querySelectorAll(`#${containerId} input[type="range"]`).forEach(slider => {
       const asset = slider.dataset.asset;
       const value = allocation[asset] || 0;
@@ -289,17 +496,19 @@ const Comparador2 = {
       // Aba Histórico
       'comp2DolarExtra',
       'comp2RendaMaisTaxa',
+      'comp2ImoveisRenda',
       // Aba Duelo
       'comp2DueloDolarExtra',
       'comp2DueloRendaMaisTaxa',
-      'comp2DueloInflacao',
+      'comp2DueloImoveisRenda',
       // Aba Carteira
       'comp2CarteiraDolarExtra',
       'comp2CarteiraRendaMaisTaxa',
-      'comp2CarteiraInflacao',
+      'comp2CarteiraImoveisRenda',
       // Aba Rebalancear
       'comp2RebalDolarExtra',
       'comp2RebalRendaMaisTaxa',
+      'comp2RebalImoveisRenda',
       'comp2Tolerancia'
     ];
 
@@ -362,36 +571,39 @@ const Comparador2 = {
    * Quando SELIC sobe: preço cai (variação negativa)
    * Quando SELIC cai: preço sobe (variação positiva)
    */
-  simularRetornoRendaMais(dadoAno, taxaFixa, selicAnterior = null) {
+  simularRetornoRendaMais(dadoMes, taxaFixaAnual, selicAnterior = null) {
     // Duration modificada para um título Renda+ 2065
     // Títulos de longo prazo têm duration alta, gerando alta volatilidade
     const duration = 16;
 
-    const ipca = dadoAno.inflacao_ipca || 5;
-    const selicAtual = dadoAno.selic_media || 10;
+    const ipcaMensal = dadoMes.inflacao_ipca || 0.5; // IPCA já é mensal nos dados
+    const selicAtual = dadoMes.selic_meta || 10; // SELIC meta anual
 
-    // Retorno do cupom: IPCA + taxa fixa informada pelo usuário
-    const retornoCupom = ipca + taxaFixa;
+    // Converter taxa fixa anual para mensal: (1 + taxa_anual)^(1/12) - 1
+    const taxaFixaMensal = (Math.pow(1 + taxaFixaAnual / 100, 1/12) - 1) * 100;
 
-    // Se não temos SELIC anterior, usar apenas o cupom (primeiro ano)
+    // Retorno do cupom mensal: IPCA mensal + taxa fixa mensal
+    const retornoCupom = ipcaMensal + taxaFixaMensal;
+
+    // Se não temos SELIC anterior, usar apenas o cupom (primeiro mês)
     if (selicAnterior === null) {
       return retornoCupom;
     }
 
     // Fórmula de precificação de títulos que garante preços sempre positivos
-    // Preço = Valor / (1 + taxa)^duration
-    // Razão de preços = ((1 + taxa_anterior) / (1 + taxa_atual))^duration
-    // Esta fórmula nunca produz valores negativos pois é uma razão de números positivos
+    // Usar taxas anuais para calcular variação de preço (duration é anual)
+    // Converter para decimais
     const taxaAnterior = selicAnterior / 100;
     const taxaAtual = selicAtual / 100;
 
     // Razão de preços: se taxa subiu, preço cai; se taxa caiu, preço sobe
-    const razaoPreco = Math.pow((1 + taxaAnterior) / (1 + taxaAtual), duration);
+    // Escalar para variação mensal (dividir por 12)
+    const razaoPreco = Math.pow((1 + taxaAnterior) / (1 + taxaAtual), duration / 12);
 
     // Variação em percentual (nunca inferior a -100%)
     const variacaoPreco = (razaoPreco - 1) * 100;
 
-    // Retorno total = cupom + variação de preço
+    // Retorno total mensal = cupom mensal + variação de preço mensal
     const retornoTotal = retornoCupom + variacaoPreco;
 
     return retornoTotal;
@@ -403,7 +615,7 @@ const Comparador2 = {
   getRetornoAjustado(ativo, dadoAno, dolarExtra = 0, rendaMaisTaxa = 6, dadoAnoAnterior = null) {
     // Ativo especial: Renda+ 2065 (simulado)
     if (ativo === 'renda_mais') {
-      const selicAnterior = dadoAnoAnterior ? dadoAnoAnterior.selic_media : null;
+      const selicAnterior = dadoAnoAnterior ? dadoAnoAnterior.selic_meta : null;
       return this.simularRetornoRendaMais(dadoAno, rendaMaisTaxa, selicAnterior);
     }
 
@@ -411,23 +623,41 @@ const Comparador2 = {
     let retorno = dadoAno[ativo];
     if (retorno === null || retorno === undefined) retorno = 0;
 
-    // Aplicar ajuste extra para o dólar
+    // Aplicar ajuste extra para o dólar (converter taxa anual para mensal)
     if (ativo === 'dolar' && dolarExtra > 0) {
-      // Composição: (1 + retorno_dolar) × (1 + rendimento_extra) - 1
-      const retornoComposto = (1 + retorno / 100) * (1 + dolarExtra / 100) - 1;
+      // Converter taxa anual para mensal: (1 + taxa_anual)^(1/12) - 1
+      const taxaMensal = Math.pow(1 + dolarExtra / 100, 1/12) - 1;
+      // Composição: (1 + retorno_dolar) × (1 + rendimento_mensal) - 1
+      const retornoComposto = (1 + retorno / 100) * (1 + taxaMensal) - 1;
       retorno = retornoComposto * 100;
+    }
+
+    // Aplicar ajuste para imóveis (rendimento de aluguel)
+    if (ativo === 'imoveis_fipezap') {
+      const imoveisRenda = this.ajustes.imoveisRenda || 0;
+
+      if (imoveisRenda !== 0) {
+        // Converter taxa anual para mensal: (1 + taxa_anual)^(1/12) - 1
+        const taxaMensal = Math.pow(1 + imoveisRenda / 100, 1/12) - 1;
+        // Composição: (1 + valorização) × (1 + renda_mensal) - 1
+        const retornoComposto = (1 + retorno / 100) * (1 + taxaMensal) - 1;
+        retorno = retornoComposto * 100;
+      }
     }
 
     return retorno;
   },
 
   calcularEvolucao(ativo, dados, valorInicial, dolarExtra = 0, rendaMaisTaxa = 6) {
-    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    // Usar periodo para dados mensais
+    const primeiroRegistro = dados[0];
+    const periodoInicial = primeiroRegistro.periodo || `${primeiroRegistro.ano}`;
+    const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
 
     dados.forEach((d, index) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação
+      // Obter dado do mês anterior para cálculos que precisam de variação
       const dadoAnterior = index > 0 ? dados[index - 1] : null;
 
       // Usar função de retorno ajustado
@@ -437,7 +667,7 @@ const Comparador2 = {
       inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
 
       evolucao.push({
-        ano: d.ano,
+        periodo: d.periodo || `${d.ano}`,
         nominal: valorNominal,
         real: valorNominal / inflacaoAcumulada
       });
@@ -468,23 +698,25 @@ const Comparador2 = {
   // ABA 1: COMPARADOR HISTÓRICO
   // ==========================================
   compararHistorico() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
-    const anoInicio = parseInt(document.getElementById('comp2AnoInicio')?.value || 2015);
-    const anoFim = parseInt(document.getElementById('comp2AnoFim')?.value || 2025);
+    const periodoInicio = document.getElementById('comp2PeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2PeriodoFim')?.value || '2024-12';
     const valorStr = document.getElementById('comp2Valor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2ImoveisRenda')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
 
     // Pegar ativos selecionados dos chips
     const ativosSelecionados = [];
@@ -497,8 +729,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período selecionado
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período selecionado
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     if (dadosFiltrados.length === 0) {
       alert('Não há dados suficientes para o período selecionado.');
@@ -515,6 +747,10 @@ const Comparador2 = {
 
     // Salvar para toggle nominal/real
     this._chartData = { resultados, dadosFiltrados, valorInicial };
+
+    // Mostrar container de resultados
+    const resultsContainer = document.getElementById('comp2Results');
+    if (resultsContainer) resultsContainer.style.display = 'block';
 
     // Renderizar resultados
     this.renderChartEvolucao(resultados, dadosFiltrados, valorInicial);
@@ -540,7 +776,8 @@ const Comparador2 = {
       this.charts.main.destroy();
     }
 
-    const anos = [dados[0].ano - 1, ...dados.map(d => d.ano)];
+    // Usar período para labels (dados mensais)
+    const periodos = ['Início', ...dados.map(d => d.periodo || `${d.ano}`)];
     const datasets = [];
 
     Object.entries(resultados).forEach(([ativo, data]) => {
@@ -558,7 +795,7 @@ const Comparador2 = {
 
     this.charts.main = new Chart(canvas, {
       type: 'line',
-      data: { labels: anos, datasets },
+      data: { labels: periodos, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -608,7 +845,7 @@ const Comparador2 = {
               ${isPositive ? '+' : ''}${this.formatPercent(item.retornoReal)} real
             </div>
             <div style="font-size: 0.85rem; color: var(--text-primary);">
-              ${this.formatCurrency(item.valorFinalReal)}
+              ${this.formatCurrency(item.valorFinalNominal)}
             </div>
             <div style="font-size: 0.7rem; color: var(--text-muted);">
               ${this.formatPercent(item.retornoNominal)} nominal
@@ -731,16 +968,16 @@ const Comparador2 = {
   // ABA 2: DUELO (FRENTE A FRENTE)
   // ==========================================
   iniciarDuelo() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
     const dueloSelecionado = document.querySelector('.comp2-duelo-btn.active')?.dataset.duelo || 'ibov-sp500';
 
-    // Usar os seletores de ano
-    const anoInicio = parseInt(document.getElementById('comp2DueloAnoInicio')?.value) || 2015;
-    const anoFim = parseInt(document.getElementById('comp2DueloAnoFim')?.value) || 2025;
+    // Usar os seletores de período
+    const periodoInicio = document.getElementById('comp2DueloPeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2DueloPeriodoFim')?.value || '2024-12';
 
     const valorStr = document.getElementById('comp2DueloValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
@@ -748,16 +985,18 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DueloDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2DueloRendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2DueloImoveisRenda')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
 
     const config = this.dueloConfigs[dueloSelecionado];
     if (!config) return;
 
-    // Filtrar dados pelo período
-    const dadosPeriodo = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período
+    const dadosPeriodo = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     if (dadosPeriodo.length === 0) {
       alert('Não há dados disponíveis para o período selecionado.');
@@ -769,56 +1008,93 @@ const Comparador2 = {
     const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, 0, dolarExtra, rendaMaisTaxa);
 
     // Armazenar para toggle
-    this.dueloResultados = { config, resultado1, resultado2, valorInicial, anoInicio, anoFim, dadosPeriodo };
+    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo };
 
     // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);
     this.renderChartDuelo();
-    this.renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo);
+    this.renderTabelaDuelo(config, resultado1, resultado2);
     this.renderMetricasDuelo(config, resultado1, resultado2);
     this.renderConclusaoDuelo(config, resultado1, resultado2);
   },
 
   calcularEvolucaoDuelo(ativoKey, dados, valorInicial, inflacaoCustom = 0, dolarExtra = 0, rendaMaisTaxa = 6) {
-    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
-    const retornosAnuais = [];
-    let anosPositivos = 0;
+    const retornosMensais = [];
+    let mesesPositivos = 0;
     let maxDrawdown = 0;
     let peakValue = valorInicial;
 
     dados.forEach((d, index) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação
+      // Obter dado do mês anterior para cálculos que precisam de variação
       const dadoAnterior = index > 0 ? dados[index - 1] : null;
 
       // Usar função de retorno ajustado
       const retorno = this.getRetornoAjustado(ativoKey, d, dolarExtra, rendaMaisTaxa, dadoAnterior);
 
-      retornosAnuais.push(retorno);
-      if (retorno > 0) anosPositivos++;
+      retornosMensais.push(retorno);
+      if (retorno > 0) mesesPositivos++;
 
       valorNominal *= (1 + retorno / 100);
-      const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
-      inflacaoAcumulada *= (1 + inflacaoAnual / 100);
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
 
       if (valorNominal > peakValue) peakValue = valorNominal;
       const drawdown = (peakValue - valorNominal) / peakValue * 100;
       if (drawdown > maxDrawdown) maxDrawdown = drawdown;
 
       evolucao.push({
-        ano: d.ano,
+        periodo: d.periodo || `${d.ano}`,
         nominal: valorNominal,
         real: valorNominal / inflacaoAcumulada,
-        retornoAno: retorno
+        retornoPeriodo: retorno
       });
     });
 
     const retornoNominal = ((valorNominal / valorInicial) - 1) * 100;
     const valorReal = valorNominal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
-    const mediaAnual = retornosAnuais.reduce((a, b) => a + b, 0) / retornosAnuais.length;
-    const volatilidade = this.calcularVolatilidade(retornosAnuais);
+    const mediaMensal = retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length;
+    const volatilidade = this.calcularVolatilidade(retornosMensais);
+
+    // Agregar retornos por ano para a tabela
+    const retornosPorAno = {};
+    dados.forEach((d, i) => {
+      const ano = d.ano;
+      if (!retornosPorAno[ano]) {
+        retornosPorAno[ano] = { retornos: [], inflacoes: [] };
+      }
+      retornosPorAno[ano].retornos.push(retornosMensais[i]);
+      retornosPorAno[ano].inflacoes.push(d.inflacao_ipca || 0);
+    });
+
+    // Calcular retorno anual composto
+    const anosDisponiveis = Object.keys(retornosPorAno).map(Number).sort((a, b) => a - b);
+    const retornosAnuais = anosDisponiveis.map(ano => {
+      const retornosDoAno = retornosPorAno[ano].retornos;
+      // Retorno composto do ano
+      let retornoComposto = 1;
+      retornosDoAno.forEach(r => {
+        retornoComposto *= (1 + r / 100);
+      });
+      return (retornoComposto - 1) * 100;
+    });
+
+    const inflacaoAnual = anosDisponiveis.map(ano => {
+      const inflacoesDoAno = retornosPorAno[ano].inflacoes;
+      let inflacaoComposta = 1;
+      inflacoesDoAno.forEach(i => {
+        inflacaoComposta *= (1 + i / 100);
+      });
+      return (inflacaoComposta - 1) * 100;
+    });
+
+    const anosPositivos = retornosAnuais.filter(r => r > 0).length;
+    const mediaAnual = retornosAnuais.length > 0
+      ? retornosAnuais.reduce((a, b) => a + b, 0) / retornosAnuais.length
+      : 0;
 
     return {
       evolucao,
@@ -826,12 +1102,18 @@ const Comparador2 = {
       valorFinalReal: valorReal,
       retornoNominal,
       retornoReal,
+      mediaMensal,
       mediaAnual,
       volatilidade,
       maxDrawdown,
+      mesesPositivos,
+      totalMeses: dados.length,
+      retornosMensais,
+      retornosAnuais,
+      inflacaoAnual,
+      anosDisponiveis,
       anosPositivos,
-      totalAnos: dados.length,
-      retornosAnuais
+      totalAnos: anosDisponiveis.length
     };
   },
 
@@ -878,7 +1160,7 @@ const Comparador2 = {
     `;
   },
 
-  renderTabelaDuelo(config, resultado1, resultado2, dadosPeriodo) {
+  renderTabelaDuelo(config, resultado1, resultado2) {
     const tabela = document.getElementById('comp2DueloTabela');
     if (!tabela) return;
 
@@ -896,22 +1178,23 @@ const Comparador2 = {
     `;
 
     let html = '';
-    dadosPeriodo.forEach((d, i) => {
+    resultado1.anosDisponiveis.forEach((ano, i) => {
       const retorno1 = resultado1.retornosAnuais[i];
       const retorno2 = resultado2.retornosAnuais[i];
+      const inflacao = resultado1.inflacaoAnual[i];
       const vencedorAno = retorno1 > retorno2 ? config.ativo1.nome :
                          retorno2 > retorno1 ? config.ativo2.nome : 'Empate';
 
       html += `
         <tr>
-          <td>${d.ano}</td>
+          <td>${ano}</td>
           <td class="${retorno1 >= 0 ? 'text-green' : 'text-red'}">
             ${this.formatPercent(retorno1)}
           </td>
           <td class="${retorno2 >= 0 ? 'text-green' : 'text-red'}">
             ${this.formatPercent(retorno2)}
           </td>
-          <td>${this.formatPercent(d.inflacao_ipca)}</td>
+          <td>${this.formatPercent(inflacao)}</td>
           <td><strong>${vencedorAno}</strong></td>
         </tr>
       `;
@@ -1038,13 +1321,14 @@ const Comparador2 = {
       this.charts.duelo.destroy();
     }
 
-    const anos = [dadosPeriodo[0].ano - 1, ...dadosPeriodo.map(d => d.ano)];
+    // Usar labels dos períodos da evolução
+    const periodos = resultado1.evolucao.map(e => e.periodo);
     const view = this.dueloViewReal ? 'real' : 'nominal';
 
     this.charts.duelo = new Chart(canvas, {
       type: 'line',
       data: {
-        labels: anos,
+        labels: periodos,
         datasets: [
           {
             label: config.ativo1.nome,
@@ -1083,23 +1367,25 @@ const Comparador2 = {
   // ABA 3: CARTEIRA DIVERSIFICADA
   // ==========================================
   simularCarteira() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
-    const anoInicio = parseInt(document.getElementById('comp2CarteiraAnoInicio')?.value || 2015);
-    const anoFim = parseInt(document.getElementById('comp2CarteiraAnoFim')?.value || 2025);
+    const periodoInicio = document.getElementById('comp2CarteiraPeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2CarteiraPeriodoFim')?.value || '2024-12';
     const valorStr = document.getElementById('comp2CarteiraValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2CarteiraDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2CarteiraRendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2CarteiraImoveisRenda')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
 
     // Coletar alocações (apenas da aba Carteira)
     const alocacao = {};
@@ -1122,8 +1408,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período selecionado
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período selecionado
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     // Calcular evolução da carteira e ativos individuais
     // Todos começam do mesmo valor inicial para comparação justa no gráfico
@@ -1135,16 +1421,20 @@ const Comparador2 = {
 
     const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados);
 
+    // Mostrar container de resultados
+    const resultsContainer = document.getElementById('comp2CarteiraResults');
+    if (resultsContainer) resultsContainer.style.display = 'block';
+
     this.renderCarteiraResults(resultados, dadosFiltrados, valorInicial, inflacaoAcumulada, alocacao);
   },
 
   calcularEvolucaoCarteira(alocacao, dados, valorInicial, dolarExtra = 0, rendaMaisTaxa = 6) {
-    const evolucao = [{ ano: dados[0].ano - 1, nominal: valorInicial, real: valorInicial }];
+    const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
 
     dados.forEach((d, index) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação
+      // Obter dado do mês anterior para cálculos que precisam de variação
       const dadoAnterior = index > 0 ? dados[index - 1] : null;
 
       let retornoCarteira = 0;
@@ -1158,7 +1448,7 @@ const Comparador2 = {
       inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
 
       evolucao.push({
-        ano: d.ano,
+        periodo: d.periodo || `${d.ano}`,
         nominal: valorNominal,
         real: valorNominal / inflacaoAcumulada
       });
@@ -1186,7 +1476,8 @@ const Comparador2 = {
       this.charts.carteira.destroy();
     }
 
-    const anos = [dados[0].ano - 1, ...dados.map(d => d.ano)];
+    // Usar período para labels (dados mensais)
+    const periodos = ['Início', ...dados.map(d => d.periodo || `${d.ano}`)];
     const datasets = [];
 
     // Carteira primeiro (destaque)
@@ -1218,7 +1509,7 @@ const Comparador2 = {
 
     this.charts.carteira = new Chart(canvas, {
       type: 'line',
-      data: { labels: anos, datasets },
+      data: { labels: periodos, datasets },
       options: {
         responsive: true,
         maintainAspectRatio: false,
@@ -1261,6 +1552,9 @@ const Comparador2 = {
 
     // Adicionar conclusões
     this.renderConclusoesCarteira(resultados, alocacao, inflacaoAcumulada);
+
+    // Adicionar análise de diversificação
+    this.renderAnaliseDiversificacao(resultados, alocacao);
   },
 
   renderConclusoesCarteira(resultados, alocacao, inflacaoAcumulada) {
@@ -1354,6 +1648,194 @@ const Comparador2 = {
     card.style.display = 'block';
   },
 
+  renderAnaliseDiversificacao(resultados, alocacao) {
+    const container = document.getElementById('comp2DiversificacaoContent');
+    const card = document.getElementById('comp2CarteiraDiversificacao');
+    if (!container || !card) return;
+
+    // Calcular volatilidade (desvio padrão dos retornos mensais)
+    const calcularVolatilidade = (evolucao) => {
+      if (!evolucao || evolucao.length < 2) return 0;
+      const retornosMensais = [];
+      for (let i = 1; i < evolucao.length; i++) {
+        const retorno = ((evolucao[i].nominal / evolucao[i - 1].nominal) - 1) * 100;
+        retornosMensais.push(retorno);
+      }
+      if (retornosMensais.length === 0) return 0;
+      const media = retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length;
+      const variancia = retornosMensais.reduce((acc, r) => acc + Math.pow(r - media, 2), 0) / retornosMensais.length;
+      return Math.sqrt(variancia);
+    };
+
+    // Calcular máxima queda (drawdown)
+    const calcularMaxDrawdown = (evolucao) => {
+      if (!evolucao || evolucao.length < 2) return 0;
+      let maxDrawdown = 0;
+      let picoNominal = evolucao[0].nominal;
+      for (let i = 1; i < evolucao.length; i++) {
+        if (evolucao[i].nominal > picoNominal) {
+          picoNominal = evolucao[i].nominal;
+        }
+        const drawdown = ((picoNominal - evolucao[i].nominal) / picoNominal) * 100;
+        if (drawdown > maxDrawdown) {
+          maxDrawdown = drawdown;
+        }
+      }
+      return maxDrawdown;
+    };
+
+    // Coletar dados de todos os ativos
+    const carteira = resultados.carteira;
+    const dadosAtivos = Object.keys(alocacao)
+      .filter(ativo => resultados[ativo])
+      .map(ativo => ({
+        ativo,
+        nome: Comparador.assetNames[ativo] || ativo,
+        peso: alocacao[ativo],
+        retornoReal: resultados[ativo].retornoReal,
+        retornoNominal: resultados[ativo].retornoNominal,
+        volatilidade: calcularVolatilidade(resultados[ativo].evolucao),
+        maxDrawdown: calcularMaxDrawdown(resultados[ativo].evolucao)
+      }))
+      .sort((a, b) => b.retornoReal - a.retornoReal);
+
+    const volatilidadeCarteira = calcularVolatilidade(carteira.evolucao);
+    const maxDrawdownCarteira = calcularMaxDrawdown(carteira.evolucao);
+    const volatilidadeMedia = dadosAtivos.reduce((acc, a) => acc + a.volatilidade * (a.peso / 100), 0);
+
+    // Encontrar melhor e pior ativo
+    const melhorAtivo = dadosAtivos[0];
+    const piorAtivo = dadosAtivos[dadosAtivos.length - 1];
+    const posicaoCarteira = dadosAtivos.filter(a => a.retornoReal >= carteira.retornoReal).length;
+
+    // HTML da tabela de ativos
+    let html = `
+      <div class="diversificacao-tabela">
+        <h4>Desempenho Individual dos Ativos</h4>
+        <table class="tabela-ativos">
+          <thead>
+            <tr>
+              <th>Ativo</th>
+              <th>Peso</th>
+              <th>Retorno Real</th>
+              <th>Volatilidade</th>
+              <th>Máx. Queda</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="linha-carteira">
+              <td><strong>📊 Carteira</strong></td>
+              <td>100%</td>
+              <td class="${carteira.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+                ${carteira.retornoReal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoReal)}
+              </td>
+              <td>${this.formatPercent(volatilidadeCarteira)}</td>
+              <td class="negativo">-${this.formatPercent(maxDrawdownCarteira)}</td>
+            </tr>
+    `;
+
+    dadosAtivos.forEach((ativo, idx) => {
+      const isMelhor = idx === 0;
+      const isPior = idx === dadosAtivos.length - 1;
+      const classeDestaque = isMelhor ? 'melhor-ativo' : (isPior ? 'pior-ativo' : '');
+      html += `
+        <tr class="${classeDestaque}">
+          <td>${isMelhor ? '🏆 ' : (isPior ? '⚠️ ' : '')}${ativo.nome}</td>
+          <td>${ativo.peso}%</td>
+          <td class="${ativo.retornoReal >= 0 ? 'positivo' : 'negativo'}">
+            ${ativo.retornoReal >= 0 ? '+' : ''}${this.formatPercent(ativo.retornoReal)}
+          </td>
+          <td>${this.formatPercent(ativo.volatilidade)}</td>
+          <td class="negativo">-${this.formatPercent(ativo.maxDrawdown)}</td>
+        </tr>
+      `;
+    });
+
+    html += `
+          </tbody>
+        </table>
+      </div>
+    `;
+
+    // Análise de benefícios da diversificação
+    const reducaoVolatilidade = ((volatilidadeMedia - volatilidadeCarteira) / volatilidadeMedia) * 100;
+    const diferencaMelhor = carteira.retornoReal - melhorAtivo.retornoReal;
+    const diferencaPior = carteira.retornoReal - piorAtivo.retornoReal;
+
+    html += `
+      <div class="diversificacao-analise">
+        <h4>🎯 Benefícios da Diversificação</h4>
+        <div class="analise-metricas">
+          <div class="metrica-box ${reducaoVolatilidade > 0 ? 'positiva' : 'neutra'}">
+            <span class="metrica-valor">${reducaoVolatilidade > 0 ? '-' : ''}${Math.abs(reducaoVolatilidade).toFixed(1)}%</span>
+            <span class="metrica-label">Redução de Volatilidade</span>
+            <span class="metrica-detalhe">vs. média ponderada dos ativos</span>
+          </div>
+          <div class="metrica-box">
+            <span class="metrica-valor">#${posicaoCarteira + 1}</span>
+            <span class="metrica-label">Posição no Ranking</span>
+            <span class="metrica-detalhe">de ${dadosAtivos.length + 1} opções</span>
+          </div>
+          <div class="metrica-box ${diferencaPior > 0 ? 'positiva' : 'negativa'}">
+            <span class="metrica-valor">${diferencaPior >= 0 ? '+' : ''}${this.formatPercent(diferencaPior)}</span>
+            <span class="metrica-label">vs. Pior Ativo</span>
+            <span class="metrica-detalhe">${piorAtivo.nome}</span>
+          </div>
+        </div>
+      </div>
+    `;
+
+    // Explicação educacional
+    html += `
+      <div class="diversificacao-explicacao">
+        <h4>📚 Entendendo a Diversificação</h4>
+        <div class="explicacao-content">
+          <p><strong>Por que a carteira não foi a melhor opção?</strong></p>
+          <p>
+            Em retrospectiva, concentrar 100% em <strong>${melhorAtivo.nome}</strong> teria gerado
+            <span class="positivo">${this.formatPercent(melhorAtivo.retornoReal)}</span> de retorno real,
+            superando a carteira em <span class="destaque">${this.formatPercent(Math.abs(diferencaMelhor))}</span>.
+          </p>
+
+          <p><strong>Mas por que diversificar faz sentido?</strong></p>
+          <ul>
+            <li>
+              <strong>Proteção contra o pior cenário:</strong> Se você tivesse investido apenas em
+              <strong>${piorAtivo.nome}</strong>, teria obtido apenas
+              <span class="${piorAtivo.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatPercent(piorAtivo.retornoReal)}</span>.
+              A carteira ficou <strong>${this.formatPercent(diferencaPior)}</strong> à frente.
+            </li>
+            <li>
+              <strong>Menor volatilidade:</strong> A carteira teve volatilidade mensal de
+              <strong>${this.formatPercent(volatilidadeCarteira)}</strong>, ${reducaoVolatilidade > 0 ?
+              `que é <strong>${reducaoVolatilidade.toFixed(1)}% menor</strong> que a média ponderada dos ativos` :
+              `similar à média dos ativos`}.
+              Isso significa menos "susto" nos meses de queda.
+            </li>
+            <li>
+              <strong>Máxima queda controlada:</strong> O maior tombo da carteira foi de
+              <strong>${this.formatPercent(maxDrawdownCarteira)}</strong>, enquanto alguns ativos
+              individuais chegaram a cair muito mais.
+            </li>
+          </ul>
+
+          <div class="explicacao-conclusao">
+            <p>
+              <strong>💡 Conclusão:</strong> Diversificar nunca será a melhor escolha <em>em retrospectiva</em>,
+              pois sempre haverá um ativo que superou os demais. Porém, diversificar também nunca será a pior escolha.
+              Você abre mão de potenciais ganhos extraordinários em troca de <strong>previsibilidade</strong>,
+              <strong>menor volatilidade</strong> e <strong>proteção contra cenários adversos</strong> —
+              essencial para quem busca construir patrimônio de forma consistente no longo prazo.
+            </p>
+          </div>
+        </div>
+      </div>
+    `;
+
+    container.innerHTML = html;
+    card.style.display = 'block';
+  },
+
   // ==========================================
   // ABA 4: REBALANCEAMENTO
   // ==========================================
@@ -1361,14 +1843,14 @@ const Comparador2 = {
   rebalData: null,
 
   simularRebalanceamento() {
-    if (!Comparador.dados?.anos) {
+    if (!Comparador.dadosMensais?.meses) {
       alert('Dados ainda não carregados. Aguarde...');
       return;
     }
 
     // Ler configurações
-    const anoInicio = parseInt(document.getElementById('comp2RebalAnoInicio')?.value) || 2015;
-    const anoFim = parseInt(document.getElementById('comp2RebalAnoFim')?.value) || 2025;
+    const periodoInicio = document.getElementById('comp2RebalPeriodoInicio')?.value || '2015-01';
+    const periodoFim = document.getElementById('comp2RebalPeriodoFim')?.value || '2024-12';
     const valorStr = document.getElementById('comp2RebalValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
     const tolerancia = this.parsePercentage(document.getElementById('comp2Tolerancia')?.value) || 10;
@@ -1376,10 +1858,12 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2RebalDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RebalRendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2RebalImoveisRenda')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
 
     // Coletar alocações
     const alocacaoConfig = {};
@@ -1405,8 +1889,8 @@ const Comparador2 = {
       return;
     }
 
-    // Filtrar dados pelo período
-    const dadosFiltrados = Comparador.dados.anos.filter(d => d.ano >= anoInicio && d.ano <= anoFim);
+    // Filtrar dados mensais pelo período
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
 
     if (dadosFiltrados.length === 0) {
       alert('Não há dados suficientes para o período selecionado.');
@@ -1448,7 +1932,7 @@ const Comparador2 = {
     this.renderRebalComparison(resultadoComRebal, resultadoSemRebal);
     this.renderRebalChart();
     this.renderRebalMetricas(resultadoComRebal, resultadoSemRebal, alocacaoConfig);
-    this.renderHistoricoSemestral(resultadoComRebal);
+    this.renderHistoricoMensal(resultadoComRebal);
     this.renderRebalConclusoes(resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig);
 
     // Bind toggle buttons
@@ -1487,9 +1971,7 @@ const Comparador2 = {
     });
 
     const evolucao = [{
-      periodo: `${dados[0].ano - 1} S2`,
-      ano: dados[0].ano - 1,
-      semestre: 2,
+      periodo: 'Início',
       valor: valorInicial,
       valorReal: valorInicial
     }];
@@ -1498,153 +1980,147 @@ const Comparador2 = {
     const historico = [];
 
     let totalRebalanceamentos = 0;
-    const retornosSemestrais = [];
+    const retornosMensais = [];
     let precoMercado = {};
     ativos.forEach(ativo => { precoMercado[ativo] = 1; });
 
-    // Processar cada ano
-    dados.forEach((dadoAno, indexAno) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação (Renda+ 2065)
-      const dadoAnoAnterior = indexAno > 0 ? dados[indexAno - 1] : null;
+    // Processar cada mês
+    dados.forEach((dadoMes, indexMes) => {
+      // Obter dado do mês anterior para cálculos que precisam de variação (Renda+ 2065)
+      const dadoMesAnterior = indexMes > 0 ? dados[indexMes - 1] : null;
 
-      for (let sem = 1; sem <= 2; sem++) {
-        const periodoLabel = `${dadoAno.ano} S${sem}`;
-        let rebalanceou = false;
-        let impostoPeriodo = 0;
-        const movimentacoes = [];
+      const periodoLabel = dadoMes.periodo || `${dadoMes.ano}`;
+      let rebalanceou = false;
+      let impostoPeriodo = 0;
+      const movimentacoes = [];
 
-        // Valor antes do retorno
-        let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
+      // Valor antes do retorno
+      let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
 
-        // Aplicar retorno semestral para cada ativo
+      // Aplicar retorno mensal para cada ativo
+      ativos.forEach(ativo => {
+        // Usar função de retorno ajustado (já é mensal)
+        const retornoMensal = this.getRetornoAjustado(ativo, dadoMes, dolarExtra, rendaMaisTaxa, dadoMesAnterior);
+        carteira[ativo] *= (1 + retornoMensal / 100);
+        precoMercado[ativo] *= (1 + retornoMensal / 100);
+      });
+
+      let valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
+      retornosMensais.push((valorTotal / valorAntes - 1) * 100);
+
+      // Atualizar inflação
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom / 12 : dadoMes.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
+
+      // Verificar necessidade de rebalanceamento
+      const alocacoesAtuais = {};
+      ativos.forEach(ativo => {
+        alocacoesAtuais[ativo] = (carteira[ativo] / valorTotal) * 100;
+      });
+
+      const foraTolerancia = ativos.filter(ativo => {
+        const atual = alocacoesAtuais[ativo];
+        const desejada = config[ativo].alocacao;
+        const tolerancia = config[ativo].tolerancia;
+        // Tolerância relativa: se alocação alvo é 5% e tolerância é 50%,
+        // rebalanceia quando cair abaixo de 2.5% ou subir acima de 7.5%
+        const desvioRelativo = Math.abs(atual - desejada) / desejada * 100;
+        return desvioRelativo > tolerancia;
+      });
+
+      // Executar rebalanceamento se necessário
+      if (foraTolerancia.length > 0) {
+        rebalanceou = true;
+        totalRebalanceamentos++;
+
         ativos.forEach(ativo => {
-          // Usar função de retorno ajustado
-          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa, dadoAnoAnterior);
+          const valorDesejado = valorTotal * (config[ativo].alocacao / 100);
+          const valorAtual = carteira[ativo];
+          const diferenca = valorDesejado - valorAtual;
 
-          const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
-          carteira[ativo] *= (1 + retornoSemestral);
-          precoMercado[ativo] *= (1 + retornoSemestral);
-        });
-
-        let valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
-        retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
-
-        // Atualizar inflação
-        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
-        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
-        inflacaoAcumulada *= (1 + inflacaoSemestral);
-
-        // Verificar necessidade de rebalanceamento
-        const alocacoesAtuais = {};
-        ativos.forEach(ativo => {
-          alocacoesAtuais[ativo] = (carteira[ativo] / valorTotal) * 100;
-        });
-
-        const foraTolerancia = ativos.filter(ativo => {
-          const atual = alocacoesAtuais[ativo];
-          const desejada = config[ativo].alocacao;
-          const tolerancia = config[ativo].tolerancia;
-          return Math.abs(atual - desejada) > tolerancia;
-        });
-
-        // Executar rebalanceamento se necessário
-        if (foraTolerancia.length > 0) {
-          rebalanceou = true;
-          totalRebalanceamentos++;
-
-          ativos.forEach(ativo => {
-            const valorDesejado = valorTotal * (config[ativo].alocacao / 100);
-            const valorAtual = carteira[ativo];
-            const diferenca = valorDesejado - valorAtual;
-
-            if (Math.abs(diferenca) > 1) {
-              if (diferenca < 0) {
-                // VENDA - calcular ganho de capital e imposto
-                const lucroVenda = Math.abs(diferenca) - (Math.abs(diferenca) / precoMercado[ativo]) * precoMedio[ativo];
-                const taxaIR = Comparador.taxasIR?.[ativo] || 0.15;
-                let impostoVenda = 0;
-                if (lucroVenda > 0) {
-                  impostoVenda = lucroVenda * taxaIR;
-                  impostoPeriodo += impostoVenda;
-                  totalImpostosPagos += impostoVenda;
-                }
-                const proporcaoVendida = Math.abs(diferenca) / valorAtual;
-                custoTotal[ativo] *= (1 - proporcaoVendida);
-
-                movimentacoes.push({
-                  ativo,
-                  tipo: 'venda',
-                  valor: Math.abs(diferenca),
-                  de: alocacoesAtuais[ativo].toFixed(1),
-                  para: config[ativo].alocacao.toFixed(1),
-                  lucro: lucroVenda,
-                  imposto: impostoVenda
-                });
-
-                carteira[ativo] = valorAtual - Math.abs(diferenca);
-              } else {
-                // COMPRA - atualizar preço médio
-                const qtdComprada = diferenca / precoMercado[ativo];
-                const qtdAtual = carteira[ativo] / precoMercado[ativo];
-                custoTotal[ativo] += diferenca;
-                precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
-
-                movimentacoes.push({
-                  ativo,
-                  tipo: 'compra',
-                  valor: diferenca,
-                  de: alocacoesAtuais[ativo].toFixed(1),
-                  para: config[ativo].alocacao.toFixed(1)
-                });
-
-                carteira[ativo] = valorAtual + diferenca;
+          if (Math.abs(diferenca) > 1) {
+            if (diferenca < 0) {
+              // VENDA - calcular ganho de capital e imposto
+              const lucroVenda = Math.abs(diferenca) - (Math.abs(diferenca) / precoMercado[ativo]) * precoMedio[ativo];
+              const taxaIR = Comparador.taxasIR?.[ativo] || 0.15;
+              let impostoVenda = 0;
+              if (lucroVenda > 0) {
+                impostoVenda = lucroVenda * taxaIR;
+                impostoPeriodo += impostoVenda;
+                totalImpostosPagos += impostoVenda;
               }
+              const proporcaoVendida = Math.abs(diferenca) / valorAtual;
+              custoTotal[ativo] *= (1 - proporcaoVendida);
+
+              movimentacoes.push({
+                ativo,
+                tipo: 'venda',
+                valor: Math.abs(diferenca),
+                de: alocacoesAtuais[ativo].toFixed(1),
+                para: config[ativo].alocacao.toFixed(1),
+                lucro: lucroVenda,
+                imposto: impostoVenda
+              });
+
+              carteira[ativo] = valorAtual - Math.abs(diferenca);
+            } else {
+              // COMPRA - atualizar preço médio
+              const qtdComprada = diferenca / precoMercado[ativo];
+              const qtdAtual = carteira[ativo] / precoMercado[ativo];
+              custoTotal[ativo] += diferenca;
+              precoMedio[ativo] = custoTotal[ativo] / (qtdAtual + qtdComprada);
+
+              movimentacoes.push({
+                ativo,
+                tipo: 'compra',
+                valor: diferenca,
+                de: alocacoesAtuais[ativo].toFixed(1),
+                para: config[ativo].alocacao.toFixed(1)
+              });
+
+              carteira[ativo] = valorAtual + diferenca;
             }
-          });
-
-          // Recalcular valor total após impostos
-          valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0) - impostoPeriodo;
-          if (impostoPeriodo > 0) {
-            const fatorReducao = valorTotal / (valorTotal + impostoPeriodo);
-            ativos.forEach(ativo => { carteira[ativo] *= fatorReducao; });
           }
+        });
+
+        // Recalcular valor total após impostos
+        valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0) - impostoPeriodo;
+        if (impostoPeriodo > 0) {
+          const fatorReducao = valorTotal / (valorTotal + impostoPeriodo);
+          ativos.forEach(ativo => { carteira[ativo] *= fatorReducao; });
         }
-
-        // Recalcular alocações finais do período
-        const alocacoesFinais = {};
-        ativos.forEach(ativo => {
-          alocacoesFinais[ativo] = (carteira[ativo] / valorTotal) * 100;
-        });
-
-        evolucao.push({
-          periodo: periodoLabel,
-          ano: dadoAno.ano,
-          semestre: sem,
-          valor: valorTotal,
-          valorReal: valorTotal / inflacaoAcumulada,
-          rebalanceou
-        });
-
-        // Adicionar ao histórico detalhado
-        historico.push({
-          periodo: periodoLabel,
-          ano: dadoAno.ano,
-          semestre: sem,
-          valor: valorTotal,
-          valorReal: valorTotal / inflacaoAcumulada,
-          alocacoes: { ...alocacoesFinais },
-          rebalanceou,
-          movimentacoes,
-          impostosPagos: impostoPeriodo
-        });
       }
+
+      // Recalcular alocações finais do período
+      const alocacoesFinais = {};
+      ativos.forEach(ativo => {
+        alocacoesFinais[ativo] = (carteira[ativo] / valorTotal) * 100;
+      });
+
+      evolucao.push({
+        periodo: periodoLabel,
+        valor: valorTotal,
+        valorReal: valorTotal / inflacaoAcumulada,
+        rebalanceou
+      });
+
+      // Adicionar ao histórico detalhado
+      historico.push({
+        periodo: periodoLabel,
+        valor: valorTotal,
+        valorReal: valorTotal / inflacaoAcumulada,
+        alocacoes: { ...alocacoesFinais },
+        rebalanceou,
+        movimentacoes,
+        impostosPagos: impostoPeriodo
+      });
     });
 
     const valorFinal = evolucao[evolucao.length - 1].valor;
     const retornoNominal = ((valorFinal / valorInicial) - 1) * 100;
     const valorReal = valorFinal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
-    const volatilidade = this.calcularVolatilidade(retornosSemestrais);
+    const volatilidade = this.calcularVolatilidade(retornosMensais);
 
     // Calcular max drawdown
     let maxDrawdown = 0, peakValue = valorInicial;
@@ -1686,50 +2162,43 @@ const Comparador2 = {
     });
 
     const evolucao = [{
-      periodo: `${dados[0].ano - 1} S2`,
+      periodo: 'Início',
       valor: valorInicial,
       valorReal: valorInicial
     }];
 
-    const retornosSemestrais = [];
+    const retornosMensais = [];
 
-    dados.forEach((dadoAno, indexAno) => {
-      // Obter dado do ano anterior para cálculos que precisam de variação (Renda+ 2065)
-      const dadoAnoAnterior = indexAno > 0 ? dados[indexAno - 1] : null;
+    dados.forEach((dadoMes, indexMes) => {
+      // Obter dado do mês anterior para cálculos que precisam de variação (Renda+ 2065)
+      const dadoMesAnterior = indexMes > 0 ? dados[indexMes - 1] : null;
 
-      for (let sem = 1; sem <= 2; sem++) {
-        let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
+      let valorAntes = Object.values(carteira).reduce((a, b) => a + b, 0);
 
-        ativos.forEach(ativo => {
-          // Usar função de retorno ajustado
-          const retornoAnual = this.getRetornoAjustado(ativo, dadoAno, dolarExtra, rendaMaisTaxa, dadoAnoAnterior);
+      ativos.forEach(ativo => {
+        // Usar função de retorno ajustado (já é mensal)
+        const retornoMensal = this.getRetornoAjustado(ativo, dadoMes, dolarExtra, rendaMaisTaxa, dadoMesAnterior);
+        carteira[ativo] *= (1 + retornoMensal / 100);
+      });
 
-          const retornoSemestral = Math.pow(1 + retornoAnual / 100, 0.5) - 1;
-          carteira[ativo] *= (1 + retornoSemestral);
-        });
+      const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
+      retornosMensais.push((valorTotal / valorAntes - 1) * 100);
 
-        const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
-        retornosSemestrais.push((valorTotal / valorAntes - 1) * 100);
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom / 12 : dadoMes.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
 
-        const inflacaoAnual = inflacaoCustom > 0 ? inflacaoCustom : dadoAno.inflacao_ipca;
-        const inflacaoSemestral = Math.pow(1 + inflacaoAnual / 100, 0.5) - 1;
-        inflacaoAcumulada *= (1 + inflacaoSemestral);
-
-        evolucao.push({
-          periodo: `${dadoAno.ano} S${sem}`,
-          ano: dadoAno.ano,
-          semestre: sem,
-          valor: valorTotal,
-          valorReal: valorTotal / inflacaoAcumulada
-        });
-      }
+      evolucao.push({
+        periodo: dadoMes.periodo || `${dadoMes.ano}`,
+        valor: valorTotal,
+        valorReal: valorTotal / inflacaoAcumulada
+      });
     });
 
     const valorFinal = evolucao[evolucao.length - 1].valor;
     const retornoNominal = ((valorFinal / valorInicial) - 1) * 100;
     const valorReal = valorFinal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
-    const volatilidade = this.calcularVolatilidade(retornosSemestrais);
+    const volatilidade = this.calcularVolatilidade(retornosMensais);
 
     let maxDrawdown = 0, peakValue = valorInicial;
     evolucao.forEach(e => {
@@ -1998,7 +2467,7 @@ const Comparador2 = {
     container.innerHTML = html;
   },
 
-  renderHistoricoSemestral(resultado) {
+  renderHistoricoMensal(resultado) {
     const thead = document.querySelector('#comp2RebalHistorico thead');
     const tbody = document.querySelector('#comp2RebalHistorico tbody');
     if (!thead || !tbody) return;

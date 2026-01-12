@@ -10,8 +10,8 @@ const Calculadora = {
     tempoAnos: 10,
     aporteMensal: 1000,
     valorInicial: 0, // Valor que já possui
-    rentabilidadeMensal: 1.0, // % ao mês
-    inflacaoAnual: 7.0 // % ao ano
+    rentabilidadeMensal: 0.9, // % ao mês
+    inflacaoAnual: 6.0 // % ao ano
   },
 
   // Traduções
@@ -73,6 +73,7 @@ const Calculadora = {
       fiMarginIncome: 'Renda com margem',
       fiMarginCapital: 'Capital necessário',
       fiMarginTime: 'Tempo necessário',
+      fiMarginTimeShort: 'considerando margem de segurança (+30%)',
       fiNeverReach: 'Com os parâmetros atuais, a independência financeira não será atingida em 50 anos. Aumente o aporte ou reduza a renda desejada.',
       perMonth: '/mês'
     },
@@ -133,6 +134,7 @@ const Calculadora = {
       fiMarginIncome: 'Income with margin',
       fiMarginCapital: 'Required capital',
       fiMarginTime: 'Time needed',
+      fiMarginTimeShort: 'with safety margin (+30%)',
       fiNeverReach: 'With current parameters, financial independence won\'t be reached in 50 years. Increase contribution or reduce desired income.',
       perMonth: '/month'
     },
@@ -193,6 +195,7 @@ const Calculadora = {
       fiMarginIncome: 'Ingreso con margen',
       fiMarginCapital: 'Capital necesario',
       fiMarginTime: 'Tiempo necesario',
+      fiMarginTimeShort: 'con margen de seguridad (+30%)',
       fiNeverReach: 'Con los parámetros actuales, la independencia financiera no se alcanzará en 50 años. Aumente el aporte o reduzca el ingreso deseado.',
       perMonth: '/mes'
     }
@@ -243,6 +246,20 @@ const Calculadora = {
       minimumFractionDigits: 2,
       maximumFractionDigits: 2
     }).format(value);
+  },
+
+  renderReturnField() {
+    const d = this.defaults;
+
+    return `
+      <div class="calc-field">
+        <label>${this.t('returnLabel')}</label>
+        <div class="input-group">
+          <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
+          <span class="input-suffix">%</span>
+        </div>
+      </div>
+    `;
   },
 
   // Máscara para campos monetários (formato brasileiro: 1.234,56)
@@ -458,21 +475,13 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
@@ -505,21 +514,13 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
@@ -552,27 +553,19 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
         <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
       `;
-    } else {
+    } else if (this.currentMode === 4) {
       // Modo 4: Independência Financeira
       return `
         <div class="calc-field">
@@ -599,21 +592,13 @@ const Calculadora = {
           </div>
         </div>
 
-        <div class="calc-fields-row">
-          <div class="calc-field">
-            <label for="rentabilidade">${this.t('returnLabel')}</label>
-            <div class="input-group">
-              <input type="text" id="rentabilidade" value="${d.rentabilidadeMensal}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
-          </div>
+        ${this.renderReturnField()}
 
-          <div class="calc-field">
-            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
-            <div class="input-group">
-              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-              <span class="input-suffix">%</span>
-            </div>
+        <div class="calc-field">
+          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <div class="input-group">
+            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+            <span class="input-suffix">%</span>
           </div>
         </div>
 
@@ -669,7 +654,9 @@ const Calculadora = {
   },
 
   calculate() {
-    const rentabilidadeMensal = this.parsePercentage(document.getElementById('rentabilidade')?.value) / 100 || 0.01;
+    // Get rentabilidade from fixed input field
+    const rentabilidadeMensal = this.parsePercentage(document.getElementById('rentabilidade')?.value) / 100 || 0.009;
+
     const inflacaoAnual = this.parsePercentage(document.getElementById('inflacao')?.value) / 100 || 0.07;
     const valorInicial = this.parseCurrency(document.getElementById('valorInicial')?.value) || 0;
 
@@ -679,7 +666,7 @@ const Calculadora = {
     if (this.currentMode === 1) {
       // Calcular aporte necessário para atingir objetivo
       const tempoAnos = parseInt(document.getElementById('tempoAnos')?.value) || 10;
-      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
+      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 0;
       const meses = tempoAnos * 12;
 
       // Objetivo ajustado pela inflação (valor nominal futuro)
@@ -704,7 +691,7 @@ const Calculadora = {
     } else if (this.currentMode === 2) {
       // Calcular montante final dado um aporte
       const tempoAnos = parseInt(document.getElementById('tempoAnos')?.value) || 10;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 0;
       const meses = tempoAnos * 12;
 
       const resultado = this.simularInvestimento(aporteInicial, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
@@ -731,8 +718,8 @@ const Calculadora = {
 
     } else if (this.currentMode === 3) {
       // Modo 3: Calcular tempo necessário
-      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 300000;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+      const objetivoHoje = this.parseCurrency(document.getElementById('objetivo')?.value) || 0;
+      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 0;
 
       const resultado = this.calcularTempoNecessario(objetivoHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial);
 
@@ -746,10 +733,10 @@ const Calculadora = {
         inflacaoAnual,
         inflacaoMensal
       });
-    } else {
+    } else if (this.currentMode === 4) {
       // Modo 4: Independência Financeira
-      const rendaPassivaHoje = this.parseCurrency(document.getElementById('rendaPassiva')?.value) || 5000;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 1000;
+      const rendaPassivaHoje = this.parseCurrency(document.getElementById('rendaPassiva')?.value) || 0;
+      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 0;
 
       // Calcular para renda exata
       const resultadoExato = this.calcularIndependenciaFinanceira(
@@ -1131,7 +1118,7 @@ const Calculadora = {
           ${this.renderProjection(data.saldosPorAno, data.aportesPorAno, data.inflacaoAnual)}
         `;
       }
-    } else {
+    } else if (data.mode === 4) {
       // Resultado do modo 4: Independência Financeira
       const exato = data.resultadoExato;
       const margem = data.resultadoMargem;
@@ -1159,6 +1146,7 @@ const Calculadora = {
           <div class="result-main">
             <div class="result-value">${tempoExatoFormatado}</div>
             <div class="result-label">${this.t('fiTimeNeeded')}</div>
+            <div class="result-margin-inline">${margem.naoAtingiu ? '+50 ' + this.t('years') : tempoMargemFormatado} ${this.t('fiMarginTimeShort')}</div>
           </div>
 
           <div class="result-secondary">

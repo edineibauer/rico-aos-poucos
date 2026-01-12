@@ -680,6 +680,23 @@
   color: var(--text-primary);
 }
 
+/* Minha Carteira preset button */
+.comp2-preset-myportfolio {
+  background: rgba(139, 92, 246, 0.1);
+  border-color: rgba(139, 92, 246, 0.3);
+  color: var(--text-secondary);
+}
+
+.comp2-preset-myportfolio:hover {
+  border-color: rgba(139, 92, 246, 0.5);
+}
+
+.comp2-preset-myportfolio.active {
+  background: rgba(139, 92, 246, 0.2);
+  border-color: rgba(139, 92, 246, 0.6);
+  color: var(--text-primary);
+}
+
 /* Allocation Sliders */
 .comp2-allocation {
   display: grid;
@@ -1159,6 +1176,188 @@
   color: var(--text-primary);
 }
 
+/* Análise de Diversificação */
+.diversificacao-tabela {
+  margin-bottom: 24px;
+}
+
+.diversificacao-tabela h4 {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.tabela-ativos {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.tabela-ativos th {
+  text-align: left;
+  padding: 10px 8px;
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabela-ativos td {
+  padding: 10px 8px;
+  color: var(--text-secondary);
+  border-bottom: 1px solid rgba(139, 148, 158, 0.1);
+}
+
+.tabela-ativos .linha-carteira {
+  background: rgba(245, 158, 11, 0.1);
+}
+
+.tabela-ativos .linha-carteira td {
+  color: var(--text-primary);
+}
+
+.tabela-ativos .melhor-ativo {
+  background: rgba(52, 211, 153, 0.1);
+}
+
+.tabela-ativos .pior-ativo {
+  background: rgba(239, 68, 68, 0.05);
+}
+
+.tabela-ativos .positivo {
+  color: var(--bullish);
+}
+
+.tabela-ativos .negativo {
+  color: var(--bearish);
+}
+
+.diversificacao-analise {
+  margin-bottom: 24px;
+}
+
+.diversificacao-analise h4 {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.analise-metricas {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.metrica-box {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 16px;
+  text-align: center;
+}
+
+.metrica-box.positiva {
+  background: rgba(52, 211, 153, 0.1);
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+.metrica-box.negativa {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.3);
+}
+
+.metrica-box.neutra {
+  background: rgba(139, 148, 158, 0.1);
+}
+
+.metrica-valor {
+  display: block;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.metrica-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  margin-bottom: 2px;
+}
+
+.metrica-detalhe {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--text-muted);
+}
+
+.diversificacao-explicacao h4 {
+  color: var(--text-primary);
+  margin-bottom: 12px;
+  font-size: 1rem;
+}
+
+.explicacao-content {
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.explicacao-content p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 12px;
+}
+
+.explicacao-content ul {
+  margin: 12px 0;
+  padding-left: 20px;
+}
+
+.explicacao-content li {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.6;
+  margin-bottom: 8px;
+}
+
+.explicacao-content strong {
+  color: var(--text-primary);
+}
+
+.explicacao-content .positivo {
+  color: var(--bullish);
+  font-weight: 600;
+}
+
+.explicacao-content .negativo {
+  color: var(--bearish);
+  font-weight: 600;
+}
+
+.explicacao-content .destaque {
+  color: var(--primary-light);
+  font-weight: 600;
+}
+
+.explicacao-conclusao {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.explicacao-conclusao p {
+  margin-bottom: 0;
+  background: rgba(245, 158, 11, 0.1);
+  padding: 12px;
+  border-radius: 8px;
+  border-left: 3px solid #f59e0b;
+}
+
 /* Mobile Responsive */
 @media (max-width: 768px) {
   .comp2-main {
@@ -1407,6 +1606,38 @@
   }
 
   .conclusao-item p {
+    font-size: 0.85rem;
+  }
+
+  /* Diversificação - Mobile */
+  .analise-metricas {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .metrica-box {
+    padding: 12px;
+  }
+
+  .metrica-valor {
+    font-size: 1.2rem;
+  }
+
+  .tabela-ativos {
+    font-size: 0.8rem;
+  }
+
+  .tabela-ativos th,
+  .tabela-ativos td {
+    padding: 8px 6px;
+  }
+
+  .explicacao-content {
+    padding: 14px;
+  }
+
+  .explicacao-content p,
+  .explicacao-content li {
     font-size: 0.85rem;
   }
 }

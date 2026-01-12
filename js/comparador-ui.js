@@ -14,7 +14,8 @@ const Comparador2 = {
   ajustes: {
     dolarExtra: 0,        // Rendimento extra anual do dólar (%)
     rendaMaisTaxa: 6,     // Taxa fixa do Tesouro Renda+ (IPCA+X%)
-    imoveisRenda: 0       // Rendimento anual líquido de aluguel (% do valor do imóvel)
+    imoveisRenda: 0,      // Rendimento anual líquido de aluguel (% do valor do imóvel)
+    ibovespaDividendos: 4 // Dividend yield médio do Ibovespa (%) - converte IBOV em IBOVTR
   },
 
   // Configurações de duelo (igual ao original)
@@ -497,18 +498,22 @@ const Comparador2 = {
       'comp2DolarExtra',
       'comp2RendaMaisTaxa',
       'comp2ImoveisRenda',
+      'comp2IbovespaDividendos',
       // Aba Duelo
       'comp2DueloDolarExtra',
       'comp2DueloRendaMaisTaxa',
       'comp2DueloImoveisRenda',
+      'comp2DueloIbovespaDividendos',
       // Aba Carteira
       'comp2CarteiraDolarExtra',
       'comp2CarteiraRendaMaisTaxa',
       'comp2CarteiraImoveisRenda',
+      'comp2CarteiraIbovespaDividendos',
       // Aba Rebalancear
       'comp2RebalDolarExtra',
       'comp2RebalRendaMaisTaxa',
       'comp2RebalImoveisRenda',
+      'comp2RebalIbovespaDividendos',
       'comp2Tolerancia'
     ];
 
@@ -645,6 +650,19 @@ const Comparador2 = {
       }
     }
 
+    // Aplicar ajuste de dividendos para Ibovespa (converte IBOV em IBOVTR)
+    if (ativo === 'ibovespa') {
+      const ibovespaDividendos = this.ajustes.ibovespaDividendos || 0;
+
+      if (ibovespaDividendos !== 0) {
+        // Converter dividend yield anual para mensal: (1 + dy_anual)^(1/12) - 1
+        const dyMensal = Math.pow(1 + ibovespaDividendos / 100, 1/12) - 1;
+        // Composição: (1 + retorno_ibov) × (1 + dy_mensal) - 1
+        const retornoComposto = (1 + retorno / 100) * (1 + dyMensal) - 1;
+        retorno = retornoComposto * 100;
+      }
+    }
+
     return retorno;
   },
 
@@ -712,11 +730,13 @@ const Comparador2 = {
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RendaMaisTaxa')?.value) || 6;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2ImoveisRenda')?.value) || 0;
+    const ibovespaDividendos = this.parsePercentage(document.getElementById('comp2IbovespaDividendos')?.value) ?? 4;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.ibovespaDividendos = ibovespaDividendos;
 
     // Pegar ativos selecionados dos chips
     const ativosSelecionados = [];
@@ -986,11 +1006,13 @@ const Comparador2 = {
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DueloDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2DueloRendaMaisTaxa')?.value) || 6;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2DueloImoveisRenda')?.value) || 0;
+    const ibovespaDividendos = this.parsePercentage(document.getElementById('comp2DueloIbovespaDividendos')?.value) ?? 4;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.ibovespaDividendos = ibovespaDividendos;
 
     const config = this.dueloConfigs[dueloSelecionado];
     if (!config) return;
@@ -1381,11 +1403,13 @@ const Comparador2 = {
     const dolarExtra = this.parsePercentage(document.getElementById('comp2CarteiraDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2CarteiraRendaMaisTaxa')?.value) || 6;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2CarteiraImoveisRenda')?.value) || 0;
+    const ibovespaDividendos = this.parsePercentage(document.getElementById('comp2CarteiraIbovespaDividendos')?.value) ?? 4;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.ibovespaDividendos = ibovespaDividendos;
 
     // Coletar alocações (apenas da aba Carteira)
     const alocacao = {};
@@ -1859,11 +1883,13 @@ const Comparador2 = {
     const dolarExtra = this.parsePercentage(document.getElementById('comp2RebalDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RebalRendaMaisTaxa')?.value) || 6;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2RebalImoveisRenda')?.value) || 0;
+    const ibovespaDividendos = this.parsePercentage(document.getElementById('comp2RebalIbovespaDividendos')?.value) ?? 4;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.ibovespaDividendos = ibovespaDividendos;
 
     // Coletar alocações
     const alocacaoConfig = {};

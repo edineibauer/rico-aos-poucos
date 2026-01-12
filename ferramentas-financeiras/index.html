@@ -125,6 +125,13 @@
                     <span>%</span>
                   </div>
                 </div>
+                <div class="comp2-field">
+                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield médio do Ibovespa. 4% converte IBOV em IBOVTR (retorno total com dividendos)">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="text" id="comp2IbovespaDividendos" value="4" inputmode="decimal">
+                    <span>%</span>
+                  </div>
+                </div>
               </div>
 
               <!-- Asset chips -->
@@ -140,6 +147,9 @@
                 </button>
                 <button class="comp2-chip active" data-asset="fii_ifix">
                   <span class="chip-dot" style="background:#8b5cf6"></span>FIIs
+                </button>
+                <button class="comp2-chip" data-asset="idiv">
+                  <span class="chip-dot" style="background:#10b981"></span>IDIV
                 </button>
                 <button class="comp2-chip" data-asset="cdi">
                   <span class="chip-dot" style="background:#ec4899"></span>CDI
@@ -267,6 +277,13 @@
                   <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2DueloImoveisRenda" value="0" inputmode="decimal">
+                    <span>%</span>
+                  </div>
+                </div>
+                <div class="comp2-field">
+                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield médio do Ibovespa. 4% converte IBOV em IBOVTR (retorno total com dividendos)">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="text" id="comp2DueloIbovespaDividendos" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -416,6 +433,13 @@
                     <span>%</span>
                   </div>
                 </div>
+                <div class="comp2-field">
+                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield médio do Ibovespa. 4% converte IBOV em IBOVTR (retorno total com dividendos)">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="text" id="comp2CarteiraIbovespaDividendos" value="4" inputmode="decimal">
+                    <span>%</span>
+                  </div>
+                </div>
               </div>
 
               <!-- Presets -->
@@ -468,6 +492,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="fii_ifix">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#10b981"></span>
+                    <span class="alloc-name">IDIV</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="idiv">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -598,6 +630,13 @@
                     <span>%</span>
                   </div>
                 </div>
+                <div class="comp2-field">
+                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield médio do Ibovespa. 4% converte IBOV em IBOVTR (retorno total com dividendos)">?</span></label>
+                  <div class="comp2-input-group">
+                    <input type="text" id="comp2RebalIbovespaDividendos" value="4" inputmode="decimal">
+                    <span>%</span>
+                  </div>
+                </div>
               </div>
               <p class="comp2-hint">Rebalanceia quando desviar além da tolerância definida.</p>
 
@@ -651,6 +690,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="fii_ifix">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#10b981"></span>
+                    <span class="alloc-name">IDIV</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="idiv">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">

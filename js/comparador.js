@@ -12,6 +12,7 @@ const Comparador = {
     dolar: '#22c55e',
     ouro: '#eab308',
     fii_ifix: '#8b5cf6',
+    idiv: '#10b981',
     tesouro_ipca: '#06b6d4',
     cdi: '#ec4899',
     sp500_brl: '#ef4444',
@@ -25,6 +26,7 @@ const Comparador = {
     dolar: 'Dólar',
     ouro: 'Ouro',
     fii_ifix: 'FIIs (IFIX)',
+    idiv: 'IDIV (Dividendos)',
     tesouro_ipca: 'Tesouro IPCA+',
     cdi: 'Caixa/CDI',
     sp500_brl: 'S&P 500 (R$)',
@@ -37,6 +39,7 @@ const Comparador = {
   taxasIR: {
     ibovespa: 0.15, // 15% ganho de capital
     fii_ifix: 0.20, // 20% ganho de capital
+    idiv: 0.15, // 15% ganho de capital (ações)
     sp500_brl: 0.15,
     bitcoin_brl: 0.15,
     ouro: 0.15,

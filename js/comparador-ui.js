@@ -13,7 +13,9 @@ const Comparador2 = {
   // Configurações de ajuste para ativos
   ajustes: {
     dolarExtra: 0,        // Rendimento extra anual do dólar (%)
-    rendaMaisTaxa: 6      // Taxa fixa do Tesouro Renda+ (IPCA+X%)
+    rendaMaisTaxa: 6,     // Taxa fixa do Tesouro Renda+ (IPCA+X%)
+    imoveisRenda: 0,      // Rendimento anual de aluguel (% do valor do imóvel)
+    imoveisCustos: 0      // Custos anuais do imóvel (IPTU, manutenção, reformas)
   },
 
   // Configurações de duelo (igual ao original)
@@ -495,15 +497,23 @@ const Comparador2 = {
       // Aba Histórico
       'comp2DolarExtra',
       'comp2RendaMaisTaxa',
+      'comp2ImoveisRenda',
+      'comp2ImoveisCustos',
       // Aba Duelo
       'comp2DueloDolarExtra',
       'comp2DueloRendaMaisTaxa',
+      'comp2DueloImoveisRenda',
+      'comp2DueloImoveisCustos',
       // Aba Carteira
       'comp2CarteiraDolarExtra',
       'comp2CarteiraRendaMaisTaxa',
+      'comp2CarteiraImoveisRenda',
+      'comp2CarteiraImoveisCustos',
       // Aba Rebalancear
       'comp2RebalDolarExtra',
       'comp2RebalRendaMaisTaxa',
+      'comp2RebalImoveisRenda',
+      'comp2RebalImoveisCustos',
       'comp2Tolerancia'
     ];
 
@@ -627,6 +637,21 @@ const Comparador2 = {
       retorno = retornoComposto * 100;
     }
 
+    // Aplicar ajuste para imóveis (aluguel - custos)
+    if (ativo === 'imoveis_fipezap') {
+      const imoveisRenda = this.ajustes.imoveisRenda || 0;
+      const imoveisCustos = this.ajustes.imoveisCustos || 0;
+      const rendaLiquida = imoveisRenda - imoveisCustos; // Taxa anual líquida
+
+      if (rendaLiquida !== 0) {
+        // Converter taxa anual para mensal: (1 + taxa_anual)^(1/12) - 1
+        const taxaMensal = Math.pow(1 + rendaLiquida / 100, 1/12) - 1;
+        // Composição: (1 + valorização) × (1 + renda_liquida_mensal) - 1
+        const retornoComposto = (1 + retorno / 100) * (1 + taxaMensal) - 1;
+        retorno = retornoComposto * 100;
+      }
+    }
+
     return retorno;
   },
 
@@ -693,10 +718,14 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2ImoveisRenda')?.value) || 0;
+    const imoveisCustos = this.parsePercentage(document.getElementById('comp2ImoveisCustos')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.imoveisCustos = imoveisCustos;
 
     // Pegar ativos selecionados dos chips
     const ativosSelecionados = [];
@@ -965,10 +994,14 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DueloDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2DueloRendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2DueloImoveisRenda')?.value || document.getElementById('comp2ImoveisRenda')?.value) || 0;
+    const imoveisCustos = this.parsePercentage(document.getElementById('comp2DueloImoveisCustos')?.value || document.getElementById('comp2ImoveisCustos')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.imoveisCustos = imoveisCustos;
 
     const config = this.dueloConfigs[dueloSelecionado];
     if (!config) return;
@@ -1358,10 +1391,14 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2CarteiraDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2CarteiraRendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2CarteiraImoveisRenda')?.value || document.getElementById('comp2ImoveisRenda')?.value) || 0;
+    const imoveisCustos = this.parsePercentage(document.getElementById('comp2CarteiraImoveisCustos')?.value || document.getElementById('comp2ImoveisCustos')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.imoveisCustos = imoveisCustos;
 
     // Coletar alocações (apenas da aba Carteira)
     const alocacao = {};
@@ -1834,10 +1871,14 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2RebalDolarExtra')?.value) || 0;
     const rendaMaisTaxa = this.parsePercentage(document.getElementById('comp2RebalRendaMaisTaxa')?.value) || 6;
+    const imoveisRenda = this.parsePercentage(document.getElementById('comp2RebalImoveisRenda')?.value || document.getElementById('comp2ImoveisRenda')?.value) || 0;
+    const imoveisCustos = this.parsePercentage(document.getElementById('comp2RebalImoveisCustos')?.value || document.getElementById('comp2ImoveisCustos')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.rendaMaisTaxa = rendaMaisTaxa;
+    this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.imoveisCustos = imoveisCustos;
 
     // Coletar alocações
     const alocacaoConfig = {};

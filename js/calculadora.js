@@ -11,7 +11,7 @@ const Calculadora = {
     aporteMensal: 1000,
     valorInicial: 0, // Valor que já possui
     rentabilidadeMensal: 1.0, // % ao mês
-    inflacaoAnual: 7.0 // % ao ano
+    inflacaoAnual: 6.0 // % ao ano
   },
 
   // Traduções

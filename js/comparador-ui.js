@@ -627,6 +627,16 @@ const Comparador2 = {
       retorno = retornoComposto * 100;
     }
 
+    // FII/IFIX: adicionar dividend yield mensal (~0.7% ao mês)
+    // O índice IFIX é de retorno total, mas os dados históricos só têm variação de preço
+    // FIIs pagam dividendos mensais que precisam ser considerados para refletir o IFIX real
+    if (ativo === 'fii_ifix') {
+      const dividendYieldMensal = 0.7; // ~8.4% ao ano
+      // Composição: (1 + variação_preço) × (1 + dividend_yield) - 1
+      const retornoComposto = (1 + retorno / 100) * (1 + dividendYieldMensal / 100) - 1;
+      retorno = retornoComposto * 100;
+    }
+
     return retorno;
   },
 

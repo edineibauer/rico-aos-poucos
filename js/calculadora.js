@@ -231,6 +231,11 @@ const Calculadora = {
   },
 
   loadPortfolioPreference() {
+    // Inside comparador: always use portfolio
+    if (this.isInsideComparador()) {
+      this.usePortfolio = true;
+      return;
+    }
     // Check if user has a saved portfolio
     const portfolio = this.getPortfolio();
     // Default to fixed return, but remember if user chose portfolio
@@ -343,6 +348,12 @@ const Calculadora = {
     }).format(value);
   },
 
+  // Check if running inside comparador page
+  isInsideComparador() {
+    const container = document.getElementById('calculadora-container');
+    return container && container.closest('#comp2-calculadora') !== null;
+  },
+
   renderReturnField() {
     const d = this.defaults;
     const portfolio = this.getPortfolio();
@@ -361,9 +372,14 @@ const Calculadora = {
       portfolioSummaryHtml = `<span class="portfolio-mini-summary">${summary}</span>`;
     }
 
-    return `
-      <div class="calc-field return-type-field">
-        <label>${this.t('returnTypeLabel')}</label>
+    // Inside comparador: always use portfolio, no toggle
+    const inComparador = this.isInsideComparador();
+    if (inComparador) {
+      this.usePortfolio = true;
+    }
+
+    // Toggle HTML (hidden in comparador)
+    const toggleHtml = inComparador ? '' : `
         <div class="return-type-toggle">
           <button type="button" class="return-type-btn ${!this.usePortfolio ? 'active' : ''}" data-type="fixed">
             ${this.t('returnTypeFixed')}
@@ -372,6 +388,12 @@ const Calculadora = {
             ${this.t('returnTypePortfolio')}
           </button>
         </div>
+    `;
+
+    return `
+      <div class="calc-field return-type-field">
+        <label>${this.t('returnTypeLabel')}</label>
+        ${toggleHtml}
 
         <div class="return-input-container" id="returnInputContainer">
           ${!this.usePortfolio ? `

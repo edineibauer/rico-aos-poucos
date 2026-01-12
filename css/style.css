@@ -6027,7 +6027,7 @@ body.home-page {
   transform: translateX(4px);
 }
 
-/* Home Bottom Row - Calculadora + YouTube lado a lado */
+/* Home Bottom Row - Ferramentas + YouTube lado a lado */
 .home-bottom-row {
   display: flex;
   flex-direction: column;
@@ -6041,11 +6041,11 @@ body.home-page {
   }
 
   .home-bottom-row .card-calculadora {
-    flex: 1;
+    flex: 7;
   }
 
   .home-bottom-row .card-youtube {
-    flex: 1;
+    flex: 5;
   }
 }
 

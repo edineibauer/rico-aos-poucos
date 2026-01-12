@@ -125,19 +125,15 @@
                     <span>%</span>
                   </div>
                 </div>
-                <div class="comp2-field">
-                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield para converter IBOV em IBOVTR. Use -1 para DY histórico automático por ano, ou informe um valor fixo (ex: 4)">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2IbovespaDividendos" value="-1" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
               </div>
 
               <!-- Asset chips -->
               <div class="comp2-assets">
-                <button class="comp2-chip active" data-asset="ibovespa">
-                  <span class="chip-dot" style="background:#3b82f6"></span>Ibovespa
+                <button class="comp2-chip" data-asset="ibovespa">
+                  <span class="chip-dot" style="background:#3b82f6"></span>IBOV
+                </button>
+                <button class="comp2-chip active" data-asset="ibovtr">
+                  <span class="chip-dot" style="background:#2563eb"></span>IBOV TR
                 </button>
                 <button class="comp2-chip active" data-asset="dolar">
                   <span class="chip-dot" style="background:#22c55e"></span>Dólar
@@ -154,8 +150,8 @@
                 <button class="comp2-chip" data-asset="cdi">
                   <span class="chip-dot" style="background:#ec4899"></span>CDI
                 </button>
-                <button class="comp2-chip" data-asset="renda_mais">
-                  <span class="chip-dot" style="background:#7c3aed"></span>Renda+ 2065
+                <button class="comp2-chip active" data-asset="imab5">
+                  <span class="chip-dot" style="background:#06b6d4"></span>IMA-B 5+
                 </button>
                 <button class="comp2-chip" data-asset="sp500_brl">
                   <span class="chip-dot" style="background:#ef4444"></span>S&P 500
@@ -277,13 +273,6 @@
                   <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2DueloImoveisRenda" value="0" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="comp2-field">
-                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield para converter IBOV em IBOVTR. Use -1 para DY histórico automático por ano, ou informe um valor fixo (ex: 4)">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2DueloIbovespaDividendos" value="-1" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -433,13 +422,6 @@
                     <span>%</span>
                   </div>
                 </div>
-                <div class="comp2-field">
-                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield para converter IBOV em IBOVTR. Use -1 para DY histórico automático por ano, ou informe um valor fixo (ex: 4)">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2CarteiraIbovespaDividendos" value="-1" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
               </div>
 
               <!-- Presets -->
@@ -455,11 +437,11 @@
               <div class="comp2-allocation" id="comp2Allocation">
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#3b82f6"></span>
-                    <span class="alloc-name">Ibovespa</span>
+                    <span class="alloc-dot" style="background:#2563eb"></span>
+                    <span class="alloc-name">IBOV TR</span>
                     <span class="alloc-pct">50%</span>
                   </div>
-                  <input type="range" min="0" max="100" value="50" data-asset="ibovespa">
+                  <input type="range" min="0" max="100" value="50" data-asset="ibovtr">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -503,19 +485,19 @@
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#06b6d4"></span>
+                    <span class="alloc-name">IMA-B 5+</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="imab5">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
                     <span class="alloc-dot" style="background:#ef4444"></span>
                     <span class="alloc-name">S&P 500</span>
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="sp500_brl">
-                </div>
-                <div class="alloc-item">
-                  <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#7c3aed"></span>
-                    <span class="alloc-name">Renda+ 2065</span>
-                    <span class="alloc-pct">0%</span>
-                  </div>
-                  <input type="range" min="0" max="100" value="0" data-asset="renda_mais">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -630,13 +612,6 @@
                     <span>%</span>
                   </div>
                 </div>
-                <div class="comp2-field">
-                  <label>Ibovespa + (a.a.) <span class="comp2-tooltip" title="Dividend yield para converter IBOV em IBOVTR. Use -1 para DY histórico automático por ano, ou informe um valor fixo (ex: 4)">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2RebalIbovespaDividendos" value="-1" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
               </div>
               <p class="comp2-hint">Rebalanceia quando desviar além da tolerância definida.</p>
 
@@ -653,11 +628,11 @@
               <div class="comp2-allocation" id="comp2RebalAllocation">
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#3b82f6"></span>
-                    <span class="alloc-name">Ibovespa</span>
+                    <span class="alloc-dot" style="background:#2563eb"></span>
+                    <span class="alloc-name">IBOV TR</span>
                     <span class="alloc-pct">50%</span>
                   </div>
-                  <input type="range" min="0" max="100" value="50" data-asset="ibovespa">
+                  <input type="range" min="0" max="100" value="50" data-asset="ibovtr">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -701,11 +676,11 @@
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#7c3aed"></span>
-                    <span class="alloc-name">Renda+ 2065</span>
+                    <span class="alloc-dot" style="background:#06b6d4"></span>
+                    <span class="alloc-name">IMA-B 5+</span>
                     <span class="alloc-pct">0%</span>
                   </div>
-                  <input type="range" min="0" max="100" value="0" data-asset="renda_mais">
+                  <input type="range" min="0" max="100" value="0" data-asset="imab5">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -722,6 +697,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="tlt_brl">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#14b8a6"></span>
+                    <span class="alloc-name">Imóveis</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="imoveis_fipezap">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">

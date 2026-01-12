@@ -9,11 +9,13 @@ const Comparador = {
   chartViewDiversif: 'nominal',
   chartColors: {
     ibovespa: '#3b82f6',
+    ibovtr: '#2563eb',
     dolar: '#22c55e',
     ouro: '#eab308',
     fii_ifix: '#8b5cf6',
     idiv: '#10b981',
-    tesouro_ipca: '#06b6d4',
+    imab5: '#06b6d4',
+    tesouro_ipca: '#0891b2',
     cdi: '#ec4899',
     sp500_brl: '#ef4444',
     imoveis_fipezap: '#14b8a6',
@@ -23,10 +25,12 @@ const Comparador = {
   },
   assetNames: {
     ibovespa: 'Ibovespa',
+    ibovtr: 'Ibovespa TR',
     dolar: 'Dólar',
     ouro: 'Ouro',
     fii_ifix: 'FIIs (IFIX)',
     idiv: 'IDIV (Dividendos)',
+    imab5: 'IMA-B 5+',
     tesouro_ipca: 'Tesouro IPCA+',
     cdi: 'Caixa/CDI',
     sp500_brl: 'S&P 500 (R$)',
@@ -38,8 +42,10 @@ const Comparador = {
   // Taxas de IR por tipo de ativo
   taxasIR: {
     ibovespa: 0.15, // 15% ganho de capital
+    ibovtr: 0.15,   // 15% ganho de capital
     fii_ifix: 0.20, // 20% ganho de capital
     idiv: 0.15, // 15% ganho de capital (ações)
+    imab5: 0.15, // IR regressivo simplificado
     sp500_brl: 0.15,
     bitcoin_brl: 0.15,
     ouro: 0.15,

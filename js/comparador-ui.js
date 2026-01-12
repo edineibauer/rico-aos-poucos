@@ -63,7 +63,25 @@ const Comparador2 = {
     this.applyPercentageMasks();
     this.applyCurrencyMasks();
     this.bindPortfolioEvents();
+    this.handleUrlHash();
     this.waitForData();
+  },
+
+  // Handle URL hash to open specific tab (e.g., #calculadora)
+  handleUrlHash() {
+    const hash = window.location.hash.replace('#', '');
+    if (hash) {
+      const tabBtn = document.querySelector(`.comp2-nav-btn[data-tab="${hash}"]`);
+      if (tabBtn) {
+        // Simulate click to switch tab
+        document.querySelectorAll('.comp2-nav-btn').forEach(b => b.classList.remove('active'));
+        tabBtn.classList.add('active');
+        document.querySelectorAll('.comp2-tab').forEach(t => t.classList.remove('active'));
+        const tabEl = document.getElementById(`comp2-${hash}`);
+        if (tabEl) tabEl.classList.add('active');
+        this.currentTab = hash;
+      }
+    }
   },
 
   // Listen for portfolio updates from the user menu

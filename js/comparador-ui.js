@@ -710,6 +710,10 @@ const Comparador2 = {
     // Salvar para toggle nominal/real
     this._chartData = { resultados, dadosFiltrados, valorInicial };
 
+    // Mostrar container de resultados
+    const resultsContainer = document.getElementById('comp2Results');
+    if (resultsContainer) resultsContainer.style.display = 'block';
+
     // Renderizar resultados
     this.renderChartEvolucao(resultados, dadosFiltrados, valorInicial);
     this.renderRanking(resultados, inflacaoAcumulada);
@@ -1374,6 +1378,10 @@ const Comparador2 = {
     });
 
     const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados);
+
+    // Mostrar container de resultados
+    const resultsContainer = document.getElementById('comp2CarteiraResults');
+    if (resultsContainer) resultsContainer.style.display = 'block';
 
     this.renderCarteiraResults(resultados, dadosFiltrados, valorInicial, inflacaoAcumulada, alocacao);
   },

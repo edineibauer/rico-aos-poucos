@@ -632,9 +632,14 @@ const Comparador2 = {
     // FIIs pagam dividendos mensais que precisam ser considerados para refletir o IFIX real
     if (ativo === 'fii_ifix') {
       const dividendYieldMensal = 0.7; // ~8.4% ao ano
+      const retornoOriginal = retorno;
       // Composição: (1 + variação_preço) × (1 + dividend_yield) - 1
       const retornoComposto = (1 + retorno / 100) * (1 + dividendYieldMensal / 100) - 1;
       retorno = retornoComposto * 100;
+      // Debug log (remover depois)
+      if (dadoAno.periodo === 'jul/2020' || dadoAno.periodo === 'dez/2025') {
+        console.log(`FII ${dadoAno.periodo}: original=${retornoOriginal.toFixed(2)}%, ajustado=${retorno.toFixed(2)}%`);
+      }
     }
 
     return retorno;

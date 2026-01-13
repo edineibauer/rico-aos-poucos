@@ -1,11 +1,16 @@
-const APP_VERSION = '3.1';
+const APP_VERSION = '3.2';
 const CACHE_NAME = `rico-aos-poucos-v${APP_VERSION}`;
 
 // Recursos críticos - cacheados na instalação (mínimo para funcionar)
 const CRITICAL_ASSETS = [
   './css/style.css',
+  './css/comparador.css',
   './js/app.js',
   './js/i18n.js',
+  './js/comparador.js',
+  './js/comparador-ui.js',
+  './js/page-header.js',
+  './data/historico-mensal.json',
   './manifest.json',
   './favicon.svg',
   './icon-192.png',
@@ -21,6 +26,7 @@ const PAGES_TO_CACHE = [
   './artigos/index.html',
   './desempenho/index.html',
   './sobre/index.html',
+  './ferramentas-financeiras/index.html',
   './en/index.html',
   './en/setores/index.html',
   './en/artigos/index.html',

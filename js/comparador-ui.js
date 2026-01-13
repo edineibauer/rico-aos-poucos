@@ -53,64 +53,227 @@ const Comparador2 = {
   // Análises conceituais para cada duelo
   dueloAnalises: {
     'ibov-sp500': {
-      contexto: `<p><strong>O que estamos comparando?</strong></p>
-        <p>O <strong>IBOV TR</strong> (Total Return) é o Ibovespa com dividendos reinvestidos - uma medida mais justa de performance. Já o <strong>S&P 500</strong> representa as 500 maiores empresas americanas, convertido para reais.</p>
-        <p><strong>A comparação é justa?</strong> Sim, mas com ressalvas. A valorização do S&P 500 em reais é turbinada pela desvalorização histórica do real frente ao dólar. Um brasileiro que investiu no S&P ganhou duas vezes: valorização das ações + alta do dólar.</p>`,
-      pontoChave: `O "efeito câmbio" é crucial nesta comparação. Em períodos de crise brasileira, o dólar sobe e o S&P 500 se beneficia duplamente para o investidor brasileiro.`,
-      reflexao: `<strong>Reflexão:</strong> Diversificar parte do patrimônio em ativos dolarizados pode ser uma proteção contra a volatilidade da economia brasileira. Não é "torcer contra o Brasil", é gestão de risco.`
-    },
-    'ouro-bitcoin': {
-      contexto: `<p><strong>O que é Ouro?</strong></p>
-        <p>Reserva de valor milenar, usado como moeda por civilizações desde 3000 a.C. Não paga dividendos, não gera renda - seu valor vem da escassez natural e aceitação universal. Bancos centrais mantêm ouro como reserva estratégica.</p>
-        <p><strong>O que é Bitcoin?</strong></p>
-        <p>Criado em 2009, é um ativo digital com oferta limitada a 21 milhões de unidades. Chamado de "ouro digital" por seus defensores devido à escassez programada. Porém, é muito mais volátil e tem apenas 15 anos de história.</p>
-        <p><strong>São comparáveis?</strong> Em essência, ambos são apostas em escassez. Mas ouro tem 5000 anos de track record; Bitcoin, apenas 15. O ouro já sobreviveu a guerras mundiais, hiperinflações e colapsos de impérios.</p>`,
-      pontoChave: `Bitcoin teve valorização explosiva, mas com volatilidade extrema (quedas de 80%+ são comuns). Ouro é mais estável, mas com retornos mais modestos. São perfis de risco completamente diferentes.`,
-      reflexao: `<strong>Reflexão:</strong> Bitcoin pode ser o "ouro digital" do futuro, ou pode ser uma bolha especulativa. A verdade é que ninguém sabe. Uma pequena alocação pode fazer sentido para quem aceita o risco de perda total.`
-    },
-    'ipca-tlt': {
-      contexto: `<p><strong>O que é IMA-B 5+?</strong></p>
-        <p>Índice de títulos públicos brasileiros atrelados à inflação (Tesouro IPCA+) com vencimento acima de 5 anos. Protege contra inflação e oferece juros reais - historicamente altos no Brasil.</p>
-        <p><strong>O que é TLT?</strong></p>
-        <p>ETF que investe em títulos do Tesouro americano de longo prazo (20+ anos). É considerado um dos ativos mais seguros do mundo, mas paga juros muito menores.</p>
-        <p><strong>A comparação:</strong> No Brasil, você recebe juros reais de 5-7% a.a. Nos EUA, historicamente 1-2%. Porém, o TLT é em dólar - moeda forte. O IMA-B é em real - moeda historicamente fraca.</p>`,
-      pontoChave: `O Brasil historicamente paga juros altíssimos para atrair investidores estrangeiros. Isso beneficia quem investe aqui, mas reflete o maior risco do país.`,
-      reflexao: `<strong>Reflexão:</strong> A combinação de ambos pode ser interessante: IMA-B para aproveitar os juros altos brasileiros, TLT como proteção em dólar para momentos de crise.`
-    },
-    'ibov-cdi': {
-      contexto: `<p><strong>O clássico dilema brasileiro</strong></p>
-        <p>No Brasil, diferente de países desenvolvidos, a renda fixa paga muito bem. O CDI (que segue a Selic) frequentemente supera a bolsa, levantando a pergunta: vale o risco da renda variável?</p>
-        <p><strong>IBOV TR:</strong> Retorno das ações + dividendos reinvestidos. Alta volatilidade, quedas de 40-50% não são raras.</p>
-        <p><strong>CDI:</strong> Rendimento "garantido" atrelado à Selic. Baixíssimo risco, mas historicamente perdeu para a inflação em alguns períodos.</p>`,
-      pontoChave: `Historicamente, o CDI brasileiro tem superado muitos índices de ações no longo prazo - algo raro no mundo. Isso não significa que sempre será assim.`,
-      reflexao: `<strong>Reflexão:</strong> A bolsa brasileira exige paciência e estômago forte. Muitos investidores desistem nas quedas e perdem as recuperações. Se você não aguenta ver -40%, talvez o CDI seja mais adequado ao seu perfil.`
-    },
-    'fii-imovel': {
-      contexto: `<p><strong>Duas formas de investir em imóveis</strong></p>
-        <p><strong>Imóvel físico:</strong> Você é dono do tijolo. Pode morar, alugar ou vender. Exige gestão ativa: inquilinos, manutenção, IPTU, vacância. Pouca liquidez - vender um imóvel leva meses.</p>
-        <p><strong>FIIs (IFIX):</strong> Cotas de fundos que investem em imóveis comerciais. Renda mensal isenta de IR, liquidez diária na bolsa, diversificação fácil. Porém, você não é "dono" do imóvel - é cotista de um fundo.</p>
-        <p><strong>Comparação dos rendimentos:</strong> O índice IFIX considera apenas a variação das cotas. Já adicionamos o rendimento de aluguel aos imóveis físicos (campo "Imóveis+") para uma comparação mais justa.</p>`,
-      pontoChave: `FIIs oferecem renda mensal maior e liquidez, mas você não tem controle sobre o ativo. Imóveis físicos dão controle total, mas exigem tempo e capital concentrado.`,
-      reflexao: `<strong>Reflexão:</strong> Para quem quer renda passiva sem trabalho: FIIs. Para quem quer construir patrimônio físico e tem tempo para gerir: imóvel. Muitos investidores combinam os dois.`,
+      contexto: `
+        <p><strong>O que é o IBOV TR (Total Return)?</strong></p>
+        <p>O Ibovespa Total Return mede a performance das ações brasileiras <em>com dividendos reinvestidos</em>. Isso é crucial porque muitas empresas brasileiras (bancos, elétricas, estatais) distribuem dividendos gordos. Sem considerar dividendos, a comparação seria injusta.</p>
+
+        <p><strong>O que é o S&P 500?</strong></p>
+        <p>Índice das 500 maiores empresas americanas por capitalização de mercado. Representa cerca de 80% do valor total do mercado acionário dos EUA. Aqui, convertido para reais para comparação direta.</p>
+
+        <p><strong>Por que o S&P 500 em reais costuma ganhar?</strong></p>
+        <p>Dois fatores trabalham a favor do investidor brasileiro no S&P 500:</p>
+        <ul>
+          <li><strong>Valorização das ações:</strong> Empresas americanas (Apple, Microsoft, Google) dominam setores globais</li>
+          <li><strong>Desvalorização do real:</strong> Em 2011, US$1 = R$1,60. Em 2025, US$1 = R$6,20. Só o câmbio multiplicou o investimento por 3,8x</li>
+        </ul>
+
+        <p><strong>Quando o IBOV pode ganhar?</strong></p>
+        <p>Em ciclos de otimismo com o Brasil (commodities em alta, juros caindo, reformas), o IBOV pode superar o S&P 500 em reais. Isso ocorreu em 2003-2007 e brevemente em 2016-2017.</p>`,
+      pontoChave: `O "efeito câmbio" é o fator decisivo. Quando o Brasil vai mal, o dólar sobe - e o investidor em S&P 500 ganha duas vezes. Quando o Brasil vai bem, o real se valoriza - e o ganho do S&P 500 em reais diminui. É uma proteção natural contra crises brasileiras.`,
+      reflexao: `<strong>Nossa Tese:</strong> Diversificar parte do patrimônio em ativos dolarizados não é "torcer contra o Brasil" - é gestão de risco básica. Se sua renda é em reais, seu emprego é no Brasil, e seu imóvel é aqui, você já está muito exposto ao país. Ter 20-30% em ativos dolarizados equilibra essa concentração.`,
       tabelaComparativa: `
         <table class="tabela-comparativa">
-          <tr><th>Característica</th><th>FIIs</th><th>Imóvel Físico</th></tr>
-          <tr><td>Liquidez</td><td class="positivo">Alta (venda em D+2)</td><td class="negativo">Baixa (meses)</td></tr>
-          <tr><td>Diversificação</td><td class="positivo">Fácil (várias cotas)</td><td class="negativo">Difícil (capital alto)</td></tr>
-          <tr><td>Gestão</td><td class="positivo">Passiva (gestor cuida)</td><td class="negativo">Ativa (você cuida)</td></tr>
-          <tr><td>Controle</td><td class="negativo">Nenhum</td><td class="positivo">Total</td></tr>
-          <tr><td>Alavancagem</td><td class="negativo">Não disponível</td><td class="positivo">Financiamento imobiliário</td></tr>
-          <tr><td>IR sobre rendimentos</td><td class="positivo">Isento (PF)</td><td class="negativo">Tributado (aluguel)</td></tr>
-          <tr><td>Valorização potencial</td><td>Moderada</td><td>Alta (localização)</td></tr>
+          <tr><th>Característica</th><th>IBOV TR</th><th>S&P 500 (R$)</th></tr>
+          <tr><td>Moeda base</td><td>Real (BRL)</td><td>Dólar convertido para BRL</td></tr>
+          <tr><td>Setores dominantes</td><td>Bancos, commodities, estatais</td><td>Tecnologia, saúde, consumo</td></tr>
+          <tr><td>Dividend yield médio</td><td class="positivo">~5-7% a.a.</td><td>~1,5% a.a.</td></tr>
+          <tr><td>Volatilidade histórica</td><td class="negativo">~25-30% a.a.</td><td class="positivo">~15-20% a.a.</td></tr>
+          <tr><td>Correlação com crises BR</td><td class="negativo">Cai junto</td><td class="positivo">Sobe (via câmbio)</td></tr>
+          <tr><td>Acesso para brasileiro</td><td class="positivo">Direto (B3)</td><td>Via BDRs ou corretora externa</td></tr>
+          <tr><td>Tributação</td><td>15-22,5% sobre ganho</td><td>15% (até R$35k/mês isento)</td></tr>
+        </table>`
+    },
+    'ouro-bitcoin': {
+      contexto: `
+        <p><strong>O que é o Ouro?</strong></p>
+        <p>O ouro é a reserva de valor mais antiga da humanidade. Usado como moeda desde 3000 a.C., sobreviveu à queda de impérios, guerras mundiais, hiperinflações e crises financeiras. Suas características:</p>
+        <ul>
+          <li><strong>Escassez natural:</strong> Todo o ouro já minerado na história cabe em um cubo de 22 metros de lado</li>
+          <li><strong>Indestrutível:</strong> Não oxida, não se degrada, dura para sempre</li>
+          <li><strong>Reconhecimento universal:</strong> Aceito como valor em qualquer país do mundo</li>
+          <li><strong>Sem risco de contraparte:</strong> Não depende de nenhum governo ou empresa</li>
+        </ul>
+
+        <p><strong>O que é o Bitcoin?</strong></p>
+        <p>Criado em 2009 por Satoshi Nakamoto, o Bitcoin é um ativo digital descentralizado. Suas características:</p>
+        <ul>
+          <li><strong>Escassez programada:</strong> Máximo de 21 milhões de unidades (atualmente ~19,5 milhões minerados)</li>
+          <li><strong>Descentralizado:</strong> Não controlado por nenhum governo ou banco central</li>
+          <li><strong>Transferível globalmente:</strong> Pode ser enviado para qualquer lugar em minutos</li>
+          <li><strong>Volatilidade extrema:</strong> Quedas de 50-80% são historicamente comuns</li>
+        </ul>
+
+        <p><strong>A Grande Questão: São comparáveis?</strong></p>
+        <p>Defensores do Bitcoin o chamam de "ouro digital" pela escassez programada. Críticos argumentam que comparar 15 anos de história com 5.000 é absurdo. A verdade: são ativos fundamentalmente diferentes, com perfis de risco incomparáveis.</p>`,
+      pontoChave: `<strong>O argumento central:</strong> Ouro já provou seu valor atravessando 5 milênios de história humana. Bitcoin ainda precisa provar que não é uma bolha especulativa. Isso não significa que Bitcoin não possa se tornar o "ouro do século XXI" - apenas que é uma aposta muito mais arriscada do que o ouro tradicional.`,
+      reflexao: `<strong>Nossa Tese:</strong> Ouro é proteção patrimonial testada pelo tempo - deve fazer parte de qualquer carteira conservadora (5-10%). Bitcoin é uma aposta assimétrica: pode multiplicar por 10x ou ir a zero. Se você aceita perder 100% do valor investido, uma pequena alocação (1-3%) pode fazer sentido pela opcionalidade. Nunca coloque em Bitcoin dinheiro que você não pode perder.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>Ouro</th><th>Bitcoin</th></tr>
+          <tr><td>Histórico</td><td class="positivo">5.000+ anos</td><td class="negativo">15 anos</td></tr>
+          <tr><td>Volatilidade anual</td><td class="positivo">~15%</td><td class="negativo">~60-80%</td></tr>
+          <tr><td>Maior queda histórica</td><td class="positivo">-46% (1980-1982)</td><td class="negativo">-83% (2017-2018)</td></tr>
+          <tr><td>Reserva de bancos centrais</td><td class="positivo">Sim (35.000 toneladas)</td><td class="negativo">Não (El Salvador apenas)</td></tr>
+          <tr><td>Regulação</td><td class="positivo">Clara e estabelecida</td><td class="negativo">Incerta, varia por país</td></tr>
+          <tr><td>Custódia</td><td>Física ou ETF</td><td>Carteira digital (risco de hack)</td></tr>
+          <tr><td>Uso industrial</td><td class="positivo">Eletrônicos, joias, medicina</td><td class="negativo">Nenhum</td></tr>
+          <tr><td>Correlação com crises</td><td class="positivo">Sobe em crises</td><td>Incerta (caiu em 2022)</td></tr>
+          <tr><td>Potencial de valorização</td><td>Moderado (2-5x em 20 anos)</td><td class="positivo">Alto (mas com risco proporcional)</td></tr>
+          <tr><td>Risco de ir a zero</td><td class="positivo">Praticamente zero</td><td class="negativo">Existe (regulação, tecnologia)</td></tr>
+        </table>`
+    },
+    'ipca-tlt': {
+      contexto: `
+        <p><strong>O que é o IMA-B 5+ (Tesouro IPCA+ longo)?</strong></p>
+        <p>Índice que mede a performance de títulos públicos brasileiros atrelados à inflação com vencimento acima de 5 anos. Características:</p>
+        <ul>
+          <li><strong>Proteção contra inflação:</strong> Rende IPCA + taxa real prefixada</li>
+          <li><strong>Juros reais altos:</strong> Historicamente 5-7% acima da inflação no Brasil</li>
+          <li><strong>Risco de marcação a mercado:</strong> Se juros sobem, o preço do título cai (e vice-versa)</li>
+          <li><strong>Risco soberano:</strong> Depende da capacidade do governo brasileiro de pagar</li>
+        </ul>
+
+        <p><strong>O que é o TLT (Treasury Long Term)?</strong></p>
+        <p>ETF que investe em títulos do Tesouro americano com vencimento de 20+ anos. Características:</p>
+        <ul>
+          <li><strong>Ativo mais seguro do mundo:</strong> Governo dos EUA nunca deu calote</li>
+          <li><strong>Juros reais baixos:</strong> Historicamente 0-2% acima da inflação americana</li>
+          <li><strong>Moeda forte:</strong> Rendimento em dólar - moeda de reserva global</li>
+          <li><strong>Alta sensibilidade a juros:</strong> Duration de ~17 anos = muita volatilidade</li>
+        </ul>
+
+        <p><strong>Por que o Brasil paga juros tão altos?</strong></p>
+        <p>Para atrair capital estrangeiro, o Brasil precisa compensar o risco maior com juros maiores. Isso beneficia o investidor local, mas reflete a percepção de risco do país. Países desenvolvidos não precisam pagar 6-7% de juros reais.</p>`,
+      pontoChave: `<strong>O trade-off fundamental:</strong> No IMA-B você ganha juros muito maiores (6-7% real vs 1-2% real), mas assume risco Brasil e risco de marcação a mercado em cenários de crise. No TLT você ganha menos, mas em dólar e com risco soberano mínimo.`,
+      reflexao: `<strong>Nossa Tese:</strong> Aproveite os juros altos brasileiros enquanto durarem, mas mantenha uma reserva em ativos dolarizados como proteção. Uma combinação de IMA-B (para renda) + TLT (para proteção) pode oferecer o melhor dos dois mundos: retorno alto no Brasil com hedge em dólar para crises.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>IMA-B 5+</th><th>TLT</th></tr>
+          <tr><td>Juros reais históricos</td><td class="positivo">5-7% a.a.</td><td>0-2% a.a.</td></tr>
+          <tr><td>Moeda</td><td>Real (BRL)</td><td class="positivo">Dólar (USD)</td></tr>
+          <tr><td>Risco soberano</td><td class="negativo">Médio-alto (Brasil)</td><td class="positivo">Mínimo (EUA)</td></tr>
+          <tr><td>Proteção contra inflação</td><td class="positivo">Sim (IPCA)</td><td class="negativo">Não diretamente</td></tr>
+          <tr><td>Volatilidade (duration)</td><td class="negativo">Alta (~7-10 anos)</td><td class="negativo">Muito alta (~17 anos)</td></tr>
+          <tr><td>Comportamento em crise BR</td><td class="negativo">Pode cair muito</td><td class="positivo">Tende a subir (dólar)</td></tr>
+          <tr><td>Liquidez</td><td class="positivo">Alta (Tesouro Direto)</td><td class="positivo">Alta (NYSE)</td></tr>
+          <tr><td>Tributação</td><td>15-22,5% (tabela regressiva)</td><td>15% sobre ganho de capital</td></tr>
+        </table>`
+    },
+    'ibov-cdi': {
+      contexto: `
+        <p><strong>O Dilema Clássico do Investidor Brasileiro</strong></p>
+        <p>Em países desenvolvidos, a resposta é clara: no longo prazo, ações superam renda fixa. Nos EUA, o S&P 500 rendeu ~10% a.a. contra ~4% dos bonds. No Brasil, essa certeza não existe.</p>
+
+        <p><strong>O que é o IBOV TR?</strong></p>
+        <p>Ibovespa Total Return = variação das ações + dividendos reinvestidos. Representa o retorno real de quem investe em ações brasileiras e reinveste os proventos.</p>
+
+        <p><strong>O que é o CDI?</strong></p>
+        <p>Certificado de Depósito Interbancário - taxa que os bancos cobram entre si. Segue de perto a Selic. É o benchmark da renda fixa brasileira e, historicamente, paga muito bem.</p>
+
+        <p><strong>Por que o CDI brasileiro é tão alto?</strong></p>
+        <p>O Brasil é um país com histórico de inflação alta, instabilidade política e crises fiscais. Para financiar sua dívida, o governo precisa pagar juros altos. Isso beneficia o investidor de renda fixa, mas reflete os riscos do país.</p>
+
+        <p><strong>O Fenômeno Brasileiro</strong></p>
+        <p>Em muitos períodos de 10-20 anos, o CDI superou o Ibovespa - algo raríssimo no mundo. Isso levanta a questão: se a renda fixa paga tão bem, por que correr o risco da bolsa?</p>`,
+      pontoChave: `<strong>O paradoxo brasileiro:</strong> A bolsa deveria pagar um "prêmio de risco" sobre a renda fixa pelo maior risco assumido. Mas com CDI pagando 10-14% a.a. nominais, esse prêmio fica apertado. Muitos investidores se frustram com a bolsa e voltam para o CDI após quedas de 30-40%.`,
+      reflexao: `<strong>Nossa Tese:</strong> A bolsa brasileira exige mais paciência que outras bolsas do mundo. O investidor médio não aguenta ver -40% e vende no pior momento. Se você não tem estômago para volatilidade, não há vergonha em ficar no CDI - que historicamente pagou muito bem. Mas se aceita a volatilidade, a bolsa pode oferecer ganhos superiores em janelas de 15-20 anos.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>IBOV TR</th><th>CDI</th></tr>
+          <tr><td>Volatilidade anual</td><td class="negativo">~25-30%</td><td class="positivo">~0,5%</td></tr>
+          <tr><td>Maior queda histórica</td><td class="negativo">-50% (2008)</td><td class="positivo">Nunca negativo</td></tr>
+          <tr><td>Retorno em anos ruins</td><td class="negativo">Pode perder 30-50%</td><td class="positivo">Sempre positivo nominal</td></tr>
+          <tr><td>Previsibilidade</td><td class="negativo">Baixa</td><td class="positivo">Alta</td></tr>
+          <tr><td>Proteção contra inflação</td><td>Moderada (empresas repassam)</td><td class="negativo">Pode perder para IPCA</td></tr>
+          <tr><td>Necessidade de gestão</td><td class="negativo">Requer acompanhamento</td><td class="positivo">Passivo</td></tr>
+          <tr><td>Liquidez</td><td class="positivo">D+2</td><td class="positivo">D+0 a D+1</td></tr>
+          <tr><td>Potencial de ganho</td><td class="positivo">Ilimitado</td><td>Limitado à taxa Selic</td></tr>
+        </table>`
+    },
+    'fii-imovel': {
+      contexto: `
+        <p><strong>Duas Filosofias de Investimento Imobiliário</strong></p>
+        <p>Investir em imóveis no Brasil é tradição. Mas há duas formas muito diferentes de fazer isso, cada uma com vantagens e desvantagens claras.</p>
+
+        <p><strong>Imóvel Físico: O Investimento Tradicional</strong></p>
+        <ul>
+          <li><strong>Você é dono do tijolo:</strong> Pode usar, alugar, reformar ou vender</li>
+          <li><strong>Controle total:</strong> Você decide inquilino, preço do aluguel, manutenção</li>
+          <li><strong>Alavancagem:</strong> Pode financiar 70-80% do valor e usar o aluguel para pagar</li>
+          <li><strong>Valorização por localização:</strong> Imóvel bem localizado pode valorizar muito acima da média</li>
+        </ul>
+        <p><strong>Mas exige:</strong> Capital alto, tempo para gestão, lidar com inquilinos, vacância, manutenção, IPTU, condomínio...</p>
+
+        <p><strong>FIIs (Fundos Imobiliários): O Investimento Moderno</strong></p>
+        <ul>
+          <li><strong>Cotas acessíveis:</strong> Invista a partir de R$100 em grandes empreendimentos</li>
+          <li><strong>Renda mensal:</strong> Dividendos distribuídos todo mês, isentos de IR para pessoa física</li>
+          <li><strong>Diversificação:</strong> Um FII pode ter 50+ imóveis em diferentes cidades</li>
+          <li><strong>Liquidez:</strong> Venda suas cotas em D+2 na bolsa</li>
+        </ul>
+        <p><strong>Mas você abre mão de:</strong> Controle sobre o ativo, possibilidade de usar o imóvel, alavancagem via financiamento.</p>
+
+        <p><strong>Sobre a Comparação</strong></p>
+        <p>O IFIX mede apenas a variação das cotas dos FIIs. Para comparar com imóveis físicos de forma justa, adicionamos o campo "Imóveis+" que simula o rendimento de aluguel (padrão 4,5% a.a.).</p>`,
+      pontoChave: `<strong>A questão central:</strong> FIIs são melhores para quem quer renda passiva sem trabalho - você recebe dividendos todo mês sem se preocupar com inquilinos. Imóveis físicos são melhores para quem quer construir patrimônio de longo prazo e tem tempo/disposição para a gestão.`,
+      reflexao: `<strong>Nossa Tese:</strong> Não existe resposta certa - depende do seu perfil. Se você tem capital alto, tempo livre e gosta de "colocar a mão na massa", imóveis físicos podem ser excelentes (especialmente via leilões). Se você quer simplicidade e renda passiva, FIIs são mais práticos. Muitos investidores combinam os dois: FIIs para liquidez e imóvel próprio para moradia/patrimônio.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>FIIs (IFIX)</th><th>Imóvel Físico</th></tr>
+          <tr><td>Capital mínimo</td><td class="positivo">~R$100</td><td class="negativo">R$200.000+</td></tr>
+          <tr><td>Liquidez</td><td class="positivo">Alta (D+2)</td><td class="negativo">Baixa (meses para vender)</td></tr>
+          <tr><td>Diversificação</td><td class="positivo">Fácil (várias cotas)</td><td class="negativo">Difícil (capital concentrado)</td></tr>
+          <tr><td>Gestão necessária</td><td class="positivo">Nenhuma</td><td class="negativo">Alta (inquilinos, manutenção)</td></tr>
+          <tr><td>Controle sobre o ativo</td><td class="negativo">Nenhum</td><td class="positivo">Total</td></tr>
+          <tr><td>Alavancagem (financiamento)</td><td class="negativo">Não disponível</td><td class="positivo">Até 80% do valor</td></tr>
+          <tr><td>IR sobre rendimentos</td><td class="positivo">Isento (PF)</td><td class="negativo">Tributado (27,5% aluguel)</td></tr>
+          <tr><td>IR sobre ganho de capital</td><td>20%</td><td>15% (pode isentar)</td></tr>
+          <tr><td>Renda mensal típica</td><td class="positivo">0,7-1% a.m.</td><td>0,3-0,5% a.m.</td></tr>
+          <tr><td>Risco de vacância</td><td class="positivo">Diluído (muitos imóveis)</td><td class="negativo">Concentrado (1 imóvel)</td></tr>
+          <tr><td>Potencial de valorização</td><td>Moderado</td><td class="positivo">Alto (localização premium)</td></tr>
+          <tr><td>Uso próprio</td><td class="negativo">Não</td><td class="positivo">Sim</td></tr>
         </table>`
     },
     'dolar-ouro': {
-      contexto: `<p><strong>Dois ativos de proteção</strong></p>
-        <p><strong>Dólar:</strong> Moeda de reserva mundial. Quando há crise global, investidores correm para o dólar. No Brasil, também sobe em crises locais. O campo "Dólar+" permite simular rendimento em conta americana.</p>
-        <p><strong>Ouro:</strong> Reserva de valor milenar. Não depende de nenhum governo ou banco central. Tende a subir em momentos de incerteza e inflação global.</p>
-        <p><strong>Correlação:</strong> Ambos tendem a subir em crises, mas por motivos diferentes. O dólar sobe por ser porto seguro; o ouro sobe por ser hedge contra desvalorização de todas as moedas.</p>`,
-      pontoChave: `Em crises brasileiras, o dólar tende a subir mais que o ouro. Em crises globais (como guerras ou pandemias), o ouro pode se destacar. São proteções complementares.`,
-      reflexao: `<strong>Reflexão:</strong> Ter uma pequena parcela em ambos pode ser uma estratégia de proteção. Não são ativos para enriquecer, mas para preservar patrimônio em tempos turbulentos.`
+      contexto: `
+        <p><strong>Dois Pilares de Proteção Patrimonial</strong></p>
+        <p>Tanto o dólar quanto o ouro são considerados "ativos de proteção" - refúgios em momentos de crise. Mas funcionam de formas diferentes e protegem contra riscos diferentes.</p>
+
+        <p><strong>Dólar: A Moeda de Reserva Mundial</strong></p>
+        <ul>
+          <li><strong>Dominância global:</strong> ~60% das reservas cambiais mundiais são em dólar</li>
+          <li><strong>Flight to quality:</strong> Em crises globais, investidores correm para o dólar</li>
+          <li><strong>Proteção contra Brasil:</strong> Em crises locais, o real desvaloriza e o dólar sobe</li>
+          <li><strong>Rende juros:</strong> Você pode investir em títulos americanos (Treasury) e ter renda</li>
+        </ul>
+
+        <p><strong>Ouro: O Ativo Sem Contraparte</strong></p>
+        <ul>
+          <li><strong>Independente:</strong> Não depende de nenhum governo, banco ou empresa</li>
+          <li><strong>Hedge contra impressão de moeda:</strong> Bancos centrais imprimem dinheiro; ninguém imprime ouro</li>
+          <li><strong>Reserva milenar:</strong> 5.000 anos de história como reserva de valor</li>
+          <li><strong>Não rende nada:</strong> Ouro parado é ouro parado - não paga dividendos nem juros</li>
+        </ul>
+
+        <p><strong>Quando cada um funciona melhor?</strong></p>
+        <p><strong>Dólar sobe mais quando:</strong> Crise brasileira (Dilma 2015, Bolsonaro 2022), fuga de emergentes, alta de juros nos EUA.</p>
+        <p><strong>Ouro sobe mais quando:</strong> Crise global (COVID 2020, Guerra Ucrânia 2022), inflação mundial, desconfiança em moedas fiduciárias.</p>`,
+      pontoChave: `<strong>A diferença fundamental:</strong> Dólar é uma moeda - depende da confiança no governo americano e no Federal Reserve. Ouro é um ativo físico - não depende de ninguém. Em um cenário de colapso do sistema financeiro global, o ouro teoricamente seria mais seguro. Em crises "normais", o dólar costuma performar bem.`,
+      reflexao: `<strong>Nossa Tese:</strong> Ter os dois faz sentido como proteção complementar. O dólar protege contra crises brasileiras e paga rendimento. O ouro protege contra cenários mais extremos e desvalorização de todas as moedas (incluindo o dólar). Uma alocação de 10-15% em dólar + 5-10% em ouro cobre a maioria dos cenários de risco.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>Dólar</th><th>Ouro</th></tr>
+          <tr><td>Tipo de ativo</td><td>Moeda fiduciária</td><td>Commodity / metal precioso</td></tr>
+          <tr><td>Dependência</td><td class="negativo">Governo dos EUA / Fed</td><td class="positivo">Nenhuma</td></tr>
+          <tr><td>Rende juros</td><td class="positivo">Sim (Treasury ~4-5%)</td><td class="negativo">Não</td></tr>
+          <tr><td>Proteção contra crise BR</td><td class="positivo">Excelente</td><td class="positivo">Boa</td></tr>
+          <tr><td>Proteção contra crise global</td><td class="positivo">Boa</td><td class="positivo">Excelente</td></tr>
+          <tr><td>Proteção contra inflação EUA</td><td class="negativo">Fraca</td><td class="positivo">Forte</td></tr>
+          <tr><td>Liquidez no Brasil</td><td class="positivo">Alta (fundos, BDRs)</td><td class="positivo">Alta (ETFs, fundos)</td></tr>
+          <tr><td>Volatilidade</td><td>Moderada (~15% a.a.)</td><td>Moderada (~15% a.a.)</td></tr>
+          <tr><td>Correlação em crise BR</td><td class="positivo">Forte alta</td><td class="positivo">Alta moderada</td></tr>
+          <tr><td>Histórico</td><td>~80 anos (pós Bretton Woods)</td><td class="positivo">5.000+ anos</td></tr>
+        </table>`
     }
   },
 

@@ -833,6 +833,14 @@
   color: var(--text-muted);
 }
 
+.comparison-avg {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 4px;
+  padding-top: 4px;
+  border-top: 1px solid var(--border-color);
+}
+
 .winner-tag {
   background: var(--bullish);
   color: #000;

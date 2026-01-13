@@ -88,11 +88,11 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2PeriodoInicio" value="2015-01" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2PeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2PeriodoFim" value="2024-12" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2PeriodoFim" value="2025-12" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -106,22 +106,14 @@
                 <div class="comp2-field">
                   <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2DolarExtra" value="0" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="comp2-field">
-                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
-                  <div class="comp2-input-group">
-                    <span>IPCA+</span>
-                    <input type="text" id="comp2RendaMaisTaxa" value="6" inputmode="decimal">
+                    <input type="text" id="comp2DolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
                   <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2ImoveisRenda" value="0" inputmode="decimal">
+                    <input type="text" id="comp2ImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -129,8 +121,11 @@
 
               <!-- Asset chips -->
               <div class="comp2-assets">
-                <button class="comp2-chip active" data-asset="ibovespa">
-                  <span class="chip-dot" style="background:#3b82f6"></span>Ibovespa
+                <button class="comp2-chip" data-asset="ibovespa">
+                  <span class="chip-dot" style="background:#3b82f6"></span>IBOV
+                </button>
+                <button class="comp2-chip active" data-asset="ibovtr">
+                  <span class="chip-dot" style="background:#2563eb"></span>IBOV TR
                 </button>
                 <button class="comp2-chip active" data-asset="dolar">
                   <span class="chip-dot" style="background:#22c55e"></span>Dólar
@@ -141,11 +136,14 @@
                 <button class="comp2-chip active" data-asset="fii_ifix">
                   <span class="chip-dot" style="background:#8b5cf6"></span>FIIs
                 </button>
+                <button class="comp2-chip" data-asset="idiv">
+                  <span class="chip-dot" style="background:#10b981"></span>IDIV
+                </button>
                 <button class="comp2-chip" data-asset="cdi">
                   <span class="chip-dot" style="background:#ec4899"></span>CDI
                 </button>
-                <button class="comp2-chip" data-asset="renda_mais">
-                  <span class="chip-dot" style="background:#7c3aed"></span>Renda+ 2065
+                <button class="comp2-chip active" data-asset="imab5">
+                  <span class="chip-dot" style="background:#06b6d4"></span>IMA-B 5+
                 </button>
                 <button class="comp2-chip" data-asset="sp500_brl">
                   <span class="chip-dot" style="background:#ef4444"></span>S&P 500
@@ -233,11 +231,11 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2DueloPeriodoInicio" value="2015-01" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2DueloPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2DueloPeriodoFim" value="2024-12" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2DueloPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Valor</label>
@@ -251,22 +249,14 @@
                 <div class="comp2-field">
                   <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2DueloDolarExtra" value="0" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="comp2-field">
-                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
-                  <div class="comp2-input-group">
-                    <span>IPCA+</span>
-                    <input type="text" id="comp2DueloRendaMaisTaxa" value="6" inputmode="decimal">
+                    <input type="text" id="comp2DueloDolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
                   <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2DueloImoveisRenda" value="0" inputmode="decimal">
+                    <input type="text" id="comp2DueloImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -379,11 +369,11 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2CarteiraPeriodoInicio" value="2015-01" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2CarteiraPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2CarteiraPeriodoFim" value="2024-12" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2CarteiraPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -397,22 +387,14 @@
                 <div class="comp2-field">
                   <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2CarteiraDolarExtra" value="0" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="comp2-field">
-                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
-                  <div class="comp2-input-group">
-                    <span>IPCA+</span>
-                    <input type="text" id="comp2CarteiraRendaMaisTaxa" value="6" inputmode="decimal">
+                    <input type="text" id="comp2CarteiraDolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
                   <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2CarteiraImoveisRenda" value="0" inputmode="decimal">
+                    <input type="text" id="comp2CarteiraImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -431,11 +413,11 @@
               <div class="comp2-allocation" id="comp2Allocation">
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#3b82f6"></span>
-                    <span class="alloc-name">Ibovespa</span>
+                    <span class="alloc-dot" style="background:#2563eb"></span>
+                    <span class="alloc-name">IBOV TR</span>
                     <span class="alloc-pct">50%</span>
                   </div>
-                  <input type="range" min="0" max="100" value="50" data-asset="ibovespa">
+                  <input type="range" min="0" max="100" value="50" data-asset="ibovtr">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -471,19 +453,27 @@
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#10b981"></span>
+                    <span class="alloc-name">IDIV</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="idiv">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#06b6d4"></span>
+                    <span class="alloc-name">IMA-B 5+</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="imab5">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
                     <span class="alloc-dot" style="background:#ef4444"></span>
                     <span class="alloc-name">S&P 500</span>
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="sp500_brl">
-                </div>
-                <div class="alloc-item">
-                  <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#7c3aed"></span>
-                    <span class="alloc-name">Renda+ 2065</span>
-                    <span class="alloc-pct">0%</span>
-                  </div>
-                  <input type="range" min="0" max="100" value="0" data-asset="renda_mais">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -553,11 +543,11 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2RebalPeriodoInicio" value="2015-01" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2RebalPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2RebalPeriodoFim" value="2024-12" min="2005-01" max="2025-12">
+                  <input type="month" id="comp2RebalPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -579,22 +569,14 @@
                 <div class="comp2-field">
                   <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2RebalDolarExtra" value="0" inputmode="decimal">
-                    <span>%</span>
-                  </div>
-                </div>
-                <div class="comp2-field">
-                  <label>Renda+ Taxa <span class="comp2-tooltip" title="Simula Tesouro Renda+ 2065 com taxa fixa. Título de longo prazo (40 anos) com alta volatilidade">?</span></label>
-                  <div class="comp2-input-group">
-                    <span>IPCA+</span>
-                    <input type="text" id="comp2RebalRendaMaisTaxa" value="6" inputmode="decimal">
+                    <input type="text" id="comp2RebalDolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
                   <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
                   <div class="comp2-input-group">
-                    <input type="text" id="comp2RebalImoveisRenda" value="0" inputmode="decimal">
+                    <input type="text" id="comp2RebalImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
@@ -614,11 +596,11 @@
               <div class="comp2-allocation" id="comp2RebalAllocation">
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#3b82f6"></span>
-                    <span class="alloc-name">Ibovespa</span>
+                    <span class="alloc-dot" style="background:#2563eb"></span>
+                    <span class="alloc-name">IBOV TR</span>
                     <span class="alloc-pct">50%</span>
                   </div>
-                  <input type="range" min="0" max="100" value="50" data-asset="ibovespa">
+                  <input type="range" min="0" max="100" value="50" data-asset="ibovtr">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -654,11 +636,19 @@
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
-                    <span class="alloc-dot" style="background:#7c3aed"></span>
-                    <span class="alloc-name">Renda+ 2065</span>
+                    <span class="alloc-dot" style="background:#10b981"></span>
+                    <span class="alloc-name">IDIV</span>
                     <span class="alloc-pct">0%</span>
                   </div>
-                  <input type="range" min="0" max="100" value="0" data-asset="renda_mais">
+                  <input type="range" min="0" max="100" value="0" data-asset="idiv">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#06b6d4"></span>
+                    <span class="alloc-name">IMA-B 5+</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="imab5">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">
@@ -675,6 +665,14 @@
                     <span class="alloc-pct">0%</span>
                   </div>
                   <input type="range" min="0" max="100" value="0" data-asset="tlt_brl">
+                </div>
+                <div class="alloc-item">
+                  <div class="alloc-header">
+                    <span class="alloc-dot" style="background:#14b8a6"></span>
+                    <span class="alloc-name">Imóveis</span>
+                    <span class="alloc-pct">0%</span>
+                  </div>
+                  <input type="range" min="0" max="100" value="0" data-asset="imoveis_fipezap">
                 </div>
                 <div class="alloc-item">
                   <div class="alloc-header">

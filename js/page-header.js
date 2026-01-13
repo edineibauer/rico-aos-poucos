@@ -195,13 +195,15 @@ const PageHeader = {
         extraYield: '+ % a.a.',
         extraYieldPlaceholder: 'Ex: 5',
         assets: {
-          dolar: 'Dolar',
+          dolar: 'Dólar',
           caixa: 'Caixa (CDI)',
           tlt: 'TLT (Bonds)',
-          imoveis: 'Imoveis',
+          imoveis: 'Imóveis',
           fiis: 'FIIs',
-          ipca: 'IPCA+',
+          ipca: 'IMA-B 5+',
           ibov: 'Ibovespa',
+          ibovtr: 'IBOV TR',
+          idiv: 'IDIV',
           ouro: 'Ouro',
           sp500: 'S&P 500',
           bitcoin: 'Bitcoin'
@@ -222,8 +224,10 @@ const PageHeader = {
           tlt: 'TLT (Bonds)',
           imoveis: 'Real Estate',
           fiis: 'REITs',
-          ipca: 'IPCA+',
+          ipca: 'IMA-B 5+',
           ibov: 'Ibovespa',
+          ibovtr: 'IBOV TR',
+          idiv: 'IDIV',
           ouro: 'Gold',
           sp500: 'S&P 500',
           bitcoin: 'Bitcoin'
@@ -239,13 +243,15 @@ const PageHeader = {
         extraYield: '+ % a.a.',
         extraYieldPlaceholder: 'Ej: 5',
         assets: {
-          dolar: 'Dolar',
+          dolar: 'Dólar',
           caixa: 'Caja (CDI)',
           tlt: 'TLT (Bonos)',
           imoveis: 'Inmuebles',
           fiis: 'FIIs',
-          ipca: 'IPCA+',
+          ipca: 'IMA-B 5+',
           ibov: 'Ibovespa',
+          ibovtr: 'IBOV TR',
+          idiv: 'IDIV',
           ouro: 'Oro',
           sp500: 'S&P 500',
           bitcoin: 'Bitcoin'
@@ -254,8 +260,8 @@ const PageHeader = {
     };
 
     const t = translations[lang] || translations['pt-BR'];
-    const assets = ['dolar', 'caixa', 'tlt', 'imoveis', 'fiis', 'ipca', 'ibov', 'ouro', 'sp500', 'bitcoin'];
-    const assetsWithExtraYield = ['dolar', 'ipca']; // Assets that have extra yield input
+    const assets = ['dolar', 'caixa', 'tlt', 'imoveis', 'fiis', 'ipca', 'ibov', 'ibovtr', 'idiv', 'ouro', 'sp500', 'bitcoin'];
+    const assetsWithExtraYield = ['dolar', 'imoveis']; // Assets that have extra yield input
 
     let slidersHTML = '';
     assets.forEach(asset => {

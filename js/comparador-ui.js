@@ -661,8 +661,8 @@ const Comparador2 = {
       return;
     }
 
-    const periodoInicio = document.getElementById('comp2PeriodoInicio')?.value || '2015-01';
-    const periodoFim = document.getElementById('comp2PeriodoFim')?.value || '2024-12';
+    const periodoInicio = document.getElementById('comp2PeriodoInicio')?.value || '2011-01';
+    const periodoFim = document.getElementById('comp2PeriodoFim')?.value || '2025-12';
     const valorStr = document.getElementById('comp2Valor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
@@ -939,8 +939,8 @@ const Comparador2 = {
     const dueloSelecionado = document.querySelector('.comp2-duelo-btn.active')?.dataset.duelo || 'ibov-sp500';
 
     // Usar os seletores de período
-    const periodoInicio = document.getElementById('comp2DueloPeriodoInicio')?.value || '2015-01';
-    const periodoFim = document.getElementById('comp2DueloPeriodoFim')?.value || '2024-12';
+    const periodoInicio = document.getElementById('comp2DueloPeriodoInicio')?.value || '2011-01';
+    const periodoFim = document.getElementById('comp2DueloPeriodoFim')?.value || '2025-12';
 
     const valorStr = document.getElementById('comp2DueloValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
@@ -1333,8 +1333,8 @@ const Comparador2 = {
       return;
     }
 
-    const periodoInicio = document.getElementById('comp2CarteiraPeriodoInicio')?.value || '2015-01';
-    const periodoFim = document.getElementById('comp2CarteiraPeriodoFim')?.value || '2024-12';
+    const periodoInicio = document.getElementById('comp2CarteiraPeriodoInicio')?.value || '2011-01';
+    const periodoFim = document.getElementById('comp2CarteiraPeriodoFim')?.value || '2025-12';
     const valorStr = document.getElementById('comp2CarteiraValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
@@ -1844,8 +1844,8 @@ const Comparador2 = {
     }
 
     // Ler configurações
-    const periodoInicio = document.getElementById('comp2RebalPeriodoInicio')?.value || '2015-01';
-    const periodoFim = document.getElementById('comp2RebalPeriodoFim')?.value || '2024-12';
+    const periodoInicio = document.getElementById('comp2RebalPeriodoInicio')?.value || '2011-01';
+    const periodoFim = document.getElementById('comp2RebalPeriodoFim')?.value || '2025-12';
     const valorStr = document.getElementById('comp2RebalValor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
     const tolerancia = this.parsePercentage(document.getElementById('comp2Tolerancia')?.value) || 10;

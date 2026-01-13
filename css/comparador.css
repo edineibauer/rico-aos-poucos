@@ -2192,3 +2192,161 @@
     font-size: 0.95rem;
   }
 }
+
+/* ===========================================
+   ANÁLISE CONCEITUAL - DUELO
+   =========================================== */
+.comp2-analise-conceitual {
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+  border: 1px solid var(--border-color);
+}
+
+.comp2-analise-conceitual h3 {
+  color: var(--primary-light);
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.analise-contexto {
+  margin-bottom: 20px;
+  line-height: 1.7;
+}
+
+.analise-contexto p {
+  margin-bottom: 12px;
+  color: var(--text-secondary);
+}
+
+.analise-contexto p:last-child {
+  margin-bottom: 0;
+}
+
+.analise-contexto strong {
+  color: var(--text-primary);
+}
+
+.analise-ponto-chave {
+  display: flex;
+  gap: 12px;
+  padding: 16px;
+  background: rgba(234, 179, 8, 0.1);
+  border: 1px solid rgba(234, 179, 8, 0.3);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.ponto-chave-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.analise-ponto-chave p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+.analise-reflexao {
+  padding: 16px;
+  background: rgba(139, 92, 246, 0.1);
+  border-left: 4px solid var(--primary-light);
+  border-radius: 0 12px 12px 0;
+  margin-top: 20px;
+}
+
+.analise-reflexao p {
+  margin: 0;
+  line-height: 1.6;
+  color: var(--text-secondary);
+  font-style: italic;
+}
+
+.analise-reflexao strong {
+  color: var(--text-primary);
+  font-style: normal;
+}
+
+/* Tabela Comparativa (FII vs Imóvel) */
+.tabela-comparativa {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 16px 0;
+  font-size: 0.9rem;
+}
+
+.tabela-comparativa th,
+.tabela-comparativa td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.tabela-comparativa th {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.tabela-comparativa th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.tabela-comparativa th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.tabela-comparativa tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela-comparativa td.positivo {
+  color: #22c55e;
+}
+
+.tabela-comparativa td.negativo {
+  color: #ef4444;
+}
+
+/* Conclusão disclaimer */
+.conclusao-item.disclaimer {
+  background: var(--bg-tertiary);
+  border-left-color: var(--text-muted);
+}
+
+.conclusao-item.disclaimer p {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+/* Mobile Adjustments for Analysis */
+@media (max-width: 768px) {
+  .analise-ponto-chave {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ponto-chave-icon {
+    font-size: 1.2rem;
+  }
+
+  .tabela-comparativa {
+    font-size: 0.8rem;
+  }
+
+  .tabela-comparativa th,
+  .tabela-comparativa td {
+    padding: 8px 6px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabela-comparativa {
+    font-size: 0.75rem;
+  }
+
+  .tabela-comparativa th,
+  .tabela-comparativa td {
+    padding: 6px 4px;
+  }
+}

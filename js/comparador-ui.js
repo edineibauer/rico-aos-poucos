@@ -16,11 +16,11 @@ const Comparador2 = {
     imoveisRenda: 0       // Rendimento anual líquido de aluguel (% do valor do imóvel)
   },
 
-  // Configurações de duelo (igual ao original)
+  // Configurações de duelo
   dueloConfigs: {
     'ibov-sp500': {
-      titulo: 'Ibovespa vs S&P 500',
-      ativo1: { key: 'ibovespa', nome: 'Ibovespa', icone: '🇧🇷' },
+      titulo: 'IBOV TR vs S&P 500',
+      ativo1: { key: 'ibovtr', nome: 'IBOV TR', icone: '🇧🇷' },
       ativo2: { key: 'sp500_brl', nome: 'S&P 500 (R$)', icone: '🇺🇸' }
     },
     'ouro-bitcoin': {
@@ -29,13 +29,13 @@ const Comparador2 = {
       ativo2: { key: 'bitcoin_brl', nome: 'Bitcoin', icone: '₿' }
     },
     'ipca-tlt': {
-      titulo: 'IPCA+ vs TLT',
-      ativo1: { key: 'tesouro_ipca', nome: 'Tesouro IPCA+', icone: '🇧🇷' },
+      titulo: 'IMA-B 5+ vs TLT',
+      ativo1: { key: 'imab5', nome: 'IMA-B 5+', icone: '🇧🇷' },
       ativo2: { key: 'tlt_brl', nome: 'TLT (Tesouro EUA)', icone: '🇺🇸' }
     },
     'ibov-cdi': {
-      titulo: 'Ibovespa vs CDI',
-      ativo1: { key: 'ibovespa', nome: 'Ibovespa', icone: '📈' },
+      titulo: 'IBOV TR vs CDI',
+      ativo1: { key: 'ibovtr', nome: 'IBOV TR', icone: '📈' },
       ativo2: { key: 'cdi', nome: 'CDI', icone: '💰' }
     },
     'fii-imovel': {
@@ -47,6 +47,70 @@ const Comparador2 = {
       titulo: 'Dólar vs Ouro',
       ativo1: { key: 'dolar', nome: 'Dólar', icone: '💵' },
       ativo2: { key: 'ouro', nome: 'Ouro', icone: '🥇' }
+    }
+  },
+
+  // Análises conceituais para cada duelo
+  dueloAnalises: {
+    'ibov-sp500': {
+      contexto: `<p><strong>O que estamos comparando?</strong></p>
+        <p>O <strong>IBOV TR</strong> (Total Return) é o Ibovespa com dividendos reinvestidos - uma medida mais justa de performance. Já o <strong>S&P 500</strong> representa as 500 maiores empresas americanas, convertido para reais.</p>
+        <p><strong>A comparação é justa?</strong> Sim, mas com ressalvas. A valorização do S&P 500 em reais é turbinada pela desvalorização histórica do real frente ao dólar. Um brasileiro que investiu no S&P ganhou duas vezes: valorização das ações + alta do dólar.</p>`,
+      pontoChave: `O "efeito câmbio" é crucial nesta comparação. Em períodos de crise brasileira, o dólar sobe e o S&P 500 se beneficia duplamente para o investidor brasileiro.`,
+      reflexao: `<strong>Reflexão:</strong> Diversificar parte do patrimônio em ativos dolarizados pode ser uma proteção contra a volatilidade da economia brasileira. Não é "torcer contra o Brasil", é gestão de risco.`
+    },
+    'ouro-bitcoin': {
+      contexto: `<p><strong>O que é Ouro?</strong></p>
+        <p>Reserva de valor milenar, usado como moeda por civilizações desde 3000 a.C. Não paga dividendos, não gera renda - seu valor vem da escassez natural e aceitação universal. Bancos centrais mantêm ouro como reserva estratégica.</p>
+        <p><strong>O que é Bitcoin?</strong></p>
+        <p>Criado em 2009, é um ativo digital com oferta limitada a 21 milhões de unidades. Chamado de "ouro digital" por seus defensores devido à escassez programada. Porém, é muito mais volátil e tem apenas 15 anos de história.</p>
+        <p><strong>São comparáveis?</strong> Em essência, ambos são apostas em escassez. Mas ouro tem 5000 anos de track record; Bitcoin, apenas 15. O ouro já sobreviveu a guerras mundiais, hiperinflações e colapsos de impérios.</p>`,
+      pontoChave: `Bitcoin teve valorização explosiva, mas com volatilidade extrema (quedas de 80%+ são comuns). Ouro é mais estável, mas com retornos mais modestos. São perfis de risco completamente diferentes.`,
+      reflexao: `<strong>Reflexão:</strong> Bitcoin pode ser o "ouro digital" do futuro, ou pode ser uma bolha especulativa. A verdade é que ninguém sabe. Uma pequena alocação pode fazer sentido para quem aceita o risco de perda total.`
+    },
+    'ipca-tlt': {
+      contexto: `<p><strong>O que é IMA-B 5+?</strong></p>
+        <p>Índice de títulos públicos brasileiros atrelados à inflação (Tesouro IPCA+) com vencimento acima de 5 anos. Protege contra inflação e oferece juros reais - historicamente altos no Brasil.</p>
+        <p><strong>O que é TLT?</strong></p>
+        <p>ETF que investe em títulos do Tesouro americano de longo prazo (20+ anos). É considerado um dos ativos mais seguros do mundo, mas paga juros muito menores.</p>
+        <p><strong>A comparação:</strong> No Brasil, você recebe juros reais de 5-7% a.a. Nos EUA, historicamente 1-2%. Porém, o TLT é em dólar - moeda forte. O IMA-B é em real - moeda historicamente fraca.</p>`,
+      pontoChave: `O Brasil historicamente paga juros altíssimos para atrair investidores estrangeiros. Isso beneficia quem investe aqui, mas reflete o maior risco do país.`,
+      reflexao: `<strong>Reflexão:</strong> A combinação de ambos pode ser interessante: IMA-B para aproveitar os juros altos brasileiros, TLT como proteção em dólar para momentos de crise.`
+    },
+    'ibov-cdi': {
+      contexto: `<p><strong>O clássico dilema brasileiro</strong></p>
+        <p>No Brasil, diferente de países desenvolvidos, a renda fixa paga muito bem. O CDI (que segue a Selic) frequentemente supera a bolsa, levantando a pergunta: vale o risco da renda variável?</p>
+        <p><strong>IBOV TR:</strong> Retorno das ações + dividendos reinvestidos. Alta volatilidade, quedas de 40-50% não são raras.</p>
+        <p><strong>CDI:</strong> Rendimento "garantido" atrelado à Selic. Baixíssimo risco, mas historicamente perdeu para a inflação em alguns períodos.</p>`,
+      pontoChave: `Historicamente, o CDI brasileiro tem superado muitos índices de ações no longo prazo - algo raro no mundo. Isso não significa que sempre será assim.`,
+      reflexao: `<strong>Reflexão:</strong> A bolsa brasileira exige paciência e estômago forte. Muitos investidores desistem nas quedas e perdem as recuperações. Se você não aguenta ver -40%, talvez o CDI seja mais adequado ao seu perfil.`
+    },
+    'fii-imovel': {
+      contexto: `<p><strong>Duas formas de investir em imóveis</strong></p>
+        <p><strong>Imóvel físico:</strong> Você é dono do tijolo. Pode morar, alugar ou vender. Exige gestão ativa: inquilinos, manutenção, IPTU, vacância. Pouca liquidez - vender um imóvel leva meses.</p>
+        <p><strong>FIIs (IFIX):</strong> Cotas de fundos que investem em imóveis comerciais. Renda mensal isenta de IR, liquidez diária na bolsa, diversificação fácil. Porém, você não é "dono" do imóvel - é cotista de um fundo.</p>
+        <p><strong>Comparação dos rendimentos:</strong> O índice IFIX considera apenas a variação das cotas. Já adicionamos o rendimento de aluguel aos imóveis físicos (campo "Imóveis+") para uma comparação mais justa.</p>`,
+      pontoChave: `FIIs oferecem renda mensal maior e liquidez, mas você não tem controle sobre o ativo. Imóveis físicos dão controle total, mas exigem tempo e capital concentrado.`,
+      reflexao: `<strong>Reflexão:</strong> Para quem quer renda passiva sem trabalho: FIIs. Para quem quer construir patrimônio físico e tem tempo para gerir: imóvel. Muitos investidores combinam os dois.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>FIIs</th><th>Imóvel Físico</th></tr>
+          <tr><td>Liquidez</td><td class="positivo">Alta (venda em D+2)</td><td class="negativo">Baixa (meses)</td></tr>
+          <tr><td>Diversificação</td><td class="positivo">Fácil (várias cotas)</td><td class="negativo">Difícil (capital alto)</td></tr>
+          <tr><td>Gestão</td><td class="positivo">Passiva (gestor cuida)</td><td class="negativo">Ativa (você cuida)</td></tr>
+          <tr><td>Controle</td><td class="negativo">Nenhum</td><td class="positivo">Total</td></tr>
+          <tr><td>Alavancagem</td><td class="negativo">Não disponível</td><td class="positivo">Financiamento imobiliário</td></tr>
+          <tr><td>IR sobre rendimentos</td><td class="positivo">Isento (PF)</td><td class="negativo">Tributado (aluguel)</td></tr>
+          <tr><td>Valorização potencial</td><td>Moderada</td><td>Alta (localização)</td></tr>
+        </table>`
+    },
+    'dolar-ouro': {
+      contexto: `<p><strong>Dois ativos de proteção</strong></p>
+        <p><strong>Dólar:</strong> Moeda de reserva mundial. Quando há crise global, investidores correm para o dólar. No Brasil, também sobe em crises locais. O campo "Dólar+" permite simular rendimento em conta americana.</p>
+        <p><strong>Ouro:</strong> Reserva de valor milenar. Não depende de nenhum governo ou banco central. Tende a subir em momentos de incerteza e inflação global.</p>
+        <p><strong>Correlação:</strong> Ambos tendem a subir em crises, mas por motivos diferentes. O dólar sobe por ser porto seguro; o ouro sobe por ser hedge contra desvalorização de todas as moedas.</p>`,
+      pontoChave: `Em crises brasileiras, o dólar tende a subir mais que o ouro. Em crises globais (como guerras ou pandemias), o ouro pode se destacar. São proteções complementares.`,
+      reflexao: `<strong>Reflexão:</strong> Ter uma pequena parcela em ambos pode ser uma estratégia de proteção. Não são ativos para enriquecer, mas para preservar patrimônio em tempos turbulentos.`
     }
   },
 
@@ -969,13 +1033,14 @@ const Comparador2 = {
     const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, 0, dolarExtra);
 
     // Armazenar para toggle
-    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo };
+    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo, dueloSelecionado };
 
     // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);
     this.renderChartDuelo();
     this.renderTabelaDuelo(config, resultado1, resultado2);
     this.renderMetricasDuelo(config, resultado1, resultado2);
+    this.renderAnaliseDuelo(dueloSelecionado);
     this.renderConclusaoDuelo(config, resultado1, resultado2);
   },
 
@@ -1204,6 +1269,31 @@ const Comparador2 = {
     `;
   },
 
+  renderAnaliseDuelo(dueloKey) {
+    const container = document.getElementById('comp2DueloAnaliseConteudo');
+    if (!container) return;
+
+    const analise = this.dueloAnalises[dueloKey];
+    if (!analise) {
+      container.innerHTML = '';
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="analise-contexto">
+        ${analise.contexto}
+      </div>
+      <div class="analise-ponto-chave">
+        <span class="ponto-chave-icon">💡</span>
+        <p><strong>Ponto-chave:</strong> ${analise.pontoChave}</p>
+      </div>
+      ${analise.tabelaComparativa || ''}
+      <div class="analise-reflexao">
+        <p>${analise.reflexao}</p>
+      </div>
+    `;
+  },
+
   renderConclusaoDuelo(config, resultado1, resultado2) {
     const container = document.getElementById('comp2DueloConclusaoLista');
     if (!container) return;
@@ -1217,50 +1307,54 @@ const Comparador2 = {
     const diferencaValor = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);
 
     // Contagem de vitórias anuais
-    let vitorias1 = 0, vitorias2 = 0;
+    let vitorias1 = 0, vitorias2 = 0, empates = 0;
     resultado1.retornosAnuais.forEach((r, i) => {
       if (r > resultado2.retornosAnuais[i]) vitorias1++;
       else if (r < resultado2.retornosAnuais[i]) vitorias2++;
+      else empates++;
     });
 
     const vitoriasMelhor = resultado1.retornoReal > resultado2.retornoReal ? vitorias1 : vitorias2;
     const vitoriasPior = resultado1.retornoReal > resultado2.retornoReal ? vitorias2 : vitorias1;
 
-    // Análise de risco-retorno
+    // Análise de risco-retorno (Sharpe simplificado)
     const sharpe1 = resultado1.volatilidade > 0 ? resultado1.retornoReal / resultado1.volatilidade : 0;
     const sharpe2 = resultado2.volatilidade > 0 ? resultado2.retornoReal / resultado2.volatilidade : 0;
-    const melhorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo1.nome : config.ativo2.nome;
+    const melhorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo1 : config.ativo2;
+    const piorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo2 : config.ativo1;
 
-    let analiseExtra = '';
+    // Calcular CAGR
+    const numAnos = resultado1.totalAnos || 1;
+    const cagr1 = (Math.pow(resultado1.valorFinalReal / this.dueloResultados.valorInicial, 1/numAnos) - 1) * 100;
+    const cagr2 = (Math.pow(resultado2.valorFinalReal / this.dueloResultados.valorInicial, 1/numAnos) - 1) * 100;
 
-    // Análise específica por tipo de duelo
-    if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'sp500_brl') {
-      analiseExtra = `<div class="conclusao-item info"><span class="conclusao-icon">🌎</span><p>A comparação inclui o efeito cambial. Em períodos de desvalorização do real, o S&P 500 se beneficia duplamente: valorização das ações americanas e alta do dólar.</p></div>`;
-    } else if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'cdi') {
-      analiseExtra = `<div class="conclusao-item info"><span class="conclusao-icon">💡</span><p>O clássico debate brasileiro: vale a pena o risco da bolsa quando o CDI paga tão bem? Historicamente, o Brasil tem juros altos, tornando essa comparação particularmente relevante.</p></div>`;
-    }
+    // Menor drawdown é melhor
+    const menorDrawdown = resultado1.maxDrawdown < resultado2.maxDrawdown ? config.ativo1 : config.ativo2;
 
     container.innerHTML = `
       <div class="conclusao-item success">
         <span class="conclusao-icon">🏆</span>
-        <p><strong>${vencedor.nome}</strong> venceu o duelo com retorno real de <strong>${this.formatPercent(resVencedor.retornoReal)}</strong>, superando ${perdedor.nome} que rendeu ${this.formatPercent(resPerdedor.retornoReal)}.</p>
+        <p><strong>${vencedor.nome}</strong> venceu com retorno real de <strong>${this.formatPercent(resVencedor.retornoReal)}</strong> (CAGR: ${this.formatPercent(resVencedor === resultado1 ? cagr1 : cagr2)} a.a.), contra ${this.formatPercent(resPerdedor.retornoReal)} do ${perdedor.nome}.</p>
       </div>
       <div class="conclusao-item info">
         <span class="conclusao-icon">💰</span>
-        <p>A diferença final foi de <strong>${this.formatCurrency(diferencaValor)}</strong> em valor real (${this.formatPercent(diferenca)} em retorno).</p>
+        <p>Diferença final: <strong>${this.formatCurrency(diferencaValor)}</strong> (${this.formatPercent(diferenca)} de vantagem).</p>
       </div>
       <div class="conclusao-item info">
-        <span class="conclusao-icon">📊</span>
-        <p>Ano a ano, <strong>${vencedor.nome}</strong> venceu em ${vitoriasMelhor} dos ${resultado1.totalAnos} anos, enquanto ${perdedor.nome} venceu em ${vitoriasPior} anos.</p>
+        <span class="conclusao-icon">📅</span>
+        <p><strong>${vencedor.nome}</strong> venceu em <strong>${vitoriasMelhor}</strong> de ${resultado1.totalAnos} anos. ${perdedor.nome} venceu em ${vitoriasPior} anos${empates > 0 ? ` (${empates} empates)` : ''}.</p>
       </div>
-      <div class="conclusao-item ${resultado1.volatilidade < resultado2.volatilidade ? 'success' : 'warning'}">
+      <div class="conclusao-item ${sharpe1 !== sharpe2 ? 'warning' : 'info'}">
         <span class="conclusao-icon">⚖️</span>
-        <p>Considerando risco e retorno, <strong>${melhorRiscoRetorno}</strong> teve a melhor relação (Sharpe).</p>
+        <p><strong>${melhorRiscoRetorno.nome}</strong> teve melhor relação risco/retorno. Volatilidade: ${this.formatPercent(melhorRiscoRetorno === config.ativo1 ? resultado1.volatilidade : resultado2.volatilidade)} vs ${this.formatPercent(piorRiscoRetorno === config.ativo1 ? resultado1.volatilidade : resultado2.volatilidade)}.</p>
       </div>
-      ${analiseExtra}
-      <div class="conclusao-item" style="background: var(--bg-tertiary); border-left-color: var(--text-muted);">
+      <div class="conclusao-item ${resultado1.maxDrawdown !== resultado2.maxDrawdown ? 'info' : ''}">
+        <span class="conclusao-icon">📉</span>
+        <p><strong>${menorDrawdown.nome}</strong> teve menor queda máxima (drawdown): ${this.formatPercent(menorDrawdown === config.ativo1 ? resultado1.maxDrawdown : resultado2.maxDrawdown)} vs ${this.formatPercent(menorDrawdown === config.ativo1 ? resultado2.maxDrawdown : resultado1.maxDrawdown)}.</p>
+      </div>
+      <div class="conclusao-item disclaimer">
         <span class="conclusao-icon">⚠️</span>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais.</p>
+        <p>Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais.</p>
       </div>
     `;
   },

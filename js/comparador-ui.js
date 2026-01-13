@@ -323,6 +323,8 @@ const Comparador2 = {
     fiis: 'fii_ifix',
     ipca: 'imab5',
     ibov: 'ibovespa',
+    ibovtr: 'ibovtr',
+    idiv: 'idiv',
     ouro: 'ouro',
     sp500: 'sp500_brl',
     bitcoin: 'bitcoin_brl'
@@ -612,12 +614,33 @@ const Comparador2 = {
     const valorReal = valorNominal / inflacaoAcumulada;
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
 
+    // Calcular retornos mensais para média
+    const retornosMensais = [];
+    for (let i = 1; i < evolucao.length; i++) {
+      const retMensal = ((evolucao[i].nominal / evolucao[i-1].nominal) - 1) * 100;
+      retornosMensais.push(retMensal);
+    }
+
+    // Média mensal simples
+    const mediaMensal = retornosMensais.length > 0
+      ? retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length
+      : 0;
+
+    // Retorno anualizado (CAGR - Compound Annual Growth Rate)
+    const numMeses = dados.length;
+    const numAnos = numMeses / 12;
+    const retornoAnualizado = numAnos > 0
+      ? (Math.pow(valorNominal / valorInicial, 1 / numAnos) - 1) * 100
+      : 0;
+
     return {
       evolucao,
       valorFinalNominal: valorNominal,
       valorFinalReal: valorReal,
       retornoNominal,
       retornoReal,
+      mediaMensal,
+      retornoAnualizado,
       ganhouDaInflacao: retornoReal > 0
     };
   },
@@ -766,6 +789,9 @@ const Comparador2 = {
       const isPositive = item.retornoReal > 0;
       const medal = index === 0 ? '🥇' : index === 1 ? '🥈' : index === 2 ? '🥉' : '';
 
+      const mediaAnual = item.retornoAnualizado || 0;
+      const mediaMes = item.mediaMensal || 0;
+
       html += `
         <div class="comp2-ranking-item ${isPositive ? 'positive' : 'negative'}">
           <span class="ranking-pos">${medal || (index + 1) + 'º'}</span>
@@ -782,6 +808,10 @@ const Comparador2 = {
             </div>
             <div style="font-size: 0.7rem; color: var(--text-muted);">
               ${this.formatPercent(item.retornoNominal)} nominal
+            </div>
+            <div style="font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; border-top: 1px solid var(--border-color); padding-top: 4px;">
+              <span title="CAGR - Retorno anualizado composto">📈 ${mediaAnual >= 0 ? '+' : ''}${this.formatPercent(mediaAnual)} a.a.</span>
+              <span style="margin-left: 8px;" title="Média aritmética mensal">📅 ${mediaMes >= 0 ? '+' : ''}${this.formatPercent(mediaMes)} a.m.</span>
             </div>
           </div>
         </div>
@@ -1383,12 +1413,33 @@ const Comparador2 = {
       });
     });
 
+    // Calcular retornos mensais para média
+    const retornosMensais = [];
+    for (let i = 1; i < evolucao.length; i++) {
+      const retMensal = ((evolucao[i].nominal / evolucao[i-1].nominal) - 1) * 100;
+      retornosMensais.push(retMensal);
+    }
+
+    // Média mensal simples
+    const mediaMensal = retornosMensais.length > 0
+      ? retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length
+      : 0;
+
+    // Retorno anualizado (CAGR)
+    const numMeses = dados.length;
+    const numAnos = numMeses / 12;
+    const retornoAnualizado = numAnos > 0
+      ? (Math.pow(valorNominal / valorInicial, 1 / numAnos) - 1) * 100
+      : 0;
+
     return {
       evolucao,
       valorFinalNominal: valorNominal,
       valorFinalReal: valorNominal / inflacaoAcumulada,
       retornoNominal: ((valorNominal / valorInicial) - 1) * 100,
-      retornoReal: ((valorNominal / inflacaoAcumulada / valorInicial) - 1) * 100
+      retornoReal: ((valorNominal / inflacaoAcumulada / valorInicial) - 1) * 100,
+      mediaMensal,
+      retornoAnualizado
     };
   },
 
@@ -1458,6 +1509,9 @@ const Comparador2 = {
     const statsContainer = document.getElementById('comp2CarteiraStats');
     const resumoCard = document.getElementById('comp2CarteiraResumo');
     if (statsContainer && resumoCard) {
+      const mediaAnual = carteira.retornoAnualizado || 0;
+      const mediaMes = carteira.mediaMensal || 0;
+
       statsContainer.innerHTML = `
         <div class="comp2-stat-box">
           <div class="stat-label">Valor Final</div>
@@ -1473,6 +1527,18 @@ const Comparador2 = {
           <div class="stat-label">Retorno Real</div>
           <div class="stat-value ${carteira.retornoReal >= 0 ? 'positivo' : 'negativo'}">
             ${carteira.retornoReal >= 0 ? '+' : ''}${this.formatPercent(carteira.retornoReal)}
+          </div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Média Anual (CAGR)</div>
+          <div class="stat-value ${mediaAnual >= 0 ? 'positivo' : 'negativo'}">
+            ${mediaAnual >= 0 ? '+' : ''}${this.formatPercent(mediaAnual)}
+          </div>
+        </div>
+        <div class="comp2-stat-box">
+          <div class="stat-label">Média Mensal</div>
+          <div class="stat-value ${mediaMes >= 0 ? 'positivo' : 'negativo'}">
+            ${mediaMes >= 0 ? '+' : ''}${this.formatPercent(mediaMes)}
           </div>
         </div>
       `;
@@ -2048,6 +2114,18 @@ const Comparador2 = {
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
     const volatilidade = this.calcularVolatilidade(retornosMensais);
 
+    // Média mensal simples
+    const mediaMensal = retornosMensais.length > 0
+      ? retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length
+      : 0;
+
+    // Retorno anualizado (CAGR)
+    const numMeses = dados.length;
+    const numAnos = numMeses / 12;
+    const retornoAnualizado = numAnos > 0
+      ? (Math.pow(valorFinal / valorInicial, 1 / numAnos) - 1) * 100
+      : 0;
+
     // Calcular max drawdown
     let maxDrawdown = 0, peakValue = valorInicial;
     evolucao.forEach(e => {
@@ -2069,7 +2147,7 @@ const Comparador2 = {
 
     return {
       evolucao, historico, valorInicial, valorFinal, valorReal, valorLiquido, impostoVendaTotal,
-      totalImpostosPagos, retornoNominal, retornoReal, volatilidade, maxDrawdown,
+      totalImpostosPagos, retornoNominal, retornoReal, volatilidade, maxDrawdown, mediaMensal, retornoAnualizado,
       sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0,
       totalRebalanceamentos, inflacaoAcumulada: (inflacaoAcumulada - 1) * 100
     };
@@ -2126,6 +2204,18 @@ const Comparador2 = {
     const retornoReal = ((valorReal / valorInicial) - 1) * 100;
     const volatilidade = this.calcularVolatilidade(retornosMensais);
 
+    // Média mensal simples
+    const mediaMensal = retornosMensais.length > 0
+      ? retornosMensais.reduce((a, b) => a + b, 0) / retornosMensais.length
+      : 0;
+
+    // Retorno anualizado (CAGR)
+    const numMeses = dados.length;
+    const numAnos = numMeses / 12;
+    const retornoAnualizado = numAnos > 0
+      ? (Math.pow(valorFinal / valorInicial, 1 / numAnos) - 1) * 100
+      : 0;
+
     let maxDrawdown = 0, peakValue = valorInicial;
     evolucao.forEach(e => {
       if (e.valor > peakValue) peakValue = e.valor;
@@ -2145,7 +2235,7 @@ const Comparador2 = {
 
     return {
       evolucao, valorInicial, valorFinal, valorReal, valorLiquido, impostoVendaTotal,
-      retornoNominal, retornoReal, volatilidade, maxDrawdown,
+      retornoNominal, retornoReal, volatilidade, maxDrawdown, mediaMensal, retornoAnualizado,
       sharpe: volatilidade > 0 ? retornoReal / volatilidade : 0,
       inflacaoAcumulada: (inflacaoAcumulada - 1) * 100
     };
@@ -2174,6 +2264,11 @@ const Comparador2 = {
     const diferencaPct = comRebal.retornoNominal - semRebal.retornoNominal;
     const venceuRebal = diferencaValor > 0;
 
+    const comRebalAnual = comRebal.retornoAnualizado || 0;
+    const comRebalMensal = comRebal.mediaMensal || 0;
+    const semRebalAnual = semRebal.retornoAnualizado || 0;
+    const semRebalMensal = semRebal.mediaMensal || 0;
+
     container.innerHTML = `
       <div class="comparison-box ${venceuRebal ? 'winner' : ''}">
         <span class="comparison-icon">⚖️</span>
@@ -2181,6 +2276,7 @@ const Comparador2 = {
         <span class="comparison-value ${comRebal.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatCurrency(comRebal.valorFinal)}</span>
         <span class="comparison-pct">${comRebal.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(comRebal.retornoNominal)} nominal</span>
         <span class="comparison-detail">${comRebal.retornoReal >= 0 ? '+' : ''}${this.formatPercent(comRebal.retornoReal)} real</span>
+        <span class="comparison-avg">📈 ${comRebalAnual >= 0 ? '+' : ''}${this.formatPercent(comRebalAnual)} a.a. | 📅 ${comRebalMensal >= 0 ? '+' : ''}${this.formatPercent(comRebalMensal)} a.m.</span>
         ${venceuRebal ? '<span class="winner-tag">VENCEDOR</span>' : ''}
       </div>
       <div class="comparison-vs">
@@ -2194,6 +2290,7 @@ const Comparador2 = {
         <span class="comparison-value ${semRebal.retornoReal >= 0 ? 'positivo' : 'negativo'}">${this.formatCurrency(semRebal.valorFinal)}</span>
         <span class="comparison-pct">${semRebal.retornoNominal >= 0 ? '+' : ''}${this.formatPercent(semRebal.retornoNominal)} nominal</span>
         <span class="comparison-detail">${semRebal.retornoReal >= 0 ? '+' : ''}${this.formatPercent(semRebal.retornoReal)} real</span>
+        <span class="comparison-avg">📈 ${semRebalAnual >= 0 ? '+' : ''}${this.formatPercent(semRebalAnual)} a.a. | 📅 ${semRebalMensal >= 0 ? '+' : ''}${this.formatPercent(semRebalMensal)} a.m.</span>
         ${!venceuRebal ? '<span class="winner-tag">VENCEDOR</span>' : ''}
       </div>
     `;

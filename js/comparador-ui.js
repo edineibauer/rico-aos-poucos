@@ -86,40 +86,43 @@ const Comparador2 = {
     'ouro-bitcoin': {
       contexto: `
         <p><strong>O que é o Ouro?</strong></p>
-        <p>O ouro é a reserva de valor mais antiga da humanidade. Usado como moeda desde 3000 a.C., sobreviveu à queda de impérios, guerras mundiais, hiperinflações e crises financeiras. Suas características:</p>
+        <p>O ouro é a reserva de valor mais antiga da humanidade. Usado como moeda desde 3000 a.C., sobreviveu à queda de impérios, guerras mundiais, hiperinflações e crises financeiras. Em 2025, teve seu melhor ano em quase 50 anos, subindo 65% e ultrapassando US$4.000/oz pela primeira vez na história.</p>
         <ul>
           <li><strong>Escassez natural:</strong> Todo o ouro já minerado na história cabe em um cubo de 22 metros de lado</li>
           <li><strong>Indestrutível:</strong> Não oxida, não se degrada, dura para sempre</li>
           <li><strong>Reconhecimento universal:</strong> Aceito como valor em qualquer país do mundo</li>
+          <li><strong>Demanda institucional recorde:</strong> Bancos centrais compraram +1.000 toneladas/ano nos últimos 3 anos</li>
           <li><strong>Sem risco de contraparte:</strong> Não depende de nenhum governo ou empresa</li>
         </ul>
 
         <p><strong>O que é o Bitcoin?</strong></p>
-        <p>Criado em 2009 por Satoshi Nakamoto, o Bitcoin é um ativo digital descentralizado. Suas características:</p>
+        <p>Criado em 2009 por Satoshi Nakamoto, o Bitcoin é um ativo digital descentralizado. Em 2024-2025, passou por transformação institucional significativa com aprovação de ETFs spot nos EUA e adoção como reserva estratégica por alguns países.</p>
         <ul>
-          <li><strong>Escassez programada:</strong> Máximo de 21 milhões de unidades (atualmente ~19,5 milhões minerados)</li>
+          <li><strong>Escassez programada:</strong> Máximo de 21 milhões de unidades (~19,5 milhões já minerados)</li>
           <li><strong>Descentralizado:</strong> Não controlado por nenhum governo ou banco central</li>
-          <li><strong>Transferível globalmente:</strong> Pode ser enviado para qualquer lugar em minutos</li>
-          <li><strong>Volatilidade extrema:</strong> Quedas de 50-80% são historicamente comuns</li>
+          <li><strong>Institucionalização acelerada:</strong> ETFs com US$123+ bilhões em ativos (jan/2026), BlackRock detém ~805.000 BTC</li>
+          <li><strong>Volatilidade ainda alta:</strong> Quedas de 25-30% continuam frequentes (março e outubro 2025)</li>
         </ul>
 
-        <p><strong>A Grande Questão: São comparáveis?</strong></p>
-        <p>Defensores do Bitcoin o chamam de "ouro digital" pela escassez programada. Críticos argumentam que comparar 15 anos de história com 5.000 é absurdo. A verdade: são ativos fundamentalmente diferentes, com perfis de risco incomparáveis.</p>`,
-      pontoChave: `<strong>O argumento central:</strong> Ouro já provou seu valor atravessando 5 milênios de história humana. Bitcoin ainda precisa provar que não é uma bolha especulativa. Isso não significa que Bitcoin não possa se tornar o "ouro do século XXI" - apenas que é uma aposta muito mais arriscada do que o ouro tradicional.`,
-      reflexao: `<strong>Nossa Tese:</strong> Ouro é proteção patrimonial testada pelo tempo - deve fazer parte de qualquer carteira conservadora (5-10%). Bitcoin é uma aposta assimétrica: pode multiplicar por 10x ou ir a zero. Se você aceita perder 100% do valor investido, uma pequena alocação (1-3%) pode fazer sentido pela opcionalidade. Nunca coloque em Bitcoin dinheiro que você não pode perder.`,
+        <p><strong>O Cenário em 2026: Uma Nova Era?</strong></p>
+        <p>Bitcoin amadureceu significativamente: ETFs spot aprovados, custódia institucional (Coinbase Prime, Fidelity), regulação mais clara (GENIUS Act nos EUA, MiCA na Europa). Mas ainda está longe de ser comparável ao ouro em termos de aceitação global e estabilidade.</p>`,
+      pontoChave: `<strong>O argumento central:</strong> Ouro acaba de ter seu melhor ano em 50 anos (+65% em 2025), com bancos centrais comprando volumes recordes como proteção geopolítica. Bitcoin ganhou legitimidade institucional com ETFs de US$123 bilhões e reservas estratégicas em alguns países (EUA, El Salvador, Brasil), mas ainda apresenta volatilidade 3-4x maior que o ouro. A questão não é mais "Bitcoin vai sobreviver?", mas "quanto de cada faz sentido para seu perfil de risco?"`,
+      reflexao: `<strong>Nossa Tese:</strong> O cenário mudou. Bitcoin não é mais apenas especulação - tem infraestrutura institucional real. Mas ouro continua sendo o porto seguro comprovado, especialmente em cenários de fragmentação geopolítica. Nossa sugestão: Ouro (5-10%) como proteção patrimonial base. Bitcoin (0-5%) dependendo da sua tolerância a volatilidade e horizonte de investimento. A soma dos dois não deve exceder 15% de uma carteira diversificada.`,
       tabelaComparativa: `
         <table class="tabela-comparativa">
           <tr><th>Característica</th><th>Ouro</th><th>Bitcoin</th></tr>
-          <tr><td>Histórico</td><td class="positivo">5.000+ anos</td><td class="negativo">15 anos</td></tr>
-          <tr><td>Volatilidade anual</td><td class="positivo">~15%</td><td class="negativo">~60-80%</td></tr>
-          <tr><td>Maior queda histórica</td><td class="positivo">-46% (1980-1982)</td><td class="negativo">-83% (2017-2018)</td></tr>
-          <tr><td>Reserva de bancos centrais</td><td class="positivo">Sim (35.000 toneladas)</td><td class="negativo">Não (El Salvador apenas)</td></tr>
-          <tr><td>Regulação</td><td class="positivo">Clara e estabelecida</td><td class="negativo">Incerta, varia por país</td></tr>
-          <tr><td>Custódia</td><td>Física ou ETF</td><td>Carteira digital (risco de hack)</td></tr>
-          <tr><td>Uso industrial</td><td class="positivo">Eletrônicos, joias, medicina</td><td class="negativo">Nenhum</td></tr>
-          <tr><td>Correlação com crises</td><td class="positivo">Sobe em crises</td><td>Incerta (caiu em 2022)</td></tr>
-          <tr><td>Potencial de valorização</td><td>Moderado (2-5x em 20 anos)</td><td class="positivo">Alto (mas com risco proporcional)</td></tr>
-          <tr><td>Risco de ir a zero</td><td class="positivo">Praticamente zero</td><td class="negativo">Existe (regulação, tecnologia)</td></tr>
+          <tr><td>Histórico</td><td class="positivo">5.000+ anos</td><td>17 anos (desde 2009)</td></tr>
+          <tr><td>Performance 2025</td><td class="positivo">+65% (melhor ano em 50 anos)</td><td>~0% (flat após alta volatilidade)</td></tr>
+          <tr><td>Volatilidade típica</td><td class="positivo">~15-20%</td><td class="negativo">~40-60%</td></tr>
+          <tr><td>Maior queda histórica</td><td class="positivo">-46% (1980-1982)</td><td class="negativo">-77% (2021-2022)</td></tr>
+          <tr><td>Reservas soberanas</td><td class="positivo">36.000+ ton (quase todos os países)</td><td>EUA, El Salvador, Bhutan, Brasil, Rep. Tcheca</td></tr>
+          <tr><td>ETFs/Fundos</td><td class="positivo">Consolidados há décadas</td><td class="positivo">US$123B+ em ETFs spot (2026)</td></tr>
+          <tr><td>Custódia institucional</td><td class="positivo">Bancos, cofres, ETFs</td><td class="positivo">Coinbase Prime, Fidelity, BitGo</td></tr>
+          <tr><td>Regulação</td><td class="positivo">Clara e universal</td><td>Em evolução (GENIUS Act, MiCA)</td></tr>
+          <tr><td>Uso além de reserva</td><td class="positivo">Joias, eletrônicos, medicina</td><td>Pagamentos, DeFi, remessas</td></tr>
+          <tr><td>Comportamento em crises</td><td class="positivo">Sobe consistentemente</td><td>Misto (caiu em 2022, subiu pós-eleição 2024)</td></tr>
+          <tr><td>Projeções 2026</td><td>US$5.000/oz (JPMorgan)</td><td>US$150-200k (analistas otimistas)</td></tr>
+          <tr><td>Risco de perda total</td><td class="positivo">Praticamente zero</td><td class="negativo">Baixo mas existente</td></tr>
         </table>`
     },
     'ipca-tlt': {
@@ -161,8 +164,8 @@ const Comparador2 = {
     },
     'ibov-cdi': {
       contexto: `
-        <p><strong>O Dilema Clássico do Investidor Brasileiro</strong></p>
-        <p>Em países desenvolvidos, a resposta é clara: no longo prazo, ações superam renda fixa. Nos EUA, o S&P 500 rendeu ~10% a.a. contra ~4% dos bonds. No Brasil, essa certeza não existe.</p>
+        <p><strong>O Dilema Clássico do Investidor Brasileiro (Versão 2026)</strong></p>
+        <p>Em países desenvolvidos, a resposta é clara: no longo prazo, ações superam renda fixa. Nos EUA, o S&P 500 rendeu ~10% a.a. contra ~4% dos bonds. No Brasil, essa certeza não existe - e em 2026, menos ainda.</p>
 
         <p><strong>O que é o IBOV TR?</strong></p>
         <p>Ibovespa Total Return = variação das ações + dividendos reinvestidos. Representa o retorno real de quem investe em ações brasileiras e reinveste os proventos.</p>
@@ -170,53 +173,55 @@ const Comparador2 = {
         <p><strong>O que é o CDI?</strong></p>
         <p>Certificado de Depósito Interbancário - taxa que os bancos cobram entre si. Segue de perto a Selic. É o benchmark da renda fixa brasileira e, historicamente, paga muito bem.</p>
 
-        <p><strong>Por que o CDI brasileiro é tão alto?</strong></p>
-        <p>O Brasil é um país com histórico de inflação alta, instabilidade política e crises fiscais. Para financiar sua dívida, o governo precisa pagar juros altos. Isso beneficia o investidor de renda fixa, mas reflete os riscos do país.</p>
+        <p><strong>O Cenário Atual: Selic a 15%</strong></p>
+        <p>Em dezembro de 2025, o Banco Central manteve a Selic em 15% a.a. pelo quarto mês consecutivo - o maior nível desde julho de 2006. Com inflação em ~4,4%, isso significa <strong>juros reais de ~10,5% ao ano</strong> - entre os mais altos do mundo.</p>
 
         <p><strong>O Fenômeno Brasileiro</strong></p>
-        <p>Em muitos períodos de 10-20 anos, o CDI superou o Ibovespa - algo raríssimo no mundo. Isso levanta a questão: se a renda fixa paga tão bem, por que correr o risco da bolsa?</p>`,
-      pontoChave: `<strong>O paradoxo brasileiro:</strong> A bolsa deveria pagar um "prêmio de risco" sobre a renda fixa pelo maior risco assumido. Mas com CDI pagando 10-14% a.a. nominais, esse prêmio fica apertado. Muitos investidores se frustram com a bolsa e voltam para o CDI após quedas de 30-40%.`,
-      reflexao: `<strong>Nossa Tese:</strong> A bolsa brasileira exige mais paciência que outras bolsas do mundo. O investidor médio não aguenta ver -40% e vende no pior momento. Se você não tem estômago para volatilidade, não há vergonha em ficar no CDI - que historicamente pagou muito bem. Mas se aceita a volatilidade, a bolsa pode oferecer ganhos superiores em janelas de 15-20 anos.`,
+        <p>Em muitos períodos de 10-20 anos, o CDI superou o Ibovespa - algo raríssimo no mundo. Com Selic a 15%, a pergunta fica ainda mais difícil: por que correr risco em ações se a renda fixa paga ~1,2% ao mês com segurança?</p>`,
+      pontoChave: `<strong>O paradoxo brasileiro em 2026:</strong> Com Selic a 15%, o CDI paga ~1,2% ao mês garantido. Para a bolsa valer o risco, precisaria entregar bem mais - mas historicamente entrega retornos semelhantes com muito mais volatilidade. O consenso espera cortes de ~2,75 pontos em 2026 (Selic para 12-12,25%), o que poderia beneficiar a bolsa. Mas "esperar queda de juros" é uma das apostas mais frustrantes da história recente.`,
+      reflexao: `<strong>Nossa Tese:</strong> Com Selic a 15%, o CDI é imbatível no curto prazo. Mas se você acredita que os juros vão cair para 12% ou menos em 2026-2027, a bolsa pode surpreender positivamente - especialmente empresas sensíveis a juros (varejo, construtoras, small caps). A estratégia prudente: manter uma base sólida em CDI/Tesouro Selic e alocar gradualmente em bolsa conforme os cortes acontecerem de fato (não antes).`,
       tabelaComparativa: `
         <table class="tabela-comparativa">
           <tr><th>Característica</th><th>IBOV TR</th><th>CDI</th></tr>
+          <tr><td>Retorno atual (jan/2026)</td><td>Variável</td><td class="positivo">~15% a.a. (1,2%/mês)</td></tr>
+          <tr><td>Juros reais</td><td>Depende do lucro empresas</td><td class="positivo">~10,5% a.a. (Selic - IPCA)</td></tr>
           <tr><td>Volatilidade anual</td><td class="negativo">~25-30%</td><td class="positivo">~0,5%</td></tr>
-          <tr><td>Maior queda histórica</td><td class="negativo">-50% (2008)</td><td class="positivo">Nunca negativo</td></tr>
+          <tr><td>Maior queda histórica</td><td class="negativo">-50% (2008)</td><td class="positivo">Nunca negativo nominal</td></tr>
           <tr><td>Retorno em anos ruins</td><td class="negativo">Pode perder 30-50%</td><td class="positivo">Sempre positivo nominal</td></tr>
-          <tr><td>Previsibilidade</td><td class="negativo">Baixa</td><td class="positivo">Alta</td></tr>
-          <tr><td>Proteção contra inflação</td><td>Moderada (empresas repassam)</td><td class="negativo">Pode perder para IPCA</td></tr>
-          <tr><td>Necessidade de gestão</td><td class="negativo">Requer acompanhamento</td><td class="positivo">Passivo</td></tr>
+          <tr><td>Previsibilidade</td><td class="negativo">Baixa</td><td class="positivo">Alta (acompanha Selic)</td></tr>
+          <tr><td>Sensibilidade a juros</td><td class="positivo">Beneficia-se de queda</td><td class="negativo">Rende menos se Selic cair</td></tr>
+          <tr><td>Proteção contra inflação</td><td>Moderada</td><td>Boa enquanto Selic > IPCA</td></tr>
           <tr><td>Liquidez</td><td class="positivo">D+2</td><td class="positivo">D+0 a D+1</td></tr>
-          <tr><td>Potencial de ganho</td><td class="positivo">Ilimitado</td><td>Limitado à taxa Selic</td></tr>
+          <tr><td>Potencial de ganho</td><td class="positivo">Ilimitado</td><td>Limitado à Selic (15% atual)</td></tr>
         </table>`
     },
     'fii-imovel': {
       contexto: `
-        <p><strong>Duas Filosofias de Investimento Imobiliário</strong></p>
-        <p>Investir em imóveis no Brasil é tradição. Mas há duas formas muito diferentes de fazer isso, cada uma com vantagens e desvantagens claras.</p>
+        <p><strong>Duas Filosofias de Investimento Imobiliário (Cenário 2026)</strong></p>
+        <p>Investir em imóveis no Brasil é tradição. Mas há duas formas muito diferentes de fazer isso, cada uma com vantagens e desvantagens claras - especialmente no cenário atual de Selic a 15%.</p>
 
         <p><strong>Imóvel Físico: O Investimento Tradicional</strong></p>
         <ul>
           <li><strong>Você é dono do tijolo:</strong> Pode usar, alugar, reformar ou vender</li>
           <li><strong>Controle total:</strong> Você decide inquilino, preço do aluguel, manutenção</li>
-          <li><strong>Alavancagem:</strong> Pode financiar 70-80% do valor e usar o aluguel para pagar</li>
-          <li><strong>Valorização por localização:</strong> Imóvel bem localizado pode valorizar muito acima da média</li>
+          <li><strong>Alavancagem:</strong> Pode financiar 70-80% do valor (mas cuidado: juros de financiamento estão altíssimos)</li>
+          <li><strong>Mercado aquecido:</strong> Preços subiram ~8% em 2025, vendas +9,6% no 1º semestre</li>
         </ul>
         <p><strong>Mas exige:</strong> Capital alto, tempo para gestão, lidar com inquilinos, vacância, manutenção, IPTU, condomínio...</p>
 
         <p><strong>FIIs (Fundos Imobiliários): O Investimento Moderno</strong></p>
         <ul>
           <li><strong>Cotas acessíveis:</strong> Invista a partir de R$100 em grandes empreendimentos</li>
-          <li><strong>Renda mensal:</strong> Dividendos distribuídos todo mês, isentos de IR para pessoa física</li>
+          <li><strong>Renda mensal:</strong> Dividendos distribuídos todo mês, isentos de IR para pessoa física (por enquanto - pode mudar para 5% em 2026)</li>
           <li><strong>Diversificação:</strong> Um FII pode ter 50+ imóveis em diferentes cidades</li>
           <li><strong>Liquidez:</strong> Venda suas cotas em D+2 na bolsa</li>
         </ul>
         <p><strong>Mas você abre mão de:</strong> Controle sobre o ativo, possibilidade de usar o imóvel, alavancagem via financiamento.</p>
 
-        <p><strong>Sobre a Comparação</strong></p>
-        <p>O IFIX mede apenas a variação das cotas dos FIIs. Para comparar com imóveis físicos de forma justa, adicionamos o campo "Imóveis+" que simula o rendimento de aluguel (padrão 4,5% a.a.).</p>`,
-      pontoChave: `<strong>A questão central:</strong> FIIs são melhores para quem quer renda passiva sem trabalho - você recebe dividendos todo mês sem se preocupar com inquilinos. Imóveis físicos são melhores para quem quer construir patrimônio de longo prazo e tem tempo/disposição para a gestão.`,
-      reflexao: `<strong>Nossa Tese:</strong> Não existe resposta certa - depende do seu perfil. Se você tem capital alto, tempo livre e gosta de "colocar a mão na massa", imóveis físicos podem ser excelentes (especialmente via leilões). Se você quer simplicidade e renda passiva, FIIs são mais práticos. Muitos investidores combinam os dois: FIIs para liquidez e imóvel próprio para moradia/patrimônio.`,
+        <p><strong>O Impacto da Selic a 15%</strong></p>
+        <p>Com juros tão altos, FIIs enfrentam forte concorrência do CDI - por que arriscar em imóveis se a renda fixa paga 15% ao ano? Mas se a Selic cair para 12% em 2026 (consenso do mercado), FIIs podem se valorizar significativamente. É uma aposta em queda de juros.</p>`,
+      pontoChave: `<strong>A questão central em 2026:</strong> Com Selic a 15%, tanto FIIs quanto financiamento imobiliário estão em desvantagem vs. renda fixa. Mas se os juros caírem como o mercado espera (para ~12% até fim de 2026), ambos podem se beneficiar. FIIs são mais líquidos e práticos; imóveis físicos oferecem mais controle e possibilidade de alavancagem quando os juros baixarem.`,
+      reflexao: `<strong>Nossa Tese:</strong> No cenário atual (Selic 15%), o momento é de cautela com imóveis. Se for comprar imóvel físico, evite financiamento caro - ou negocie forte desconto à vista. FIIs de tijolo (logística, shoppings) podem ser boas opções para quem acredita na queda de juros, mas prepare-se para volatilidade. Uma mudança tributária (possível IR de 5% sobre dividendos) está no radar para 2026 - fique atento.`,
       tabelaComparativa: `
         <table class="tabela-comparativa">
           <tr><th>Característica</th><th>FIIs (IFIX)</th><th>Imóvel Físico</th></tr>
@@ -225,53 +230,55 @@ const Comparador2 = {
           <tr><td>Diversificação</td><td class="positivo">Fácil (várias cotas)</td><td class="negativo">Difícil (capital concentrado)</td></tr>
           <tr><td>Gestão necessária</td><td class="positivo">Nenhuma</td><td class="negativo">Alta (inquilinos, manutenção)</td></tr>
           <tr><td>Controle sobre o ativo</td><td class="negativo">Nenhum</td><td class="positivo">Total</td></tr>
-          <tr><td>Alavancagem (financiamento)</td><td class="negativo">Não disponível</td><td class="positivo">Até 80% do valor</td></tr>
-          <tr><td>IR sobre rendimentos</td><td class="positivo">Isento (PF)</td><td class="negativo">Tributado (27,5% aluguel)</td></tr>
+          <tr><td>Alavancagem (financiamento)</td><td class="negativo">Não disponível</td><td>Até 80% (mas juros de ~12% a.a.)</td></tr>
+          <tr><td>IR sobre rendimentos</td><td class="positivo">Isento (pode mudar p/ 5%)</td><td class="negativo">Tributado (27,5% aluguel)</td></tr>
           <tr><td>IR sobre ganho de capital</td><td>20%</td><td>15% (pode isentar)</td></tr>
-          <tr><td>Renda mensal típica</td><td class="positivo">0,7-1% a.m.</td><td>0,3-0,5% a.m.</td></tr>
+          <tr><td>Dividend yield atual</td><td class="positivo">~10-12% a.a.</td><td>~4-6% a.a. líquido</td></tr>
+          <tr><td>Valorização 2025</td><td class="negativo">IFIX pressionado pela Selic</td><td class="positivo">+8% nominal (FIPEZAP)</td></tr>
           <tr><td>Risco de vacância</td><td class="positivo">Diluído (muitos imóveis)</td><td class="negativo">Concentrado (1 imóvel)</td></tr>
-          <tr><td>Potencial de valorização</td><td>Moderado</td><td class="positivo">Alto (localização premium)</td></tr>
+          <tr><td>Sensibilidade a juros</td><td>Alta (valoriza se Selic cair)</td><td>Moderada</td></tr>
           <tr><td>Uso próprio</td><td class="negativo">Não</td><td class="positivo">Sim</td></tr>
         </table>`
     },
     'dolar-ouro': {
       contexto: `
-        <p><strong>Dois Pilares de Proteção Patrimonial</strong></p>
-        <p>Tanto o dólar quanto o ouro são considerados "ativos de proteção" - refúgios em momentos de crise. Mas funcionam de formas diferentes e protegem contra riscos diferentes.</p>
+        <p><strong>Dois Pilares de Proteção Patrimonial (Cenário 2026)</strong></p>
+        <p>Tanto o dólar quanto o ouro são considerados "ativos de proteção" - refúgios em momentos de crise. Em 2025, o ouro teve desempenho espetacular (+65%), enquanto o dólar teve comportamento misto. O que isso significa para 2026?</p>
 
         <p><strong>Dólar: A Moeda de Reserva Mundial</strong></p>
         <ul>
-          <li><strong>Dominância global:</strong> ~60% das reservas cambiais mundiais são em dólar</li>
-          <li><strong>Flight to quality:</strong> Em crises globais, investidores correm para o dólar</li>
+          <li><strong>Dominância global:</strong> ~60% das reservas cambiais mundiais ainda são em dólar</li>
+          <li><strong>Flight to quality:</strong> Em crises, investidores correm para o dólar</li>
           <li><strong>Proteção contra Brasil:</strong> Em crises locais, o real desvaloriza e o dólar sobe</li>
-          <li><strong>Rende juros:</strong> Você pode investir em títulos americanos (Treasury) e ter renda</li>
+          <li><strong>Rende juros:</strong> Treasury ainda paga ~4,25-4,50% a.a. (Fed em janeiro 2026)</li>
         </ul>
 
-        <p><strong>Ouro: O Ativo Sem Contraparte</strong></p>
+        <p><strong>Ouro: O Ativo Que Brilhou em 2025</strong></p>
         <ul>
-          <li><strong>Independente:</strong> Não depende de nenhum governo, banco ou empresa</li>
-          <li><strong>Hedge contra impressão de moeda:</strong> Bancos centrais imprimem dinheiro; ninguém imprime ouro</li>
-          <li><strong>Reserva milenar:</strong> 5.000 anos de história como reserva de valor</li>
-          <li><strong>Não rende nada:</strong> Ouro parado é ouro parado - não paga dividendos nem juros</li>
+          <li><strong>Performance histórica:</strong> +65% em 2025 - melhor ano desde a era Jimmy Carter</li>
+          <li><strong>Novo recorde:</strong> Ultrapassou US$4.000/oz pela primeira vez, chegando a US$4.500</li>
+          <li><strong>Compra recorde de BCs:</strong> Bancos centrais compraram +1.000 toneladas/ano nos últimos 3 anos</li>
+          <li><strong>Geopolítica:</strong> Congelamento de reservas russas acelerou diversificação para ouro</li>
         </ul>
 
-        <p><strong>Quando cada um funciona melhor?</strong></p>
-        <p><strong>Dólar sobe mais quando:</strong> Crise brasileira (Dilma 2015, Bolsonaro 2022), fuga de emergentes, alta de juros nos EUA.</p>
-        <p><strong>Ouro sobe mais quando:</strong> Crise global (COVID 2020, Guerra Ucrânia 2022), inflação mundial, desconfiança em moedas fiduciárias.</p>`,
-      pontoChave: `<strong>A diferença fundamental:</strong> Dólar é uma moeda - depende da confiança no governo americano e no Federal Reserve. Ouro é um ativo físico - não depende de ninguém. Em um cenário de colapso do sistema financeiro global, o ouro teoricamente seria mais seguro. Em crises "normais", o dólar costuma performar bem.`,
-      reflexao: `<strong>Nossa Tese:</strong> Ter os dois faz sentido como proteção complementar. O dólar protege contra crises brasileiras e paga rendimento. O ouro protege contra cenários mais extremos e desvalorização de todas as moedas (incluindo o dólar). Uma alocação de 10-15% em dólar + 5-10% em ouro cobre a maioria dos cenários de risco.`,
+        <p><strong>A Mudança Estrutural</strong></p>
+        <p>Após o congelamento das reservas russas em 2022, bancos centrais (especialmente China, Índia, Turquia) aumentaram significativamente suas compras de ouro. Pela primeira vez desde 1996, o ouro superou os títulos do Tesouro americano nas reservas de bancos centrais. É uma mudança geopolítica profunda.</p>`,
+      pontoChave: `<strong>O que mudou:</strong> Antes de 2022, o dólar era o "porto seguro" indiscutível. Após o congelamento de reservas russas e a fragmentação geopolítica, o ouro ganhou relevância como ativo verdadeiramente neutro. Bancos centrais estão diversificando suas reservas de dólar para ouro. JPMorgan projeta ouro a US$5.000/oz até fim de 2026.`,
+      reflexao: `<strong>Nossa Tese:</strong> O momento é de ter ambos, mas o ouro ganhou protagonismo. Com a fragmentação do sistema financeiro global, ter parte do patrimônio em um ativo que não pode ser congelado por nenhum governo faz cada vez mais sentido. Sugestão: 15-20% em dólar (proteção contra Brasil + rendimento) e 5-10% em ouro (proteção contra cenários extremos). A soma protege contra a maioria dos riscos.`,
       tabelaComparativa: `
         <table class="tabela-comparativa">
           <tr><th>Característica</th><th>Dólar</th><th>Ouro</th></tr>
           <tr><td>Tipo de ativo</td><td>Moeda fiduciária</td><td>Commodity / metal precioso</td></tr>
-          <tr><td>Dependência</td><td class="negativo">Governo dos EUA / Fed</td><td class="positivo">Nenhuma</td></tr>
-          <tr><td>Rende juros</td><td class="positivo">Sim (Treasury ~4-5%)</td><td class="negativo">Não</td></tr>
-          <tr><td>Proteção contra crise BR</td><td class="positivo">Excelente</td><td class="positivo">Boa</td></tr>
+          <tr><td>Performance 2025</td><td>Mista (variou por período)</td><td class="positivo">+65% (melhor em 50 anos)</td></tr>
+          <tr><td>Dependência</td><td class="negativo">Governo dos EUA / Fed</td><td class="positivo">Nenhuma (neutro)</td></tr>
+          <tr><td>Rende juros</td><td class="positivo">Sim (Treasury ~4,25%)</td><td class="negativo">Não</td></tr>
+          <tr><td>Pode ser congelado</td><td class="negativo">Sim (reservas russas 2022)</td><td class="positivo">Não (ativo físico)</td></tr>
+          <tr><td>Demanda de BCs</td><td class="negativo">Reduzindo % nas reservas</td><td class="positivo">+1.000 ton/ano (recorde)</td></tr>
+          <tr><td>Proteção contra crise BR</td><td class="positivo">Excelente</td><td class="positivo">Muito boa</td></tr>
           <tr><td>Proteção contra crise global</td><td class="positivo">Boa</td><td class="positivo">Excelente</td></tr>
-          <tr><td>Proteção contra inflação EUA</td><td class="negativo">Fraca</td><td class="positivo">Forte</td></tr>
+          <tr><td>Proteção contra inflação</td><td class="negativo">Fraca</td><td class="positivo">Forte (histórica)</td></tr>
           <tr><td>Liquidez no Brasil</td><td class="positivo">Alta (fundos, BDRs)</td><td class="positivo">Alta (ETFs, fundos)</td></tr>
-          <tr><td>Volatilidade</td><td>Moderada (~15% a.a.)</td><td>Moderada (~15% a.a.)</td></tr>
-          <tr><td>Correlação em crise BR</td><td class="positivo">Forte alta</td><td class="positivo">Alta moderada</td></tr>
+          <tr><td>Projeções 2026</td><td>Estável ou queda leve</td><td class="positivo">US$5.000/oz (JPMorgan)</td></tr>
           <tr><td>Histórico</td><td>~80 anos (pós Bretton Woods)</td><td class="positivo">5.000+ anos</td></tr>
         </table>`
     }

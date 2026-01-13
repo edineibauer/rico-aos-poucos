@@ -204,6 +204,37 @@
   border-color: var(--primary-light);
 }
 
+/* Custom Date Select */
+.comp2-date-select {
+  display: flex;
+  gap: 6px;
+}
+
+.comp2-date-select select {
+  flex: 1;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 10px 8px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-width: 0;
+}
+
+.comp2-date-select .date-month {
+  flex: 1;
+}
+
+.comp2-date-select .date-year {
+  flex: 1.2;
+}
+
+.comp2-date-select select:focus {
+  outline: none;
+  border-color: var(--primary-light);
+}
+
 .comp2-input-group {
   display: flex;
   align-items: center;
@@ -1449,15 +1480,13 @@
     gap: 8px;
   }
 
-  /* Ensure date inputs don't overflow */
+  /* Ensure date selects don't overflow */
   .comp2-config-row:first-child .comp2-field {
     min-width: 0;
   }
 
-  .comp2-config-row:first-child .comp2-field input[type="month"] {
+  .comp2-config-row:first-child .comp2-date-select {
     width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
   }
 
   .comp2-config-row:first-child .comp2-field:last-child {
@@ -1486,8 +1515,7 @@
     margin-bottom: 4px;
   }
 
-  .comp2-field select,
-  .comp2-field input[type="month"] {
+  .comp2-field select {
     padding: 10px;
     font-size: 0.9rem;
     min-height: 44px;
@@ -1496,6 +1524,17 @@
   .comp2-field input {
     padding: 10px;
     font-size: 0.95rem;
+  }
+
+  /* Date select mobile styles */
+  .comp2-date-select {
+    gap: 4px;
+  }
+
+  .comp2-date-select select {
+    padding: 10px 6px;
+    font-size: 0.85rem;
+    min-height: 44px;
   }
 
   .comp2-input-group {
@@ -1925,16 +1964,19 @@
     gap: 6px;
   }
 
-  /* Ensure date inputs don't overflow */
+  /* Ensure date selects don't overflow */
   .comp2-config-row:first-child .comp2-field {
     min-width: 0;
     overflow: hidden;
   }
 
-  .comp2-config-row:first-child .comp2-field input[type="month"] {
+  .comp2-config-row:first-child .comp2-date-select {
     width: 100%;
-    min-width: 0;
-    box-sizing: border-box;
+  }
+
+  .comp2-date-select select {
+    padding: 8px 4px;
+    font-size: 0.8rem;
   }
 
   /* Value field spans full width */

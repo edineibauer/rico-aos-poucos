@@ -88,11 +88,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2PeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2PeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2PeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2PeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2PeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2PeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -231,11 +239,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2DueloPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2DueloPeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2DueloPeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2DueloPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2DueloPeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2DueloPeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor</label>
@@ -369,11 +385,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2CarteiraPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2CarteiraPeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2CarteiraPeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2CarteiraPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2CarteiraPeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2CarteiraPeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -543,11 +567,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2RebalPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2RebalPeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2RebalPeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2RebalPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2RebalPeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2RebalPeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -814,5 +846,72 @@
   <script src="../js/comparador-ui.js"></script>
   <script src="../js/calculadora.js"></script>
   <script src="../js/i18n.js"></script>
+  <script>
+    // Initialize custom date selects
+    (function() {
+      const months = [
+        { value: '01', label: 'Jan' },
+        { value: '02', label: 'Fev' },
+        { value: '03', label: 'Mar' },
+        { value: '04', label: 'Abr' },
+        { value: '05', label: 'Mai' },
+        { value: '06', label: 'Jun' },
+        { value: '07', label: 'Jul' },
+        { value: '08', label: 'Ago' },
+        { value: '09', label: 'Set' },
+        { value: '10', label: 'Out' },
+        { value: '11', label: 'Nov' },
+        { value: '12', label: 'Dez' }
+      ];
+
+      const startYear = 2005;
+      const endYear = 2025;
+
+      function initDateSelects() {
+        document.querySelectorAll('.comp2-date-select').forEach(container => {
+          const monthSelect = container.querySelector('.date-month');
+          const yearSelect = container.querySelector('.date-year');
+          const hiddenInput = container.querySelector('input[type="hidden"]');
+
+          if (!monthSelect || !yearSelect || !hiddenInput) return;
+
+          const defaultMonth = monthSelect.dataset.default || '01';
+          const defaultYear = yearSelect.dataset.default || '2011';
+
+          // Populate months
+          months.forEach(m => {
+            const opt = document.createElement('option');
+            opt.value = m.value;
+            opt.textContent = m.label;
+            if (m.value === defaultMonth) opt.selected = true;
+            monthSelect.appendChild(opt);
+          });
+
+          // Populate years
+          for (let y = startYear; y <= endYear; y++) {
+            const opt = document.createElement('option');
+            opt.value = y;
+            opt.textContent = y;
+            if (y.toString() === defaultYear) opt.selected = true;
+            yearSelect.appendChild(opt);
+          }
+
+          // Sync hidden input on change
+          function syncValue() {
+            hiddenInput.value = `${yearSelect.value}-${monthSelect.value}`;
+          }
+
+          monthSelect.addEventListener('change', syncValue);
+          yearSelect.addEventListener('change', syncValue);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDateSelects);
+      } else {
+        initDateSelects();
+      }
+    })();
+  </script>
 </body>
 </html>

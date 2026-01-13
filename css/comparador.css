@@ -1,5 +1,10 @@
 /* Comparador v2 - Improved UX */
 
+/* Hide language selector on this page */
+#langSelector {
+  display: none;
+}
+
 /* Main Layout - Sidebar + Content */
 .comp2-main {
   display: block;
@@ -1902,18 +1907,23 @@
     padding: 10px;
   }
 
-  /* Period inputs stack on very small screens */
+  /* Period inputs stay 50/50 on small screens - date fields side by side */
   .comp2-config-row:first-child {
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
   }
 
+  /* Value field spans full width */
   .comp2-config-row:first-child .comp2-field:last-child {
-    grid-column: auto;
+    grid-column: 1 / -1;
   }
 
+  /* Adjustment fields stay 50/50 */
   .comp2-config-row.comp2-adjustments {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px;
   }
 
   .comp2-assets {
@@ -2027,5 +2037,93 @@
 
   .metrica-detalhe {
     display: none;
+  }
+}
+
+/* Calculator Tab - Consistent Padding */
+#comp2-calculadora .comp2-panel {
+  padding: 0;
+}
+
+#comp2-calculadora #calculadora-container {
+  width: 100%;
+}
+
+/* Ensure calc-modes has proper spacing */
+#comp2-calculadora .calc-modes {
+  margin-bottom: 16px;
+}
+
+/* Mobile Calculator Adjustments */
+@media (max-width: 768px) {
+  #comp2-calculadora .calc-modes {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  #comp2-calculadora .calc-mode-btn {
+    flex-direction: row;
+    text-align: left;
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  #comp2-calculadora .calc-mode-btn .mode-icon {
+    font-size: 1.5rem;
+  }
+
+  #comp2-calculadora .calc-mode-btn .mode-text {
+    align-items: flex-start;
+  }
+
+  #comp2-calculadora .calc-mode-btn .mode-text strong {
+    font-size: 0.9rem;
+  }
+
+  #comp2-calculadora .calc-mode-btn .mode-text small {
+    font-size: 0.75rem;
+  }
+
+  #comp2-calculadora .calc-form {
+    padding: 16px;
+    border-radius: 12px;
+  }
+
+  #comp2-calculadora .calc-result {
+    padding: 16px;
+    border-radius: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  #comp2-calculadora .calc-mode-btn {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+
+  #comp2-calculadora .calc-mode-btn .mode-icon {
+    font-size: 1.3rem;
+  }
+
+  #comp2-calculadora .calc-mode-btn .mode-text strong {
+    font-size: 0.85rem;
+  }
+
+  #comp2-calculadora .calc-form {
+    padding: 12px;
+  }
+
+  #comp2-calculadora .calc-result {
+    padding: 12px;
+  }
+
+  #comp2-calculadora .calc-field {
+    margin-bottom: 14px;
+  }
+
+  #comp2-calculadora .calc-btn {
+    padding: 14px;
+    font-size: 0.95rem;
   }
 }

@@ -1449,6 +1449,17 @@
     gap: 8px;
   }
 
+  /* Ensure date inputs don't overflow */
+  .comp2-config-row:first-child .comp2-field {
+    min-width: 0;
+  }
+
+  .comp2-config-row:first-child .comp2-field input[type="month"] {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+  }
+
   .comp2-config-row:first-child .comp2-field:last-child {
     grid-column: 1 / -1;
   }
@@ -1912,6 +1923,18 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 6px;
+  }
+
+  /* Ensure date inputs don't overflow */
+  .comp2-config-row:first-child .comp2-field {
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .comp2-config-row:first-child .comp2-field input[type="month"] {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
   }
 
   /* Value field spans full width */

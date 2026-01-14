@@ -288,6 +288,7 @@ const Comparador2 = {
     this.bindNavigation();
     this.bindAssetChips();
     this.bindDueloButtons();
+    this.bindDueloFilters();
     this.bindPresets();
     this.bindAllocationSliders();
     this.bindPatternButtons();
@@ -448,6 +449,44 @@ const Comparador2 = {
         this.iniciarDuelo();
       });
     });
+  },
+
+  // Bind filter changes to auto-recalculate duelo
+  bindDueloFilters() {
+    const self = this;
+
+    // Debounce function to avoid too many recalculations
+    let debounceTimer;
+    const recalcularDuelo = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        if (self.currentTab === 'comparacao' && Comparador.dadosMensais?.meses) {
+          self.iniciarDuelo();
+        }
+      }, 300);
+    };
+
+    // Date selects for Duelo tab (inside #comp2-comparacao)
+    const dueloTab = document.getElementById('comp2-comparacao');
+    if (dueloTab) {
+      // Listen for changes on date-month and date-year selects
+      dueloTab.querySelectorAll('.comp2-date-select .date-month, .comp2-date-select .date-year').forEach(select => {
+        select.addEventListener('change', recalcularDuelo);
+      });
+
+      // Listen for changes on text inputs (valor, dolar extra, imoveis renda)
+      const valorInput = document.getElementById('comp2DueloValor');
+      const dolarExtraInput = document.getElementById('comp2DueloDolarExtra');
+      const imoveisRendaInput = document.getElementById('comp2DueloImoveisRenda');
+
+      [valorInput, dolarExtraInput, imoveisRendaInput].forEach(input => {
+        if (input) {
+          // Use 'change' for when user finishes editing, 'blur' as backup
+          input.addEventListener('change', recalcularDuelo);
+          input.addEventListener('blur', recalcularDuelo);
+        }
+      });
+    }
   },
 
   bindPresets() {

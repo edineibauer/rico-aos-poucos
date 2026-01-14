@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Market Already Priced It In: Why Following Consensus Can Be a Mistake | Rico aos Poucos</title>
   <meta name="description" content="Understand why buying what everyone is buying rarely works. The Efficient Market Hypothesis, the TLT case, CDI vs Ibovespa, and Buffett's rule #1.">
+  <meta name="keywords" content="efficient market hypothesis, market pricing, CDI vs Ibovespa, TLT, Warren Buffett, investment strategy, fixed income, variable income">
+  <meta name="author" content="Rico aos Poucos">
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ricoaospoucos.com.br/en/artigos/o-mercado-ja-precificou.html">
 
-  <!-- Hreflang -->
+  <!-- Hreflang Tags -->
   <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/o-mercado-ja-precificou.html">
   <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/o-mercado-ja-precificou.html">
   <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/o-mercado-ja-precificou.html">
@@ -27,9 +28,16 @@
   <meta name="twitter:title" content="The Market Already Priced It In: Why Following Consensus Can Be a Mistake">
   <meta name="twitter:description" content="Why buying what everyone is buying rarely works.">
 
+  <meta name="theme-color" content="#0d1117">
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="shortcut icon" href="../../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../../icon-192.png">
+  <link rel="manifest" href="../../manifest.json">
+  <title>The Market Already Priced It In: Why Following Consensus Can Be a Mistake - Rico aos Poucos</title>
   <link rel="stylesheet" href="../../css/style.css">
-  <link rel="stylesheet" href="../../css/artigo.css">
-  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
 
   <!-- JSON-LD -->
   <script type="application/ld+json">
@@ -38,58 +46,92 @@
     "@type": "Article",
     "headline": "The Market Already Priced It In: Why Following Consensus Can Be a Mistake",
     "description": "Analysis of market efficiency, expectation pricing, and why the strategy of not losing can beat the strategy of gaining more.",
-    "author": {
-      "@type": "Organization",
-      "name": "Rico aos Poucos"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Rico aos Poucos",
-      "url": "https://ricoaospoucos.com.br"
-    },
+    "author": {"@type": "Organization", "name": "Rico aos Poucos"},
+    "publisher": {"@type": "Organization", "name": "Rico aos Poucos"},
     "datePublished": "2026-01-14",
     "dateModified": "2026-01-14"
   }
   </script>
+
+  <style>
+    .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+    .app-header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; background: var(--bg-secondary); border-bottom: 1px solid var(--border-color); }
+    .header-back { display: flex; align-items: center; justify-content: center; width: 36px; height: 36px; background: rgba(255, 255, 255, 0.05); border-radius: 10px; color: var(--text-primary); text-decoration: none; transition: all 0.3s ease; flex-shrink: 0; }
+    .header-back:hover { background: rgba(255, 255, 255, 0.1); }
+    .header-back svg { width: 18px; height: 18px; stroke: currentColor; stroke-width: 2; fill: none; }
+    .app-logo { width: 36px; height: 36px; flex-shrink: 0; }
+    .app-title-group { flex: 1; min-width: 0; }
+    .app-name { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 0; }
+    .app-subtitle { font-size: 0.7rem; color: var(--text-muted); }
+    .main-content { flex: 1; padding: 16px 20px; max-width: 800px; margin: 0 auto; width: 100%; }
+    .article-header { margin-bottom: 24px; }
+    .article-header h1 { font-size: 1.5rem; margin: 12px 0 8px; line-height: 1.3; color: var(--text-primary); }
+    .article-lead { color: var(--text-secondary); font-size: 0.95rem; line-height: 1.5; margin-bottom: 12px; }
+    .article-meta { display: flex; gap: 12px; color: var(--text-muted); font-size: 0.75rem; flex-wrap: wrap; }
+    .nivel-badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 10px; font-size: 0.7rem; font-weight: 600; }
+    .nivel-badge.intermediario { background: rgba(240, 193, 75, 0.15); color: var(--neutral); }
+    .article-content { line-height: 1.7; color: var(--text-secondary); }
+    .article-content h2 { color: var(--text-primary); margin: 28px 0 14px; font-size: 1.2rem; }
+    .article-content h3 { color: var(--text-primary); margin: 20px 0 10px; font-size: 1rem; }
+    .article-content p { margin-bottom: 14px; font-size: 0.9rem; }
+    .article-content ul, .article-content ol { margin-bottom: 14px; padding-left: 20px; }
+    .article-content li { margin-bottom: 6px; font-size: 0.9rem; }
+    .article-content blockquote { background: var(--bg-tertiary); border-left: 3px solid var(--primary); padding: 12px 16px; margin: 16px 0; border-radius: 0 8px 8px 0; }
+    .article-content blockquote p { margin-bottom: 8px; font-style: italic; }
+    .article-content blockquote cite { font-size: 0.8rem; color: var(--text-muted); }
+    .article-content blockquote cite a { color: var(--primary-light); }
+    .stat-box { background: var(--bg-tertiary); border-radius: 10px; padding: 20px; text-align: center; margin: 20px 0; }
+    .stat-box.success { background: linear-gradient(135deg, rgba(63, 185, 80, 0.15) 0%, var(--bg-tertiary) 100%); border: 1px solid rgba(63, 185, 80, 0.3); }
+    .stat-number { font-size: 1.4rem; font-weight: 700; color: var(--text-primary); }
+    .stat-number.success { color: var(--bullish); }
+    .stat-label { color: var(--text-muted); font-size: 0.8rem; margin-top: 4px; }
+    .callout { background: linear-gradient(135deg, rgba(63, 185, 80, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%); border: 1px solid rgba(63, 185, 80, 0.25); border-radius: 10px; padding: 16px; margin: 20px 0; }
+    .callout h4 { margin: 0 0 8px; font-size: 0.9rem; color: var(--text-primary); }
+    .callout p, .callout ul { margin: 0; font-size: 0.85rem; }
+    .callout ul { margin-top: 8px; padding-left: 18px; }
+    .callout.warning { background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%); border-color: rgba(240, 193, 75, 0.25); }
+    .callout.danger { background: linear-gradient(135deg, rgba(248, 81, 73, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%); border-color: rgba(248, 81, 73, 0.25); }
+    .callout.success { background: linear-gradient(135deg, rgba(63, 185, 80, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%); border-color: rgba(63, 185, 80, 0.25); }
+    .data-table { width: 100%; border-collapse: collapse; margin: 16px 0; font-size: 0.85rem; }
+    .data-table th, .data-table td { padding: 10px 12px; text-align: left; border-bottom: 1px solid var(--border-color); }
+    .data-table th { background: var(--bg-tertiary); color: var(--text-primary); font-weight: 600; }
+    .data-table td.positive { color: var(--bullish); }
+    .data-table td.negative { color: var(--bearish); }
+    .disclaimer { background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 10px; padding: 16px; margin-top: 24px; }
+    .disclaimer h4 { margin-bottom: 8px; color: var(--neutral); font-size: 0.85rem; }
+    .disclaimer p { font-size: 0.8rem; margin: 0; }
+    .nav-buttons { display: flex; justify-content: space-between; gap: 12px; margin-top: 24px; flex-wrap: wrap; }
+    .btn { padding: 10px 16px; border-radius: 8px; font-size: 0.8rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
+    .btn-outline { background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); }
+    .btn-outline:hover { border-color: var(--primary-light); color: var(--text-primary); }
+    @media (min-width: 768px) { .main-content { max-width: 900px; padding: 20px 32px; } .article-header h1 { font-size: 1.8rem; } .article-content p { font-size: 0.95rem; } }
+    @media (min-width: 1024px) { .main-content { max-width: 1000px; padding: 24px 40px; } .article-header h1 { font-size: 2rem; } .article-content h2 { font-size: 1.4rem; } }
+    @media (min-width: 1400px) { .main-content { max-width: 1100px; } }
+  </style>
 </head>
 <body>
-  <div id="page-header"></div>
+  <div class="page-wrapper">
+    <header id="article-header" class="app-header"></header>
 
-  <main class="artigo-container">
-    <article class="artigo-content">
-      <header class="artigo-header">
-        <div class="artigo-meta">
-          <span class="artigo-categoria">Strategy</span>
-          <span class="artigo-data">January 14, 2026</span>
-          <span class="artigo-tempo">18 min read</span>
-        </div>
-        <h1>The Market Already Priced It In: Why Following Consensus Can Be a Mistake</h1>
-        <p class="artigo-subtitulo">When everyone is buying the same thing, it's probably too late. Understand the mechanics of pricing and why "not losing" can be more important than "winning more".</p>
-      </header>
-
-      <div class="artigo-body">
-
-        <div class="artigo-destaque">
-          <p><strong>Summary:</strong> Financial markets are forward-looking — they anticipate future events and incorporate them into prices before they happen. When an expectation becomes consensus, it's already reflected in prices. Making money consistently requires identifying what hasn't been priced in yet, not following the herd.</p>
+    <main class="main-content">
+      <article>
+        <div class="article-header">
+          <span class="nivel-badge intermediario">Intermediate</span>
+          <h1>The Market Already Priced It In: Why Following Consensus Can Be a Mistake</h1>
+          <p class="article-lead">When everyone is buying the same thing, it's probably too late. Understand the mechanics of pricing and why "not losing" can be more important than "winning more".</p>
+          <div class="article-meta">
+            <span>Jan 14, 2026</span>
+            <span>18 min read</span>
+          </div>
         </div>
 
-        <nav class="artigo-toc">
-          <h3>In this article</h3>
-          <ul>
-            <li><a href="#hypothesis">1. The Efficient Market Hypothesis</a></li>
-            <li><a href="#tlt">2. The TLT Case: Concrete Proof</a></li>
-            <li><a href="#gold">3. Gold Up 65%: Now What?</a></li>
-            <li><a href="#consensus">4. The Danger of Consensus in Brazil</a></li>
-            <li><a href="#cdi">5. CDI vs Ibovespa: Historical Data</a></li>
-            <li><a href="#ipca">6. The Risk of IPCA+ Bonds</a></li>
-            <li><a href="#buffett">7. Buffett's Rule #1</a></li>
-            <li><a href="#conclusion">8. Conclusion: The Strategy of Not Losing</a></li>
-          </ul>
-        </nav>
+        <div class="article-content">
+          <div class="callout">
+            <h4>Summary</h4>
+            <p>Financial markets are forward-looking — they anticipate future events and incorporate them into prices before they happen. When an expectation becomes consensus, it's already reflected in prices. Making money consistently requires identifying what hasn't been priced in yet, not following the herd.</p>
+          </div>
 
-        <section id="hypothesis">
           <h2>1. The Efficient Market Hypothesis</h2>
-
           <p>The <strong>Efficient Market Hypothesis</strong> (EMH), developed by Eugene Fama in the 1960s, states that asset prices <strong>reflect all available information</strong>. In other words: if information is public and known, it's already incorporated in the price.</p>
 
           <blockquote>
@@ -100,22 +142,16 @@
           <p>The direct implication is devastating for those who follow consensus: <strong>it's impossible to "beat the market" consistently</strong> by trading on public information, because that information is already in the prices.</p>
 
           <h3>The Three Forms of Efficiency</h3>
-
           <ul>
             <li><strong>Weak Form:</strong> Past prices don't predict future prices (technical analysis doesn't work)</li>
             <li><strong>Semi-Strong Form:</strong> All public information is already in prices (fundamental analysis generates no alpha)</li>
             <li><strong>Strong Form:</strong> Even insider information is already reflected (practically impossible)</li>
           </ul>
 
-          <p>The real market operates somewhere between weak and semi-strong form. The crucial point: <strong>consensus expectations are public information</strong>. If everyone expects rates to fall, that expectation is already in asset prices.</p>
-        </section>
-
-        <section id="tlt">
           <h2>2. The TLT Case: Concrete Proof</h2>
-
           <p>Want real proof that markets anticipate events? Look at <strong>TLT</strong> (iShares 20+ Year Treasury Bond ETF), which invests in long-term US Treasury bonds.</p>
 
-          <div class="artigo-card destaque">
+          <div class="callout danger">
             <h4>The TLT Paradox in 2024-2025</h4>
             <ul>
               <li>The Fed cut rates by 100 basis points during 2024</li>
@@ -125,92 +161,43 @@
             </ul>
           </div>
 
-          <p>How is this possible? The answer lies in advance pricing:</p>
-
           <blockquote>
-            <p>"The moves in TLT raise the question of how much Fed easing is already priced into bond markets. [...] One could make the case that the 10-year Treasury yield at 3.6% and a 30-year Treasury yield at 3.9% already reflect that."</p>
-            <cite>— <a href="https://www.etf.com/sections/features/tlt-sinks-are-fed-rate-cuts-priced" target="_blank" rel="noopener">ETF.com: TLT Sinks - Are Fed Rate Cuts Priced In?</a></cite>
+            <p>"The moves in TLT raise the question of how much Fed easing is already priced into bond markets."</p>
+            <cite>— <a href="https://www.etf.com/sections/features/tlt-sinks-are-fed-rate-cuts-priced" target="_blank" rel="noopener">ETF.com</a></cite>
           </blockquote>
 
-          <p>The market doesn't wait for the Fed to announce cuts. It <strong>anticipates</strong>. When the cut finally happens, the news is already "old" — prices moved months before.</p>
-        </section>
-
-        <section id="gold">
           <h2>3. Gold Up 65%: Now What?</h2>
+          <p>Gold had a spectacular 2025: <strong>+65% appreciation</strong>, the best year since the Jimmy Carter era. And now everyone recommends buying gold "for protection".</p>
 
-          <p>Gold had a spectacular 2025: <strong>+65% appreciation</strong>, the best year since the Jimmy Carter era. It surpassed $4,000/oz and broke over 50 all-time records. And now everyone recommends buying gold "for protection".</p>
-
-          <div class="artigo-card alerta">
+          <div class="callout warning">
             <h4>The Question Nobody Asks</h4>
             <p>If gold already rose 65% because the market anticipated crises and instability, <strong>how much of that protection is already in the price?</strong></p>
           </div>
 
-          <p>According to the <a href="https://www.gold.org/goldhub/research/gold-outlook-2026" target="_blank" rel="noopener">World Gold Council</a>:</p>
-
-          <blockquote>
-            <p>"The gold price broadly reflects macroeconomic consensus expectations and may remain rangebound if current conditions persist."</p>
-          </blockquote>
-
-          <p>This doesn't mean gold can't go higher. <a href="https://www.jpmorgan.com/insights/global-research/commodities/gold-prices" target="_blank" rel="noopener">JPMorgan projects $5,000/oz</a> by end of 2026. But the point is: <strong>buying protection after everyone else has bought is riskier</strong> than it seems.</p>
-        </section>
-
-        <section id="consensus">
-          <h2>4. The Danger of Consensus in Brazil</h2>
-
-          <p>In Brazil 2026, the market consensus says:</p>
-
-          <ul>
-            <li>"Selic will fall to 12% by year end"</li>
-            <li>"Buy stocks and REITs to ride the rate cuts"</li>
-            <li>"Those who stay in CDI will lose money"</li>
-          </ul>
-
-          <p>If you understood the logic so far, you already see the problem: <strong>if everyone expects Selic at 12%, that expectation is already in stock and REIT prices</strong>. The rate cut alone won't generate the extraordinary returns that influencers promise.</p>
-
-          <p>According to <a href="https://www.eurasiagroup.net/issues/Top-Risks-2026-Implications-for-Brazil" target="_blank" rel="noopener">Eurasia Group</a> and <a href="https://www.investing.com/news/economy-news/brazils-fiscal-discipline-crucial-post2026-election-warns-goldman-sachs-4350652" target="_blank" rel="noopener">Goldman Sachs</a>, there are significant risks that could reverse the narrative.</p>
-        </section>
-
-        <section id="cdi">
-          <h2>5. CDI vs Ibovespa: Historical Data</h2>
-
+          <h2>4. CDI vs Ibovespa: Historical Data</h2>
           <p>One of the most repeated lies in the Brazilian market is that "in the long run, stocks always beat fixed income." Historical data tells another story.</p>
 
-          <div class="artigo-card destaque">
-            <h4>Return on R$100 invested from 2000 to 2024</h4>
-            <table class="artigo-tabela">
-              <tr><th>Asset</th><th>Final Value</th><th>Nominal CAGR</th><th>Real CAGR</th></tr>
-              <tr><td>CDI</td><td class="positivo">R$ 1,705.70</td><td class="positivo">12.02%</td><td class="positivo">5.51%</td></tr>
-              <tr><td>Ibovespa</td><td>R$ 704.33</td><td>8.12%</td><td>1.84%</td></tr>
-              <tr><td>Dollar</td><td>R$ 345.97</td><td>5.10%</td><td class="negativo">-1.01%</td></tr>
-            </table>
-            <p class="fonte">Source: <a href="https://clubedospoupadores.com/carteira-investimentos/tabela.html" target="_blank" rel="noopener">Clube dos Poupadores</a></p>
+          <div class="stat-box success">
+            <div class="stat-number success">CDI: R$ 1,705.70</div>
+            <div class="stat-label">R$100 invested from 2000 to 2024</div>
           </div>
 
-          <p>Read again: <strong>in 24 years, CDI returned more than double the Ibovespa</strong>. In real terms (inflation-adjusted), CDI delivered 5.51% per year versus only 1.84% from stocks.</p>
-        </section>
+          <table class="data-table">
+            <tr><th>Asset</th><th>Final Value</th><th>Nominal CAGR</th><th>Real CAGR</th></tr>
+            <tr><td>CDI</td><td class="positive">R$ 1,705.70</td><td class="positive">12.02%</td><td class="positive">5.51%</td></tr>
+            <tr><td>Ibovespa</td><td>R$ 704.33</td><td>8.12%</td><td>1.84%</td></tr>
+            <tr><td>Dollar</td><td>R$ 345.97</td><td>5.10%</td><td class="negative">-1.01%</td></tr>
+          </table>
 
-        <section id="ipca">
-          <h2>6. The Risk of IPCA+ Bonds</h2>
+          <p>Read again: <strong>in 24 years, CDI returned more than double the Ibovespa</strong>.</p>
 
-          <p>Another dangerous consensus: "Buy Treasury IPCA+ 2035/2045 and you'll gain a lot from mark-to-market when rates fall." This may be true — or it could be a trap.</p>
-
-          <div class="artigo-card alerta">
-            <h4>Duration Risk</h4>
-            <p>Long IPCA+ bonds have <strong>high duration</strong> — they're extremely sensitive to rate changes. If the market starts demanding IPCA+9% or IPCA+10% to finance the government, your bond bought at IPCA+7% <strong>could drop 30-40% in price</strong>.</p>
-          </div>
-        </section>
-
-        <section id="buffett">
-          <h2>7. Buffett's Rule #1</h2>
-
-          <p>Warren Buffett, the greatest investor in history, has a simple philosophy:</p>
-
+          <h2>5. Buffett's Rule #1</h2>
           <blockquote>
-            <p>"The first rule of an investment is don't lose [money]. And the second rule of an investment is don't forget the first rule. And that's all the rules there are."</p>
-            <cite>— <a href="https://finance.yahoo.com/news/warren-buffetts-no-1-investing-132715262.html" target="_blank" rel="noopener">Warren Buffett via Yahoo Finance</a></cite>
+            <p>"The first rule of an investment is don't lose [money]. And the second rule of an investment is don't forget the first rule."</p>
+            <cite>— <a href="https://finance.yahoo.com/news/warren-buffetts-no-1-investing-132715262.html" target="_blank" rel="noopener">Warren Buffett</a></cite>
           </blockquote>
 
-          <div class="artigo-card destaque">
+          <div class="callout">
             <h4>The Math of Loss</h4>
             <ul>
               <li>If you lose 50%, you need to gain 100% to break even</li>
@@ -219,49 +206,46 @@
             </ul>
           </div>
 
-          <p><strong>The goal is not to maximize gains. It's to minimize the chance of catastrophic loss.</strong></p>
-        </section>
-
-        <section id="conclusion">
-          <h2>8. Conclusion: The Strategy of Not Losing</h2>
-
-          <div class="artigo-card destaque">
+          <h2>6. Conclusion: The Strategy of Not Losing</h2>
+          <div class="callout success">
             <h4>The Prudent Strategy for 2026</h4>
             <ul>
               <li><strong>Solid base in CDI/Treasury Selic:</strong> Enjoy 15% per year with safety</li>
               <li><strong>Limited risk exposure:</strong> If you want to bet on stocks/REITs, use only money you can lose</li>
               <li><strong>IPCA+ with caution:</strong> Prefer shorter maturities or be prepared to hold until the end</li>
-              <li><strong>Dollar protection:</strong> Keep 15-20% in dollar assets as a hedge against Brazilian crisis</li>
-              <li><strong>Expect the unexpected:</strong> Real money is made when the market is wrong about something, not when it's right</li>
+              <li><strong>Dollar protection:</strong> Keep 15-20% in dollar assets as a hedge</li>
             </ul>
           </div>
 
-          <p>If the optimistic scenario happens, you gain less than you could. That's ok — you miss opportunities every day.</p>
-
-          <p>If the pessimistic scenario happens, you're protected, with money available to buy cheap assets.</p>
-
           <p><strong>The goal is not to get rich quick. It's to not get poor.</strong></p>
-        </section>
 
-        <section class="artigo-referencias">
           <h2>References</h2>
           <ul>
             <li><a href="https://en.wikipedia.org/wiki/Efficient-market_hypothesis" target="_blank" rel="noopener">Efficient Market Hypothesis - Wikipedia</a></li>
             <li><a href="https://www.etf.com/sections/features/tlt-sinks-are-fed-rate-cuts-priced" target="_blank" rel="noopener">TLT Sinks: Are Fed Rate Cuts Priced In? - ETF.com</a></li>
-            <li><a href="https://clubedospoupadores.com/carteira-investimentos/tabela.html" target="_blank" rel="noopener">Comparative Table CDI, Stocks and Dollar - Clube dos Poupadores</a></li>
-            <li><a href="https://www.gold.org/goldhub/research/gold-outlook-2026" target="_blank" rel="noopener">Gold Outlook 2026 - World Gold Council</a></li>
+            <li><a href="https://clubedospoupadores.com/carteira-investimentos/tabela.html" target="_blank" rel="noopener">Comparative Table - Clube dos Poupadores</a></li>
             <li><a href="https://finance.yahoo.com/news/warren-buffetts-no-1-investing-132715262.html" target="_blank" rel="noopener">Warren Buffett's No. 1 Investing Rule - Yahoo Finance</a></li>
           </ul>
-        </section>
+        </div>
 
-      </div>
-    </article>
-  </main>
+        <div class="disclaimer">
+          <h4>Important Notice</h4>
+          <p>This analysis reflects the opinion of Rico aos Poucos channel and <strong>does not constitute investment advice</strong>. Consult a professional before investing.</p>
+        </div>
 
-  <div id="page-footer"></div>
+        <div class="nav-buttons">
+          <a href="./" class="btn btn-outline">← Articles</a>
+          <a href="../setores/caixa/" class="btn btn-outline">Cash Sector →</a>
+        </div>
+      </article>
+    </main>
 
+    <div id="comments-container"></div>
+    <div id="footer-container"></div>
+  </div>
+  <script src="../../js/article-header.js"></script>
   <script src="../../js/footer.js"></script>
-  <script src="../../js/page-header.js"></script>
+  <script src="../../js/comments.js"></script>
   <script src="../../js/i18n.js"></script>
 </body>
 </html>

@@ -771,9 +771,52 @@
       return negacoes.some(regex => regex.test(textoLower));
     }
 
-    // Área em m² - priorizar área total/construída, ignorar áreas de cômodos específicos
-    // Lista de termos que indicam cômodos específicos (não é a área total)
-    const comodoTermos = ['salao', 'sala', 'cozinha', 'quarto', 'banheiro', 'churrasqueira', 'varanda', 'sacada', 'escritorio', 'closet', 'lavabo', 'despensa', 'edicula', 'garagem', 'suite', 'piscina', 'area gourmet', 'espaco gourmet', 'campeiro'];
+    // Área em m² - detecção inteligente, ignorando áreas de cômodos específicos
+    // Lista de termos que indicam cômodos/espaços específicos (não é a área total da casa)
+    const comodoTermos = [
+      'salao', 'sala', 'cozinha', 'quarto', 'banheiro', 'churrasqueira',
+      'varanda', 'sacada', 'escritorio', 'closet', 'lavabo', 'despensa',
+      'edicula', 'garagem', 'suite', 'piscina', 'area gourmet', 'espaco gourmet',
+      'campeiro', 'deposito', 'lavanderia', 'terraço', 'deck', 'quintal',
+      'jardim', 'corredor', 'hall', 'dispensa', 'sotao', 'porao'
+    ];
+
+    // Função para verificar se um número de área está associado a um cômodo
+    function isAreaDeComodo(textoOriginal, posicaoNumero) {
+      // Pegar contexto antes do número (últimos 60 caracteres)
+      const contextoBefore = textoOriginal.slice(Math.max(0, posicaoNumero - 60), posicaoNumero)
+        .toLowerCase()
+        .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+      // Verificar se algum termo de cômodo aparece no contexto próximo
+      for (const comodo of comodoTermos) {
+        // Procurar o termo seguido de qualquer coisa até o final (próximo ao número)
+        if (contextoBefore.includes(comodo)) {
+          // Verificar se o termo está nas últimas 30 caracteres (bem próximo do número)
+          const ultimos30 = contextoBefore.slice(-30);
+          if (ultimos30.includes(comodo)) {
+            return true;
+          }
+        }
+      }
+
+      // Verificar padrões específicos que indicam cômodo
+      const padroesComodo = [
+        /\(\s*\d+\s*m[²2]?\s*\)/i,  // Área entre parênteses geralmente é de cômodo
+        /com\s+\d+\s*m[²2]/i,       // "com Xm²" geralmente descreve cômodo
+      ];
+
+      const contextoComNumero = textoOriginal.slice(Math.max(0, posicaoNumero - 20), posicaoNumero + 10)
+        .toLowerCase();
+
+      for (const padrao of padroesComodo) {
+        if (padrao.test(contextoComNumero)) {
+          return true;
+        }
+      }
+
+      return false;
+    }
 
     // Padrão 1: Área explícita total/construída/privativa (maior prioridade)
     const areaTotalPatterns = [
@@ -799,7 +842,6 @@
 
     // Padrão 2: Se não encontrou área explícita, buscar m² que NÃO esteja associado a cômodo
     if (!areaEncontrada) {
-      // Encontrar todas as menções de m²
       const areaRegex = /(\d+)\s*m[²2]/gi;
       let match;
       const areasEncontradas = [];
@@ -807,17 +849,8 @@
       while ((match = areaRegex.exec(texto)) !== null) {
         const area = parseInt(match[1]);
         if (area >= 20 && area <= 5000) {
-          // Verificar o contexto antes do número (últimos 50 caracteres)
-          const contextoBefore = texto.slice(Math.max(0, match.index - 50), match.index).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
-
-          // Verificar se está associado a um cômodo específico
-          const isComodo = comodoTermos.some(comodo => {
-            // Verificar se o termo do cômodo aparece logo antes do número
-            const regex = new RegExp(`${comodo}[^0-9]*$`, 'i');
-            return regex.test(contextoBefore);
-          });
-
-          if (!isComodo) {
+          // Verificar se NÃO está associado a um cômodo específico
+          if (!isAreaDeComodo(texto, match.index)) {
             areasEncontradas.push(area);
           }
         }
@@ -1106,16 +1139,28 @@
     }
 
     // Tipo de estrutura - com priorização inteligente
-    // Primeiro verificar se "casa" está explicitamente mencionada
-    const temCasa = /\bcasa\b/i.test(textoLower);
-    const temSobrado = /\bsobrado\b/i.test(textoLower) || /\bdois\s*(andares|pisos)\b/i.test(textoLower) || /\b2\s*(andares|pisos)\b/i.test(textoLower) || /\bduplex\b/i.test(textoLower);
+    // PRIORIDADE: casa/apartamento > chácara (mesmo que mencione "sítio" no contexto de terreno)
 
-    // Verificar chácara/sítio apenas se for descrição da propriedade (não "mini sítio", "tipo sítio", etc)
+    // Verificar se tem "casa" explicitamente (alta prioridade)
+    const temCasa = /\bcasa\b/i.test(textoLower);
+    const temSobrado = /\bsobrado\b/i.test(textoLower) ||
+                       /\bdois\s*(andares|pisos)\b/i.test(textoLower) ||
+                       /\b2\s*(andares|pisos)\b/i.test(textoLower) ||
+                       /\bduplex\b/i.test(textoLower);
+
+    // Verificar chácara/sítio - MAS excluir padrões que são só descrição de terreno
+    // "mini sítio", "tipo sítio", "como sítio" não contam
+    const temSitioNoTexto = /\bsitio\b/i.test(textoLower);
+    const sitioEhDescricaoTerreno = /mini\s*sitio/i.test(textoLower) ||
+                                    /tipo\s*sitio/i.test(textoLower) ||
+                                    /como\s*(?:um\s*)?sitio/i.test(textoLower) ||
+                                    /\(.*sitio.*\)/i.test(textoLower); // sítio entre parênteses
+
     const temChacaraReal = /\bchacara\b/i.test(textoLower) ||
                           /\bfazenda\b/i.test(textoLower) ||
                           /\bcasa de campo\b/i.test(textoLower) ||
                           /\bzona rural\b/i.test(textoLower) ||
-                          (/\bsitio\b/i.test(textoLower) && !/mini\s*sitio/i.test(textoLower) && !/tipo\s*sitio/i.test(textoLower));
+                          (temSitioNoTexto && !sitioEhDescricaoTerreno && !temCasa);
 
     const estruturaMap = {
       'apartamento': ['\\bapartamento\\b', '\\bapto\\b', '\\bflat\\b', '\\bcobertura\\b', '\\bloft\\b'],
@@ -1143,6 +1188,7 @@
     }
 
     // Se não encontrou tipo específico mas tem "casa", assumir térrea (ou sobrado se indicado)
+    // PRIORIDADE: "casa" sempre vence sobre "chácara" quando ambos presentes
     if (!tipoEncontrado && temCasa) {
       if (temSobrado) {
         resultado.config.tipoEstrutura = 'sobrado';
@@ -1154,8 +1200,8 @@
       tipoEncontrado = true;
     }
 
-    // Só usar chácara se for realmente uma chácara e não encontrou outro tipo
-    if (!tipoEncontrado && temChacaraReal) {
+    // Só usar chácara se for realmente uma chácara E não tem "casa" no texto
+    if (!tipoEncontrado && temChacaraReal && !temCasa) {
       resultado.config.tipoEstrutura = 'chacara';
       resultado.encontrados.push(`Tipo: ${data.tiposEstrutura['chacara']?.nome || 'Chácara/Sítio'}`);
     }
@@ -1227,9 +1273,11 @@
       /\d+\s*carros?\b/i,
       /cabe\s*\d+\s*carros?/i,
       /para\s*\d+\s*carros?/i,
+      /p\/\s*\d+\s*carros?/i,            // "p/ 4 carros"
       /\bcobertura\s+para\s+carros?\b/i,
       /\bestacionamento\b/i,
-      /entrada\s*(?:p(?:ara|\/)?|de)\s*carros?/i  // "entrada p/carro", "entrada para carro"
+      /entrada\s*(?:p(?:ara|\/)?|de)\s*carros?/i,  // "entrada p/carro"
+      /area\s*(?:p(?:ara|\/)?|de)\s*\d*\s*carros?/i // "área p/ 4 carros"
     ];
 
     const temGaragem = garagemPatterns.some(pattern => pattern.test(textoLower));
@@ -1241,7 +1289,8 @@
         /(\d+)\s*carros?/i,
         /(\d+)\s*vagas?/i,
         /garagem\s*(?:para\s*)?(\d+)/i,
-        /cabe\s*(\d+)\s*carros?/i
+        /cabe\s*(\d+)\s*carros?/i,
+        /p\/\s*(\d+)\s*carros?/i  // "p/ 4 carros"
       ];
       let qtdCarros = 1; // default
       for (const pattern of qtdCarrosPatterns) {
@@ -1330,6 +1379,59 @@
     if ((textoLower.includes('automacao') || textoLower.includes('casa inteligente') || textoLower.includes('smart home')) && !isNegado('automacao')) {
       resultado.extras.automacao = true;
       resultado.encontrados.push('Extra: Automação');
+    }
+
+    // ============================================
+    // VALIDAÇÃO DE SANIDADE - verificar se os dados fazem sentido
+    // ============================================
+
+    // Calcular área mínima necessária baseado nos cômodos detectados
+    const numQuartos = resultado.config.numQuartos || 0;
+    const numSuites = resultado.config.numSuites || 0;
+    const numBanheiros = resultado.config.numBanheiros || 0;
+
+    // Área mínima estimada por cômodo (valores conservadores em m²)
+    const areaMinimaPorQuarto = 9;    // quarto mínimo: 3x3m
+    const areaMinimaPorSuite = 15;    // suite: quarto + banheiro
+    const areaMinimaPorBanheiro = 3;  // banheiro mínimo
+    const areaMinimaCozinha = 6;      // cozinha mínima
+    const areaMinimaSala = 12;        // sala mínima
+    const areaMinimaCirculacao = 10;  // corredores, etc
+
+    // Calcular área mínima necessária
+    const areaMinimaEstimada =
+      (numQuartos * areaMinimaPorQuarto) +
+      (numSuites * areaMinimaPorSuite) +
+      (numBanheiros * areaMinimaPorBanheiro) +
+      areaMinimaCozinha +
+      areaMinimaSala +
+      areaMinimaCirculacao;
+
+    // Se a área detectada é menor que a mínima necessária, é provavelmente de um cômodo
+    if (resultado.config.areaTotal && resultado.config.areaTotal < areaMinimaEstimada * 0.8) {
+      // Área muito pequena para os cômodos - invalidar
+      resultado.encontrados = resultado.encontrados.filter(e => !e.startsWith('Área:'));
+      delete resultado.config.areaTotal;
+      resultado.avisos = resultado.avisos || [];
+      resultado.avisos.push(`Área detectada (${resultado.config.areaTotal}m²) incompatível com ${numQuartos + numSuites} quartos - ignorada`);
+    }
+
+    // Se não tem área mas tem terreno, estimar área construída como 30-40% do terreno
+    if (!resultado.config.areaTotal && resultado.config.areaTerreno) {
+      const areaEstimada = Math.round(resultado.config.areaTerreno * 0.35);
+      // Só usar se for pelo menos a área mínima
+      if (areaEstimada >= areaMinimaEstimada) {
+        resultado.config.areaTotal = areaEstimada;
+        resultado.encontrados.push(`Área: ~${areaEstimada}m² (estimada)`);
+      }
+    }
+
+    // Se ainda não tem área, estimar baseado nos cômodos
+    if (!resultado.config.areaTotal && (numQuartos > 0 || numSuites > 0)) {
+      // Estimar área razoável (não mínima)
+      const areaEstimada = Math.round(areaMinimaEstimada * 1.5);
+      resultado.config.areaTotal = areaEstimada;
+      resultado.encontrados.push(`Área: ~${areaEstimada}m² (estimada por cômodos)`);
     }
 
     return resultado;

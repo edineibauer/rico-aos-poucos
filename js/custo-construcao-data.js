@@ -1,16 +1,15 @@
 /**
  * Calculadora de Custo de Construção - Base de Dados
- * Valores atualizados: Janeiro 2026 (Base SINAPI Nov/2025)
+ * Valores atualizados: Janeiro 2026 (Base SINAPI Nov/2025 + Pesquisa de mercado)
  *
  * Fontes:
  * - SINAPI/IBGE
  * - CBIC
- * - Pesquisa de mercado
+ * - Pesquisa de mercado regional
  */
 
 const CustoConstrucaoData = {
-  // Versão dos dados
-  versao: '1.0',
+  versao: '2.0',
   atualizacao: '2026-01',
 
   // Fator de correção regional (base = 1.0 para média nacional)
@@ -44,23 +43,63 @@ const CustoConstrucaoData = {
     'TO': { nome: 'Tocantins', fator: 0.97, custoM2: 1806 }
   },
 
-  // Tipos de construção com fatores de custo
+  // Tipos estruturais de casa
+  tiposEstrutura: {
+    'terrea': {
+      nome: 'Térrea',
+      descricao: 'Casa em um único pavimento',
+      fator: 1.0,
+      observacao: 'Custo padrão de referência'
+    },
+    'sobrado': {
+      nome: 'Sobrado (2 pavimentos)',
+      descricao: 'Casa com dois andares',
+      fator: 1.15,
+      observacao: 'Requer escada, estrutura reforçada e mais instalações'
+    },
+    'meia_agua': {
+      nome: 'Meia Água',
+      descricao: 'Construção simples com telhado inclinado em uma direção',
+      fator: 0.85,
+      observacao: 'Economia na estrutura do telhado'
+    },
+    'geminada': {
+      nome: 'Geminada',
+      descricao: 'Casa que divide parede com outra construção',
+      fator: 0.90,
+      observacao: 'Economia por compartilhar parede lateral'
+    },
+    'edicula': {
+      nome: 'Edícula/Kitnet',
+      descricao: 'Construção pequena e simples',
+      fator: 1.10,
+      observacao: 'Custo/m² maior por ser compacta (mais instalações por m²)'
+    },
+    'triplex': {
+      nome: 'Triplex (3 pavimentos)',
+      descricao: 'Casa com três andares',
+      fator: 1.30,
+      observacao: 'Estrutura mais robusta, elevador opcional'
+    }
+  },
+
+  // Tipos de construção (método construtivo)
   tiposConstrucao: {
     'alvenaria': {
       nome: 'Alvenaria Convencional',
       descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto',
       fator: 1.0,
-      tempoObra: 1.0, // referência
+      tempoObra: 1.0,
       vantagens: ['Durabilidade', 'Flexibilidade de projeto', 'Mão de obra disponível'],
       desvantagens: ['Maior tempo de obra', 'Mais resíduos', 'Maior consumo de água']
     },
     'steel_frame': {
       nome: 'Steel Frame',
       descricao: 'Estrutura em aço galvanizado com fechamento em placas',
-      fator: 1.15, // 15% mais caro que alvenaria
-      tempoObra: 0.7, // 30% mais rápido
+      fator: 1.15,
+      tempoObra: 0.7,
       vantagens: ['Obra mais rápida', 'Menos resíduos', 'Precisão'],
-      desvantagens: ['Custo inicial maior', 'Mão de obra especializada', 'Menor flexibilidade para reformas']
+      desvantagens: ['Custo inicial maior', 'Mão de obra especializada']
     },
     'wood_frame': {
       nome: 'Wood Frame (Madeira)',
@@ -68,12 +107,12 @@ const CustoConstrucaoData = {
       fator: 1.20,
       tempoObra: 0.65,
       vantagens: ['Sustentável', 'Excelente isolamento térmico', 'Obra rápida'],
-      desvantagens: ['Custo maior', 'Manutenção periódica', 'Mão de obra especializada']
+      desvantagens: ['Custo maior', 'Manutenção periódica']
     },
     'eps': {
       nome: 'Painéis EPS (Isopor)',
       descricao: 'Painéis de poliestireno expandido revestidos com argamassa',
-      fator: 0.78, // 22% mais barato
+      fator: 0.78,
       tempoObra: 0.6,
       vantagens: ['Custo menor', 'Obra rápida', 'Bom isolamento térmico'],
       desvantagens: ['Limitações estruturais', 'Menos resistente a impactos']
@@ -89,10 +128,10 @@ const CustoConstrucaoData = {
     'pre_fabricada': {
       nome: 'Pré-Fabricada',
       descricao: 'Casa com módulos industrializados',
-      fator: 1.30, // R$ 2.400 a R$ 3.600/m²
+      fator: 1.30,
       tempoObra: 0.4,
-      vantagens: ['Obra muito rápida', 'Controle de qualidade', 'Menos desperdício'],
-      desvantagens: ['Custo maior', 'Menos personalização', 'Transporte dos módulos']
+      vantagens: ['Obra muito rápida', 'Controle de qualidade'],
+      desvantagens: ['Custo maior', 'Menos personalização']
     }
   },
 
@@ -101,108 +140,88 @@ const CustoConstrucaoData = {
     'popular': {
       nome: 'Popular/Econômico',
       descricao: 'Acabamentos básicos, materiais simples',
-      fator: 0.75,
+      fator: 0.70,
       exemplos: 'Piso cerâmico simples, pintura básica, esquadrias simples'
+    },
+    'medio_baixo': {
+      nome: 'Médio-Baixo',
+      descricao: 'Acabamentos econômicos de qualidade razoável',
+      fator: 0.85,
+      exemplos: 'Cerâmica classe C, pintura acrílica básica'
     },
     'medio': {
       nome: 'Médio',
       descricao: 'Acabamentos de qualidade média',
       fator: 1.0,
-      exemplos: 'Porcelanato, pintura acrílica, esquadrias de alumínio'
+      exemplos: 'Porcelanato nacional, pintura acrílica, alumínio'
+    },
+    'medio_alto': {
+      nome: 'Médio-Alto',
+      descricao: 'Acabamentos de boa qualidade',
+      fator: 1.25,
+      exemplos: 'Porcelanato retificado, pintura premium'
     },
     'alto': {
       nome: 'Alto Padrão',
       descricao: 'Acabamentos de alta qualidade',
-      fator: 1.5,
-      exemplos: 'Porcelanato importado, pintura especial, esquadrias premium'
+      fator: 1.50,
+      exemplos: 'Porcelanato importado, mármore, madeira nobre'
     },
     'luxo': {
       nome: 'Luxo',
       descricao: 'Acabamentos premium e materiais nobres',
-      fator: 2.5,
-      exemplos: 'Mármore, madeira nobre, automação completa'
+      fator: 2.50,
+      exemplos: 'Mármore importado, automação completa, design exclusivo'
     }
   },
 
   // Custo base por m² (SINAPI Nov/2025) - média nacional
   custoBaseM2: {
-    materiais: 1076, // R$/m²
-    maoDeObra: 807   // R$/m²
+    materiais: 1076,
+    maoDeObra: 807
   },
 
-  // Etapas da obra com percentual do custo total
-  etapas: {
-    'infraestrutura': {
-      nome: 'Infraestrutura',
-      descricao: 'Fundação, baldrame, contrapiso',
-      percentual: 8,
-      itens: ['Escavação', 'Fundação', 'Baldrame', 'Impermeabilização', 'Contrapiso']
+  // Custo por cômodo adicional (estimativas)
+  custoPorComodo: {
+    quarto: {
+      areaPadrao: 12,
+      custoBase: 18000, // custo base do cômodo
+      custoM2Adicional: 1500 // por m² acima do padrão
     },
-    'estrutura': {
-      nome: 'Estrutura',
-      descricao: 'Pilares, vigas, lajes',
-      percentual: 15,
-      itens: ['Pilares', 'Vigas', 'Lajes', 'Escadas']
+    suite: {
+      areaPadrao: 18, // quarto + banheiro
+      custoBase: 32000,
+      custoM2Adicional: 1800
     },
-    'alvenaria': {
-      nome: 'Alvenaria',
-      descricao: 'Paredes, divisórias',
-      percentual: 8,
-      itens: ['Paredes externas', 'Paredes internas', 'Vergas e contravergas']
+    banheiro: {
+      areaPadrao: 4,
+      custoBase: 12000, // instalações hidráulicas + revestimentos
+      custoM2Adicional: 2500
     },
-    'cobertura': {
-      nome: 'Cobertura',
-      descricao: 'Telhado, calhas, rufos',
-      percentual: 10,
-      itens: ['Estrutura do telhado', 'Telhas', 'Calhas', 'Rufos', 'Cumeeiras']
+    cozinha: {
+      areaPadrao: 10,
+      custoBase: 20000,
+      custoM2Adicional: 2000
     },
-    'instalacoes_eletricas': {
-      nome: 'Instalações Elétricas',
-      descricao: 'Fiação, tomadas, disjuntores',
-      percentual: 8,
-      itens: ['Quadro de distribuição', 'Fiação', 'Tomadas', 'Interruptores', 'Iluminação']
+    sala: {
+      areaPadrao: 20,
+      custoBase: 15000,
+      custoM2Adicional: 1200
     },
-    'instalacoes_hidraulicas': {
-      nome: 'Instalações Hidráulicas',
-      descricao: 'Água fria, água quente, esgoto',
-      percentual: 8,
-      itens: ['Tubulação água fria', 'Tubulação água quente', 'Esgoto', 'Caixa d\'água', 'Aquecedor']
+    areaServico: {
+      areaPadrao: 5,
+      custoBase: 8000,
+      custoM2Adicional: 1600
     },
-    'revestimentos': {
-      nome: 'Revestimentos',
-      descricao: 'Reboco, chapisco, gesso',
-      percentual: 10,
-      itens: ['Chapisco', 'Reboco interno', 'Reboco externo', 'Gesso', 'Forro']
+    varanda: {
+      areaPadrao: 8,
+      custoBase: 10000,
+      custoM2Adicional: 1200
     },
-    'pisos': {
-      nome: 'Pisos',
-      descricao: 'Cerâmica, porcelanato, outros',
-      percentual: 10,
-      itens: ['Contrapiso', 'Piso cerâmico/porcelanato', 'Rodapé', 'Soleira']
-    },
-    'esquadrias': {
-      nome: 'Esquadrias',
-      descricao: 'Portas, janelas, vidros',
-      percentual: 8,
-      itens: ['Portas internas', 'Portas externas', 'Janelas', 'Vidros', 'Fechaduras']
-    },
-    'pintura': {
-      nome: 'Pintura',
-      descricao: 'Interna e externa',
-      percentual: 6,
-      itens: ['Selador', 'Massa corrida', 'Pintura interna', 'Pintura externa', 'Textura']
-    },
-    'loucas_metais': {
-      nome: 'Louças e Metais',
-      descricao: 'Vasos, pias, torneiras',
-      percentual: 5,
-      itens: ['Vaso sanitário', 'Pia', 'Tanque', 'Torneiras', 'Chuveiro', 'Acessórios']
-    },
-    'acabamentos_finais': {
-      nome: 'Acabamentos Finais',
-      descricao: 'Limpeza, detalhes',
-      percentual: 4,
-      itens: ['Limpeza da obra', 'Arremates', 'Detalhes finais']
+    garagem: {
+      areaPadrao: 15, // 1 vaga
+      custoBase: 12000,
+      custoM2Adicional: 800
     }
   },
 
@@ -210,533 +229,799 @@ const CustoConstrucaoData = {
   maoDeObra: {
     'pedreiro': {
       nome: 'Pedreiro',
-      valorHora: 60, // R$/hora (média)
-      valorDia: 500, // R$/dia (média)
-      valorM2: 65,   // R$/m² (serviço geral)
-      servicos: {
-        'alvenaria': { nome: 'Alvenaria (levantar paredes)', valorM2: 25 },
-        'reboco': { nome: 'Reboco', valorM2: 55 },
-        'contrapiso': { nome: 'Contrapiso', valorM2: 35 },
-        'assentamento_piso': { nome: 'Assentamento de piso cerâmico', valorM2: 60 },
-        'assentamento_porcelanato': { nome: 'Assentamento de porcelanato', valorM2: 80 }
-      }
+      valorDia: 500,
+      percentualObra: 25 // % do custo de mão de obra
     },
     'eletricista': {
       nome: 'Eletricista',
-      valorHora: 80,
       valorDia: 600,
-      valorPonto: 45, // R$ por ponto elétrico
-      salarioMes: 3800
+      percentualObra: 12
     },
     'encanador': {
       nome: 'Encanador',
-      valorHora: 80,
       valorDia: 600,
-      valorPonto: 50, // R$ por ponto hidráulico
-      salarioMes: 3800
+      percentualObra: 12
     },
     'pintor': {
       nome: 'Pintor',
-      valorHora: 50,
       valorDia: 400,
-      valorM2: 18, // R$/m² pintura simples
-      salarioMes: 3500,
-      servicos: {
-        'pintura_simples': { nome: 'Pintura simples (1 demão)', valorM2: 12 },
-        'pintura_completa': { nome: 'Pintura completa (massa + 2 demãos)', valorM2: 25 },
-        'textura': { nome: 'Textura', valorM2: 35 }
-      }
+      percentualObra: 10
     },
     'gesseiro': {
       nome: 'Gesseiro',
-      valorHora: 60,
       valorDia: 450,
-      valorM2: 45,
-      servicos: {
-        'forro_liso': { nome: 'Forro de gesso liso', valorM2: 45 },
-        'forro_tabicado': { nome: 'Forro de gesso tabicado', valorM2: 55 },
-        'sanca': { nome: 'Sanca', valorMetro: 80 }
-      }
-    },
-    'marceneiro': {
-      nome: 'Marceneiro',
-      valorHora: 70,
-      valorDia: 550,
-      salarioMes: 4200
-    },
-    'serralheiro': {
-      nome: 'Serralheiro',
-      valorHora: 65,
-      valorDia: 500,
-      salarioMes: 4000
-    },
-    'vidraceiro': {
-      nome: 'Vidraceiro',
-      valorHora: 60,
-      valorDia: 450,
-      valorM2: 30 // instalação
+      percentualObra: 8
     },
     'telhadista': {
       nome: 'Telhadista',
-      valorHora: 55,
       valorDia: 420,
-      valorM2: 80 // inclui estrutura simples
+      percentualObra: 8
+    },
+    'vidraceiro': {
+      nome: 'Vidraceiro',
+      valorDia: 450,
+      percentualObra: 5
     },
     'engenheiro': {
-      nome: 'Engenheiro Civil',
-      valorProjeto: 5000, // projeto básico
-      valorART: 800,
-      acompanhamentoMes: 2500
+      nome: 'Engenheiro/Responsável Técnico',
+      valorDia: 800,
+      percentualObra: 5
     },
-    'arquiteto': {
-      nome: 'Arquiteto',
-      valorProjeto: 8000, // projeto completo
-      valorM2Projeto: 80 // R$/m² para projeto
-    },
-    'mestre_obras': {
+    'mestreObras': {
       nome: 'Mestre de Obras',
-      salarioMes: 5500,
-      percentualObra: 3 // 3% do valor da obra
+      valorDia: 600,
+      percentualObra: 8
     },
     'servente': {
       nome: 'Servente/Ajudante',
-      valorHora: 25,
       valorDia: 180,
-      salarioMes: 2100
+      percentualObra: 7
     }
   },
 
   // Materiais específicos com opções de substituição
   materiais: {
     janelas: {
-      'madeira': {
-        nome: 'Janela de Madeira',
-        valorM2: 350, // R$/m²
-        durabilidade: 'Média (requer manutenção)',
-        manutencao: 'Pintura a cada 2-3 anos'
+      'madeira_simples': {
+        nome: 'Janela de Madeira Simples',
+        valorM2: 250,
+        durabilidade: 'Média'
       },
-      'aluminio': {
-        nome: 'Janela de Alumínio',
-        valorM2: 450,
-        durabilidade: 'Alta',
-        manutencao: 'Baixa'
-      },
-      'pvc': {
-        nome: 'Janela de PVC',
+      'madeira_nobre': {
+        nome: 'Janela de Madeira Nobre',
         valorM2: 600,
-        durabilidade: 'Alta',
-        manutencao: 'Muito baixa',
-        isolamento: 'Excelente térmico e acústico'
+        durabilidade: 'Alta'
       },
-      'vidro_temperado': {
-        nome: 'Vidro Temperado (blindex)',
+      'aluminio_simples': {
+        nome: 'Janela de Alumínio Simples',
+        valorM2: 350,
+        durabilidade: 'Alta'
+      },
+      'aluminio_linha_25': {
+        nome: 'Janela de Alumínio Linha 25',
+        valorM2: 500,
+        durabilidade: 'Alta'
+      },
+      'aluminio_premium': {
+        nome: 'Janela de Alumínio Premium',
+        valorM2: 800,
+        durabilidade: 'Alta'
+      },
+      'pvc_simples': {
+        nome: 'Janela de PVC Simples',
+        valorM2: 450,
+        durabilidade: 'Alta'
+      },
+      'pvc_premium': {
+        nome: 'Janela de PVC Premium (duplo vidro)',
+        valorM2: 900,
+        durabilidade: 'Alta'
+      },
+      'blindex_temperado': {
+        nome: 'Vidro Temperado (Blindex)',
         valorM2: 550,
-        durabilidade: 'Alta',
-        manutencao: 'Baixa'
+        durabilidade: 'Alta'
       }
     },
     portas: {
-      'madeira_macica': {
-        nome: 'Porta de Madeira Maciça',
-        valorUnidade: 800,
-        durabilidade: 'Alta'
+      'madeira_oca': {
+        nome: 'Porta de Madeira Oca (interna)',
+        valorUnidade: 180,
+        observacao: 'Básica, uso interno'
       },
       'madeira_semi_oca': {
         nome: 'Porta de Madeira Semi-Oca',
         valorUnidade: 350,
-        durabilidade: 'Média'
+        observacao: 'Melhor isolamento'
       },
-      'madeira_oca': {
-        nome: 'Porta de Madeira Oca',
-        valorUnidade: 200,
-        durabilidade: 'Baixa'
+      'madeira_macica_padrao': {
+        nome: 'Porta de Madeira Maciça Padrão (80cm)',
+        valorUnidade: 800,
+        observacao: 'Durável, boa qualidade'
       },
-      'aluminio': {
-        nome: 'Porta de Alumínio',
-        valorUnidade: 600,
-        durabilidade: 'Alta'
+      'madeira_macica_grande': {
+        nome: 'Porta de Madeira Maciça Grande (90-100cm)',
+        valorUnidade: 1500,
+        observacao: 'Para entradas principais'
       },
-      'vidro': {
-        nome: 'Porta de Vidro Temperado',
-        valorM2: 650,
-        durabilidade: 'Alta'
+      'madeira_macica_pivotante': {
+        nome: 'Porta Pivotante Madeira Maciça',
+        valorUnidade: 3500,
+        observacao: 'Alto padrão'
       },
-      'aco': {
-        nome: 'Porta de Aço',
+      'madeira_macica_especial': {
+        nome: 'Porta Maciça Especial/Design (grande)',
+        valorUnidade: 5500,
+        observacao: 'Peça única, madeira nobre'
+      },
+      'aluminio_simples': {
+        nome: 'Porta de Alumínio Simples',
         valorUnidade: 500,
-        durabilidade: 'Alta',
-        seguranca: 'Alta'
+        observacao: 'Prática e durável'
+      },
+      'aluminio_vidro': {
+        nome: 'Porta de Alumínio com Vidro',
+        valorUnidade: 900,
+        observacao: 'Moderna'
+      },
+      'vidro_temperado': {
+        nome: 'Porta de Vidro Temperado',
+        valorUnidade: 1200,
+        observacao: 'Elegante'
+      },
+      'aco_seguranca': {
+        nome: 'Porta de Aço (segurança)',
+        valorUnidade: 1800,
+        observacao: 'Alta segurança'
       }
     },
     pisos: {
-      'ceramica_simples': {
-        nome: 'Cerâmica Simples',
-        valorM2: 35,
-        durabilidade: 'Média'
+      'ceramica_classe_c': {
+        nome: 'Cerâmica Classe C (básica)',
+        valorM2: 25,
+        observacao: 'Econômica, áreas internas'
       },
-      'ceramica_qualidade': {
-        nome: 'Cerâmica Qualidade',
+      'ceramica_classe_b': {
+        nome: 'Cerâmica Classe B',
+        valorM2: 35,
+        observacao: 'Boa durabilidade'
+      },
+      'ceramica_classe_a': {
+        nome: 'Cerâmica Classe A',
         valorM2: 55,
-        durabilidade: 'Alta'
+        observacao: 'Alta qualidade'
+      },
+      'porcelanato_classe_c': {
+        nome: 'Porcelanato Classe C (popular)',
+        valorM2: 45,
+        observacao: 'Entrada de porcelanato'
+      },
+      'porcelanato_classe_b': {
+        nome: 'Porcelanato Classe B',
+        valorM2: 70,
+        observacao: 'Bom custo-benefício'
       },
       'porcelanato_nacional': {
-        nome: 'Porcelanato Nacional',
-        valorM2: 85,
-        durabilidade: 'Alta'
+        nome: 'Porcelanato Nacional Classe A',
+        valorM2: 95,
+        observacao: 'Ótima qualidade'
+      },
+      'porcelanato_retificado': {
+        nome: 'Porcelanato Retificado Premium',
+        valorM2: 140,
+        observacao: 'Acabamento perfeito'
       },
       'porcelanato_importado': {
         nome: 'Porcelanato Importado',
+        valorM2: 220,
+        observacao: 'Alto padrão'
+      },
+      'porcelanato_grande_formato': {
+        nome: 'Porcelanato Grande Formato (120x120+)',
         valorM2: 180,
-        durabilidade: 'Alta'
+        observacao: 'Moderno, menos rejunte'
       },
-      'vinilico': {
-        nome: 'Piso Vinílico',
-        valorM2: 75,
-        durabilidade: 'Média'
+      'vinilico_basico': {
+        nome: 'Piso Vinílico Básico',
+        valorM2: 45,
+        observacao: 'Fácil instalação'
       },
-      'laminado': {
-        nome: 'Piso Laminado',
-        valorM2: 65,
-        durabilidade: 'Média'
+      'vinilico_premium': {
+        nome: 'Piso Vinílico Premium',
+        valorM2: 95,
+        observacao: 'Alta durabilidade'
       },
-      'madeira': {
-        nome: 'Piso de Madeira',
-        valorM2: 180,
-        durabilidade: 'Alta (com manutenção)'
+      'laminado_basico': {
+        nome: 'Piso Laminado Básico',
+        valorM2: 50,
+        observacao: 'Econômico'
+      },
+      'laminado_premium': {
+        nome: 'Piso Laminado Premium',
+        valorM2: 90,
+        observacao: 'Maior resistência'
+      },
+      'madeira_natural': {
+        nome: 'Piso de Madeira Natural',
+        valorM2: 200,
+        observacao: 'Elegante, requer manutenção'
+      },
+      'madeira_nobre': {
+        nome: 'Piso de Madeira Nobre (ipê, cumaru)',
+        valorM2: 400,
+        observacao: 'Luxo'
       },
       'cimento_queimado': {
         nome: 'Cimento Queimado',
         valorM2: 45,
-        durabilidade: 'Alta'
+        observacao: 'Industrial, moderno'
       },
       'granito': {
         nome: 'Granito',
-        valorM2: 220,
-        durabilidade: 'Alta'
+        valorM2: 250,
+        observacao: 'Resistente'
+      },
+      'marmore': {
+        nome: 'Mármore',
+        valorM2: 450,
+        observacao: 'Luxo, requer cuidados'
       },
       'porcelanato_liquido': {
-        nome: 'Porcelanato Líquido',
+        nome: 'Porcelanato Líquido (Epóxi)',
         valorM2: 150,
-        durabilidade: 'Alta'
+        observacao: 'Sem rejunte'
       }
     },
     telhados: {
-      'ceramica': {
-        nome: 'Telha Cerâmica',
-        valorM2: 85, // com estrutura de madeira
-        durabilidade: 'Alta (30+ anos)'
+      'fibrocimento_basico': {
+        nome: 'Telha Fibrocimento Básica',
+        valorM2: 45,
+        observacao: 'Econômica, 15-20 anos'
+      },
+      'fibrocimento_premium': {
+        nome: 'Telha Fibrocimento Premium',
+        valorM2: 65,
+        observacao: 'Melhor acabamento'
+      },
+      'ceramica_simples': {
+        nome: 'Telha Cerâmica Simples',
+        valorM2: 70,
+        observacao: 'Tradicional, 30+ anos'
+      },
+      'ceramica_esmaltada': {
+        nome: 'Telha Cerâmica Esmaltada',
+        valorM2: 95,
+        observacao: 'Acabamento superior'
       },
       'concreto': {
         nome: 'Telha de Concreto',
         valorM2: 75,
-        durabilidade: 'Alta (40+ anos)'
+        observacao: 'Durável, 40+ anos'
       },
-      'fibrocimento': {
-        nome: 'Telha Fibrocimento',
-        valorM2: 55,
-        durabilidade: 'Média (15-20 anos)'
+      'metalica_simples': {
+        nome: 'Telha Metálica Simples',
+        valorM2: 70,
+        observacao: 'Prática'
       },
-      'metalica': {
-        nome: 'Telha Metálica (Galvalume)',
+      'metalica_sanduiche': {
+        nome: 'Telha Metálica Sanduíche (térmica)',
+        valorM2: 120,
+        observacao: 'Isolamento térmico'
+      },
+      'galvalume': {
+        nome: 'Telha Galvalume',
         valorM2: 95,
-        durabilidade: 'Alta (25+ anos)'
+        observacao: 'Resistente, 25+ anos'
       },
       'shingle': {
         nome: 'Shingle (Telha Americana)',
         valorM2: 180,
-        durabilidade: 'Alta (30+ anos)'
+        observacao: 'Estética diferenciada'
       },
-      'laje': {
-        nome: 'Laje (sem telha)',
+      'laje_impermeabilizada': {
+        nome: 'Laje Impermeabilizada (sem telha)',
         valorM2: 150,
-        durabilidade: 'Alta',
-        observacao: 'Requer impermeabilização'
+        observacao: 'Moderna, permite terraço'
+      },
+      'telhado_verde': {
+        nome: 'Telhado Verde',
+        valorM2: 250,
+        observacao: 'Sustentável'
       }
     },
     forros: {
+      'pvc_simples': {
+        nome: 'Forro de PVC Simples',
+        valorM2: 40,
+        observacao: 'Econômico, fácil manutenção'
+      },
+      'pvc_premium': {
+        nome: 'Forro de PVC Premium',
+        valorM2: 65,
+        observacao: 'Melhor acabamento'
+      },
       'gesso_liso': {
         nome: 'Forro de Gesso Liso',
-        valorM2: 65, // material + mão de obra
-        durabilidade: 'Alta'
+        valorM2: 65,
+        observacao: 'Acabamento elegante'
       },
       'gesso_acartonado': {
         nome: 'Forro de Gesso Acartonado (Drywall)',
-        valorM2: 75,
-        durabilidade: 'Alta'
+        valorM2: 80,
+        observacao: 'Permite embutidos'
       },
-      'pvc': {
-        nome: 'Forro de PVC',
-        valorM2: 55,
-        durabilidade: 'Alta'
-      },
-      'madeira': {
-        nome: 'Forro de Madeira',
+      'gesso_rebaixado_sanca': {
+        nome: 'Forro Rebaixado com Sanca',
         valorM2: 120,
-        durabilidade: 'Alta'
+        observacao: 'Iluminação embutida'
+      },
+      'madeira_pinus': {
+        nome: 'Forro de Madeira Pinus',
+        valorM2: 80,
+        observacao: 'Rústico'
+      },
+      'madeira_cedro': {
+        nome: 'Forro de Madeira Cedro',
+        valorM2: 140,
+        observacao: 'Nobre'
       },
       'isopor': {
         nome: 'Forro de Isopor',
-        valorM2: 35,
-        durabilidade: 'Média'
-      }
-    },
-    revestimentos: {
-      'azulejo_simples': {
-        nome: 'Azulejo Simples',
-        valorM2: 30
+        valorM2: 30,
+        observacao: 'Mais econômico'
       },
-      'azulejo_decorado': {
-        nome: 'Azulejo Decorado',
-        valorM2: 60
-      },
-      'porcelanato_parede': {
-        nome: 'Porcelanato Parede',
-        valorM2: 95
-      },
-      'pastilha_vidro': {
-        nome: 'Pastilha de Vidro',
-        valorM2: 180
-      },
-      'pedra_natural': {
-        nome: 'Pedra Natural',
-        valorM2: 250
+      'sem_forro': {
+        nome: 'Sem Forro (laje aparente)',
+        valorM2: 0,
+        observacao: 'Industrial/moderno'
       }
     }
   },
 
-  // Itens extras/opcionais
+  // Itens extras/opcionais - REVISADO
   extras: {
     piscina: {
-      'fibra_pequena': {
-        nome: 'Piscina de Fibra Pequena (4x2m)',
+      'fibra_pequena_3x2': {
+        nome: 'Piscina de Fibra 3x2m',
+        valor: 12000,
+        observacao: 'Básica, instalação simples'
+      },
+      'fibra_pequena_4x2': {
+        nome: 'Piscina de Fibra 4x2m',
+        valor: 14000,
+        observacao: 'Econômica'
+      },
+      'fibra_media_5x3': {
+        nome: 'Piscina de Fibra 5x3m',
+        valor: 16000,
+        observacao: 'Tamanho familiar'
+      },
+      'fibra_media_6x3': {
+        nome: 'Piscina de Fibra 6x3m',
+        valor: 18000,
+        observacao: 'Bom custo-benefício'
+      },
+      'fibra_grande_7x3': {
+        nome: 'Piscina de Fibra 7x3m',
         valor: 22000,
-        manutencaoAnual: 1500
+        observacao: 'Espaçosa'
       },
-      'fibra_media': {
-        nome: 'Piscina de Fibra Média (6x3m)',
+      'fibra_grande_8x4': {
+        nome: 'Piscina de Fibra 8x4m',
         valor: 28000,
-        manutencaoAnual: 2000
+        observacao: 'Grande porte'
       },
-      'fibra_grande': {
-        nome: 'Piscina de Fibra Grande (8x4m)',
+      'vinil_media_5x3': {
+        nome: 'Piscina de Vinil 5x3m',
+        valor: 22000,
+        observacao: 'Personalizável'
+      },
+      'vinil_grande_6x3': {
+        nome: 'Piscina de Vinil 6x3m',
+        valor: 28000,
+        observacao: 'Formato livre'
+      },
+      'vinil_grande_8x4': {
+        nome: 'Piscina de Vinil 8x4m',
         valor: 38000,
-        manutencaoAnual: 2500
+        observacao: 'Grande porte'
       },
-      'vinil_pequena': {
-        nome: 'Piscina de Vinil Pequena',
-        valor: 30000,
-        manutencaoAnual: 1800
+      'alvenaria_pequena_4x2': {
+        nome: 'Piscina de Alvenaria 4x2m',
+        valor: 25000,
+        observacao: 'Personalizada, durável'
       },
-      'vinil_media': {
-        nome: 'Piscina de Vinil Média',
-        valor: 42000,
-        manutencaoAnual: 2200
+      'alvenaria_media_6x3': {
+        nome: 'Piscina de Alvenaria 6x3m',
+        valor: 40000,
+        observacao: 'Acabamento em azulejo'
       },
-      'alvenaria_pequena': {
-        nome: 'Piscina de Alvenaria Pequena (5x2.5m)',
-        valor: 45000,
-        manutencaoAnual: 2000
-      },
-      'alvenaria_media': {
-        nome: 'Piscina de Alvenaria Média (6x3m)',
+      'alvenaria_grande_8x4': {
+        nome: 'Piscina de Alvenaria 8x4m',
         valor: 60000,
-        manutencaoAnual: 2500
+        observacao: 'Projeto personalizado'
       },
-      'alvenaria_grande': {
-        nome: 'Piscina de Alvenaria Grande (8x4m)',
-        valor: 85000,
-        manutencaoAnual: 3000
+      'alvenaria_pastilha_6x3': {
+        nome: 'Piscina Alvenaria c/ Pastilha 6x3m',
+        valor: 55000,
+        observacao: 'Acabamento premium'
       }
     },
     churrasqueira: {
-      'simples': {
-        nome: 'Churrasqueira Simples (pré-moldada)',
-        valor: 1500
+      'pre_moldada_simples': {
+        nome: 'Churrasqueira Pré-Moldada Simples',
+        valor: 800,
+        observacao: 'Básica'
       },
-      'alvenaria_pequena': {
-        nome: 'Churrasqueira Alvenaria Pequena',
-        valor: 4000
+      'pre_moldada_media': {
+        nome: 'Churrasqueira Pré-Moldada Média',
+        valor: 1500,
+        observacao: 'Com coifa'
       },
-      'alvenaria_media': {
-        nome: 'Churrasqueira Alvenaria Média',
-        valor: 7000
+      'alvenaria_simples': {
+        nome: 'Churrasqueira de Alvenaria Simples',
+        valor: 3500,
+        observacao: 'Tijolinho'
+      },
+      'alvenaria_completa': {
+        nome: 'Churrasqueira de Alvenaria Completa',
+        valor: 6000,
+        observacao: 'Com bancada e pia'
       },
       'alvenaria_grande': {
-        nome: 'Churrasqueira Alvenaria Grande',
-        valor: 12000
+        nome: 'Churrasqueira de Alvenaria Grande',
+        valor: 10000,
+        observacao: 'Forno de pizza incluso'
       },
-      'gourmet_completa': {
-        nome: 'Área Gourmet Completa',
-        valor: 25000
+      'gourmet_simples': {
+        nome: 'Espaço Gourmet Simples',
+        valor: 18000,
+        observacao: 'Churrasqueira + bancada + pia'
+      },
+      'gourmet_completo': {
+        nome: 'Espaço Gourmet Completo',
+        valor: 35000,
+        observacao: 'Com cooktop, forno, geladeira embutida'
       }
     },
     garagem: {
-      'coberta_1_vaga': {
-        nome: 'Garagem Coberta 1 Vaga (15m²)',
-        valorM2: 800
+      'coberta_metalica_1v': {
+        nome: 'Garagem Coberta Metálica (1 vaga)',
+        valorM2: 350,
+        areaBase: 15
       },
-      'coberta_2_vagas': {
-        nome: 'Garagem Coberta 2 Vagas (30m²)',
-        valorM2: 750
+      'coberta_metalica_2v': {
+        nome: 'Garagem Coberta Metálica (2 vagas)',
+        valorM2: 320,
+        areaBase: 30
       },
-      'fechada_1_vaga': {
-        nome: 'Garagem Fechada 1 Vaga',
-        valorM2: 1200
+      'coberta_madeira_1v': {
+        nome: 'Garagem Coberta Madeira (1 vaga)',
+        valorM2: 450,
+        areaBase: 15
       },
-      'fechada_2_vagas': {
-        nome: 'Garagem Fechada 2 Vagas',
-        valorM2: 1100
+      'pergolado_madeira': {
+        nome: 'Pergolado de Madeira',
+        valorM2: 380,
+        areaBase: 20
+      },
+      'pergolado_metalico': {
+        nome: 'Pergolado Metálico',
+        valorM2: 320,
+        areaBase: 20
+      },
+      'pergolado_policarbonato': {
+        nome: 'Pergolado com Policarbonato',
+        valorM2: 450,
+        areaBase: 20
+      },
+      'fechada_alvenaria_1v': {
+        nome: 'Garagem Fechada Alvenaria (1 vaga)',
+        valorM2: 1200,
+        areaBase: 18
+      },
+      'fechada_alvenaria_2v': {
+        nome: 'Garagem Fechada Alvenaria (2 vagas)',
+        valorM2: 1100,
+        areaBase: 35
+      },
+      'gourmet_garagem': {
+        nome: 'Garagem Gourmet (coberta + churrasqueira + pia)',
+        valorM2: 1500,
+        areaBase: 25
+      }
+    },
+    pisoExterno: {
+      'terra_natural': {
+        nome: 'Terra Natural (sem piso)',
+        valorM2: 0,
+        observacao: 'Apenas nivelamento'
+      },
+      'brita': {
+        nome: 'Brita/Pedriscos',
+        valorM2: 25,
+        observacao: 'Drenagem, baixo custo'
+      },
+      'grama_natural': {
+        nome: 'Grama Natural',
+        valorM2: 35,
+        observacao: 'Requer manutenção'
+      },
+      'grama_sintetica_basica': {
+        nome: 'Grama Sintética Básica',
+        valorM2: 80,
+        observacao: 'Sem manutenção, 12mm'
+      },
+      'grama_sintetica_premium': {
+        nome: 'Grama Sintética Premium',
+        valorM2: 150,
+        observacao: 'Alta durabilidade, 25mm+'
+      },
+      'contrapiso_cimento': {
+        nome: 'Contrapiso/Cimento Alisado',
+        valorM2: 45,
+        observacao: 'Simples e funcional'
+      },
+      'paver_intertravado': {
+        nome: 'Paver/Piso Intertravado',
+        valorM2: 80,
+        observacao: 'Durável, permeável'
+      },
+      'paver_premium': {
+        nome: 'Paver Premium Colorido',
+        valorM2: 120,
+        observacao: 'Diversas cores'
+      },
+      'ceramica_externa': {
+        nome: 'Cerâmica para Área Externa',
+        valorM2: 65,
+        observacao: 'Antiderrapante'
+      },
+      'porcelanato_externo': {
+        nome: 'Porcelanato Externo',
+        valorM2: 110,
+        observacao: 'Resistente'
+      },
+      'pedra_natural': {
+        nome: 'Pedra Natural (Miracema, São Tomé)',
+        valorM2: 95,
+        observacao: 'Rústico'
+      },
+      'deck_madeira': {
+        nome: 'Deck de Madeira',
+        valorM2: 350,
+        observacao: 'Elegante, manutenção'
+      },
+      'deck_wpc': {
+        nome: 'Deck WPC (Madeira Plástica)',
+        valorM2: 280,
+        observacao: 'Sem manutenção'
       }
     },
     varanda: {
-      'simples': {
-        nome: 'Varanda Simples',
-        valorM2: 900
+      'aberta_simples': {
+        nome: 'Varanda Aberta Simples',
+        valorM2: 800,
+        observacao: 'Só cobertura e piso'
       },
-      'coberta': {
-        nome: 'Varanda Coberta',
-        valorM2: 1200
+      'coberta_completa': {
+        nome: 'Varanda Coberta Completa',
+        valorM2: 1200,
+        observacao: 'Com acabamentos'
       },
       'fechada_vidro': {
         nome: 'Varanda Fechada com Vidro',
-        valorM2: 1800
+        valorM2: 1800,
+        observacao: 'Cortina de vidro'
+      },
+      'gourmet_aberta': {
+        nome: 'Varanda Gourmet Aberta',
+        valorM2: 1500,
+        observacao: 'Com bancada e pia'
+      },
+      'gourmet_fechada': {
+        nome: 'Varanda Gourmet Fechada',
+        valorM2: 2200,
+        observacao: 'Completa'
       }
     },
     muro: {
       'bloco_simples': {
         nome: 'Muro de Bloco Simples',
-        valorMetroLinear: 280, // por metro linear, 2m de altura
+        valorMetroLinear: 250,
         alturaBase: 2
       },
       'bloco_rebocado': {
-        nome: 'Muro de Bloco Rebocado',
+        nome: 'Muro de Bloco Rebocado e Pintado',
         valorMetroLinear: 380,
         alturaBase: 2
       },
-      'gradil': {
-        nome: 'Muro com Gradil',
+      'bloco_texturizado': {
+        nome: 'Muro com Textura/Grafiato',
         valorMetroLinear: 450,
+        alturaBase: 2
+      },
+      'tijolo_aparente': {
+        nome: 'Muro de Tijolo Aparente',
+        valorMetroLinear: 420,
         alturaBase: 2
       },
       'pre_moldado': {
         nome: 'Muro Pré-Moldado',
-        valorMetroLinear: 250,
+        valorMetroLinear: 200,
+        alturaBase: 2
+      },
+      'gradil_metalico': {
+        nome: 'Muro Baixo + Gradil Metálico',
+        valorMetroLinear: 480,
+        alturaBase: 2
+      },
+      'vidro': {
+        nome: 'Muro de Vidro',
+        valorMetroLinear: 850,
         alturaBase: 2
       }
     },
     portao: {
       'ferro_simples': {
         nome: 'Portão de Ferro Simples',
-        valorM2: 450
+        valorM2: 350
       },
       'ferro_trabalhado': {
         nome: 'Portão de Ferro Trabalhado',
-        valorM2: 700
+        valorM2: 550
       },
-      'aluminio': {
-        nome: 'Portão de Alumínio',
-        valorM2: 850
+      'aluminio_simples': {
+        nome: 'Portão de Alumínio Simples',
+        valorM2: 650
       },
-      'automatico_basculante': {
-        nome: 'Portão Automático Basculante',
+      'aluminio_premium': {
+        nome: 'Portão de Alumínio Premium',
+        valorM2: 950
+      },
+      'basculante_manual': {
+        nome: 'Portão Basculante Manual',
+        valorUnidade: 2500
+      },
+      'basculante_automatico': {
+        nome: 'Portão Basculante Automático',
         valorUnidade: 4500
       },
-      'automatico_deslizante': {
-        nome: 'Portão Automático Deslizante',
+      'deslizante_manual': {
+        nome: 'Portão Deslizante Manual',
+        valorUnidade: 3000
+      },
+      'deslizante_automatico': {
+        nome: 'Portão Deslizante Automático',
         valorUnidade: 5500
+      },
+      'pivotante': {
+        nome: 'Portão Pivotante',
+        valorUnidade: 6500
       }
     },
     edicula: {
       'simples_1_comodo': {
         nome: 'Edícula Simples (1 cômodo)',
-        valorM2: 1500
+        valorM2: 1400,
+        areaBase: 15
       },
       'com_banheiro': {
         nome: 'Edícula com Banheiro',
-        valorM2: 1800
+        valorM2: 1700,
+        areaBase: 20
       },
       'completa': {
         nome: 'Edícula Completa (quarto + banheiro + cozinha)',
-        valorM2: 2000
-      }
-    },
-    areaDeLazer: {
-      'deck_madeira': {
-        nome: 'Deck de Madeira',
-        valorM2: 350
+        valorM2: 1900,
+        areaBase: 30
       },
-      'deck_wpc': {
-        nome: 'Deck WPC (madeira plástica)',
-        valorM2: 280
-      },
-      'pergolado_madeira': {
-        nome: 'Pergolado de Madeira',
-        valorM2: 450
-      },
-      'pergolado_metalico': {
-        nome: 'Pergolado Metálico',
-        valorM2: 550
-      },
-      'jardim': {
-        nome: 'Paisagismo/Jardim',
-        valorM2: 120
+      'alto_padrao': {
+        nome: 'Edícula Alto Padrão',
+        valorM2: 2500,
+        areaBase: 35
       }
     },
     energia: {
+      'solar_2kw': {
+        nome: 'Energia Solar 2kWp',
+        valor: 12000,
+        economia: 'R$ 200-300/mês'
+      },
       'solar_3kw': {
         nome: 'Energia Solar 3kWp',
-        valor: 18000,
+        valor: 16000,
         economia: 'R$ 300-400/mês'
       },
       'solar_5kw': {
         nome: 'Energia Solar 5kWp',
-        valor: 28000,
+        valor: 24000,
         economia: 'R$ 500-700/mês'
       },
       'solar_8kw': {
         nome: 'Energia Solar 8kWp',
-        valor: 42000,
+        valor: 36000,
         economia: 'R$ 800-1000/mês'
       },
-      'aquecedor_solar': {
-        nome: 'Aquecedor Solar (200L)',
+      'solar_10kw': {
+        nome: 'Energia Solar 10kWp',
+        valor: 45000,
+        economia: 'R$ 1000-1200/mês'
+      },
+      'aquecedor_solar_150l': {
+        nome: 'Aquecedor Solar 150L',
+        valor: 2500
+      },
+      'aquecedor_solar_200l': {
+        nome: 'Aquecedor Solar 200L',
         valor: 3500
+      },
+      'aquecedor_solar_300l': {
+        nome: 'Aquecedor Solar 300L',
+        valor: 5000
       }
     },
     seguranca: {
       'cameras_4': {
         nome: 'Sistema 4 Câmeras',
-        valor: 2500
+        valor: 2000
       },
       'cameras_8': {
         nome: 'Sistema 8 Câmeras',
-        valor: 4500
+        valor: 3500
       },
-      'alarme': {
-        nome: 'Alarme Monitorado',
-        valor: 1800,
-        mensalidade: 100
+      'cameras_8_premium': {
+        nome: 'Sistema 8 Câmeras Premium (4K)',
+        valor: 6000
+      },
+      'alarme_basico': {
+        nome: 'Alarme Básico',
+        valor: 1200
+      },
+      'alarme_monitorado': {
+        nome: 'Alarme Monitorado (com central)',
+        valor: 2500
       },
       'cerca_eletrica': {
         nome: 'Cerca Elétrica',
-        valorMetro: 35
+        valorMetro: 30
       },
       'concertina': {
         nome: 'Concertina',
-        valorMetro: 25
+        valorMetro: 22
+      },
+      'sensor_presenca': {
+        nome: 'Sensores de Presença (kit 6)',
+        valor: 800
       }
     },
     automacao: {
-      'basica': {
-        nome: 'Automação Básica (iluminação)',
+      'iluminacao_basica': {
+        nome: 'Automação de Iluminação Básica',
+        valor: 3500
+      },
+      'iluminacao_completa': {
+        nome: 'Automação de Iluminação Completa',
+        valor: 8000
+      },
+      'som_ambiente': {
+        nome: 'Sistema de Som Ambiente',
+        valor: 6000
+      },
+      'ar_condicionado': {
+        nome: 'Automação de Ar Condicionado',
+        valor: 4000
+      },
+      'cortinas_motorizadas': {
+        nome: 'Cortinas Motorizadas',
         valor: 5000
       },
-      'intermediaria': {
-        nome: 'Automação Intermediária (luz + som)',
+      'pacote_intermediario': {
+        nome: 'Pacote Intermediário (luz + som)',
         valor: 15000
       },
-      'completa': {
-        nome: 'Automação Completa',
+      'pacote_completo': {
+        nome: 'Automação Completa (tudo integrado)',
         valor: 40000
       }
     }
@@ -747,82 +1032,47 @@ const CustoConstrucaoData = {
     'projeto_arquitetonico': {
       nome: 'Projeto Arquitetônico',
       percentual: 3,
-      valorMinimo: 5000
+      valorMinimo: 4000
     },
     'projeto_estrutural': {
       nome: 'Projeto Estrutural',
       percentual: 1.5,
-      valorMinimo: 3000
+      valorMinimo: 2500
     },
     'projeto_eletrico': {
       nome: 'Projeto Elétrico',
       percentual: 0.5,
-      valorMinimo: 1500
+      valorMinimo: 1200
     },
     'projeto_hidraulico': {
       nome: 'Projeto Hidráulico',
       percentual: 0.5,
-      valorMinimo: 1500
+      valorMinimo: 1200
     },
     'aprovacao_prefeitura': {
       nome: 'Aprovação na Prefeitura',
-      valorFixo: 3500
+      valorFixo: 3000
     },
     'art_rrt': {
       nome: 'ART/RRT',
-      valorFixo: 800
+      valorFixo: 700
     },
     'ligacao_agua': {
       nome: 'Ligação de Água',
-      valorFixo: 1200
+      valorFixo: 1000
     },
     'ligacao_esgoto': {
       nome: 'Ligação de Esgoto',
-      valorFixo: 800
+      valorFixo: 700
     },
     'ligacao_energia': {
       nome: 'Ligação de Energia',
-      valorFixo: 600
+      valorFixo: 500
     },
     'habite_se': {
       nome: 'Habite-se',
-      valorFixo: 500
+      valorFixo: 400
     }
-  },
-
-  // Cômodos típicos com áreas médias
-  comodosReferencia: {
-    'quarto_pequeno': { nome: 'Quarto Pequeno', areaMedia: 9 },
-    'quarto_medio': { nome: 'Quarto Médio', areaMedia: 12 },
-    'quarto_grande': { nome: 'Quarto Grande/Suíte', areaMedia: 16 },
-    'suite_master': { nome: 'Suíte Master', areaMedia: 25 },
-    'banheiro_pequeno': { nome: 'Banheiro Pequeno', areaMedia: 3 },
-    'banheiro_medio': { nome: 'Banheiro Médio', areaMedia: 5 },
-    'banheiro_grande': { nome: 'Banheiro Grande', areaMedia: 8 },
-    'sala_pequena': { nome: 'Sala Pequena', areaMedia: 15 },
-    'sala_media': { nome: 'Sala Média', areaMedia: 25 },
-    'sala_grande': { nome: 'Sala Grande', areaMedia: 40 },
-    'cozinha_pequena': { nome: 'Cozinha Pequena', areaMedia: 8 },
-    'cozinha_media': { nome: 'Cozinha Média', areaMedia: 12 },
-    'cozinha_grande': { nome: 'Cozinha Grande', areaMedia: 18 },
-    'area_servico_pequena': { nome: 'Área de Serviço Pequena', areaMedia: 4 },
-    'area_servico_media': { nome: 'Área de Serviço Média', areaMedia: 6 },
-    'varanda': { nome: 'Varanda', areaMedia: 8 },
-    'garagem_1_vaga': { nome: 'Garagem 1 Vaga', areaMedia: 15 },
-    'garagem_2_vagas': { nome: 'Garagem 2 Vagas', areaMedia: 30 },
-    'circulacao': { nome: 'Circulação (corredores)', percentual: 10 } // % da área total
-  },
-
-  // Estimativa de pontos por cômodo
-  pontosReferencia: {
-    quarto: { eletricos: 8, hidraulicos: 0 },
-    quarto_suite: { eletricos: 8, hidraulicos: 4 },
-    banheiro: { eletricos: 4, hidraulicos: 6 },
-    sala: { eletricos: 12, hidraulicos: 0 },
-    cozinha: { eletricos: 10, hidraulicos: 4 },
-    area_servico: { eletricos: 4, hidraulicos: 4 },
-    varanda: { eletricos: 4, hidraulicos: 1 },
-    garagem: { eletricos: 4, hidraulicos: 1 }
   },
 
   // Textos para tradução
@@ -831,7 +1081,8 @@ const CustoConstrucaoData = {
       titulo: 'Calculadora de Custo de Construção',
       subtitulo: 'Estime o custo para construir sua casa',
       configuracaoBasica: 'Configuração Básica',
-      tipoConstrucao: 'Tipo de Construção',
+      tipoEstrutura: 'Tipo de Casa',
+      tipoConstrucao: 'Método Construtivo',
       padraoAcabamento: 'Padrão de Acabamento',
       regiao: 'Estado/Região',
       areaTotal: 'Área Total (m²)',
@@ -843,13 +1094,14 @@ const CustoConstrucaoData = {
       detalhamento: 'Detalhamento',
       calcular: 'Calcular',
       exportar: 'Exportar Orçamento',
-      avisoValores: 'Valores de referência sujeitos a variação conforme localidade e período.'
+      avisoValores: 'Valores de referência sujeitos a variação conforme localidade, período e negociação com fornecedores.'
     },
     en: {
       titulo: 'Construction Cost Calculator',
       subtitulo: 'Estimate the cost to build your home',
       configuracaoBasica: 'Basic Configuration',
-      tipoConstrucao: 'Construction Type',
+      tipoEstrutura: 'House Type',
+      tipoConstrucao: 'Construction Method',
       padraoAcabamento: 'Finishing Standard',
       regiao: 'State/Region',
       areaTotal: 'Total Area (m²)',
@@ -861,13 +1113,14 @@ const CustoConstrucaoData = {
       detalhamento: 'Breakdown',
       calcular: 'Calculate',
       exportar: 'Export Budget',
-      avisoValores: 'Reference values subject to variation according to location and period.'
+      avisoValores: 'Reference values subject to variation according to location, period and supplier negotiation.'
     },
     es: {
       titulo: 'Calculadora de Costo de Construcción',
       subtitulo: 'Estime el costo para construir su casa',
       configuracaoBasica: 'Configuración Básica',
-      tipoConstrucao: 'Tipo de Construcción',
+      tipoEstrutura: 'Tipo de Casa',
+      tipoConstrucao: 'Método Constructivo',
       padraoAcabamento: 'Estándar de Acabado',
       regiao: 'Estado/Región',
       areaTotal: 'Área Total (m²)',
@@ -879,12 +1132,11 @@ const CustoConstrucaoData = {
       detalhamento: 'Desglose',
       calcular: 'Calcular',
       exportar: 'Exportar Presupuesto',
-      avisoValores: 'Valores de referencia sujetos a variación según localidad y período.'
+      avisoValores: 'Valores de referencia sujetos a variación según localidad, período y negociación con proveedores.'
     }
   }
 };
 
-// Export for use in other modules
 if (typeof module !== 'undefined' && module.exports) {
   module.exports = CustoConstrucaoData;
 }

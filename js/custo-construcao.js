@@ -1,76 +1,42 @@
 /**
- * Calculadora de Custo de Construção
- * Lógica principal e UI
+ * Calculadora de Custo de Construção v2.0
+ * Lógica principal e UI - Versão melhorada
  */
 
 (function() {
   'use strict';
 
-  // Estado da calculadora
   const state = {
     config: {
       estado: 'SP',
+      tipoEstrutura: 'terrea',
       tipoConstrucao: 'alvenaria',
       padrao: 'medio',
       areaTotal: 100,
-      numQuartos: 3,
-      numBanheiros: 2,
+      numQuartos: 2,
       numSuites: 1,
+      numBanheiros: 2,
       temSala: true,
       temCozinha: true,
       temAreaServico: true,
-      temGaragem: true,
-      numVagasGaragem: 1
+      temVaranda: false
     },
     materiais: {
-      janelas: 'aluminio',
+      janelas: 'aluminio_simples',
       portas: 'madeira_semi_oca',
-      pisos: 'ceramica_qualidade',
-      telhado: 'ceramica',
-      forro: 'gesso_liso'
+      pisos: 'ceramica_classe_b',
+      telhado: 'ceramica_simples',
+      forro: 'pvc_simples'
     },
-    maoDeObra: {
-      pedreiro: true,
-      eletricista: true,
-      encanador: true,
-      pintor: true,
-      gesseiro: true,
-      telhadista: true,
-      vidraceiro: true,
-      engenheiro: true,
-      mestreObras: true
-    },
-    extras: {
-      piscina: null,
-      churrasqueira: null,
-      muro: { tipo: null, metros: 0 },
-      portao: { tipo: null, m2: 0 },
-      edicula: null,
-      varanda: { tipo: null, m2: 0 },
-      energiaSolar: null,
-      aquecedorSolar: false,
-      automacao: null,
-      seguranca: []
-    },
-    custosAdicionais: {
-      projetoArquitetonico: true,
-      projetoEstrutural: true,
-      projetoEletrico: true,
-      projetoHidraulico: true,
-      aprovacaoPrefeitura: true,
-      artRrt: true,
-      ligacaoAgua: true,
-      ligacaoEsgoto: true,
-      ligacaoEnergia: true,
-      habiteSe: true
-    },
-    itensZerados: new Set() // Itens que o usuário quer zerar o custo
+    maoDeObra: {},
+    extras: {},
+    custosAdicionais: {},
+    calculoAtual: null
   };
 
-  let data = null; // Será preenchido com CustoConstrucaoData
+  let data = null;
   let lang = 'pt';
 
-  // Inicialização
   function init() {
     if (typeof CustoConstrucaoData === 'undefined') {
       console.error('CustoConstrucaoData não carregado');
@@ -78,7 +44,17 @@
     }
     data = CustoConstrucaoData;
 
-    // Detectar idioma
+    // Inicializar estado da mão de obra
+    Object.keys(data.maoDeObra).forEach(k => {
+      state.maoDeObra[k] = true;
+    });
+
+    // Inicializar custos adicionais
+    Object.keys(data.custosAdicionais).forEach(k => {
+      const key = k.replace(/_([a-z])/g, (m, l) => l.toUpperCase());
+      state.custosAdicionais[key] = true;
+    });
+
     const savedLang = localStorage.getItem('rico-lang');
     if (savedLang && ['pt', 'en', 'es'].includes(savedLang)) {
       lang = savedLang;
@@ -93,7 +69,6 @@
     calculate();
   }
 
-  // Construir interface
   function buildUI() {
     const container = document.getElementById('custo-construcao-container');
     if (!container) return;
@@ -106,12 +81,21 @@
         <section class="cc-section cc-section-config">
           <h2 class="cc-section-title">${t.configuracaoBasica}</h2>
 
-          <div class="cc-grid cc-grid-4">
+          <div class="cc-grid cc-grid-3">
             <div class="cc-field">
               <label>${t.regiao}</label>
               <select id="cc-estado">
                 ${Object.entries(data.regioes).map(([uf, info]) =>
                   `<option value="${uf}" ${uf === state.config.estado ? 'selected' : ''}>${uf} - ${info.nome}</option>`
+                ).join('')}
+              </select>
+            </div>
+
+            <div class="cc-field">
+              <label>${t.tipoEstrutura || 'Tipo de Casa'}</label>
+              <select id="cc-tipo-estrutura">
+                ${Object.entries(data.tiposEstrutura).map(([key, info]) =>
+                  `<option value="${key}" ${key === state.config.tipoEstrutura ? 'selected' : ''}>${info.nome}</option>`
                 ).join('')}
               </select>
             </div>
@@ -124,7 +108,9 @@
                 ).join('')}
               </select>
             </div>
+          </div>
 
+          <div class="cc-grid cc-grid-2" style="margin-top: 16px;">
             <div class="cc-field">
               <label>${t.padraoAcabamento}</label>
               <select id="cc-padrao">
@@ -137,7 +123,7 @@
             <div class="cc-field">
               <label>${t.areaTotal}</label>
               <div class="cc-input-group">
-                <input type="number" id="cc-area" value="${state.config.areaTotal}" min="30" max="1000" step="5">
+                <input type="number" id="cc-area" value="${state.config.areaTotal}" min="30" max="2000" step="5">
                 <span>m²</span>
               </div>
             </div>
@@ -158,22 +144,19 @@
           </h2>
 
           <div class="cc-section-content" id="comodos-content">
-            <div class="cc-grid cc-grid-5">
+            <p class="cc-hint">O número de cômodos influencia diretamente no custo (mais banheiros = mais instalações hidráulicas e revestimentos).</p>
+            <div class="cc-grid cc-grid-4">
               <div class="cc-field">
-                <label>Quartos</label>
+                <label>Quartos (sem suíte)</label>
                 <input type="number" id="cc-quartos" value="${state.config.numQuartos}" min="0" max="10">
               </div>
               <div class="cc-field">
-                <label>Suítes</label>
+                <label>Suítes (quarto + banheiro)</label>
                 <input type="number" id="cc-suites" value="${state.config.numSuites}" min="0" max="10">
               </div>
               <div class="cc-field">
-                <label>Banheiros</label>
-                <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="1" max="10">
-              </div>
-              <div class="cc-field">
-                <label>Vagas Garagem</label>
-                <input type="number" id="cc-vagas" value="${state.config.numVagasGaragem}" min="0" max="5">
+                <label>Banheiros extras</label>
+                <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="0" max="10">
               </div>
               <div class="cc-field cc-field-checkbox">
                 <label>
@@ -182,6 +165,7 @@
                 </label>
               </div>
             </div>
+            <div class="cc-comodos-resumo" id="cc-comodos-resumo"></div>
           </div>
         </section>
 
@@ -197,9 +181,10 @@
           </h2>
 
           <div class="cc-section-content" id="materiais-content">
+            <p class="cc-hint">Escolha os materiais conforme seu orçamento. Os valores já incluem mão de obra de instalação.</p>
             <div class="cc-grid cc-grid-3">
               ${buildMaterialSelect('janelas', 'Janelas')}
-              ${buildMaterialSelect('portas', 'Portas')}
+              ${buildMaterialSelect('portas', 'Portas Internas')}
               ${buildMaterialSelect('pisos', 'Pisos')}
               ${buildMaterialSelect('telhados', 'Telhado', 'telhado')}
               ${buildMaterialSelect('forros', 'Forro', 'forro')}
@@ -219,8 +204,8 @@
           </h2>
 
           <div class="cc-section-content" id="mao-obra-content">
-            <p class="cc-hint">Desmarque os profissionais cujo custo você não terá (ex: você mesmo faz, ou alguém faz de graça).</p>
-            <div class="cc-grid cc-grid-4">
+            <p class="cc-hint">Desmarque os profissionais cujo custo você não terá (ex: você mesmo faz, ou alguém faz de graça). Cada profissional tem um percentual do custo de mão de obra.</p>
+            <div class="cc-grid cc-grid-3">
               ${buildMaoDeObraCheckboxes()}
             </div>
           </div>
@@ -239,211 +224,7 @@
 
           <div class="cc-section-content" id="extras-content">
             <div class="cc-extras-grid">
-              <!-- Piscina -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-piscina">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Piscina</span>
-                </div>
-                <div class="cc-extra-options" id="cc-piscina-options" style="display:none;">
-                  <select id="cc-piscina-tipo">
-                    ${Object.entries(data.extras.piscina).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
-                    ).join('')}
-                  </select>
-                </div>
-              </div>
-
-              <!-- Churrasqueira -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-churrasqueira">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Churrasqueira</span>
-                </div>
-                <div class="cc-extra-options" id="cc-churrasqueira-options" style="display:none;">
-                  <select id="cc-churrasqueira-tipo">
-                    ${Object.entries(data.extras.churrasqueira).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
-                    ).join('')}
-                  </select>
-                </div>
-              </div>
-
-              <!-- Muro -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-muro">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Muro</span>
-                </div>
-                <div class="cc-extra-options" id="cc-muro-options" style="display:none;">
-                  <select id="cc-muro-tipo">
-                    ${Object.entries(data.extras.muro).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorMetroLinear)}/m</option>`
-                    ).join('')}
-                  </select>
-                  <div class="cc-input-group cc-input-inline">
-                    <input type="number" id="cc-muro-metros" value="40" min="0" max="500">
-                    <span>metros</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Portão -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-portao">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Portão</span>
-                </div>
-                <div class="cc-extra-options" id="cc-portao-options" style="display:none;">
-                  <select id="cc-portao-tipo">
-                    ${Object.entries(data.extras.portao).map(([key, info]) => {
-                      const preco = info.valorUnidade
-                        ? `R$ ${formatNumber(info.valorUnidade)}`
-                        : `R$ ${formatNumber(info.valorM2)}/m²`;
-                      return `<option value="${key}">${info.nome} - ${preco}</option>`;
-                    }).join('')}
-                  </select>
-                  <div class="cc-input-group cc-input-inline" id="cc-portao-m2-group">
-                    <input type="number" id="cc-portao-m2" value="9" min="1" max="50" step="0.5">
-                    <span>m²</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Edícula -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-edicula">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Edícula</span>
-                </div>
-                <div class="cc-extra-options" id="cc-edicula-options" style="display:none;">
-                  <select id="cc-edicula-tipo">
-                    ${Object.entries(data.extras.edicula).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
-                    ).join('')}
-                  </select>
-                  <div class="cc-input-group cc-input-inline">
-                    <input type="number" id="cc-edicula-m2" value="20" min="10" max="100">
-                    <span>m²</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Varanda Extra -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-varanda">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Varanda/Terraço Extra</span>
-                </div>
-                <div class="cc-extra-options" id="cc-varanda-options" style="display:none;">
-                  <select id="cc-varanda-tipo">
-                    ${Object.entries(data.extras.varanda).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
-                    ).join('')}
-                  </select>
-                  <div class="cc-input-group cc-input-inline">
-                    <input type="number" id="cc-varanda-m2" value="15" min="5" max="100">
-                    <span>m²</span>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Energia Solar -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-solar">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Energia Solar</span>
-                </div>
-                <div class="cc-extra-options" id="cc-solar-options" style="display:none;">
-                  <select id="cc-solar-tipo">
-                    ${Object.entries(data.extras.energia).filter(([k]) => k.startsWith('solar')).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
-                    ).join('')}
-                  </select>
-                </div>
-              </div>
-
-              <!-- Aquecedor Solar -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-aquecedor">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Aquecedor Solar</span>
-                  <span class="cc-extra-price">R$ ${formatNumber(data.extras.energia.aquecedor_solar.valor)}</span>
-                </div>
-              </div>
-
-              <!-- Automação -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-automacao">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Automação Residencial</span>
-                </div>
-                <div class="cc-extra-options" id="cc-automacao-options" style="display:none;">
-                  <select id="cc-automacao-tipo">
-                    ${Object.entries(data.extras.automacao).map(([key, info]) =>
-                      `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
-                    ).join('')}
-                  </select>
-                </div>
-              </div>
-
-              <!-- Segurança -->
-              <div class="cc-extra-item">
-                <div class="cc-extra-header">
-                  <label class="cc-switch">
-                    <input type="checkbox" id="cc-extra-seguranca">
-                    <span class="cc-switch-slider"></span>
-                  </label>
-                  <span class="cc-extra-name">Sistema de Segurança</span>
-                </div>
-                <div class="cc-extra-options" id="cc-seguranca-options" style="display:none;">
-                  <div class="cc-checkboxes">
-                    ${Object.entries(data.extras.seguranca).map(([key, info]) => {
-                      const preco = info.valor
-                        ? `R$ ${formatNumber(info.valor)}`
-                        : `R$ ${formatNumber(info.valorMetro)}/m`;
-                      return `
-                        <label class="cc-checkbox-item">
-                          <input type="checkbox" data-seguranca="${key}">
-                          <span>${info.nome} - ${preco}</span>
-                        </label>
-                      `;
-                    }).join('')}
-                  </div>
-                  <div class="cc-input-group cc-input-inline" id="cc-cerca-metros-group" style="display:none;">
-                    <label>Metros de cerca:</label>
-                    <input type="number" id="cc-cerca-metros" value="40" min="0" max="500">
-                    <span>m</span>
-                  </div>
-                </div>
-              </div>
+              ${buildExtrasSection()}
             </div>
           </div>
         </section>
@@ -460,7 +241,7 @@
           </h2>
 
           <div class="cc-section-content" id="custos-adicionais-content">
-            <p class="cc-hint">Desmarque os custos que você não terá.</p>
+            <p class="cc-hint">Desmarque os custos que você já pagou ou não terá.</p>
             <div class="cc-grid cc-grid-3">
               ${buildCustosAdicionaisCheckboxes()}
             </div>
@@ -470,11 +251,8 @@
         <!-- Resultado -->
         <section class="cc-section cc-section-resultado">
           <h2 class="cc-section-title">${t.resultado}</h2>
-
           <div class="cc-resultado-card" id="cc-resultado">
-            <div class="cc-resultado-loading">
-              Calculando...
-            </div>
+            <div class="cc-resultado-loading">Calculando...</div>
           </div>
         </section>
 
@@ -491,6 +269,7 @@
     `;
 
     updateTipoInfo();
+    updateComodosResumo();
   }
 
   function buildMaterialSelect(categoria, label, stateKey = null) {
@@ -514,26 +293,252 @@
   }
 
   function buildMaoDeObraCheckboxes() {
-    const profissionais = [
-      { key: 'pedreiro', label: 'Pedreiro' },
-      { key: 'eletricista', label: 'Eletricista' },
-      { key: 'encanador', label: 'Encanador' },
-      { key: 'pintor', label: 'Pintor' },
-      { key: 'gesseiro', label: 'Gesseiro' },
-      { key: 'telhadista', label: 'Telhadista' },
-      { key: 'vidraceiro', label: 'Vidraceiro' },
-      { key: 'engenheiro', label: 'Engenheiro' },
-      { key: 'mestreObras', label: 'Mestre de Obras' }
-    ];
-
-    return profissionais.map(p => `
+    return Object.entries(data.maoDeObra).map(([key, info]) => `
       <div class="cc-field cc-field-checkbox">
         <label>
-          <input type="checkbox" id="cc-mao-${p.key}" data-profissional="${p.key}" ${state.maoDeObra[p.key] ? 'checked' : ''}>
-          ${p.label}
+          <input type="checkbox" data-profissional="${key}" ${state.maoDeObra[key] ? 'checked' : ''}>
+          ${info.nome} <span class="cc-percent">(${info.percentualObra}%)</span>
         </label>
       </div>
     `).join('');
+  }
+
+  function buildExtrasSection() {
+    return `
+      <!-- Piscina -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-piscina">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Piscina</span>
+        </div>
+        <div class="cc-extra-options" id="cc-piscina-options" style="display:none;">
+          <select id="cc-piscina-tipo">
+            ${Object.entries(data.extras.piscina).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </div>
+
+      <!-- Churrasqueira -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-churrasqueira">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Churrasqueira / Espaço Gourmet</span>
+        </div>
+        <div class="cc-extra-options" id="cc-churrasqueira-options" style="display:none;">
+          <select id="cc-churrasqueira-tipo">
+            ${Object.entries(data.extras.churrasqueira).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </div>
+
+      <!-- Garagem/Pergolado -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-garagem">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Garagem / Pergolado</span>
+        </div>
+        <div class="cc-extra-options" id="cc-garagem-options" style="display:none;">
+          <select id="cc-garagem-tipo">
+            ${Object.entries(data.extras.garagem).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
+            ).join('')}
+          </select>
+          <div class="cc-input-group cc-input-inline">
+            <input type="number" id="cc-garagem-m2" value="20" min="10" max="100">
+            <span>m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Piso Externo / Pátio -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-piso-externo">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Piso Externo / Pátio</span>
+        </div>
+        <div class="cc-extra-options" id="cc-piso-externo-options" style="display:none;">
+          <select id="cc-piso-externo-tipo">
+            ${Object.entries(data.extras.pisoExterno).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
+            ).join('')}
+          </select>
+          <div class="cc-input-group cc-input-inline">
+            <input type="number" id="cc-piso-externo-m2" value="50" min="0" max="500">
+            <span>m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Muro -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-muro">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Muro</span>
+        </div>
+        <div class="cc-extra-options" id="cc-muro-options" style="display:none;">
+          <select id="cc-muro-tipo">
+            ${Object.entries(data.extras.muro).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorMetroLinear)}/m</option>`
+            ).join('')}
+          </select>
+          <div class="cc-input-group cc-input-inline">
+            <input type="number" id="cc-muro-metros" value="40" min="0" max="500">
+            <span>metros</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Portão -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-portao">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Portão</span>
+        </div>
+        <div class="cc-extra-options" id="cc-portao-options" style="display:none;">
+          <select id="cc-portao-tipo">
+            ${Object.entries(data.extras.portao).map(([key, info]) => {
+              const preco = info.valorUnidade
+                ? `R$ ${formatNumber(info.valorUnidade)}`
+                : `R$ ${formatNumber(info.valorM2)}/m²`;
+              return `<option value="${key}">${info.nome} - ${preco}</option>`;
+            }).join('')}
+          </select>
+          <div class="cc-input-group cc-input-inline" id="cc-portao-m2-group">
+            <input type="number" id="cc-portao-m2" value="9" min="1" max="50" step="0.5">
+            <span>m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Edícula -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-edicula">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Edícula</span>
+        </div>
+        <div class="cc-extra-options" id="cc-edicula-options" style="display:none;">
+          <select id="cc-edicula-tipo">
+            ${Object.entries(data.extras.edicula).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
+            ).join('')}
+          </select>
+          <div class="cc-input-group cc-input-inline">
+            <input type="number" id="cc-edicula-m2" value="20" min="10" max="100">
+            <span>m²</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Energia Solar -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-solar">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Energia Solar</span>
+        </div>
+        <div class="cc-extra-options" id="cc-solar-options" style="display:none;">
+          <select id="cc-solar-tipo">
+            ${Object.entries(data.extras.energia).filter(([k]) => k.startsWith('solar')).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </div>
+
+      <!-- Aquecedor Solar -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-aquecedor">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Aquecedor Solar</span>
+        </div>
+        <div class="cc-extra-options" id="cc-aquecedor-options" style="display:none;">
+          <select id="cc-aquecedor-tipo">
+            ${Object.entries(data.extras.energia).filter(([k]) => k.startsWith('aquecedor')).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </div>
+
+      <!-- Automação -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-automacao">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Automação Residencial</span>
+        </div>
+        <div class="cc-extra-options" id="cc-automacao-options" style="display:none;">
+          <select id="cc-automacao-tipo">
+            ${Object.entries(data.extras.automacao).map(([key, info]) =>
+              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
+            ).join('')}
+          </select>
+        </div>
+      </div>
+
+      <!-- Segurança -->
+      <div class="cc-extra-item">
+        <div class="cc-extra-header">
+          <label class="cc-switch">
+            <input type="checkbox" id="cc-extra-seguranca">
+            <span class="cc-switch-slider"></span>
+          </label>
+          <span class="cc-extra-name">Sistema de Segurança</span>
+        </div>
+        <div class="cc-extra-options" id="cc-seguranca-options" style="display:none;">
+          <div class="cc-checkboxes">
+            ${Object.entries(data.extras.seguranca).map(([key, info]) => {
+              const preco = info.valor
+                ? `R$ ${formatNumber(info.valor)}`
+                : `R$ ${formatNumber(info.valorMetro)}/m`;
+              return `
+                <label class="cc-checkbox-item">
+                  <input type="checkbox" data-seguranca="${key}">
+                  <span>${info.nome} - ${preco}</span>
+                </label>
+              `;
+            }).join('')}
+          </div>
+          <div class="cc-input-group cc-input-inline" id="cc-cerca-metros-group" style="display:none;">
+            <label>Metros de cerca:</label>
+            <input type="number" id="cc-cerca-metros" value="40" min="0" max="500">
+            <span>m</span>
+          </div>
+        </div>
+      </div>
+    `;
   }
 
   function buildCustosAdicionaisCheckboxes() {
@@ -557,15 +562,14 @@
         if (custoData.valorFixo) {
           valorStr = `R$ ${formatNumber(custoData.valorFixo)}`;
         } else if (custoData.percentual) {
-          valorStr = `${custoData.percentual}% da obra`;
+          valorStr = `${custoData.percentual}%`;
         }
       }
       return `
         <div class="cc-field cc-field-checkbox">
           <label>
-            <input type="checkbox" id="cc-custo-${c.key}" data-custo="${c.key}" ${state.custosAdicionais[c.key] ? 'checked' : ''}>
-            ${c.label}
-            <span class="cc-custo-valor">${valorStr}</span>
+            <input type="checkbox" data-custo="${c.key}" ${state.custosAdicionais[c.key] ? 'checked' : ''}>
+            ${c.label} <span class="cc-custo-valor">${valorStr}</span>
           </label>
         </div>
       `;
@@ -576,27 +580,52 @@
     const tipoInfo = document.getElementById('cc-tipo-info');
     if (!tipoInfo) return;
 
-    const tipo = data.tiposConstrucao[state.config.tipoConstrucao];
-    if (!tipo) return;
+    const estrutura = data.tiposEstrutura[state.config.tipoEstrutura];
+    const metodo = data.tiposConstrucao[state.config.tipoConstrucao];
+    if (!estrutura || !metodo) return;
 
     tipoInfo.innerHTML = `
       <div class="cc-tipo-card">
-        <p class="cc-tipo-desc">${tipo.descricao}</p>
-        <div class="cc-tipo-details">
-          <div class="cc-tipo-detail">
-            <span class="cc-tipo-label">Fator de custo:</span>
-            <span class="cc-tipo-value ${tipo.fator > 1 ? 'cc-red' : tipo.fator < 1 ? 'cc-green' : ''}">${tipo.fator > 1 ? '+' : ''}${((tipo.fator - 1) * 100).toFixed(0)}%</span>
+        <div class="cc-tipo-row">
+          <div class="cc-tipo-col">
+            <strong>${estrutura.nome}:</strong> ${estrutura.descricao}
+            <span class="cc-tipo-badge ${estrutura.fator > 1 ? 'cc-red' : estrutura.fator < 1 ? 'cc-green' : ''}">${estrutura.fator > 1 ? '+' : ''}${((estrutura.fator - 1) * 100).toFixed(0)}%</span>
           </div>
-          <div class="cc-tipo-detail">
-            <span class="cc-tipo-label">Tempo de obra:</span>
-            <span class="cc-tipo-value ${tipo.tempoObra < 1 ? 'cc-green' : ''}">${tipo.tempoObra < 1 ? '-' + ((1 - tipo.tempoObra) * 100).toFixed(0) + '%' : 'Normal'}</span>
+        </div>
+        <div class="cc-tipo-row">
+          <div class="cc-tipo-col">
+            <strong>${metodo.nome}:</strong> ${metodo.descricao}
+            <span class="cc-tipo-badge ${metodo.fator > 1 ? 'cc-red' : metodo.fator < 1 ? 'cc-green' : ''}">${metodo.fator > 1 ? '+' : ''}${((metodo.fator - 1) * 100).toFixed(0)}%</span>
           </div>
         </div>
       </div>
     `;
   }
 
-  // Event Listeners
+  function updateComodosResumo() {
+    const resumo = document.getElementById('cc-comodos-resumo');
+    if (!resumo) return;
+
+    const quartos = state.config.numQuartos;
+    const suites = state.config.numSuites;
+    const banheiros = state.config.numBanheiros;
+    const totalBanheiros = suites + banheiros;
+
+    // Calcular custo adicional estimado por cômodo
+    const custoComodos = data.custoPorComodo;
+    const custoQuartos = quartos * custoComodos.quarto.custoBase;
+    const custoSuites = suites * custoComodos.suite.custoBase;
+    const custoBanheiros = banheiros * custoComodos.banheiro.custoBase;
+    const totalComodosExtra = custoQuartos + custoSuites + custoBanheiros;
+
+    resumo.innerHTML = `
+      <div class="cc-comodos-info">
+        <span><strong>Total de banheiros:</strong> ${totalBanheiros} (${suites} nas suítes + ${banheiros} extras)</span>
+        <span class="cc-comodos-custo">Custo estimado dos cômodos: <strong>R$ ${formatNumber(totalComodosExtra)}</strong></span>
+      </div>
+    `;
+  }
+
   function attachEventListeners() {
     // Toggle sections
     document.querySelectorAll('.cc-btn-toggle').forEach(btn => {
@@ -610,45 +639,25 @@
     });
 
     // Config changes
-    document.getElementById('cc-estado')?.addEventListener('change', function() {
-      state.config.estado = this.value;
-      calculate();
-    });
+    const configHandlers = {
+      'cc-estado': v => state.config.estado = v,
+      'cc-tipo-estrutura': v => { state.config.tipoEstrutura = v; updateTipoInfo(); },
+      'cc-tipo-construcao': v => { state.config.tipoConstrucao = v; updateTipoInfo(); },
+      'cc-padrao': v => state.config.padrao = v,
+      'cc-area': v => state.config.areaTotal = parseFloat(v) || 100,
+      'cc-quartos': v => { state.config.numQuartos = parseInt(v) || 0; updateComodosResumo(); },
+      'cc-suites': v => { state.config.numSuites = parseInt(v) || 0; updateComodosResumo(); },
+      'cc-banheiros': v => { state.config.numBanheiros = parseInt(v) || 0; updateComodosResumo(); }
+    };
 
-    document.getElementById('cc-tipo-construcao')?.addEventListener('change', function() {
-      state.config.tipoConstrucao = this.value;
-      updateTipoInfo();
-      calculate();
-    });
-
-    document.getElementById('cc-padrao')?.addEventListener('change', function() {
-      state.config.padrao = this.value;
-      calculate();
-    });
-
-    document.getElementById('cc-area')?.addEventListener('input', function() {
-      state.config.areaTotal = parseFloat(this.value) || 100;
-      calculate();
-    });
-
-    document.getElementById('cc-quartos')?.addEventListener('input', function() {
-      state.config.numQuartos = parseInt(this.value) || 0;
-      calculate();
-    });
-
-    document.getElementById('cc-suites')?.addEventListener('input', function() {
-      state.config.numSuites = parseInt(this.value) || 0;
-      calculate();
-    });
-
-    document.getElementById('cc-banheiros')?.addEventListener('input', function() {
-      state.config.numBanheiros = parseInt(this.value) || 1;
-      calculate();
-    });
-
-    document.getElementById('cc-vagas')?.addEventListener('input', function() {
-      state.config.numVagasGaragem = parseInt(this.value) || 0;
-      calculate();
+    Object.entries(configHandlers).forEach(([id, handler]) => {
+      const el = document.getElementById(id);
+      if (el) {
+        el.addEventListener(el.type === 'number' ? 'input' : 'change', function() {
+          handler(this.value);
+          calculate();
+        });
+      }
     });
 
     document.getElementById('cc-area-servico')?.addEventListener('change', function() {
@@ -659,17 +668,15 @@
     // Material changes
     document.querySelectorAll('[id^="cc-material-"]').forEach(select => {
       select.addEventListener('change', function() {
-        const categoria = this.dataset.categoria;
-        state.materiais[categoria] = this.value;
+        state.materiais[this.dataset.categoria] = this.value;
         calculate();
       });
     });
 
-    // Mão de obra changes
+    // Mão de obra
     document.querySelectorAll('[data-profissional]').forEach(checkbox => {
       checkbox.addEventListener('change', function() {
-        const prof = this.dataset.profissional;
-        state.maoDeObra[prof] = this.checked;
+        state.maoDeObra[this.dataset.profissional] = this.checked;
         calculate();
       });
     });
@@ -677,44 +684,43 @@
     // Custos adicionais
     document.querySelectorAll('[data-custo]').forEach(checkbox => {
       checkbox.addEventListener('change', function() {
-        const custo = this.dataset.custo;
-        state.custosAdicionais[custo] = this.checked;
+        state.custosAdicionais[this.dataset.custo] = this.checked;
         calculate();
       });
     });
 
     // Extras toggles
-    setupExtraToggle('piscina', 'cc-piscina-options');
-    setupExtraToggle('churrasqueira', 'cc-churrasqueira-options');
-    setupExtraToggle('muro', 'cc-muro-options');
-    setupExtraToggle('portao', 'cc-portao-options');
-    setupExtraToggle('edicula', 'cc-edicula-options');
-    setupExtraToggle('varanda', 'cc-varanda-options');
-    setupExtraToggle('solar', 'cc-solar-options');
-    setupExtraToggle('aquecedor');
-    setupExtraToggle('automacao', 'cc-automacao-options');
-    setupExtraToggle('seguranca', 'cc-seguranca-options');
+    const extras = ['piscina', 'churrasqueira', 'garagem', 'piso-externo', 'muro', 'portao', 'edicula', 'solar', 'aquecedor', 'automacao', 'seguranca'];
+    extras.forEach(name => {
+      const checkbox = document.getElementById(`cc-extra-${name}`);
+      const options = document.getElementById(`cc-${name}-options`);
+      if (checkbox) {
+        checkbox.addEventListener('change', function() {
+          if (options) options.style.display = this.checked ? 'block' : 'none';
+          calculate();
+        });
+      }
+    });
 
     // Extra option changes
-    document.getElementById('cc-piscina-tipo')?.addEventListener('change', calculate);
-    document.getElementById('cc-churrasqueira-tipo')?.addEventListener('change', calculate);
-    document.getElementById('cc-muro-tipo')?.addEventListener('change', calculate);
-    document.getElementById('cc-muro-metros')?.addEventListener('input', calculate);
+    const extraSelects = ['piscina-tipo', 'churrasqueira-tipo', 'garagem-tipo', 'piso-externo-tipo', 'muro-tipo', 'portao-tipo', 'edicula-tipo', 'solar-tipo', 'aquecedor-tipo', 'automacao-tipo'];
+    extraSelects.forEach(id => {
+      document.getElementById(`cc-${id}`)?.addEventListener('change', calculate);
+    });
+
+    const extraInputs = ['garagem-m2', 'piso-externo-m2', 'muro-metros', 'portao-m2', 'edicula-m2', 'cerca-metros'];
+    extraInputs.forEach(id => {
+      document.getElementById(`cc-${id}`)?.addEventListener('input', calculate);
+    });
+
+    // Portão tipo change
     document.getElementById('cc-portao-tipo')?.addEventListener('change', function() {
       const tipo = data.extras.portao[this.value];
       const m2Group = document.getElementById('cc-portao-m2-group');
       if (m2Group) {
         m2Group.style.display = tipo.valorUnidade ? 'none' : 'flex';
       }
-      calculate();
     });
-    document.getElementById('cc-portao-m2')?.addEventListener('input', calculate);
-    document.getElementById('cc-edicula-tipo')?.addEventListener('change', calculate);
-    document.getElementById('cc-edicula-m2')?.addEventListener('input', calculate);
-    document.getElementById('cc-varanda-tipo')?.addEventListener('change', calculate);
-    document.getElementById('cc-varanda-m2')?.addEventListener('input', calculate);
-    document.getElementById('cc-solar-tipo')?.addEventListener('change', calculate);
-    document.getElementById('cc-automacao-tipo')?.addEventListener('change', calculate);
 
     // Segurança checkboxes
     document.querySelectorAll('[data-seguranca]').forEach(checkbox => {
@@ -728,57 +734,52 @@
         calculate();
       });
     });
-    document.getElementById('cc-cerca-metros')?.addEventListener('input', calculate);
   }
 
-  function setupExtraToggle(extraName, optionsId = null) {
-    const checkbox = document.getElementById(`cc-extra-${extraName}`);
-    const options = optionsId ? document.getElementById(optionsId) : null;
-
-    if (checkbox) {
-      checkbox.addEventListener('change', function() {
-        if (options) {
-          options.style.display = this.checked ? 'block' : 'none';
-        }
-        calculate();
-      });
-    }
-  }
-
-  // Cálculo principal
   function calculate() {
     const resultado = document.getElementById('cc-resultado');
     if (!resultado) return;
 
-    // Dados base
     const regiao = data.regioes[state.config.estado];
-    const tipoConstrucao = data.tiposConstrucao[state.config.tipoConstrucao];
+    const estrutura = data.tiposEstrutura[state.config.tipoEstrutura];
+    const metodo = data.tiposConstrucao[state.config.tipoConstrucao];
     const padrao = data.padroes[state.config.padrao];
     const area = state.config.areaTotal;
 
-    // Custo base por m²
+    // Custo base
     const custoBaseM2 = data.custoBaseM2.materiais + data.custoBaseM2.maoDeObra;
+    let custoM2Ajustado = custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator;
 
-    // Aplicar fatores
-    let custoM2Ajustado = custoBaseM2 * regiao.fator * tipoConstrucao.fator * padrao.fator;
-
-    // Separar materiais e mão de obra
     const proporcaoMateriais = data.custoBaseM2.materiais / custoBaseM2;
     const proporcaoMaoObra = data.custoBaseM2.maoDeObra / custoBaseM2;
 
     let custoMateriais = custoM2Ajustado * proporcaoMateriais * area;
     let custoMaoObra = custoM2Ajustado * proporcaoMaoObra * area;
 
-    // Ajustar mão de obra se profissionais foram desmarcados
-    const totalProfissionais = Object.keys(state.maoDeObra).length;
-    const profissionaisAtivos = Object.values(state.maoDeObra).filter(v => v).length;
-    const fatorMaoObra = profissionaisAtivos / totalProfissionais;
+    // Ajustar mão de obra com base nos profissionais desmarcados
+    let percentualMaoObraAtivo = 0;
+    Object.entries(state.maoDeObra).forEach(([key, ativo]) => {
+      if (ativo && data.maoDeObra[key]) {
+        percentualMaoObraAtivo += data.maoDeObra[key].percentualObra;
+      }
+    });
+    const fatorMaoObra = percentualMaoObraAtivo / 100;
     custoMaoObra = custoMaoObra * fatorMaoObra;
 
-    // Custo base da construção
-    let custoBase = custoMateriais + custoMaoObra;
+    // Custo adicional por cômodos
+    const custoComodos = data.custoPorComodo;
+    let custoComodosExtra = 0;
+    custoComodosExtra += state.config.numQuartos * custoComodos.quarto.custoBase * padrao.fator;
+    custoComodosExtra += state.config.numSuites * custoComodos.suite.custoBase * padrao.fator;
+    custoComodosExtra += state.config.numBanheiros * custoComodos.banheiro.custoBase * padrao.fator;
+    if (state.config.temAreaServico) {
+      custoComodosExtra += custoComodos.areaServico.custoBase * padrao.fator;
+    }
 
-    // ===== EXTRAS =====
+    // Custo base da construção
+    let custoBase = custoMateriais + custoMaoObra + custoComodosExtra;
+
+    // EXTRAS
     let custoExtras = 0;
     const detalhesExtras = [];
 
@@ -799,6 +800,28 @@
         const valor = data.extras.churrasqueira[tipo].valor;
         custoExtras += valor;
         detalhesExtras.push({ nome: data.extras.churrasqueira[tipo].nome, valor });
+      }
+    }
+
+    // Garagem/Pergolado
+    if (document.getElementById('cc-extra-garagem')?.checked) {
+      const tipo = document.getElementById('cc-garagem-tipo')?.value;
+      const m2 = parseFloat(document.getElementById('cc-garagem-m2')?.value) || 20;
+      if (tipo && data.extras.garagem[tipo]) {
+        const valor = data.extras.garagem[tipo].valorM2 * m2;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: `${data.extras.garagem[tipo].nome} (${m2}m²)`, valor });
+      }
+    }
+
+    // Piso Externo
+    if (document.getElementById('cc-extra-piso-externo')?.checked) {
+      const tipo = document.getElementById('cc-piso-externo-tipo')?.value;
+      const m2 = parseFloat(document.getElementById('cc-piso-externo-m2')?.value) || 50;
+      if (tipo && data.extras.pisoExterno[tipo] && m2 > 0) {
+        const valor = data.extras.pisoExterno[tipo].valorM2 * m2;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: `${data.extras.pisoExterno[tipo].nome} (${m2}m²)`, valor });
       }
     }
 
@@ -841,17 +864,6 @@
       }
     }
 
-    // Varanda Extra
-    if (document.getElementById('cc-extra-varanda')?.checked) {
-      const tipo = document.getElementById('cc-varanda-tipo')?.value;
-      const m2 = parseFloat(document.getElementById('cc-varanda-m2')?.value) || 15;
-      if (tipo && data.extras.varanda[tipo]) {
-        const valor = data.extras.varanda[tipo].valorM2 * m2;
-        custoExtras += valor;
-        detalhesExtras.push({ nome: `${data.extras.varanda[tipo].nome} (${m2}m²)`, valor });
-      }
-    }
-
     // Energia Solar
     if (document.getElementById('cc-extra-solar')?.checked) {
       const tipo = document.getElementById('cc-solar-tipo')?.value;
@@ -864,9 +876,12 @@
 
     // Aquecedor Solar
     if (document.getElementById('cc-extra-aquecedor')?.checked) {
-      const valor = data.extras.energia.aquecedor_solar.valor;
-      custoExtras += valor;
-      detalhesExtras.push({ nome: 'Aquecedor Solar', valor });
+      const tipo = document.getElementById('cc-aquecedor-tipo')?.value;
+      if (tipo && data.extras.energia[tipo]) {
+        const valor = data.extras.energia[tipo].valor;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: data.extras.energia[tipo].nome, valor });
+      }
     }
 
     // Automação
@@ -898,7 +913,7 @@
       });
     }
 
-    // ===== CUSTOS ADICIONAIS =====
+    // CUSTOS ADICIONAIS
     let custoAdicionais = 0;
     const detalhesAdicionais = [];
 
@@ -934,11 +949,30 @@
       }
     });
 
-    // ===== TOTAL =====
+    // TOTAL
     const custoTotal = custoBase + custoExtras + custoAdicionais;
     const custoM2Final = custoTotal / area;
 
-    // Render resultado
+    // Salvar para exportação
+    state.calculoAtual = {
+      custoTotal,
+      custoM2Final,
+      custoBase,
+      custoMateriais,
+      custoMaoObra,
+      custoComodosExtra,
+      custoExtras,
+      custoAdicionais,
+      detalhesExtras,
+      detalhesAdicionais,
+      config: { ...state.config },
+      regiao,
+      estrutura,
+      metodo,
+      padrao
+    };
+
+    // Render
     resultado.innerHTML = `
       <div class="cc-resultado-main">
         <div class="cc-resultado-total">
@@ -953,12 +987,16 @@
             <span class="cc-breakdown-valor">R$ ${formatNumber(custoBase)}</span>
           </div>
           <div class="cc-breakdown-sub">
-            <span>Materiais</span>
+            <span>Materiais (estrutura)</span>
             <span>R$ ${formatNumber(custoMateriais)}</span>
           </div>
           <div class="cc-breakdown-sub">
-            <span>Mão de Obra</span>
+            <span>Mão de Obra (${(percentualMaoObraAtivo).toFixed(0)}% ativa)</span>
             <span>R$ ${formatNumber(custoMaoObra)}</span>
+          </div>
+          <div class="cc-breakdown-sub">
+            <span>Cômodos (${state.config.numQuartos} qts + ${state.config.numSuites} suítes + ${state.config.numBanheiros} wc)</span>
+            <span>R$ ${formatNumber(custoComodosExtra)}</span>
           </div>
 
           ${custoExtras > 0 ? `
@@ -997,53 +1035,171 @@
           </div>
           <div class="cc-info-item">
             <span class="cc-info-label">Tipo</span>
-            <span class="cc-info-value">${tipoConstrucao.nome}</span>
+            <span class="cc-info-value">${estrutura.nome}</span>
+          </div>
+          <div class="cc-info-item">
+            <span class="cc-info-label">Método</span>
+            <span class="cc-info-value">${metodo.nome}</span>
           </div>
           <div class="cc-info-item">
             <span class="cc-info-label">Padrão</span>
             <span class="cc-info-value">${padrao.nome}</span>
           </div>
-          <div class="cc-info-item">
-            <span class="cc-info-label">Custo base região</span>
-            <span class="cc-info-value">R$ ${formatNumber(regiao.custoM2)}/m²</span>
-          </div>
         </div>
       </div>
 
       <div class="cc-resultado-actions">
-        <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.exportar()">
+        <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.exportarExcel()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
             <polyline points="7 10 12 15 17 10"></polyline>
             <line x1="12" y1="15" x2="12" y2="3"></line>
           </svg>
-          Exportar Orçamento
+          Exportar Excel
+        </button>
+        <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.exportarTexto()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+          </svg>
+          Exportar Texto
         </button>
       </div>
     `;
   }
 
-  // Exportar orçamento
-  function exportar() {
-    const resultado = document.getElementById('cc-resultado');
-    if (!resultado) return;
+  function exportarExcel() {
+    if (!state.calculoAtual) {
+      calculate();
+    }
+    const c = state.calculoAtual;
+    const dataAtual = new Date().toLocaleDateString('pt-BR');
 
-    const texto = resultado.innerText;
-    const data = new Date().toLocaleDateString('pt-BR');
+    // Criar conteúdo CSV (que pode ser aberto no Excel)
+    let csv = '\uFEFF'; // BOM para UTF-8
+    csv += 'ORÇAMENTO DE CONSTRUÇÃO\n';
+    csv += `Data:;${dataAtual}\n`;
+    csv += `Site:;ricoaospoucos.com.br\n\n`;
 
-    const conteudo = `
-ORÇAMENTO DE CONSTRUÇÃO
-Gerado em: ${data}
-Rico aos Poucos - ricoaospoucos.com.br
+    csv += 'CONFIGURAÇÃO\n';
+    csv += `Região;${c.config.estado} - ${c.regiao.nome}\n`;
+    csv += `Tipo de Casa;${c.estrutura.nome}\n`;
+    csv += `Método Construtivo;${c.metodo.nome}\n`;
+    csv += `Padrão de Acabamento;${c.padrao.nome}\n`;
+    csv += `Área Total;${c.config.areaTotal} m²\n`;
+    csv += `Quartos;${c.config.numQuartos}\n`;
+    csv += `Suítes;${c.config.numSuites}\n`;
+    csv += `Banheiros extras;${c.config.numBanheiros}\n\n`;
 
-${texto}
+    csv += 'DETALHAMENTO DE CUSTOS\n';
+    csv += 'Item;Valor (R$)\n';
+    csv += `Materiais (estrutura);${formatNumber(c.custoMateriais)}\n`;
+    csv += `Mão de Obra;${formatNumber(c.custoMaoObra)}\n`;
+    csv += `Cômodos;${formatNumber(c.custoComodosExtra)}\n`;
+    csv += `SUBTOTAL CONSTRUÇÃO;${formatNumber(c.custoBase)}\n\n`;
 
----
-Este é um orçamento estimativo baseado em valores médios de mercado.
-Os valores reais podem variar conforme fornecedores e condições locais.
-    `.trim();
+    if (c.detalhesExtras.length > 0) {
+      csv += 'ITENS EXTRAS\n';
+      c.detalhesExtras.forEach(e => {
+        csv += `${e.nome};${formatNumber(e.valor)}\n`;
+      });
+      csv += `SUBTOTAL EXTRAS;${formatNumber(c.custoExtras)}\n\n`;
+    }
 
-    const blob = new Blob([conteudo], { type: 'text/plain;charset=utf-8' });
+    if (c.detalhesAdicionais.length > 0) {
+      csv += 'PROJETOS E TAXAS\n';
+      c.detalhesAdicionais.forEach(e => {
+        csv += `${e.nome};${formatNumber(e.valor)}\n`;
+      });
+      csv += `SUBTOTAL PROJETOS;${formatNumber(c.custoAdicionais)}\n\n`;
+    }
+
+    csv += 'RESUMO\n';
+    csv += `CUSTO TOTAL;${formatNumber(c.custoTotal)}\n`;
+    csv += `CUSTO POR M²;${formatNumber(c.custoM2Final)}\n\n`;
+
+    csv += 'OBSERVAÇÃO\n';
+    csv += 'Valores de referência sujeitos a variação conforme localidade e negociação.\n';
+
+    // Download
+    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = `orcamento-construcao-${Date.now()}.csv`;
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  }
+
+  function exportarTexto() {
+    if (!state.calculoAtual) {
+      calculate();
+    }
+    const c = state.calculoAtual;
+    const dataAtual = new Date().toLocaleDateString('pt-BR');
+
+    let texto = `
+═══════════════════════════════════════════════════════════
+                  ORÇAMENTO DE CONSTRUÇÃO
+═══════════════════════════════════════════════════════════
+Gerado em: ${dataAtual}
+Site: ricoaospoucos.com.br
+
+CONFIGURAÇÃO
+───────────────────────────────────────────────────────────
+Região: ${c.config.estado} - ${c.regiao.nome}
+Tipo de Casa: ${c.estrutura.nome}
+Método: ${c.metodo.nome}
+Padrão: ${c.padrao.nome}
+Área Total: ${c.config.areaTotal} m²
+Quartos: ${c.config.numQuartos} | Suítes: ${c.config.numSuites} | Banheiros: ${c.config.numBanheiros}
+
+DETALHAMENTO
+───────────────────────────────────────────────────────────
+Materiais (estrutura):     R$ ${formatNumber(c.custoMateriais).padStart(12)}
+Mão de Obra:               R$ ${formatNumber(c.custoMaoObra).padStart(12)}
+Cômodos:                   R$ ${formatNumber(c.custoComodosExtra).padStart(12)}
+                           ─────────────────
+SUBTOTAL CONSTRUÇÃO:       R$ ${formatNumber(c.custoBase).padStart(12)}
+`;
+
+    if (c.detalhesExtras.length > 0) {
+      texto += `
+ITENS EXTRAS
+───────────────────────────────────────────────────────────`;
+      c.detalhesExtras.forEach(e => {
+        texto += `\n${e.nome.padEnd(30)} R$ ${formatNumber(e.valor).padStart(12)}`;
+      });
+      texto += `\n                           ─────────────────
+SUBTOTAL EXTRAS:           R$ ${formatNumber(c.custoExtras).padStart(12)}`;
+    }
+
+    if (c.detalhesAdicionais.length > 0) {
+      texto += `
+
+PROJETOS E TAXAS
+───────────────────────────────────────────────────────────`;
+      c.detalhesAdicionais.forEach(e => {
+        texto += `\n${e.nome.padEnd(30)} R$ ${formatNumber(e.valor).padStart(12)}`;
+      });
+      texto += `\n                           ─────────────────
+SUBTOTAL PROJETOS:         R$ ${formatNumber(c.custoAdicionais).padStart(12)}`;
+    }
+
+    texto += `
+
+═══════════════════════════════════════════════════════════
+CUSTO TOTAL:               R$ ${formatNumber(c.custoTotal).padStart(12)}
+CUSTO POR M²:              R$ ${formatNumber(c.custoM2Final).padStart(12)}
+═══════════════════════════════════════════════════════════
+
+Valores de referência sujeitos a variação conforme localidade,
+período e negociação com fornecedores.
+    `;
+
+    const blob = new Blob([texto.trim()], { type: 'text/plain;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -1054,19 +1210,17 @@ Os valores reais podem variar conforme fornecedores e condições locais.
     URL.revokeObjectURL(url);
   }
 
-  // Utilitários
   function formatNumber(num) {
     return num.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   }
 
-  // API pública
   window.CustoConstrucao = {
     init,
     calculate,
-    exportar
+    exportarExcel,
+    exportarTexto
   };
 
-  // Auto-init quando DOM estiver pronto
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {

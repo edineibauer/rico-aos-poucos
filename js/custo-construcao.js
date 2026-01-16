@@ -922,7 +922,7 @@
 
     let areaEncontrada = false;
     for (const pattern of areaTotalPatterns) {
-      const match = texto.match(pattern);
+      const match = textoLower.match(pattern);
       if (match) {
         // Converter vírgula para ponto e parsear como float, depois arredondar
         const areaStr = match[1].replace(',', '.');
@@ -942,12 +942,12 @@
       let match;
       const areasEncontradas = [];
 
-      while ((match = areaRegex.exec(texto)) !== null) {
+      while ((match = areaRegex.exec(textoLower)) !== null) {
         const areaStr = match[1].replace(',', '.');
         const area = Math.round(parseFloat(areaStr));
         if (area >= 20 && area <= 5000) {
           // Verificar se NÃO está associado a um cômodo específico
-          if (!isAreaDeComodo(texto, match.index)) {
+          if (!isAreaDeComodo(textoLower, match.index)) {
             areasEncontradas.push(area);
           }
         }
@@ -1115,6 +1115,18 @@
 
         resultado.encontrados.push(`Região: ${descricao}`);
         estadoEncontrado = true;
+
+        // Detectar bairro/localização específica usando DadosMercadoImoveis
+        if (typeof DadosMercadoImoveis !== 'undefined' && cidadeInfo.cidade) {
+          const bairroDetectado = DadosMercadoImoveis.detectarBairro(texto, cidadeInfo.cidade);
+          if (bairroDetectado) {
+            resultado.config.bairro = bairroDetectado;
+            const descBairro = DadosMercadoImoveis.getDescricaoLocalizacao(cidadeInfo.cidade, bairroDetectado);
+            if (descBairro && bairroDetectado !== 'centro') {
+              resultado.encontrados.push(`Localização: ${descBairro}`);
+            }
+          }
+        }
 
         // Determinar tipo de localização para cálculo do terreno
         if (cidadeInfo.nobre) {
@@ -1381,14 +1393,16 @@
       }
 
       // Se não foi especificado e é apartamento, definir baseado no tamanho
+      // Apartamentos pequenos (<60m²) geralmente têm vaga aberta/descoberta
+      // Apartamentos maiores podem ter garagem fechada/box
       if (!tipoExplicito && resultado.config.tipoEstrutura === 'apartamento') {
         const areaApto = resultado.config.areaTotal || 50;
-        tipoGaragem = areaApto < 60 ? 'coberta' : 'fechada';
+        tipoGaragem = areaApto < 60 ? 'aberta' : 'fechada';
       }
 
       resultado.extras.garagemTipo = tipoGaragem;
 
-      const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : 'coberta';
+      const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : (tipoGaragem === 'aberta' ? 'aberta' : 'coberta');
       resultado.encontrados.push(`Extra: Garagem (${qtdCarros} carro${qtdCarros > 1 ? 's' : ''}, ${tipoLabel})`);
     }
 
@@ -1557,6 +1571,7 @@
       const el = document.getElementById('cc-tipo-estrutura');
       if (el) el.value = config.tipoEstrutura;
       updateTipoInfo();
+      updateFormForTipo(); // Aplicar restrições de extras para apartamentos
     }
     if (config.tipoConstrucao) {
       state.config.tipoConstrucao = config.tipoConstrucao;
@@ -1578,6 +1593,13 @@
       state.config.areaTerreno = config.areaTerreno;
       const el = document.getElementById('cc-area-terreno');
       if (el) el.value = config.areaTerreno;
+    }
+    // Aplicar cidade e bairro detectados
+    if (config.cidadeInfo) {
+      state.config.cidadeInfo = config.cidadeInfo;
+    }
+    if (config.bairro) {
+      state.config.bairro = config.bairro;
     }
 
     // Aplicar extras
@@ -1766,7 +1788,7 @@
     const configHandlers = {
       'cc-estado': v => state.config.estado = v,
       'cc-estado-conservacao': v => { state.config.estadoConservacao = v; updateConservacaoInfo(); },
-      'cc-tipo-estrutura': v => { state.config.tipoEstrutura = v; updateTipoInfo(); },
+      'cc-tipo-estrutura': v => { state.config.tipoEstrutura = v; updateTipoInfo(); updateFormForTipo(); },
       'cc-tipo-construcao': v => { state.config.tipoConstrucao = v; updateTipoInfo(); },
       'cc-padrao': v => state.config.padrao = v,
       'cc-area': v => state.config.areaTotal = parseFloat(v) || 100,
@@ -1879,17 +1901,23 @@
     // Custo base
     const custoBaseM2 = data.custoBaseM2.materiais + data.custoBaseM2.maoDeObra;
 
-    // Fator de ajuste regional (se cidade detectada e dados de mercado disponíveis)
-    let fatorCidade = 1.0;
+    // Fator de ajuste regional + bairro (se cidade detectada e dados de mercado disponíveis)
+    let fatorLocalizacao = 1.0;
     let cidadeDetectada = null;
+    let bairroDetectado = state.config.bairro || null;
     if (state.config.cidadeInfo && state.config.cidadeInfo.cidade) {
       cidadeDetectada = state.config.cidadeInfo.cidade;
-      if (typeof DadosMercadoImoveis !== 'undefined' && DadosMercadoImoveis.getFatorAjuste) {
-        fatorCidade = DadosMercadoImoveis.getFatorAjuste(cidadeDetectada, state.config.tipoEstrutura);
+      if (typeof DadosMercadoImoveis !== 'undefined') {
+        // Usar fator completo com bairro se disponível
+        if (DadosMercadoImoveis.getFatorAjusteCompleto && bairroDetectado) {
+          fatorLocalizacao = DadosMercadoImoveis.getFatorAjusteCompleto(cidadeDetectada, state.config.tipoEstrutura, bairroDetectado);
+        } else if (DadosMercadoImoveis.getFatorAjuste) {
+          fatorLocalizacao = DadosMercadoImoveis.getFatorAjuste(cidadeDetectada, state.config.tipoEstrutura);
+        }
       }
     }
 
-    let custoM2Ajustado = custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator * fatorCidade;
+    let custoM2Ajustado = custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator * fatorLocalizacao;
 
     const proporcaoMateriais = data.custoBaseM2.materiais / custoBaseM2;
     const proporcaoMaoObra = data.custoBaseM2.maoDeObra / custoBaseM2;
@@ -2270,6 +2298,18 @@
             <span class="cc-info-label">Região</span>
             <span class="cc-info-value">${state.config.estado} - ${regiao.nome}</span>
           </div>
+          ${cidadeDetectada ? `
+          <div class="cc-info-item">
+            <span class="cc-info-label">Cidade</span>
+            <span class="cc-info-value">${cidadeDetectada}${bairroDetectado && typeof DadosMercadoImoveis !== 'undefined' ? ' - ' + (DadosMercadoImoveis.getDescricaoLocalizacao(cidadeDetectada, bairroDetectado) || bairroDetectado).split(' - ')[1] || '' : ''}</span>
+          </div>
+          ` : ''}
+          ${fatorLocalizacao !== 1.0 ? `
+          <div class="cc-info-item">
+            <span class="cc-info-label">Fator Localização</span>
+            <span class="cc-info-value">${fatorLocalizacao > 1 ? '+' : ''}${((fatorLocalizacao - 1) * 100).toFixed(0)}%</span>
+          </div>
+          ` : ''}
           <div class="cc-info-item">
             <span class="cc-info-label">Situação</span>
             <span class="cc-info-value">${tipoObra}</span>

@@ -480,6 +480,165 @@ const DadosMercadoImoveis = {
 
     const categoria = tipoMap[tipo] || 'casa';
     return fatores[categoria] || 1.0;
+  },
+
+  // Fatores de ajuste por bairro/localização específica
+  // Estes fatores são multiplicadores sobre o fator regional
+  fatoresBairro: {
+    'torres': {
+      // Praia nobre - Praia Grande, Prainha, Cal (frente mar)
+      'praiaNobre': {
+        apartamento: 1.45,
+        casa: 1.35,
+        terreno: 1.80,
+        keywords: ['praia grande', 'prainha', 'cal', 'beira mar', 'beira-mar', 'beiramar', 'frente mar', 'frente pro mar', 'vista mar', 'pe na areia', 'pé na areia', 'primeira quadra']
+      },
+      // Centro - área comercial e residencial consolidada
+      'centro': {
+        apartamento: 1.15,
+        casa: 1.10,
+        terreno: 1.30,
+        keywords: ['centro', 'av principal', 'avenida principal', 'comercial']
+      },
+      // Outros bairros - residenciais mais afastados
+      'outros': {
+        apartamento: 0.85,
+        casa: 0.80,
+        terreno: 0.70,
+        keywords: ['interior', 'afastado', 'rural', 'campo']
+      }
+    },
+    'arroio-do-sal': {
+      'beiramar': {
+        apartamento: 1.50,
+        casa: 1.35,
+        terreno: 1.70,
+        keywords: ['beira mar', 'beira-mar', 'beiramar', 'frente mar', 'vista mar', 'primeira quadra']
+      },
+      'centro': {
+        apartamento: 1.00,
+        casa: 1.00,
+        terreno: 1.00,
+        keywords: ['centro']
+      },
+      'outros': {
+        apartamento: 0.75,
+        casa: 0.78,
+        terreno: 0.70,
+        keywords: ['interior', 'afastado']
+      }
+    },
+    'passo-de-torres': {
+      'beiramar': {
+        apartamento: 1.40,
+        casa: 1.30,
+        terreno: 1.50,
+        keywords: ['beira mar', 'beira-mar', 'beiramar', 'beira rio', 'frente rio', 'vista mar', 'rosa do mar']
+      },
+      'centro': {
+        apartamento: 1.00,
+        casa: 1.00,
+        terreno: 1.00,
+        keywords: ['centro']
+      },
+      'outros': {
+        apartamento: 0.80,
+        casa: 0.78,
+        terreno: 0.70,
+        keywords: ['interior', 'afastado']
+      }
+    }
+  },
+
+  // Detectar bairro/localização a partir de texto
+  detectarBairro: function(texto, cidade) {
+    if (!texto || !cidade) return null;
+
+    const textoLower = texto.toLowerCase()
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const cidadeNorm = cidade.toLowerCase().replace(/\s/g, '-')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    const bairros = this.fatoresBairro[cidadeNorm];
+    if (!bairros) return null;
+
+    // Procurar keywords em ordem de prioridade (mais específico primeiro)
+    const ordemPrioridade = ['praiaNobre', 'beiramar', 'centro', 'outros'];
+
+    for (const bairroKey of ordemPrioridade) {
+      const bairro = bairros[bairroKey];
+      if (bairro && bairro.keywords) {
+        for (const keyword of bairro.keywords) {
+          const keywordNorm = keyword.normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+          if (textoLower.includes(keywordNorm)) {
+            return bairroKey;
+          }
+        }
+      }
+    }
+
+    // Se não encontrou, assume centro como padrão
+    return 'centro';
+  },
+
+  // Obter fator de ajuste combinado (regional + bairro)
+  getFatorAjusteCompleto: function(cidade, tipo, bairro) {
+    const cidadeNorm = cidade?.toLowerCase().replace(/\s/g, '-')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    // Fator base regional
+    const fatorRegional = this.getFatorAjuste(cidade, tipo);
+
+    // Fator de bairro
+    const bairros = this.fatoresBairro[cidadeNorm];
+    if (!bairros || !bairro) return fatorRegional;
+
+    const dadosBairro = bairros[bairro];
+    if (!dadosBairro) return fatorRegional;
+
+    // Mapear tipo para categoria
+    const tipoMap = {
+      'apartamento': 'apartamento',
+      'terrea': 'casa',
+      'sobrado': 'casa',
+      'meia_agua': 'casa',
+      'geminada': 'casa',
+      'edicula': 'casa',
+      'triplex': 'casa',
+      'chacara': 'casa'
+    };
+
+    const categoria = tipoMap[tipo] || 'casa';
+    const fatorBairro = dadosBairro[categoria] || 1.0;
+
+    // Retorna o fator combinado (bairro já inclui a valorização relativa)
+    return fatorBairro;
+  },
+
+  // Obter descrição da localização detectada
+  getDescricaoLocalizacao: function(cidade, bairro) {
+    const cidadeNorm = cidade?.toLowerCase().replace(/\s/g, '-')
+      .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+    const descricoes = {
+      'torres': {
+        'praiaNobre': 'Torres - Praia Nobre (Praia Grande/Prainha)',
+        'centro': 'Torres - Centro',
+        'outros': 'Torres - Bairros Residenciais'
+      },
+      'arroio-do-sal': {
+        'beiramar': 'Arroio do Sal - Beira-mar',
+        'centro': 'Arroio do Sal - Centro',
+        'outros': 'Arroio do Sal - Interior'
+      },
+      'passo-de-torres': {
+        'beiramar': 'Passo de Torres - Beira-mar/Rio',
+        'centro': 'Passo de Torres - Centro',
+        'outros': 'Passo de Torres - Interior'
+      }
+    };
+
+    return descricoes[cidadeNorm]?.[bairro] || `${cidade} - ${bairro}`;
   }
 };
 

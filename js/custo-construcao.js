@@ -78,61 +78,84 @@
 
     container.innerHTML = `
       <div class="cc-calculator">
-        <!-- Descrição Inteligente -->
-        <section class="cc-section cc-section-descricao">
-          <div class="cc-descricao-header">
-            <h2 class="cc-section-title">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+        <!-- Cabeçalho com Resumo do Imóvel -->
+        <header class="cc-header-resumo" id="cc-header-resumo">
+          <div class="cc-header-info">
+            <div class="cc-header-titulo">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
               </svg>
-              Descreva o Imóvel
-            </h2>
-            <div class="cc-valor-rapido" id="cc-valor-rapido">
-              <span class="cc-valor-label">Valor Estimado</span>
-              <span class="cc-valor-numero" id="cc-valor-topo">R$ 0</span>
+              <span id="cc-header-tipo">Casa Térrea</span>
+            </div>
+            <div class="cc-header-detalhes">
+              <span id="cc-header-area">100m²</span>
+              <span class="cc-header-sep">•</span>
+              <span id="cc-header-quartos">3 quartos</span>
+              <span class="cc-header-sep">•</span>
+              <span id="cc-header-regiao">SP</span>
             </div>
           </div>
+          <div class="cc-header-valor">
+            <span class="cc-header-valor-label">Valor Estimado</span>
+            <span class="cc-header-valor-numero" id="cc-valor-topo">R$ 0</span>
+            <span class="cc-header-valor-m2" id="cc-valor-m2">R$ 0/m²</span>
+          </div>
+        </header>
 
-          <div class="cc-descricao-content">
+        <!-- Descrição Inteligente -->
+        <section class="cc-section cc-section-descricao">
+          <h2 class="cc-section-title">
+            <span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+              Descrição Rápida
+            </span>
+            <button class="cc-btn-toggle" data-target="descricao-content">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
+          </h2>
+
+          <div class="cc-section-content" id="descricao-content">
+            <p class="cc-hint">Descreva o imóvel de forma livre e o sistema identificará automaticamente as características.</p>
             <textarea
               id="cc-descricao-texto"
               class="cc-textarea"
-              placeholder="Descreva o imóvel de forma livre. Exemplo:&#10;&#10;Casa térrea de 120m² em São Paulo, com 3 quartos sendo 1 suíte, 2 banheiros, área de serviço. Imóvel em bom estado de conservação, padrão médio de acabamento, construção em alvenaria. Possui piscina e churrasqueira."
-              rows="4"
+              placeholder="Ex: Apartamento de 85m² em São Paulo, 2 quartos sendo 1 suíte, 2 banheiros, bom estado, padrão médio..."
+              rows="3"
             ></textarea>
 
             <div class="cc-descricao-actions">
               <button class="cc-btn cc-btn-aplicar" id="cc-btn-aplicar">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                   <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
                   <polyline points="22 4 12 14.01 9 11.01"/>
                 </svg>
-                Aplicar Configuração
+                Aplicar
               </button>
               <button class="cc-btn cc-btn-limpar" id="cc-btn-limpar">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
-                </svg>
                 Limpar
               </button>
             </div>
 
             <div class="cc-descricao-feedback" id="cc-descricao-feedback" style="display: none;"></div>
-          </div>
 
-          <div class="cc-descricao-dicas">
-            <details>
-              <summary>Dicas de descrição</summary>
-              <ul>
-                <li><strong>Área:</strong> "120m²", "120 metros quadrados", "casa de 120m"</li>
-                <li><strong>Quartos:</strong> "3 quartos", "2 quartos sendo 1 suíte", "4 dormitórios"</li>
-                <li><strong>Banheiros:</strong> "2 banheiros", "3 wc", "lavabo"</li>
-                <li><strong>Localização:</strong> "em São Paulo", "SP", "Rio de Janeiro", "MG"</li>
-                <li><strong>Estado:</strong> "nova", "bom estado", "precisa de reforma", "só estrutura"</li>
-                <li><strong>Tipo:</strong> "térrea", "sobrado", "2 andares", "geminada"</li>
-                <li><strong>Padrão:</strong> "popular", "médio", "alto padrão", "luxo"</li>
-                <li><strong>Extras:</strong> "piscina", "churrasqueira", "garagem", "energia solar"</li>
-              </ul>
+            <details class="cc-dicas-details">
+              <summary>Exemplos de descrição</summary>
+              <div class="cc-dicas-grid">
+                <span>120m²</span>
+                <span>3 quartos</span>
+                <span>1 suíte</span>
+                <span>apartamento</span>
+                <span>chácara</span>
+                <span>sobrado</span>
+                <span>bom estado</span>
+                <span>alto padrão</span>
+                <span>piscina</span>
+              </div>
             </details>
           </div>
         </section>
@@ -885,7 +908,9 @@
       'terrea': ['terrea', 'terreo', 'casa terrea', 'um andar', '1 andar', 'unico piso'],
       'sobrado': ['sobrado', 'dois andares', '2 andares', 'duplex', 'dois pisos', '2 pisos'],
       'meia_agua': ['meia agua', 'meia-agua', 'kit', 'kitnet', 'conjugado', 'simples'],
-      'geminada': ['geminada', 'casa geminada', 'conjugada com outra']
+      'geminada': ['geminada', 'casa geminada', 'conjugada com outra'],
+      'apartamento': ['apartamento', 'apto', 'ap', 'flat', 'cobertura', 'loft'],
+      'chacara': ['chacara', 'sitio', 'fazenda', 'rural', 'campo', 'casa de campo']
     };
     for (const [key, termos] of Object.entries(estruturaMap)) {
       for (const termo of termos) {
@@ -1059,6 +1084,99 @@
     calculate();
   }
 
+  // Resetar formulário para valores padrão
+  function resetFormulario() {
+    // Reset config
+    state.config = {
+      estado: 'SP',
+      tipoEstrutura: 'terrea',
+      tipoConstrucao: 'alvenaria',
+      estadoConservacao: 'nova',
+      padrao: 'medio',
+      areaTotal: 100,
+      numQuartos: 2,
+      numSuites: 1,
+      numBanheiros: 2,
+      temSala: true,
+      temCozinha: true,
+      temAreaServico: true,
+      temVaranda: false
+    };
+
+    // Reset materiais
+    state.materiais = {
+      janelas: 'aluminio_simples',
+      portas: 'madeira_semi_oca',
+      pisos: 'ceramica_classe_b',
+      telhado: 'ceramica_simples',
+      forro: 'pvc_simples'
+    };
+
+    // Reset mão de obra (all checked)
+    Object.keys(data.maoDeObra).forEach(k => {
+      state.maoDeObra[k] = true;
+    });
+
+    // Reset custos adicionais (all checked)
+    Object.keys(data.custosAdicionais).forEach(k => {
+      const key = k.replace(/_([a-z])/g, (m, l) => l.toUpperCase());
+      state.custosAdicionais[key] = true;
+    });
+
+    // Reset form fields
+    const fieldMappings = {
+      'cc-estado': state.config.estado,
+      'cc-estado-conservacao': state.config.estadoConservacao,
+      'cc-tipo-estrutura': state.config.tipoEstrutura,
+      'cc-tipo-construcao': state.config.tipoConstrucao,
+      'cc-padrao': state.config.padrao,
+      'cc-area': state.config.areaTotal,
+      'cc-quartos': state.config.numQuartos,
+      'cc-suites': state.config.numSuites,
+      'cc-banheiros': state.config.numBanheiros
+    };
+
+    Object.entries(fieldMappings).forEach(([id, value]) => {
+      const el = document.getElementById(id);
+      if (el) el.value = value;
+    });
+
+    // Reset checkbox área de serviço
+    const areaServicoEl = document.getElementById('cc-area-servico');
+    if (areaServicoEl) areaServicoEl.checked = state.config.temAreaServico;
+
+    // Reset mão de obra checkboxes
+    document.querySelectorAll('[data-profissional]').forEach(checkbox => {
+      checkbox.checked = true;
+    });
+
+    // Reset custos adicionais checkboxes
+    document.querySelectorAll('[data-custo]').forEach(checkbox => {
+      checkbox.checked = true;
+    });
+
+    // Reset all extras
+    const extras = ['piscina', 'churrasqueira', 'garagem', 'piso-externo', 'muro', 'portao', 'edicula', 'solar', 'aquecedor', 'automacao', 'seguranca'];
+    extras.forEach(name => {
+      const checkbox = document.getElementById(`cc-extra-${name}`);
+      const options = document.getElementById(`cc-${name}-options`);
+      if (checkbox) {
+        checkbox.checked = false;
+        if (options) options.style.display = 'none';
+      }
+    });
+
+    // Reset segurança checkboxes
+    document.querySelectorAll('[data-seguranca]').forEach(checkbox => {
+      checkbox.checked = false;
+    });
+
+    // Update UI
+    updateTipoInfo();
+    updateComodosResumo();
+    updateConservacaoInfo();
+  }
+
   // Mostrar feedback da análise
   function mostrarFeedback(encontrados) {
     const feedbackEl = document.getElementById('cc-descricao-feedback');
@@ -1104,6 +1222,8 @@
           mostrarFeedback([]);
           return;
         }
+        // Resetar formulário antes de aplicar nova configuração
+        resetFormulario();
         const resultado = parseDescricao(texto);
         aplicarConfiguracao(resultado.config, resultado.extras);
         mostrarFeedback(resultado.encontrados);
@@ -1471,10 +1591,32 @@
       isReforma
     };
 
-    // Atualizar valor no topo
+    // Atualizar cabeçalho com resumo
     const valorTopoEl = document.getElementById('cc-valor-topo');
+    const valorM2El = document.getElementById('cc-valor-m2');
+    const headerTipoEl = document.getElementById('cc-header-tipo');
+    const headerAreaEl = document.getElementById('cc-header-area');
+    const headerQuartosEl = document.getElementById('cc-header-quartos');
+    const headerRegiaoEl = document.getElementById('cc-header-regiao');
+
     if (valorTopoEl) {
       valorTopoEl.textContent = `R$ ${formatNumber(custoTotal)}`;
+    }
+    if (valorM2El) {
+      valorM2El.textContent = `R$ ${formatNumber(custoM2Final)}/m²`;
+    }
+    if (headerTipoEl) {
+      headerTipoEl.textContent = estrutura.nome;
+    }
+    if (headerAreaEl) {
+      headerAreaEl.textContent = `${area}m²`;
+    }
+    if (headerQuartosEl) {
+      const totalQuartos = state.config.numQuartos + state.config.numSuites;
+      headerQuartosEl.textContent = `${totalQuartos} quarto${totalQuartos !== 1 ? 's' : ''}`;
+    }
+    if (headerRegiaoEl) {
+      headerRegiaoEl.textContent = state.config.estado;
     }
 
     // Render

@@ -80,6 +80,18 @@ const CustoConstrucaoData = {
       descricao: 'Casa com três andares',
       fator: 1.30,
       observacao: 'Estrutura mais robusta, elevador opcional'
+    },
+    'apartamento': {
+      nome: 'Apartamento',
+      descricao: 'Unidade em edifício residencial',
+      fator: 1.05,
+      observacao: 'Custo considera apenas a unidade, sem áreas comuns'
+    },
+    'chacara': {
+      nome: 'Chácara/Sítio',
+      descricao: 'Casa em área rural ou de lazer',
+      fator: 0.95,
+      observacao: 'Geralmente mais simples, mas pode incluir área de lazer'
     }
   },
 

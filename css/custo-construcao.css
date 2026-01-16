@@ -696,6 +696,34 @@
   line-height: 1.5;
 }
 
+/* Aviso de tipo (apartamento, etc.) */
+.cc-aviso-tipo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  background: var(--accent-blue-bg, #e3f2fd);
+  border: 1px solid var(--accent-blue, #2196f3);
+  border-radius: 8px;
+  margin-bottom: 15px;
+  font-size: 0.85rem;
+  color: var(--accent-blue-dark, #1565c0);
+}
+
+.cc-aviso-tipo svg {
+  flex-shrink: 0;
+  color: var(--accent-blue, #2196f3);
+}
+
+[data-theme="dark"] .cc-aviso-tipo {
+  background: rgba(33, 150, 243, 0.1);
+  color: #90caf9;
+}
+
+[data-theme="dark"] .cc-aviso-tipo svg {
+  color: #90caf9;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .cc-calculator {

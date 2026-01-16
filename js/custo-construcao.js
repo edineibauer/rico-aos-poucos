@@ -700,6 +700,97 @@
         </div>
       </div>
     `;
+
+    // Atualizar visibilidade de seções baseado no tipo de estrutura
+    updateFormForTipo();
+  }
+
+  // Atualiza visibilidade de campos e seções baseado no tipo de imóvel
+  function updateFormForTipo() {
+    const isApartamento = state.config.tipoEstrutura === 'apartamento';
+
+    // Extras que NÃO se aplicam a apartamentos
+    const extrasNaoAplicaveis = [
+      'cc-extra-piscina',
+      'cc-extra-muro',
+      'cc-extra-portao',
+      'cc-extra-edicula',
+      'cc-extra-garagem',
+      'cc-extra-piso-externo'
+    ];
+
+    // Seções/campos que NÃO se aplicam a apartamentos
+    const camposNaoAplicaveis = [
+      'cc-terreno-section',
+      'cc-forro-section'
+    ];
+
+    // Mostrar/ocultar extras não aplicáveis
+    extrasNaoAplicaveis.forEach(id => {
+      const el = document.getElementById(id);
+      if (el) {
+        const itemEl = el.closest('.cc-extra-item');
+        if (itemEl) {
+          itemEl.style.display = isApartamento ? 'none' : '';
+          // Desmarcar se estiver oculto
+          if (isApartamento && el.checked) {
+            el.checked = false;
+            el.dispatchEvent(new Event('change', { bubbles: true }));
+          }
+        }
+      }
+    });
+
+    // Mostrar/ocultar seções de materiais não aplicáveis
+    // Para apartamento, ocultar telhado/forro externo, usar forro interno como padrão
+    const forroSelect = document.getElementById('cc-material-forros');
+    if (forroSelect) {
+      const forroContainer = forroSelect.closest('.cc-field');
+      if (forroContainer) {
+        // Manter visível mas indicar que é forro interno
+        const label = forroContainer.querySelector('label');
+        if (label) {
+          label.textContent = isApartamento ? 'Forro Interno' : 'Forro';
+        }
+      }
+    }
+
+    // Para apartamento, ajustar label de telhado
+    const telhadoSelect = document.getElementById('cc-material-telhados');
+    if (telhadoSelect) {
+      const telhadoContainer = telhadoSelect.closest('.cc-field');
+      if (telhadoContainer) {
+        telhadoContainer.style.display = isApartamento ? 'none' : '';
+      }
+    }
+
+    // Mostrar aviso específico para apartamentos
+    let avisoApto = document.getElementById('cc-aviso-apartamento');
+    if (isApartamento) {
+      if (!avisoApto) {
+        const extrasSection = document.querySelector('.cc-section-extras');
+        if (extrasSection) {
+          avisoApto = document.createElement('div');
+          avisoApto.id = 'cc-aviso-apartamento';
+          avisoApto.className = 'cc-aviso-tipo';
+          avisoApto.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Apartamento selecionado: itens como terreno, muro, portão e edícula não se aplicam e foram ocultados.</span>
+          `;
+          extrasSection.insertBefore(avisoApto, extrasSection.querySelector('.cc-section-content'));
+        }
+      }
+      if (avisoApto) avisoApto.style.display = 'flex';
+    } else {
+      if (avisoApto) avisoApto.style.display = 'none';
+    }
+
+    // Recalcular quando muda o tipo
+    calcularCusto();
   }
 
   function updateComodosResumo() {
@@ -1785,7 +1876,18 @@
 
     // Custo base
     const custoBaseM2 = data.custoBaseM2.materiais + data.custoBaseM2.maoDeObra;
-    let custoM2Ajustado = custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator;
+
+    // Fator de ajuste regional (se cidade detectada e dados de mercado disponíveis)
+    let fatorCidade = 1.0;
+    let cidadeDetectada = null;
+    if (state.config.cidadeInfo && state.config.cidadeInfo.cidade) {
+      cidadeDetectada = state.config.cidadeInfo.cidade;
+      if (typeof DadosMercadoImoveis !== 'undefined' && DadosMercadoImoveis.getFatorAjuste) {
+        fatorCidade = DadosMercadoImoveis.getFatorAjuste(cidadeDetectada, state.config.tipoEstrutura);
+      }
+    }
+
+    let custoM2Ajustado = custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator * fatorCidade;
 
     const proporcaoMateriais = data.custoBaseM2.materiais / custoBaseM2;
     const proporcaoMaoObra = data.custoBaseM2.maoDeObra / custoBaseM2;
@@ -1986,10 +2088,13 @@
       }
     });
 
-    // VALOR DO TERRENO (se informado)
+    // VALOR DO TERRENO (se informado e NÃO for apartamento)
+    // Apartamentos não têm terreno próprio - o valor do terreno já está embutido no preço/m²
     let custoTerreno = 0;
     const areaTerreno = state.config.areaTerreno || 0;
-    if (areaTerreno > 0) {
+    const isApartamento = state.config.tipoEstrutura === 'apartamento';
+
+    if (areaTerreno > 0 && !isApartamento) {
       // Usar tipo de localização detectado pelo parser, ou inferir do tipo de estrutura
       let tipoLocalizacao = state.config.tipoLocalizacao || 'urbano';
 
@@ -1997,8 +2102,6 @@
       if (!state.config.tipoLocalizacao) {
         if (state.config.tipoEstrutura === 'chacara') {
           tipoLocalizacao = 'rural';
-        } else if (state.config.tipoEstrutura === 'apartamento') {
-          tipoLocalizacao = 'urbano';
         }
       }
 

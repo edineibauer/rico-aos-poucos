@@ -84,8 +84,9 @@ const CustoConstrucaoData = {
     'apartamento': {
       nome: 'Apartamento',
       descricao: 'Unidade em edifício residencial',
-      fator: 1.70,
-      observacao: 'Valor por m² maior devido à localização urbana e infraestrutura'
+      fator: 3.50,
+      observacao: 'Valor de mercado médio - inclui fração do terreno, área comum e infraestrutura',
+      isValorMercado: true
     },
     'chacara': {
       nome: 'Chácara/Sítio',

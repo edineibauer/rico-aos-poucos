@@ -49,20 +49,20 @@ const DadosMercadoImoveis = {
       }
     },
 
-    // PASSO DE TORRES - SC (mais acessível)
+    // PASSO DE TORRES - SC (mais acessível, preço base da região)
     'passo-de-torres': {
       apartamento: {
         beiramar: { min: 5500, medio: 7000, max: 9000 },
-        centro: { min: 4000, medio: 5500, max: 7000 },
-        outros: { min: 3500, medio: 4500, max: 5500 }
+        centro: { min: 4500, medio: 5500, max: 7000 },
+        outros: { min: 4000, medio: 5000, max: 6300 } // ~R$230-300k para 48m²
       },
       casa: {
         beiramar: { min: 4500, medio: 5500, max: 7000 },
         centro: { min: 3500, medio: 4500, max: 5500 },
-        outros: { min: 2800, medio: 3521, max: 4500 }
+        outros: { min: 2800, medio: 3500, max: 4500 }
       },
       sobrado: {
-        todos: { min: 4500, medio: 5091, max: 6000 }
+        todos: { min: 4500, medio: 5000, max: 6000 }
       },
       terreno: {
         beiramar: { min: 400, medio: 600, max: 900 },

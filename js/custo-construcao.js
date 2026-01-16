@@ -226,6 +226,38 @@
           </div>
 
           <div class="cc-tipo-info" id="cc-tipo-info"></div>
+
+          <!-- Ajuste de Localização (aparece quando cidade detectada) -->
+          <div class="cc-localizacao-ajuste" id="cc-localizacao-ajuste" style="display: none; margin-top: 16px;">
+            <div class="cc-field">
+              <label>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Ajuste de Localização
+              </label>
+              <div class="cc-localizacao-info" id="cc-localizacao-info" style="font-size: 12px; color: var(--cc-text-secondary); margin-bottom: 8px;"></div>
+              <select id="cc-ajuste-localizacao">
+                <option value="0">Padrão / Afastado do centro (0%)</option>
+                <option value="10">Bairro residencial (+10%)</option>
+                <option value="25">Centro da cidade (+25%)</option>
+                <option value="50">Região valorizada (+50%)</option>
+                <option value="80">Próximo à praia/mar (+80%)</option>
+                <option value="120">Beira-mar / Vista mar (+120%)</option>
+                <option value="150">Frente ao mar / Premium (+150%)</option>
+                <option value="-10">Região periférica (-10%)</option>
+                <option value="-20">Afastado / Rural (-20%)</option>
+                <option value="custom">Personalizado...</option>
+              </select>
+              <div id="cc-ajuste-custom" style="display: none; margin-top: 8px;">
+                <div class="cc-input-group">
+                  <input type="number" id="cc-ajuste-custom-valor" value="0" min="-50" max="200" step="5">
+                  <span>%</span>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <!-- Cômodos -->
@@ -792,6 +824,60 @@
     // Recalcular quando muda o tipo (só se a função já estiver definida)
     if (typeof calcularCusto === 'function') {
       calcularCusto();
+    }
+  }
+
+  // Atualiza o campo de ajuste de localização baseado na cidade detectada
+  function updateLocalizacaoAjuste() {
+    const container = document.getElementById('cc-localizacao-ajuste');
+    const infoEl = document.getElementById('cc-localizacao-info');
+    const selectEl = document.getElementById('cc-ajuste-localizacao');
+
+    if (!container) return;
+
+    const cidadeInfo = state.config.cidadeInfo;
+    const bairro = state.config.bairro;
+
+    // Mostrar o campo apenas se temos cidade detectada
+    if (cidadeInfo && cidadeInfo.cidade) {
+      container.style.display = 'block';
+
+      // Atualizar informação da localização
+      if (infoEl) {
+        let infoText = `Cidade detectada: <strong>${cidadeInfo.cidade}</strong>`;
+        if (bairro && typeof DadosMercadoImoveis !== 'undefined') {
+          const descBairro = DadosMercadoImoveis.getDescricaoLocalizacao
+            ? DadosMercadoImoveis.getDescricaoLocalizacao(cidadeInfo.cidade, bairro)
+            : bairro;
+          if (descBairro) {
+            infoText += ` (${descBairro.split(' - ')[1] || bairro})`;
+          }
+        }
+        infoEl.innerHTML = infoText;
+      }
+
+      // Se o bairro foi detectado, selecionar o ajuste apropriado
+      if (selectEl && state.config.ajusteLocalizacao === undefined) {
+        // Mapear bairro para ajuste sugerido
+        const ajustePorBairro = {
+          'praiaNobre': 120,
+          'beiramar': 80,
+          'centro': 25,
+          'outros': 0
+        };
+        const ajusteSugerido = ajustePorBairro[bairro] || 0;
+
+        // Encontrar a opção mais próxima
+        const opcoes = Array.from(selectEl.options);
+        const opcaoMaisProxima = opcoes.find(o => parseInt(o.value) === ajusteSugerido);
+        if (opcaoMaisProxima) {
+          selectEl.value = ajusteSugerido.toString();
+          state.config.ajusteLocalizacao = ajusteSugerido;
+        }
+      }
+    } else {
+      container.style.display = 'none';
+      state.config.ajusteLocalizacao = undefined;
     }
   }
 
@@ -1601,6 +1687,8 @@
     if (config.bairro) {
       state.config.bairro = config.bairro;
     }
+    // Atualizar campo de ajuste de localização
+    updateLocalizacaoAjuste();
 
     // Aplicar extras
     if (extras) {
@@ -1635,8 +1723,19 @@
       temSala: true,
       temCozinha: true,
       temAreaServico: false,
-      temVaranda: false
+      temVaranda: false,
+      cidadeInfo: null,
+      bairro: null,
+      ajusteLocalizacao: undefined
     };
+
+    // Esconder o campo de ajuste de localização
+    const locAjuste = document.getElementById('cc-localizacao-ajuste');
+    if (locAjuste) locAjuste.style.display = 'none';
+    const ajusteSelect = document.getElementById('cc-ajuste-localizacao');
+    if (ajusteSelect) ajusteSelect.value = '0';
+    const ajusteCustom = document.getElementById('cc-ajuste-custom');
+    if (ajusteCustom) ajusteCustom.style.display = 'none';
 
     // Reset materiais
     state.materiais = {
@@ -1812,6 +1911,32 @@
       calculate();
     });
 
+    // Ajuste de localização
+    const ajusteSelect = document.getElementById('cc-ajuste-localizacao');
+    const ajusteCustomDiv = document.getElementById('cc-ajuste-custom');
+    const ajusteCustomInput = document.getElementById('cc-ajuste-custom-valor');
+
+    if (ajusteSelect) {
+      ajusteSelect.addEventListener('change', function() {
+        if (this.value === 'custom') {
+          if (ajusteCustomDiv) ajusteCustomDiv.style.display = 'block';
+          const customVal = parseInt(ajusteCustomInput?.value) || 0;
+          state.config.ajusteLocalizacao = customVal;
+        } else {
+          if (ajusteCustomDiv) ajusteCustomDiv.style.display = 'none';
+          state.config.ajusteLocalizacao = parseInt(this.value) || 0;
+        }
+        calculate();
+      });
+    }
+
+    if (ajusteCustomInput) {
+      ajusteCustomInput.addEventListener('input', function() {
+        state.config.ajusteLocalizacao = parseInt(this.value) || 0;
+        calculate();
+      });
+    }
+
     // Material changes
     document.querySelectorAll('[id^="cc-material-"]').forEach(select => {
       select.addEventListener('change', function() {
@@ -1898,55 +2023,102 @@
     const fatorConservacao = conservacao ? conservacao.fator : 1.0;
     const isReforma = state.config.estadoConservacao !== 'nova';
 
+    // Detectar cidade e bairro
+    let cidadeDetectada = null;
+    let bairroDetectado = state.config.bairro || 'outros';
+    if (state.config.cidadeInfo && state.config.cidadeInfo.cidade) {
+      cidadeDetectada = state.config.cidadeInfo.cidade;
+    }
+
+    // Verificar se é apartamento e temos dados de mercado
+    const isApartamento = state.config.tipoEstrutura === 'apartamento';
+    const temDadosMercado = typeof DadosMercadoImoveis !== 'undefined' && cidadeDetectada;
+
+    // Obter ajuste de localização do usuário (se definido)
+    const ajusteLocalizacaoUsuario = state.config.ajusteLocalizacao;
+
+    // Para apartamentos com dados de mercado, usar preço/m² do mercado
+    let usarPrecoMercado = isApartamento && temDadosMercado;
+    let precoMercado = null;
+    let precoM2Base = 0;
+    let fatorLocalizacao = 1.0;
+    let descricaoLocalizacao = '';
+
+    if (usarPrecoMercado) {
+      precoMercado = DadosMercadoImoveis.getPrecoReferencia(cidadeDetectada, 'apartamento', bairroDetectado, area);
+      if (precoMercado) {
+        precoM2Base = precoMercado.precoM2Medio;
+        descricaoLocalizacao = DadosMercadoImoveis.getDescricaoLocalizacao
+          ? DadosMercadoImoveis.getDescricaoLocalizacao(cidadeDetectada, bairroDetectado)
+          : `${cidadeDetectada} - ${bairroDetectado}`;
+      } else {
+        usarPrecoMercado = false; // Fallback para cálculo tradicional
+      }
+    }
+
+    // Aplicar ajuste de localização do usuário se definido
+    if (ajusteLocalizacaoUsuario !== undefined && ajusteLocalizacaoUsuario !== null) {
+      fatorLocalizacao = 1 + (ajusteLocalizacaoUsuario / 100);
+    } else if (!usarPrecoMercado && temDadosMercado) {
+      // Para casas, usar o fator de ajuste regional
+      if (DadosMercadoImoveis.getFatorAjusteCompleto && bairroDetectado) {
+        fatorLocalizacao = DadosMercadoImoveis.getFatorAjusteCompleto(cidadeDetectada, state.config.tipoEstrutura, bairroDetectado);
+      } else if (DadosMercadoImoveis.getFatorAjuste) {
+        fatorLocalizacao = DadosMercadoImoveis.getFatorAjuste(cidadeDetectada, state.config.tipoEstrutura);
+      }
+    }
+
     // Custo base
     const custoBaseM2 = data.custoBaseM2.materiais + data.custoBaseM2.maoDeObra;
 
-    // Fator de ajuste regional + bairro (se cidade detectada e dados de mercado disponíveis)
-    let fatorLocalizacao = 1.0;
-    let cidadeDetectada = null;
-    let bairroDetectado = state.config.bairro || null;
-    if (state.config.cidadeInfo && state.config.cidadeInfo.cidade) {
-      cidadeDetectada = state.config.cidadeInfo.cidade;
-      if (typeof DadosMercadoImoveis !== 'undefined') {
-        // Usar fator completo com bairro se disponível
-        if (DadosMercadoImoveis.getFatorAjusteCompleto && bairroDetectado) {
-          fatorLocalizacao = DadosMercadoImoveis.getFatorAjusteCompleto(cidadeDetectada, state.config.tipoEstrutura, bairroDetectado);
-        } else if (DadosMercadoImoveis.getFatorAjuste) {
-          fatorLocalizacao = DadosMercadoImoveis.getFatorAjuste(cidadeDetectada, state.config.tipoEstrutura);
-        }
-      }
-    }
+    let custoM2Ajustado = usarPrecoMercado
+      ? precoM2Base * fatorLocalizacao
+      : custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator * fatorLocalizacao;
 
-    let custoM2Ajustado = custoBaseM2 * regiao.fator * estrutura.fator * metodo.fator * padrao.fator * fatorLocalizacao;
-
-    const proporcaoMateriais = data.custoBaseM2.materiais / custoBaseM2;
-    const proporcaoMaoObra = data.custoBaseM2.maoDeObra / custoBaseM2;
-
-    let custoMateriais = custoM2Ajustado * proporcaoMateriais * area * fatorConservacao;
-    let custoMaoObra = custoM2Ajustado * proporcaoMaoObra * area * fatorConservacao;
-
-    // Ajustar mão de obra com base nos profissionais desmarcados
-    let percentualMaoObraAtivo = 0;
-    Object.entries(state.maoDeObra).forEach(([key, ativo]) => {
-      if (ativo && data.maoDeObra[key]) {
-        percentualMaoObraAtivo += data.maoDeObra[key].percentualObra;
-      }
-    });
-    const fatorMaoObra = percentualMaoObraAtivo / 100;
-    custoMaoObra = custoMaoObra * fatorMaoObra;
-
-    // Custo adicional por cômodos (também ajustado pelo fator de conservação)
-    const custoComodos = data.custoPorComodo;
+    // Variáveis para detalhamento
+    let custoMateriais = 0;
+    let custoMaoObra = 0;
     let custoComodosExtra = 0;
-    custoComodosExtra += state.config.numQuartos * custoComodos.quarto.custoBase * padrao.fator * fatorConservacao;
-    custoComodosExtra += state.config.numSuites * custoComodos.suite.custoBase * padrao.fator * fatorConservacao;
-    custoComodosExtra += state.config.numBanheiros * custoComodos.banheiro.custoBase * padrao.fator * fatorConservacao;
-    if (state.config.temAreaServico) {
-      custoComodosExtra += custoComodos.areaServico.custoBase * padrao.fator * fatorConservacao;
-    }
+    let percentualMaoObraAtivo = 100;
+    let custoBase = 0;
 
-    // Custo base da construção
-    let custoBase = custoMateriais + custoMaoObra + custoComodosExtra;
+    if (usarPrecoMercado) {
+      // Para apartamentos com dados de mercado: usar preço/m² diretamente
+      custoBase = area * custoM2Ajustado * fatorConservacao;
+      // Não detalhamos materiais/mão de obra para apartamentos
+      custoMateriais = custoBase;
+      custoMaoObra = 0;
+    } else {
+      // Cálculo tradicional para casas/construções
+      const proporcaoMateriais = data.custoBaseM2.materiais / custoBaseM2;
+      const proporcaoMaoObra = data.custoBaseM2.maoDeObra / custoBaseM2;
+
+      custoMateriais = custoM2Ajustado * proporcaoMateriais * area * fatorConservacao;
+      custoMaoObra = custoM2Ajustado * proporcaoMaoObra * area * fatorConservacao;
+
+      // Ajustar mão de obra com base nos profissionais desmarcados
+      percentualMaoObraAtivo = 0;
+      Object.entries(state.maoDeObra).forEach(([key, ativo]) => {
+        if (ativo && data.maoDeObra[key]) {
+          percentualMaoObraAtivo += data.maoDeObra[key].percentualObra;
+        }
+      });
+      const fatorMaoObra = percentualMaoObraAtivo / 100;
+      custoMaoObra = custoMaoObra * fatorMaoObra;
+
+      // Custo adicional por cômodos (também ajustado pelo fator de conservação)
+      const custoComodos = data.custoPorComodo;
+      custoComodosExtra = 0;
+      custoComodosExtra += state.config.numQuartos * custoComodos.quarto.custoBase * padrao.fator * fatorConservacao;
+      custoComodosExtra += state.config.numSuites * custoComodos.suite.custoBase * padrao.fator * fatorConservacao;
+      custoComodosExtra += state.config.numBanheiros * custoComodos.banheiro.custoBase * padrao.fator * fatorConservacao;
+      if (state.config.temAreaServico) {
+        custoComodosExtra += custoComodos.areaServico.custoBase * padrao.fator * fatorConservacao;
+      }
+
+      // Custo base da construção
+      custoBase = custoMateriais + custoMaoObra + custoComodosExtra;
+    }
 
     // EXTRAS
     let custoExtras = 0;
@@ -2165,7 +2337,14 @@
       metodo,
       padrao,
       conservacao,
-      isReforma
+      isReforma,
+      usarPrecoMercado,
+      precoMercado,
+      precoM2Base,
+      fatorLocalizacao,
+      descricaoLocalizacao,
+      cidadeDetectada,
+      bairroDetectado
     };
 
     // Atualizar cabeçalho com resumo
@@ -2201,17 +2380,18 @@
     }
 
     // Render
-    const tipoObra = isReforma ? conservacao.nome : 'Construção Nova';
+    const tipoObra = isReforma ? conservacao.nome : (usarPrecoMercado ? 'Valor de Mercado' : 'Construção Nova');
+    const labelResultado = usarPrecoMercado ? 'Valor Estimado de Mercado' : (isReforma ? 'Valor Estimado do Imóvel' : 'Custo de Construção Nova');
 
     resultado.innerHTML = `
       <div class="cc-resultado-main">
         <div class="cc-resultado-total">
-          <span class="cc-resultado-label">${isReforma ? 'Valor Estimado do Imóvel' : 'Custo de Construção Nova'}</span>
+          <span class="cc-resultado-label">${labelResultado}</span>
           <span class="cc-resultado-valor">R$ ${formatNumber(custoTotal)}</span>
           <span class="cc-resultado-m2">R$ ${formatNumber(custoM2Final)}/m²</span>
         </div>
 
-        ${isReforma ? `
+        ${isReforma && !usarPrecoMercado ? `
           <div class="cc-resultado-reforma-info">
             <strong>${conservacao.nome}</strong> - ${conservacao.descricao}
             <br><small>Depreciação de ${conservacao.desconto}% sobre valor de construção nova</small>
@@ -2219,6 +2399,37 @@
         ` : ''}
 
         <div class="cc-resultado-breakdown">
+          ${usarPrecoMercado ? `
+          <!-- Cálculo baseado em valor de mercado (apartamentos) -->
+          <div class="cc-breakdown-group">
+            <div class="cc-breakdown-group-title">Valor de Mercado (${area}m²)</div>
+
+            <div class="cc-breakdown-row">
+              <span>Preço base/m² (${descricaoLocalizacao || cidadeDetectada || 'região'})</span>
+              <span>R$ ${formatNumber(precoM2Base)}/m²</span>
+            </div>
+            ${fatorLocalizacao !== 1.0 ? `
+            <div class="cc-breakdown-row">
+              <span>Ajuste de localização (${fatorLocalizacao > 1 ? '+' : ''}${((fatorLocalizacao - 1) * 100).toFixed(0)}%)</span>
+              <span>R$ ${formatNumber(precoM2Base * fatorLocalizacao)}/m²</span>
+            </div>
+            ` : ''}
+            ${fatorConservacao !== 1.0 ? `
+            <div class="cc-breakdown-row">
+              <span>Depreciação (${conservacao.nome}: ${conservacao.desconto}%)</span>
+              <span>-R$ ${formatNumber(area * precoM2Base * fatorLocalizacao * (1 - fatorConservacao))}</span>
+            </div>
+            ` : ''}
+            <div class="cc-breakdown-hint">
+              <small>* Baseado em preços de mercado da região. Ajuste a localização se necessário.</small>
+            </div>
+
+            <div class="cc-breakdown-subtotal">
+              <span>Valor do Apartamento (${area}m²)</span>
+              <span>R$ ${formatNumber(custoBase)}</span>
+            </div>
+          </div>
+          ` : `
           <!-- Composição do custo - seção agrupada -->
           <div class="cc-breakdown-group">
             <div class="cc-breakdown-group-title">Composição do Custo (${area}m²)</div>
@@ -2244,6 +2455,7 @@
               <span>R$ ${formatNumber(custoBase)}</span>
             </div>
           </div>
+          `}
 
           ${custoExtras > 0 ? `
             <div class="cc-breakdown-group">

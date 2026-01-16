@@ -2428,7 +2428,7 @@
   /* Dropup container */
   .comp2-dropup {
     position: fixed;
-    bottom: 60px;
+    bottom: 54px;
     left: 0;
     right: 0;
     background: var(--bg-secondary);
@@ -2521,7 +2521,7 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 60px;
+    bottom: 54px;
     background: rgba(0,0,0,0.5);
     z-index: 98;
     display: none;
@@ -2548,7 +2548,7 @@
   }
 
   .comp2-dropup {
-    bottom: 56px;
+    bottom: 54px;
     padding: 10px;
   }
 

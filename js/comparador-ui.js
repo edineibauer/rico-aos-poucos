@@ -381,6 +381,13 @@ const Comparador2 = {
         if (tabEl) tabEl.classList.add('active');
         this.currentTab = tab;
 
+        // Clear dropup active states when switching via main nav
+        document.querySelectorAll('.comp2-dropup-btn').forEach(b => b.classList.remove('active'));
+        const moreBtn = document.getElementById('comp2NavMore');
+        if (moreBtn) {
+          moreBtn.classList.remove('has-active');
+        }
+
         // Auto-load saved portfolio when clicking on Carteira or Rebalancear tabs
         if (tab === 'carteira' && this.hasSavedPortfolio()) {
           this.loadSavedPortfolioToTab('comp2Allocation', 'allocTotal');

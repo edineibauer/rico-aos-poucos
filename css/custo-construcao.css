@@ -645,6 +645,8 @@
   border-top: 1px solid var(--border-color);
   display: flex;
   justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .cc-btn {

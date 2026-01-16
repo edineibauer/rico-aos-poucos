@@ -1153,9 +1153,151 @@
     }
     const c = state.calculoAtual;
     const dataAtual = new Date().toLocaleDateString('pt-BR');
+    const tipoObra = c.isReforma ? c.conservacao.nome : 'Construção Nova';
 
-    // Criar conteúdo CSV (que pode ser aberto no Excel)
-    let csv = '\uFEFF'; // BOM para UTF-8
+    // Verificar se SheetJS está disponível
+    if (typeof XLSX === 'undefined') {
+      // Fallback para CSV se SheetJS não estiver disponível
+      exportarCSVFallback(c, dataAtual);
+      return;
+    }
+
+    // Criar workbook
+    const wb = XLSX.utils.book_new();
+
+    // Dados para a planilha principal
+    const wsData = [];
+
+    // Cabeçalho do relatório
+    wsData.push(['ORÇAMENTO DE CONSTRUÇÃO']);
+    wsData.push(['Rico aos Poucos - ricoaospoucos.com.br']);
+    wsData.push([`Gerado em: ${dataAtual}`]);
+    wsData.push([]);
+
+    // Resumo principal (destaque)
+    wsData.push(['RESUMO DO ORÇAMENTO']);
+    wsData.push(['Descrição', 'Valor']);
+    wsData.push([c.isReforma ? 'Valor Estimado do Imóvel' : 'Custo Total de Construção', c.custoTotal]);
+    wsData.push(['Custo por m²', c.custoM2Final]);
+    wsData.push([]);
+
+    // Configuração do imóvel
+    wsData.push(['CONFIGURAÇÃO DO IMÓVEL']);
+    wsData.push(['Parâmetro', 'Valor']);
+    wsData.push(['Região', `${c.config.estado} - ${c.regiao.nome}`]);
+    wsData.push(['Situação', tipoObra]);
+    wsData.push(['Tipo de Casa', c.estrutura.nome]);
+    wsData.push(['Método Construtivo', c.metodo.nome]);
+    wsData.push(['Padrão de Acabamento', c.padrao.nome]);
+    wsData.push(['Área Total', `${c.config.areaTotal} m²`]);
+    wsData.push(['Quartos', c.config.numQuartos]);
+    wsData.push(['Suítes', c.config.numSuites]);
+    wsData.push(['Banheiros Extras', c.config.numBanheiros]);
+    wsData.push(['Área de Serviço', c.config.temAreaServico ? 'Sim' : 'Não']);
+    if (c.isReforma) {
+      wsData.push(['Depreciação', `${c.conservacao.desconto}%`]);
+    }
+    wsData.push([]);
+
+    // Detalhamento de custos
+    wsData.push(['COMPOSIÇÃO DO CUSTO']);
+    wsData.push(['Item', 'Valor (R$)']);
+    wsData.push(['Estrutura e Materiais Base', c.custoMateriais]);
+    wsData.push(['Mão de Obra', c.custoMaoObra]);
+    wsData.push(['Adicionais de Cômodos', c.custoComodosExtra]);
+    wsData.push(['SUBTOTAL CONSTRUÇÃO', c.custoBase]);
+    wsData.push([]);
+
+    // Extras
+    if (c.detalhesExtras.length > 0) {
+      wsData.push(['ITENS EXTRAS']);
+      wsData.push(['Item', 'Valor (R$)']);
+      c.detalhesExtras.forEach(e => {
+        wsData.push([e.nome, e.valor]);
+      });
+      wsData.push(['SUBTOTAL EXTRAS', c.custoExtras]);
+      wsData.push([]);
+    }
+
+    // Projetos e taxas
+    if (c.detalhesAdicionais.length > 0) {
+      wsData.push(['PROJETOS E TAXAS']);
+      wsData.push(['Item', 'Valor (R$)']);
+      c.detalhesAdicionais.forEach(e => {
+        wsData.push([e.nome, e.valor]);
+      });
+      wsData.push(['SUBTOTAL PROJETOS', c.custoAdicionais]);
+      wsData.push([]);
+    }
+
+    // Total final
+    wsData.push(['TOTAL FINAL']);
+    wsData.push(['', '']);
+    wsData.push(['CUSTO TOTAL', c.custoTotal]);
+    wsData.push(['CUSTO POR M²', c.custoM2Final]);
+    wsData.push([]);
+
+    // Observações
+    wsData.push(['OBSERVAÇÕES']);
+    wsData.push(['• Valores de referência baseados em dados SINAPI e médias de mercado.']);
+    wsData.push(['• Custos podem variar conforme localidade, período e negociação.']);
+    wsData.push(['• Consulte profissionais para orçamentos detalhados.']);
+
+    // Criar worksheet
+    const ws = XLSX.utils.aoa_to_sheet(wsData);
+
+    // Configurar larguras das colunas
+    ws['!cols'] = [
+      { wch: 45 }, // Coluna A - Descrições
+      { wch: 20 }  // Coluna B - Valores
+    ];
+
+    // Formatar células de valores como moeda
+    const currencyFormat = 'R$ #,##0';
+    for (let i = 0; i < wsData.length; i++) {
+      const cellB = XLSX.utils.encode_cell({ r: i, c: 1 });
+      if (ws[cellB] && typeof ws[cellB].v === 'number') {
+        ws[cellB].z = currencyFormat;
+      }
+    }
+
+    // Adicionar worksheet ao workbook
+    XLSX.utils.book_append_sheet(wb, ws, 'Orçamento');
+
+    // Criar segunda aba com detalhes técnicos
+    const wsDetalhes = [];
+    wsDetalhes.push(['DETALHES TÉCNICOS']);
+    wsDetalhes.push([]);
+    wsDetalhes.push(['Fatores Aplicados']);
+    wsDetalhes.push(['Fator', 'Descrição', 'Valor']);
+    wsDetalhes.push(['Regional', c.regiao.nome, `${((c.regiao.fator - 1) * 100).toFixed(0)}%`]);
+    wsDetalhes.push(['Estrutura', c.estrutura.nome, `${((c.estrutura.fator - 1) * 100).toFixed(0)}%`]);
+    wsDetalhes.push(['Método', c.metodo.nome, `${((c.metodo.fator - 1) * 100).toFixed(0)}%`]);
+    wsDetalhes.push(['Padrão', c.padrao.nome, `${((c.padrao.fator - 1) * 100).toFixed(0)}%`]);
+    if (c.isReforma) {
+      wsDetalhes.push(['Conservação', c.conservacao.nome, `-${c.conservacao.desconto}%`]);
+    }
+    wsDetalhes.push([]);
+    wsDetalhes.push(['Custo Base SINAPI']);
+    wsDetalhes.push(['Materiais', '', `R$ ${formatNumber(data.custoBaseM2.materiais)}/m²`]);
+    wsDetalhes.push(['Mão de Obra', '', `R$ ${formatNumber(data.custoBaseM2.maoDeObra)}/m²`]);
+
+    const wsD = XLSX.utils.aoa_to_sheet(wsDetalhes);
+    wsD['!cols'] = [
+      { wch: 20 },
+      { wch: 25 },
+      { wch: 15 }
+    ];
+    XLSX.utils.book_append_sheet(wb, wsD, 'Detalhes Técnicos');
+
+    // Gerar arquivo e download
+    const fileName = `orcamento-construcao-${c.config.areaTotal}m2-${c.config.estado}-${Date.now()}.xlsx`;
+    XLSX.writeFile(wb, fileName);
+  }
+
+  function exportarCSVFallback(c, dataAtual) {
+    // Fallback CSV caso SheetJS não esteja disponível
+    let csv = '\uFEFF';
     csv += 'ORÇAMENTO DE CONSTRUÇÃO\n';
     csv += `Data:;${dataAtual}\n`;
     csv += `Site:;ricoaospoucos.com.br\n\n`;
@@ -1166,20 +1308,13 @@
     csv += `Tipo de Casa;${c.estrutura.nome}\n`;
     csv += `Método Construtivo;${c.metodo.nome}\n`;
     csv += `Padrão de Acabamento;${c.padrao.nome}\n`;
-    csv += `Área Total;${c.config.areaTotal} m²\n`;
-    csv += `Quartos;${c.config.numQuartos}\n`;
-    csv += `Suítes;${c.config.numSuites}\n`;
-    csv += `Banheiros extras;${c.config.numBanheiros}\n`;
-    if (c.isReforma) {
-      csv += `Depreciação;${c.conservacao.desconto}%\n`;
-    }
-    csv += '\n';
+    csv += `Área Total;${c.config.areaTotal} m²\n\n`;
 
     csv += 'DETALHAMENTO DE CUSTOS\n';
     csv += 'Item;Valor (R$)\n';
     csv += `Estrutura e Materiais Base;${formatNumber(c.custoMateriais)}\n`;
     csv += `Mão de Obra;${formatNumber(c.custoMaoObra)}\n`;
-    csv += `Adicionais Cômodos (hidráulica, louças);${formatNumber(c.custoComodosExtra)}\n`;
+    csv += `Adicionais Cômodos;${formatNumber(c.custoComodosExtra)}\n`;
     csv += `SUBTOTAL CONSTRUÇÃO;${formatNumber(c.custoBase)}\n\n`;
 
     if (c.detalhesExtras.length > 0) {
@@ -1200,12 +1335,8 @@
 
     csv += 'RESUMO\n';
     csv += `CUSTO TOTAL;${formatNumber(c.custoTotal)}\n`;
-    csv += `CUSTO POR M²;${formatNumber(c.custoM2Final)}\n\n`;
+    csv += `CUSTO POR M²;${formatNumber(c.custoM2Final)}\n`;
 
-    csv += 'OBSERVAÇÃO\n';
-    csv += 'Valores de referência sujeitos a variação conforme localidade e negociação.\n';
-
-    // Download
     const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');

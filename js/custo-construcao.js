@@ -1156,6 +1156,30 @@
       }
     }
 
+    // Padrão 4: Quantidade de terrenos/lotes (ex: "2 terrenos" = 2 x 360m²)
+    // Tamanho padrão de um lote urbano: 12x30 = 360m²
+    if (!terrenoEncontrado) {
+      const qtdTerrenosPatterns = [
+        /(\d+)\s*terrenos?(?!\s*m[²2])/i,
+        /(\d+)\s*lotes?(?!\s*m[²2])/i
+      ];
+
+      for (const pattern of qtdTerrenosPatterns) {
+        const match = texto.match(pattern);
+        if (match) {
+          const qtdTerrenos = parseInt(match[1]);
+          if (qtdTerrenos >= 1 && qtdTerrenos <= 20) {
+            const areaPorTerreno = 360; // 12x30m padrão
+            const areaTerreno = qtdTerrenos * areaPorTerreno;
+            resultado.config.areaTerreno = areaTerreno;
+            resultado.encontrados.push(`Terreno: ${areaTerreno}m² (${qtdTerrenos} lote${qtdTerrenos > 1 ? 's' : ''} x ${areaPorTerreno}m²)`);
+            terrenoEncontrado = true;
+            break;
+          }
+        }
+      }
+    }
+
     // Quartos
     const quartosPatterns = [
       /(\d+)\s*quartos?/i,
@@ -1461,10 +1485,34 @@
     // Extras COM VERIFICAÇÃO DE NEGAÇÃO
     resultado.extras = {};
 
-    // Piscina
+    // Piscina - com detecção de tamanho
     if (textoLower.includes('piscina') && !isNegado('piscina')) {
       resultado.extras.piscina = true;
-      resultado.encontrados.push('Extra: Piscina');
+
+      // Detectar dimensões da piscina (ex: "piscina 9x4", "piscina de 8x4m")
+      const piscinaDimensoesMatch = texto.match(/piscina\s*(?:de\s*)?(\d+(?:[.,]\d+)?)\s*[xX×]\s*(\d+(?:[.,]\d+)?)/i);
+      if (piscinaDimensoesMatch) {
+        const comp = parseFloat(piscinaDimensoesMatch[1].replace(',', '.'));
+        const larg = parseFloat(piscinaDimensoesMatch[2].replace(',', '.'));
+        const areaPiscina = comp * larg;
+
+        // Selecionar o tipo de piscina mais próximo baseado na área
+        // Áreas disponíveis: 3x2=6, 4x2=8, 5x3=15, 6x3=18, 7x3=21, 8x4=32
+        let tipoPiscina = 'fibra_grande_8x4'; // padrão para piscinas grandes
+        if (areaPiscina <= 8) tipoPiscina = 'fibra_pequena_4x2';
+        else if (areaPiscina <= 12) tipoPiscina = 'fibra_pequena_4x2';
+        else if (areaPiscina <= 16) tipoPiscina = 'fibra_media_5x3';
+        else if (areaPiscina <= 20) tipoPiscina = 'fibra_media_6x3';
+        else if (areaPiscina <= 24) tipoPiscina = 'fibra_grande_7x3';
+        else if (areaPiscina <= 35) tipoPiscina = 'fibra_grande_8x4';
+        else tipoPiscina = 'alvenaria_grande_8x4'; // piscinas maiores que 8x4
+
+        resultado.extras.piscinaTipo = tipoPiscina;
+        resultado.extras.piscinaArea = areaPiscina;
+        resultado.encontrados.push(`Extra: Piscina ${comp}x${larg}m (~${Math.round(areaPiscina)}m²)`);
+      } else {
+        resultado.encontrados.push('Extra: Piscina');
+      }
     }
 
     // Churrasqueira
@@ -1578,7 +1626,48 @@
         resultado.extras.ediculaArea = parseInt(areaEdiculaMatch[1]);
         resultado.encontrados.push(`Extra: Edícula (${areaEdiculaMatch[1]}m²)`);
       } else {
-        resultado.encontrados.push('Extra: Edícula');
+        // Tentar estimar área da edícula pelos cômodos descritos
+        // Formato: "edícula com X quartos, sala, cozinha, banheiro"
+        const ediculaComodos = texto.match(/edicula\s*com\s*([^,.]+(?:,[^,.]+)*)/i);
+        if (ediculaComodos) {
+          const descComodos = ediculaComodos[1].toLowerCase();
+          let areaEstimada = 0;
+
+          // Quartos na edícula
+          const quartosEdMatch = descComodos.match(/(\d+)\s*quartos?/i);
+          if (quartosEdMatch) {
+            areaEstimada += parseInt(quartosEdMatch[1]) * 12; // 12m² por quarto
+          }
+
+          // Sala
+          if (/\bsala\b/i.test(descComodos)) {
+            areaEstimada += 15; // 15m² para sala
+          }
+
+          // Cozinha
+          if (/\bcozinha\b/i.test(descComodos)) {
+            areaEstimada += 8; // 8m² para cozinha
+          }
+
+          // Banheiro
+          const banheirosEdMatch = descComodos.match(/(\d+)\s*banheiros?/i);
+          if (banheirosEdMatch) {
+            areaEstimada += parseInt(banheirosEdMatch[1]) * 4; // 4m² por banheiro
+          } else if (/\bbanheiro\b/i.test(descComodos)) {
+            areaEstimada += 4;
+          }
+
+          // Mínimo de 20m² para edícula
+          if (areaEstimada > 0) {
+            areaEstimada = Math.max(20, areaEstimada);
+            resultado.extras.ediculaArea = areaEstimada;
+            resultado.encontrados.push(`Extra: Edícula (~${areaEstimada}m² estimado)`);
+          } else {
+            resultado.encontrados.push('Extra: Edícula');
+          }
+        } else {
+          resultado.encontrados.push('Extra: Edícula');
+        }
       }
     }
 
@@ -1773,6 +1862,22 @@
           if (options) options.style.display = value ? 'block' : 'none';
         }
       });
+
+      // Aplicar tipo de piscina detectado
+      if (extras.piscinaTipo) {
+        const piscinaTipoSelect = document.getElementById('cc-piscina-tipo');
+        if (piscinaTipoSelect) {
+          piscinaTipoSelect.value = extras.piscinaTipo;
+        }
+      }
+
+      // Aplicar área da edícula detectada
+      if (extras.ediculaArea) {
+        const ediculaM2Input = document.getElementById('cc-edicula-m2');
+        if (ediculaM2Input) {
+          ediculaM2Input.value = extras.ediculaArea;
+        }
+      }
     }
 
     // Atualizar resumos

@@ -19,16 +19,60 @@
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ricoaospoucos.com.br/ferramentas-financeiras/">
   <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ferramentas Financeiras | Rico aos Poucos">
+  <meta name="twitter:description" content="Compare investimentos, calcule juros compostos, simule carteiras e rebalanceamento.">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="calculadora de investimentos, comparador de investimentos, juros compostos, simulador de carteira, rebalanceamento de carteira, CDI, Ibovespa, dólar, tesouro direto, FIIs, renda fixa, renda variável">
 
   <!-- PWA -->
   <meta name="theme-color" content="#0d1117">
   <link rel="manifest" href="../manifest.json">
+  <!-- Favicon - Multiple formats for browser and search engine compatibility -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../icon-192.png">
 
   <title>Ferramentas Financeiras | Rico aos Poucos</title>
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/comparador.css">
+  <link rel="stylesheet" href="../css/custo-construcao.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Ferramentas Financeiras - Rico aos Poucos",
+    "description": "Ferramentas financeiras para comparar investimentos, calcular juros compostos, simular carteiras e rebalanceamento.",
+    "url": "https://ricoaospoucos.com.br/ferramentas-financeiras/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "featureList": [
+      "Comparador histórico de investimentos",
+      "Calculadora de juros compostos",
+      "Simulador de carteira diversificada",
+      "Ferramenta de rebalanceamento",
+      "Análise de padrões históricos"
+    ]
+  }
+  </script>
 </head>
 <body>
   <div class="page-wrapper">
@@ -74,7 +118,47 @@
             </svg>
             <span>Calculadora</span>
           </button>
+          <button class="comp2-nav-btn" data-tab="construcao" title="Calculadora de Custo de Construção">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/>
+            </svg>
+            <span>Construção</span>
+          </button>
+
+          <!-- Mobile More Button -->
+          <button class="comp2-nav-more" id="comp2NavMore" title="Mais opções">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="18 15 12 9 6 15"></polyline>
+            </svg>
+            <span>Mais</span>
+          </button>
         </nav>
+
+        <!-- Mobile Dropup Menu -->
+        <div class="comp2-dropup" id="comp2Dropup">
+          <div class="comp2-dropup-title">Mais ferramentas</div>
+          <div class="comp2-dropup-items">
+            <button class="comp2-dropup-btn" data-tab="padroes" title="Padrões Históricos">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M2 20h20"/><path d="M5 20V10"/><path d="M9 20V4"/><path d="M13 20v-8"/><path d="M17 20V8"/><path d="M21 20v-4"/>
+              </svg>
+              <span>Padrões</span>
+            </button>
+            <button class="comp2-dropup-btn" data-tab="calculadora" title="Calculadora de Investimentos">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="10" y2="10"/><line x1="14" y1="10" x2="16" y2="10"/><line x1="8" y1="14" x2="10" y2="14"/><line x1="14" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="10" y2="18"/><line x1="14" y1="18" x2="16" y2="18"/>
+              </svg>
+              <span>Calculadora</span>
+            </button>
+            <button class="comp2-dropup-btn" data-tab="construcao" title="Calculadora de Custo de Construção">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/>
+              </svg>
+              <span>Construção</span>
+            </button>
+          </div>
+        </div>
+        <div class="comp2-dropup-overlay" id="comp2DropupOverlay"></div>
       </aside>
 
       <!-- Main Content Area -->
@@ -88,11 +172,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2PeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2PeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2PeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2PeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2PeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2PeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -231,11 +323,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2DueloPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2DueloPeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2DueloPeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2DueloPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2DueloPeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2DueloPeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor</label>
@@ -268,25 +368,25 @@
                   <div class="duelo-icons">
                     <span>🇧🇷</span><span class="vs">×</span><span>🇺🇸</span>
                   </div>
-                  <span class="duelo-title">Ibov vs S&P</span>
+                  <span class="duelo-title">IBOV TR vs S&P</span>
                 </button>
                 <button class="comp2-duelo-btn" data-duelo="ouro-bitcoin">
                   <div class="duelo-icons">
                     <span>🥇</span><span class="vs">×</span><span>₿</span>
                   </div>
-                  <span class="duelo-title">Ouro vs BTC</span>
+                  <span class="duelo-title">Ouro vs Bitcoin</span>
                 </button>
                 <button class="comp2-duelo-btn" data-duelo="ipca-tlt">
                   <div class="duelo-icons">
                     <span>📈</span><span class="vs">×</span><span>📉</span>
                   </div>
-                  <span class="duelo-title">IPCA+ vs TLT</span>
+                  <span class="duelo-title">IMA-B vs TLT</span>
                 </button>
                 <button class="comp2-duelo-btn" data-duelo="ibov-cdi">
                   <div class="duelo-icons">
                     <span>📊</span><span class="vs">×</span><span>💰</span>
                   </div>
-                  <span class="duelo-title">Ibov vs CDI</span>
+                  <span class="duelo-title">IBOV TR vs CDI</span>
                 </button>
                 <button class="comp2-duelo-btn" data-duelo="fii-imovel">
                   <div class="duelo-icons">
@@ -353,9 +453,15 @@
                 <div class="comp2-metricas" id="comp2DueloMetricas"></div>
               </div>
 
-              <!-- Análise Final -->
+              <!-- Análise Conceitual -->
+              <div class="comp2-card comp2-analise-conceitual" id="comp2DueloAnalise">
+                <h3>Entendendo a Comparação</h3>
+                <div id="comp2DueloAnaliseConteudo"></div>
+              </div>
+
+              <!-- Conclusão dos Números -->
               <div class="comp2-conclusoes" id="comp2DueloConclusao">
-                <h3>Análise Final</h3>
+                <h3>O Que os Números Mostram</h3>
                 <div id="comp2DueloConclusaoLista"></div>
               </div>
             </div>
@@ -369,11 +475,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2CarteiraPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2CarteiraPeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2CarteiraPeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2CarteiraPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2CarteiraPeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2CarteiraPeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -543,11 +657,19 @@
               <div class="comp2-config-row">
                 <div class="comp2-field">
                   <label>Período inicial</label>
-                  <input type="month" id="comp2RebalPeriodoInicio" value="2011-01" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2RebalPeriodoInicio">
+                    <select class="date-month" data-default="01"></select>
+                    <select class="date-year" data-default="2011"></select>
+                    <input type="hidden" id="comp2RebalPeriodoInicio" value="2011-01">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Período final</label>
-                  <input type="month" id="comp2RebalPeriodoFim" value="2025-12" min="2005-01" max="2025-12">
+                  <div class="comp2-date-select" data-target="comp2RebalPeriodoFim">
+                    <select class="date-month" data-default="12"></select>
+                    <select class="date-year" data-default="2025"></select>
+                    <input type="hidden" id="comp2RebalPeriodoFim" value="2025-12">
+                  </div>
                 </div>
                 <div class="comp2-field">
                   <label>Valor inicial</label>
@@ -801,6 +923,13 @@
           </div>
         </section>
 
+        <!-- Tab: Construção -->
+        <section class="comp2-tab" id="comp2-construcao">
+          <div class="comp2-panel">
+            <div id="custo-construcao-container"></div>
+          </div>
+        </section>
+
       </div>
     </main>
 
@@ -813,6 +942,181 @@
   <script src="../js/comparador.js"></script>
   <script src="../js/comparador-ui.js"></script>
   <script src="../js/calculadora.js"></script>
+  <script src="../js/custo-construcao-data.js"></script>
+  <script src="../js/cidades-brasil.js"></script>
+  <script src="../js/dados-mercado-imoveis.js"></script>
+  <script src="../js/custo-construcao.js"></script>
   <script src="../js/i18n.js"></script>
+  <script>
+    // Mobile dropup menu handler
+    (function() {
+      const moreBtn = document.getElementById('comp2NavMore');
+      const dropup = document.getElementById('comp2Dropup');
+      const overlay = document.getElementById('comp2DropupOverlay');
+      const dropupBtns = document.querySelectorAll('.comp2-dropup-btn');
+      const navBtns = document.querySelectorAll('.comp2-nav-btn');
+      const tabs = document.querySelectorAll('.comp2-tab');
+
+      if (!moreBtn || !dropup) return;
+
+      function closeDropup() {
+        dropup.classList.remove('show');
+        overlay.classList.remove('show');
+        moreBtn.classList.remove('active');
+      }
+
+      function openDropup() {
+        dropup.classList.add('show');
+        overlay.classList.add('show');
+        moreBtn.classList.add('active');
+      }
+
+      function toggleDropup() {
+        if (dropup.classList.contains('show')) {
+          closeDropup();
+        } else {
+          openDropup();
+        }
+      }
+
+      function switchTab(tabId) {
+        // Remove active from all nav buttons
+        navBtns.forEach(btn => btn.classList.remove('active'));
+        dropupBtns.forEach(btn => btn.classList.remove('active'));
+        moreBtn.classList.remove('has-active');
+
+        // Hide all tabs
+        tabs.forEach(tab => tab.classList.remove('active'));
+
+        // Show selected tab
+        const targetTab = document.getElementById(`comp2-${tabId}`);
+        if (targetTab) {
+          targetTab.classList.add('active');
+        }
+
+        // Mark corresponding button as active
+        const mainNavBtn = document.querySelector(`.comp2-nav-btn[data-tab="${tabId}"]`);
+        const dropupNavBtn = document.querySelector(`.comp2-dropup-btn[data-tab="${tabId}"]`);
+
+        if (mainNavBtn) {
+          mainNavBtn.classList.add('active');
+        }
+        if (dropupNavBtn) {
+          dropupNavBtn.classList.add('active');
+          // Mark more button as having an active child
+          moreBtn.classList.add('has-active');
+        }
+
+        closeDropup();
+      }
+
+      // Event listeners
+      moreBtn.addEventListener('click', toggleDropup);
+
+      if (overlay) {
+        overlay.addEventListener('click', closeDropup);
+      }
+
+      // Dropup button clicks
+      dropupBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const tabId = this.dataset.tab;
+          switchTab(tabId);
+        });
+      });
+
+      // Close dropup when pressing Escape key
+      document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape' && dropup.classList.contains('show')) {
+          closeDropup();
+        }
+      });
+
+      // Check if a dropup item is currently active (on page load/refresh)
+      function checkActiveDropupItem() {
+        const activeTab = document.querySelector('.comp2-tab.active');
+        if (activeTab) {
+          const tabId = activeTab.id.replace('comp2-', '');
+          const dropupBtn = document.querySelector(`.comp2-dropup-btn[data-tab="${tabId}"]`);
+          if (dropupBtn && window.innerWidth <= 768) {
+            dropupBtn.classList.add('active');
+            moreBtn.classList.add('has-active');
+          }
+        }
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', checkActiveDropupItem);
+      } else {
+        checkActiveDropupItem();
+      }
+    })();
+
+    // Initialize custom date selects
+    (function() {
+      const months = [
+        { value: '01', label: 'Jan' },
+        { value: '02', label: 'Fev' },
+        { value: '03', label: 'Mar' },
+        { value: '04', label: 'Abr' },
+        { value: '05', label: 'Mai' },
+        { value: '06', label: 'Jun' },
+        { value: '07', label: 'Jul' },
+        { value: '08', label: 'Ago' },
+        { value: '09', label: 'Set' },
+        { value: '10', label: 'Out' },
+        { value: '11', label: 'Nov' },
+        { value: '12', label: 'Dez' }
+      ];
+
+      const startYear = 2005;
+      const endYear = 2025;
+
+      function initDateSelects() {
+        document.querySelectorAll('.comp2-date-select').forEach(container => {
+          const monthSelect = container.querySelector('.date-month');
+          const yearSelect = container.querySelector('.date-year');
+          const hiddenInput = container.querySelector('input[type="hidden"]');
+
+          if (!monthSelect || !yearSelect || !hiddenInput) return;
+
+          const defaultMonth = monthSelect.dataset.default || '01';
+          const defaultYear = yearSelect.dataset.default || '2011';
+
+          // Populate months
+          months.forEach(m => {
+            const opt = document.createElement('option');
+            opt.value = m.value;
+            opt.textContent = m.label;
+            if (m.value === defaultMonth) opt.selected = true;
+            monthSelect.appendChild(opt);
+          });
+
+          // Populate years
+          for (let y = startYear; y <= endYear; y++) {
+            const opt = document.createElement('option');
+            opt.value = y;
+            opt.textContent = y;
+            if (y.toString() === defaultYear) opt.selected = true;
+            yearSelect.appendChild(opt);
+          }
+
+          // Sync hidden input on change
+          function syncValue() {
+            hiddenInput.value = `${yearSelect.value}-${monthSelect.value}`;
+          }
+
+          monthSelect.addEventListener('change', syncValue);
+          yearSelect.addEventListener('change', syncValue);
+        });
+      }
+
+      if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initDateSelects);
+      } else {
+        initDateSelects();
+      }
+    })();
+  </script>
 </body>
 </html>

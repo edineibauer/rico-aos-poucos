@@ -16,11 +16,11 @@ const Comparador2 = {
     imoveisRenda: 0       // Rendimento anual líquido de aluguel (% do valor do imóvel)
   },
 
-  // Configurações de duelo (igual ao original)
+  // Configurações de duelo
   dueloConfigs: {
     'ibov-sp500': {
-      titulo: 'Ibovespa vs S&P 500',
-      ativo1: { key: 'ibovespa', nome: 'Ibovespa', icone: '🇧🇷' },
+      titulo: 'IBOV TR vs S&P 500',
+      ativo1: { key: 'ibovtr', nome: 'IBOV TR', icone: '🇧🇷' },
       ativo2: { key: 'sp500_brl', nome: 'S&P 500 (R$)', icone: '🇺🇸' }
     },
     'ouro-bitcoin': {
@@ -29,13 +29,13 @@ const Comparador2 = {
       ativo2: { key: 'bitcoin_brl', nome: 'Bitcoin', icone: '₿' }
     },
     'ipca-tlt': {
-      titulo: 'IPCA+ vs TLT',
-      ativo1: { key: 'tesouro_ipca', nome: 'Tesouro IPCA+', icone: '🇧🇷' },
+      titulo: 'IMA-B 5+ vs TLT',
+      ativo1: { key: 'imab5', nome: 'IMA-B 5+', icone: '🇧🇷' },
       ativo2: { key: 'tlt_brl', nome: 'TLT (Tesouro EUA)', icone: '🇺🇸' }
     },
     'ibov-cdi': {
-      titulo: 'Ibovespa vs CDI',
-      ativo1: { key: 'ibovespa', nome: 'Ibovespa', icone: '📈' },
+      titulo: 'IBOV TR vs CDI',
+      ativo1: { key: 'ibovtr', nome: 'IBOV TR', icone: '📈' },
       ativo2: { key: 'cdi', nome: 'CDI', icone: '💰' }
     },
     'fii-imovel': {
@@ -50,10 +50,245 @@ const Comparador2 = {
     }
   },
 
+  // Análises conceituais para cada duelo
+  dueloAnalises: {
+    'ibov-sp500': {
+      contexto: `
+        <p><strong>O que é o IBOV TR (Total Return)?</strong></p>
+        <p>O Ibovespa Total Return mede a performance das ações brasileiras <em>com dividendos reinvestidos</em>. Isso é crucial porque muitas empresas brasileiras (bancos, elétricas, estatais) distribuem dividendos gordos. Sem considerar dividendos, a comparação seria injusta.</p>
+
+        <p><strong>O que é o S&P 500?</strong></p>
+        <p>Índice das 500 maiores empresas americanas por capitalização de mercado. Representa cerca de 80% do valor total do mercado acionário dos EUA. Aqui, convertido para reais para comparação direta.</p>
+
+        <p><strong>Por que o S&P 500 em reais costuma ganhar?</strong></p>
+        <p>Dois fatores trabalham a favor do investidor brasileiro no S&P 500:</p>
+        <ul>
+          <li><strong>Valorização das ações:</strong> Empresas americanas (Apple, Microsoft, Google) dominam setores globais</li>
+          <li><strong>Desvalorização do real:</strong> Em 2011, US$1 = R$1,60. Em 2025, US$1 = R$6,20. Só o câmbio multiplicou o investimento por 3,8x</li>
+        </ul>
+
+        <p><strong>Quando o IBOV pode ganhar?</strong></p>
+        <p>Em ciclos de otimismo com o Brasil (commodities em alta, juros caindo, reformas), o IBOV pode superar o S&P 500 em reais. Isso ocorreu em 2003-2007 e brevemente em 2016-2017.</p>`,
+      pontoChave: `O "efeito câmbio" é o fator decisivo. Quando o Brasil vai mal, o dólar sobe - e o investidor em S&P 500 ganha duas vezes. Quando o Brasil vai bem, o real se valoriza - e o ganho do S&P 500 em reais diminui. É uma proteção natural contra crises brasileiras.`,
+      reflexao: `<strong>Nossa Tese:</strong> Diversificar parte do patrimônio em ativos dolarizados não é "torcer contra o Brasil" - é gestão de risco básica. Se sua renda é em reais, seu emprego é no Brasil, e seu imóvel é aqui, você já está muito exposto ao país. Ter 20-30% em ativos dolarizados equilibra essa concentração.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>IBOV TR</th><th>S&P 500 (R$)</th></tr>
+          <tr><td>Moeda base</td><td>Real (BRL)</td><td>Dólar convertido para BRL</td></tr>
+          <tr><td>Setores dominantes</td><td>Bancos, commodities, estatais</td><td>Tecnologia, saúde, consumo</td></tr>
+          <tr><td>Dividend yield médio</td><td class="positivo">~5-7% a.a.</td><td>~1,5% a.a.</td></tr>
+          <tr><td>Volatilidade histórica</td><td class="negativo">~25-30% a.a.</td><td class="positivo">~15-20% a.a.</td></tr>
+          <tr><td>Correlação com crises BR</td><td class="negativo">Cai junto</td><td class="positivo">Sobe (via câmbio)</td></tr>
+          <tr><td>Acesso para brasileiro</td><td class="positivo">Direto (B3)</td><td>Via BDRs ou corretora externa</td></tr>
+          <tr><td>Tributação</td><td>15-22,5% sobre ganho</td><td>15% (até R$35k/mês isento)</td></tr>
+        </table>`
+    },
+    'ouro-bitcoin': {
+      contexto: `
+        <p><strong>O que é o Ouro?</strong></p>
+        <p>O ouro é a reserva de valor mais antiga da humanidade. Usado como moeda desde 3000 a.C., sobreviveu à queda de impérios, guerras mundiais, hiperinflações e crises financeiras. Em 2025, teve seu melhor ano em quase 50 anos, subindo 65% e ultrapassando US$4.000/oz pela primeira vez na história.</p>
+        <ul>
+          <li><strong>Escassez natural:</strong> Todo o ouro já minerado na história cabe em um cubo de 22 metros de lado</li>
+          <li><strong>Indestrutível:</strong> Não oxida, não se degrada, dura para sempre</li>
+          <li><strong>Reconhecimento universal:</strong> Aceito como valor em qualquer país do mundo</li>
+          <li><strong>Demanda institucional recorde:</strong> Bancos centrais compraram +1.000 toneladas/ano nos últimos 3 anos</li>
+          <li><strong>Sem risco de contraparte:</strong> Não depende de nenhum governo ou empresa</li>
+        </ul>
+
+        <p><strong>O que é o Bitcoin?</strong></p>
+        <p>Criado em 2009 por Satoshi Nakamoto, o Bitcoin é um ativo digital descentralizado. Em 2024-2025, passou por transformação institucional significativa com aprovação de ETFs spot nos EUA e adoção como reserva estratégica por alguns países.</p>
+        <ul>
+          <li><strong>Escassez programada:</strong> Máximo de 21 milhões de unidades (~19,5 milhões já minerados)</li>
+          <li><strong>Descentralizado:</strong> Não controlado por nenhum governo ou banco central</li>
+          <li><strong>Institucionalização acelerada:</strong> ETFs com US$123+ bilhões em ativos (jan/2026), BlackRock detém ~805.000 BTC</li>
+          <li><strong>Volatilidade ainda alta:</strong> Quedas de 25-30% continuam frequentes (março e outubro 2025)</li>
+        </ul>
+
+        <p><strong>O Cenário em 2026: Uma Nova Era?</strong></p>
+        <p>Bitcoin amadureceu significativamente: ETFs spot aprovados, custódia institucional (Coinbase Prime, Fidelity), regulação mais clara (GENIUS Act nos EUA, MiCA na Europa). Mas ainda está longe de ser comparável ao ouro em termos de aceitação global e estabilidade.</p>`,
+      pontoChave: `<strong>O argumento central:</strong> Ouro acaba de ter seu melhor ano em 50 anos (+65% em 2025), com bancos centrais comprando volumes recordes como proteção geopolítica. Bitcoin ganhou legitimidade institucional com ETFs de US$123 bilhões e reservas estratégicas em alguns países (EUA, El Salvador, Brasil), mas ainda apresenta volatilidade 3-4x maior que o ouro. A questão não é mais "Bitcoin vai sobreviver?", mas "quanto de cada faz sentido para seu perfil de risco?"`,
+      reflexao: `<strong>Nossa Tese:</strong> O cenário mudou. Bitcoin não é mais apenas especulação - tem infraestrutura institucional real. Mas ouro continua sendo o porto seguro comprovado, especialmente em cenários de fragmentação geopolítica. Nossa sugestão: Ouro (5-10%) como proteção patrimonial base. Bitcoin (0-5%) dependendo da sua tolerância a volatilidade e horizonte de investimento. A soma dos dois não deve exceder 15% de uma carteira diversificada.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>Ouro</th><th>Bitcoin</th></tr>
+          <tr><td>Histórico</td><td class="positivo">5.000+ anos</td><td>17 anos (desde 2009)</td></tr>
+          <tr><td>Performance 2025</td><td class="positivo">+65% (melhor ano em 50 anos)</td><td>~0% (flat após alta volatilidade)</td></tr>
+          <tr><td>Volatilidade típica</td><td class="positivo">~15-20%</td><td class="negativo">~40-60%</td></tr>
+          <tr><td>Maior queda histórica</td><td class="positivo">-46% (1980-1982)</td><td class="negativo">-77% (2021-2022)</td></tr>
+          <tr><td>Reservas soberanas</td><td class="positivo">36.000+ ton (quase todos os países)</td><td>EUA, El Salvador, Bhutan, Brasil, Rep. Tcheca</td></tr>
+          <tr><td>ETFs/Fundos</td><td class="positivo">Consolidados há décadas</td><td class="positivo">US$123B+ em ETFs spot (2026)</td></tr>
+          <tr><td>Custódia institucional</td><td class="positivo">Bancos, cofres, ETFs</td><td class="positivo">Coinbase Prime, Fidelity, BitGo</td></tr>
+          <tr><td>Regulação</td><td class="positivo">Clara e universal</td><td>Em evolução (GENIUS Act, MiCA)</td></tr>
+          <tr><td>Uso além de reserva</td><td class="positivo">Joias, eletrônicos, medicina</td><td>Pagamentos, DeFi, remessas</td></tr>
+          <tr><td>Comportamento em crises</td><td class="positivo">Sobe consistentemente</td><td>Misto (caiu em 2022, subiu pós-eleição 2024)</td></tr>
+          <tr><td>Projeções 2026</td><td>US$5.000/oz (JPMorgan)</td><td>US$150-200k (analistas otimistas)</td></tr>
+          <tr><td>Risco de perda total</td><td class="positivo">Praticamente zero</td><td class="negativo">Baixo mas existente</td></tr>
+        </table>`
+    },
+    'ipca-tlt': {
+      contexto: `
+        <p><strong>O que é o IMA-B 5+ (Tesouro IPCA+ longo)?</strong></p>
+        <p>Índice que mede a performance de títulos públicos brasileiros atrelados à inflação com vencimento acima de 5 anos. Características:</p>
+        <ul>
+          <li><strong>Proteção contra inflação:</strong> Rende IPCA + taxa real prefixada</li>
+          <li><strong>Juros reais altos:</strong> Historicamente 5-7% acima da inflação no Brasil</li>
+          <li><strong>Risco de marcação a mercado:</strong> Se juros sobem, o preço do título cai (e vice-versa)</li>
+          <li><strong>Risco soberano:</strong> Depende da capacidade do governo brasileiro de pagar</li>
+        </ul>
+
+        <p><strong>O que é o TLT (Treasury Long Term)?</strong></p>
+        <p>ETF que investe em títulos do Tesouro americano com vencimento de 20+ anos. Características:</p>
+        <ul>
+          <li><strong>Ativo mais seguro do mundo:</strong> Governo dos EUA nunca deu calote</li>
+          <li><strong>Juros reais baixos:</strong> Historicamente 0-2% acima da inflação americana</li>
+          <li><strong>Moeda forte:</strong> Rendimento em dólar - moeda de reserva global</li>
+          <li><strong>Alta sensibilidade a juros:</strong> Duration de ~17 anos = muita volatilidade</li>
+        </ul>
+
+        <p><strong>Por que o Brasil paga juros tão altos?</strong></p>
+        <p>Para atrair capital estrangeiro, o Brasil precisa compensar o risco maior com juros maiores. Isso beneficia o investidor local, mas reflete a percepção de risco do país. Países desenvolvidos não precisam pagar 6-7% de juros reais.</p>`,
+      pontoChave: `<strong>O trade-off fundamental:</strong> No IMA-B você ganha juros muito maiores (6-7% real vs 1-2% real), mas assume risco Brasil e risco de marcação a mercado em cenários de crise. No TLT você ganha menos, mas em dólar e com risco soberano mínimo.`,
+      reflexao: `<strong>Nossa Tese:</strong> Aproveite os juros altos brasileiros enquanto durarem, mas mantenha uma reserva em ativos dolarizados como proteção. Uma combinação de IMA-B (para renda) + TLT (para proteção) pode oferecer o melhor dos dois mundos: retorno alto no Brasil com hedge em dólar para crises.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>IMA-B 5+</th><th>TLT</th></tr>
+          <tr><td>Juros reais históricos</td><td class="positivo">5-7% a.a.</td><td>0-2% a.a.</td></tr>
+          <tr><td>Moeda</td><td>Real (BRL)</td><td class="positivo">Dólar (USD)</td></tr>
+          <tr><td>Risco soberano</td><td class="negativo">Médio-alto (Brasil)</td><td class="positivo">Mínimo (EUA)</td></tr>
+          <tr><td>Proteção contra inflação</td><td class="positivo">Sim (IPCA)</td><td class="negativo">Não diretamente</td></tr>
+          <tr><td>Volatilidade (duration)</td><td class="negativo">Alta (~7-10 anos)</td><td class="negativo">Muito alta (~17 anos)</td></tr>
+          <tr><td>Comportamento em crise BR</td><td class="negativo">Pode cair muito</td><td class="positivo">Tende a subir (dólar)</td></tr>
+          <tr><td>Liquidez</td><td class="positivo">Alta (Tesouro Direto)</td><td class="positivo">Alta (NYSE)</td></tr>
+          <tr><td>Tributação</td><td>15-22,5% (tabela regressiva)</td><td>15% sobre ganho de capital</td></tr>
+        </table>`
+    },
+    'ibov-cdi': {
+      contexto: `
+        <p><strong>O Dilema Clássico do Investidor Brasileiro (Versão 2026)</strong></p>
+        <p>Em países desenvolvidos, a resposta é clara: no longo prazo, ações superam renda fixa. Nos EUA, o S&P 500 rendeu ~10% a.a. contra ~4% dos bonds. No Brasil, essa certeza não existe - e em 2026, menos ainda.</p>
+
+        <p><strong>O que é o IBOV TR?</strong></p>
+        <p>Ibovespa Total Return = variação das ações + dividendos reinvestidos. Representa o retorno real de quem investe em ações brasileiras e reinveste os proventos.</p>
+
+        <p><strong>O que é o CDI?</strong></p>
+        <p>Certificado de Depósito Interbancário - taxa que os bancos cobram entre si. Segue de perto a Selic. É o benchmark da renda fixa brasileira e, historicamente, paga muito bem.</p>
+
+        <p><strong>O Cenário Atual: Selic a 15%</strong></p>
+        <p>Em dezembro de 2025, o Banco Central manteve a Selic em 15% a.a. pelo quarto mês consecutivo - o maior nível desde julho de 2006. Com inflação em ~4,4%, isso significa <strong>juros reais de ~10,5% ao ano</strong> - entre os mais altos do mundo.</p>
+
+        <p><strong>O Fenômeno Brasileiro</strong></p>
+        <p>Em muitos períodos de 10-20 anos, o CDI superou o Ibovespa - algo raríssimo no mundo. Com Selic a 15%, a pergunta fica ainda mais difícil: por que correr risco em ações se a renda fixa paga ~1,2% ao mês com segurança?</p>`,
+      pontoChave: `<strong>O paradoxo brasileiro em 2026:</strong> Com Selic a 15%, o CDI paga ~1,2% ao mês garantido. Para a bolsa valer o risco, precisaria entregar bem mais - mas historicamente entrega retornos semelhantes com muito mais volatilidade. O consenso espera cortes de ~2,75 pontos em 2026 (Selic para 12-12,25%), o que poderia beneficiar a bolsa. Mas "esperar queda de juros" é uma das apostas mais frustrantes da história recente.`,
+      reflexao: `<strong>Nossa Tese:</strong> Com Selic a 15%, o CDI é imbatível no curto prazo. Mas se você acredita que os juros vão cair para 12% ou menos em 2026-2027, a bolsa pode surpreender positivamente - especialmente empresas sensíveis a juros (varejo, construtoras, small caps). A estratégia prudente: manter uma base sólida em CDI/Tesouro Selic e alocar gradualmente em bolsa conforme os cortes acontecerem de fato (não antes).`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>IBOV TR</th><th>CDI</th></tr>
+          <tr><td>Retorno atual (jan/2026)</td><td>Variável</td><td class="positivo">~15% a.a. (1,2%/mês)</td></tr>
+          <tr><td>Juros reais</td><td>Depende do lucro empresas</td><td class="positivo">~10,5% a.a. (Selic - IPCA)</td></tr>
+          <tr><td>Volatilidade anual</td><td class="negativo">~25-30%</td><td class="positivo">~0,5%</td></tr>
+          <tr><td>Maior queda histórica</td><td class="negativo">-50% (2008)</td><td class="positivo">Nunca negativo nominal</td></tr>
+          <tr><td>Retorno em anos ruins</td><td class="negativo">Pode perder 30-50%</td><td class="positivo">Sempre positivo nominal</td></tr>
+          <tr><td>Previsibilidade</td><td class="negativo">Baixa</td><td class="positivo">Alta (acompanha Selic)</td></tr>
+          <tr><td>Sensibilidade a juros</td><td class="positivo">Beneficia-se de queda</td><td class="negativo">Rende menos se Selic cair</td></tr>
+          <tr><td>Proteção contra inflação</td><td>Moderada</td><td>Boa enquanto Selic > IPCA</td></tr>
+          <tr><td>Liquidez</td><td class="positivo">D+2</td><td class="positivo">D+0 a D+1</td></tr>
+          <tr><td>Potencial de ganho</td><td class="positivo">Ilimitado</td><td>Limitado à Selic (15% atual)</td></tr>
+        </table>`
+    },
+    'fii-imovel': {
+      contexto: `
+        <p><strong>Duas Filosofias de Investimento Imobiliário (Cenário 2026)</strong></p>
+        <p>Investir em imóveis no Brasil é tradição. Mas há duas formas muito diferentes de fazer isso, cada uma com vantagens e desvantagens claras - especialmente no cenário atual de Selic a 15%.</p>
+
+        <p><strong>Imóvel Físico: O Investimento Tradicional</strong></p>
+        <ul>
+          <li><strong>Você é dono do tijolo:</strong> Pode usar, alugar, reformar ou vender</li>
+          <li><strong>Controle total:</strong> Você decide inquilino, preço do aluguel, manutenção</li>
+          <li><strong>Alavancagem:</strong> Pode financiar 70-80% do valor (mas cuidado: juros de financiamento estão altíssimos)</li>
+          <li><strong>Mercado aquecido:</strong> Preços subiram ~8% em 2025, vendas +9,6% no 1º semestre</li>
+        </ul>
+        <p><strong>Mas exige:</strong> Capital alto, tempo para gestão, lidar com inquilinos, vacância, manutenção, IPTU, condomínio...</p>
+
+        <p><strong>FIIs (Fundos Imobiliários): O Investimento Moderno</strong></p>
+        <ul>
+          <li><strong>Cotas acessíveis:</strong> Invista a partir de R$100 em grandes empreendimentos</li>
+          <li><strong>Renda mensal:</strong> Dividendos distribuídos todo mês, isentos de IR para pessoa física (por enquanto - pode mudar para 5% em 2026)</li>
+          <li><strong>Diversificação:</strong> Um FII pode ter 50+ imóveis em diferentes cidades</li>
+          <li><strong>Liquidez:</strong> Venda suas cotas em D+2 na bolsa</li>
+        </ul>
+        <p><strong>Mas você abre mão de:</strong> Controle sobre o ativo, possibilidade de usar o imóvel, alavancagem via financiamento.</p>
+
+        <p><strong>O Impacto da Selic a 15%</strong></p>
+        <p>Com juros tão altos, FIIs enfrentam forte concorrência do CDI - por que arriscar em imóveis se a renda fixa paga 15% ao ano? Mas se a Selic cair para 12% em 2026 (consenso do mercado), FIIs podem se valorizar significativamente. É uma aposta em queda de juros.</p>`,
+      pontoChave: `<strong>A questão central em 2026:</strong> Com Selic a 15%, tanto FIIs quanto financiamento imobiliário estão em desvantagem vs. renda fixa. Mas se os juros caírem como o mercado espera (para ~12% até fim de 2026), ambos podem se beneficiar. FIIs são mais líquidos e práticos; imóveis físicos oferecem mais controle e possibilidade de alavancagem quando os juros baixarem.`,
+      reflexao: `<strong>Nossa Tese:</strong> No cenário atual (Selic 15%), o momento é de cautela com imóveis. Se for comprar imóvel físico, evite financiamento caro - ou negocie forte desconto à vista. FIIs de tijolo (logística, shoppings) podem ser boas opções para quem acredita na queda de juros, mas prepare-se para volatilidade. Uma mudança tributária (possível IR de 5% sobre dividendos) está no radar para 2026 - fique atento.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>FIIs (IFIX)</th><th>Imóvel Físico</th></tr>
+          <tr><td>Capital mínimo</td><td class="positivo">~R$100</td><td class="negativo">R$200.000+</td></tr>
+          <tr><td>Liquidez</td><td class="positivo">Alta (D+2)</td><td class="negativo">Baixa (meses para vender)</td></tr>
+          <tr><td>Diversificação</td><td class="positivo">Fácil (várias cotas)</td><td class="negativo">Difícil (capital concentrado)</td></tr>
+          <tr><td>Gestão necessária</td><td class="positivo">Nenhuma</td><td class="negativo">Alta (inquilinos, manutenção)</td></tr>
+          <tr><td>Controle sobre o ativo</td><td class="negativo">Nenhum</td><td class="positivo">Total</td></tr>
+          <tr><td>Alavancagem (financiamento)</td><td class="negativo">Não disponível</td><td>Até 80% (mas juros de ~12% a.a.)</td></tr>
+          <tr><td>IR sobre rendimentos</td><td class="positivo">Isento (pode mudar p/ 5%)</td><td class="negativo">Tributado (27,5% aluguel)</td></tr>
+          <tr><td>IR sobre ganho de capital</td><td>20%</td><td>15% (pode isentar)</td></tr>
+          <tr><td>Dividend yield atual</td><td class="positivo">~10-12% a.a.</td><td>~4-6% a.a. líquido</td></tr>
+          <tr><td>Valorização 2025</td><td class="negativo">IFIX pressionado pela Selic</td><td class="positivo">+8% nominal (FIPEZAP)</td></tr>
+          <tr><td>Risco de vacância</td><td class="positivo">Diluído (muitos imóveis)</td><td class="negativo">Concentrado (1 imóvel)</td></tr>
+          <tr><td>Sensibilidade a juros</td><td>Alta (valoriza se Selic cair)</td><td>Moderada</td></tr>
+          <tr><td>Uso próprio</td><td class="negativo">Não</td><td class="positivo">Sim</td></tr>
+        </table>`
+    },
+    'dolar-ouro': {
+      contexto: `
+        <p><strong>Dois Pilares de Proteção Patrimonial (Cenário 2026)</strong></p>
+        <p>Tanto o dólar quanto o ouro são considerados "ativos de proteção" - refúgios em momentos de crise. Em 2025, o ouro teve desempenho espetacular (+65%), enquanto o dólar teve comportamento misto. O que isso significa para 2026?</p>
+
+        <p><strong>Dólar: A Moeda de Reserva Mundial</strong></p>
+        <ul>
+          <li><strong>Dominância global:</strong> ~60% das reservas cambiais mundiais ainda são em dólar</li>
+          <li><strong>Flight to quality:</strong> Em crises, investidores correm para o dólar</li>
+          <li><strong>Proteção contra Brasil:</strong> Em crises locais, o real desvaloriza e o dólar sobe</li>
+          <li><strong>Rende juros:</strong> Treasury ainda paga ~4,25-4,50% a.a. (Fed em janeiro 2026)</li>
+        </ul>
+
+        <p><strong>Ouro: O Ativo Que Brilhou em 2025</strong></p>
+        <ul>
+          <li><strong>Performance histórica:</strong> +65% em 2025 - melhor ano desde a era Jimmy Carter</li>
+          <li><strong>Novo recorde:</strong> Ultrapassou US$4.000/oz pela primeira vez, chegando a US$4.500</li>
+          <li><strong>Compra recorde de BCs:</strong> Bancos centrais compraram +1.000 toneladas/ano nos últimos 3 anos</li>
+          <li><strong>Geopolítica:</strong> Congelamento de reservas russas acelerou diversificação para ouro</li>
+        </ul>
+
+        <p><strong>A Mudança Estrutural</strong></p>
+        <p>Após o congelamento das reservas russas em 2022, bancos centrais (especialmente China, Índia, Turquia) aumentaram significativamente suas compras de ouro. Pela primeira vez desde 1996, o ouro superou os títulos do Tesouro americano nas reservas de bancos centrais. É uma mudança geopolítica profunda.</p>`,
+      pontoChave: `<strong>O que mudou:</strong> Antes de 2022, o dólar era o "porto seguro" indiscutível. Após o congelamento de reservas russas e a fragmentação geopolítica, o ouro ganhou relevância como ativo verdadeiramente neutro. Bancos centrais estão diversificando suas reservas de dólar para ouro. JPMorgan projeta ouro a US$5.000/oz até fim de 2026.`,
+      reflexao: `<strong>Nossa Tese:</strong> O momento é de ter ambos, mas o ouro ganhou protagonismo. Com a fragmentação do sistema financeiro global, ter parte do patrimônio em um ativo que não pode ser congelado por nenhum governo faz cada vez mais sentido. Sugestão: 15-20% em dólar (proteção contra Brasil + rendimento) e 5-10% em ouro (proteção contra cenários extremos). A soma protege contra a maioria dos riscos.`,
+      tabelaComparativa: `
+        <table class="tabela-comparativa">
+          <tr><th>Característica</th><th>Dólar</th><th>Ouro</th></tr>
+          <tr><td>Tipo de ativo</td><td>Moeda fiduciária</td><td>Commodity / metal precioso</td></tr>
+          <tr><td>Performance 2025</td><td>Mista (variou por período)</td><td class="positivo">+65% (melhor em 50 anos)</td></tr>
+          <tr><td>Dependência</td><td class="negativo">Governo dos EUA / Fed</td><td class="positivo">Nenhuma (neutro)</td></tr>
+          <tr><td>Rende juros</td><td class="positivo">Sim (Treasury ~4,25%)</td><td class="negativo">Não</td></tr>
+          <tr><td>Pode ser congelado</td><td class="negativo">Sim (reservas russas 2022)</td><td class="positivo">Não (ativo físico)</td></tr>
+          <tr><td>Demanda de BCs</td><td class="negativo">Reduzindo % nas reservas</td><td class="positivo">+1.000 ton/ano (recorde)</td></tr>
+          <tr><td>Proteção contra crise BR</td><td class="positivo">Excelente</td><td class="positivo">Muito boa</td></tr>
+          <tr><td>Proteção contra crise global</td><td class="positivo">Boa</td><td class="positivo">Excelente</td></tr>
+          <tr><td>Proteção contra inflação</td><td class="negativo">Fraca</td><td class="positivo">Forte (histórica)</td></tr>
+          <tr><td>Liquidez no Brasil</td><td class="positivo">Alta (fundos, BDRs)</td><td class="positivo">Alta (ETFs, fundos)</td></tr>
+          <tr><td>Projeções 2026</td><td>Estável ou queda leve</td><td class="positivo">US$5.000/oz (JPMorgan)</td></tr>
+          <tr><td>Histórico</td><td>~80 anos (pós Bretton Woods)</td><td class="positivo">5.000+ anos</td></tr>
+        </table>`
+    }
+  },
+
   init() {
     this.bindNavigation();
     this.bindAssetChips();
     this.bindDueloButtons();
+    this.bindDueloFilters();
     this.bindPresets();
     this.bindAllocationSliders();
     this.bindPatternButtons();
@@ -146,6 +381,13 @@ const Comparador2 = {
         if (tabEl) tabEl.classList.add('active');
         this.currentTab = tab;
 
+        // Clear dropup active states when switching via main nav
+        document.querySelectorAll('.comp2-dropup-btn').forEach(b => b.classList.remove('active'));
+        const moreBtn = document.getElementById('comp2NavMore');
+        if (moreBtn) {
+          moreBtn.classList.remove('has-active');
+        }
+
         // Auto-load saved portfolio when clicking on Carteira or Rebalancear tabs
         if (tab === 'carteira' && this.hasSavedPortfolio()) {
           this.loadSavedPortfolioToTab('comp2Allocation', 'allocTotal');
@@ -214,6 +456,44 @@ const Comparador2 = {
         this.iniciarDuelo();
       });
     });
+  },
+
+  // Bind filter changes to auto-recalculate duelo
+  bindDueloFilters() {
+    const self = this;
+
+    // Debounce function to avoid too many recalculations
+    let debounceTimer;
+    const recalcularDuelo = () => {
+      clearTimeout(debounceTimer);
+      debounceTimer = setTimeout(() => {
+        if (self.currentTab === 'comparacao' && Comparador.dadosMensais?.meses) {
+          self.iniciarDuelo();
+        }
+      }, 300);
+    };
+
+    // Date selects for Duelo tab (inside #comp2-comparacao)
+    const dueloTab = document.getElementById('comp2-comparacao');
+    if (dueloTab) {
+      // Listen for changes on date-month and date-year selects
+      dueloTab.querySelectorAll('.comp2-date-select .date-month, .comp2-date-select .date-year').forEach(select => {
+        select.addEventListener('change', recalcularDuelo);
+      });
+
+      // Listen for changes on text inputs (valor, dolar extra, imoveis renda)
+      const valorInput = document.getElementById('comp2DueloValor');
+      const dolarExtraInput = document.getElementById('comp2DueloDolarExtra');
+      const imoveisRendaInput = document.getElementById('comp2DueloImoveisRenda');
+
+      [valorInput, dolarExtraInput, imoveisRendaInput].forEach(input => {
+        if (input) {
+          // Use 'change' for when user finishes editing, 'blur' as backup
+          input.addEventListener('change', recalcularDuelo);
+          input.addEventListener('blur', recalcularDuelo);
+        }
+      });
+    }
   },
 
   bindPresets() {
@@ -969,13 +1249,14 @@ const Comparador2 = {
     const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, 0, dolarExtra);
 
     // Armazenar para toggle
-    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo };
+    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo, dueloSelecionado };
 
     // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);
     this.renderChartDuelo();
     this.renderTabelaDuelo(config, resultado1, resultado2);
     this.renderMetricasDuelo(config, resultado1, resultado2);
+    this.renderAnaliseDuelo(dueloSelecionado);
     this.renderConclusaoDuelo(config, resultado1, resultado2);
   },
 
@@ -1204,6 +1485,31 @@ const Comparador2 = {
     `;
   },
 
+  renderAnaliseDuelo(dueloKey) {
+    const container = document.getElementById('comp2DueloAnaliseConteudo');
+    if (!container) return;
+
+    const analise = this.dueloAnalises[dueloKey];
+    if (!analise) {
+      container.innerHTML = '';
+      return;
+    }
+
+    container.innerHTML = `
+      <div class="analise-contexto">
+        ${analise.contexto}
+      </div>
+      <div class="analise-ponto-chave">
+        <span class="ponto-chave-icon">💡</span>
+        <p><strong>Ponto-chave:</strong> ${analise.pontoChave}</p>
+      </div>
+      ${analise.tabelaComparativa || ''}
+      <div class="analise-reflexao">
+        <p>${analise.reflexao}</p>
+      </div>
+    `;
+  },
+
   renderConclusaoDuelo(config, resultado1, resultado2) {
     const container = document.getElementById('comp2DueloConclusaoLista');
     if (!container) return;
@@ -1217,50 +1523,54 @@ const Comparador2 = {
     const diferencaValor = Math.abs(resultado1.valorFinalReal - resultado2.valorFinalReal);
 
     // Contagem de vitórias anuais
-    let vitorias1 = 0, vitorias2 = 0;
+    let vitorias1 = 0, vitorias2 = 0, empates = 0;
     resultado1.retornosAnuais.forEach((r, i) => {
       if (r > resultado2.retornosAnuais[i]) vitorias1++;
       else if (r < resultado2.retornosAnuais[i]) vitorias2++;
+      else empates++;
     });
 
     const vitoriasMelhor = resultado1.retornoReal > resultado2.retornoReal ? vitorias1 : vitorias2;
     const vitoriasPior = resultado1.retornoReal > resultado2.retornoReal ? vitorias2 : vitorias1;
 
-    // Análise de risco-retorno
+    // Análise de risco-retorno (Sharpe simplificado)
     const sharpe1 = resultado1.volatilidade > 0 ? resultado1.retornoReal / resultado1.volatilidade : 0;
     const sharpe2 = resultado2.volatilidade > 0 ? resultado2.retornoReal / resultado2.volatilidade : 0;
-    const melhorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo1.nome : config.ativo2.nome;
+    const melhorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo1 : config.ativo2;
+    const piorRiscoRetorno = sharpe1 > sharpe2 ? config.ativo2 : config.ativo1;
 
-    let analiseExtra = '';
+    // Calcular CAGR
+    const numAnos = resultado1.totalAnos || 1;
+    const cagr1 = (Math.pow(resultado1.valorFinalReal / this.dueloResultados.valorInicial, 1/numAnos) - 1) * 100;
+    const cagr2 = (Math.pow(resultado2.valorFinalReal / this.dueloResultados.valorInicial, 1/numAnos) - 1) * 100;
 
-    // Análise específica por tipo de duelo
-    if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'sp500_brl') {
-      analiseExtra = `<div class="conclusao-item info"><span class="conclusao-icon">🌎</span><p>A comparação inclui o efeito cambial. Em períodos de desvalorização do real, o S&P 500 se beneficia duplamente: valorização das ações americanas e alta do dólar.</p></div>`;
-    } else if (config.ativo1.key === 'ibovespa' && config.ativo2.key === 'cdi') {
-      analiseExtra = `<div class="conclusao-item info"><span class="conclusao-icon">💡</span><p>O clássico debate brasileiro: vale a pena o risco da bolsa quando o CDI paga tão bem? Historicamente, o Brasil tem juros altos, tornando essa comparação particularmente relevante.</p></div>`;
-    }
+    // Menor drawdown é melhor
+    const menorDrawdown = resultado1.maxDrawdown < resultado2.maxDrawdown ? config.ativo1 : config.ativo2;
 
     container.innerHTML = `
       <div class="conclusao-item success">
         <span class="conclusao-icon">🏆</span>
-        <p><strong>${vencedor.nome}</strong> venceu o duelo com retorno real de <strong>${this.formatPercent(resVencedor.retornoReal)}</strong>, superando ${perdedor.nome} que rendeu ${this.formatPercent(resPerdedor.retornoReal)}.</p>
+        <p><strong>${vencedor.nome}</strong> venceu com retorno real de <strong>${this.formatPercent(resVencedor.retornoReal)}</strong> (CAGR: ${this.formatPercent(resVencedor === resultado1 ? cagr1 : cagr2)} a.a.), contra ${this.formatPercent(resPerdedor.retornoReal)} do ${perdedor.nome}.</p>
       </div>
       <div class="conclusao-item info">
         <span class="conclusao-icon">💰</span>
-        <p>A diferença final foi de <strong>${this.formatCurrency(diferencaValor)}</strong> em valor real (${this.formatPercent(diferenca)} em retorno).</p>
+        <p>Diferença final: <strong>${this.formatCurrency(diferencaValor)}</strong> (${this.formatPercent(diferenca)} de vantagem).</p>
       </div>
       <div class="conclusao-item info">
-        <span class="conclusao-icon">📊</span>
-        <p>Ano a ano, <strong>${vencedor.nome}</strong> venceu em ${vitoriasMelhor} dos ${resultado1.totalAnos} anos, enquanto ${perdedor.nome} venceu em ${vitoriasPior} anos.</p>
+        <span class="conclusao-icon">📅</span>
+        <p><strong>${vencedor.nome}</strong> venceu em <strong>${vitoriasMelhor}</strong> de ${resultado1.totalAnos} anos. ${perdedor.nome} venceu em ${vitoriasPior} anos${empates > 0 ? ` (${empates} empates)` : ''}.</p>
       </div>
-      <div class="conclusao-item ${resultado1.volatilidade < resultado2.volatilidade ? 'success' : 'warning'}">
+      <div class="conclusao-item ${sharpe1 !== sharpe2 ? 'warning' : 'info'}">
         <span class="conclusao-icon">⚖️</span>
-        <p>Considerando risco e retorno, <strong>${melhorRiscoRetorno}</strong> teve a melhor relação (Sharpe).</p>
+        <p><strong>${melhorRiscoRetorno.nome}</strong> teve melhor relação risco/retorno. Volatilidade: ${this.formatPercent(melhorRiscoRetorno === config.ativo1 ? resultado1.volatilidade : resultado2.volatilidade)} vs ${this.formatPercent(piorRiscoRetorno === config.ativo1 ? resultado1.volatilidade : resultado2.volatilidade)}.</p>
       </div>
-      ${analiseExtra}
-      <div class="conclusao-item" style="background: var(--bg-tertiary); border-left-color: var(--text-muted);">
+      <div class="conclusao-item ${resultado1.maxDrawdown !== resultado2.maxDrawdown ? 'info' : ''}">
+        <span class="conclusao-icon">📉</span>
+        <p><strong>${menorDrawdown.nome}</strong> teve menor queda máxima (drawdown): ${this.formatPercent(menorDrawdown === config.ativo1 ? resultado1.maxDrawdown : resultado2.maxDrawdown)} vs ${this.formatPercent(menorDrawdown === config.ativo1 ? resultado2.maxDrawdown : resultado1.maxDrawdown)}.</p>
+      </div>
+      <div class="conclusao-item disclaimer">
         <span class="conclusao-icon">⚠️</span>
-        <p style="color: var(--text-muted); font-size: 0.9rem;">Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais.</p>
+        <p>Resultados passados não garantem resultados futuros. Esta análise é apenas para fins educacionais.</p>
       </div>
     `;
   },

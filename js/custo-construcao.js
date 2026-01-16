@@ -2356,6 +2356,114 @@
       custoBase = custoMateriais + custoMaoObra + custoComodosExtra;
     }
 
+    // AJUSTE DE MATERIAIS SELECIONADOS
+    // Calcula a diferença entre os materiais selecionados e os materiais base
+    let ajusteMateriais = 0;
+    const detalhesMateriais = [];
+
+    // Só aplicar ajuste de materiais para construções (não apartamentos com preço de mercado)
+    if (!usarPrecoMercado) {
+      // Valores base de referência (materiais padrão incluídos no custo base)
+      const materiaisBase = {
+        pisos: { key: 'ceramica_classe_b', valorM2: 35 },
+        telhado: { key: 'ceramica_simples', valorM2: 70 },
+        forro: { key: 'pvc_simples', valorM2: 40 },
+        janelas: { key: 'aluminio_simples', valorM2: 350 },  // por m² de janela
+        portas: { key: 'madeira_semi_oca', valorUnidade: 350 }
+      };
+
+      // Piso - aplica-se a toda a área
+      const pisoSelecionado = state.materiais.pisos;
+      const pisoData = data.materiais.pisos[pisoSelecionado];
+      if (pisoData && pisoData.valorM2) {
+        const diferencaPiso = pisoData.valorM2 - materiaisBase.pisos.valorM2;
+        if (diferencaPiso !== 0) {
+          const ajustePiso = diferencaPiso * area;
+          ajusteMateriais += ajustePiso;
+          if (ajustePiso > 0) {
+            detalhesMateriais.push({ nome: `Piso: ${pisoData.nome}`, valor: ajustePiso, tipo: 'upgrade' });
+          } else {
+            detalhesMateriais.push({ nome: `Piso: ${pisoData.nome}`, valor: ajustePiso, tipo: 'economia' });
+          }
+        }
+      }
+
+      // Telhado - aplica-se à área (para casas, não apartamentos)
+      if (!isApartamento) {
+        const telhadoSelecionado = state.materiais.telhado;
+        const telhadoData = data.materiais.telhados[telhadoSelecionado];
+        if (telhadoData && telhadoData.valorM2) {
+          const diferencaTelhado = telhadoData.valorM2 - materiaisBase.telhado.valorM2;
+          if (diferencaTelhado !== 0) {
+            // Área do telhado é aproximadamente 1.1x a área construída (inclinação)
+            const areaTelhado = area * 1.1;
+            const ajusteTelhado = diferencaTelhado * areaTelhado;
+            ajusteMateriais += ajusteTelhado;
+            if (ajusteTelhado > 0) {
+              detalhesMateriais.push({ nome: `Telhado: ${telhadoData.nome}`, valor: ajusteTelhado, tipo: 'upgrade' });
+            } else {
+              detalhesMateriais.push({ nome: `Telhado: ${telhadoData.nome}`, valor: ajusteTelhado, tipo: 'economia' });
+            }
+          }
+        }
+
+        // Forro - aplica-se à área interna
+        const forroSelecionado = state.materiais.forro;
+        const forroData = data.materiais.forros[forroSelecionado];
+        if (forroData && forroData.valorM2) {
+          const diferencaForro = forroData.valorM2 - materiaisBase.forro.valorM2;
+          if (diferencaForro !== 0) {
+            const ajusteForro = diferencaForro * area;
+            ajusteMateriais += ajusteForro;
+            if (ajusteForro > 0) {
+              detalhesMateriais.push({ nome: `Forro: ${forroData.nome}`, valor: ajusteForro, tipo: 'upgrade' });
+            } else {
+              detalhesMateriais.push({ nome: `Forro: ${forroData.nome}`, valor: ajusteForro, tipo: 'economia' });
+            }
+          }
+        }
+      }
+
+      // Janelas - estimar quantidade baseado na área (aprox. 1 janela a cada 8m²)
+      const janelaSelecionada = state.materiais.janelas;
+      const janelaData = data.materiais.janelas[janelaSelecionada];
+      if (janelaData && janelaData.valorM2) {
+        const diferencaJanela = janelaData.valorM2 - materiaisBase.janelas.valorM2;
+        if (diferencaJanela !== 0) {
+          // Estimar área de janelas: ~10% da área construída
+          const areaJanelas = area * 0.10;
+          const ajusteJanelas = diferencaJanela * areaJanelas;
+          ajusteMateriais += ajusteJanelas;
+          if (ajusteJanelas > 0) {
+            detalhesMateriais.push({ nome: `Janelas: ${janelaData.nome}`, valor: ajusteJanelas, tipo: 'upgrade' });
+          } else {
+            detalhesMateriais.push({ nome: `Janelas: ${janelaData.nome}`, valor: ajusteJanelas, tipo: 'economia' });
+          }
+        }
+      }
+
+      // Portas - estimar quantidade (quartos + suítes + banheiros + cozinha + área serviço + entrada)
+      const portaSelecionada = state.materiais.portas;
+      const portaData = data.materiais.portas[portaSelecionada];
+      if (portaData && portaData.valorUnidade) {
+        const diferencaPorta = portaData.valorUnidade - materiaisBase.portas.valorUnidade;
+        if (diferencaPorta !== 0) {
+          const numPortas = state.config.numQuartos + state.config.numSuites +
+                           state.config.numBanheiros + 3; // +3 = cozinha, entrada, serviço
+          const ajustePortas = diferencaPorta * numPortas;
+          ajusteMateriais += ajustePortas;
+          if (ajustePortas > 0) {
+            detalhesMateriais.push({ nome: `Portas: ${portaData.nome} (${numPortas}un)`, valor: ajustePortas, tipo: 'upgrade' });
+          } else {
+            detalhesMateriais.push({ nome: `Portas: ${portaData.nome} (${numPortas}un)`, valor: ajustePortas, tipo: 'economia' });
+          }
+        }
+      }
+
+      // Aplicar ajuste ao custo base
+      custoBase += ajusteMateriais;
+    }
+
     // EXTRAS
     let custoExtras = 0;
     const detalhesExtras = [];
@@ -2603,10 +2711,12 @@
       custoMateriais,
       custoMaoObra,
       custoComodosExtra,
+      ajusteMateriais,
       custoExtras,
       custoAdicionais,
       custoTerreno,
       areaTerreno,
+      detalhesMateriais,
       detalhesExtras,
       detalhesAdicionais,
       config: { ...state.config },
@@ -2734,6 +2844,25 @@
             </div>
           </div>
           `}
+
+          ${detalhesMateriais.length > 0 ? `
+            <div class="cc-breakdown-group">
+              <div class="cc-breakdown-group-title">Ajuste de Materiais Selecionados</div>
+              ${detalhesMateriais.map(e => `
+                <div class="cc-breakdown-row ${e.tipo === 'economia' ? 'cc-economia' : 'cc-upgrade'}">
+                  <span>${e.nome}</span>
+                  <span>${e.valor > 0 ? '+' : ''}R$ ${formatNumber(e.valor)}</span>
+                </div>
+              `).join('')}
+              <div class="cc-breakdown-subtotal">
+                <span>Ajuste Total Materiais</span>
+                <span>${ajusteMateriais > 0 ? '+' : ''}R$ ${formatNumber(ajusteMateriais)}</span>
+              </div>
+              <div class="cc-breakdown-hint">
+                <small>* Diferença em relação aos materiais padrão (Cerâmica B, Telha Cerâmica, Forro PVC, Alumínio Simples, Porta Semi-oca)</small>
+              </div>
+            </div>
+          ` : ''}
 
           ${custoExtras > 0 ? `
             <div class="cc-breakdown-group">

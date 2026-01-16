@@ -559,7 +559,6 @@ const CidadesBrasil = {
       'carlos barbosa': { tipo: 'interior', populacao: 'pequena' },
       'farroupilha': { tipo: 'interior', populacao: 'media' },
       'campo bonito': { tipo: 'interior', populacao: 'pequena' },
-      'passo de torres': { tipo: 'litoral', populacao: 'pequena' },
       'morro reuter': { tipo: 'turistico', populacao: 'pequena', turistico: true },
       'nova petropolis': { tipo: 'turistico', populacao: 'pequena', turistico: true }
     },
@@ -586,6 +585,7 @@ const CidadesBrasil = {
       'concordia': { tipo: 'interior', populacao: 'media' },
       'rio do sul': { tipo: 'interior', populacao: 'media' },
       'ararangua': { tipo: 'litoral', populacao: 'media' },
+      'passo de torres': { tipo: 'litoral', populacao: 'pequena', turistico: true },
       'biguacu': { tipo: 'metropole', populacao: 'media' },
       'gaspar': { tipo: 'interior', populacao: 'media' },
       'itapema': { tipo: 'litoral', populacao: 'media', turistico: true },
@@ -767,18 +767,27 @@ const CidadesBrasil = {
       }
     }
 
-    // Depois, procurar cidades
+    // Coletar todas as cidades que fazem match
+    const matches = [];
     for (const [uf, cidades] of Object.entries(this.cidades)) {
       for (const [cidade, info] of Object.entries(cidades)) {
         if (textoNorm.includes(cidade)) {
-          return {
+          matches.push({
             cidade: cidade,
             uf: uf,
             estado: this.estados[uf].nome,
+            tamanhoMatch: cidade.length,
             ...info
-          };
+          });
         }
       }
+    }
+
+    // Retornar o match mais específico (nome mais longo)
+    // Ex: "Passo de Torres" (15 chars) vence "Torres" (6 chars)
+    if (matches.length > 0) {
+      matches.sort((a, b) => b.tamanhoMatch - a.tamanhoMatch);
+      return matches[0];
     }
 
     return null;

@@ -11,6 +11,7 @@
       estado: 'SP',
       tipoEstrutura: 'terrea',
       tipoConstrucao: 'alvenaria',
+      estadoConservacao: 'nova',
       padrao: 'medio',
       areaTotal: 100,
       numQuartos: 2,
@@ -81,7 +82,7 @@
         <section class="cc-section cc-section-config">
           <h2 class="cc-section-title">${t.configuracaoBasica}</h2>
 
-          <div class="cc-grid cc-grid-3">
+          <div class="cc-grid cc-grid-2">
             <div class="cc-field">
               <label>${t.regiao}</label>
               <select id="cc-estado">
@@ -91,6 +92,19 @@
               </select>
             </div>
 
+            <div class="cc-field">
+              <label>Situação do Imóvel</label>
+              <select id="cc-estado-conservacao">
+                ${Object.entries(data.estadoConservacao).map(([key, info]) =>
+                  `<option value="${key}" ${key === state.config.estadoConservacao ? 'selected' : ''}>${info.nome}</option>`
+                ).join('')}
+              </select>
+            </div>
+          </div>
+
+          <div class="cc-conservacao-info" id="cc-conservacao-info"></div>
+
+          <div class="cc-grid cc-grid-3" style="margin-top: 16px;">
             <div class="cc-field">
               <label>${t.tipoEstrutura || 'Tipo de Casa'}</label>
               <select id="cc-tipo-estrutura">
@@ -108,9 +122,7 @@
                 ).join('')}
               </select>
             </div>
-          </div>
 
-          <div class="cc-grid cc-grid-2" style="margin-top: 16px;">
             <div class="cc-field">
               <label>${t.padraoAcabamento}</label>
               <select id="cc-padrao">
@@ -119,7 +131,9 @@
                 ).join('')}
               </select>
             </div>
+          </div>
 
+          <div class="cc-grid cc-grid-1" style="margin-top: 16px;">
             <div class="cc-field">
               <label>${t.areaTotal}</label>
               <div class="cc-input-group">
@@ -270,6 +284,7 @@
 
     updateTipoInfo();
     updateComodosResumo();
+    updateConservacaoInfo();
   }
 
   function buildMaterialSelect(categoria, label, stateKey = null) {
@@ -629,6 +644,31 @@
     `;
   }
 
+  function updateConservacaoInfo() {
+    const infoEl = document.getElementById('cc-conservacao-info');
+    if (!infoEl) return;
+
+    const conservacao = data.estadoConservacao[state.config.estadoConservacao];
+    if (!conservacao) return;
+
+    if (state.config.estadoConservacao === 'nova') {
+      infoEl.innerHTML = '';
+      return;
+    }
+
+    infoEl.innerHTML = `
+      <div class="cc-conservacao-card">
+        <div class="cc-conservacao-row">
+          <strong>${conservacao.nome}:</strong> ${conservacao.descricao}
+          <span class="cc-tipo-badge cc-green">-${conservacao.desconto}% no custo</span>
+        </div>
+        <div class="cc-conservacao-detail">
+          <em>O que inclui:</em> ${conservacao.itensInclusos}
+        </div>
+      </div>
+    `;
+  }
+
   function attachEventListeners() {
     // Toggle sections
     document.querySelectorAll('.cc-btn-toggle').forEach(btn => {
@@ -644,6 +684,7 @@
     // Config changes
     const configHandlers = {
       'cc-estado': v => state.config.estado = v,
+      'cc-estado-conservacao': v => { state.config.estadoConservacao = v; updateConservacaoInfo(); },
       'cc-tipo-estrutura': v => { state.config.tipoEstrutura = v; updateTipoInfo(); },
       'cc-tipo-construcao': v => { state.config.tipoConstrucao = v; updateTipoInfo(); },
       'cc-padrao': v => state.config.padrao = v,
@@ -746,8 +787,13 @@
     const regiao = data.regioes[state.config.estado];
     const estrutura = data.tiposEstrutura[state.config.tipoEstrutura];
     const metodo = data.tiposConstrucao[state.config.tipoConstrucao];
+    const conservacao = data.estadoConservacao[state.config.estadoConservacao];
     const padrao = data.padroes[state.config.padrao];
     const area = state.config.areaTotal;
+
+    // Fator de conservação (reduz o custo para reformas)
+    const fatorConservacao = conservacao ? conservacao.fator : 1.0;
+    const isReforma = state.config.estadoConservacao !== 'nova';
 
     // Custo base
     const custoBaseM2 = data.custoBaseM2.materiais + data.custoBaseM2.maoDeObra;
@@ -756,8 +802,8 @@
     const proporcaoMateriais = data.custoBaseM2.materiais / custoBaseM2;
     const proporcaoMaoObra = data.custoBaseM2.maoDeObra / custoBaseM2;
 
-    let custoMateriais = custoM2Ajustado * proporcaoMateriais * area;
-    let custoMaoObra = custoM2Ajustado * proporcaoMaoObra * area;
+    let custoMateriais = custoM2Ajustado * proporcaoMateriais * area * fatorConservacao;
+    let custoMaoObra = custoM2Ajustado * proporcaoMaoObra * area * fatorConservacao;
 
     // Ajustar mão de obra com base nos profissionais desmarcados
     let percentualMaoObraAtivo = 0;
@@ -769,14 +815,14 @@
     const fatorMaoObra = percentualMaoObraAtivo / 100;
     custoMaoObra = custoMaoObra * fatorMaoObra;
 
-    // Custo adicional por cômodos
+    // Custo adicional por cômodos (também ajustado pelo fator de conservação)
     const custoComodos = data.custoPorComodo;
     let custoComodosExtra = 0;
-    custoComodosExtra += state.config.numQuartos * custoComodos.quarto.custoBase * padrao.fator;
-    custoComodosExtra += state.config.numSuites * custoComodos.suite.custoBase * padrao.fator;
-    custoComodosExtra += state.config.numBanheiros * custoComodos.banheiro.custoBase * padrao.fator;
+    custoComodosExtra += state.config.numQuartos * custoComodos.quarto.custoBase * padrao.fator * fatorConservacao;
+    custoComodosExtra += state.config.numSuites * custoComodos.suite.custoBase * padrao.fator * fatorConservacao;
+    custoComodosExtra += state.config.numBanheiros * custoComodos.banheiro.custoBase * padrao.fator * fatorConservacao;
     if (state.config.temAreaServico) {
-      custoComodosExtra += custoComodos.areaServico.custoBase * padrao.fator;
+      custoComodosExtra += custoComodos.areaServico.custoBase * padrao.fator * fatorConservacao;
     }
 
     // Custo base da construção
@@ -972,60 +1018,83 @@
       regiao,
       estrutura,
       metodo,
-      padrao
+      padrao,
+      conservacao,
+      isReforma
     };
 
     // Render
+    const tipoObra = isReforma ? conservacao.nome : 'Construção Nova';
+
     resultado.innerHTML = `
       <div class="cc-resultado-main">
         <div class="cc-resultado-total">
-          <span class="cc-resultado-label">Custo Total Estimado</span>
+          <span class="cc-resultado-label">Custo Total Estimado ${isReforma ? '(Reforma)' : ''}</span>
           <span class="cc-resultado-valor">R$ ${formatNumber(custoTotal)}</span>
           <span class="cc-resultado-m2">R$ ${formatNumber(custoM2Final)}/m²</span>
         </div>
 
+        ${isReforma ? `
+          <div class="cc-resultado-reforma-info">
+            <strong>${conservacao.nome}</strong> - ${conservacao.descricao}
+            <br><small>Economia de ${conservacao.desconto}% sobre construção nova</small>
+          </div>
+        ` : ''}
+
         <div class="cc-resultado-breakdown">
-          <div class="cc-breakdown-item">
-            <span class="cc-breakdown-label">Construção Base (${area}m²)</span>
-            <span class="cc-breakdown-valor">R$ ${formatNumber(custoBase)}</span>
-          </div>
-          <div class="cc-breakdown-sub">
-            <span>Materiais (estrutura)</span>
-            <span>R$ ${formatNumber(custoMateriais)}</span>
-          </div>
-          <div class="cc-breakdown-sub">
-            <span>Mão de Obra (${(percentualMaoObraAtivo).toFixed(0)}% ativa)</span>
-            <span>R$ ${formatNumber(custoMaoObra)}</span>
-          </div>
-          <div class="cc-breakdown-sub">
-            <span>Cômodos (${state.config.numQuartos} qts + ${state.config.numSuites} suítes + ${state.config.numBanheiros} wc)</span>
-            <span>R$ ${formatNumber(custoComodosExtra)}</span>
+          <!-- Composição do custo - seção agrupada -->
+          <div class="cc-breakdown-group">
+            <div class="cc-breakdown-group-title">Composição do Custo (${area}m²)</div>
+
+            <div class="cc-breakdown-row">
+              <span>Materiais e Estrutura</span>
+              <span>R$ ${formatNumber(custoMateriais)}</span>
+            </div>
+            <div class="cc-breakdown-row">
+              <span>Mão de Obra (${(percentualMaoObraAtivo).toFixed(0)}% ativa)</span>
+              <span>R$ ${formatNumber(custoMaoObra)}</span>
+            </div>
+            <div class="cc-breakdown-row">
+              <span>Cômodos (${state.config.numQuartos} qts + ${state.config.numSuites} suítes + ${state.config.numBanheiros} wc)</span>
+              <span>R$ ${formatNumber(custoComodosExtra)}</span>
+            </div>
+
+            <div class="cc-breakdown-subtotal">
+              <span>Subtotal Construção</span>
+              <span>R$ ${formatNumber(custoBase)}</span>
+            </div>
           </div>
 
           ${custoExtras > 0 ? `
-            <div class="cc-breakdown-item">
-              <span class="cc-breakdown-label">Itens Extras</span>
-              <span class="cc-breakdown-valor">R$ ${formatNumber(custoExtras)}</span>
-            </div>
-            ${detalhesExtras.map(e => `
-              <div class="cc-breakdown-sub">
-                <span>${e.nome}</span>
-                <span>R$ ${formatNumber(e.valor)}</span>
+            <div class="cc-breakdown-group">
+              <div class="cc-breakdown-group-title">Itens Extras</div>
+              ${detalhesExtras.map(e => `
+                <div class="cc-breakdown-row">
+                  <span>${e.nome}</span>
+                  <span>R$ ${formatNumber(e.valor)}</span>
+                </div>
+              `).join('')}
+              <div class="cc-breakdown-subtotal">
+                <span>Subtotal Extras</span>
+                <span>R$ ${formatNumber(custoExtras)}</span>
               </div>
-            `).join('')}
+            </div>
           ` : ''}
 
           ${custoAdicionais > 0 ? `
-            <div class="cc-breakdown-item">
-              <span class="cc-breakdown-label">Projetos e Taxas</span>
-              <span class="cc-breakdown-valor">R$ ${formatNumber(custoAdicionais)}</span>
-            </div>
-            ${detalhesAdicionais.map(e => `
-              <div class="cc-breakdown-sub">
-                <span>${e.nome}</span>
-                <span>R$ ${formatNumber(e.valor)}</span>
+            <div class="cc-breakdown-group">
+              <div class="cc-breakdown-group-title">Projetos e Taxas</div>
+              ${detalhesAdicionais.map(e => `
+                <div class="cc-breakdown-row">
+                  <span>${e.nome}</span>
+                  <span>R$ ${formatNumber(e.valor)}</span>
+                </div>
+              `).join('')}
+              <div class="cc-breakdown-subtotal">
+                <span>Subtotal Projetos</span>
+                <span>R$ ${formatNumber(custoAdicionais)}</span>
               </div>
-            `).join('')}
+            </div>
           ` : ''}
         </div>
       </div>
@@ -1035,6 +1104,10 @@
           <div class="cc-info-item">
             <span class="cc-info-label">Região</span>
             <span class="cc-info-value">${state.config.estado} - ${regiao.nome}</span>
+          </div>
+          <div class="cc-info-item">
+            <span class="cc-info-label">Situação</span>
+            <span class="cc-info-value">${tipoObra}</span>
           </div>
           <div class="cc-info-item">
             <span class="cc-info-label">Tipo</span>
@@ -1086,13 +1159,18 @@
 
     csv += 'CONFIGURAÇÃO\n';
     csv += `Região;${c.config.estado} - ${c.regiao.nome}\n`;
+    csv += `Situação;${c.isReforma ? c.conservacao.nome : 'Construção Nova'}\n`;
     csv += `Tipo de Casa;${c.estrutura.nome}\n`;
     csv += `Método Construtivo;${c.metodo.nome}\n`;
     csv += `Padrão de Acabamento;${c.padrao.nome}\n`;
     csv += `Área Total;${c.config.areaTotal} m²\n`;
     csv += `Quartos;${c.config.numQuartos}\n`;
     csv += `Suítes;${c.config.numSuites}\n`;
-    csv += `Banheiros extras;${c.config.numBanheiros}\n\n`;
+    csv += `Banheiros extras;${c.config.numBanheiros}\n`;
+    if (c.isReforma) {
+      csv += `Economia (reforma);${c.conservacao.desconto}%\n`;
+    }
+    csv += '\n';
 
     csv += 'DETALHAMENTO DE CUSTOS\n';
     csv += 'Item;Valor (R$)\n';
@@ -1143,9 +1221,11 @@
     const c = state.calculoAtual;
     const dataAtual = new Date().toLocaleDateString('pt-BR');
 
+    const tipoObra = c.isReforma ? c.conservacao.nome : 'Construção Nova';
+
     let texto = `
 ═══════════════════════════════════════════════════════════
-                  ORÇAMENTO DE CONSTRUÇÃO
+           ORÇAMENTO DE ${c.isReforma ? 'REFORMA' : 'CONSTRUÇÃO'}
 ═══════════════════════════════════════════════════════════
 Gerado em: ${dataAtual}
 Site: ricoaospoucos.com.br
@@ -1153,6 +1233,7 @@ Site: ricoaospoucos.com.br
 CONFIGURAÇÃO
 ───────────────────────────────────────────────────────────
 Região: ${c.config.estado} - ${c.regiao.nome}
+Situação: ${tipoObra}${c.isReforma ? ` (economia de ${c.conservacao.desconto}%)` : ''}
 Tipo de Casa: ${c.estrutura.nome}
 Método: ${c.metodo.nome}
 Padrão: ${c.padrao.nome}

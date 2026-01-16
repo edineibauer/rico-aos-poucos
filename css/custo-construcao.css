@@ -482,6 +482,96 @@
   color: var(--text-secondary);
 }
 
+/* Breakdown groups - novo layout */
+.cc-breakdown-group {
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-bottom: 12px;
+}
+
+.cc-breakdown-group:last-child {
+  margin-bottom: 0;
+}
+
+.cc-breakdown-group-title {
+  font-weight: 600;
+  color: var(--text-primary);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.cc-breakdown-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+.cc-breakdown-row span:last-child {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cc-breakdown-subtotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 0 0;
+  margin-top: 8px;
+  border-top: 1px dashed var(--border-color);
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+/* Reforma info */
+.cc-resultado-reforma-info {
+  background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);
+  color: #155724;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin: 12px 0;
+  font-size: 0.95rem;
+}
+
+.cc-resultado-reforma-info small {
+  opacity: 0.85;
+}
+
+/* Conservação info card */
+.cc-conservacao-info {
+  margin-top: 12px;
+}
+
+.cc-conservacao-card {
+  background: linear-gradient(135deg, #e8f4fd 0%, #d0e8f7 100%);
+  border-radius: 8px;
+  padding: 12px 16px;
+}
+
+.cc-conservacao-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.cc-conservacao-detail {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.cc-conservacao-detail em {
+  font-weight: 500;
+}
+
 /* Info grid */
 .cc-resultado-info {
   padding: 16px 24px;
@@ -491,8 +581,14 @@
 
 .cc-info-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   gap: 16px;
+}
+
+@media (max-width: 992px) {
+  .cc-info-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (max-width: 768px) {

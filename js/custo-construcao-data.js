@@ -83,6 +83,45 @@ const CustoConstrucaoData = {
     }
   },
 
+  // Estado de conservação (para reformas/casas existentes)
+  estadoConservacao: {
+    'nova': {
+      nome: 'Construção Nova',
+      descricao: 'Construção do zero, sem estrutura existente',
+      fator: 1.0,
+      desconto: 0,
+      itensInclusos: 'Todos os itens e materiais'
+    },
+    'bom': {
+      nome: 'Casa em Bom Estado',
+      descricao: 'Reforma leve - estrutura, telhado e instalações em bom estado',
+      fator: 0.35,
+      desconto: 65,
+      itensInclusos: 'Pintura, pisos, acabamentos, alguns reparos'
+    },
+    'medio': {
+      nome: 'Casa em Estado Médio',
+      descricao: 'Reforma média - necessita trocar parte das instalações',
+      fator: 0.55,
+      desconto: 45,
+      itensInclusos: 'Instalações parciais, revestimentos, esquadrias, pintura'
+    },
+    'ruim': {
+      nome: 'Casa em Mau Estado',
+      descricao: 'Reforma pesada - aproveita apenas estrutura básica',
+      fator: 0.75,
+      desconto: 25,
+      itensInclusos: 'Quase tudo, exceto fundação e parte da estrutura'
+    },
+    'so_estrutura': {
+      nome: 'Apenas Estrutura (esqueleto)',
+      descricao: 'Casa no osso - apenas paredes e laje/telhado',
+      fator: 0.60,
+      desconto: 40,
+      itensInclusos: 'Todos acabamentos, instalações, esquadrias'
+    }
+  },
+
   // Tipos de construção (método construtivo)
   tiposConstrucao: {
     'alvenaria': {

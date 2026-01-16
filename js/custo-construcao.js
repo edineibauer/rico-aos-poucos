@@ -819,18 +819,21 @@
     }
 
     // Padrão 1: Área explícita total/construída/privativa (maior prioridade)
+    // Aceita decimais com vírgula (BR) ou ponto: 48,37m² ou 48.37m²
     const areaTotalPatterns = [
-      /area\s*(?:total|construida|privativa|util)\s*(?:de\s*)?(\d+)\s*m[²2]?/i,
-      /(\d+)\s*m[²2]?\s*(?:de\s*)?area\s*(?:total|construida|privativa|util)/i,
-      /(?:casa|imovel|apartamento|apto|sobrado|residencia)\s+(?:de\s+|com\s+)?(\d+)\s*m[²2]/i,
-      /(\d+)\s*m[²2]\s*(?:de\s*)?(?:casa|imovel|apartamento|apto|sobrado|residencia)/i
+      /area\s*(?:total|construida|privativa|util)\s*(?:de\s*)?:?\s*(\d+(?:[,\.]\d+)?)\s*m[²2]?/i,
+      /(\d+(?:[,\.]\d+)?)\s*m[²2]?\s*(?:de\s*)?area\s*(?:total|construida|privativa|util)/i,
+      /(?:casa|imovel|apartamento|apto|sobrado|residencia)\s+(?:de\s+|com\s+)?(\d+(?:[,\.]\d+)?)\s*m[²2]/i,
+      /(\d+(?:[,\.]\d+)?)\s*m[²2]\s*(?:de\s*)?(?:casa|imovel|apartamento|apto|sobrado|residencia)/i
     ];
 
     let areaEncontrada = false;
     for (const pattern of areaTotalPatterns) {
       const match = texto.match(pattern);
       if (match) {
-        const area = parseInt(match[1]);
+        // Converter vírgula para ponto e parsear como float, depois arredondar
+        const areaStr = match[1].replace(',', '.');
+        const area = Math.round(parseFloat(areaStr));
         if (area >= 20 && area <= 5000) {
           resultado.config.areaTotal = area;
           resultado.encontrados.push(`Área: ${area}m²`);
@@ -842,12 +845,13 @@
 
     // Padrão 2: Se não encontrou área explícita, buscar m² que NÃO esteja associado a cômodo
     if (!areaEncontrada) {
-      const areaRegex = /(\d+)\s*m[²2]/gi;
+      const areaRegex = /(\d+(?:[,\.]\d+)?)\s*m[²2]/gi;
       let match;
       const areasEncontradas = [];
 
       while ((match = areaRegex.exec(texto)) !== null) {
-        const area = parseInt(match[1]);
+        const areaStr = match[1].replace(',', '.');
+        const area = Math.round(parseFloat(areaStr));
         if (area >= 20 && area <= 5000) {
           // Verificar se NÃO está associado a um cômodo específico
           if (!isAreaDeComodo(texto, match.index)) {

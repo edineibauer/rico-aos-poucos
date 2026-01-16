@@ -124,12 +124,21 @@
 /* ===========================================
    CARD PRINCIPAL - SEÇÕES
    =========================================== */
+.cc-calculator .cc-section,
 .cc-section {
   background: var(--cc-bg);
   border: 1px solid var(--cc-border);
   border-radius: var(--cc-radius-lg);
   margin-bottom: 16px;
   overflow: hidden;
+  padding: 0; /* Override default .section padding */
+}
+
+/* Override any global .section styles */
+.cc-calculator section,
+.cc-calculator .section {
+  padding: 0;
+  margin: 0 0 16px 0;
 }
 
 .cc-section-header {

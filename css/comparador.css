@@ -2355,14 +2355,16 @@
    MOBILE NAVBAR - 5 ITEMS + MORE DROPUP
    =========================================== */
 
-/* More button (mobile only) */
-.comp2-nav-more {
+/* More button and dropup - hidden on desktop */
+.comp2-nav-more,
+.comp2-dropup,
+.comp2-dropup-overlay {
   display: none;
 }
 
 @media (max-width: 768px) {
-  /* Hide items beyond 5th position on mobile */
-  .comp2-nav .comp2-nav-btn:nth-child(n+6) {
+  /* Hide items beyond 4th position on mobile (4 items + More = 5 total) */
+  .comp2-nav .comp2-nav-btn:nth-child(n+5) {
     display: none;
   }
 

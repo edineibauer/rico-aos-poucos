@@ -1136,13 +1136,6 @@
           </svg>
           Exportar Excel
         </button>
-        <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.exportarTexto()">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-            <polyline points="14 2 14 8 20 8"></polyline>
-          </svg>
-          Exportar Texto
-        </button>
       </div>
     `;
   }
@@ -1155,274 +1148,123 @@
     const dataAtual = new Date().toLocaleDateString('pt-BR');
     const tipoObra = c.isReforma ? c.conservacao.nome : 'Construção Nova';
 
-    // Verificar se SheetJS está disponível
-    if (typeof XLSX === 'undefined') {
-      // Fallback para CSV se SheetJS não estiver disponível
-      exportarCSVFallback(c, dataAtual);
-      return;
-    }
+    // Gerar HTML estilizado que o Excel pode abrir
+    const html = `
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+  body { font-family: Arial, sans-serif; }
+  table { border-collapse: collapse; width: 100%; margin-bottom: 20px; }
+  th, td { border: 1px solid #ccc; padding: 10px 12px; text-align: left; }
+  .header { background: #1a5f2a; color: white; font-size: 24px; font-weight: bold; text-align: center; padding: 20px; border: none; }
+  .subheader { background: #f0f0f0; color: #666; font-size: 12px; text-align: center; padding: 8px; border: none; }
+  .section-title { background: #2d5a3d; color: white; font-weight: bold; font-size: 14px; }
+  .section-title td { border: none; }
+  .table-header { background: #e8f5e9; font-weight: bold; color: #1a5f2a; }
+  .row-alt { background: #fafafa; }
+  .subtotal { background: #fff3e0; font-weight: bold; }
+  .subtotal td { border-top: 2px solid #ff9800; }
+  .total-row { background: #1a5f2a; color: white; font-weight: bold; font-size: 16px; }
+  .total-row td { border: 2px solid #0d3d17; }
+  .currency { text-align: right; font-family: 'Courier New', monospace; }
+  .info-row td:first-child { color: #666; }
+  .depreciation { background: #fff8e1; color: #e65100; }
+  .obs { font-size: 11px; color: #666; font-style: italic; }
+  .logo-text { color: #1a5f2a; font-weight: bold; }
+</style>
+</head>
+<body>
 
-    // Criar workbook
-    const wb = XLSX.utils.book_new();
+<table>
+  <tr><td class="header" colspan="2">ORÇAMENTO DE CONSTRUÇÃO</td></tr>
+  <tr><td class="subheader" colspan="2"><span class="logo-text">Rico aos Poucos</span> - ricoaospoucos.com.br | Gerado em: ${dataAtual}</td></tr>
+</table>
 
-    // Dados para a planilha principal
-    const wsData = [];
+<table>
+  <tr class="section-title"><td colspan="2">RESUMO DO ORÇAMENTO</td></tr>
+  <tr class="total-row">
+    <td>${c.isReforma ? 'Valor Estimado do Imóvel' : 'Custo Total de Construção'}</td>
+    <td class="currency">R$ ${formatNumber(c.custoTotal)}</td>
+  </tr>
+  <tr class="subtotal">
+    <td>Custo por m²</td>
+    <td class="currency">R$ ${formatNumber(c.custoM2Final)}</td>
+  </tr>
+</table>
 
-    // Cabeçalho do relatório
-    wsData.push(['ORÇAMENTO DE CONSTRUÇÃO']);
-    wsData.push(['Rico aos Poucos - ricoaospoucos.com.br']);
-    wsData.push([`Gerado em: ${dataAtual}`]);
-    wsData.push([]);
+<table>
+  <tr class="section-title"><td colspan="2">CONFIGURAÇÃO DO IMÓVEL</td></tr>
+  <tr class="table-header"><td>Parâmetro</td><td>Valor</td></tr>
+  <tr class="info-row"><td>Região</td><td>${c.config.estado} - ${c.regiao.nome}</td></tr>
+  <tr class="info-row row-alt"><td>Situação</td><td>${tipoObra}</td></tr>
+  ${c.isReforma ? `<tr class="depreciation"><td>Depreciação aplicada</td><td>${c.conservacao.desconto}%</td></tr>` : ''}
+  <tr class="info-row"><td>Tipo de Casa</td><td>${c.estrutura.nome}</td></tr>
+  <tr class="info-row row-alt"><td>Método Construtivo</td><td>${c.metodo.nome}</td></tr>
+  <tr class="info-row"><td>Padrão de Acabamento</td><td>${c.padrao.nome}</td></tr>
+  <tr class="info-row row-alt"><td>Área Total</td><td>${c.config.areaTotal} m²</td></tr>
+  <tr class="info-row"><td>Quartos</td><td>${c.config.numQuartos}</td></tr>
+  <tr class="info-row row-alt"><td>Suítes</td><td>${c.config.numSuites}</td></tr>
+  <tr class="info-row"><td>Banheiros Extras</td><td>${c.config.numBanheiros}</td></tr>
+  <tr class="info-row row-alt"><td>Área de Serviço</td><td>${c.config.temAreaServico ? 'Sim' : 'Não'}</td></tr>
+</table>
 
-    // Resumo principal (destaque)
-    wsData.push(['RESUMO DO ORÇAMENTO']);
-    wsData.push(['Descrição', 'Valor']);
-    wsData.push([c.isReforma ? 'Valor Estimado do Imóvel' : 'Custo Total de Construção', c.custoTotal]);
-    wsData.push(['Custo por m²', c.custoM2Final]);
-    wsData.push([]);
+<table>
+  <tr class="section-title"><td colspan="2">COMPOSIÇÃO DO CUSTO</td></tr>
+  <tr class="table-header"><td>Item</td><td>Valor (R$)</td></tr>
+  <tr><td>Estrutura e Materiais Base</td><td class="currency">R$ ${formatNumber(c.custoMateriais)}</td></tr>
+  <tr class="row-alt"><td>Mão de Obra</td><td class="currency">R$ ${formatNumber(c.custoMaoObra)}</td></tr>
+  <tr><td>Adicionais de Cômodos (hidráulica, louças)</td><td class="currency">R$ ${formatNumber(c.custoComodosExtra)}</td></tr>
+  <tr class="subtotal"><td><strong>SUBTOTAL CONSTRUÇÃO</strong></td><td class="currency"><strong>R$ ${formatNumber(c.custoBase)}</strong></td></tr>
+</table>
 
-    // Configuração do imóvel
-    wsData.push(['CONFIGURAÇÃO DO IMÓVEL']);
-    wsData.push(['Parâmetro', 'Valor']);
-    wsData.push(['Região', `${c.config.estado} - ${c.regiao.nome}`]);
-    wsData.push(['Situação', tipoObra]);
-    wsData.push(['Tipo de Casa', c.estrutura.nome]);
-    wsData.push(['Método Construtivo', c.metodo.nome]);
-    wsData.push(['Padrão de Acabamento', c.padrao.nome]);
-    wsData.push(['Área Total', `${c.config.areaTotal} m²`]);
-    wsData.push(['Quartos', c.config.numQuartos]);
-    wsData.push(['Suítes', c.config.numSuites]);
-    wsData.push(['Banheiros Extras', c.config.numBanheiros]);
-    wsData.push(['Área de Serviço', c.config.temAreaServico ? 'Sim' : 'Não']);
-    if (c.isReforma) {
-      wsData.push(['Depreciação', `${c.conservacao.desconto}%`]);
-    }
-    wsData.push([]);
+${c.detalhesExtras.length > 0 ? `
+<table>
+  <tr class="section-title"><td colspan="2">ITENS EXTRAS</td></tr>
+  <tr class="table-header"><td>Item</td><td>Valor (R$)</td></tr>
+  ${c.detalhesExtras.map((e, i) => `<tr${i % 2 ? ' class="row-alt"' : ''}><td>${e.nome}</td><td class="currency">R$ ${formatNumber(e.valor)}</td></tr>`).join('')}
+  <tr class="subtotal"><td><strong>SUBTOTAL EXTRAS</strong></td><td class="currency"><strong>R$ ${formatNumber(c.custoExtras)}</strong></td></tr>
+</table>
+` : ''}
 
-    // Detalhamento de custos
-    wsData.push(['COMPOSIÇÃO DO CUSTO']);
-    wsData.push(['Item', 'Valor (R$)']);
-    wsData.push(['Estrutura e Materiais Base', c.custoMateriais]);
-    wsData.push(['Mão de Obra', c.custoMaoObra]);
-    wsData.push(['Adicionais de Cômodos', c.custoComodosExtra]);
-    wsData.push(['SUBTOTAL CONSTRUÇÃO', c.custoBase]);
-    wsData.push([]);
+${c.detalhesAdicionais.length > 0 ? `
+<table>
+  <tr class="section-title"><td colspan="2">PROJETOS E TAXAS</td></tr>
+  <tr class="table-header"><td>Item</td><td>Valor (R$)</td></tr>
+  ${c.detalhesAdicionais.map((e, i) => `<tr${i % 2 ? ' class="row-alt"' : ''}><td>${e.nome}</td><td class="currency">R$ ${formatNumber(e.valor)}</td></tr>`).join('')}
+  <tr class="subtotal"><td><strong>SUBTOTAL PROJETOS</strong></td><td class="currency"><strong>R$ ${formatNumber(c.custoAdicionais)}</strong></td></tr>
+</table>
+` : ''}
 
-    // Extras
-    if (c.detalhesExtras.length > 0) {
-      wsData.push(['ITENS EXTRAS']);
-      wsData.push(['Item', 'Valor (R$)']);
-      c.detalhesExtras.forEach(e => {
-        wsData.push([e.nome, e.valor]);
-      });
-      wsData.push(['SUBTOTAL EXTRAS', c.custoExtras]);
-      wsData.push([]);
-    }
+<table>
+  <tr class="section-title"><td colspan="2">DETALHES TÉCNICOS - FATORES APLICADOS</td></tr>
+  <tr class="table-header"><td>Fator</td><td>Ajuste</td></tr>
+  <tr><td>Regional (${c.regiao.nome})</td><td>${((c.regiao.fator - 1) * 100) >= 0 ? '+' : ''}${((c.regiao.fator - 1) * 100).toFixed(0)}%</td></tr>
+  <tr class="row-alt"><td>Estrutura (${c.estrutura.nome})</td><td>${((c.estrutura.fator - 1) * 100) >= 0 ? '+' : ''}${((c.estrutura.fator - 1) * 100).toFixed(0)}%</td></tr>
+  <tr><td>Método (${c.metodo.nome})</td><td>${((c.metodo.fator - 1) * 100) >= 0 ? '+' : ''}${((c.metodo.fator - 1) * 100).toFixed(0)}%</td></tr>
+  <tr class="row-alt"><td>Padrão (${c.padrao.nome})</td><td>${((c.padrao.fator - 1) * 100) >= 0 ? '+' : ''}${((c.padrao.fator - 1) * 100).toFixed(0)}%</td></tr>
+  ${c.isReforma ? `<tr class="depreciation"><td>Conservação (${c.conservacao.nome})</td><td>-${c.conservacao.desconto}%</td></tr>` : ''}
+</table>
 
-    // Projetos e taxas
-    if (c.detalhesAdicionais.length > 0) {
-      wsData.push(['PROJETOS E TAXAS']);
-      wsData.push(['Item', 'Valor (R$)']);
-      c.detalhesAdicionais.forEach(e => {
-        wsData.push([e.nome, e.valor]);
-      });
-      wsData.push(['SUBTOTAL PROJETOS', c.custoAdicionais]);
-      wsData.push([]);
-    }
+<table>
+  <tr><td class="obs" colspan="2">
+    <strong>Observações:</strong><br>
+    • Valores de referência baseados em dados SINAPI e médias de mercado.<br>
+    • Custos podem variar conforme localidade, período e negociação com fornecedores.<br>
+    • Consulte profissionais para orçamentos detalhados.
+  </td></tr>
+</table>
 
-    // Total final
-    wsData.push(['TOTAL FINAL']);
-    wsData.push(['', '']);
-    wsData.push(['CUSTO TOTAL', c.custoTotal]);
-    wsData.push(['CUSTO POR M²', c.custoM2Final]);
-    wsData.push([]);
+</body>
+</html>`;
 
-    // Observações
-    wsData.push(['OBSERVAÇÕES']);
-    wsData.push(['• Valores de referência baseados em dados SINAPI e médias de mercado.']);
-    wsData.push(['• Custos podem variar conforme localidade, período e negociação.']);
-    wsData.push(['• Consulte profissionais para orçamentos detalhados.']);
-
-    // Criar worksheet
-    const ws = XLSX.utils.aoa_to_sheet(wsData);
-
-    // Configurar larguras das colunas
-    ws['!cols'] = [
-      { wch: 45 }, // Coluna A - Descrições
-      { wch: 20 }  // Coluna B - Valores
-    ];
-
-    // Formatar células de valores como moeda
-    const currencyFormat = 'R$ #,##0';
-    for (let i = 0; i < wsData.length; i++) {
-      const cellB = XLSX.utils.encode_cell({ r: i, c: 1 });
-      if (ws[cellB] && typeof ws[cellB].v === 'number') {
-        ws[cellB].z = currencyFormat;
-      }
-    }
-
-    // Adicionar worksheet ao workbook
-    XLSX.utils.book_append_sheet(wb, ws, 'Orçamento');
-
-    // Criar segunda aba com detalhes técnicos
-    const wsDetalhes = [];
-    wsDetalhes.push(['DETALHES TÉCNICOS']);
-    wsDetalhes.push([]);
-    wsDetalhes.push(['Fatores Aplicados']);
-    wsDetalhes.push(['Fator', 'Descrição', 'Valor']);
-    wsDetalhes.push(['Regional', c.regiao.nome, `${((c.regiao.fator - 1) * 100).toFixed(0)}%`]);
-    wsDetalhes.push(['Estrutura', c.estrutura.nome, `${((c.estrutura.fator - 1) * 100).toFixed(0)}%`]);
-    wsDetalhes.push(['Método', c.metodo.nome, `${((c.metodo.fator - 1) * 100).toFixed(0)}%`]);
-    wsDetalhes.push(['Padrão', c.padrao.nome, `${((c.padrao.fator - 1) * 100).toFixed(0)}%`]);
-    if (c.isReforma) {
-      wsDetalhes.push(['Conservação', c.conservacao.nome, `-${c.conservacao.desconto}%`]);
-    }
-    wsDetalhes.push([]);
-    wsDetalhes.push(['Custo Base SINAPI']);
-    wsDetalhes.push(['Materiais', '', `R$ ${formatNumber(data.custoBaseM2.materiais)}/m²`]);
-    wsDetalhes.push(['Mão de Obra', '', `R$ ${formatNumber(data.custoBaseM2.maoDeObra)}/m²`]);
-
-    const wsD = XLSX.utils.aoa_to_sheet(wsDetalhes);
-    wsD['!cols'] = [
-      { wch: 20 },
-      { wch: 25 },
-      { wch: 15 }
-    ];
-    XLSX.utils.book_append_sheet(wb, wsD, 'Detalhes Técnicos');
-
-    // Gerar arquivo e download
-    const fileName = `orcamento-construcao-${c.config.areaTotal}m2-${c.config.estado}-${Date.now()}.xlsx`;
-    XLSX.writeFile(wb, fileName);
-  }
-
-  function exportarCSVFallback(c, dataAtual) {
-    // Fallback CSV caso SheetJS não esteja disponível
-    let csv = '\uFEFF';
-    csv += 'ORÇAMENTO DE CONSTRUÇÃO\n';
-    csv += `Data:;${dataAtual}\n`;
-    csv += `Site:;ricoaospoucos.com.br\n\n`;
-
-    csv += 'CONFIGURAÇÃO\n';
-    csv += `Região;${c.config.estado} - ${c.regiao.nome}\n`;
-    csv += `Situação;${c.isReforma ? c.conservacao.nome : 'Construção Nova'}\n`;
-    csv += `Tipo de Casa;${c.estrutura.nome}\n`;
-    csv += `Método Construtivo;${c.metodo.nome}\n`;
-    csv += `Padrão de Acabamento;${c.padrao.nome}\n`;
-    csv += `Área Total;${c.config.areaTotal} m²\n\n`;
-
-    csv += 'DETALHAMENTO DE CUSTOS\n';
-    csv += 'Item;Valor (R$)\n';
-    csv += `Estrutura e Materiais Base;${formatNumber(c.custoMateriais)}\n`;
-    csv += `Mão de Obra;${formatNumber(c.custoMaoObra)}\n`;
-    csv += `Adicionais Cômodos;${formatNumber(c.custoComodosExtra)}\n`;
-    csv += `SUBTOTAL CONSTRUÇÃO;${formatNumber(c.custoBase)}\n\n`;
-
-    if (c.detalhesExtras.length > 0) {
-      csv += 'ITENS EXTRAS\n';
-      c.detalhesExtras.forEach(e => {
-        csv += `${e.nome};${formatNumber(e.valor)}\n`;
-      });
-      csv += `SUBTOTAL EXTRAS;${formatNumber(c.custoExtras)}\n\n`;
-    }
-
-    if (c.detalhesAdicionais.length > 0) {
-      csv += 'PROJETOS E TAXAS\n';
-      c.detalhesAdicionais.forEach(e => {
-        csv += `${e.nome};${formatNumber(e.valor)}\n`;
-      });
-      csv += `SUBTOTAL PROJETOS;${formatNumber(c.custoAdicionais)}\n\n`;
-    }
-
-    csv += 'RESUMO\n';
-    csv += `CUSTO TOTAL;${formatNumber(c.custoTotal)}\n`;
-    csv += `CUSTO POR M²;${formatNumber(c.custoM2Final)}\n`;
-
-    const blob = new Blob([csv], { type: 'text/csv;charset=utf-8' });
+    // Download como arquivo .xls (Excel reconhece HTML)
+    const blob = new Blob([html], { type: 'application/vnd.ms-excel;charset=utf-8' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `orcamento-construcao-${Date.now()}.csv`;
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  }
-
-  function exportarTexto() {
-    if (!state.calculoAtual) {
-      calculate();
-    }
-    const c = state.calculoAtual;
-    const dataAtual = new Date().toLocaleDateString('pt-BR');
-
-    const tipoObra = c.isReforma ? c.conservacao.nome : 'Construção Nova';
-
-    let texto = `
-═══════════════════════════════════════════════════════════
-           ORÇAMENTO DE ${c.isReforma ? 'REFORMA' : 'CONSTRUÇÃO'}
-═══════════════════════════════════════════════════════════
-Gerado em: ${dataAtual}
-Site: ricoaospoucos.com.br
-
-CONFIGURAÇÃO
-───────────────────────────────────────────────────────────
-Região: ${c.config.estado} - ${c.regiao.nome}
-Situação: ${tipoObra}${c.isReforma ? ` (depreciação de ${c.conservacao.desconto}%)` : ''}
-Tipo de Casa: ${c.estrutura.nome}
-Método: ${c.metodo.nome}
-Padrão: ${c.padrao.nome}
-Área Total: ${c.config.areaTotal} m²
-Quartos: ${c.config.numQuartos} | Suítes: ${c.config.numSuites} | Banheiros: ${c.config.numBanheiros}
-
-DETALHAMENTO
-───────────────────────────────────────────────────────────
-Estrutura e Mat. Base:     R$ ${formatNumber(c.custoMateriais).padStart(12)}
-Mão de Obra:               R$ ${formatNumber(c.custoMaoObra).padStart(12)}
-Adicionais Cômodos*:       R$ ${formatNumber(c.custoComodosExtra).padStart(12)}
-                           ─────────────────
-SUBTOTAL CONSTRUÇÃO:       R$ ${formatNumber(c.custoBase).padStart(12)}
-* Hidráulica, louças e revestimentos específicos de cada cômodo
-`;
-
-    if (c.detalhesExtras.length > 0) {
-      texto += `
-ITENS EXTRAS
-───────────────────────────────────────────────────────────`;
-      c.detalhesExtras.forEach(e => {
-        texto += `\n${e.nome.padEnd(30)} R$ ${formatNumber(e.valor).padStart(12)}`;
-      });
-      texto += `\n                           ─────────────────
-SUBTOTAL EXTRAS:           R$ ${formatNumber(c.custoExtras).padStart(12)}`;
-    }
-
-    if (c.detalhesAdicionais.length > 0) {
-      texto += `
-
-PROJETOS E TAXAS
-───────────────────────────────────────────────────────────`;
-      c.detalhesAdicionais.forEach(e => {
-        texto += `\n${e.nome.padEnd(30)} R$ ${formatNumber(e.valor).padStart(12)}`;
-      });
-      texto += `\n                           ─────────────────
-SUBTOTAL PROJETOS:         R$ ${formatNumber(c.custoAdicionais).padStart(12)}`;
-    }
-
-    texto += `
-
-═══════════════════════════════════════════════════════════
-CUSTO TOTAL:               R$ ${formatNumber(c.custoTotal).padStart(12)}
-CUSTO POR M²:              R$ ${formatNumber(c.custoM2Final).padStart(12)}
-═══════════════════════════════════════════════════════════
-
-Valores de referência sujeitos a variação conforme localidade,
-período e negociação com fornecedores.
-    `;
-
-    const blob = new Blob([texto.trim()], { type: 'text/plain;charset=utf-8' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = `orcamento-construcao-${Date.now()}.txt`;
+    a.download = `orcamento-construcao-${c.config.areaTotal}m2-${c.config.estado}-${Date.now()}.xls`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);
@@ -1439,8 +1281,7 @@ período e negociação com fornecedores.
   window.CustoConstrucao = {
     init,
     calculate,
-    exportarExcel,
-    exportarTexto
+    exportarExcel
   };
 
   if (document.readyState === 'loading') {

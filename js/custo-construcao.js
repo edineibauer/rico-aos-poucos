@@ -78,6 +78,65 @@
 
     container.innerHTML = `
       <div class="cc-calculator">
+        <!-- Descrição Inteligente -->
+        <section class="cc-section cc-section-descricao">
+          <div class="cc-descricao-header">
+            <h2 class="cc-section-title">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
+              </svg>
+              Descreva o Imóvel
+            </h2>
+            <div class="cc-valor-rapido" id="cc-valor-rapido">
+              <span class="cc-valor-label">Valor Estimado</span>
+              <span class="cc-valor-numero" id="cc-valor-topo">R$ 0</span>
+            </div>
+          </div>
+
+          <div class="cc-descricao-content">
+            <textarea
+              id="cc-descricao-texto"
+              class="cc-textarea"
+              placeholder="Descreva o imóvel de forma livre. Exemplo:&#10;&#10;Casa térrea de 120m² em São Paulo, com 3 quartos sendo 1 suíte, 2 banheiros, área de serviço. Imóvel em bom estado de conservação, padrão médio de acabamento, construção em alvenaria. Possui piscina e churrasqueira."
+              rows="4"
+            ></textarea>
+
+            <div class="cc-descricao-actions">
+              <button class="cc-btn cc-btn-aplicar" id="cc-btn-aplicar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/>
+                  <polyline points="22 4 12 14.01 9 11.01"/>
+                </svg>
+                Aplicar Configuração
+              </button>
+              <button class="cc-btn cc-btn-limpar" id="cc-btn-limpar">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 6h18"/><path d="M8 6V4h8v2"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/>
+                </svg>
+                Limpar
+              </button>
+            </div>
+
+            <div class="cc-descricao-feedback" id="cc-descricao-feedback" style="display: none;"></div>
+          </div>
+
+          <div class="cc-descricao-dicas">
+            <details>
+              <summary>Dicas de descrição</summary>
+              <ul>
+                <li><strong>Área:</strong> "120m²", "120 metros quadrados", "casa de 120m"</li>
+                <li><strong>Quartos:</strong> "3 quartos", "2 quartos sendo 1 suíte", "4 dormitórios"</li>
+                <li><strong>Banheiros:</strong> "2 banheiros", "3 wc", "lavabo"</li>
+                <li><strong>Localização:</strong> "em São Paulo", "SP", "Rio de Janeiro", "MG"</li>
+                <li><strong>Estado:</strong> "nova", "bom estado", "precisa de reforma", "só estrutura"</li>
+                <li><strong>Tipo:</strong> "térrea", "sobrado", "2 andares", "geminada"</li>
+                <li><strong>Padrão:</strong> "popular", "médio", "alto padrão", "luxo"</li>
+                <li><strong>Extras:</strong> "piscina", "churrasqueira", "garagem", "energia solar"</li>
+              </ul>
+            </details>
+          </div>
+        </section>
+
         <!-- Configuração Básica -->
         <section class="cc-section cc-section-config">
           <h2 class="cc-section-title">${t.configuracaoBasica}</h2>
@@ -669,7 +728,396 @@
     `;
   }
 
+  // Parser de texto para extrair características do imóvel
+  function parseDescricao(texto) {
+    const textoLower = texto.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+    const resultado = {
+      encontrados: [],
+      config: {}
+    };
+
+    // Área em m²
+    const areaPatterns = [
+      /(\d+)\s*m[²2]/i,
+      /(\d+)\s*metros?\s*quadrados?/i,
+      /casa\s*de\s*(\d+)\s*m/i,
+      /imovel\s*de\s*(\d+)\s*m/i,
+      /(\d+)\s*m\s*de\s*area/i,
+      /area\s*(?:total\s*)?(?:de\s*)?(\d+)/i
+    ];
+    for (const pattern of areaPatterns) {
+      const match = texto.match(pattern);
+      if (match) {
+        resultado.config.areaTotal = parseInt(match[1]);
+        resultado.encontrados.push(`Área: ${match[1]}m²`);
+        break;
+      }
+    }
+
+    // Quartos
+    const quartosPatterns = [
+      /(\d+)\s*quartos?/i,
+      /(\d+)\s*dormitorios?/i,
+      /(\d+)\s*dorms?/i
+    ];
+    for (const pattern of quartosPatterns) {
+      const match = texto.match(pattern);
+      if (match) {
+        resultado.config.numQuartos = parseInt(match[1]);
+        resultado.encontrados.push(`Quartos: ${match[1]}`);
+        break;
+      }
+    }
+
+    // Suítes
+    const suitesPatterns = [
+      /(\d+)\s*suites?/i,
+      /sendo\s*(\d+)\s*suites?/i,
+      /(\d+)\s*quartos?\s*suites?/i
+    ];
+    for (const pattern of suitesPatterns) {
+      const match = texto.match(pattern);
+      if (match) {
+        resultado.config.numSuites = parseInt(match[1]);
+        resultado.encontrados.push(`Suítes: ${match[1]}`);
+        // Ajustar quartos se suítes foram encontradas depois
+        if (resultado.config.numQuartos && resultado.config.numSuites) {
+          const quartosNormais = resultado.config.numQuartos - resultado.config.numSuites;
+          if (quartosNormais >= 0) {
+            resultado.config.numQuartos = quartosNormais;
+            resultado.encontrados = resultado.encontrados.filter(e => !e.startsWith('Quartos:'));
+            resultado.encontrados.push(`Quartos (sem suíte): ${quartosNormais}`);
+          }
+        }
+        break;
+      }
+    }
+
+    // Banheiros
+    const banheirosPatterns = [
+      /(\d+)\s*banheiros?/i,
+      /(\d+)\s*wc/i,
+      /(\d+)\s*sanitarios?/i
+    ];
+    for (const pattern of banheirosPatterns) {
+      const match = texto.match(pattern);
+      if (match) {
+        let numBanheiros = parseInt(match[1]);
+        // Subtrair suítes (cada suíte já tem banheiro)
+        if (resultado.config.numSuites) {
+          numBanheiros = Math.max(0, numBanheiros - resultado.config.numSuites);
+        }
+        resultado.config.numBanheiros = numBanheiros;
+        resultado.encontrados.push(`Banheiros extras: ${numBanheiros}`);
+        break;
+      }
+    }
+
+    // Lavabo conta como banheiro extra
+    if (textoLower.includes('lavabo')) {
+      resultado.config.numBanheiros = (resultado.config.numBanheiros || 0) + 1;
+      if (!resultado.encontrados.some(e => e.includes('Banheiros'))) {
+        resultado.encontrados.push(`Banheiros extras: ${resultado.config.numBanheiros}`);
+      }
+    }
+
+    // Estado/Região
+    const estadosMap = {
+      'sao paulo': 'SP', 'sp': 'SP', 'paulista': 'SP',
+      'rio de janeiro': 'RJ', 'rj': 'RJ', 'carioca': 'RJ',
+      'minas gerais': 'MG', 'mg': 'MG', 'mineiro': 'MG', 'belo horizonte': 'MG', 'bh': 'MG',
+      'rio grande do sul': 'RS', 'rs': 'RS', 'gaucho': 'RS', 'porto alegre': 'RS',
+      'parana': 'PR', 'pr': 'PR', 'curitiba': 'PR',
+      'santa catarina': 'SC', 'sc': 'SC', 'florianopolis': 'SC', 'floripa': 'SC',
+      'bahia': 'BA', 'ba': 'BA', 'salvador': 'BA', 'baiano': 'BA',
+      'pernambuco': 'PE', 'pe': 'PE', 'recife': 'PE',
+      'ceara': 'CE', 'ce': 'CE', 'fortaleza': 'CE',
+      'distrito federal': 'DF', 'df': 'DF', 'brasilia': 'DF',
+      'goias': 'GO', 'go': 'GO', 'goiania': 'GO',
+      'espirito santo': 'ES', 'es': 'ES', 'vitoria': 'ES',
+      'mato grosso': 'MT', 'mt': 'MT', 'cuiaba': 'MT',
+      'mato grosso do sul': 'MS', 'ms': 'MS', 'campo grande': 'MS',
+      'para': 'PA', 'pa': 'PA', 'belem': 'PA',
+      'amazonas': 'AM', 'am': 'AM', 'manaus': 'AM',
+      'maranhao': 'MA', 'ma': 'MA', 'sao luis': 'MA',
+      'piaui': 'PI', 'pi': 'PI', 'teresina': 'PI',
+      'rio grande do norte': 'RN', 'rn': 'RN', 'natal': 'RN',
+      'paraiba': 'PB', 'pb': 'PB', 'joao pessoa': 'PB',
+      'alagoas': 'AL', 'al': 'AL', 'maceio': 'AL',
+      'sergipe': 'SE', 'se': 'SE', 'aracaju': 'SE',
+      'tocantins': 'TO', 'to': 'TO', 'palmas': 'TO',
+      'rondonia': 'RO', 'ro': 'RO', 'porto velho': 'RO',
+      'acre': 'AC', 'ac': 'AC', 'rio branco': 'AC',
+      'roraima': 'RR', 'rr': 'RR', 'boa vista': 'RR',
+      'amapa': 'AP', 'ap': 'AP', 'macapa': 'AP'
+    };
+    for (const [termo, uf] of Object.entries(estadosMap)) {
+      const regex = new RegExp(`\\b${termo}\\b`, 'i');
+      if (regex.test(textoLower)) {
+        resultado.config.estado = uf;
+        resultado.encontrados.push(`Região: ${uf}`);
+        break;
+      }
+    }
+
+    // Estado de conservação
+    const conservacaoMap = {
+      'nova': ['nova', 'recem construida', 'zerada', 'nunca habitada', 'construcao nova'],
+      'bom': ['bom estado', 'bem conservada', 'conservada', 'otimo estado', 'excelente estado'],
+      'medio': ['medio estado', 'estado regular', 'usada', 'habitada'],
+      'ruim': ['mal estado', 'mau estado', 'precisa de reforma', 'reformar', 'deteriorada', 'antiga'],
+      'so_estrutura': ['so estrutura', 'apenas estrutura', 'inacabada', 'em construcao', 'obra']
+    };
+    for (const [key, termos] of Object.entries(conservacaoMap)) {
+      for (const termo of termos) {
+        if (textoLower.includes(termo)) {
+          resultado.config.estadoConservacao = key;
+          const nomeConservacao = data.estadoConservacao[key]?.nome || key;
+          resultado.encontrados.push(`Conservação: ${nomeConservacao}`);
+          break;
+        }
+      }
+      if (resultado.config.estadoConservacao) break;
+    }
+
+    // Tipo de estrutura
+    const estruturaMap = {
+      'terrea': ['terrea', 'terreo', 'casa terrea', 'um andar', '1 andar', 'unico piso'],
+      'sobrado': ['sobrado', 'dois andares', '2 andares', 'duplex', 'dois pisos', '2 pisos'],
+      'meia_agua': ['meia agua', 'meia-agua', 'kit', 'kitnet', 'conjugado', 'simples'],
+      'geminada': ['geminada', 'casa geminada', 'conjugada com outra']
+    };
+    for (const [key, termos] of Object.entries(estruturaMap)) {
+      for (const termo of termos) {
+        if (textoLower.includes(termo)) {
+          resultado.config.tipoEstrutura = key;
+          const nomeEstrutura = data.tiposEstrutura[key]?.nome || key;
+          resultado.encontrados.push(`Tipo: ${nomeEstrutura}`);
+          break;
+        }
+      }
+      if (resultado.config.tipoEstrutura) break;
+    }
+
+    // Tipo de construção
+    const construcaoMap = {
+      'alvenaria': ['alvenaria', 'tijolo', 'tijolos', 'concreto', 'bloco'],
+      'steel_frame': ['steel frame', 'steelframe', 'estrutura metalica', 'aco'],
+      'wood_frame': ['wood frame', 'woodframe', 'madeira', 'casa de madeira'],
+      'eps': ['eps', 'isopor', 'poliestireno']
+    };
+    for (const [key, termos] of Object.entries(construcaoMap)) {
+      for (const termo of termos) {
+        if (textoLower.includes(termo)) {
+          resultado.config.tipoConstrucao = key;
+          const nomeConstrucao = data.tiposConstrucao[key]?.nome || key;
+          resultado.encontrados.push(`Construção: ${nomeConstrucao}`);
+          break;
+        }
+      }
+      if (resultado.config.tipoConstrucao) break;
+    }
+
+    // Padrão de acabamento
+    const padraoMap = {
+      'popular': ['popular', 'simples', 'basico', 'economico', 'baixo padrao', 'baixo custo'],
+      'medio': ['medio', 'padrao medio', 'normal', 'comum'],
+      'alto': ['alto padrao', 'alto', 'bom acabamento', 'fino', 'premium'],
+      'luxo': ['luxo', 'luxuoso', 'top', 'altissimo padrao', 'super luxo']
+    };
+    for (const [key, termos] of Object.entries(padraoMap)) {
+      for (const termo of termos) {
+        if (textoLower.includes(termo)) {
+          resultado.config.padrao = key;
+          const nomePadrao = data.padroes[key]?.nome || key;
+          resultado.encontrados.push(`Padrão: ${nomePadrao}`);
+          break;
+        }
+      }
+      if (resultado.config.padrao) break;
+    }
+
+    // Área de serviço
+    if (textoLower.includes('area de servico') || textoLower.includes('lavanderia')) {
+      resultado.config.temAreaServico = true;
+      resultado.encontrados.push('Área de serviço: Sim');
+    }
+
+    // Extras
+    resultado.extras = {};
+    if (textoLower.includes('piscina')) {
+      resultado.extras.piscina = true;
+      resultado.encontrados.push('Extra: Piscina');
+    }
+    if (textoLower.includes('churrasqueira') || textoLower.includes('churrasco') || textoLower.includes('gourmet')) {
+      resultado.extras.churrasqueira = true;
+      resultado.encontrados.push('Extra: Churrasqueira');
+    }
+    if (textoLower.includes('garagem') || textoLower.includes('pergolado') || textoLower.includes('cobertura para carro')) {
+      resultado.extras.garagem = true;
+      resultado.encontrados.push('Extra: Garagem/Pergolado');
+    }
+    if (textoLower.includes('muro') || textoLower.includes('murado')) {
+      resultado.extras.muro = true;
+      resultado.encontrados.push('Extra: Muro');
+    }
+    if (textoLower.includes('portao') || textoLower.includes('portão')) {
+      resultado.extras.portao = true;
+      resultado.encontrados.push('Extra: Portão');
+    }
+    if (textoLower.includes('edicula') || textoLower.includes('edícula') || textoLower.includes('dependencia')) {
+      resultado.extras.edicula = true;
+      resultado.encontrados.push('Extra: Edícula');
+    }
+    if (textoLower.includes('solar') || textoLower.includes('fotovoltaico') || textoLower.includes('energia solar')) {
+      resultado.extras.solar = true;
+      resultado.encontrados.push('Extra: Energia Solar');
+    }
+    if (textoLower.includes('aquecedor solar') || textoLower.includes('aquecimento solar')) {
+      resultado.extras.aquecedor = true;
+      resultado.encontrados.push('Extra: Aquecedor Solar');
+    }
+    if (textoLower.includes('automacao') || textoLower.includes('casa inteligente') || textoLower.includes('smart home')) {
+      resultado.extras.automacao = true;
+      resultado.encontrados.push('Extra: Automação');
+    }
+
+    return resultado;
+  }
+
+  // Aplicar configuração do parser no formulário
+  function aplicarConfiguracao(config, extras) {
+    // Aplicar configurações básicas
+    if (config.areaTotal) {
+      state.config.areaTotal = config.areaTotal;
+      const el = document.getElementById('cc-area');
+      if (el) el.value = config.areaTotal;
+    }
+    if (config.numQuartos !== undefined) {
+      state.config.numQuartos = config.numQuartos;
+      const el = document.getElementById('cc-quartos');
+      if (el) el.value = config.numQuartos;
+    }
+    if (config.numSuites !== undefined) {
+      state.config.numSuites = config.numSuites;
+      const el = document.getElementById('cc-suites');
+      if (el) el.value = config.numSuites;
+    }
+    if (config.numBanheiros !== undefined) {
+      state.config.numBanheiros = config.numBanheiros;
+      const el = document.getElementById('cc-banheiros');
+      if (el) el.value = config.numBanheiros;
+    }
+    if (config.estado) {
+      state.config.estado = config.estado;
+      const el = document.getElementById('cc-estado');
+      if (el) el.value = config.estado;
+    }
+    if (config.estadoConservacao) {
+      state.config.estadoConservacao = config.estadoConservacao;
+      const el = document.getElementById('cc-estado-conservacao');
+      if (el) el.value = config.estadoConservacao;
+      updateConservacaoInfo();
+    }
+    if (config.tipoEstrutura) {
+      state.config.tipoEstrutura = config.tipoEstrutura;
+      const el = document.getElementById('cc-tipo-estrutura');
+      if (el) el.value = config.tipoEstrutura;
+      updateTipoInfo();
+    }
+    if (config.tipoConstrucao) {
+      state.config.tipoConstrucao = config.tipoConstrucao;
+      const el = document.getElementById('cc-tipo-construcao');
+      if (el) el.value = config.tipoConstrucao;
+      updateTipoInfo();
+    }
+    if (config.padrao) {
+      state.config.padrao = config.padrao;
+      const el = document.getElementById('cc-padrao');
+      if (el) el.value = config.padrao;
+    }
+    if (config.temAreaServico !== undefined) {
+      state.config.temAreaServico = config.temAreaServico;
+      const el = document.getElementById('cc-area-servico');
+      if (el) el.checked = config.temAreaServico;
+    }
+
+    // Aplicar extras
+    if (extras) {
+      Object.entries(extras).forEach(([key, value]) => {
+        const checkbox = document.getElementById(`cc-extra-${key}`);
+        const options = document.getElementById(`cc-${key}-options`);
+        if (checkbox) {
+          checkbox.checked = value;
+          if (options) options.style.display = value ? 'block' : 'none';
+        }
+      });
+    }
+
+    // Atualizar resumos
+    updateComodosResumo();
+    calculate();
+  }
+
+  // Mostrar feedback da análise
+  function mostrarFeedback(encontrados) {
+    const feedbackEl = document.getElementById('cc-descricao-feedback');
+    if (!feedbackEl) return;
+
+    if (encontrados.length === 0) {
+      feedbackEl.innerHTML = `
+        <div class="cc-feedback-vazio">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+          </svg>
+          <span>Nenhuma característica identificada. Tente descrever área, quartos, localização, etc.</span>
+        </div>
+      `;
+    } else {
+      feedbackEl.innerHTML = `
+        <div class="cc-feedback-sucesso">
+          <div class="cc-feedback-header">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/>
+            </svg>
+            <span>${encontrados.length} característica${encontrados.length > 1 ? 's' : ''} identificada${encontrados.length > 1 ? 's' : ''}:</span>
+          </div>
+          <div class="cc-feedback-tags">
+            ${encontrados.map(e => `<span class="cc-feedback-tag">${e}</span>`).join('')}
+          </div>
+        </div>
+      `;
+    }
+    feedbackEl.style.display = 'block';
+  }
+
   function attachEventListeners() {
+    // Descrição inteligente
+    const btnAplicar = document.getElementById('cc-btn-aplicar');
+    const btnLimpar = document.getElementById('cc-btn-limpar');
+    const textareaDescricao = document.getElementById('cc-descricao-texto');
+
+    if (btnAplicar && textareaDescricao) {
+      btnAplicar.addEventListener('click', () => {
+        const texto = textareaDescricao.value.trim();
+        if (!texto) {
+          mostrarFeedback([]);
+          return;
+        }
+        const resultado = parseDescricao(texto);
+        aplicarConfiguracao(resultado.config, resultado.extras);
+        mostrarFeedback(resultado.encontrados);
+      });
+    }
+
+    if (btnLimpar && textareaDescricao) {
+      btnLimpar.addEventListener('click', () => {
+        textareaDescricao.value = '';
+        const feedbackEl = document.getElementById('cc-descricao-feedback');
+        if (feedbackEl) feedbackEl.style.display = 'none';
+      });
+    }
+
     // Toggle sections
     document.querySelectorAll('.cc-btn-toggle').forEach(btn => {
       btn.addEventListener('click', function() {
@@ -1022,6 +1470,12 @@
       conservacao,
       isReforma
     };
+
+    // Atualizar valor no topo
+    const valorTopoEl = document.getElementById('cc-valor-topo');
+    if (valorTopoEl) {
+      valorTopoEl.textContent = `R$ ${formatNumber(custoTotal)}`;
+    }
 
     // Render
     const tipoObra = isReforma ? conservacao.nome : 'Construção Nova';

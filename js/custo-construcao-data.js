@@ -232,6 +232,21 @@ const CustoConstrucaoData = {
     maoDeObra: 807
   },
 
+  // Custo base do terreno por m² (valores médios de mercado)
+  // O valor varia muito por localização, estes são valores médios para áreas urbanas/periurbanas
+  custoTerrenoM2: {
+    base: 150, // Valor médio nacional (áreas residenciais comuns)
+    // Fatores de ajuste por tipo de localização
+    fatores: {
+      'rural': 0.3,        // Área rural - R$ 45/m²
+      'periferia': 0.6,    // Periferia - R$ 90/m²
+      'urbano': 1.0,       // Urbano normal - R$ 150/m²
+      'nobre': 2.5,        // Bairro nobre - R$ 375/m²
+      'praia': 3.0,        // Litoral/praia - R$ 450/m²
+      'centro': 4.0        // Centro de grandes cidades - R$ 600/m²
+    }
+  },
+
   // Custo ADICIONAL por cômodo (DIFERENCIAL sobre o custo base por m²)
   // O custo base m² já inclui um "quarto básico" na média
   // Estes valores representam apenas o EXTRA que cada tipo de cômodo exige

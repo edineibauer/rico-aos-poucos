@@ -1219,22 +1219,51 @@
       resultado.encontrados.push('Extra: Churrasqueira');
     }
 
-    // Garagem - verificar negação e detectar menções de carros/vagas
+    // Garagem - verificar negação, detectar quantidade de carros e tipo
     const garagemPatterns = [
       /\bgaragem\b/i,
       /\bvaga\b/i,
       /\bvagas\b/i,
-      /\d+\s*carros?\b/i,        // "4 carros", "2 carro"
-      /cabe\s*\d+\s*carros?/i,   // "cabe 4 carros"
-      /para\s*\d+\s*carros?/i,   // "para 4 carros"
+      /\d+\s*carros?\b/i,
+      /cabe\s*\d+\s*carros?/i,
+      /para\s*\d+\s*carros?/i,
       /\bcobertura\s+para\s+carros?\b/i,
-      /\bestacionamento\b/i
+      /\bestacionamento\b/i,
+      /entrada\s*(?:p(?:ara|\/)?|de)\s*carros?/i  // "entrada p/carro", "entrada para carro"
     ];
 
     const temGaragem = garagemPatterns.some(pattern => pattern.test(textoLower));
     if (temGaragem && !isNegado('garagem') && !isNegado('vaga') && !isNegado('carro')) {
       resultado.extras.garagem = true;
-      resultado.encontrados.push('Extra: Garagem');
+
+      // Detectar quantidade de carros
+      const qtdCarrosPatterns = [
+        /(\d+)\s*carros?/i,
+        /(\d+)\s*vagas?/i,
+        /garagem\s*(?:para\s*)?(\d+)/i,
+        /cabe\s*(\d+)\s*carros?/i
+      ];
+      let qtdCarros = 1; // default
+      for (const pattern of qtdCarrosPatterns) {
+        const match = texto.match(pattern);
+        if (match && parseInt(match[1]) > 0 && parseInt(match[1]) <= 10) {
+          qtdCarros = parseInt(match[1]);
+          break;
+        }
+      }
+      resultado.extras.garagemQtd = qtdCarros;
+
+      // Detectar tipo de garagem (fechada ou aberta/coberta)
+      let tipoGaragem = 'coberta'; // default
+      if (/garagem\s*fechada/i.test(texto) || /fechada/i.test(texto) && /garagem/i.test(texto)) {
+        tipoGaragem = 'fechada';
+      } else if (/garagem\s*aberta/i.test(texto) || /cobert(?:a|ura)/i.test(texto) || /toldo/i.test(texto)) {
+        tipoGaragem = 'coberta';
+      }
+      resultado.extras.garagemTipo = tipoGaragem;
+
+      const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : 'coberta';
+      resultado.encontrados.push(`Extra: Garagem (${qtdCarros} carro${qtdCarros > 1 ? 's' : ''}, ${tipoLabel})`);
     }
 
     // Muro
@@ -1249,10 +1278,46 @@
       resultado.encontrados.push('Extra: Portão');
     }
 
-    // Edícula
-    if ((textoLower.includes('edicula') || textoLower.includes('dependencia')) && !isNegado('edicula') && !isNegado('dependencia')) {
+    // Edícula - incluir salão campeiro, salão de festas, área de lazer externa
+    const ediculaPatterns = [
+      /\bedicula\b/i,
+      /\bdependencia\b/i,
+      /\bsalao\s*campeiro\b/i,
+      /\bsalao\s*de\s*festas?\b/i,
+      /\barea\s*(?:de\s*)?lazer\b/i,
+      /\bquiosque\b/i,
+      /\bespaco\s*gourmet\b/i,
+      /\barea\s*gourmet\b/i
+    ];
+
+    const temEdicula = ediculaPatterns.some(pattern => pattern.test(textoLower));
+    if (temEdicula && !isNegado('edicula') && !isNegado('salao')) {
       resultado.extras.edicula = true;
-      resultado.encontrados.push('Extra: Edícula');
+
+      // Detectar área da edícula se especificada
+      const areaEdiculaMatch = texto.match(/(?:salao|edicula|quiosque|gourmet)[^0-9]*(\d+)\s*m[²2]/i);
+      if (areaEdiculaMatch) {
+        resultado.extras.ediculaArea = parseInt(areaEdiculaMatch[1]);
+        resultado.encontrados.push(`Extra: Edícula (${areaEdiculaMatch[1]}m²)`);
+      } else {
+        resultado.encontrados.push('Extra: Edícula');
+      }
+    }
+
+    // Cozinha integrada com sala
+    const cozinhaIntegradaPatterns = [
+      /cozinha\s*(?:americana|integrada)/i,
+      /cozinha\s*(?:com|e)\s*sala/i,
+      /sala\s*(?:com|e)\s*cozinha/i,
+      /conceito\s*aberto/i,
+      /open\s*concept/i,
+      /ambientes\s*integrados/i
+    ];
+
+    const temCozinhaIntegrada = cozinhaIntegradaPatterns.some(pattern => pattern.test(textoLower));
+    if (temCozinhaIntegrada && !isNegado('integrada') && !isNegado('americana')) {
+      resultado.config.cozinhaIntegrada = true;
+      resultado.encontrados.push('Cozinha integrada: Sim');
     }
 
     // Energia Solar
@@ -1325,6 +1390,11 @@
       state.config.temAreaServico = config.temAreaServico;
       const el = document.getElementById('cc-area-servico');
       if (el) el.checked = config.temAreaServico;
+    }
+    if (config.areaTerreno) {
+      state.config.areaTerreno = config.areaTerreno;
+      const el = document.getElementById('cc-area-terreno');
+      if (el) el.value = config.areaTerreno;
     }
 
     // Aplicar extras
@@ -1826,8 +1896,26 @@
       }
     });
 
+    // VALOR DO TERRENO (se informado)
+    let custoTerreno = 0;
+    const areaTerreno = state.config.areaTerreno || 0;
+    if (areaTerreno > 0) {
+      // Determinar tipo de localização baseado no tipo de estrutura e região
+      let tipoLocalizacao = 'urbano'; // padrão
+      if (state.config.tipoEstrutura === 'chacara') {
+        tipoLocalizacao = 'rural';
+      } else if (state.config.tipoEstrutura === 'apartamento') {
+        tipoLocalizacao = 'urbano';
+      }
+
+      // Usar fator regional para ajustar preço do terreno
+      const fatorTerreno = data.custoTerrenoM2.fatores[tipoLocalizacao] || 1.0;
+      const custoTerrenoM2 = data.custoTerrenoM2.base * fatorTerreno * regiao.fator;
+      custoTerreno = areaTerreno * custoTerrenoM2;
+    }
+
     // TOTAL
-    const custoTotal = custoBase + custoExtras + custoAdicionais;
+    const custoTotal = custoBase + custoExtras + custoAdicionais + custoTerreno;
     const custoM2Final = custoTotal / area;
 
     // Salvar para exportação
@@ -1840,6 +1928,8 @@
       custoComodosExtra,
       custoExtras,
       custoAdicionais,
+      custoTerreno,
+      areaTerreno,
       detalhesExtras,
       detalhesAdicionais,
       config: { ...state.config },
@@ -1869,7 +1959,11 @@
       headerTipoEl.textContent = estrutura.nome;
     }
     if (headerAreaEl) {
-      headerAreaEl.textContent = `${area}m²`;
+      let areaText = `${area}m²`;
+      if (areaTerreno > 0) {
+        areaText += ` • Terreno: ${areaTerreno}m²`;
+      }
+      headerAreaEl.textContent = areaText;
     }
     if (headerQuartosEl) {
       const totalQuartos = state.config.numQuartos + state.config.numSuites;
@@ -1952,6 +2046,19 @@
               <div class="cc-breakdown-subtotal">
                 <span>Subtotal Projetos</span>
                 <span>R$ ${formatNumber(custoAdicionais)}</span>
+              </div>
+            </div>
+          ` : ''}
+
+          ${custoTerreno > 0 ? `
+            <div class="cc-breakdown-group">
+              <div class="cc-breakdown-group-title">Valor do Terreno</div>
+              <div class="cc-breakdown-row">
+                <span>Terreno (${areaTerreno}m² × R$ ${formatNumber(custoTerreno / areaTerreno)}/m²)</span>
+                <span>R$ ${formatNumber(custoTerreno)}</span>
+              </div>
+              <div class="cc-breakdown-hint">
+                <small>* Valor estimado baseado na região e tipo de localização</small>
               </div>
             </div>
           ` : ''}

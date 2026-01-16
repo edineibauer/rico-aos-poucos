@@ -14,6 +14,8 @@
       estadoConservacao: 'nova',
       padrao: 'medio',
       areaTotal: 100,
+      areaTerreno: 0,
+      cidade: '',
       numQuartos: 3,
       numSuites: 0,
       numBanheiros: 1,
@@ -217,13 +219,41 @@
             </div>
           </div>
 
-          <div class="cc-grid cc-grid-1" style="margin-top: 16px;">
+          <div class="cc-grid cc-grid-2" style="margin-top: 16px;">
             <div class="cc-field">
               <label>${t.areaTotal}</label>
               <div class="cc-input-group">
                 <input type="number" id="cc-area" value="${state.config.areaTotal}" min="30" max="2000" step="5">
                 <span>m²</span>
               </div>
+            </div>
+            <div class="cc-field" id="cc-terreno-section">
+              <label>Área do Terreno</label>
+              <div class="cc-input-group">
+                <input type="number" id="cc-area-terreno" value="${state.config.areaTerreno || ''}" min="0" max="100000" step="10" placeholder="Opcional">
+                <span>m²</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="cc-grid cc-grid-1" style="margin-top: 12px;">
+            <div class="cc-field">
+              <label>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+                Cidade (para preço de mercado)
+              </label>
+              <select id="cc-cidade">
+                <option value="">-- Selecione ou deixe em branco --</option>
+                <option value="torres" ${state.config.cidade === 'torres' ? 'selected' : ''}>Torres - RS</option>
+                <option value="arroio-do-sal" ${state.config.cidade === 'arroio-do-sal' ? 'selected' : ''}>Arroio do Sal - RS</option>
+                <option value="passo-de-torres" ${state.config.cidade === 'passo-de-torres' ? 'selected' : ''}>Passo de Torres - SC</option>
+                <option value="capao-da-canoa" ${state.config.cidade === 'capao-da-canoa' ? 'selected' : ''}>Capão da Canoa - RS</option>
+                <option value="tramandai" ${state.config.cidade === 'tramandai' ? 'selected' : ''}>Tramandaí - RS</option>
+                <option value="xangri-la" ${state.config.cidade === 'xangri-la' ? 'selected' : ''}>Xangri-lá - RS</option>
+              </select>
             </div>
           </div>
 
@@ -838,7 +868,7 @@
     }
   }
 
-  // Atualiza o campo de ajuste de localização baseado na cidade detectada
+  // Atualiza o campo de ajuste de localização baseado na cidade detectada ou selecionada
   function updateLocalizacaoAjuste() {
     const container = document.getElementById('cc-localizacao-ajuste');
     const infoEl = document.getElementById('cc-localizacao-info');
@@ -846,19 +876,23 @@
 
     if (!container) return;
 
-    const cidadeInfo = state.config.cidadeInfo;
+    // Priorizar cidade selecionada manualmente, depois a detectada pelo parser
+    const cidade = state.config.cidade || (state.config.cidadeInfo && state.config.cidadeInfo.cidade);
     const bairro = state.config.bairro;
 
-    // Mostrar o campo apenas se temos cidade detectada
-    if (cidadeInfo && cidadeInfo.cidade) {
+    // Mostrar o campo apenas se temos cidade
+    if (cidade) {
       container.style.display = 'block';
 
       // Atualizar informação da localização
       if (infoEl) {
-        let infoText = `Cidade detectada: <strong>${cidadeInfo.cidade}</strong>`;
+        const isManual = state.config.cidade && !state.config.cidadeInfo;
+        let infoText = isManual
+          ? `Cidade selecionada: <strong>${cidade}</strong>`
+          : `Cidade detectada: <strong>${cidade}</strong>`;
         if (bairro && typeof DadosMercadoImoveis !== 'undefined') {
           const descBairro = DadosMercadoImoveis.getDescricaoLocalizacao
-            ? DadosMercadoImoveis.getDescricaoLocalizacao(cidadeInfo.cidade, bairro)
+            ? DadosMercadoImoveis.getDescricaoLocalizacao(cidade, bairro)
             : bairro;
           if (descBairro) {
             infoText += ` (${descBairro.split(' - ')[1] || bairro})`;
@@ -1716,6 +1750,12 @@
     // Aplicar cidade e bairro detectados
     if (config.cidadeInfo) {
       state.config.cidadeInfo = config.cidadeInfo;
+      state.config.cidade = config.cidadeInfo.cidade;
+      // Atualizar o dropdown de cidade
+      const cidadeSelect = document.getElementById('cc-cidade');
+      if (cidadeSelect && config.cidadeInfo.cidade) {
+        cidadeSelect.value = config.cidadeInfo.cidade;
+      }
     }
     if (config.bairro) {
       state.config.bairro = config.bairro;
@@ -1750,6 +1790,8 @@
       estadoConservacao: 'bom',
       padrao: 'medio',
       areaTotal: 100,
+      areaTerreno: 0,
+      cidade: '',
       numQuartos: 0,
       numSuites: 0,
       numBanheiros: 0,
@@ -1771,6 +1813,12 @@
     if (ajusteSelect) ajusteSelect.value = '0';
     const ajusteCustom = document.getElementById('cc-ajuste-custom');
     if (ajusteCustom) ajusteCustom.style.display = 'none';
+
+    // Reset terreno e cidade
+    const terrenoEl = document.getElementById('cc-area-terreno');
+    if (terrenoEl) terrenoEl.value = '';
+    const cidadeEl = document.getElementById('cc-cidade');
+    if (cidadeEl) cidadeEl.value = '';
 
     // Reset garagem inputs
     const garagemVagasEl = document.getElementById('cc-vagas-garagem');
@@ -1964,6 +2012,28 @@
       calculate();
     });
 
+    // Área do terreno
+    document.getElementById('cc-area-terreno')?.addEventListener('input', function() {
+      state.config.areaTerreno = parseInt(this.value) || 0;
+      calculate();
+    });
+
+    // Cidade (para preço de mercado)
+    document.getElementById('cc-cidade')?.addEventListener('change', function() {
+      state.config.cidade = this.value;
+      // Atualizar cidadeInfo se DadosMercadoImoveis estiver disponível
+      if (this.value && typeof DadosMercadoImoveis !== 'undefined') {
+        state.config.cidadeInfo = { cidade: this.value };
+        // Mostrar o ajuste de localização
+        updateLocalizacaoAjuste();
+      } else {
+        state.config.cidadeInfo = null;
+        state.config.bairro = null;
+        updateLocalizacaoAjuste();
+      }
+      calculate();
+    });
+
     // Ajuste de localização
     const ajusteSelect = document.getElementById('cc-ajuste-localizacao');
     const ajusteCustomDiv = document.getElementById('cc-ajuste-custom');
@@ -2079,7 +2149,10 @@
     // Detectar cidade e bairro
     let cidadeDetectada = null;
     let bairroDetectado = state.config.bairro || 'outros';
-    if (state.config.cidadeInfo && state.config.cidadeInfo.cidade) {
+    // Priorizar cidade selecionada manualmente, depois a detectada pelo parser
+    if (state.config.cidade) {
+      cidadeDetectada = state.config.cidade;
+    } else if (state.config.cidadeInfo && state.config.cidadeInfo.cidade) {
       cidadeDetectada = state.config.cidadeInfo.cidade;
     }
 

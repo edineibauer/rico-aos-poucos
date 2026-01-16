@@ -9,6 +9,16 @@
   padding: 20px 0;
 }
 
+/* Integração com página de ferramentas */
+.comp2-panel .cc-calculator {
+  max-width: 100%;
+  padding: 0;
+}
+
+.comp2-panel .cc-section {
+  background: var(--bg-tertiary);
+}
+
 /* Sections */
 .cc-section {
   background: var(--bg-secondary);

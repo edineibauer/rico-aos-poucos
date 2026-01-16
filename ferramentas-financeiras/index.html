@@ -42,6 +42,7 @@
 
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/comparador.css">
+  <link rel="stylesheet" href="../css/custo-construcao.css">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -117,12 +118,12 @@
             </svg>
             <span>Calculadora</span>
           </button>
-          <a href="calculadora-construcao.html" class="comp2-nav-btn" title="Calculadora de Custo de Construção" style="text-decoration: none;">
+          <button class="comp2-nav-btn" data-tab="construcao" title="Calculadora de Custo de Construção">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
               <path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/>
             </svg>
             <span>Construção</span>
-          </a>
+          </button>
         </nav>
       </aside>
 
@@ -888,6 +889,13 @@
           </div>
         </section>
 
+        <!-- Tab: Construção -->
+        <section class="comp2-tab" id="comp2-construcao">
+          <div class="comp2-panel">
+            <div id="custo-construcao-container"></div>
+          </div>
+        </section>
+
       </div>
     </main>
 
@@ -900,6 +908,8 @@
   <script src="../js/comparador.js"></script>
   <script src="../js/comparador-ui.js"></script>
   <script src="../js/calculadora.js"></script>
+  <script src="../js/custo-construcao-data.js"></script>
+  <script src="../js/custo-construcao.js"></script>
   <script src="../js/i18n.js"></script>
   <script>
     // Initialize custom date selects

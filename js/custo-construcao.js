@@ -196,126 +196,135 @@
 
         <!-- Configuração Básica -->
         <section class="cc-section cc-section-config">
-          <h2 class="cc-section-title">${t.configuracaoBasica}</h2>
-
-          <div class="cc-grid cc-grid-2">
-            <div class="cc-field">
-              <label>${t.regiao}</label>
-              <select id="cc-estado">
-                ${Object.entries(data.regioes).map(([uf, info]) =>
-                  `<option value="${uf}" ${uf === state.config.estado ? 'selected' : ''}>${uf} - ${info.nome}</option>`
-                ).join('')}
-              </select>
-            </div>
-
-            <div class="cc-field">
-              <label>Situação do Imóvel</label>
-              <select id="cc-estado-conservacao">
-                ${Object.entries(data.estadoConservacao).map(([key, info]) =>
-                  `<option value="${key}" ${key === state.config.estadoConservacao ? 'selected' : ''}>${info.nome}</option>`
-                ).join('')}
-              </select>
-            </div>
+          <div class="cc-section-header" data-target="config-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">1</span>
+              ${t.configuracaoBasica}
+            </h2>
+            <button class="cc-btn-toggle" data-target="config-content">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+            </button>
           </div>
 
-          <div class="cc-conservacao-info" id="cc-conservacao-info"></div>
-
-          <div class="cc-grid cc-grid-3" style="margin-top: 16px;">
-            <div class="cc-field">
-              <label>${t.tipoEstrutura || 'Tipo de Casa'}</label>
-              <select id="cc-tipo-estrutura">
-                ${Object.entries(data.tiposEstrutura).map(([key, info]) =>
-                  `<option value="${key}" ${key === state.config.tipoEstrutura ? 'selected' : ''}>${info.nome}</option>`
-                ).join('')}
-              </select>
-            </div>
-
-            <div class="cc-field">
-              <label>${t.tipoConstrucao}</label>
-              <select id="cc-tipo-construcao">
-                ${Object.entries(data.tiposConstrucao).map(([key, info]) =>
-                  `<option value="${key}" ${key === state.config.tipoConstrucao ? 'selected' : ''}>${info.nome}</option>`
-                ).join('')}
-              </select>
-            </div>
-
-            <div class="cc-field">
-              <label>${t.padraoAcabamento}</label>
-              <select id="cc-padrao">
-                ${Object.entries(data.padroes).map(([key, info]) =>
-                  `<option value="${key}" ${key === state.config.padrao ? 'selected' : ''}>${info.nome}</option>`
-                ).join('')}
-              </select>
-            </div>
-          </div>
-
-          <div class="cc-grid cc-grid-2" style="margin-top: 16px;">
-            <div class="cc-field">
-              <label>${t.areaTotal}</label>
-              <div class="cc-input-group">
-                <input type="number" id="cc-area" value="${state.config.areaTotal}" min="30" max="2000" step="5">
-                <span>m²</span>
+          <div class="cc-section-content" id="config-content">
+            <!-- Grupo: Localização e Estado -->
+            <div class="cc-field-group">
+              <div class="cc-field-group-title">
+                <span class="emoji">📍</span> Localização e Estado
               </div>
-            </div>
-            <div class="cc-field" id="cc-terreno-section">
-              <label>Área do Terreno</label>
-              <div class="cc-input-group">
-                <input type="number" id="cc-area-terreno" value="${state.config.areaTerreno || ''}" min="0" max="100000" step="10" placeholder="Opcional">
-                <span>m²</span>
+              <div class="cc-grid cc-grid-2">
+                <div class="cc-field">
+                  <label>${t.regiao}</label>
+                  <select id="cc-estado">
+                    ${Object.entries(data.regioes).map(([uf, info]) =>
+                      `<option value="${uf}" ${uf === state.config.estado ? 'selected' : ''}>${uf} - ${info.nome}</option>`
+                    ).join('')}
+                  </select>
+                </div>
+                <div class="cc-field">
+                  <label>Situação do Imóvel</label>
+                  <select id="cc-estado-conservacao">
+                    ${Object.entries(data.estadoConservacao).map(([key, info]) =>
+                      `<option value="${key}" ${key === state.config.estadoConservacao ? 'selected' : ''}>${info.nome}</option>`
+                    ).join('')}
+                  </select>
+                </div>
               </div>
-            </div>
-          </div>
+              <div class="cc-conservacao-info" id="cc-conservacao-info"></div>
 
-          <div class="cc-grid cc-grid-1" style="margin-top: 12px;">
-            <div class="cc-field">
-              <label>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Cidade (para preço de mercado)
-              </label>
-              <select id="cc-cidade">
-                <option value="">-- Selecione ou deixe em branco --</option>
-                <option value="torres" ${state.config.cidade === 'torres' ? 'selected' : ''}>Torres - RS</option>
-                <option value="arroio-do-sal" ${state.config.cidade === 'arroio-do-sal' ? 'selected' : ''}>Arroio do Sal - RS</option>
-                <option value="passo-de-torres" ${state.config.cidade === 'passo-de-torres' ? 'selected' : ''}>Passo de Torres - SC</option>
-                <option value="capao-da-canoa" ${state.config.cidade === 'capao-da-canoa' ? 'selected' : ''}>Capão da Canoa - RS</option>
-                <option value="tramandai" ${state.config.cidade === 'tramandai' ? 'selected' : ''}>Tramandaí - RS</option>
-                <option value="xangri-la" ${state.config.cidade === 'xangri-la' ? 'selected' : ''}>Xangri-lá - RS</option>
-              </select>
-            </div>
-          </div>
-
-          <div class="cc-tipo-info" id="cc-tipo-info"></div>
-
-          <!-- Ajuste de Localização (aparece quando cidade detectada) -->
-          <div class="cc-localizacao-ajuste" id="cc-localizacao-ajuste" style="display: none; margin-top: 16px;">
-            <div class="cc-field">
-              <label>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-right: 4px;">
-                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                  <circle cx="12" cy="10" r="3"></circle>
-                </svg>
-                Ajuste de Localização
-              </label>
-              <div class="cc-localizacao-info" id="cc-localizacao-info" style="font-size: 12px; color: var(--cc-text-secondary); margin-bottom: 8px;"></div>
-              <select id="cc-ajuste-localizacao">
-                <option value="0">Padrão / Afastado do centro (0%)</option>
-                <option value="10">Bairro residencial (+10%)</option>
-                <option value="25">Centro da cidade (+25%)</option>
-                <option value="50">Região valorizada (+50%)</option>
-                <option value="80">Próximo à praia/mar (+80%)</option>
-                <option value="120">Beira-mar / Vista mar (+120%)</option>
-                <option value="150">Frente ao mar / Premium (+150%)</option>
-                <option value="-10">Região periférica (-10%)</option>
-                <option value="-20">Afastado / Rural (-20%)</option>
-                <option value="custom">Personalizado...</option>
-              </select>
-              <div id="cc-ajuste-custom" style="display: none; margin-top: 8px;">
+              <div class="cc-grid cc-grid-2" style="margin-top: 14px;">
+                <div class="cc-field">
+                  <label>Cidade (Preço de Mercado)</label>
+                  <select id="cc-cidade">
+                    <option value="">-- Selecione --</option>
+                    <option value="torres" ${state.config.cidade === 'torres' ? 'selected' : ''}>Torres - RS</option>
+                    <option value="arroio-do-sal" ${state.config.cidade === 'arroio-do-sal' ? 'selected' : ''}>Arroio do Sal - RS</option>
+                    <option value="passo-de-torres" ${state.config.cidade === 'passo-de-torres' ? 'selected' : ''}>Passo de Torres - SC</option>
+                    <option value="capao-da-canoa" ${state.config.cidade === 'capao-da-canoa' ? 'selected' : ''}>Capão da Canoa - RS</option>
+                    <option value="tramandai" ${state.config.cidade === 'tramandai' ? 'selected' : ''}>Tramandaí - RS</option>
+                    <option value="xangri-la" ${state.config.cidade === 'xangri-la' ? 'selected' : ''}>Xangri-lá - RS</option>
+                  </select>
+                </div>
+                <div class="cc-field">
+                  <label>Ajuste de Localização</label>
+                  <select id="cc-ajuste-localizacao">
+                    <option value="0">Padrão (0%)</option>
+                    <option value="10">Residencial (+10%)</option>
+                    <option value="25">Centro (+25%)</option>
+                    <option value="50">Valorizada (+50%)</option>
+                    <option value="80">Próximo praia (+80%)</option>
+                    <option value="120">Beira-mar (+120%)</option>
+                    <option value="150">Frente mar (+150%)</option>
+                    <option value="-10">Periférica (-10%)</option>
+                    <option value="-20">Rural (-20%)</option>
+                    <option value="custom">Personalizado...</option>
+                  </select>
+                </div>
+              </div>
+              <div id="cc-ajuste-custom" style="display: none; margin-top: 10px;">
                 <div class="cc-input-group">
                   <input type="number" id="cc-ajuste-custom-valor" value="0" min="-50" max="200" step="5">
-                  <span>%</span>
+                  <span class="cc-unit">%</span>
+                </div>
+              </div>
+              <div class="cc-localizacao-info" id="cc-localizacao-info"></div>
+            </div>
+
+            <!-- Grupo: Tipo do Imóvel -->
+            <div class="cc-field-group">
+              <div class="cc-field-group-title">
+                <span class="emoji">🏠</span> Tipo do Imóvel
+              </div>
+              <div class="cc-grid cc-grid-3">
+                <div class="cc-field">
+                  <label>${t.tipoEstrutura || 'Tipo de Casa'}</label>
+                  <select id="cc-tipo-estrutura">
+                    ${Object.entries(data.tiposEstrutura).map(([key, info]) =>
+                      `<option value="${key}" ${key === state.config.tipoEstrutura ? 'selected' : ''}>${info.nome}</option>`
+                    ).join('')}
+                  </select>
+                </div>
+                <div class="cc-field">
+                  <label>${t.tipoConstrucao}</label>
+                  <select id="cc-tipo-construcao">
+                    ${Object.entries(data.tiposConstrucao).map(([key, info]) =>
+                      `<option value="${key}" ${key === state.config.tipoConstrucao ? 'selected' : ''}>${info.nome}</option>`
+                    ).join('')}
+                  </select>
+                </div>
+                <div class="cc-field">
+                  <label>${t.padraoAcabamento}</label>
+                  <select id="cc-padrao">
+                    ${Object.entries(data.padroes).map(([key, info]) =>
+                      `<option value="${key}" ${key === state.config.padrao ? 'selected' : ''}>${info.nome}</option>`
+                    ).join('')}
+                  </select>
+                </div>
+              </div>
+              <div class="cc-tipo-info" id="cc-tipo-info"></div>
+            </div>
+
+            <!-- Grupo: Metragem -->
+            <div class="cc-field-group">
+              <div class="cc-field-group-title">
+                <span class="emoji">📐</span> Metragem
+              </div>
+              <div class="cc-grid cc-grid-2">
+                <div class="cc-field">
+                  <label>${t.areaTotal}</label>
+                  <div class="cc-input-group">
+                    <input type="number" id="cc-area" value="${state.config.areaTotal}" min="30" max="2000" step="5">
+                    <span class="cc-unit">m²</span>
+                  </div>
+                </div>
+                <div class="cc-field" id="cc-terreno-section">
+                  <label>Área do Terreno</label>
+                  <div class="cc-input-group">
+                    <input type="number" id="cc-area-terreno" value="${state.config.areaTerreno || ''}" min="0" max="100000" step="10" placeholder="Opcional">
+                    <span class="cc-unit">m²</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -324,64 +333,71 @@
 
         <!-- Cômodos -->
         <section class="cc-section cc-section-comodos">
-          <h2 class="cc-section-title">
-            <span>Configuração dos Cômodos</span>
+          <div class="cc-section-header" data-target="comodos-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">2</span>
+              Cômodos e Ambientes
+            </h2>
             <button class="cc-btn-toggle" data-target="comodos-content">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
-          </h2>
+          </div>
 
           <div class="cc-section-content" id="comodos-content">
-            <p class="cc-hint">O número de cômodos influencia diretamente no custo (mais banheiros = mais instalações hidráulicas e revestimentos).</p>
-
-            <!-- Quartos e Banheiros -->
-            <div class="cc-grid cc-grid-4">
-              <div class="cc-field">
-                <label>Quartos (sem suíte)</label>
-                <input type="number" id="cc-quartos" value="${state.config.numQuartos}" min="0" max="10">
+            <!-- Grupo: Quartos e Banheiros -->
+            <div class="cc-field-group">
+              <div class="cc-field-group-title">
+                <span class="emoji">🛏️</span> Quartos e Banheiros
               </div>
-              <div class="cc-field">
-                <label>Suítes (quarto + banheiro)</label>
-                <input type="number" id="cc-suites" value="${state.config.numSuites}" min="0" max="10">
-              </div>
-              <div class="cc-field">
-                <label>Banheiros extras</label>
-                <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="0" max="10">
-              </div>
-              <div class="cc-field">
-                <label>Escritório/Home Office</label>
-                <input type="number" id="cc-escritorios" value="${state.config.numEscritorios || 0}" min="0" max="5">
+              <div class="cc-grid cc-grid-4">
+                <div class="cc-field">
+                  <label>Quartos</label>
+                  <input type="number" id="cc-quartos" value="${state.config.numQuartos}" min="0" max="10">
+                </div>
+                <div class="cc-field">
+                  <label>Suítes</label>
+                  <input type="number" id="cc-suites" value="${state.config.numSuites}" min="0" max="10">
+                </div>
+                <div class="cc-field">
+                  <label>Banheiros Extras</label>
+                  <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="0" max="10">
+                </div>
+                <div class="cc-field">
+                  <label>Escritório</label>
+                  <input type="number" id="cc-escritorios" value="${state.config.numEscritorios || 0}" min="0" max="5">
+                </div>
               </div>
             </div>
 
-            <!-- Área de Serviço e Despensa -->
-            <div class="cc-grid cc-grid-4" style="margin-top: 12px;">
-              <div class="cc-field cc-field-checkbox">
-                <label>
+            <!-- Grupo: Ambientes Adicionais -->
+            <div class="cc-field-group">
+              <div class="cc-field-group-title">
+                <span class="emoji">🏡</span> Ambientes Adicionais
+              </div>
+              <div class="cc-grid cc-grid-auto">
+                <label class="cc-checkbox">
                   <input type="checkbox" id="cc-area-servico" ${state.config.temAreaServico ? 'checked' : ''}>
-                  Área de Serviço
+                  <span>Área de Serviço</span>
                 </label>
-              </div>
-              <div class="cc-field cc-field-checkbox">
-                <label>
+                <label class="cc-checkbox">
                   <input type="checkbox" id="cc-despensa" ${state.config.temDespensa ? 'checked' : ''}>
-                  Despensa
+                  <span>Despensa</span>
                 </label>
-              </div>
-              <div class="cc-field cc-field-checkbox">
-                <label>
+                <label class="cc-checkbox">
                   <input type="checkbox" id="cc-varanda" ${state.config.temVaranda ? 'checked' : ''}>
-                  Varanda/Sacada
+                  <span>Varanda/Sacada</span>
                 </label>
               </div>
             </div>
 
-            <!-- Garagem -->
-            <div class="cc-comodos-subsection" style="margin-top: 16px; padding: 12px; background: var(--cc-card-bg); border-radius: 8px;">
-              <div class="cc-subsection-title" style="font-weight: 600; margin-bottom: 10px;">🚗 Garagem</div>
-              <div class="cc-grid cc-grid-3">
+            <!-- Subsection: Garagem -->
+            <div class="cc-subsection">
+              <div class="cc-subsection-header">
+                <span class="cc-subsection-title"><span class="emoji">🚗</span> Garagem</span>
+              </div>
+              <div class="cc-grid cc-grid-2">
                 <div class="cc-field">
                   <label>Vagas</label>
                   <input type="number" id="cc-vagas-garagem" value="${state.config.garagemVagas || 0}" min="0" max="10">
@@ -390,95 +406,73 @@
                   <label>Tipo</label>
                   <select id="cc-tipo-vaga">
                     <option value="aberta" ${state.config.garagemTipo === 'aberta' ? 'selected' : ''}>Aberta (descoberta)</option>
-                    <option value="coberta" ${state.config.garagemTipo === 'coberta' ? 'selected' : ''}>Coberta (telhado simples)</option>
-                    <option value="fechada" ${state.config.garagemTipo === 'fechada' ? 'selected' : ''}>Fechada (box/portão)</option>
+                    <option value="coberta" ${state.config.garagemTipo === 'coberta' ? 'selected' : ''}>Coberta</option>
+                    <option value="fechada" ${state.config.garagemTipo === 'fechada' ? 'selected' : ''}>Fechada (box)</option>
                   </select>
                 </div>
               </div>
-              <div class="cc-grid cc-grid-4" style="margin-top: 8px;" id="cc-garagem-extras">
-                <div class="cc-field cc-field-checkbox">
-                  <label>
-                    <input type="checkbox" id="cc-garagem-churrasqueira" ${state.config.garagemChurrasqueira ? 'checked' : ''}>
-                    Churrasqueira
-                  </label>
-                </div>
-                <div class="cc-field cc-field-checkbox">
-                  <label>
-                    <input type="checkbox" id="cc-garagem-banheiro" ${state.config.garagemBanheiro ? 'checked' : ''}>
-                    Banheiro
-                  </label>
-                </div>
-                <div class="cc-field cc-field-checkbox">
-                  <label>
-                    <input type="checkbox" id="cc-garagem-deposito" ${state.config.garagemDeposito ? 'checked' : ''}>
-                    Depósito
-                  </label>
-                </div>
-                <div class="cc-field cc-field-checkbox">
-                  <label>
-                    <input type="checkbox" id="cc-garagem-lavabo" ${state.config.garagemLavabo ? 'checked' : ''}>
-                    Lavabo
-                  </label>
-                </div>
+              <div class="cc-grid cc-grid-auto" style="margin-top: 12px;">
+                <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-garagem-churrasqueira" ${state.config.garagemChurrasqueira ? 'checked' : ''}>
+                  <span>Churrasqueira</span>
+                </label>
+                <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-garagem-banheiro" ${state.config.garagemBanheiro ? 'checked' : ''}>
+                  <span>Banheiro</span>
+                </label>
+                <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-garagem-deposito" ${state.config.garagemDeposito ? 'checked' : ''}>
+                  <span>Depósito</span>
+                </label>
+                <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-garagem-lavabo" ${state.config.garagemLavabo ? 'checked' : ''}>
+                  <span>Lavabo</span>
+                </label>
               </div>
             </div>
 
-            <!-- Área Gourmet -->
-            <div class="cc-comodos-subsection" style="margin-top: 16px; padding: 12px; background: var(--cc-card-bg); border-radius: 8px;">
-              <div class="cc-subsection-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
-                <label class="cc-switch cc-switch-small">
+            <!-- Subsection: Área Gourmet -->
+            <div class="cc-subsection">
+              <div class="cc-subsection-header">
+                <label class="cc-switch">
                   <input type="checkbox" id="cc-tem-area-gourmet" ${state.config.temAreaGourmet ? 'checked' : ''}>
                   <span class="cc-switch-slider"></span>
                 </label>
-                <span class="cc-subsection-title" style="font-weight: 600;">🍖 Área Gourmet / Espaço de Lazer</span>
+                <span class="cc-subsection-title"><span class="emoji">🍖</span> Área Gourmet / Lazer</span>
               </div>
               <div id="cc-area-gourmet-options" style="display: ${state.config.temAreaGourmet ? 'block' : 'none'};">
-                <div class="cc-grid cc-grid-2">
-                  <div class="cc-field">
-                    <label>Área aproximada</label>
-                    <div class="cc-input-group">
-                      <input type="number" id="cc-area-gourmet-m2" value="${state.config.areaGourmetM2 || 20}" min="10" max="100">
-                      <span>m²</span>
-                    </div>
+                <div class="cc-field" style="margin-bottom: 12px;">
+                  <label>Área Aproximada</label>
+                  <div class="cc-input-group">
+                    <input type="number" id="cc-area-gourmet-m2" value="${state.config.areaGourmetM2 || 20}" min="10" max="100">
+                    <span class="cc-unit">m²</span>
                   </div>
                 </div>
-                <div class="cc-grid cc-grid-4" style="margin-top: 8px;">
-                  <div class="cc-field cc-field-checkbox">
-                    <label>
-                      <input type="checkbox" id="cc-gourmet-churrasqueira" ${state.config.gourmetChurrasqueira !== false ? 'checked' : ''}>
-                      Churrasqueira
-                    </label>
-                  </div>
-                  <div class="cc-field cc-field-checkbox">
-                    <label>
-                      <input type="checkbox" id="cc-gourmet-lareira" ${state.config.gourmetLareira ? 'checked' : ''}>
-                      Lareira
-                    </label>
-                  </div>
-                  <div class="cc-field cc-field-checkbox">
-                    <label>
-                      <input type="checkbox" id="cc-gourmet-fogao-lenha" ${state.config.gourmetFogaoLenha ? 'checked' : ''}>
-                      Fogão a Lenha
-                    </label>
-                  </div>
-                  <div class="cc-field cc-field-checkbox">
-                    <label>
-                      <input type="checkbox" id="cc-gourmet-forno-pizza" ${state.config.gourmetFornoPizza ? 'checked' : ''}>
-                      Forno de Pizza
-                    </label>
-                  </div>
-                  <div class="cc-field cc-field-checkbox">
-                    <label>
-                      <input type="checkbox" id="cc-gourmet-bancada" ${state.config.gourmetBancada !== false ? 'checked' : ''}>
-                      Bancada/Pia
-                    </label>
-                  </div>
-                  <div class="cc-field cc-field-checkbox">
-                    <label>
-                      <input type="checkbox" id="cc-gourmet-banheiro" ${state.config.gourmetBanheiro ? 'checked' : ''}>
-                      Banheiro
-                    </label>
-                  </div>
+                <div class="cc-grid cc-grid-auto">
+                  <label class="cc-checkbox">
+                    <input type="checkbox" id="cc-gourmet-churrasqueira" ${state.config.gourmetChurrasqueira !== false ? 'checked' : ''}>
+                    <span>Churrasqueira</span>
+                  </label>
+                  <label class="cc-checkbox">
+                    <input type="checkbox" id="cc-gourmet-lareira" ${state.config.gourmetLareira ? 'checked' : ''}>
+                    <span>Lareira</span>
+                  </label>
+                  <label class="cc-checkbox">
+                    <input type="checkbox" id="cc-gourmet-fogao-lenha" ${state.config.gourmetFogaoLenha ? 'checked' : ''}>
+                    <span>Fogão a Lenha</span>
+                  </label>
+                  <label class="cc-checkbox">
+                    <input type="checkbox" id="cc-gourmet-forno-pizza" ${state.config.gourmetFornoPizza ? 'checked' : ''}>
+                    <span>Forno de Pizza</span>
+                  </label>
+                  <label class="cc-checkbox">
+                    <input type="checkbox" id="cc-gourmet-bancada" ${state.config.gourmetBancada !== false ? 'checked' : ''}>
+                    <span>Bancada/Pia</span>
+                  </label>
+                  <label class="cc-checkbox">
+                    <input type="checkbox" id="cc-gourmet-banheiro" ${state.config.gourmetBanheiro ? 'checked' : ''}>
+                    <span>Banheiro</span>
+                  </label>
                 </div>
               </div>
             </div>
@@ -489,14 +483,17 @@
 
         <!-- Materiais -->
         <section class="cc-section cc-section-materiais">
-          <h2 class="cc-section-title">
-            <span>${t.materiais}</span>
+          <div class="cc-section-header" data-target="materiais-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">3</span>
+              ${t.materiais}
+            </h2>
             <button class="cc-btn-toggle" data-target="materiais-content">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
-          </h2>
+          </div>
 
           <div class="cc-section-content" id="materiais-content">
             <p class="cc-hint">Escolha os materiais conforme seu orçamento. Os valores já incluem mão de obra de instalação.</p>
@@ -512,18 +509,21 @@
 
         <!-- Mão de Obra -->
         <section class="cc-section cc-section-mao-obra">
-          <h2 class="cc-section-title">
-            <span>${t.maoDeObra}</span>
+          <div class="cc-section-header" data-target="mao-obra-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">4</span>
+              ${t.maoDeObra}
+            </h2>
             <button class="cc-btn-toggle" data-target="mao-obra-content">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
-          </h2>
+          </div>
 
           <div class="cc-section-content" id="mao-obra-content">
-            <p class="cc-hint">Desmarque os profissionais cujo custo você não terá (ex: você mesmo faz, ou alguém faz de graça). Cada profissional tem um percentual do custo de mão de obra.</p>
-            <div class="cc-grid cc-grid-3">
+            <p class="cc-hint">Desmarque os profissionais cujo custo você não terá.</p>
+            <div class="cc-grid cc-grid-auto">
               ${buildMaoDeObraCheckboxes()}
             </div>
           </div>
@@ -531,14 +531,17 @@
 
         <!-- Extras -->
         <section class="cc-section cc-section-extras">
-          <h2 class="cc-section-title">
-            <span>${t.extras}</span>
+          <div class="cc-section-header" data-target="extras-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">5</span>
+              ${t.extras}
+            </h2>
             <button class="cc-btn-toggle" data-target="extras-content">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
-          </h2>
+          </div>
 
           <div class="cc-section-content" id="extras-content">
             <div class="cc-extras-grid">
@@ -549,18 +552,21 @@
 
         <!-- Custos Adicionais -->
         <section class="cc-section cc-section-custos-adicionais">
-          <h2 class="cc-section-title">
-            <span>Custos Adicionais (Projetos e Taxas)</span>
+          <div class="cc-section-header" data-target="custos-adicionais-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">6</span>
+              Projetos e Taxas
+            </h2>
             <button class="cc-btn-toggle" data-target="custos-adicionais-content">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
-          </h2>
+          </div>
 
           <div class="cc-section-content" id="custos-adicionais-content">
             <p class="cc-hint">Desmarque os custos que você já pagou ou não terá.</p>
-            <div class="cc-grid cc-grid-3">
+            <div class="cc-grid cc-grid-auto">
               ${buildCustosAdicionaisCheckboxes()}
             </div>
           </div>
@@ -616,19 +622,17 @@
 
   function buildMaoDeObraCheckboxes() {
     return Object.entries(data.maoDeObra).map(([key, info]) => `
-      <div class="cc-field cc-field-checkbox">
-        <label>
-          <input type="checkbox" data-profissional="${key}" ${state.maoDeObra[key] ? 'checked' : ''}>
-          ${info.nome} <span class="cc-percent">(${info.percentualObra}%)</span>
-        </label>
-      </div>
+      <label class="cc-checkbox">
+        <input type="checkbox" data-profissional="${key}" ${state.maoDeObra[key] ? 'checked' : ''}>
+        <span>${info.nome} <span class="cc-percent">(${info.percentualObra}%)</span></span>
+      </label>
     `).join('');
   }
 
   function buildExtrasSection() {
     return `
       <!-- Piscina -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-piscina">
@@ -646,7 +650,7 @@
       </div>
 
       <!-- Piso Externo / Pátio -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-piso-externo">
@@ -668,7 +672,7 @@
       </div>
 
       <!-- Muro -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-muro">
@@ -690,7 +694,7 @@
       </div>
 
       <!-- Portão -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-portao">
@@ -715,7 +719,7 @@
       </div>
 
       <!-- Edícula - Configuração Completa -->
-      <div class="cc-extra-item cc-extra-edicula-expanded">
+      <div class="cc-extra-card cc-extra-edicula-expanded">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-edicula">
@@ -826,7 +830,7 @@
       </div>
 
       <!-- Energia Solar -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-solar">
@@ -844,7 +848,7 @@
       </div>
 
       <!-- Aquecedor Solar -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-aquecedor">
@@ -862,7 +866,7 @@
       </div>
 
       <!-- Automação -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-automacao">
@@ -880,7 +884,7 @@
       </div>
 
       <!-- Segurança -->
-      <div class="cc-extra-item">
+      <div class="cc-extra-card">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-seguranca">
@@ -937,12 +941,10 @@
         }
       }
       return `
-        <div class="cc-field cc-field-checkbox">
-          <label>
-            <input type="checkbox" data-custo="${c.key}" ${state.custosAdicionais[c.key] ? 'checked' : ''}>
-            ${c.label} <span class="cc-custo-valor">${valorStr}</span>
-          </label>
-        </div>
+        <label class="cc-checkbox">
+          <input type="checkbox" data-custo="${c.key}" ${state.custosAdicionais[c.key] ? 'checked' : ''}>
+          <span>${c.label} <span class="cc-percent">${valorStr}</span></span>
+        </label>
       `;
     }).join('');
   }
@@ -1002,7 +1004,7 @@
     extrasNaoAplicaveis.forEach(id => {
       const el = document.getElementById(id);
       if (el) {
-        const itemEl = el.closest('.cc-extra-item');
+        const itemEl = el.closest('.cc-extra-card');
         if (itemEl) {
           itemEl.style.display = isApartamento ? 'none' : '';
           // Desmarcar se estiver oculto

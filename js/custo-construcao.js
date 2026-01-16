@@ -771,21 +771,126 @@
       return negacoes.some(regex => regex.test(textoLower));
     }
 
-    // Área em m²
-    const areaPatterns = [
-      /(\d+)\s*m[²2]/i,
-      /(\d+)\s*metros?\s*quadrados?/i,
-      /area\s*(?:privativa|total|construida)?\s*(?:de\s*)?(\d+)/i,
-      /(\d+)\s*m\s*de\s*area/i
+    // Área em m² - priorizar área total/construída, ignorar áreas de cômodos específicos
+    // Lista de termos que indicam cômodos específicos (não é a área total)
+    const comodoTermos = ['salao', 'sala', 'cozinha', 'quarto', 'banheiro', 'churrasqueira', 'varanda', 'sacada', 'escritorio', 'closet', 'lavabo', 'despensa', 'edicula', 'garagem', 'suite', 'piscina', 'area gourmet', 'espaco gourmet', 'campeiro'];
+
+    // Padrão 1: Área explícita total/construída/privativa (maior prioridade)
+    const areaTotalPatterns = [
+      /area\s*(?:total|construida|privativa|util)\s*(?:de\s*)?(\d+)\s*m[²2]?/i,
+      /(\d+)\s*m[²2]?\s*(?:de\s*)?area\s*(?:total|construida|privativa|util)/i,
+      /(?:casa|imovel|apartamento|apto|sobrado|residencia)\s+(?:de\s+|com\s+)?(\d+)\s*m[²2]/i,
+      /(\d+)\s*m[²2]\s*(?:de\s*)?(?:casa|imovel|apartamento|apto|sobrado|residencia)/i
     ];
-    for (const pattern of areaPatterns) {
+
+    let areaEncontrada = false;
+    for (const pattern of areaTotalPatterns) {
       const match = texto.match(pattern);
       if (match) {
-        const area = parseInt(match[1] || match[2]);
+        const area = parseInt(match[1]);
         if (area >= 20 && area <= 5000) {
           resultado.config.areaTotal = area;
           resultado.encontrados.push(`Área: ${area}m²`);
+          areaEncontrada = true;
           break;
+        }
+      }
+    }
+
+    // Padrão 2: Se não encontrou área explícita, buscar m² que NÃO esteja associado a cômodo
+    if (!areaEncontrada) {
+      // Encontrar todas as menções de m²
+      const areaRegex = /(\d+)\s*m[²2]/gi;
+      let match;
+      const areasEncontradas = [];
+
+      while ((match = areaRegex.exec(texto)) !== null) {
+        const area = parseInt(match[1]);
+        if (area >= 20 && area <= 5000) {
+          // Verificar o contexto antes do número (últimos 50 caracteres)
+          const contextoBefore = texto.slice(Math.max(0, match.index - 50), match.index).toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+
+          // Verificar se está associado a um cômodo específico
+          const isComodo = comodoTermos.some(comodo => {
+            // Verificar se o termo do cômodo aparece logo antes do número
+            const regex = new RegExp(`${comodo}[^0-9]*$`, 'i');
+            return regex.test(contextoBefore);
+          });
+
+          if (!isComodo) {
+            areasEncontradas.push(area);
+          }
+        }
+      }
+
+      // Usar a maior área encontrada que não seja de cômodo
+      if (areasEncontradas.length > 0) {
+        const maiorArea = Math.max(...areasEncontradas);
+        resultado.config.areaTotal = maiorArea;
+        resultado.encontrados.push(`Área: ${maiorArea}m²`);
+      }
+    }
+
+    // Tamanho do terreno/lote
+    let terrenoEncontrado = false;
+
+    // Padrão 1: Dimensões como "15x30", "10 x 20", "12m x 25m"
+    const dimensoesRegex = /terreno\s*(?:de\s*)?(\d+(?:[.,]\d+)?)\s*(?:m(?:etros?)?)?\s*[xX×]\s*(\d+(?:[.,]\d+)?)/i;
+    const matchDimensoes = texto.match(dimensoesRegex);
+    if (matchDimensoes) {
+      const largura = parseFloat(matchDimensoes[1].replace(',', '.'));
+      const comprimento = parseFloat(matchDimensoes[2].replace(',', '.'));
+      const areaTerreno = Math.round(largura * comprimento);
+      if (areaTerreno >= 50 && areaTerreno <= 100000) {
+        resultado.config.areaTerreno = areaTerreno;
+        resultado.encontrados.push(`Terreno: ${areaTerreno}m² (${largura}x${comprimento})`);
+        terrenoEncontrado = true;
+      }
+    }
+
+    // Padrão 2: Dimensões sem "terreno" na frente: "15x30" seguido de contexto de terreno
+    if (!terrenoEncontrado) {
+      const dimensoesSimplesRegex = /(\d+(?:[.,]\d+)?)\s*[xX×]\s*(\d+(?:[.,]\d+)?)/g;
+      let matchSimples;
+      while ((matchSimples = dimensoesSimplesRegex.exec(texto)) !== null) {
+        // Verificar contexto (últimos 30 ou próximos 30 caracteres devem ter "terreno", "lote", "sítio", etc)
+        const contextoBefore = texto.slice(Math.max(0, matchSimples.index - 30), matchSimples.index).toLowerCase();
+        const contextoAfter = texto.slice(matchSimples.index, matchSimples.index + matchSimples[0].length + 30).toLowerCase();
+        const contexto = contextoBefore + contextoAfter;
+
+        if (/terreno|lote|sitio|chacara|area\s+total/i.test(contexto)) {
+          const largura = parseFloat(matchSimples[1].replace(',', '.'));
+          const comprimento = parseFloat(matchSimples[2].replace(',', '.'));
+          const areaTerreno = Math.round(largura * comprimento);
+          if (areaTerreno >= 50 && areaTerreno <= 100000) {
+            resultado.config.areaTerreno = areaTerreno;
+            resultado.encontrados.push(`Terreno: ${areaTerreno}m² (${largura}x${comprimento})`);
+            terrenoEncontrado = true;
+            break;
+          }
+        }
+      }
+    }
+
+    // Padrão 3: Área direta do terreno em m²
+    if (!terrenoEncontrado) {
+      const areaTerrenoPatterns = [
+        /terreno\s*(?:de\s*)?(\d+)\s*m[²2]/i,
+        /lote\s*(?:de\s*)?(\d+)\s*m[²2]/i,
+        /(\d+)\s*m[²2]\s*(?:de\s*)?terreno/i,
+        /(\d+)\s*m[²2]\s*(?:de\s*)?lote/i
+      ];
+
+      for (const pattern of areaTerrenoPatterns) {
+        const match = texto.match(pattern);
+        if (match) {
+          const areaTerreno = parseInt(match[1]);
+          if (areaTerreno >= 50 && areaTerreno <= 100000) {
+            resultado.config.areaTerreno = areaTerreno;
+            resultado.encontrados.push(`Terreno: ${areaTerreno}m²`);
+            terrenoEncontrado = true;
+            break;
+          }
         }
       }
     }
@@ -1000,25 +1105,59 @@
       resultado.config.estadoConservacao = 'bom';
     }
 
-    // Tipo de estrutura
+    // Tipo de estrutura - com priorização inteligente
+    // Primeiro verificar se "casa" está explicitamente mencionada
+    const temCasa = /\bcasa\b/i.test(textoLower);
+    const temSobrado = /\bsobrado\b/i.test(textoLower) || /\bdois\s*(andares|pisos)\b/i.test(textoLower) || /\b2\s*(andares|pisos)\b/i.test(textoLower) || /\bduplex\b/i.test(textoLower);
+
+    // Verificar chácara/sítio apenas se for descrição da propriedade (não "mini sítio", "tipo sítio", etc)
+    const temChacaraReal = /\bchacara\b/i.test(textoLower) ||
+                          /\bfazenda\b/i.test(textoLower) ||
+                          /\bcasa de campo\b/i.test(textoLower) ||
+                          /\bzona rural\b/i.test(textoLower) ||
+                          (/\bsitio\b/i.test(textoLower) && !/mini\s*sitio/i.test(textoLower) && !/tipo\s*sitio/i.test(textoLower));
+
     const estruturaMap = {
-      'apartamento': ['apartamento', 'apto', 'flat', 'cobertura', 'loft'],
-      'terrea': ['terrea', 'terreo', 'casa terrea', 'um andar', '1 andar', 'unico piso'],
-      'sobrado': ['sobrado', 'dois andares', '2 andares', 'duplex', 'dois pisos', '2 pisos'],
-      'meia_agua': ['meia agua', 'meia-agua', 'kitnet', 'conjugado'],
-      'geminada': ['geminada', 'casa geminada'],
-      'chacara': ['chacara', 'sitio', 'fazenda', 'rural', 'casa de campo']
+      'apartamento': ['\\bapartamento\\b', '\\bapto\\b', '\\bflat\\b', '\\bcobertura\\b', '\\bloft\\b'],
+      'terrea': ['\\bterrea\\b', '\\bterreo\\b', '\\bcasa terrea\\b', '\\bum andar\\b', '\\b1 andar\\b', '\\bunico piso\\b'],
+      'sobrado': ['\\bsobrado\\b', '\\bdois andares\\b', '\\b2 andares\\b', '\\bduplex\\b', '\\bdois pisos\\b', '\\b2 pisos\\b'],
+      'meia_agua': ['\\bmeia agua\\b', '\\bmeia-agua\\b', '\\bkitnet\\b', '\\bconjugado\\b'],
+      'geminada': ['\\bgeminada\\b', '\\bcasa geminada\\b']
     };
+
+    let tipoEncontrado = false;
+
+    // Tentar encontrar tipo específico primeiro
     for (const [key, termos] of Object.entries(estruturaMap)) {
       for (const termo of termos) {
-        if (textoLower.includes(termo)) {
+        const regex = new RegExp(termo, 'i');
+        if (regex.test(textoLower)) {
           resultado.config.tipoEstrutura = key;
           const nomeEstrutura = data.tiposEstrutura[key]?.nome || key;
           resultado.encontrados.push(`Tipo: ${nomeEstrutura}`);
+          tipoEncontrado = true;
           break;
         }
       }
-      if (resultado.config.tipoEstrutura) break;
+      if (tipoEncontrado) break;
+    }
+
+    // Se não encontrou tipo específico mas tem "casa", assumir térrea (ou sobrado se indicado)
+    if (!tipoEncontrado && temCasa) {
+      if (temSobrado) {
+        resultado.config.tipoEstrutura = 'sobrado';
+        resultado.encontrados.push(`Tipo: ${data.tiposEstrutura['sobrado']?.nome || 'Sobrado'}`);
+      } else {
+        resultado.config.tipoEstrutura = 'terrea';
+        resultado.encontrados.push(`Tipo: ${data.tiposEstrutura['terrea']?.nome || 'Casa Térrea'}`);
+      }
+      tipoEncontrado = true;
+    }
+
+    // Só usar chácara se for realmente uma chácara e não encontrou outro tipo
+    if (!tipoEncontrado && temChacaraReal) {
+      resultado.config.tipoEstrutura = 'chacara';
+      resultado.encontrados.push(`Tipo: ${data.tiposEstrutura['chacara']?.nome || 'Chácara/Sítio'}`);
     }
 
     // Tipo de construção
@@ -1080,12 +1219,22 @@
       resultado.encontrados.push('Extra: Churrasqueira');
     }
 
-    // Garagem - verificar negação
-    if (textoLower.includes('garagem') || textoLower.includes('vaga')) {
-      if (!isNegado('garagem') && !isNegado('vaga')) {
-        resultado.extras.garagem = true;
-        resultado.encontrados.push('Extra: Garagem');
-      }
+    // Garagem - verificar negação e detectar menções de carros/vagas
+    const garagemPatterns = [
+      /\bgaragem\b/i,
+      /\bvaga\b/i,
+      /\bvagas\b/i,
+      /\d+\s*carros?\b/i,        // "4 carros", "2 carro"
+      /cabe\s*\d+\s*carros?/i,   // "cabe 4 carros"
+      /para\s*\d+\s*carros?/i,   // "para 4 carros"
+      /\bcobertura\s+para\s+carros?\b/i,
+      /\bestacionamento\b/i
+    ];
+
+    const temGaragem = garagemPatterns.some(pattern => pattern.test(textoLower));
+    if (temGaragem && !isNegado('garagem') && !isNegado('vaga') && !isNegado('carro')) {
+      resultado.extras.garagem = true;
+      resultado.encontrados.push('Extra: Garagem');
     }
 
     // Muro

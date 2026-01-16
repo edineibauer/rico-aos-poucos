@@ -1271,12 +1271,24 @@
       resultado.extras.garagemQtd = qtdCarros;
 
       // Detectar tipo de garagem (fechada ou aberta/coberta)
-      let tipoGaragem = 'coberta'; // default
+      // Para apartamentos: pequenos (<60m²) = aberta, médios/grandes = fechada
+      let tipoGaragem = 'coberta'; // default para casas
+      let tipoExplicito = false;
+
       if (/garagem\s*fechada/i.test(texto) || /fechada/i.test(texto) && /garagem/i.test(texto)) {
         tipoGaragem = 'fechada';
+        tipoExplicito = true;
       } else if (/garagem\s*aberta/i.test(texto) || /cobert(?:a|ura)/i.test(texto) || /toldo/i.test(texto)) {
         tipoGaragem = 'coberta';
+        tipoExplicito = true;
       }
+
+      // Se não foi especificado e é apartamento, definir baseado no tamanho
+      if (!tipoExplicito && resultado.config.tipoEstrutura === 'apartamento') {
+        const areaApto = resultado.config.areaTotal || 50;
+        tipoGaragem = areaApto < 60 ? 'coberta' : 'fechada';
+      }
+
       resultado.extras.garagemTipo = tipoGaragem;
 
       const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : 'coberta';
@@ -1357,14 +1369,16 @@
     const numQuartos = resultado.config.numQuartos || 0;
     const numSuites = resultado.config.numSuites || 0;
     const numBanheiros = resultado.config.numBanheiros || 0;
+    const isApartamento = resultado.config.tipoEstrutura === 'apartamento';
 
-    // Área mínima estimada por cômodo (valores conservadores em m²)
-    const areaMinimaPorQuarto = 9;    // quarto mínimo: 3x3m
-    const areaMinimaPorSuite = 15;    // suite: quarto + banheiro
-    const areaMinimaPorBanheiro = 3;  // banheiro mínimo
-    const areaMinimaCozinha = 6;      // cozinha mínima
-    const areaMinimaSala = 12;        // sala mínima
-    const areaMinimaCirculacao = 10;  // corredores, etc
+    // Área mínima estimada por cômodo (valores em m²)
+    // Apartamentos são muito mais compactos que casas
+    const areaMinimaPorQuarto = isApartamento ? 6 : 9;    // apartamento: 2.5x2.4m, casa: 3x3m
+    const areaMinimaPorSuite = isApartamento ? 10 : 15;   // apartamento: quarto+banheiro compacto
+    const areaMinimaPorBanheiro = isApartamento ? 2 : 3;  // apartamento: banheiro mínimo
+    const areaMinimaCozinha = isApartamento ? 4 : 6;      // apartamento: cozinha americana
+    const areaMinimaSala = isApartamento ? 8 : 12;        // apartamento: sala compacta
+    const areaMinimaCirculacao = isApartamento ? 3 : 10;  // apartamento: corredores mínimos
 
     // Calcular área mínima necessária
     const areaMinimaEstimada =
@@ -1375,13 +1389,15 @@
       areaMinimaSala +
       areaMinimaCirculacao;
 
-    // Se a área detectada é menor que a mínima necessária, é provavelmente de um cômodo
-    if (resultado.config.areaTotal && resultado.config.areaTotal < areaMinimaEstimada * 0.8) {
+    // Só invalidar se a área for MUITO menor que o mínimo (0.6x para dar margem)
+    // Apartamentos compactos existem e são comuns
+    const fatorValidacao = isApartamento ? 0.5 : 0.7;
+    if (resultado.config.areaTotal && resultado.config.areaTotal < areaMinimaEstimada * fatorValidacao) {
       // Área muito pequena para os cômodos - invalidar
       resultado.encontrados = resultado.encontrados.filter(e => !e.startsWith('Área:'));
       delete resultado.config.areaTotal;
       resultado.avisos = resultado.avisos || [];
-      resultado.avisos.push(`Área detectada (${resultado.config.areaTotal}m²) incompatível com ${numQuartos + numSuites} quartos - ignorada`);
+      resultado.avisos.push(`Área detectada incompatível com ${numQuartos + numSuites} quartos - ignorada`);
     }
 
     // Se não tem área mas tem terreno, estimar área construída como 30-40% do terreno

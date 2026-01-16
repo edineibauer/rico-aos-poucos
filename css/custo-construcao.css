@@ -530,6 +530,13 @@
   color: var(--text-primary);
 }
 
+.cc-breakdown-hint {
+  padding: 4px 0;
+  color: var(--text-secondary);
+  font-style: italic;
+  opacity: 0.8;
+}
+
 /* Reforma info */
 .cc-resultado-reforma-info {
   background: linear-gradient(135deg, #d4edda 0%, #c3e6cb 100%);

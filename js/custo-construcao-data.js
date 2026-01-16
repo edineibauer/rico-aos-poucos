@@ -220,37 +220,45 @@ const CustoConstrucaoData = {
     maoDeObra: 807
   },
 
-  // Custo por cômodo adicional (estimativas)
+  // Custo ADICIONAL por cômodo (DIFERENCIAL sobre o custo base por m²)
+  // O custo base m² já inclui um "quarto básico" na média
+  // Estes valores representam apenas o EXTRA que cada tipo de cômodo exige
   custoPorComodo: {
     quarto: {
       areaPadrao: 12,
-      custoBase: 18000, // custo base do cômodo
-      custoM2Adicional: 1500 // por m² acima do padrão
+      custoBase: 2500, // Diferencial: porta, acabamentos básicos, ponto elétrico
+      custoM2Adicional: 200,
+      descricao: 'Porta, acabamentos, pontos elétricos'
     },
     suite: {
       areaPadrao: 18, // quarto + banheiro
-      custoBase: 32000,
-      custoM2Adicional: 1800
+      custoBase: 12000, // Diferencial: inclui banheiro privativo (hidráulica, louças, revestimentos)
+      custoM2Adicional: 400,
+      descricao: 'Quarto + banheiro completo com hidráulica e louças'
     },
     banheiro: {
       areaPadrao: 4,
-      custoBase: 12000, // instalações hidráulicas + revestimentos
-      custoM2Adicional: 2500
+      custoBase: 8000, // Diferencial: hidráulica, revestimentos especiais, louças, box
+      custoM2Adicional: 1500,
+      descricao: 'Hidráulica, revestimentos, louças, box'
     },
     cozinha: {
       areaPadrao: 10,
-      custoBase: 20000,
-      custoM2Adicional: 2000
+      custoBase: 10000, // Diferencial: hidráulica, elétrica reforçada, bancada, revestimentos
+      custoM2Adicional: 800,
+      descricao: 'Hidráulica, elétrica, bancada, revestimentos'
     },
     sala: {
       areaPadrao: 20,
-      custoBase: 15000,
-      custoM2Adicional: 1200
+      custoBase: 2000, // Diferencial: pontos elétricos extras, iluminação
+      custoM2Adicional: 150,
+      descricao: 'Pontos elétricos, iluminação'
     },
     areaServico: {
       areaPadrao: 5,
-      custoBase: 8000,
-      custoM2Adicional: 1600
+      custoBase: 4000, // Diferencial: tanque, pontos hidráulicos
+      custoM2Adicional: 600,
+      descricao: 'Tanque, pontos hidráulicos e elétricos'
     },
     varanda: {
       areaPadrao: 8,

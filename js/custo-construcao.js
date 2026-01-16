@@ -639,7 +639,7 @@
     resumo.innerHTML = `
       <div class="cc-comodos-info">
         <span><strong>Total de banheiros:</strong> ${totalBanheiros} (${suites} nas suítes + ${banheiros} extras)</span>
-        <span class="cc-comodos-custo">Custo estimado dos cômodos: <strong>R$ ${formatNumber(totalComodosExtra)}</strong></span>
+        <span class="cc-comodos-custo">Custo adicional (hidráulica, louças, etc): <strong>R$ ${formatNumber(totalComodosExtra)}</strong></span>
       </div>
     `;
   }
@@ -1047,7 +1047,7 @@
             <div class="cc-breakdown-group-title">Composição do Custo (${area}m²)</div>
 
             <div class="cc-breakdown-row">
-              <span>Materiais e Estrutura</span>
+              <span>Estrutura e Materiais Base (${area}m²)</span>
               <span>R$ ${formatNumber(custoMateriais)}</span>
             </div>
             <div class="cc-breakdown-row">
@@ -1055,8 +1055,11 @@
               <span>R$ ${formatNumber(custoMaoObra)}</span>
             </div>
             <div class="cc-breakdown-row">
-              <span>Cômodos (${state.config.numQuartos} qts + ${state.config.numSuites} suítes + ${state.config.numBanheiros} wc)</span>
+              <span>Adicionais Cômodos (${state.config.numQuartos} qts + ${state.config.numSuites} suítes + ${state.config.numBanheiros} wc)</span>
               <span>R$ ${formatNumber(custoComodosExtra)}</span>
+            </div>
+            <div class="cc-breakdown-hint">
+              <small>* Hidráulica, louças, revestimentos específicos de cada cômodo</small>
             </div>
 
             <div class="cc-breakdown-subtotal">
@@ -1174,9 +1177,9 @@
 
     csv += 'DETALHAMENTO DE CUSTOS\n';
     csv += 'Item;Valor (R$)\n';
-    csv += `Materiais (estrutura);${formatNumber(c.custoMateriais)}\n`;
+    csv += `Estrutura e Materiais Base;${formatNumber(c.custoMateriais)}\n`;
     csv += `Mão de Obra;${formatNumber(c.custoMaoObra)}\n`;
-    csv += `Cômodos;${formatNumber(c.custoComodosExtra)}\n`;
+    csv += `Adicionais Cômodos (hidráulica, louças);${formatNumber(c.custoComodosExtra)}\n`;
     csv += `SUBTOTAL CONSTRUÇÃO;${formatNumber(c.custoBase)}\n\n`;
 
     if (c.detalhesExtras.length > 0) {
@@ -1242,11 +1245,12 @@ Quartos: ${c.config.numQuartos} | Suítes: ${c.config.numSuites} | Banheiros: ${
 
 DETALHAMENTO
 ───────────────────────────────────────────────────────────
-Materiais (estrutura):     R$ ${formatNumber(c.custoMateriais).padStart(12)}
+Estrutura e Mat. Base:     R$ ${formatNumber(c.custoMateriais).padStart(12)}
 Mão de Obra:               R$ ${formatNumber(c.custoMaoObra).padStart(12)}
-Cômodos:                   R$ ${formatNumber(c.custoComodosExtra).padStart(12)}
+Adicionais Cômodos*:       R$ ${formatNumber(c.custoComodosExtra).padStart(12)}
                            ─────────────────
 SUBTOTAL CONSTRUÇÃO:       R$ ${formatNumber(c.custoBase).padStart(12)}
+* Hidráulica, louças e revestimentos específicos de cada cômodo
 `;
 
     if (c.detalhesExtras.length > 0) {

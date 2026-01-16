@@ -14,9 +14,9 @@
       estadoConservacao: 'nova',
       padrao: 'medio',
       areaTotal: 100,
-      numQuartos: 2,
-      numSuites: 1,
-      numBanheiros: 2,
+      numQuartos: 3,
+      numSuites: 0,
+      numBanheiros: 1,
       temSala: true,
       temCozinha: true,
       temAreaServico: true,
@@ -1518,20 +1518,20 @@
 
   // Resetar formulário para valores padrão
   function resetFormulario() {
-    // Reset config
+    // Reset config - valores zerados para receber os dados do parser
     state.config = {
       estado: 'SP',
       tipoEstrutura: 'terrea',
       tipoConstrucao: 'alvenaria',
-      estadoConservacao: 'nova',
+      estadoConservacao: 'bom',
       padrao: 'medio',
       areaTotal: 100,
-      numQuartos: 2,
-      numSuites: 1,
-      numBanheiros: 2,
+      numQuartos: 0,
+      numSuites: 0,
+      numBanheiros: 0,
       temSala: true,
       temCozinha: true,
-      temAreaServico: true,
+      temAreaServico: false,
       temVaranda: false
     };
 

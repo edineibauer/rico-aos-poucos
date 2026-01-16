@@ -974,17 +974,18 @@
       }
     }
 
-    // Estado de conservação
+    // Estado de conservação - usar word boundaries para evitar falsos positivos (ex: "cobra" contém "obra")
     const conservacaoMap = {
-      'nova': ['nova', 'recem construida', 'zerada', 'nunca habitada', 'construcao nova'],
-      'bom': ['bom estado', 'bem conservada', 'conservada', 'otimo estado', 'excelente estado'],
-      'medio': ['medio estado', 'estado regular', 'usada', 'habitada'],
-      'ruim': ['mal estado', 'mau estado', 'precisa de reforma', 'reformar', 'deteriorada', 'antiga'],
-      'so_estrutura': ['so estrutura', 'apenas estrutura', 'inacabada', 'em construcao', 'obra']
+      'nova': ['\\bnova\\b', '\\brecem construida\\b', '\\bzerada\\b', '\\bnunca habitada\\b', '\\bconstrucao nova\\b'],
+      'bom': ['\\bbom estado\\b', '\\bbem conservad[ao]\\b', '\\bconservad[ao]\\b', '\\botimo estado\\b', '\\bexcelente estado\\b'],
+      'medio': ['\\bmedio estado\\b', '\\bestado regular\\b', '\\busad[ao]\\b'],
+      'ruim': ['\\bmal estado\\b', '\\bmau estado\\b', '\\bprecisa de reforma\\b', '\\breformar\\b', '\\bdeteriorad[ao]\\b', '\\bantig[ao]\\b'],
+      'so_estrutura': ['\\bso estrutura\\b', '\\bapenas estrutura\\b', '\\binacabad[ao]\\b', '\\bem construcao\\b', '\\bna obra\\b', '\\bem obra\\b']
     };
     for (const [key, termos] of Object.entries(conservacaoMap)) {
       for (const termo of termos) {
-        if (textoLower.includes(termo)) {
+        const regex = new RegExp(termo, 'i');
+        if (regex.test(textoLower)) {
           resultado.config.estadoConservacao = key;
           const nomeConservacao = data.estadoConservacao[key]?.nome || key;
           resultado.encontrados.push(`Conservação: ${nomeConservacao}`);
@@ -992,6 +993,11 @@
         }
       }
       if (resultado.config.estadoConservacao) break;
+    }
+
+    // Se não detectou conservação, assumir bom estado (padrão para imóveis à venda)
+    if (!resultado.config.estadoConservacao) {
+      resultado.config.estadoConservacao = 'bom';
     }
 
     // Tipo de estrutura

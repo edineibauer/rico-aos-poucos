@@ -300,11 +300,11 @@
             <div class="cc-grid cc-grid-3" style="margin-top: 12px;">
               <div class="cc-field">
                 <label>Vagas de Garagem</label>
-                <input type="number" id="cc-garagem-vagas" value="${state.config.garagemVagas || 0}" min="0" max="10">
+                <input type="number" id="cc-vagas-garagem" value="${state.config.garagemVagas || 0}" min="0" max="10">
               </div>
               <div class="cc-field">
-                <label>Tipo de Garagem</label>
-                <select id="cc-garagem-tipo">
+                <label>Tipo de Vaga</label>
+                <select id="cc-tipo-vaga">
                   <option value="aberta" ${state.config.garagemTipo === 'aberta' ? 'selected' : ''}>Aberta (descoberta)</option>
                   <option value="coberta" ${state.config.garagemTipo === 'coberta' ? 'selected' : ''}>Coberta (telhado simples)</option>
                   <option value="fechada" ${state.config.garagemTipo === 'fechada' ? 'selected' : ''}>Fechada (box/portão)</option>
@@ -1697,12 +1697,12 @@
     const garagemVagas = extras?.garagemVagas ?? extras?.garagemQtd;
     if (garagemVagas !== undefined) {
       state.config.garagemVagas = garagemVagas;
-      const el = document.getElementById('cc-garagem-vagas');
+      const el = document.getElementById('cc-vagas-garagem');
       if (el) el.value = garagemVagas;
     }
     if (extras && extras.garagemTipo) {
       state.config.garagemTipo = extras.garagemTipo;
-      const el = document.getElementById('cc-garagem-tipo');
+      const el = document.getElementById('cc-tipo-vaga');
       if (el) el.value = extras.garagemTipo;
     }
 
@@ -1766,9 +1766,9 @@
     if (ajusteCustom) ajusteCustom.style.display = 'none';
 
     // Reset garagem inputs
-    const garagemVagasEl = document.getElementById('cc-garagem-vagas');
+    const garagemVagasEl = document.getElementById('cc-vagas-garagem');
     if (garagemVagasEl) garagemVagasEl.value = 0;
-    const garagemTipoEl = document.getElementById('cc-garagem-tipo');
+    const garagemTipoEl = document.getElementById('cc-tipo-vaga');
     if (garagemTipoEl) garagemTipoEl.value = 'aberta';
 
     // Reset materiais
@@ -1945,14 +1945,14 @@
       calculate();
     });
 
-    // Garagem - vagas e tipo
-    document.getElementById('cc-garagem-vagas')?.addEventListener('input', function() {
+    // Garagem - vagas e tipo (nos cômodos)
+    document.getElementById('cc-vagas-garagem')?.addEventListener('input', function() {
       state.config.garagemVagas = parseInt(this.value) || 0;
       updateComodosResumo();
       calculate();
     });
 
-    document.getElementById('cc-garagem-tipo')?.addEventListener('change', function() {
+    document.getElementById('cc-tipo-vaga')?.addEventListener('change', function() {
       state.config.garagemTipo = this.value;
       calculate();
     });
@@ -2361,6 +2361,49 @@
       const fatorTerreno = data.custoTerrenoM2.fatores[tipoLocalizacao] || 1.0;
       const custoTerrenoM2 = data.custoTerrenoM2.base * fatorTerreno * regiao.fator;
       custoTerreno = areaTerreno * custoTerrenoM2;
+    }
+
+    // VALOR DAS VAGAS DE GARAGEM (dos inputs de cômodos)
+    let custoGaragem = 0;
+    const numVagas = state.config.garagemVagas || 0;
+    const tipoVaga = state.config.garagemTipo || 'aberta';
+
+    if (numVagas > 0) {
+      // Valores por vaga baseados no tipo e região
+      // Ajustados conforme fator regional e se é apartamento ou casa
+      const valoresVagaBase = {
+        'aberta': 15000,    // Vaga descoberta
+        'coberta': 25000,   // Vaga com cobertura simples
+        'fechada': 40000    // Box fechado com portão
+      };
+
+      let valorPorVaga = valoresVagaBase[tipoVaga] || valoresVagaBase['aberta'];
+
+      // Ajustar pelo fator regional
+      if (regiao && regiao.fator) {
+        valorPorVaga *= regiao.fator;
+      }
+
+      // Para apartamentos com dados de mercado, usar proporção do preço/m²
+      if (usarPrecoMercado && precoM2Base > 0) {
+        // Vaga de apartamento vale aproximadamente 3-6x o preço do m²
+        const multiplicadorVaga = {
+          'aberta': 3,
+          'coberta': 4,
+          'fechada': 6
+        };
+        valorPorVaga = precoM2Base * (multiplicadorVaga[tipoVaga] || 3);
+      }
+
+      custoGaragem = numVagas * valorPorVaga;
+      if (custoGaragem > 0) {
+        const tipoLabel = tipoVaga === 'fechada' ? 'fechada' : (tipoVaga === 'aberta' ? 'aberta' : 'coberta');
+        detalhesExtras.push({
+          nome: `Garagem (${numVagas} vaga${numVagas > 1 ? 's' : ''}, ${tipoLabel})`,
+          valor: custoGaragem
+        });
+        custoExtras += custoGaragem;
+      }
     }
 
     // TOTAL

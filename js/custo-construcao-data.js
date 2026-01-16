@@ -83,42 +83,42 @@ const CustoConstrucaoData = {
     }
   },
 
-  // Estado de conservação (para reformas/casas existentes)
+  // Estado de conservação (para avaliar valor de imóveis existentes)
   estadoConservacao: {
     'nova': {
       nome: 'Construção Nova',
-      descricao: 'Construção do zero, sem estrutura existente',
+      descricao: 'Construção do zero, valor de referência',
       fator: 1.0,
       desconto: 0,
-      itensInclusos: 'Todos os itens e materiais'
+      itensInclusos: 'Todos os itens e materiais novos'
     },
     'bom': {
       nome: 'Casa em Bom Estado',
-      descricao: 'Reforma leve - estrutura, telhado e instalações em bom estado',
-      fator: 0.35,
-      desconto: 65,
-      itensInclusos: 'Pintura, pisos, acabamentos, alguns reparos'
+      descricao: 'Imóvel bem conservado, poucos reparos necessários',
+      fator: 0.85,
+      desconto: 15,
+      itensInclusos: 'Estrutura, instalações e acabamentos em bom estado'
     },
     'medio': {
       nome: 'Casa em Estado Médio',
-      descricao: 'Reforma média - necessita trocar parte das instalações',
-      fator: 0.55,
-      desconto: 45,
-      itensInclusos: 'Instalações parciais, revestimentos, esquadrias, pintura'
+      descricao: 'Imóvel com desgaste normal, precisa de alguns reparos',
+      fator: 0.65,
+      desconto: 35,
+      itensInclusos: 'Estrutura boa, acabamentos com desgaste'
     },
     'ruim': {
       nome: 'Casa em Mau Estado',
-      descricao: 'Reforma pesada - aproveita apenas estrutura básica',
-      fator: 0.75,
-      desconto: 25,
-      itensInclusos: 'Quase tudo, exceto fundação e parte da estrutura'
+      descricao: 'Imóvel deteriorado, precisa de reforma significativa',
+      fator: 0.45,
+      desconto: 55,
+      itensInclusos: 'Apenas estrutura básica aproveitável'
     },
     'so_estrutura': {
       nome: 'Apenas Estrutura (esqueleto)',
       descricao: 'Casa no osso - apenas paredes e laje/telhado',
-      fator: 0.60,
-      desconto: 40,
-      itensInclusos: 'Todos acabamentos, instalações, esquadrias'
+      fator: 0.30,
+      desconto: 70,
+      itensInclusos: 'Somente estrutura bruta, sem acabamentos'
     }
   },
 

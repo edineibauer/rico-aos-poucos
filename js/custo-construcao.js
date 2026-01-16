@@ -660,10 +660,10 @@
       <div class="cc-conservacao-card">
         <div class="cc-conservacao-row">
           <strong>${conservacao.nome}:</strong> ${conservacao.descricao}
-          <span class="cc-tipo-badge cc-green">-${conservacao.desconto}% no custo</span>
+          <span class="cc-tipo-badge ${conservacao.desconto > 30 ? 'cc-red' : 'cc-yellow'}">${conservacao.desconto}% depreciação</span>
         </div>
         <div class="cc-conservacao-detail">
-          <em>O que inclui:</em> ${conservacao.itensInclusos}
+          <em>Condição:</em> ${conservacao.itensInclusos}
         </div>
       </div>
     `;
@@ -1029,7 +1029,7 @@
     resultado.innerHTML = `
       <div class="cc-resultado-main">
         <div class="cc-resultado-total">
-          <span class="cc-resultado-label">Custo Total Estimado ${isReforma ? '(Reforma)' : ''}</span>
+          <span class="cc-resultado-label">${isReforma ? 'Valor Estimado do Imóvel' : 'Custo de Construção Nova'}</span>
           <span class="cc-resultado-valor">R$ ${formatNumber(custoTotal)}</span>
           <span class="cc-resultado-m2">R$ ${formatNumber(custoM2Final)}/m²</span>
         </div>
@@ -1037,7 +1037,7 @@
         ${isReforma ? `
           <div class="cc-resultado-reforma-info">
             <strong>${conservacao.nome}</strong> - ${conservacao.descricao}
-            <br><small>Economia de ${conservacao.desconto}% sobre construção nova</small>
+            <br><small>Depreciação de ${conservacao.desconto}% sobre valor de construção nova</small>
           </div>
         ` : ''}
 
@@ -1171,7 +1171,7 @@
     csv += `Suítes;${c.config.numSuites}\n`;
     csv += `Banheiros extras;${c.config.numBanheiros}\n`;
     if (c.isReforma) {
-      csv += `Economia (reforma);${c.conservacao.desconto}%\n`;
+      csv += `Depreciação;${c.conservacao.desconto}%\n`;
     }
     csv += '\n';
 
@@ -1236,7 +1236,7 @@ Site: ricoaospoucos.com.br
 CONFIGURAÇÃO
 ───────────────────────────────────────────────────────────
 Região: ${c.config.estado} - ${c.regiao.nome}
-Situação: ${tipoObra}${c.isReforma ? ` (economia de ${c.conservacao.desconto}%)` : ''}
+Situação: ${tipoObra}${c.isReforma ? ` (depreciação de ${c.conservacao.desconto}%)` : ''}
 Tipo de Casa: ${c.estrutura.nome}
 Método: ${c.metodo.nome}
 Padrão: ${c.padrao.nome}

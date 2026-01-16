@@ -20,7 +20,9 @@
       temSala: true,
       temCozinha: true,
       temAreaServico: true,
-      temVaranda: false
+      temVaranda: false,
+      garagemVagas: 0,
+      garagemTipo: 'aberta'
     },
     materiais: {
       janelas: 'aluminio_simples',
@@ -293,6 +295,23 @@
                 </label>
               </div>
             </div>
+
+            <!-- Garagem/Vagas -->
+            <div class="cc-grid cc-grid-3" style="margin-top: 12px;">
+              <div class="cc-field">
+                <label>Vagas de Garagem</label>
+                <input type="number" id="cc-garagem-vagas" value="${state.config.garagemVagas || 0}" min="0" max="10">
+              </div>
+              <div class="cc-field">
+                <label>Tipo de Garagem</label>
+                <select id="cc-garagem-tipo">
+                  <option value="aberta" ${state.config.garagemTipo === 'aberta' ? 'selected' : ''}>Aberta (descoberta)</option>
+                  <option value="coberta" ${state.config.garagemTipo === 'coberta' ? 'selected' : ''}>Coberta (telhado simples)</option>
+                  <option value="fechada" ${state.config.garagemTipo === 'fechada' ? 'selected' : ''}>Fechada (box/portão)</option>
+                </select>
+              </div>
+            </div>
+
             <div class="cc-comodos-resumo" id="cc-comodos-resumo"></div>
           </div>
         </section>
@@ -748,7 +767,9 @@
       'cc-extra-portao',
       'cc-extra-edicula',
       'cc-extra-garagem',
-      'cc-extra-piso-externo'
+      'cc-extra-piso-externo',
+      'cc-extra-solar',
+      'cc-extra-aquecedor'
     ];
 
     // Seções/campos que NÃO se aplicam a apartamentos
@@ -773,28 +794,18 @@
       }
     });
 
-    // Mostrar/ocultar seções de materiais não aplicáveis
-    // Para apartamento, ocultar telhado/forro externo, usar forro interno como padrão
-    const forroSelect = document.getElementById('cc-material-forros');
-    if (forroSelect) {
-      const forroContainer = forroSelect.closest('.cc-field');
-      if (forroContainer) {
-        // Manter visível mas indicar que é forro interno
-        const label = forroContainer.querySelector('label');
-        if (label) {
-          label.textContent = isApartamento ? 'Forro Interno' : 'Forro';
+    // Mostrar/ocultar seções de materiais não aplicáveis a apartamentos
+    // Apartamentos não têm telhado próprio nem forro externo
+    const materiaisNaoAplicaveis = ['cc-material-forros', 'cc-material-telhados'];
+    materiaisNaoAplicaveis.forEach(id => {
+      const select = document.getElementById(id);
+      if (select) {
+        const container = select.closest('.cc-field');
+        if (container) {
+          container.style.display = isApartamento ? 'none' : '';
         }
       }
-    }
-
-    // Para apartamento, ajustar label de telhado
-    const telhadoSelect = document.getElementById('cc-material-telhados');
-    if (telhadoSelect) {
-      const telhadoContainer = telhadoSelect.closest('.cc-field');
-      if (telhadoContainer) {
-        telhadoContainer.style.display = isApartamento ? 'none' : '';
-      }
-    }
+    });
 
     // Mostrar aviso específico para apartamentos
     let avisoApto = document.getElementById('cc-aviso-apartamento');
@@ -1680,6 +1691,21 @@
       const el = document.getElementById('cc-area-terreno');
       if (el) el.value = config.areaTerreno;
     }
+
+    // Aplicar garagem detectada (de extras)
+    // O parser usa garagemQtd, mapeamos para garagemVagas
+    const garagemVagas = extras?.garagemVagas ?? extras?.garagemQtd;
+    if (garagemVagas !== undefined) {
+      state.config.garagemVagas = garagemVagas;
+      const el = document.getElementById('cc-garagem-vagas');
+      if (el) el.value = garagemVagas;
+    }
+    if (extras && extras.garagemTipo) {
+      state.config.garagemTipo = extras.garagemTipo;
+      const el = document.getElementById('cc-garagem-tipo');
+      if (el) el.value = extras.garagemTipo;
+    }
+
     // Aplicar cidade e bairro detectados
     if (config.cidadeInfo) {
       state.config.cidadeInfo = config.cidadeInfo;
@@ -1724,6 +1750,8 @@
       temCozinha: true,
       temAreaServico: false,
       temVaranda: false,
+      garagemVagas: 0,
+      garagemTipo: 'aberta',
       cidadeInfo: null,
       bairro: null,
       ajusteLocalizacao: undefined
@@ -1736,6 +1764,12 @@
     if (ajusteSelect) ajusteSelect.value = '0';
     const ajusteCustom = document.getElementById('cc-ajuste-custom');
     if (ajusteCustom) ajusteCustom.style.display = 'none';
+
+    // Reset garagem inputs
+    const garagemVagasEl = document.getElementById('cc-garagem-vagas');
+    if (garagemVagasEl) garagemVagasEl.value = 0;
+    const garagemTipoEl = document.getElementById('cc-garagem-tipo');
+    if (garagemTipoEl) garagemTipoEl.value = 'aberta';
 
     // Reset materiais
     state.materiais = {
@@ -1908,6 +1942,18 @@
 
     document.getElementById('cc-area-servico')?.addEventListener('change', function() {
       state.config.temAreaServico = this.checked;
+      calculate();
+    });
+
+    // Garagem - vagas e tipo
+    document.getElementById('cc-garagem-vagas')?.addEventListener('input', function() {
+      state.config.garagemVagas = parseInt(this.value) || 0;
+      updateComodosResumo();
+      calculate();
+    });
+
+    document.getElementById('cc-garagem-tipo')?.addEventListener('change', function() {
+      state.config.garagemTipo = this.value;
       calculate();
     });
 

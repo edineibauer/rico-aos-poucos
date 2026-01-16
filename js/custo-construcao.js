@@ -2294,7 +2294,6 @@
     // Apartamentos não têm terreno próprio - o valor do terreno já está embutido no preço/m²
     let custoTerreno = 0;
     const areaTerreno = state.config.areaTerreno || 0;
-    const isApartamento = state.config.tipoEstrutura === 'apartamento';
 
     if (areaTerreno > 0 && !isApartamento) {
       // Usar tipo de localização detectado pelo parser, ou inferir do tipo de estrutura

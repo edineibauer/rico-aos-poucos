@@ -1082,7 +1082,7 @@
 
     // Estado de conservação - usar word boundaries para evitar falsos positivos (ex: "cobra" contém "obra")
     const conservacaoMap = {
-      'nova': ['\\bnova\\b', '\\brecem construida\\b', '\\bzerada\\b', '\\bnunca habitada\\b', '\\bconstrucao nova\\b'],
+      'nova': ['\\bnov[oa]\\b', '\\brecem construid[oa]\\b', '\\bzerad[oa]\\b', '\\bnunca habitad[oa]\\b', '\\bnunca morad[oa]\\b', '\\bnunca usad[oa]\\b', '\\bsem uso\\b', '\\bconstrucao nova\\b', '\\bprimeir[oa] morador\\b', '\\b0\\s*km\\b'],
       'bom': ['\\bbom estado\\b', '\\bbem conservad[ao]\\b', '\\bconservad[ao]\\b', '\\botimo estado\\b', '\\bexcelente estado\\b'],
       'medio': ['\\bmedio estado\\b', '\\bestado regular\\b', '\\busad[ao]\\b'],
       'ruim': ['\\bmal estado\\b', '\\bmau estado\\b', '\\bprecisa de reforma\\b', '\\breformar\\b', '\\bdeteriorad[ao]\\b', '\\bantig[ao]\\b'],

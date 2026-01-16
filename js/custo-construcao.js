@@ -992,86 +992,53 @@
       }
     }
 
-    // Estado/Região - PRIORIZAR CIDADES ANTES DE SIGLAS DE 2 LETRAS
-    // Primeiro: cidades conhecidas (mais específico)
-    const cidadesMap = {
-      // RS
-      'torres': 'RS', 'porto alegre': 'RS', 'gramado': 'RS', 'canela': 'RS', 'caxias do sul': 'RS',
-      'pelotas': 'RS', 'santa maria': 'RS', 'novo hamburgo': 'RS', 'sao leopoldo': 'RS',
-      'capao da canoa': 'RS', 'tramandai': 'RS', 'xangri-la': 'RS', 'osorio': 'RS',
-      // SC
-      'florianopolis': 'SC', 'floripa': 'SC', 'joinville': 'SC', 'blumenau': 'SC', 'balneario camboriu': 'SC',
-      'itajai': 'SC', 'chapeco': 'SC', 'criciuma': 'SC', 'itapema': 'SC', 'bombinhas': 'SC',
-      // PR
-      'curitiba': 'PR', 'londrina': 'PR', 'maringa': 'PR', 'foz do iguacu': 'PR', 'cascavel': 'PR',
-      'ponta grossa': 'PR', 'guarapuava': 'PR',
-      // SP
-      'sao paulo': 'SP', 'campinas': 'SP', 'santos': 'SP', 'guaruja': 'SP', 'ribeirao preto': 'SP',
-      'sorocaba': 'SP', 'sao jose dos campos': 'SP', 'osasco': 'SP', 'santo andre': 'SP',
-      'sao bernardo': 'SP', 'guarulhos': 'SP', 'praia grande': 'SP', 'ubatuba': 'SP', 'caraguatatuba': 'SP',
-      // RJ
-      'rio de janeiro': 'RJ', 'niteroi': 'RJ', 'petropolis': 'RJ', 'buzios': 'RJ', 'cabo frio': 'RJ',
-      'angra dos reis': 'RJ', 'paraty': 'RJ', 'campos dos goytacazes': 'RJ', 'nova friburgo': 'RJ',
-      // MG
-      'belo horizonte': 'MG', 'uberlandia': 'MG', 'contagem': 'MG', 'juiz de fora': 'MG',
-      'betim': 'MG', 'montes claros': 'MG', 'ouro preto': 'MG', 'tiradentes': 'MG',
-      // BA
-      'salvador': 'BA', 'feira de santana': 'BA', 'porto seguro': 'BA', 'ilheus': 'BA',
-      'vitoria da conquista': 'BA', 'itabuna': 'BA', 'morro de sao paulo': 'BA',
-      // CE
-      'fortaleza': 'CE', 'caucaia': 'CE', 'juazeiro do norte': 'CE', 'jericoacoara': 'CE', 'canoa quebrada': 'CE',
-      // PE
-      'recife': 'PE', 'olinda': 'PE', 'jaboatao': 'PE', 'caruaru': 'PE', 'porto de galinhas': 'PE',
-      // DF
-      'brasilia': 'DF',
-      // GO
-      'goiania': 'GO', 'aparecida de goiania': 'GO', 'anapolis': 'GO', 'caldas novas': 'GO',
-      // ES
-      'vitoria': 'ES', 'vila velha': 'ES', 'serra': 'ES', 'guarapari': 'ES',
-      // MT
-      'cuiaba': 'MT', 'varzea grande': 'MT', 'rondonopolis': 'MT',
-      // MS
-      'campo grande': 'MS', 'dourados': 'MS', 'bonito': 'MS',
-      // PA
-      'belem': 'PA', 'ananindeua': 'PA', 'santarem': 'PA', 'maraba': 'PA', 'alter do chao': 'PA',
-      // AM
-      'manaus': 'AM', 'parintins': 'AM',
-      // RN
-      'natal': 'RN', 'parnamirim': 'RN', 'pipa': 'RN', 'mossoro': 'RN',
-      // PB
-      'joao pessoa': 'PB', 'campina grande': 'PB',
-      // AL
-      'maceio': 'AL', 'arapiraca': 'AL', 'maragogi': 'AL',
-      // SE
-      'aracaju': 'SE',
-      // PI
-      'teresina': 'PI',
-      // MA
-      'sao luis': 'MA', 'imperatriz': 'MA', 'lencois maranhenses': 'MA',
-      // TO
-      'palmas': 'TO',
-      // RO
-      'porto velho': 'RO',
-      // AC
-      'rio branco': 'AC',
-      // RR
-      'boa vista': 'RR',
-      // AP
-      'macapa': 'AP'
-    };
-
-    // Buscar cidade primeiro
+    // Estado/Região - Usar base de dados CidadesBrasil para identificação completa
     let estadoEncontrado = false;
-    for (const [cidade, uf] of Object.entries(cidadesMap)) {
-      if (textoLower.includes(cidade)) {
-        resultado.config.estado = uf;
-        resultado.encontrados.push(`Região: ${uf} (${cidade})`);
+    let cidadeInfo = null;
+
+    // Tentar usar a base de dados CidadesBrasil se disponível
+    if (typeof CidadesBrasil !== 'undefined') {
+      cidadeInfo = CidadesBrasil.encontrarCidade(textoLower);
+      if (cidadeInfo && cidadeInfo.uf) {
+        resultado.config.estado = cidadeInfo.uf;
+        resultado.config.cidadeInfo = cidadeInfo;
+
+        // Construir descrição da localização
+        let descricao = `${cidadeInfo.uf}`;
+        if (cidadeInfo.cidade) {
+          descricao = `${cidadeInfo.uf} (${cidadeInfo.cidade})`;
+        }
+        if (cidadeInfo.nobre) {
+          descricao += ' - Bairro Nobre';
+        } else if (cidadeInfo.litoral) {
+          descricao += ' - Litoral';
+        } else if (cidadeInfo.turistico) {
+          descricao += ' - Turístico';
+        }
+
+        resultado.encontrados.push(`Região: ${descricao}`);
         estadoEncontrado = true;
-        break;
+
+        // Determinar tipo de localização para cálculo do terreno
+        if (cidadeInfo.nobre) {
+          resultado.config.tipoLocalizacao = 'nobre';
+        } else if (cidadeInfo.litoral && cidadeInfo.turistico) {
+          resultado.config.tipoLocalizacao = 'praia';
+        } else if (cidadeInfo.tipo === 'capital') {
+          resultado.config.tipoLocalizacao = 'urbano';
+        } else if (cidadeInfo.tipo === 'metropole') {
+          resultado.config.tipoLocalizacao = 'urbano';
+        } else if (cidadeInfo.turistico) {
+          resultado.config.tipoLocalizacao = 'nobre'; // turístico valoriza
+        } else if (cidadeInfo.tipo === 'interior') {
+          resultado.config.tipoLocalizacao = 'periferia';
+        } else {
+          resultado.config.tipoLocalizacao = 'urbano';
+        }
       }
     }
 
-    // Se não achou cidade, buscar por estado/sigla (apenas siglas isoladas com word boundary)
+    // Fallback: buscar por nome de estado se CidadesBrasil não encontrou
     if (!estadoEncontrado) {
       const estadosMap = {
         'rio grande do sul': 'RS', 'gaucho': 'RS',
@@ -1107,6 +1074,7 @@
         if (regex.test(textoLower)) {
           resultado.config.estado = uf;
           resultado.encontrados.push(`Região: ${uf}`);
+          estadoEncontrado = true;
           break;
         }
       }
@@ -2002,12 +1970,16 @@
     let custoTerreno = 0;
     const areaTerreno = state.config.areaTerreno || 0;
     if (areaTerreno > 0) {
-      // Determinar tipo de localização baseado no tipo de estrutura e região
-      let tipoLocalizacao = 'urbano'; // padrão
-      if (state.config.tipoEstrutura === 'chacara') {
-        tipoLocalizacao = 'rural';
-      } else if (state.config.tipoEstrutura === 'apartamento') {
-        tipoLocalizacao = 'urbano';
+      // Usar tipo de localização detectado pelo parser, ou inferir do tipo de estrutura
+      let tipoLocalizacao = state.config.tipoLocalizacao || 'urbano';
+
+      // Fallback se não foi detectado pelo parser
+      if (!state.config.tipoLocalizacao) {
+        if (state.config.tipoEstrutura === 'chacara') {
+          tipoLocalizacao = 'rural';
+        } else if (state.config.tipoEstrutura === 'apartamento') {
+          tipoLocalizacao = 'urbano';
+        }
       }
 
       // Usar fator regional para ajustar preço do terreno

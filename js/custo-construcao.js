@@ -759,21 +759,34 @@
       config: {}
     };
 
+    // Função auxiliar para verificar se um termo está negado
+    function isNegado(termo) {
+      const negacoes = [
+        new RegExp(`nao\\s+tem\\s+${termo}`, 'i'),
+        new RegExp(`sem\\s+${termo}`, 'i'),
+        new RegExp(`nao\\s+possui\\s+${termo}`, 'i'),
+        new RegExp(`nao\\s+ha\\s+${termo}`, 'i'),
+        new RegExp(`nao\\s+inclui\\s+${termo}`, 'i')
+      ];
+      return negacoes.some(regex => regex.test(textoLower));
+    }
+
     // Área em m²
     const areaPatterns = [
       /(\d+)\s*m[²2]/i,
       /(\d+)\s*metros?\s*quadrados?/i,
-      /casa\s*de\s*(\d+)\s*m/i,
-      /imovel\s*de\s*(\d+)\s*m/i,
-      /(\d+)\s*m\s*de\s*area/i,
-      /area\s*(?:total\s*)?(?:de\s*)?(\d+)/i
+      /area\s*(?:privativa|total|construida)?\s*(?:de\s*)?(\d+)/i,
+      /(\d+)\s*m\s*de\s*area/i
     ];
     for (const pattern of areaPatterns) {
       const match = texto.match(pattern);
       if (match) {
-        resultado.config.areaTotal = parseInt(match[1]);
-        resultado.encontrados.push(`Área: ${match[1]}m²`);
-        break;
+        const area = parseInt(match[1] || match[2]);
+        if (area >= 20 && area <= 5000) {
+          resultado.config.areaTotal = area;
+          resultado.encontrados.push(`Área: ${area}m²`);
+          break;
+        }
       }
     }
 
@@ -795,15 +808,13 @@
     // Suítes
     const suitesPatterns = [
       /(\d+)\s*suites?/i,
-      /sendo\s*(\d+)\s*suites?/i,
-      /(\d+)\s*quartos?\s*suites?/i
+      /sendo\s*(\d+)\s*suites?/i
     ];
     for (const pattern of suitesPatterns) {
       const match = texto.match(pattern);
       if (match) {
         resultado.config.numSuites = parseInt(match[1]);
         resultado.encontrados.push(`Suítes: ${match[1]}`);
-        // Ajustar quartos se suítes foram encontradas depois
         if (resultado.config.numQuartos && resultado.config.numSuites) {
           const quartosNormais = resultado.config.numQuartos - resultado.config.numSuites;
           if (quartosNormais >= 0) {
@@ -826,7 +837,6 @@
       const match = texto.match(pattern);
       if (match) {
         let numBanheiros = parseInt(match[1]);
-        // Subtrair suítes (cada suíte já tem banheiro)
         if (resultado.config.numSuites) {
           numBanheiros = Math.max(0, numBanheiros - resultado.config.numSuites);
         }
@@ -836,50 +846,131 @@
       }
     }
 
-    // Lavabo conta como banheiro extra
-    if (textoLower.includes('lavabo')) {
+    // Lavabo
+    if (textoLower.includes('lavabo') && !isNegado('lavabo')) {
       resultado.config.numBanheiros = (resultado.config.numBanheiros || 0) + 1;
       if (!resultado.encontrados.some(e => e.includes('Banheiros'))) {
         resultado.encontrados.push(`Banheiros extras: ${resultado.config.numBanheiros}`);
       }
     }
 
-    // Estado/Região
-    const estadosMap = {
-      'sao paulo': 'SP', 'sp': 'SP', 'paulista': 'SP',
-      'rio de janeiro': 'RJ', 'rj': 'RJ', 'carioca': 'RJ',
-      'minas gerais': 'MG', 'mg': 'MG', 'mineiro': 'MG', 'belo horizonte': 'MG', 'bh': 'MG',
-      'rio grande do sul': 'RS', 'rs': 'RS', 'gaucho': 'RS', 'porto alegre': 'RS',
-      'parana': 'PR', 'pr': 'PR', 'curitiba': 'PR',
-      'santa catarina': 'SC', 'sc': 'SC', 'florianopolis': 'SC', 'floripa': 'SC',
-      'bahia': 'BA', 'ba': 'BA', 'salvador': 'BA', 'baiano': 'BA',
-      'pernambuco': 'PE', 'pe': 'PE', 'recife': 'PE',
-      'ceara': 'CE', 'ce': 'CE', 'fortaleza': 'CE',
-      'distrito federal': 'DF', 'df': 'DF', 'brasilia': 'DF',
-      'goias': 'GO', 'go': 'GO', 'goiania': 'GO',
-      'espirito santo': 'ES', 'es': 'ES', 'vitoria': 'ES',
-      'mato grosso': 'MT', 'mt': 'MT', 'cuiaba': 'MT',
-      'mato grosso do sul': 'MS', 'ms': 'MS', 'campo grande': 'MS',
-      'para': 'PA', 'pa': 'PA', 'belem': 'PA',
-      'amazonas': 'AM', 'am': 'AM', 'manaus': 'AM',
-      'maranhao': 'MA', 'ma': 'MA', 'sao luis': 'MA',
-      'piaui': 'PI', 'pi': 'PI', 'teresina': 'PI',
-      'rio grande do norte': 'RN', 'rn': 'RN', 'natal': 'RN',
-      'paraiba': 'PB', 'pb': 'PB', 'joao pessoa': 'PB',
-      'alagoas': 'AL', 'al': 'AL', 'maceio': 'AL',
-      'sergipe': 'SE', 'se': 'SE', 'aracaju': 'SE',
-      'tocantins': 'TO', 'to': 'TO', 'palmas': 'TO',
-      'rondonia': 'RO', 'ro': 'RO', 'porto velho': 'RO',
-      'acre': 'AC', 'ac': 'AC', 'rio branco': 'AC',
-      'roraima': 'RR', 'rr': 'RR', 'boa vista': 'RR',
-      'amapa': 'AP', 'ap': 'AP', 'macapa': 'AP'
+    // Estado/Região - PRIORIZAR CIDADES ANTES DE SIGLAS DE 2 LETRAS
+    // Primeiro: cidades conhecidas (mais específico)
+    const cidadesMap = {
+      // RS
+      'torres': 'RS', 'porto alegre': 'RS', 'gramado': 'RS', 'canela': 'RS', 'caxias do sul': 'RS',
+      'pelotas': 'RS', 'santa maria': 'RS', 'novo hamburgo': 'RS', 'sao leopoldo': 'RS',
+      'capao da canoa': 'RS', 'tramandai': 'RS', 'xangri-la': 'RS', 'osorio': 'RS',
+      // SC
+      'florianopolis': 'SC', 'floripa': 'SC', 'joinville': 'SC', 'blumenau': 'SC', 'balneario camboriu': 'SC',
+      'itajai': 'SC', 'chapeco': 'SC', 'criciuma': 'SC', 'itapema': 'SC', 'bombinhas': 'SC',
+      // PR
+      'curitiba': 'PR', 'londrina': 'PR', 'maringa': 'PR', 'foz do iguacu': 'PR', 'cascavel': 'PR',
+      'ponta grossa': 'PR', 'guarapuava': 'PR',
+      // SP
+      'sao paulo': 'SP', 'campinas': 'SP', 'santos': 'SP', 'guaruja': 'SP', 'ribeirao preto': 'SP',
+      'sorocaba': 'SP', 'sao jose dos campos': 'SP', 'osasco': 'SP', 'santo andre': 'SP',
+      'sao bernardo': 'SP', 'guarulhos': 'SP', 'praia grande': 'SP', 'ubatuba': 'SP', 'caraguatatuba': 'SP',
+      // RJ
+      'rio de janeiro': 'RJ', 'niteroi': 'RJ', 'petropolis': 'RJ', 'buzios': 'RJ', 'cabo frio': 'RJ',
+      'angra dos reis': 'RJ', 'paraty': 'RJ', 'campos dos goytacazes': 'RJ', 'nova friburgo': 'RJ',
+      // MG
+      'belo horizonte': 'MG', 'uberlandia': 'MG', 'contagem': 'MG', 'juiz de fora': 'MG',
+      'betim': 'MG', 'montes claros': 'MG', 'ouro preto': 'MG', 'tiradentes': 'MG',
+      // BA
+      'salvador': 'BA', 'feira de santana': 'BA', 'porto seguro': 'BA', 'ilheus': 'BA',
+      'vitoria da conquista': 'BA', 'itabuna': 'BA', 'morro de sao paulo': 'BA',
+      // CE
+      'fortaleza': 'CE', 'caucaia': 'CE', 'juazeiro do norte': 'CE', 'jericoacoara': 'CE', 'canoa quebrada': 'CE',
+      // PE
+      'recife': 'PE', 'olinda': 'PE', 'jaboatao': 'PE', 'caruaru': 'PE', 'porto de galinhas': 'PE',
+      // DF
+      'brasilia': 'DF',
+      // GO
+      'goiania': 'GO', 'aparecida de goiania': 'GO', 'anapolis': 'GO', 'caldas novas': 'GO',
+      // ES
+      'vitoria': 'ES', 'vila velha': 'ES', 'serra': 'ES', 'guarapari': 'ES',
+      // MT
+      'cuiaba': 'MT', 'varzea grande': 'MT', 'rondonopolis': 'MT',
+      // MS
+      'campo grande': 'MS', 'dourados': 'MS', 'bonito': 'MS',
+      // PA
+      'belem': 'PA', 'ananindeua': 'PA', 'santarem': 'PA', 'maraba': 'PA', 'alter do chao': 'PA',
+      // AM
+      'manaus': 'AM', 'parintins': 'AM',
+      // RN
+      'natal': 'RN', 'parnamirim': 'RN', 'pipa': 'RN', 'mossoro': 'RN',
+      // PB
+      'joao pessoa': 'PB', 'campina grande': 'PB',
+      // AL
+      'maceio': 'AL', 'arapiraca': 'AL', 'maragogi': 'AL',
+      // SE
+      'aracaju': 'SE',
+      // PI
+      'teresina': 'PI',
+      // MA
+      'sao luis': 'MA', 'imperatriz': 'MA', 'lencois maranhenses': 'MA',
+      // TO
+      'palmas': 'TO',
+      // RO
+      'porto velho': 'RO',
+      // AC
+      'rio branco': 'AC',
+      // RR
+      'boa vista': 'RR',
+      // AP
+      'macapa': 'AP'
     };
-    for (const [termo, uf] of Object.entries(estadosMap)) {
-      const regex = new RegExp(`\\b${termo}\\b`, 'i');
-      if (regex.test(textoLower)) {
+
+    // Buscar cidade primeiro
+    let estadoEncontrado = false;
+    for (const [cidade, uf] of Object.entries(cidadesMap)) {
+      if (textoLower.includes(cidade)) {
         resultado.config.estado = uf;
-        resultado.encontrados.push(`Região: ${uf}`);
+        resultado.encontrados.push(`Região: ${uf} (${cidade})`);
+        estadoEncontrado = true;
         break;
+      }
+    }
+
+    // Se não achou cidade, buscar por estado/sigla (apenas siglas isoladas com word boundary)
+    if (!estadoEncontrado) {
+      const estadosMap = {
+        'rio grande do sul': 'RS', 'gaucho': 'RS',
+        'santa catarina': 'SC', 'catarinense': 'SC',
+        'parana': 'PR', 'paranaense': 'PR',
+        'sao paulo': 'SP', 'paulista': 'SP',
+        'rio de janeiro': 'RJ', 'carioca': 'RJ', 'fluminense': 'RJ',
+        'minas gerais': 'MG', 'mineiro': 'MG',
+        'bahia': 'BA', 'baiano': 'BA',
+        'pernambuco': 'PE', 'pernambucano': 'PE',
+        'ceara': 'CE', 'cearense': 'CE',
+        'distrito federal': 'DF',
+        'goias': 'GO', 'goiano': 'GO',
+        'espirito santo': 'ES', 'capixaba': 'ES',
+        'mato grosso do sul': 'MS',
+        'mato grosso': 'MT',
+        'amazonas': 'AM',
+        'maranhao': 'MA',
+        'piaui': 'PI',
+        'rio grande do norte': 'RN', 'potiguar': 'RN',
+        'paraiba': 'PB',
+        'alagoas': 'AL', 'alagoano': 'AL',
+        'sergipe': 'SE',
+        'tocantins': 'TO',
+        'rondonia': 'RO',
+        'acre': 'AC',
+        'roraima': 'RR',
+        'amapa': 'AP'
+      };
+
+      for (const [termo, uf] of Object.entries(estadosMap)) {
+        const regex = new RegExp(`\\b${termo}\\b`, 'i');
+        if (regex.test(textoLower)) {
+          resultado.config.estado = uf;
+          resultado.encontrados.push(`Região: ${uf}`);
+          break;
+        }
       }
     }
 
@@ -905,12 +996,12 @@
 
     // Tipo de estrutura
     const estruturaMap = {
+      'apartamento': ['apartamento', 'apto', 'flat', 'cobertura', 'loft'],
       'terrea': ['terrea', 'terreo', 'casa terrea', 'um andar', '1 andar', 'unico piso'],
       'sobrado': ['sobrado', 'dois andares', '2 andares', 'duplex', 'dois pisos', '2 pisos'],
-      'meia_agua': ['meia agua', 'meia-agua', 'kit', 'kitnet', 'conjugado', 'simples'],
-      'geminada': ['geminada', 'casa geminada', 'conjugada com outra'],
-      'apartamento': ['apartamento', 'apto', 'ap', 'flat', 'cobertura', 'loft'],
-      'chacara': ['chacara', 'sitio', 'fazenda', 'rural', 'campo', 'casa de campo']
+      'meia_agua': ['meia agua', 'meia-agua', 'kitnet', 'conjugado'],
+      'geminada': ['geminada', 'casa geminada'],
+      'chacara': ['chacara', 'sitio', 'fazenda', 'rural', 'casa de campo']
     };
     for (const [key, termos] of Object.entries(estruturaMap)) {
       for (const termo of termos) {
@@ -927,8 +1018,8 @@
     // Tipo de construção
     const construcaoMap = {
       'alvenaria': ['alvenaria', 'tijolo', 'tijolos', 'concreto', 'bloco'],
-      'steel_frame': ['steel frame', 'steelframe', 'estrutura metalica', 'aco'],
-      'wood_frame': ['wood frame', 'woodframe', 'madeira', 'casa de madeira'],
+      'steel_frame': ['steel frame', 'steelframe', 'estrutura metalica'],
+      'wood_frame': ['wood frame', 'woodframe', 'casa de madeira'],
       'eps': ['eps', 'isopor', 'poliestireno']
     };
     for (const [key, termos] of Object.entries(construcaoMap)) {
@@ -945,10 +1036,10 @@
 
     // Padrão de acabamento
     const padraoMap = {
-      'popular': ['popular', 'simples', 'basico', 'economico', 'baixo padrao', 'baixo custo'],
-      'medio': ['medio', 'padrao medio', 'normal', 'comum'],
-      'alto': ['alto padrao', 'alto', 'bom acabamento', 'fino', 'premium'],
-      'luxo': ['luxo', 'luxuoso', 'top', 'altissimo padrao', 'super luxo']
+      'popular': ['popular', 'basico', 'economico', 'baixo padrao', 'baixo custo'],
+      'medio': ['padrao medio', 'acabamento medio'],
+      'alto': ['alto padrao', 'bom acabamento', 'fino acabamento', 'premium'],
+      'luxo': ['luxo', 'luxuoso', 'altissimo padrao', 'super luxo']
     };
     for (const [key, termos] of Object.entries(padraoMap)) {
       for (const termo of termos) {
@@ -963,46 +1054,60 @@
     }
 
     // Área de serviço
-    if (textoLower.includes('area de servico') || textoLower.includes('lavanderia')) {
+    if ((textoLower.includes('area de servico') || textoLower.includes('lavanderia')) && !isNegado('area de servico') && !isNegado('lavanderia')) {
       resultado.config.temAreaServico = true;
       resultado.encontrados.push('Área de serviço: Sim');
     }
 
-    // Extras
+    // Extras COM VERIFICAÇÃO DE NEGAÇÃO
     resultado.extras = {};
-    if (textoLower.includes('piscina')) {
+
+    // Piscina
+    if (textoLower.includes('piscina') && !isNegado('piscina')) {
       resultado.extras.piscina = true;
       resultado.encontrados.push('Extra: Piscina');
     }
-    if (textoLower.includes('churrasqueira') || textoLower.includes('churrasco') || textoLower.includes('gourmet')) {
+
+    // Churrasqueira
+    if ((textoLower.includes('churrasqueira') || textoLower.includes('espaco gourmet')) && !isNegado('churrasqueira') && !isNegado('gourmet')) {
       resultado.extras.churrasqueira = true;
       resultado.encontrados.push('Extra: Churrasqueira');
     }
-    if (textoLower.includes('garagem') || textoLower.includes('pergolado') || textoLower.includes('cobertura para carro')) {
-      resultado.extras.garagem = true;
-      resultado.encontrados.push('Extra: Garagem/Pergolado');
+
+    // Garagem - verificar negação
+    if (textoLower.includes('garagem') || textoLower.includes('vaga')) {
+      if (!isNegado('garagem') && !isNegado('vaga')) {
+        resultado.extras.garagem = true;
+        resultado.encontrados.push('Extra: Garagem');
+      }
     }
-    if (textoLower.includes('muro') || textoLower.includes('murado')) {
+
+    // Muro
+    if ((textoLower.includes('muro') || textoLower.includes('murado')) && !isNegado('muro')) {
       resultado.extras.muro = true;
       resultado.encontrados.push('Extra: Muro');
     }
-    if (textoLower.includes('portao') || textoLower.includes('portão')) {
+
+    // Portão
+    if (textoLower.includes('portao') && !isNegado('portao')) {
       resultado.extras.portao = true;
       resultado.encontrados.push('Extra: Portão');
     }
-    if (textoLower.includes('edicula') || textoLower.includes('edícula') || textoLower.includes('dependencia')) {
+
+    // Edícula
+    if ((textoLower.includes('edicula') || textoLower.includes('dependencia')) && !isNegado('edicula') && !isNegado('dependencia')) {
       resultado.extras.edicula = true;
       resultado.encontrados.push('Extra: Edícula');
     }
-    if (textoLower.includes('solar') || textoLower.includes('fotovoltaico') || textoLower.includes('energia solar')) {
+
+    // Energia Solar
+    if ((textoLower.includes('energia solar') || textoLower.includes('fotovoltaico')) && !isNegado('solar')) {
       resultado.extras.solar = true;
       resultado.encontrados.push('Extra: Energia Solar');
     }
-    if (textoLower.includes('aquecedor solar') || textoLower.includes('aquecimento solar')) {
-      resultado.extras.aquecedor = true;
-      resultado.encontrados.push('Extra: Aquecedor Solar');
-    }
-    if (textoLower.includes('automacao') || textoLower.includes('casa inteligente') || textoLower.includes('smart home')) {
+
+    // Automação
+    if ((textoLower.includes('automacao') || textoLower.includes('casa inteligente') || textoLower.includes('smart home')) && !isNegado('automacao')) {
       resultado.extras.automacao = true;
       resultado.encontrados.push('Extra: Automação');
     }

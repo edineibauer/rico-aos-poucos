@@ -154,7 +154,6 @@
           </h2>
 
           <div class="cc-section-content" id="descricao-content">
-            <p class="cc-hint">Descreva o imóvel de forma livre e o sistema identificará automaticamente as características.</p>
             <textarea
               id="cc-descricao-texto"
               class="cc-textarea"
@@ -176,21 +175,6 @@
             </div>
 
             <div class="cc-descricao-feedback" id="cc-descricao-feedback" style="display: none;"></div>
-
-            <details class="cc-dicas-details">
-              <summary>Exemplos de descrição</summary>
-              <div class="cc-dicas-grid">
-                <span>120m²</span>
-                <span>3 quartos</span>
-                <span>1 suíte</span>
-                <span>apartamento</span>
-                <span>chácara</span>
-                <span>sobrado</span>
-                <span>bom estado</span>
-                <span>alto padrão</span>
-                <span>piscina</span>
-              </div>
-            </details>
           </div>
         </section>
 

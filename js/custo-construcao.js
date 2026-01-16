@@ -19,12 +19,28 @@
       numQuartos: 3,
       numSuites: 0,
       numBanheiros: 1,
+      numEscritorios: 0,
       temSala: true,
       temCozinha: true,
       temAreaServico: true,
+      temDespensa: false,
       temVaranda: false,
+      // Garagem
       garagemVagas: 0,
-      garagemTipo: 'aberta'
+      garagemTipo: 'aberta',
+      garagemChurrasqueira: false,
+      garagemBanheiro: false,
+      garagemDeposito: false,
+      garagemLavabo: false,
+      // Área Gourmet
+      temAreaGourmet: false,
+      areaGourmetM2: 20,
+      gourmetChurrasqueira: true,
+      gourmetLareira: false,
+      gourmetFogaoLenha: false,
+      gourmetFornoPizza: false,
+      gourmetBancada: true,
+      gourmetBanheiro: false
     },
     materiais: {
       janelas: 'aluminio_simples',
@@ -36,6 +52,20 @@
     maoDeObra: {},
     extras: {},
     custosAdicionais: {},
+    edicula: {
+      quartos: 0,
+      suites: 0,
+      banheiros: 0,
+      garagem: 0,
+      sala: false,
+      cozinha: false,
+      areaServico: false,
+      escritorio: false,
+      churrasqueira: false,
+      lareira: false,
+      varanda: false,
+      piscina: false
+    },
     calculoAtual: null
   };
 
@@ -305,6 +335,8 @@
 
           <div class="cc-section-content" id="comodos-content">
             <p class="cc-hint">O número de cômodos influencia diretamente no custo (mais banheiros = mais instalações hidráulicas e revestimentos).</p>
+
+            <!-- Quartos e Banheiros -->
             <div class="cc-grid cc-grid-4">
               <div class="cc-field">
                 <label>Quartos (sem suíte)</label>
@@ -318,27 +350,136 @@
                 <label>Banheiros extras</label>
                 <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="0" max="10">
               </div>
+              <div class="cc-field">
+                <label>Escritório/Home Office</label>
+                <input type="number" id="cc-escritorios" value="${state.config.numEscritorios || 0}" min="0" max="5">
+              </div>
+            </div>
+
+            <!-- Área de Serviço e Despensa -->
+            <div class="cc-grid cc-grid-4" style="margin-top: 12px;">
               <div class="cc-field cc-field-checkbox">
                 <label>
                   <input type="checkbox" id="cc-area-servico" ${state.config.temAreaServico ? 'checked' : ''}>
                   Área de Serviço
                 </label>
               </div>
+              <div class="cc-field cc-field-checkbox">
+                <label>
+                  <input type="checkbox" id="cc-despensa" ${state.config.temDespensa ? 'checked' : ''}>
+                  Despensa
+                </label>
+              </div>
+              <div class="cc-field cc-field-checkbox">
+                <label>
+                  <input type="checkbox" id="cc-varanda" ${state.config.temVaranda ? 'checked' : ''}>
+                  Varanda/Sacada
+                </label>
+              </div>
             </div>
 
-            <!-- Garagem/Vagas -->
-            <div class="cc-grid cc-grid-3" style="margin-top: 12px;">
-              <div class="cc-field">
-                <label>Vagas de Garagem</label>
-                <input type="number" id="cc-vagas-garagem" value="${state.config.garagemVagas || 0}" min="0" max="10">
+            <!-- Garagem -->
+            <div class="cc-comodos-subsection" style="margin-top: 16px; padding: 12px; background: var(--cc-card-bg); border-radius: 8px;">
+              <div class="cc-subsection-title" style="font-weight: 600; margin-bottom: 10px;">🚗 Garagem</div>
+              <div class="cc-grid cc-grid-3">
+                <div class="cc-field">
+                  <label>Vagas</label>
+                  <input type="number" id="cc-vagas-garagem" value="${state.config.garagemVagas || 0}" min="0" max="10">
+                </div>
+                <div class="cc-field">
+                  <label>Tipo</label>
+                  <select id="cc-tipo-vaga">
+                    <option value="aberta" ${state.config.garagemTipo === 'aberta' ? 'selected' : ''}>Aberta (descoberta)</option>
+                    <option value="coberta" ${state.config.garagemTipo === 'coberta' ? 'selected' : ''}>Coberta (telhado simples)</option>
+                    <option value="fechada" ${state.config.garagemTipo === 'fechada' ? 'selected' : ''}>Fechada (box/portão)</option>
+                  </select>
+                </div>
               </div>
-              <div class="cc-field">
-                <label>Tipo de Vaga</label>
-                <select id="cc-tipo-vaga">
-                  <option value="aberta" ${state.config.garagemTipo === 'aberta' ? 'selected' : ''}>Aberta (descoberta)</option>
-                  <option value="coberta" ${state.config.garagemTipo === 'coberta' ? 'selected' : ''}>Coberta (telhado simples)</option>
-                  <option value="fechada" ${state.config.garagemTipo === 'fechada' ? 'selected' : ''}>Fechada (box/portão)</option>
-                </select>
+              <div class="cc-grid cc-grid-4" style="margin-top: 8px;" id="cc-garagem-extras">
+                <div class="cc-field cc-field-checkbox">
+                  <label>
+                    <input type="checkbox" id="cc-garagem-churrasqueira" ${state.config.garagemChurrasqueira ? 'checked' : ''}>
+                    Churrasqueira
+                  </label>
+                </div>
+                <div class="cc-field cc-field-checkbox">
+                  <label>
+                    <input type="checkbox" id="cc-garagem-banheiro" ${state.config.garagemBanheiro ? 'checked' : ''}>
+                    Banheiro
+                  </label>
+                </div>
+                <div class="cc-field cc-field-checkbox">
+                  <label>
+                    <input type="checkbox" id="cc-garagem-deposito" ${state.config.garagemDeposito ? 'checked' : ''}>
+                    Depósito
+                  </label>
+                </div>
+                <div class="cc-field cc-field-checkbox">
+                  <label>
+                    <input type="checkbox" id="cc-garagem-lavabo" ${state.config.garagemLavabo ? 'checked' : ''}>
+                    Lavabo
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <!-- Área Gourmet -->
+            <div class="cc-comodos-subsection" style="margin-top: 16px; padding: 12px; background: var(--cc-card-bg); border-radius: 8px;">
+              <div class="cc-subsection-header" style="display: flex; align-items: center; gap: 8px; margin-bottom: 10px;">
+                <label class="cc-switch cc-switch-small">
+                  <input type="checkbox" id="cc-tem-area-gourmet" ${state.config.temAreaGourmet ? 'checked' : ''}>
+                  <span class="cc-switch-slider"></span>
+                </label>
+                <span class="cc-subsection-title" style="font-weight: 600;">🍖 Área Gourmet / Espaço de Lazer</span>
+              </div>
+              <div id="cc-area-gourmet-options" style="display: ${state.config.temAreaGourmet ? 'block' : 'none'};">
+                <div class="cc-grid cc-grid-2">
+                  <div class="cc-field">
+                    <label>Área aproximada</label>
+                    <div class="cc-input-group">
+                      <input type="number" id="cc-area-gourmet-m2" value="${state.config.areaGourmetM2 || 20}" min="10" max="100">
+                      <span>m²</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="cc-grid cc-grid-4" style="margin-top: 8px;">
+                  <div class="cc-field cc-field-checkbox">
+                    <label>
+                      <input type="checkbox" id="cc-gourmet-churrasqueira" ${state.config.gourmetChurrasqueira !== false ? 'checked' : ''}>
+                      Churrasqueira
+                    </label>
+                  </div>
+                  <div class="cc-field cc-field-checkbox">
+                    <label>
+                      <input type="checkbox" id="cc-gourmet-lareira" ${state.config.gourmetLareira ? 'checked' : ''}>
+                      Lareira
+                    </label>
+                  </div>
+                  <div class="cc-field cc-field-checkbox">
+                    <label>
+                      <input type="checkbox" id="cc-gourmet-fogao-lenha" ${state.config.gourmetFogaoLenha ? 'checked' : ''}>
+                      Fogão a Lenha
+                    </label>
+                  </div>
+                  <div class="cc-field cc-field-checkbox">
+                    <label>
+                      <input type="checkbox" id="cc-gourmet-forno-pizza" ${state.config.gourmetFornoPizza ? 'checked' : ''}>
+                      Forno de Pizza
+                    </label>
+                  </div>
+                  <div class="cc-field cc-field-checkbox">
+                    <label>
+                      <input type="checkbox" id="cc-gourmet-bancada" ${state.config.gourmetBancada !== false ? 'checked' : ''}>
+                      Bancada/Pia
+                    </label>
+                  </div>
+                  <div class="cc-field cc-field-checkbox">
+                    <label>
+                      <input type="checkbox" id="cc-gourmet-banheiro" ${state.config.gourmetBanheiro ? 'checked' : ''}>
+                      Banheiro
+                    </label>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -504,46 +645,6 @@
         </div>
       </div>
 
-      <!-- Churrasqueira -->
-      <div class="cc-extra-item">
-        <div class="cc-extra-header">
-          <label class="cc-switch">
-            <input type="checkbox" id="cc-extra-churrasqueira">
-            <span class="cc-switch-slider"></span>
-          </label>
-          <span class="cc-extra-name">Churrasqueira / Espaço Gourmet</span>
-        </div>
-        <div class="cc-extra-options" id="cc-churrasqueira-options" style="display:none;">
-          <select id="cc-churrasqueira-tipo">
-            ${Object.entries(data.extras.churrasqueira).map(([key, info]) =>
-              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valor)}</option>`
-            ).join('')}
-          </select>
-        </div>
-      </div>
-
-      <!-- Garagem/Pergolado -->
-      <div class="cc-extra-item">
-        <div class="cc-extra-header">
-          <label class="cc-switch">
-            <input type="checkbox" id="cc-extra-garagem">
-            <span class="cc-switch-slider"></span>
-          </label>
-          <span class="cc-extra-name">Garagem / Pergolado</span>
-        </div>
-        <div class="cc-extra-options" id="cc-garagem-options" style="display:none;">
-          <select id="cc-garagem-tipo">
-            ${Object.entries(data.extras.garagem).map(([key, info]) =>
-              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
-            ).join('')}
-          </select>
-          <div class="cc-input-group cc-input-inline">
-            <input type="number" id="cc-garagem-m2" value="20" min="10" max="100">
-            <span>m²</span>
-          </div>
-        </div>
-      </div>
-
       <!-- Piso Externo / Pátio -->
       <div class="cc-extra-item">
         <div class="cc-extra-header">
@@ -613,25 +714,114 @@
         </div>
       </div>
 
-      <!-- Edícula -->
-      <div class="cc-extra-item">
+      <!-- Edícula - Configuração Completa -->
+      <div class="cc-extra-item cc-extra-edicula-expanded">
         <div class="cc-extra-header">
           <label class="cc-switch">
             <input type="checkbox" id="cc-extra-edicula">
             <span class="cc-switch-slider"></span>
           </label>
-          <span class="cc-extra-name">Edícula</span>
+          <span class="cc-extra-name">🏠 Edícula / Casa de Hóspedes</span>
         </div>
         <div class="cc-extra-options" id="cc-edicula-options" style="display:none;">
-          <select id="cc-edicula-tipo">
-            ${Object.entries(data.extras.edicula).map(([key, info]) =>
-              `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
-            ).join('')}
-          </select>
-          <div class="cc-input-group cc-input-inline">
-            <input type="number" id="cc-edicula-m2" value="20" min="10" max="100">
-            <span>m²</span>
+          <p class="cc-hint" style="margin-bottom: 12px;">Configure os cômodos e características da edícula:</p>
+
+          <!-- Padrão de acabamento da edícula -->
+          <div class="cc-grid cc-grid-2" style="margin-bottom: 12px;">
+            <div class="cc-field">
+              <label>Padrão de Acabamento</label>
+              <select id="cc-edicula-tipo">
+                ${Object.entries(data.extras.edicula).map(([key, info]) =>
+                  `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
+                ).join('')}
+              </select>
+            </div>
+            <div class="cc-field">
+              <label>Área Total (calculada ou manual)</label>
+              <div class="cc-input-group">
+                <input type="number" id="cc-edicula-m2" value="20" min="10" max="200">
+                <span>m²</span>
+              </div>
+            </div>
           </div>
+
+          <!-- Cômodos da edícula -->
+          <div class="cc-grid cc-grid-4" style="margin-bottom: 8px;">
+            <div class="cc-field">
+              <label>Quartos</label>
+              <input type="number" id="cc-edicula-quartos" value="0" min="0" max="5">
+            </div>
+            <div class="cc-field">
+              <label>Suítes</label>
+              <input type="number" id="cc-edicula-suites" value="0" min="0" max="3">
+            </div>
+            <div class="cc-field">
+              <label>Banheiros extras</label>
+              <input type="number" id="cc-edicula-banheiros" value="0" min="0" max="3">
+            </div>
+            <div class="cc-field">
+              <label>Vagas garagem</label>
+              <input type="number" id="cc-edicula-garagem" value="0" min="0" max="3">
+            </div>
+          </div>
+
+          <!-- Características da edícula -->
+          <div class="cc-grid cc-grid-4" style="margin-bottom: 8px;">
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-sala">
+                Sala
+              </label>
+            </div>
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-cozinha">
+                Cozinha
+              </label>
+            </div>
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-area-servico">
+                Área de Serviço
+              </label>
+            </div>
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-escritorio">
+                Escritório
+              </label>
+            </div>
+          </div>
+
+          <!-- Extras da edícula -->
+          <div class="cc-grid cc-grid-4">
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-churrasqueira">
+                Churrasqueira
+              </label>
+            </div>
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-lareira">
+                Lareira
+              </label>
+            </div>
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-varanda">
+                Varanda
+              </label>
+            </div>
+            <div class="cc-field cc-field-checkbox">
+              <label>
+                <input type="checkbox" id="cc-edicula-piscina">
+                Piscina
+              </label>
+            </div>
+          </div>
+
+          <div class="cc-edicula-resumo" id="cc-edicula-resumo" style="margin-top: 12px; padding: 8px; background: var(--cc-bg); border-radius: 4px; font-size: 13px;"></div>
         </div>
       </div>
 
@@ -933,6 +1123,8 @@
     const quartos = state.config.numQuartos;
     const suites = state.config.numSuites;
     const banheiros = state.config.numBanheiros;
+    const escritorios = state.config.numEscritorios || 0;
+    const garagem = state.config.garagemVagas || 0;
     const totalBanheiros = suites + banheiros;
 
     // Calcular custo adicional estimado por cômodo
@@ -940,14 +1132,98 @@
     const custoQuartos = quartos * custoComodos.quarto.custoBase;
     const custoSuites = suites * custoComodos.suite.custoBase;
     const custoBanheiros = banheiros * custoComodos.banheiro.custoBase;
-    const totalComodosExtra = custoQuartos + custoSuites + custoBanheiros;
+    let totalComodosExtra = custoQuartos + custoSuites + custoBanheiros;
+
+    // Adicionar custos dos novos cômodos
+    if (escritorios > 0) totalComodosExtra += escritorios * 5000;
+    if (state.config.temDespensa) totalComodosExtra += 3000;
+    if (state.config.temVaranda) totalComodosExtra += 8000;
+
+    // Listar cômodos configurados
+    const comodosLista = [];
+    if (quartos > 0) comodosLista.push(`${quartos} quarto${quartos > 1 ? 's' : ''}`);
+    if (suites > 0) comodosLista.push(`${suites} suíte${suites > 1 ? 's' : ''}`);
+    if (banheiros > 0) comodosLista.push(`${banheiros} banheiro${banheiros > 1 ? 's' : ''}`);
+    if (escritorios > 0) comodosLista.push(`${escritorios} escritório${escritorios > 1 ? 's' : ''}`);
+    if (garagem > 0) comodosLista.push(`${garagem} vaga${garagem > 1 ? 's' : ''}`);
 
     resumo.innerHTML = `
       <div class="cc-comodos-info">
+        <span><strong>Cômodos:</strong> ${comodosLista.join(', ') || 'Nenhum configurado'}</span>
         <span><strong>Total de banheiros:</strong> ${totalBanheiros} (${suites} nas suítes + ${banheiros} extras)</span>
         <span class="cc-comodos-custo">Custo adicional (hidráulica, louças, etc): <strong>R$ ${formatNumber(totalComodosExtra)}</strong></span>
       </div>
     `;
+  }
+
+  function updateEdiculaArea() {
+    // Calcula a área estimada da edícula com base nos cômodos e características
+    const ed = state.edicula || {};
+    let areaEstimada = 0;
+
+    // Área por tipo de cômodo
+    const areaPorComodo = {
+      quartos: 12,       // ~12m² por quarto
+      suites: 20,        // ~20m² por suíte (quarto + banheiro)
+      banheiros: 5,      // ~5m² por banheiro extra
+      garagem: 15,       // ~15m² por vaga
+      sala: 15,          // ~15m² sala
+      cozinha: 10,       // ~10m² cozinha
+      areaServico: 6,    // ~6m² área de serviço
+      escritorio: 10,    // ~10m² escritório
+      churrasqueira: 8,  // ~8m² área churrasqueira
+      lareira: 3,        // ~3m² adicional para lareira
+      varanda: 10,       // ~10m² varanda
+      piscina: 0         // não adiciona à área coberta
+    };
+
+    // Cômodos com quantidade
+    areaEstimada += (ed.quartos || 0) * areaPorComodo.quartos;
+    areaEstimada += (ed.suites || 0) * areaPorComodo.suites;
+    areaEstimada += (ed.banheiros || 0) * areaPorComodo.banheiros;
+    areaEstimada += (ed.garagem || 0) * areaPorComodo.garagem;
+
+    // Cômodos boolean
+    if (ed.sala) areaEstimada += areaPorComodo.sala;
+    if (ed.cozinha) areaEstimada += areaPorComodo.cozinha;
+    if (ed.areaServico) areaEstimada += areaPorComodo.areaServico;
+    if (ed.escritorio) areaEstimada += areaPorComodo.escritorio;
+    if (ed.churrasqueira) areaEstimada += areaPorComodo.churrasqueira;
+    if (ed.lareira) areaEstimada += areaPorComodo.lareira;
+    if (ed.varanda) areaEstimada += areaPorComodo.varanda;
+
+    // Se não há nada selecionado, usar mínimo padrão
+    if (areaEstimada < 10) areaEstimada = 20;
+
+    // Atualizar o campo de área
+    const areaInput = document.getElementById('cc-edicula-m2');
+    if (areaInput) {
+      areaInput.value = Math.round(areaEstimada);
+    }
+
+    // Atualizar resumo da edícula
+    const resumo = document.getElementById('cc-edicula-resumo');
+    if (resumo) {
+      const items = [];
+      if (ed.quartos > 0) items.push(`${ed.quartos} quarto${ed.quartos > 1 ? 's' : ''}`);
+      if (ed.suites > 0) items.push(`${ed.suites} suíte${ed.suites > 1 ? 's' : ''}`);
+      if (ed.banheiros > 0) items.push(`${ed.banheiros} banheiro${ed.banheiros > 1 ? 's' : ''}`);
+      if (ed.garagem > 0) items.push(`${ed.garagem} vaga${ed.garagem > 1 ? 's' : ''}`);
+      if (ed.sala) items.push('sala');
+      if (ed.cozinha) items.push('cozinha');
+      if (ed.areaServico) items.push('área serviço');
+      if (ed.escritorio) items.push('escritório');
+      if (ed.churrasqueira) items.push('churrasqueira');
+      if (ed.lareira) items.push('lareira');
+      if (ed.varanda) items.push('varanda');
+      if (ed.piscina) items.push('piscina');
+
+      if (items.length > 0) {
+        resumo.innerHTML = `<strong>Edícula:</strong> ${items.join(', ')} (${Math.round(areaEstimada)}m² estimados)`;
+      } else {
+        resumo.innerHTML = `<strong>Edícula:</strong> ${Math.round(areaEstimada)}m² (básica)`;
+      }
+    }
   }
 
   function updateConservacaoInfo() {
@@ -2105,6 +2381,25 @@
       calculate();
     });
 
+    // Escritório
+    document.getElementById('cc-escritorios')?.addEventListener('input', function() {
+      state.config.numEscritorios = parseInt(this.value) || 0;
+      updateComodosResumo();
+      calculate();
+    });
+
+    // Despensa
+    document.getElementById('cc-despensa')?.addEventListener('change', function() {
+      state.config.temDespensa = this.checked;
+      calculate();
+    });
+
+    // Varanda/Sacada
+    document.getElementById('cc-varanda')?.addEventListener('change', function() {
+      state.config.temVaranda = this.checked;
+      calculate();
+    });
+
     // Garagem - vagas e tipo (nos cômodos)
     document.getElementById('cc-vagas-garagem')?.addEventListener('input', function() {
       state.config.garagemVagas = parseInt(this.value) || 0;
@@ -2115,6 +2410,65 @@
     document.getElementById('cc-tipo-vaga')?.addEventListener('change', function() {
       state.config.garagemTipo = this.value;
       calculate();
+    });
+
+    // Garagem extras (churrasqueira, banheiro, depósito, lavabo)
+    document.getElementById('cc-garagem-churrasqueira')?.addEventListener('change', function() {
+      state.config.garagemChurrasqueira = this.checked;
+      calculate();
+    });
+    document.getElementById('cc-garagem-banheiro')?.addEventListener('change', function() {
+      state.config.garagemBanheiro = this.checked;
+      calculate();
+    });
+    document.getElementById('cc-garagem-deposito')?.addEventListener('change', function() {
+      state.config.garagemDeposito = this.checked;
+      calculate();
+    });
+    document.getElementById('cc-garagem-lavabo')?.addEventListener('change', function() {
+      state.config.garagemLavabo = this.checked;
+      calculate();
+    });
+
+    // Área Gourmet toggle and options
+    document.getElementById('cc-tem-area-gourmet')?.addEventListener('change', function() {
+      state.config.temAreaGourmet = this.checked;
+      const options = document.getElementById('cc-area-gourmet-options');
+      if (options) options.style.display = this.checked ? 'block' : 'none';
+      calculate();
+    });
+    document.getElementById('cc-area-gourmet-m2')?.addEventListener('input', function() {
+      state.config.areaGourmetM2 = parseInt(this.value) || 20;
+      calculate();
+    });
+    // Área Gourmet extras
+    ['churrasqueira', 'lareira', 'fogao-lenha', 'forno-pizza', 'bancada', 'banheiro'].forEach(item => {
+      const camelCase = item.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+      const stateKey = 'gourmet' + camelCase.charAt(0).toUpperCase() + camelCase.slice(1);
+      document.getElementById(`cc-gourmet-${item}`)?.addEventListener('change', function() {
+        state.config[stateKey] = this.checked;
+        calculate();
+      });
+    });
+
+    // Edícula - cômodos (number inputs)
+    ['quartos', 'suites', 'banheiros', 'garagem'].forEach(item => {
+      document.getElementById(`cc-edicula-${item}`)?.addEventListener('input', function() {
+        if (!state.edicula) state.edicula = {};
+        state.edicula[item] = parseInt(this.value) || 0;
+        updateEdiculaArea();
+        calculate();
+      });
+    });
+    // Edícula - características (checkboxes)
+    ['sala', 'cozinha', 'area-servico', 'escritorio', 'churrasqueira', 'lareira', 'varanda', 'piscina'].forEach(item => {
+      const stateKey = item.replace(/-([a-z])/g, (g) => g[1].toUpperCase());
+      document.getElementById(`cc-edicula-${item}`)?.addEventListener('change', function() {
+        if (!state.edicula) state.edicula = {};
+        state.edicula[stateKey] = this.checked;
+        updateEdiculaArea();
+        calculate();
+      });
     });
 
     // Área do terreno
@@ -2351,6 +2705,16 @@
       if (state.config.temAreaServico) {
         custoComodosExtra += custoComodos.areaServico.custoBase * padrao.fator * fatorConservacao;
       }
+      // Novos cômodos
+      if (state.config.numEscritorios > 0) {
+        custoComodosExtra += state.config.numEscritorios * 5000 * padrao.fator * fatorConservacao; // ~5k por escritório
+      }
+      if (state.config.temDespensa) {
+        custoComodosExtra += 3000 * padrao.fator * fatorConservacao; // ~3k despensa
+      }
+      if (state.config.temVaranda) {
+        custoComodosExtra += 8000 * padrao.fator * fatorConservacao; // ~8k varanda/sacada
+      }
 
       // Custo base da construção
       custoBase = custoMateriais + custoMaoObra + custoComodosExtra;
@@ -2468,6 +2832,87 @@
     let custoExtras = 0;
     const detalhesExtras = [];
 
+    // GARAGEM (do card Cômodos)
+    const garagemVagas = state.config.garagemVagas || 0;
+    if (garagemVagas > 0) {
+      const garagemTipo = state.config.garagemTipo || 'aberta';
+      // Custo por m² dependendo do tipo
+      const custoPorVaga = {
+        aberta: { m2: 15, custoM2: 150 },    // Descoberta, simples
+        coberta: { m2: 18, custoM2: 350 },   // Coberta com telhado
+        fechada: { m2: 20, custoM2: 650 }    // Box fechado com portão
+      };
+      const config = custoPorVaga[garagemTipo] || custoPorVaga.aberta;
+      const areaGaragem = garagemVagas * config.m2;
+      const valorGaragem = areaGaragem * config.custoM2 * padrao.fator;
+      custoExtras += valorGaragem;
+      const tipoNome = { aberta: 'Aberta', coberta: 'Coberta', fechada: 'Fechada' }[garagemTipo];
+      detalhesExtras.push({ nome: `Garagem ${tipoNome} (${garagemVagas} vaga${garagemVagas > 1 ? 's' : ''}, ${areaGaragem}m²)`, valor: valorGaragem });
+
+      // Extras da garagem
+      if (state.config.garagemChurrasqueira) {
+        const valorChurr = 4500 * padrao.fator;
+        custoExtras += valorChurr;
+        detalhesExtras.push({ nome: 'Churrasqueira na garagem', valor: valorChurr });
+      }
+      if (state.config.garagemBanheiro) {
+        const valorBanh = 8000 * padrao.fator;
+        custoExtras += valorBanh;
+        detalhesExtras.push({ nome: 'Banheiro na garagem', valor: valorBanh });
+      }
+      if (state.config.garagemDeposito) {
+        const valorDep = 3500 * padrao.fator;
+        custoExtras += valorDep;
+        detalhesExtras.push({ nome: 'Depósito na garagem', valor: valorDep });
+      }
+      if (state.config.garagemLavabo) {
+        const valorLav = 5000 * padrao.fator;
+        custoExtras += valorLav;
+        detalhesExtras.push({ nome: 'Lavabo na garagem', valor: valorLav });
+      }
+    }
+
+    // ÁREA GOURMET (do card Cômodos)
+    if (state.config.temAreaGourmet) {
+      const areaGourmetM2 = state.config.areaGourmetM2 || 20;
+      // Custo base da área gourmet (construção + acabamento)
+      const custoBaseGourmet = areaGourmetM2 * 1200 * padrao.fator; // ~R$1200/m² para espaço gourmet
+      custoExtras += custoBaseGourmet;
+      detalhesExtras.push({ nome: `Área Gourmet (${areaGourmetM2}m²)`, valor: custoBaseGourmet });
+
+      // Equipamentos da área gourmet
+      if (state.config.gourmetChurrasqueira) {
+        const valor = 6000 * padrao.fator;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: 'Churrasqueira (gourmet)', valor });
+      }
+      if (state.config.gourmetLareira) {
+        const valor = 8000 * padrao.fator;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: 'Lareira (gourmet)', valor });
+      }
+      if (state.config.gourmetFogaoLenha) {
+        const valor = 5500 * padrao.fator;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: 'Fogão a lenha (gourmet)', valor });
+      }
+      if (state.config.gourmetFornoPizza) {
+        const valor = 4500 * padrao.fator;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: 'Forno de pizza (gourmet)', valor });
+      }
+      if (state.config.gourmetBancada) {
+        const valor = 3500 * padrao.fator;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: 'Bancada/Pia (gourmet)', valor });
+      }
+      if (state.config.gourmetBanheiro) {
+        const valor = 9000 * padrao.fator;
+        custoExtras += valor;
+        detalhesExtras.push({ nome: 'Banheiro (gourmet)', valor });
+      }
+    }
+
     // Piscina
     if (document.getElementById('cc-extra-piscina')?.checked) {
       const tipo = document.getElementById('cc-piscina-tipo')?.value;
@@ -2475,27 +2920,6 @@
         const valor = data.extras.piscina[tipo].valor;
         custoExtras += valor;
         detalhesExtras.push({ nome: data.extras.piscina[tipo].nome, valor });
-      }
-    }
-
-    // Churrasqueira
-    if (document.getElementById('cc-extra-churrasqueira')?.checked) {
-      const tipo = document.getElementById('cc-churrasqueira-tipo')?.value;
-      if (tipo && data.extras.churrasqueira[tipo]) {
-        const valor = data.extras.churrasqueira[tipo].valor;
-        custoExtras += valor;
-        detalhesExtras.push({ nome: data.extras.churrasqueira[tipo].nome, valor });
-      }
-    }
-
-    // Garagem/Pergolado
-    if (document.getElementById('cc-extra-garagem')?.checked) {
-      const tipo = document.getElementById('cc-garagem-tipo')?.value;
-      const m2 = parseFloat(document.getElementById('cc-garagem-m2')?.value) || 20;
-      if (tipo && data.extras.garagem[tipo]) {
-        const valor = data.extras.garagem[tipo].valorM2 * m2;
-        custoExtras += valor;
-        detalhesExtras.push({ nome: `${data.extras.garagem[tipo].nome} (${m2}m²)`, valor });
       }
     }
 
@@ -2538,14 +2962,54 @@
       }
     }
 
-    // Edícula
+    // Edícula (com configuração completa)
     if (document.getElementById('cc-extra-edicula')?.checked) {
       const tipo = document.getElementById('cc-edicula-tipo')?.value;
       const m2 = parseFloat(document.getElementById('cc-edicula-m2')?.value) || 20;
       if (tipo && data.extras.edicula[tipo]) {
-        const valor = data.extras.edicula[tipo].valorM2 * m2;
-        custoExtras += valor;
-        detalhesExtras.push({ nome: `${data.extras.edicula[tipo].nome} (${m2}m²)`, valor });
+        const valorBase = data.extras.edicula[tipo].valorM2 * m2;
+        custoExtras += valorBase;
+        detalhesExtras.push({ nome: `${data.extras.edicula[tipo].nome} (${m2}m²)`, valor: valorBase });
+
+        // Extras da edícula (usando state.edicula)
+        const ed = state.edicula || {};
+        // Cômodos com quantidade (custo adicional por instalações)
+        if (ed.suites > 0) {
+          const valor = ed.suites * 8000 * padrao.fator;
+          custoExtras += valor;
+          detalhesExtras.push({ nome: `Suítes na edícula (${ed.suites})`, valor });
+        }
+        if (ed.banheiros > 0) {
+          const valor = ed.banheiros * 6000 * padrao.fator;
+          custoExtras += valor;
+          detalhesExtras.push({ nome: `Banheiros na edícula (${ed.banheiros})`, valor });
+        }
+        if (ed.garagem > 0) {
+          const valor = ed.garagem * 4000 * padrao.fator;
+          custoExtras += valor;
+          detalhesExtras.push({ nome: `Vagas garagem na edícula (${ed.garagem})`, valor });
+        }
+        // Características extras
+        if (ed.churrasqueira) {
+          const valor = 5000 * padrao.fator;
+          custoExtras += valor;
+          detalhesExtras.push({ nome: 'Churrasqueira na edícula', valor });
+        }
+        if (ed.lareira) {
+          const valor = 7000 * padrao.fator;
+          custoExtras += valor;
+          detalhesExtras.push({ nome: 'Lareira na edícula', valor });
+        }
+        if (ed.varanda) {
+          const valor = 6000 * padrao.fator;
+          custoExtras += valor;
+          detalhesExtras.push({ nome: 'Varanda na edícula', valor });
+        }
+        if (ed.piscina) {
+          const valor = 25000 * padrao.fator; // Piscina pequena na edícula
+          custoExtras += valor;
+          detalhesExtras.push({ nome: 'Piscina na edícula', valor });
+        }
       }
     }
 

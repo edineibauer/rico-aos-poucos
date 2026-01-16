@@ -164,6 +164,17 @@
   font-weight: 600;
   color: var(--cc-text);
   margin: 0;
+  padding: 0;
+  border: none;
+  background: none;
+}
+
+/* Section title when used directly (not inside header) */
+.cc-section > h2.cc-section-title {
+  padding: 16px 20px;
+  margin: 0;
+  background: var(--cc-card-bg);
+  border-bottom: 1px solid var(--cc-border);
 }
 
 .cc-section-title .cc-step-badge {
@@ -758,6 +769,22 @@
   font-size: 0.85rem;
   font-weight: 500;
   color: var(--cc-text);
+}
+
+/* Actions (export button) */
+.cc-resultado-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 20px 24px;
+  margin-top: 16px;
+  border-top: 1px solid var(--cc-border);
+  flex-wrap: wrap;
+}
+
+.cc-resultado-actions .cc-btn {
+  min-width: 180px;
 }
 
 /* ===========================================

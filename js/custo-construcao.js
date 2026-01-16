@@ -1456,8 +1456,6 @@
 
     const temGaragem = garagemPatterns.some(pattern => pattern.test(textoLower));
     if (temGaragem && !isNegado('garagem') && !isNegado('vaga') && !isNegado('carro')) {
-      resultado.extras.garagem = true;
-
       // Detectar quantidade de carros
       const qtdCarrosPatterns = [
         /(\d+)\s*carros?/i,
@@ -1474,7 +1472,6 @@
           break;
         }
       }
-      resultado.extras.garagemQtd = qtdCarros;
 
       // Detectar tipo de garagem (fechada ou aberta/coberta)
       // Para apartamentos: pequenos (<60m²) = aberta, médios/grandes = fechada
@@ -1497,10 +1494,20 @@
         tipoGaragem = areaApto < 60 ? 'aberta' : 'fechada';
       }
 
+      // Armazenar quantidade e tipo (usado pelos inputs de cômodos)
+      resultado.extras.garagemQtd = qtdCarros;
       resultado.extras.garagemTipo = tipoGaragem;
 
+      // Para apartamentos: NÃO marcar o checkbox de extras (garagem externa)
+      // Usar apenas os inputs de cômodos para calcular o valor das vagas
+      // Para casas: marcar o checkbox de extras (garagem externa/construção)
+      const isApartamento = resultado.config.tipoEstrutura === 'apartamento';
+      if (!isApartamento) {
+        resultado.extras.garagem = true;
+      }
+
       const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : (tipoGaragem === 'aberta' ? 'aberta' : 'coberta');
-      resultado.encontrados.push(`Extra: Garagem (${qtdCarros} carro${qtdCarros > 1 ? 's' : ''}, ${tipoLabel})`);
+      resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel})`);
     }
 
     // Muro

@@ -421,8 +421,7 @@ const DadosMercadoImoveis = {
       default:
         return 'Valores dentro da faixa de mercado.';
     }
-  }
-};
+  },
 
   // Fatores de ajuste regional para a calculadora de custo
   // Usados para ajustar o cálculo base às realidades de mercado locais

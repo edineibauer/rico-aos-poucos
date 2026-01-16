@@ -789,8 +789,10 @@
       if (avisoApto) avisoApto.style.display = 'none';
     }
 
-    // Recalcular quando muda o tipo
-    calcularCusto();
+    // Recalcular quando muda o tipo (só se a função já estiver definida)
+    if (typeof calcularCusto === 'function') {
+      calcularCusto();
+    }
   }
 
   function updateComodosResumo() {

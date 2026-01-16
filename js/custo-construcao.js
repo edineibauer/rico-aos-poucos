@@ -282,11 +282,14 @@
         <label>${label}</label>
         <select id="cc-material-${key}" data-categoria="${key}">
           ${Object.entries(options).map(([k, info]) => {
-            const preco = info.valorM2
+            if (!info || typeof info !== 'object') return '';
+            const preco = info.valorM2 !== undefined
               ? `R$ ${formatNumber(info.valorM2)}/m²`
-              : `R$ ${formatNumber(info.valorUnidade)}/un`;
-            return `<option value="${k}" ${k === state.materiais[key] ? 'selected' : ''}>${info.nome} - ${preco}</option>`;
-          }).join('')}
+              : info.valorUnidade !== undefined
+                ? `R$ ${formatNumber(info.valorUnidade)}/un`
+                : '';
+            return `<option value="${k}" ${k === state.materiais[key] ? 'selected' : ''}>${info.nome || k} - ${preco}</option>`;
+          }).filter(Boolean).join('')}
         </select>
       </div>
     `;
@@ -1211,6 +1214,9 @@ período e negociação com fornecedores.
   }
 
   function formatNumber(num) {
+    if (num === undefined || num === null || isNaN(num)) {
+      return '0';
+    }
     return num.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   }
 

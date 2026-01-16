@@ -2056,10 +2056,15 @@
       }
     }
 
-    // Aplicar ajuste de localização do usuário se definido
+    // Aplicar ajuste de localização
     if (ajusteLocalizacaoUsuario !== undefined && ajusteLocalizacaoUsuario !== null) {
+      // Usuário definiu um ajuste manual
       fatorLocalizacao = 1 + (ajusteLocalizacaoUsuario / 100);
-    } else if (!usarPrecoMercado && temDadosMercado) {
+    } else if (usarPrecoMercado) {
+      // Para apartamentos com preço de mercado: o preço já inclui a localização
+      // Não aplicar fator adicional - usar 1.0 (preço base da região "outros")
+      fatorLocalizacao = 1.0;
+    } else if (temDadosMercado) {
       // Para casas, usar o fator de ajuste regional
       if (DadosMercadoImoveis.getFatorAjusteCompleto && bairroDetectado) {
         fatorLocalizacao = DadosMercadoImoveis.getFatorAjusteCompleto(cidadeDetectada, state.config.tipoEstrutura, bairroDetectado);

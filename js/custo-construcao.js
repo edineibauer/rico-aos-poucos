@@ -479,7 +479,6 @@
           </div>
 
           <div class="cc-section-content" id="materiais-content">
-            <p class="cc-hint">Escolha os materiais conforme seu orçamento. Os valores já incluem mão de obra de instalação.</p>
             <div class="cc-grid cc-grid-3">
               ${buildMaterialSelect('janelas', 'Janelas')}
               ${buildMaterialSelect('portas', 'Portas Internas')}
@@ -505,7 +504,6 @@
           </div>
 
           <div class="cc-section-content" id="mao-obra-content">
-            <p class="cc-hint">Desmarque os profissionais cujo custo você não terá.</p>
             <div class="cc-grid cc-grid-auto">
               ${buildMaoDeObraCheckboxes()}
             </div>
@@ -548,7 +546,6 @@
           </div>
 
           <div class="cc-section-content" id="custos-adicionais-content">
-            <p class="cc-hint">Desmarque os custos que você já pagou ou não terá.</p>
             <div class="cc-grid cc-grid-auto">
               ${buildCustosAdicionaisCheckboxes()}
             </div>

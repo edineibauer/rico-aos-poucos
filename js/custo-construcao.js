@@ -196,7 +196,7 @@
               <div class="cc-field-group-title">
                 <span class="emoji">📍</span> Localização e Estado
               </div>
-              <div class="cc-grid cc-grid-2">
+              <div class="cc-grid cc-grid-3">
                 <div class="cc-field">
                   <label>${t.regiao}</label>
                   <select id="cc-estado">
@@ -213,10 +213,6 @@
                     ).join('')}
                   </select>
                 </div>
-              </div>
-              <div class="cc-conservacao-info" id="cc-conservacao-info"></div>
-
-              <div style="margin-top: 14px;">
                 <div class="cc-field">
                   <label>Ajuste de Localização</label>
                   <select id="cc-ajuste-localizacao">
@@ -233,6 +229,7 @@
                   </select>
                 </div>
               </div>
+              <div class="cc-conservacao-info" id="cc-conservacao-info"></div>
               <div id="cc-ajuste-custom" style="display: none; margin-top: 10px;">
                 <div class="cc-input-group">
                   <input type="number" id="cc-ajuste-custom-valor" value="0" min="-50" max="200" step="5">

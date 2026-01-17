@@ -202,6 +202,7 @@
   height: 20px;
   color: var(--cc-primary);
   flex-shrink: 0;
+  margin-right: 4px;
 }
 
 .cc-btn-toggle {
@@ -316,6 +317,14 @@
   transition: all 0.2s;
 }
 
+.cc-field select {
+  padding-right: 32px;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%238888aa' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+}
+
 .cc-field select:focus,
 .cc-field input:focus {
   outline: none;
@@ -373,7 +382,7 @@
   align-items: center;
   gap: 10px;
   padding: 10px 12px;
-  background: var(--cc-card-hover);
+  background: var(--cc-card-bg);
   border: 1px solid var(--cc-border);
   border-radius: var(--cc-radius-sm);
   cursor: pointer;

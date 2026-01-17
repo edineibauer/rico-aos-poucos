@@ -489,32 +489,11 @@
           </div>
         </section>
 
-        <!-- Mão de Obra -->
-        <section class="cc-section cc-section-mao-obra">
-          <div class="cc-section-header" data-target="mao-obra-content">
-            <h2 class="cc-section-title">
-              <span class="cc-step-badge">4</span>
-              ${t.maoDeObra}
-            </h2>
-            <button class="cc-btn-toggle" data-target="mao-obra-content">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
-          </div>
-
-          <div class="cc-section-content" id="mao-obra-content">
-            <div class="cc-grid cc-grid-auto">
-              ${buildMaoDeObraCheckboxes()}
-            </div>
-          </div>
-        </section>
-
         <!-- Extras -->
         <section class="cc-section cc-section-extras">
           <div class="cc-section-header" data-target="extras-content">
             <h2 class="cc-section-title">
-              <span class="cc-step-badge">5</span>
+              <span class="cc-step-badge">4</span>
               ${t.extras}
             </h2>
             <button class="cc-btn-toggle" data-target="extras-content">
@@ -531,6 +510,33 @@
           </div>
         </section>
 
+        <!-- Mão de Obra -->
+        <section class="cc-section cc-section-mao-obra">
+          <div class="cc-section-header" data-target="mao-obra-content">
+            <h2 class="cc-section-title">
+              <span class="cc-step-badge">5</span>
+              ${t.maoDeObra}
+            </h2>
+            <div class="cc-header-actions">
+              <label class="cc-select-all" title="Marcar/Desmarcar todos">
+                <input type="checkbox" id="cc-mao-obra-select-all" checked>
+                <span>Todos</span>
+              </label>
+              <button class="cc-btn-toggle rotated" data-target="mao-obra-content">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
+          </div>
+
+          <div class="cc-section-content collapsed" id="mao-obra-content">
+            <div class="cc-grid cc-grid-auto">
+              ${buildMaoDeObraCheckboxes()}
+            </div>
+          </div>
+        </section>
+
         <!-- Custos Adicionais -->
         <section class="cc-section cc-section-custos-adicionais">
           <div class="cc-section-header" data-target="custos-adicionais-content">
@@ -538,14 +544,20 @@
               <span class="cc-step-badge">6</span>
               Projetos e Taxas
             </h2>
-            <button class="cc-btn-toggle" data-target="custos-adicionais-content">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <polyline points="6 9 12 15 18 9"></polyline>
-              </svg>
-            </button>
+            <div class="cc-header-actions">
+              <label class="cc-select-all" title="Marcar/Desmarcar todos">
+                <input type="checkbox" id="cc-custos-select-all" checked>
+                <span>Todos</span>
+              </label>
+              <button class="cc-btn-toggle rotated" data-target="custos-adicionais-content">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+            </div>
           </div>
 
-          <div class="cc-section-content" id="custos-adicionais-content">
+          <div class="cc-section-content collapsed" id="custos-adicionais-content">
             <div class="cc-grid cc-grid-auto">
               ${buildCustosAdicionaisCheckboxes()}
             </div>
@@ -2326,12 +2338,45 @@
 
     // Toggle sections
     document.querySelectorAll('.cc-btn-toggle').forEach(btn => {
-      btn.addEventListener('click', function() {
+      btn.addEventListener('click', function(e) {
+        e.stopPropagation();
         const target = document.getElementById(this.dataset.target);
         if (target) {
           target.classList.toggle('collapsed');
           this.classList.toggle('rotated');
         }
+      });
+    });
+
+    // Header click to toggle sections
+    document.querySelectorAll('.cc-section-header').forEach(header => {
+      header.addEventListener('click', function(e) {
+        if (e.target.closest('.cc-btn-toggle') || e.target.closest('.cc-select-all')) return;
+        const targetId = this.dataset.target;
+        const target = document.getElementById(targetId);
+        const btn = this.querySelector('.cc-btn-toggle');
+        if (target && btn) {
+          target.classList.toggle('collapsed');
+          btn.classList.toggle('rotated');
+        }
+      });
+    });
+
+    // Select all - Mão de Obra
+    document.getElementById('cc-mao-obra-select-all')?.addEventListener('change', function() {
+      const isChecked = this.checked;
+      document.querySelectorAll('#mao-obra-content .cc-checkbox input[type="checkbox"]').forEach(cb => {
+        cb.checked = isChecked;
+        cb.dispatchEvent(new Event('change', { bubbles: true }));
+      });
+    });
+
+    // Select all - Custos Adicionais
+    document.getElementById('cc-custos-select-all')?.addEventListener('change', function() {
+      const isChecked = this.checked;
+      document.querySelectorAll('#custos-adicionais-content .cc-checkbox input[type="checkbox"]').forEach(cb => {
+        cb.checked = isChecked;
+        cb.dispatchEvent(new Event('change', { bubbles: true }));
       });
     });
 

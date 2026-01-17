@@ -217,6 +217,7 @@
   cursor: pointer;
   color: var(--cc-text-muted);
   transition: all 0.2s;
+  transform: rotate(180deg);
 }
 
 .cc-btn-toggle:hover {
@@ -226,7 +227,43 @@
 }
 
 .cc-btn-toggle.rotated {
-  transform: rotate(180deg);
+  transform: rotate(0deg);
+}
+
+.cc-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.cc-select-all {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: var(--cc-card-bg);
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius-sm);
+  cursor: pointer;
+  font-size: 0.8rem;
+  color: var(--cc-text-muted);
+  transition: all 0.2s;
+}
+
+.cc-select-all:hover {
+  border-color: var(--cc-primary);
+  color: var(--cc-text);
+}
+
+.cc-select-all input {
+  width: 14px;
+  height: 14px;
+  accent-color: var(--cc-primary);
+  cursor: pointer;
+}
+
+.cc-select-all span {
+  white-space: nowrap;
 }
 
 .cc-section-content {

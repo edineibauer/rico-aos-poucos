@@ -197,6 +197,13 @@
   opacity: 0.9;
 }
 
+.cc-section-title > svg {
+  width: 20px;
+  height: 20px;
+  color: var(--cc-primary);
+  flex-shrink: 0;
+}
+
 .cc-btn-toggle {
   display: flex;
   align-items: center;

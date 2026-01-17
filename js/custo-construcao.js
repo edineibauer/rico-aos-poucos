@@ -139,20 +139,19 @@
 
         <!-- Descrição Inteligente -->
         <section class="cc-section cc-section-descricao">
-          <h2 class="cc-section-title">
-            <span>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <div class="cc-section-header" data-target="descricao-content">
+            <h2 class="cc-section-title">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M12 20h9"/><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/>
               </svg>
               Descrição Rápida
-            </span>
+            </h2>
             <button class="cc-btn-toggle" data-target="descricao-content">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <polyline points="6 9 12 15 18 9"></polyline>
               </svg>
             </button>
-          </h2>
-
+          </div>
           <div class="cc-section-content" id="descricao-content">
             <textarea
               id="cc-descricao-texto"

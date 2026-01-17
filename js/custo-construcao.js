@@ -19,11 +19,16 @@
       numSuites: 0,
       numBanheiros: 1,
       numEscritorios: 0,
+      numClosets: 0,
+      numLavabos: 0,
       temSala: true,
+      temSalaJantar: false,
       temCozinha: true,
+      temCopa: false,
       temAreaServico: true,
       temDespensa: false,
       temVaranda: false,
+      temHallEntrada: false,
       // Garagem
       garagemVagas: 0,
       garagemTipo: 'aberta',
@@ -318,7 +323,7 @@
               <div class="cc-field-group-title">
                 <span class="emoji">🛏️</span> Quartos e Banheiros
               </div>
-              <div class="cc-grid cc-grid-4">
+              <div class="cc-grid cc-grid-3">
                 <div class="cc-field">
                   <label>Quartos</label>
                   <input type="number" id="cc-quartos" value="${state.config.numQuartos}" min="0" max="10">
@@ -331,9 +336,19 @@
                   <label>Banheiros Extras</label>
                   <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="0" max="10">
                 </div>
+              </div>
+              <div class="cc-grid cc-grid-3" style="margin-top: 12px;">
                 <div class="cc-field">
-                  <label>Escritório</label>
+                  <label>Closets</label>
+                  <input type="number" id="cc-closets" value="${state.config.numClosets || 0}" min="0" max="10">
+                </div>
+                <div class="cc-field">
+                  <label>Escritórios</label>
                   <input type="number" id="cc-escritorios" value="${state.config.numEscritorios || 0}" min="0" max="5">
+                </div>
+                <div class="cc-field">
+                  <label>Lavabos</label>
+                  <input type="number" id="cc-lavabos" value="${state.config.numLavabos || 0}" min="0" max="5">
                 </div>
               </div>
             </div>
@@ -345,6 +360,14 @@
               </div>
               <div class="cc-grid cc-grid-auto">
                 <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-sala-jantar" ${state.config.temSalaJantar ? 'checked' : ''}>
+                  <span>Sala de Jantar</span>
+                </label>
+                <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-copa" ${state.config.temCopa ? 'checked' : ''}>
+                  <span>Copa</span>
+                </label>
+                <label class="cc-checkbox">
                   <input type="checkbox" id="cc-area-servico" ${state.config.temAreaServico ? 'checked' : ''}>
                   <span>Área de Serviço</span>
                 </label>
@@ -355,6 +378,10 @@
                 <label class="cc-checkbox">
                   <input type="checkbox" id="cc-varanda" ${state.config.temVaranda ? 'checked' : ''}>
                   <span>Varanda/Sacada</span>
+                </label>
+                <label class="cc-checkbox">
+                  <input type="checkbox" id="cc-hall-entrada" ${state.config.temHallEntrada ? 'checked' : ''}>
+                  <span>Hall de Entrada</span>
                 </label>
               </div>
             </div>
@@ -2130,10 +2157,17 @@
       numQuartos: 0,
       numSuites: 0,
       numBanheiros: 0,
+      numEscritorios: 0,
+      numClosets: 0,
+      numLavabos: 0,
       temSala: true,
+      temSalaJantar: false,
       temCozinha: true,
+      temCopa: false,
       temAreaServico: false,
+      temDespensa: false,
       temVaranda: false,
+      temHallEntrada: false,
       garagemVagas: 0,
       garagemTipo: 'aberta',
       cidadeInfo: null,
@@ -2384,6 +2418,38 @@
       calculate();
     });
 
+    // Closets
+    document.getElementById('cc-closets')?.addEventListener('input', function() {
+      state.config.numClosets = parseInt(this.value) || 0;
+      updateComodosResumo();
+      calculate();
+    });
+
+    // Lavabos
+    document.getElementById('cc-lavabos')?.addEventListener('input', function() {
+      state.config.numLavabos = parseInt(this.value) || 0;
+      updateComodosResumo();
+      calculate();
+    });
+
+    // Sala de Jantar
+    document.getElementById('cc-sala-jantar')?.addEventListener('change', function() {
+      state.config.temSalaJantar = this.checked;
+      calculate();
+    });
+
+    // Copa
+    document.getElementById('cc-copa')?.addEventListener('change', function() {
+      state.config.temCopa = this.checked;
+      calculate();
+    });
+
+    // Hall de Entrada
+    document.getElementById('cc-hall-entrada')?.addEventListener('change', function() {
+      state.config.temHallEntrada = this.checked;
+      calculate();
+    });
+
     // Garagem - vagas e tipo (nos cômodos)
     document.getElementById('cc-vagas-garagem')?.addEventListener('input', function() {
       state.config.garagemVagas = parseInt(this.value) || 0;
@@ -2626,11 +2692,26 @@
     if (state.config.numEscritorios > 0) {
       custoComodosExtra += state.config.numEscritorios * 5000 * padrao.fator * fatorConservacao; // ~5k por escritório
     }
+    if (state.config.numClosets > 0) {
+      custoComodosExtra += state.config.numClosets * 4000 * padrao.fator * fatorConservacao; // ~4k por closet
+    }
+    if (state.config.numLavabos > 0) {
+      custoComodosExtra += state.config.numLavabos * 6000 * padrao.fator * fatorConservacao; // ~6k por lavabo
+    }
+    if (state.config.temSalaJantar) {
+      custoComodosExtra += 5000 * padrao.fator * fatorConservacao; // ~5k sala de jantar separada
+    }
+    if (state.config.temCopa) {
+      custoComodosExtra += 4000 * padrao.fator * fatorConservacao; // ~4k copa
+    }
     if (state.config.temDespensa) {
       custoComodosExtra += 3000 * padrao.fator * fatorConservacao; // ~3k despensa
     }
     if (state.config.temVaranda) {
       custoComodosExtra += 8000 * padrao.fator * fatorConservacao; // ~8k varanda/sacada
+    }
+    if (state.config.temHallEntrada) {
+      custoComodosExtra += 3500 * padrao.fator * fatorConservacao; // ~3.5k hall de entrada
     }
 
     // Custo base da construção

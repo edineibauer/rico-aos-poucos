@@ -135,58 +135,6 @@ const CustoConstrucaoData = {
     }
   },
 
-  // Tipos de construção (método construtivo)
-  tiposConstrucao: {
-    'alvenaria': {
-      nome: 'Alvenaria Convencional',
-      descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto',
-      fator: 1.0,
-      tempoObra: 1.0,
-      vantagens: ['Durabilidade', 'Flexibilidade de projeto', 'Mão de obra disponível'],
-      desvantagens: ['Maior tempo de obra', 'Mais resíduos', 'Maior consumo de água']
-    },
-    'steel_frame': {
-      nome: 'Steel Frame',
-      descricao: 'Estrutura em aço galvanizado com fechamento em placas',
-      fator: 1.15,
-      tempoObra: 0.7,
-      vantagens: ['Obra mais rápida', 'Menos resíduos', 'Precisão'],
-      desvantagens: ['Custo inicial maior', 'Mão de obra especializada']
-    },
-    'wood_frame': {
-      nome: 'Wood Frame (Madeira)',
-      descricao: 'Estrutura em madeira tratada com fechamento em placas',
-      fator: 1.20,
-      tempoObra: 0.65,
-      vantagens: ['Sustentável', 'Excelente isolamento térmico', 'Obra rápida'],
-      desvantagens: ['Custo maior', 'Manutenção periódica']
-    },
-    'eps': {
-      nome: 'Painéis EPS (Isopor)',
-      descricao: 'Painéis de poliestireno expandido revestidos com argamassa',
-      fator: 0.78,
-      tempoObra: 0.6,
-      vantagens: ['Custo menor', 'Obra rápida', 'Bom isolamento térmico'],
-      desvantagens: ['Limitações estruturais', 'Menos resistente a impactos']
-    },
-    'mista': {
-      nome: 'Construção Mista',
-      descricao: 'Combinação de alvenaria com outros sistemas',
-      fator: 1.05,
-      tempoObra: 0.85,
-      vantagens: ['Flexibilidade', 'Otimização de custos'],
-      desvantagens: ['Requer planejamento cuidadoso']
-    },
-    'pre_fabricada': {
-      nome: 'Pré-Fabricada',
-      descricao: 'Casa com módulos industrializados',
-      fator: 1.30,
-      tempoObra: 0.4,
-      vantagens: ['Obra muito rápida', 'Controle de qualidade'],
-      desvantagens: ['Custo maior', 'Menos personalização']
-    }
-  },
-
   // Padrões de acabamento
   padroes: {
     'popular': {
@@ -231,6 +179,246 @@ const CustoConstrucaoData = {
   custoBaseM2: {
     materiais: 1076,
     maoDeObra: 807
+  },
+
+  // =====================================================
+  // COMPOSIÇÃO DETALHADA DE MATERIAIS POR TIPO DE CONSTRUÇÃO
+  // =====================================================
+  // Preços unitários base dos materiais (podem ser personalizados pelo usuário)
+  materiaisBase: {
+    // Materiais de alvenaria
+    tijolo_ceramico: { nome: 'Tijolo Cerâmico 9 furos', unidade: 'milheiro', preco: 850, categoria: 'estrutura' },
+    bloco_concreto: { nome: 'Bloco de Concreto 14x19x39', unidade: 'unidade', preco: 3.50, categoria: 'estrutura' },
+    cimento: { nome: 'Cimento CP-II 50kg', unidade: 'saco', preco: 38, categoria: 'estrutura' },
+    areia_media: { nome: 'Areia Média', unidade: 'm³', preco: 130, categoria: 'estrutura' },
+    areia_fina: { nome: 'Areia Fina', unidade: 'm³', preco: 145, categoria: 'estrutura' },
+    brita: { nome: 'Brita 1', unidade: 'm³', preco: 140, categoria: 'estrutura' },
+    ferro_8mm: { nome: 'Ferro CA-50 8mm', unidade: 'kg', preco: 8.50, categoria: 'estrutura' },
+    ferro_10mm: { nome: 'Ferro CA-50 10mm', unidade: 'kg', preco: 8.50, categoria: 'estrutura' },
+    ferro_12mm: { nome: 'Ferro CA-50 12mm', unidade: 'kg', preco: 9.00, categoria: 'estrutura' },
+    arame_recozido: { nome: 'Arame Recozido', unidade: 'kg', preco: 14, categoria: 'estrutura' },
+
+    // Materiais para Steel Frame
+    perfil_aco: { nome: 'Perfil de Aço Galvanizado', unidade: 'm', preco: 28, categoria: 'estrutura' },
+    parafuso_auto: { nome: 'Parafuso Auto-Brocante', unidade: 'unidade', preco: 0.35, categoria: 'estrutura' },
+    placa_osb: { nome: 'Placa OSB 18mm', unidade: 'm²', preco: 75, categoria: 'fechamento' },
+    placa_cimenticia: { nome: 'Placa Cimentícia 10mm', unidade: 'm²', preco: 65, categoria: 'fechamento' },
+    la_vidro: { nome: 'Lã de Vidro 50mm', unidade: 'm²', preco: 28, categoria: 'isolamento' },
+
+    // Materiais para Wood Frame
+    madeira_pinus_tratado: { nome: 'Pinus Tratado (estrutura)', unidade: 'm³', preco: 2200, categoria: 'estrutura' },
+    madeira_eucalipto: { nome: 'Eucalipto Tratado', unidade: 'm³', preco: 1800, categoria: 'estrutura' },
+    madeira_nobre: { nome: 'Madeira Nobre (Ipê, Cumaru)', unidade: 'm³', preco: 8500, categoria: 'estrutura' },
+
+    // Materiais para EPS
+    painel_eps: { nome: 'Painel EPS 10cm', unidade: 'm²', preco: 85, categoria: 'estrutura' },
+    tela_galvanizada: { nome: 'Tela Galvanizada', unidade: 'm²', preco: 18, categoria: 'estrutura' },
+    argamassa_projetada: { nome: 'Argamassa Projetada', unidade: 'saco 40kg', preco: 45, categoria: 'estrutura' },
+
+    // Instalações
+    fio_eletrico_2_5mm: { nome: 'Fio Elétrico 2,5mm', unidade: 'm', preco: 2.80, categoria: 'eletrica' },
+    fio_eletrico_4mm: { nome: 'Fio Elétrico 4mm', unidade: 'm', preco: 4.50, categoria: 'eletrica' },
+    fio_eletrico_6mm: { nome: 'Fio Elétrico 6mm', unidade: 'm', preco: 7.20, categoria: 'eletrica' },
+    tubo_pvc_25mm: { nome: 'Tubo PVC 25mm', unidade: 'm', preco: 4.50, categoria: 'hidraulica' },
+    tubo_pvc_50mm: { nome: 'Tubo PVC 50mm', unidade: 'm', preco: 12, categoria: 'hidraulica' },
+    tubo_pvc_100mm: { nome: 'Tubo PVC 100mm', unidade: 'm', preco: 28, categoria: 'hidraulica' },
+
+    // Acabamentos
+    argamassa_colante: { nome: 'Argamassa Colante AC-II', unidade: 'saco 20kg', preco: 28, categoria: 'acabamento' },
+    rejunte: { nome: 'Rejunte', unidade: 'kg', preco: 8, categoria: 'acabamento' },
+    massa_corrida: { nome: 'Massa Corrida PVA', unidade: 'lata 18L', preco: 95, categoria: 'acabamento' },
+    tinta_acrilica: { nome: 'Tinta Acrílica', unidade: 'lata 18L', preco: 320, categoria: 'acabamento' },
+    selador: { nome: 'Selador Acrílico', unidade: 'lata 18L', preco: 180, categoria: 'acabamento' }
+  },
+
+  // Composição de materiais por tipo de construção (quantidade por m² de área construída)
+  composicaoMateriais: {
+    alvenaria: {
+      nome: 'Alvenaria Convencional',
+      descricao: 'Construção tradicional com tijolos e concreto armado',
+      materiais: {
+        tijolo_ceramico: { qtdPorM2: 0.025, unidadeCalc: 'milheiro' }, // 25 tijolos por m²
+        cimento: { qtdPorM2: 0.45, unidadeCalc: 'saco' }, // ~22 sacos para 50m²
+        areia_media: { qtdPorM2: 0.08, unidadeCalc: 'm³' },
+        areia_fina: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.06, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 4.5, unidadeCalc: 'kg' },
+        ferro_10mm: { qtdPorM2: 2.0, unidadeCalc: 'kg' },
+        arame_recozido: { qtdPorM2: 0.3, unidadeCalc: 'kg' },
+        argamassa_colante: { qtdPorM2: 0.25, unidadeCalc: 'saco' },
+        massa_corrida: { qtdPorM2: 0.04, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+      },
+      maoDeObraFator: 1.0
+    },
+    steel_frame: {
+      nome: 'Steel Frame',
+      descricao: 'Estrutura em aço galvanizado com fechamento em placas',
+      materiais: {
+        perfil_aco: { qtdPorM2: 8.5, unidadeCalc: 'm' },
+        parafuso_auto: { qtdPorM2: 45, unidadeCalc: 'unidade' },
+        placa_osb: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        placa_cimenticia: { qtdPorM2: 2.4, unidadeCalc: 'm²' }, // interno e externo
+        la_vidro: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.2, unidadeCalc: 'saco' },
+        massa_corrida: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+      },
+      maoDeObraFator: 0.85, // mão de obra mais rápida
+      vantagens: ['Obra 30% mais rápida', 'Menos resíduos', 'Alta precisão'],
+      desvantagens: ['Mão de obra especializada', 'Maior custo de material']
+    },
+    wood_frame: {
+      nome: 'Wood Frame (Madeira)',
+      descricao: 'Estrutura em madeira tratada',
+      subtipos: {
+        economico: {
+          nome: 'Madeira Econômica (Pinus/Eucalipto)',
+          fator: 1.0,
+          material: 'madeira_pinus_tratado'
+        },
+        premium: {
+          nome: 'Madeira Nobre (Ipê, Cumaru)',
+          fator: 2.2,
+          material: 'madeira_nobre'
+        }
+      },
+      materiais: {
+        madeira_pinus_tratado: { qtdPorM2: 0.08, unidadeCalc: 'm³' }, // ou madeira_nobre
+        placa_osb: { qtdPorM2: 2.2, unidadeCalc: 'm²' },
+        la_vidro: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.15, unidadeCalc: 'saco' },
+        massa_corrida: { qtdPorM2: 0.03, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+      },
+      maoDeObraFator: 0.80, // mão de obra mais rápida ainda
+      vantagens: ['Sustentável', 'Excelente isolamento térmico', 'Obra rápida'],
+      desvantagens: ['Requer tratamento da madeira', 'Manutenção periódica']
+    },
+    eps: {
+      nome: 'Painéis EPS (Isopor Estrutural)',
+      descricao: 'Painéis de poliestireno com malha de aço e argamassa',
+      materiais: {
+        painel_eps: { qtdPorM2: 2.6, unidadeCalc: 'm²' }, // paredes internas e externas
+        tela_galvanizada: { qtdPorM2: 2.8, unidadeCalc: 'm²' },
+        argamassa_projetada: { qtdPorM2: 1.2, unidadeCalc: 'saco' },
+        ferro_8mm: { qtdPorM2: 1.5, unidadeCalc: 'kg' }, // menos ferro que alvenaria
+        cimento: { qtdPorM2: 0.15, unidadeCalc: 'saco' }, // menos cimento
+        areia_fina: { qtdPorM2: 0.02, unidadeCalc: 'm³' },
+        argamassa_colante: { qtdPorM2: 0.2, unidadeCalc: 'saco' },
+        massa_corrida: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+      },
+      maoDeObraFator: 0.70, // obra mais rápida - 40% menos mão de obra
+      naoUsa: ['tijolo_ceramico', 'brita', 'areia_media'], // materiais que NÃO usa
+      vantagens: ['Custo de material menor', 'Obra muito rápida', 'Excelente isolamento'],
+      desvantagens: ['Limitações em vãos grandes', 'Menos resistente a impactos', 'Requer cuidado com fixações']
+    },
+    mista: {
+      nome: 'Construção Mista',
+      descricao: 'Combinação de alvenaria com outros sistemas',
+      materiais: {
+        tijolo_ceramico: { qtdPorM2: 0.018, unidadeCalc: 'milheiro' },
+        cimento: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        areia_media: { qtdPorM2: 0.06, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 3.5, unidadeCalc: 'kg' },
+        perfil_aco: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        argamassa_colante: { qtdPorM2: 0.22, unidadeCalc: 'saco' },
+        massa_corrida: { qtdPorM2: 0.038, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+      },
+      maoDeObraFator: 0.90
+    },
+    pre_fabricada: {
+      nome: 'Pré-Fabricada/Modular',
+      descricao: 'Módulos industrializados montados no local',
+      materiais: {
+        // Custos são principalmente do módulo pronto
+        cimento: { qtdPorM2: 0.10, unidadeCalc: 'saco' }, // apenas fundação
+        areia_media: { qtdPorM2: 0.02, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 1.0, unidadeCalc: 'kg' }
+      },
+      custoModuloPorM2: 1450, // custo do módulo pronto por m²
+      maoDeObraFator: 0.50, // muito menos mão de obra local
+      vantagens: ['Obra muito rápida (2-4 semanas)', 'Controle de qualidade fabril'],
+      desvantagens: ['Menos personalização', 'Custo maior', 'Transporte dos módulos']
+    }
+  },
+
+  // Atualizar tiposConstrucao com referência às composições
+  tiposConstrucao: {
+    'alvenaria': {
+      nome: 'Alvenaria Convencional',
+      descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto',
+      composicao: 'alvenaria',
+      fator: 1.0,
+      tempoObra: 1.0,
+      vantagens: ['Durabilidade', 'Flexibilidade de projeto', 'Mão de obra disponível'],
+      desvantagens: ['Maior tempo de obra', 'Mais resíduos', 'Maior consumo de água']
+    },
+    'steel_frame': {
+      nome: 'Steel Frame',
+      descricao: 'Estrutura em aço galvanizado com fechamento em placas',
+      composicao: 'steel_frame',
+      fator: 1.12, // revisado: 12% mais caro que alvenaria
+      tempoObra: 0.7,
+      vantagens: ['Obra mais rápida', 'Menos resíduos', 'Precisão'],
+      desvantagens: ['Custo inicial maior', 'Mão de obra especializada']
+    },
+    'wood_frame': {
+      nome: 'Wood Frame Econômico',
+      descricao: 'Estrutura em madeira tratada (pinus/eucalipto)',
+      composicao: 'wood_frame',
+      subtipo: 'economico',
+      fator: 0.95, // revisado: 5% mais barato (madeira comum)
+      tempoObra: 0.65,
+      vantagens: ['Sustentável', 'Bom isolamento térmico', 'Obra rápida'],
+      desvantagens: ['Manutenção periódica', 'Tratamento necessário']
+    },
+    'wood_frame_premium': {
+      nome: 'Wood Frame Premium',
+      descricao: 'Estrutura em madeira nobre (ipê, cumaru)',
+      composicao: 'wood_frame',
+      subtipo: 'premium',
+      fator: 1.85, // madeira nobre é muito mais cara
+      tempoObra: 0.65,
+      vantagens: ['Alta durabilidade', 'Estética premium', 'Valorização'],
+      desvantagens: ['Custo elevado', 'Mão de obra especializada']
+    },
+    'eps': {
+      nome: 'Painéis EPS (Isopor)',
+      descricao: 'Painéis de poliestireno expandido com argamassa projetada',
+      composicao: 'eps',
+      fator: 0.82, // revisado: 18% mais barato
+      tempoObra: 0.6,
+      vantagens: ['Custo menor', 'Obra muito rápida', 'Excelente isolamento térmico'],
+      desvantagens: ['Vãos limitados', 'Cuidado com fixações', 'Menos resistente a impactos']
+    },
+    'mista': {
+      nome: 'Construção Mista',
+      descricao: 'Combinação de alvenaria com outros sistemas',
+      composicao: 'mista',
+      fator: 1.05,
+      tempoObra: 0.85,
+      vantagens: ['Flexibilidade', 'Otimização de custos'],
+      desvantagens: ['Requer planejamento cuidadoso']
+    },
+    'pre_fabricada': {
+      nome: 'Pré-Fabricada/Modular',
+      descricao: 'Casa com módulos industrializados',
+      composicao: 'pre_fabricada',
+      fator: 1.25, // revisado: 25% mais caro
+      tempoObra: 0.4,
+      vantagens: ['Obra muito rápida', 'Controle de qualidade'],
+      desvantagens: ['Custo maior', 'Menos personalização', 'Transporte']
+    }
   },
 
   // Custo base do terreno por m² (valores médios de mercado)

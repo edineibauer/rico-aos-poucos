@@ -3118,6 +3118,17 @@
     const custoTotal = custoBase + custoExtras + custoAdicionais + custoTerreno;
     const custoM2Final = custoTotal / area;
 
+    // Calcular breakdown detalhado de materiais por tipo de construção
+    const breakdownMateriais = calcularBreakdownMateriais(
+      state.config.tipoConstrucao,
+      area,
+      padrao.fator,
+      regiao.fator
+    );
+
+    // Verificar se há preços personalizados
+    const usandoPrecosCustom = temPrecosPersonalizados();
+
     // Salvar para exportação
     state.calculoAtual = {
       custoTotal,
@@ -3134,6 +3145,8 @@
       detalhesMateriais,
       detalhesExtras,
       detalhesAdicionais,
+      breakdownMateriais,
+      usandoPrecosCustom,
       config: { ...state.config },
       regiao,
       estrutura,
@@ -3319,7 +3332,53 @@
         </div>
       </div>
 
+      ${breakdownMateriais.materiais.length > 0 ? `
+      <div class="cc-resultado-breakdown-materiais">
+        <div class="cc-breakdown-header">
+          <h4>📦 Detalhamento de Materiais (${metodo.nome})</h4>
+          ${usandoPrecosCustom ? '<span class="cc-custom-badge">Preços Personalizados</span>' : ''}
+        </div>
+        <div class="cc-materiais-grid">
+          ${breakdownMateriais.materiais.slice(0, 8).map(m => `
+            <div class="cc-material-item">
+              <span class="cc-material-nome">${m.nome}</span>
+              <span class="cc-material-qtd">${m.qtdFormatada}</span>
+              <span class="cc-material-valor">R$ ${formatNumber(m.custo)}</span>
+            </div>
+          `).join('')}
+        </div>
+        ${breakdownMateriais.materiais.length > 8 ? `
+          <details class="cc-mais-materiais">
+            <summary>Ver mais ${breakdownMateriais.materiais.length - 8} materiais</summary>
+            <div class="cc-materiais-grid">
+              ${breakdownMateriais.materiais.slice(8).map(m => `
+                <div class="cc-material-item">
+                  <span class="cc-material-nome">${m.nome}</span>
+                  <span class="cc-material-qtd">${m.qtdFormatada}</span>
+                  <span class="cc-material-valor">R$ ${formatNumber(m.custo)}</span>
+                </div>
+              `).join('')}
+            </div>
+          </details>
+        ` : ''}
+        <div class="cc-materiais-total">
+          <span>Total Estimado em Materiais Base:</span>
+          <span>R$ ${formatNumber(breakdownMateriais.totalMateriais)}</span>
+        </div>
+        <p class="cc-materiais-nota">
+          <small>* Valores estimados baseados em quantidades médias por m². Pode variar conforme projeto específico.</small>
+        </p>
+      </div>
+      ` : ''}
+
       <div class="cc-resultado-actions">
+        <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.abrirModalPrecos()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="3"></circle>
+            <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+          </svg>
+          Personalizar Preços
+        </button>
         <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.exportarExcel()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -3470,10 +3529,425 @@ ${c.detalhesAdicionais.length > 0 ? `
     return num.toLocaleString('pt-BR', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
   }
 
+  // =====================================================
+  // SISTEMA DE PREÇOS PERSONALIZADOS
+  // =====================================================
+  const STORAGE_KEY = 'rico-custo-construcao-precos';
+
+  // Obter preços (personalizados ou padrão)
+  function getPrecosMateriais() {
+    try {
+      const saved = localStorage.getItem(STORAGE_KEY);
+      if (saved) {
+        return JSON.parse(saved);
+      }
+    } catch (e) {
+      console.warn('Erro ao carregar preços personalizados:', e);
+    }
+    return null; // Retorna null para usar padrão
+  }
+
+  // Salvar preços personalizados
+  function salvarPrecosMateriais(precos) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(precos));
+      return true;
+    } catch (e) {
+      console.error('Erro ao salvar preços:', e);
+      return false;
+    }
+  }
+
+  // Limpar preços personalizados (voltar ao padrão)
+  function limparPrecosMateriais() {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+      return true;
+    } catch (e) {
+      return false;
+    }
+  }
+
+  // Obter preço de um material específico
+  function getPrecoMaterial(materialKey) {
+    const customPrecos = getPrecosMateriais();
+    if (customPrecos && customPrecos[materialKey] !== undefined) {
+      return customPrecos[materialKey];
+    }
+    // Usar preço padrão
+    if (data.materiaisBase && data.materiaisBase[materialKey]) {
+      return data.materiaisBase[materialKey].preco;
+    }
+    return 0;
+  }
+
+  // Calcular breakdown de materiais baseado na composição
+  function calcularBreakdownMateriais(tipoConstrucao, area, fatorPadrao, fatorRegiao) {
+    const breakdown = {
+      materiais: [],
+      totalMateriais: 0,
+      composicao: null
+    };
+
+    // Obter composição para o tipo de construção
+    const metodo = data.tiposConstrucao[tipoConstrucao];
+    if (!metodo || !metodo.composicao) {
+      return breakdown;
+    }
+
+    const composicaoKey = metodo.composicao;
+    const composicao = data.composicaoMateriais[composicaoKey];
+    if (!composicao || !composicao.materiais) {
+      return breakdown;
+    }
+
+    breakdown.composicao = composicao;
+
+    // Calcular custo de cada material
+    Object.entries(composicao.materiais).forEach(([materialKey, config]) => {
+      const materialInfo = data.materiaisBase[materialKey];
+      if (!materialInfo) return;
+
+      const preco = getPrecoMaterial(materialKey);
+      const quantidade = config.qtdPorM2 * area;
+      const custoMaterial = quantidade * preco * fatorPadrao * fatorRegiao;
+
+      breakdown.materiais.push({
+        key: materialKey,
+        nome: materialInfo.nome,
+        unidade: materialInfo.unidade,
+        categoria: materialInfo.categoria,
+        precoUnitario: preco,
+        quantidade: quantidade,
+        qtdFormatada: formatarQuantidade(quantidade, config.unidadeCalc),
+        custo: custoMaterial
+      });
+
+      breakdown.totalMateriais += custoMaterial;
+    });
+
+    // Ordenar por custo (maior primeiro)
+    breakdown.materiais.sort((a, b) => b.custo - a.custo);
+
+    return breakdown;
+  }
+
+  // Formatar quantidade com unidade
+  function formatarQuantidade(qtd, unidade) {
+    if (qtd >= 1000) {
+      return `${(qtd / 1000).toFixed(1)}k ${unidade}`;
+    }
+    if (qtd < 1) {
+      return `${(qtd * 1000).toFixed(0)} ${unidade === 'm³' ? 'L' : unidade}`;
+    }
+    return `${qtd.toFixed(qtd < 10 ? 1 : 0)} ${unidade}`;
+  }
+
+  // =====================================================
+  // MODAL DE PERSONALIZAÇÃO DE PREÇOS
+  // =====================================================
+  function abrirModalPrecos() {
+    // Remover modal existente se houver
+    const existente = document.getElementById('cc-modal-precos');
+    if (existente) existente.remove();
+
+    const customPrecos = getPrecosMateriais() || {};
+    const temCustom = Object.keys(customPrecos).length > 0;
+
+    // Agrupar materiais por categoria
+    const categorias = {};
+    Object.entries(data.materiaisBase).forEach(([key, info]) => {
+      const cat = info.categoria || 'outros';
+      if (!categorias[cat]) categorias[cat] = [];
+      categorias[cat].push({ key, ...info });
+    });
+
+    const categoriasNomes = {
+      estrutura: '🏗️ Estrutura',
+      fechamento: '🧱 Fechamento',
+      isolamento: '🌡️ Isolamento',
+      eletrica: '⚡ Elétrica',
+      hidraulica: '🚿 Hidráulica',
+      acabamento: '🎨 Acabamento',
+      outros: '📦 Outros'
+    };
+
+    let materiaisHtml = '';
+    Object.entries(categorias).forEach(([cat, materiais]) => {
+      materiaisHtml += `
+        <div class="cc-modal-categoria">
+          <div class="cc-modal-categoria-titulo">${categoriasNomes[cat] || cat}</div>
+          <div class="cc-modal-materiais-grid">
+            ${materiais.map(m => {
+              const precoAtual = customPrecos[m.key] !== undefined ? customPrecos[m.key] : m.preco;
+              const isCustom = customPrecos[m.key] !== undefined;
+              return `
+                <div class="cc-modal-material ${isCustom ? 'cc-custom' : ''}">
+                  <label>${m.nome}</label>
+                  <div class="cc-modal-input-group">
+                    <span class="cc-modal-prefix">R$</span>
+                    <input type="number"
+                      id="cc-preco-${m.key}"
+                      value="${precoAtual}"
+                      data-default="${m.preco}"
+                      data-key="${m.key}"
+                      step="0.01"
+                      min="0">
+                    <span class="cc-modal-suffix">/${m.unidade}</span>
+                  </div>
+                  <small class="cc-modal-default">Padrão: R$ ${m.preco.toFixed(2)}</small>
+                </div>
+              `;
+            }).join('')}
+          </div>
+        </div>
+      `;
+    });
+
+    const modal = document.createElement('div');
+    modal.id = 'cc-modal-precos';
+    modal.className = 'cc-modal-overlay';
+    modal.innerHTML = `
+      <div class="cc-modal-content">
+        <div class="cc-modal-header">
+          <h3>⚙️ Personalizar Preços de Materiais</h3>
+          <button class="cc-modal-close" onclick="CustoConstrucao.fecharModalPrecos()">×</button>
+        </div>
+        <div class="cc-modal-body">
+          <p class="cc-modal-info">
+            Ajuste os preços dos materiais conforme sua região ou fornecedores.
+            Os valores serão salvos localmente no seu navegador.
+          </p>
+          ${temCustom ? `
+            <div class="cc-modal-alert">
+              <span>⚠️ Você está usando preços personalizados</span>
+              <button class="cc-btn cc-btn-small cc-btn-danger" onclick="CustoConstrucao.confirmarResetPrecos()">
+                Restaurar Padrão
+              </button>
+            </div>
+          ` : ''}
+          ${materiaisHtml}
+        </div>
+        <div class="cc-modal-footer">
+          <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.fecharModalPrecos()">Cancelar</button>
+          <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.salvarModalPrecos()">
+            💾 Salvar Preços
+          </button>
+        </div>
+      </div>
+    `;
+
+    document.body.appendChild(modal);
+
+    // Adicionar estilo do modal se não existir
+    if (!document.getElementById('cc-modal-styles')) {
+      const style = document.createElement('style');
+      style.id = 'cc-modal-styles';
+      style.textContent = `
+        .cc-modal-overlay {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(0,0,0,0.7);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          z-index: 10000;
+          padding: 20px;
+        }
+        .cc-modal-content {
+          background: var(--cc-card-bg, #1e1e1e);
+          border-radius: 12px;
+          max-width: 900px;
+          width: 100%;
+          max-height: 85vh;
+          display: flex;
+          flex-direction: column;
+          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+        }
+        .cc-modal-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 16px 20px;
+          border-bottom: 1px solid var(--cc-border, #333);
+        }
+        .cc-modal-header h3 {
+          margin: 0;
+          font-size: 1.1rem;
+          color: var(--cc-text, #fff);
+        }
+        .cc-modal-close {
+          background: none;
+          border: none;
+          font-size: 24px;
+          cursor: pointer;
+          color: var(--cc-text-secondary, #888);
+          padding: 0 8px;
+        }
+        .cc-modal-close:hover { color: var(--cc-text, #fff); }
+        .cc-modal-body {
+          padding: 20px;
+          overflow-y: auto;
+          flex: 1;
+        }
+        .cc-modal-info {
+          color: var(--cc-text-secondary, #888);
+          font-size: 0.9rem;
+          margin-bottom: 16px;
+        }
+        .cc-modal-alert {
+          background: rgba(255,193,7,0.15);
+          border: 1px solid rgba(255,193,7,0.3);
+          border-radius: 8px;
+          padding: 12px 16px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-bottom: 20px;
+          color: #ffc107;
+        }
+        .cc-modal-categoria {
+          margin-bottom: 24px;
+        }
+        .cc-modal-categoria-titulo {
+          font-weight: 600;
+          font-size: 1rem;
+          margin-bottom: 12px;
+          color: var(--cc-primary, #4CAF50);
+        }
+        .cc-modal-materiais-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+          gap: 12px;
+        }
+        .cc-modal-material {
+          background: var(--cc-bg, #121212);
+          border: 1px solid var(--cc-border, #333);
+          border-radius: 8px;
+          padding: 12px;
+        }
+        .cc-modal-material.cc-custom {
+          border-color: var(--cc-primary, #4CAF50);
+          background: rgba(76,175,80,0.1);
+        }
+        .cc-modal-material label {
+          display: block;
+          font-size: 0.85rem;
+          color: var(--cc-text, #fff);
+          margin-bottom: 8px;
+        }
+        .cc-modal-input-group {
+          display: flex;
+          align-items: center;
+          gap: 4px;
+        }
+        .cc-modal-prefix, .cc-modal-suffix {
+          font-size: 0.8rem;
+          color: var(--cc-text-secondary, #888);
+        }
+        .cc-modal-material input {
+          flex: 1;
+          min-width: 60px;
+          padding: 6px 8px;
+          border: 1px solid var(--cc-border, #333);
+          border-radius: 4px;
+          background: var(--cc-card-bg, #1e1e1e);
+          color: var(--cc-text, #fff);
+          font-size: 0.9rem;
+        }
+        .cc-modal-material input:focus {
+          outline: none;
+          border-color: var(--cc-primary, #4CAF50);
+        }
+        .cc-modal-default {
+          display: block;
+          margin-top: 4px;
+          font-size: 0.75rem;
+          color: var(--cc-text-secondary, #666);
+        }
+        .cc-modal-footer {
+          display: flex;
+          justify-content: flex-end;
+          gap: 12px;
+          padding: 16px 20px;
+          border-top: 1px solid var(--cc-border, #333);
+        }
+        .cc-btn-small {
+          padding: 6px 12px !important;
+          font-size: 0.8rem !important;
+        }
+        .cc-btn-danger {
+          background: #dc3545 !important;
+        }
+        .cc-btn-danger:hover {
+          background: #c82333 !important;
+        }
+        @media (max-width: 600px) {
+          .cc-modal-materiais-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+      `;
+      document.head.appendChild(style);
+    }
+  }
+
+  function fecharModalPrecos() {
+    const modal = document.getElementById('cc-modal-precos');
+    if (modal) modal.remove();
+  }
+
+  function salvarModalPrecos() {
+    const inputs = document.querySelectorAll('#cc-modal-precos input[data-key]');
+    const precos = {};
+    let temAlteracao = false;
+
+    inputs.forEach(input => {
+      const key = input.dataset.key;
+      const defaultVal = parseFloat(input.dataset.default);
+      const valor = parseFloat(input.value);
+
+      if (!isNaN(valor) && valor !== defaultVal) {
+        precos[key] = valor;
+        temAlteracao = true;
+      }
+    });
+
+    if (temAlteracao) {
+      salvarPrecosMateriais(precos);
+    } else {
+      limparPrecosMateriais();
+    }
+
+    fecharModalPrecos();
+    calculate(); // Recalcular com novos preços
+  }
+
+  function confirmarResetPrecos() {
+    if (confirm('Tem certeza que deseja restaurar todos os preços para os valores padrão do site?')) {
+      limparPrecosMateriais();
+      fecharModalPrecos();
+      calculate();
+    }
+  }
+
+  // Verificar se há preços personalizados
+  function temPrecosPersonalizados() {
+    const saved = getPrecosMateriais();
+    return saved && Object.keys(saved).length > 0;
+  }
+
   window.CustoConstrucao = {
     init,
     calculate,
-    exportarExcel
+    exportarExcel,
+    abrirModalPrecos,
+    fecharModalPrecos,
+    salvarModalPrecos,
+    confirmarResetPrecos
   };
 
   if (document.readyState === 'loading') {

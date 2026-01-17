@@ -841,6 +841,120 @@
 }
 
 /* ===========================================
+   BREAKDOWN DE MATERIAIS DETALHADO
+   =========================================== */
+.cc-resultado-breakdown-materiais {
+  padding: 20px 24px;
+  border-top: 1px solid var(--cc-border);
+  background: var(--cc-bg);
+}
+
+.cc-breakdown-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cc-breakdown-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  color: var(--cc-text);
+}
+
+.cc-custom-badge {
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  background: rgba(76, 175, 80, 0.2);
+  color: var(--cc-primary);
+  border-radius: 12px;
+  border: 1px solid var(--cc-primary);
+}
+
+.cc-materiais-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.cc-material-item {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 12px;
+  background: var(--cc-card-bg);
+  border-radius: var(--cc-radius-sm);
+  border: 1px solid var(--cc-border);
+}
+
+.cc-material-nome {
+  font-size: 0.8rem;
+  color: var(--cc-text);
+  margin-bottom: 4px;
+}
+
+.cc-material-qtd {
+  font-size: 0.75rem;
+  color: var(--cc-text-secondary);
+}
+
+.cc-material-valor {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--cc-primary);
+  margin-top: auto;
+  padding-top: 4px;
+}
+
+.cc-mais-materiais {
+  margin: 12px 0;
+}
+
+.cc-mais-materiais summary {
+  cursor: pointer;
+  color: var(--cc-primary);
+  font-size: 0.85rem;
+  padding: 8px 0;
+}
+
+.cc-mais-materiais summary:hover {
+  text-decoration: underline;
+}
+
+.cc-mais-materiais[open] summary {
+  margin-bottom: 12px;
+}
+
+.cc-materiais-total {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+  background: rgba(76, 175, 80, 0.1);
+  border-radius: var(--cc-radius-sm);
+  margin-top: 12px;
+}
+
+.cc-materiais-total span:first-child {
+  font-size: 0.9rem;
+  color: var(--cc-text);
+}
+
+.cc-materiais-total span:last-child {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--cc-primary);
+}
+
+.cc-materiais-nota {
+  margin: 12px 0 0;
+  color: var(--cc-text-muted);
+  font-size: 0.8rem;
+}
+
+/* ===========================================
    DICAS E HINTS
    =========================================== */
 .cc-hint {

@@ -2743,7 +2743,6 @@
 
       // Aplicar ajuste ao custo base
       custoBase += ajusteMateriais;
-    }
 
     // EXTRAS
     let custoExtras = 0;

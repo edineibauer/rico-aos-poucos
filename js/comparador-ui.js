@@ -353,7 +353,6 @@ const Comparador2 = {
   waitForData() {
     const checkData = () => {
       if (typeof Comparador !== 'undefined' && Comparador.dadosMensais && Comparador.dadosMensais.meses) {
-        console.log('Comparador2: Dados mensais carregados, inicializando...');
         // Mostrar conteúdo inicial
         setTimeout(() => {
           this.showPattern('dotcom');

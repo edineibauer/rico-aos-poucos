@@ -2860,8 +2860,9 @@
     const detalhesExtras = [];
 
     // GARAGEM (do card Cômodos)
+    // Para apartamentos com preço de mercado, usar cálculo diferente (mais abaixo)
     const garagemVagas = state.config.garagemVagas || 0;
-    if (garagemVagas > 0) {
+    if (garagemVagas > 0 && !usarPrecoMercado) {
       const garagemTipo = state.config.garagemTipo || 'aberta';
       // Custo por m² dependendo do tipo
       const custoPorVaga = {
@@ -3147,36 +3148,25 @@
       custoTerreno = areaTerreno * custoTerrenoM2;
     }
 
-    // VALOR DAS VAGAS DE GARAGEM (dos inputs de cômodos)
+    // VALOR DAS VAGAS DE GARAGEM (apenas para apartamentos com preço de mercado)
+    // Para casas, o cálculo já foi feito acima com custoM2 por tipo
     let custoGaragem = 0;
     const numVagas = state.config.garagemVagas || 0;
     const tipoVaga = state.config.garagemTipo || 'aberta';
 
-    if (numVagas > 0) {
-      // Valores por vaga baseados no tipo e região
-      // Ajustados conforme fator regional e se é apartamento ou casa
-      const valoresVagaBase = {
-        'aberta': 15000,    // Vaga descoberta
-        'coberta': 25000,   // Vaga com cobertura simples
-        'fechada': 40000    // Box fechado com portão
+    if (numVagas > 0 && usarPrecoMercado) {
+      // Para apartamentos com dados de mercado, usar proporção do preço/m²
+      // Vaga de apartamento vale aproximadamente 3-6x o preço do m²
+      const multiplicadorVaga = {
+        'aberta': 3,
+        'coberta': 4,
+        'fechada': 6
       };
-
-      let valorPorVaga = valoresVagaBase[tipoVaga] || valoresVagaBase['aberta'];
+      let valorPorVaga = precoM2Base * (multiplicadorVaga[tipoVaga] || 3);
 
       // Ajustar pelo fator regional
       if (regiao && regiao.fator) {
         valorPorVaga *= regiao.fator;
-      }
-
-      // Para apartamentos com dados de mercado, usar proporção do preço/m²
-      if (usarPrecoMercado && precoM2Base > 0) {
-        // Vaga de apartamento vale aproximadamente 3-6x o preço do m²
-        const multiplicadorVaga = {
-          'aberta': 3,
-          'coberta': 4,
-          'fechada': 6
-        };
-        valorPorVaga = precoM2Base * (multiplicadorVaga[tipoVaga] || 3);
       }
 
       custoGaragem = numVagas * valorPorVaga;

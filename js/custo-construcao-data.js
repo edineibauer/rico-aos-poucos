@@ -185,8 +185,9 @@ const CustoConstrucaoData = {
   // COMPOSIÇÃO DETALHADA DE MATERIAIS POR TIPO DE CONSTRUÇÃO
   // =====================================================
   // Preços unitários base dos materiais (podem ser personalizados pelo usuário)
+  // Total esperado por m² para alvenaria padrão médio: ~R$ 1.076/m²
   materiaisBase: {
-    // Materiais de alvenaria
+    // ========== FUNDAÇÃO E ESTRUTURA ==========
     tijolo_ceramico: { nome: 'Tijolo Cerâmico 9 furos', unidade: 'milheiro', preco: 850, categoria: 'estrutura' },
     bloco_concreto: { nome: 'Bloco de Concreto 14x19x39', unidade: 'unidade', preco: 3.50, categoria: 'estrutura' },
     cimento: { nome: 'Cimento CP-II 50kg', unidade: 'saco', preco: 38, categoria: 'estrutura' },
@@ -197,58 +198,205 @@ const CustoConstrucaoData = {
     ferro_10mm: { nome: 'Ferro CA-50 10mm', unidade: 'kg', preco: 8.50, categoria: 'estrutura' },
     ferro_12mm: { nome: 'Ferro CA-50 12mm', unidade: 'kg', preco: 9.00, categoria: 'estrutura' },
     arame_recozido: { nome: 'Arame Recozido', unidade: 'kg', preco: 14, categoria: 'estrutura' },
+    concreto_usinado: { nome: 'Concreto Usinado fck25', unidade: 'm³', preco: 450, categoria: 'estrutura' },
+    forma_madeira: { nome: 'Forma de Madeira (compensado)', unidade: 'm²', preco: 45, categoria: 'estrutura' },
+    lona_plastica: { nome: 'Lona Plástica Preta', unidade: 'm²', preco: 3.50, categoria: 'estrutura' },
+    impermeabilizante: { nome: 'Impermeabilizante Manta Asfáltica', unidade: 'm²', preco: 65, categoria: 'estrutura' },
 
-    // Materiais para Steel Frame
+    // ========== COBERTURA/TELHADO ==========
+    madeira_telhado: { nome: 'Madeiramento Telhado (tesoura)', unidade: 'm²', preco: 85, categoria: 'cobertura' },
+    telha_ceramica: { nome: 'Telha Cerâmica Colonial', unidade: 'm²', preco: 55, categoria: 'cobertura' },
+    cumeeira: { nome: 'Cumeeira Cerâmica', unidade: 'unidade', preco: 8, categoria: 'cobertura' },
+    rufo_galvanizado: { nome: 'Rufo Galvanizado', unidade: 'm', preco: 35, categoria: 'cobertura' },
+    calha_pvc: { nome: 'Calha PVC 170mm', unidade: 'm', preco: 28, categoria: 'cobertura' },
+    condutor_pvc: { nome: 'Condutor Pluvial PVC 100mm', unidade: 'm', preco: 22, categoria: 'cobertura' },
+
+    // ========== INSTALAÇÃO ELÉTRICA ==========
+    fio_eletrico_2_5mm: { nome: 'Fio Elétrico 2,5mm', unidade: 'm', preco: 2.80, categoria: 'eletrica' },
+    fio_eletrico_4mm: { nome: 'Fio Elétrico 4mm', unidade: 'm', preco: 4.50, categoria: 'eletrica' },
+    fio_eletrico_6mm: { nome: 'Fio Elétrico 6mm', unidade: 'm', preco: 7.20, categoria: 'eletrica' },
+    fio_eletrico_10mm: { nome: 'Fio Elétrico 10mm', unidade: 'm', preco: 12.00, categoria: 'eletrica' },
+    eletroduto_pvc_20mm: { nome: 'Eletroduto PVC 20mm', unidade: 'm', preco: 3.80, categoria: 'eletrica' },
+    eletroduto_pvc_25mm: { nome: 'Eletroduto PVC 25mm', unidade: 'm', preco: 4.50, categoria: 'eletrica' },
+    caixa_4x2: { nome: 'Caixa de Luz 4x2', unidade: 'unidade', preco: 2.50, categoria: 'eletrica' },
+    caixa_4x4: { nome: 'Caixa de Luz 4x4', unidade: 'unidade', preco: 4.00, categoria: 'eletrica' },
+    tomada_simples: { nome: 'Tomada 2P+T 10A', unidade: 'unidade', preco: 12, categoria: 'eletrica' },
+    tomada_dupla: { nome: 'Tomada Dupla 2P+T', unidade: 'unidade', preco: 22, categoria: 'eletrica' },
+    interruptor_simples: { nome: 'Interruptor Simples', unidade: 'unidade', preco: 10, categoria: 'eletrica' },
+    interruptor_paralelo: { nome: 'Interruptor Paralelo', unidade: 'unidade', preco: 15, categoria: 'eletrica' },
+    disjuntor_10a: { nome: 'Disjuntor 10A', unidade: 'unidade', preco: 12, categoria: 'eletrica' },
+    disjuntor_20a: { nome: 'Disjuntor 20A', unidade: 'unidade', preco: 14, categoria: 'eletrica' },
+    disjuntor_32a: { nome: 'Disjuntor 32A', unidade: 'unidade', preco: 18, categoria: 'eletrica' },
+    disjuntor_geral: { nome: 'Disjuntor Geral 50A', unidade: 'unidade', preco: 45, categoria: 'eletrica' },
+    quadro_distribuicao: { nome: 'Quadro de Distribuição 12 disjuntores', unidade: 'unidade', preco: 120, categoria: 'eletrica' },
+    dr_dispositivo: { nome: 'Dispositivo DR 30mA', unidade: 'unidade', preco: 95, categoria: 'eletrica' },
+    lustre_plafon: { nome: 'Plafon LED 18W', unidade: 'unidade', preco: 45, categoria: 'eletrica' },
+    spot_embutir: { nome: 'Spot LED Embutir', unidade: 'unidade', preco: 28, categoria: 'eletrica' },
+
+    // ========== INSTALAÇÃO HIDRÁULICA ==========
+    tubo_pvc_25mm: { nome: 'Tubo PVC Água Fria 25mm', unidade: 'm', preco: 4.50, categoria: 'hidraulica' },
+    tubo_pvc_32mm: { nome: 'Tubo PVC Água Fria 32mm', unidade: 'm', preco: 6.50, categoria: 'hidraulica' },
+    tubo_pvc_50mm: { nome: 'Tubo PVC Esgoto 50mm', unidade: 'm', preco: 12, categoria: 'hidraulica' },
+    tubo_pvc_100mm: { nome: 'Tubo PVC Esgoto 100mm', unidade: 'm', preco: 28, categoria: 'hidraulica' },
+    conexoes_pvc: { nome: 'Kit Conexões PVC (joelhos, tês, caps)', unidade: 'conjunto', preco: 85, categoria: 'hidraulica' },
+    registro_gaveta: { nome: 'Registro Gaveta 3/4"', unidade: 'unidade', preco: 35, categoria: 'hidraulica' },
+    registro_pressao: { nome: 'Registro de Pressão', unidade: 'unidade', preco: 55, categoria: 'hidraulica' },
+    caixa_dagua_500l: { nome: 'Caixa d\'Água 500L', unidade: 'unidade', preco: 350, categoria: 'hidraulica' },
+    caixa_dagua_1000l: { nome: 'Caixa d\'Água 1000L', unidade: 'unidade', preco: 550, categoria: 'hidraulica' },
+    caixa_sifonada: { nome: 'Caixa Sifonada', unidade: 'unidade', preco: 25, categoria: 'hidraulica' },
+    ralo_linear: { nome: 'Ralo Linear Inox', unidade: 'unidade', preco: 85, categoria: 'hidraulica' },
+    sifao: { nome: 'Sifão Sanfonado', unidade: 'unidade', preco: 18, categoria: 'hidraulica' },
+    vaso_sanitario: { nome: 'Vaso Sanitário com Caixa Acoplada', unidade: 'unidade', preco: 450, categoria: 'hidraulica' },
+    lavatorio: { nome: 'Lavatório com Coluna', unidade: 'unidade', preco: 180, categoria: 'hidraulica' },
+    torneira_lavatorio: { nome: 'Torneira para Lavatório', unidade: 'unidade', preco: 65, categoria: 'hidraulica' },
+    torneira_cozinha: { nome: 'Torneira de Cozinha Mesa', unidade: 'unidade', preco: 85, categoria: 'hidraulica' },
+    chuveiro: { nome: 'Chuveiro Elétrico', unidade: 'unidade', preco: 95, categoria: 'hidraulica' },
+    ducha_higienica: { nome: 'Ducha Higiênica', unidade: 'unidade', preco: 75, categoria: 'hidraulica' },
+    pia_cozinha: { nome: 'Cuba Inox Cozinha', unidade: 'unidade', preco: 180, categoria: 'hidraulica' },
+    tanque_lavar: { nome: 'Tanque de Lavar Roupa', unidade: 'unidade', preco: 220, categoria: 'hidraulica' },
+
+    // ========== ESQUADRIAS (PORTAS E JANELAS) ==========
+    porta_madeira_interna: { nome: 'Porta Madeira Interna 80cm (kit completo)', unidade: 'unidade', preco: 380, categoria: 'esquadrias' },
+    porta_madeira_externa: { nome: 'Porta Madeira Externa 90cm (maciça)', unidade: 'unidade', preco: 850, categoria: 'esquadrias' },
+    janela_aluminio_100x120: { nome: 'Janela Alumínio 100x120cm', unidade: 'unidade', preco: 450, categoria: 'esquadrias' },
+    janela_aluminio_150x120: { nome: 'Janela Alumínio 150x120cm', unidade: 'unidade', preco: 650, categoria: 'esquadrias' },
+    janela_aluminio_200x120: { nome: 'Janela Alumínio 200x120cm', unidade: 'unidade', preco: 850, categoria: 'esquadrias' },
+    basculante_aluminio: { nome: 'Basculante Alumínio 60x60cm', unidade: 'unidade', preco: 180, categoria: 'esquadrias' },
+    vidro_comum_4mm: { nome: 'Vidro Comum 4mm (instalado)', unidade: 'm²', preco: 95, categoria: 'esquadrias' },
+
+    // ========== PISOS E REVESTIMENTOS ==========
+    contrapiso: { nome: 'Contrapiso/Regularização', unidade: 'm²', preco: 35, categoria: 'piso' },
+    ceramica_piso: { nome: 'Piso Cerâmico 45x45cm (padrão)', unidade: 'm²', preco: 38, categoria: 'piso' },
+    ceramica_parede: { nome: 'Revestimento Cerâmico Parede', unidade: 'm²', preco: 35, categoria: 'piso' },
+    argamassa_colante: { nome: 'Argamassa Colante AC-II', unidade: 'saco 20kg', preco: 28, categoria: 'acabamento' },
+    rejunte: { nome: 'Rejunte', unidade: 'kg', preco: 8, categoria: 'acabamento' },
+    rodape_ceramico: { nome: 'Rodapé Cerâmico', unidade: 'm', preco: 8, categoria: 'piso' },
+    soleira: { nome: 'Soleira Granito', unidade: 'm', preco: 95, categoria: 'piso' },
+
+    // ========== REBOCO E PINTURA ==========
+    reboco: { nome: 'Argamassa Reboco', unidade: 'saco 20kg', preco: 18, categoria: 'acabamento' },
+    gesso_liso: { nome: 'Gesso Liso (teto)', unidade: 'm²', preco: 38, categoria: 'acabamento' },
+    massa_corrida: { nome: 'Massa Corrida PVA', unidade: 'lata 18L', preco: 95, categoria: 'acabamento' },
+    tinta_acrilica: { nome: 'Tinta Acrílica Premium', unidade: 'lata 18L', preco: 320, categoria: 'acabamento' },
+    selador: { nome: 'Selador Acrílico', unidade: 'lata 18L', preco: 180, categoria: 'acabamento' },
+    textura: { nome: 'Textura/Grafiato', unidade: 'lata 25kg', preco: 145, categoria: 'acabamento' },
+
+    // ========== MATERIAIS STEEL FRAME ==========
     perfil_aco: { nome: 'Perfil de Aço Galvanizado', unidade: 'm', preco: 28, categoria: 'estrutura' },
     parafuso_auto: { nome: 'Parafuso Auto-Brocante', unidade: 'unidade', preco: 0.35, categoria: 'estrutura' },
     placa_osb: { nome: 'Placa OSB 18mm', unidade: 'm²', preco: 75, categoria: 'fechamento' },
     placa_cimenticia: { nome: 'Placa Cimentícia 10mm', unidade: 'm²', preco: 65, categoria: 'fechamento' },
     la_vidro: { nome: 'Lã de Vidro 50mm', unidade: 'm²', preco: 28, categoria: 'isolamento' },
 
-    // Materiais para Wood Frame
+    // ========== MATERIAIS WOOD FRAME ==========
     madeira_pinus_tratado: { nome: 'Pinus Tratado (estrutura)', unidade: 'm³', preco: 2200, categoria: 'estrutura' },
     madeira_eucalipto: { nome: 'Eucalipto Tratado', unidade: 'm³', preco: 1800, categoria: 'estrutura' },
     madeira_nobre: { nome: 'Madeira Nobre (Ipê, Cumaru)', unidade: 'm³', preco: 8500, categoria: 'estrutura' },
 
-    // Materiais para EPS
+    // ========== MATERIAIS EPS ==========
     painel_eps: { nome: 'Painel EPS 10cm', unidade: 'm²', preco: 85, categoria: 'estrutura' },
     tela_galvanizada: { nome: 'Tela Galvanizada', unidade: 'm²', preco: 18, categoria: 'estrutura' },
     argamassa_projetada: { nome: 'Argamassa Projetada', unidade: 'saco 40kg', preco: 45, categoria: 'estrutura' },
 
-    // Instalações
-    fio_eletrico_2_5mm: { nome: 'Fio Elétrico 2,5mm', unidade: 'm', preco: 2.80, categoria: 'eletrica' },
-    fio_eletrico_4mm: { nome: 'Fio Elétrico 4mm', unidade: 'm', preco: 4.50, categoria: 'eletrica' },
-    fio_eletrico_6mm: { nome: 'Fio Elétrico 6mm', unidade: 'm', preco: 7.20, categoria: 'eletrica' },
-    tubo_pvc_25mm: { nome: 'Tubo PVC 25mm', unidade: 'm', preco: 4.50, categoria: 'hidraulica' },
-    tubo_pvc_50mm: { nome: 'Tubo PVC 50mm', unidade: 'm', preco: 12, categoria: 'hidraulica' },
-    tubo_pvc_100mm: { nome: 'Tubo PVC 100mm', unidade: 'm', preco: 28, categoria: 'hidraulica' },
-
-    // Acabamentos
-    argamassa_colante: { nome: 'Argamassa Colante AC-II', unidade: 'saco 20kg', preco: 28, categoria: 'acabamento' },
-    rejunte: { nome: 'Rejunte', unidade: 'kg', preco: 8, categoria: 'acabamento' },
-    massa_corrida: { nome: 'Massa Corrida PVA', unidade: 'lata 18L', preco: 95, categoria: 'acabamento' },
-    tinta_acrilica: { nome: 'Tinta Acrílica', unidade: 'lata 18L', preco: 320, categoria: 'acabamento' },
-    selador: { nome: 'Selador Acrílico', unidade: 'lata 18L', preco: 180, categoria: 'acabamento' }
+    // ========== BANCADAS E COMPLEMENTOS ==========
+    bancada_granito: { nome: 'Bancada Granito Cozinha (por metro linear)', unidade: 'm', preco: 350, categoria: 'acabamento' },
+    bancada_banheiro: { nome: 'Bancada Granito Banheiro', unidade: 'unidade', preco: 280, categoria: 'acabamento' }
   },
 
   // Composição de materiais por tipo de construção (quantidade por m² de área construída)
+  // Meta: breakdown totaliza aproximadamente R$ 1.076/m² para alvenaria padrão médio
   composicaoMateriais: {
     alvenaria: {
       nome: 'Alvenaria Convencional',
       descricao: 'Construção tradicional com tijolos e concreto armado',
       materiais: {
-        tijolo_ceramico: { qtdPorM2: 0.025, unidadeCalc: 'milheiro' }, // 25 tijolos por m²
-        cimento: { qtdPorM2: 0.45, unidadeCalc: 'saco' }, // ~22 sacos para 50m²
-        areia_media: { qtdPorM2: 0.08, unidadeCalc: 'm³' },
-        areia_fina: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
-        brita: { qtdPorM2: 0.06, unidadeCalc: 'm³' },
-        ferro_8mm: { qtdPorM2: 4.5, unidadeCalc: 'kg' },
-        ferro_10mm: { qtdPorM2: 2.0, unidadeCalc: 'kg' },
-        arame_recozido: { qtdPorM2: 0.3, unidadeCalc: 'kg' },
-        argamassa_colante: { qtdPorM2: 0.25, unidadeCalc: 'saco' },
-        massa_corrida: { qtdPorM2: 0.04, unidadeCalc: 'lata' },
-        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
-        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+        // ========== FUNDAÇÃO E ESTRUTURA (~R$ 380/m²) ==========
+        tijolo_ceramico: { qtdPorM2: 0.035, unidadeCalc: 'milheiro' }, // 35 tijolos por m² construído
+        cimento: { qtdPorM2: 0.85, unidadeCalc: 'saco' }, // estrutura + reboco + contrapiso
+        areia_media: { qtdPorM2: 0.12, unidadeCalc: 'm³' },
+        areia_fina: { qtdPorM2: 0.06, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.10, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 6.0, unidadeCalc: 'kg' },
+        ferro_10mm: { qtdPorM2: 3.5, unidadeCalc: 'kg' },
+        ferro_12mm: { qtdPorM2: 2.0, unidadeCalc: 'kg' },
+        arame_recozido: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        concreto_usinado: { qtdPorM2: 0.15, unidadeCalc: 'm³' }, // laje + vigas
+        forma_madeira: { qtdPorM2: 0.4, unidadeCalc: 'm²' },
+        impermeabilizante: { qtdPorM2: 0.25, unidadeCalc: 'm²' }, // fundação + banheiros
+        lona_plastica: { qtdPorM2: 0.3, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' }, // área telhado > área construída
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        disjuntor_32a: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        spot_embutir: { qtdPorM2: 0.05, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' }, // ~6 portas/100m²
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' }, // 1 porta/100m²
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' }, // cozinha + banheiros
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== REBOCO E PINTURA (~R$ 86/m²) ==========
+        reboco: { qtdPorM2: 0.8, unidadeCalc: 'saco' },
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.055, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.025, unidadeCalc: 'lata' }
       },
       maoDeObraFator: 1.0
     },
@@ -256,17 +404,90 @@ const CustoConstrucaoData = {
       nome: 'Steel Frame',
       descricao: 'Estrutura em aço galvanizado com fechamento em placas',
       materiais: {
-        perfil_aco: { qtdPorM2: 8.5, unidadeCalc: 'm' },
-        parafuso_auto: { qtdPorM2: 45, unidadeCalc: 'unidade' },
-        placa_osb: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
-        placa_cimenticia: { qtdPorM2: 2.4, unidadeCalc: 'm²' }, // interno e externo
-        la_vidro: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
-        argamassa_colante: { qtdPorM2: 0.2, unidadeCalc: 'saco' },
-        massa_corrida: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
-        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
-        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+        // ========== ESTRUTURA STEEL FRAME (~R$ 420/m²) ==========
+        perfil_aco: { qtdPorM2: 10.0, unidadeCalc: 'm' },
+        parafuso_auto: { qtdPorM2: 55, unidadeCalc: 'unidade' },
+        placa_osb: { qtdPorM2: 1.5, unidadeCalc: 'm²' },
+        placa_cimenticia: { qtdPorM2: 2.8, unidadeCalc: 'm²' },
+        la_vidro: { qtdPorM2: 1.3, unidadeCalc: 'm²' },
+        cimento: { qtdPorM2: 0.25, unidadeCalc: 'saco' }, // fundação radier
+        areia_media: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.05, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 2.0, unidadeCalc: 'kg' },
+        lona_plastica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        impermeabilizante: { qtdPorM2: 0.20, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 75/m²) ==========
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.045, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.025, unidadeCalc: 'lata' }
       },
-      maoDeObraFator: 0.85, // mão de obra mais rápida
+      maoDeObraFator: 0.85,
       vantagens: ['Obra 30% mais rápida', 'Menos resíduos', 'Alta precisão'],
       desvantagens: ['Mão de obra especializada', 'Maior custo de material']
     },
@@ -286,15 +507,88 @@ const CustoConstrucaoData = {
         }
       },
       materiais: {
-        madeira_pinus_tratado: { qtdPorM2: 0.08, unidadeCalc: 'm³' }, // ou madeira_nobre
-        placa_osb: { qtdPorM2: 2.2, unidadeCalc: 'm²' },
-        la_vidro: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
-        argamassa_colante: { qtdPorM2: 0.15, unidadeCalc: 'saco' },
-        massa_corrida: { qtdPorM2: 0.03, unidadeCalc: 'lata' },
-        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
-        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+        // ========== ESTRUTURA WOOD FRAME (~R$ 350/m²) ==========
+        madeira_pinus_tratado: { qtdPorM2: 0.10, unidadeCalc: 'm³' },
+        placa_osb: { qtdPorM2: 2.5, unidadeCalc: 'm²' },
+        la_vidro: { qtdPorM2: 1.3, unidadeCalc: 'm²' },
+        cimento: { qtdPorM2: 0.20, unidadeCalc: 'saco' }, // fundação radier
+        areia_media: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 1.5, unidadeCalc: 'kg' },
+        lona_plastica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        impermeabilizante: { qtdPorM2: 0.18, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 65/m²) ==========
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.040, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.022, unidadeCalc: 'lata' }
       },
-      maoDeObraFator: 0.80, // mão de obra mais rápida ainda
+      maoDeObraFator: 0.80,
       vantagens: ['Sustentável', 'Excelente isolamento térmico', 'Obra rápida'],
       desvantagens: ['Requer tratamento da madeira', 'Manutenção periódica']
     },
@@ -302,19 +596,89 @@ const CustoConstrucaoData = {
       nome: 'Painéis EPS (Isopor Estrutural)',
       descricao: 'Painéis de poliestireno com malha de aço e argamassa',
       materiais: {
-        painel_eps: { qtdPorM2: 2.6, unidadeCalc: 'm²' }, // paredes internas e externas
-        tela_galvanizada: { qtdPorM2: 2.8, unidadeCalc: 'm²' },
-        argamassa_projetada: { qtdPorM2: 1.2, unidadeCalc: 'saco' },
-        ferro_8mm: { qtdPorM2: 1.5, unidadeCalc: 'kg' }, // menos ferro que alvenaria
-        cimento: { qtdPorM2: 0.15, unidadeCalc: 'saco' }, // menos cimento
-        areia_fina: { qtdPorM2: 0.02, unidadeCalc: 'm³' },
-        argamassa_colante: { qtdPorM2: 0.2, unidadeCalc: 'saco' },
-        massa_corrida: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
-        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
-        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+        // ========== ESTRUTURA EPS (~R$ 320/m²) ==========
+        painel_eps: { qtdPorM2: 2.8, unidadeCalc: 'm²' },
+        tela_galvanizada: { qtdPorM2: 3.0, unidadeCalc: 'm²' },
+        argamassa_projetada: { qtdPorM2: 1.5, unidadeCalc: 'saco' },
+        ferro_8mm: { qtdPorM2: 2.0, unidadeCalc: 'kg' },
+        cimento: { qtdPorM2: 0.25, unidadeCalc: 'saco' }, // fundação
+        areia_fina: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        lona_plastica: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        impermeabilizante: { qtdPorM2: 0.18, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 65/m²) - sem reboco tradicional ==========
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.045, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.025, unidadeCalc: 'lata' }
       },
-      maoDeObraFator: 0.70, // obra mais rápida - 40% menos mão de obra
-      naoUsa: ['tijolo_ceramico', 'brita', 'areia_media'], // materiais que NÃO usa
+      maoDeObraFator: 0.70,
+      naoUsa: ['tijolo_ceramico', 'areia_media', 'reboco'],
       vantagens: ['Custo de material menor', 'Obra muito rápida', 'Excelente isolamento'],
       desvantagens: ['Limitações em vãos grandes', 'Menos resistente a impactos', 'Requer cuidado com fixações']
     },
@@ -322,16 +686,91 @@ const CustoConstrucaoData = {
       nome: 'Construção Mista',
       descricao: 'Combinação de alvenaria com outros sistemas',
       materiais: {
-        tijolo_ceramico: { qtdPorM2: 0.018, unidadeCalc: 'milheiro' },
-        cimento: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
-        areia_media: { qtdPorM2: 0.06, unidadeCalc: 'm³' },
-        brita: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
-        ferro_8mm: { qtdPorM2: 3.5, unidadeCalc: 'kg' },
-        perfil_aco: { qtdPorM2: 2.0, unidadeCalc: 'm' },
-        argamassa_colante: { qtdPorM2: 0.22, unidadeCalc: 'saco' },
-        massa_corrida: { qtdPorM2: 0.038, unidadeCalc: 'lata' },
-        tinta_acrilica: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
-        selador: { qtdPorM2: 0.015, unidadeCalc: 'lata' }
+        // ========== ESTRUTURA MISTA (~R$ 360/m²) ==========
+        tijolo_ceramico: { qtdPorM2: 0.025, unidadeCalc: 'milheiro' },
+        cimento: { qtdPorM2: 0.65, unidadeCalc: 'saco' },
+        areia_media: { qtdPorM2: 0.08, unidadeCalc: 'm³' },
+        areia_fina: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.07, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 4.5, unidadeCalc: 'kg' },
+        ferro_10mm: { qtdPorM2: 2.5, unidadeCalc: 'kg' },
+        arame_recozido: { qtdPorM2: 0.4, unidadeCalc: 'kg' },
+        perfil_aco: { qtdPorM2: 3.0, unidadeCalc: 'm' },
+        concreto_usinado: { qtdPorM2: 0.12, unidadeCalc: 'm³' },
+        forma_madeira: { qtdPorM2: 0.3, unidadeCalc: 'm²' },
+        impermeabilizante: { qtdPorM2: 0.22, unidadeCalc: 'm²' },
+        lona_plastica: { qtdPorM2: 0.25, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== REBOCO E PINTURA (~R$ 80/m²) ==========
+        reboco: { qtdPorM2: 0.6, unidadeCalc: 'saco' },
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.050, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.025, unidadeCalc: 'lata' }
       },
       maoDeObraFator: 0.90
     },
@@ -339,14 +778,86 @@ const CustoConstrucaoData = {
       nome: 'Pré-Fabricada/Modular',
       descricao: 'Módulos industrializados montados no local',
       materiais: {
-        // Custos são principalmente do módulo pronto
-        cimento: { qtdPorM2: 0.10, unidadeCalc: 'saco' }, // apenas fundação
-        areia_media: { qtdPorM2: 0.02, unidadeCalc: 'm³' },
-        brita: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
-        ferro_8mm: { qtdPorM2: 1.0, unidadeCalc: 'kg' }
+        // ========== FUNDAÇÃO E MONTAGEM (~R$ 120/m²) ==========
+        cimento: { qtdPorM2: 0.15, unidadeCalc: 'saco' },
+        areia_media: { qtdPorM2: 0.03, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 1.5, unidadeCalc: 'kg' },
+        lona_plastica: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        impermeabilizante: { qtdPorM2: 0.15, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 65/m²) ==========
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.040, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.022, unidadeCalc: 'lata' }
       },
-      custoModuloPorM2: 1450, // custo do módulo pronto por m²
-      maoDeObraFator: 0.50, // muito menos mão de obra local
+      custoModuloPorM2: 450, // custo adicional do módulo pré-fabricado (paredes)
+      maoDeObraFator: 0.50,
       vantagens: ['Obra muito rápida (2-4 semanas)', 'Controle de qualidade fabril'],
       desvantagens: ['Menos personalização', 'Custo maior', 'Transporte dos módulos']
     }

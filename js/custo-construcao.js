@@ -3338,35 +3338,46 @@
           <h4>📦 Detalhamento de Materiais (${metodo.nome})</h4>
           ${usandoPrecosCustom ? '<span class="cc-custom-badge">Preços Personalizados</span>' : ''}
         </div>
-        <div class="cc-materiais-grid">
-          ${breakdownMateriais.materiais.slice(0, 8).map(m => `
-            <div class="cc-material-item">
-              <span class="cc-material-nome">${m.nome}</span>
-              <span class="cc-material-qtd">${m.qtdFormatada}</span>
-              <span class="cc-material-valor">R$ ${formatNumber(m.custo)}</span>
-            </div>
-          `).join('')}
+
+        <!-- Resumo por categoria -->
+        <div class="cc-categorias-resumo">
+          ${Object.entries(breakdownMateriais.porCategoria)
+            .sort((a, b) => a[1].ordem - b[1].ordem)
+            .map(([catKey, cat]) => `
+              <div class="cc-categoria-resumo-item">
+                <span class="cc-categoria-nome">${cat.nome}</span>
+                <span class="cc-categoria-valor">R$ ${formatNumber(cat.total)}</span>
+              </div>
+            `).join('')}
         </div>
-        ${breakdownMateriais.materiais.length > 8 ? `
-          <details class="cc-mais-materiais">
-            <summary>Ver mais ${breakdownMateriais.materiais.length - 8} materiais</summary>
-            <div class="cc-materiais-grid">
-              ${breakdownMateriais.materiais.slice(8).map(m => `
-                <div class="cc-material-item">
-                  <span class="cc-material-nome">${m.nome}</span>
-                  <span class="cc-material-qtd">${m.qtdFormatada}</span>
-                  <span class="cc-material-valor">R$ ${formatNumber(m.custo)}</span>
+
+        <!-- Detalhamento por categoria expansível -->
+        <details class="cc-mais-materiais">
+          <summary>Ver detalhamento completo (${breakdownMateriais.materiais.length} itens)</summary>
+          ${Object.entries(breakdownMateriais.porCategoria)
+            .sort((a, b) => a[1].ordem - b[1].ordem)
+            .map(([catKey, cat]) => `
+              <div class="cc-categoria-detalhe">
+                <div class="cc-categoria-titulo">${cat.nome} <span>R$ ${formatNumber(cat.total)}</span></div>
+                <div class="cc-materiais-grid">
+                  ${cat.materiais.map(m => `
+                    <div class="cc-material-item">
+                      <span class="cc-material-nome">${m.nome}</span>
+                      <span class="cc-material-qtd">${m.qtdFormatada}</span>
+                      <span class="cc-material-valor">R$ ${formatNumber(m.custo)}</span>
+                    </div>
+                  `).join('')}
                 </div>
-              `).join('')}
-            </div>
-          </details>
-        ` : ''}
+              </div>
+            `).join('')}
+        </details>
+
         <div class="cc-materiais-total">
-          <span>Total Estimado em Materiais Base:</span>
+          <span>Total Estimado em Materiais:</span>
           <span>R$ ${formatNumber(breakdownMateriais.totalMateriais)}</span>
         </div>
         <p class="cc-materiais-nota">
-          <small>* Valores estimados baseados em quantidades médias por m². Pode variar conforme projeto específico.</small>
+          <small>* Valores estimados baseados em quantidades médias por m². Valores reais podem variar ±15% conforme projeto.</small>
         </p>
       </div>
       ` : ''}
@@ -3586,8 +3597,25 @@ ${c.detalhesAdicionais.length > 0 ? `
     const breakdown = {
       materiais: [],
       totalMateriais: 0,
+      porCategoria: {},
       composicao: null
     };
+
+    // Nomes amigáveis das categorias
+    const nomesCategorias = {
+      'estrutura': 'Fundação e Estrutura',
+      'cobertura': 'Cobertura/Telhado',
+      'eletrica': 'Instalação Elétrica',
+      'hidraulica': 'Instalação Hidráulica',
+      'esquadrias': 'Portas e Janelas',
+      'piso': 'Pisos e Revestimentos',
+      'acabamento': 'Acabamento e Pintura',
+      'fechamento': 'Fechamento',
+      'isolamento': 'Isolamento'
+    };
+
+    // Ordem de exibição das categorias
+    const ordemCategorias = ['estrutura', 'cobertura', 'eletrica', 'hidraulica', 'esquadrias', 'piso', 'acabamento', 'fechamento', 'isolamento'];
 
     // Obter composição para o tipo de construção
     const metodo = data.tiposConstrucao[tipoConstrucao];
@@ -3612,21 +3640,41 @@ ${c.detalhesAdicionais.length > 0 ? `
       const quantidade = config.qtdPorM2 * area;
       const custoMaterial = quantidade * preco * fatorPadrao * fatorRegiao;
 
-      breakdown.materiais.push({
+      const categoria = materialInfo.categoria || 'outros';
+
+      const materialData = {
         key: materialKey,
         nome: materialInfo.nome,
         unidade: materialInfo.unidade,
-        categoria: materialInfo.categoria,
+        categoria: categoria,
         precoUnitario: preco,
         quantidade: quantidade,
         qtdFormatada: formatarQuantidade(quantidade, config.unidadeCalc),
         custo: custoMaterial
-      });
+      };
 
+      breakdown.materiais.push(materialData);
       breakdown.totalMateriais += custoMaterial;
+
+      // Agrupar por categoria
+      if (!breakdown.porCategoria[categoria]) {
+        breakdown.porCategoria[categoria] = {
+          nome: nomesCategorias[categoria] || categoria,
+          ordem: ordemCategorias.indexOf(categoria),
+          materiais: [],
+          total: 0
+        };
+      }
+      breakdown.porCategoria[categoria].materiais.push(materialData);
+      breakdown.porCategoria[categoria].total += custoMaterial;
     });
 
-    // Ordenar por custo (maior primeiro)
+    // Ordenar materiais dentro de cada categoria por custo
+    Object.values(breakdown.porCategoria).forEach(cat => {
+      cat.materiais.sort((a, b) => b.custo - a.custo);
+    });
+
+    // Ordenar todos os materiais por custo (maior primeiro)
     breakdown.materiais.sort((a, b) => b.custo - a.custo);
 
     return breakdown;

@@ -954,6 +954,57 @@
   font-size: 0.8rem;
 }
 
+/* Resumo por categoria */
+.cc-categorias-resumo {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.cc-categoria-resumo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  background: var(--cc-card-bg);
+  border-radius: var(--cc-radius-sm);
+  border: 1px solid var(--cc-border);
+}
+
+.cc-categoria-nome {
+  font-size: 0.85rem;
+  color: var(--cc-text);
+}
+
+.cc-categoria-valor {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--cc-primary);
+}
+
+/* Detalhamento por categoria */
+.cc-categoria-detalhe {
+  margin-bottom: 20px;
+}
+
+.cc-categoria-titulo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--cc-text);
+  padding: 10px 0;
+  border-bottom: 2px solid var(--cc-primary);
+  margin-bottom: 12px;
+}
+
+.cc-categoria-titulo span {
+  color: var(--cc-primary);
+  font-weight: 700;
+}
+
 /* ===========================================
    DICAS E HINTS
    =========================================== */

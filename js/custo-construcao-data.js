@@ -298,6 +298,24 @@ const CustoConstrucaoData = {
     tela_galvanizada: { nome: 'Tela Galvanizada', unidade: 'm²', preco: 18, categoria: 'estrutura' },
     argamassa_projetada: { nome: 'Argamassa Projetada', unidade: 'saco 40kg', preco: 45, categoria: 'estrutura' },
 
+    // ========== MATERIAIS TIJOLO ECOLÓGICO ==========
+    tijolo_ecologico: { nome: 'Tijolo Ecológico Solo-Cimento', unidade: 'milheiro', preco: 750, categoria: 'estrutura' },
+
+    // ========== MATERIAIS ALVENARIA ESTRUTURAL ==========
+    bloco_estrutural: { nome: 'Bloco Estrutural 14x19x39', unidade: 'milheiro', preco: 1200, categoria: 'estrutura' },
+    reboco_pronto: { nome: 'Reboco Pronto (saco 20kg)', unidade: 'saco', preco: 22, categoria: 'acabamento' },
+
+    // ========== MATERIAIS CONTAINER ==========
+    container_20pes: { nome: 'Container Marítimo 20 pés (usado)', unidade: 'unidade', preco: 12000, categoria: 'estrutura' },
+    la_de_vidro: { nome: 'Lã de Vidro 50mm (isolamento)', unidade: 'm²', preco: 32, categoria: 'isolamento' },
+    drywall: { nome: 'Placa Drywall Standard 12,5mm', unidade: 'm²', preco: 28, categoria: 'fechamento' },
+    perfil_metalico_drywall: { nome: 'Perfil Metálico p/ Drywall', unidade: 'm', preco: 12, categoria: 'estrutura' },
+    telha_sanduiche: { nome: 'Telha Sanduíche 30mm (termo-acústica)', unidade: 'm²', preco: 95, categoria: 'cobertura' },
+    estrutura_metalica_leve: { nome: 'Estrutura Metálica Leve (perfis)', unidade: 'kg/m²', preco: 18, categoria: 'estrutura' },
+    piso_vinilico: { nome: 'Piso Vinílico Click', unidade: 'm²', preco: 65, categoria: 'piso' },
+    rodape_mdf: { nome: 'Rodapé MDF 7cm', unidade: 'm', preco: 12, categoria: 'acabamento' },
+    tinta_epoxi: { nome: 'Tinta Epóxi (proteção metálica)', unidade: 'lata 3,6L', preco: 280, categoria: 'acabamento' },
+
     // ========== BANCADAS E COMPLEMENTOS ==========
     bancada_granito: { nome: 'Bancada Granito Cozinha (por metro linear)', unidade: 'm', preco: 350, categoria: 'acabamento' },
     bancada_banheiro: { nome: 'Bancada Granito Banheiro', unidade: 'unidade', preco: 280, categoria: 'acabamento' }
@@ -859,100 +877,439 @@ const CustoConstrucaoData = {
       maoDeObraFator: 0.50,
       vantagens: ['Obra muito rápida (2-4 semanas)', 'Controle de qualidade fabril'],
       desvantagens: ['Menos personalização', 'Custo maior', 'Transporte dos módulos']
+    },
+
+    // ========== TIJOLO ECOLÓGICO (SOLO-CIMENTO) ==========
+    // Custo base: ~R$ 1.350/m² (fator 0.72 em relação à alvenaria)
+    // Economia: dispensa argamassa vertical, paredes já saem prontas para pintura
+    tijolo_ecologico: {
+      nome: 'Tijolo Ecológico (Solo-Cimento)',
+      descricao: 'Tijolos modulares de solo-cimento que se encaixam, dispensando argamassa nas juntas verticais',
+      materiais: {
+        // ========== FUNDAÇÃO E ESTRUTURA (~R$ 280/m²) ==========
+        // Menos concreto armado, tijolos absorvem mais carga
+        tijolo_ecologico: { qtdPorM2: 0.040, unidadeCalc: 'milheiro' }, // 40 tijolos por m²
+        cimento: { qtdPorM2: 0.55, unidadeCalc: 'saco' }, // menos argamassa de assentamento
+        areia_media: { qtdPorM2: 0.08, unidadeCalc: 'm³' },
+        areia_fina: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.08, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 4.0, unidadeCalc: 'kg' }, // menos ferro
+        ferro_10mm: { qtdPorM2: 2.5, unidadeCalc: 'kg' },
+        arame_recozido: { qtdPorM2: 0.4, unidadeCalc: 'kg' },
+        concreto_usinado: { qtdPorM2: 0.12, unidadeCalc: 'm³' },
+        impermeabilizante: { qtdPorM2: 0.20, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        disjuntor_32a: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        spot_embutir: { qtdPorM2: 0.05, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 115/m²) - ECONOMIA ==========
+        // Paredes de tijolo ecológico podem ficar aparentes (economia no reboco)
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.25, unidadeCalc: 'm²' }, // só áreas molhadas
+        argamassa_colante: { qtdPorM2: 0.30, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.4, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 45/m²) - ECONOMIA ==========
+        // Dispensa reboco externo, apenas selador e pintura
+        gesso_liso: { qtdPorM2: 0.8, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.025, unidadeCalc: 'lata' }, // menos massa
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.030, unidadeCalc: 'lata' } // mais selador para tijolo aparente
+      },
+      maoDeObraFator: 0.85, // Economia de mão de obra (menos reboco, menos argamassa)
+      vantagens: ['25-30% mais barato', 'Ecológico', 'Obra limpa', 'Dispensa reboco externo'],
+      desvantagens: ['Mão de obra precisa treinamento', 'Projetos específicos']
+    },
+
+    // ========== ALVENARIA ESTRUTURAL ==========
+    // Custo base: ~R$ 1.600/m² (fator 0.85 em relação à alvenaria convencional)
+    // Economia: dispensa vigas e pilares de concreto armado
+    alvenaria_estrutural: {
+      nome: 'Alvenaria Estrutural',
+      descricao: 'Blocos estruturais que suportam a carga - dispensa pilares e vigas',
+      materiais: {
+        // ========== FUNDAÇÃO E ESTRUTURA (~R$ 310/m²) ==========
+        // Blocos estruturais mais caros, mas sem vigas e pilares
+        bloco_estrutural: { qtdPorM2: 0.040, unidadeCalc: 'milheiro' }, // 40 blocos por m²
+        cimento: { qtdPorM2: 0.65, unidadeCalc: 'saco' }, // grauteamento + argamassa
+        areia_media: { qtdPorM2: 0.10, unidadeCalc: 'm³' },
+        areia_fina: { qtdPorM2: 0.05, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.06, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 3.0, unidadeCalc: 'kg' }, // menos ferro (só graute)
+        ferro_10mm: { qtdPorM2: 1.5, unidadeCalc: 'kg' },
+        arame_recozido: { qtdPorM2: 0.3, unidadeCalc: 'kg' },
+        concreto_usinado: { qtdPorM2: 0.10, unidadeCalc: 'm³' }, // só laje
+        impermeabilizante: { qtdPorM2: 0.22, unidadeCalc: 'm²' },
+        lona_plastica: { qtdPorM2: 0.3, unidadeCalc: 'm²' },
+
+        // ========== COBERTURA (~R$ 145/m²) ==========
+        madeira_telhado: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        telha_ceramica: { qtdPorM2: 1.2, unidadeCalc: 'm²' },
+        cumeeira: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        rufo_galvanizado: { qtdPorM2: 0.15, unidadeCalc: 'm' },
+        calha_pvc: { qtdPorM2: 0.12, unidadeCalc: 'm' },
+        condutor_pvc: { qtdPorM2: 0.06, unidadeCalc: 'm' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 95/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 4.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.0, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.35, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.25, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        disjuntor_32a: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+        spot_embutir: { qtdPorM2: 0.05, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 120/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.8, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.6, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.3, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.04, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 95/m²) ==========
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.025, unidadeCalc: 'unidade' },
+        basculante_aluminio: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.12, unidadeCalc: 'm²' },
+
+        // ========== PISOS E REVESTIMENTOS (~R$ 155/m²) ==========
+        contrapiso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_piso: { qtdPorM2: 1.0, unidadeCalc: 'm²' },
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.35, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.5, unidadeCalc: 'kg' },
+        rodape_ceramico: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        soleira: { qtdPorM2: 0.08, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 80/m²) ==========
+        reboco_pronto: { qtdPorM2: 0.25, unidadeCalc: 'saco' },
+        gesso_liso: { qtdPorM2: 0.9, unidadeCalc: 'm²' },
+        massa_corrida: { qtdPorM2: 0.040, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.035, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.022, unidadeCalc: 'lata' }
+      },
+      maoDeObraFator: 0.90, // Menos mão de obra (sem armar vigas e pilares)
+      vantagens: ['10-15% mais barato', 'Obra mais rápida', 'Menos desperdício'],
+      desvantagens: ['Projetos menos flexíveis', 'Dificuldade para reformas', 'Vãos limitados']
+    },
+
+    // ========== CASA CONTAINER ==========
+    // Custo base: ~R$ 2.500/m² (fator 1.33 em relação à alvenaria)
+    // Estrutura já pronta, mas exige adaptações caras
+    container: {
+      nome: 'Casa Container',
+      descricao: 'Construção com containers marítimos adaptados',
+      materiais: {
+        // ========== CONTAINER E FUNDAÇÃO (~R$ 350/m²) ==========
+        container_20pes: { qtdPorM2: 0.07, unidadeCalc: 'unidade' }, // 1 container de 20 pés = ~15m²
+        cimento: { qtdPorM2: 0.25, unidadeCalc: 'saco' }, // fundação radier
+        areia_media: { qtdPorM2: 0.04, unidadeCalc: 'm³' },
+        brita: { qtdPorM2: 0.05, unidadeCalc: 'm³' },
+        ferro_8mm: { qtdPorM2: 2.0, unidadeCalc: 'kg' },
+        impermeabilizante: { qtdPorM2: 0.30, unidadeCalc: 'm²' },
+
+        // ========== ISOLAMENTO TÉRMICO/ACÚSTICO (~R$ 180/m²) - OBRIGATÓRIO ==========
+        la_de_vidro: { qtdPorM2: 1.8, unidadeCalc: 'm²' }, // paredes e teto
+        drywall: { qtdPorM2: 2.5, unidadeCalc: 'm²' }, // fechamento interno
+        perfil_metalico_drywall: { qtdPorM2: 3.0, unidadeCalc: 'm' },
+
+        // ========== COBERTURA ADICIONAL (~R$ 100/m²) ==========
+        // Proteção contra sol direto no container
+        telha_sanduiche: { qtdPorM2: 1.1, unidadeCalc: 'm²' },
+        estrutura_metalica_leve: { qtdPorM2: 0.8, unidadeCalc: 'kg/m²' },
+
+        // ========== INSTALAÇÃO ELÉTRICA (~R$ 110/m²) ==========
+        fio_eletrico_2_5mm: { qtdPorM2: 5.0, unidadeCalc: 'm' },
+        fio_eletrico_4mm: { qtdPorM2: 2.5, unidadeCalc: 'm' },
+        fio_eletrico_6mm: { qtdPorM2: 1.0, unidadeCalc: 'm' },
+        eletroduto_pvc_20mm: { qtdPorM2: 3.0, unidadeCalc: 'm' },
+        eletroduto_pvc_25mm: { qtdPorM2: 1.0, unidadeCalc: 'm' },
+        caixa_4x2: { qtdPorM2: 0.40, unidadeCalc: 'unidade' },
+        caixa_4x4: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        tomada_simples: { qtdPorM2: 0.30, unidadeCalc: 'unidade' },
+        tomada_dupla: { qtdPorM2: 0.12, unidadeCalc: 'unidade' },
+        interruptor_simples: { qtdPorM2: 0.15, unidadeCalc: 'unidade' },
+        interruptor_paralelo: { qtdPorM2: 0.05, unidadeCalc: 'unidade' },
+        disjuntor_10a: { qtdPorM2: 0.05, unidadeCalc: 'unidade' },
+        disjuntor_20a: { qtdPorM2: 0.07, unidadeCalc: 'unidade' },
+        disjuntor_32a: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        quadro_distribuicao: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        dr_dispositivo: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        lustre_plafon: { qtdPorM2: 0.10, unidadeCalc: 'unidade' },
+        spot_embutir: { qtdPorM2: 0.08, unidadeCalc: 'unidade' },
+
+        // ========== INSTALAÇÃO HIDRÁULICA (~R$ 130/m²) ==========
+        tubo_pvc_25mm: { qtdPorM2: 0.9, unidadeCalc: 'm' },
+        tubo_pvc_32mm: { qtdPorM2: 0.5, unidadeCalc: 'm' },
+        tubo_pvc_50mm: { qtdPorM2: 0.7, unidadeCalc: 'm' },
+        tubo_pvc_100mm: { qtdPorM2: 0.35, unidadeCalc: 'm' },
+        conexoes_pvc: { qtdPorM2: 0.05, unidadeCalc: 'conjunto' },
+        registro_gaveta: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        registro_pressao: { qtdPorM2: 0.02, unidadeCalc: 'unidade' },
+        caixa_dagua_1000l: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        caixa_sifonada: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        sifao: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vaso_sanitario: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_lavatorio: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        torneira_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        chuveiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        pia_cozinha: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+        tanque_lavar: { qtdPorM2: 0.01, unidadeCalc: 'unidade' },
+
+        // ========== ESQUADRIAS (~R$ 120/m²) ==========
+        // Recortes no container são caros
+        porta_madeira_interna: { qtdPorM2: 0.06, unidadeCalc: 'unidade' },
+        porta_madeira_externa: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+        janela_aluminio_100x120: { qtdPorM2: 0.04, unidadeCalc: 'unidade' },
+        janela_aluminio_150x120: { qtdPorM2: 0.03, unidadeCalc: 'unidade' },
+        vidro_comum_4mm: { qtdPorM2: 0.15, unidadeCalc: 'm²' },
+
+        // ========== PISOS E ACABAMENTOS (~R$ 170/m²) ==========
+        contrapiso: { qtdPorM2: 0.3, unidadeCalc: 'm²' }, // só áreas molhadas
+        piso_vinilico: { qtdPorM2: 0.7, unidadeCalc: 'm²' }, // mais leve para container
+        ceramica_piso: { qtdPorM2: 0.3, unidadeCalc: 'm²' }, // só banheiro/cozinha
+        ceramica_parede: { qtdPorM2: 0.35, unidadeCalc: 'm²' },
+        argamassa_colante: { qtdPorM2: 0.20, unidadeCalc: 'saco' },
+        rejunte: { qtdPorM2: 0.4, unidadeCalc: 'kg' },
+        rodape_mdf: { qtdPorM2: 0.4, unidadeCalc: 'm' },
+        bancada_granito: { qtdPorM2: 0.025, unidadeCalc: 'm' },
+        bancada_banheiro: { qtdPorM2: 0.015, unidadeCalc: 'unidade' },
+
+        // ========== ACABAMENTO (~R$ 90/m²) ==========
+        massa_corrida: { qtdPorM2: 0.045, unidadeCalc: 'lata' },
+        tinta_acrilica: { qtdPorM2: 0.040, unidadeCalc: 'lata' },
+        selador: { qtdPorM2: 0.025, unidadeCalc: 'lata' },
+        tinta_epoxi: { qtdPorM2: 0.015, unidadeCalc: 'lata' } // exterior do container
+      },
+      maoDeObraFator: 0.75, // Menos mão de obra convencional, mas especializada
+      vantagens: ['Obra rápida', 'Estética industrial', 'Estrutura robusta', 'Sustentável'],
+      desvantagens: ['Isolamento térmico obrigatório', 'Largura limitada', 'Adaptações caras']
     }
   },
 
-  // Atualizar tiposConstrucao com referência às composições
-  // Base: alvenaria = R$ 1.883/m² (1076 materiais + 807 mão de obra) para padrão médio
-  // Pesquisa de mercado 2025-2026:
-  // - Alvenaria: R$ 1.800-2.400/m² (padrão médio)
-  // - Wood frame simples: 30-40% mais barato que alvenaria
-  // - EPS: custo similar à alvenaria, vantagem está na velocidade e isolamento
-  // - Steel frame: custo similar ou ligeiramente maior
-  // - Pré-fabricada concreto: 15-25% mais barato (produção em escala)
+  // =====================================================
+  // TIPOS DE CONSTRUÇÃO - FATORES BASEADOS EM PESQUISA DE MERCADO 2025/2026
+  // =====================================================
+  // Base: Alvenaria Convencional = R$ 1.880/m² (fator 1.0)
+  // Fontes: SINAPI, CBIC, pesquisa de mercado com ChatGPT/Gemini/Perplexity
+  //
+  // RESUMO DOS FATORES (pesquisa jan/2026):
+  // | Método                  | Faixa R$/m²      | Fator |
+  // |-------------------------|------------------|-------|
+  // | Pré-fab Concreto        | R$ 900-1.500     | 0.64  |
+  // | Pré-fab Madeira (kit)   | R$ 900-1.500     | 0.64  |
+  // | Tijolo Ecológico        | R$ 900-1.800     | 0.72  |
+  // | Alvenaria Estrutural    | R$ 1.400-1.800   | 0.85  |
+  // | Construção Mista        | R$ 1.500-1.900   | 0.90  |
+  // | ALVENARIA (base)        | R$ 1.500-2.200   | 1.00  |
+  // | EPS (Isopor)            | R$ 1.600-2.400   | 1.06  |
+  // | Wood Frame (americano)  | R$ 2.000-2.800   | 1.28  |
+  // | Container               | R$ 1.800-3.500   | 1.33  |
+  // | Steel Frame             | R$ 2.500-3.500   | 1.60  |
+  // | Wood Frame Premium      | R$ 2.800-4.000   | 1.70  |
   tiposConstrucao: {
+    // ----- OPÇÕES MAIS ECONÔMICAS -----
+    'pre_fabricada_concreto': {
+      nome: 'Pré-Fabricada em Concreto',
+      descricao: 'Painéis de concreto armado produzidos em fábrica e montados no local',
+      composicao: 'pre_fabricada',
+      fator: 0.64, // R$ 900-1.500/m² (média R$ 1.200) - pesquisa de mercado 2025
+      tempoObra: 0.30,
+      custoM2Referencia: '~R$ 1.200/m² padrão médio',
+      vantagens: ['Mais econômica entre as sólidas', 'Obra rápida (3-6 semanas)', 'Controle de qualidade fabril', 'Preço fechado', 'Durabilidade'],
+      desvantagens: ['Projetos padronizados', 'Custo de transporte pesado', 'Precisa de guindaste', 'Menos flexibilidade']
+    },
+    'pre_fabricada_madeira': {
+      nome: 'Casa Pré-Fabricada em Madeira (Kit)',
+      descricao: 'Kit de casa em madeira tratada produzido em fábrica - estilo chalé brasileiro',
+      composicao: 'wood_frame',
+      subtipo: 'kit',
+      fator: 0.64, // R$ 900-1.500/m² (média R$ 1.200) - casas de madeira kit
+      tempoObra: 0.25,
+      custoM2Referencia: '~R$ 1.200/m² padrão médio',
+      vantagens: ['Econômica', 'Montagem muito rápida (2-4 semanas)', 'Estética rústica', 'Ecológica'],
+      desvantagens: ['Projetos limitados', 'Manutenção periódica', 'Menor valor de revenda', 'Tratamento obrigatório contra cupins']
+    },
+    'tijolo_ecologico': {
+      nome: 'Tijolo Ecológico (Solo-Cimento)',
+      descricao: 'Tijolos modulares de solo-cimento sem queima, encaixe perfeito que dispensa argamassa nas juntas',
+      composicao: 'tijolo_ecologico',
+      fator: 0.72, // R$ 900-1.800/m² (média R$ 1.350) - economia de materiais e mão de obra
+      tempoObra: 0.60,
+      custoM2Referencia: '~R$ 1.350/m² padrão médio',
+      vantagens: ['25-30% mais barato que alvenaria', 'Ecológico (sem queima)', 'Obra limpa', 'Dispensa reboco em algumas áreas', 'Isolamento térmico'],
+      desvantagens: ['Mão de obra precisa treinamento', 'Projetos específicos', 'Menos conhecido no mercado']
+    },
+    'alvenaria_estrutural': {
+      nome: 'Alvenaria Estrutural',
+      descricao: 'Blocos estruturais que dispensam pilares e vigas - a própria parede é a estrutura',
+      composicao: 'alvenaria_estrutural',
+      fator: 0.85, // R$ 1.400-1.800/m² (média R$ 1.600) - economia de concreto armado
+      tempoObra: 0.80,
+      custoM2Referencia: '~R$ 1.600/m² padrão médio',
+      vantagens: ['10-15% mais barata que convencional', 'Obra mais rápida', 'Menos desperdício', 'Estrutura já pronta'],
+      desvantagens: ['Projetos menos flexíveis', 'Dificuldade para reformas futuras', 'Vãos limitados']
+    },
+    'mista': {
+      nome: 'Construção Mista',
+      descricao: 'Combinação de alvenaria estrutural com drywall interno ou outros sistemas',
+      composicao: 'mista',
+      fator: 0.90,
+      tempoObra: 0.75,
+      custoM2Referencia: '~R$ 1.690/m² padrão médio',
+      vantagens: ['Flexibilidade de projeto', 'Otimiza custos por ambiente', 'Combina vantagens dos sistemas'],
+      desvantagens: ['Requer planejamento cuidadoso', 'Diferentes especialistas']
+    },
+
+    // ----- CUSTO MÉDIO (PRÓXIMO À ALVENARIA) -----
     'alvenaria': {
       nome: 'Alvenaria Convencional',
-      descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto armado',
+      descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto armado (vigas e pilares)',
       composicao: 'alvenaria',
-      fator: 1.0,
+      fator: 1.0, // R$ 1.500-2.200/m² (média R$ 1.880) - REFERÊNCIA BASE
       tempoObra: 1.0,
       custoM2Referencia: '~R$ 1.880/m² padrão médio',
-      vantagens: ['Durabilidade comprovada', 'Flexibilidade de projeto', 'Mão de obra disponível', 'Maior valor de revenda'],
+      vantagens: ['Durabilidade comprovada', 'Flexibilidade de projeto', 'Mão de obra disponível', 'Maior valor de revenda', 'Facilidade de reforma'],
       desvantagens: ['Maior tempo de obra (4-6 meses)', 'Mais resíduos', 'Maior consumo de água']
-    },
-    'steel_frame': {
-      nome: 'Steel Frame',
-      descricao: 'Estrutura em perfis de aço galvanizado com fechamento em placas cimentícias/drywall',
-      composicao: 'steel_frame',
-      fator: 1.05, // 5% mais caro - materiais importados mas obra mais rápida
-      tempoObra: 0.5,
-      custoM2Referencia: '~R$ 1.975/m² padrão médio',
-      vantagens: ['Obra 50% mais rápida', 'Menos resíduos', 'Alta precisão', 'Paredes finas = mais área útil'],
-      desvantagens: ['Mão de obra especializada', 'Materiais mais caros', 'Menor inércia térmica']
-    },
-    'wood_frame': {
-      nome: 'Wood Frame Econômico',
-      descricao: 'Estrutura em madeira tratada (pinus/eucalipto) com fechamento em OSB e placas',
-      composicao: 'wood_frame',
-      subtipo: 'economico',
-      fator: 0.68, // 32% mais barato - pesquisa indica 30-40% economia
-      tempoObra: 0.45,
-      custoM2Referencia: '~R$ 1.280/m² padrão médio',
-      vantagens: ['30-35% mais barato', 'Obra muito rápida (2-3 meses)', 'Sustentável', 'Excelente isolamento térmico'],
-      desvantagens: ['Manutenção periódica', 'Tratamento contra cupins', 'Menor valor de revenda', 'Cuidado com umidade']
-    },
-    'wood_frame_premium': {
-      nome: 'Wood Frame Premium',
-      descricao: 'Estrutura em madeira nobre (ipê, cumaru, cedro) com acabamento superior',
-      composicao: 'wood_frame',
-      subtipo: 'premium',
-      fator: 1.15, // Madeira nobre é cara
-      tempoObra: 0.50,
-      custoM2Referencia: '~R$ 2.165/m² padrão médio',
-      vantagens: ['Alta durabilidade (50+ anos)', 'Estética premium', 'Valorização do imóvel', 'Não precisa tratamento'],
-      desvantagens: ['Custo elevado', 'Mão de obra especializada', 'Disponibilidade limitada de madeira']
     },
     'eps': {
       nome: 'Painéis EPS (Isopor Estrutural)',
       descricao: 'Painéis de poliestireno expandido com malha de aço e argamassa projetada',
       composicao: 'eps',
-      fator: 0.95, // Custo similar à alvenaria - economia de ~5% pela rapidez
+      fator: 1.06, // R$ 1.600-2.400/m² (média R$ 2.000) - custo similar ou levemente maior que alvenaria
       tempoObra: 0.40,
-      custoM2Referencia: '~R$ 1.785/m² padrão médio',
+      custoM2Referencia: '~R$ 2.000/m² padrão médio',
       vantagens: ['Obra 60% mais rápida', 'Excelente isolamento térmico/acústico', 'Estrutura muito leve', 'Menos sujeira na obra'],
       desvantagens: ['Vãos limitados (até 4m)', 'Menos resistente a impactos', 'Fixações especiais', 'Mão de obra especializada']
     },
-    'mista': {
-      nome: 'Construção Mista',
-      descricao: 'Combinação de alvenaria estrutural com steel frame ou drywall',
-      composicao: 'mista',
-      fator: 0.92,
-      tempoObra: 0.75,
-      custoM2Referencia: '~R$ 1.730/m² padrão médio',
-      vantagens: ['Flexibilidade de projeto', 'Otimiza custos por ambiente', 'Combina vantagens dos sistemas'],
-      desvantagens: ['Requer planejamento cuidadoso', 'Diferentes especialistas']
-    },
-    'pre_fabricada_concreto': {
-      nome: 'Pré-Fabricada em Concreto',
-      descricao: 'Painéis de concreto armado produzidos em fábrica e montados no local',
-      composicao: 'pre_fabricada',
-      fator: 0.80, // 20% mais barato - produção em escala
-      tempoObra: 0.30,
-      custoM2Referencia: '~R$ 1.505/m² padrão médio',
-      vantagens: ['Obra rápida (3-6 semanas)', 'Controle de qualidade fabril', 'Preço fechado', 'Durabilidade'],
-      desvantagens: ['Projetos padronizados', 'Custo de transporte pesado', 'Precisa de guindaste']
-    },
-    'pre_fabricada_madeira': {
-      nome: 'Casa Pré-Fabricada em Madeira',
-      descricao: 'Kit de casa em madeira tratada produzido em fábrica - estilo chalé',
+
+    // ----- OPÇÕES MAIS CARAS (SISTEMAS CONSTRUTIVOS MODERNOS) -----
+    'wood_frame': {
+      nome: 'Wood Frame (Sistema Americano)',
+      descricao: 'Estrutura engenheirada em madeira tratada com fechamento em OSB, membrana e placas cimentícias',
       composicao: 'wood_frame',
-      subtipo: 'economico',
-      fator: 0.60, // 40% mais barato - produção em escala + madeira
-      tempoObra: 0.25,
-      custoM2Referencia: '~R$ 1.130/m² padrão médio',
-      vantagens: ['Mais econômica', 'Montagem muito rápida (2-4 semanas)', 'Estética rústica', 'Ecológica'],
-      desvantagens: ['Projetos limitados', 'Manutenção periódica', 'Menor valor de revenda', 'Tratamento obrigatório']
+      subtipo: 'americano',
+      fator: 1.28, // R$ 2.000-2.800/m² (média R$ 2.400) - sistema construtivo moderno, NÃO é casa de madeira simples
+      tempoObra: 0.45,
+      custoM2Referencia: '~R$ 2.400/m² padrão médio',
+      vantagens: ['Obra rápida (2-3 meses)', 'Excelente isolamento térmico/acústico', 'Sustentável', 'Mais área útil (paredes finas)'],
+      desvantagens: ['Custo elevado no Brasil', 'Mão de obra especializada escassa', 'Materiais importados', 'Cuidado com umidade', 'Menor valor de revenda']
+    },
+    'container': {
+      nome: 'Casa Container',
+      descricao: 'Construção utilizando containers marítimos adaptados e conectados',
+      composicao: 'container',
+      fator: 1.33, // R$ 1.800-3.500/m² (média R$ 2.500) - varia muito conforme acabamento
+      tempoObra: 0.35,
+      custoM2Referencia: '~R$ 2.500/m² padrão médio',
+      vantagens: ['Obra rápida', 'Estética industrial moderna', 'Estrutura robusta', 'Sustentável (reuso)'],
+      desvantagens: ['Isolamento térmico obrigatório', 'Largura limitada (2,4m interno)', 'Adaptações caras', 'Pode aquecer muito']
+    },
+    'steel_frame': {
+      nome: 'Steel Frame',
+      descricao: 'Estrutura em perfis de aço galvanizado com fechamento em placas cimentícias e drywall',
+      composicao: 'steel_frame',
+      fator: 1.60, // R$ 2.500-3.500/m² (média R$ 3.000) - ~60% mais caro que alvenaria no Brasil
+      tempoObra: 0.50,
+      custoM2Referencia: '~R$ 3.000/m² padrão médio',
+      vantagens: ['Obra 50% mais rápida', 'Menos resíduos', 'Alta precisão', 'Paredes finas = mais área útil', 'Durabilidade do aço'],
+      desvantagens: ['60% mais caro que alvenaria', 'Mão de obra especializada escassa', 'Materiais importados', 'Menor inércia térmica']
+    },
+    'wood_frame_premium': {
+      nome: 'Wood Frame Premium (Madeira Nobre)',
+      descricao: 'Estrutura em madeira nobre (ipê, cumaru, cedro) com acabamento superior de alto padrão',
+      composicao: 'wood_frame',
+      subtipo: 'premium',
+      fator: 1.70, // Madeira nobre + sistema premium
+      tempoObra: 0.55,
+      custoM2Referencia: '~R$ 3.200/m² padrão médio',
+      vantagens: ['Alta durabilidade (50+ anos)', 'Estética premium', 'Valorização do imóvel', 'Não precisa tratamento contra cupins'],
+      desvantagens: ['Custo muito elevado', 'Mão de obra especializada', 'Disponibilidade limitada de madeira certificada']
     }
   },
 

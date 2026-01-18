@@ -867,80 +867,92 @@ const CustoConstrucaoData = {
   // Pesquisa de mercado 2025-2026:
   // - Alvenaria: R$ 1.800-2.400/m² (padrão médio)
   // - Wood frame simples: 30-40% mais barato que alvenaria
-  // - EPS: 20-30% mais barato que alvenaria
+  // - EPS: custo similar à alvenaria, vantagem está na velocidade e isolamento
   // - Steel frame: custo similar ou ligeiramente maior
+  // - Pré-fabricada concreto: 15-25% mais barato (produção em escala)
   tiposConstrucao: {
     'alvenaria': {
       nome: 'Alvenaria Convencional',
-      descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto',
+      descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto armado',
       composicao: 'alvenaria',
       fator: 1.0,
       tempoObra: 1.0,
       custoM2Referencia: '~R$ 1.880/m² padrão médio',
-      vantagens: ['Durabilidade', 'Flexibilidade de projeto', 'Mão de obra disponível', 'Maior valor de revenda'],
+      vantagens: ['Durabilidade comprovada', 'Flexibilidade de projeto', 'Mão de obra disponível', 'Maior valor de revenda'],
       desvantagens: ['Maior tempo de obra (4-6 meses)', 'Mais resíduos', 'Maior consumo de água']
     },
     'steel_frame': {
       nome: 'Steel Frame',
-      descricao: 'Estrutura em aço galvanizado com fechamento em placas',
+      descricao: 'Estrutura em perfis de aço galvanizado com fechamento em placas cimentícias/drywall',
       composicao: 'steel_frame',
-      fator: 1.05, // 5% mais caro - materiais mais caros mas obra mais rápida
-      tempoObra: 0.5, // 50% do tempo de alvenaria
+      fator: 1.05, // 5% mais caro - materiais importados mas obra mais rápida
+      tempoObra: 0.5,
       custoM2Referencia: '~R$ 1.975/m² padrão médio',
-      vantagens: ['Obra 50% mais rápida', 'Menos resíduos', 'Alta precisão', 'Paredes mais finas = mais área útil'],
-      desvantagens: ['Mão de obra especializada', 'Maior custo de material']
+      vantagens: ['Obra 50% mais rápida', 'Menos resíduos', 'Alta precisão', 'Paredes finas = mais área útil'],
+      desvantagens: ['Mão de obra especializada', 'Materiais mais caros', 'Menor inércia térmica']
     },
     'wood_frame': {
       nome: 'Wood Frame Econômico',
-      descricao: 'Estrutura em madeira tratada (pinus/eucalipto) - sistema mais econômico',
+      descricao: 'Estrutura em madeira tratada (pinus/eucalipto) com fechamento em OSB e placas',
       composicao: 'wood_frame',
       subtipo: 'economico',
       fator: 0.68, // 32% mais barato - pesquisa indica 30-40% economia
-      tempoObra: 0.45, // Obra muito rápida
+      tempoObra: 0.45,
       custoM2Referencia: '~R$ 1.280/m² padrão médio',
       vantagens: ['30-35% mais barato', 'Obra muito rápida (2-3 meses)', 'Sustentável', 'Excelente isolamento térmico'],
-      desvantagens: ['Manutenção periódica', 'Tratamento necessário', 'Menor valor de revenda', 'Cuidado com umidade']
+      desvantagens: ['Manutenção periódica', 'Tratamento contra cupins', 'Menor valor de revenda', 'Cuidado com umidade']
     },
     'wood_frame_premium': {
       nome: 'Wood Frame Premium',
-      descricao: 'Estrutura em madeira nobre (ipê, cumaru, cedro) - alta durabilidade',
+      descricao: 'Estrutura em madeira nobre (ipê, cumaru, cedro) com acabamento superior',
       composicao: 'wood_frame',
       subtipo: 'premium',
-      fator: 1.15, // Madeira nobre é cara, mas obra ainda é rápida
+      fator: 1.15, // Madeira nobre é cara
       tempoObra: 0.50,
       custoM2Referencia: '~R$ 2.165/m² padrão médio',
-      vantagens: ['Alta durabilidade (50+ anos)', 'Estética premium', 'Valorização do imóvel', 'Obra rápida'],
-      desvantagens: ['Custo elevado', 'Mão de obra especializada', 'Disponibilidade de madeira']
+      vantagens: ['Alta durabilidade (50+ anos)', 'Estética premium', 'Valorização do imóvel', 'Não precisa tratamento'],
+      desvantagens: ['Custo elevado', 'Mão de obra especializada', 'Disponibilidade limitada de madeira']
     },
     'eps': {
       nome: 'Painéis EPS (Isopor Estrutural)',
       descricao: 'Painéis de poliestireno expandido com malha de aço e argamassa projetada',
       composicao: 'eps',
-      fator: 0.72, // 28% mais barato - muito eficiente
-      tempoObra: 0.40, // Obra muito rápida
-      custoM2Referencia: '~R$ 1.355/m² padrão médio',
-      vantagens: ['25-30% mais barato', 'Obra muito rápida', 'Excelente isolamento térmico', 'Menos mão de obra'],
-      desvantagens: ['Vãos limitados (até 4m)', 'Menos resistente a impactos', 'Cuidado com fixações pesadas']
+      fator: 0.95, // Custo similar à alvenaria - economia de ~5% pela rapidez
+      tempoObra: 0.40,
+      custoM2Referencia: '~R$ 1.785/m² padrão médio',
+      vantagens: ['Obra 60% mais rápida', 'Excelente isolamento térmico/acústico', 'Estrutura muito leve', 'Menos sujeira na obra'],
+      desvantagens: ['Vãos limitados (até 4m)', 'Menos resistente a impactos', 'Fixações especiais', 'Mão de obra especializada']
     },
     'mista': {
       nome: 'Construção Mista',
-      descricao: 'Combinação de alvenaria com steel frame ou outros sistemas',
+      descricao: 'Combinação de alvenaria estrutural com steel frame ou drywall',
       composicao: 'mista',
-      fator: 0.92, // Otimização de custos
+      fator: 0.92,
       tempoObra: 0.75,
       custoM2Referencia: '~R$ 1.730/m² padrão médio',
-      vantagens: ['Flexibilidade de projeto', 'Otimização de custos', 'Combina vantagens dos sistemas'],
-      desvantagens: ['Requer planejamento cuidadoso', 'Diferentes fornecedores']
+      vantagens: ['Flexibilidade de projeto', 'Otimiza custos por ambiente', 'Combina vantagens dos sistemas'],
+      desvantagens: ['Requer planejamento cuidadoso', 'Diferentes especialistas']
     },
-    'pre_fabricada': {
-      nome: 'Pré-Fabricada/Modular',
-      descricao: 'Módulos industrializados prontos montados no local',
+    'pre_fabricada_concreto': {
+      nome: 'Pré-Fabricada em Concreto',
+      descricao: 'Painéis de concreto armado produzidos em fábrica e montados no local',
       composicao: 'pre_fabricada',
-      fator: 0.78, // Mais barata pela industrialização
-      tempoObra: 0.25, // Montagem muito rápida (2-4 semanas)
-      custoM2Referencia: '~R$ 1.470/m² padrão médio',
-      vantagens: ['Obra muito rápida (2-4 semanas)', 'Controle de qualidade fabril', 'Preço fixo garantido'],
-      desvantagens: ['Menos personalização', 'Custo de transporte', 'Projetos limitados']
+      fator: 0.80, // 20% mais barato - produção em escala
+      tempoObra: 0.30,
+      custoM2Referencia: '~R$ 1.505/m² padrão médio',
+      vantagens: ['Obra rápida (3-6 semanas)', 'Controle de qualidade fabril', 'Preço fechado', 'Durabilidade'],
+      desvantagens: ['Projetos padronizados', 'Custo de transporte pesado', 'Precisa de guindaste']
+    },
+    'pre_fabricada_madeira': {
+      nome: 'Casa Pré-Fabricada em Madeira',
+      descricao: 'Kit de casa em madeira tratada produzido em fábrica - estilo chalé',
+      composicao: 'wood_frame',
+      subtipo: 'economico',
+      fator: 0.60, // 40% mais barato - produção em escala + madeira
+      tempoObra: 0.25,
+      custoM2Referencia: '~R$ 1.130/m² padrão médio',
+      vantagens: ['Mais econômica', 'Montagem muito rápida (2-4 semanas)', 'Estética rústica', 'Ecológica'],
+      desvantagens: ['Projetos limitados', 'Manutenção periódica', 'Menor valor de revenda', 'Tratamento obrigatório']
     }
   },
 

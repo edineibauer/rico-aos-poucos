@@ -1182,16 +1182,15 @@ const CustoConstrucaoData = {
   // | Método                  | Faixa R$/m²      | Fator |
   // |-------------------------|------------------|-------|
   // | Pré-fab Concreto        | R$ 900-1.500     | 0.64  |
-  // | Pré-fab Madeira (kit)   | R$ 900-1.500     | 0.64  |
+  // | Madeira Simples         | R$ 900-1.500     | 0.64  |
   // | Tijolo Ecológico        | R$ 900-1.800     | 0.72  |
   // | Alvenaria Estrutural    | R$ 1.400-1.800   | 0.85  |
   // | Construção Mista        | R$ 1.500-1.900   | 0.90  |
   // | ALVENARIA (base)        | R$ 1.500-2.200   | 1.00  |
   // | EPS (Isopor)            | R$ 1.600-2.400   | 1.06  |
-  // | Wood Frame (americano)  | R$ 2.000-2.800   | 1.28  |
   // | Container               | R$ 1.800-3.500   | 1.33  |
   // | Steel Frame             | R$ 2.500-3.500   | 1.60  |
-  // | Wood Frame Premium      | R$ 2.800-4.000   | 1.70  |
+  // | Madeira Nobre           | R$ 2.800-4.000   | 1.70  |
   tiposConstrucao: {
     // ----- OPÇÕES MAIS ECONÔMICAS -----
     'pre_fabricada_concreto': {
@@ -1204,16 +1203,16 @@ const CustoConstrucaoData = {
       vantagens: ['Mais econômica entre as sólidas', 'Obra rápida (3-6 semanas)', 'Controle de qualidade fabril', 'Preço fechado', 'Durabilidade'],
       desvantagens: ['Projetos padronizados', 'Custo de transporte pesado', 'Precisa de guindaste', 'Menos flexibilidade']
     },
-    'pre_fabricada_madeira': {
-      nome: 'Casa Pré-Fabricada em Madeira (Kit)',
-      descricao: 'Kit de casa em madeira tratada produzido em fábrica - estilo chalé brasileiro',
+    'madeira_simples': {
+      nome: 'Casa de Madeira Simples (Pinus/Eucalipto)',
+      descricao: 'Casa em madeira tratada (pinus ou eucalipto) - estilo chalé brasileiro, econômica',
       composicao: 'wood_frame',
-      subtipo: 'kit',
-      fator: 0.64, // R$ 900-1.500/m² (média R$ 1.200) - casas de madeira kit
+      subtipo: 'simples',
+      fator: 0.64, // R$ 900-1.500/m² (média R$ 1.200) - casas de madeira simples
       tempoObra: 0.25,
       custoM2Referencia: '~R$ 1.200/m² padrão médio',
-      vantagens: ['Econômica', 'Montagem muito rápida (2-4 semanas)', 'Estética rústica', 'Ecológica'],
-      desvantagens: ['Projetos limitados', 'Manutenção periódica', 'Menor valor de revenda', 'Tratamento obrigatório contra cupins']
+      vantagens: ['Econômica', 'Montagem muito rápida (2-4 semanas)', 'Estética rústica', 'Ecológica', 'Excelente conforto térmico'],
+      desvantagens: ['Manutenção periódica', 'Menor valor de revenda', 'Tratamento obrigatório contra cupins', 'Cuidado com umidade']
     },
     'tijolo_ecologico': {
       nome: 'Tijolo Ecológico (Solo-Cimento)',
@@ -1269,17 +1268,6 @@ const CustoConstrucaoData = {
     },
 
     // ----- OPÇÕES MAIS CARAS (SISTEMAS CONSTRUTIVOS MODERNOS) -----
-    'wood_frame': {
-      nome: 'Wood Frame (Sistema Americano)',
-      descricao: 'Estrutura engenheirada em madeira tratada com fechamento em OSB, membrana e placas cimentícias',
-      composicao: 'wood_frame',
-      subtipo: 'americano',
-      fator: 1.28, // R$ 2.000-2.800/m² (média R$ 2.400) - sistema construtivo moderno, NÃO é casa de madeira simples
-      tempoObra: 0.45,
-      custoM2Referencia: '~R$ 2.400/m² padrão médio',
-      vantagens: ['Obra rápida (2-3 meses)', 'Excelente isolamento térmico/acústico', 'Sustentável', 'Mais área útil (paredes finas)'],
-      desvantagens: ['Custo elevado no Brasil', 'Mão de obra especializada escassa', 'Materiais importados', 'Cuidado com umidade', 'Menor valor de revenda']
-    },
     'container': {
       nome: 'Casa Container',
       descricao: 'Construção utilizando containers marítimos adaptados e conectados',
@@ -1300,12 +1288,12 @@ const CustoConstrucaoData = {
       vantagens: ['Obra 50% mais rápida', 'Menos resíduos', 'Alta precisão', 'Paredes finas = mais área útil', 'Durabilidade do aço'],
       desvantagens: ['60% mais caro que alvenaria', 'Mão de obra especializada escassa', 'Materiais importados', 'Menor inércia térmica']
     },
-    'wood_frame_premium': {
-      nome: 'Wood Frame Premium (Madeira Nobre)',
-      descricao: 'Estrutura em madeira nobre (ipê, cumaru, cedro) com acabamento superior de alto padrão',
+    'madeira_nobre': {
+      nome: 'Casa de Madeira Nobre',
+      descricao: 'Estrutura em madeira nobre (ipê, cumaru, cedro) com acabamento superior - alta durabilidade',
       composicao: 'wood_frame',
       subtipo: 'premium',
-      fator: 1.70, // Madeira nobre + sistema premium
+      fator: 1.70, // R$ 2.800-4.000/m² - Madeira nobre é cara
       tempoObra: 0.55,
       custoM2Referencia: '~R$ 3.200/m² padrão médio',
       vantagens: ['Alta durabilidade (50+ anos)', 'Estética premium', 'Valorização do imóvel', 'Não precisa tratamento contra cupins'],

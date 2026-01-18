@@ -1970,33 +1970,81 @@
     // VALIDAÇÃO DE SANIDADE - verificar se os dados fazem sentido
     // ============================================
 
-    // Calcular área mínima necessária baseado nos cômodos detectados
+    // Calcular área TOTAL necessária baseado em TODOS os cômodos detectados
     const numQuartos = resultado.config.numQuartos || 0;
     const numSuites = resultado.config.numSuites || 0;
     const numBanheiros = resultado.config.numBanheiros || 0;
+    const numEscritorios = resultado.config.numEscritorios || 0;
+    const numLavabos = resultado.config.numLavabos || 0;
+    const numGaragem = resultado.extras?.garagemQtd || resultado.config.garagemVagas || 0;
+    const temAreaGourmet = resultado.config.temAreaGourmet || resultado.extras?.churrasqueira || false;
+    const areaGourmetM2 = resultado.config.areaGourmetM2 || 20;
+    const temDeposito = resultado.config.temDeposito || textoLower.includes('deposito') || textoLower.includes('depósito');
+    const temAreaServico = resultado.config.temAreaServico || textoLower.includes('lavanderia') || textoLower.includes('area de servico');
+    const isSobrado = resultado.config.tipoEstrutura === 'sobrado' || resultado.config.tipoEstrutura === 'triplex';
     const isApartamento = resultado.config.tipoEstrutura === 'apartamento';
 
-    // Área mínima estimada por cômodo (valores em m²)
-    // Apartamentos são muito mais compactos que casas
-    const areaMinimaPorQuarto = isApartamento ? 6 : 9;    // apartamento: 2.5x2.4m, casa: 3x3m
-    const areaMinimaPorSuite = isApartamento ? 10 : 15;   // apartamento: quarto+banheiro compacto
-    const areaMinimaPorBanheiro = isApartamento ? 2 : 3;  // apartamento: banheiro mínimo
-    const areaMinimaCozinha = isApartamento ? 4 : 6;      // apartamento: cozinha americana
-    const areaMinimaSala = isApartamento ? 8 : 12;        // apartamento: sala compacta
-    const areaMinimaCirculacao = isApartamento ? 3 : 10;  // apartamento: corredores mínimos
+    // Área por tipo de cômodo (valores realistas em m²)
+    // Apartamentos são mais compactos que casas
+    const areas = {
+      quarto: isApartamento ? 10 : 12,          // quarto padrão
+      suite: isApartamento ? 15 : 20,           // quarto + banheiro
+      banheiro: isApartamento ? 3 : 4,          // banheiro extra
+      cozinha: isApartamento ? 8 : 12,          // cozinha (conjugada = maior)
+      sala: isApartamento ? 12 : 18,            // sala (conjugada = maior)
+      escritorio: isApartamento ? 8 : 10,       // escritório/home office
+      lavabo: 3,                                 // lavabo social
+      areaServico: isApartamento ? 4 : 6,       // lavanderia/área de serviço
+      deposito: 6,                               // depósito/despensa
+      garagem: 15,                               // ~15m² por vaga
+      areaGourmet: areaGourmetM2,               // área gourmet (customizável)
+      circulacao: isApartamento ? 5 : 12,       // corredores, hall
+      escada: 8                                  // escada (sobrado/triplex)
+    };
 
-    // Calcular área mínima necessária
-    const areaMinimaEstimada =
-      (numQuartos * areaMinimaPorQuarto) +
-      (numSuites * areaMinimaPorSuite) +
-      (numBanheiros * areaMinimaPorBanheiro) +
-      areaMinimaCozinha +
-      areaMinimaSala +
-      areaMinimaCirculacao;
+    // Calcular área TOTAL estimada incluindo TODOS os espaços construídos
+    let areaEstimadaTotal = 0;
+
+    // Quartos e suítes
+    areaEstimadaTotal += numQuartos * areas.quarto;
+    areaEstimadaTotal += numSuites * areas.suite;
+
+    // Banheiros extras (além dos das suítes)
+    areaEstimadaTotal += numBanheiros * areas.banheiro;
+
+    // Áreas básicas da casa
+    areaEstimadaTotal += areas.cozinha;
+    areaEstimadaTotal += areas.sala;
+    areaEstimadaTotal += areas.circulacao;
+
+    // Escritórios
+    areaEstimadaTotal += numEscritorios * areas.escritorio;
+
+    // Lavabos
+    areaEstimadaTotal += numLavabos * areas.lavabo;
+
+    // Área de serviço/lavanderia
+    if (temAreaServico) areaEstimadaTotal += areas.areaServico;
+
+    // Depósito
+    if (temDeposito) areaEstimadaTotal += areas.deposito;
+
+    // GARAGEM - INCLUI NA ÁREA TOTAL (é área construída!)
+    areaEstimadaTotal += numGaragem * areas.garagem;
+
+    // ÁREA GOURMET - INCLUI NA ÁREA TOTAL (é área construída!)
+    if (temAreaGourmet) areaEstimadaTotal += areas.areaGourmet;
+
+    // Sobrado/Triplex - adiciona escada
+    if (isSobrado) areaEstimadaTotal += areas.escada;
+    if (resultado.config.tipoEstrutura === 'triplex') areaEstimadaTotal += areas.escada; // 2 escadas
+
+    // Área mínima para validação (valor menor para não rejeitar)
+    const areaMinimaEstimada = (numQuartos * 9) + (numSuites * 15) + (numBanheiros * 3) + 6 + 12 + 10;
 
     // Só invalidar se a área for MUITO menor que o mínimo (0.6x para dar margem)
     // Apartamentos compactos existem e são comuns
-    const fatorValidacao = isApartamento ? 0.5 : 0.7;
+    const fatorValidacao = isApartamento ? 0.5 : 0.6;
     if (resultado.config.areaTotal && resultado.config.areaTotal < areaMinimaEstimada * fatorValidacao) {
       // Área muito pequena para os cômodos - invalidar
       resultado.encontrados = resultado.encontrados.filter(e => !e.startsWith('Área:'));
@@ -2006,21 +2054,22 @@
     }
 
     // Se não tem área mas tem terreno, estimar área construída como 30-40% do terreno
+    // Mas usar areaEstimadaTotal se for maior (para casas completas)
     if (!resultado.config.areaTotal && resultado.config.areaTerreno) {
-      const areaEstimada = Math.round(resultado.config.areaTerreno * 0.35);
-      // Só usar se for pelo menos a área mínima
+      const areaDoTerreno = Math.round(resultado.config.areaTerreno * 0.35);
+      // Usar o MAIOR entre estimativa por cômodos e estimativa por terreno
+      const areaEstimada = Math.max(areaDoTerreno, areaEstimadaTotal);
       if (areaEstimada >= areaMinimaEstimada) {
         resultado.config.areaTotal = areaEstimada;
         resultado.encontrados.push(`Área: ~${areaEstimada}m² (estimada)`);
       }
     }
 
-    // Se ainda não tem área, estimar baseado nos cômodos
-    if (!resultado.config.areaTotal && (numQuartos > 0 || numSuites > 0)) {
-      // Estimar área razoável (não mínima)
-      const areaEstimada = Math.round(areaMinimaEstimada * 1.5);
-      resultado.config.areaTotal = areaEstimada;
-      resultado.encontrados.push(`Área: ~${areaEstimada}m² (estimada por cômodos)`);
+    // Se ainda não tem área, usar a área estimada completa (inclui garagem, gourmet, etc.)
+    if (!resultado.config.areaTotal && (numQuartos > 0 || numSuites > 0 || numGaragem > 0 || temAreaGourmet)) {
+      // Usar areaEstimadaTotal que inclui TODOS os cômodos detectados
+      resultado.config.areaTotal = Math.round(areaEstimadaTotal);
+      resultado.encontrados.push(`Área: ~${Math.round(areaEstimadaTotal)}m² (estimada por cômodos)`);
     }
 
     return resultado;

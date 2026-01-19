@@ -1777,10 +1777,14 @@
       }
     }
 
-    // Churrasqueira
-    if ((textoLower.includes('churrasqueira') || textoLower.includes('espaco gourmet')) && !isNegado('churrasqueira') && !isNegado('gourmet')) {
+    // Área Gourmet / Churrasqueira (faz parte da casa principal, NÃO é edícula)
+    const temGourmet = textoLower.includes('churrasqueira') ||
+                       textoLower.includes('espaco gourmet') ||
+                       textoLower.includes('area gourmet');
+    if (temGourmet && !isNegado('churrasqueira') && !isNegado('gourmet')) {
       resultado.extras.churrasqueira = true;
-      resultado.encontrados.push('Extra: Churrasqueira');
+      resultado.config.temAreaGourmet = true;
+      resultado.encontrados.push('Área Gourmet');
     }
 
     // Garagem - verificar negação, detectar quantidade de carros e tipo
@@ -1866,16 +1870,15 @@
       resultado.encontrados.push('Extra: Portão');
     }
 
-    // Edícula - incluir salão campeiro, salão de festas, área de lazer externa
+    // Edícula - construção SEPARADA da casa principal
+    // NÃO inclui área gourmet (que faz parte da casa principal)
     const ediculaPatterns = [
       /\bedicula\b/i,
       /\bdependencia\b/i,
       /\bsalao\s*campeiro\b/i,
       /\bsalao\s*de\s*festas?\b/i,
-      /\barea\s*(?:de\s*)?lazer\b/i,
       /\bquiosque\b/i,
-      /\bespaco\s*gourmet\b/i,
-      /\barea\s*gourmet\b/i
+      /\bcasa\s*(?:de\s*)?hospedes?\b/i
     ];
 
     const temEdicula = ediculaPatterns.some(pattern => pattern.test(textoLower));
@@ -1883,7 +1886,7 @@
       resultado.extras.edicula = true;
 
       // Detectar área da edícula se especificada
-      const areaEdiculaMatch = texto.match(/(?:salao|edicula|quiosque|gourmet)[^0-9]*(\d+)\s*m[²2]/i);
+      const areaEdiculaMatch = texto.match(/(?:salao|edicula|quiosque)[^0-9]*(\d+)\s*m[²2]/i);
       if (areaEdiculaMatch) {
         resultado.extras.ediculaArea = parseInt(areaEdiculaMatch[1]);
         resultado.encontrados.push(`Extra: Edícula (${areaEdiculaMatch[1]}m²)`);
@@ -2153,6 +2156,17 @@
     }
     // Atualizar campo de ajuste de localização
     updateLocalizacaoAjuste();
+
+    // Aplicar Área Gourmet (do config, não de extras - pois faz parte da casa)
+    if (config.temAreaGourmet) {
+      state.config.temAreaGourmet = true;
+      const checkbox = document.getElementById('cc-tem-area-gourmet');
+      const options = document.getElementById('cc-area-gourmet-options');
+      if (checkbox) {
+        checkbox.checked = true;
+        if (options) options.style.display = 'block';
+      }
+    }
 
     // Aplicar extras
     if (extras) {

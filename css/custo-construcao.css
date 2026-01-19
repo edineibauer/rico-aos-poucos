@@ -1315,7 +1315,7 @@
 }
 
 .cc-edicula-row-4 {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 }
 
 .cc-field-compact input[type="number"] {
@@ -1323,10 +1323,10 @@
   padding: 8px 4px;
 }
 
-/* Checkboxes em grid */
+/* Checkboxes em grid - usa auto-fit para quebrar linha automaticamente */
 .cc-edicula-checkboxes {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
   gap: 8px;
 }
 
@@ -1387,29 +1387,10 @@
   color: var(--cc-primary);
 }
 
-/* Responsive - Tablet */
-@media (max-width: 768px) {
-  .cc-edicula-row-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cc-edicula-checkboxes {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 /* Responsive - Mobile */
 @media (max-width: 480px) {
   .cc-edicula-row {
     grid-template-columns: 1fr;
-  }
-
-  .cc-edicula-row-4 {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .cc-edicula-checkboxes {
-    grid-template-columns: 1fr 1fr;
   }
 
   .cc-checkbox-item {

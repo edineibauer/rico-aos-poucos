@@ -1260,9 +1260,9 @@ const CustoConstrucaoData = {
       nome: 'Painéis EPS (Isopor Estrutural)',
       descricao: 'Painéis de poliestireno expandido com malha de aço e argamassa projetada',
       composicao: 'eps',
-      fator: 0.92, // 8-10% mais barato que alvenaria - fundação mais leve, sem caixaria, menos desperdício
+      fator: 0.95, // 5% mais barato que alvenaria - fundação mais leve, sem caixaria, menos desperdício
       tempoObra: 0.50,
-      custoM2Referencia: '~R$ 1.730/m² padrão médio',
+      custoM2Referencia: '~R$ 1.790/m² padrão médio',
       vantagens: ['Obra 50% mais rápida (6-8 meses)', 'Fundação mais barata (estrutura leve)', 'Sem desperdício de caixaria', 'Excelente isolamento térmico/acústico', 'Menos resíduos', 'Ideal para regiões úmidas/litorâneas'],
       desvantagens: ['Vãos limitados (até 4m)', 'Menos resistente a impactos', 'Fixações especiais', 'Mão de obra especializada (escassa)', 'Preconceito no mercado de revenda']
     },

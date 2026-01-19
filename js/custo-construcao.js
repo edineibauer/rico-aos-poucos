@@ -3448,6 +3448,16 @@
           </svg>
           Personalizar Preços
         </button>
+        <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.abrirModalDescricao()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+            <polyline points="14 2 14 8 20 8"></polyline>
+            <line x1="16" y1="13" x2="8" y2="13"></line>
+            <line x1="16" y1="17" x2="8" y2="17"></line>
+            <polyline points="10 9 9 9 8 9"></polyline>
+          </svg>
+          Descrição
+        </button>
         <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.exportarExcel()">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
             <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -3589,6 +3599,295 @@ ${c.detalhesAdicionais.length > 0 ? `
     a.click();
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
+  }
+
+  // =====================================================
+  // GERADOR DE DESCRIÇÃO DO IMÓVEL
+  // =====================================================
+
+  function gerarDescricaoImovel() {
+    const c = state.config;
+    const partes = [];
+
+    // Tipo de estrutura
+    const tipoEstrutura = data.tiposEstrutura[c.tipoEstrutura];
+    if (tipoEstrutura && c.tipoEstrutura !== 'terrea') {
+      partes.push(tipoEstrutura.nome);
+    }
+
+    // Quartos e suítes
+    const totalQuartos = (c.numQuartos || 0) + (c.numSuites || 0);
+    if (totalQuartos > 0) {
+      if (c.numSuites > 0 && c.numQuartos > 0) {
+        partes.push(`${totalQuartos} quartos, sendo ${c.numSuites} suíte${c.numSuites > 1 ? 's' : ''}`);
+      } else if (c.numSuites > 0) {
+        partes.push(`${c.numSuites} suíte${c.numSuites > 1 ? 's' : ''}`);
+      } else {
+        partes.push(`${c.numQuartos} quarto${c.numQuartos > 1 ? 's' : ''}`);
+      }
+    }
+
+    // Banheiros extras
+    if (c.numBanheiros > 0) {
+      partes.push(`${c.numBanheiros} banheiro${c.numBanheiros > 1 ? 's' : ''}`);
+    }
+
+    // Sala e cozinha
+    const temSala = document.getElementById('cc-sala')?.checked;
+    const temCozinha = document.getElementById('cc-cozinha')?.checked;
+    if (temSala && temCozinha) {
+      partes.push('sala e cozinha');
+    } else if (temSala) {
+      partes.push('sala');
+    } else if (temCozinha) {
+      partes.push('cozinha');
+    }
+
+    // Escritórios
+    if (c.numEscritorios > 0) {
+      partes.push(`${c.numEscritorios} escritório${c.numEscritorios > 1 ? 's' : ''}`);
+    }
+
+    // Lavabos
+    if (c.numLavabos > 0) {
+      partes.push(`${c.numLavabos} lavabo${c.numLavabos > 1 ? 's' : ''}`);
+    }
+
+    // Área de serviço
+    const temAreaServico = document.getElementById('cc-area-servico')?.checked;
+    if (temAreaServico) {
+      partes.push('lavanderia');
+    }
+
+    // Área Gourmet
+    if (c.temAreaGourmet) {
+      const gourmetItems = [];
+      if (c.gourmetChurrasqueira) gourmetItems.push('churrasqueira');
+      if (c.gourmetLareira) gourmetItems.push('lareira');
+      if (c.gourmetFogaoLenha) gourmetItems.push('fogão a lenha');
+      if (c.gourmetFornoPizza) gourmetItems.push('forno de pizza');
+      if (c.gourmetBancada) gourmetItems.push('bancada');
+      if (c.gourmetBanheiro) gourmetItems.push('banheiro');
+
+      if (gourmetItems.length > 0) {
+        partes.push(`área gourmet ${c.areaGourmetM2 || 20}m² com ${gourmetItems.join(', ')}`);
+      } else {
+        partes.push(`área gourmet ${c.areaGourmetM2 || 20}m²`);
+      }
+    }
+
+    // Garagem
+    if (c.garagemVagas > 0) {
+      let garagemDesc = `garagem para ${c.garagemVagas} carro${c.garagemVagas > 1 ? 's' : ''}`;
+      if (c.garagemTipo && c.garagemTipo !== 'aberta') {
+        garagemDesc += ` ${c.garagemTipo}`;
+      }
+      const garagemExtras = [];
+      if (c.garagemChurrasqueira) garagemExtras.push('churrasqueira');
+      if (c.garagemBanheiro) garagemExtras.push('banheiro');
+      if (c.garagemDeposito) garagemExtras.push('depósito');
+      if (c.garagemLavabo) garagemExtras.push('lavabo');
+      if (garagemExtras.length > 0) {
+        garagemDesc += ` com ${garagemExtras.join(', ')}`;
+      }
+      partes.push(garagemDesc);
+    }
+
+    // Varanda
+    const temVaranda = document.getElementById('cc-varanda')?.checked;
+    if (temVaranda) {
+      partes.push('varanda');
+    }
+
+    // Extras (piscina, churrasqueira externa, etc.)
+    const extras = [];
+    if (document.getElementById('cc-extra-piscina')?.checked) {
+      const tipoP = document.getElementById('cc-piscina-tipo')?.value;
+      if (tipoP && data.extras?.piscina?.[tipoP]) {
+        extras.push(`piscina ${data.extras.piscina[tipoP].nome.toLowerCase()}`);
+      } else {
+        extras.push('piscina');
+      }
+    }
+
+    if (document.getElementById('cc-extra-muro')?.checked) {
+      const metrosM = document.getElementById('cc-muro-metros')?.value;
+      if (metrosM) {
+        extras.push(`muro ${metrosM}m`);
+      } else {
+        extras.push('muro');
+      }
+    }
+
+    if (document.getElementById('cc-extra-portao')?.checked) {
+      extras.push('portão');
+    }
+
+    if (document.getElementById('cc-extra-edicula')?.checked) {
+      const edM2 = document.getElementById('cc-edicula-m2')?.value || 20;
+      extras.push(`edícula ${edM2}m²`);
+    }
+
+    if (document.getElementById('cc-extra-solar')?.checked) {
+      extras.push('energia solar');
+    }
+
+    if (document.getElementById('cc-extra-automacao')?.checked) {
+      extras.push('automação');
+    }
+
+    if (extras.length > 0) {
+      partes.push(...extras);
+    }
+
+    // Área total
+    partes.push(`${c.areaTotal}m²`);
+
+    // Tipo de construção
+    const tipoConstrucao = data.tiposConstrucao[c.tipoConstrucao];
+    if (tipoConstrucao && c.tipoConstrucao !== 'alvenaria') {
+      partes.push(`construção em ${tipoConstrucao.nome.toLowerCase()}`);
+    }
+
+    // Padrão de acabamento
+    const padrao = data.padroes[c.padrao];
+    if (padrao && c.padrao !== 'medio') {
+      partes.push(`padrão ${padrao.nome.toLowerCase()}`);
+    }
+
+    // Localização (estado e cidade)
+    const estado = data.regioes[c.estado];
+    if (estado) {
+      if (c.cidadeInfo?.cidade) {
+        partes.push(`${c.cidadeInfo.cidade} - ${c.estado}`);
+      } else {
+        partes.push(c.estado);
+      }
+    }
+
+    // Terreno
+    if (c.areaTerreno > 0) {
+      partes.push(`terreno ${c.areaTerreno}m²`);
+    }
+
+    return partes.join(', ');
+  }
+
+  function abrirModalDescricao() {
+    // Gerar a descrição
+    const descricao = gerarDescricaoImovel();
+
+    // Criar modal se não existir
+    let modal = document.getElementById('cc-modal-descricao');
+    if (!modal) {
+      modal = document.createElement('div');
+      modal.id = 'cc-modal-descricao';
+      modal.className = 'cc-modal-overlay';
+      document.body.appendChild(modal);
+    }
+
+    modal.innerHTML = `
+      <div class="cc-modal-content cc-modal-descricao">
+        <div class="cc-modal-header">
+          <h3>📝 Descrição do Imóvel</h3>
+          <button class="cc-modal-close" onclick="CustoConstrucao.fecharModalDescricao()">×</button>
+        </div>
+        <div class="cc-modal-body">
+          <p class="cc-hint" style="margin-bottom: 12px;">
+            Esta descrição foi gerada automaticamente com base na configuração atual.
+            Você pode copiá-la e usar em anúncios, ou colá-la no campo de descrição para restaurar esta configuração.
+          </p>
+          <div class="cc-descricao-container">
+            <textarea id="cc-descricao-gerada" class="cc-descricao-textarea" readonly>${descricao}</textarea>
+          </div>
+          <div class="cc-descricao-actions">
+            <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.copiarDescricao()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+              </svg>
+              Copiar Descrição
+            </button>
+            <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.usarDescricao()">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                <polyline points="14 2 14 8 20 8"></polyline>
+                <line x1="12" y1="18" x2="12" y2="12"></line>
+                <line x1="9" y1="15" x2="15" y2="15"></line>
+              </svg>
+              Usar no Campo de Descrição
+            </button>
+          </div>
+        </div>
+      </div>
+    `;
+
+    modal.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+
+    // Fechar ao clicar fora
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        fecharModalDescricao();
+      }
+    });
+  }
+
+  function fecharModalDescricao() {
+    const modal = document.getElementById('cc-modal-descricao');
+    if (modal) {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    }
+  }
+
+  function copiarDescricao() {
+    const textarea = document.getElementById('cc-descricao-gerada');
+    if (textarea) {
+      textarea.select();
+      textarea.setSelectionRange(0, 99999); // Para mobile
+
+      try {
+        navigator.clipboard.writeText(textarea.value).then(() => {
+          // Feedback visual
+          const btn = event.target.closest('button');
+          const originalHTML = btn.innerHTML;
+          btn.innerHTML = `
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="20 6 9 17 4 12"></polyline>
+            </svg>
+            Copiado!
+          `;
+          btn.classList.add('cc-btn-success');
+          setTimeout(() => {
+            btn.innerHTML = originalHTML;
+            btn.classList.remove('cc-btn-success');
+          }, 2000);
+        });
+      } catch (err) {
+        // Fallback para navegadores mais antigos
+        document.execCommand('copy');
+      }
+    }
+  }
+
+  function usarDescricao() {
+    const textarea = document.getElementById('cc-descricao-gerada');
+    const campoDescricao = document.getElementById('cc-descricao-texto');
+
+    if (textarea && campoDescricao) {
+      campoDescricao.value = textarea.value;
+      fecharModalDescricao();
+
+      // Scroll até o campo de descrição
+      campoDescricao.scrollIntoView({ behavior: 'smooth', block: 'center' });
+
+      // Highlight visual
+      campoDescricao.classList.add('cc-highlight');
+      setTimeout(() => {
+        campoDescricao.classList.remove('cc-highlight');
+      }, 2000);
+    }
   }
 
   function formatNumber(num) {
@@ -3991,9 +4290,60 @@ ${c.detalhesAdicionais.length > 0 ? `
         .cc-btn-danger:hover {
           background: #c82333 !important;
         }
+        /* Modal de Descrição */
+        .cc-modal-descricao {
+          max-width: 700px;
+          width: 100%;
+        }
+        .cc-modal-descricao .cc-modal-body {
+          padding: 20px;
+        }
+        .cc-hint {
+          font-size: 0.85rem;
+          color: var(--cc-text-secondary, #888);
+          line-height: 1.5;
+        }
+        .cc-descricao-container {
+          margin-bottom: 16px;
+        }
+        .cc-descricao-textarea {
+          width: 100%;
+          min-height: 200px;
+          padding: 16px;
+          border: 1px solid var(--cc-border, #333);
+          border-radius: 8px;
+          background: var(--cc-bg, #121212);
+          color: var(--cc-text, #fff);
+          font-size: 0.95rem;
+          line-height: 1.6;
+          resize: vertical;
+          font-family: inherit;
+        }
+        .cc-descricao-textarea:focus {
+          outline: none;
+          border-color: var(--cc-primary, #4CAF50);
+        }
+        .cc-descricao-actions {
+          display: flex;
+          gap: 12px;
+          justify-content: flex-end;
+          flex-wrap: wrap;
+        }
+        .cc-btn-success {
+          background: #22c55e !important;
+        }
+        .cc-btn-success:hover {
+          background: #16a34a !important;
+        }
         @media (max-width: 600px) {
           .cc-modal-materiais-grid {
             grid-template-columns: 1fr;
+          }
+          .cc-descricao-actions {
+            flex-direction: column;
+          }
+          .cc-descricao-actions .cc-btn {
+            width: 100%;
           }
         }
       `;
@@ -4053,7 +4403,11 @@ ${c.detalhesAdicionais.length > 0 ? `
     abrirModalPrecos,
     fecharModalPrecos,
     salvarModalPrecos,
-    confirmarResetPrecos
+    confirmarResetPrecos,
+    abrirModalDescricao,
+    fecharModalDescricao,
+    copiarDescricao,
+    usarDescricao
   };
 
   if (document.readyState === 'loading') {

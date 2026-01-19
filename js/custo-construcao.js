@@ -1946,7 +1946,15 @@
     // Muro
     if ((textoLower.includes('muro') || textoLower.includes('murado')) && !isNegado('muro')) {
       resultado.extras.muro = true;
-      resultado.encontrados.push('Extra: Muro');
+
+      // Detectar comprimento do muro (ex: "muro 40m", "muro de 50 metros")
+      const muroMetrosMatch = textoLower.match(/muro\s*(?:de\s+)?(\d+)\s*m(?:etros)?/i);
+      if (muroMetrosMatch) {
+        resultado.extras.muroMetros = parseInt(muroMetrosMatch[1]);
+        resultado.encontrados.push(`Extra: Muro ${muroMetrosMatch[1]}m`);
+      } else {
+        resultado.encontrados.push('Extra: Muro');
+      }
     }
 
     // Portão - detectar tipo
@@ -2376,18 +2384,34 @@
         }
       }
 
+      // Aplicar comprimento do muro detectado
+      if (extras.muroMetros) {
+        const muroMetrosInput = document.getElementById('cc-muro-metros');
+        if (muroMetrosInput) {
+          muroMetrosInput.value = extras.muroMetros;
+        }
+      }
+
       // Aplicar tipo de portão detectado
       if (extras.portaoTipo) {
         const portaoTipoSelect = document.getElementById('cc-portao-tipo');
         if (portaoTipoSelect) {
           portaoTipoSelect.value = extras.portaoTipo;
+
+          // Atualizar visibilidade do campo m² baseado no tipo
+          const portaoData = data.extras.portao[extras.portaoTipo];
+          const m2Group = document.getElementById('cc-portao-m2-group');
+          if (m2Group && portaoData) {
+            m2Group.style.display = portaoData.valorUnidade ? 'none' : 'flex';
+          }
         }
       }
 
-      // Aplicar tamanho do portão detectado
+      // Aplicar tamanho do portão detectado (só se tipo usa m²)
       if (extras.portaoM2) {
         const portaoM2Input = document.getElementById('cc-portao-m2');
-        if (portaoM2Input) {
+        const portaoData = extras.portaoTipo ? data.extras.portao[extras.portaoTipo] : null;
+        if (portaoM2Input && (!portaoData || !portaoData.valorUnidade)) {
           portaoM2Input.value = extras.portaoM2;
         }
       }
@@ -3986,6 +4010,16 @@ ${c.detalhesAdicionais.length > 0 ? `
     // Terreno
     if (c.areaTerreno > 0) {
       partes.push(`terreno ${c.areaTerreno}m²`);
+    }
+
+    // Estado de conservação (apenas se não for "bom" que é o padrão)
+    const conservacao = data.estadoConservacao[c.estadoConservacao];
+    if (conservacao && c.estadoConservacao !== 'bom') {
+      if (c.estadoConservacao === 'nova') {
+        partes.push('casa nova');
+      } else {
+        partes.push(conservacao.nome.toLowerCase());
+      }
     }
 
     return partes.join(', ');

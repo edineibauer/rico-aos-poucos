@@ -1492,6 +1492,8 @@
     }
 
     // Banheiros
+    // Banheiros - NÃO subtrair das suítes, pois a descrição gerada já considera
+    // banheiros como EXTRAS (além dos banheiros das suítes)
     const banheirosPatterns = [
       /(\d+)\s*banheiros?/i,
       /(\d+)\s*wc/i,
@@ -1500,10 +1502,7 @@
     for (const pattern of banheirosPatterns) {
       const match = textoLower.match(pattern);
       if (match) {
-        let numBanheiros = parseInt(match[1]);
-        if (resultado.config.numSuites) {
-          numBanheiros = Math.max(0, numBanheiros - resultado.config.numSuites);
-        }
+        const numBanheiros = parseInt(match[1]);
         resultado.config.numBanheiros = numBanheiros;
         resultado.encontrados.push(`Banheiros: ${numBanheiros}`);
         break;
@@ -1744,6 +1743,55 @@
       resultado.encontrados.push('Área de serviço: Sim');
     }
 
+    // Escritórios
+    const escritorioPatterns = [
+      /(\d+)\s*escritorios?/i,
+      /(\d+)\s*home\s*office/i
+    ];
+    for (const pattern of escritorioPatterns) {
+      const match = textoLower.match(pattern);
+      if (match) {
+        resultado.config.numEscritorios = parseInt(match[1]);
+        resultado.encontrados.push(`Escritórios: ${match[1]}`);
+        break;
+      }
+    }
+    // Escritório sem número = 1
+    if (!resultado.config.numEscritorios && (textoLower.includes('escritorio') || textoLower.includes('home office')) && !isNegado('escritorio')) {
+      resultado.config.numEscritorios = 1;
+      resultado.encontrados.push('Escritório: 1');
+    }
+
+    // Closets
+    const closetPatterns = [
+      /(\d+)\s*closets?/i
+    ];
+    for (const pattern of closetPatterns) {
+      const match = textoLower.match(pattern);
+      if (match) {
+        resultado.config.numClosets = parseInt(match[1]);
+        resultado.encontrados.push(`Closets: ${match[1]}`);
+        break;
+      }
+    }
+    // Closet sem número = 1
+    if (!resultado.config.numClosets && textoLower.includes('closet') && !isNegado('closet')) {
+      resultado.config.numClosets = 1;
+      resultado.encontrados.push('Closet: 1');
+    }
+
+    // Despensa
+    if (textoLower.includes('despensa') && !isNegado('despensa')) {
+      resultado.config.temDespensa = true;
+      resultado.encontrados.push('Despensa: Sim');
+    }
+
+    // Varanda/Sacada
+    if ((textoLower.includes('varanda') || textoLower.includes('sacada')) && !isNegado('varanda') && !isNegado('sacada')) {
+      resultado.config.temVaranda = true;
+      resultado.encontrados.push('Varanda: Sim');
+    }
+
     // Extras COM VERIFICAÇÃO DE NEGAÇÃO
     resultado.extras = {};
 
@@ -1784,7 +1832,42 @@
     if (temGourmet && !isNegado('churrasqueira') && !isNegado('gourmet')) {
       resultado.extras.churrasqueira = true;
       resultado.config.temAreaGourmet = true;
-      resultado.encontrados.push('Área Gourmet');
+      resultado.config.gourmetChurrasqueira = textoLower.includes('churrasqueira');
+
+      // Detectar tamanho da área gourmet (ex: "área gourmet 30m²")
+      const areaGourmetMatch = texto.match(/area\s*gourmet\s*(\d+)\s*m[²2]/i) ||
+                               texto.match(/espaco\s*gourmet\s*(\d+)\s*m[²2]/i);
+      if (areaGourmetMatch) {
+        resultado.config.areaGourmetM2 = parseInt(areaGourmetMatch[1]);
+      }
+
+      // Detectar itens da área gourmet (banheiro/lavabo, lareira, forno, etc.)
+      // Pegar contexto após "área gourmet" para ver os itens
+      const gourmetContextMatch = texto.match(/area\s*gourmet[^,]*(?:com\s+)?([^,]+)/i);
+      if (gourmetContextMatch) {
+        const gourmetContext = gourmetContextMatch[1].toLowerCase();
+        if (gourmetContext.includes('banheiro') || gourmetContext.includes('lavabo')) {
+          resultado.config.gourmetBanheiro = true;
+        }
+        if (gourmetContext.includes('lareira')) {
+          resultado.config.gourmetLareira = true;
+        }
+        if (gourmetContext.includes('forno') || gourmetContext.includes('pizza')) {
+          resultado.config.gourmetFornoPizza = true;
+        }
+        if (gourmetContext.includes('fogao') || gourmetContext.includes('lenha')) {
+          resultado.config.gourmetFogaoLenha = true;
+        }
+        if (gourmetContext.includes('bancada') || gourmetContext.includes('pia')) {
+          resultado.config.gourmetBancada = true;
+        }
+      }
+
+      let gourmetDesc = 'Área Gourmet';
+      if (resultado.config.areaGourmetM2) {
+        gourmetDesc += ` ${resultado.config.areaGourmetM2}m²`;
+      }
+      resultado.encontrados.push(gourmetDesc);
     }
 
     // Garagem - verificar negação, detectar quantidade de carros e tipo
@@ -2136,6 +2219,34 @@
       if (el) el.value = config.areaTerreno;
     }
 
+    // Escritórios
+    if (config.numEscritorios !== undefined) {
+      state.config.numEscritorios = config.numEscritorios;
+      const el = document.getElementById('cc-escritorios');
+      if (el) el.value = config.numEscritorios;
+    }
+
+    // Closets
+    if (config.numClosets !== undefined) {
+      state.config.numClosets = config.numClosets;
+      const el = document.getElementById('cc-closets');
+      if (el) el.value = config.numClosets;
+    }
+
+    // Despensa
+    if (config.temDespensa !== undefined) {
+      state.config.temDespensa = config.temDespensa;
+      const el = document.getElementById('cc-despensa');
+      if (el) el.checked = config.temDespensa;
+    }
+
+    // Varanda
+    if (config.temVaranda !== undefined) {
+      state.config.temVaranda = config.temVaranda;
+      const el = document.getElementById('cc-varanda');
+      if (el) el.checked = config.temVaranda;
+    }
+
     // Aplicar garagem detectada (de extras)
     // O parser usa garagemQtd, mapeamos para garagemVagas
     const garagemVagas = extras?.garagemVagas ?? extras?.garagemQtd;
@@ -2165,6 +2276,45 @@
       if (checkbox) {
         checkbox.checked = true;
         if (options) options.style.display = 'block';
+      }
+
+      // Aplicar tamanho da área gourmet
+      if (config.areaGourmetM2) {
+        state.config.areaGourmetM2 = config.areaGourmetM2;
+        const m2El = document.getElementById('cc-area-gourmet-m2');
+        if (m2El) m2El.value = config.areaGourmetM2;
+      }
+
+      // Aplicar itens da área gourmet
+      if (config.gourmetChurrasqueira) {
+        state.config.gourmetChurrasqueira = true;
+        const el = document.getElementById('cc-gourmet-churrasqueira');
+        if (el) el.checked = true;
+      }
+      if (config.gourmetBanheiro) {
+        state.config.gourmetBanheiro = true;
+        const el = document.getElementById('cc-gourmet-banheiro');
+        if (el) el.checked = true;
+      }
+      if (config.gourmetLareira) {
+        state.config.gourmetLareira = true;
+        const el = document.getElementById('cc-gourmet-lareira');
+        if (el) el.checked = true;
+      }
+      if (config.gourmetFornoPizza) {
+        state.config.gourmetFornoPizza = true;
+        const el = document.getElementById('cc-gourmet-forno-pizza');
+        if (el) el.checked = true;
+      }
+      if (config.gourmetFogaoLenha) {
+        state.config.gourmetFogaoLenha = true;
+        const el = document.getElementById('cc-gourmet-fogao-lenha');
+        if (el) el.checked = true;
+      }
+      if (config.gourmetBancada) {
+        state.config.gourmetBancada = true;
+        const el = document.getElementById('cc-gourmet-bancada');
+        if (el) el.checked = true;
       }
     }
 
@@ -3653,6 +3803,17 @@ ${c.detalhesAdicionais.length > 0 ? `
       partes.push(`${c.numLavabos} lavabo${c.numLavabos > 1 ? 's' : ''}`);
     }
 
+    // Closets
+    if (c.numClosets > 0) {
+      partes.push(`${c.numClosets} closet${c.numClosets > 1 ? 's' : ''}`);
+    }
+
+    // Despensa
+    const temDespensa = document.getElementById('cc-despensa')?.checked;
+    if (temDespensa) {
+      partes.push('despensa');
+    }
+
     // Área de serviço
     const temAreaServico = document.getElementById('cc-area-servico')?.checked;
     if (temAreaServico) {
@@ -3704,7 +3865,8 @@ ${c.detalhesAdicionais.length > 0 ? `
     if (document.getElementById('cc-extra-piscina')?.checked) {
       const tipoP = document.getElementById('cc-piscina-tipo')?.value;
       if (tipoP && data.extras?.piscina?.[tipoP]) {
-        extras.push(`piscina ${data.extras.piscina[tipoP].nome.toLowerCase()}`);
+        // Extrair tipo e dimensões do nome (ex: "Piscina de Fibra 6x3m" -> "piscina de fibra 6x3m")
+        extras.push(data.extras.piscina[tipoP].nome.toLowerCase());
       } else {
         extras.push('piscina');
       }
@@ -3720,7 +3882,15 @@ ${c.detalhesAdicionais.length > 0 ? `
     }
 
     if (document.getElementById('cc-extra-portao')?.checked) {
-      extras.push('portão');
+      const tipoPortao = document.getElementById('cc-portao-tipo')?.value;
+      const m2Portao = document.getElementById('cc-portao-m2')?.value;
+      if (tipoPortao && data.extras?.portao?.[tipoPortao]) {
+        let portaoDesc = `portão ${data.extras.portao[tipoPortao].nome.toLowerCase()}`;
+        if (m2Portao) portaoDesc += ` ${m2Portao}m²`;
+        extras.push(portaoDesc);
+      } else {
+        extras.push('portão');
+      }
     }
 
     if (document.getElementById('cc-extra-edicula')?.checked) {
@@ -3831,31 +4001,31 @@ ${c.detalhesAdicionais.length > 0 ? `
 
   function copiarDescricao() {
     const textarea = document.getElementById('cc-descricao-gerada');
-    if (textarea) {
+    const btn = document.querySelector('#cc-modal-descricao .cc-btn-primary');
+
+    if (textarea && btn) {
       textarea.select();
       textarea.setSelectionRange(0, 99999); // Para mobile
 
-      try {
-        navigator.clipboard.writeText(textarea.value).then(() => {
-          // Feedback visual
-          const btn = event.target.closest('button');
-          const originalHTML = btn.innerHTML;
-          btn.innerHTML = `
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <polyline points="20 6 9 17 4 12"></polyline>
-            </svg>
-            Copiado!
-          `;
-          btn.classList.add('cc-btn-success');
-          setTimeout(() => {
-            btn.innerHTML = originalHTML;
-            btn.classList.remove('cc-btn-success');
-          }, 2000);
-        });
-      } catch (err) {
+      const originalHTML = btn.innerHTML;
+
+      navigator.clipboard.writeText(textarea.value).then(() => {
+        // Feedback visual
+        btn.innerHTML = `
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="20 6 9 17 4 12"></polyline>
+          </svg>
+          Copiado!
+        `;
+        btn.classList.add('cc-btn-success');
+        setTimeout(() => {
+          btn.innerHTML = originalHTML;
+          btn.classList.remove('cc-btn-success');
+        }, 2000);
+      }).catch(() => {
         // Fallback para navegadores mais antigos
         document.execCommand('copy');
-      }
+      });
     }
   }
 

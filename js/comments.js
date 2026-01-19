@@ -5,7 +5,7 @@
 
 const Comments = {
   // YouTube channel URL
-  YOUTUBE_CHANNEL: 'https://www.youtube.com/@ricoaospoucos-edineibauer',
+  YOUTUBE_CHANNEL: 'https://www.youtube.com/@ricoaospoucos-com-br',
 
   // Get translations based on language
   getTranslations() {

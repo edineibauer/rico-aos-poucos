@@ -149,7 +149,7 @@ const Footer = {
         <div class="footer-col footer-col-social">
           <span class="footer-col-title" data-i18n="footer.followUs">Acompanhe</span>
           <div class="footer-col-links">
-            <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="footer-link-item footer-youtube-link">
+            <a href="https://www.youtube.com/@ricoaospoucos-com-br" target="_blank" class="footer-link-item footer-youtube-link">
               <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1 1.8 2 2.1 1.9.5 9.5.5 9.5.5s7.6 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
               <span>YouTube</span>
             </a>
@@ -197,7 +197,7 @@ const Footer = {
   renderSectorsListFooter() {
     return `
     <footer class="page-footer">
-      <a href="https://www.youtube.com/@ricoaospoucos-edineibauer" target="_blank" class="footer-youtube">
+      <a href="https://www.youtube.com/@ricoaospoucos-com-br" target="_blank" class="footer-youtube">
         <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M23.5 6.2c-.3-1-1-1.8-2-2.1C19.6 3.6 12 3.6 12 3.6s-7.6 0-9.5.5c-1 .3-1.7 1.1-2 2.1C0 8.1 0 12 0 12s0 3.9.5 5.8c.3 1 1 1.8 2 2.1 1.9.5 9.5.5 9.5.5s7.6 0 9.5-.5c1-.3 1.7-1.1 2-2.1.5-1.9.5-5.8.5-5.8s0-3.9-.5-5.8zM9.6 15.6V8.4l6.4 3.6-6.4 3.6z"/></svg>
         YouTube
       </a>

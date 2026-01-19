@@ -763,7 +763,7 @@
               <input type="number" id="cc-edicula-suites" value="0" min="0" max="3">
             </div>
             <div class="cc-field">
-              <label>Banheiros extras</label>
+              <label>Banheiros</label>
               <input type="number" id="cc-edicula-banheiros" value="0" min="0" max="3">
             </div>
             <div class="cc-field">
@@ -1510,7 +1510,7 @@
           numBanheiros = Math.max(0, numBanheiros - resultado.config.numSuites);
         }
         resultado.config.numBanheiros = numBanheiros;
-        resultado.encontrados.push(`Banheiros extras: ${numBanheiros}`);
+        resultado.encontrados.push(`Banheiros: ${numBanheiros}`);
         break;
       }
     }
@@ -1519,7 +1519,7 @@
     if (textoLower.includes('lavabo') && !isNegado('lavabo')) {
       resultado.config.numBanheiros = (resultado.config.numBanheiros || 0) + 1;
       if (!resultado.encontrados.some(e => e.includes('Banheiros'))) {
-        resultado.encontrados.push(`Banheiros extras: ${resultado.config.numBanheiros}`);
+        resultado.encontrados.push(`Banheiros: ${resultado.config.numBanheiros}`);
       }
     }
 
@@ -2009,7 +2009,7 @@
     areaEstimadaTotal += numQuartos * areas.quarto;
     areaEstimadaTotal += numSuites * areas.suite;
 
-    // Banheiros extras (além dos das suítes)
+    // Banheiros (além dos das suítes)
     areaEstimadaTotal += numBanheiros * areas.banheiro;
 
     // Áreas básicas da casa

@@ -1,7 +1,7 @@
 {
   "versao": "2.0",
   "tipo": "mensal",
-  "atualizacao": "2026-01-09",
+  "atualizacao": "2026-01-19",
   "meses": [
     {
       "periodo": "jan/2005",
@@ -14,13 +14,13 @@
       "dolar": 0,
       "ouro": 0,
       "sp500_brl": 0,
-      "tlt_brl": 0,
+      "tlt_brl": 0.4,
       "bitcoin_brl": 0,
-      "fii_ifix": 4.14,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 0,
       "idiv": 0,
-      "imab5": -1.19,
-      "ibovtr": 0
+      "imab5": -1.19
     },
     {
       "periodo": "fev/2005",
@@ -33,13 +33,13 @@
       "dolar": -3.35,
       "ouro": 0.08,
       "sp500_brl": -1.47,
-      "tlt_brl": -5.13,
+      "tlt_brl": -4.75,
       "bitcoin_brl": -3.35,
-      "fii_ifix": 5.18,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 15.85,
       "idiv": 16.2,
-      "imab5": 0.29,
-      "ibovtr": 15.85
+      "imab5": 0.29
     },
     {
       "periodo": "mar/2005",
@@ -52,13 +52,13 @@
       "dolar": 2.69,
       "ouro": 0.81,
       "sp500_brl": 0.73,
-      "tlt_brl": 1.9,
+      "tlt_brl": 2.3,
       "bitcoin_brl": 2.69,
-      "fii_ifix": 3.03,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -5.2,
       "idiv": -5.43,
-      "imab5": 4.74,
-      "ibovtr": -5.2
+      "imab5": 4.74
     },
     {
       "periodo": "abr/2005",
@@ -71,13 +71,13 @@
       "dolar": -5.24,
       "ouro": -3.91,
       "sp500_brl": -7.16,
-      "tlt_brl": -1.94,
+      "tlt_brl": -1.55,
       "bitcoin_brl": -5.24,
-      "fii_ifix": -3.03,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -10.5,
       "idiv": -9.66,
-      "imab5": 2.61,
-      "ibovtr": -10.5
+      "imab5": 2.61
     },
     {
       "periodo": "mai/2005",
@@ -90,13 +90,13 @@
       "dolar": -5.14,
       "ouro": -4.92,
       "sp500_brl": -2.27,
-      "tlt_brl": -2.51,
+      "tlt_brl": -2.12,
       "bitcoin_brl": -5.14,
-      "fii_ifix": 4.18,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 6.35,
       "idiv": 5.7,
-      "imab5": 1.69,
-      "ibovtr": 6.35
+      "imab5": 1.69
     },
     {
       "periodo": "jun/2005",
@@ -109,13 +109,13 @@
       "dolar": -2.08,
       "ouro": -3.43,
       "sp500_brl": -2.16,
-      "tlt_brl": -0.33,
+      "tlt_brl": 0.07,
       "bitcoin_brl": -2.08,
-      "fii_ifix": 2.12,
+      "fii_ifix": 0.6,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -0.36,
       "idiv": 0.25,
-      "imab5": 1.83,
-      "ibovtr": -0.36
+      "imab5": 1.83
     },
     {
       "periodo": "jul/2005",
@@ -128,13 +128,13 @@
       "dolar": 1.7,
       "ouro": 2.65,
       "sp500_brl": 5.37,
-      "tlt_brl": -2.07,
+      "tlt_brl": -1.68,
       "bitcoin_brl": 1.7,
-      "fii_ifix": 4.78,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 2.58,
       "idiv": 2.52,
-      "imab5": 0.46,
-      "ibovtr": 2.58
+      "imab5": 0.46
     },
     {
       "periodo": "ago/2005",
@@ -147,13 +147,13 @@
       "dolar": -1.26,
       "ouro": 6.7,
       "sp500_brl": -2.38,
-      "tlt_brl": 1.79,
+      "tlt_brl": 2.2,
       "bitcoin_brl": -1.26,
-      "fii_ifix": 2.68,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 9.67,
       "idiv": 10.02,
-      "imab5": 1.67,
-      "ibovtr": 9.67
+      "imab5": 1.67
     },
     {
       "periodo": "set/2005",
@@ -166,13 +166,13 @@
       "dolar": -5.93,
       "ouro": -6.73,
       "sp500_brl": -5.23,
-      "tlt_brl": -9.65,
+      "tlt_brl": -9.29,
       "bitcoin_brl": -5.93,
-      "fii_ifix": -3.6,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 12.66,
       "idiv": 12.51,
-      "imab5": 1.71,
-      "ibovtr": 12.66
+      "imab5": 1.71
     },
     {
       "periodo": "out/2005",
@@ -185,13 +185,13 @@
       "dolar": 1.35,
       "ouro": 7.89,
       "sp500_brl": -0.46,
-      "tlt_brl": -1.31,
+      "tlt_brl": -0.91,
       "bitcoin_brl": 1.35,
-      "fii_ifix": 1.16,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -3.95,
       "idiv": -3.72,
-      "imab5": -0.06,
-      "ibovtr": -3.95
+      "imab5": -0.06
     },
     {
       "periodo": "nov/2005",
@@ -204,13 +204,13 @@
       "dolar": -1.78,
       "ouro": -1.78,
       "sp500_brl": 1.64,
-      "tlt_brl": -1.53,
+      "tlt_brl": -1.14,
       "bitcoin_brl": -1.78,
-      "fii_ifix": 0.42,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 6.59,
       "idiv": 7.02,
-      "imab5": 2.02,
-      "ibovtr": 6.59
+      "imab5": 2.02
     },
     {
       "periodo": "dez/2005",
@@ -223,13 +223,13 @@
       "dolar": 5.88,
       "ouro": 10.58,
       "sp500_brl": 5.8,
-      "tlt_brl": 8.11,
+      "tlt_brl": 8.54,
       "bitcoin_brl": 5.88,
-      "fii_ifix": 0.57,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 4.47,
       "idiv": 4.29,
-      "imab5": -0.7,
-      "ibovtr": 4.47
+      "imab5": -0.7
     },
     {
       "periodo": "jan/2006",
@@ -242,13 +242,13 @@
       "dolar": -5.13,
       "ouro": 4.41,
       "sp500_brl": -2.7,
-      "tlt_brl": -6.4,
+      "tlt_brl": -6.04,
       "bitcoin_brl": -5.13,
-      "fii_ifix": -1.68,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 16.22,
       "idiv": 15.94,
-      "imab5": -1.52,
-      "ibovtr": 16.22
+      "imab5": -1.52
     },
     {
       "periodo": "fev/2006",
@@ -261,13 +261,13 @@
       "dolar": -3.6,
       "ouro": -5.8,
       "sp500_brl": -3.52,
-      "tlt_brl": -2.88,
+      "tlt_brl": -2.5,
       "bitcoin_brl": -3.6,
-      "fii_ifix": 3.01,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -2.52,
       "idiv": -1.95,
-      "imab5": 0.94,
-      "ibovtr": -2.52
+      "imab5": 0.94
     },
     {
       "periodo": "mar/2006",
@@ -280,13 +280,13 @@
       "dolar": 1.4,
       "ouro": 6.15,
       "sp500_brl": 2.51,
-      "tlt_brl": -3.57,
+      "tlt_brl": -3.19,
       "bitcoin_brl": 1.4,
-      "fii_ifix": 1.82,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 1,
+      "ibovtr": 2.87,
       "idiv": 2.72,
-      "imab5": 5.17,
-      "ibovtr": 2.87
+      "imab5": 5.17
     },
     {
       "periodo": "abr/2006",
@@ -299,13 +299,13 @@
       "dolar": -3.69,
       "ouro": 6.57,
       "sp500_brl": -2.5,
-      "tlt_brl": -6.69,
+      "tlt_brl": -6.33,
       "bitcoin_brl": -3.69,
-      "fii_ifix": -1.24,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 5.24,
       "idiv": 5.44,
-      "imab5": 2.85,
-      "ibovtr": 5.24
+      "imab5": 2.85
     },
     {
       "periodo": "mai/2006",
@@ -318,13 +318,13 @@
       "dolar": 10.05,
       "ouro": 11.59,
       "sp500_brl": 6.61,
-      "tlt_brl": 9.41,
+      "tlt_brl": 9.84,
       "bitcoin_brl": 10.05,
-      "fii_ifix": 6.28,
+      "fii_ifix": 0.6,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -9.78,
       "idiv": -9.48,
-      "imab5": 2.65,
-      "ibovtr": -9.78
+      "imab5": 2.65
     },
     {
       "periodo": "jun/2006",
@@ -337,13 +337,13 @@
       "dolar": -6.09,
       "ouro": -11.7,
       "sp500_brl": -6.09,
-      "tlt_brl": -5.36,
+      "tlt_brl": -4.99,
       "bitcoin_brl": -6.09,
-      "fii_ifix": -0.8,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 0.53,
       "idiv": 0.19,
-      "imab5": 1.37,
-      "ibovtr": 0.53
+      "imab5": 1.37
     },
     {
       "periodo": "jul/2006",
@@ -356,13 +356,13 @@
       "dolar": 0.93,
       "ouro": 3.89,
       "sp500_brl": 1.49,
-      "tlt_brl": 2.72,
+      "tlt_brl": 3.11,
       "bitcoin_brl": 0.93,
-      "fii_ifix": 1.28,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1,
+      "ibovtr": -0.49,
       "idiv": 0.03,
-      "imab5": 1.33,
-      "ibovtr": -0.49
+      "imab5": 1.33
     },
     {
       "periodo": "ago/2006",
@@ -375,13 +375,13 @@
       "dolar": -1.83,
       "ouro": -3.22,
       "sp500_brl": 0.24,
-      "tlt_brl": 0.77,
+      "tlt_brl": 1.16,
       "bitcoin_brl": -1.83,
-      "fii_ifix": 2.67,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 3.76,
       "idiv": 4.05,
-      "imab5": 1.7,
-      "ibovtr": 3.76
+      "imab5": 1.7
     },
     {
       "periodo": "set/2006",
@@ -394,13 +394,13 @@
       "dolar": 1.4,
       "ouro": -2.67,
       "sp500_brl": 3.88,
-      "tlt_brl": 2.93,
+      "tlt_brl": 3.33,
       "bitcoin_brl": 1.4,
-      "fii_ifix": 2.15,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -2.87,
       "idiv": -3.38,
-      "imab5": 2,
-      "ibovtr": -2.87
+      "imab5": 2
     },
     {
       "periodo": "out/2006",
@@ -413,13 +413,13 @@
       "dolar": -0.92,
       "ouro": -2.91,
       "sp500_brl": 2.19,
-      "tlt_brl": -0.47,
+      "tlt_brl": -0.09,
       "bitcoin_brl": -0.92,
-      "fii_ifix": 0.64,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 8,
       "idiv": 8.72,
-      "imab5": 0.23,
-      "ibovtr": 8
+      "imab5": 0.23
     },
     {
       "periodo": "nov/2006",
@@ -432,13 +432,13 @@
       "dolar": 0.47,
       "ouro": 10.76,
       "sp500_brl": 2.15,
-      "tlt_brl": 2.4,
+      "tlt_brl": 2.8,
       "bitcoin_brl": 0.47,
-      "fii_ifix": -2.11,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1,
+      "ibovtr": 5.07,
       "idiv": 5.1,
-      "imab5": 2.45,
-      "ibovtr": 5.07
+      "imab5": 2.45
     },
     {
       "periodo": "dez/2006",
@@ -451,13 +451,13 @@
       "dolar": -0.93,
       "ouro": -2.47,
       "sp500_brl": 0.27,
-      "tlt_brl": -4.29,
+      "tlt_brl": -3.92,
       "bitcoin_brl": -0.93,
-      "fii_ifix": -2.49,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 8.38,
       "idiv": 8.29,
-      "imab5": -0.63,
-      "ibovtr": 8.38
+      "imab5": -0.63
     },
     {
       "periodo": "jan/2007",
@@ -470,13 +470,13 @@
       "dolar": -0.93,
       "ouro": 1.25,
       "sp500_brl": -1.7,
-      "tlt_brl": -1.92,
+      "tlt_brl": -1.52,
       "bitcoin_brl": -0.93,
-      "fii_ifix": 1.37,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1,
+      "ibovtr": 0.63,
       "idiv": 0.28,
-      "imab5": -1.83,
-      "ibovtr": 0.63
+      "imab5": -1.83
     },
     {
       "periodo": "fev/2007",
@@ -489,13 +489,13 @@
       "dolar": -0.94,
       "ouro": 1.35,
       "sp500_brl": 0.05,
-      "tlt_brl": 2.09,
+      "tlt_brl": 2.51,
       "bitcoin_brl": -0.94,
-      "fii_ifix": -2.98,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -1.44,
       "idiv": -1.12,
-      "imab5": 1.2,
-      "ibovtr": -1.44
+      "imab5": 1.2
     },
     {
       "periodo": "mar/2007",
@@ -508,13 +508,13 @@
       "dolar": -2.38,
       "ouro": -2.97,
       "sp500_brl": 1.81,
-      "tlt_brl": -4.07,
+      "tlt_brl": -3.67,
       "bitcoin_brl": -2.38,
-      "fii_ifix": 6.33,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 4.62,
       "idiv": 5.15,
-      "imab5": 3.75,
-      "ibovtr": 4.62
+      "imab5": 3.75
     },
     {
       "periodo": "abr/2007",
@@ -527,13 +527,13 @@
       "dolar": -0.98,
       "ouro": 1.42,
       "sp500_brl": 2.3,
-      "tlt_brl": -2.87,
+      "tlt_brl": -2.47,
       "bitcoin_brl": -0.98,
-      "fii_ifix": 0.66,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1,
+      "ibovtr": 10.57,
       "idiv": 10.46,
-      "imab5": 2.81,
-      "ibovtr": 10.57
+      "imab5": 2.81
     },
     {
       "periodo": "mai/2007",
@@ -546,13 +546,13 @@
       "dolar": -4.93,
       "ouro": -7.46,
       "sp500_brl": -6.67,
-      "tlt_brl": -9.16,
+      "tlt_brl": -8.79,
       "bitcoin_brl": -4.93,
-      "fii_ifix": -3.37,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 3.72,
       "idiv": 3.39,
-      "imab5": 1.91,
-      "ibovtr": 3.72
+      "imab5": 1.91
     },
     {
       "periodo": "jun/2007",
@@ -565,13 +565,13 @@
       "dolar": 0,
       "ouro": -1.37,
       "sp500_brl": -3.19,
-      "tlt_brl": -0.85,
+      "tlt_brl": -0.44,
       "bitcoin_brl": 0,
-      "fii_ifix": -4.2,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1,
+      "ibovtr": 4.32,
       "idiv": 4.96,
-      "imab5": 1.02,
-      "ibovtr": 4.32
+      "imab5": 1.02
     },
     {
       "periodo": "jul/2007",
@@ -584,13 +584,13 @@
       "dolar": -2.59,
       "ouro": -0.34,
       "sp500_brl": -1.31,
-      "tlt_brl": 0.58,
+      "tlt_brl": 0.99,
       "bitcoin_brl": -2.59,
-      "fii_ifix": 0.27,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 1.1,
+      "ibovtr": -0.14,
       "idiv": 0.12,
-      "imab5": 1.18,
-      "ibovtr": -0.14
+      "imab5": 1.18
     },
     {
       "periodo": "ago/2007",
@@ -603,13 +603,13 @@
       "dolar": 4.26,
       "ouro": 5.35,
       "sp500_brl": 8.01,
-      "tlt_brl": 8.66,
+      "tlt_brl": 9.11,
       "bitcoin_brl": 4.26,
-      "fii_ifix": 5.34,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 1.2,
+      "ibovtr": -2.8,
       "idiv": -3.13,
-      "imab5": 1.11,
-      "ibovtr": -2.8
+      "imab5": 1.11
     },
     {
       "periodo": "set/2007",
@@ -622,13 +622,13 @@
       "dolar": -6.12,
       "ouro": 3.8,
       "sp500_brl": -4.77,
-      "tlt_brl": -5.41,
+      "tlt_brl": -5.02,
       "bitcoin_brl": -6.12,
-      "fii_ifix": 0.79,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 8.98,
       "idiv": 9.19,
-      "imab5": 1.62,
-      "ibovtr": 8.98
+      "imab5": 1.62
     },
     {
       "periodo": "out/2007",
@@ -641,13 +641,13 @@
       "dolar": -5.43,
       "ouro": 0.42,
       "sp500_brl": -9.58,
-      "tlt_brl": -4.61,
+      "tlt_brl": -4.21,
       "bitcoin_brl": -5.43,
-      "fii_ifix": -2.22,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 1,
+      "ibovtr": 12.14,
       "idiv": 12.76,
-      "imab5": 0.28,
-      "ibovtr": 12.14
+      "imab5": 0.28
     },
     {
       "periodo": "nov/2007",
@@ -660,13 +660,13 @@
       "dolar": 1.72,
       "ouro": 3.91,
       "sp500_brl": 0.82,
-      "tlt_brl": 8.53,
+      "tlt_brl": 8.97,
       "bitcoin_brl": 1.72,
-      "fii_ifix": 4.86,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1.1,
+      "ibovtr": -2.05,
       "idiv": -2.28,
-      "imab5": 1.41,
-      "ibovtr": -2.05
+      "imab5": 1.41
     },
     {
       "periodo": "dez/2007",
@@ -679,13 +679,13 @@
       "dolar": 0,
       "ouro": 3.97,
       "sp500_brl": -6.06,
-      "tlt_brl": -2.84,
+      "tlt_brl": -2.44,
       "bitcoin_brl": 0,
-      "fii_ifix": -0.05,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 1.2,
+      "ibovtr": 2.59,
       "idiv": 2.66,
-      "imab5": -0.29,
-      "ibovtr": 2.59
+      "imab5": -0.29
     },
     {
       "periodo": "jan/2008",
@@ -698,13 +698,13 @@
       "dolar": -0.56,
       "ouro": 9.52,
       "sp500_brl": -4.02,
-      "tlt_brl": -2.89,
+      "tlt_brl": -2.53,
       "bitcoin_brl": -0.56,
-      "fii_ifix": 1.88,
+      "fii_ifix": 0.6,
       "imoveis_fipezap": 1.2,
+      "ibovtr": -6.54,
       "idiv": -6.97,
-      "imab5": -2.01,
-      "ibovtr": -6.54
+      "imab5": -2.01
     },
     {
       "periodo": "fev/2008",
@@ -717,13 +717,13 @@
       "dolar": -4.55,
       "ouro": 0.41,
       "sp500_brl": -5.12,
-      "tlt_brl": -1.07,
+      "tlt_brl": -0.71,
       "bitcoin_brl": -4.55,
-      "fii_ifix": -3.68,
+      "fii_ifix": 0.5,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 7.11,
       "idiv": 6.8,
-      "imab5": 0.67,
-      "ibovtr": 7.11
+      "imab5": 0.67
     },
     {
       "periodo": "mar/2008",
@@ -736,13 +736,13 @@
       "dolar": 4.17,
       "ouro": 7.61,
       "sp500_brl": 9.13,
-      "tlt_brl": 2.68,
+      "tlt_brl": 3.05,
       "bitcoin_brl": 4.17,
-      "fii_ifix": 1.36,
+      "fii_ifix": 0.4,
       "imoveis_fipezap": 1.3,
+      "ibovtr": -3.62,
       "idiv": -3.2,
-      "imab5": 3.77,
-      "ibovtr": -3.62
+      "imab5": 3.77
     },
     {
       "periodo": "abr/2008",
@@ -755,13 +755,13 @@
       "dolar": -3.43,
       "ouro": -16.14,
       "sp500_brl": -2.45,
-      "tlt_brl": -7.1,
+      "tlt_brl": -6.76,
       "bitcoin_brl": -3.43,
-      "fii_ifix": 1.95,
+      "fii_ifix": -0.2,
       "imoveis_fipezap": 1.2,
+      "ibovtr": 11.73,
       "idiv": 12.32,
-      "imab5": 1.49,
-      "ibovtr": 11.73
+      "imab5": 1.49
     },
     {
       "periodo": "mai/2008",
@@ -774,13 +774,13 @@
       "dolar": -3.55,
       "ouro": -1.55,
       "sp500_brl": -11.82,
-      "tlt_brl": -8.11,
+      "tlt_brl": -7.78,
       "bitcoin_brl": -3.55,
-      "fii_ifix": 2.73,
+      "fii_ifix": -0.5,
       "imoveis_fipezap": 1.3,
+      "ibovtr": 7.35,
       "idiv": 6.94,
-      "imab5": 1.35,
-      "ibovtr": 7.35
+      "imab5": 1.35
     },
     {
       "periodo": "jun/2008",
@@ -793,13 +793,13 @@
       "dolar": -1.84,
       "ouro": 2.69,
       "sp500_brl": -2.84,
-      "tlt_brl": 0.1,
+      "tlt_brl": 0.47,
       "bitcoin_brl": -1.84,
-      "fii_ifix": 0.21,
+      "fii_ifix": -0.3,
       "imoveis_fipezap": 1.2,
+      "ibovtr": -10.11,
       "idiv": -10.54,
-      "imab5": 1.37,
-      "ibovtr": -10.11
+      "imab5": 1.37
     },
     {
       "periodo": "jul/2008",
@@ -812,13 +812,13 @@
       "dolar": -1.88,
       "ouro": -3.15,
       "sp500_brl": -0.64,
-      "tlt_brl": 0.12,
+      "tlt_brl": 0.48,
       "bitcoin_brl": -1.88,
-      "fii_ifix": -2.9,
+      "fii_ifix": 0.2,
       "imoveis_fipezap": 1.1,
+      "ibovtr": -8.14,
       "idiv": -8.05,
-      "imab5": 0.29,
-      "ibovtr": -8.14
+      "imab5": 0.29
     },
     {
       "periodo": "ago/2008",
@@ -831,13 +831,13 @@
       "dolar": 3.82,
       "ouro": -5.79,
       "sp500_brl": -5.65,
-      "tlt_brl": 9.14,
+      "tlt_brl": 9.53,
       "bitcoin_brl": 3.82,
-      "fii_ifix": 2.76,
+      "fii_ifix": 0.4,
       "imoveis_fipezap": 1,
+      "ibovtr": -12.03,
       "idiv": -11.53,
-      "imab5": 0.74,
-      "ibovtr": -12.03
+      "imab5": 0.74
     },
     {
       "periodo": "set/2008",
@@ -850,13 +850,13 @@
       "dolar": 17.18,
       "ouro": 24.35,
       "sp500_brl": -2.62,
-      "tlt_brl": 26.94,
+      "tlt_brl": 27.4,
       "bitcoin_brl": 17.18,
-      "fii_ifix": 1.71,
+      "fii_ifix": 0.1,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -4.67,
       "idiv": -4.46,
-      "imab5": 1.23,
-      "ibovtr": -4.67
+      "imab5": 1.23
     },
     {
       "periodo": "out/2008",
@@ -869,13 +869,13 @@
       "dolar": 10.99,
       "ouro": -8.34,
       "sp500_brl": 2.63,
-      "tlt_brl": 23.18,
+      "tlt_brl": 23.62,
       "bitcoin_brl": 10.99,
-      "fii_ifix": -0.6,
+      "fii_ifix": -2.5,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -24.52,
       "idiv": -24.5,
-      "imab5": 0.37,
-      "ibovtr": -24.52
+      "imab5": 0.37
     },
     {
       "periodo": "nov/2008",
@@ -888,13 +888,13 @@
       "dolar": 9.91,
       "ouro": 22.56,
       "sp500_brl": 10.77,
-      "tlt_brl": 19.8,
+      "tlt_brl": 20.24,
       "bitcoin_brl": 9.91,
-      "fii_ifix": -0.78,
+      "fii_ifix": -1.8,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -1.41,
       "idiv": -1.8,
-      "imab5": 0.69,
-      "ibovtr": -1.41
+      "imab5": 0.69
     },
     {
       "periodo": "dez/2008",
@@ -907,13 +907,13 @@
       "dolar": 0.43,
       "ouro": 8.82,
       "sp500_brl": -8.14,
-      "tlt_brl": 0.79,
+      "tlt_brl": 1.16,
       "bitcoin_brl": 0.43,
-      "fii_ifix": 1.94,
+      "fii_ifix": 0.3,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 2.99,
       "idiv": 3.07,
-      "imab5": -0.29,
-      "ibovtr": 2.99
+      "imab5": -0.29
     },
     {
       "periodo": "jan/2009",
@@ -926,13 +926,13 @@
       "dolar": -0.85,
       "ouro": 3.31,
       "sp500_brl": -11.78,
-      "tlt_brl": -14.74,
+      "tlt_brl": -14.5,
       "bitcoin_brl": -0.85,
-      "fii_ifix": -1.36,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 4.92,
       "idiv": 4.69,
-      "imab5": -2.06,
-      "ibovtr": 4.92
+      "imab5": -2.06
     },
     {
       "periodo": "fev/2009",
@@ -945,13 +945,13 @@
       "dolar": 2.59,
       "ouro": 6.27,
       "sp500_brl": 11.38,
-      "tlt_brl": -3.04,
+      "tlt_brl": -2.76,
       "bitcoin_brl": 2.59,
-      "fii_ifix": 2.39,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -2.6,
       "idiv": -3.01,
-      "imab5": 0.93,
-      "ibovtr": -2.6
+      "imab5": 0.93
     },
     {
       "periodo": "mar/2009",
@@ -964,13 +964,13 @@
       "dolar": -2.52,
       "ouro": -5.39,
       "sp500_brl": 6.64,
-      "tlt_brl": -0.11,
+      "tlt_brl": 0.18,
       "bitcoin_brl": -2.52,
-      "fii_ifix": -1.24,
+      "fii_ifix": 1.2,
       "imoveis_fipezap": 1,
+      "ibovtr": 7.44,
       "idiv": 7.27,
-      "imab5": 5.94,
-      "ibovtr": 7.44
+      "imab5": 5.94
     },
     {
       "periodo": "abr/2009",
@@ -983,13 +983,13 @@
       "dolar": -6.03,
       "ouro": -10.2,
       "sp500_brl": -1.08,
-      "tlt_brl": -9.32,
+      "tlt_brl": -9.06,
       "bitcoin_brl": -6.03,
-      "fii_ifix": -3.15,
+      "fii_ifix": 1.5,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 15.83,
       "idiv": 16.17,
-      "imab5": 4.06,
-      "ibovtr": 15.83
+      "imab5": 4.06
     },
     {
       "periodo": "mai/2009",
@@ -1002,13 +1002,13 @@
       "dolar": -9.63,
       "ouro": -0.21,
       "sp500_brl": -9.63,
-      "tlt_brl": -16.52,
+      "tlt_brl": -16.28,
       "bitcoin_brl": -9.63,
-      "fii_ifix": 1.9,
+      "fii_ifix": 1.8,
       "imoveis_fipezap": 1.2,
+      "ibovtr": 12.77,
       "idiv": 12.99,
-      "imab5": 3.18,
-      "ibovtr": 12.77
+      "imab5": 3.18
     },
     {
       "periodo": "jun/2009",
@@ -1021,13 +1021,13 @@
       "dolar": -1.02,
       "ouro": -5.19,
       "sp500_brl": 6.3,
-      "tlt_brl": 4.64,
+      "tlt_brl": 4.94,
       "bitcoin_brl": -1.02,
-      "fii_ifix": 0.45,
+      "fii_ifix": 1.4,
       "imoveis_fipezap": 1.3,
+      "ibovtr": -3.02,
       "idiv": -2.36,
-      "imab5": 1.74,
-      "ibovtr": -3.02
+      "imab5": 1.74
     },
     {
       "periodo": "jul/2009",
@@ -1040,13 +1040,13 @@
       "dolar": -4.1,
       "ouro": -3.58,
       "sp500_brl": -0.8,
-      "tlt_brl": -1.44,
+      "tlt_brl": -1.16,
       "bitcoin_brl": -4.1,
-      "fii_ifix": 0.33,
+      "fii_ifix": 1.6,
       "imoveis_fipezap": 1.4,
+      "ibovtr": 6.67,
       "idiv": 7.26,
-      "imab5": 0.82,
-      "ibovtr": 6.67
+      "imab5": 0.82
     },
     {
       "periodo": "ago/2009",
@@ -1059,13 +1059,13 @@
       "dolar": 1.07,
       "ouro": 2.79,
       "sp500_brl": 4.64,
-      "tlt_brl": 5.49,
+      "tlt_brl": 5.79,
       "bitcoin_brl": 1.07,
-      "fii_ifix": 3.27,
+      "fii_ifix": 1.5,
       "imoveis_fipezap": 1.5,
+      "ibovtr": 3.4,
       "idiv": 3.44,
-      "imab5": 2.26,
-      "ibovtr": 3.4
+      "imab5": 2.26
     },
     {
       "periodo": "set/2009",
@@ -1078,13 +1078,13 @@
       "dolar": -5.82,
       "ouro": -1.87,
       "sp500_brl": -7.69,
-      "tlt_brl": -3.7,
+      "tlt_brl": -3.42,
       "bitcoin_brl": -5.82,
-      "fii_ifix": 1.94,
+      "fii_ifix": 1.3,
       "imoveis_fipezap": 1.4,
+      "ibovtr": 9.17,
       "idiv": 8.69,
-      "imab5": 2.34,
-      "ibovtr": 9.17
+      "imab5": 2.34
     },
     {
       "periodo": "out/2009",
@@ -1097,13 +1097,13 @@
       "dolar": -2.25,
       "ouro": 2.17,
       "sp500_brl": 3.41,
-      "tlt_brl": -3.69,
+      "tlt_brl": -3.41,
       "bitcoin_brl": -2.25,
-      "fii_ifix": 3.81,
+      "fii_ifix": 1.2,
       "imoveis_fipezap": 1.3,
+      "ibovtr": 0.3,
       "idiv": 0.12,
-      "imab5": 1.34,
-      "ibovtr": 0.3
+      "imab5": 1.34
     },
     {
       "periodo": "nov/2009",
@@ -1116,13 +1116,13 @@
       "dolar": 0.57,
       "ouro": 13.62,
       "sp500_brl": 2.31,
-      "tlt_brl": 5.08,
+      "tlt_brl": 5.38,
       "bitcoin_brl": 0.57,
-      "fii_ifix": 1.01,
+      "fii_ifix": 1.4,
       "imoveis_fipezap": 1.4,
+      "ibovtr": 9.2,
       "idiv": 9.13,
-      "imab5": 2.49,
-      "ibovtr": 9.2
+      "imab5": 2.49
     },
     {
       "periodo": "dez/2009",
@@ -1135,13 +1135,13 @@
       "dolar": -0.57,
       "ouro": -7.93,
       "sp500_brl": -4.23,
-      "tlt_brl": -8.58,
+      "tlt_brl": -8.32,
       "bitcoin_brl": -0.57,
-      "fii_ifix": -0.98,
+      "fii_ifix": 1.5,
       "imoveis_fipezap": 1.5,
+      "ibovtr": 2.55,
       "idiv": 2.9,
-      "imab5": -0.29,
-      "ibovtr": 2.55
+      "imab5": -0.29
     },
     {
       "periodo": "jan/2010",
@@ -1154,13 +1154,13 @@
       "dolar": 7.47,
       "ouro": 6.48,
       "sp500_brl": 7.47,
-      "tlt_brl": 4.6,
+      "tlt_brl": 4.99,
       "bitcoin_brl": 7.47,
-      "fii_ifix": 2.97,
+      "fii_ifix": 1.2,
       "imoveis_fipezap": 1.6,
+      "ibovtr": -4.38,
       "idiv": -4.41,
-      "imab5": -1.79,
-      "ibovtr": -4.38
+      "imab5": -1.79
     },
     {
       "periodo": "fev/2010",
@@ -1173,13 +1173,13 @@
       "dolar": -3.21,
       "ouro": -0.52,
       "sp500_brl": -0.51,
-      "tlt_brl": -0.9,
+      "tlt_brl": -0.53,
       "bitcoin_brl": -3.21,
-      "fii_ifix": 2.67,
+      "fii_ifix": 1.1,
       "imoveis_fipezap": 1.7,
+      "ibovtr": 1.97,
       "idiv": 1.72,
-      "imab5": 0.76,
-      "ibovtr": 1.97
+      "imab5": 0.76
     },
     {
       "periodo": "mar/2010",
@@ -1192,13 +1192,13 @@
       "dolar": -1.66,
       "ouro": -1.04,
       "sp500_brl": 4.13,
-      "tlt_brl": -5.16,
+      "tlt_brl": -4.81,
       "bitcoin_brl": -1.66,
-      "fii_ifix": -0.42,
+      "fii_ifix": 1.3,
       "imoveis_fipezap": 1.8,
+      "ibovtr": 6.12,
       "idiv": 5.84,
-      "imab5": 4.84,
-      "ibovtr": 6.12
+      "imab5": 4.84
     },
     {
       "periodo": "abr/2010",
@@ -1211,13 +1211,13 @@
       "dolar": -2.81,
       "ouro": 2.86,
       "sp500_brl": -1.31,
-      "tlt_brl": 1.12,
+      "tlt_brl": 1.5,
       "bitcoin_brl": -2.81,
-      "fii_ifix": -0.18,
+      "fii_ifix": 1.2,
       "imoveis_fipezap": 1.9,
+      "ibovtr": -3.76,
       "idiv": -3.94,
-      "imab5": 2.74,
-      "ibovtr": -3.76
+      "imab5": 2.74
     },
     {
       "periodo": "mai/2010",
@@ -1230,13 +1230,13 @@
       "dolar": 5.2,
       "ouro": 7.61,
       "sp500_brl": -3.49,
-      "tlt_brl": 13.95,
+      "tlt_brl": 14.38,
       "bitcoin_brl": 5.2,
-      "fii_ifix": 2.38,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 2,
+      "ibovtr": -9.5,
       "idiv": -10.15,
-      "imab5": 2.19,
-      "ibovtr": -9.5
+      "imab5": 2.19
     },
     {
       "periodo": "jun/2010",
@@ -1249,13 +1249,13 @@
       "dolar": -1.1,
       "ouro": 1.94,
       "sp500_brl": -6.37,
-      "tlt_brl": 2.45,
+      "tlt_brl": 2.83,
       "bitcoin_brl": -1.1,
-      "fii_ifix": 3.79,
+      "fii_ifix": 1,
       "imoveis_fipezap": 2.1,
+      "ibovtr": 3.76,
       "idiv": 3.38,
-      "imab5": 1.51,
-      "ibovtr": 3.76
+      "imab5": 1.51
     },
     {
       "periodo": "jul/2010",
@@ -1268,13 +1268,13 @@
       "dolar": -2.22,
       "ouro": -8.12,
       "sp500_brl": 4.52,
-      "tlt_brl": 0.67,
+      "tlt_brl": 1.05,
       "bitcoin_brl": -2.22,
-      "fii_ifix": 3.09,
+      "fii_ifix": 1.1,
       "imoveis_fipezap": 2.2,
+      "ibovtr": 7.4,
       "idiv": 7.23,
-      "imab5": 1.08,
-      "ibovtr": 7.4
+      "imab5": 1.08
     },
     {
       "periodo": "ago/2010",
@@ -1287,13 +1287,13 @@
       "dolar": 0,
       "ouro": 6.59,
       "sp500_brl": -4.81,
-      "tlt_brl": 4.13,
+      "tlt_brl": 4.52,
       "bitcoin_brl": 0,
-      "fii_ifix": 2.74,
+      "fii_ifix": 1.2,
       "imoveis_fipezap": 2.1,
+      "ibovtr": -3.23,
       "idiv": -3.44,
-      "imab5": 2.34,
-      "ibovtr": -3.23
+      "imab5": 2.34
     },
     {
       "periodo": "set/2010",
@@ -1306,13 +1306,13 @@
       "dolar": -3.98,
       "ouro": 0.8,
       "sp500_brl": 4.44,
-      "tlt_brl": -5.75,
+      "tlt_brl": -5.39,
       "bitcoin_brl": -3.98,
-      "fii_ifix": 2.67,
+      "fii_ifix": 1,
       "imoveis_fipezap": 2,
+      "ibovtr": 6.89,
       "idiv": 6.61,
-      "imab5": 2.11,
-      "ibovtr": 6.89
+      "imab5": 2.11
     },
     {
       "periodo": "out/2010",
@@ -1325,13 +1325,13 @@
       "dolar": 0.59,
       "ouro": 3.52,
       "sp500_brl": 4.29,
-      "tlt_brl": -1.59,
+      "tlt_brl": -1.22,
       "bitcoin_brl": 101.18,
-      "fii_ifix": 2.51,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 1.9,
+      "ibovtr": 2.08,
       "idiv": 2.33,
-      "imab5": 1.18,
-      "ibovtr": 2.08
+      "imab5": 1.18
     },
     {
       "periodo": "nov/2010",
@@ -1344,13 +1344,13 @@
       "dolar": 1.18,
       "ouro": 3.96,
       "sp500_brl": 0.93,
-      "tlt_brl": -4.26,
+      "tlt_brl": -3.9,
       "bitcoin_brl": 51.77,
-      "fii_ifix": 4.14,
+      "fii_ifix": 1.1,
       "imoveis_fipezap": 2,
+      "ibovtr": -3.92,
       "idiv": -3.62,
-      "imab5": 2.68,
-      "ibovtr": -3.92
+      "imab5": 2.68
     },
     {
       "periodo": "dez/2010",
@@ -1363,13 +1363,13 @@
       "dolar": -2.91,
       "ouro": -0.24,
       "sp500_brl": 3.51,
-      "tlt_brl": -7.54,
+      "tlt_brl": -7.19,
       "bitcoin_brl": -2.91,
-      "fii_ifix": 1.4,
+      "fii_ifix": 1.2,
       "imoveis_fipezap": 2.1,
+      "ibovtr": 2.65,
       "idiv": 3.09,
-      "imab5": 0.42,
-      "ibovtr": 2.65
+      "imab5": 0.42
     },
     {
       "periodo": "jan/2011",
@@ -1382,13 +1382,13 @@
       "dolar": 0,
       "ouro": -6.62,
       "sp500_brl": 2.23,
-      "tlt_brl": -0.54,
+      "tlt_brl": -0.19,
       "bitcoin_brl": 0,
-      "fii_ifix": 0.56,
+      "fii_ifix": 1,
       "imoveis_fipezap": 2.2,
+      "ibovtr": -3.66,
       "idiv": -3.55,
-      "imab5": -1.41,
-      "ibovtr": -3.66
+      "imab5": -1.41
     },
     {
       "periodo": "fev/2011",
@@ -1401,13 +1401,13 @@
       "dolar": -0.6,
       "ouro": 5.69,
       "sp500_brl": 2.57,
-      "tlt_brl": 0.89,
+      "tlt_brl": 1.25,
       "bitcoin_brl": 231.33,
-      "fii_ifix": -0.51,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 2.1,
+      "ibovtr": 1.5,
       "idiv": 1.54,
-      "imab5": 0.96,
-      "ibovtr": 1.5
+      "imab5": 0.96
     },
     {
       "periodo": "mar/2011",
@@ -1420,13 +1420,13 @@
       "dolar": -1.81,
       "ouro": 0.13,
       "sp500_brl": -1.89,
-      "tlt_brl": -2.44,
+      "tlt_brl": -2.09,
       "bitcoin_brl": -11.63,
-      "fii_ifix": 2.78,
+      "fii_ifix": 1.1,
       "imoveis_fipezap": 2.3,
+      "ibovtr": 2.08,
       "idiv": 2.21,
-      "imab5": 4.51,
-      "ibovtr": 2.08
+      "imab5": 4.51
     },
     {
       "periodo": "abr/2011",
@@ -1439,13 +1439,13 @@
       "dolar": -3.68,
       "ouro": 2.74,
       "sp500_brl": -0.92,
-      "tlt_brl": -0.62,
+      "tlt_brl": -0.26,
       "bitcoin_brl": 242.48,
-      "fii_ifix": 1.76,
+      "fii_ifix": 1,
       "imoveis_fipezap": 2.2,
+      "ibovtr": -3.3,
       "idiv": -3.01,
-      "imab5": 2.86,
-      "ibovtr": -3.3
+      "imab5": 2.86
     },
     {
       "periodo": "mai/2011",
@@ -1458,13 +1458,13 @@
       "dolar": 0.64,
       "ouro": 0.77,
       "sp500_brl": -0.76,
-      "tlt_brl": 3.86,
+      "tlt_brl": 4.23,
       "bitcoin_brl": 173.61,
-      "fii_ifix": -0.55,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 2.1,
+      "ibovtr": -2.01,
       "idiv": 0.59,
-      "imab5": 2.39,
-      "ibovtr": -2.01
+      "imab5": 2.39
     },
     {
       "periodo": "jun/2011",
@@ -1477,13 +1477,13 @@
       "dolar": -1.27,
       "ouro": -3.26,
       "sp500_brl": -3.11,
-      "tlt_brl": -2.65,
+      "tlt_brl": -2.31,
       "bitcoin_brl": 74.76,
-      "fii_ifix": 1.49,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 2,
+      "ibovtr": -3.15,
       "idiv": -0.09,
-      "imab5": 1.72,
-      "ibovtr": -3.15
+      "imab5": 1.72
     },
     {
       "periodo": "jul/2011",
@@ -1496,13 +1496,13 @@
       "dolar": 0,
       "ouro": 8.1,
       "sp500_brl": -2.12,
-      "tlt_brl": 4.35,
+      "tlt_brl": 4.72,
       "bitcoin_brl": -9.74,
-      "fii_ifix": 2.69,
+      "fii_ifix": 1,
       "imoveis_fipezap": 1.9,
+      "ibovtr": -5.47,
       "idiv": -3.57,
-      "imab5": 1.18,
-      "ibovtr": -5.47
+      "imab5": 1.18
     },
     {
       "periodo": "ago/2011",
@@ -1515,13 +1515,13 @@
       "dolar": 1.92,
       "ouro": 14.31,
       "sp500_brl": -3.84,
-      "tlt_brl": 15.47,
+      "tlt_brl": 15.88,
       "bitcoin_brl": -20.07,
-      "fii_ifix": 0.77,
+      "fii_ifix": 0.7,
       "imoveis_fipezap": 1.8,
+      "ibovtr": -3.68,
       "idiv": 3.31,
-      "imab5": 1.99,
-      "ibovtr": -3.68
+      "imab5": 1.99
     },
     {
       "periodo": "set/2011",
@@ -1534,13 +1534,13 @@
       "dolar": 16.35,
       "ouro": 3.23,
       "sp500_brl": 7.95,
-      "tlt_brl": 20.34,
+      "tlt_brl": 20.77,
       "bitcoin_brl": -47.7,
-      "fii_ifix": 1.67,
+      "fii_ifix": 0.5,
       "imoveis_fipezap": 1.7,
+      "ibovtr": -7.11,
       "idiv": -1.92,
-      "imab5": 1.56,
-      "ibovtr": -7.11
+      "imab5": 1.56
     },
     {
       "periodo": "out/2011",
@@ -1553,13 +1553,13 @@
       "dolar": -8.65,
       "ouro": -2.89,
       "sp500_brl": 1.21,
-      "tlt_brl": -16.74,
+      "tlt_brl": -16.45,
       "bitcoin_brl": -40.34,
-      "fii_ifix": -0.36,
+      "fii_ifix": 0.8,
       "imoveis_fipezap": 1.6,
+      "ibovtr": 11.81,
       "idiv": 5.6,
-      "imab5": 0.59,
-      "ibovtr": 11.81
+      "imab5": 0.59
     },
     {
       "periodo": "nov/2011",
@@ -1572,13 +1572,13 @@
       "dolar": 5.92,
       "ouro": 7.39,
       "sp500_brl": 5.41,
-      "tlt_brl": 7.93,
+      "tlt_brl": 8.32,
       "bitcoin_brl": -4.02,
-      "fii_ifix": 1.48,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 1.5,
+      "ibovtr": -2.23,
       "idiv": 1.89,
-      "imab5": 1.67,
-      "ibovtr": -2.23
+      "imab5": 1.67
     },
     {
       "periodo": "dez/2011",
@@ -1591,13 +1591,13 @@
       "dolar": 5.03,
       "ouro": -5.8,
       "sp500_brl": 5.95,
-      "tlt_brl": 6.53,
+      "tlt_brl": 6.91,
       "bitcoin_brl": 55.74,
-      "fii_ifix": 3.7,
+      "fii_ifix": 1,
       "imoveis_fipezap": 1.4,
+      "ibovtr": 0.08,
       "idiv": 5.56,
-      "imab5": -4.16,
-      "ibovtr": 0.08
+      "imab5": -4.16
     },
     {
       "periodo": "jan/2012",
@@ -1610,13 +1610,13 @@
       "dolar": -7.45,
       "ouro": 2.83,
       "sp500_brl": -3.48,
-      "tlt_brl": -12.65,
+      "tlt_brl": -12.46,
       "bitcoin_brl": 14.08,
-      "fii_ifix": 3.03,
+      "fii_ifix": 2.46,
       "imoveis_fipezap": 1.3,
+      "ibovtr": 11.45,
       "idiv": 5.29,
-      "imab5": -1.31,
-      "ibovtr": 11.45
+      "imab5": -1.31
     },
     {
       "periodo": "fev/2012",
@@ -1629,13 +1629,13 @@
       "dolar": -1.72,
       "ouro": 0.03,
       "sp500_brl": 2.33,
-      "tlt_brl": -3.46,
+      "tlt_brl": -3.24,
       "bitcoin_brl": -9.14,
-      "fii_ifix": 4.65,
+      "fii_ifix": 1.89,
       "imoveis_fipezap": 1.2,
+      "ibovtr": 4.64,
       "idiv": 7.66,
-      "imab5": 2.27,
-      "ibovtr": 4.64
+      "imab5": 2.27
     },
     {
       "periodo": "mar/2012",
@@ -1648,13 +1648,13 @@
       "dolar": 6.43,
       "ouro": -0.12,
       "sp500_brl": 9.7,
-      "tlt_brl": 3.19,
+      "tlt_brl": 3.43,
       "bitcoin_brl": 6.43,
-      "fii_ifix": 4.07,
+      "fii_ifix": 0.93,
       "imoveis_fipezap": 1.4,
+      "ibovtr": -1.7,
       "idiv": 2.15,
-      "imab5": 7.35,
-      "ibovtr": -1.7
+      "imab5": 7.35
     },
     {
       "periodo": "abr/2012",
@@ -1667,13 +1667,13 @@
       "dolar": 3.85,
       "ouro": 3.97,
       "sp500_brl": 3.11,
-      "tlt_brl": 8.22,
+      "tlt_brl": 8.46,
       "bitcoin_brl": 5.97,
-      "fii_ifix": 1.43,
+      "fii_ifix": 1.47,
       "imoveis_fipezap": 1.3,
+      "ibovtr": -3.89,
       "idiv": 1.39,
-      "imab5": 4.18,
-      "ibovtr": -3.89
+      "imab5": 4.18
     },
     {
       "periodo": "mai/2012",
@@ -1686,13 +1686,13 @@
       "dolar": 6.88,
       "ouro": 0.46,
       "sp500_brl": 0.16,
-      "tlt_brl": 14.39,
+      "tlt_brl": 14.65,
       "bitcoin_brl": 9.02,
-      "fii_ifix": 3.51,
+      "fii_ifix": 0.26,
       "imoveis_fipezap": 1.2,
+      "ibovtr": -11.61,
       "idiv": -7.84,
-      "imab5": 3.21,
-      "ibovtr": -11.61
+      "imab5": 3.21
     },
     {
       "periodo": "jun/2012",
@@ -1705,13 +1705,13 @@
       "dolar": 0,
       "ouro": 2.17,
       "sp500_brl": 3.97,
-      "tlt_brl": -3.5,
+      "tlt_brl": -3.28,
       "bitcoin_brl": 29.41,
-      "fii_ifix": 3.97,
+      "fii_ifix": -0.73,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 0.04,
       "idiv": 4.63,
-      "imab5": 2.39,
-      "ibovtr": 0.04
+      "imab5": 2.39
     },
     {
       "periodo": "jul/2012",
@@ -1724,13 +1724,13 @@
       "dolar": 0.5,
       "ouro": 1.51,
       "sp500_brl": 1.76,
-      "tlt_brl": 5.89,
+      "tlt_brl": 6.12,
       "bitcoin_brl": 27.91,
-      "fii_ifix": 5.95,
+      "fii_ifix": 2.11,
       "imoveis_fipezap": 1.2,
+      "ibovtr": 3.5,
       "idiv": 1.32,
-      "imab5": 2.04,
-      "ibovtr": 3.5
+      "imab5": 2.04
     },
     {
       "periodo": "ago/2012",
@@ -1743,13 +1743,13 @@
       "dolar": 0.49,
       "ouro": 5.34,
       "sp500_brl": 2.53,
-      "tlt_brl": -2.03,
+      "tlt_brl": -1.81,
       "bitcoin_brl": 22.03,
-      "fii_ifix": -0.43,
+      "fii_ifix": 1.96,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 2.74,
       "idiv": -4.6,
-      "imab5": 3.66,
-      "ibovtr": 2.74
+      "imab5": 3.66
     },
     {
       "periodo": "set/2012",
@@ -1762,13 +1762,13 @@
       "dolar": -0.49,
       "ouro": 4.45,
       "sp500_brl": 1.92,
-      "tlt_brl": -2.25,
+      "tlt_brl": -2.03,
       "bitcoin_brl": 20.97,
-      "fii_ifix": 0.98,
+      "fii_ifix": 1.76,
       "imoveis_fipezap": 1,
+      "ibovtr": 3.26,
       "idiv": 0.66,
-      "imab5": 2.95,
-      "ibovtr": 3.26
+      "imab5": 2.95
     },
     {
       "periodo": "out/2012",
@@ -1781,13 +1781,13 @@
       "dolar": 0,
       "ouro": -3.21,
       "sp500_brl": -2.01,
-      "tlt_brl": 1.89,
+      "tlt_brl": 2.12,
       "bitcoin_brl": -11.29,
-      "fii_ifix": -2.05,
+      "fii_ifix": 0.11,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -3.28,
       "idiv": 0.88,
-      "imab5": 1.14,
-      "ibovtr": -3.28
+      "imab5": 1.14
     },
     {
       "periodo": "nov/2012",
@@ -1800,13 +1800,13 @@
       "dolar": 3.94,
       "ouro": 4.37,
       "sp500_brl": 4.23,
-      "tlt_brl": 5.23,
+      "tlt_brl": 5.46,
       "bitcoin_brl": 19.06,
-      "fii_ifix": 0.4,
+      "fii_ifix": 0.73,
       "imoveis_fipezap": 1,
+      "ibovtr": 1.09,
       "idiv": 1.59,
-      "imab5": 2.69,
-      "ibovtr": 1.09
+      "imab5": 2.69
     },
     {
       "periodo": "dez/2012",
@@ -1819,13 +1819,13 @@
       "dolar": -3.32,
       "ouro": -6.79,
       "sp500_brl": -2.63,
-      "tlt_brl": -6.52,
+      "tlt_brl": -6.31,
       "bitcoin_brl": 3.58,
-      "fii_ifix": 4.44,
+      "fii_ifix": 1.52,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 6.26,
       "idiv": 7.64,
-      "imab5": -0.52,
-      "ibovtr": 6.26
+      "imab5": -0.52
     },
     {
       "periodo": "jan/2013",
@@ -1838,13 +1838,13 @@
       "dolar": -2.45,
       "ouro": -2.68,
       "sp500_brl": 2.48,
-      "tlt_brl": -4.83,
+      "tlt_brl": -4.62,
       "bitcoin_brl": 47.41,
-      "fii_ifix": 2.57,
+      "fii_ifix": 0.03,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -1.67,
       "idiv": -1.86,
-      "imab5": -3.92,
-      "ibovtr": -1.67
+      "imab5": -3.92
     },
     {
       "periodo": "fev/2013",
@@ -1857,13 +1857,13 @@
       "dolar": -0.5,
       "ouro": -5.42,
       "sp500_brl": 0.56,
-      "tlt_brl": 3.27,
+      "tlt_brl": 3.5,
       "bitcoin_brl": 40.96,
-      "fii_ifix": -0.98,
+      "fii_ifix": -1.68,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -3.63,
       "idiv": -0.81,
-      "imab5": -2.11,
-      "ibovtr": -3.63
+      "imab5": -2.11
     },
     {
       "periodo": "mar/2013",
@@ -1876,13 +1876,13 @@
       "dolar": 1.52,
       "ouro": 2.81,
       "sp500_brl": 5.21,
-      "tlt_brl": 3.69,
+      "tlt_brl": 3.92,
       "bitcoin_brl": 224.94,
-      "fii_ifix": -1,
+      "fii_ifix": -1.98,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -1.59,
       "idiv": -0.96,
-      "imab5": 1.22,
-      "ibovtr": -1.59
+      "imab5": 1.22
     },
     {
       "periodo": "abr/2013",
@@ -1895,13 +1895,13 @@
       "dolar": -0.5,
       "ouro": -8.53,
       "sp500_brl": 1.34,
-      "tlt_brl": 2.71,
+      "tlt_brl": 2.94,
       "bitcoin_brl": 49.52,
-      "fii_ifix": -2.08,
+      "fii_ifix": -1.1,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -0.5,
       "idiv": -0.1,
-      "imab5": 0.03,
-      "ibovtr": -0.5
+      "imab5": 0.03
     },
     {
       "periodo": "mai/2013",
@@ -1914,13 +1914,13 @@
       "dolar": 6.5,
       "ouro": 1.06,
       "sp500_brl": 8.7,
-      "tlt_brl": -4.21,
+      "tlt_brl": -4,
       "bitcoin_brl": -1.7,
-      "fii_ifix": 0.02,
+      "fii_ifix": -4.22,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -4.03,
       "idiv": -2.47,
-      "imab5": -0.27,
-      "ibovtr": -4.03
+      "imab5": -0.27
     },
     {
       "periodo": "jun/2013",
@@ -1933,13 +1933,13 @@
       "dolar": 4.23,
       "ouro": -10.87,
       "sp500_brl": 2.64,
-      "tlt_brl": -4.2,
+      "tlt_brl": -3.99,
       "bitcoin_brl": -20.8,
-      "fii_ifix": -7.2,
+      "fii_ifix": -6.03,
       "imoveis_fipezap": 0.6,
+      "ibovtr": -11.06,
       "idiv": -7.27,
-      "imab5": -1.73,
-      "ibovtr": -11.06
+      "imab5": -1.73
     },
     {
       "periodo": "jul/2013",
@@ -1952,13 +1952,13 @@
       "dolar": 3.15,
       "ouro": 11.29,
       "sp500_brl": 8.29,
-      "tlt_brl": 1.05,
+      "tlt_brl": 1.27,
       "bitcoin_brl": 11.3,
-      "fii_ifix": -0.74,
+      "fii_ifix": 0.13,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 1.93,
       "idiv": 2.27,
-      "imab5": -2.4,
-      "ibovtr": 1.93
+      "imab5": -2.4
     },
     {
       "periodo": "ago/2013",
@@ -1971,13 +1971,13 @@
       "dolar": 3.49,
       "ouro": 12.27,
       "sp500_brl": 0.24,
-      "tlt_brl": -0.5,
+      "tlt_brl": -0.28,
       "bitcoin_brl": 32.81,
-      "fii_ifix": -3.65,
+      "fii_ifix": -0.75,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 3.98,
       "idiv": 1.28,
-      "imab5": -0.74,
-      "ibovtr": 3.98
+      "imab5": -0.74
     },
     {
       "periodo": "set/2013",
@@ -1990,13 +1990,13 @@
       "dolar": -5.91,
       "ouro": -10.57,
       "sp500_brl": -3.09,
-      "tlt_brl": -0.81,
+      "tlt_brl": -0.59,
       "bitcoin_brl": -1.86,
-      "fii_ifix": 1.88,
+      "fii_ifix": 1.93,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 4.95,
       "idiv": 6.13,
-      "imab5": -1.13,
-      "ibovtr": 4.95
+      "imab5": -1.13
     },
     {
       "periodo": "out/2013",
@@ -2009,13 +2009,13 @@
       "dolar": -1.79,
       "ouro": -2.02,
       "sp500_brl": 2.59,
-      "tlt_brl": -0.57,
+      "tlt_brl": -0.35,
       "bitcoin_brl": 42.23,
-      "fii_ifix": 1.58,
+      "fii_ifix": 2.9,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 3.96,
       "idiv": 5.89,
-      "imab5": -2.79,
-      "ibovtr": 3.96
+      "imab5": -2.79
     },
     {
       "periodo": "nov/2013",
@@ -2028,13 +2028,13 @@
       "dolar": 6.39,
       "ouro": 0.76,
       "sp500_brl": 9.36,
-      "tlt_brl": 2.92,
+      "tlt_brl": 3.15,
       "bitcoin_brl": 461.02,
-      "fii_ifix": -0.8,
+      "fii_ifix": 0.58,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -2.99,
       "idiv": -3.49,
-      "imab5": -1.33,
-      "ibovtr": -2.99
+      "imab5": -1.33
     },
     {
       "periodo": "dez/2013",
@@ -2047,13 +2047,13 @@
       "dolar": 1.29,
       "ouro": -2.83,
       "sp500_brl": 3.65,
-      "tlt_brl": -2.96,
+      "tlt_brl": -2.75,
       "bitcoin_brl": -31.04,
-      "fii_ifix": -2.62,
+      "fii_ifix": -0.18,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -1.58,
       "idiv": -2.15,
-      "imab5": -3.28,
-      "ibovtr": -1.58
+      "imab5": -3.28
     },
     {
       "periodo": "jan/2014",
@@ -2066,13 +2066,13 @@
       "dolar": 2.97,
       "ouro": 6.56,
       "sp500_brl": -0.65,
-      "tlt_brl": 9.75,
+      "tlt_brl": 10.07,
       "bitcoin_brl": 8.31,
-      "fii_ifix": -6.74,
+      "fii_ifix": -3.05,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -7.24,
       "idiv": -7.26,
-      "imab5": -1.2,
-      "ibovtr": -7.24
+      "imab5": -1.2
     },
     {
       "periodo": "fev/2014",
@@ -2085,13 +2085,13 @@
       "dolar": -4.12,
       "ouro": 2.2,
       "sp500_brl": -0.04,
-      "tlt_brl": -1.94,
+      "tlt_brl": -1.66,
       "bitcoin_brl": -23.17,
-      "fii_ifix": 3.77,
+      "fii_ifix": 1.41,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -0.86,
       "idiv": -2.2,
-      "imab5": 0.33,
-      "ibovtr": -0.86
+      "imab5": 0.33
     },
     {
       "periodo": "mar/2014",
@@ -2104,13 +2104,13 @@
       "dolar": -3,
       "ouro": -5.27,
       "sp500_brl": -2.32,
-      "tlt_brl": -4.46,
+      "tlt_brl": -4.18,
       "bitcoin_brl": -28.78,
-      "fii_ifix": 0.42,
+      "fii_ifix": 1.95,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 7.57,
       "idiv": 7.11,
-      "imab5": 4.85,
-      "ibovtr": 7.57
+      "imab5": 4.85
     },
     {
       "periodo": "abr/2014",
@@ -2123,13 +2123,13 @@
       "dolar": -0.88,
       "ouro": -1.11,
       "sp500_brl": -0.25,
-      "tlt_brl": 1.46,
+      "tlt_brl": 1.76,
       "bitcoin_brl": -1.75,
-      "fii_ifix": 1.1,
+      "fii_ifix": 2.3,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 2.49,
       "idiv": 2.2,
-      "imab5": 2.64,
-      "ibovtr": 2.49
+      "imab5": 2.64
     },
     {
       "periodo": "mai/2014",
@@ -2142,13 +2142,13 @@
       "dolar": 0,
       "ouro": -3.25,
       "sp500_brl": 2.12,
-      "tlt_brl": 3.99,
+      "tlt_brl": 4.3,
       "bitcoin_brl": 40.09,
-      "fii_ifix": 1.37,
+      "fii_ifix": 2.27,
       "imoveis_fipezap": 0.3,
+      "ibovtr": -0.47,
       "idiv": -2.86,
-      "imab5": 1.78,
-      "ibovtr": -0.47
+      "imab5": 1.78
     },
     {
       "periodo": "jun/2014",
@@ -2161,13 +2161,13 @@
       "dolar": -1.79,
       "ouro": 3.32,
       "sp500_brl": 0.05,
-      "tlt_brl": -3.01,
+      "tlt_brl": -2.72,
       "bitcoin_brl": -0.07,
-      "fii_ifix": 1.34,
+      "fii_ifix": 2.15,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 4.06,
       "idiv": 4.58,
-      "imab5": 1.88,
-      "ibovtr": 4.06
+      "imab5": 1.88
     },
     {
       "periodo": "jul/2014",
@@ -2180,13 +2180,13 @@
       "dolar": 3.18,
       "ouro": 0.59,
       "sp500_brl": 1.65,
-      "tlt_brl": 5.48,
+      "tlt_brl": 5.79,
       "bitcoin_brl": -5.53,
-      "fii_ifix": 1.57,
+      "fii_ifix": 3.37,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 5.3,
       "idiv": 5.94,
-      "imab5": 0.45,
-      "ibovtr": 5.3
+      "imab5": 0.45
     },
     {
       "periodo": "ago/2014",
@@ -2199,13 +2199,13 @@
       "dolar": -1.32,
       "ouro": -0.94,
       "sp500_brl": 2.36,
-      "tlt_brl": 2.53,
+      "tlt_brl": 2.83,
       "bitcoin_brl": -19.17,
-      "fii_ifix": 0.26,
+      "fii_ifix": 4.96,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 10.1,
       "idiv": 7.82,
-      "imab5": 1.79,
-      "ibovtr": 10.1
+      "imab5": 1.79
     },
     {
       "periodo": "set/2014",
@@ -2218,13 +2218,13 @@
       "dolar": 9.38,
       "ouro": 3.34,
       "sp500_brl": 7.68,
-      "tlt_brl": 6.27,
+      "tlt_brl": 6.59,
       "bitcoin_brl": -12.04,
-      "fii_ifix": 0.59,
+      "fii_ifix": -0.99,
       "imoveis_fipezap": 0.3,
+      "ibovtr": -11.45,
       "idiv": -12.95,
-      "imab5": 1.7,
-      "ibovtr": -11.45
+      "imab5": 1.7
     },
     {
       "periodo": "out/2014",
@@ -2237,13 +2237,13 @@
       "dolar": -0.41,
       "ouro": -4.02,
       "sp500_brl": 1.91,
-      "tlt_brl": 4.29,
+      "tlt_brl": 4.6,
       "bitcoin_brl": -12.8,
-      "fii_ifix": -1.34,
+      "fii_ifix": 2.06,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 1.24,
       "idiv": -5.62,
-      "imab5": -0.03,
-      "ibovtr": 1.24
+      "imab5": -0.03
     },
     {
       "periodo": "nov/2014",
@@ -2256,13 +2256,13 @@
       "dolar": 4.92,
       "ouro": 4.47,
       "sp500_brl": 7.52,
-      "tlt_brl": 5.96,
+      "tlt_brl": 6.27,
       "bitcoin_brl": 17.33,
-      "fii_ifix": -2.96,
+      "fii_ifix": 0.81,
       "imoveis_fipezap": 0.1,
+      "ibovtr": 0.47,
       "idiv": -2.82,
-      "imab5": 2.14,
-      "ibovtr": 0.47
+      "imab5": 2.14
     },
     {
       "periodo": "dez/2014",
@@ -2275,13 +2275,13 @@
       "dolar": 3.91,
       "ouro": 5.43,
       "sp500_brl": 3.45,
-      "tlt_brl": 6.59,
+      "tlt_brl": 6.9,
       "bitcoin_brl": -12.03,
-      "fii_ifix": -1.78,
+      "fii_ifix": -0.88,
       "imoveis_fipezap": 0.2,
+      "ibovtr": -8.36,
       "idiv": -10.88,
-      "imab5": -0.73,
-      "ibovtr": -8.36
+      "imab5": -0.73
     },
     {
       "periodo": "jan/2015",
@@ -2294,13 +2294,13 @@
       "dolar": 1.13,
       "ouro": 9.58,
       "sp500_brl": -2.02,
-      "tlt_brl": 9.84,
+      "tlt_brl": 10.04,
       "bitcoin_brl": -31.42,
-      "fii_ifix": 2.64,
+      "fii_ifix": -1.23,
       "imoveis_fipezap": 0.1,
+      "ibovtr": -5.89,
       "idiv": -11.18,
-      "imab5": -1.49,
-      "ibovtr": -5.89
+      "imab5": -1.49
     },
     {
       "periodo": "fev/2015",
@@ -2313,13 +2313,13 @@
       "dolar": 7.06,
       "ouro": 1.21,
       "sp500_brl": 12.96,
-      "tlt_brl": -1.08,
+      "tlt_brl": -0.9,
       "bitcoin_brl": 25.31,
-      "fii_ifix": -0.19,
+      "fii_ifix": 1.91,
       "imoveis_fipezap": 0,
+      "ibovtr": 10.33,
       "idiv": 10.15,
-      "imab5": 0.07,
-      "ibovtr": 10.33
+      "imab5": 0.07
     },
     {
       "periodo": "mar/2015",
@@ -2332,13 +2332,13 @@
       "dolar": 11.46,
       "ouro": 8.71,
       "sp500_brl": 9.5,
-      "tlt_brl": 13.49,
+      "tlt_brl": 13.7,
       "bitcoin_brl": 7.07,
-      "fii_ifix": -1.59,
+      "fii_ifix": -1.15,
       "imoveis_fipezap": 0.1,
+      "ibovtr": -0.52,
       "idiv": -4.14,
-      "imab5": 2.83,
-      "ibovtr": -0.52
+      "imab5": 2.83
     },
     {
       "periodo": "abr/2015",
@@ -2351,13 +2351,13 @@
       "dolar": -5.3,
       "ouro": -5.94,
       "sp500_brl": -4.48,
-      "tlt_brl": -7.79,
+      "tlt_brl": -7.62,
       "bitcoin_brl": -8.41,
-      "fii_ifix": 3.67,
+      "fii_ifix": 0.87,
       "imoveis_fipezap": 0,
+      "ibovtr": 10.29,
       "idiv": 11.83,
-      "imab5": 1.28,
-      "ibovtr": 10.29
+      "imab5": 1.28
     },
     {
       "periodo": "mai/2015",
@@ -2370,13 +2370,13 @@
       "dolar": 4.61,
       "ouro": 6.03,
       "sp500_brl": 5.67,
-      "tlt_brl": -0.14,
+      "tlt_brl": 0.04,
       "bitcoin_brl": 1.95,
-      "fii_ifix": 1.47,
+      "fii_ifix": -1.81,
       "imoveis_fipezap": -0.1,
+      "ibovtr": -5.86,
       "idiv": -6.94,
-      "imab5": 1.23,
-      "ibovtr": -5.86
+      "imab5": 1.23
     },
     {
       "periodo": "jun/2015",
@@ -2389,13 +2389,13 @@
       "dolar": -2.52,
       "ouro": -4.16,
       "sp500_brl": -4.56,
-      "tlt_brl": -4.75,
+      "tlt_brl": -4.58,
       "bitcoin_brl": 11.47,
-      "fii_ifix": 3.03,
+      "fii_ifix": -2.83,
       "imoveis_fipezap": 0,
+      "ibovtr": 0.94,
       "idiv": -2.5,
-      "imab5": 0.31,
-      "ibovtr": 0.94
+      "imab5": 0.31
     },
     {
       "periodo": "jul/2015",
@@ -2408,13 +2408,13 @@
       "dolar": 9.35,
       "ouro": 2.25,
       "sp500_brl": 11.53,
-      "tlt_brl": 12.73,
+      "tlt_brl": 12.94,
       "bitcoin_brl": 18.5,
-      "fii_ifix": 0.7,
+      "fii_ifix": 1.82,
       "imoveis_fipezap": -0.1,
+      "ibovtr": -3.87,
       "idiv": -3.48,
-      "imab5": 0.39,
-      "ibovtr": -3.87
+      "imab5": 0.39
     },
     {
       "periodo": "ago/2015",
@@ -2427,13 +2427,13 @@
       "dolar": 7.67,
       "ouro": 11.5,
       "sp500_brl": 0.92,
-      "tlt_brl": 9.04,
+      "tlt_brl": 9.24,
       "bitcoin_brl": -13.11,
-      "fii_ifix": -0.86,
+      "fii_ifix": -0.44,
       "imoveis_fipezap": -0.2,
+      "ibovtr": -8.03,
       "idiv": -11.05,
-      "imab5": 0.5,
-      "ibovtr": -8.03
+      "imab5": 0.5
     },
     {
       "periodo": "set/2015",
@@ -2446,13 +2446,13 @@
       "dolar": 8.77,
       "ouro": 6.86,
       "sp500_brl": 5.9,
-      "tlt_brl": 11.89,
+      "tlt_brl": 12.1,
       "bitcoin_brl": 11.61,
-      "fii_ifix": -3.96,
+      "fii_ifix": -2.3,
       "imoveis_fipezap": -0.1,
+      "ibovtr": -3.04,
       "idiv": -6.2,
-      "imab5": 0.84,
-      "ibovtr": -3.04
+      "imab5": 0.84
     },
     {
       "periodo": "out/2015",
@@ -2465,13 +2465,13 @@
       "dolar": -2.77,
       "ouro": -0.33,
       "sp500_brl": 5.28,
-      "tlt_brl": -7.43,
+      "tlt_brl": -7.26,
       "bitcoin_brl": 29.36,
-      "fii_ifix": 2.12,
+      "fii_ifix": -2.17,
       "imoveis_fipezap": -0.2,
+      "ibovtr": 2.13,
       "idiv": 6.44,
-      "imab5": -0.46,
-      "ibovtr": 2.13
+      "imab5": -0.46
     },
     {
       "periodo": "nov/2015",
@@ -2484,13 +2484,13 @@
       "dolar": -0.26,
       "ouro": -6.98,
       "sp500_brl": -0.21,
-      "tlt_brl": -2.81,
+      "tlt_brl": -2.64,
       "bitcoin_brl": 19.75,
-      "fii_ifix": 1.57,
+      "fii_ifix": 0.49,
       "imoveis_fipezap": -0.3,
+      "ibovtr": -1.31,
       "idiv": -7.59,
-      "imab5": 1.15,
-      "ibovtr": -1.31
+      "imab5": 1.15
     },
     {
       "periodo": "dez/2015",
@@ -2503,13 +2503,13 @@
       "dolar": 1.3,
       "ouro": 0.82,
       "sp500_brl": -0.45,
-      "tlt_brl": 2.83,
+      "tlt_brl": 3.02,
       "bitcoin_brl": 15.81,
-      "fii_ifix": -3,
+      "fii_ifix": -0.64,
       "imoveis_fipezap": -0.2,
+      "ibovtr": -3.61,
       "idiv": -3.75,
-      "imab5": -1.01,
-      "ibovtr": -3.61
+      "imab5": -1.01
     },
     {
       "periodo": "jan/2016",
@@ -2522,13 +2522,13 @@
       "dolar": 3.59,
       "ouro": 9.26,
       "sp500_brl": -1.68,
-      "tlt_brl": 8.47,
+      "tlt_brl": 8.69,
       "bitcoin_brl": -11.32,
-      "fii_ifix": -6.11,
+      "fii_ifix": 4.24,
       "imoveis_fipezap": -0.3,
+      "ibovtr": -6.48,
       "idiv": -9.55,
-      "imab5": -1.97,
-      "ibovtr": -6.48
+      "imab5": -1.97
     },
     {
       "periodo": "fev/2016",
@@ -2541,13 +2541,13 @@
       "dolar": -1.49,
       "ouro": 8.74,
       "sp500_brl": -1.89,
-      "tlt_brl": 3.83,
+      "tlt_brl": 4.04,
       "bitcoin_brl": 16.93,
-      "fii_ifix": 2.88,
+      "fii_ifix": 2.87,
       "imoveis_fipezap": -0.2,
+      "ibovtr": 6.26,
       "idiv": 8.18,
-      "imab5": 2.11,
-      "ibovtr": 6.26
+      "imab5": 2.11
     },
     {
       "periodo": "mar/2016",
@@ -2560,13 +2560,13 @@
       "dolar": -10.55,
       "ouro": -10.34,
       "sp500_brl": -4.62,
-      "tlt_brl": -11.68,
+      "tlt_brl": -11.49,
       "bitcoin_brl": -14.83,
-      "fii_ifix": 9.16,
+      "fii_ifix": 6.8,
       "imoveis_fipezap": -0.3,
+      "ibovtr": 17.35,
       "idiv": 20.54,
-      "imab5": 6.27,
-      "ibovtr": 17.35
+      "imab5": 6.27
     },
     {
       "periodo": "abr/2016",
@@ -2579,13 +2579,13 @@
       "dolar": -3.09,
       "ouro": 0.98,
       "sp500_brl": -2.81,
-      "tlt_brl": -2.76,
+      "tlt_brl": -2.56,
       "bitcoin_brl": 4.11,
-      "fii_ifix": 4.6,
+      "fii_ifix": 2.24,
       "imoveis_fipezap": -0.2,
+      "ibovtr": 8.05,
       "idiv": 12.4,
-      "imab5": 4.49,
-      "ibovtr": 8.05
+      "imab5": 4.49
     },
     {
       "periodo": "mai/2016",
@@ -2598,13 +2598,13 @@
       "dolar": 4.35,
       "ouro": -1.64,
       "sp500_brl": 5.92,
-      "tlt_brl": 10.44,
+      "tlt_brl": 10.67,
       "bitcoin_brl": 23.69,
-      "fii_ifix": 3.74,
+      "fii_ifix": -0.28,
       "imoveis_fipezap": -0.1,
+      "ibovtr": -9.8,
       "idiv": -11.83,
-      "imab5": 3.42,
-      "ibovtr": -9.8
+      "imab5": 3.42
     },
     {
       "periodo": "jun/2016",
@@ -2617,13 +2617,13 @@
       "dolar": -10.83,
       "ouro": -2.97,
       "sp500_brl": -10.74,
-      "tlt_brl": -6.49,
+      "tlt_brl": -6.29,
       "bitcoin_brl": 13.01,
-      "fii_ifix": 1.6,
+      "fii_ifix": 3.16,
       "imoveis_fipezap": -0.2,
+      "ibovtr": 6.65,
       "idiv": 7.69,
-      "imab5": 2.12,
-      "ibovtr": 6.65
+      "imab5": 2.12
     },
     {
       "periodo": "jul/2016",
@@ -2636,13 +2636,13 @@
       "dolar": 0.93,
       "ouro": 3.07,
       "sp500_brl": 4.53,
-      "tlt_brl": -0.77,
+      "tlt_brl": -0.56,
       "bitcoin_brl": -6.27,
-      "fii_ifix": 5.97,
+      "fii_ifix": 4.91,
       "imoveis_fipezap": -0.1,
+      "ibovtr": 11.58,
       "idiv": 12.72,
-      "imab5": 2.11,
-      "ibovtr": 11.58
+      "imab5": 2.11
     },
     {
       "periodo": "ago/2016",
@@ -2655,13 +2655,13 @@
       "dolar": 0,
       "ouro": -2.89,
       "sp500_brl": -0.14,
-      "tlt_brl": -3.02,
+      "tlt_brl": -2.82,
       "bitcoin_brl": -8,
-      "fii_ifix": 1.79,
+      "fii_ifix": 3.03,
       "imoveis_fipezap": 0,
+      "ibovtr": 1.36,
       "idiv": 1.86,
-      "imab5": 2.44,
-      "ibovtr": 1.36
+      "imab5": 2.44
     },
     {
       "periodo": "set/2016",
@@ -2674,13 +2674,13 @@
       "dolar": 0.31,
       "ouro": 0.77,
       "sp500_brl": 0.17,
-      "tlt_brl": -2.03,
+      "tlt_brl": -1.82,
       "bitcoin_brl": 6.42,
-      "fii_ifix": 2.77,
+      "fii_ifix": 1.4,
       "imoveis_fipezap": -0.1,
+      "ibovtr": 1.13,
       "idiv": -0.26,
-      "imab5": 2.71,
-      "ibovtr": 1.13
+      "imab5": 2.71
     },
     {
       "periodo": "out/2016",
@@ -2693,13 +2693,13 @@
       "dolar": -1.85,
       "ouro": -4.83,
       "sp500_brl": -3.71,
-      "tlt_brl": -7.07,
+      "tlt_brl": -6.88,
       "bitcoin_brl": 12.79,
-      "fii_ifix": 3.85,
+      "fii_ifix": 1.21,
       "imoveis_fipezap": 0,
+      "ibovtr": 11.6,
       "idiv": 14.85,
-      "imab5": 1.11,
-      "ibovtr": 11.6
+      "imab5": 1.11
     },
     {
       "periodo": "nov/2016",
@@ -2712,13 +2712,13 @@
       "dolar": 6.58,
       "ouro": -2.1,
       "sp500_brl": 10.19,
-      "tlt_brl": -4.3,
+      "tlt_brl": -4.1,
       "bitcoin_brl": 13.42,
-      "fii_ifix": -2.59,
+      "fii_ifix": -1.53,
       "imoveis_fipezap": 0.1,
+      "ibovtr": -6.94,
       "idiv": -2.19,
-      "imab5": 2.64,
-      "ibovtr": -6.94
+      "imab5": 2.64
     },
     {
       "periodo": "dez/2016",
@@ -2731,13 +2731,13 @@
       "dolar": -4.12,
       "ouro": -5.84,
       "sp500_brl": -2.37,
-      "tlt_brl": -1.71,
+      "tlt_brl": -1.51,
       "bitcoin_brl": 23.9,
-      "fii_ifix": 1.5,
+      "fii_ifix": 2.89,
       "imoveis_fipezap": 0,
+      "ibovtr": 0,
       "idiv": -0.9,
-      "imab5": 0.12,
-      "ibovtr": 0
+      "imab5": 0.12
     },
     {
       "periodo": "jan/2017",
@@ -2750,13 +2750,13 @@
       "dolar": -3.99,
       "ouro": 0.84,
       "sp500_brl": -2.27,
-      "tlt_brl": -2.19,
+      "tlt_brl": -1.96,
       "bitcoin_brl": -3.39,
-      "fii_ifix": 3.76,
+      "fii_ifix": 7.32,
       "imoveis_fipezap": 0.1,
+      "ibovtr": 7.73,
       "idiv": 8.59,
-      "imab5": -2.02,
-      "ibovtr": 7.73
+      "imab5": -2.02
     },
     {
       "periodo": "fev/2017",
@@ -2769,13 +2769,13 @@
       "dolar": -0.96,
       "ouro": 2.97,
       "sp500_brl": 2.73,
-      "tlt_brl": 1.77,
+      "tlt_brl": 2.01,
       "bitcoin_brl": 20.48,
-      "fii_ifix": 4.87,
+      "fii_ifix": 3.59,
       "imoveis_fipezap": 0,
+      "ibovtr": 3.42,
       "idiv": 6.99,
-      "imab5": 0.83,
-      "ibovtr": 3.42
+      "imab5": 0.83
     },
     {
       "periodo": "mar/2017",
@@ -2788,13 +2788,13 @@
       "dolar": 2.26,
       "ouro": 1.52,
       "sp500_brl": 2.22,
-      "tlt_brl": 1.07,
+      "tlt_brl": 1.31,
       "bitcoin_brl": -7.1,
-      "fii_ifix": 0.2,
+      "fii_ifix": 1.96,
       "imoveis_fipezap": 0.1,
+      "ibovtr": -2.2,
       "idiv": -1.86,
-      "imab5": 4.24,
-      "ibovtr": -2.2
+      "imab5": 4.24
     },
     {
       "periodo": "abr/2017",
@@ -2807,13 +2807,13 @@
       "dolar": 0.95,
       "ouro": 2.48,
       "sp500_brl": 1.85,
-      "tlt_brl": 3.7,
+      "tlt_brl": 3.93,
       "bitcoin_brl": 26.94,
-      "fii_ifix": 0.15,
+      "fii_ifix": 0.47,
       "imoveis_fipezap": 0,
+      "ibovtr": 0.97,
       "idiv": 0.94,
-      "imab5": 1.82,
-      "ibovtr": 0.97
+      "imab5": 1.82
     },
     {
       "periodo": "mai/2017",
@@ -2826,13 +2826,13 @@
       "dolar": 1.56,
       "ouro": 1.64,
       "sp500_brl": 2.75,
-      "tlt_brl": 4.17,
+      "tlt_brl": 4.41,
       "bitcoin_brl": 72.23,
-      "fii_ifix": 1.03,
+      "fii_ifix": 1.04,
       "imoveis_fipezap": 0.1,
+      "ibovtr": -3.81,
       "idiv": -5.71,
-      "imab5": 1.57,
-      "ibovtr": -3.81
+      "imab5": 1.57
     },
     {
       "periodo": "jun/2017",
@@ -2845,13 +2845,13 @@
       "dolar": 1.85,
       "ouro": -0.32,
       "sp500_brl": 2.32,
-      "tlt_brl": -1.58,
+      "tlt_brl": -1.36,
       "bitcoin_brl": 10.54,
       "fii_ifix": 0.85,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 0.63,
       "idiv": -1.21,
-      "imab5": 1.58,
-      "ibovtr": 0.63
+      "imab5": 1.58
     },
     {
       "periodo": "jul/2017",
@@ -2864,13 +2864,13 @@
       "dolar": -5.14,
       "ouro": -3.08,
       "sp500_brl": -3.3,
-      "tlt_brl": -3.45,
+      "tlt_brl": -3.23,
       "bitcoin_brl": 9.92,
-      "fii_ifix": -0.38,
+      "fii_ifix": 2.26,
       "imoveis_fipezap": 0.1,
+      "ibovtr": 5.14,
       "idiv": 4.81,
-      "imab5": 0.52,
-      "ibovtr": 5.14
+      "imab5": 0.52
     },
     {
       "periodo": "ago/2017",
@@ -2883,13 +2883,13 @@
       "dolar": 0.32,
       "ouro": 4.74,
       "sp500_brl": 0.4,
-      "tlt_brl": 4.01,
+      "tlt_brl": 4.25,
       "bitcoin_brl": 64.1,
-      "fii_ifix": 0.86,
+      "fii_ifix": 3.49,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 7.81,
       "idiv": 6.96,
-      "imab5": 0.95,
-      "ibovtr": 7.81
+      "imab5": 0.95
     },
     {
       "periodo": "set/2017",
@@ -2902,13 +2902,13 @@
       "dolar": 0.63,
       "ouro": -2.56,
       "sp500_brl": 2.54,
-      "tlt_brl": -3.37,
+      "tlt_brl": -3.14,
       "bitcoin_brl": -7.16,
-      "fii_ifix": 6.58,
+      "fii_ifix": 0.95,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 5.22,
       "idiv": 6.12,
-      "imab5": 1.39,
-      "ibovtr": 5.22
+      "imab5": 1.39
     },
     {
       "periodo": "out/2017",
@@ -2921,13 +2921,13 @@
       "dolar": 3.47,
       "ouro": 2.5,
       "sp500_brl": 5.77,
-      "tlt_brl": 2.19,
+      "tlt_brl": 2.42,
       "bitcoin_brl": 54.24,
-      "fii_ifix": 0.23,
+      "fii_ifix": -0.1,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 3.42,
       "idiv": 0.29,
-      "imab5": 0.58,
-      "ibovtr": 3.42
+      "imab5": 0.58
     },
     {
       "periodo": "nov/2017",
@@ -2940,13 +2940,13 @@
       "dolar": -0.61,
       "ouro": -0.3,
       "sp500_brl": 2.2,
-      "tlt_brl": 1.95,
+      "tlt_brl": 2.19,
       "bitcoin_brl": 57.26,
-      "fii_ifix": -0.59,
+      "fii_ifix": 0.12,
       "imoveis_fipezap": 0.3,
+      "ibovtr": -5.71,
       "idiv": -6.67,
-      "imab5": 0.96,
-      "ibovtr": -5.71
+      "imab5": 0.96
     },
     {
       "periodo": "dez/2017",
@@ -2959,13 +2959,13 @@
       "dolar": 1.53,
       "ouro": 3.76,
       "sp500_brl": 2.52,
-      "tlt_brl": 0.38,
+      "tlt_brl": 0.61,
       "bitcoin_brl": 40.44,
-      "fii_ifix": 0.6,
+      "fii_ifix": -1.02,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 6.51,
       "idiv": 4.94,
-      "imab5": -0.25,
-      "ibovtr": 6.51
+      "imab5": -0.25
     },
     {
       "periodo": "jan/2018",
@@ -2978,13 +2978,13 @@
       "dolar": -4.53,
       "ouro": -1.46,
       "sp500_brl": 0.83,
-      "tlt_brl": -9.14,
+      "tlt_brl": -8.93,
       "bitcoin_brl": -31.07,
-      "fii_ifix": 2.64,
+      "fii_ifix": 2.82,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 11.46,
       "idiv": 9.88,
-      "imab5": -1.99,
-      "ibovtr": 11.46
+      "imab5": -1.99
     },
     {
       "periodo": "fev/2018",
@@ -2997,13 +2997,13 @@
       "dolar": 2.53,
       "ouro": 0.47,
       "sp500_brl": -1.47,
-      "tlt_brl": 0.44,
+      "tlt_brl": 0.67,
       "bitcoin_brl": 4.3,
-      "fii_ifix": 1.15,
+      "fii_ifix": -0.16,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 0.81,
       "idiv": -0.61,
-      "imab5": 0.36,
-      "ibovtr": 0.81
+      "imab5": 0.36
     },
     {
       "periodo": "mar/2018",
@@ -3016,13 +3016,13 @@
       "dolar": 2.47,
       "ouro": 3.01,
       "sp500_brl": -0.29,
-      "tlt_brl": 5.56,
+      "tlt_brl": 5.8,
       "bitcoin_brl": -31.27,
-      "fii_ifix": 2,
+      "fii_ifix": 1.43,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 0.3,
       "idiv": 1.05,
-      "imab5": 4.4,
-      "ibovtr": 0.3
+      "imab5": 4.4
     },
     {
       "periodo": "abr/2018",
@@ -3035,13 +3035,13 @@
       "dolar": 4.82,
       "ouro": 4.03,
       "sp500_brl": 5.1,
-      "tlt_brl": 2.42,
+      "tlt_brl": 2.65,
       "bitcoin_brl": 38.9,
-      "fii_ifix": -0.86,
+      "fii_ifix": 0.93,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 1.17,
       "idiv": -1.42,
-      "imab5": 3.01,
-      "ibovtr": 1.17
+      "imab5": 3.01
     },
     {
       "periodo": "mai/2018",
@@ -3054,13 +3054,13 @@
       "dolar": 7.47,
       "ouro": 6.08,
       "sp500_brl": 9.78,
-      "tlt_brl": 8.88,
+      "tlt_brl": 9.13,
       "bitcoin_brl": -12.84,
-      "fii_ifix": -5.27,
+      "fii_ifix": 3.04,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -10.61,
       "idiv": -10.53,
-      "imab5": 2.32,
-      "ibovtr": -10.61
+      "imab5": 2.32
     },
     {
       "periodo": "jun/2018",
@@ -3073,13 +3073,13 @@
       "dolar": 3.21,
       "ouro": -0.37,
       "sp500_brl": 3.71,
-      "tlt_brl": 2.54,
+      "tlt_brl": 2.77,
       "bitcoin_brl": -11.8,
-      "fii_ifix": -4.01,
+      "fii_ifix": 4.43,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -4.93,
       "idiv": -4.33,
-      "imab5": 1.09,
-      "ibovtr": -4.93
+      "imab5": 1.09
     },
     {
       "periodo": "jul/2018",
@@ -3092,13 +3092,13 @@
       "dolar": -2.85,
       "ouro": -5.17,
       "sp500_brl": 0.66,
-      "tlt_brl": -3.3,
+      "tlt_brl": -3.08,
       "bitcoin_brl": 18.03,
-      "fii_ifix": 1.37,
+      "fii_ifix": -0.49,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 9.18,
       "idiv": 7.27,
-      "imab5": 0.26,
-      "ibovtr": 9.18
+      "imab5": 0.26
     },
     {
       "periodo": "ago/2018",
@@ -3111,13 +3111,13 @@
       "dolar": 10.4,
       "ouro": 8.41,
       "sp500_brl": 13.77,
-      "tlt_brl": 12.66,
+      "tlt_brl": 12.92,
       "bitcoin_brl": -0.13,
-      "fii_ifix": -0.7,
+      "fii_ifix": 3,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -1.42,
       "idiv": -3.7,
-      "imab5": 1.41,
-      "ibovtr": -1.42
+      "imab5": 1.41
     },
     {
       "periodo": "set/2018",
@@ -3130,13 +3130,13 @@
       "dolar": -3.38,
       "ouro": -4.03,
       "sp500_brl": -2.98,
-      "tlt_brl": -7.01,
+      "tlt_brl": -6.8,
       "bitcoin_brl": -9.03,
-      "fii_ifix": -0.21,
+      "fii_ifix": 0.97,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 2.18,
       "idiv": 0.17,
-      "imab5": 1.58,
-      "ibovtr": 2.18
+      "imab5": 1.58
     },
     {
       "periodo": "out/2018",
@@ -3149,13 +3149,13 @@
       "dolar": -7,
       "ouro": -5.29,
       "sp500_brl": -13.44,
-      "tlt_brl": -9.65,
+      "tlt_brl": -9.44,
       "bitcoin_brl": -11.32,
-      "fii_ifix": 5.04,
+      "fii_ifix": 4.57,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 8.82,
       "idiv": 11.44,
-      "imab5": 0.9,
-      "ibovtr": 8.82
+      "imab5": 0.9
     },
     {
       "periodo": "nov/2018",
@@ -3168,13 +3168,13 @@
       "dolar": 3.76,
       "ouro": 4.36,
       "sp500_brl": 5.6,
-      "tlt_brl": 8.74,
+      "tlt_brl": 8.99,
       "bitcoin_brl": -34.03,
-      "fii_ifix": 2.59,
+      "fii_ifix": 0.87,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 4.63,
       "idiv": 7.28,
-      "imab5": 1.78,
-      "ibovtr": 4.63
+      "imab5": 1.78
     },
     {
       "periodo": "dez/2018",
@@ -3187,13 +3187,13 @@
       "dolar": 0.26,
       "ouro": 5.18,
       "sp500_brl": -8.93,
-      "tlt_brl": 4.28,
+      "tlt_brl": 4.52,
       "bitcoin_brl": -6.58,
-      "fii_ifix": 2.22,
+      "fii_ifix": -0.01,
       "imoveis_fipezap": 0.2,
+      "ibovtr": -1.87,
       "idiv": 0.65,
-      "imab5": -0.55,
-      "ibovtr": -1.87
+      "imab5": -0.55
     },
     {
       "periodo": "jan/2019",
@@ -3206,13 +3206,13 @@
       "dolar": -5.68,
       "ouro": -2.81,
       "sp500_brl": 1.73,
-      "tlt_brl": -7.54,
+      "tlt_brl": -7.32,
       "bitcoin_brl": -12.86,
-      "fii_ifix": 2.47,
+      "fii_ifix": 9.24,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 11.14,
       "idiv": 12.48,
-      "imab5": -1.87,
-      "ibovtr": 11.14
+      "imab5": -1.87
     },
     {
       "periodo": "fev/2019",
@@ -3225,13 +3225,13 @@
       "dolar": 2.47,
       "ouro": 1.84,
       "sp500_brl": 5.5,
-      "tlt_brl": 2,
+      "tlt_brl": 2.24,
       "bitcoin_brl": 14.23,
-      "fii_ifix": 1.03,
+      "fii_ifix": 1.82,
       "imoveis_fipezap": 0.2,
+      "ibovtr": -1.58,
       "idiv": -2.03,
-      "imab5": 1.23,
-      "ibovtr": -1.58
+      "imab5": 1.23
     },
     {
       "periodo": "mar/2019",
@@ -3244,13 +3244,13 @@
       "dolar": 4.28,
       "ouro": 2.61,
       "sp500_brl": 6.16,
-      "tlt_brl": 10.52,
+      "tlt_brl": 10.78,
       "bitcoin_brl": 11.05,
-      "fii_ifix": 1.99,
+      "fii_ifix": 0.95,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 0.11,
       "idiv": -1.79,
-      "imab5": 6.17,
-      "ibovtr": 0.11
+      "imab5": 6.17
     },
     {
       "periodo": "abr/2019",
@@ -3263,13 +3263,13 @@
       "dolar": 1.03,
       "ouro": 0.4,
       "sp500_brl": 5.02,
-      "tlt_brl": -0.19,
+      "tlt_brl": 0.05,
       "bitcoin_brl": 31.69,
-      "fii_ifix": 1.03,
+      "fii_ifix": 1.45,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 1.27,
       "idiv": 3.09,
-      "imab5": 3.63,
-      "ibovtr": 1.27
+      "imab5": 3.63
     },
     {
       "periodo": "mai/2019",
@@ -3282,13 +3282,13 @@
       "dolar": 0.25,
       "ouro": 1.89,
       "sp500_brl": -6.36,
-      "tlt_brl": 6.78,
+      "tlt_brl": 7.03,
       "bitcoin_brl": 60.65,
-      "fii_ifix": 1.76,
+      "fii_ifix": 3.11,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 0.99,
       "idiv": 3.14,
-      "imab5": 2.93,
-      "ibovtr": 0.99
+      "imab5": 2.93
     },
     {
       "periodo": "jun/2019",
@@ -3301,13 +3301,13 @@
       "dolar": -3.04,
       "ouro": 4.69,
       "sp500_brl": 3.65,
-      "tlt_brl": 0.09,
+      "tlt_brl": 0.33,
       "bitcoin_brl": 22.32,
-      "fii_ifix": 2.88,
+      "fii_ifix": 4.23,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 4.36,
       "idiv": 3.11,
-      "imab5": 2.06,
-      "ibovtr": 4.36
+      "imab5": 2.06
     },
     {
       "periodo": "jul/2019",
@@ -3320,13 +3320,13 @@
       "dolar": -1.31,
       "ouro": -0.05,
       "sp500_brl": -0.04,
-      "tlt_brl": -2.34,
+      "tlt_brl": -2.1,
       "bitcoin_brl": -7.98,
-      "fii_ifix": 1.27,
+      "fii_ifix": 2.14,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 4.04,
       "idiv": 2.76,
-      "imab5": 1.49,
-      "ibovtr": 4.04
+      "imab5": 1.49
     },
     {
       "periodo": "ago/2019",
@@ -3339,13 +3339,13 @@
       "dolar": 6.08,
       "ouro": 13.66,
       "sp500_brl": 4.16,
-      "tlt_brl": 13.63,
+      "tlt_brl": 13.91,
       "bitcoin_brl": 1.3,
-      "fii_ifix": -0.11,
+      "fii_ifix": 0.14,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -3.17,
       "idiv": 2.23,
-      "imab5": 2.96,
-      "ibovtr": -3.17
+      "imab5": 2.96
     },
     {
       "periodo": "set/2019",
@@ -3358,13 +3358,13 @@
       "dolar": 3.74,
       "ouro": -0.13,
       "sp500_brl": 5.55,
-      "tlt_brl": 1.93,
+      "tlt_brl": 2.18,
       "bitcoin_brl": -10.66,
-      "fii_ifix": 1.04,
+      "fii_ifix": -1.75,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 3.87,
       "idiv": 1.89,
-      "imab5": 2.65,
-      "ibovtr": 3.87
+      "imab5": 2.65
     },
     {
       "periodo": "out/2019",
@@ -3377,13 +3377,13 @@
       "dolar": -3.85,
       "ouro": -1.17,
       "sp500_brl": -1.88,
-      "tlt_brl": -6.14,
+      "tlt_brl": -5.91,
       "bitcoin_brl": 6.65,
-      "fii_ifix": 4.01,
+      "fii_ifix": 3.17,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 3.59,
       "idiv": 1.52,
-      "imab5": 1.53,
-      "ibovtr": 3.59
+      "imab5": 1.53
     },
     {
       "periodo": "nov/2019",
@@ -3396,13 +3396,13 @@
       "dolar": 6,
       "ouro": 2.5,
       "sp500_brl": 9.59,
-      "tlt_brl": 4.66,
+      "tlt_brl": 4.92,
       "bitcoin_brl": -12.78,
-      "fii_ifix": 3.52,
+      "fii_ifix": 4.61,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 0.33,
       "idiv": 2.35,
-      "imab5": 3.36,
-      "ibovtr": 0.33
+      "imab5": 3.36
     },
     {
       "periodo": "dez/2019",
@@ -3415,13 +3415,13 @@
       "dolar": -4.95,
       "ouro": -1.44,
       "sp500_brl": -2.22,
-      "tlt_brl": -6.01,
+      "tlt_brl": -5.79,
       "bitcoin_brl": -9.67,
       "fii_ifix": 10.63,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 7.16,
       "idiv": 9.99,
-      "imab5": 0.88,
-      "ibovtr": 7.16
+      "imab5": 0.88
     },
     {
       "periodo": "jan/2020",
@@ -3434,13 +3434,13 @@
       "dolar": 6.45,
       "ouro": 11.51,
       "sp500_brl": 6.29,
-      "tlt_brl": 12.45,
+      "tlt_brl": 12.65,
       "bitcoin_brl": 38.36,
       "fii_ifix": -3.76,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -1.31,
       "idiv": -1.58,
-      "imab5": -1.39,
-      "ibovtr": -1.31
+      "imab5": -1.39
     },
     {
       "periodo": "fev/2020",
@@ -3453,13 +3453,13 @@
       "dolar": 4.43,
       "ouro": 4.23,
       "sp500_brl": -4.37,
-      "tlt_brl": 9.21,
+      "tlt_brl": 9.4,
       "bitcoin_brl": -3.96,
-      "fii_ifix": -3.69,
+      "fii_ifix": -5.79,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -8.13,
       "idiv": -6.18,
-      "imab5": 0.4,
-      "ibovtr": -8.13
+      "imab5": 0.4
     },
     {
       "periodo": "mar/2020",
@@ -3472,13 +3472,13 @@
       "dolar": 16.07,
       "ouro": 15.41,
       "sp500_brl": 1.57,
-      "tlt_brl": 30.46,
+      "tlt_brl": 30.69,
       "bitcoin_brl": -13.1,
       "fii_ifix": -15.85,
       "imoveis_fipezap": 0.3,
+      "ibovtr": -29.67,
       "idiv": -25.53,
-      "imab5": 3.05,
-      "ibovtr": -29.67
+      "imab5": 3.05
     },
     {
       "periodo": "abr/2020",
@@ -3491,13 +3491,13 @@
       "dolar": 4.42,
       "ouro": 11.71,
       "sp500_brl": 17.63,
-      "tlt_brl": 1.03,
+      "tlt_brl": 1.2,
       "bitcoin_brl": 40.42,
       "fii_ifix": 4.39,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 10.61,
       "idiv": 3.76,
-      "imab5": 1.86,
-      "ibovtr": 10.61
+      "imab5": 1.86
     },
     {
       "periodo": "mai/2020",
@@ -3510,13 +3510,13 @@
       "dolar": -1.66,
       "ouro": 2.07,
       "sp500_brl": 2.79,
-      "tlt_brl": -2.98,
+      "tlt_brl": -2.81,
       "bitcoin_brl": 7.45,
-      "fii_ifix": 2.08,
+      "fii_ifix": 2.03,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 8.93,
       "idiv": 5,
-      "imab5": 1.51,
-      "ibovtr": 8.93
+      "imab5": 1.51
     },
     {
       "periodo": "jun/2020",
@@ -3529,13 +3529,13 @@
       "dolar": 2.62,
       "ouro": 4.37,
       "sp500_brl": 4.51,
-      "tlt_brl": 4.15,
+      "tlt_brl": 4.33,
       "bitcoin_brl": -0.88,
-      "fii_ifix": 5.59,
+      "fii_ifix": 5.4,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 9.12,
       "idiv": 8.95,
-      "imab5": 1.01,
-      "ibovtr": 9.12
+      "imab5": 1.01
     },
     {
       "periodo": "jul/2020",
@@ -3548,13 +3548,13 @@
       "dolar": -5.11,
       "ouro": 5.28,
       "sp500_brl": 0.13,
-      "tlt_brl": -2.5,
+      "tlt_brl": -2.33,
       "bitcoin_brl": 17.58,
-      "fii_ifix": -2.61,
+      "fii_ifix": 2.88,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 8.62,
       "idiv": 6.53,
-      "imab5": 0.59,
-      "ibovtr": 8.62
+      "imab5": 0.59
     },
     {
       "periodo": "ago/2020",
@@ -3567,13 +3567,13 @@
       "dolar": 5.19,
       "ouro": 4.18,
       "sp500_brl": 12.55,
-      "tlt_brl": 0.18,
+      "tlt_brl": 0.36,
       "bitcoin_brl": 8.51,
-      "fii_ifix": 1.79,
+      "fii_ifix": -1.72,
       "imoveis_fipezap": 0.6,
+      "ibovtr": -3.11,
       "idiv": -4.83,
-      "imab5": 1.15,
-      "ibovtr": -3.11
+      "imab5": 1.15
     },
     {
       "periodo": "set/2020",
@@ -3586,13 +3586,13 @@
       "dolar": 3.11,
       "ouro": -0.63,
       "sp500_brl": -0.92,
-      "tlt_brl": 4.03,
+      "tlt_brl": 4.21,
       "bitcoin_brl": -4.81,
-      "fii_ifix": 0.46,
+      "fii_ifix": 0.47,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -4.5,
       "idiv": -4.63,
-      "imab5": 0.79,
-      "ibovtr": -4.5
+      "imab5": 0.79
     },
     {
       "periodo": "out/2020",
@@ -3605,13 +3605,13 @@
       "dolar": 2.3,
       "ouro": 1.92,
       "sp500_brl": -0.53,
-      "tlt_brl": 0.08,
+      "tlt_brl": 0.25,
       "bitcoin_brl": 30.73,
-      "fii_ifix": -1.01,
+      "fii_ifix": 0.58,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -0.36,
       "idiv": 0.65,
-      "imab5": 0.03,
-      "ibovtr": -0.36
+      "imab5": 0.03
     },
     {
       "periodo": "nov/2020",
@@ -3624,13 +3624,13 @@
       "dolar": -7.45,
       "ouro": -12.48,
       "sp500_brl": 2.51,
-      "tlt_brl": -9.63,
+      "tlt_brl": -9.48,
       "bitcoin_brl": 31.8,
-      "fii_ifix": 1.51,
+      "fii_ifix": 1.7,
       "imoveis_fipezap": 0.9,
+      "ibovtr": 16.28,
       "idiv": 14.4,
-      "imab5": 0.78,
-      "ibovtr": 16.28
+      "imab5": 0.78
     },
     {
       "periodo": "dez/2020",
@@ -3643,13 +3643,13 @@
       "dolar": -2.62,
       "ouro": 4.01,
       "sp500_brl": 0.98,
-      "tlt_brl": -0.61,
+      "tlt_brl": -0.44,
       "bitcoin_brl": 43.9,
       "fii_ifix": 2.19,
       "imoveis_fipezap": 1,
+      "ibovtr": 9.66,
       "idiv": 8.94,
-      "imab5": -4.23,
-      "ibovtr": 9.66
+      "imab5": -4.23
     },
     {
       "periodo": "jan/2021",
@@ -3662,13 +3662,13 @@
       "dolar": 5.19,
       "ouro": 2.53,
       "sp500_brl": 4.01,
-      "tlt_brl": 0.36,
+      "tlt_brl": 0.5,
       "bitcoin_brl": 20.11,
-      "fii_ifix": 0.32,
+      "fii_ifix": -3.75,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -2.85,
       "idiv": -5.08,
-      "imab5": -2.2,
-      "ibovtr": -2.85
+      "imab5": -2.2
     },
     {
       "periodo": "fev/2021",
@@ -3681,13 +3681,13 @@
       "dolar": 2.38,
       "ouro": -4.04,
       "sp500_brl": 5.05,
-      "tlt_brl": -3.45,
+      "tlt_brl": -3.31,
       "bitcoin_brl": 39.55,
       "fii_ifix": 0.25,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -3.9,
       "idiv": -5.21,
-      "imab5": -0.43,
-      "ibovtr": -3.9
+      "imab5": -0.43
     },
     {
       "periodo": "mar/2021",
@@ -3700,13 +3700,13 @@
       "dolar": 1.79,
       "ouro": 0.2,
       "sp500_brl": 6.12,
-      "tlt_brl": -1.9,
+      "tlt_brl": -1.77,
       "bitcoin_brl": 32.87,
       "fii_ifix": -1.38,
       "imoveis_fipezap": 1,
+      "ibovtr": 6.52,
       "idiv": 7.57,
-      "imab5": 1.86,
-      "ibovtr": 6.52
+      "imab5": 1.86
     },
     {
       "periodo": "abr/2021",
@@ -3719,13 +3719,13 @@
       "dolar": -4.56,
       "ouro": -1.1,
       "sp500_brl": 0.44,
-      "tlt_brl": 0.12,
+      "tlt_brl": 0.25,
       "bitcoin_brl": -6.45,
-      "fii_ifix": 0.51,
+      "fii_ifix": -0.77,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 2.44,
       "idiv": 2.03,
-      "imab5": 0.08,
-      "ibovtr": 2.44
+      "imab5": 0.08
     },
     {
       "periodo": "mai/2021",
@@ -3738,13 +3738,13 @@
       "dolar": -4.04,
       "ouro": 3.44,
       "sp500_brl": -3.51,
-      "tlt_brl": -1.1,
+      "tlt_brl": -0.97,
       "bitcoin_brl": -37.96,
-      "fii_ifix": -1.56,
+      "fii_ifix": -1.55,
       "imoveis_fipezap": 1.2,
+      "ibovtr": 6.68,
       "idiv": 5.64,
-      "imab5": -0.46,
-      "ibovtr": 6.68
+      "imab5": -0.46
     },
     {
       "periodo": "jun/2021",
@@ -3757,13 +3757,13 @@
       "dolar": -4.79,
       "ouro": -11.63,
       "sp500_brl": -2.66,
-      "tlt_brl": -2.38,
+      "tlt_brl": -2.25,
       "bitcoin_brl": -10.64,
       "fii_ifix": -2.19,
       "imoveis_fipezap": 1.1,
+      "ibovtr": 0.95,
       "idiv": -2.17,
-      "imab5": -0.68,
-      "ibovtr": 0.95
+      "imab5": -0.68
     },
     {
       "periodo": "jul/2021",
@@ -3776,13 +3776,13 @@
       "dolar": 4.83,
       "ouro": 7.44,
       "sp500_brl": 7.2,
-      "tlt_brl": 7.1,
+      "tlt_brl": 7.25,
       "bitcoin_brl": 24.53,
-      "fii_ifix": 2.51,
+      "fii_ifix": -2.48,
       "imoveis_fipezap": 1.2,
+      "ibovtr": -3.47,
       "idiv": -1.72,
-      "imab5": -0.61,
-      "ibovtr": -3.47
+      "imab5": -0.61
     },
     {
       "periodo": "ago/2021",
@@ -3795,13 +3795,13 @@
       "dolar": -1.15,
       "ouro": -0.87,
       "sp500_brl": 1.73,
-      "tlt_brl": -3.95,
+      "tlt_brl": -3.82,
       "bitcoin_brl": 12.01,
       "fii_ifix": -2.63,
       "imoveis_fipezap": 1.1,
+      "ibovtr": -2.01,
       "idiv": -0.5,
-      "imab5": 0.27,
-      "ibovtr": -2.01
+      "imab5": 0.27
     },
     {
       "periodo": "set/2021",
@@ -3814,13 +3814,13 @@
       "dolar": 5.63,
       "ouro": 2.03,
       "sp500_brl": 0.58,
-      "tlt_brl": -0.38,
+      "tlt_brl": -0.25,
       "bitcoin_brl": -1.93,
       "fii_ifix": -1.24,
       "imoveis_fipezap": 1,
+      "ibovtr": -6.12,
       "idiv": -4.48,
-      "imab5": -0.22,
-      "ibovtr": -6.12
+      "imab5": -0.22
     },
     {
       "periodo": "out/2021",
@@ -3833,13 +3833,13 @@
       "dolar": 3.68,
       "ouro": 5.21,
       "sp500_brl": 10.85,
-      "tlt_brl": 4.08,
+      "tlt_brl": 4.23,
       "bitcoin_brl": 45.18,
-      "fii_ifix": -1.47,
+      "fii_ifix": 0.29,
       "imoveis_fipezap": 0.9,
+      "ibovtr": -6.29,
       "idiv": -4.23,
-      "imab5": -1.36,
-      "ibovtr": -6.29
+      "imab5": -1.36
     },
     {
       "periodo": "nov/2021",
@@ -3852,13 +3852,13 @@
       "dolar": -0.71,
       "ouro": -1.1,
       "sp500_brl": -1.53,
-      "tlt_brl": 3.18,
+      "tlt_brl": 3.32,
       "bitcoin_brl": -7.7,
       "fii_ifix": -3.64,
       "imoveis_fipezap": 0.8,
+      "ibovtr": -1.05,
       "idiv": 0.89,
-      "imab5": -0.72,
-      "ibovtr": -1.05
+      "imab5": -0.72
     },
     {
       "periodo": "dez/2021",
@@ -3871,13 +3871,13 @@
       "dolar": -0.36,
       "ouro": 2.61,
       "sp500_brl": 3.98,
-      "tlt_brl": -1.17,
+      "tlt_brl": -1.03,
       "bitcoin_brl": -19.06,
-      "fii_ifix": 8.78,
+      "fii_ifix": -0.63,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 3.35,
       "idiv": 1.6,
-      "imab5": -2.22,
-      "ibovtr": 3.35
+      "imab5": -2.22
     },
     {
       "periodo": "jan/2022",
@@ -3890,13 +3890,13 @@
       "dolar": -4.66,
       "ouro": -6.33,
       "sp500_brl": -9.67,
-      "tlt_brl": -8.72,
+      "tlt_brl": -8.56,
       "bitcoin_brl": -20.76,
-      "fii_ifix": -0.99,
+      "fii_ifix": 0.74,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 7.45,
       "idiv": 7.47,
-      "imab5": -1.61,
-      "ibovtr": 7.45
+      "imab5": -1.61
     },
     {
       "periodo": "fev/2022",
@@ -3909,13 +3909,13 @@
       "dolar": -3.01,
       "ouro": 3.03,
       "sp500_brl": -6.06,
-      "tlt_brl": -7.03,
+      "tlt_brl": -6.86,
       "bitcoin_brl": 8.86,
-      "fii_ifix": -1.29,
+      "fii_ifix": 0.3,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 1.75,
       "idiv": -2.32,
-      "imab5": 0.01,
-      "ibovtr": 1.75
+      "imab5": 0.01
     },
     {
       "periodo": "mar/2022",
@@ -3928,13 +3928,13 @@
       "dolar": -8.14,
       "ouro": -6.79,
       "sp500_brl": -4.86,
-      "tlt_brl": -13.9,
+      "tlt_brl": -13.75,
       "bitcoin_brl": -3.15,
-      "fii_ifix": 1.42,
+      "fii_ifix": 1.41,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 6.48,
       "idiv": 10,
-      "imab5": 3.56,
-      "ibovtr": 6.48
+      "imab5": 3.56
     },
     {
       "periodo": "abr/2022",
@@ -3947,13 +3947,13 @@
       "dolar": 4.43,
       "ouro": 2.27,
       "sp500_brl": -4.75,
-      "tlt_brl": -1.73,
+      "tlt_brl": -1.56,
       "bitcoin_brl": -13.51,
-      "fii_ifix": 1.19,
+      "fii_ifix": -0.3,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -9.3,
       "idiv": -5.19,
-      "imab5": 0.08,
-      "ibovtr": -9.3
+      "imab5": 0.08
     },
     {
       "periodo": "mai/2022",
@@ -3966,13 +3966,13 @@
       "dolar": -4.44,
       "ouro": -6.91,
       "sp500_brl": -4.44,
-      "tlt_brl": -5.77,
+      "tlt_brl": -5.6,
       "bitcoin_brl": -19.44,
-      "fii_ifix": 0.26,
+      "fii_ifix": -1.04,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 3.88,
       "idiv": 4.26,
-      "imab5": 1.16,
-      "ibovtr": 3.88
+      "imab5": 1.16
     },
     {
       "periodo": "jun/2022",
@@ -3985,13 +3985,13 @@
       "dolar": 10.78,
       "ouro": 8.92,
       "sp500_brl": 1.47,
-      "tlt_brl": 6.64,
+      "tlt_brl": 6.83,
       "bitcoin_brl": -31.06,
-      "fii_ifix": -0.88,
+      "fii_ifix": -0.86,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -10.93,
       "idiv": -8.38,
-      "imab5": -1.1,
-      "ibovtr": -10.93
+      "imab5": -1.1
     },
     {
       "periodo": "jul/2022",
@@ -4004,13 +4004,13 @@
       "dolar": -1.34,
       "ouro": -4.16,
       "sp500_brl": 7.65,
-      "tlt_brl": 5.76,
+      "tlt_brl": 5.95,
       "bitcoin_brl": 16.37,
       "fii_ifix": 0.66,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 5.36,
       "idiv": 1.98,
-      "imab5": -1.84,
-      "ibovtr": 5.36
+      "imab5": -1.84
     },
     {
       "periodo": "ago/2022",
@@ -4023,13 +4023,13 @@
       "dolar": 0,
       "ouro": -3.06,
       "sp500_brl": -4.24,
-      "tlt_brl": -8.26,
+      "tlt_brl": -8.1,
       "bitcoin_brl": -14.08,
       "fii_ifix": 5.76,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 6.84,
       "idiv": 4.27,
-      "imab5": 2.49,
-      "ibovtr": 6.84
+      "imab5": 2.49
     },
     {
       "periodo": "set/2022",
@@ -4042,13 +4042,13 @@
       "dolar": 4.64,
       "ouro": 1.58,
       "sp500_brl": -5.12,
-      "tlt_brl": -4.37,
+      "tlt_brl": -4.2,
       "bitcoin_brl": 1.42,
       "fii_ifix": 0.49,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 1.12,
       "idiv": -1.8,
-      "imab5": 2.39,
-      "ibovtr": 1.12
+      "imab5": 2.39
     },
     {
       "periodo": "out/2022",
@@ -4061,13 +4061,13 @@
       "dolar": -4.44,
       "ouro": -6.05,
       "sp500_brl": 3.19,
-      "tlt_brl": -7.44,
+      "tlt_brl": -7.27,
       "bitcoin_brl": 0.8,
-      "fii_ifix": 0.02,
+      "fii_ifix": -0.53,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 6.13,
       "idiv": 4.03,
-      "imab5": 0.65,
-      "ibovtr": 6.13
+      "imab5": 0.65
     },
     {
       "periodo": "nov/2022",
@@ -4080,13 +4080,13 @@
       "dolar": 2.71,
       "ouro": 10.64,
       "sp500_brl": 8.23,
-      "tlt_brl": 11.43,
+      "tlt_brl": 11.63,
       "bitcoin_brl": -13.96,
-      "fii_ifix": -4.15,
+      "fii_ifix": 0.72,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -2.44,
       "idiv": 0.78,
-      "imab5": -1.18,
-      "ibovtr": -2.44
+      "imab5": -1.18
     },
     {
       "periodo": "dez/2022",
@@ -4099,13 +4099,13 @@
       "dolar": -0.56,
       "ouro": 3.12,
       "sp500_brl": -6.41,
-      "tlt_brl": -3.93,
+      "tlt_brl": -3.76,
       "bitcoin_brl": -4.16,
-      "fii_ifix": 0,
+      "fii_ifix": 2.2,
       "imoveis_fipezap": 0.3,
+      "ibovtr": -1.82,
       "idiv": -1.61,
-      "imab5": -1.19,
-      "ibovtr": -1.82
+      "imab5": -1.19
     },
     {
       "periodo": "jan/2023",
@@ -4118,13 +4118,13 @@
       "dolar": -3.79,
       "ouro": 1.69,
       "sp500_brl": 2.15,
-      "tlt_brl": -0.82,
+      "tlt_brl": -0.5,
       "bitcoin_brl": 34.53,
       "fii_ifix": -1.6,
       "imoveis_fipezap": 0.2,
+      "ibovtr": 3.79,
       "idiv": 5.89,
-      "imab5": -1.3,
-      "ibovtr": 3.79
+      "imab5": -1.3
     },
     {
       "periodo": "fev/2023",
@@ -4137,13 +4137,13 @@
       "dolar": 2.95,
       "ouro": -2.44,
       "sp500_brl": 0.25,
-      "tlt_brl": -3.97,
+      "tlt_brl": -3.66,
       "bitcoin_brl": 2.98,
-      "fii_ifix": -0.45,
+      "fii_ifix": 0.42,
       "imoveis_fipezap": 0.3,
+      "ibovtr": -7.11,
       "idiv": -7.55,
-      "imab5": 1.13,
-      "ibovtr": -7.11
+      "imab5": 1.13
     },
     {
       "periodo": "mar/2023",
@@ -4156,13 +4156,13 @@
       "dolar": -2.87,
       "ouro": 4.68,
       "sp500_brl": 0.53,
-      "tlt_brl": 5.31,
+      "tlt_brl": 5.64,
       "bitcoin_brl": 19.5,
-      "fii_ifix": -1.69,
+      "fii_ifix": 0.55,
       "imoveis_fipezap": 0.2,
+      "ibovtr": -2.51,
       "idiv": -2.02,
-      "imab5": 3.68,
-      "ibovtr": -2.51
+      "imab5": 3.68
     },
     {
       "periodo": "abr/2023",
@@ -4175,13 +4175,13 @@
       "dolar": -1.77,
       "ouro": -0.72,
       "sp500_brl": -0.34,
-      "tlt_brl": -3.87,
+      "tlt_brl": -3.57,
       "bitcoin_brl": 0.96,
-      "fii_ifix": 3.52,
+      "fii_ifix": -0.84,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 2.92,
       "idiv": 3.89,
-      "imab5": 2.99,
-      "ibovtr": 2.92
+      "imab5": 2.99
     },
     {
       "periodo": "mai/2023",
@@ -4194,13 +4194,13 @@
       "dolar": 1.6,
       "ouro": 0.22,
       "sp500_brl": 1.86,
-      "tlt_brl": -6.89,
+      "tlt_brl": -6.6,
       "bitcoin_brl": -5.51,
-      "fii_ifix": 5.43,
+      "fii_ifix": -5.05,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 4.16,
       "idiv": 0.84,
-      "imab5": 4.09,
-      "ibovtr": 4.16
+      "imab5": 4.09
     },
     {
       "periodo": "jun/2023",
@@ -4213,13 +4213,13 @@
       "dolar": -5.52,
       "ouro": -7.64,
       "sp500_brl": 0.58,
-      "tlt_brl": -6.17,
+      "tlt_brl": -5.87,
       "bitcoin_brl": 5.79,
       "fii_ifix": 4.71,
       "imoveis_fipezap": 0.3,
+      "ibovtr": 9.44,
       "idiv": 8.78,
-      "imab5": 3.33,
-      "ibovtr": 9.44
+      "imab5": 3.33
     },
     {
       "periodo": "jul/2023",
@@ -4232,13 +4232,13 @@
       "dolar": -1.25,
       "ouro": 1.12,
       "sp500_brl": 1.83,
-      "tlt_brl": -3.85,
+      "tlt_brl": -3.54,
       "bitcoin_brl": -5.29,
-      "fii_ifix": 1.33,
+      "fii_ifix": 1.34,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 2.19,
       "idiv": 2.84,
-      "imab5": 0.69,
-      "ibovtr": 2.19
+      "imab5": 0.69
     },
     {
       "periodo": "ago/2023",
@@ -4251,13 +4251,13 @@
       "dolar": 4.65,
       "ouro": 3.43,
       "sp500_brl": 2.78,
-      "tlt_brl": -0.42,
+      "tlt_brl": -0.1,
       "bitcoin_brl": -7.16,
       "fii_ifix": 0.49,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -3.31,
       "idiv": -2.83,
-      "imab5": -1.3,
-      "ibovtr": -3.31
+      "imab5": -1.3
     },
     {
       "periodo": "set/2023",
@@ -4270,13 +4270,13 @@
       "dolar": 1.62,
       "ouro": -2.35,
       "sp500_brl": -3.32,
-      "tlt_brl": 0.12,
+      "tlt_brl": 0.43,
       "bitcoin_brl": 5.68,
-      "fii_ifix": 0.2,
+      "fii_ifix": -2.58,
       "imoveis_fipezap": 0.4,
+      "ibovtr": 1.12,
       "idiv": 1.32,
-      "imab5": -1.95,
-      "ibovtr": 1.12
+      "imab5": -1.95
     },
     {
       "periodo": "out/2023",
@@ -4289,13 +4289,13 @@
       "dolar": 0.2,
       "ouro": 6.48,
       "sp500_brl": -1.99,
-      "tlt_brl": -2.83,
+      "tlt_brl": -2.52,
       "bitcoin_brl": 28.81,
-      "fii_ifix": -1.97,
+      "fii_ifix": 0.9,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -2.53,
       "idiv": -3.15,
-      "imab5": -1.01,
-      "ibovtr": -2.53
+      "imab5": -1.01
     },
     {
       "periodo": "nov/2023",
@@ -4308,13 +4308,13 @@
       "dolar": -2.38,
       "ouro": 0.23,
       "sp500_brl": 6.33,
-      "tlt_brl": 9.27,
+      "tlt_brl": 9.61,
       "bitcoin_brl": 6.19,
       "fii_ifix": 0.66,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 12.62,
       "idiv": 10.7,
-      "imab5": 3.35,
-      "ibovtr": 12.62
+      "imab5": 3.35
     },
     {
       "periodo": "dez/2023",
@@ -4327,13 +4327,13 @@
       "dolar": -1.42,
       "ouro": -0.11,
       "sp500_brl": 2.94,
-      "tlt_brl": 3.05,
+      "tlt_brl": 3.37,
       "bitcoin_brl": 10.48,
-      "fii_ifix": 4.25,
+      "fii_ifix": 4.27,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 6.16,
       "idiv": 6.9,
-      "imab5": 3.19,
-      "ibovtr": 6.16
+      "imab5": 3.19
     },
     {
       "periodo": "jan/2024",
@@ -4346,13 +4346,13 @@
       "dolar": 1.65,
       "ouro": 0.47,
       "sp500_brl": 3.27,
-      "tlt_brl": -1.85,
+      "tlt_brl": -1.49,
       "bitcoin_brl": 2.41,
       "fii_ifix": 0.67,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -4.36,
       "idiv": -3.51,
-      "imab5": -1.5,
-      "ibovtr": -4.36
+      "imab5": -1.5
     },
     {
       "periodo": "fev/2024",
@@ -4365,13 +4365,13 @@
       "dolar": 0.81,
       "ouro": 1.06,
       "sp500_brl": 6.01,
-      "tlt_brl": -2.66,
+      "tlt_brl": -2.3,
       "bitcoin_brl": 44.87,
-      "fii_ifix": 0.79,
+      "fii_ifix": -0.94,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 1.44,
       "idiv": 0.91,
-      "imab5": 0.48,
-      "ibovtr": 1.44
+      "imab5": 0.48
     },
     {
       "periodo": "mar/2024",
@@ -4384,13 +4384,13 @@
       "dolar": 0.8,
       "ouro": 10.12,
       "sp500_brl": 3.92,
-      "tlt_brl": 3.2,
+      "tlt_brl": 3.58,
       "bitcoin_brl": 17.49,
-      "fii_ifix": 1.43,
+      "fii_ifix": -1.02,
       "imoveis_fipezap": 0.4,
+      "ibovtr": -0.27,
       "idiv": -1.2,
-      "imab5": -0.59,
-      "ibovtr": -0.27
+      "imab5": -0.59
     },
     {
       "periodo": "abr/2024",
@@ -4403,13 +4403,13 @@
       "dolar": 3.59,
       "ouro": 6.05,
       "sp500_brl": -0.71,
-      "tlt_brl": -4.47,
+      "tlt_brl": -4.12,
       "bitcoin_brl": -11.95,
-      "fii_ifix": -0.77,
+      "fii_ifix": -2.04,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -1.26,
       "idiv": -0.56,
-      "imab5": -2.94,
-      "ibovtr": -1.26
+      "imab5": -2.94
     },
     {
       "periodo": "mai/2024",
@@ -4422,13 +4422,13 @@
       "dolar": 1.16,
       "ouro": 2.97,
       "sp500_brl": 6.03,
-      "tlt_brl": 4.85,
+      "tlt_brl": 5.24,
       "bitcoin_brl": 12.59,
-      "fii_ifix": 0.02,
+      "fii_ifix": 1.88,
       "imoveis_fipezap": 0.6,
+      "ibovtr": -2.61,
       "idiv": -0.99,
-      "imab5": 1.55,
-      "ibovtr": -2.61
+      "imab5": 1.55
     },
     {
       "periodo": "jun/2024",
@@ -4441,13 +4441,13 @@
       "dolar": 5.9,
       "ouro": 6.45,
       "sp500_brl": 9.55,
-      "tlt_brl": 8.47,
+      "tlt_brl": 8.87,
       "bitcoin_brl": -1.65,
-      "fii_ifix": -1.04,
+      "fii_ifix": 1,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 1.93,
       "idiv": 1.99,
-      "imab5": -2.28,
-      "ibovtr": 1.93
+      "imab5": -2.28
     },
     {
       "periodo": "jul/2024",
@@ -4460,13 +4460,13 @@
       "dolar": 1.8,
       "ouro": 7.63,
       "sp500_brl": 2.96,
-      "tlt_brl": 6.39,
+      "tlt_brl": 6.78,
       "bitcoin_brl": 4.96,
-      "fii_ifix": 0.52,
+      "fii_ifix": -0.48,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 3.48,
       "idiv": 1.89,
-      "imab5": 3.19,
-      "ibovtr": 3.48
+      "imab5": 3.19
     },
     {
       "periodo": "ago/2024",
@@ -4479,13 +4479,13 @@
       "dolar": -0.35,
       "ouro": 0.86,
       "sp500_brl": 1.92,
-      "tlt_brl": 4.18,
+      "tlt_brl": 4.57,
       "bitcoin_brl": -9.06,
       "fii_ifix": 0.86,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 7.02,
       "idiv": 6.69,
-      "imab5": 0.73,
-      "ibovtr": 7.02
+      "imab5": 0.73
     },
     {
       "periodo": "set/2024",
@@ -4498,13 +4498,13 @@
       "dolar": -3.37,
       "ouro": 1.68,
       "sp500_brl": -1.42,
-      "tlt_brl": -0.23,
+      "tlt_brl": 0.14,
       "bitcoin_brl": 3.77,
       "fii_ifix": -2.58,
       "imoveis_fipezap": 0.6,
+      "ibovtr": -2.25,
       "idiv": -0.72,
-      "imab5": -1.46,
-      "ibovtr": -2.25
+      "imab5": -1.46
     },
     {
       "periodo": "out/2024",
@@ -4517,13 +4517,13 @@
       "dolar": 6.06,
       "ouro": 10.12,
       "sp500_brl": 5.01,
-      "tlt_brl": -3.2,
+      "tlt_brl": -2.84,
       "bitcoin_brl": 17.59,
       "fii_ifix": -3.06,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -1.55,
       "idiv": -1.72,
-      "imab5": -1.69,
-      "ibovtr": -1.55
+      "imab5": -1.69
     },
     {
       "periodo": "nov/2024",
@@ -4536,13 +4536,13 @@
       "dolar": 3.81,
       "ouro": 1.45,
       "sp500_brl": 9.76,
-      "tlt_brl": -0.61,
+      "tlt_brl": -0.25,
       "bitcoin_brl": 42.59,
-      "fii_ifix": -2.11,
+      "fii_ifix": 0.52,
       "imoveis_fipezap": 0.6,
+      "ibovtr": -2.69,
       "idiv": -0.07,
-      "imab5": -0.26,
-      "ibovtr": -2.69
+      "imab5": -0.26
     },
     {
       "periodo": "dez/2024",
@@ -4555,13 +4555,13 @@
       "dolar": 3,
       "ouro": 1.07,
       "sp500_brl": 0.44,
-      "tlt_brl": -2.78,
+      "tlt_brl": -2.42,
       "bitcoin_brl": -2.79,
       "fii_ifix": -0.67,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -3.86,
       "idiv": -4.89,
-      "imab5": -4.37,
-      "ibovtr": -3.86
+      "imab5": -4.37
     },
     {
       "periodo": "jan/2025",
@@ -4574,13 +4574,13 @@
       "dolar": -4.21,
       "ouro": 2.18,
       "sp500_brl": -3.23,
-      "tlt_brl": -1.69,
+      "tlt_brl": -1.29,
       "bitcoin_brl": 7.7,
-      "fii_ifix": -3.07,
+      "fii_ifix": 3.05,
       "imoveis_fipezap": 0.5,
+      "ibovtr": -1.1,
       "idiv": 3.5,
-      "imab5": 0.43,
-      "ibovtr": -1.1
+      "imab5": 0.43
     },
     {
       "periodo": "fev/2025",
@@ -4593,13 +4593,13 @@
       "dolar": -2.7,
       "ouro": -0.58,
       "sp500_brl": -1.54,
-      "tlt_brl": 0.44,
+      "tlt_brl": 0.85,
       "bitcoin_brl": -6.61,
-      "fii_ifix": 3.34,
+      "fii_ifix": 0.98,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 5.38,
       "idiv": -2.78,
-      "imab5": 0.41,
-      "ibovtr": 5.38
+      "imab5": 0.41
     },
     {
       "periodo": "mar/2025",
@@ -4612,13 +4612,13 @@
       "dolar": -1.39,
       "ouro": 3.89,
       "sp500_brl": -4.23,
-      "tlt_brl": 2.17,
+      "tlt_brl": 2.59,
       "bitcoin_brl": -5.07,
-      "fii_ifix": 6.14,
+      "fii_ifix": -1.2,
       "imoveis_fipezap": 0.5,
+      "ibovtr": 6.38,
       "idiv": 5.52,
-      "imab5": 2.83,
-      "ibovtr": 6.38
+      "imab5": 2.83
     },
     {
       "periodo": "abr/2025",
@@ -4631,13 +4631,13 @@
       "dolar": -1.06,
       "ouro": 8.34,
       "sp500_brl": -5.65,
-      "tlt_brl": 1.59,
+      "tlt_brl": 2.01,
       "bitcoin_brl": -6.64,
-      "fii_ifix": 3.01,
+      "fii_ifix": 1.45,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 2.8,
       "idiv": 3.88,
-      "imab5": 2.33,
-      "ibovtr": 2.8
+      "imab5": 2.33
     },
     {
       "periodo": "mai/2025",
@@ -4650,13 +4650,13 @@
       "dolar": -1.25,
       "ouro": -3.34,
       "sp500_brl": 5.65,
-      "tlt_brl": -3.04,
+      "tlt_brl": -2.64,
       "bitcoin_brl": 5.88,
-      "fii_ifix": 1.44,
+      "fii_ifix": 2.1,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 3.74,
       "idiv": 1.31,
-      "imab5": 2.45,
-      "ibovtr": 3.74
+      "imab5": 2.45
     },
     {
       "periodo": "jun/2025",
@@ -4669,13 +4669,13 @@
       "dolar": -1.26,
       "ouro": -3.46,
       "sp500_brl": 1.82,
-      "tlt_brl": -2.97,
+      "tlt_brl": -2.57,
       "bitcoin_brl": 4.48,
-      "fii_ifix": 0.63,
+      "fii_ifix": 0.85,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 1.23,
       "idiv": 1.76,
-      "imab5": 1.86,
-      "ibovtr": 1.23
+      "imab5": 1.86
     },
     {
       "periodo": "jul/2025",
@@ -4688,13 +4688,13 @@
       "dolar": 0.73,
       "ouro": 6.09,
       "sp500_brl": 3.74,
-      "tlt_brl": -1.86,
+      "tlt_brl": -1.46,
       "bitcoin_brl": 8.02,
-      "fii_ifix": -1.36,
+      "fii_ifix": 1.23,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 2.21,
       "idiv": -2.97,
-      "imab5": -1.52,
-      "ibovtr": 2.21
+      "imab5": -1.52
     },
     {
       "periodo": "ago/2025",
@@ -4707,13 +4707,13 @@
       "dolar": -2.54,
       "ouro": 1.65,
       "sp500_brl": 0.43,
-      "tlt_brl": -4.88,
+      "tlt_brl": -4.49,
       "bitcoin_brl": 0.85,
-      "fii_ifix": 1.16,
+      "fii_ifix": -0.45,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 3.5,
       "idiv": 5.36,
-      "imab5": 0.54,
-      "ibovtr": 3.5
+      "imab5": 0.54
     },
     {
       "periodo": "set/2025",
@@ -4726,13 +4726,13 @@
       "dolar": 1.3,
       "ouro": -3.63,
       "sp500_brl": -2.98,
-      "tlt_brl": 5.05,
+      "tlt_brl": 5.48,
       "bitcoin_brl": -4.71,
-      "fii_ifix": 3.25,
+      "fii_ifix": 0.78,
       "imoveis_fipezap": 0.7,
+      "ibovtr": -4.15,
       "idiv": 2.82,
-      "imab5": 0.44,
-      "ibovtr": -4.15
+      "imab5": 0.44
     },
     {
       "periodo": "out/2025",
@@ -4745,13 +4745,13 @@
       "dolar": 1.28,
       "ouro": 4.78,
       "sp500_brl": 4.41,
-      "tlt_brl": 3.69,
+      "tlt_brl": 4.12,
       "bitcoin_brl": 13.31,
-      "fii_ifix": 0.12,
+      "fii_ifix": 1.34,
       "imoveis_fipezap": 0.6,
+      "ibovtr": 5.72,
       "idiv": 1.78,
-      "imab5": 1.06,
-      "ibovtr": 5.72
+      "imab5": 1.06
     },
     {
       "periodo": "nov/2025",
@@ -4764,13 +4764,13 @@
       "dolar": -0.72,
       "ouro": 2.45,
       "sp500_brl": 1.96,
-      "tlt_brl": 0.9,
+      "tlt_brl": 1.31,
       "bitcoin_brl": 5.53,
-      "fii_ifix": 1.86,
+      "fii_ifix": 0.67,
       "imoveis_fipezap": 0.7,
+      "ibovtr": 2.78,
       "idiv": 5.31,
-      "imab5": 2.8,
-      "ibovtr": 2.78
+      "imab5": 2.8
     },
     {
       "periodo": "dez/2025",
@@ -4783,13 +4783,13 @@
       "dolar": -2.19,
       "ouro": -0.38,
       "sp500_brl": 1.27,
-      "tlt_brl": 0.04,
+      "tlt_brl": 0.45,
       "bitcoin_brl": 3.08,
-      "fii_ifix": 3.14,
+      "fii_ifix": 1.12,
       "imoveis_fipezap": 0.8,
+      "ibovtr": 6.16,
       "idiv": 1.46,
-      "imab5": 0.5,
-      "ibovtr": 6.16
+      "imab5": 0.5
     }
   ]
 }

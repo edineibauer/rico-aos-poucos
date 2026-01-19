@@ -1969,34 +1969,34 @@ const CustoConstrucaoData = {
       }
     },
     muro: {
-      'bloco_simples': {
-        nome: 'Muro de Bloco Simples',
-        valorMetroLinear: 250,
-        alturaBase: 2
-      },
       'bloco_rebocado': {
         nome: 'Muro de Bloco Rebocado e Pintado',
-        valorMetroLinear: 380,
+        valorMetroLinear: 420,
+        alturaBase: 2
+      },
+      'bloco_simples': {
+        nome: 'Muro de Bloco Simples (sem acabamento)',
+        valorMetroLinear: 280,
         alturaBase: 2
       },
       'bloco_texturizado': {
         nome: 'Muro com Textura/Grafiato',
-        valorMetroLinear: 450,
+        valorMetroLinear: 500,
         alturaBase: 2
       },
       'tijolo_aparente': {
         nome: 'Muro de Tijolo Aparente',
-        valorMetroLinear: 420,
+        valorMetroLinear: 480,
         alturaBase: 2
       },
       'pre_moldado': {
         nome: 'Muro Pré-Moldado',
-        valorMetroLinear: 200,
+        valorMetroLinear: 220,
         alturaBase: 2
       },
       'gradil_metalico': {
         nome: 'Muro Baixo + Gradil Metálico',
-        valorMetroLinear: 480,
+        valorMetroLinear: 520,
         alturaBase: 2
       },
       'vidro': {
@@ -2008,39 +2008,39 @@ const CustoConstrucaoData = {
     portao: {
       'ferro_simples': {
         nome: 'Portão de Ferro Simples',
-        valorM2: 350
+        valorM2: 380
       },
       'ferro_trabalhado': {
         nome: 'Portão de Ferro Trabalhado',
-        valorM2: 550
+        valorM2: 580
       },
       'aluminio_simples': {
         nome: 'Portão de Alumínio Simples',
-        valorM2: 650
+        valorM2: 700
       },
       'aluminio_premium': {
         nome: 'Portão de Alumínio Premium',
-        valorM2: 950
+        valorM2: 1000
       },
       'basculante_manual': {
         nome: 'Portão Basculante Manual',
-        valorUnidade: 2500
+        valorUnidade: 3200
       },
       'basculante_automatico': {
         nome: 'Portão Basculante Automático',
-        valorUnidade: 4500
+        valorUnidade: 5500
       },
       'deslizante_manual': {
         nome: 'Portão Deslizante Manual',
-        valorUnidade: 3000
+        valorUnidade: 3800
       },
       'deslizante_automatico': {
         nome: 'Portão Deslizante Automático',
-        valorUnidade: 5500
+        valorUnidade: 6500
       },
       'pivotante': {
         nome: 'Portão Pivotante',
-        valorUnidade: 6500
+        valorUnidade: 7500
       }
     },
     edicula: {

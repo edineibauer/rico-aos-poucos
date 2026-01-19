@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Construction Cost Calculator: estimate the cost to build your house accurately. Compare construction methods (masonry, EPS, steel frame), calculate materials, labor and extras like pool, wall and gourmet area.">
+  <meta name="keywords" content="construction calculator, cost to build house, how much to build, construction price per sqm, construction budget, material costs, construction labor, EPS structural foam, conventional masonry, steel frame, wood frame, two-story house, single-story house, pool, wall, gourmet area">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/en/calculadora-custo-construcao/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/calculadora-custo-construcao/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/calculadora-custo-construcao/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/calculadora-custo-construcao/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/calculadora-custo-construcao/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Construction Cost Calculator | How Much to Build Your House?">
+  <meta property="og:description" content="Calculate the cost to build your house accurately. Compare masonry, EPS, steel frame. Include pool, wall, gourmet area and more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/en/calculadora-custo-construcao/">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Construction Cost Calculator | How Much to Build?">
+  <meta name="twitter:description" content="Calculate the cost to build your house. Compare methods, materials and extras.">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="shortcut icon" href="../../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../../icon-192.png">
+
+  <title>Construction Cost Calculator | How Much to Build Your House? - Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Construction Cost Calculator",
+    "description": "Calculate the cost to build your house accurately. Compare construction methods, materials, labor and extras.",
+    "url": "https://ricoaospoucos.com.br/en/calculadora-custo-construcao/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "featureList": [
+      "Cost per square meter calculation",
+      "Construction method comparison",
+      "Material breakdown",
+      "Labor cost calculation",
+      "Extras: pool, wall, gourmet area",
+      "Adjustment by Brazilian region",
+      "Budget export"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How much does it cost to build a house in Brazil in 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The average cost to build a house in Brazil in 2026 ranges from R$ 1,500 to R$ 3,500 per sqm, depending on the finish standard, region and construction method. A 100sqm medium-standard house costs between R$ 180,000 and R$ 280,000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Which is cheaper: masonry or EPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "EPS (structural foam) is usually 5-10% cheaper than conventional masonry, mainly due to lighter foundation, less waste and reduced construction time (6-8 months vs 10-14 months)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is included in the cost per sqm?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The cost per sqm includes: foundation, structure, walls, roofing, electrical and plumbing installations, basic finishes (floors, painting, fixtures). Not included: land, projects, fees, furniture and external items like pool and wall."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .landing-hero {
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(102, 126, 234, 0.15);
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge svg { width: 14px; height: 14px; }
+
+    .landing-hero h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 16px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .landing-hero .lead {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .btn-primary-landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 28px;
+      background: var(--gradient-primary);
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-primary-landing:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    }
+
+    .btn-secondary-landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary-landing:hover {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+
+    .landing-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 30px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 16px 10px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-card .number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-card .label { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+
+    .landing-section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+
+    .section-header { text-align: center; margin-bottom: 30px; }
+    .section-header h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+    .section-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .feature-card {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover { border-color: rgba(102, 126, 234, 0.3); transform: translateY(-2px); }
+
+    .feature-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-primary);
+      border-radius: 12px;
+    }
+
+    .feature-icon svg { width: 24px; height: 24px; stroke: white; }
+
+    .feature-content h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 6px; }
+    .feature-content p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+
+    .methods-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .method-card {
+      padding: 24px 20px;
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .method-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .method-card.alvenaria::before { background: var(--gradient-primary); }
+    .method-card.eps::before { background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%); }
+    .method-card.steel::before { background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%); }
+
+    .method-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 8px; }
+    .method-card .price { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+    .method-card .price strong { color: var(--primary-light); font-size: 1.1rem; }
+
+    .method-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .method-tag { padding: 4px 10px; background: var(--bg-tertiary); border-radius: 6px; font-size: 0.7rem; color: var(--text-secondary); }
+    .method-tag.pro { color: var(--bullish); background: rgba(63, 185, 80, 0.1); }
+    .method-tag.con { color: var(--bearish); background: rgba(248, 81, 73, 0.1); }
+
+    .extras-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 4px 0 16px;
+      margin: 0 -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      scrollbar-width: none;
+    }
+    .extras-scroll::-webkit-scrollbar { display: none; }
+
+    .extra-chip {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .extra-chip svg { width: 20px; height: 20px; stroke: var(--primary-light); }
+    .extra-chip span { font-size: 0.85rem; color: var(--text-primary); white-space: nowrap; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--text-muted); transition: transform 0.3s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-answer { padding: 0 20px 16px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+    .landing-cta {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, rgba(102, 126, 234, 0.1) 100%);
+    }
+
+    .landing-cta h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0 0 12px; }
+    .landing-cta p { color: var(--text-secondary); margin: 0 0 24px; font-size: 0.9rem; }
+
+    @media (min-width: 640px) {
+      .landing-hero h1 { font-size: 2.5rem; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .methods-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-cta { flex-direction: row; max-width: 450px; }
+    }
+
+    @media (min-width: 768px) {
+      .landing-hero { padding: 80px 20px 60px; }
+      .landing-hero h1 { font-size: 3rem; }
+      .landing-hero .lead { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="page-header" data-subtitle="Construction Calculator"></header>
+
+    <main>
+      <section class="landing-hero">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Free Tool
+        </div>
+
+        <h1>How Much Does It Cost to Build Your House?</h1>
+
+        <p class="lead">
+          Calculate construction costs accurately. Compare construction methods,
+          materials, labor and extras like pool, wall and gourmet area.
+        </p>
+
+        <div class="hero-cta">
+          <a href="../../ferramentas-financeiras/#construcao" class="btn-primary-landing">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+            </svg>
+            Calculate Now
+          </a>
+          <a href="#how-it-works" class="btn-secondary-landing">
+            Learn More
+          </a>
+        </div>
+      </section>
+
+      <section class="landing-stats">
+        <div class="stat-card">
+          <div class="number">10+</div>
+          <div class="label">Construction Methods</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">27</div>
+          <div class="label">Brazilian States</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">100%</div>
+          <div class="label">Free</div>
+        </div>
+      </section>
+
+      <section class="landing-section" id="how-it-works">
+        <div class="section-header">
+          <h2>How the Calculator Works</h2>
+          <p>Simulate your construction in minutes</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Define Your House</h3>
+              <p>Choose the type (single-story, two-story, triplex), total area, number of bedrooms, suites and bathrooms.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Choose the Method</h3>
+              <p>Compare conventional masonry, EPS, steel frame, wood frame, container and more.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Customize Materials</h3>
+              <p>Adjust floors, roofing, windows, doors and finishes according to your standard.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Detailed Budget</h3>
+              <p>Receive a complete breakdown with materials, labor, projects and fees costs.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section">
+        <div class="section-header">
+          <h2>Compare Construction Methods</h2>
+          <p>Each method has its advantages and disadvantages</p>
+        </div>
+
+        <div class="methods-grid">
+          <div class="method-card alvenaria">
+            <h3>Conventional Masonry</h3>
+            <p class="price">From <strong>R$ 1,880/sqm</strong></p>
+            <div class="method-tags">
+              <span class="method-tag pro">Durability</span>
+              <span class="method-tag pro">Resale</span>
+              <span class="method-tag con">10-14 months</span>
+            </div>
+          </div>
+
+          <div class="method-card eps">
+            <h3>EPS (Structural Foam)</h3>
+            <p class="price">From <strong>R$ 1,790/sqm</strong></p>
+            <div class="method-tags">
+              <span class="method-tag pro">5% cheaper</span>
+              <span class="method-tag pro">6-8 months</span>
+              <span class="method-tag pro">Thermal insulation</span>
+            </div>
+          </div>
+
+          <div class="method-card steel">
+            <h3>Steel Frame</h3>
+            <p class="price">From <strong>R$ 2,250/sqm</strong></p>
+            <div class="method-tags">
+              <span class="method-tag pro">Clean construction</span>
+              <span class="method-tag pro">Precision</span>
+              <span class="method-tag con">Specialized labor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section">
+        <div class="section-header">
+          <h2>Also Calculate Extras</h2>
+          <p>Add complementary items to your budget</p>
+        </div>
+
+        <div class="extras-scroll">
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M2 12h6l2 3h4l2-3h6"/>
+              <path d="M5 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2"/>
+            </svg>
+            <span>Pool</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            </svg>
+            <span>Wall</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Automatic Gate</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/>
+            </svg>
+            <span>Gourmet Area</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            </svg>
+            <span>Solar Energy</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+            <span>Guest House</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+            <span>Covered Garage</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section">
+        <div class="section-header">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>How much does it cost to build a house in Brazil in 2026?</summary>
+            <div class="faq-answer">
+              The average cost ranges from <strong>R$ 1,500 to R$ 3,500 per sqm</strong>, depending on the finish standard, region and construction method. A 100sqm medium-standard house costs between R$ 180,000 and R$ 280,000, not including land.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Which is cheaper: masonry or EPS?</summary>
+            <div class="faq-answer">
+              <strong>EPS is usually 5-10% cheaper</strong> than conventional masonry. Savings come from lighter foundation (lighter structure = cheaper foundation), less material waste and reduced construction time (6-8 months vs 10-14 months).
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is included in the cost per sqm?</summary>
+            <div class="faq-answer">
+              Includes: foundation, structure, walls, roofing, electrical and plumbing installations, basic finishes (floors, painting, fixtures). <strong>Not included:</strong> land, architectural projects, city hall fees, furniture and external items like pool and wall.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Does the calculator consider my region?</summary>
+            <div class="faq-answer">
+              Yes! The calculator automatically adjusts costs based on the <strong>CUB (Basic Unit Cost)</strong> of each Brazilian state. Regions like São Paulo, Rio de Janeiro and Santa Catarina have higher costs than the national average.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can I export the budget?</summary>
+            <div class="faq-answer">
+              Yes! You can <strong>export the complete budget to Excel</strong> with all details of materials, labor, extras and projects. Ideal to present to builders or use as a negotiation base.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="landing-cta">
+        <h2>Ready to Calculate?</h2>
+        <p>Find out how much it will cost to build your dream house</p>
+        <a href="../../ferramentas-financeiras/#construcao" class="btn-primary-landing">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          Access Free Calculator
+        </a>
+      </section>
+    </main>
+
+    <footer id="page-footer"></footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/components.js"></script>
+</body>
+</html>

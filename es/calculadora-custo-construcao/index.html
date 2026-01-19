@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Calculadora de Costo de Construcción: estime el valor para construir su casa con precisión. Compare métodos constructivos (albañilería, EPS, steel frame), calcule materiales, mano de obra y extras como piscina, muro y área gourmet.">
+  <meta name="keywords" content="calculadora de construcción, costo para construir casa, cuánto cuesta construir, precio construcción m2, presupuesto de obra, costo de materiales, mano de obra construcción, EPS poliestireno estructural, albañilería convencional, steel frame, wood frame, construcción casa dos pisos, casa de un piso, piscina, muro, área gourmet">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/es/calculadora-custo-construcao/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/calculadora-custo-construcao/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/calculadora-custo-construcao/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/calculadora-custo-construcao/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/calculadora-custo-construcao/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Calculadora de Costo de Construcción | ¿Cuánto Cuesta Construir su Casa?">
+  <meta property="og:description" content="Calcule el costo para construir su casa con precisión. Compare albañilería, EPS, steel frame. Incluya piscina, muro, área gourmet y más.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/es/calculadora-custo-construcao/">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Calculadora de Costo de Construcción | ¿Cuánto Cuesta Construir?">
+  <meta name="twitter:description" content="Calcule el costo para construir su casa. Compare métodos, materiales y extras.">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="../../manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="shortcut icon" href="../../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../../icon-192.png">
+
+  <title>Calculadora de Costo de Construcción | ¿Cuánto Cuesta Construir su Casa? - Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../../css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Calculadora de Costo de Construcción",
+    "description": "Calcule el costo para construir su casa con precisión. Compare métodos constructivos, materiales, mano de obra y extras.",
+    "url": "https://ricoaospoucos.com.br/es/calculadora-custo-construcao/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "featureList": [
+      "Cálculo de costo por m²",
+      "Comparación de métodos constructivos",
+      "Desglose de materiales",
+      "Cálculo de mano de obra",
+      "Extras: piscina, muro, área gourmet",
+      "Ajuste por región de Brasil",
+      "Exportación de presupuesto"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "¿Cuánto cuesta construir una casa en Brasil en 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El costo promedio para construir una casa en Brasil en 2026 varía de R$ 1.500 a R$ 3.500 por m², dependiendo del estándar de acabado, región y método constructivo. Una casa de 100m² estándar medio cuesta entre R$ 180.000 y R$ 280.000."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué es más barato: albañilería o EPS?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El EPS (poliestireno estructural) suele ser 5-10% más barato que la albañilería convencional, principalmente debido a la cimentación más ligera, menos desperdicio y tiempo de obra reducido (6-8 meses vs 10-14 meses)."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "¿Qué está incluido en el costo por m²?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "El costo por m² incluye: cimentación, estructura, paredes, techo, instalaciones eléctricas e hidráulicas, acabados básicos (pisos, pintura, accesorios). No incluye: terreno, proyectos, tasas, muebles e items externos como piscina y muro."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+      --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    }
+
+    .landing-hero {
+      padding: 60px 20px 40px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 14px;
+      background: rgba(102, 126, 234, 0.15);
+      border: 1px solid rgba(102, 126, 234, 0.3);
+      border-radius: 20px;
+      font-size: 0.75rem;
+      color: #667eea;
+      margin-bottom: 20px;
+    }
+
+    .hero-badge svg { width: 14px; height: 14px; }
+
+    .landing-hero h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      margin: 0 0 16px;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .landing-hero .lead {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      max-width: 600px;
+      margin: 0 auto 28px;
+    }
+
+    .hero-cta {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 320px;
+      margin: 0 auto;
+    }
+
+    .btn-primary-landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 16px 28px;
+      background: var(--gradient-primary);
+      color: white;
+      font-size: 1rem;
+      font-weight: 600;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+    }
+
+    .btn-primary-landing:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
+    }
+
+    .btn-secondary-landing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 24px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .btn-secondary-landing:hover {
+      background: var(--bg-tertiary);
+      color: var(--text-primary);
+    }
+
+    .landing-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 12px;
+      padding: 30px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 16px 10px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .stat-card .number {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: var(--gradient-primary);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-card .label { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
+
+    .landing-section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
+
+    .section-header { text-align: center; margin-bottom: 30px; }
+    .section-header h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+    .section-header p { color: var(--text-secondary); font-size: 0.9rem; }
+
+    .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .feature-card {
+      display: flex;
+      gap: 16px;
+      padding: 20px;
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      transition: all 0.3s ease;
+    }
+
+    .feature-card:hover { border-color: rgba(102, 126, 234, 0.3); transform: translateY(-2px); }
+
+    .feature-icon {
+      flex-shrink: 0;
+      width: 48px;
+      height: 48px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--gradient-primary);
+      border-radius: 12px;
+    }
+
+    .feature-icon svg { width: 24px; height: 24px; stroke: white; }
+
+    .feature-content h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 6px; }
+    .feature-content p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
+
+    .methods-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+
+    .method-card {
+      padding: 24px 20px;
+      background: var(--bg-secondary);
+      border-radius: 16px;
+      border: 1px solid var(--border-color);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .method-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
+    .method-card.alvenaria::before { background: var(--gradient-primary); }
+    .method-card.eps::before { background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%); }
+    .method-card.steel::before { background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%); }
+
+    .method-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 8px; }
+    .method-card .price { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
+    .method-card .price strong { color: var(--primary-light); font-size: 1.1rem; }
+
+    .method-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .method-tag { padding: 4px 10px; background: var(--bg-tertiary); border-radius: 6px; font-size: 0.7rem; color: var(--text-secondary); }
+    .method-tag.pro { color: var(--bullish); background: rgba(63, 185, 80, 0.1); }
+    .method-tag.con { color: var(--bearish); background: rgba(248, 81, 73, 0.1); }
+
+    .extras-scroll {
+      display: flex;
+      gap: 12px;
+      overflow-x: auto;
+      padding: 4px 0 16px;
+      margin: 0 -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+      scrollbar-width: none;
+    }
+    .extras-scroll::-webkit-scrollbar { display: none; }
+
+    .extra-chip {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 16px;
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .extra-chip svg { width: 20px; height: 20px; stroke: var(--primary-light); }
+    .extra-chip span { font-size: 0.85rem; color: var(--text-primary); white-space: nowrap; }
+
+    .faq-list { display: flex; flex-direction: column; gap: 12px; }
+
+    .faq-item {
+      background: var(--bg-secondary);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      overflow: hidden;
+    }
+
+    .faq-item summary {
+      padding: 16px 20px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--text-muted); transition: transform 0.3s ease; }
+    .faq-item[open] summary::after { transform: rotate(45deg); }
+    .faq-answer { padding: 0 20px 16px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
+
+    .landing-cta {
+      padding: 50px 20px;
+      text-align: center;
+      background: linear-gradient(180deg, transparent 0%, rgba(102, 126, 234, 0.1) 100%);
+    }
+
+    .landing-cta h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0 0 12px; }
+    .landing-cta p { color: var(--text-secondary); margin: 0 0 24px; font-size: 0.9rem; }
+
+    @media (min-width: 640px) {
+      .landing-hero h1 { font-size: 2.5rem; }
+      .features-grid { grid-template-columns: repeat(2, 1fr); }
+      .methods-grid { grid-template-columns: repeat(3, 1fr); }
+      .hero-cta { flex-direction: row; max-width: 450px; }
+    }
+
+    @media (min-width: 768px) {
+      .landing-hero { padding: 80px 20px 60px; }
+      .landing-hero h1 { font-size: 3rem; }
+      .landing-hero .lead { font-size: 1.1rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="page-header" data-subtitle="Calculadora de Construcción"></header>
+
+    <main>
+      <section class="landing-hero">
+        <div class="hero-badge">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
+          </svg>
+          Herramienta Gratuita
+        </div>
+
+        <h1>¿Cuánto Cuesta Construir su Casa?</h1>
+
+        <p class="lead">
+          Calcule el costo de construcción con precisión. Compare métodos constructivos,
+          materiales, mano de obra y extras como piscina, muro y área gourmet.
+        </p>
+
+        <div class="hero-cta">
+          <a href="../../ferramentas-financeiras/#construcao" class="btn-primary-landing">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+            </svg>
+            Calcular Ahora
+          </a>
+          <a href="#como-funciona" class="btn-secondary-landing">
+            Saber Más
+          </a>
+        </div>
+      </section>
+
+      <section class="landing-stats">
+        <div class="stat-card">
+          <div class="number">10+</div>
+          <div class="label">Métodos Constructivos</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">27</div>
+          <div class="label">Estados de Brasil</div>
+        </div>
+        <div class="stat-card">
+          <div class="number">100%</div>
+          <div class="label">Gratuito</div>
+        </div>
+      </section>
+
+      <section class="landing-section" id="como-funciona">
+        <div class="section-header">
+          <h2>Cómo Funciona la Calculadora</h2>
+          <p>Simule su construcción en pocos minutos</p>
+        </div>
+
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+                <polyline points="9 22 9 12 15 12 15 22"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Defina su Casa</h3>
+              <p>Elija el tipo (una planta, dos plantas, triplex), área total, número de habitaciones, suites y baños.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
+                <line x1="1" y1="10" x2="23" y2="10"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Elija el Método</h3>
+              <p>Compare albañilería convencional, EPS, steel frame, wood frame, container y más.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Personalice Materiales</h3>
+              <p>Ajuste pisos, techo, ventanas, puertas y acabados según su estándar.</p>
+            </div>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
+                <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
+              </svg>
+            </div>
+            <div class="feature-content">
+              <h3>Presupuesto Detallado</h3>
+              <p>Reciba un desglose completo con costos de materiales, mano de obra, proyectos y tasas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section">
+        <div class="section-header">
+          <h2>Compare Métodos Constructivos</h2>
+          <p>Cada método tiene sus ventajas y desventajas</p>
+        </div>
+
+        <div class="methods-grid">
+          <div class="method-card alvenaria">
+            <h3>Albañilería Convencional</h3>
+            <p class="price">Desde <strong>R$ 1.880/m²</strong></p>
+            <div class="method-tags">
+              <span class="method-tag pro">Durabilidad</span>
+              <span class="method-tag pro">Reventa</span>
+              <span class="method-tag con">10-14 meses</span>
+            </div>
+          </div>
+
+          <div class="method-card eps">
+            <h3>EPS (Poliestireno Estructural)</h3>
+            <p class="price">Desde <strong>R$ 1.790/m²</strong></p>
+            <div class="method-tags">
+              <span class="method-tag pro">5% más barato</span>
+              <span class="method-tag pro">6-8 meses</span>
+              <span class="method-tag pro">Aislamiento térmico</span>
+            </div>
+          </div>
+
+          <div class="method-card steel">
+            <h3>Steel Frame</h3>
+            <p class="price">Desde <strong>R$ 2.250/m²</strong></p>
+            <div class="method-tags">
+              <span class="method-tag pro">Obra limpia</span>
+              <span class="method-tag pro">Precisión</span>
+              <span class="method-tag con">Mano de obra especializada</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section">
+        <div class="section-header">
+          <h2>Calcule También los Extras</h2>
+          <p>Agregue items complementarios a su presupuesto</p>
+        </div>
+
+        <div class="extras-scroll">
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M2 12h6l2 3h4l2-3h6"/>
+              <path d="M5 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2"/>
+            </svg>
+            <span>Piscina</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+            </svg>
+            <span>Muro</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            <span>Portón Automático</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/>
+            </svg>
+            <span>Área Gourmet</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
+              <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+            </svg>
+            <span>Energía Solar</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
+            </svg>
+            <span>Casa de Huéspedes</span>
+          </div>
+          <div class="extra-chip">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+            </svg>
+            <span>Garaje Cubierto</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="landing-section">
+        <div class="section-header">
+          <h2>Preguntas Frecuentes</h2>
+        </div>
+
+        <div class="faq-list">
+          <details class="faq-item">
+            <summary>¿Cuánto cuesta construir una casa en Brasil en 2026?</summary>
+            <div class="faq-answer">
+              El costo promedio varía de <strong>R$ 1.500 a R$ 3.500 por m²</strong>, dependiendo del estándar de acabado, región y método constructivo. Una casa de 100m² estándar medio cuesta entre R$ 180.000 y R$ 280.000, sin considerar terreno.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Qué es más barato: albañilería o EPS?</summary>
+            <div class="faq-answer">
+              El <strong>EPS suele ser 5-10% más barato</strong> que la albañilería convencional. El ahorro viene de la cimentación más ligera (estructura más ligera = cimentación más barata), menor desperdicio de materiales y tiempo de obra reducido (6-8 meses vs 10-14 meses).
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Qué está incluido en el costo por m²?</summary>
+            <div class="faq-answer">
+              Incluye: cimentación, estructura, paredes, techo, instalaciones eléctricas e hidráulicas, acabados básicos (pisos, pintura, accesorios). <strong>No incluye:</strong> terreno, proyectos arquitectónicos, tasas municipales, muebles e items externos como piscina y muro.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿La calculadora considera mi región?</summary>
+            <div class="faq-answer">
+              ¡Sí! La calculadora ajusta automáticamente los costos basándose en el <strong>CUB (Costo Unitario Básico)</strong> de cada estado brasileño. Regiones como São Paulo, Rio de Janeiro y Santa Catarina tienen costos más elevados que el promedio nacional.
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>¿Puedo exportar el presupuesto?</summary>
+            <div class="faq-answer">
+              ¡Sí! Puede <strong>exportar el presupuesto completo a Excel</strong> con todo el desglose de materiales, mano de obra, extras y proyectos. Ideal para presentar a constructores o usar como base de negociación.
+            </div>
+          </details>
+        </div>
+      </section>
+
+      <section class="landing-cta">
+        <h2>¿Listo para Calcular?</h2>
+        <p>Descubra cuánto costará construir la casa de sus sueños</p>
+        <a href="../../ferramentas-financeiras/#construcao" class="btn-primary-landing">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
+            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
+          </svg>
+          Acceder a Calculadora Gratuita
+        </a>
+      </section>
+    </main>
+
+    <footer id="page-footer"></footer>
+  </div>
+
+  <script src="../../js/i18n.js"></script>
+  <script src="../../js/components.js"></script>
+</body>
+</html>

@@ -731,104 +731,99 @@
           <span class="cc-extra-name">🏠 Edícula / Casa de Hóspedes</span>
         </div>
         <div class="cc-extra-options" id="cc-edicula-options" style="display:none;">
-          <p class="cc-hint" style="margin-bottom: 12px;">Configure os cômodos e características da edícula:</p>
 
-          <!-- Padrão de acabamento da edícula -->
-          <div class="cc-grid cc-grid-2" style="margin-bottom: 12px;">
-            <div class="cc-field">
-              <label>Padrão de Acabamento</label>
-              <select id="cc-edicula-tipo">
-                ${Object.entries(data.extras.edicula).map(([key, info]) =>
-                  `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
-                ).join('')}
-              </select>
-            </div>
-            <div class="cc-field">
-              <label>Área Total (calculada ou manual)</label>
-              <div class="cc-input-group">
-                <input type="number" id="cc-edicula-m2" value="20" min="10" max="200">
-                <span>m²</span>
+          <!-- Configuração Principal -->
+          <div class="cc-edicula-section">
+            <div class="cc-edicula-row">
+              <div class="cc-field">
+                <label>Padrão de Acabamento</label>
+                <select id="cc-edicula-tipo">
+                  ${Object.entries(data.extras.edicula).map(([key, info]) =>
+                    `<option value="${key}">${info.nome} - R$ ${formatNumber(info.valorM2)}/m²</option>`
+                  ).join('')}
+                </select>
+              </div>
+              <div class="cc-field">
+                <label>Área Total</label>
+                <div class="cc-input-group">
+                  <input type="number" id="cc-edicula-m2" value="20" min="10" max="200">
+                  <span>m²</span>
+                </div>
               </div>
             </div>
           </div>
 
-          <!-- Cômodos da edícula -->
-          <div class="cc-grid cc-grid-4" style="margin-bottom: 8px;">
-            <div class="cc-field">
-              <label>Quartos</label>
-              <input type="number" id="cc-edicula-quartos" value="0" min="0" max="5">
-            </div>
-            <div class="cc-field">
-              <label>Suítes</label>
-              <input type="number" id="cc-edicula-suites" value="0" min="0" max="3">
-            </div>
-            <div class="cc-field">
-              <label>Banheiros</label>
-              <input type="number" id="cc-edicula-banheiros" value="0" min="0" max="3">
-            </div>
-            <div class="cc-field">
-              <label>Vagas garagem</label>
-              <input type="number" id="cc-edicula-garagem" value="0" min="0" max="3">
+          <!-- Cômodos -->
+          <div class="cc-edicula-section">
+            <div class="cc-edicula-section-title">Cômodos</div>
+            <div class="cc-edicula-row cc-edicula-row-4">
+              <div class="cc-field cc-field-compact">
+                <label>Quartos</label>
+                <input type="number" id="cc-edicula-quartos" value="0" min="0" max="5">
+              </div>
+              <div class="cc-field cc-field-compact">
+                <label>Suítes</label>
+                <input type="number" id="cc-edicula-suites" value="0" min="0" max="3">
+              </div>
+              <div class="cc-field cc-field-compact">
+                <label>Banheiros</label>
+                <input type="number" id="cc-edicula-banheiros" value="0" min="0" max="3">
+              </div>
+              <div class="cc-field cc-field-compact">
+                <label>Garagem</label>
+                <input type="number" id="cc-edicula-garagem" value="0" min="0" max="3">
+              </div>
             </div>
           </div>
 
-          <!-- Características da edícula -->
-          <div class="cc-grid cc-grid-4" style="margin-bottom: 8px;">
-            <div class="cc-field cc-field-checkbox">
-              <label>
+          <!-- Ambientes -->
+          <div class="cc-edicula-section">
+            <div class="cc-edicula-section-title">Ambientes</div>
+            <div class="cc-edicula-checkboxes">
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-sala">
-                Sala
+                <span>Sala</span>
               </label>
-            </div>
-            <div class="cc-field cc-field-checkbox">
-              <label>
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-cozinha">
-                Cozinha
+                <span>Cozinha</span>
               </label>
-            </div>
-            <div class="cc-field cc-field-checkbox">
-              <label>
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-area-servico">
-                Área de Serviço
+                <span>Área de Serviço</span>
               </label>
-            </div>
-            <div class="cc-field cc-field-checkbox">
-              <label>
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-escritorio">
-                Escritório
+                <span>Escritório</span>
               </label>
             </div>
           </div>
 
-          <!-- Extras da edícula -->
-          <div class="cc-grid cc-grid-4">
-            <div class="cc-field cc-field-checkbox">
-              <label>
+          <!-- Extras -->
+          <div class="cc-edicula-section">
+            <div class="cc-edicula-section-title">Extras</div>
+            <div class="cc-edicula-checkboxes">
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-churrasqueira">
-                Churrasqueira
+                <span>Churrasqueira</span>
               </label>
-            </div>
-            <div class="cc-field cc-field-checkbox">
-              <label>
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-lareira">
-                Lareira
+                <span>Lareira</span>
               </label>
-            </div>
-            <div class="cc-field cc-field-checkbox">
-              <label>
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-varanda">
-                Varanda
+                <span>Varanda</span>
               </label>
-            </div>
-            <div class="cc-field cc-field-checkbox">
-              <label>
+              <label class="cc-checkbox-item">
                 <input type="checkbox" id="cc-edicula-piscina">
-                Piscina
+                <span>Piscina</span>
               </label>
             </div>
           </div>
 
-          <div class="cc-edicula-resumo" id="cc-edicula-resumo" style="margin-top: 12px; padding: 8px; background: var(--cc-bg); border-radius: 4px; font-size: 13px;"></div>
+          <!-- Resumo -->
+          <div class="cc-edicula-resumo" id="cc-edicula-resumo"></div>
         </div>
       </div>
 

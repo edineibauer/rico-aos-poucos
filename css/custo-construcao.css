@@ -1285,8 +1285,91 @@
 }
 
 /* ===========================================
-   EDÍCULA RESUMO
+   EDÍCULA - SEÇÕES E LAYOUT
    =========================================== */
+.cc-edicula-section {
+  margin-bottom: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--cc-border);
+}
+
+.cc-edicula-section:last-of-type {
+  border-bottom: none;
+  margin-bottom: 8px;
+  padding-bottom: 0;
+}
+
+.cc-edicula-section-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--cc-text-muted);
+  margin-bottom: 10px;
+}
+
+.cc-edicula-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.cc-edicula-row-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.cc-field-compact input[type="number"] {
+  text-align: center;
+  padding: 8px 4px;
+}
+
+/* Checkboxes em grid */
+.cc-edicula-checkboxes {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 8px;
+}
+
+.cc-checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: var(--cc-bg);
+  border: 1px solid var(--cc-border);
+  border-radius: var(--cc-radius-sm);
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-size: 0.85rem;
+  color: var(--cc-text-secondary);
+}
+
+.cc-checkbox-item:hover {
+  border-color: var(--cc-primary);
+  background: var(--cc-primary-soft);
+}
+
+.cc-checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--cc-primary);
+  cursor: pointer;
+}
+
+.cc-checkbox-item:has(input:checked) {
+  border-color: var(--cc-primary);
+  background: var(--cc-primary-soft);
+  color: var(--cc-text);
+}
+
+.cc-checkbox-item span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Resumo da edícula */
 .cc-edicula-resumo {
   margin-top: 12px;
   padding: 10px 14px;
@@ -1296,8 +1379,43 @@
   color: var(--cc-text-secondary);
 }
 
+.cc-edicula-resumo:empty {
+  display: none;
+}
+
 .cc-edicula-resumo strong {
   color: var(--cc-primary);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+  .cc-edicula-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cc-edicula-checkboxes {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+  .cc-edicula-row {
+    grid-template-columns: 1fr;
+  }
+
+  .cc-edicula-row-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .cc-edicula-checkboxes {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .cc-checkbox-item {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
 }
 
 /* ===========================================

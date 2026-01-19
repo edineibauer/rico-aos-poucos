@@ -1,0 +1,1067 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulador de Investimentos Grátis: monte sua carteira ideal, visualize alocação por setor, compare estratégias e acompanhe sua evolução patrimonial. Ferramenta completa para investidores.">
+  <meta name="keywords" content="simulador de investimentos, carteira de investimentos, alocação de ativos, diversificação, renda fixa, renda variável, FIIs, ações, dólar, bitcoin, como investir, estratégia de investimento, portfolio">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/simulador-investimentos/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/simulador-investimentos/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/simulador-investimentos/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/simulador-investimentos/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/simulador-investimentos/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Simulador de Investimentos | Monte sua Carteira Ideal">
+  <meta property="og:description" content="Monte sua carteira de investimentos, visualize alocação por setor e acompanhe sua estratégia. Ferramenta gratuita.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/simulador-investimentos/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Simulador de Investimentos | Monte sua Carteira Ideal">
+  <meta name="twitter:description" content="Monte sua carteira de investimentos e visualize sua alocação ideal.">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+
+  <title>Simulador de Investimentos | Monte sua Carteira Ideal - Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Simulador de Investimentos",
+    "description": "Monte sua carteira de investimentos, visualize alocação por setor e acompanhe sua estratégia patrimonial.",
+    "url": "https://ricoaospoucos.com.br/simulador-investimentos/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "featureList": [
+      "Montagem de carteira personalizada",
+      "Visualização gráfica de alocação",
+      "Comparação entre setores",
+      "Análise de diversificação",
+      "Acompanhamento de estratégia"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Como montar uma carteira de investimentos diversificada?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Uma carteira diversificada deve conter ativos de diferentes classes: renda fixa (CDBs, Tesouro), renda variável (ações, FIIs), proteções (dólar, ouro) e reserva de emergência. A proporção depende do seu perfil de risco e objetivos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a melhor alocação para iniciantes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Para iniciantes, recomenda-se começar com maior peso em renda fixa (60-70%) e ir aumentando gradualmente a exposição em renda variável conforme ganha experiência e conhecimento."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Devo investir em dólar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ter uma parte da carteira em dólar (10-25%) serve como proteção contra desvalorização do real e crises locais. Pode ser feito via fundos cambiais, ETFs ou diretamente em ativos dolarizados."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ricoaospoucos.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ferramentas Financeiras",
+        "item": "https://ricoaospoucos.com.br/ferramentas-financeiras/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Simulador de Investimentos",
+        "item": "https://ricoaospoucos.com.br/simulador-investimentos/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Landing Page Styles - Investment Theme */
+    .lp-wrapper {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .lp-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 60px;
+      background:
+        radial-gradient(ellipse at 30% 0%, rgba(99, 102, 241, 0.25) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 100%, rgba(45, 138, 110, 0.2) 0%, transparent 50%),
+        var(--bg-primary);
+      overflow: hidden;
+    }
+
+    .lp-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    /* Floating Elements */
+    .lp-float-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .lp-float-icon {
+      position: absolute;
+      opacity: 0.08;
+      font-size: 4rem;
+      animation: lpFloat 20s infinite ease-in-out;
+    }
+
+    .lp-float-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .lp-float-icon:nth-child(2) { top: 60%; right: 8%; animation-delay: -5s; font-size: 3rem; }
+    .lp-float-icon:nth-child(3) { bottom: 15%; left: 10%; animation-delay: -10s; font-size: 5rem; }
+    .lp-float-icon:nth-child(4) { top: 25%; right: 15%; animation-delay: -15s; font-size: 2.5rem; }
+    .lp-float-icon:nth-child(5) { bottom: 30%; right: 5%; animation-delay: -7s; font-size: 3.5rem; }
+
+    @keyframes lpFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-20px) rotate(5deg); }
+      50% { transform: translateY(0) rotate(0deg); }
+      75% { transform: translateY(20px) rotate(-5deg); }
+    }
+
+    /* Hero Content */
+    .lp-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .lp-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);
+      border: 1px solid rgba(99, 102, 241, 0.4);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: #a5b4fc;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .lp-hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: #a5b4fc;
+      border-radius: 50%;
+      animation: lpPulse 2s infinite;
+    }
+
+    @keyframes lpPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
+    .lp-hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .lp-hero h1 .text-gradient {
+      background: linear-gradient(135deg, #818cf8 0%, var(--primary-light) 50%, var(--secondary) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lp-hero h1 .text-white {
+      color: var(--text-primary);
+    }
+
+    .lp-hero-desc {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 650px;
+      margin: 0 auto 40px;
+    }
+
+    /* CTA Buttons */
+    .lp-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .lp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 36px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow:
+        0 4px 15px rgba(99, 102, 241, 0.4),
+        0 0 0 0 rgba(99, 102, 241, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lp-btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .lp-btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow:
+        0 8px 25px rgba(99, 102, 241, 0.5),
+        0 0 0 4px rgba(99, 102, 241, 0.2);
+    }
+
+    .lp-btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .lp-btn-primary svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s;
+    }
+
+    .lp-btn-primary:hover svg {
+      transform: translateX(4px);
+    }
+
+    .lp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 500;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .lp-btn-secondary:hover {
+      border-color: #818cf8;
+      color: #a5b4fc;
+      background: rgba(99, 102, 241, 0.1);
+    }
+
+    /* Hero Stats Bar */
+    .lp-hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .lp-stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+    }
+
+    .lp-stat-pill .icon {
+      font-size: 1.2rem;
+    }
+
+    .lp-stat-pill .value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #a5b4fc;
+    }
+
+    .lp-stat-pill .label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* Scroll Indicator */
+    .lp-scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      animation: lpBounce 2s infinite;
+    }
+
+    .lp-scroll-indicator svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--text-muted);
+    }
+
+    @keyframes lpBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* Section Base */
+    .lp-section {
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .lp-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .lp-section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .lp-section-header .overline {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: #818cf8;
+      margin-bottom: 12px;
+    }
+
+    .lp-section-header h2 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .lp-section-header p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Feature Cards - Bento Grid */
+    .lp-bento-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .lp-bento-card {
+      background: linear-gradient(145deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .lp-bento-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, #6366f1, #8b5cf6);
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .lp-bento-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(99, 102, 241, 0.4);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .lp-bento-card:hover::before {
+      opacity: 1;
+    }
+
+    .lp-bento-icon {
+      width: 56px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      border-radius: 16px;
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    }
+
+    .lp-bento-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 10px;
+    }
+
+    .lp-bento-card p {
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Asset Classes Section */
+    .lp-assets-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+    }
+
+    .lp-assets-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+
+    .lp-asset-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 32px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lp-asset-card::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      opacity: 0.05;
+      pointer-events: none;
+    }
+
+    .lp-asset-card.rf { border-left: 4px solid #10b981; }
+    .lp-asset-card.rf::after { background: radial-gradient(circle, #10b981 0%, transparent 70%); }
+    .lp-asset-card.rv { border-left: 4px solid #f59e0b; }
+    .lp-asset-card.rv::after { background: radial-gradient(circle, #f59e0b 0%, transparent 70%); }
+    .lp-asset-card.alt { border-left: 4px solid #8b5cf6; }
+    .lp-asset-card.alt::after { background: radial-gradient(circle, #8b5cf6 0%, transparent 70%); }
+
+    .lp-asset-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .lp-asset-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .lp-asset-icon {
+      font-size: 2rem;
+    }
+
+    .lp-asset-examples {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .lp-asset-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 500;
+      background: rgba(255, 255, 255, 0.05);
+      color: var(--text-secondary);
+    }
+
+    .lp-asset-desc {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+    }
+
+    /* Allocation Visual Section */
+    .lp-allocation-section {
+      background: var(--bg-secondary);
+    }
+
+    .lp-allocation-visual {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      align-items: center;
+    }
+
+    .lp-pie-mock {
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      background: conic-gradient(
+        #10b981 0deg 90deg,
+        #f59e0b 90deg 180deg,
+        #6366f1 180deg 252deg,
+        #ec4899 252deg 306deg,
+        #8b5cf6 306deg 360deg
+      );
+      position: relative;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .lp-pie-mock::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: var(--bg-secondary);
+      border-radius: 50%;
+    }
+
+    .lp-allocation-legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      justify-content: center;
+    }
+
+    .lp-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .lp-legend-color {
+      width: 12px;
+      height: 12px;
+      border-radius: 4px;
+    }
+
+    /* FAQ Section */
+    .lp-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .lp-faq-item {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .lp-faq-item:hover {
+      border-color: rgba(99, 102, 241, 0.3);
+    }
+
+    .lp-faq-item[open] {
+      border-color: #818cf8;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.2);
+    }
+
+    .lp-faq-item summary {
+      padding: 20px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lp-faq-item summary::-webkit-details-marker { display: none; }
+
+    .lp-faq-item summary::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238b949e'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+      transition: transform 0.3s;
+    }
+
+    .lp-faq-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lp-faq-answer {
+      padding: 0 24px 20px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Final CTA Section */
+    .lp-final-cta {
+      padding: 100px 20px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 50% 100%, rgba(99, 102, 241, 0.3) 0%, transparent 60%),
+        var(--bg-primary);
+      position: relative;
+    }
+
+    .lp-final-cta h2 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .lp-final-cta h2 span {
+      background: linear-gradient(135deg, #818cf8 0%, var(--primary-light) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lp-final-cta p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin: 0 0 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive */
+    @media (min-width: 640px) {
+      .lp-cta-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .lp-bento-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .lp-assets-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .lp-allocation-visual {
+        flex-direction: row;
+        justify-content: center;
+        gap: 60px;
+      }
+
+      .lp-pie-mock {
+        width: 250px;
+        height: 250px;
+      }
+
+      .lp-pie-mock::after {
+        width: 100px;
+        height: 100px;
+      }
+
+      .lp-allocation-legend {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+
+    @media (min-width: 900px) {
+      .lp-bento-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .lp-bento-card.wide {
+        grid-column: span 2;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="page-header" data-subtitle="Simulador de Investimentos"></header>
+
+    <main class="lp-wrapper">
+      <!-- Hero Section -->
+      <section class="lp-hero">
+        <div class="lp-float-elements">
+          <span class="lp-float-icon">📊</span>
+          <span class="lp-float-icon">💰</span>
+          <span class="lp-float-icon">📈</span>
+          <span class="lp-float-icon">💼</span>
+          <span class="lp-float-icon">🎯</span>
+        </div>
+
+        <div class="lp-hero-content">
+          <div class="lp-hero-badge">
+            Ferramenta 100% Gratuita
+          </div>
+
+          <h1>
+            <span class="text-white">Monte sua</span><br>
+            <span class="text-gradient">Carteira Ideal</span>
+          </h1>
+
+          <p class="lp-hero-desc">
+            Simule sua carteira de investimentos, visualize a alocação por setores
+            e acompanhe sua estratégia patrimonial de forma simples e intuitiva.
+          </p>
+
+          <div class="lp-cta-group">
+            <a href="../ferramentas-financeiras/#carteira" class="lp-btn-primary">
+              Simular Agora
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#como-funciona" class="lp-btn-secondary">
+              Como Funciona
+            </a>
+          </div>
+
+          <div class="lp-hero-stats">
+            <div class="lp-stat-pill">
+              <span class="icon">📊</span>
+              <span class="value">10+</span>
+              <span class="label">Setores</span>
+            </div>
+            <div class="lp-stat-pill">
+              <span class="icon">🎨</span>
+              <span class="value">Visual</span>
+              <span class="label">Gráfico</span>
+            </div>
+            <div class="lp-stat-pill">
+              <span class="icon">💾</span>
+              <span class="value">Salva</span>
+              <span class="label">Automático</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lp-scroll-indicator">
+          <span>Saiba mais</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Features Section -->
+      <section class="lp-section" id="como-funciona">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Como Funciona</span>
+            <h2>Visualize seus Investimentos</h2>
+            <p>Defina sua alocação ideal e acompanhe sua estratégia de forma visual e organizada</p>
+          </div>
+
+          <div class="lp-bento-grid">
+            <div class="lp-bento-card">
+              <div class="lp-bento-icon">🎯</div>
+              <h3>Defina sua Alocação</h3>
+              <p>Escolha quanto investir em cada setor: renda fixa, ações, FIIs, dólar, criptomoedas e mais.</p>
+            </div>
+
+            <div class="lp-bento-card">
+              <div class="lp-bento-icon">📊</div>
+              <h3>Visualização Gráfica</h3>
+              <p>Veja sua carteira em gráficos interativos de pizza e barras com cores intuitivas.</p>
+            </div>
+
+            <div class="lp-bento-card">
+              <div class="lp-bento-icon">⚖️</div>
+              <h3>Análise de Risco</h3>
+              <p>Entenda a exposição da sua carteira entre classes conservadoras e arrojadas.</p>
+            </div>
+
+            <div class="lp-bento-card">
+              <div class="lp-bento-icon">💾</div>
+              <h3>Salva Automaticamente</h3>
+              <p>Sua carteira fica salva no navegador. Acesse novamente e ela estará lá.</p>
+            </div>
+
+            <div class="lp-bento-card wide">
+              <div class="lp-bento-icon">🔄</div>
+              <h3>Rebalanceamento</h3>
+              <p>Compare sua alocação atual com a meta e veja onde precisa ajustar para manter sua estratégia equilibrada ao longo do tempo.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Asset Classes -->
+      <section class="lp-section lp-assets-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Classes de Ativos</span>
+            <h2>Diversifique sua Carteira</h2>
+            <p>Conheça os principais setores disponíveis para alocação</p>
+          </div>
+
+          <div class="lp-assets-grid">
+            <div class="lp-asset-card rf">
+              <div class="lp-asset-header">
+                <h3>Renda Fixa</h3>
+                <span class="lp-asset-icon">🏦</span>
+              </div>
+              <div class="lp-asset-examples">
+                <span class="lp-asset-tag">Tesouro Direto</span>
+                <span class="lp-asset-tag">CDB</span>
+                <span class="lp-asset-tag">LCI/LCA</span>
+              </div>
+              <p class="lp-asset-desc">Segurança e previsibilidade. Ideal para reserva de emergência e metas de curto prazo.</p>
+            </div>
+
+            <div class="lp-asset-card rv">
+              <div class="lp-asset-header">
+                <h3>Renda Variável</h3>
+                <span class="lp-asset-icon">📈</span>
+              </div>
+              <div class="lp-asset-examples">
+                <span class="lp-asset-tag">Ações BR</span>
+                <span class="lp-asset-tag">FIIs</span>
+                <span class="lp-asset-tag">ETFs</span>
+              </div>
+              <p class="lp-asset-desc">Potencial de crescimento no longo prazo. Maior risco, maior retorno esperado.</p>
+            </div>
+
+            <div class="lp-asset-card alt">
+              <div class="lp-asset-header">
+                <h3>Alternativos</h3>
+                <span class="lp-asset-icon">🌐</span>
+              </div>
+              <div class="lp-asset-examples">
+                <span class="lp-asset-tag">Dólar</span>
+                <span class="lp-asset-tag">Ouro</span>
+                <span class="lp-asset-tag">Cripto</span>
+              </div>
+              <p class="lp-asset-desc">Proteção e descorrelação. Hedge contra inflação e crises locais.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Allocation Visualization -->
+      <section class="lp-section lp-allocation-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Visualização</span>
+            <h2>Entenda sua Alocação</h2>
+            <p>Gráficos intuitivos mostram exatamente onde seu dinheiro está investido</p>
+          </div>
+
+          <div class="lp-allocation-visual">
+            <div class="lp-pie-mock"></div>
+            <div class="lp-allocation-legend">
+              <div class="lp-legend-item">
+                <span class="lp-legend-color" style="background: #10b981;"></span>
+                <span>Renda Fixa (25%)</span>
+              </div>
+              <div class="lp-legend-item">
+                <span class="lp-legend-color" style="background: #f59e0b;"></span>
+                <span>Ações (25%)</span>
+              </div>
+              <div class="lp-legend-item">
+                <span class="lp-legend-color" style="background: #6366f1;"></span>
+                <span>FIIs (20%)</span>
+              </div>
+              <div class="lp-legend-item">
+                <span class="lp-legend-color" style="background: #ec4899;"></span>
+                <span>Dólar (15%)</span>
+              </div>
+              <div class="lp-legend-item">
+                <span class="lp-legend-color" style="background: #8b5cf6;"></span>
+                <span>Alternativos (15%)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="lp-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Dúvidas Frequentes</span>
+            <h2>Perguntas e Respostas</h2>
+          </div>
+
+          <div class="lp-faq-list">
+            <details class="lp-faq-item">
+              <summary>Como montar uma carteira diversificada?</summary>
+              <div class="lp-faq-answer">
+                Uma carteira diversificada deve conter ativos de <strong>diferentes classes</strong>: renda fixa (CDBs, Tesouro), renda variável (ações, FIIs), proteções (dólar, ouro) e reserva de emergência. A proporção ideal depende do seu perfil de risco, idade e objetivos financeiros.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Qual a alocação ideal para iniciantes?</summary>
+              <div class="lp-faq-answer">
+                Para iniciantes, recomenda-se começar com <strong>maior peso em renda fixa (60-70%)</strong> e ir aumentando gradualmente a exposição em renda variável conforme ganha experiência. O importante é começar e ir ajustando com o tempo.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Devo investir em dólar?</summary>
+              <div class="lp-faq-answer">
+                Ter uma parte da carteira em dólar <strong>(10-25%)</strong> serve como proteção contra desvalorização do real e crises locais. Pode ser feito via fundos cambiais, ETFs ou diretamente em ativos dolarizados no exterior.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>O que é rebalanceamento?</summary>
+              <div class="lp-faq-answer">
+                Rebalanceamento é o processo de <strong>ajustar sua carteira</strong> periodicamente para manter a alocação original. Se ações subiram muito e agora representam 40% (meta era 30%), você vende parte e realoca em setores abaixo da meta.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Minha carteira fica salva?</summary>
+              <div class="lp-faq-answer">
+                Sim! Sua carteira é <strong>salva automaticamente no navegador</strong> (localStorage). Quando você voltar ao site, sua configuração estará lá. Não é necessário criar conta ou fazer login.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="lp-final-cta">
+        <h2>Pronto para <span>Investir Melhor?</span></h2>
+        <p>Monte sua carteira ideal e acompanhe sua evolução patrimonial</p>
+        <a href="../ferramentas-financeiras/#carteira" class="lp-btn-primary">
+          Acessar Simulador Gratuito
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+  </div>
+
+  <script src="../js/page-header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

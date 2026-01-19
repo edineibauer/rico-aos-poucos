@@ -1,0 +1,1125 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ferramentas Financeiras Gratuitas: simulador de investimentos, calculadora de aposentadoria, calculadora de construção e mais. Tome decisões financeiras inteligentes com nossas calculadoras.">
+  <meta name="keywords" content="ferramentas financeiras, calculadora de investimentos, simulador de carteira, calculadora de aposentadoria, FIRE calculator, calculadora de construção, planejamento financeiro, independência financeira, como investir, juros compostos">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/ferramentas/">
+
+  <!-- Hreflang Tags -->
+  <link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/ferramentas/">
+  <link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/ferramentas/">
+  <link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/ferramentas/">
+  <link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/ferramentas/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Ferramentas Financeiras Gratuitas | Rico aos Poucos">
+  <meta property="og:description" content="Calculadoras e simuladores para investimentos, aposentadoria e construção. Tome decisões financeiras mais inteligentes.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/ferramentas/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ferramentas Financeiras Gratuitas | Rico aos Poucos">
+  <meta name="twitter:description" content="Calculadoras e simuladores gratuitos para suas decisões financeiras.">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+
+  <title>Ferramentas Financeiras Gratuitas | Calculadoras e Simuladores - Rico aos Poucos</title>
+
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Ferramentas Financeiras Gratuitas",
+    "description": "Conjunto de calculadoras e simuladores financeiros gratuitos para ajudar na tomada de decisões de investimento e planejamento.",
+    "url": "https://ricoaospoucos.com.br/ferramentas/",
+    "provider": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Simulador de Investimentos",
+          "url": "https://ricoaospoucos.com.br/ferramentas-financeiras/#carteira"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculadora de Aposentadoria",
+          "url": "https://ricoaospoucos.com.br/ferramentas-financeiras/#aposentadoria"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Calculadora de Construção",
+          "url": "https://ricoaospoucos.com.br/ferramentas-financeiras/#construcao"
+        }
+      ]
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "As ferramentas são realmente gratuitas?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Todas as ferramentas do Rico aos Poucos são 100% gratuitas, sem necessidade de cadastro ou pagamento. Você pode usar à vontade para planejar suas finanças."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Meus dados ficam salvos?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Seus dados são salvos localmente no seu navegador (localStorage). Não enviamos nenhuma informação para servidores externos. Sua privacidade é respeitada."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Posso usar as ferramentas no celular?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Sim! Todas as ferramentas são responsivas e funcionam perfeitamente em smartphones, tablets e computadores. Você pode inclusive instalar como app (PWA)."
+        }
+      }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ricoaospoucos.com.br/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Ferramentas Financeiras",
+        "item": "https://ricoaospoucos.com.br/ferramentas/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Landing Page Styles - Main Tools Theme (Green/Primary) */
+    .lp-wrapper {
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* Hero Section */
+    .lp-hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 100px 20px 60px;
+      background:
+        radial-gradient(ellipse at 20% 0%, rgba(45, 138, 110, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 100%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(249, 115, 22, 0.1) 0%, transparent 40%),
+        var(--bg-primary);
+      overflow: hidden;
+    }
+
+    .lp-hero::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
+      background-size: 50px 50px;
+      pointer-events: none;
+    }
+
+    /* Floating Elements */
+    .lp-float-elements {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .lp-float-icon {
+      position: absolute;
+      opacity: 0.08;
+      font-size: 4rem;
+      animation: lpFloat 20s infinite ease-in-out;
+    }
+
+    .lp-float-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .lp-float-icon:nth-child(2) { top: 60%; right: 8%; animation-delay: -5s; font-size: 3rem; }
+    .lp-float-icon:nth-child(3) { bottom: 15%; left: 10%; animation-delay: -10s; font-size: 5rem; }
+    .lp-float-icon:nth-child(4) { top: 25%; right: 15%; animation-delay: -15s; font-size: 2.5rem; }
+    .lp-float-icon:nth-child(5) { bottom: 30%; right: 5%; animation-delay: -7s; font-size: 3.5rem; }
+    .lp-float-icon:nth-child(6) { top: 45%; left: 3%; animation-delay: -12s; font-size: 3rem; }
+
+    @keyframes lpFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      25% { transform: translateY(-20px) rotate(5deg); }
+      50% { transform: translateY(0) rotate(0deg); }
+      75% { transform: translateY(20px) rotate(-5deg); }
+    }
+
+    /* Hero Content */
+    .lp-hero-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      max-width: 900px;
+    }
+
+    .lp-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: linear-gradient(135deg, rgba(45, 138, 110, 0.2) 0%, rgba(26, 95, 74, 0.2) 100%);
+      border: 1px solid rgba(45, 138, 110, 0.4);
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      margin-bottom: 24px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .lp-hero-badge::before {
+      content: '';
+      width: 8px;
+      height: 8px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      animation: lpPulse 2s infinite;
+    }
+
+    @keyframes lpPulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.5; transform: scale(1.2); }
+    }
+
+    .lp-hero h1 {
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin: 0 0 24px;
+      letter-spacing: -0.02em;
+    }
+
+    .lp-hero h1 .text-gradient {
+      background: linear-gradient(135deg, var(--primary-light) 0%, #6366f1 50%, #f97316 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lp-hero h1 .text-white {
+      color: var(--text-primary);
+    }
+
+    .lp-hero-desc {
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 700px;
+      margin: 0 auto 40px;
+    }
+
+    /* CTA Buttons */
+    .lp-cta-group {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+
+    .lp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      padding: 18px 36px;
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      color: white;
+      font-size: 1.1rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 16px;
+      text-decoration: none;
+      transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      box-shadow:
+        0 4px 15px rgba(26, 95, 74, 0.4),
+        0 0 0 0 rgba(26, 95, 74, 0.4);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .lp-btn-primary::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: 0.5s;
+    }
+
+    .lp-btn-primary:hover {
+      transform: translateY(-3px) scale(1.02);
+      box-shadow:
+        0 8px 25px rgba(26, 95, 74, 0.5),
+        0 0 0 4px rgba(26, 95, 74, 0.2);
+    }
+
+    .lp-btn-primary:hover::before {
+      left: 100%;
+    }
+
+    .lp-btn-primary svg {
+      width: 24px;
+      height: 24px;
+      transition: transform 0.3s;
+    }
+
+    .lp-btn-primary:hover svg {
+      transform: translateX(4px);
+    }
+
+    .lp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 28px;
+      background: transparent;
+      color: var(--text-secondary);
+      font-size: 1rem;
+      font-weight: 500;
+      border: 2px solid var(--border-color);
+      border-radius: 12px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+    }
+
+    .lp-btn-secondary:hover {
+      border-color: var(--primary-light);
+      color: var(--primary-light);
+      background: rgba(45, 138, 110, 0.1);
+    }
+
+    /* Hero Stats Bar */
+    .lp-hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .lp-stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 12px 20px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 100px;
+      backdrop-filter: blur(10px);
+    }
+
+    .lp-stat-pill .icon {
+      font-size: 1.2rem;
+    }
+
+    .lp-stat-pill .value {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+
+    .lp-stat-pill .label {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    /* Scroll Indicator */
+    .lp-scroll-indicator {
+      position: absolute;
+      bottom: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      animation: lpBounce 2s infinite;
+    }
+
+    .lp-scroll-indicator svg {
+      width: 24px;
+      height: 24px;
+      stroke: var(--text-muted);
+    }
+
+    @keyframes lpBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(10px); }
+    }
+
+    /* Section Base */
+    .lp-section {
+      padding: 80px 20px;
+      position: relative;
+    }
+
+    .lp-section-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .lp-section-header {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .lp-section-header .overline {
+      display: inline-block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      color: var(--primary-light);
+      margin-bottom: 12px;
+    }
+
+    .lp-section-header h2 {
+      font-size: clamp(1.8rem, 5vw, 2.5rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .lp-section-header p {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Main Tools Cards */
+    .lp-tools-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 24px;
+    }
+
+    .lp-tool-card {
+      background: linear-gradient(145deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 36px;
+      position: relative;
+      overflow: hidden;
+      transition: all 0.4s ease;
+      text-decoration: none;
+      display: block;
+    }
+
+    .lp-tool-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+
+    .lp-tool-card.investment::before { background: linear-gradient(90deg, #6366f1, #8b5cf6); }
+    .lp-tool-card.retirement::before { background: linear-gradient(90deg, #f97316, #ea580c); }
+    .lp-tool-card.construction::before { background: linear-gradient(90deg, var(--primary), var(--primary-light)); }
+
+    .lp-tool-card:hover {
+      transform: translateY(-8px);
+      border-color: rgba(45, 138, 110, 0.4);
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    .lp-tool-card:hover::before {
+      opacity: 1;
+    }
+
+    .lp-tool-header {
+      display: flex;
+      align-items: flex-start;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+
+    .lp-tool-icon {
+      width: 72px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 20px;
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .lp-tool-card.investment .lp-tool-icon {
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    }
+
+    .lp-tool-card.retirement .lp-tool-icon {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+      box-shadow: 0 8px 24px rgba(249, 115, 22, 0.3);
+    }
+
+    .lp-tool-card.construction .lp-tool-icon {
+      background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+      box-shadow: 0 8px 24px rgba(26, 95, 74, 0.3);
+    }
+
+    .lp-tool-title-area {
+      flex: 1;
+    }
+
+    .lp-tool-card h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 8px;
+    }
+
+    .lp-tool-subtitle {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .lp-tool-desc {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-bottom: 24px;
+    }
+
+    .lp-tool-features {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 24px;
+    }
+
+    .lp-tool-feature {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 14px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+    }
+
+    .lp-tool-feature span:first-child {
+      font-size: 1rem;
+    }
+
+    .lp-tool-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: gap 0.3s;
+    }
+
+    .lp-tool-card.investment .lp-tool-cta { color: #a5b4fc; }
+    .lp-tool-card.retirement .lp-tool-cta { color: #fdba74; }
+    .lp-tool-card.construction .lp-tool-cta { color: var(--primary-light); }
+
+    .lp-tool-cta svg {
+      width: 20px;
+      height: 20px;
+      transition: transform 0.3s;
+    }
+
+    .lp-tool-card:hover .lp-tool-cta {
+      gap: 12px;
+    }
+
+    .lp-tool-card:hover .lp-tool-cta svg {
+      transform: translateX(4px);
+    }
+
+    /* Benefits Section */
+    .lp-benefits-section {
+      background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%);
+    }
+
+    .lp-benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .lp-benefit-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 28px;
+      text-align: center;
+      transition: all 0.3s ease;
+    }
+
+    .lp-benefit-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(45, 138, 110, 0.3);
+    }
+
+    .lp-benefit-icon {
+      font-size: 2.5rem;
+      margin-bottom: 16px;
+    }
+
+    .lp-benefit-card h3 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 8px;
+    }
+
+    .lp-benefit-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.5;
+      margin: 0;
+    }
+
+    /* Why Tools Section */
+    .lp-why-section {
+      background: var(--bg-secondary);
+    }
+
+    .lp-why-content {
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      align-items: center;
+    }
+
+    .lp-why-text {
+      max-width: 600px;
+    }
+
+    .lp-why-text h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .lp-why-text p {
+      font-size: 1rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin: 0 0 16px;
+    }
+
+    .lp-why-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .lp-why-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      padding: 12px 0;
+      font-size: 1rem;
+      color: var(--text-secondary);
+    }
+
+    .lp-why-list li span:first-child {
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+
+    /* FAQ Section */
+    .lp-faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .lp-faq-item {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .lp-faq-item:hover {
+      border-color: rgba(45, 138, 110, 0.3);
+    }
+
+    .lp-faq-item[open] {
+      border-color: var(--primary-light);
+      box-shadow: 0 4px 20px rgba(26, 95, 74, 0.2);
+    }
+
+    .lp-faq-item summary {
+      padding: 20px 24px;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .lp-faq-item summary::-webkit-details-marker { display: none; }
+
+    .lp-faq-item summary::after {
+      content: '';
+      width: 24px;
+      height: 24px;
+      flex-shrink: 0;
+      background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238b949e'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") center/contain no-repeat;
+      transition: transform 0.3s;
+    }
+
+    .lp-faq-item[open] summary::after {
+      transform: rotate(180deg);
+    }
+
+    .lp-faq-answer {
+      padding: 0 24px 20px;
+      font-size: 0.95rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Final CTA Section */
+    .lp-final-cta {
+      padding: 100px 20px;
+      text-align: center;
+      background:
+        radial-gradient(ellipse at 30% 100%, rgba(45, 138, 110, 0.3) 0%, transparent 50%),
+        radial-gradient(ellipse at 70% 100%, rgba(99, 102, 241, 0.2) 0%, transparent 50%),
+        var(--bg-primary);
+      position: relative;
+    }
+
+    .lp-final-cta h2 {
+      font-size: clamp(2rem, 6vw, 3rem);
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+    }
+
+    .lp-final-cta h2 span {
+      background: linear-gradient(135deg, var(--primary-light) 0%, #6366f1 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lp-final-cta p {
+      font-size: 1.2rem;
+      color: var(--text-secondary);
+      margin: 0 0 40px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Responsive */
+    @media (min-width: 640px) {
+      .lp-cta-group {
+        flex-direction: row;
+        justify-content: center;
+      }
+
+      .lp-benefits-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+    }
+
+    @media (min-width: 900px) {
+      .lp-why-content {
+        flex-direction: row;
+        text-align: left;
+      }
+
+      .lp-why-text {
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="page-header" data-subtitle="Ferramentas Financeiras"></header>
+
+    <main class="lp-wrapper">
+      <!-- Hero Section -->
+      <section class="lp-hero">
+        <div class="lp-float-elements">
+          <span class="lp-float-icon">📊</span>
+          <span class="lp-float-icon">💰</span>
+          <span class="lp-float-icon">🏠</span>
+          <span class="lp-float-icon">📈</span>
+          <span class="lp-float-icon">🎯</span>
+          <span class="lp-float-icon">🧮</span>
+        </div>
+
+        <div class="lp-hero-content">
+          <div class="lp-hero-badge">
+            100% Gratuito
+          </div>
+
+          <h1>
+            <span class="text-white">Ferramentas para</span><br>
+            <span class="text-gradient">Decisões Inteligentes</span>
+          </h1>
+
+          <p class="lp-hero-desc">
+            Calculadoras e simuladores gratuitos para ajudar você a planejar seus investimentos,
+            aposentadoria e projetos. Tome decisões financeiras com mais confiança.
+          </p>
+
+          <div class="lp-cta-group">
+            <a href="../ferramentas-financeiras/" class="lp-btn-primary">
+              Acessar Ferramentas
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#ferramentas" class="lp-btn-secondary">
+              Ver Todas
+            </a>
+          </div>
+
+          <div class="lp-hero-stats">
+            <div class="lp-stat-pill">
+              <span class="icon">🛠️</span>
+              <span class="value">3+</span>
+              <span class="label">Ferramentas</span>
+            </div>
+            <div class="lp-stat-pill">
+              <span class="icon">💳</span>
+              <span class="value">Grátis</span>
+              <span class="label">Sem cadastro</span>
+            </div>
+            <div class="lp-stat-pill">
+              <span class="icon">📱</span>
+              <span class="value">PWA</span>
+              <span class="label">Mobile</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lp-scroll-indicator">
+          <span>Conheça as ferramentas</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Main Tools Section -->
+      <section class="lp-section" id="ferramentas">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Nossas Ferramentas</span>
+            <h2>Escolha e Comece a Planejar</h2>
+            <p>Cada ferramenta foi desenvolvida para ajudar em um aspecto específico do seu planejamento financeiro</p>
+          </div>
+
+          <div class="lp-tools-grid">
+            <!-- Investment Simulator -->
+            <a href="../simulador-investimentos/" class="lp-tool-card investment">
+              <div class="lp-tool-header">
+                <div class="lp-tool-icon">💼</div>
+                <div class="lp-tool-title-area">
+                  <h3>Simulador de Investimentos</h3>
+                  <span class="lp-tool-subtitle">Monte sua carteira ideal</span>
+                </div>
+              </div>
+              <p class="lp-tool-desc">
+                Defina sua alocação por setores (renda fixa, ações, FIIs, dólar, cripto), visualize em gráficos
+                interativos e acompanhe sua estratégia de diversificação. Ideal para quem quer organizar
+                e balancear seus investimentos.
+              </p>
+              <div class="lp-tool-features">
+                <span class="lp-tool-feature"><span>📊</span> Gráfico de alocação</span>
+                <span class="lp-tool-feature"><span>🎯</span> 10+ setores</span>
+                <span class="lp-tool-feature"><span>💾</span> Salva automático</span>
+                <span class="lp-tool-feature"><span>⚖️</span> Rebalanceamento</span>
+              </div>
+              <span class="lp-tool-cta">
+                Acessar simulador
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+
+            <!-- Retirement Calculator -->
+            <a href="../calculadora-aposentadoria/" class="lp-tool-card retirement">
+              <div class="lp-tool-header">
+                <div class="lp-tool-icon">🏖️</div>
+                <div class="lp-tool-title-area">
+                  <h3>Calculadora de Aposentadoria</h3>
+                  <span class="lp-tool-subtitle">Independência financeira</span>
+                </div>
+              </div>
+              <p class="lp-tool-desc">
+                Descubra quanto precisa investir mensalmente para atingir a liberdade financeira.
+                Simule diferentes cenários de prazo, rentabilidade e valor desejado. Veja o poder
+                dos juros compostos trabalhando por você.
+              </p>
+              <div class="lp-tool-features">
+                <span class="lp-tool-feature"><span>📈</span> Juros compostos</span>
+                <span class="lp-tool-feature"><span>🎯</span> Regra FIRE</span>
+                <span class="lp-tool-feature"><span>📊</span> Gráfico evolução</span>
+                <span class="lp-tool-feature"><span>🧮</span> Regra dos 4%</span>
+              </div>
+              <span class="lp-tool-cta">
+                Calcular aposentadoria
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+
+            <!-- Construction Calculator -->
+            <a href="../calculadora-custo-construcao/" class="lp-tool-card construction">
+              <div class="lp-tool-header">
+                <div class="lp-tool-icon">🏗️</div>
+                <div class="lp-tool-title-area">
+                  <h3>Calculadora de Construção</h3>
+                  <span class="lp-tool-subtitle">Orçamento completo de obra</span>
+                </div>
+              </div>
+              <p class="lp-tool-desc">
+                Calcule quanto custa construir sua casa considerando método construtivo (alvenaria, EPS,
+                steel frame), região do Brasil, padrão de acabamento e extras como piscina, muro e
+                área gourmet. Exporte orçamento em Excel.
+              </p>
+              <div class="lp-tool-features">
+                <span class="lp-tool-feature"><span>🧱</span> 10+ métodos</span>
+                <span class="lp-tool-feature"><span>📍</span> 27 estados</span>
+                <span class="lp-tool-feature"><span>📋</span> Exporta Excel</span>
+                <span class="lp-tool-feature"><span>🏊</span> Extras inclusos</span>
+              </div>
+              <span class="lp-tool-cta">
+                Calcular construção
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
+                </svg>
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits Section -->
+      <section class="lp-section lp-benefits-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Benefícios</span>
+            <h2>Por que Usar Nossas Ferramentas?</h2>
+          </div>
+
+          <div class="lp-benefits-grid">
+            <div class="lp-benefit-card">
+              <div class="lp-benefit-icon">💳</div>
+              <h3>100% Gratuito</h3>
+              <p>Sem taxas, sem planos pagos, sem surpresas</p>
+            </div>
+
+            <div class="lp-benefit-card">
+              <div class="lp-benefit-icon">🔒</div>
+              <h3>Privacidade</h3>
+              <p>Dados salvos no seu navegador, não em servidores</p>
+            </div>
+
+            <div class="lp-benefit-card">
+              <div class="lp-benefit-icon">📱</div>
+              <h3>Mobile First</h3>
+              <p>Funciona em celulares, tablets e computadores</p>
+            </div>
+
+            <div class="lp-benefit-card">
+              <div class="lp-benefit-icon">⚡</div>
+              <h3>Instantâneo</h3>
+              <p>Resultados em tempo real sem espera</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Section -->
+      <section class="lp-section lp-why-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Importância</span>
+            <h2>Por que Planejar suas Finanças?</h2>
+          </div>
+
+          <div class="lp-why-content">
+            <div class="lp-why-text">
+              <h3>Decisões Informadas, Resultados Melhores</h3>
+              <p>
+                Usar ferramentas de planejamento financeiro não é sobre prever o futuro,
+                mas sobre tomar decisões mais conscientes com as informações disponíveis.
+              </p>
+              <ul class="lp-why-list">
+                <li>
+                  <span>📊</span>
+                  <span><strong>Visualização clara:</strong> Ver seus números organizados ajuda a entender onde você está e para onde vai</span>
+                </li>
+                <li>
+                  <span>🎯</span>
+                  <span><strong>Metas realistas:</strong> Calcular cenários ajuda a definir objetivos alcançáveis</span>
+                </li>
+                <li>
+                  <span>⚖️</span>
+                  <span><strong>Comparação de opções:</strong> Simular diferentes estratégias antes de decidir</span>
+                </li>
+                <li>
+                  <span>🧠</span>
+                  <span><strong>Educação financeira:</strong> Usar as ferramentas ensina conceitos importantes</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ Section -->
+      <section class="lp-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Dúvidas Frequentes</span>
+            <h2>Perguntas e Respostas</h2>
+          </div>
+
+          <div class="lp-faq-list">
+            <details class="lp-faq-item">
+              <summary>As ferramentas são realmente gratuitas?</summary>
+              <div class="lp-faq-answer">
+                <strong>Sim, 100%.</strong> Todas as ferramentas do Rico aos Poucos são completamente gratuitas, sem necessidade de cadastro, sem planos pagos e sem publicidade invasiva. Nosso objetivo é democratizar o acesso a ferramentas de planejamento financeiro.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Meus dados ficam salvos? São seguros?</summary>
+              <div class="lp-faq-answer">
+                Seus dados são salvos <strong>localmente no seu navegador</strong> (localStorage). Não enviamos nenhuma informação para servidores externos. Sua privacidade é completamente respeitada. Se limpar os dados do navegador, as informações serão apagadas.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Posso usar no celular?</summary>
+              <div class="lp-faq-answer">
+                Sim! Todas as ferramentas são <strong>responsivas</strong> e funcionam perfeitamente em smartphones, tablets e computadores. Você pode inclusive instalar como app (PWA) na tela inicial do seu celular para acesso rápido.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Os cálculos são precisos?</summary>
+              <div class="lp-faq-answer">
+                As ferramentas usam <strong>fórmulas financeiras padrão</strong> e dados de referência confiáveis (como CUB/SINAPI para construção). São excelentes para planejamento e estimativas, mas lembre-se que são simulações - para decisões importantes, consulte profissionais especializados.
+              </div>
+            </details>
+
+            <details class="lp-faq-item">
+              <summary>Vocês vão adicionar mais ferramentas?</summary>
+              <div class="lp-faq-answer">
+                <strong>Sim!</strong> Estamos constantemente desenvolvendo novas ferramentas e melhorando as existentes. Se tiver sugestões de calculadoras que gostaria de ver, entre em contato conosco.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Final CTA -->
+      <section class="lp-final-cta">
+        <h2>Comece a <span>Planejar Hoje</span></h2>
+        <p>Escolha uma ferramenta e dê o primeiro passo para decisões financeiras mais inteligentes</p>
+        <a href="../ferramentas-financeiras/" class="lp-btn-primary">
+          Acessar Ferramentas Gratuitas
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+  </div>
+
+  <script src="../js/page-header.js"></script>
+  <script src="../js/footer.js"></script>
+  <script src="../js/i18n.js"></script>
+  <script src="../js/components.js"></script>
+</body>
+</html>

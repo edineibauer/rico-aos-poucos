@@ -3641,8 +3641,10 @@
                 <div class="cc-materiais-grid">
                   ${cat.materiais.map(m => `
                     <div class="cc-material-item">
-                      <span class="cc-material-nome">${m.nome}</span>
-                      <span class="cc-material-qtd">${m.qtdFormatada}</span>
+                      <div class="cc-material-info">
+                        <span class="cc-material-nome">${m.nome}</span>
+                        <span class="cc-material-qtd">${m.qtdFormatada}</span>
+                      </div>
                       <span class="cc-material-valor">R$ ${formatNumber(m.custo)}</span>
                     </div>
                   `).join('')}

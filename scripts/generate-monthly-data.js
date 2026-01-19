@@ -156,6 +156,33 @@ const ouroPrecos = {
   "2025": [2798,2859,3012,3298,3228,3156,3324,3467,3298,3412,3521,3586]
 };
 
+// TLT Dividend Yield anual (%) - baseado no 20-Year Treasury Yield
+// Fonte: Federal Reserve FRED, Multpl.com
+// O TLT paga dividendos mensais que refletem aproximadamente o yield dos Treasuries de 20+ anos
+const tltYieldAnual = {
+  "2005": 4.77,
+  "2006": 4.65,
+  "2007": 4.95,
+  "2008": 4.35,
+  "2009": 3.46,
+  "2010": 4.50,
+  "2011": 4.28,
+  "2012": 2.69,
+  "2013": 2.68,
+  "2014": 3.52,
+  "2015": 2.20,
+  "2016": 2.49,
+  "2017": 2.75,
+  "2018": 2.73,
+  "2019": 2.89,
+  "2020": 2.07,
+  "2021": 1.63,
+  "2022": 2.15,
+  "2023": 3.81,
+  "2024": 4.39,
+  "2025": 4.92
+};
+
 // TLT (USD) - preços de fechamento mensais
 const tltPrecos = {
   "2005": [91.71,90.02,89.33,92.44,95.00,96.70,93.11,95.99,92.20,89.78,90.00,91.90],
@@ -345,8 +372,38 @@ function converterParaBRL(retornosUSD, retornosDolar) {
 
 const sp500BRL = converterParaBRL(sp500Retornos, dolarRetornos);
 const ouroBRL = converterParaBRL(ouroRetornos, dolarRetornos);
-const tltBRL = converterParaBRL(tltRetornos, dolarRetornos);
 const btcBRL = converterParaBRL(btcRetornos, dolarRetornos);
+
+// Função especial para TLT: inclui dividendos reinvestidos (Total Return)
+// Fórmula: (1 + variação_preço) * (1 + dividendo_mensal) * (1 + variação_dólar) - 1
+function calcularTLTTotalReturnBRL(retornosPreco, retornosDolar, yieldAnual) {
+  const retornosTotalBRL = {};
+  const anos = Object.keys(retornosPreco);
+
+  for (const ano of anos) {
+    retornosTotalBRL[ano] = [];
+    // Yield mensal = yield anual / 12
+    const yieldMensal = (yieldAnual[ano] || 3.5) / 12;
+
+    for (let mes = 0; mes < 12; mes++) {
+      const retPreco = retornosPreco[ano][mes] || 0;
+      const retDolar = retornosDolar[ano]?.[mes] || 0;
+
+      // Retorno total em USD = variação de preço + dividendo mensal
+      // (1 + ret_preco) * (1 + yield_mensal) - 1
+      const retTotalUSD = ((1 + retPreco/100) * (1 + yieldMensal/100) - 1) * 100;
+
+      // Converter para BRL
+      const retTotalBRL = ((1 + retTotalUSD/100) * (1 + retDolar/100) - 1) * 100;
+      retornosTotalBRL[ano].push(parseFloat(retTotalBRL.toFixed(2)));
+    }
+  }
+
+  return retornosTotalBRL;
+}
+
+// TLT com retorno total (preço + dividendos + câmbio)
+const tltBRL = calcularTLTTotalReturnBRL(tltRetornos, dolarRetornos, tltYieldAnual);
 
 // Gerar array de meses
 const meses = [];

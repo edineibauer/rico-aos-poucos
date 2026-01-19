@@ -1,15 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Home Page -->
   <url>
     <loc>https://ricoaospoucos.com.br/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/"/>
-    <lastmod>2026-01-12</lastmod>
+    <lastmod>2026-01-19</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -17,20 +12,30 @@
   <!-- Ferramentas Financeiras -->
   <url>
     <loc>https://ricoaospoucos.com.br/ferramentas-financeiras/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/ferramentas-financeiras/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/ferramentas-financeiras/"/>
     <lastmod>2026-01-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Calculadora de Custo de Construção -->
+  <!-- Calculadora de Aposentadoria -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/calculadora-aposentadoria/</loc>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Calculadora de Custo de Construcao -->
   <url>
     <loc>https://ricoaospoucos.com.br/calculadora-custo-construcao/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/calculadora-custo-construcao/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/calculadora-custo-construcao/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/calculadora-custo-construcao/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/calculadora-custo-construcao/"/>
+    <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Simulador de Investimentos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/simulador-investimentos/</loc>
     <lastmod>2026-01-19</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -39,22 +44,14 @@
   <!-- Setores Index -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
 
-  <!-- Setor: Dólar -->
+  <!-- Setor: Dolar -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/dolar/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/dolar/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/dolar/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/dolar/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/dolar/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -63,10 +60,6 @@
   <!-- Setor: Caixa -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/caixa/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/caixa/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/caixa/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/caixa/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/caixa/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -75,22 +68,14 @@
   <!-- Setor: TLT -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/tlt/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/tlt/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/tlt/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/tlt/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/tlt/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Setor: Imóveis -->
+  <!-- Setor: Imoveis -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/imoveis/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/imoveis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/imoveis/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/imoveis/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/imoveis/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -99,10 +84,6 @@
   <!-- Setor: FIIs -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/fiis/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/fiis/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/fiis/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/fiis/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/fiis/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -111,10 +92,6 @@
   <!-- Setor: Tesouro IPCA -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/tesouro-ipca/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/tesouro-ipca/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/tesouro-ipca/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/tesouro-ipca/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/tesouro-ipca/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -123,10 +100,6 @@
   <!-- Setor: IBOV -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/ibov/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/ibov/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/ibov/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/ibov/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/ibov/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -135,10 +108,6 @@
   <!-- Setor: Ouro -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/ouro/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/ouro/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/ouro/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/ouro/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/ouro/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -147,10 +116,6 @@
   <!-- Setor: S&P 500 -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/sp500/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/sp500/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/sp500/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/sp500/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/sp500/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -159,10 +124,6 @@
   <!-- Setor: Bitcoin -->
   <url>
     <loc>https://ricoaospoucos.com.br/setores/bitcoin/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/setores/bitcoin/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/setores/bitcoin/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/setores/bitcoin/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/setores/bitcoin/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
@@ -171,10 +132,6 @@
   <!-- Desempenho -->
   <url>
     <loc>https://ricoaospoucos.com.br/desempenho/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/desempenho/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/desempenho/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/desempenho/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/desempenho/"/>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
@@ -183,10 +140,6 @@
   <!-- Artigos Index -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/"/>
     <lastmod>2026-01-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
@@ -195,10 +148,14 @@
   <!-- Sobre -->
   <url>
     <loc>https://ricoaospoucos.com.br/sobre/</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/sobre/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/sobre/"/>
+    <lastmod>2026-01-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Ferramentas -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/ferramentas/</loc>
     <lastmod>2026-01-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -207,10 +164,6 @@
   <!-- Artigo: Oportunidades de Mercado -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/oportunidades-mercado-ineficiencias-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/oportunidades-mercado-ineficiencias-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/oportunidades-mercado-ineficiencias-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/oportunidades-mercado-ineficiencias-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/oportunidades-mercado-ineficiencias-2026.html"/>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -219,10 +172,6 @@
   <!-- Artigo: Risco e Retorno -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/risco-retorno-investimentos-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/risco-retorno-investimentos-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/risco-retorno-investimentos-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/risco-retorno-investimentos-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/risco-retorno-investimentos-2026.html"/>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -231,10 +180,6 @@
   <!-- Artigo: Quanto Tempo Para Ficar Rico -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/quanto-tempo-para-ficar-rico-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/quanto-tempo-para-ficar-rico-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/quanto-tempo-para-ficar-rico-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/quanto-tempo-para-ficar-rico-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/quanto-tempo-para-ficar-rico-2026.html"/>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -243,10 +188,6 @@
   <!-- Artigo: Bitcoin Proposta vs Realidade -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/bitcoin-proposta-vs-realidade-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/bitcoin-proposta-vs-realidade-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/bitcoin-proposta-vs-realidade-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/bitcoin-proposta-vs-realidade-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/bitcoin-proposta-vs-realidade-2026.html"/>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -255,130 +196,86 @@
   <!-- Artigo: Strategy (MSTR) -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/strategy-mstr-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/strategy-mstr-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/strategy-mstr-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/strategy-mstr-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/strategy-mstr-2026-analise.html"/>
     <lastmod>2026-01-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Artigo: Bitcoin 2026 Análise -->
+  <!-- Artigo: Bitcoin 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/bitcoin-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/bitcoin-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/bitcoin-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/bitcoin-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/bitcoin-2026-analise.html"/>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Artigo: TLT 2026 Análise -->
+  <!-- Artigo: TLT 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/tlt-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/tlt-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/tlt-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/tlt-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/tlt-2026-analise.html"/>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Artigo: Dólar 2026 Análise -->
+  <!-- Artigo: Dolar 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/dolar-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/dolar-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/dolar-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/dolar-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/dolar-2026-analise.html"/>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Artigo: Tesouro IPCA 2026 Análise -->
+  <!-- Artigo: Tesouro IPCA 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/tesouro-ipca-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/tesouro-ipca-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/tesouro-ipca-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/tesouro-ipca-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/tesouro-ipca-2026-analise.html"/>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Artigo: FIIs 2026 Análise -->
+  <!-- Artigo: FIIs 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/fiis-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/fiis-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/fiis-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/fiis-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/fiis-2026-analise.html"/>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Artigo: Ações Brasileiras 2026 Análise -->
+  <!-- Artigo: Acoes Brasileiras 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/acoes-brasileiras-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/acoes-brasileiras-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/acoes-brasileiras-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/acoes-brasileiras-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/acoes-brasileiras-2026-analise.html"/>
     <lastmod>2026-01-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Artigo: Leilões de Imóveis -->
+  <!-- Artigo: Leiloes de Imoveis -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/leiloes-imoveis-oportunidade-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/leiloes-imoveis-oportunidade-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/leiloes-imoveis-oportunidade-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/leiloes-imoveis-oportunidade-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/leiloes-imoveis-oportunidade-2026.html"/>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Artigo: Inflação - O Imposto Invisível -->
+  <!-- Artigo: Inflacao - O Imposto Invisivel -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/inflacao-o-imposto-invisivel-2026.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/inflacao-o-imposto-invisivel-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/inflacao-o-imposto-invisivel-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/inflacao-o-imposto-invisivel-2026.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/inflacao-o-imposto-invisivel-2026.html"/>
     <lastmod>2026-01-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Artigo: Mercado Imobiliário 2026 Análise -->
+  <!-- Artigo: Mercado Imobiliario 2026 Analise -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/mercado-imobiliario-2026-analise.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/mercado-imobiliario-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/mercado-imobiliario-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/mercado-imobiliario-2026-analise.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/mercado-imobiliario-2026-analise.html"/>
     <lastmod>2026-01-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
-  <!-- Artigo: O Mercado Já Precificou -->
+  <!-- Artigo: O Mercado Ja Precificou -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/o-mercado-ja-precificou.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://ricoaospoucos.com.br/artigos/o-mercado-ja-precificou.html"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://ricoaospoucos.com.br/en/artigos/o-mercado-ja-precificou.html"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://ricoaospoucos.com.br/es/artigos/o-mercado-ja-precificou.html"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://ricoaospoucos.com.br/artigos/o-mercado-ja-precificou.html"/>
     <lastmod>2026-01-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

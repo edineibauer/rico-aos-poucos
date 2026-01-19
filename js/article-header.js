@@ -6,12 +6,6 @@
 const ArticleHeader = {
   // Get base path based on current location
   getBasePath() {
-    const path = window.location.pathname;
-
-    // Check if we're in a language subfolder
-    if (path.includes('/en/') || path.includes('/es/')) {
-      return '../';
-    }
     return '../';
   },
 
@@ -20,15 +14,8 @@ const ArticleHeader = {
     return './';
   },
 
-  // Get subtitle based on language
+  // Get subtitle (Portuguese only)
   getSubtitle() {
-    const path = window.location.pathname;
-
-    if (path.includes('/en/')) {
-      return 'Financial Education';
-    } else if (path.includes('/es/')) {
-      return 'Educación Financiera';
-    }
     return 'Educação Financeira';
   },
 
@@ -48,7 +35,6 @@ const ArticleHeader = {
 
   // Render header HTML
   render() {
-    const basePath = this.getBasePath();
     const articlesPath = this.getArticlesPath();
     const subtitle = this.getSubtitle();
     const logoSVG = this.getLogoSVG();
@@ -64,7 +50,6 @@ const ArticleHeader = {
         <h1 class="app-name">Rico aos Poucos</h1>
         <span class="app-subtitle">${subtitle}</span>
       </div>
-      <div id="langSelector"></div>
     `;
   },
 

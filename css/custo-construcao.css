@@ -889,10 +889,16 @@
   border: 1px solid var(--cc-border);
 }
 
+.cc-material-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px;
+}
+
 .cc-material-nome {
   font-size: 0.8rem;
   color: var(--cc-text);
-  margin-bottom: 4px;
 }
 
 .cc-material-qtd {
@@ -904,8 +910,7 @@
   font-size: 0.85rem;
   font-weight: 600;
   color: var(--cc-primary);
-  margin-top: auto;
-  padding-top: 4px;
+  margin-top: 4px;
 }
 
 .cc-mais-materiais {

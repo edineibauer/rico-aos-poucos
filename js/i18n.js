@@ -208,7 +208,6 @@ const I18n = {
       <div class="lang-selector">
         <button class="lang-current" id="langToggle" aria-label="Selecionar idioma">
           <span class="lang-flag">${current.flag}</span>
-          <span class="lang-code">${current.code.split('-')[0].toUpperCase()}</span>
           <svg class="lang-arrow" viewBox="0 0 24 24" width="12" height="12">
             <path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2"/>
           </svg>

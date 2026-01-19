@@ -1282,20 +1282,19 @@
 
     // Função para verificar se um número de área está associado a um cômodo
     function isAreaDeComodo(textoOriginal, posicaoNumero) {
-      // Pegar contexto antes do número (últimos 60 caracteres)
-      const contextoBefore = textoOriginal.slice(Math.max(0, posicaoNumero - 60), posicaoNumero)
+      // Pegar contexto antes do número (últimos 30 caracteres)
+      const contextoBefore = textoOriginal.slice(Math.max(0, posicaoNumero - 30), posicaoNumero)
         .toLowerCase()
         .normalize('NFD').replace(/[\u0300-\u036f]/g, '');
 
-      // Verificar se algum termo de cômodo aparece no contexto próximo
+      // Verificar se algum termo de cômodo aparece DIRETAMENTE antes do número
+      // O termo deve estar próximo (últimos 15 chars) E ser seguido de espaço/número
+      const ultimos15 = contextoBefore.slice(-15);
+
       for (const comodo of comodoTermos) {
-        // Procurar o termo seguido de qualquer coisa até o final (próximo ao número)
-        if (contextoBefore.includes(comodo)) {
-          // Verificar se o termo está nas últimas 30 caracteres (bem próximo do número)
-          const ultimos30 = contextoBefore.slice(-30);
-          if (ultimos30.includes(comodo)) {
-            return true;
-          }
+        // Verificar se o termo está nos últimos 15 caracteres (bem próximo do número)
+        if (ultimos15.includes(comodo)) {
+          return true;
         }
       }
 
@@ -4304,6 +4303,37 @@ ${c.detalhesAdicionais.length > 0 ? `
         gap: 12px;
         justify-content: flex-end;
         flex-wrap: wrap;
+      }
+      /* Estilos de botões para modais */
+      .cc-modal-overlay .cc-btn {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 8px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.2s;
+      }
+      .cc-modal-overlay .cc-btn-primary {
+        background: var(--cc-primary, #58a6ff);
+        color: #000;
+      }
+      .cc-modal-overlay .cc-btn-primary:hover {
+        background: #7cc4ff;
+        transform: translateY(-1px);
+      }
+      .cc-modal-overlay .cc-btn-secondary {
+        background: transparent;
+        color: var(--cc-text-secondary, #888);
+        border: 1px solid var(--cc-border, #333);
+      }
+      .cc-modal-overlay .cc-btn-secondary:hover {
+        background: var(--cc-card-bg, #1e1e1e);
+        border-color: var(--cc-text-secondary, #888);
       }
       .cc-btn-success {
         background: #22c55e !important;

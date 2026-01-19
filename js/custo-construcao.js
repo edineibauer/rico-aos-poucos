@@ -1799,8 +1799,9 @@
     if (textoLower.includes('piscina') && !isNegado('piscina')) {
       resultado.extras.piscina = true;
 
-      // Detectar dimensões da piscina (ex: "piscina 9x4", "piscina de 8x4m")
-      const piscinaDimensoesMatch = texto.match(/piscina\s*(?:de\s*)?(\d+(?:[.,]\d+)?)\s*[xX×]\s*(\d+(?:[.,]\d+)?)/i);
+      // Detectar dimensões da piscina (ex: "piscina 9x4", "piscina de fibra 6x3m")
+      // Aceita palavras entre "piscina" e as dimensões (como "de fibra", "de vinil", etc.)
+      const piscinaDimensoesMatch = texto.match(/piscina\s+(?:de\s+)?(?:\w+\s+)?(\d+(?:[.,]\d+)?)\s*[xX×]\s*(\d+(?:[.,]\d+)?)/i);
       if (piscinaDimensoesMatch) {
         const comp = parseFloat(piscinaDimensoesMatch[1].replace(',', '.'));
         const larg = parseFloat(piscinaDimensoesMatch[2].replace(',', '.'));
@@ -1835,15 +1836,16 @@
       resultado.config.gourmetChurrasqueira = textoLower.includes('churrasqueira');
 
       // Detectar tamanho da área gourmet (ex: "área gourmet 30m²")
-      const areaGourmetMatch = texto.match(/area\s*gourmet\s*(\d+)\s*m[²2]/i) ||
-                               texto.match(/espaco\s*gourmet\s*(\d+)\s*m[²2]/i);
+      // Usar textoLower (normalizado) para a regex
+      const areaGourmetMatch = textoLower.match(/area\s*gourmet\s*(\d+)\s*m[²2]?/i) ||
+                               textoLower.match(/espaco\s*gourmet\s*(\d+)\s*m[²2]?/i);
       if (areaGourmetMatch) {
         resultado.config.areaGourmetM2 = parseInt(areaGourmetMatch[1]);
       }
 
       // Detectar itens da área gourmet (banheiro/lavabo, lareira, forno, etc.)
-      // Pegar contexto após "área gourmet" para ver os itens
-      const gourmetContextMatch = texto.match(/area\s*gourmet[^,]*(?:com\s+)?([^,]+)/i);
+      // Pegar contexto após "área gourmet Xm² com ..." - usar textoLower
+      const gourmetContextMatch = textoLower.match(/area\s*gourmet\s*(?:\d+\s*m[²2]?\s*)?com\s+([^,]+)/i);
       if (gourmetContextMatch) {
         const gourmetContext = gourmetContextMatch[1].toLowerCase();
         if (gourmetContext.includes('banheiro') || gourmetContext.includes('lavabo')) {
@@ -1947,10 +1949,39 @@
       resultado.encontrados.push('Extra: Muro');
     }
 
-    // Portão
+    // Portão - detectar tipo
     if (textoLower.includes('portao') && !isNegado('portao')) {
       resultado.extras.portao = true;
-      resultado.encontrados.push('Extra: Portão');
+
+      // Detectar tipo de portão
+      let tipoPortao = null;
+      if (textoLower.includes('basculante') && textoLower.includes('automatico')) {
+        tipoPortao = 'basculante_automatico';
+      } else if (textoLower.includes('basculante')) {
+        tipoPortao = 'basculante_manual';
+      } else if (textoLower.includes('deslizante') && textoLower.includes('automatico')) {
+        tipoPortao = 'deslizante_automatico';
+      } else if (textoLower.includes('deslizante')) {
+        tipoPortao = 'deslizante_manual';
+      } else if (textoLower.includes('aluminio')) {
+        tipoPortao = 'aluminio';
+      } else if (textoLower.includes('trabalhado')) {
+        tipoPortao = 'ferro_trabalhado';
+      } else if (textoLower.includes('ferro')) {
+        tipoPortao = 'ferro_simples';
+      }
+
+      if (tipoPortao) {
+        resultado.extras.portaoTipo = tipoPortao;
+      }
+
+      // Detectar tamanho do portão (ex: "portão 9m²")
+      const portaoM2Match = textoLower.match(/portao[^,]*?(\d+)\s*m[²2]/i);
+      if (portaoM2Match) {
+        resultado.extras.portaoM2 = parseInt(portaoM2Match[1]);
+      }
+
+      resultado.encontrados.push('Extra: Portão' + (tipoPortao ? ` (${tipoPortao})` : ''));
     }
 
     // Edícula - construção SEPARADA da casa principal
@@ -2342,6 +2373,22 @@
         const ediculaM2Input = document.getElementById('cc-edicula-m2');
         if (ediculaM2Input) {
           ediculaM2Input.value = extras.ediculaArea;
+        }
+      }
+
+      // Aplicar tipo de portão detectado
+      if (extras.portaoTipo) {
+        const portaoTipoSelect = document.getElementById('cc-portao-tipo');
+        if (portaoTipoSelect) {
+          portaoTipoSelect.value = extras.portaoTipo;
+        }
+      }
+
+      // Aplicar tamanho do portão detectado
+      if (extras.portaoM2) {
+        const portaoM2Input = document.getElementById('cc-portao-m2');
+        if (portaoM2Input) {
+          portaoM2Input.value = extras.portaoM2;
         }
       }
     }
@@ -3809,14 +3856,12 @@ ${c.detalhesAdicionais.length > 0 ? `
     }
 
     // Despensa
-    const temDespensa = document.getElementById('cc-despensa')?.checked;
-    if (temDespensa) {
+    if (c.temDespensa) {
       partes.push('despensa');
     }
 
-    // Área de serviço
-    const temAreaServico = document.getElementById('cc-area-servico')?.checked;
-    if (temAreaServico) {
+    // Área de serviço / Lavanderia
+    if (c.temAreaServico) {
       partes.push('lavanderia');
     }
 
@@ -3855,8 +3900,7 @@ ${c.detalhesAdicionais.length > 0 ? `
     }
 
     // Varanda
-    const temVaranda = document.getElementById('cc-varanda')?.checked;
-    if (temVaranda) {
+    if (c.temVaranda) {
       partes.push('varanda');
     }
 
@@ -3885,8 +3929,12 @@ ${c.detalhesAdicionais.length > 0 ? `
       const tipoPortao = document.getElementById('cc-portao-tipo')?.value;
       const m2Portao = document.getElementById('cc-portao-m2')?.value;
       if (tipoPortao && data.extras?.portao?.[tipoPortao]) {
-        let portaoDesc = `portão ${data.extras.portao[tipoPortao].nome.toLowerCase()}`;
-        if (m2Portao) portaoDesc += ` ${m2Portao}m²`;
+        // Nome já inclui "Portão", usar diretamente
+        let portaoDesc = data.extras.portao[tipoPortao].nome.toLowerCase();
+        // Só adicionar m² se não for preço por unidade
+        if (m2Portao && !data.extras.portao[tipoPortao].valorUnidade) {
+          portaoDesc += ` ${m2Portao}m²`;
+        }
         extras.push(portaoDesc);
       } else {
         extras.push('portão');

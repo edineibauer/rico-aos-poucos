@@ -1250,21 +1250,21 @@ const CustoConstrucaoData = {
       nome: 'Alvenaria Convencional',
       descricao: 'Construção tradicional com tijolos/blocos e estrutura de concreto armado (vigas e pilares)',
       composicao: 'alvenaria',
-      fator: 1.0, // R$ 1.500-2.200/m² (média R$ 1.880) - REFERÊNCIA BASE
+      fator: 1.0, // REFERÊNCIA BASE - R$ 1.880/m² padrão médio
       tempoObra: 1.0,
       custoM2Referencia: '~R$ 1.880/m² padrão médio',
-      vantagens: ['Durabilidade comprovada', 'Flexibilidade de projeto', 'Mão de obra disponível', 'Maior valor de revenda', 'Facilidade de reforma'],
-      desvantagens: ['Maior tempo de obra (4-6 meses)', 'Mais resíduos', 'Maior consumo de água']
+      vantagens: ['Durabilidade comprovada', 'Flexibilidade de projeto', 'Mão de obra abundante', 'Maior valor de revenda', 'Facilidade de reforma'],
+      desvantagens: ['Maior tempo de obra (10-14 meses)', 'Fundação mais cara (estrutura pesada)', 'Desperdício com caixaria de madeira', 'Mais resíduos e entulho', 'Retrabalho para passar tubulações']
     },
     'eps': {
       nome: 'Painéis EPS (Isopor Estrutural)',
       descricao: 'Painéis de poliestireno expandido com malha de aço e argamassa projetada',
       composicao: 'eps',
-      fator: 1.06, // R$ 1.600-2.400/m² (média R$ 2.000) - custo similar ou levemente maior que alvenaria
-      tempoObra: 0.40,
-      custoM2Referencia: '~R$ 2.000/m² padrão médio',
-      vantagens: ['Obra 60% mais rápida', 'Excelente isolamento térmico/acústico', 'Estrutura muito leve', 'Menos sujeira na obra'],
-      desvantagens: ['Vãos limitados (até 4m)', 'Menos resistente a impactos', 'Fixações especiais', 'Mão de obra especializada']
+      fator: 0.92, // 8-10% mais barato que alvenaria - fundação mais leve, sem caixaria, menos desperdício
+      tempoObra: 0.50,
+      custoM2Referencia: '~R$ 1.730/m² padrão médio',
+      vantagens: ['Obra 50% mais rápida (6-8 meses)', 'Fundação mais barata (estrutura leve)', 'Sem desperdício de caixaria', 'Excelente isolamento térmico/acústico', 'Menos resíduos', 'Ideal para regiões úmidas/litorâneas'],
+      desvantagens: ['Vãos limitados (até 4m)', 'Menos resistente a impactos', 'Fixações especiais', 'Mão de obra especializada (escassa)', 'Preconceito no mercado de revenda']
     },
 
     // ----- OPÇÕES MAIS CARAS (SISTEMAS CONSTRUTIVOS MODERNOS) -----

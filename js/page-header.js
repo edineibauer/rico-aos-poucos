@@ -9,22 +9,12 @@
  */
 
 const PageHeader = {
-  // User menu translations
+  // User menu translations (Portuguese only)
   userMenuTranslations: {
     'pt-BR': {
       myPortfolio: 'Minha Carteira',
       editPortfolio: 'Editar Carteira',
       noPortfolio: 'Nenhuma carteira configurada'
-    },
-    'en': {
-      myPortfolio: 'My Portfolio',
-      editPortfolio: 'Edit Portfolio',
-      noPortfolio: 'No portfolio configured'
-    },
-    'es': {
-      myPortfolio: 'Mi Cartera',
-      editPortfolio: 'Editar Cartera',
-      noPortfolio: 'Ninguna cartera configurada'
     }
   },
   // Logo SVG inline
@@ -44,32 +34,13 @@ const PageHeader = {
    * Returns '../' for pages in subdirectories
    */
   getBackLink() {
-    const path = window.location.pathname;
-
-    // Count depth: /calculadora/ = 1, /en/calculadora/ = 2, /setores/dolar/ = 2
-    const segments = path.split('/').filter(s => s && s !== 'index.html');
-
-    // If in language folder (en, es), we need to go back to language root
-    const isLangFolder = segments[0] === 'en' || segments[0] === 'es';
-
-    if (isLangFolder) {
-      // /en/calculadora/ -> /en/
-      return '../';
-    } else {
-      // /calculadora/ -> /
-      return '../';
-    }
+    return '../';
   },
 
   /**
-   * Get current language
+   * Get current language (always pt-BR)
    */
   getLang() {
-    const saved = localStorage.getItem('rico-lang');
-    if (saved) return saved;
-    const path = window.location.pathname;
-    if (path.startsWith('/en/')) return 'en';
-    if (path.startsWith('/es/')) return 'es';
     return 'pt-BR';
   },
 
@@ -118,7 +89,6 @@ const PageHeader = {
             </button>
           </div>
         </div>
-        <div id="langSelector"></div>
       </div>
     `;
   },
@@ -183,83 +153,30 @@ const PageHeader = {
   createPortfolioModal() {
     if (document.getElementById('portfolioModal')) return;
 
-    const lang = this.getLang();
-    const translations = {
-      'pt-BR': {
-        title: 'Minha Carteira de Investimentos',
-        subtitle: 'Configure a distribuicao da sua carteira',
-        total: 'Total',
-        save: 'Salvar Carteira',
-        cancel: 'Cancelar',
-        clear: 'Limpar',
-        extraYield: '+ % a.a.',
-        extraYieldPlaceholder: 'Ex: 5',
-        assets: {
-          dolar: 'Dólar',
-          caixa: 'Caixa (CDI)',
-          tlt: 'TLT (Bonds)',
-          imoveis: 'Imóveis',
-          fiis: 'FIIs',
-          ipca: 'IMA-B 5+',
-          ibov: 'Ibovespa',
-          ibovtr: 'IBOV TR',
-          idiv: 'IDIV',
-          ouro: 'Ouro',
-          sp500: 'S&P 500',
-          bitcoin: 'Bitcoin'
-        }
-      },
-      'en': {
-        title: 'My Investment Portfolio',
-        subtitle: 'Configure your portfolio allocation',
-        total: 'Total',
-        save: 'Save Portfolio',
-        cancel: 'Cancel',
-        clear: 'Clear',
-        extraYield: '+ % p.a.',
-        extraYieldPlaceholder: 'Ex: 5',
-        assets: {
-          dolar: 'Dollar',
-          caixa: 'Cash (CDI)',
-          tlt: 'TLT (Bonds)',
-          imoveis: 'Real Estate',
-          fiis: 'REITs',
-          ipca: 'IMA-B 5+',
-          ibov: 'Ibovespa',
-          ibovtr: 'IBOV TR',
-          idiv: 'IDIV',
-          ouro: 'Gold',
-          sp500: 'S&P 500',
-          bitcoin: 'Bitcoin'
-        }
-      },
-      'es': {
-        title: 'Mi Cartera de Inversiones',
-        subtitle: 'Configure la distribucion de su cartera',
-        total: 'Total',
-        save: 'Guardar Cartera',
-        cancel: 'Cancelar',
-        clear: 'Limpiar',
-        extraYield: '+ % a.a.',
-        extraYieldPlaceholder: 'Ej: 5',
-        assets: {
-          dolar: 'Dólar',
-          caixa: 'Caja (CDI)',
-          tlt: 'TLT (Bonos)',
-          imoveis: 'Inmuebles',
-          fiis: 'FIIs',
-          ipca: 'IMA-B 5+',
-          ibov: 'Ibovespa',
-          ibovtr: 'IBOV TR',
-          idiv: 'IDIV',
-          ouro: 'Oro',
-          sp500: 'S&P 500',
-          bitcoin: 'Bitcoin'
-        }
+    const t = {
+      title: 'Minha Carteira de Investimentos',
+      subtitle: 'Configure a distribuicao da sua carteira',
+      total: 'Total',
+      save: 'Salvar Carteira',
+      cancel: 'Cancelar',
+      clear: 'Limpar',
+      extraYield: '+ % a.a.',
+      extraYieldPlaceholder: 'Ex: 5',
+      assets: {
+        dolar: 'Dólar',
+        caixa: 'Caixa (CDI)',
+        tlt: 'TLT (Bonds)',
+        imoveis: 'Imóveis',
+        fiis: 'FIIs',
+        ipca: 'IMA-B 5+',
+        ibov: 'Ibovespa',
+        ibovtr: 'IBOV TR',
+        idiv: 'IDIV',
+        ouro: 'Ouro',
+        sp500: 'S&P 500',
+        bitcoin: 'Bitcoin'
       }
     };
-
-    const t = translations[lang] || translations['pt-BR'];
     const assets = ['dolar', 'caixa', 'tlt', 'imoveis', 'fiis', 'ipca', 'ibov', 'ibovtr', 'idiv', 'ouro', 'sp500', 'bitcoin'];
     const assetsWithExtraYield = ['dolar', 'imoveis']; // Assets that have extra yield input
 

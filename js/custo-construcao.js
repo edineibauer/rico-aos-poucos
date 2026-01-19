@@ -3774,17 +3774,19 @@ ${c.detalhesAdicionais.length > 0 ? `
   }
 
   function abrirModalDescricao() {
+    // Garantir que os estilos do modal existam
+    injetarEstilosModal();
+
     // Gerar a descrição
     const descricao = gerarDescricaoImovel();
 
-    // Criar modal se não existir
-    let modal = document.getElementById('cc-modal-descricao');
-    if (!modal) {
-      modal = document.createElement('div');
-      modal.id = 'cc-modal-descricao';
-      modal.className = 'cc-modal-overlay';
-      document.body.appendChild(modal);
-    }
+    // Remover modal existente se houver
+    const existente = document.getElementById('cc-modal-descricao');
+    if (existente) existente.remove();
+
+    const modal = document.createElement('div');
+    modal.id = 'cc-modal-descricao';
+    modal.className = 'cc-modal-overlay';
 
     modal.innerHTML = `
       <div class="cc-modal-content cc-modal-descricao">
@@ -3794,36 +3796,25 @@ ${c.detalhesAdicionais.length > 0 ? `
         </div>
         <div class="cc-modal-body">
           <p class="cc-hint" style="margin-bottom: 12px;">
-            Esta descrição foi gerada automaticamente com base na configuração atual.
-            Você pode copiá-la e usar em anúncios, ou colá-la no campo de descrição para restaurar esta configuração.
+            Descrição gerada automaticamente. Copie e use em anúncios ou publicações.
           </p>
           <div class="cc-descricao-container">
             <textarea id="cc-descricao-gerada" class="cc-descricao-textarea" readonly>${descricao}</textarea>
           </div>
           <div class="cc-descricao-actions">
-            <button class="cc-btn cc-btn-secondary" onclick="CustoConstrucao.copiarDescricao()">
+            <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.copiarDescricao()">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
                 <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
               </svg>
               Copiar Descrição
             </button>
-            <button class="cc-btn cc-btn-primary" onclick="CustoConstrucao.usarDescricao()">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-                <polyline points="14 2 14 8 20 8"></polyline>
-                <line x1="12" y1="18" x2="12" y2="12"></line>
-                <line x1="9" y1="15" x2="15" y2="15"></line>
-              </svg>
-              Usar no Campo de Descrição
-            </button>
           </div>
         </div>
       </div>
     `;
 
-    modal.style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    document.body.appendChild(modal);
 
     // Fechar ao clicar fora
     modal.addEventListener('click', (e) => {
@@ -3835,10 +3826,7 @@ ${c.detalhesAdicionais.length > 0 ? `
 
   function fecharModalDescricao() {
     const modal = document.getElementById('cc-modal-descricao');
-    if (modal) {
-      modal.style.display = 'none';
-      document.body.style.overflow = '';
-    }
+    if (modal) modal.remove();
   }
 
   function copiarDescricao() {
@@ -3868,25 +3856,6 @@ ${c.detalhesAdicionais.length > 0 ? `
         // Fallback para navegadores mais antigos
         document.execCommand('copy');
       }
-    }
-  }
-
-  function usarDescricao() {
-    const textarea = document.getElementById('cc-descricao-gerada');
-    const campoDescricao = document.getElementById('cc-descricao-texto');
-
-    if (textarea && campoDescricao) {
-      campoDescricao.value = textarea.value;
-      fecharModalDescricao();
-
-      // Scroll até o campo de descrição
-      campoDescricao.scrollIntoView({ behavior: 'smooth', block: 'center' });
-
-      // Highlight visual
-      campoDescricao.classList.add('cc-highlight');
-      setTimeout(() => {
-        campoDescricao.classList.remove('cc-highlight');
-      }, 2000);
     }
   }
 
@@ -4144,211 +4113,216 @@ ${c.detalhesAdicionais.length > 0 ? `
 
     document.body.appendChild(modal);
 
-    // Adicionar estilo do modal se não existir
-    if (!document.getElementById('cc-modal-styles')) {
-      const style = document.createElement('style');
-      style.id = 'cc-modal-styles';
-      style.textContent = `
-        .cc-modal-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          bottom: 0;
-          background: rgba(0,0,0,0.7);
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          z-index: 10000;
-          padding: 20px;
-        }
-        .cc-modal-content {
-          background: var(--cc-card-bg, #1e1e1e);
-          border-radius: 12px;
-          max-width: 900px;
-          width: 100%;
-          max-height: 85vh;
-          display: flex;
-          flex-direction: column;
-          box-shadow: 0 10px 40px rgba(0,0,0,0.5);
-        }
-        .cc-modal-header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          padding: 16px 20px;
-          border-bottom: 1px solid var(--cc-border, #333);
-        }
-        .cc-modal-header h3 {
-          margin: 0;
-          font-size: 1.1rem;
-          color: var(--cc-text, #fff);
-        }
-        .cc-modal-close {
-          background: none;
-          border: none;
-          font-size: 24px;
-          cursor: pointer;
-          color: var(--cc-text-secondary, #888);
-          padding: 0 8px;
-        }
-        .cc-modal-close:hover { color: var(--cc-text, #fff); }
-        .cc-modal-body {
-          padding: 20px;
-          overflow-y: auto;
-          flex: 1;
-        }
-        .cc-modal-info {
-          color: var(--cc-text-secondary, #888);
-          font-size: 0.9rem;
-          margin-bottom: 16px;
-        }
-        .cc-modal-alert {
-          background: rgba(255,193,7,0.15);
-          border: 1px solid rgba(255,193,7,0.3);
-          border-radius: 8px;
-          padding: 12px 16px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin-bottom: 20px;
-          color: #ffc107;
-        }
-        .cc-modal-categoria {
-          margin-bottom: 24px;
-        }
-        .cc-modal-categoria-titulo {
-          font-weight: 600;
-          font-size: 1rem;
-          margin-bottom: 12px;
-          color: var(--cc-primary, #4CAF50);
-        }
+    // Garantir que os estilos existam
+    injetarEstilosModal();
+  }
+
+  // Função para injetar estilos dos modais (compartilhada)
+  function injetarEstilosModal() {
+    if (document.getElementById('cc-modal-styles')) return;
+
+    const style = document.createElement('style');
+    style.id = 'cc-modal-styles';
+    style.textContent = `
+      .cc-modal-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: rgba(0,0,0,0.7);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 10000;
+        padding: 20px;
+      }
+      .cc-modal-content {
+        background: var(--cc-card-bg, #1e1e1e);
+        border-radius: 12px;
+        max-width: 900px;
+        width: 100%;
+        max-height: 85vh;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 10px 40px rgba(0,0,0,0.5);
+      }
+      .cc-modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px 20px;
+        border-bottom: 1px solid var(--cc-border, #333);
+      }
+      .cc-modal-header h3 {
+        margin: 0;
+        font-size: 1.1rem;
+        color: var(--cc-text, #fff);
+      }
+      .cc-modal-close {
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: var(--cc-text-secondary, #888);
+        padding: 0 8px;
+      }
+      .cc-modal-close:hover { color: var(--cc-text, #fff); }
+      .cc-modal-body {
+        padding: 20px;
+        overflow-y: auto;
+        flex: 1;
+      }
+      .cc-modal-info {
+        color: var(--cc-text-secondary, #888);
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+      }
+      .cc-modal-alert {
+        background: rgba(255,193,7,0.15);
+        border: 1px solid rgba(255,193,7,0.3);
+        border-radius: 8px;
+        padding: 12px 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+        color: #ffc107;
+      }
+      .cc-modal-categoria {
+        margin-bottom: 24px;
+      }
+      .cc-modal-categoria-titulo {
+        font-weight: 600;
+        font-size: 1rem;
+        margin-bottom: 12px;
+        color: var(--cc-primary, #4CAF50);
+      }
+      .cc-modal-materiais-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 12px;
+      }
+      .cc-modal-material {
+        background: var(--cc-bg, #121212);
+        border: 1px solid var(--cc-border, #333);
+        border-radius: 8px;
+        padding: 12px;
+      }
+      .cc-modal-material.cc-custom {
+        border-color: var(--cc-primary, #4CAF50);
+        background: rgba(76,175,80,0.1);
+      }
+      .cc-modal-material label {
+        display: block;
+        font-size: 0.85rem;
+        color: var(--cc-text, #fff);
+        margin-bottom: 8px;
+      }
+      .cc-modal-input-group {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+      }
+      .cc-modal-prefix, .cc-modal-suffix {
+        font-size: 0.8rem;
+        color: var(--cc-text-secondary, #888);
+      }
+      .cc-modal-material input {
+        flex: 1;
+        min-width: 60px;
+        padding: 6px 8px;
+        border: 1px solid var(--cc-border, #333);
+        border-radius: 4px;
+        background: var(--cc-card-bg, #1e1e1e);
+        color: var(--cc-text, #fff);
+        font-size: 0.9rem;
+      }
+      .cc-modal-material input:focus {
+        outline: none;
+        border-color: var(--cc-primary, #4CAF50);
+      }
+      .cc-modal-default {
+        display: block;
+        margin-top: 4px;
+        font-size: 0.75rem;
+        color: var(--cc-text-secondary, #666);
+      }
+      .cc-modal-footer {
+        display: flex;
+        justify-content: flex-end;
+        gap: 12px;
+        padding: 16px 20px;
+        border-top: 1px solid var(--cc-border, #333);
+      }
+      .cc-btn-small {
+        padding: 6px 12px !important;
+        font-size: 0.8rem !important;
+      }
+      .cc-btn-danger {
+        background: #dc3545 !important;
+      }
+      .cc-btn-danger:hover {
+        background: #c82333 !important;
+      }
+      /* Modal de Descrição */
+      .cc-modal-descricao {
+        max-width: 700px;
+        width: 100%;
+      }
+      .cc-modal-descricao .cc-modal-body {
+        padding: 20px;
+      }
+      .cc-hint {
+        font-size: 0.85rem;
+        color: var(--cc-text-secondary, #888);
+        line-height: 1.5;
+      }
+      .cc-descricao-container {
+        margin-bottom: 16px;
+      }
+      .cc-descricao-textarea {
+        width: 100%;
+        min-height: 200px;
+        padding: 16px;
+        border: 1px solid var(--cc-border, #333);
+        border-radius: 8px;
+        background: var(--cc-bg, #121212);
+        color: var(--cc-text, #fff);
+        font-size: 0.95rem;
+        line-height: 1.6;
+        resize: vertical;
+        font-family: inherit;
+      }
+      .cc-descricao-textarea:focus {
+        outline: none;
+        border-color: var(--cc-primary, #4CAF50);
+      }
+      .cc-descricao-actions {
+        display: flex;
+        gap: 12px;
+        justify-content: flex-end;
+        flex-wrap: wrap;
+      }
+      .cc-btn-success {
+        background: #22c55e !important;
+      }
+      .cc-btn-success:hover {
+        background: #16a34a !important;
+      }
+      @media (max-width: 600px) {
         .cc-modal-materiais-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-          gap: 12px;
-        }
-        .cc-modal-material {
-          background: var(--cc-bg, #121212);
-          border: 1px solid var(--cc-border, #333);
-          border-radius: 8px;
-          padding: 12px;
-        }
-        .cc-modal-material.cc-custom {
-          border-color: var(--cc-primary, #4CAF50);
-          background: rgba(76,175,80,0.1);
-        }
-        .cc-modal-material label {
-          display: block;
-          font-size: 0.85rem;
-          color: var(--cc-text, #fff);
-          margin-bottom: 8px;
-        }
-        .cc-modal-input-group {
-          display: flex;
-          align-items: center;
-          gap: 4px;
-        }
-        .cc-modal-prefix, .cc-modal-suffix {
-          font-size: 0.8rem;
-          color: var(--cc-text-secondary, #888);
-        }
-        .cc-modal-material input {
-          flex: 1;
-          min-width: 60px;
-          padding: 6px 8px;
-          border: 1px solid var(--cc-border, #333);
-          border-radius: 4px;
-          background: var(--cc-card-bg, #1e1e1e);
-          color: var(--cc-text, #fff);
-          font-size: 0.9rem;
-        }
-        .cc-modal-material input:focus {
-          outline: none;
-          border-color: var(--cc-primary, #4CAF50);
-        }
-        .cc-modal-default {
-          display: block;
-          margin-top: 4px;
-          font-size: 0.75rem;
-          color: var(--cc-text-secondary, #666);
-        }
-        .cc-modal-footer {
-          display: flex;
-          justify-content: flex-end;
-          gap: 12px;
-          padding: 16px 20px;
-          border-top: 1px solid var(--cc-border, #333);
-        }
-        .cc-btn-small {
-          padding: 6px 12px !important;
-          font-size: 0.8rem !important;
-        }
-        .cc-btn-danger {
-          background: #dc3545 !important;
-        }
-        .cc-btn-danger:hover {
-          background: #c82333 !important;
-        }
-        /* Modal de Descrição */
-        .cc-modal-descricao {
-          max-width: 700px;
-          width: 100%;
-        }
-        .cc-modal-descricao .cc-modal-body {
-          padding: 20px;
-        }
-        .cc-hint {
-          font-size: 0.85rem;
-          color: var(--cc-text-secondary, #888);
-          line-height: 1.5;
-        }
-        .cc-descricao-container {
-          margin-bottom: 16px;
-        }
-        .cc-descricao-textarea {
-          width: 100%;
-          min-height: 200px;
-          padding: 16px;
-          border: 1px solid var(--cc-border, #333);
-          border-radius: 8px;
-          background: var(--cc-bg, #121212);
-          color: var(--cc-text, #fff);
-          font-size: 0.95rem;
-          line-height: 1.6;
-          resize: vertical;
-          font-family: inherit;
-        }
-        .cc-descricao-textarea:focus {
-          outline: none;
-          border-color: var(--cc-primary, #4CAF50);
+          grid-template-columns: 1fr;
         }
         .cc-descricao-actions {
-          display: flex;
-          gap: 12px;
-          justify-content: flex-end;
-          flex-wrap: wrap;
+          flex-direction: column;
         }
-        .cc-btn-success {
-          background: #22c55e !important;
+        .cc-descricao-actions .cc-btn {
+          width: 100%;
         }
-        .cc-btn-success:hover {
-          background: #16a34a !important;
-        }
-        @media (max-width: 600px) {
-          .cc-modal-materiais-grid {
-            grid-template-columns: 1fr;
-          }
-          .cc-descricao-actions {
-            flex-direction: column;
-          }
-          .cc-descricao-actions .cc-btn {
-            width: 100%;
-          }
-        }
-      `;
-      document.head.appendChild(style);
-    }
+      }
+    `;
+    document.head.appendChild(style);
   }
 
   function fecharModalPrecos() {
@@ -4406,8 +4380,7 @@ ${c.detalhesAdicionais.length > 0 ? `
     confirmarResetPrecos,
     abrirModalDescricao,
     fecharModalDescricao,
-    copiarDescricao,
-    usarDescricao
+    copiarDescricao
   };
 
   if (document.readyState === 'loading') {

@@ -106,523 +106,263 @@
   </script>
 
   <style>
-    :root {
-      --gradient-primary: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-      --gradient-secondary: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-      --gradient-success: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
-    }
-
-    .landing-hero {
-      padding: 60px 20px 40px;
-      text-align: center;
-      background: linear-gradient(180deg, rgba(102, 126, 234, 0.1) 0%, transparent 100%);
-    }
-
-    .hero-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      padding: 6px 14px;
-      background: rgba(102, 126, 234, 0.15);
-      border: 1px solid rgba(102, 126, 234, 0.3);
-      border-radius: 20px;
-      font-size: 0.75rem;
-      color: #667eea;
-      margin-bottom: 20px;
-    }
-
-    .hero-badge svg { width: 14px; height: 14px; }
-
-    .landing-hero h1 {
-      font-size: 2rem;
-      font-weight: 800;
-      line-height: 1.2;
-      margin: 0 0 16px;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .landing-hero .lead {
-      font-size: 1rem;
-      color: var(--text-secondary);
-      line-height: 1.6;
-      max-width: 600px;
-      margin: 0 auto 28px;
-    }
-
-    .hero-cta {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-      max-width: 320px;
-      margin: 0 auto;
-    }
-
-    .btn-primary-landing {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-      padding: 16px 28px;
-      background: var(--gradient-primary);
-      color: white;
-      font-size: 1rem;
-      font-weight: 600;
-      border: none;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
-    }
-
-    .btn-primary-landing:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(102, 126, 234, 0.5);
-    }
-
-    .btn-secondary-landing {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 14px 24px;
-      background: transparent;
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .btn-secondary-landing:hover {
-      background: var(--bg-tertiary);
-      color: var(--text-primary);
-    }
-
-    .landing-stats {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      padding: 30px 20px;
-      max-width: 500px;
-      margin: 0 auto;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 16px 10px;
-      background: var(--bg-secondary);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-
-    .stat-card .number {
-      font-size: 1.5rem;
-      font-weight: 700;
-      background: var(--gradient-primary);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    .stat-card .label { font-size: 0.7rem; color: var(--text-muted); margin-top: 4px; }
-
-    .landing-section { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-
-    .section-header { text-align: center; margin-bottom: 30px; }
-    .section-header h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
-    .section-header p { color: var(--text-secondary); font-size: 0.9rem; }
-
-    .features-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-
-    .feature-card {
-      display: flex;
-      gap: 16px;
-      padding: 20px;
-      background: var(--bg-secondary);
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      transition: all 0.3s ease;
-    }
-
-    .feature-card:hover { border-color: rgba(102, 126, 234, 0.3); transform: translateY(-2px); }
-
-    .feature-icon {
-      flex-shrink: 0;
-      width: 48px;
-      height: 48px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: var(--gradient-primary);
-      border-radius: 12px;
-    }
-
-    .feature-icon svg { width: 24px; height: 24px; stroke: white; }
-
-    .feature-content h3 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 6px; }
-    .feature-content p { font-size: 0.85rem; color: var(--text-secondary); margin: 0; line-height: 1.5; }
-
-    .methods-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
-
-    .method-card {
-      padding: 24px 20px;
-      background: var(--bg-secondary);
-      border-radius: 16px;
-      border: 1px solid var(--border-color);
-      position: relative;
-      overflow: hidden;
-    }
-
-    .method-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 4px; }
-    .method-card.alvenaria::before { background: var(--gradient-primary); }
-    .method-card.eps::before { background: linear-gradient(90deg, #00c6fb 0%, #005bea 100%); }
-    .method-card.steel::before { background: linear-gradient(90deg, #f857a6 0%, #ff5858 100%); }
-
-    .method-card h3 { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 8px; }
-    .method-card .price { font-size: 0.85rem; color: var(--text-muted); margin-bottom: 12px; }
-    .method-card .price strong { color: var(--primary-light); font-size: 1.1rem; }
-
-    .method-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .method-tag { padding: 4px 10px; background: var(--bg-tertiary); border-radius: 6px; font-size: 0.7rem; color: var(--text-secondary); }
-    .method-tag.pro { color: var(--bullish); background: rgba(63, 185, 80, 0.1); }
-    .method-tag.con { color: var(--bearish); background: rgba(248, 81, 73, 0.1); }
-
-    .extras-scroll {
-      display: flex;
-      gap: 12px;
-      overflow-x: auto;
-      padding: 4px 0 16px;
-      margin: 0 -20px;
-      padding-left: 20px;
-      padding-right: 20px;
-      scrollbar-width: none;
-    }
-    .extras-scroll::-webkit-scrollbar { display: none; }
-
-    .extra-chip {
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      padding: 12px 16px;
-      background: var(--bg-secondary);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-
-    .extra-chip svg { width: 20px; height: 20px; stroke: var(--primary-light); }
-    .extra-chip span { font-size: 0.85rem; color: var(--text-primary); white-space: nowrap; }
-
-    .faq-list { display: flex; flex-direction: column; gap: 12px; }
-
-    .faq-item {
-      background: var(--bg-secondary);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      overflow: hidden;
-    }
-
-    .faq-item summary {
-      padding: 16px 20px;
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      cursor: pointer;
-      list-style: none;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .faq-item summary::-webkit-details-marker { display: none; }
-    .faq-item summary::after { content: '+'; font-size: 1.2rem; color: var(--text-muted); transition: transform 0.3s ease; }
-    .faq-item[open] summary::after { transform: rotate(45deg); }
-    .faq-answer { padding: 0 20px 16px; font-size: 0.85rem; color: var(--text-secondary); line-height: 1.6; }
-
-    .landing-cta {
-      padding: 50px 20px;
-      text-align: center;
-      background: linear-gradient(180deg, transparent 0%, rgba(102, 126, 234, 0.1) 100%);
-    }
-
-    .landing-cta h2 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin: 0 0 12px; }
-    .landing-cta p { color: var(--text-secondary); margin: 0 0 24px; font-size: 0.9rem; }
-
-    @media (min-width: 640px) {
-      .landing-hero h1 { font-size: 2.5rem; }
-      .features-grid { grid-template-columns: repeat(2, 1fr); }
-      .methods-grid { grid-template-columns: repeat(3, 1fr); }
-      .hero-cta { flex-direction: row; max-width: 450px; }
-    }
-
-    @media (min-width: 768px) {
-      .landing-hero { padding: 80px 20px 60px; }
-      .landing-hero h1 { font-size: 3rem; }
-      .landing-hero .lead { font-size: 1.1rem; }
-    }
+    .lp-wrapper { min-height: 100vh; overflow-x: hidden; }
+    .lp-hero { position: relative; min-height: 100vh; display: flex; flex-direction: column; justify-content: center; align-items: center; padding: 100px 20px 60px; background: radial-gradient(ellipse at 20% 0%, rgba(26, 95, 74, 0.3) 0%, transparent 50%), radial-gradient(ellipse at 80% 100%, rgba(244, 162, 97, 0.2) 0%, transparent 50%), var(--bg-primary); overflow: hidden; }
+    .lp-hero::before { content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0; background-image: linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px); background-size: 50px 50px; pointer-events: none; }
+    .lp-float-elements { position: absolute; top: 0; left: 0; right: 0; bottom: 0; pointer-events: none; overflow: hidden; }
+    .lp-float-icon { position: absolute; opacity: 0.08; font-size: 4rem; animation: lpFloat 20s infinite ease-in-out; }
+    .lp-float-icon:nth-child(1) { top: 10%; left: 5%; animation-delay: 0s; }
+    .lp-float-icon:nth-child(2) { top: 60%; right: 8%; animation-delay: -5s; font-size: 3rem; }
+    .lp-float-icon:nth-child(3) { bottom: 15%; left: 10%; animation-delay: -10s; font-size: 5rem; }
+    .lp-float-icon:nth-child(4) { top: 25%; right: 15%; animation-delay: -15s; font-size: 2.5rem; }
+    .lp-float-icon:nth-child(5) { bottom: 30%; right: 5%; animation-delay: -7s; font-size: 3.5rem; }
+    @keyframes lpFloat { 0%, 100% { transform: translateY(0) rotate(0deg); } 25% { transform: translateY(-20px) rotate(5deg); } 50% { transform: translateY(0) rotate(0deg); } 75% { transform: translateY(20px) rotate(-5deg); } }
+    .lp-hero-content { position: relative; z-index: 2; text-align: center; max-width: 900px; }
+    .lp-hero-badge { display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px; background: linear-gradient(135deg, rgba(26, 95, 74, 0.2) 0%, rgba(45, 138, 110, 0.2) 100%); border: 1px solid rgba(45, 138, 110, 0.4); border-radius: 50px; font-size: 0.8rem; font-weight: 600; color: var(--primary-light); margin-bottom: 24px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .lp-hero-badge::before { content: ''; width: 8px; height: 8px; background: var(--primary-light); border-radius: 50%; animation: lpPulse 2s infinite; }
+    @keyframes lpPulse { 0%, 100% { opacity: 1; transform: scale(1); } 50% { opacity: 0.5; transform: scale(1.2); } }
+    .lp-hero h1 { font-size: clamp(2.5rem, 8vw, 4.5rem); font-weight: 800; line-height: 1.1; margin: 0 0 24px; letter-spacing: -0.02em; }
+    .lp-hero h1 .text-gradient { background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 50%, #e76f51 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .lp-hero h1 .text-white { color: var(--text-primary); }
+    .lp-hero-desc { font-size: clamp(1rem, 2.5vw, 1.25rem); color: var(--text-secondary); line-height: 1.7; max-width: 650px; margin: 0 auto 40px; }
+    .lp-cta-group { display: flex; flex-direction: column; gap: 16px; margin-bottom: 60px; }
+    .lp-btn-primary { display: inline-flex; align-items: center; justify-content: center; gap: 12px; padding: 18px 36px; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); color: white; font-size: 1.1rem; font-weight: 700; border: none; border-radius: 16px; text-decoration: none; transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); box-shadow: 0 4px 15px rgba(26, 95, 74, 0.4), 0 0 0 0 rgba(26, 95, 74, 0.4); position: relative; overflow: hidden; }
+    .lp-btn-primary::before { content: ''; position: absolute; top: 0; left: -100%; width: 100%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent); transition: 0.5s; }
+    .lp-btn-primary:hover { transform: translateY(-3px) scale(1.02); box-shadow: 0 8px 25px rgba(26, 95, 74, 0.5), 0 0 0 4px rgba(26, 95, 74, 0.2); }
+    .lp-btn-primary:hover::before { left: 100%; }
+    .lp-btn-primary svg { width: 24px; height: 24px; transition: transform 0.3s; }
+    .lp-btn-primary:hover svg { transform: translateX(4px); }
+    .lp-btn-secondary { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 14px 28px; background: transparent; color: var(--text-secondary); font-size: 1rem; font-weight: 500; border: 2px solid var(--border-color); border-radius: 12px; text-decoration: none; transition: all 0.3s ease; }
+    .lp-btn-secondary:hover { border-color: var(--primary-light); color: var(--primary-light); background: rgba(26, 95, 74, 0.1); }
+    .lp-hero-stats { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; }
+    .lp-stat-pill { display: flex; align-items: center; gap: 10px; padding: 12px 20px; background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: 100px; backdrop-filter: blur(10px); }
+    .lp-stat-pill .icon { font-size: 1.2rem; }
+    .lp-stat-pill .value { font-size: 1.1rem; font-weight: 700; color: var(--primary-light); }
+    .lp-stat-pill .label { font-size: 0.85rem; color: var(--text-secondary); }
+    .lp-scroll-indicator { position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%); display: flex; flex-direction: column; align-items: center; gap: 8px; color: var(--text-muted); font-size: 0.75rem; animation: lpBounce 2s infinite; }
+    .lp-scroll-indicator svg { width: 24px; height: 24px; stroke: var(--text-muted); }
+    @keyframes lpBounce { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(10px); } }
+    .lp-section { padding: 80px 20px; position: relative; }
+    .lp-section-inner { max-width: 1100px; margin: 0 auto; }
+    .lp-section-header { text-align: center; margin-bottom: 50px; }
+    .lp-section-header .overline { display: inline-block; font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--primary-light); margin-bottom: 12px; }
+    .lp-section-header h2 { font-size: clamp(1.8rem, 5vw, 2.5rem); font-weight: 700; color: var(--text-primary); margin: 0 0 16px; }
+    .lp-section-header p { font-size: 1.1rem; color: var(--text-secondary); max-width: 600px; margin: 0 auto; }
+    .lp-bento-grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    .lp-bento-card { background: linear-gradient(145deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%); border: 1px solid var(--border-color); border-radius: 24px; padding: 28px; position: relative; overflow: hidden; transition: all 0.4s ease; }
+    .lp-bento-card::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: linear-gradient(90deg, var(--primary-light), var(--secondary)); opacity: 0; transition: opacity 0.3s; }
+    .lp-bento-card:hover { transform: translateY(-4px); border-color: rgba(45, 138, 110, 0.4); box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); }
+    .lp-bento-card:hover::before { opacity: 1; }
+    .lp-bento-icon { width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%); border-radius: 16px; font-size: 1.5rem; margin-bottom: 20px; box-shadow: 0 8px 20px rgba(26, 95, 74, 0.3); }
+    .lp-bento-card h3 { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); margin: 0 0 10px; }
+    .lp-bento-card p { font-size: 0.95rem; color: var(--text-secondary); line-height: 1.6; margin: 0; }
+    .lp-methods-section { background: linear-gradient(180deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-primary) 100%); }
+    .lp-methods-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+    .lp-method-card { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 24px; padding: 32px; position: relative; overflow: hidden; }
+    .lp-method-card::after { content: ''; position: absolute; top: 0; right: 0; width: 150px; height: 150px; border-radius: 50%; opacity: 0.05; pointer-events: none; }
+    .lp-method-card.alvenaria { border-left: 4px solid #667eea; }
+    .lp-method-card.alvenaria::after { background: radial-gradient(circle, #667eea 0%, transparent 70%); }
+    .lp-method-card.eps { border-left: 4px solid #00d4aa; }
+    .lp-method-card.eps::after { background: radial-gradient(circle, #00d4aa 0%, transparent 70%); }
+    .lp-method-card.steel { border-left: 4px solid #f093fb; }
+    .lp-method-card.steel::after { background: radial-gradient(circle, #f093fb 0%, transparent 70%); }
+    .lp-method-header { display: flex; align-items: flex-start; justify-content: space-between; margin-bottom: 20px; }
+    .lp-method-card h3 { font-size: 1.3rem; font-weight: 700; color: var(--text-primary); margin: 0; }
+    .lp-method-price { text-align: right; }
+    .lp-method-price .from { font-size: 0.75rem; color: var(--text-muted); }
+    .lp-method-price .amount { font-size: 1.5rem; font-weight: 800; color: var(--primary-light); }
+    .lp-method-price .unit { font-size: 0.85rem; color: var(--text-muted); }
+    .lp-method-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 16px; }
+    .lp-method-tag { display: inline-flex; align-items: center; gap: 4px; padding: 6px 12px; border-radius: 8px; font-size: 0.8rem; font-weight: 500; }
+    .lp-method-tag.pro { background: rgba(63, 185, 80, 0.15); color: var(--bullish); }
+    .lp-method-tag.con { background: rgba(248, 81, 73, 0.15); color: var(--bearish); }
+    .lp-method-tag.info { background: rgba(88, 166, 255, 0.15); color: #58a6ff; }
+    .lp-method-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; }
+    .lp-extras-section { background: var(--bg-secondary); }
+    .lp-extras-track { display: flex; gap: 16px; overflow-x: auto; padding: 8px 0 24px; margin: 0 -20px; padding-left: 20px; padding-right: 20px; scrollbar-width: none; scroll-snap-type: x mandatory; }
+    .lp-extras-track::-webkit-scrollbar { display: none; }
+    .lp-extra-card { flex: 0 0 auto; width: 200px; padding: 24px; background: var(--bg-tertiary); border: 1px solid var(--border-color); border-radius: 20px; text-align: center; scroll-snap-align: start; transition: all 0.3s ease; }
+    .lp-extra-card:hover { transform: translateY(-4px); border-color: var(--primary-light); }
+    .lp-extra-icon { font-size: 2.5rem; margin-bottom: 12px; }
+    .lp-extra-card h4 { font-size: 1rem; font-weight: 600; color: var(--text-primary); margin: 0 0 4px; }
+    .lp-extra-card span { font-size: 0.8rem; color: var(--text-muted); }
+    .lp-faq-list { display: flex; flex-direction: column; gap: 12px; max-width: 800px; margin: 0 auto; }
+    .lp-faq-item { background: var(--bg-secondary); border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; transition: all 0.3s ease; }
+    .lp-faq-item:hover { border-color: rgba(45, 138, 110, 0.3); }
+    .lp-faq-item[open] { border-color: var(--primary-light); box-shadow: 0 4px 20px rgba(26, 95, 74, 0.2); }
+    .lp-faq-item summary { padding: 20px 24px; font-size: 1rem; font-weight: 600; color: var(--text-primary); cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .lp-faq-item summary::-webkit-details-marker { display: none; }
+    .lp-faq-item summary::after { content: ''; width: 24px; height: 24px; flex-shrink: 0; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke='%238b949e'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M19 9l-7 7-7-7'/%3E%3C/svg%3E") center/contain no-repeat; transition: transform 0.3s; }
+    .lp-faq-item[open] summary::after { transform: rotate(180deg); }
+    .lp-faq-answer { padding: 0 24px 20px; font-size: 0.95rem; color: var(--text-secondary); line-height: 1.7; }
+    .lp-final-cta { padding: 100px 20px; text-align: center; background: radial-gradient(ellipse at 50% 100%, rgba(26, 95, 74, 0.3) 0%, transparent 60%), var(--bg-primary); position: relative; }
+    .lp-final-cta h2 { font-size: clamp(2rem, 6vw, 3rem); font-weight: 800; color: var(--text-primary); margin: 0 0 16px; }
+    .lp-final-cta h2 span { background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .lp-final-cta p { font-size: 1.2rem; color: var(--text-secondary); margin: 0 0 40px; max-width: 500px; margin-left: auto; margin-right: auto; }
+    @media (min-width: 640px) { .lp-cta-group { flex-direction: row; justify-content: center; } .lp-bento-grid { grid-template-columns: repeat(2, 1fr); } .lp-methods-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (min-width: 900px) { .lp-bento-grid { grid-template-columns: repeat(3, 1fr); } .lp-bento-card.wide { grid-column: span 2; } .lp-extra-card { width: 220px; } }
   </style>
 </head>
 <body>
   <div class="page-wrapper">
     <header id="page-header" data-subtitle="Construction Calculator"></header>
 
-    <main>
-      <section class="landing-hero">
-        <div class="hero-badge">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-          </svg>
-          Free Tool
+    <main class="lp-wrapper">
+      <section class="lp-hero">
+        <div class="lp-float-elements">
+          <span class="lp-float-icon">🏗️</span>
+          <span class="lp-float-icon">📐</span>
+          <span class="lp-float-icon">🏠</span>
+          <span class="lp-float-icon">🧱</span>
+          <span class="lp-float-icon">🔨</span>
         </div>
 
-        <h1>How Much Does It Cost to Build Your House?</h1>
+        <div class="lp-hero-content">
+          <div class="lp-hero-badge">100% Free Tool</div>
 
-        <p class="lead">
-          Calculate construction costs accurately. Compare construction methods,
-          materials, labor and extras like pool, wall and gourmet area.
-        </p>
+          <h1>
+            <span class="text-white">How Much Does It Cost</span><br>
+            <span class="text-gradient">to Build Your House?</span>
+          </h1>
 
-        <div class="hero-cta">
-          <a href="../../ferramentas-financeiras/#construcao" class="btn-primary-landing">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-              <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-            </svg>
-            Calculate Now
-          </a>
-          <a href="#how-it-works" class="btn-secondary-landing">
-            Learn More
-          </a>
+          <p class="lp-hero-desc">
+            Simulate the complete cost of your construction. Compare masonry, EPS and steel frame.
+            Include pool, wall, gourmet area and get a detailed budget.
+          </p>
+
+          <div class="lp-cta-group">
+            <a href="../../ferramentas-financeiras/#construcao" class="lp-btn-primary">
+              Calculate Now
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#how-it-works" class="lp-btn-secondary">How It Works</a>
+          </div>
+
+          <div class="lp-hero-stats">
+            <div class="lp-stat-pill"><span class="icon">🏗️</span><span class="value">10+</span><span class="label">Methods</span></div>
+            <div class="lp-stat-pill"><span class="icon">📍</span><span class="value">27</span><span class="label">States</span></div>
+            <div class="lp-stat-pill"><span class="icon">📊</span><span class="value">Excel</span><span class="label">Export</span></div>
+          </div>
+        </div>
+
+        <div class="lp-scroll-indicator">
+          <span>Learn more</span>
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
         </div>
       </section>
 
-      <section class="landing-stats">
-        <div class="stat-card">
-          <div class="number">10+</div>
-          <div class="label">Construction Methods</div>
-        </div>
-        <div class="stat-card">
-          <div class="number">27</div>
-          <div class="label">Brazilian States</div>
-        </div>
-        <div class="stat-card">
-          <div class="number">100%</div>
-          <div class="label">Free</div>
-        </div>
-      </section>
-
-      <section class="landing-section" id="how-it-works">
-        <div class="section-header">
-          <h2>How the Calculator Works</h2>
-          <p>Simulate your construction in minutes</p>
-        </div>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-                <polyline points="9 22 9 12 15 12 15 22"/>
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Define Your House</h3>
-              <p>Choose the type (single-story, two-story, triplex), total area, number of bedrooms, suites and bathrooms.</p>
-            </div>
+      <section class="lp-section" id="how-it-works">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">How It Works</span>
+            <h2>Simulate Your Construction in Minutes</h2>
+            <p>Define your house characteristics and receive a detailed budget instantly</p>
           </div>
 
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                <rect x="1" y="4" width="22" height="16" rx="2" ry="2"/>
-                <line x1="1" y1="10" x2="23" y2="10"/>
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Choose the Method</h3>
-              <p>Compare conventional masonry, EPS, steel frame, wood frame, container and more.</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                <line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/>
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Customize Materials</h3>
-              <p>Adjust floors, roofing, windows, doors and finishes according to your standard.</p>
-            </div>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                <polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/>
-                <line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/>
-              </svg>
-            </div>
-            <div class="feature-content">
-              <h3>Detailed Budget</h3>
-              <p>Receive a complete breakdown with materials, labor, projects and fees costs.</p>
-            </div>
+          <div class="lp-bento-grid">
+            <div class="lp-bento-card"><div class="lp-bento-icon">🏠</div><h3>Define Your House</h3><p>Choose the type (single-story, two-story, triplex), total area, bedrooms, suites and bathrooms.</p></div>
+            <div class="lp-bento-card"><div class="lp-bento-icon">🧱</div><h3>Choose the Method</h3><p>Compare masonry, EPS, steel frame, wood frame, container and 5 more options.</p></div>
+            <div class="lp-bento-card"><div class="lp-bento-icon">🎨</div><h3>Customize Materials</h3><p>Adjust floors, roofing, windows, doors and finish level.</p></div>
+            <div class="lp-bento-card"><div class="lp-bento-icon">📍</div><h3>Adjust by Region</h3><p>Values automatically adjusted by each Brazilian state's CUB.</p></div>
+            <div class="lp-bento-card wide"><div class="lp-bento-icon">📋</div><h3>Get the Complete Budget</h3><p>Detailed breakdown of materials, labor, projects, fees and extras. Export everything to Excel and present to builders.</p></div>
           </div>
         </div>
       </section>
 
-      <section class="landing-section">
-        <div class="section-header">
-          <h2>Compare Construction Methods</h2>
-          <p>Each method has its advantages and disadvantages</p>
-        </div>
-
-        <div class="methods-grid">
-          <div class="method-card alvenaria">
-            <h3>Conventional Masonry</h3>
-            <p class="price">From <strong>R$ 1,880/sqm</strong></p>
-            <div class="method-tags">
-              <span class="method-tag pro">Durability</span>
-              <span class="method-tag pro">Resale</span>
-              <span class="method-tag con">10-14 months</span>
-            </div>
+      <section class="lp-section lp-methods-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Compare Methods</span>
+            <h2>What's the Best Construction System?</h2>
+            <p>Each method has its advantages. Compare and choose the ideal one for you.</p>
           </div>
 
-          <div class="method-card eps">
-            <h3>EPS (Structural Foam)</h3>
-            <p class="price">From <strong>R$ 1,790/sqm</strong></p>
-            <div class="method-tags">
-              <span class="method-tag pro">5% cheaper</span>
-              <span class="method-tag pro">6-8 months</span>
-              <span class="method-tag pro">Thermal insulation</span>
+          <div class="lp-methods-grid">
+            <div class="lp-method-card alvenaria">
+              <div class="lp-method-header">
+                <h3>Conventional Masonry</h3>
+                <div class="lp-method-price"><div class="from">From</div><div class="amount">R$ 1,880</div><div class="unit">/sqm</div></div>
+              </div>
+              <div class="lp-method-tags">
+                <span class="lp-method-tag pro">High durability</span>
+                <span class="lp-method-tag pro">Easy resale</span>
+                <span class="lp-method-tag con">10-14 months</span>
+              </div>
+              <p class="lp-method-desc">Traditional method with bricks and concrete. Accepted by all banks for financing.</p>
             </div>
-          </div>
 
-          <div class="method-card steel">
-            <h3>Steel Frame</h3>
-            <p class="price">From <strong>R$ 2,250/sqm</strong></p>
-            <div class="method-tags">
-              <span class="method-tag pro">Clean construction</span>
-              <span class="method-tag pro">Precision</span>
-              <span class="method-tag con">Specialized labor</span>
+            <div class="lp-method-card eps">
+              <div class="lp-method-header">
+                <h3>EPS (Structural Foam)</h3>
+                <div class="lp-method-price"><div class="from">From</div><div class="amount">R$ 1,790</div><div class="unit">/sqm</div></div>
+              </div>
+              <div class="lp-method-tags">
+                <span class="lp-method-tag pro">5% cheaper</span>
+                <span class="lp-method-tag pro">6-8 months</span>
+                <span class="lp-method-tag info">Thermal insulation</span>
+              </div>
+              <p class="lp-method-desc">Foam panels with concrete. Lighter foundation and energy savings.</p>
+            </div>
+
+            <div class="lp-method-card steel">
+              <div class="lp-method-header">
+                <h3>Steel Frame</h3>
+                <div class="lp-method-price"><div class="from">From</div><div class="amount">R$ 2,250</div><div class="unit">/sqm</div></div>
+              </div>
+              <div class="lp-method-tags">
+                <span class="lp-method-tag pro">Clean construction</span>
+                <span class="lp-method-tag pro">Millimetric precision</span>
+                <span class="lp-method-tag con">Specialized labor</span>
+              </div>
+              <p class="lp-method-desc">Galvanized steel structure. Ideal for modern and sustainable projects.</p>
             </div>
           </div>
         </div>
       </section>
 
-      <section class="landing-section">
-        <div class="section-header">
-          <h2>Also Calculate Extras</h2>
-          <p>Add complementary items to your budget</p>
-        </div>
+      <section class="lp-section lp-extras-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">Additional Items</span>
+            <h2>Also Calculate Extras</h2>
+            <p>Add complements to your budget for the total value</p>
+          </div>
 
-        <div class="extras-scroll">
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <path d="M2 12h6l2 3h4l2-3h6"/>
-              <path d="M5 19a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2"/>
-            </svg>
-            <span>Pool</span>
-          </div>
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
-            </svg>
-            <span>Wall</span>
-          </div>
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
-              <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
-            </svg>
-            <span>Automatic Gate</span>
-          </div>
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/>
-            </svg>
-            <span>Gourmet Area</span>
-          </div>
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/>
-              <line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
-            </svg>
-            <span>Solar Energy</span>
-          </div>
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/>
-            </svg>
-            <span>Guest House</span>
-          </div>
-          <div class="extra-chip">
-            <svg viewBox="0 0 24 24" fill="none" stroke-width="2">
-              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-            </svg>
-            <span>Covered Garage</span>
+          <div class="lp-extras-track">
+            <div class="lp-extra-card"><div class="lp-extra-icon">🏊</div><h4>Pool</h4><span>Fiberglass or Masonry</span></div>
+            <div class="lp-extra-card"><div class="lp-extra-icon">🧱</div><h4>Wall</h4><span>With or without plaster</span></div>
+            <div class="lp-extra-card"><div class="lp-extra-icon">🚗</div><h4>Gate</h4><span>Manual or Automatic</span></div>
+            <div class="lp-extra-card"><div class="lp-extra-icon">🍖</div><h4>Gourmet Area</h4><span>BBQ included</span></div>
+            <div class="lp-extra-card"><div class="lp-extra-icon">☀️</div><h4>Solar Energy</h4><span>Photovoltaic system</span></div>
+            <div class="lp-extra-card"><div class="lp-extra-icon">🏡</div><h4>Guest House</h4><span>Separate unit</span></div>
+            <div class="lp-extra-card"><div class="lp-extra-icon">👔</div><h4>Walk-in Closet</h4><span>Custom planned</span></div>
           </div>
         </div>
       </section>
 
-      <section class="landing-section">
-        <div class="section-header">
-          <h2>Frequently Asked Questions</h2>
-        </div>
+      <section class="lp-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">FAQ</span>
+            <h2>Frequently Asked Questions</h2>
+          </div>
 
-        <div class="faq-list">
-          <details class="faq-item">
-            <summary>How much does it cost to build a house in Brazil in 2026?</summary>
-            <div class="faq-answer">
-              The average cost ranges from <strong>R$ 1,500 to R$ 3,500 per sqm</strong>, depending on the finish standard, region and construction method. A 100sqm medium-standard house costs between R$ 180,000 and R$ 280,000, not including land.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>Which is cheaper: masonry or EPS?</summary>
-            <div class="faq-answer">
-              <strong>EPS is usually 5-10% cheaper</strong> than conventional masonry. Savings come from lighter foundation (lighter structure = cheaper foundation), less material waste and reduced construction time (6-8 months vs 10-14 months).
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>What is included in the cost per sqm?</summary>
-            <div class="faq-answer">
-              Includes: foundation, structure, walls, roofing, electrical and plumbing installations, basic finishes (floors, painting, fixtures). <strong>Not included:</strong> land, architectural projects, city hall fees, furniture and external items like pool and wall.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>Does the calculator consider my region?</summary>
-            <div class="faq-answer">
-              Yes! The calculator automatically adjusts costs based on the <strong>CUB (Basic Unit Cost)</strong> of each Brazilian state. Regions like São Paulo, Rio de Janeiro and Santa Catarina have higher costs than the national average.
-            </div>
-          </details>
-
-          <details class="faq-item">
-            <summary>Can I export the budget?</summary>
-            <div class="faq-answer">
-              Yes! You can <strong>export the complete budget to Excel</strong> with all details of materials, labor, extras and projects. Ideal to present to builders or use as a negotiation base.
-            </div>
-          </details>
+          <div class="lp-faq-list">
+            <details class="lp-faq-item"><summary>How much does it cost to build a house in Brazil in 2026?</summary><div class="lp-faq-answer">The average cost ranges from <strong>R$ 1,500 to R$ 3,500 per sqm</strong>, depending on the finish standard, region and construction method. A 100sqm medium-standard house costs between R$ 180,000 and R$ 280,000, not including land.</div></details>
+            <details class="lp-faq-item"><summary>Which is cheaper: masonry or EPS?</summary><div class="lp-faq-answer"><strong>EPS is usually 5-10% cheaper</strong> than conventional masonry. Savings come from lighter foundation (lighter structure = cheaper foundation), less material waste and reduced construction time (6-8 months vs 10-14 months).</div></details>
+            <details class="lp-faq-item"><summary>What is included in the cost per sqm?</summary><div class="lp-faq-answer">Includes: foundation, structure, walls, roofing, electrical and plumbing installations, basic finishes (floors, painting, fixtures). <strong>Not included:</strong> land, architectural projects, city hall fees, furniture and external items like pool and wall.</div></details>
+            <details class="lp-faq-item"><summary>Does the calculator consider my region?</summary><div class="lp-faq-answer">Yes! The calculator automatically adjusts costs based on the <strong>CUB (Basic Unit Cost)</strong> of each Brazilian state. Regions like Sao Paulo, Rio de Janeiro and Santa Catarina have higher costs than the national average.</div></details>
+            <details class="lp-faq-item"><summary>Can I export the budget?</summary><div class="lp-faq-answer">Yes! You can <strong>export the complete budget to Excel</strong> with all details of materials, labor, extras and projects. Ideal to present to builders or use as a negotiation base.</div></details>
+          </div>
         </div>
       </section>
 
-      <section class="landing-cta">
-        <h2>Ready to Calculate?</h2>
+      <section class="lp-final-cta">
+        <h2>Ready to <span>Calculate?</span></h2>
         <p>Find out how much it will cost to build your dream house</p>
-        <a href="../../ferramentas-financeiras/#construcao" class="btn-primary-landing">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/>
-            <rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/>
-          </svg>
+        <a href="../../ferramentas-financeiras/#construcao" class="lp-btn-primary">
           Access Free Calculator
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
       </section>
     </main>

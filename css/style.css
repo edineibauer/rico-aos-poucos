@@ -2089,6 +2089,71 @@ body.home-page {
   opacity: 0.5;
 }
 
+/* Footer Quick Links */
+.footer-quick-links {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 0;
+  margin: 8px 0;
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+  max-width: 500px;
+}
+
+.footer-quick-title {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-muted);
+}
+
+.footer-quick-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+}
+
+.footer-quick-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-quick-item:hover {
+  background: rgba(45, 138, 110, 0.1);
+  border-color: var(--primary-light);
+  color: var(--primary-light);
+}
+
+.footer-quick-item span:first-child {
+  font-size: 0.9rem;
+}
+
+@media (max-width: 480px) {
+  .footer-quick-grid {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-quick-item {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 /* ==========================================
    Animations
    ========================================== */
@@ -6032,6 +6097,160 @@ body.home-page {
 
 .card-calculadora:hover .calc-card-cta svg {
   transform: translateX(4px);
+}
+
+/* Card Calculadora de Construção - Destaque */
+.card-construcao-featured {
+  display: flex;
+  gap: 20px;
+  padding: 24px;
+  background: linear-gradient(135deg, rgba(26, 95, 74, 0.15) 0%, rgba(45, 138, 110, 0.08) 100%);
+  border: 1px solid rgba(45, 138, 110, 0.3);
+  border-radius: 20px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.4s ease;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 16px;
+}
+
+.card-construcao-featured::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-light), var(--secondary));
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.card-construcao-featured:hover {
+  transform: translateY(-4px);
+  border-color: var(--primary-light);
+  box-shadow: 0 12px 30px rgba(26, 95, 74, 0.25);
+}
+
+.card-construcao-featured:hover::before {
+  opacity: 1;
+}
+
+.construcao-visual {
+  position: relative;
+  flex-shrink: 0;
+  width: 80px;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.construcao-icon-main {
+  font-size: 3rem;
+  z-index: 2;
+}
+
+.construcao-floating {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.construcao-floating span {
+  position: absolute;
+  opacity: 0.4;
+  animation: floatAround 8s infinite ease-in-out;
+}
+
+.construcao-floating span:nth-child(1) { top: 0; right: 0; animation-delay: 0s; font-size: 1rem; }
+.construcao-floating span:nth-child(2) { bottom: 5px; left: 0; animation-delay: -3s; font-size: 0.9rem; }
+.construcao-floating span:nth-child(3) { top: 50%; right: -5px; animation-delay: -5s; font-size: 0.8rem; }
+
+@keyframes floatAround {
+  0%, 100% { transform: translateY(0) rotate(0deg); }
+  50% { transform: translateY(-6px) rotate(10deg); }
+}
+
+.construcao-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.construcao-badge {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 10px;
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+  border-radius: 6px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: white;
+}
+
+.construcao-content h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+.construcao-content p {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.construcao-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-top: 4px;
+}
+
+.construcao-cta svg {
+  width: 18px;
+  height: 18px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.3s;
+}
+
+.card-construcao-featured:hover .construcao-cta svg {
+  transform: translateX(5px);
+}
+
+@media (max-width: 480px) {
+  .card-construcao-featured {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .construcao-visual {
+    width: 70px;
+    height: 70px;
+  }
+
+  .construcao-icon-main {
+    font-size: 2.5rem;
+  }
+
+  .construcao-content {
+    align-items: center;
+  }
 }
 
 /* Home Bottom Row - Ferramentas + YouTube lado a lado */

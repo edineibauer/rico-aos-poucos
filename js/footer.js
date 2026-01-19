@@ -90,6 +90,7 @@ const Footer = {
   // Render default footer (main pages, articles)
   renderDefaultFooter(showSobreLink = true) {
     const sobrePath = this.getSobrePath();
+    const basePath = this.getBasePath();
 
     return `
     <footer class="app-footer">
@@ -100,6 +101,20 @@ const Footer = {
         </a>
       </div>
       ` : ''}
+      <div class="footer-quick-links">
+        <span class="footer-quick-title" data-i18n="footer.quickLinks">Ferramentas</span>
+        <div class="footer-quick-grid">
+          <a href="${basePath}ferramentas-financeiras/#carteira" class="footer-quick-item">
+            <span>💼</span> <span data-i18n="footer.portfolioSim">Simulador de Carteira</span>
+          </a>
+          <a href="${basePath}ferramentas-financeiras/#aposentadoria" class="footer-quick-item">
+            <span>🏖️</span> <span data-i18n="footer.retirementCalc">Calculadora de Aposentadoria</span>
+          </a>
+          <a href="${basePath}calculadora-custo-construcao/" class="footer-quick-item">
+            <span>🏗️</span> <span data-i18n="footer.constructionCalc">Calculadora de Construção</span>
+          </a>
+        </div>
+      </div>
       <p class="footer-disclaimer" data-i18n="common.disclaimer">
         Conteúdo educacional • Não é recomendação de investimento
       </p>

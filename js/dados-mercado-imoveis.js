@@ -491,7 +491,12 @@ const DadosMercadoImoveis = {
         apartamento: 1.45,
         casa: 1.35,
         terreno: 1.80,
-        keywords: ['praia grande', 'prainha', 'cal', 'beira mar', 'beira-mar', 'beiramar', 'frente mar', 'frente pro mar', 'vista mar', 'pe na areia', 'pé na areia', 'primeira quadra']
+        keywords: [
+          'praia grande', 'prainha', 'cal', 'praia',
+          'beira mar', 'beira-mar', 'beiramar', 'beirra mar', // inclui typo
+          'frente mar', 'frente pro mar', 'vista mar',
+          'pe na areia', 'pé na areia', 'primeira quadra'
+        ]
       },
       // Centro - área comercial e residencial consolidada
       'centro': {
@@ -513,7 +518,12 @@ const DadosMercadoImoveis = {
         apartamento: 1.50,
         casa: 1.35,
         terreno: 1.70,
-        keywords: ['beira mar', 'beira-mar', 'beiramar', 'frente mar', 'vista mar', 'primeira quadra']
+        keywords: [
+          'beira mar', 'beira-mar', 'beiramar', 'beirra mar', // inclui typo comum
+          'frente mar', 'vista mar', 'primeira quadra', 'praia',
+          'arroio seco', 'areias brancas', 'rondinha', // bairros de praia
+          'costa do sol', 'jardim do eden'
+        ]
       },
       'centro': {
         apartamento: 1.00,
@@ -533,7 +543,10 @@ const DadosMercadoImoveis = {
         apartamento: 1.40,
         casa: 1.30,
         terreno: 1.50,
-        keywords: ['beira mar', 'beira-mar', 'beiramar', 'beira rio', 'frente rio', 'vista mar', 'rosa do mar']
+        keywords: [
+          'beira mar', 'beira-mar', 'beiramar', 'beirra mar', // inclui typo
+          'beira rio', 'frente rio', 'vista mar', 'rosa do mar', 'praia'
+        ]
       },
       'centro': {
         apartamento: 1.00,

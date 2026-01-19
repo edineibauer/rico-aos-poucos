@@ -333,7 +333,7 @@
                   <input type="number" id="cc-suites" value="${state.config.numSuites}" min="0" max="10">
                 </div>
                 <div class="cc-field">
-                  <label>Banheiros Extras</label>
+                  <label>Banheiros</label>
                   <input type="number" id="cc-banheiros" value="${state.config.numBanheiros}" min="0" max="10">
                 </div>
               </div>
@@ -1276,7 +1276,8 @@
       'varanda', 'sacada', 'escritorio', 'closet', 'lavabo', 'despensa',
       'edicula', 'garagem', 'suite', 'piscina', 'area gourmet', 'espaco gourmet',
       'campeiro', 'deposito', 'lavanderia', 'terraço', 'deck', 'quintal',
-      'jardim', 'corredor', 'hall', 'dispensa', 'sotao', 'porao'
+      'jardim', 'corredor', 'hall', 'dispensa', 'sotao', 'porao',
+      'terreno', 'lote' // Área do terreno NÃO é área construída
     ];
 
     // Função para verificar se um número de área está associado a um cômodo
@@ -1461,7 +1462,7 @@
       /(\d+)\s*dorms?/i
     ];
     for (const pattern of quartosPatterns) {
-      const match = texto.match(pattern);
+      const match = textoLower.match(pattern);
       if (match) {
         resultado.config.numQuartos = parseInt(match[1]);
         resultado.encontrados.push(`Quartos: ${match[1]}`);
@@ -1469,13 +1470,13 @@
       }
     }
 
-    // Suítes
+    // Suítes - usar textoLower (já normalizado sem acentos)
     const suitesPatterns = [
       /(\d+)\s*suites?/i,
       /sendo\s*(\d+)\s*suites?/i
     ];
     for (const pattern of suitesPatterns) {
-      const match = texto.match(pattern);
+      const match = textoLower.match(pattern);
       if (match) {
         resultado.config.numSuites = parseInt(match[1]);
         resultado.encontrados.push(`Suítes: ${match[1]}`);
@@ -1498,7 +1499,7 @@
       /(\d+)\s*sanitarios?/i
     ];
     for (const pattern of banheirosPatterns) {
-      const match = texto.match(pattern);
+      const match = textoLower.match(pattern);
       if (match) {
         let numBanheiros = parseInt(match[1]);
         if (resultado.config.numSuites) {
@@ -3536,7 +3537,7 @@
   <tr class="info-row row-alt"><td>Área Total</td><td>${c.config.areaTotal} m²</td></tr>
   <tr class="info-row"><td>Quartos</td><td>${c.config.numQuartos}</td></tr>
   <tr class="info-row row-alt"><td>Suítes</td><td>${c.config.numSuites}</td></tr>
-  <tr class="info-row"><td>Banheiros Extras</td><td>${c.config.numBanheiros}</td></tr>
+  <tr class="info-row"><td>Banheiros</td><td>${c.config.numBanheiros}</td></tr>
   <tr class="info-row row-alt"><td>Área de Serviço</td><td>${c.config.temAreaServico ? 'Sim' : 'Não'}</td></tr>
 </table>
 

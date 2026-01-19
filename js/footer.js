@@ -115,10 +115,10 @@ const Footer = {
         <div class="footer-col footer-col-tools">
           <span class="footer-col-title" data-i18n="footer.quickLinks">Ferramentas</span>
           <div class="footer-col-links">
-            <a href="${basePath}ferramentas-financeiras/#carteira" class="footer-link-item">
+            <a href="${basePath}simulador-investimentos/" class="footer-link-item">
               <span>💼</span> <span data-i18n="footer.portfolioSim">Simulador de Carteira</span>
             </a>
-            <a href="${basePath}ferramentas-financeiras/#aposentadoria" class="footer-link-item">
+            <a href="${basePath}calculadora-aposentadoria/" class="footer-link-item">
               <span>🏖️</span> <span data-i18n="footer.retirementCalc">Calculadora de Aposentadoria</span>
             </a>
             <a href="${basePath}calculadora-custo-construcao/" class="footer-link-item">

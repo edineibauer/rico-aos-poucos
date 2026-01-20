@@ -221,7 +221,7 @@
                 <div class="cc-field">
                   <label>Valorização do local</label>
                   <div class="cc-input-group">
-                    <input type="text" id="cc-ajuste-localizacao" value="0" inputmode="decimal" style="width: 80px;">
+                    <input type="text" id="cc-ajuste-localizacao" value="0,00" inputmode="decimal" style="width: 80px;">
                     <span class="cc-unit">%</span>
                   </div>
                 </div>
@@ -1086,7 +1086,10 @@
           ajusteSugerido = 25;
         }
 
-        inputEl.value = ajusteSugerido.toString();
+        inputEl.value = ajusteSugerido.toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
         state.config.ajusteLocalizacao = ajusteSugerido;
       }
     } else {
@@ -2438,7 +2441,7 @@
     const locAjuste = document.getElementById('cc-localizacao-ajuste');
     if (locAjuste) locAjuste.style.display = 'none';
     const ajusteInput = document.getElementById('cc-ajuste-localizacao');
-    if (ajusteInput) ajusteInput.value = '0';
+    if (ajusteInput) ajusteInput.value = '0,00';
 
     // Reset terreno
     const terrenoEl = document.getElementById('cc-area-terreno');
@@ -2785,35 +2788,60 @@
       calculate();
     });
 
-    // Ajuste de localização (local valorizado)
+    // Ajuste de localização (valorização do local)
     const ajusteInput = document.getElementById('cc-ajuste-localizacao');
 
     if (ajusteInput) {
-      // Aplicar máscara de porcentagem
+      // Aplicar máscara de porcentagem no formato brasileiro
       ajusteInput.addEventListener('input', function() {
-        // Permitir apenas números, vírgula, ponto e sinal negativo
-        let value = this.value.replace(/[^\d,.\-]/g, '');
-        // Converter vírgula para ponto
-        value = value.replace(',', '.');
-        this.value = value;
+        // Guardar posição do cursor e se é negativo
+        const isNegative = this.value.startsWith('-');
+        // Remover tudo exceto dígitos
+        let value = this.value.replace(/[^\d]/g, '');
 
-        let numValue = parseFloat(value) || 0;
-        // Limitar ao intervalo -80 a 500
-        if (numValue < -80) numValue = -80;
-        if (numValue > 500) numValue = 500;
+        if (value === '') {
+          this.value = isNegative ? '-' : '';
+          state.config.ajusteLocalizacao = 0;
+          calculate();
+          return;
+        }
 
-        state.config.ajusteLocalizacao = numValue;
+        let numValue = parseInt(value, 10);
+        // Limitar ao máximo de 50000 (500,00%)
+        if (numValue > 50000) numValue = 50000;
+
+        // Formatar com 2 casas decimais no formato brasileiro
+        const formatted = (numValue / 100).toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+
+        this.value = isNegative ? '-' + formatted : formatted;
+
+        let finalValue = isNegative ? -(numValue / 100) : (numValue / 100);
+        if (finalValue < -80) finalValue = -80;
+        if (finalValue > 500) finalValue = 500;
+
+        state.config.ajusteLocalizacao = finalValue;
         calculate();
       });
 
-      // Formatar ao sair do campo
-      ajusteInput.addEventListener('blur', function() {
-        let numValue = parseFloat(this.value.replace(',', '.')) || 0;
-        if (numValue < -80) numValue = -80;
-        if (numValue > 500) numValue = 500;
-        this.value = numValue.toString();
-        state.config.ajusteLocalizacao = numValue;
+      // Permitir digitar o sinal de menos
+      ajusteInput.addEventListener('keydown', function(e) {
+        if (e.key === '-' && !this.value.includes('-')) {
+          e.preventDefault();
+          const currentValue = this.value;
+          this.value = '-' + currentValue;
+          const numValue = parseFloat(this.value.replace(/\./g, '').replace(',', '.')) || 0;
+          state.config.ajusteLocalizacao = Math.max(-80, numValue);
+          calculate();
+        }
       });
+
+      // Formatar valor inicial
+      if (ajusteInput.value === '0' || ajusteInput.value === '') {
+        ajusteInput.value = '0,00';
+      }
     }
 
     // Material changes

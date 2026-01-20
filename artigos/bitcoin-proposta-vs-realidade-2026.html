@@ -167,12 +167,6 @@
     .article-cover { width: 100%; max-height: 400px; object-fit: cover; border-radius: 12px; margin-bottom: 20px; }
     .video-container { position: relative; width: 100%; padding-bottom: 56.25%; margin: 20px 0; border-radius: 12px; overflow: hidden; background: var(--bg-tertiary); }
     .video-container iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
-    .cta-youtube { display: flex; flex-direction: column; align-items: center; gap: 12px; padding: 24px; background: linear-gradient(135deg, rgba(255, 0, 0, 0.1) 0%, var(--bg-tertiary) 100%); border: 1px solid rgba(255, 0, 0, 0.2); border-radius: 12px; margin: 24px 0; text-align: center; }
-    .cta-youtube h3 { margin: 0; font-size: 1rem; color: var(--text-primary); }
-    .cta-youtube p { margin: 0; font-size: 0.85rem; color: var(--text-secondary); }
-    .cta-youtube .btn-youtube { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #ff0000; color: white; border-radius: 8px; font-size: 0.9rem; font-weight: 600; text-decoration: none; transition: all 0.3s ease; }
-    .cta-youtube .btn-youtube:hover { background: #cc0000; transform: translateY(-2px); }
-    .cta-youtube .btn-youtube svg { width: 20px; height: 20px; fill: currentColor; }
   </style>
 </head>
 <body>
@@ -683,15 +677,6 @@
             </ul>
           </div>
 
-          <div class="cta-youtube">
-            <h3>Gostou do conteúdo?</h3>
-            <p>Assista ao vídeo completo no YouTube e deixe sua opinião nos comentários!</p>
-            <a href="https://www.youtube.com/watch?v=JuRju3JZ-Qs" target="_blank" rel="noopener" class="btn-youtube">
-              <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-              Assistir no YouTube
-            </a>
-          </div>
-
         </div>
 
         <div class="disclaimer">
@@ -710,7 +695,7 @@
 
     </main>
 
-    <div id="comments-container"></div>
+    <div id="comments-container" data-video="https://www.youtube.com/watch?v=JuRju3JZ-Qs"></div>
 
     <div id="footer-container"></div>
 

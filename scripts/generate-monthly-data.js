@@ -445,9 +445,40 @@ function converterParaBRL(retornosUSD, retornosDolar) {
   return retornosBRL;
 }
 
-const sp500BRL = converterParaBRL(sp500Retornos, dolarRetornos);
 const ouroBRL = converterParaBRL(ouroRetornos, dolarRetornos);
 const btcBRL = converterParaBRL(btcRetornos, dolarRetornos);
+
+// Função para calcular S&P 500 Total Return em BRL
+// Inclui: variação de preço + dividendos (1.5% a.a.) + variação cambial
+const SP500_DIVIDEND_YIELD = 1.5; // 1.5% ao ano
+
+function calcularSP500TotalReturnBRL(retornosPreco, retornosDolar, yieldAnual) {
+  const retornosTotalBRL = {};
+  const anos = Object.keys(retornosPreco);
+
+  for (const ano of anos) {
+    retornosTotalBRL[ano] = [];
+    // Yield mensal = yield anual / 12
+    const yieldMensal = yieldAnual / 12;
+
+    for (let mes = 0; mes < 12; mes++) {
+      const retPreco = retornosPreco[ano][mes] || 0;
+      const retDolar = retornosDolar[ano]?.[mes] || 0;
+
+      // Retorno total em USD = variação de preço + dividendo mensal
+      // (1 + ret_preco) * (1 + yield_mensal) - 1
+      const retTotalUSD = ((1 + retPreco/100) * (1 + yieldMensal/100) - 1) * 100;
+
+      // Converter para BRL
+      const retTotalBRL = ((1 + retTotalUSD/100) * (1 + retDolar/100) - 1) * 100;
+      retornosTotalBRL[ano].push(parseFloat(retTotalBRL.toFixed(2)));
+    }
+  }
+
+  return retornosTotalBRL;
+}
+
+const sp500BRL = calcularSP500TotalReturnBRL(sp500Retornos, dolarRetornos, SP500_DIVIDEND_YIELD);
 
 // Função especial para TLT: inclui dividendos reinvestidos (Total Return)
 // Fórmula: (1 + variação_preço) * (1 + dividendo_mensal) * (1 + variação_dólar) - 1

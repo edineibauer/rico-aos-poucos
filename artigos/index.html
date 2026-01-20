@@ -190,6 +190,23 @@
       background: linear-gradient(135deg, rgba(26, 95, 74, 0.1) 0%, var(--bg-card) 100%);
     }
 
+    .artigo-card.com-capa {
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .artigo-card.com-capa .artigo-capa {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-radius: 8px;
+    }
+
+    .artigo-card.com-capa .artigo-content-row {
+      display: flex;
+      gap: 16px;
+    }
+
     .artigo-date {
       display: flex;
       flex-direction: column;
@@ -555,6 +572,32 @@
         const data = formatarData(artigo.dataPublicacao);
         const nivel = niveis[artigo.nivel];
         const destaqueClass = artigo.destaque ? 'destaque' : '';
+        const temCapa = artigo.capa ? 'com-capa' : '';
+
+        if (artigo.capa) {
+          return `
+            <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass} ${temCapa}" data-nivel="${artigo.nivel}">
+              <img src="../${artigo.capa}" alt="${artigo.titulo}" class="artigo-capa" loading="lazy">
+              <div class="artigo-content-row">
+                <div class="artigo-date">
+                  <span class="day">${data.dia}</span>
+                  <span class="month">${data.mes}</span>
+                </div>
+                <div class="artigo-info">
+                  <span class="artigo-nivel ${artigo.nivel}">${nivel.label}</span>
+                  <h3 class="artigo-titulo">${artigo.titulo}</h3>
+                  <p class="artigo-desc">${artigo.descricao}</p>
+                  <div class="artigo-meta">
+                    <span class="artigo-tempo">${artigo.tempoLeitura} min</span>
+                    <div class="artigo-tags">
+                      ${artigo.tags.slice(0, 2).map(tag => `<span class="artigo-tag">${tag}</span>`).join('')}
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          `;
+        }
 
         return `
           <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass}" data-nivel="${artigo.nivel}">

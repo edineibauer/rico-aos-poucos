@@ -219,7 +219,7 @@
                   </select>
                 </div>
                 <div class="cc-field">
-                  <label>Local valorizado</label>
+                  <label>Valorização do local</label>
                   <div class="cc-input-group">
                     <input type="text" id="cc-ajuste-localizacao" value="0" inputmode="decimal" style="width: 80px;">
                     <span class="cc-unit">%</span>

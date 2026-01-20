@@ -3,7 +3,7 @@
     "fonte": "Dados compilados de fontes públicas (BCB, B3, IBGE, Anbima, CoinMarketCap)",
     "atualizacao": "2025-12",
     "moeda": "BRL",
-    "notas": "Retornos nominais anuais. Dividendos inclusos quando aplicável. Bitcoin e TLT em R$. TLT inclui retorno total (preço + dividendos reinvestidos + variação cambial)."
+    "notas": "Retornos nominais anuais. Dividendos inclusos quando aplicável. Bitcoin, TLT e S&P500 em R$. TLT e S&P500 incluem retorno total (preço + dividendos reinvestidos + variação cambial)."
   },
   "anos": [
     {
@@ -18,7 +18,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 17.1,
       "cdi": 19.0,
-      "sp500_brl": -8.5,
+      "sp500_brl": -7.1,
       "imoveis_fipezap": 8.2,
       "bitcoin_brl": null,
       "tlt_brl": -6.6
@@ -35,7 +35,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 21.3,
       "cdi": 15.0,
-      "sp500_brl": 0.5,
+      "sp500_brl": 2.0,
       "imoveis_fipezap": 6.5,
       "bitcoin_brl": null,
       "tlt_brl": -7.9
@@ -52,7 +52,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 15.2,
       "cdi": 11.8,
-      "sp500_brl": -14.2,
+      "sp500_brl": -12.9,
       "imoveis_fipezap": 12.4,
       "bitcoin_brl": null,
       "tlt_brl": -8.3
@@ -69,7 +69,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 13.5,
       "cdi": 12.4,
-      "sp500_brl": -8.5,
+      "sp500_brl": -7.1,
       "imoveis_fipezap": 14.8,
       "bitcoin_brl": null,
       "tlt_brl": 81.5
@@ -86,7 +86,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 17.8,
       "cdi": 9.9,
-      "sp500_brl": -3.8,
+      "sp500_brl": -2.4,
       "imoveis_fipezap": 15.2,
       "bitcoin_brl": null,
       "tlt_brl": -37.3
@@ -103,7 +103,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 15.1,
       "cdi": 9.7,
-      "sp500_brl": 7.2,
+      "sp500_brl": 8.8,
       "imoveis_fipezap": 23.5,
       "bitcoin_brl": null,
       "tlt_brl": 4.4
@@ -120,7 +120,7 @@
       "fii_ifix": null,
       "tesouro_ipca": 14.8,
       "cdi": 11.6,
-      "sp500_brl": 13.5,
+      "sp500_brl": 15.2,
       "imoveis_fipezap": 26.0,
       "bitcoin_brl": 1420.0,
       "tlt_brl": 42.4
@@ -137,7 +137,7 @@
       "fii_ifix": 35.0,
       "tesouro_ipca": 28.8,
       "cdi": 8.4,
-      "sp500_brl": 16.8,
+      "sp500_brl": 18.6,
       "imoveis_fipezap": 13.7,
       "bitcoin_brl": 186.0,
       "tlt_brl": 8.5
@@ -154,7 +154,7 @@
       "fii_ifix": -12.6,
       "tesouro_ipca": -10.0,
       "cdi": 8.1,
-      "sp500_brl": 44.2,
+      "sp500_brl": 46.4,
       "imoveis_fipezap": 11.6,
       "bitcoin_brl": 5450.0,
       "tlt_brl": -2.3
@@ -171,7 +171,7 @@
       "fii_ifix": -2.8,
       "tesouro_ipca": 14.5,
       "cdi": 10.8,
-      "sp500_brl": 25.8,
+      "sp500_brl": 27.7,
       "imoveis_fipezap": 6.7,
       "bitcoin_brl": -42.5,
       "tlt_brl": 47.4
@@ -188,7 +188,7 @@
       "fii_ifix": 5.4,
       "tesouro_ipca": 5.8,
       "cdi": 13.2,
-      "sp500_brl": 48.5,
+      "sp500_brl": 50.7,
       "imoveis_fipezap": 1.3,
       "bitcoin_brl": 98.5,
       "tlt_brl": 40.6
@@ -205,7 +205,7 @@
       "fii_ifix": 32.3,
       "tesouro_ipca": 44.8,
       "cdi": 14.0,
-      "sp500_brl": -5.8,
+      "sp500_brl": -4.4,
       "imoveis_fipezap": 0.6,
       "bitcoin_brl": 78.2,
       "tlt_brl": -15.6
@@ -222,7 +222,7 @@
       "fii_ifix": 19.4,
       "tesouro_ipca": 26.5,
       "cdi": 9.9,
-      "sp500_brl": 20.5,
+      "sp500_brl": 22.3,
       "imoveis_fipezap": 0.5,
       "bitcoin_brl": 1318.0,
       "tlt_brl": 11.6
@@ -239,7 +239,7 @@
       "fii_ifix": 5.6,
       "tesouro_ipca": 12.2,
       "cdi": 6.4,
-      "sp500_brl": 11.8,
+      "sp500_brl": 13.5,
       "imoveis_fipezap": 0.5,
       "bitcoin_brl": -59.2,
       "tlt_brl": 17.5
@@ -256,7 +256,7 @@
       "fii_ifix": 35.9,
       "tesouro_ipca": 23.8,
       "cdi": 5.9,
-      "sp500_brl": 35.2,
+      "sp500_brl": 37.2,
       "imoveis_fipezap": 2.2,
       "bitcoin_brl": 85.6,
       "tlt_brl": 19.5
@@ -273,7 +273,7 @@
       "fii_ifix": -10.2,
       "tesouro_ipca": 6.4,
       "cdi": 2.8,
-      "sp500_brl": 48.4,
+      "sp500_brl": 50.6,
       "imoveis_fipezap": 3.7,
       "bitcoin_brl": 395.8,
       "tlt_brl": 52.5
@@ -290,7 +290,7 @@
       "fii_ifix": -2.3,
       "tesouro_ipca": -6.2,
       "cdi": 4.4,
-      "sp500_brl": 34.5,
+      "sp500_brl": 36.5,
       "imoveis_fipezap": 5.3,
       "bitcoin_brl": 72.5,
       "tlt_brl": 1.5
@@ -307,7 +307,7 @@
       "fii_ifix": 2.2,
       "tesouro_ipca": 6.4,
       "cdi": 12.4,
-      "sp500_brl": -13.8,
+      "sp500_brl": -12.5,
       "imoveis_fipezap": 6.1,
       "bitcoin_brl": -69.5,
       "tlt_brl": -32.2
@@ -324,7 +324,7 @@
       "fii_ifix": 15.5,
       "tesouro_ipca": 16.8,
       "cdi": 13.0,
-      "sp500_brl": 16.5,
+      "sp500_brl": 18.2,
       "imoveis_fipezap": 5.1,
       "bitcoin_brl": 132.5,
       "tlt_brl": -8.3
@@ -341,7 +341,7 @@
       "fii_ifix": -5.9,
       "tesouro_ipca": -3.2,
       "cdi": 10.8,
-      "sp500_brl": 52.8,
+      "sp500_brl": 55.1,
       "imoveis_fipezap": 7.2,
       "bitcoin_brl": 185.2,
       "tlt_brl": 15.7
@@ -358,7 +358,7 @@
       "fii_ifix": 21.15,
       "tesouro_ipca": 18.5,
       "cdi": 14.32,
-      "sp500_brl": 4.5,
+      "sp500_brl": 6.1,
       "imoveis_fipezap": 8.2,
       "bitcoin_brl": -18.88,
       "tlt_brl": 3.8

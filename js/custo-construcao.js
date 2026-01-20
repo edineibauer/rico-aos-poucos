@@ -12,7 +12,7 @@
       tipoEstrutura: 'terrea',
       tipoConstrucao: 'alvenaria',
       estadoConservacao: 'nova',
-      padrao: 'medio',
+      padrao: 'medio_baixo',
       areaTotal: 100,
       areaTerreno: 0,
       numQuartos: 3,
@@ -219,28 +219,14 @@
                   </select>
                 </div>
                 <div class="cc-field">
-                  <label>Ajuste de Localização</label>
-                  <select id="cc-ajuste-localizacao">
-                    <option value="0">Padrão (0%)</option>
-                    <option value="10">Residencial (+10%)</option>
-                    <option value="25">Centro (+25%)</option>
-                    <option value="50">Valorizada (+50%)</option>
-                    <option value="80">Próximo praia (+80%)</option>
-                    <option value="120">Beira-mar (+120%)</option>
-                    <option value="150">Frente mar (+150%)</option>
-                    <option value="-10">Periférica (-10%)</option>
-                    <option value="-20">Rural (-20%)</option>
-                    <option value="custom">Personalizado...</option>
-                  </select>
+                  <label>Valorização do local</label>
+                  <div class="cc-input-group">
+                    <input type="text" id="cc-ajuste-localizacao" value="0,00" inputmode="decimal" style="width: 80px;">
+                    <span class="cc-unit">%</span>
+                  </div>
                 </div>
               </div>
               <div class="cc-conservacao-info" id="cc-conservacao-info"></div>
-              <div id="cc-ajuste-custom" style="display: none; margin-top: 10px;">
-                <div class="cc-input-group">
-                  <input type="number" id="cc-ajuste-custom-valor" value="0" min="-50" max="200" step="5">
-                  <span class="cc-unit">%</span>
-                </div>
-              </div>
               <div class="cc-localizacao-info" id="cc-localizacao-info"></div>
             </div>
 
@@ -1062,7 +1048,7 @@
   function updateLocalizacaoAjuste() {
     const container = document.getElementById('cc-localizacao-ajuste');
     const infoEl = document.getElementById('cc-localizacao-info');
-    const selectEl = document.getElementById('cc-ajuste-localizacao');
+    const inputEl = document.getElementById('cc-ajuste-localizacao');
 
     if (!container) return;
 
@@ -1088,7 +1074,7 @@
       }
 
       // Sugerir ajuste baseado nas características da cidade
-      if (selectEl && state.config.ajusteLocalizacao === undefined) {
+      if (inputEl && state.config.ajusteLocalizacao === undefined) {
         let ajusteSugerido = 0;
         if (cidadeInfo.nobre) {
           ajusteSugerido = 120;
@@ -1100,13 +1086,11 @@
           ajusteSugerido = 25;
         }
 
-        // Encontrar a opção mais próxima
-        const opcoes = Array.from(selectEl.options);
-        const opcaoMaisProxima = opcoes.find(o => parseInt(o.value) === ajusteSugerido);
-        if (opcaoMaisProxima) {
-          selectEl.value = ajusteSugerido.toString();
-          state.config.ajusteLocalizacao = ajusteSugerido;
-        }
+        inputEl.value = ajusteSugerido.toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+        state.config.ajusteLocalizacao = ajusteSugerido;
       }
     } else {
       container.style.display = 'none';
@@ -2430,7 +2414,7 @@
       tipoEstrutura: 'terrea',
       tipoConstrucao: 'alvenaria',
       estadoConservacao: 'bom',
-      padrao: 'medio',
+      padrao: 'medio_baixo',
       areaTotal: 100,
       areaTerreno: 0,
       numQuartos: 0,
@@ -2456,10 +2440,8 @@
     // Esconder o campo de ajuste de localização
     const locAjuste = document.getElementById('cc-localizacao-ajuste');
     if (locAjuste) locAjuste.style.display = 'none';
-    const ajusteSelect = document.getElementById('cc-ajuste-localizacao');
-    if (ajusteSelect) ajusteSelect.value = '0';
-    const ajusteCustom = document.getElementById('cc-ajuste-custom');
-    if (ajusteCustom) ajusteCustom.style.display = 'none';
+    const ajusteInput = document.getElementById('cc-ajuste-localizacao');
+    if (ajusteInput) ajusteInput.value = '0,00';
 
     // Reset terreno
     const terrenoEl = document.getElementById('cc-area-terreno');
@@ -2806,30 +2788,60 @@
       calculate();
     });
 
-    // Ajuste de localização
-    const ajusteSelect = document.getElementById('cc-ajuste-localizacao');
-    const ajusteCustomDiv = document.getElementById('cc-ajuste-custom');
-    const ajusteCustomInput = document.getElementById('cc-ajuste-custom-valor');
+    // Ajuste de localização (valorização do local)
+    const ajusteInput = document.getElementById('cc-ajuste-localizacao');
 
-    if (ajusteSelect) {
-      ajusteSelect.addEventListener('change', function() {
-        if (this.value === 'custom') {
-          if (ajusteCustomDiv) ajusteCustomDiv.style.display = 'block';
-          const customVal = parseInt(ajusteCustomInput?.value) || 0;
-          state.config.ajusteLocalizacao = customVal;
-        } else {
-          if (ajusteCustomDiv) ajusteCustomDiv.style.display = 'none';
-          state.config.ajusteLocalizacao = parseInt(this.value) || 0;
+    if (ajusteInput) {
+      // Aplicar máscara de porcentagem no formato brasileiro
+      ajusteInput.addEventListener('input', function() {
+        // Guardar posição do cursor e se é negativo
+        const isNegative = this.value.startsWith('-');
+        // Remover tudo exceto dígitos
+        let value = this.value.replace(/[^\d]/g, '');
+
+        if (value === '') {
+          this.value = isNegative ? '-' : '';
+          state.config.ajusteLocalizacao = 0;
+          calculate();
+          return;
         }
-        calculate();
-      });
-    }
 
-    if (ajusteCustomInput) {
-      ajusteCustomInput.addEventListener('input', function() {
-        state.config.ajusteLocalizacao = parseInt(this.value) || 0;
+        let numValue = parseInt(value, 10);
+        // Limitar ao máximo de 50000 (500,00%)
+        if (numValue > 50000) numValue = 50000;
+
+        // Formatar com 2 casas decimais no formato brasileiro
+        const formatted = (numValue / 100).toLocaleString('pt-BR', {
+          minimumFractionDigits: 2,
+          maximumFractionDigits: 2
+        });
+
+        this.value = isNegative ? '-' + formatted : formatted;
+
+        let finalValue = isNegative ? -(numValue / 100) : (numValue / 100);
+        if (finalValue < -80) finalValue = -80;
+        if (finalValue > 500) finalValue = 500;
+
+        state.config.ajusteLocalizacao = finalValue;
         calculate();
       });
+
+      // Permitir digitar o sinal de menos
+      ajusteInput.addEventListener('keydown', function(e) {
+        if (e.key === '-' && !this.value.includes('-')) {
+          e.preventDefault();
+          const currentValue = this.value;
+          this.value = '-' + currentValue;
+          const numValue = parseFloat(this.value.replace(/\./g, '').replace(',', '.')) || 0;
+          state.config.ajusteLocalizacao = Math.max(-80, numValue);
+          calculate();
+        }
+      });
+
+      // Formatar valor inicial
+      if (ajusteInput.value === '0' || ajusteInput.value === '') {
+        ajusteInput.value = '0,00';
+      }
     }
 
     // Material changes

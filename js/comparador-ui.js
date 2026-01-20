@@ -812,9 +812,14 @@ const Comparador2 = {
     });
   },
 
-  calcularInflacaoAcumulada(dados) {
+  calcularInflacaoAcumulada(dados, inflacaoCustom = 0) {
     let acumulada = 1;
-    dados.forEach(d => { acumulada *= (1 + d.inflacao_ipca / 100); });
+    // Se inflação customizada, converter taxa anual para mensal
+    const inflacaoMensalCustom = inflacaoCustom > 0 ? (Math.pow(1 + inflacaoCustom / 100, 1/12) - 1) * 100 : 0;
+    dados.forEach(d => {
+      const inflacaoMes = inflacaoCustom > 0 ? inflacaoMensalCustom : d.inflacao_ipca;
+      acumulada *= (1 + inflacaoMes / 100);
+    });
     return (acumulada - 1) * 100;
   },
 
@@ -864,13 +869,15 @@ const Comparador2 = {
     return retorno;
   },
 
-  calcularEvolucao(ativo, dados, valorInicial, dolarExtra = 0) {
+  calcularEvolucao(ativo, dados, valorInicial, dolarExtra = 0, inflacaoCustom = 0) {
     // Usar periodo para dados mensais
     const primeiroRegistro = dados[0];
     const periodoInicial = primeiroRegistro.periodo || `${primeiroRegistro.ano}`;
     const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
+    // Se inflação customizada, converter taxa anual para mensal
+    const inflacaoMensalCustom = inflacaoCustom > 0 ? (Math.pow(1 + inflacaoCustom / 100, 1/12) - 1) * 100 : 0;
 
     dados.forEach((d, index) => {
       // Obter dado do mês anterior para cálculos que precisam de variação
@@ -880,7 +887,9 @@ const Comparador2 = {
       const retorno = this.getRetornoAjustado(ativo, d, dolarExtra, dadoAnterior);
 
       valorNominal *= (1 + retorno / 100);
-      inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
+      // Usar inflação customizada se informada, senão usar a histórica
+      const inflacaoMes = inflacaoCustom > 0 ? inflacaoMensalCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMes / 100);
 
       evolucao.push({
         periodo: d.periodo || `${d.ano}`,
@@ -948,10 +957,12 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DolarExtra')?.value) || 0;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2ImoveisRenda')?.value) || 0;
+    const inflacaoCustom = this.parsePercentage(document.getElementById('comp2InflacaoCustom')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.inflacaoCustom = inflacaoCustom;
 
     // Pegar ativos selecionados dos chips
     const ativosSelecionados = [];
@@ -974,10 +985,10 @@ const Comparador2 = {
 
     // Calcular evolução de cada ativo
     const resultados = {};
-    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados);
+    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados, inflacaoCustom);
 
     ativosSelecionados.forEach(ativo => {
-      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial, dolarExtra);
+      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial, dolarExtra, inflacaoCustom);
     });
 
     // Salvar para toggle nominal/real
@@ -1227,10 +1238,12 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DueloDolarExtra')?.value) || 0;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2DueloImoveisRenda')?.value) || 0;
+    const inflacaoCustom = this.parsePercentage(document.getElementById('comp2DueloInflacaoCustom')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.inflacaoCustom = inflacaoCustom;
 
     const config = this.dueloConfigs[dueloSelecionado];
     if (!config) return;
@@ -1244,11 +1257,11 @@ const Comparador2 = {
     }
 
     // Calcular evolução para ambos os ativos
-    const resultado1 = this.calcularEvolucaoDuelo(config.ativo1.key, dadosPeriodo, valorInicial, 0, dolarExtra);
-    const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, 0, dolarExtra);
+    const resultado1 = this.calcularEvolucaoDuelo(config.ativo1.key, dadosPeriodo, valorInicial, inflacaoCustom, dolarExtra);
+    const resultado2 = this.calcularEvolucaoDuelo(config.ativo2.key, dadosPeriodo, valorInicial, inflacaoCustom, dolarExtra);
 
     // Armazenar para toggle
-    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo, dueloSelecionado };
+    this.dueloResultados = { config, resultado1, resultado2, valorInicial, periodoInicio, periodoFim, dadosPeriodo, dueloSelecionado, inflacaoCustom };
 
     // Renderizar todos os componentes
     this.renderPlacarDuelo(config, resultado1, resultado2);
@@ -1267,6 +1280,8 @@ const Comparador2 = {
     let mesesPositivos = 0;
     let maxDrawdown = 0;
     let peakValue = valorInicial;
+    // Se inflação customizada, converter taxa anual para mensal
+    const inflacaoMensalCustom = inflacaoCustom > 0 ? (Math.pow(1 + inflacaoCustom / 100, 1/12) - 1) * 100 : 0;
 
     dados.forEach((d, index) => {
       // Obter dado do mês anterior para cálculos que precisam de variação
@@ -1279,8 +1294,9 @@ const Comparador2 = {
       if (retorno > 0) mesesPositivos++;
 
       valorNominal *= (1 + retorno / 100);
-      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom : d.inflacao_ipca;
-      inflacaoAcumulada *= (1 + inflacaoMensal / 100);
+      // Usar inflação customizada (já convertida para mensal) se informada, senão usar a histórica
+      const inflacaoMes = inflacaoCustom > 0 ? inflacaoMensalCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMes / 100);
 
       if (valorNominal > peakValue) peakValue = valorNominal;
       const drawdown = (peakValue - valorNominal) / peakValue * 100;
@@ -1650,10 +1666,12 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2CarteiraDolarExtra')?.value) || 0;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2CarteiraImoveisRenda')?.value) || 0;
+    const inflacaoCustom = this.parsePercentage(document.getElementById('comp2CarteiraInflacaoCustom')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.imoveisRenda = imoveisRenda;
+    this.ajustes.inflacaoCustom = inflacaoCustom;
 
     // Coletar alocações (apenas da aba Carteira)
     const alocacao = {};
@@ -1681,13 +1699,13 @@ const Comparador2 = {
 
     // Calcular evolução da carteira e ativos individuais
     // Todos começam do mesmo valor inicial para comparação justa no gráfico
-    const resultados = { carteira: this.calcularEvolucaoCarteira(alocacao, dadosFiltrados, valorInicial, dolarExtra) };
+    const resultados = { carteira: this.calcularEvolucaoCarteira(alocacao, dadosFiltrados, valorInicial, dolarExtra, inflacaoCustom) };
 
     Object.keys(alocacao).forEach(ativo => {
-      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial, dolarExtra);
+      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial, dolarExtra, inflacaoCustom);
     });
 
-    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados);
+    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados, inflacaoCustom);
 
     // Mostrar container de resultados
     const resultsContainer = document.getElementById('comp2CarteiraResults');
@@ -1696,10 +1714,12 @@ const Comparador2 = {
     this.renderCarteiraResults(resultados, dadosFiltrados, valorInicial, inflacaoAcumulada, alocacao);
   },
 
-  calcularEvolucaoCarteira(alocacao, dados, valorInicial, dolarExtra = 0) {
+  calcularEvolucaoCarteira(alocacao, dados, valorInicial, dolarExtra = 0, inflacaoCustom = 0) {
     const evolucao = [{ periodo: 'Início', nominal: valorInicial, real: valorInicial }];
     let valorNominal = valorInicial;
     let inflacaoAcumulada = 1;
+    // Se inflação customizada, converter taxa anual para mensal
+    const inflacaoMensalCustom = inflacaoCustom > 0 ? (Math.pow(1 + inflacaoCustom / 100, 1/12) - 1) * 100 : 0;
 
     dados.forEach((d, index) => {
       // Obter dado do mês anterior para cálculos que precisam de variação
@@ -1713,7 +1733,9 @@ const Comparador2 = {
       });
 
       valorNominal *= (1 + retornoCarteira / 100);
-      inflacaoAcumulada *= (1 + d.inflacao_ipca / 100);
+      // Usar inflação customizada (já convertida para mensal) se informada, senão usar a histórica
+      const inflacaoMes = inflacaoCustom > 0 ? inflacaoMensalCustom : d.inflacao_ipca;
+      inflacaoAcumulada *= (1 + inflacaoMes / 100);
 
       evolucao.push({
         periodo: d.periodo || `${d.ano}`,
@@ -2162,6 +2184,7 @@ const Comparador2 = {
     // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2RebalDolarExtra')?.value) || 0;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2RebalImoveisRenda')?.value) || 0;
+    const inflacaoCustom = this.parsePercentage(document.getElementById('comp2RebalInflacaoCustom')?.value) || 0;
 
     // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
@@ -2212,16 +2235,16 @@ const Comparador2 = {
 
     // Simular COM rebalanceamento
     const resultadoComRebal = this.simularCarteiraComRebalanceamento(
-      alocacaoConfig, dadosFiltrados, valorInicial, 0, dolarExtra
+      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom, dolarExtra
     );
 
     // Simular SEM rebalanceamento (buy and hold)
     const resultadoSemRebal = this.simularCarteiraSemRebalanceamento(
-      alocacaoConfig, dadosFiltrados, valorInicial, 0, dolarExtra
+      alocacaoConfig, dadosFiltrados, valorInicial, inflacaoCustom, dolarExtra
     );
 
     // Simular cada ativo individual para ranking
-    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial, 0, dolarExtra);
+    const resultadosIndividuais = this.simularAtivosIndividuais(dadosFiltrados, valorInicial, inflacaoCustom, dolarExtra);
 
     // Salvar para toggle do gráfico
     this.rebalData = { resultadoComRebal, resultadoSemRebal, resultadosIndividuais, alocacaoConfig };
@@ -2309,8 +2332,9 @@ const Comparador2 = {
       let valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
       retornosMensais.push((valorTotal / valorAntes - 1) * 100);
 
-      // Atualizar inflação
-      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom / 12 : dadoMes.inflacao_ipca;
+      // Atualizar inflação (converter taxa anual para mensal com fórmula de juros compostos)
+      const inflacaoMensalCustom = inflacaoCustom > 0 ? (Math.pow(1 + inflacaoCustom / 100, 1/12) - 1) * 100 : 0;
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoMensalCustom : dadoMes.inflacao_ipca;
       inflacaoAcumulada *= (1 + inflacaoMensal / 100);
 
       // Verificar necessidade de rebalanceamento
@@ -2497,7 +2521,9 @@ const Comparador2 = {
       const valorTotal = Object.values(carteira).reduce((a, b) => a + b, 0);
       retornosMensais.push((valorTotal / valorAntes - 1) * 100);
 
-      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoCustom / 12 : dadoMes.inflacao_ipca;
+      // Converter taxa anual para mensal com fórmula de juros compostos
+      const inflacaoMensalCustom = inflacaoCustom > 0 ? (Math.pow(1 + inflacaoCustom / 100, 1/12) - 1) * 100 : 0;
+      const inflacaoMensal = inflacaoCustom > 0 ? inflacaoMensalCustom : dadoMes.inflacao_ipca;
       inflacaoAcumulada *= (1 + inflacaoMensal / 100);
 
       evolucao.push({
@@ -2557,7 +2583,7 @@ const Comparador2 = {
     ativos.forEach(ativo => {
       const temDados = dados.some(d => d[ativo] !== null && d[ativo] !== undefined);
       if (temDados) {
-        const resultado = this.calcularEvolucao(ativo, dados, valorInicial, dolarExtra);
+        const resultado = this.calcularEvolucao(ativo, dados, valorInicial, dolarExtra, inflacaoCustom);
         resultados[ativo] = resultado;
       }
     });

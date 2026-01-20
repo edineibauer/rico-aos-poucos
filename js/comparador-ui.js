@@ -758,16 +758,20 @@ const Comparador2 = {
       'comp2DolarExtra',
       'comp2RendaMaisTaxa',
       'comp2ImoveisRenda',
+      'comp2InflacaoCustom',
       // Aba Duelo
       'comp2DueloDolarExtra',
       'comp2DueloRendaMaisTaxa',
       'comp2DueloImoveisRenda',
+      'comp2DueloInflacaoCustom',
       // Aba Carteira
       'comp2CarteiraDolarExtra',
       'comp2CarteiraImoveisRenda',
+      'comp2CarteiraInflacaoCustom',
       // Aba Rebalancear
       'comp2RebalDolarExtra',
       'comp2RebalImoveisRenda',
+      'comp2RebalInflacaoCustom',
       'comp2Tolerancia'
     ];
 

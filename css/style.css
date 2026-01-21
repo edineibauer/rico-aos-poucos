@@ -3367,6 +3367,8 @@ body.home-page {
 
 .card-publicacoes {
   cursor: default;
+  max-height: 704px;
+  overflow-y: auto;
 }
 
 .card-publicacoes .card-header {

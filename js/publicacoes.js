@@ -236,18 +236,25 @@ const Publicacoes = {
       activateItem(nextIndex);
     };
 
-    const startAutoRotate = () => {
+    const resetAutoRotate = () => {
+      clearInterval(autoRotateInterval);
       autoRotateInterval = setInterval(nextItem, 7000);
     };
 
     const stopAutoRotate = () => {
       clearInterval(autoRotateInterval);
+      autoRotateInterval = null;
+    };
+
+    const startAutoRotate = () => {
+      if (!autoRotateInterval) {
+        autoRotateInterval = setInterval(nextItem, 7000);
+      }
     };
 
     // Click handlers
     items.forEach((item, index) => {
       item.addEventListener('click', () => {
-        stopAutoRotate();
         activateItem(index);
 
         // Smooth scroll on mobile
@@ -261,13 +268,14 @@ const Publicacoes = {
           }
         }
 
-        startAutoRotate();
+        // Reset timer after interaction
+        resetAutoRotate();
       });
     });
 
-    // Hover handlers
+    // Hover handlers - stop on hover, restart on leave
     pubList.addEventListener('mouseenter', stopAutoRotate);
-    pubList.addEventListener('mouseleave', startAutoRotate);
+    pubList.addEventListener('mouseleave', resetAutoRotate);
 
     // Start auto-rotate
     startAutoRotate();

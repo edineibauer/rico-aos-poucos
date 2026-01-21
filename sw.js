@@ -1,4 +1,4 @@
-const APP_VERSION = '4.1';
+const APP_VERSION = '4.2';
 const CACHE_NAME = `rico-aos-poucos-v${APP_VERSION}`;
 
 // Recursos críticos - cacheados na instalação (mínimo para funcionar)
@@ -10,6 +10,9 @@ const CRITICAL_ASSETS = [
   './js/comparador.js',
   './js/comparador-ui.js',
   './js/page-header.js',
+  './js/footer.js',
+  './js/publicacoes.js',
+  './js/comments.js',
   './data/historico-mensal.json',
   './manifest.json',
   './favicon.svg',
@@ -26,20 +29,10 @@ const PAGES_TO_CACHE = [
   './artigos/index.html',
   './desempenho/index.html',
   './sobre/index.html',
-  './ferramentas-financeiras/index.html',
-  './en/index.html',
-  './en/setores/index.html',
-  './en/artigos/index.html',
-  './en/desempenho/index.html',
-  './en/sobre/index.html',
-  './es/index.html',
-  './es/setores/index.html',
-  './es/artigos/index.html',
-  './es/desempenho/index.html',
-  './es/sobre/index.html'
+  './ferramentas-financeiras/index.html'
 ];
 
-// Instalar - apenas recursos críticos (rápido)
+// Instalar - cachear recursos críticos e forçar ativação imediata
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME)
@@ -48,7 +41,7 @@ self.addEventListener('install', (event) => {
   );
 });
 
-// Ativar - limpar caches antigos
+// Ativar - limpar caches antigos e assumir controle imediatamente
 self.addEventListener('activate', (event) => {
   event.waitUntil(
     caches.keys()
@@ -85,7 +78,7 @@ function isCacheablePage(url) {
   });
 }
 
-// Verificar se é asset crítico
+// Verificar se é asset crítico (CSS, JS, etc)
 function isCriticalAsset(url) {
   const path = new URL(url).pathname;
   return CRITICAL_ASSETS.some((asset) => path.endsWith(asset.replace('./', '/')));
@@ -108,17 +101,21 @@ self.addEventListener('fetch', (event) => {
     return;
   }
 
-  // Assets críticos (CSS, JS, icons): cache-first
+  // Assets críticos (CSS, JS, icons): stale-while-revalidate
+  // Serve do cache imediatamente, mas atualiza em background
   if (isCriticalAsset(request.url)) {
     event.respondWith(
-      caches.match(request).then((cached) => {
-        if (cached) return cached;
-        return fetch(request).then((response) => {
-          if (response.ok) {
-            const clone = response.clone();
-            caches.open(CACHE_NAME).then((cache) => cache.put(request, clone));
-          }
-          return response;
+      caches.open(CACHE_NAME).then((cache) => {
+        return cache.match(request).then((cachedResponse) => {
+          const fetchPromise = fetch(request).then((networkResponse) => {
+            if (networkResponse.ok) {
+              cache.put(request, networkResponse.clone());
+            }
+            return networkResponse;
+          }).catch(() => cachedResponse);
+
+          // Retorna cache imediatamente se disponível, senão espera a rede
+          return cachedResponse || fetchPromise;
         });
       })
     );
@@ -159,6 +156,11 @@ self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'GET_VERSION') {
     event.ports[0].postMessage({ version: APP_VERSION });
   }
+
+  // Forçar atualização do SW
+  if (event.data && event.data.type === 'SKIP_WAITING') {
+    self.skipWaiting();
+  }
 });
 
 // Cachear todas as páginas em background
@@ -169,13 +171,10 @@ async function cacheAllPages() {
   for (const page of PAGES_TO_CACHE) {
     const url = page.replace('./', basePath);
     try {
-      // Verificar se já está em cache
-      const cached = await cache.match(url);
-      if (!cached) {
-        const response = await fetch(url);
-        if (response.ok) {
-          await cache.put(url, response);
-        }
+      // Sempre buscar da rede e atualizar cache
+      const response = await fetch(url);
+      if (response.ok) {
+        await cache.put(url, response);
       }
     } catch (e) {
       // Ignorar erros de páginas individuais

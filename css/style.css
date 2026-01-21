@@ -3985,12 +3985,13 @@ body.home-page {
     display: grid;
     grid-template-columns: 1fr 1.3fr;
     gap: 20px;
-    align-items: start;
+    align-items: stretch;
   }
 
-  /* Card Expectativas menor à esquerda */
+  /* Card Expectativas define a altura base */
   .home-cards-grid .card-expectativas {
-    height: fit-content;
+    display: flex;
+    flex-direction: column;
   }
 
   /* Setores legend dentro do grid - forçar 2 colunas para caber todos */
@@ -3999,11 +4000,17 @@ body.home-page {
     gap: 6px;
   }
 
-  /* Card Publicações maior à direita */
+  /* Card Publicações iguala altura do card-expectativas */
   .home-cards-grid .card-publicacoes {
-    height: fit-content;
-    max-height: 704px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .home-cards-grid .card-publicacoes .card-body {
+    flex: 1;
     overflow-y: auto;
+    min-height: 0;
   }
 
   /* Pub-featured sempre 100% largura */

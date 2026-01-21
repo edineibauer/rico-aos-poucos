@@ -119,6 +119,7 @@ const Publicacoes = {
     container.innerHTML = artigos.map((artigo, index) => {
       const { badge, type } = this.getBadgeInfo(artigo);
       const href = articlesPath + artigo.arquivo;
+      const capa = artigo.capa || '';
 
       return `
         <button class="pub-list-item ${index === 0 ? 'active' : ''}"
@@ -127,7 +128,8 @@ const Publicacoes = {
                 data-badge="${badge}"
                 data-type="${type}"
                 data-title="${artigo.titulo}"
-                data-excerpt="${artigo.descricao}">
+                data-excerpt="${artigo.descricao}"
+                data-capa="${capa}">
           <span class="pub-list-badge ${type}">${badge}</span>
           <span class="pub-list-title">${artigo.titulo}</span>
         </button>
@@ -149,15 +151,23 @@ const Publicacoes = {
       'es': 'Leer más'
     }[lang] || 'Ler mais';
 
+    // Cover image HTML
+    const capaHtml = artigo.capa
+      ? `<div class="pub-featured-image"><img src="${artigo.capa}" alt="${artigo.titulo}" loading="lazy"></div>`
+      : '';
+
     container.innerHTML = `
-      <a href="${href}" class="pub-featured-link" id="pubFeaturedLink">
-        <div class="pub-featured-badge ${type}" id="pubFeaturedBadge">${badge}</div>
-        <h3 class="pub-featured-title" id="pubFeaturedTitle">${artigo.titulo}</h3>
-        <p class="pub-featured-excerpt" id="pubFeaturedExcerpt">${artigo.descricao}</p>
-        <span class="pub-featured-cta">
-          <span>${readMore}</span>
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </span>
+      <a href="${href}" class="pub-featured-link ${artigo.capa ? 'has-cover' : ''}" id="pubFeaturedLink">
+        ${capaHtml}
+        <div class="pub-featured-content">
+          <div class="pub-featured-badge ${type}" id="pubFeaturedBadge">${badge}</div>
+          <h3 class="pub-featured-title" id="pubFeaturedTitle">${artigo.titulo}</h3>
+          <p class="pub-featured-excerpt" id="pubFeaturedExcerpt">${artigo.descricao}</p>
+          <span class="pub-featured-cta">
+            <span>${readMore}</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </span>
+        </div>
       </a>
     `;
   },
@@ -188,6 +198,28 @@ const Publicacoes = {
         pubFeaturedBadge.className = 'pub-featured-badge ' + item.dataset.type;
         pubFeaturedTitle.textContent = item.dataset.title;
         pubFeaturedExcerpt.textContent = item.dataset.excerpt;
+
+        // Update cover image
+        const capa = item.dataset.capa;
+        let imageContainer = pubFeaturedLink.querySelector('.pub-featured-image');
+
+        if (capa) {
+          pubFeaturedLink.classList.add('has-cover');
+          if (imageContainer) {
+            imageContainer.querySelector('img').src = capa;
+            imageContainer.querySelector('img').alt = item.dataset.title;
+          } else {
+            const imgHtml = document.createElement('div');
+            imgHtml.className = 'pub-featured-image';
+            imgHtml.innerHTML = `<img src="${capa}" alt="${item.dataset.title}" loading="lazy">`;
+            pubFeaturedLink.insertBefore(imgHtml, pubFeaturedLink.firstChild);
+          }
+        } else {
+          pubFeaturedLink.classList.remove('has-cover');
+          if (imageContainer) {
+            imageContainer.remove();
+          }
+        }
 
         // Fade animation
         pubFeaturedLink.style.opacity = '0';

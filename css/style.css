@@ -3401,6 +3401,33 @@ body.home-page {
   background: rgba(255, 255, 255, 0.05);
 }
 
+.pub-featured-link.has-cover {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.pub-featured-link.has-cover .pub-featured-content {
+  padding: 16px 20px 20px;
+}
+
+.pub-featured-image {
+  width: 100%;
+  height: 140px;
+  overflow: hidden;
+}
+
+.pub-featured-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.pub-featured-link:hover .pub-featured-image img {
+  transform: scale(1.05);
+}
+
 .pub-featured-badge {
   display: inline-block;
   padding: 4px 10px;

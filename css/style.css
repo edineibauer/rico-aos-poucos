@@ -3367,8 +3367,6 @@ body.home-page {
 
 .card-publicacoes {
   cursor: default;
-  max-height: 704px;
-  overflow-y: auto;
 }
 
 .card-publicacoes .card-header {
@@ -4004,6 +4002,8 @@ body.home-page {
   /* Card Publicações maior à direita */
   .home-cards-grid .card-publicacoes {
     height: fit-content;
+    max-height: 704px;
+    overflow-y: auto;
   }
 
   /* Pub-featured sempre 100% largura */

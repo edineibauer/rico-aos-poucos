@@ -159,7 +159,7 @@ const Footer = {
 
       <div class="footer-bottom">
         <div class="footer-version">
-          <span data-i18n="footer.version">v1.5</span>
+          <span id="app-version">v--</span>
           <span class="separator">•</span>
           <span data-i18n="footer.date">Janeiro 2026</span>
         </div>
@@ -229,6 +229,42 @@ const Footer = {
     gtag('config', this.GA_ID);
   },
 
+  // Get version from Service Worker
+  async updateVersion() {
+    const versionEl = document.getElementById('app-version');
+    if (!versionEl) return;
+
+    // Try to get version from SW
+    if ('serviceWorker' in navigator && navigator.serviceWorker.controller) {
+      try {
+        const messageChannel = new MessageChannel();
+        const versionPromise = new Promise((resolve) => {
+          messageChannel.port1.onmessage = (event) => {
+            resolve(event.data.version);
+          };
+          // Timeout after 2 seconds
+          setTimeout(() => resolve(null), 2000);
+        });
+
+        navigator.serviceWorker.controller.postMessage(
+          { type: 'GET_VERSION' },
+          [messageChannel.port2]
+        );
+
+        const version = await versionPromise;
+        if (version) {
+          versionEl.textContent = `v${version}`;
+          return;
+        }
+      } catch (e) {
+        // Fallback to default
+      }
+    }
+
+    // Fallback: show generic version
+    versionEl.textContent = 'v4.2';
+  },
+
   // Main initialization
   init() {
     // Initialize Google Analytics first
@@ -266,6 +302,9 @@ const Footer = {
     }
 
     container.innerHTML = footerHTML;
+
+    // Update version from SW
+    this.updateVersion();
   }
 };
 

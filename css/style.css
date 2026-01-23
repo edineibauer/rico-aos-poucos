@@ -8629,3 +8629,461 @@ body.home-page {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ==========================================
+   Header Navigation Menu
+   ========================================== */
+
+/* Header layout updates */
+body.home-page .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+body.home-page .app-header .header-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Desktop Navigation */
+.desktop-nav {
+  display: none;
+  align-items: center;
+  gap: 8px;
+}
+
+.desktop-nav .nav-link {
+  padding: 8px 14px;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.desktop-nav .nav-link:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+/* Dropdown */
+.nav-dropdown {
+  position: relative;
+}
+
+.nav-dropdown .dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  min-width: 220px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 8px;
+  margin-top: 8px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+  z-index: 100;
+}
+
+.nav-dropdown.open .dropdown-menu {
+  display: block;
+}
+
+.nav-dropdown .dropdown-menu a {
+  display: block;
+  padding: 10px 14px;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.nav-dropdown .dropdown-menu a:hover {
+  color: var(--text-primary);
+  background: var(--bg-tertiary);
+}
+
+/* Header Action Buttons */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.header-btn:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-color: var(--primary-light);
+}
+
+/* Hide menu button on desktop */
+@media (min-width: 900px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .desktop-nav {
+    display: flex;
+  }
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  z-index: 1001;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.mobile-menu-overlay.show {
+  display: block;
+  opacity: 1;
+}
+
+/* Mobile Menu Drawer */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -300px;
+  width: 300px;
+  max-width: 85vw;
+  height: 100vh;
+  background: var(--bg-secondary);
+  z-index: 1002;
+  transition: right 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.mobile-menu.open {
+  right: 0;
+}
+
+.mobile-menu-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mobile-menu-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--bg-tertiary);
+  border: none;
+  border-radius: 8px;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu-close:hover {
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+/* Mobile Search */
+.mobile-menu-search {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.mobile-menu-search form {
+  display: flex;
+  gap: 8px;
+}
+
+.mobile-search-input {
+  flex: 1;
+  padding: 12px 16px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  color: var(--text-primary);
+  font-size: 0.9rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.mobile-search-input:focus {
+  border-color: var(--primary-light);
+}
+
+.mobile-search-input::placeholder {
+  color: var(--text-muted);
+}
+
+.mobile-search-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: var(--primary);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.mobile-search-btn:hover {
+  background: var(--primary-light);
+}
+
+/* Mobile Navigation Links */
+.mobile-menu-links {
+  flex: 1;
+  padding: 12px 0;
+}
+
+.mobile-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+}
+
+.mobile-nav-link:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.mobile-nav-link .nav-icon {
+  font-size: 1.1rem;
+  width: 24px;
+  text-align: center;
+}
+
+.mobile-nav-section {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+}
+
+.mobile-nav-section-title {
+  display: block;
+  padding: 8px 20px 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ==========================================
+   FIIs Card (Home)
+   ========================================== */
+
+.home-featured-row {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.card-fiis-featured {
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-fiis-featured:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(30, 60, 114, 0.4);
+  color: white;
+}
+
+.fiis-visual {
+  position: relative;
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fiis-icon-main {
+  font-size: 3rem;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.fiis-floating {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.fiis-floating span {
+  position: absolute;
+  font-size: 1.2rem;
+  opacity: 0.6;
+  animation: floatFiis 3s ease-in-out infinite;
+}
+
+.fiis-floating span:nth-child(1) {
+  top: 20%;
+  left: 15%;
+  animation-delay: 0s;
+}
+
+.fiis-floating span:nth-child(2) {
+  top: 30%;
+  right: 15%;
+  animation-delay: 0.5s;
+}
+
+.fiis-floating span:nth-child(3) {
+  bottom: 20%;
+  left: 25%;
+  animation-delay: 1s;
+}
+
+@keyframes floatFiis {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.fiis-content {
+  padding: 0 24px 24px;
+}
+
+.fiis-badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: rgba(255,255,255,0.2);
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+}
+
+.fiis-content h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.fiis-content p {
+  font-size: 0.85rem;
+  opacity: 0.9;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.fiis-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.fiis-cta svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.2s ease;
+}
+
+.card-fiis-featured:hover .fiis-cta svg {
+  transform: translateX(4px);
+}
+
+/* Desktop: FIIs and Construção side by side */
+@media (min-width: 768px) {
+  .home-featured-row {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .card-fiis-featured,
+  .home-featured-row .card-construcao-featured {
+    flex: 1;
+  }
+
+  .card-fiis-featured {
+    flex-direction: row;
+  }
+
+  .fiis-visual {
+    width: 140px;
+    flex-shrink: 0;
+  }
+
+  .fiis-content {
+    padding: 24px 24px 24px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .fiis-visual {
+    width: 160px;
+  }
+
+  .fiis-icon-main {
+    font-size: 3.5rem;
+  }
+
+  .fiis-content h3 {
+    font-size: 1.3rem;
+  }
+}

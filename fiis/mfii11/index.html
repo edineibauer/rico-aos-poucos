@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Analise completa do MFII11 - Merito Desenvolvimento Imobiliario: indicadores, riscos, taxas, exposicao ao MCMV e nossa opiniao.">
+  <meta name="theme-color" content="#0d1117">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/mfii11/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="MFII11 - Analise Completa - Rico aos Poucos">
+  <meta property="og:description" content="Analise detalhada do MFII11: indicadores, riscos, taxas elevadas, exposicao ao MCMV e conclusao.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/mfii11/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MFII11 - Analise Completa">
+  <meta name="twitter:description" content="Analise detalhada do MFII11 com indicadores, riscos e conclusao.">
+
+  <!-- Keywords -->
+  <meta name="keywords" content="MFII11, Merito Desenvolvimento, FII, fundo imobiliario, MCMV, Minha Casa Minha Vida, dividend yield, P/VP, analise">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="shortcut icon" href="../../icon-192.png">
+  <title>MFII11 - Analise Completa - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .header-back:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-back svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .app-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .app-subtitle {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Hero section */
+    .fii-hero {
+      padding: 24px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      margin-bottom: 24px;
+    }
+
+    .fii-hero-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 16px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+
+    .fii-ticker-main {
+      font-size: 2rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .fii-nome-main {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin-top: 4px;
+    }
+
+    .fii-sentimento-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 8px 16px;
+      border-radius: 24px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .fii-sentimento-badge.neutro {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    .fii-sentimento-badge.otimista {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+
+    .fii-sentimento-badge.pessimista {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+
+    /* Indicadores grid */
+    .indicadores-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+
+    .indicador-box {
+      padding: 16px;
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      text-align: center;
+    }
+
+    .indicador-box .label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .indicador-box .valor {
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .indicador-box .valor.positivo {
+      color: var(--bullish);
+    }
+
+    .indicador-box .valor.negativo {
+      color: var(--bearish);
+    }
+
+    .indicador-box .detalhe {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    /* Sections */
+    .section {
+      margin-bottom: 24px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      margin: 0 0 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .section-title .icon {
+      font-size: 1.2rem;
+    }
+
+    /* Info cards */
+    .info-card {
+      padding: 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+    }
+
+    .info-card p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin: 0 0 12px;
+    }
+
+    .info-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-card strong {
+      color: var(--text-primary);
+    }
+
+    /* Lists */
+    .pros-cons-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    .pros-card, .cons-card {
+      padding: 20px;
+      border-radius: 12px;
+    }
+
+    .pros-card {
+      background: rgba(63, 185, 80, 0.08);
+      border: 1px solid rgba(63, 185, 80, 0.2);
+    }
+
+    .cons-card {
+      background: rgba(248, 81, 73, 0.08);
+      border: 1px solid rgba(248, 81, 73, 0.2);
+    }
+
+    .card-title {
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin: 0 0 12px;
+    }
+
+    .pros-card .card-title {
+      color: var(--bullish);
+    }
+
+    .cons-card .card-title {
+      color: var(--bearish);
+    }
+
+    .item-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .item-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      padding: 8px 0;
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .item-list li:last-child {
+      border-bottom: none;
+    }
+
+    .item-list li .icon {
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+
+    /* Taxas section */
+    .taxas-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+
+    .taxa-item {
+      padding: 16px;
+      background: var(--bg-tertiary);
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .taxa-item .label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-bottom: 4px;
+    }
+
+    .taxa-item .valor {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--bearish);
+    }
+
+    .taxa-comentario {
+      padding: 16px;
+      background: rgba(248, 81, 73, 0.08);
+      border-left: 3px solid var(--bearish);
+      border-radius: 0 8px 8px 0;
+    }
+
+    .taxa-comentario p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* Conclusao */
+    .conclusao-card {
+      padding: 24px;
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, var(--bg-card) 100%);
+      border: 1px solid rgba(240, 193, 75, 0.3);
+      border-radius: 16px;
+    }
+
+    .conclusao-resumo {
+      font-size: 1rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin: 0 0 20px;
+    }
+
+    .conclusao-divider {
+      height: 1px;
+      background: var(--border-color);
+      margin: 20px 0;
+    }
+
+    .conclusao-para {
+      margin-bottom: 16px;
+    }
+
+    .conclusao-para h4 {
+      font-size: 0.85rem;
+      color: var(--bullish);
+      margin: 0 0 8px;
+    }
+
+    .conclusao-para p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .conclusao-nao-para h4 {
+      color: var(--bearish);
+    }
+
+    /* Data info */
+    .data-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 16px;
+      background: var(--bg-tertiary);
+      border-radius: 10px;
+      margin-top: 24px;
+    }
+
+    .data-info span {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    /* Disclaimer */
+    .disclaimer {
+      margin-top: 32px;
+      padding: 16px;
+      background: rgba(240, 193, 75, 0.08);
+      border: 1px solid rgba(240, 193, 75, 0.2);
+      border-radius: 10px;
+    }
+
+    .disclaimer p {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin: 0;
+      line-height: 1.5;
+      text-align: center;
+    }
+
+    /* Desktop */
+    @media (min-width: 768px) {
+      .main-content {
+        padding: 32px;
+      }
+
+      .indicadores-grid {
+        grid-template-columns: repeat(4, 1fr);
+      }
+
+      .pros-cons-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .fii-hero {
+        padding: 32px;
+      }
+
+      .fii-ticker-main {
+        font-size: 2.5rem;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "MFII11 - Analise Completa do Merito Desenvolvimento Imobiliario",
+    "description": "Analise detalhada do MFII11: indicadores, riscos, taxas elevadas, exposicao ao MCMV e conclusao.",
+    "url": "https://ricoaospoucos.com.br/fiis/mfii11/",
+    "datePublished": "2026-01-23",
+    "dateModified": "2026-01-23",
+    "author": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "inLanguage": "pt-BR"
+  }
+  </script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="app-header">
+      <a href="../" class="header-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div class="app-title-group">
+        <h1 class="app-name">MFII11</h1>
+        <span class="app-subtitle">Analise de FII</span>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+      <!-- Hero -->
+      <section class="fii-hero">
+        <div class="fii-hero-header">
+          <div>
+            <h2 class="fii-ticker-main">MFII11</h2>
+            <p class="fii-nome-main">Merito Desenvolvimento Imobiliario I</p>
+          </div>
+          <span class="fii-sentimento-badge neutro">➡️ Neutro</span>
+        </div>
+
+        <div class="indicadores-grid">
+          <div class="indicador-box">
+            <div class="label">Cotacao</div>
+            <div class="valor">R$ 74,88</div>
+            <div class="detalhe">Jan/2026</div>
+          </div>
+          <div class="indicador-box">
+            <div class="label">P/VP</div>
+            <div class="valor negativo">0,76</div>
+            <div class="detalhe">24% desconto</div>
+          </div>
+          <div class="indicador-box">
+            <div class="label">Dividend Yield</div>
+            <div class="valor positivo">17,39%</div>
+            <div class="detalhe">12 meses</div>
+          </div>
+          <div class="indicador-box">
+            <div class="label">Dividendo</div>
+            <div class="valor">R$ 1,10</div>
+            <div class="detalhe">Por cota/mes</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Estrategia -->
+      <section class="section">
+        <h3 class="section-title"><span class="icon">🎯</span> Estrategia do Fundo</h3>
+        <div class="info-card">
+          <p>
+            O <strong>MFII11</strong> e um fundo de <strong>desenvolvimento imobiliario</strong> focado em empreendimentos
+            residenciais populares, com forte exposicao ao programa <strong>Minha Casa Minha Vida (MCMV)</strong>.
+          </p>
+          <p>
+            A estrategia consiste em financiar a construcao de imoveis residenciais e lucrar com a venda das unidades.
+            Aproximadamente <strong>60% do portfolio</strong> esta atrelado ao programa MCMV, que oferece demanda resiliente
+            mesmo em cenarios de crise economica.
+          </p>
+          <p>
+            O fundo atua principalmente no <strong>Nordeste</strong> e <strong>interior de Sao Paulo</strong>, com ciclos
+            de desenvolvimento de 18 a 36 meses por empreendimento. Essa abordagem regional e foco em habitacao popular
+            reduz concorrencia com grandes incorporadoras.
+          </p>
+        </div>
+      </section>
+
+      <!-- Taxas -->
+      <section class="section">
+        <h3 class="section-title"><span class="icon">💸</span> Estrutura de Taxas</h3>
+        <div class="info-card">
+          <div class="taxas-grid">
+            <div class="taxa-item">
+              <div class="label">Taxa de Administracao</div>
+              <div class="valor">2,0% a.a.</div>
+            </div>
+            <div class="taxa-item">
+              <div class="label">Taxa de Performance</div>
+              <div class="valor">20% s/ CDI</div>
+            </div>
+          </div>
+          <div class="taxa-comentario">
+            <p>
+              <strong>Atencao:</strong> As taxas do MFII11 estao <strong>acima da media do mercado</strong>. A taxa de
+              administracao de 2% a.a. e considerada elevada para FIIs, e a taxa de performance de 20% sobre o que exceder
+              o CDI reduz os ganhos em cenarios positivos. Fundos de tijolo comparaveis costumam cobrar entre 0,8% e 1,2% de
+              administracao.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- P/VP e Desconto -->
+      <section class="section">
+        <h3 class="section-title"><span class="icon">📉</span> Desconto sobre Valor Patrimonial</h3>
+        <div class="info-card">
+          <p>
+            O MFII11 negocia atualmente com <strong>P/VP de 0,76</strong>, ou seja, um desconto de aproximadamente
+            <strong>24% sobre o valor patrimonial</strong> das cotas.
+          </p>
+          <p>
+            <strong>Por que o desconto?</strong> Fundos de desenvolvimento tendem a negociar com desconto porque:
+          </p>
+          <ul class="item-list">
+            <li><span class="icon">•</span> Riscos de execucao em obras (atrasos, estouros de orcamento)</li>
+            <li><span class="icon">•</span> Incerteza sobre vendas futuras das unidades</li>
+            <li><span class="icon">•</span> Historico de subscricoes dilutivas</li>
+            <li><span class="icon">•</span> Taxas elevadas comparadas ao mercado</li>
+          </ul>
+          <p>
+            <strong>Importante:</strong> P/VP baixo nem sempre significa oportunidade. O desconto pode persistir ou
+            aumentar se os riscos se materializarem.
+          </p>
+        </div>
+      </section>
+
+      <!-- Pros e Cons -->
+      <section class="section">
+        <h3 class="section-title"><span class="icon">⚖️</span> Pontos Positivos e Riscos</h3>
+        <div class="pros-cons-grid">
+          <div class="pros-card">
+            <h4 class="card-title">✅ Pontos Positivos</h4>
+            <ul class="item-list">
+              <li><span class="icon">•</span> Dividend yield atrativo (~17% a.a.)</li>
+              <li><span class="icon">•</span> Desconto significativo sobre valor patrimonial (P/VP 0,76)</li>
+              <li><span class="icon">•</span> MCMV tem demanda resiliente em cenarios de crise</li>
+              <li><span class="icon">•</span> Base diversificada de cotistas (~86.000)</li>
+              <li><span class="icon">•</span> Gestora Merito com track record em desenvolvimento</li>
+            </ul>
+          </div>
+          <div class="cons-card">
+            <h4 class="card-title">⚠️ Riscos Especificos</h4>
+            <ul class="item-list">
+              <li><span class="icon">•</span> Alta concentracao em MCMV (risco de mudancas no programa)</li>
+              <li><span class="icon">•</span> Desconto historico no P/VP pode persistir</li>
+              <li><span class="icon">•</span> Historico de subscricoes com diluicao de cotistas</li>
+              <li><span class="icon">•</span> Taxas elevadas comparadas ao mercado</li>
+              <li><span class="icon">•</span> Risco de execucao em obras e entrega</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Subscricoes -->
+      <section class="section">
+        <h3 class="section-title"><span class="icon">📋</span> Historico de Subscricoes</h3>
+        <div class="info-card">
+          <p>
+            O MFII11 ja realizou emissoes de cotas que resultaram em <strong>diluicao para cotistas</strong> que nao
+            participaram. Em 2022, por exemplo, houve emissao a R$95 por cota, abaixo do valor patrimonial da epoca.
+          </p>
+          <p>
+            <strong>Risco:</strong> Novas emissoes podem ocorrer a qualquer momento, potencialmente diluindo cotistas
+            existentes. E importante acompanhar comunicados da gestora sobre futuras captacoes.
+          </p>
+        </div>
+      </section>
+
+      <!-- Conclusao -->
+      <section class="section">
+        <h3 class="section-title"><span class="icon">💡</span> Nossa Conclusao</h3>
+        <div class="conclusao-card">
+          <p class="conclusao-resumo">
+            O MFII11 oferece dividendos atrativos e negocia com desconto relevante sobre o valor patrimonial,
+            mas carrega riscos especificos de fundos de desenvolvimento e taxas elevadas. E uma opcao para quem
+            busca renda passiva e aceita volatilidade, mas nao e adequado para perfis conservadores.
+          </p>
+          <div class="conclusao-divider"></div>
+          <div class="conclusao-para">
+            <h4>✅ Pode ser adequado para:</h4>
+            <p>Investidores que buscam renda passiva elevada, aceitam riscos de desenvolvimento imobiliario e
+            tem horizonte de medio/longo prazo. Ideal para diversificacao de carteira de FIIs, nao como posicao
+            concentrada.</p>
+          </div>
+          <div class="conclusao-para conclusao-nao-para">
+            <h4>❌ Nao indicado para:</h4>
+            <p>Investidores conservadores, quem busca preservacao de capital ou tem baixa tolerancia a volatilidade.
+            Tambem nao e adequado para quem nao consegue acompanhar comunicados sobre novas emissoes.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Data info -->
+      <div class="data-info">
+        <span>Gestora: Merito Investimentos</span>
+        <span>Atualizado: 23/01/2026</span>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer">
+        <p>
+          <strong>Aviso:</strong> Este conteudo e puramente educacional e representa nossa opiniao pessoal.
+          Nao e recomendacao de compra ou venda de ativos. Faca sua propria analise antes de investir.
+          Rentabilidade passada nao garante rentabilidade futura.
+        </p>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="page-footer" style="padding: 12px 16px; text-align: center; border-top: 1px solid var(--border-color); background: var(--bg-secondary);">
+      <a href="../" style="display: inline-flex; align-items: center; gap: 6px; color: var(--primary-light); font-size: 0.85rem; text-decoration: none;">
+        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+        Voltar para lista de FIIs
+      </a>
+      <p style="font-size: 0.75rem; color: var(--text-muted); margin: 8px 0 0;">
+        Conteudo educacional - Nao e recomendacao de investimento
+      </p>
+    </footer>
+  </div>
+</body>
+</html>

@@ -39,21 +39,21 @@ Adicionar em todas as paginas:
 
 ## Estrutura de Setores
 
-### Alocacao Atual (Jan/2026)
-- Dolar: 25%
-- Caixa: 20%
-- TLT: 15%
+### Alocacao Atual (Jan/2026 - Atualizado 27/01)
+- Dolar: 15%
+- Caixa: 15%
+- TLT: 10%
 - Imoveis: 15%
-- FIIs: 10%
+- FIIs: 20%
 - IPCA+: 10%
-- IBOV: 5%
+- IBOV: 15%
 - Ouro: 0%
 - S&P500: 0%
 - Bitcoin: 0%
 
 ### Sentimentos
-- **Otimistas**: Dolar, Caixa, TLT
-- **Neutros**: Imoveis, FIIs, IPCA+, IBOV, Ouro
+- **Otimistas**: FIIs, IBOV
+- **Neutros**: Dolar, Caixa, TLT, Imoveis, IPCA+, Ouro
 - **Pessimistas**: S&P500, Bitcoin
 
 ## Publicacoes

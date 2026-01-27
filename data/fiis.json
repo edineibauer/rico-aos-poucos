@@ -1,0 +1,133 @@
+{
+  "ultimaAtualizacao": "2026-01-23",
+  "versao": "1.0",
+
+  "segmentos": {
+    "desenvolvimento": {
+      "id": "desenvolvimento",
+      "nome": "Desenvolvimento",
+      "icone": "🏗️",
+      "descricao": "FIIs focados em construir e vender imóveis"
+    },
+    "tijolo": {
+      "id": "tijolo",
+      "nome": "Tijolo",
+      "icone": "🏢",
+      "descricao": "Fundos que investem em imóveis físicos para renda"
+    },
+    "papel": {
+      "id": "papel",
+      "nome": "Papel",
+      "icone": "📄",
+      "descricao": "FIIs que investem em CRIs e recebíveis imobiliários"
+    },
+    "hibrido": {
+      "id": "hibrido",
+      "nome": "Híbrido",
+      "icone": "🔀",
+      "descricao": "Combinam tijolo e papel"
+    },
+    "fof": {
+      "id": "fof",
+      "nome": "Fundos de Fundos",
+      "icone": "📊",
+      "descricao": "FIIs que investem em cotas de outros FIIs"
+    }
+  },
+
+  "sentimentos": {
+    "otimista": {
+      "id": "otimista",
+      "label": "Otimista",
+      "cor": "#3fb950",
+      "icone": "📈"
+    },
+    "neutro": {
+      "id": "neutro",
+      "label": "Neutro",
+      "cor": "#f0c14b",
+      "icone": "➡️"
+    },
+    "pessimista": {
+      "id": "pessimista",
+      "label": "Pessimista",
+      "cor": "#f85149",
+      "icone": "📉"
+    }
+  },
+
+  "fiis": [
+    {
+      "id": "mfii11",
+      "ticker": "MFII11",
+      "nome": "Mérito Desenvolvimento Imobiliário I",
+      "gestora": "Mérito Investimentos",
+      "segmento": "desenvolvimento",
+      "subsegmento": "Residencial MCMV",
+      "sentimento": "neutro",
+      "dataAnalise": "2026-01-23",
+
+      "indicadores": {
+        "cotacao": 78.79,
+        "pvp": 0.78,
+        "dividendYield": 16.56,
+        "dividendoMensal": 1.09,
+        "patrimonioLiquido": 669900000,
+        "liquidezMediaDiaria": 1480000,
+        "cotistas": 86000,
+        "vpCota": 101.01
+      },
+
+      "taxas": {
+        "administracao": 2.0,
+        "performance": 20,
+        "benchmarkPerformance": "CDI",
+        "comentarioTaxas": "Taxas acima da média do mercado. Taxa de administração de 2% a.a. é elevada, e taxa de performance de 20% sobre o que exceder CDI reduz ganhos em cenários positivos."
+      },
+
+      "estrategia": {
+        "resumo": "Fundo de desenvolvimento focado em empreendimentos residenciais populares, com forte exposição ao programa Minha Casa Minha Vida (MCMV).",
+        "exposicaoMCMV": 60,
+        "focoGeografico": "Principalmente Nordeste e interior de São Paulo",
+        "cicloMedio": "18 a 36 meses por empreendimento"
+      },
+
+      "riscosEspecificos": [
+        "Alta concentração em MCMV (risco de mudanças no programa)",
+        "Desconto histórico no P/VP pode persistir",
+        "Histórico de subscrições com diluição de cotistas",
+        "Taxas elevadas comparadas ao mercado",
+        "Risco de execução em obras e entrega"
+      ],
+
+      "pontosPositivos": [
+        "Dividend yield atrativo (~17% a.a.)",
+        "Desconto significativo sobre valor patrimonial (P/VP 0.76)",
+        "MCMV tem demanda resiliente em cenários de crise",
+        "Base diversificada de cotistas (~86.000)",
+        "Gestora com track record em desenvolvimento"
+      ],
+
+      "conclusao": {
+        "resumo": "Investimento de alto risco com DY atrativo mas histórico de volatilidade extrema, subscrições problemáticas e taxas elevadas. Nota 5,5/10.",
+        "paraQuem": "Investidores agressivos com capital para subscrições, que aceitam -50% em crises e acompanham ativamente.",
+        "naoParaQuem": "Perfis conservador/moderado, quem busca renda estável ou não pode acompanhar subscrições."
+      },
+
+      "historico": {
+        "ipoData": "2017",
+        "subscricoes": [
+          {
+            "ano": 2022,
+            "descricao": "Emissão a R$95, abaixo do VP da época",
+            "impacto": "Diluição de cotistas que não participaram"
+          }
+        ]
+      },
+
+      "tags": ["MCMV", "desenvolvimento", "alta yield", "desconto P/VP", "Mérito"],
+      "tempoLeitura": 12,
+      "arquivo": "mfii11/index.html"
+    }
+  ]
+}

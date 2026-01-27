@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
 
   <!-- Home Page -->
   <url>
     <loc>https://ricoaospoucos.com.br/</loc>
-    <lastmod>2026-01-19</lastmod>
+    <lastmod>2026-01-23</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -145,6 +147,22 @@
     <priority>0.8</priority>
   </url>
 
+  <!-- Analise de FIIs Index -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FII: MFII11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/mfii11/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
   <!-- Sobre -->
   <url>
     <loc>https://ricoaospoucos.com.br/sobre/</loc>
@@ -191,6 +209,18 @@
     <lastmod>2026-01-20</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://ricoaospoucos.com.br/imagens/bitcoin1.jpg</image:loc>
+      <image:title>Bitcoin: Da Proposta Original à Realidade de 2026</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/JuRju3JZ-Qs/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>Bitcoin: Da Proposta Original à Realidade de 2026</video:title>
+      <video:description>Análise crítica do Bitcoin: proposta de Satoshi Nakamoto vs realidade atual, valor intrínseco, ciclos decrescentes e perspectivas futuras.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=JuRju3JZ-Qs</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/JuRju3JZ-Qs</video:player_loc>
+      <video:publication_date>2026-01-06</video:publication_date>
+    </video:video>
   </url>
 
   <!-- Artigo: Strategy (MSTR) -->
@@ -276,9 +306,29 @@
   <!-- Artigo: O Mercado Ja Precificou -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/o-mercado-ja-precificou.html</loc>
-    <lastmod>2026-01-14</lastmod>
+    <lastmod>2026-01-21</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://ricoaospoucos.com.br/imagens/capa1.jpg</image:loc>
+      <image:title>O Mercado Já Precificou: Por Que Seguir o Consenso Pode Ser Um Erro</image:title>
+    </image:image>
+    <video:video>
+      <video:thumbnail_loc>https://img.youtube.com/vi/XjmdVqhbtlU/maxresdefault.jpg</video:thumbnail_loc>
+      <video:title>O Mercado Já Precificou: Por Que Seguir o Consenso Pode Ser Um Erro</video:title>
+      <video:description>Análise sobre eficiência de mercado, precificação de expectativas e por que a estratégia de não perder pode superar a estratégia de ganhar mais.</video:description>
+      <video:content_loc>https://www.youtube.com/watch?v=XjmdVqhbtlU</video:content_loc>
+      <video:player_loc>https://www.youtube.com/embed/XjmdVqhbtlU</video:player_loc>
+      <video:publication_date>2026-01-14</video:publication_date>
+    </video:video>
+  </url>
+
+  <!-- Busca -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/busca/</loc>
+    <lastmod>2026-01-23</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 
 </urlset>

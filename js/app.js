@@ -56,18 +56,26 @@ function initParallaxBackground() {
   const layers = parallaxBg.querySelectorAll('.parallax-layer, .parallax-particles');
   if (layers.length === 0) return;
 
+  // Disable scroll parallax on mobile - just use CSS animations
+  const isMobile = window.innerWidth < 768 || !window.matchMedia('(hover: hover)').matches;
+
   let ticking = false;
   let lastScrollY = 0;
-  let lastMouseX = 0;
-  let lastMouseY = 0;
 
-  // Parallax on scroll
+  // Max parallax offset to prevent background from disappearing
+  const maxOffset = window.innerHeight * 0.3;
+
+  // Parallax on scroll (desktop only)
   function updateParallax() {
     const scrollY = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    // Normalize scroll position (0 to 1)
+    const scrollProgress = Math.min(scrollY / Math.max(documentHeight, 1), 1);
 
     layers.forEach(layer => {
       const speed = parseFloat(layer.dataset.speed) || 0.2;
-      const yOffset = scrollY * speed;
+      // Use scroll progress instead of raw scroll value
+      const yOffset = scrollProgress * maxOffset * speed;
       layer.style.transform = `translate3d(0, ${yOffset}px, 0)`;
     });
 
@@ -81,28 +89,31 @@ function initParallaxBackground() {
     const mouseX = (e.clientX - centerX) / centerX;
     const mouseY = (e.clientY - centerY) / centerY;
 
+    const scrollY = window.scrollY;
+    const documentHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollProgress = Math.min(scrollY / Math.max(documentHeight, 1), 1);
+
     layers.forEach(layer => {
       const speed = parseFloat(layer.dataset.speed) || 0.2;
       const xOffset = mouseX * 20 * speed;
-      const yOffset = mouseY * 20 * speed + (lastScrollY * speed);
+      const yOffset = mouseY * 20 * speed + (scrollProgress * maxOffset * speed);
       layer.style.transform = `translate3d(${xOffset}px, ${yOffset}px, 0)`;
     });
   }
 
-  // Scroll listener
-  window.addEventListener('scroll', () => {
-    lastScrollY = window.scrollY;
-    if (!ticking) {
-      requestAnimationFrame(updateParallax);
-      ticking = true;
-    }
-  }, { passive: true });
+  // Only add scroll parallax on desktop
+  if (!isMobile) {
+    // Scroll listener
+    window.addEventListener('scroll', () => {
+      lastScrollY = window.scrollY;
+      if (!ticking) {
+        requestAnimationFrame(updateParallax);
+        ticking = true;
+      }
+    }, { passive: true });
 
-  // Mouse move listener (desktop only)
-  if (window.matchMedia('(hover: hover)').matches) {
+    // Mouse move listener
     document.addEventListener('mousemove', (e) => {
-      lastMouseX = e.clientX;
-      lastMouseY = e.clientY;
       requestAnimationFrame(() => updateMouseParallax(e));
     }, { passive: true });
   }

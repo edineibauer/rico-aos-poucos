@@ -1,1278 +1,1327 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MFII11 - Dossiê Completo | Rico aos Poucos</title>
-  <meta name="description" content="Análise investigativa completa do MFII11 - Mérito Desenvolvimento Imobiliário: 13 anos de história, taxas, riscos ocultos e verdade por trás dos números.">
-  <meta name="theme-color" content="#0d1117">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/mfii11/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="MFII11 - Dossiê Completo - Rico aos Poucos">
-  <meta property="og:description" content="Análise investigativa: 13 anos de história, taxas abusivas, riscos ocultos e a verdade que o gestor não conta.">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/mfii11/">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Rico aos Poucos">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="MFII11 - Dossiê Completo">
-  <meta name="twitter:description" content="Análise investigativa: taxas, riscos e a verdade por trás dos números.">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
-  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
-  <title>MFII11 - Dossiê Completo - Rico aos Poucos</title>
-  <link rel="stylesheet" href="../../css/style.css">
-  <style>
-    .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header */
-    .app-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 20px;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .header-back {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: all 0.3s ease;
-    }
-
-    .header-back:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .header-back svg {
-      width: 18px;
-      height: 18px;
-      stroke: currentColor;
-      stroke-width: 2;
-      fill: none;
-    }
-
-    .app-title-group h1 {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin: 0;
-    }
-
-    .app-subtitle {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
-
-    /* Main content */
-    .main-content {
-      flex: 1;
-      padding: 0;
-      max-width: 1000px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    /* Hero Header */
-    .dossie-hero {
-      background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-      color: white;
-      padding: 40px 24px;
-      text-align: center;
-      border-bottom: 4px solid var(--primary-light);
-    }
-
-    .dossie-hero h1 {
-      font-size: 2rem;
-      margin: 0 0 8px;
-      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
-    }
-
-    .dossie-hero .subtitle {
-      font-size: 1rem;
-      opacity: 0.95;
-      margin: 8px 0;
-    }
-
-    .dossie-hero .date {
-      font-size: 0.85rem;
-      opacity: 0.8;
-      margin-top: 12px;
-    }
-
-    /* Alerts */
-    .alert {
-      padding: 20px;
-      margin: 20px;
-      border-radius: 10px;
-      border-left: 5px solid;
-      font-size: 0.9rem;
-      line-height: 1.5;
-    }
-
-    .alert.danger {
-      background: rgba(248, 81, 73, 0.15);
-      border-color: var(--bearish);
-      color: #ff6b6b;
-    }
-
-    .alert.warning {
-      background: rgba(240, 193, 75, 0.15);
-      border-color: var(--neutral);
-      color: #f0c14b;
-    }
-
-    .alert.info {
-      background: rgba(88, 166, 255, 0.15);
-      border-color: #58a6ff;
-      color: #79c0ff;
-    }
-
-    .alert strong {
-      color: inherit;
-    }
-
-    /* Sections */
-    .section {
-      padding: 32px 24px;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .section h2 {
-      color: var(--text-primary);
-      font-size: 1.5rem;
-      margin: 0 0 24px;
-      padding-bottom: 12px;
-      border-bottom: 3px solid var(--primary);
-    }
-
-    .section h3 {
-      color: var(--primary-light);
-      font-size: 1.2rem;
-      margin: 28px 0 16px;
-      padding-left: 12px;
-      border-left: 4px solid var(--primary-light);
-    }
-
-    .section h4 {
-      color: var(--text-primary);
-      font-size: 1rem;
-      margin: 20px 0 12px;
-      font-weight: 600;
-    }
-
-    .section p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-      line-height: 1.6;
-      margin: 0 0 12px;
-    }
-
-    /* Metrics Grid */
-    .metrics-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 16px;
-      margin: 24px 0;
-    }
-
-    .metric-card {
-      padding: 20px;
-      border-radius: 12px;
-      text-align: center;
-      color: white;
-    }
-
-    .metric-card.danger {
-      background: linear-gradient(135deg, #eb3349 0%, #f45c43 100%);
-    }
-
-    .metric-card.warning {
-      background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    }
-
-    .metric-card.info {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    }
-
-    .metric-card.success {
-      background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);
-    }
-
-    .metric-card .label {
-      font-size: 0.75rem;
-      opacity: 0.9;
-      margin-bottom: 4px;
-    }
-
-    .metric-card .value {
-      font-size: 1.6rem;
-      font-weight: 700;
-      margin: 8px 0;
-    }
-
-    .metric-card .subtext {
-      font-size: 0.7rem;
-      opacity: 0.85;
-    }
-
-    /* Red Flag Box */
-    .red-flag {
-      background: rgba(248, 81, 73, 0.1);
-      border: 1px solid rgba(248, 81, 73, 0.3);
-      border-left: 5px solid var(--bearish);
-      padding: 20px;
-      border-radius: 0 10px 10px 0;
-      margin: 24px 0;
-    }
-
-    .red-flag h3 {
-      color: var(--bearish);
-      margin: 0 0 12px;
-      padding: 0;
-      border: none;
-      font-size: 1rem;
-    }
-
-    .red-flag ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .red-flag li {
-      color: var(--text-secondary);
-      margin: 8px 0;
-      font-size: 0.85rem;
-      line-height: 1.5;
-    }
-
-    /* Timeline */
-    .timeline {
-      position: relative;
-      padding-left: 28px;
-      margin: 24px 0;
-    }
-
-    .timeline::before {
-      content: '';
-      position: absolute;
-      left: 8px;
-      top: 0;
-      bottom: 0;
-      width: 2px;
-      background: var(--border-color);
-    }
-
-    .timeline-item {
-      position: relative;
-      margin-bottom: 24px;
-      padding: 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 10px;
-    }
-
-    .timeline-item::before {
-      content: '';
-      position: absolute;
-      left: -24px;
-      top: 20px;
-      width: 12px;
-      height: 12px;
-      border-radius: 50%;
-      background: var(--primary);
-      border: 2px solid var(--bg-primary);
-    }
-
-    .timeline-item.negative::before {
-      background: var(--bearish);
-    }
-
-    .timeline-item.positive::before {
-      background: var(--bullish);
-    }
-
-    .timeline-item h4 {
-      color: var(--text-primary);
-      margin: 0 0 8px;
-      font-size: 0.95rem;
-    }
-
-    .timeline-item p {
-      margin: 6px 0;
-      font-size: 0.85rem;
-    }
-
-    /* Tables */
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 20px 0;
-      font-size: 0.85rem;
-      background: var(--bg-card);
-      border-radius: 10px;
-      overflow: hidden;
-    }
-
-    table thead {
-      background: var(--bg-tertiary);
-    }
-
-    table th {
-      padding: 12px 10px;
-      text-align: left;
-      font-weight: 600;
-      color: var(--text-primary);
-      border-bottom: 2px solid var(--border-color);
-    }
-
-    table td {
-      padding: 10px;
-      border-bottom: 1px solid var(--border-color);
-      color: var(--text-secondary);
-    }
-
-    table tr:last-child td {
-      border-bottom: none;
-    }
-
-    table tr:hover {
-      background: rgba(255,255,255,0.02);
-    }
-
-    .highlight-row {
-      background: rgba(240, 193, 75, 0.1) !important;
-    }
-
-    .negative {
-      color: var(--bearish) !important;
-      font-weight: 600;
-    }
-
-    .positive {
-      color: var(--bullish) !important;
-      font-weight: 600;
-    }
-
-    /* Comparison Grid */
-    .comparison-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 16px;
-      margin: 24px 0;
-    }
-
-    .comparison-card {
-      padding: 20px;
-      border-radius: 12px;
-    }
-
-    .comparison-card.good {
-      background: rgba(63, 185, 80, 0.1);
-      border: 1px solid rgba(63, 185, 80, 0.3);
-    }
-
-    .comparison-card.bad {
-      background: rgba(248, 81, 73, 0.1);
-      border: 1px solid rgba(248, 81, 73, 0.3);
-    }
-
-    .comparison-card h4 {
-      margin: 0 0 12px;
-      font-size: 1rem;
-    }
-
-    .comparison-card.good h4 {
-      color: var(--bullish);
-    }
-
-    .comparison-card.bad h4 {
-      color: var(--bearish);
-    }
-
-    .comparison-card ul {
-      margin: 0;
-      padding-left: 20px;
-    }
-
-    .comparison-card li {
-      color: var(--text-secondary);
-      margin: 8px 0;
-      font-size: 0.85rem;
-      line-height: 1.4;
-    }
-
-    /* Fee Calculator */
-    .fee-box {
-      background: rgba(240, 193, 75, 0.1);
-      border: 1px solid rgba(240, 193, 75, 0.3);
-      padding: 20px;
-      border-radius: 12px;
-      margin: 24px 0;
-    }
-
-    .fee-box h3 {
-      color: var(--neutral);
-      margin: 0 0 16px;
-      padding: 0;
-      border: none;
-    }
-
-    /* Verdict */
-    .verdict-box {
-      background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
-      padding: 32px 24px;
-      border-radius: 16px;
-      text-align: center;
-      margin: 24px 0;
-      border: 1px solid var(--border-color);
-    }
-
-    .verdict-box h2 {
-      color: var(--text-primary);
-      border: none;
-      margin: 0 0 16px;
-    }
-
-    .verdict-box .score {
-      font-size: 3rem;
-      font-weight: 800;
-      color: var(--neutral);
-      margin: 16px 0;
-    }
-
-    .verdict-box .classification {
-      font-size: 1.1rem;
-      color: var(--neutral);
-      margin-bottom: 16px;
-    }
-
-    /* Checklist */
-    .checklist {
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      padding: 20px;
-      margin: 24px 0;
-    }
-
-    .checklist-item {
-      display: flex;
-      align-items: flex-start;
-      gap: 12px;
-      padding: 12px 0;
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .checklist-item:last-child {
-      border-bottom: none;
-    }
-
-    .checklist-item .check {
-      width: 20px;
-      height: 20px;
-      border: 2px solid var(--border-color);
-      border-radius: 4px;
-      flex-shrink: 0;
-      margin-top: 2px;
-    }
-
-    .checklist-item span {
-      color: var(--text-secondary);
-      font-size: 0.85rem;
-      line-height: 1.4;
-    }
-
-    /* Footer */
-    .page-footer {
-      padding: 20px;
-      text-align: center;
-      border-top: 1px solid var(--border-color);
-      background: var(--bg-secondary);
-    }
-
-    .page-footer a {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      color: var(--primary-light);
-      font-size: 0.85rem;
-      text-decoration: none;
-    }
-
-    .page-footer p {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin: 12px 0 0;
-    }
-
-    /* Responsive */
-    @media (min-width: 768px) {
-      .dossie-hero {
-        padding: 60px 40px;
-      }
-
-      .dossie-hero h1 {
-        font-size: 2.5rem;
-      }
-
-      .section {
-        padding: 40px;
-      }
-
-      .metrics-grid {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
-      .comparison-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .timeline {
-        padding-left: 36px;
-      }
-
-      .timeline::before {
-        left: 12px;
-      }
-
-      .timeline-item::before {
-        left: -28px;
-      }
-    }
-  </style>
-
-  <!-- JSON-LD -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": "MFII11 - Dossiê Completo: A Verdade Por Trás dos Números",
-    "description": "Análise investigativa completa do MFII11 com 13 anos de história, taxas, riscos ocultos e recomendações.",
-    "datePublished": "2026-01-23",
-    "dateModified": "2026-01-23",
-    "author": {"@type": "Organization", "name": "Rico aos Poucos"},
-    "publisher": {"@type": "Organization", "name": "Rico aos Poucos"}
-  }
-  </script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MFII11 - Análise Completa | Mérito Desenvolvimento Imobiliário FII</title>
+    <meta name="description" content="Análise completa do FII MFII11 baseada em 106 relatórios gerenciais. Avaliação da gestão, preço justo, guidance de dividendos 2026 e muito mais.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/mfii11/">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="MFII11 - Análise Completa do FII Mérito Desenvolvimento">
+    <meta property="og:description" content="Análise detalhada do MFII11 com 13 anos de histórico, taxas, carteira completa e projeções.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/mfii11/">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rico aos Poucos">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MFII11 - Análise Completa | FII Mérito Desenvolvimento">
+    <meta name="twitter:description" content="Análise detalhada do MFII11 com 13 anos de histórico, taxas, carteira completa e projeções.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Inter', system-ui, sans-serif; }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, #0c0c0c 0%, #1a1a2e 50%, #16213e 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .dark-card {
+            background: linear-gradient(145deg, #1a1a2e 0%, #16213e 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-card {
+            background: linear-gradient(145deg, #1e1e32 0%, #252542 100%);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            border-color: rgba(59, 130, 246, 0.3);
+        }
+
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .score-ring {
+            transform: rotate(-90deg);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        .chart-container-lg {
+            position: relative;
+            height: 350px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #3b82f6 0%, #8b5cf6 50%, #06b6d4 100%);
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, #3b82f6 0%, #8b5cf6 100%);
+            transition: width 1s ease-out;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-sticky {
+            backdrop-filter: blur(12px);
+            background: rgba(15, 15, 25, 0.9);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #1a1a2e; }
+        ::-webkit-scrollbar-thumb { background: #3b82f6; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #60a5fa; }
+
+        .asset-row:hover {
+            background: rgba(59, 130, 246, 0.1);
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+        }
+
+        .glow-amber {
+            box-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 20px rgba(239, 68, 68, 0.3);
+        }
+    </style>
 </head>
-<body>
-  <div class="page-wrapper">
-    <!-- Header -->
-    <header class="app-header">
-      <a href="../" class="header-back">
-        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      </a>
-      <div class="app-title-group">
-        <h1>MFII11</h1>
-        <span class="app-subtitle">Dossiê Completo</span>
-      </div>
+<body class="bg-[#0f0f1a] text-slate-200 antialiased">
+
+    <!-- Navigation -->
+    <nav class="nav-sticky fixed top-0 left-0 right-0 z-50 border-b border-slate-800/50 hidden" id="stickyNav">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <span class="text-xl font-bold text-white">MFII11</span>
+                <span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded">NEUTRO</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-lg font-semibold text-white">R$ 81,20</span>
+                <span class="text-emerald-400 font-medium">DY 16,1%</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-16 pb-32 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
+                <!-- Left side -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 flex-wrap">
+                        <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight">MFII11</h1>
+                        <div class="flex gap-2">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-emerald-500/20 text-emerald-400 text-sm font-semibold border border-emerald-500/30">
+                                <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                NOTA 7/10
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-amber-500/90 text-white text-sm font-semibold">
+                                NEUTRO
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-xl lg:text-2xl text-blue-200 font-light">Mérito Desenvolvimento Imobiliário I FII</p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">FII de Desenvolvimento</span>
+                        <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">MCMV</span>
+                        <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">13 Anos de História</span>
+                    </div>
+                </div>
+
+                <!-- Right side - Price -->
+                <div class="text-right space-y-1">
+                    <div class="text-sm text-blue-300 uppercase tracking-wider">Cota Atual</div>
+                    <div class="text-5xl lg:text-6xl font-extrabold">R$ 81,20</div>
+                    <div class="flex items-center justify-end gap-4 mt-2">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-emerald-400">16,1%</div>
+                            <div class="text-xs text-blue-300">DY Anual</div>
+                        </div>
+                        <div class="w-px h-10 bg-white/20"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-emerald-400">0,82</div>
+                            <div class="text-xs text-blue-300">P/VP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
-    <main class="main-content">
-      <!-- Hero -->
-      <div class="dossie-hero">
-        <h1>DOSSIÊ PROFUNDO - MFII11</h1>
-        <div class="subtitle">Mérito Desenvolvimento Imobiliário I</div>
-        <div class="subtitle">Análise Investigativa | O Que o Gestor Não Conta</div>
-        <div class="date">Janeiro 2026 | 13 Anos de História Revelados</div>
-      </div>
+    <!-- Quick Stats Cards -->
+    <section class="max-w-7xl mx-auto px-4 -mt-20 relative z-20 mb-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Patrimônio</span>
+                </div>
+                <div class="text-3xl font-bold text-white">R$ 669,9M</div>
+                <div class="text-xs text-slate-500 mt-1">VP/cota: <span class="font-semibold text-blue-400">R$ 98,51</span></div>
+            </div>
 
-      <!-- Alerta Crítico -->
-      <div class="alert danger">
-        <strong>⚠️ ALERTA:</strong> Esta análise revela informações que NÃO estão nos relatórios oficiais. Após investigação de 13 anos de histórico, descobrimos padrões preocupantes sobre volatilidade, taxas elevadas, subscrições mal precificadas e riscos ocultos. <strong>NÃO invista antes de ler tudo.</strong>
-      </div>
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Rendimento</span>
+                </div>
+                <div class="text-2xl font-bold text-emerald-400">R$ 1,07<span class="text-base text-slate-500">/mês</span></div>
+                <div class="text-xs text-emerald-400 mt-1 font-medium">R$ 13,05/ano (2025)</div>
+            </div>
 
-      <!-- RESUMO EXECUTIVO -->
-      <section class="section">
-        <h2>📊 Resumo Executivo</h2>
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Cotistas</span>
+                </div>
+                <div class="text-3xl font-bold text-white">32.290</div>
+                <div class="text-xs text-slate-500 mt-1">6.800.000 cotas</div>
+            </div>
 
-        <div class="metrics-grid">
-          <div class="metric-card danger">
-            <div class="label">Nota de Risco</div>
-            <div class="value">8,5/10</div>
-            <div class="subtext">MUITO ALTO</div>
-          </div>
-          <div class="metric-card warning">
-            <div class="label">Prejuízo Subscrição 2024</div>
-            <div class="value">-24%</div>
-            <div class="subtext">R$ 104 → R$ 78,79</div>
-          </div>
-          <div class="metric-card info">
-            <div class="label">DY 12 Meses</div>
-            <div class="value">16,56%</div>
-            <div class="subtext">R$ 13,05/cota</div>
-          </div>
-          <div class="metric-card danger">
-            <div class="label">Crash 2020</div>
-            <div class="value">-55%</div>
-            <div class="subtext">De R$ 110 para R$ 50</div>
-          </div>
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Preço Justo</span>
+                </div>
+                <div class="text-3xl font-bold text-blue-400">R$ 88</div>
+                <div class="text-xs text-emerald-400 mt-1 flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"/></svg>
+                    +8,4% upside
+                </div>
+            </div>
         </div>
+    </section>
 
-        <div class="red-flag">
-          <h3>🚨 DESCOBERTAS IMPORTANTES</h3>
-          <ul>
-            <li><strong>SUBSCRIÇÕES PROBLEMÁTICAS:</strong> Das 7 subscrições desde 2019, 5 geraram PREJUÍZO para subscritores</li>
-            <li><strong>TAXAS ELEVADAS:</strong> 2% adm + 20% performance = significativamente acima do mercado</li>
-            <li><strong>VOLATILIDADE EXTREMA:</strong> Já perdeu 55% do valor em crise (2020) e pode repetir</li>
-            <li><strong>22% EM MCEM11:</strong> Maior ativo é FII de CEMITÉRIOS - fora da tese de desenvolvimento</li>
-            <li><strong>DEPENDÊNCIA MCMV:</strong> ~60% do portfólio depende do programa federal</li>
-          </ul>
-        </div>
-      </section>
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 pb-16">
 
-      <!-- HISTÓRICO COMPLETO -->
-      <section class="section">
-        <h2>📚 Os 13 Anos de História (2013-2026)</h2>
+        <!-- Recommendation Box -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex items-center gap-3">
+                                <h2 class="text-2xl font-bold text-white">Recomendação</h2>
+                                <span class="px-4 py-2 rounded-lg bg-amber-500 text-white font-bold text-lg">NEUTRO</span>
+                            </div>
+                            <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+                                O <strong class="text-amber-400">DY de 16,1%</strong> é atrativo, mas o retorno total em 2025 foi <strong class="text-red-400">negativo (-3,87%)</strong> enquanto o IFIX rendeu +21%. A cota está abaixo do VP, porém o VP reflete ativos em desenvolvimento cujo valor depende de execução futura. O histórico de longo prazo é positivo (+324% desde o início), mas FIIs de desenvolvimento carregam risco de execução que justifica cautela.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <div class="relative w-32 h-32">
+                                <svg class="w-32 h-32 score-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#1e293b" stroke-width="8"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#scoreGradient)" stroke-width="8"
+                                            stroke-dasharray="282.7" stroke-dashoffset="70.7" stroke-linecap="round"/>
+                                    <defs>
+                                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#f59e0b"/>
+                                            <stop offset="100%" style="stop-color:#8b5cf6"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span class="text-4xl font-extrabold text-white">7</span>
+                                    <span class="text-sm text-slate-400">/10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <p><strong>A história real de quem investiu, perdeu, ganhou e se arrependeu neste fundo:</strong></p>
+        <!-- TAXAS DE GESTÃO - NOVO CARD -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 relative overflow-hidden glow-amber">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/10 to-red-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Taxas de Gestão</h2>
+                            <p class="text-amber-400 text-sm font-semibold">Atenção: acima da média do mercado</p>
+                        </div>
+                    </div>
 
-        <div class="timeline">
-          <div class="timeline-item">
-            <h4>2013-2015: O Começo</h4>
-            <p><strong>IPO:</strong> Março/2013, preço próximo de R$ 100</p>
-            <p><strong>Promessa:</strong> Desenvolvimento de empreendimentos residenciais de médio padrão</p>
-            <p><strong>Realidade:</strong> Cotação estável R$ 95-105, dividendos irregulares</p>
-          </div>
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-slate-800/50 rounded-2xl p-5 border border-amber-500/30">
+                            <div class="text-sm text-slate-400 mb-2">Taxa de Administração</div>
+                            <div class="text-3xl font-extrabold text-amber-400">2,0% a.a.</div>
+                            <div class="text-xs text-slate-500 mt-2">Sobre o PL a mercado</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-2xl p-5 border border-amber-500/30">
+                            <div class="text-sm text-slate-400 mb-2">Taxa de Performance</div>
+                            <div class="text-3xl font-extrabold text-amber-400">20%</div>
+                            <div class="text-xs text-slate-500 mt-2">Sobre o que exceder o CDI</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-2xl p-5 border border-red-500/30">
+                            <div class="text-sm text-slate-400 mb-2">Custo Anual Estimado</div>
+                            <div class="text-3xl font-extrabold text-red-400">~R$ 13,4M</div>
+                            <div class="text-xs text-slate-500 mt-2">R$ 1,97/cota por ano</div>
+                        </div>
+                    </div>
 
-          <div class="timeline-item negative">
-            <h4>2016-2017: A Primeira Crise</h4>
-            <p><strong>Cotação:</strong> Despenca de R$ 105 para R$ 55 <span class="negative">(-48%)</span></p>
-            <p><strong>Causa:</strong> Recessão brasileira + mercado imobiliário travado</p>
-            <p><strong>Dividendos:</strong> Praticamente ZERO por 18 meses</p>
-            <p><strong>Impacto:</strong> Quem investiu R$ 100k no início tinha R$ 52k</p>
-          </div>
+                    <div class="bg-red-900/20 rounded-2xl p-5 border border-red-500/30">
+                        <h3 class="text-red-400 font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/></svg>
+                            Alerta de Taxas Elevadas
+                        </h3>
+                        <p class="text-slate-300 text-sm mb-4">
+                            O MFII11 cobra taxas <strong class="text-amber-400">2x a 3x maiores</strong> que FIIs consolidados. Comparativo:
+                        </p>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-red-400">MFII11</div>
+                                <div class="text-xl font-extrabold text-white">2,0%</div>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-slate-400">XPML11</div>
+                                <div class="text-xl font-extrabold text-emerald-400">0,75%</div>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-slate-400">HGLG11</div>
+                                <div class="text-xl font-extrabold text-emerald-400">0,90%</div>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-slate-400">KNRI11</div>
+                                <div class="text-xl font-extrabold text-emerald-400">0,60%</div>
+                            </div>
+                        </div>
+                        <p class="text-slate-400 text-xs mt-4">
+                            <strong>Impacto em 10 anos:</strong> Um investidor com R$ 100.000 pagaria aproximadamente R$ 28.500 em taxas (28,5% do capital inicial), enquanto em um FII com taxa de 0,75% pagaria apenas R$ 7.500.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <div class="timeline-item">
-            <h4>2018-2019: Recuperação Tímida</h4>
-            <p><strong>Cotação:</strong> Sobe lentamente para R$ 60-68</p>
-            <p><strong>Maio/2019:</strong> Subscrição a R$ 110,00 (24,97%)</p>
-            <p><strong>Resultado:</strong> Subscrição nunca se pagou - cotação ficou em R$ 60-65</p>
-          </div>
+        <!-- TIMELINE - 13 ANOS DE HISTÓRIA -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 overflow-hidden">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">13 Anos de História (2013-2026)</h2>
+                        <p class="text-slate-400 text-sm">A jornada completa do fundo desde o IPO</p>
+                    </div>
+                </div>
 
-          <div class="timeline-item negative">
-            <h4>2020: A Segunda Crise (COVID-19)</h4>
-            <p><strong>Março/2020:</strong> Crash global, MFII11 vai a R$ 50 <span class="negative">(-35% em 30 dias)</span></p>
-            <p><strong>Nov/2020:</strong> Subscrição a R$ 118,00 com cotação a R$ 55</p>
-            <p><strong>Resultado:</strong> Quem subscreveu perdeu 58% até hoje (R$ 118 → R$ 78,79)</p>
-          </div>
+                <div class="relative pl-12">
+                    <div class="timeline-line"></div>
 
-          <div class="timeline-item positive">
-            <h4>2021: O Pivô para MCMV</h4>
-            <p><strong>Decisão:</strong> Focar ~60% em MCMV (Minha Casa Minha Vida)</p>
-            <p><strong>Março/2021:</strong> Subscrição de 53,85% do PL</p>
-            <p><strong>Resultado:</strong> Com MCMV forte, vendas decolaram</p>
-            <p><strong>Cotação:</strong> Recupera para R$ 85-90</p>
-          </div>
+                    <!-- 2013-2015 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-blue-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-blue-400 font-bold">2013-2015</span>
+                                <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">IPO E INÍCIO</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">IPO em Março/2013 próximo a R$ 100. Cota estável entre R$ 95-105.</p>
+                            <p class="text-amber-400 text-xs">Dividendos irregulares no período inicial.</p>
+                        </div>
+                    </div>
 
-          <div class="timeline-item">
-            <h4>2022-2023: Consolidação</h4>
-            <p><strong>Cotação:</strong> Estabilidade entre R$ 80-86</p>
-            <p><strong>Março/2023:</strong> Subscrição a R$ 94,00 (13,02%)</p>
-            <p><strong>Resultado:</strong> Break-even aproximado</p>
-          </div>
+                    <!-- 2016-2017 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-red-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-red-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-red-400 font-bold">2016-2017</span>
+                                <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">CRISE SEVERA</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Cota despenca para R$ 55 (<strong class="text-red-400">-48%</strong>). Dividendos próximos de zero por 18 meses.</p>
+                            <p class="text-red-400 text-xs">Período mais difícil da história do fundo.</p>
+                        </div>
+                    </div>
 
-          <div class="timeline-item negative">
-            <h4>2024: A Super Diluição</h4>
-            <p><strong>Março/2024:</strong> Subscrição de <span class="negative">35,01% do PL</span> a R$ 104,00</p>
-            <p><strong>Após subscrição:</strong> Cotação despenca para R$ 74-76</p>
-            <p><strong>Prejuízo imediato:</strong> Subscritores perderam ~26% na hora</p>
-          </div>
+                    <!-- 2018-2019 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-amber-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-amber-400 font-bold">2018-2019</span>
+                                <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">RECUPERAÇÃO</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Recuperação para R$ 60-68. 4ª Emissão a R$ 110 em Mai/2019.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Captação de R$ 135M na 4ª emissão</li>
+                                <li>• Aquisição da Nova Colorado</li>
+                                <li>• Conclusão do Terras da Estância</li>
+                            </ul>
+                        </div>
+                    </div>
 
-          <div class="timeline-item positive">
-            <h4>2025: Ano de Execução</h4>
-            <p><strong>Entregas:</strong> 5 obras concluídas (1.000+ unidades)</p>
-            <p><strong>Destaque:</strong> Livus Barena entregue ANTES do prazo</p>
-            <p><strong>Dividendos:</strong> Consistentes! R$ 1,06-1,12/mês (melhor ano)</p>
-            <p><strong>DY 2025:</strong> 17% (excepcional)</p>
-          </div>
+                    <!-- 2020 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-red-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-red-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-red-400 font-bold">2020</span>
+                                <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">COVID CRASH</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Cota cai para R$ 50 (<strong class="text-red-400">-35%</strong>). Subscrição em Nov a R$ 118.</p>
+                            <p class="text-red-400 text-xs">Subscritores de Nov/2020 perderam 58% (R$ 118 → R$ 81).</p>
+                        </div>
+                    </div>
 
-          <div class="timeline-item">
-            <h4>Janeiro/2026: Momento Atual</h4>
-            <p><strong>Cotação:</strong> R$ 78,79 (alta de 4,97% no mês)</p>
-            <p><strong>P/VP:</strong> 0,78 (desconto de 22%)</p>
-            <p><strong>Pipeline:</strong> 2.800+ unidades em desenvolvimento</p>
-          </div>
-        </div>
+                    <!-- 2021 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-emerald-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-emerald-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-emerald-400 font-bold">2021</span>
+                                <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">RETOMADA FORTE</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Pivot para ~60% MCMV. Venda da Nova Colorado com +84% de retorno.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Dividendo extraordinário de R$ 6,37/cota</li>
+                                <li>• 7ª Emissão capta R$ 103M</li>
+                                <li>• Cota atinge R$ 118 (pico)</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <div class="red-flag">
-          <h3>🔥 O QUE 13 ANOS ENSINAM</h3>
-          <ul>
-            <li><strong>Volatilidade Extrema:</strong> 2 crashes de 50%+ em 13 anos</li>
-            <li><strong>Subscrições = Armadilha:</strong> 5 de 7 subscrições destruíram valor</li>
-            <li><strong>2025 foi EXCEÇÃO:</strong> Não conte com R$ 13/ano sendo recorrente</li>
-            <li><strong>Dependência de MCMV é alta:</strong> Sem programa federal = problemas sérios</li>
-          </ul>
-        </div>
-      </section>
+                    <!-- 2022-2023 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-amber-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-amber-400 font-bold">2022-2023</span>
+                                <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">ESTABILIZAÇÃO</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Alta de juros pressiona mercado. Cota estabiliza entre R$ 80-86.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Lançamento da marca Livus</li>
+                                <li>• Entrada no Consórcio Cortel (cemitérios)</li>
+                                <li>• Subscrição Mar/2023 a R$ 94</li>
+                            </ul>
+                        </div>
+                    </div>
 
-      <!-- ANÁLISE DE TAXAS -->
-      <section class="section">
-        <h2>💸 As Taxas - A Matemática Completa</h2>
+                    <!-- 2024 -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-purple-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-purple-400 font-bold">2024</span>
+                                <span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded">EXPANSÃO</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">9ª Emissão capta R$ 161M. Múltiplas entregas de projetos.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• R$ 127M em lançamentos</li>
+                                <li>• R$ 390M em aquisição de landbank</li>
+                                <li>• Livus ganha tração no mercado</li>
+                            </ul>
+                        </div>
+                    </div>
 
-        <div class="fee-box">
-          <h3>Estrutura de Custos</h3>
+                    <!-- 2025-2026 -->
+                    <div class="relative">
+                        <div class="timeline-dot bg-cyan-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-cyan-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-cyan-400 font-bold">2025-2026</span>
+                                <span class="px-2 py-1 bg-cyan-500/20 text-cyan-400 text-xs rounded">ATUAL</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">5 obras finalizadas em 2025. DY excepcional de 17% anualizado.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Cotação: R$ 81,20 | P/VP: 0,82</li>
+                                <li>• Pipeline de +2.800 unidades</li>
+                                <li>• Previsão de +6 obras em 2026</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
 
-          <h4>Taxa de Administração: 2% a.a.</h4>
-          <p><strong>Base de cálculo:</strong> Valor de mercado (R$ 535,77M)</p>
-          <p><strong>Custo anual atual:</strong> ~R$ 10,7 milhões</p>
-          <p><strong>Por cota:</strong> R$ 1,58/ano</p>
+                <div class="mt-8 bg-blue-900/20 rounded-xl p-5 border border-blue-500/30">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg>
+                        <div>
+                            <p class="text-blue-300 font-medium">Resumo dos 13 anos:</p>
+                            <p class="text-slate-400 text-sm mt-1">Retorno total de <strong class="text-emerald-400">+324%</strong> desde o início, superando IFIX (+174%) e CDI (+165%). Porém, 5 das 7 subscrições desde 2019 geraram prejuízo para os subscritores, demonstrando o risco de timing em FIIs de desenvolvimento.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <h4>Taxa de Performance: 20% sobre excesso do CDI</h4>
-          <p>Quando o fundo rende acima do CDI, 20% do excesso vai para a gestora.</p>
-        </div>
+        <!-- Investment Thesis -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Tese de Investimento</h2>
+                    </div>
 
-        <h3>Simulação: 10 Anos de Investimento</h3>
-        <p><strong>Investimento inicial:</strong> R$ 100.000 em 2016</p>
+                    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                        MFII11 é um <strong class="text-white">FII de desenvolvimento</strong> com foco no segmento econômico (MCMV). Oferece <strong class="text-emerald-400">DY elevado (16,1% a.a.)</strong> em troca de maior risco de execução e ciclo longo. Gestão competente com histórico de entregas através da <strong class="text-white">marca Livus</strong>. Atualmente negocia com desconto significativo em relação ao VP.
+                    </p>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Período</th>
-              <th>Retorno</th>
-              <th>Taxas Pagas</th>
-              <th>Saldo</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>2016-2018</td>
-              <td class="negative">-10%</td>
-              <td class="negative">R$ 5.420</td>
-              <td>R$ 84.580</td>
-            </tr>
-            <tr>
-              <td>2019-2020</td>
-              <td class="negative">-5%</td>
-              <td class="negative">R$ 4.176</td>
-              <td>R$ 76.175</td>
-            </tr>
-            <tr>
-              <td>2021-2022</td>
-              <td class="positive">+45%</td>
-              <td class="negative">R$ 10.669</td>
-              <td>R$ 99.784</td>
-            </tr>
-            <tr>
-              <td>2023-2024</td>
-              <td>+5%</td>
-              <td class="negative">R$ 4.390</td>
-              <td>R$ 100.393</td>
-            </tr>
-            <tr>
-              <td>2025</td>
-              <td class="positive">+19%</td>
-              <td class="negative">R$ 3.898</td>
-              <td>R$ 115.570</td>
-            </tr>
-            <tr class="highlight-row">
-              <td><strong>TOTAL 10 ANOS</strong></td>
-              <td><strong>+54%</strong></td>
-              <td class="negative"><strong>R$ 28.553</strong></td>
-              <td><strong>R$ 115.570</strong></td>
-            </tr>
-          </tbody>
-        </table>
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-emerald-900/20 rounded-2xl p-6 border border-emerald-500/30">
+                            <h3 class="flex items-center gap-2 font-bold text-emerald-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                                Para quem serve
+                            </h3>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Investidores que buscam yield elevado e recorrente</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Quem acredita no segmento MCMV e habitação popular</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Horizonte de investimento superior a 3 anos</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Tolerância a volatilidade de cota</span>
+                                </li>
+                            </ul>
+                        </div>
 
-        <div class="red-flag">
-          <h3>🔥 A REALIDADE</h3>
-          <ul>
-            <li><strong>10 anos investido:</strong> R$ 100k viraram R$ 115k = +15,5% total</li>
-            <li><strong>Retorno anualizado:</strong> ~1,5% ao ano</li>
-            <li><strong>Taxas pagas:</strong> R$ 28.553 (28,5% do capital inicial!)</li>
-            <li><strong>CDI no período:</strong> ~140% acumulado</li>
-          </ul>
-        </div>
+                        <div class="bg-red-900/20 rounded-2xl p-6 border border-red-500/30">
+                            <h3 class="flex items-center gap-2 font-bold text-red-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
+                                Para quem não serve
+                            </h3>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Investidores conservadores avessos a risco</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Quem busca valorização de cota no curto prazo</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Horizonte curto (menos de 1 ano)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Aversão a risco de execução de obras</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h3>Comparação de Taxas</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Fundo</th>
-              <th>Taxa Adm</th>
-              <th>Taxa Perf</th>
-              <th>Custo/Ano</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight-row">
-              <td><strong>MFII11</strong></td>
-              <td class="negative">2,0%</td>
-              <td class="negative">20% exc CDI</td>
-              <td class="negative">2,5-4,0%</td>
-            </tr>
-            <tr>
-              <td>XPML11</td>
-              <td>0,75%</td>
-              <td>Não tem</td>
-              <td>0,75%</td>
-            </tr>
-            <tr>
-              <td>HGLG11</td>
-              <td>0,90%</td>
-              <td>Não tem</td>
-              <td>0,90%</td>
-            </tr>
-            <tr>
-              <td>KNRI11</td>
-              <td>0,60%</td>
-              <td>Não tem</td>
-              <td>0,60%</td>
-            </tr>
-          </tbody>
-        </table>
+        <!-- INVESTIGAÇÃO DOS ATIVOS - CONSÓRCIO CORTEL -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 glow-red">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-red-500 to-orange-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Investigação dos Ativos</h2>
+                        <p class="text-red-400 text-sm font-semibold">Atenção: exposição fora da tese principal</p>
+                    </div>
+                </div>
 
-        <p><strong>MFII11 cobra taxas 3x-5x MAIORES que FIIs consolidados.</strong></p>
-      </section>
+                <div class="bg-red-900/20 rounded-2xl p-6 border border-red-500/30 mb-6">
+                    <div class="flex items-start gap-4">
+                        <div class="w-16 h-16 rounded-xl bg-red-500/20 flex items-center justify-center flex-shrink-0">
+                            <span class="text-3xl">⚰️</span>
+                        </div>
+                        <div class="flex-1">
+                            <div class="flex items-center gap-3 mb-2">
+                                <h3 class="text-xl font-bold text-white">Consórcio Cortel</h3>
+                                <span class="px-3 py-1 bg-red-500/20 text-red-400 text-sm font-semibold rounded-lg">29% DA CARTEIRA</span>
+                            </div>
+                            <p class="text-slate-300 mb-4">
+                                O MFII11 possui <strong class="text-red-400">35% de participação</strong> na SPE Consórcio Cortel SP S.A., que detém a <strong class="text-white">concessão de 25 anos</strong> para administrar 5 cemitérios públicos de São Paulo.
+                            </p>
 
-      <!-- INVESTIGAÇÃO ATIVOS -->
-      <section class="section">
-        <h2>🔍 Investigação dos Ativos</h2>
+                            <div class="grid md:grid-cols-2 gap-4 mb-4">
+                                <div>
+                                    <h4 class="text-slate-400 text-sm mb-2">Cemitérios Administrados:</h4>
+                                    <ul class="text-sm text-slate-300 space-y-1">
+                                        <li>• Cemitério São Paulo</li>
+                                        <li>• Cemitério Santo Amaro</li>
+                                        <li>• Cemitério Araçá</li>
+                                        <li>• Cemitério Vila Nova Cachoeirinha</li>
+                                        <li>• Cemitério Dom Bosco</li>
+                                    </ul>
+                                </div>
+                                <div>
+                                    <h4 class="text-slate-400 text-sm mb-2">Dados da Concessão:</h4>
+                                    <ul class="text-sm text-slate-300 space-y-1">
+                                        <li>• Concessão: Bloco 2</li>
+                                        <li>• Prazo: 25 anos</li>
+                                        <li>• Início: Mar/2023</li>
+                                        <li>• TIR esperada: 24,1%</li>
+                                        <li>• Resultado esperado: R$ 517M</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <h3>🔴 Ativos Problemáticos</h3>
+                    <div class="bg-amber-900/30 rounded-xl p-4 border border-amber-500/30 mt-4">
+                        <h4 class="text-amber-400 font-semibold mb-2 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/></svg>
+                            Foge da Tese Principal
+                        </h4>
+                        <p class="text-slate-300 text-sm">
+                            O MFII11 se apresenta como um <strong>FII de desenvolvimento imobiliário residencial</strong>, porém possui <strong class="text-amber-400">29% da carteira</strong> em um ativo de cemitérios. Esta exposição:
+                        </p>
+                        <ul class="text-sm text-slate-400 mt-2 space-y-1">
+                            <li>• Contradiz a tese de desenvolvimento residencial/MCMV</li>
+                            <li>• Adiciona risco de concentração em um único ativo</li>
+                            <li>• Depende de fluxo de caixa diferente (serviços funerários vs vendas imobiliárias)</li>
+                            <li>• Se o Consórcio Cortel tiver problemas, impacto de ~9% no VP do fundo</li>
+                        </ul>
+                    </div>
+                </div>
 
-        <div class="timeline">
-          <div class="timeline-item negative">
-            <h4>1. MCEM11 - O Elefante na Sala (22% do Patrimônio)</h4>
-            <p><strong>Valor:</strong> R$ 147,15 milhões (MAIOR ativo do fundo!)</p>
-            <p><strong>O que é:</strong> MCEM11 é um FII de <strong>CEMITÉRIOS</strong> (Mérito Cemitérios)</p>
-            <p><strong>Problema:</strong> Não tem NADA a ver com desenvolvimento imobiliário residencial</p>
-            <p><strong>Cotação MCEM11:</strong> R$ 63,26 | P/VP: 0,67 | DY: ~8%</p>
-            <p><strong>Red Flag:</strong> Por que um fundo de desenvolvimento tem 22% em cemitérios? Foge da tese!</p>
-          </div>
+                <p class="text-slate-400 text-sm">
+                    <strong>Nota:</strong> Embora a TIR esperada seja atrativa (24,1%), investidores devem estar cientes de que quase 1/3 do patrimônio está em um ativo completamente fora do core business declarado do fundo.
+                </p>
+            </div>
+        </section>
 
-          <div class="timeline-item negative">
-            <h4>2. Jardins de Tarsila - Obra sem Vendas</h4>
-            <p><strong>Localização:</strong> Campinas - SP</p>
-            <p><strong>Status:</strong> Em obras</p>
-            <p><strong>% Vendido:</strong> <span class="negative">0% - ZERO VENDAS!</span></p>
-            <p><strong>Red Flag:</strong> Iniciar obra sem pré-vendas é arriscado</p>
-          </div>
+        <!-- CARTEIRA COMPLETA DE ATIVOS -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 overflow-hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Carteira Completa de Ativos</h2>
+                            <p class="text-slate-400">30 ativos | Landbank: R$ 1,05 bilhão em VGV</p>
+                        </div>
+                    </div>
+                </div>
 
-          <div class="timeline-item negative">
-            <h4>3. Golden Boituva - Margem Apertada</h4>
-            <p><strong>TIR esperada:</strong> 12,9% (baixa para desenvolvimento)</p>
-            <p><strong>Status:</strong> 91% vendido, mas atrasou</p>
-            <p><strong>Risco:</strong> Qualquer custo extra vira prejuízo</p>
-          </div>
-        </div>
+                <!-- Distribution -->
+                <div class="grid md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-emerald-900/20 rounded-xl p-4 border border-emerald-500/30 text-center">
+                        <div class="text-2xl font-bold text-emerald-400">21%</div>
+                        <div class="text-sm text-emerald-300">Concluídos</div>
+                    </div>
+                    <div class="bg-amber-900/20 rounded-xl p-4 border border-amber-500/30 text-center">
+                        <div class="text-2xl font-bold text-amber-400">61%</div>
+                        <div class="text-sm text-amber-300">Em Obras</div>
+                    </div>
+                    <div class="bg-purple-900/20 rounded-xl p-4 border border-purple-500/30 text-center">
+                        <div class="text-2xl font-bold text-purple-400">17%</div>
+                        <div class="text-sm text-purple-300">Landbank</div>
+                    </div>
+                    <div class="bg-red-900/20 rounded-xl p-4 border border-red-500/30 text-center">
+                        <div class="text-2xl font-bold text-red-400">29%</div>
+                        <div class="text-sm text-red-300">Consórcio Cortel</div>
+                    </div>
+                </div>
 
-        <h3>✅ Ativos que Funcionam</h3>
+                <!-- Assets Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-slate-700">
+                                <th class="text-left py-3 px-2 text-slate-400 font-semibold">Ativo</th>
+                                <th class="text-center py-3 px-2 text-slate-400 font-semibold">%</th>
+                                <th class="text-left py-3 px-2 text-slate-400 font-semibold">Local</th>
+                                <th class="text-center py-3 px-2 text-slate-400 font-semibold">Fase</th>
+                                <th class="text-center py-3 px-2 text-slate-400 font-semibold">Obras</th>
+                                <th class="text-center py-3 px-2 text-slate-400 font-semibold">Vendas</th>
+                                <th class="text-right py-3 px-2 text-slate-400 font-semibold">TIR</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Consórcio Cortel -->
+                            <tr class="asset-row border-b border-slate-800/50 bg-red-900/10">
+                                <td class="py-3 px-2 font-medium text-red-400">Consórcio Cortel</td>
+                                <td class="text-center py-3 px-2 text-red-400 font-bold">29,0%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-red-500/20 text-red-400 text-xs rounded">CEMITÉRIOS</span></td>
+                                <td class="text-center py-3 px-2 text-slate-500">-</td>
+                                <td class="text-center py-3 px-2 text-slate-500">-</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">24,1%</td>
+                            </tr>
+                            <!-- Terras da Estância -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Terras da Estância</td>
+                                <td class="text-center py-3 px-2 text-blue-400">9,4%</td>
+                                <td class="py-3 px-2 text-slate-400">Paulínia - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded">CONCLUÍDO</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">100%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">99%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">18,5%</td>
+                            </tr>
+                            <!-- Damha Fit I -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Damha Fit I</td>
+                                <td class="text-center py-3 px-2 text-blue-400">7,3%</td>
+                                <td class="py-3 px-2 text-slate-400">Uberaba - MG</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded">CONCLUÍDO</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">100%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">99%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">33,9%</td>
+                            </tr>
+                            <!-- Avenida Corifeu -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Avenida Corifeu</td>
+                                <td class="text-center py-3 px-2 text-blue-400">6,0%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-amber-400">3%</td>
+                                <td class="text-center py-3 px-2 text-amber-400">7%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">33,5%</td>
+                            </tr>
+                            <!-- Reserva da Ilha -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Reserva da Ilha</td>
+                                <td class="text-center py-3 px-2 text-blue-400">5,1%</td>
+                                <td class="py-3 px-2 text-slate-400">Sertaneja - PR</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-amber-400">40%</td>
+                                <td class="text-center py-3 px-2 text-red-400">5%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">19,8%</td>
+                            </tr>
+                            <!-- Luar de Rio Largo -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Luar de Rio Largo</td>
+                                <td class="text-center py-3 px-2 text-blue-400">5,0%</td>
+                                <td class="py-3 px-2 text-slate-400">Rio Largo - AL</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded">CONCLUÍDO</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">100%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">99%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">22,5%</td>
+                            </tr>
+                            <!-- Luar do Parque -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Luar do Parque</td>
+                                <td class="text-center py-3 px-2 text-blue-400">5,0%</td>
+                                <td class="py-3 px-2 text-slate-400">Recife - PE</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-amber-400">70%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">79%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">41,1%</td>
+                            </tr>
+                            <!-- Vilas do Rio -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Vilas do Rio</td>
+                                <td class="text-center py-3 px-2 text-blue-400">4,1%</td>
+                                <td class="py-3 px-2 text-slate-400">Campinas - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">95%</td>
+                                <td class="text-center py-3 px-2 text-amber-400">45%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">19,9%</td>
+                            </tr>
+                            <!-- Golden Boituva -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Golden Boituva</td>
+                                <td class="text-center py-3 px-2 text-blue-400">3,3%</td>
+                                <td class="py-3 px-2 text-slate-400">Boituva - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">80%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">88%</td>
+                                <td class="text-right py-3 px-2 text-amber-400">11,8%</td>
+                            </tr>
+                            <!-- Barena -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Livus Barena</td>
+                                <td class="text-center py-3 px-2 text-blue-400">3,2%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">88%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">80%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">33,7%</td>
+                            </tr>
+                            <!-- Paes de Barros -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Paes de Barros</td>
+                                <td class="text-center py-3 px-2 text-blue-400">2,8%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-red-400">1%</td>
+                                <td class="text-center py-3 px-2 text-red-400">6%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">21,5%</td>
+                            </tr>
+                            <!-- Residencial Campo Verde -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Residencial Campo Verde</td>
+                                <td class="text-center py-3 px-2 text-blue-400">2,7%</td>
+                                <td class="py-3 px-2 text-slate-400">Iracemápolis - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded">CONCLUÍDO</span></td>
+                                <td class="text-center py-3 px-2 text-emerald-400">100%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">92%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">15,8%</td>
+                            </tr>
+                            <!-- Lauro de Freitas -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Lauro de Freitas</td>
+                                <td class="text-center py-3 px-2 text-blue-400">2,7%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-amber-400">63%</td>
+                                <td class="text-center py-3 px-2 text-amber-400">56%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">23,6%</td>
+                            </tr>
+                            <!-- Residencial Dona Amélia -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Residencial Dona Amélia</td>
+                                <td class="text-center py-3 px-2 text-blue-400">2,4%</td>
+                                <td class="py-3 px-2 text-slate-400">Campinas - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">LANDBANK</span></td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-right py-3 px-2 text-amber-400">13,9%</td>
+                            </tr>
+                            <!-- Adelia Chohfi -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Adelia Chohfi</td>
+                                <td class="text-center py-3 px-2 text-blue-400">2,0%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-red-400">9%</td>
+                                <td class="text-center py-3 px-2 text-emerald-400">86%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">37,7%</td>
+                            </tr>
+                            <!-- Jardins de Tarsila -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Jardins de Tarsila</td>
+                                <td class="text-center py-3 px-2 text-blue-400">1,9%</td>
+                                <td class="py-3 px-2 text-slate-400">Campinas - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-red-400">8%</td>
+                                <td class="text-center py-3 px-2 text-red-400">0%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">15,9%</td>
+                            </tr>
+                            <!-- Jabaquara -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Jabaquara</td>
+                                <td class="text-center py-3 px-2 text-blue-400">1,5%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-amber-400">25%</td>
+                                <td class="text-center py-3 px-2 text-amber-400">27%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">30,0%</td>
+                            </tr>
+                            <!-- Descampado -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Descampado</td>
+                                <td class="text-center py-3 px-2 text-blue-400">1,5%</td>
+                                <td class="py-3 px-2 text-slate-400">Campinas - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">LANDBANK</span></td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-right py-3 px-2 text-amber-400">14,4%</td>
+                            </tr>
+                            <!-- Luar das Oliveiras -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Luar das Oliveiras</td>
+                                <td class="text-center py-3 px-2 text-blue-400">1,1%</td>
+                                <td class="py-3 px-2 text-slate-400">Recife - PE</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">OBRAS</span></td>
+                                <td class="text-center py-3 px-2 text-amber-400">46%</td>
+                                <td class="text-center py-3 px-2 text-amber-400">62%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">36,6%</td>
+                            </tr>
+                            <!-- Ponta Grossa -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Ponta Grossa</td>
+                                <td class="text-center py-3 px-2 text-blue-400">1,1%</td>
+                                <td class="py-3 px-2 text-slate-400">Ponta Grossa - PR</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">LANDBANK</span></td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">19,9%</td>
+                            </tr>
+                            <!-- Vila Carmosina -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">Vila Carmosina</td>
+                                <td class="text-center py-3 px-2 text-blue-400">0,6%</td>
+                                <td class="py-3 px-2 text-slate-400">São Paulo - SP</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">LANDBANK</span></td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-center py-3 px-2 text-slate-500">0%</td>
+                                <td class="text-right py-3 px-2 text-emerald-400">37,1%</td>
+                            </tr>
+                            <!-- Outros ativos menores -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-slate-400">Outros ativos (10)</td>
+                                <td class="text-center py-3 px-2 text-blue-400">~5%</td>
+                                <td class="py-3 px-2 text-slate-500">Diversos</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-slate-500/20 text-slate-400 text-xs rounded">MISTO</span></td>
+                                <td class="text-center py-3 px-2 text-slate-500">-</td>
+                                <td class="text-center py-3 px-2 text-slate-500">-</td>
+                                <td class="text-right py-3 px-2 text-slate-500">-</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
 
-        <div class="timeline">
-          <div class="timeline-item positive">
-            <h4>1. Livus Barena - Case de Sucesso</h4>
-            <p><strong>Unidades:</strong> 288 apartamentos MCMV</p>
-            <p><strong>Status:</strong> Entregue ANTES do prazo (Set/2025)</p>
-            <p><strong>TIR:</strong> 24,3% (excelente)</p>
-          </div>
+                <div class="mt-6 bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
+                    <p class="text-slate-400 text-sm">
+                        <strong class="text-white">Concentração:</strong> Os Top 5 ativos representam ~52% do patrimônio. O maior ativo (Consórcio Cortel) sozinho representa 29%, gerando risco de concentração significativo.
+                    </p>
+                </div>
+            </div>
+        </section>
 
-          <div class="timeline-item positive">
-            <h4>2. Luar do Parque - Alta TIR</h4>
-            <p><strong>Localização:</strong> Recife - PE</p>
-            <p><strong>TIR esperada:</strong> 36,6% (excepcional)</p>
-            <p><strong>Vendas:</strong> 84% vendido</p>
-          </div>
-        </div>
+        <!-- Valuation Section -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Valuation & Preço Justo</h2>
+                    </div>
 
-        <div class="red-flag">
-          <h3>🔥 CONCLUSÃO SOBRE OS ATIVOS</h3>
-          <ul>
-            <li><strong>22% fora da tese:</strong> MCEM11 (cemitérios) não é desenvolvimento</li>
-            <li><strong>Concentração perigosa:</strong> Top 3 ativos = 50% do portfólio</li>
-            <li><strong>Obras sem vendas:</strong> Jardins de Tarsila é risco</li>
-            <li><strong>Dependência MCMV:</strong> ~60% dos projetos dependem do programa</li>
-          </ul>
-        </div>
-      </section>
+                    <div class="grid md:grid-cols-4 gap-6 mb-8">
+                        <div class="text-center p-6 rounded-2xl bg-slate-800/50">
+                            <div class="text-sm text-slate-400 mb-2 uppercase tracking-wider">Preço Atual</div>
+                            <div class="text-4xl font-extrabold text-white">R$ 81,20</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-blue-900/30 border-2 border-blue-500/30">
+                            <div class="text-sm text-blue-400 mb-2 uppercase tracking-wider font-semibold">Preço Justo</div>
+                            <div class="text-4xl font-extrabold text-blue-400">R$ 88</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-slate-800/50">
+                            <div class="text-sm text-slate-400 mb-2 uppercase tracking-wider">VP por Cota</div>
+                            <div class="text-4xl font-extrabold text-slate-300">R$ 98,51</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-emerald-900/30">
+                            <div class="text-sm text-emerald-400 mb-2 uppercase tracking-wider">Upside Potencial</div>
+                            <div class="text-4xl font-extrabold text-emerald-400">+8,4%</div>
+                        </div>
+                    </div>
 
-      <!-- PROJEÇÃO DIVIDENDOS -->
-      <section class="section">
-        <h2>💰 Projeção de Dividendos 2026-2027</h2>
+                    <!-- Price Scenarios -->
+                    <h3 class="font-semibold text-white mb-4">Cenários de Preço (baseado em dividendos)</h3>
+                    <div class="relative mb-4">
+                        <div class="flex h-12 rounded-xl overflow-hidden">
+                            <div class="flex-1 bg-gradient-to-r from-red-600 to-red-500 flex items-center justify-center text-white font-bold">
+                                R$ 71
+                            </div>
+                            <div class="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 flex items-center justify-center text-slate-900 font-bold relative">
+                                R$ 88
+                                <div class="absolute -top-8 left-1/3 transform -translate-x-1/2 bg-white text-slate-900 text-xs px-2 py-1 rounded whitespace-nowrap">Atual: R$ 81,20</div>
+                            </div>
+                            <div class="flex-1 bg-gradient-to-r from-emerald-500 to-emerald-400 flex items-center justify-center text-white font-bold">
+                                R$ 105
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-400 px-4">
+                        <div class="text-center">
+                            <div class="font-medium text-slate-300">Pessimista</div>
+                            <div class="text-xs">R$ 11,40/ano ÷ 16% DY</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium text-slate-300">Justo (Base)</div>
+                            <div class="text-xs">R$ 14,10/ano ÷ 16% DY</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium text-slate-300">Otimista</div>
+                            <div class="text-xs">R$ 16,80/ano ÷ 16% DY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <div class="alert warning">
-          <strong>⚠️ ATENÇÃO:</strong> Gestores sempre são otimistas. Esta projeção é baseada em histórico real.
-        </div>
+        <!-- Dividend Projection Chart -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg p-8">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Projeção de Dividendos 2026</h2>
+                        <p class="text-slate-400 text-sm">Cenário base - baseado em 106 relatórios gerenciais</p>
+                    </div>
+                </div>
 
-        <h3>Cenários para 2026</h3>
+                <div class="bg-slate-800/50 rounded-2xl p-6 mb-6">
+                    <div class="chart-container-lg">
+                        <canvas id="dividendProjectionChart"></canvas>
+                    </div>
+                </div>
 
-        <div class="metrics-grid">
-          <div class="metric-card success">
-            <div class="label">Cenário Otimista (25%)</div>
-            <div class="value">R$ 13-15</div>
-            <div class="subtext">DY: 17-19%</div>
-          </div>
-          <div class="metric-card info">
-            <div class="label">Cenário Base (50%)</div>
-            <div class="value">R$ 11-12,50</div>
-            <div class="subtext">DY: 14-16%</div>
-          </div>
-          <div class="metric-card danger">
-            <div class="label">Cenário Pessimista (25%)</div>
-            <div class="value">R$ 8-10</div>
-            <div class="subtext">DY: 10-13%</div>
-          </div>
-        </div>
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-slate-800/50 rounded-xl p-4">
+                        <div class="text-slate-400 text-sm mb-1">Total 2026 (base)</div>
+                        <div class="text-2xl font-extrabold text-white">R$ 14,10</div>
+                    </div>
+                    <div class="bg-emerald-900/30 rounded-xl p-4 border border-emerald-500/30">
+                        <div class="text-emerald-400 text-sm mb-1">DY 2026 (preço atual)</div>
+                        <div class="text-2xl font-extrabold text-emerald-400">17,4%</div>
+                    </div>
+                    <div class="bg-amber-900/30 rounded-xl p-4 border border-amber-500/30">
+                        <div class="text-amber-400 text-sm mb-1">Faixa de Confiança</div>
+                        <div class="text-lg font-bold text-amber-400">R$ 11,40 - R$ 16,80</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4">
+                        <div class="text-slate-400 text-sm mb-1">Confiabilidade</div>
+                        <div class="text-lg font-bold text-amber-400">MÉDIA</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-        <h3>2027: O Ano Difícil</h3>
+        <!-- Market Comparison -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Retorno vs Mercado</h2>
+                    </div>
 
-        <div class="alert danger">
-          <strong>🚨 ALERTA 2027:</strong> Poucas obras grandes previstas para entrega. Pipeline dependerá de novos lançamentos 2026. Risco de queda nos dividendos é significativo.
-        </div>
+                    <div class="overflow-x-auto mb-6">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-slate-700">
+                                    <th class="text-left py-4 px-4 font-semibold text-slate-400">Período</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-blue-400">MFII11</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">IFIX</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">CDI</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">2025</td>
+                                    <td class="text-center py-4 px-4">
+                                        <span class="font-bold text-red-400 bg-red-500/20 px-3 py-1 rounded-lg">-3,87%</span>
+                                    </td>
+                                    <td class="text-center py-4 px-4 text-emerald-400 font-medium">+21,15%</td>
+                                    <td class="text-center py-4 px-4 text-emerald-400 font-medium">+12,04%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">36 meses</td>
+                                    <td class="text-center py-4 px-4 text-emerald-400 font-medium">+27,34%</td>
+                                    <td class="text-center py-4 px-4 text-emerald-400 font-medium">+31,68%</td>
+                                    <td class="text-center py-4 px-4 text-emerald-400 font-medium">+35,70%</td>
+                                </tr>
+                                <tr class="bg-blue-900/20">
+                                    <td class="py-4 px-4 font-bold text-white">Desde o Início</td>
+                                    <td class="text-center py-4 px-4">
+                                        <span class="font-extrabold text-emerald-400 text-xl">+324,54%</span>
+                                    </td>
+                                    <td class="text-center py-4 px-4 font-medium text-slate-300">+174,57%</td>
+                                    <td class="text-center py-4 px-4 font-medium text-slate-300">+165,55%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
 
-        <table>
-          <thead>
-            <tr>
-              <th>Cenário</th>
-              <th>Dividendo 2027</th>
-              <th>DY</th>
-              <th>Probabilidade</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Melhor caso</td>
-              <td>R$ 12-13</td>
-              <td>15-16%</td>
-              <td>20%</td>
-            </tr>
-            <tr class="highlight-row">
-              <td><strong>Mais provável</strong></td>
-              <td><strong>R$ 9-11</strong></td>
-              <td><strong>11-14%</strong></td>
-              <td><strong>50%</strong></td>
-            </tr>
-            <tr>
-              <td>Pior caso</td>
-              <td class="negative">R$ 6-8</td>
-              <td class="negative">8-10%</td>
-              <td>30%</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
+                    <div class="bg-blue-900/20 rounded-2xl p-5 border border-blue-500/30">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg>
+                            <p class="text-slate-300">
+                                <strong>Análise:</strong> Apesar do desempenho ruim em 2025 (-3,87% vs IFIX +21,15%), o retorno total desde o início do fundo <strong class="text-emerald-400">(324,54%)</strong> supera significativamente tanto o IFIX quanto o CDI, demonstrando a capacidade de geração de valor no longo prazo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-      <!-- RISCOS OCULTOS -->
-      <section class="section">
-        <h2>⚠️ Os Riscos que o Gestor Não Fala</h2>
+        <!-- Conclusion -->
+        <section class="mb-12 fade-in">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 text-white relative overflow-hidden border border-slate-700/50">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Conclusão Analítica</h2>
+                    </div>
 
-        <div class="timeline">
-          <div class="timeline-item negative">
-            <h4>1. Risco de Extinção/Corte do MCMV</h4>
-            <p><strong>Probabilidade:</strong> 15-20% nos próximos 4 anos</p>
-            <p><strong>Impacto:</strong> CATASTRÓFICO - ~60% do pipeline depende do programa</p>
-          </div>
+                    <div class="prose prose-invert max-w-none mb-8">
+                        <p class="text-lg text-slate-300 leading-relaxed">
+                            O <strong class="text-white">MFII11</strong> é um FII de desenvolvimento com perfil de <strong class="text-amber-400">risco moderado-alto</strong>. O dividend yield de 16,1% é atrativo, mas vem acompanhado de volatilidade na cota, taxas elevadas (2% + 20% performance) e exposição fora da tese (29% em cemitérios). A gestão da Mérito demonstra competência histórica, com retorno total de 324% desde o início.
+                        </p>
+                    </div>
 
-          <div class="timeline-item negative">
-            <h4>2. Risco de Diluição Perpétua</h4>
-            <p><strong>Histórico:</strong> 7 subscrições em 7 anos = 1 por ano em média</p>
-            <p><strong>Exemplo:</strong> Quem tinha 1% do fundo em 2019 tem ~0,35% hoje</p>
-          </div>
+                    <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                        <h3 class="text-lg font-semibold mb-4">Veredicto Final</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="text-emerald-400 font-semibold mb-2">Pontos a favor</h4>
+                                <ul class="text-sm text-slate-300 space-y-1">
+                                    <li>• DY elevado (16,1% a.a.)</li>
+                                    <li>• Gestão experiente (13 anos)</li>
+                                    <li>• Retorno histórico superior (+324%)</li>
+                                    <li>• Pipeline robusto (R$ 1,05 bi)</li>
+                                    <li>• Preço abaixo do justo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-red-400 font-semibold mb-2">Pontos contra</h4>
+                                <ul class="text-sm text-slate-300 space-y-1">
+                                    <li>• Taxas elevadas (2% + 20%)</li>
+                                    <li>• 29% em cemitérios (fora da tese)</li>
+                                    <li>• Retorno 2025 negativo</li>
+                                    <li>• Dependência do MCMV</li>
+                                    <li>• Histórico de subscrições com prejuízo</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-amber-400 font-semibold mb-2">Recomendação</h4>
+                                <p class="text-sm text-slate-300 mb-3">
+                                    <strong class="text-white">NEUTRO</strong> - Adequado para investidores com horizonte de longo prazo e tolerância a volatilidade. Não é recomendado como posição principal.
+                                </p>
+                                <p class="text-xs text-slate-400">
+                                    Alocação sugerida: 5-10% de uma carteira diversificada de FIIs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-          <div class="timeline-item negative">
-            <h4>3. Risco de Subscrição Mal Precificada</h4>
-            <p><strong>Track record:</strong> 5 de 7 subscrições geraram prejuízo imediato</p>
-            <p><strong>Probabilidade 2026:</strong> 60% de ter mais 1-2 ofertas</p>
-          </div>
-
-          <div class="timeline-item negative">
-            <h4>4. Risco MCEM11 (22% do PL)</h4>
-            <p><strong>Cenário de estresse:</strong> Se MCEM11 cair 40%, MFII11 perde ~9% do PL</p>
-          </div>
-
-          <div class="timeline-item negative">
-            <h4>5. Risco de Liquidez</h4>
-            <p><strong>Liquidez diária:</strong> R$ 1,48M (baixa para posições grandes)</p>
-            <p><strong>Em crash:</strong> Liquidez seca e você fica preso</p>
-          </div>
-        </div>
-
-        <h3>Matriz de Risco</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Risco</th>
-              <th>Probabilidade</th>
-              <th>Impacto</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Corte MCMV</td>
-              <td>Média (20%)</td>
-              <td class="negative">Catastrófico (-40 a -60%)</td>
-            </tr>
-            <tr>
-              <td>Diluição</td>
-              <td class="negative">Alta (80%)</td>
-              <td>Alto (-2 a -3%/ano)</td>
-            </tr>
-            <tr>
-              <td>Subscrição ruim</td>
-              <td>Média-Alta (60%)</td>
-              <td class="negative">Alto (-20 a -30%)</td>
-            </tr>
-            <tr>
-              <td>Recessão</td>
-              <td>Média (30%)</td>
-              <td class="negative">Muito Alto (-40 a -50%)</td>
-            </tr>
-          </tbody>
-        </table>
-      </section>
-
-      <!-- VEREDITO FINAL -->
-      <section class="section">
-        <h2>⚖️ Veredito Final</h2>
-
-        <div class="verdict-box">
-          <h2>NOTA FINAL</h2>
-          <div class="score">5,5/10</div>
-          <div class="classification">INVESTIMENTO DE ALTO RISCO COM RETORNO INCERTO</div>
-          <p style="color: var(--text-secondary); font-size: 0.9rem; margin: 16px 0 0;">
-            MFII11 é um fundo APENAS para quem aceita risco extremo, tem capital para subscrições e entende que dividendos NÃO são estáveis.
-          </p>
-        </div>
-
-        <h3>Para Quem Pode Fazer Sentido</h3>
-
-        <div class="comparison-grid">
-          <div class="comparison-card good">
-            <h4>✅ Invista SE Você:</h4>
-            <ul>
-              <li>Tem estômago para volatilidade de -40 a -50%</li>
-              <li>Tem capital EXTRA para subscrições frequentes</li>
-              <li>Acredita que MCMV continuará forte por 5+ anos</li>
-              <li>Busca especulação, não renda passiva estável</li>
-              <li>Pode perder esse dinheiro sem afetar seu padrão de vida</li>
-              <li>Acompanha ATIVAMENTE o fundo</li>
-            </ul>
-          </div>
-          <div class="comparison-card bad">
-            <h4>❌ NÃO Invista SE Você:</h4>
-            <ul>
-              <li>Busca renda estável e previsível</li>
-              <li>Não tem capital para subscrições</li>
-              <li>Não aceita perder 40-50% em crises</li>
-              <li>Quer "comprar e esquecer"</li>
-              <li>Precisa desse dinheiro nos próximos 5 anos</li>
-              <li>Tem perfil conservador ou moderado</li>
-            </ul>
-          </div>
-        </div>
-
-        <h3>Recomendação Por Perfil</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Perfil</th>
-              <th>Recomendação</th>
-              <th>Alocação Máx</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><strong>Conservador</strong></td>
-              <td class="negative">NÃO INVISTA</td>
-              <td>0%</td>
-            </tr>
-            <tr>
-              <td><strong>Moderado</strong></td>
-              <td class="negative">EVITE</td>
-              <td>0-2%</td>
-            </tr>
-            <tr>
-              <td><strong>Arrojado</strong></td>
-              <td>CONSIDERE</td>
-              <td>3-8%</td>
-            </tr>
-            <tr>
-              <td><strong>Agressivo</strong></td>
-              <td class="positive">PODE INVESTIR</td>
-              <td>5-15%</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <h3>Se Decidir Investir: Estratégia</h3>
-        <div class="checklist">
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span><strong>Entre em quedas:</strong> Preço ideal P/VP < 0,72 (cotação ~R$ 71-73)</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span><strong>Participe de TODAS subscrições:</strong> Se não participar, será diluído 10-15%/ano</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span><strong>Mantenha reserva:</strong> 20-30% do valor investido em caixa para subscrições</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span><strong>Acompanhe ativamente:</strong> Leia relatório gerencial mensal inteiro</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span><strong>Defina stop loss:</strong> Venda se MCMV for cortado ou cair 30% do preço médio</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span><strong>Não concentre:</strong> Máximo 10% da carteira de FIIs</span>
-          </div>
-        </div>
-
-        <h3>Sinais para VENDER</h3>
-        <div class="red-flag">
-          <h3>❌ VENDA TUDO SE...</h3>
-          <ul>
-            <li>MCMV for extinto ou cortado >50%</li>
-            <li>Cotação cair para R$ 60-65</li>
-            <li>3+ obras atrasarem >12 meses simultaneamente</li>
-            <li>Subscrição >30% do PL for anunciada</li>
-            <li>MCEM11 crescer para >30% do PL</li>
-          </ul>
-        </div>
-      </section>
-
-      <!-- ALTERNATIVAS -->
-      <section class="section">
-        <h2>📊 Alternativas Superiores</h2>
-
-        <h3>Se você quer RENDA estável:</h3>
-        <table>
-          <thead>
-            <tr>
-              <th>Fundo</th>
-              <th>DY</th>
-              <th>Risco</th>
-              <th>Veredito</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="highlight-row">
-              <td><strong>MFII11</strong></td>
-              <td>16,56%</td>
-              <td class="negative">Muito Alto</td>
-              <td>Especulação</td>
-            </tr>
-            <tr>
-              <td>XPML11 (Shoppings)</td>
-              <td>11,2%</td>
-              <td class="positive">Médio</td>
-              <td class="positive">Melhor renda</td>
-            </tr>
-            <tr>
-              <td>HGLG11 (Logística)</td>
-              <td>9,8%</td>
-              <td class="positive">Baixo</td>
-              <td class="positive">Mais seguro</td>
-            </tr>
-            <tr>
-              <td>KNRI11 (Papel)</td>
-              <td>12,5%</td>
-              <td class="positive">Baixo</td>
-              <td class="positive">Previsível</td>
-            </tr>
-          </tbody>
-        </table>
-
-        <div class="alert info">
-          <strong>💡 CONCLUSÃO:</strong> Se seu objetivo é renda passiva estável, MFII11 não é a melhor escolha. Os 5% extras de DY NÃO compensam a volatilidade e incerteza. XPML11, HGLG11 ou KNRI11 entregam renda mais previsível com menos risco.
-        </div>
-      </section>
-
-      <!-- CHECKLIST FINAL -->
-      <section class="section">
-        <h2>📝 Checklist: Devo Investir?</h2>
-
-        <p>Responda mentalmente SIM ou NÃO para cada pergunta:</p>
-
-        <div class="checklist">
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você tem estômago para perder 40-50% do valor em crises?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você tem capital EXTRA reservado para subscrições (20-30%)?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você lê e entende relatórios gerenciais mensais?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você já tem carteira diversificada?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Este investimento representa MENOS de 10% do seu patrimônio?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você aceita que dividendos podem cair 50% de um ano para outro?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você acompanha notícias sobre MCMV e política habitacional?</span>
-          </div>
-          <div class="checklist-item">
-            <div class="check"></div>
-            <span>Você não precisa deste dinheiro nos próximos 5 anos?</span>
-          </div>
-        </div>
-
-        <div class="alert warning">
-          <strong>Resultado:</strong><br>
-          <strong>7-8 SIM:</strong> Você pode investir (3-8% da carteira)<br>
-          <strong>5-6 SIM:</strong> Invista no máximo 2-3% como especulação<br>
-          <strong>3-4 SIM:</strong> NÃO invista, risco muito alto para você<br>
-          <strong>0-2 SIM:</strong> Este fundo não é para você
-        </div>
-      </section>
-
-      <!-- DISCLAIMER -->
-      <section class="section" style="background: var(--bg-tertiary);">
-        <h2>📋 Disclaimer</h2>
-        <p style="font-size: 0.85rem; line-height: 1.7;">
-          Este relatório foi elaborado para fins <strong>educacionais</strong>. Não constitui recomendação de investimento personalizada. As informações são baseadas em dados públicos e análise independente.
-        </p>
-        <p style="font-size: 0.85rem; line-height: 1.7;">
-          <strong>Investimentos envolvem riscos.</strong> Rentabilidade passada não garante rentabilidade futura. Consulte um assessor financeiro antes de investir. Faça sua própria análise.
-        </p>
-        <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 16px;">
-          Última atualização: Janeiro 2026 | Baseado em 13 anos de histórico público
-        </p>
-      </section>
     </main>
 
     <!-- Footer -->
-    <footer class="page-footer">
-      <a href="../">
-        <svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-        Voltar para lista de FIIs
-      </a>
-      <p>Conteúdo educacional - Não é recomendação de investimento</p>
+    <footer class="bg-[#0a0a12] text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Sobre esta análise</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Análise baseada em <strong class="text-white">106 relatórios gerenciais</strong> do MFII11, cobrindo o período de Fevereiro/2018 a Janeiro/2026. Dados extraídos e consolidados via inteligência artificial a partir de documentos oficiais divulgados pelo fundo.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Disclaimer</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Esta análise <strong class="text-amber-400">não constitui recomendação de investimento</strong>. Rentabilidade passada não é garantia de rentabilidade futura. Consulte seu assessor antes de investir. Os dados apresentados podem conter imprecisões.
+                    </p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-slate-500 text-sm">
+                    Gerado em 27/01/2026 - Dados até Jan/2026
+                </div>
+                <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+                    Dados atualizados automaticamente
+                </div>
+            </div>
+        </div>
     </footer>
-  </div>
+
+    <!-- Charts Scripts -->
+    <script>
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.borderColor = '#1e293b';
+
+        // Dividend Projection Chart 2026
+        const dividendProjectionCtx = document.getElementById('dividendProjectionChart').getContext('2d');
+        new Chart(dividendProjectionCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                    label: 'Cenário Base (R$)',
+                    data: [1.07, 1.05, 1.05, 1.05, 1.05, 1.08, 1.10, 1.12, 1.10, 1.08, 1.08, 1.37],
+                    backgroundColor: 'rgba(59, 130, 246, 0.8)',
+                    borderRadius: 4,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        padding: 12,
+                        cornerRadius: 8,
+                        callbacks: {
+                            label: function(context) {
+                                let label = 'R$ ' + context.parsed.y.toFixed(2);
+                                if (context.dataIndex === 11) label += ' (extra + entregas)';
+                                return label;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#64748b' }
+                    },
+                    y: {
+                        min: 0.9,
+                        max: 1.5,
+                        grid: { color: '#1e293b' },
+                        ticks: {
+                            color: '#64748b',
+                            callback: function(value) {
+                                return 'R$ ' + value.toFixed(2);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Sticky Navigation
+        const stickyNav = document.getElementById('stickyNav');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                stickyNav.classList.remove('hidden');
+            } else {
+                stickyNav.classList.add('hidden');
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "MFII11 - Análise Completa do FII Mérito Desenvolvimento Imobiliário",
+        "description": "Análise detalhada do MFII11 com 13 anos de histórico, taxas de gestão, carteira completa de 30 ativos e projeções de dividendos para 2026.",
+        "datePublished": "2026-01-27",
+        "dateModified": "2026-01-27",
+        "author": {
+            "@type": "Organization",
+            "name": "Rico aos Poucos"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Rico aos Poucos",
+            "url": "https://ricoaospoucos.com.br"
+        }
+    }
+    </script>
 </body>
 </html>

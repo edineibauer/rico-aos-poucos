@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="FIIs Recomendados pelo canal Rico aos Poucos com faixas de preço atualizadas.">
+  <meta name="theme-color" content="#0d1117">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/recomendados/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="FIIs Recomendados - Rico aos Poucos">
+  <meta property="og:description" content="Lista de FIIs recomendados com faixas de preço.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/recomendados/">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+  <link rel="shortcut icon" href="../../icon-192.png">
+  <title>FIIs Recomendados - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .page-wrapper {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .app-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 14px 20px;
+      background: var(--bg-secondary);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .header-back {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      color: var(--text-primary);
+      text-decoration: none;
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .header-back:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .header-back svg {
+      width: 18px;
+      height: 18px;
+      stroke: currentColor;
+      stroke-width: 2;
+      fill: none;
+    }
+
+    .app-logo {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+
+    .app-title-group {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .app-name {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin: 0;
+    }
+
+    .app-subtitle {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+    }
+
+    /* Main content */
+    .main-content {
+      flex: 1;
+      padding: 16px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      width: 100%;
+    }
+
+    /* Hero section - compacto */
+    .hero-section {
+      text-align: center;
+      margin-bottom: 24px;
+      padding: 24px 20px;
+      background: linear-gradient(145deg, rgba(26, 95, 74, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-radius: 16px;
+      border: 1px solid rgba(26, 95, 74, 0.2);
+    }
+
+    .hero-section h2 {
+      font-size: 1.4rem;
+      margin: 0 0 8px;
+      color: var(--text-primary);
+    }
+
+    .hero-section p {
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      margin: 0 0 16px;
+    }
+
+    .last-update {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .last-update .date {
+      color: var(--primary-light);
+      font-weight: 600;
+    }
+
+    /* Legenda de preços */
+    .price-legend {
+      display: flex;
+      justify-content: center;
+      gap: 24px;
+      margin-bottom: 24px;
+      padding: 16px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+    }
+
+    .legend-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 3px;
+    }
+
+    .legend-dot.barato { background: var(--bullish); }
+    .legend-dot.bom { background: var(--neutral); }
+    .legend-dot.caro { background: var(--bearish); }
+
+    /* Lista de FIIs - compacta */
+    .fiis-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .fii-row {
+      display: grid;
+      grid-template-columns: 120px 1fr auto;
+      gap: 16px;
+      align-items: center;
+      padding: 16px 20px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      transition: all 0.3s ease;
+    }
+
+    .fii-row:hover {
+      border-color: var(--primary-light);
+    }
+
+    .fii-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .fii-ticker {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-primary);
+    }
+
+    .fii-nome {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+    }
+
+    .fii-alocacao {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      margin-top: 4px;
+      padding: 3px 8px;
+      background: rgba(88, 166, 255, 0.15);
+      border-radius: 4px;
+      font-size: 0.65rem;
+      color: #58a6ff;
+    }
+
+    .fii-motivo {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      line-height: 1.4;
+    }
+
+    .fii-precos {
+      display: flex;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .preco-tag {
+      padding: 8px 12px;
+      border-radius: 8px;
+      text-align: center;
+      min-width: 70px;
+    }
+
+    .preco-tag .label {
+      font-size: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      opacity: 0.8;
+      margin-bottom: 2px;
+    }
+
+    .preco-tag .valor {
+      font-size: 0.95rem;
+      font-weight: 700;
+    }
+
+    .preco-tag.barato {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+
+    .preco-tag.bom {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+
+    .preco-tag.caro {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 48px 20px;
+      background: var(--bg-card);
+      border-radius: 12px;
+      border: 1px solid var(--border-color);
+    }
+
+    .empty-state .icon {
+      font-size: 3rem;
+      margin-bottom: 12px;
+    }
+
+    .empty-state h3 {
+      font-size: 1.1rem;
+      margin-bottom: 6px;
+      color: var(--text-primary);
+    }
+
+    .empty-state p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+    }
+
+    /* Disclaimer */
+    .disclaimer-box {
+      margin-top: 24px;
+      padding: 16px;
+      background: var(--bg-tertiary);
+      border-left: 3px solid var(--secondary);
+      border-radius: 0 8px 8px 0;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    /* Responsivo */
+    @media (max-width: 700px) {
+      .fii-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .fii-info {
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .fii-precos {
+        justify-content: space-between;
+      }
+
+      .preco-tag {
+        flex: 1;
+      }
+
+      .price-legend {
+        gap: 16px;
+      }
+    }
+
+    @media (min-width: 768px) {
+      .main-content {
+        padding: 24px 32px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <!-- Header -->
+    <header class="app-header">
+      <a href="../" class="header-back">
+        <svg viewBox="0 0 24 24"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div class="app-logo">
+        <svg viewBox="0 0 1024 1024" width="36" height="36">
+          <defs><clipPath id="rc"><rect width="1024" height="1024" rx="205"/></clipPath></defs>
+          <g clip-path="url(#rc)">
+            <rect width="1024" height="1024" fill="#fdfdfd"/>
+            <path d="M329.73 475.84C318.03 487.75 291.26 514.98 270.23 536.35L232 575.21V218.91l129.25.35c127.97.35 129.38.37 142.25 2.56 44.75 7.62 77.89 21.45 104.52 43.63 19.83 16.51 36.07 40.45 41.44 61.07l1.53 5.87-9.75 10.06c-5.36 5.53-29.55 30.3-53.75 55.05-24.21 24.75-48.25 49.39-53.42 54.75-5.18 5.36-9.91 9.75-10.51 9.75s-5.76-4.68-11.47-10.41l-10.38-10.41 5.36-2.71c16.69-8.46 27.74-21.74 32.49-39.04 2.49-9.07 3.04-29.21 1.06-38.93-4.86-23.89-21.8-40.39-47.62-46.39-16.32-3.79-26.87-4.26-85.51-3.77-30.79.25-56.1.5-56.24.56-.14.05-.25 32.32-.25 71.69v71.6zm438.27 271.66c0 .28-32.06.48-71.25.45l-71.25-.05-22.31-31.2c-12.27-17.16-31.31-43.7-42.31-58.99l-20-27.78 2.6-3.09c4.52-5.37 76.91-78.84 77.68-78.84 1.08 0 39.66 51.87 88.5 119 11 15.12 28.63 39.31 39.17 53.75s19.17 26.79 19.17 27.06zM356 687.92V748h-59c-32.45 0-59-.34-58.99-.75.01-.9 115.72-118.6 117.06-119.08.57-.21.93 23.06.93 59.75z" fill="rgb(32,58,87)"/>
+            <path d="M298.21 658.25C261.73 694.96 231.8 725 231.69 725s-.19-27.65-.19-61.45v-61.44l16-16.26c8.8-8.96 50.21-51.0 92.03-93.35 41.82-42.36 79.13-80.27 82.92-84.26 3.78-3.99 7.25-7.25 7.72-7.25s10.62 9.34 22.59 20.75c11.96 11.41 32.71 31.06 46.11 43.66 23.13 21.77 24.46 22.85 26.49 21.5 2.26-1.49 29.72-29.31 97.15-98.41 22.54-23.10 48.53-49.65 57.76-58.99l16.79-17 -4.34-4c-2.39-2.2-14.67-13.41-27.28-24.92s-23.07-21.23-23.23-21.61c-.3-.72.32-.88 36.29-9.4 12.65-2.99 32.22-7.70 43.5-10.45s28.15-6.85 37.5-9.11c9.35-2.26 23.30-5.64 31-7.51 32.51-7.91 64.33-15.50 64.96-15.50.15 0-.54 3.94-1.54 8.75-4.91 23.62-11.24 53.92-15.42 73.75-2.54 12.10-6.61 31.67-9.03 43.5s-5.78 23.83-7.48 31.81c-1.70 7.98-4.34 20.47-5.88 27.76s-3.06 13.52-3.38 13.84c-.61.61-9.56-6.89-25.23-21.16-4.95-4.51-12.15-10.97-16-14.36l-7-6.17-3.91 4.29c-4.90 5.38-32.10 33.35-61.08 62.80-26.70 27.13-158.79 162.16-166.52 170.22l-5.49 5.72-21.5-20.59c-55.42-53.08-73.11-69.87-73.91-70.14-.47-.17-1.47.34-2.22 1.13-4.59 4.81-75.04 75.93-131.66 132.91z" fill="rgb(214,164,45)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="app-title-group">
+        <h1 class="app-name">Rico aos Poucos</h1>
+        <span class="app-subtitle">FIIs Recomendados</span>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main-content">
+      <!-- Hero - compacto -->
+      <section class="hero-section">
+        <h2>🎯 FIIs Recomendados</h2>
+        <p>Fundos com faixas de preço definidas. Compre no <strong>barato</strong>, evite no <strong>caro</strong>.</p>
+        <div class="last-update">
+          Atualizado em <span class="date" id="lastUpdate">--</span>
+        </div>
+      </section>
+
+      <!-- Legenda -->
+      <div class="price-legend">
+        <div class="legend-item">
+          <span class="legend-dot barato"></span>
+          <span><strong>Barato</strong> = Oportunidade</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot bom"></span>
+          <span><strong>Bom</strong> = Preço justo</span>
+        </div>
+        <div class="legend-item">
+          <span class="legend-dot caro"></span>
+          <span><strong>Caro</strong> = Evitar</span>
+        </div>
+      </div>
+
+      <!-- Lista de FIIs -->
+      <div class="fiis-list" id="fiisList">
+        <div class="empty-state">
+          <div class="icon">⏳</div>
+          <h3>Carregando...</h3>
+        </div>
+      </div>
+
+      <!-- Disclaimer -->
+      <div class="disclaimer-box">
+        ⚠️ Esta lista representa a opinião do canal e não constitui recomendação de investimento. Faça sua própria análise antes de investir.
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+  </div>
+
+  <script>
+    function formatDate(dateStr) {
+      const date = new Date(dateStr + 'T12:00:00');
+      return date.toLocaleDateString('pt-BR', {
+        day: '2-digit',
+        month: '2-digit',
+        year: 'numeric'
+      });
+    }
+
+    function formatCurrency(value) {
+      return 'R$ ' + value.toFixed(2).replace('.', ',');
+    }
+
+    async function carregarFiis() {
+      const container = document.getElementById('fiisList');
+      
+      try {
+        const response = await fetch('../../data/fiis-recomendados.json');
+        if (!response.ok) throw new Error('Erro ao carregar dados');
+        const data = await response.json();
+
+        // Atualizar data
+        document.getElementById('lastUpdate').textContent = formatDate(data.ultimaAtualizacao);
+
+        // Verificar se há FIIs
+        if (!data.fiis || data.fiis.length === 0) {
+          container.innerHTML = `
+            <div class="empty-state">
+              <div class="icon">📋</div>
+              <h3>Nenhum FII no momento</h3>
+              <p>A lista será atualizada em breve.</p>
+            </div>
+          `;
+          return;
+        }
+
+        // Renderizar FIIs - lista compacta
+        container.innerHTML = data.fiis.map(fii => `
+          <div class="fii-row">
+            <div class="fii-info">
+              <span class="fii-ticker">${fii.ticker}</span>
+              <span class="fii-nome">${fii.nome}</span>
+              <span class="fii-alocacao">📊 Máx ${fii.alocacaoMax}%</span>
+            </div>
+            <div class="fii-motivo">${fii.motivo}</div>
+            <div class="fii-precos">
+              <div class="preco-tag barato">
+                <div class="label">Barato</div>
+                <div class="valor">${formatCurrency(fii.precoBarato)}</div>
+              </div>
+              <div class="preco-tag bom">
+                <div class="label">Bom</div>
+                <div class="valor">${formatCurrency(fii.precoBom)}</div>
+              </div>
+              <div class="preco-tag caro">
+                <div class="label">Caro</div>
+                <div class="valor">${formatCurrency(fii.precoCaro)}</div>
+              </div>
+            </div>
+          </div>
+        `).join('');
+
+      } catch (error) {
+        container.innerHTML = `
+          <div class="empty-state">
+            <div class="icon">⚠️</div>
+            <h3>Erro ao carregar</h3>
+            <p>Tente recarregar a página.</p>
+          </div>
+        `;
+        console.error('Erro:', error);
+      }
+    }
+
+    document.addEventListener('DOMContentLoaded', carregarFiis);
+  </script>
+  <script src="../../js/footer.js"></script>
+</body>
+</html>

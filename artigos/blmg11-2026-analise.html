@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="BLMG11: O fundo que fez o cotista perder dinheiro, mas agora pode virar oportunidade. Tudo depende das próximas decisões do gestor.">
+  <meta name="theme-color" content="#0d1117">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+  <link rel="manifest" href="../manifest.json">
+  <title>BLMG11: Tudo Depende do Gestor - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-header {
+      margin-bottom: 32px;
+    }
+    .article-header h1 {
+      font-size: 2rem;
+      margin: 16px 0;
+      line-height: 1.3;
+    }
+    .article-meta {
+      display: flex;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .article-content {
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .article-content h2 {
+      color: var(--text-primary);
+      margin: 32px 0 16px;
+      font-size: 1.4rem;
+    }
+    .article-content h3 {
+      color: var(--text-primary);
+      margin: 24px 0 12px;
+      font-size: 1.1rem;
+    }
+    .article-content p {
+      margin-bottom: 16px;
+    }
+    .article-content ul, .article-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    .article-content li {
+      margin-bottom: 8px;
+    }
+    .stat-box {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .stat-number.bearish { color: var(--bearish); }
+    .stat-number.bullish { color: var(--bullish); }
+    .stat-number.neutral { color: var(--neutral); }
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .stat-item {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-item .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+    .stat-item .value.bearish { color: var(--bearish); }
+    .stat-item .value.bullish { color: var(--bullish); }
+    .stat-item .value.neutral { color: var(--neutral); }
+    .stat-item .label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .callout {
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(240, 193, 75, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .callout.positive {
+      background: linear-gradient(135deg, rgba(63, 185, 80, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(63, 185, 80, 0.3);
+    }
+    .callout.danger {
+      background: linear-gradient(135deg, rgba(248, 81, 73, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(248, 81, 73, 0.3);
+    }
+    .price-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .price-table th, .price-table td {
+      padding: 12px 16px;
+      text-align: center;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .price-table th {
+      background: var(--bg-secondary);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .price-table tr:last-child td { border-bottom: none; }
+    .price-table .highlight { background: rgba(63, 185, 80, 0.1); }
+    .cenarios-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .cenario-card {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 4px solid;
+    }
+    .cenario-card.bullish { border-left-color: var(--bullish); }
+    .cenario-card.neutral { border-left-color: var(--neutral); }
+    .cenario-card.bearish { border-left-color: var(--bearish); }
+    .cenario-card h4 {
+      margin: 0 0 8px;
+      font-size: 1rem;
+    }
+    .cenario-card.bullish h4 { color: var(--bullish); }
+    .cenario-card.neutral h4 { color: var(--neutral); }
+    .cenario-card.bearish h4 { color: var(--bearish); }
+    .cenario-card p {
+      margin: 0;
+      font-size: 0.9rem;
+    }
+    .timeline-box {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .timeline-item:last-child {
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-bottom: none;
+    }
+    .timeline-icon {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      flex-shrink: 0;
+    }
+    .timeline-icon.bad { background: rgba(248, 81, 73, 0.2); }
+    .timeline-icon.good { background: rgba(63, 185, 80, 0.2); }
+    .timeline-icon.neutral { background: rgba(240, 193, 75, 0.2); }
+    .disclaimer {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .disclaimer h4 {
+      margin-bottom: 8px;
+      color: var(--neutral);
+    }
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .nivel-badge.avancado {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+    .nivel-badge.alerta {
+      background: rgba(240, 193, 75, 0.15);
+      color: var(--neutral);
+    }
+    .quote-box {
+      background: var(--bg-tertiary);
+      border-left: 4px solid var(--primary-light);
+      padding: 20px;
+      margin: 24px 0;
+      font-style: italic;
+    }
+    @media (max-width: 600px) {
+      .cenarios-grid { grid-template-columns: 1fr; }
+      .article-header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper" style="min-height:100vh;display:flex;flex-direction:column;">
+
+    <header class="app-header" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color);">
+      <a href="./" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.05);border-radius:10px;color:var(--text-primary);text-decoration:none;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div style="width:36px;height:36px;flex-shrink:0;">
+        <svg viewBox="0 0 1024 1024" width="36" height="36">
+          <defs><clipPath id="rc"><rect width="1024" height="1024" rx="205"/></clipPath></defs>
+          <g clip-path="url(#rc)">
+            <rect width="1024" height="1024" fill="#fdfdfd"/>
+            <path d="M329.73 475.84C318.03 487.75 291.26 514.98 270.23 536.35L232 575.21V218.91l129.25.35c127.97.35 129.38.37 142.25 2.56 44.75 7.62 77.89 21.45 104.52 43.63 19.83 16.51 36.07 40.45 41.44 61.07l1.53 5.87-9.75 10.06c-5.36 5.53-29.55 30.3-53.75 55.05-24.21 24.75-48.25 49.39-53.42 54.75-5.18 5.36-9.91 9.75-10.51 9.75s-5.76-4.68-11.47-10.41l-10.38-10.41 5.36-2.71c16.69-8.46 27.74-21.74 32.49-39.04 2.49-9.07 3.04-29.21 1.06-38.93-4.86-23.89-21.8-40.39-47.62-46.39-16.32-3.79-26.87-4.26-85.51-3.77-30.79.25-56.1.5-56.24.56-.14.05-.25 32.32-.25 71.69v71.6zm438.27 271.66c0 .28-32.06.48-71.25.45l-71.25-.05-22.31-31.2c-12.27-17.16-31.31-43.7-42.31-58.99l-20-27.78 2.6-3.09c4.52-5.37 76.91-78.84 77.68-78.84 1.08 0 39.66 51.87 88.5 119 11 15.12 28.63 39.31 39.17 53.75s19.17 26.79 19.17 27.06zM356 687.92V748h-59c-32.45 0-59-.34-58.99-.75.01-.9 115.72-118.6 117.06-119.08.57-.21.93 23.06.93 59.75z" fill="rgb(32,58,87)"/>
+            <path d="M298.21 658.25C261.73 694.96 231.8 725 231.69 725s-.19-27.65-.19-61.45v-61.44l16-16.26c8.8-8.96 50.21-51.0 92.03-93.35 41.82-42.36 79.13-80.27 82.92-84.26 3.78-3.99 7.25-7.25 7.72-7.25s10.62 9.34 22.59 20.75c11.96 11.41 32.71 31.06 46.11 43.66 23.13 21.77 24.46 22.85 26.49 21.5 2.26-1.49 29.72-29.31 97.15-98.41 22.54-23.10 48.53-49.65 57.76-58.99l16.79-17 -4.34-4c-2.39-2.2-14.67-13.41-27.28-24.92s-23.07-21.23-23.23-21.61c-.3-.72.32-.88 36.29-9.4 12.65-2.99 32.22-7.70 43.5-10.45s28.15-6.85 37.5-9.11c9.35-2.26 23.3-5.64 31-7.51 32.51-7.91 64.33-15.5 64.96-15.5.15 0-.54 3.94-1.54 8.75-4.91 23.62-11.24 53.92-15.42 73.75-2.54 12.10-6.61 31.67-9.03 43.5s-5.78 23.83-7.48 31.81c-1.70 7.98-4.34 20.47-5.88 27.76s-3.06 13.52-3.38 13.84c-.61.61-9.56-6.89-25.23-21.16-4.95-4.51-12.15-10.97-16-14.36l-7-6.17-3.91 4.29c-4.90 5.38-32.10 33.35-61.08 62.8-26.70 27.13-158.79 162.16-166.52 170.22l-5.49 5.72-21.5-20.59c-55.42-53.08-73.11-69.87-73.91-70.14-.47-.17-1.47.34-2.22 1.13-4.59 4.81-75.04 75.93-131.66 132.91z" fill="rgb(214,164,45)"/>
+          </g>
+        </svg>
+      </div>
+      <div style="flex:1;min-width:0;">
+        <h1 style="font-size:1rem;font-weight:600;color:var(--text-primary);margin:0;">Rico aos Poucos</h1>
+        <span style="font-size:0.7rem;color:var(--text-muted);">Artigo</span>
+      </div>
+    </header>
+
+    <article class="article-container" style="flex:1;">
+
+      <div class="article-header">
+        <span class="nivel-badge alerta">⚠️ Risco Gestor</span>
+        <span class="nivel-badge avancado">🔥 Avançado</span>
+        <h1>BLMG11: Tudo Depende do Gestor</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">
+          O fundo que fez o cotista perder dinheiro, estabilizou, e agora pode virar oportunidade — ou não. Depende das próximas decisões.
+        </p>
+        <div class="article-meta">
+          <span>📅 28 de Janeiro de 2026</span>
+          <span>⏱️ 6 min de leitura</span>
+          <span>📦 Logística/Multiestratégia</span>
+        </div>
+      </div>
+
+      <div class="article-content">
+
+        <div class="callout danger">
+          <h3>🚨 Aviso Direto</h3>
+          <p style="margin:0;">
+            Este é um fundo de <strong>baixa liquidez</strong> (~200k/dia) com histórico problemático. 
+            Só considere se você entende os riscos e aceita uma <strong>alocação máxima de 5%</strong> da carteira.
+          </p>
+        </div>
+
+        <h2>O Histórico: Um Desastre</h2>
+
+        <p>
+          Vamos ser diretos: o gestor do BLMG11 fez um <strong>péssimo trabalho</strong> até agora. 
+          O cotista que entrou no fundo perdeu dinheiro. Não tem como dourar a pílula.
+        </p>
+
+        <div class="timeline-box">
+          <div class="timeline-item">
+            <div class="timeline-icon bad">💸</div>
+            <div>
+              <strong>Decisões ruins de alocação</strong>
+              <p style="margin:4px 0 0;font-size:0.9rem;color:var(--text-muted);">
+                O gestor entrou em posições no momento errado, com timing péssimo de mercado.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon bad">📉</div>
+            <div>
+              <strong>Cotistas perderam dinheiro</strong>
+              <p style="margin:4px 0 0;font-size:0.9rem;color:var(--text-muted);">
+                O preço da cota despencou e muitos saíram no prejuízo.
+              </p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-icon good">🛑</div>
+            <div>
+              <strong>Estabilização recente</strong>
+              <p style="margin:4px 0 0;font-size:0.9rem;color:var(--text-muted);">
+                Últimas decisões foram para minimizar prejuízos e reestruturar o fundo.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <h2>A Situação Atual</h2>
+
+        <p>
+          Hoje o BLMG11 está basicamente composto por:
+        </p>
+
+        <ul>
+          <li><strong>Cotas de GGRC11</strong> — fundo de logística grande e estável</li>
+          <li><strong>Imóvel alugado para a Kalunga</strong> — aquisição recente</li>
+        </ul>
+
+        <p>
+          O fundo está em <strong>transição</strong>. A ideia do gestor é vender as cotas de GGRC11 
+          nos próximos meses e realocar em outros ativos, mudando de "logística" para <strong>"multiestratégia"</strong>.
+        </p>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="value">R$ 34</div>
+            <div class="label">Preço Atual</div>
+          </div>
+          <div class="stat-item">
+            <div class="value bullish">R$ 0,41</div>
+            <div class="label">Dividendo/mês</div>
+          </div>
+          <div class="stat-item">
+            <div class="value bullish">1,2%</div>
+            <div class="label">DY Mensal</div>
+          </div>
+          <div class="stat-item">
+            <div class="value neutral">~200k</div>
+            <div class="label">Liquidez/dia</div>
+          </div>
+        </div>
+
+        <h2>Os 3 Cenários Possíveis</h2>
+
+        <p>
+          O futuro do BLMG11 depende <strong>exclusivamente</strong> das próximas decisões do gestor. 
+          Não tem meio termo aqui:
+        </p>
+
+        <div class="cenarios-grid">
+          <div class="cenario-card bullish">
+            <h4>📈 Gestor Acerta</h4>
+            <p>
+              Vende GGRC11 bem, aloca em ativos que performam, dividendos sobem. 
+              <strong>Cota pode ir a R$40-45.</strong>
+            </p>
+          </div>
+          <div class="cenario-card neutral">
+            <h4>➖ Gestor Não Faz Nada</h4>
+            <p>
+              Mantém posição em GGRC11, fundo fica parado. 
+              <strong>Cota sobe devagar até ~R$36.</strong>
+            </p>
+          </div>
+          <div class="cenario-card bearish">
+            <h4>📉 Gestor Erra de Novo</h4>
+            <p>
+              Faz alocações ruins, timing errado de novo. 
+              <strong>Cota pode cair ou lateralizar por anos.</strong>
+            </p>
+          </div>
+        </div>
+
+        <h2>Por Que Considerar Mesmo Assim?</h2>
+
+        <p>
+          Se o histórico é ruim, por que diabos olhar para esse fundo? Alguns pontos:
+        </p>
+
+        <ul>
+          <li><strong>Preço muito descontado</strong> — o mercado já precificou o risco do gestor</li>
+          <li><strong>Últimas decisões foram boas</strong> — minimizou prejuízos, estabilizou</li>
+          <li><strong>Base atual é sólida</strong> — GGRC11 é um fundo estável</li>
+          <li><strong>DY de 1,2% ao mês</strong> — enquanto espera, recebe</li>
+          <li><strong>Upside se o gestor acertar</strong> — assimetria favorável</li>
+        </ul>
+
+        <div class="quote-box">
+          "Se o gestor provar que aprendeu com os erros, quem comprou barato vai colher. 
+          Se ele errar de novo, pelo menos o prejuízo está controlado no preço atual."
+        </div>
+
+        <h2>Faixas de Preço</h2>
+
+        <table class="price-table">
+          <thead>
+            <tr>
+              <th>Classificação</th>
+              <th>Faixa de Preço</th>
+              <th>Ação</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="highlight">
+              <td>🟢 Barato</td>
+              <td><strong>Abaixo de R$ 30</strong></td>
+              <td>Oportunidade clara</td>
+            </tr>
+            <tr>
+              <td>🟡 Bom</td>
+              <td><strong>R$ 30 - R$ 34</strong></td>
+              <td>Preço justo para entrada</td>
+            </tr>
+            <tr>
+              <td>🔴 Caro</td>
+              <td><strong>Acima de R$ 37</strong></td>
+              <td>Evitar / realizar lucro</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h2>Conclusão: Uma Aposta no Gestor</h2>
+
+        <p>
+          O BLMG11 é uma <strong>aposta de recuperação</strong>. Você está apostando que o gestor 
+          aprendeu com os erros e vai fazer movimentos melhores daqui pra frente.
+        </p>
+
+        <div class="callout">
+          <h3>⚠️ Regras Para Entrar</h3>
+          <ul style="margin:0;padding-left:20px;">
+            <li><strong>Máximo 5% da carteira</strong> — é um fundo pequeno e de risco</li>
+            <li><strong>Baixa liquidez</strong> — não vai conseguir sair rápido se precisar</li>
+            <li><strong>Acompanhe o gestor</strong> — se ele fizer merda de novo, abandone</li>
+            <li><strong>Não é para iniciantes</strong> — só entre se entender o risco</li>
+          </ul>
+        </div>
+
+        <p>
+          Se o gestor se mostrar competente nos próximos movimentos, o BLMG11 pode ser uma 
+          <strong>excelente oportunidade</strong> a preços descontados.
+        </p>
+
+        <p>
+          Se ele errar de novo, <strong>abandone o fundo e nunca mais olhe pra trás</strong>.
+        </p>
+
+        <p>
+          Por enquanto, vamos dar uma <strong>carta de confiança</strong> e observar os próximos meses. 🔍
+        </p>
+
+        <div class="disclaimer">
+          <h4>⚠️ Aviso Importante</h4>
+          <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">
+            Este artigo é apenas educacional e não constitui recomendação de investimento.
+            Rentabilidade passada não garante resultados futuros. Faça sua própria análise
+            antes de tomar qualquer decisão de investimento.
+          </p>
+        </div>
+
+        <div class="referencias" style="margin-top:40px;padding-top:24px;border-top:1px solid var(--border-color);">
+          <h4 style="color:var(--text-muted);font-size:0.9rem;">📚 Leia também</h4>
+          <ul style="list-style:none;padding:0;margin:16px 0 0 0;">
+            <li style="margin-bottom:8px;">
+              <a href="fiis-2026-analise.html" style="color:var(--primary-light);">FIIs em 2026: Renda Passiva com Cautela</a>
+            </li>
+            <li style="margin-bottom:8px;">
+              <a href="tgar11-panico-ou-oportunidade-2026.html" style="color:var(--primary-light);">Comprei TGAR11 a R$80: Pechincha Após Dividendos Menores</a>
+            </li>
+            <li style="margin-bottom:8px;">
+              <a href="risco-retorno-investimentos-2026.html" style="color:var(--primary-light);">Timing de Entrada: Quando a Margem de Queda é Pequena</a>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+
+    </article>
+
+    <div id="footer-container"></div>
+  </div>
+  <script src="../js/footer.js"></script>
+</body>
+</html>

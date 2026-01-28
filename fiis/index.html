@@ -129,6 +129,62 @@
       line-height: 1.5;
     }
 
+    /* CTA FIIs Recomendados */
+    .cta-recomendados {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 20px 24px;
+      margin-bottom: 24px;
+      background: linear-gradient(145deg, rgba(26, 95, 74, 0.2) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(26, 95, 74, 0.3);
+      border-radius: 16px;
+      text-decoration: none;
+      color: inherit;
+      transition: all 0.3s ease;
+    }
+
+    .cta-recomendados:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 95, 74, 0.2);
+    }
+
+    .cta-icon {
+      font-size: 2rem;
+      flex-shrink: 0;
+    }
+
+    .cta-content {
+      flex: 1;
+    }
+
+    .cta-content h3 {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      margin: 0 0 4px;
+    }
+
+    .cta-content p {
+      font-size: 0.85rem;
+      color: var(--text-secondary);
+      margin: 0;
+    }
+
+    .cta-content strong {
+      color: var(--primary-light);
+    }
+
+    .cta-arrow {
+      color: var(--primary-light);
+      flex-shrink: 0;
+      transition: transform 0.3s ease;
+    }
+
+    .cta-recomendados:hover .cta-arrow {
+      transform: translateX(4px);
+    }
+
     /* Search and filters */
     .search-section {
       margin-bottom: 20px;
@@ -545,6 +601,18 @@
         <h2>Analise de Fundos Imobiliarios</h2>
         <p>Analises detalhadas de FIIs com indicadores, riscos, pontos positivos e nossa opiniao. Conteudo educacional - nao e recomendacao de investimento.</p>
       </section>
+
+      <!-- CTA para FIIs Recomendados -->
+      <a href="recomendados/" class="cta-recomendados">
+        <div class="cta-icon">🎯</div>
+        <div class="cta-content">
+          <h3>FIIs Recomendados</h3>
+          <p>Veja a lista de FIIs com <strong>preços de entrada</strong> e <strong>saída</strong> definidos</p>
+        </div>
+        <svg class="cta-arrow" viewBox="0 0 24 24" width="24" height="24">
+          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+      </a>
 
       <!-- Stats summary -->
       <div class="stats-summary" id="statsSummary">

@@ -2,16 +2,16 @@
   <defs>
     <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" style="stop-color:#0d1117"/>
-      <stop offset="50%" style="stop-color:#161b22"/>
-      <stop offset="100%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a0a0a"/>
     </linearGradient>
-    <linearGradient id="redGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+    <linearGradient id="fireGrad" x1="0%" y1="100%" x2="0%" y2="0%">
       <stop offset="0%" style="stop-color:#f85149"/>
-      <stop offset="100%" style="stop-color:#da3633"/>
+      <stop offset="50%" style="stop-color:#f0c14b"/>
+      <stop offset="100%" style="stop-color:#ff6b35"/>
     </linearGradient>
-    <linearGradient id="greenGrad" x1="0%" y1="100%" x2="0%" y2="0%">
-      <stop offset="0%" style="stop-color:#238636"/>
-      <stop offset="100%" style="stop-color:#3fb950"/>
+    <linearGradient id="greenGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#3fb950"/>
+      <stop offset="100%" style="stop-color:#1a5f4a"/>
     </linearGradient>
     <filter id="glow">
       <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
@@ -25,54 +25,69 @@
   <!-- Background -->
   <rect width="1200" height="630" fill="url(#bgGrad)"/>
   
+  <!-- Dramatic red overlay -->
+  <rect width="1200" height="630" fill="#f85149" opacity="0.05"/>
+  
   <!-- Grid pattern -->
   <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
-    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#21262d" stroke-width="0.5"/>
+    <path d="M 40 0 L 0 0 0 40" fill="none" stroke="#ffffff" stroke-width="0.5" opacity="0.03"/>
   </pattern>
-  <rect width="1200" height="630" fill="url(#grid)" opacity="0.3"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
   
-  <!-- Chart area background -->
-  <rect x="100" y="200" width="500" height="300" fill="#161b22" rx="12"/>
+  <!-- Crashing chart line -->
+  <path d="M 50 200 L 200 180 L 350 150 L 450 170 L 550 120 L 650 140 L 750 100 L 850 400 L 950 450 L 1050 480 L 1150 520" 
+        fill="none" stroke="#f85149" stroke-width="4" opacity="0.6"/>
   
-  <!-- Price chart - dramatic drop -->
-  <polyline points="120,250 200,240 280,235 360,230 440,260 520,380" 
-            fill="none" stroke="url(#redGrad)" stroke-width="4" stroke-linecap="round"/>
+  <!-- Dramatic drop arrow -->
+  <g transform="translate(800, 250)">
+    <path d="M 0 0 L 80 150 L 50 150 L 50 250 L -50 250 L -50 150 L -80 150 Z" 
+          fill="url(#fireGrad)" opacity="0.9" filter="url(#glow)"/>
+    <text x="0" y="320" text-anchor="middle" fill="#f85149" font-family="Arial Black, sans-serif" font-size="48" font-weight="900">
+      -11%
+    </text>
+  </g>
   
-  <!-- Drop arrow -->
-  <path d="M 480,300 L 520,380 L 500,360" fill="none" stroke="#f85149" stroke-width="3" filter="url(#glow)"/>
+  <!-- Price tags -->
+  <g transform="translate(150, 350)">
+    <rect x="-60" y="-25" width="120" height="50" rx="8" fill="#f85149" opacity="0.2"/>
+    <text x="0" y="8" text-anchor="middle" fill="#f85149" font-family="Arial, sans-serif" font-size="28" font-weight="bold">
+      R$93
+    </text>
+    <line x1="70" y1="0" x2="180" y2="80" stroke="#f85149" stroke-width="3" stroke-dasharray="8,4"/>
+  </g>
   
-  <!-- Horizontal support line -->
-  <line x1="120" y1="400" x2="580" y2="400" stroke="#3fb950" stroke-width="2" stroke-dasharray="8,4"/>
-  <text x="130" y="420" fill="#3fb950" font-family="Arial, sans-serif" font-size="14">R$80 - Suporte</text>
-  
-  <!-- -11% badge -->
-  <rect x="400" y="280" width="100" height="40" fill="#f85149" rx="8"/>
-  <text x="450" y="307" fill="#fff" font-family="Arial, sans-serif" font-size="20" font-weight="bold" text-anchor="middle">-11%</text>
-  
-  <!-- Question marks representing panic -->
-  <text x="660" y="280" fill="#f85149" font-family="Arial, sans-serif" font-size="80" opacity="0.3">?</text>
-  <text x="720" y="350" fill="#f85149" font-family="Arial, sans-serif" font-size="60" opacity="0.2">?</text>
-  <text x="680" y="420" fill="#3fb950" font-family="Arial, sans-serif" font-size="100" opacity="0.3">$</text>
+  <g transform="translate(350, 450)">
+    <rect x="-60" y="-25" width="120" height="50" rx="8" fill="#3fb950" opacity="0.3"/>
+    <text x="0" y="8" text-anchor="middle" fill="#3fb950" font-family="Arial, sans-serif" font-size="28" font-weight="bold">
+      R$80
+    </text>
+  </g>
   
   <!-- Main title -->
-  <text x="700" y="180" fill="#fff" font-family="Arial, sans-serif" font-size="56" font-weight="bold">TGAR11</text>
+  <text x="600" y="100" text-anchor="middle" fill="#ffffff" font-family="Arial Black, sans-serif" font-size="72" font-weight="900">
+    TGAR11
+  </text>
   
-  <!-- Subtitle -->
-  <text x="700" y="230" fill="#f0c14b" font-family="Arial, sans-serif" font-size="28">Pânico ou</text>
-  <text x="700" y="265" fill="#f0c14b" font-family="Arial, sans-serif" font-size="28">Oportunidade?</text>
+  <!-- Subtitle with dramatic effect -->
+  <text x="600" y="160" text-anchor="middle" fill="#f0c14b" font-family="Arial, sans-serif" font-size="32" font-weight="bold">
+    COMPREI NA QUEDA
+  </text>
   
-  <!-- Key points -->
-  <text x="700" y="340" fill="#8b949e" font-family="Arial, sans-serif" font-size="18">• Guidance revisado para baixo</text>
-  <text x="700" y="370" fill="#8b949e" font-family="Arial, sans-serif" font-size="18">• R$80 = início de oportunidade</text>
-  <text x="700" y="400" fill="#8b949e" font-family="Arial, sans-serif" font-size="18">• Margem de queda controlada</text>
-  <text x="700" y="430" fill="#8b949e" font-family="Arial, sans-serif" font-size="18">• 2026 difícil, mas não é o fim</text>
+  <!-- Badge -->
+  <g transform="translate(1050, 80)">
+    <rect x="-70" y="-25" width="140" height="50" rx="25" fill="#f85149"/>
+    <text x="0" y="8" text-anchor="middle" fill="#ffffff" font-family="Arial, sans-serif" font-size="18" font-weight="bold">
+      🔥 AVANÇADO
+    </text>
+  </g>
   
-  <!-- Logo placeholder -->
-  <rect x="1050" y="550" width="120" height="50" fill="#161b22" rx="8"/>
-  <text x="1110" y="582" fill="#f0c14b" font-family="Arial, sans-serif" font-size="16" text-anchor="middle" font-weight="bold">RICO AOS</text>
-  <text x="1110" y="598" fill="#f0c14b" font-family="Arial, sans-serif" font-size="12" text-anchor="middle">POUCOS</text>
+  <!-- Bottom text -->
+  <text x="600" y="580" text-anchor="middle" fill="#8b949e" font-family="Arial, sans-serif" font-size="24">
+    Pechincha ou armadilha? Minha análise completa.
+  </text>
   
-  <!-- Urgente badge -->
-  <rect x="30" y="30" width="100" height="36" fill="#f85149" rx="18"/>
-  <text x="80" y="54" fill="#fff" font-family="Arial, sans-serif" font-size="14" font-weight="bold" text-anchor="middle">🚨 URGENTE</text>
+  <!-- Flames at bottom -->
+  <ellipse cx="200" cy="630" rx="150" ry="60" fill="#f85149" opacity="0.15"/>
+  <ellipse cx="600" cy="630" rx="200" ry="80" fill="#f85149" opacity="0.1"/>
+  <ellipse cx="1000" cy="630" rx="150" ry="60" fill="#f85149" opacity="0.15"/>
 </svg>

@@ -1,0 +1,50 @@
+{
+  "ultimaAtualizacao": "2026-01-28",
+  "descricao": "Lista de FIIs recomendados com faixas de preço. Atualizada periodicamente.",
+  "disclaimer": "Esta lista não constitui recomendação de investimento. Faça sua própria análise.",
+  "fiis": [
+    {
+      "ticker": "TGAR11",
+      "nome": "TG Ativo Real",
+      "segmento": "desenvolvimento",
+      "precoBarato": 75.00,
+      "precoBom": 80.00,
+      "precoCaro": 87.00,
+      "alocacaoMax": 7,
+      "motivo": "Preços baixos com baixa probabilidade de mais quedas. Potencial de alta em 2027+. Lateraliza em 2026.",
+      "ultimaAtualizacao": "2026-01-28"
+    },
+    {
+      "ticker": "BLMG11",
+      "nome": "Bluemacaw Logística",
+      "segmento": "logistica",
+      "precoBarato": 30.00,
+      "precoBom": 34.00,
+      "precoCaro": 37.00,
+      "alocacaoMax": 5,
+      "motivo": "Fundo em transição para multiestratégia (GGRC11 + imóvel Kalunga). Preço desconta histórico ruim do gestor. Depende dos próximos movimentos dele. Baixa liquidez.",
+      "ultimaAtualizacao": "2026-01-28"
+    },
+    {
+      "ticker": "SEQR11",
+      "nome": "Sequoia III Renda Imobiliária",
+      "segmento": "tijolo",
+      "precoBarato": 46.00,
+      "precoBom": 50.00,
+      "precoCaro": 57.00,
+      "alocacaoMax": 5,
+      "motivo": "Gestores transparentes, cumprem guidances. P/VP 0,57. Poucos imóveis = se 1 inquilino sair, cota sofre. Mas tem 1 vago (potencial de alta). Baixa liquidez.",
+      "ultimaAtualizacao": "2026-01-28"
+    }
+  ],
+  "segmentos": {
+    "desenvolvimento": { "nome": "Desenvolvimento", "icon": "🏗️" },
+    "tijolo": { "nome": "Tijolo", "icon": "🏢" },
+    "papel": { "nome": "Papel", "icon": "📄" },
+    "hibrido": { "nome": "Híbrido", "icon": "🔀" },
+    "fof": { "nome": "FoF", "icon": "📊" },
+    "logistica": { "nome": "Logística", "icon": "📦" },
+    "shoppings": { "nome": "Shoppings", "icon": "🛒" },
+    "lajes": { "nome": "Lajes Corporativas", "icon": "🏙️" }
+  }
+}

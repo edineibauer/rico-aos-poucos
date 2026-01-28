@@ -654,8 +654,9 @@
         <div class="exposicao-header">
           <h2 class="exposicao-title" data-i18n="sectors.recommendedExposure">Exposição Recomendada</h2>
           <div class="exposicao-stats">
-            <span class="stat-pill bullish">3 <span data-i18n="sentiments.bullishPlural">Otimistas</span></span>
-            <span class="stat-pill neutral">5 <span data-i18n="sentiments.neutralPlural">Neutros</span></span>
+            <span class="stat-pill bullish">4 <span data-i18n="sentiments.bullishPlural">Otimistas</span></span>
+            <span class="stat-pill neutral">3 <span data-i18n="sentiments.neutralPlural">Neutros</span></span>
+            <span class="stat-pill bearish">3 <span data-i18n="sentiments.bearishPlural">Pessimistas</span></span>
           </div>
         </div>
 
@@ -674,10 +675,10 @@
             <span class="bar-icon">💲</span>
             <div class="bar-info">
               <div class="bar-name">Dólar</div>
-              <div class="bar-track"><div class="bar-fill neutral" style="width: 15%"></div></div>
+              <div class="bar-track"><div class="bar-fill bullish" style="width: 20%"></div></div>
             </div>
-            <span class="bar-percent">15%</span>
-            <span class="bar-sentiment neutral">Neutro</span>
+            <span class="bar-percent">20%</span>
+            <span class="bar-sentiment bullish">Otimista</span>
           </a>
 
           <a href="imoveis/" class="bar-item">
@@ -694,10 +695,10 @@
             <span class="bar-icon">📈</span>
             <div class="bar-info">
               <div class="bar-name">IBOV</div>
-              <div class="bar-track"><div class="bar-fill neutral" style="width: 15%"></div></div>
+              <div class="bar-track"><div class="bar-fill bearish" style="width: 10%"></div></div>
             </div>
-            <span class="bar-percent">15%</span>
-            <span class="bar-sentiment neutral">Neutro</span>
+            <span class="bar-percent">10%</span>
+            <span class="bar-sentiment bearish">Pessimista</span>
           </a>
 
           <a href="caixa/" class="bar-item">
@@ -767,6 +768,21 @@
         <h3 class="section-title" data-i18n="sectors.changeHistory">Histórico de Mudanças</h3>
 
         <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-date">
+              <span class="day">28</span>
+              <span class="month">Jan</span>
+            </div>
+            <div class="timeline-content">
+              <h4>Ajuste: Dólar para Otimista, IBOV para Pessimista</h4>
+              <p>Dólar a R$ 5,18 - ponto de entrada. IBOV com preços esticados após alta de 34%. Redução de 15% para 10% em IBOV, aumento para 20% em Dólar.</p>
+              <div class="change-badges">
+                <span class="change-badge bullish">Dólar → 20% (Otimista)</span>
+                <span class="change-badge bearish">IBOV → 10% (Pessimista)</span>
+              </div>
+            </div>
+          </div>
+
           <div class="timeline-item">
             <div class="timeline-date">
               <span class="day">27</span>
@@ -898,35 +914,6 @@
             </div>
           </div>
         </div>
-      </section>
-
-      <!-- Card Desempenho Preview -->
-      <section class="desempenho-preview">
-        <a href="../desempenho/" class="desempenho-card">
-          <div class="desempenho-header">
-            <div class="desempenho-icon">📊</div>
-            <div class="desempenho-title">
-              <h3 data-i18n="sectors.portfolioPerformance">Desempenho da Carteira</h3>
-              <span class="desempenho-subtitle" data-i18n="footer.date">Janeiro 2026</span>
-            </div>
-            <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </div>
-          <div class="desempenho-stats">
-            <div class="stat-item">
-              <span class="stat-label" data-i18n="sectors.month">Mês</span>
-              <span class="stat-value neutral">0.0%</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label" data-i18n="sectors.accumulated">Acumulado</span>
-              <span class="stat-value neutral">0.0%</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-label" data-i18n="sectors.vsCDI">vs CDI</span>
-              <span class="stat-value neutral">0.0%</span>
-            </div>
-          </div>
-          <span class="desempenho-cta"><span data-i18n="sectors.seeFullHistory">Ver histórico completo</span> →</span>
-        </a>
       </section>
 
     </main>

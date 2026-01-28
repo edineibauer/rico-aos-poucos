@@ -1,19 +1,21 @@
 # robots.txt for Rico aos Poucos
-# https://ricoaospoucos.com
+# https://ricoaospoucos.com.br
 
 User-agent: *
 Allow: /
 
 # Sitemap location
-Sitemap: https://ricoaospoucos.com/sitemap.xml
+Sitemap: https://ricoaospoucos.com.br/sitemap.xml
 
 # Disallow crawling of asset directories that don't need indexing
 Disallow: /js/
 Disallow: /css/
+Disallow: /scripts/
+Disallow: /data/
 
-# Allow all language versions
-Allow: /en/
-Allow: /es/
+# Allow specific important files
+Allow: /manifest.json
+Allow: /sw.js
 
-# Crawl-delay for polite crawling (optional)
+# Crawl-delay for polite crawling
 Crawl-delay: 1

@@ -1,26 +1,31 @@
 {
-  "name": "Rico aos Poucos",
-  "short_name": "Rico",
-  "description": "Seu guia para investimentos inteligentes",
-  "start_url": "./index.html",
-  "scope": "./",
+  "name": "Rico aos Poucos - Investimentos Inteligentes",
+  "short_name": "Rico aos Poucos",
+  "description": "Seu guia para investimentos inteligentes. Calculadoras, simuladores, análises de FIIs e educação financeira.",
+  "start_url": "/",
+  "scope": "/",
+  "id": "/",
   "display": "standalone",
+  "display_override": ["standalone", "minimal-ui"],
   "background_color": "#0d1117",
   "theme_color": "#0d1117",
   "orientation": "portrait-primary",
-  "categories": ["finance", "education"],
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["finance", "education", "productivity"],
+  "screenshots": [],
   "icons": [
     {
       "src": "icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
-      "purpose": "any"
+      "purpose": "any maskable"
     },
     {
       "src": "favicon.svg",
@@ -28,5 +33,37 @@
       "type": "image/svg+xml",
       "purpose": "any"
     }
-  ]
+  ],
+  "shortcuts": [
+    {
+      "name": "Calculadora de Aposentadoria",
+      "short_name": "Aposentadoria",
+      "description": "Calcule quanto precisa para aposentar",
+      "url": "/calculadora-aposentadoria/",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Calculadora de Construção",
+      "short_name": "Construção",
+      "description": "Estime o custo de construir sua casa",
+      "url": "/calculadora-custo-construcao/",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Simulador de Investimentos",
+      "short_name": "Simulador",
+      "description": "Compare setores e monte carteiras",
+      "url": "/simulador-investimentos/",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    },
+    {
+      "name": "Análise de FIIs",
+      "short_name": "FIIs",
+      "description": "Análises de Fundos Imobiliários",
+      "url": "/fiis/",
+      "icons": [{ "src": "icon-192.png", "sizes": "192x192" }]
+    }
+  ],
+  "related_applications": [],
+  "prefer_related_applications": false
 }

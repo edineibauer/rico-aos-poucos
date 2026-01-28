@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Bitcoin: Da proposta original de Satoshi Nakamoto à realidade de 2026. Análise crítica sobre utilidade, valor intrínseco, ciclos e o futuro da criptomoeda.">
   <meta name="keywords" content="Bitcoin, Satoshi Nakamoto, criptomoeda, valor intrínseco, reserva de valor, ouro digital, Warren Buffett, ciclos Bitcoin">
@@ -193,7 +199,7 @@
         </div>
 
         <div class="video-container">
-          <iframe
+          <iframe loading="lazy"
             src="https://www.youtube.com/embed/JuRju3JZ-Qs"
             title="Bitcoin: Da Proposta Original à Realidade de 2026"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -703,9 +709,9 @@
     <div id="footer-container"></div>
 
   </div>
-  <script src="../js/article-header.js"></script>
-  <script src="../js/footer.js"></script>
-  <script src="../js/comments.js"></script>
-  <script src="../js/i18n.js"></script>
+  <script defer src="../js/article-header.js"></script>
+  <script defer src="../js/footer.js"></script>
+  <script defer src="../js/comments.js"></script>
+  <script defer src="../js/i18n.js"></script>
 </body>
 </html>

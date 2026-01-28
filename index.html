@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta name="description" content="Rico aos Poucos - Calculadoras de aposentadoria e construção, simulador de investimentos, análises de FIIs e educação financeira. Ferramentas gratuitas para alcançar a independência financeira.">
   <meta name="keywords" content="investimentos, calculadora aposentadoria, calculadora FIRE, quanto preciso para aposentar, simulador investimentos, FIIs, finanças pessoais, carteira de investimentos, renda variável, renda fixa, educação financeira, independência financeira">
@@ -35,6 +41,15 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Rico aos Poucos">
   <link rel="manifest" href="manifest.json">
+
+  <!-- Critical CSS - Above the fold -->
+  <style>
+    :root{--bg-primary:#0d1117;--bg-secondary:#161b22;--text-primary:#f0f6fc;--text-secondary:#8b949e;--border-color:#30363d;--primary:#1a5f4a;--primary-light:#2d8a6e}
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Segoe UI',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg-primary);color:var(--text-primary);line-height:1.6}
+    .app-header{display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color)}
+    .app-name{font-size:1rem;font-weight:600;color:var(--text-primary);margin:0}
+  </style>
   <!-- Favicon - Multiple formats for browser and search engine compatibility -->
   <link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
@@ -45,6 +60,7 @@
 
   <title>Rico aos Poucos - Investimentos Inteligentes</title>
 
+  <link rel="preload" href="css/style.css" as="style">
   <link rel="stylesheet" href="css/style.css">
 
   <!-- JSON-LD Structured Data -->
@@ -472,9 +488,9 @@
     <button class="pwa-close-btn" id="pwaCloseBtn">✕</button>
   </div>
 
-  <script src="js/footer.js"></script>
-  <script src="js/i18n.js"></script>
-  <script src="js/app.js"></script>
+  <script defer src="js/footer.js"></script>
+  <script defer src="js/i18n.js"></script>
+  <script defer src="js/app.js"></script>
   <script>
     // PWA Install
     let deferredPrompt;
@@ -521,7 +537,7 @@
     }
 
   </script>
-  <script src="js/publicacoes.js"></script>
+  <script defer src="js/publicacoes.js"></script>
   <script>
     // Mobile Menu Toggle
     const menuToggle = document.getElementById('menuToggle');

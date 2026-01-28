@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Entenda por que comprar o que todos estão comprando raramente funciona. A Hipótese do Mercado Eficiente, o caso do TLT, CDI vs Ibovespa e a regra nº1 de Buffett.">
   <meta name="keywords" content="hipótese do mercado eficiente, precificação de mercado, CDI vs Ibovespa, TLT, Warren Buffett, estratégia de investimentos, renda fixa, renda variável">
@@ -175,7 +181,7 @@
         </div>
 
         <div class="video-container">
-          <iframe
+          <iframe loading="lazy"
             src="https://www.youtube.com/embed/XjmdVqhbtlU"
             title="O Mercado Já Precificou: Por Que Seguir o Consenso Pode Ser Um Erro"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -401,9 +407,9 @@
     <div id="footer-container"></div>
 
   </div>
-  <script src="../js/article-header.js"></script>
-  <script src="../js/footer.js"></script>
-  <script src="../js/comments.js"></script>
-  <script src="../js/i18n.js"></script>
+  <script defer src="../js/article-header.js"></script>
+  <script defer src="../js/footer.js"></script>
+  <script defer src="../js/comments.js"></script>
+  <script defer src="../js/i18n.js"></script>
 </body>
 </html>

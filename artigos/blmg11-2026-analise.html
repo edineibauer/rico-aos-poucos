@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="BLMG11: O fundo que fez o cotista perder dinheiro, mas agora pode virar oportunidade. Tudo depende das próximas decisões do gestor.">
   <meta name="keywords" content="BLMG11, FII logística, galpões logísticos, FII industrial">
@@ -348,7 +354,7 @@
 
       <!-- Vídeo do YouTube -->
       <div class="video-container">
-        <iframe 
+        <iframe loading="lazy" 
           src="https://www.youtube.com/embed/EuaZ11L83LI" 
           title="BLMG11: Tudo Depende do Gestor" 
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
@@ -577,7 +583,7 @@
 
     <div id="footer-container"></div>
   </div>
-  <script src="../js/article-header.js"></script>
-  <script src="../js/footer.js"></script>
+  <script defer src="../js/article-header.js"></script>
+  <script defer src="../js/footer.js"></script>
 </body>
 </html>

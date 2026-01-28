@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Calculadora de Custo de Construção: estime o valor para construir sua casa com precisão. Compare métodos construtivos (alvenaria, EPS, steel frame), calcule materiais, mão de obra e extras como piscina, muro e área gourmet.">
   <meta name="keywords" content="calculadora de construção, custo para construir casa, quanto custa construir, preço construção m2, orçamento de obra, custo de materiais, mão de obra construção, EPS isopor estrutural, alvenaria convencional, steel frame, wood frame, construção sobrado, casa térrea, piscina, muro, área gourmet">
@@ -40,6 +46,7 @@
 
   <title>Calculadora de Custo de Construção | Quanto Custa Construir sua Casa? - Rico aos Poucos</title>
 
+  <link rel="preload" href="../css/style.css" as="style">
   <link rel="stylesheet" href="../css/style.css">
 
   <!-- JSON-LD Structured Data -->
@@ -1091,9 +1098,9 @@
     <div id="footer-container"></div>
   </div>
 
-  <script src="../js/page-header.js"></script>
-  <script src="../js/footer.js"></script>
-  <script src="../js/i18n.js"></script>
-  <script src="../js/components.js"></script>
+  <script defer src="../js/page-header.js"></script>
+  <script defer src="../js/footer.js"></script>
+  <script defer src="../js/i18n.js"></script>
+  <script defer src="../js/components.js"></script>
 </body>
 </html>

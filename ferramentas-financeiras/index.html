@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Ferramentas financeiras gratuitas: comparador histórico de investimentos, calculadora de juros compostos, simulador de carteira diversificada e rebalanceamento automático.">
   <meta name="robots" content="index, follow">
@@ -40,6 +46,7 @@
 
   <title>Ferramentas Financeiras | Rico aos Poucos</title>
 
+  <link rel="preload" href="../css/style.css" as="style">
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/comparador.css">
   <link rel="stylesheet" href="../css/custo-construcao.css">
@@ -965,17 +972,17 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="../js/footer.js"></script>
-  <script src="../js/page-header.js"></script>
-  <script src="../js/comparador.js"></script>
-  <script src="../js/comparador-ui.js"></script>
-  <script src="../js/calculadora.js"></script>
-  <script src="../js/custo-construcao-data.js"></script>
-  <script src="../js/cidades-brasil.js"></script>
-  <script src="../js/dados-mercado-imoveis.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
-  <script src="../js/custo-construcao.js"></script>
-  <script src="../js/i18n.js"></script>
+  <script defer src="../js/footer.js"></script>
+  <script defer src="../js/page-header.js"></script>
+  <script defer src="../js/comparador.js"></script>
+  <script defer src="../js/comparador-ui.js"></script>
+  <script defer src="../js/calculadora.js"></script>
+  <script defer src="../js/custo-construcao-data.js"></script>
+  <script defer src="../js/cidades-brasil.js"></script>
+  <script defer src="../js/dados-mercado-imoveis.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
+  <script defer src="../js/custo-construcao.js"></script>
+  <script defer src="../js/i18n.js"></script>
   <script>
     // Mobile dropup menu handler
     (function() {

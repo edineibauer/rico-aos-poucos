@@ -2,6 +2,12 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Artigos e análises sobre investimentos: Bitcoin, FIIs, dólar, ações brasileiras, tesouro direto e muito mais. Educação financeira para independência financeira.">
   <meta name="author" content="Rico aos Poucos">
@@ -580,7 +586,7 @@
         if (artigo.capa) {
           return `
             <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass} ${temCapa}" data-nivel="${artigo.nivel}">
-              <img src="../${artigo.capa}" alt="${artigo.titulo}" class="artigo-capa" loading="lazy">
+              <img decoding="async" src="../${artigo.capa}" alt="${artigo.titulo}" class="artigo-capa" loading="lazy">
               <div class="artigo-content-row">
                 <div class="artigo-date">
                   <span class="day">${data.dia}</span>
@@ -638,7 +644,7 @@
 
     document.addEventListener('DOMContentLoaded', carregarArtigos);
   </script>
-  <script src="../js/footer.js"></script>
-  <script src="../js/i18n.js"></script>
+  <script defer src="../js/footer.js"></script>
+  <script defer src="../js/i18n.js"></script>
 </body>
 </html>

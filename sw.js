@@ -1,4 +1,4 @@
-const APP_VERSION = '4.2';
+const APP_VERSION = '4.3';
 const CACHE_NAME = `rico-aos-poucos-v${APP_VERSION}`;
 
 // Recursos críticos - cacheados na instalação (mínimo para funcionar)
@@ -27,9 +27,13 @@ const PAGES_TO_CACHE = [
   './index.html',
   './setores/index.html',
   './artigos/index.html',
-  './desempenho/index.html',
+  './fiis/index.html',
+  './fiis/recomendados/index.html',
   './sobre/index.html',
-  './ferramentas-financeiras/index.html'
+  './ferramentas-financeiras/index.html',
+  './calculadora-aposentadoria/index.html',
+  './calculadora-custo-construcao/index.html',
+  './simulador-investimentos/index.html'
 ];
 
 // Instalar - cachear recursos críticos e forçar ativação imediata

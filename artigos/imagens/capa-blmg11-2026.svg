@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a1a0a"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f0c14b"/>
+      <stop offset="100%" style="stop-color:#d4a012"/>
+    </linearGradient>
+    <linearGradient id="splitGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#f85149"/>
+      <stop offset="50%" style="stop-color:#f85149"/>
+      <stop offset="50%" style="stop-color:#3fb950"/>
+      <stop offset="100%" style="stop-color:#3fb950"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.5"/>
+    </filter>
+    <clipPath id="leftHalf">
+      <rect x="0" y="0" width="600" height="630"/>
+    </clipPath>
+    <clipPath id="rightHalf">
+      <rect x="600" y="0" width="600" height="630"/>
+    </clipPath>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bgGrad2)"/>
+  
+  <!-- Split background effect -->
+  <rect x="0" y="0" width="600" height="630" fill="#f85149" opacity="0.03"/>
+  <rect x="600" y="0" width="600" height="630" fill="#3fb950" opacity="0.03"/>
+  
+  <!-- Center divider -->
+  <line x1="600" y1="100" x2="600" y2="530" stroke="#f0c14b" stroke-width="3" stroke-dasharray="15,10" opacity="0.5"/>
+  
+  <!-- Question mark silhouette (gestor) -->
+  <g transform="translate(600, 280)" filter="url(#shadow)">
+    <!-- Person silhouette -->
+    <circle cx="0" cy="-80" r="50" fill="#2d333b"/>
+    <path d="M -60 0 Q -70 80 -50 150 L 50 150 Q 70 80 60 0 Q 30 -20 0 -20 Q -30 -20 -60 0" fill="#2d333b"/>
+    
+    <!-- Question mark overlay -->
+    <text x="0" y="40" text-anchor="middle" fill="url(#goldGrad)" font-family="Arial Black, sans-serif" font-size="180" font-weight="900" opacity="0.9">
+      ?
+    </text>
+  </g>
+  
+  <!-- Left side - Bad past -->
+  <g clip-path="url(#leftHalf)">
+    <text x="150" y="180" text-anchor="middle" fill="#f85149" font-family="Arial, sans-serif" font-size="24" font-weight="bold" opacity="0.8">
+      PASSADO
+    </text>
+    
+    <!-- Downward chart -->
+    <path d="M 80 250 L 150 280 L 220 320 L 290 380 L 360 450 L 430 500" 
+          fill="none" stroke="#f85149" stroke-width="4" opacity="0.6"/>
+    
+    <!-- X marks -->
+    <g fill="#f85149" opacity="0.4">
+      <text x="120" y="350" font-size="40">✗</text>
+      <text x="200" y="420" font-size="40">✗</text>
+      <text x="300" y="480" font-size="40">✗</text>
+    </g>
+    
+    <text x="250" y="560" text-anchor="middle" fill="#f85149" font-family="Arial, sans-serif" font-size="18" opacity="0.7">
+      Gestão desastrosa
+    </text>
+  </g>
+  
+  <!-- Right side - Possible future -->
+  <g clip-path="url(#rightHalf)">
+    <text x="1050" y="180" text-anchor="middle" fill="#3fb950" font-family="Arial, sans-serif" font-size="24" font-weight="bold" opacity="0.8">
+      FUTURO?
+    </text>
+    
+    <!-- Upward chart -->
+    <path d="M 770 500 L 840 450 L 910 380 L 980 320 L 1050 280 L 1120 250" 
+          fill="none" stroke="#3fb950" stroke-width="4" opacity="0.6"/>
+    
+    <!-- Check marks -->
+    <g fill="#3fb950" opacity="0.4">
+      <text x="880" y="480" font-size="40">✓</text>
+      <text x="980" y="400" font-size="40">✓</text>
+      <text x="1060" y="330" font-size="40">✓</text>
+    </g>
+    
+    <text x="950" y="560" text-anchor="middle" fill="#3fb950" font-family="Arial, sans-serif" font-size="18" opacity="0.7">
+      Chance de recuperação
+    </text>
+  </g>
+  
+  <!-- Main title -->
+  <text x="600" y="80" text-anchor="middle" fill="#ffffff" font-family="Arial Black, sans-serif" font-size="72" font-weight="900">
+    BLMG11
+  </text>
+  
+  <!-- Subtitle -->
+  <rect x="350" y="520" width="500" height="50" rx="25" fill="#f0c14b" opacity="0.9"/>
+  <text x="600" y="555" text-anchor="middle" fill="#0d1117" font-family="Arial Black, sans-serif" font-size="28" font-weight="900">
+    TUDO DEPENDE DO GESTOR
+  </text>
+  
+  <!-- Badge -->
+  <g transform="translate(1050, 80)">
+    <rect x="-80" y="-25" width="160" height="50" rx="25" fill="#f0c14b"/>
+    <text x="0" y="8" text-anchor="middle" fill="#0d1117" font-family="Arial, sans-serif" font-size="16" font-weight="bold">
+      ⚠️ RISCO GESTOR
+    </text>
+  </g>
+  
+  <!-- Bottom corners decoration -->
+  <path d="M 0 630 L 0 580 L 100 630 Z" fill="#f85149" opacity="0.3"/>
+  <path d="M 1200 630 L 1200 580 L 1100 630 Z" fill="#3fb950" opacity="0.3"/>
+</svg>

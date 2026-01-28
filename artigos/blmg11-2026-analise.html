@@ -186,11 +186,18 @@
       margin-bottom: 16px;
       padding-bottom: 16px;
       border-bottom: 1px solid var(--border-color);
+      position: relative;
+    }
+    .timeline-item::before {
+      display: none !important;
     }
     .timeline-item:last-child {
       margin-bottom: 0;
       padding-bottom: 0;
       border-bottom: none;
+    }
+    .timeline-box::before {
+      display: none !important;
     }
     .timeline-icon {
       width: 40px;
@@ -259,9 +266,15 @@
       max-width: 100vw;
     }
     
-    .page-wrapper, .article-container {
+    .page-wrapper {
       overflow-x: hidden;
       max-width: 100%;
+    }
+    
+    .timeline-box ul, .timeline-box ol {
+      list-style: none;
+      padding: 0;
+      margin: 0;
     }
   </style>
 </head>

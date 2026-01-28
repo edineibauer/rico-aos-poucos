@@ -315,7 +315,19 @@
       color: var(--text-primary);
     }
 
-    /* Responsive */
+    /* Responsive - Mobile */
+    @media (max-width: 500px) {
+      .search-form {
+        flex-direction: column;
+      }
+      
+      .search-submit {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+
+    /* Responsive - Desktop */
     @media (min-width: 768px) {
       .main-content {
         padding: 32px;

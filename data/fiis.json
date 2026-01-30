@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-01-23",
+  "ultimaAtualizacao": "2026-01-30",
   "versao": "1.0",
 
   "segmentos": {
@@ -128,6 +128,88 @@
       "tags": ["MCMV", "desenvolvimento", "alta yield", "desconto P/VP", "Mérito"],
       "tempoLeitura": 12,
       "arquivo": "mfii11/index.html"
+    },
+    {
+      "id": "blmg11",
+      "ticker": "BLMG11",
+      "nome": "BlueMacaw FII",
+      "gestora": "BlueMacaw Gestora de Recursos",
+      "segmento": "hibrido",
+      "subsegmento": "Multi-estratégia (FOF + Imóvel)",
+      "sentimento": "neutro",
+      "dataAnalise": "2026-01-30",
+
+      "indicadores": {
+        "cotacao": 35.00,
+        "pvp": 0.69,
+        "dividendYield": 14.1,
+        "dividendoMensal": 0.41,
+        "patrimonioLiquido": 236000000,
+        "liquidezMediaDiaria": 200000,
+        "cotistas": 12869,
+        "vpCota": 50.49
+      },
+
+      "taxas": {
+        "administracao": 0.95,
+        "performance": 20,
+        "benchmarkPerformance": "IPCA + 6%",
+        "comentarioTaxas": "Taxas competitivas para o segmento. A 0,95% a.a. é razoável, mas há dupla camada de taxas por ser FOF concentrado em GGRC11."
+      },
+
+      "estrategia": {
+        "resumo": "Fundo em transição: vendeu ativos logísticos e agora é basicamente um FOF do GGRC11 (80%) com um único imóvel de call center em Salvador. Gestor planeja vender GGRC11 para novas aquisições multi-estratégia.",
+        "exposicaoGGRC11": 80,
+        "focoGeografico": "Salvador/BA (imóvel) + carteira GGRC11",
+        "estrategiaFutura": "Multi-estratégia - pode investir em qualquer tipo de imóvel"
+      },
+
+      "riscosEspecificos": [
+        "Histórico problemático da gestora BlueMacaw",
+        "Concentração extrema em GGRC11 (80% do patrimônio)",
+        "Único imóvel com inquilino único (Atento)",
+        "Dupla camada de taxas (BLMG11 + GGRC11)",
+        "Liquidez baixa (~R$ 200k/dia)"
+      ],
+
+      "pontosPositivos": [
+        "Dividend yield atrativo (~13,4% a.a.)",
+        "Desconto significativo sobre VP (P/VP 0,64)",
+        "Alavancagem zerada após reestruturação",
+        "Nova estratégia multi-ativo traz flexibilidade",
+        "Taxas competitivas (0,95% a.a.)"
+      ],
+
+      "conclusao": {
+        "resumo": "FII em transformação profunda. Vendeu todos os ativos logísticos e virou FOF do GGRC11. DY atrativo mas riscos elevados de gestão e concentração. Nota 5/10.",
+        "paraQuem": "Investidores experientes que aceitam alto risco, apostas de turnaround, posições pequenas em carteiras diversificadas.",
+        "naoParaQuem": "Investidores conservadores, iniciantes, quem busca renda estável ou precisa de liquidez."
+      },
+
+      "historico": {
+        "ipoData": "2020-10",
+        "eventos": [
+          {
+            "ano": 2021,
+            "descricao": "Pico histórico R$ 104,55. Expansão agressiva com 4 galpões logísticos.",
+            "impacto": "ABL atingiu 285.000 m²"
+          },
+          {
+            "ano": 2023,
+            "descricao": "4ª emissão cancelada. BlueMacaw renuncia Triple A FII.",
+            "impacto": "Crise de confiança na gestão"
+          },
+          {
+            "ano": 2025,
+            "descricao": "Liquidação massiva: vendeu Triple A, Jandira, Cabreúva. Removeu 'Logística' do nome.",
+            "impacto": "Fundo virou FOF concentrado em GGRC11"
+          }
+        ]
+      },
+
+      "tags": ["multi-estratégia", "FOF", "GGRC11", "desconto P/VP", "BlueMacaw", "turnaround"],
+      "tempoLeitura": 15,
+      "arquivo": "blmg11/index.html"
     }
   ]
 }

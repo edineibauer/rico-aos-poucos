@@ -210,6 +210,90 @@
       "tags": ["multi-estratégia", "FOF", "GGRC11", "desconto P/VP", "BlueMacaw", "turnaround"],
       "tempoLeitura": 15,
       "arquivo": "blmg11/index.html"
+    },
+    {
+      "id": "gare11",
+      "ticker": "GARE11",
+      "nome": "Guardian Real Estate FII",
+      "gestora": "Guardian Gestora",
+      "segmento": "hibrido",
+      "subsegmento": "Renda Urbana + Logística",
+      "sentimento": "otimista",
+      "dataAnalise": "2026-01-30",
+
+      "indicadores": {
+        "cotacao": 8.77,
+        "pvp": 0.94,
+        "dividendYield": 10.78,
+        "dividendoMensal": 0.083,
+        "patrimonioLiquido": 2696608836,
+        "liquidezMediaDiaria": 6360000,
+        "cotistas": 446255,
+        "vpCota": 9.32
+      },
+
+      "taxas": {
+        "administracao": 0.97,
+        "performance": 20,
+        "benchmarkPerformance": "IPCA + 6%",
+        "comentarioTaxas": "Taxas competitivas para o segmento. A taxa de administração de 0,94% a 1,00% a.a. é razoável, com performance de 20% sobre IPCA+6%."
+      },
+
+      "estrategia": {
+        "resumo": "Fundo híbrido que evoluiu de logístico puro (GALG11) para multi-ativos com foco em Renda Urbana (atacarejos) e Logística. Estratégia de gestão ativa com reciclagem de portfólio.",
+        "exposicaoRendaUrbana": 67,
+        "exposicaoLogistica": 33,
+        "focoGeografico": "12 estados brasileiros, com presença recente em MG"
+      },
+
+      "riscosEspecificos": [
+        "Concentração em Carrefour (48% da receita)",
+        "Vencimento do contrato BAT em set/2027 (27% da receita)",
+        "Transição de perfil em consolidação (logístico para híbrido)",
+        "Dependência de renovação de contratos de longo prazo",
+        "Exposição significativa ao setor de varejo"
+      ],
+
+      "pontosPositivos": [
+        "100% de ocupação desde o IPO",
+        "Zero inadimplência histórica",
+        "Contratos atípicos de longo prazo (WAULT 10,6 anos)",
+        "Inquilinos grau de investimento (Carrefour AAA, BAT AAA, Mateus AAA)",
+        "Gestão ativa com TIR média de 25% nas vendas",
+        "7ª emissão recorde (R$ 1,3 bilhão captado)",
+        "Alavancagem líquida negativa após reciclagem"
+      ],
+
+      "conclusao": {
+        "resumo": "FII sólido com fundamentos robustos: 100% ocupação, inquilinos AAA, gestão ativa comprovada e DY atrativo. Riscos de concentração são monitoráveis. Nota 7,5/10.",
+        "paraQuem": "Investidores que buscam renda mensal consistente com potencial de valorização, perfil moderado a arrojado.",
+        "naoParaQuem": "Quem não aceita exposição ao varejo ou concentração em poucos inquilinos."
+      },
+
+      "historico": {
+        "ipoData": "2021-01",
+        "eventos": [
+          {
+            "ano": 2022,
+            "descricao": "Desdobramento de cotas 10:1 em agosto. Venda do imóvel Almanara com lucro de 38%.",
+            "impacto": "Aumento de liquidez e base de cotistas"
+          },
+          {
+            "ano": 2024,
+            "descricao": "Aquisição do portfólio Artemis (R$ 843M) e 15 lojas Carrefour (R$ 725M). Mudança de GALG11 para GARE11.",
+            "impacto": "Transformação de logístico para híbrido"
+          },
+          {
+            "ano": 2025,
+            "descricao": "7ª emissão recorde (R$ 1,3 bilhão). Venda de 10 imóveis com lucro de R$ 145M. Entrada em MG.",
+            "impacto": "Patrimônio de R$ 2,7 bilhões, 446 mil cotistas"
+          }
+        ]
+      },
+
+      "tags": ["híbrido", "renda urbana", "logística", "Carrefour", "BAT", "Guardian", "100% ocupação", "WAULT longo"],
+      "tempoLeitura": 18,
+      "arquivo": "gare11/index.html"
     }
   ]
 }

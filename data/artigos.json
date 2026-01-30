@@ -1,6 +1,6 @@
 {
-  "ultimaAtualizacao": "2026-01-28",
-  "versao": "1.7",
+  "ultimaAtualizacao": "2026-01-29",
+  "versao": "2.0",
 
   "categorias": {
     "renda-variavel": {
@@ -41,7 +41,73 @@
     }
   },
 
+  "temas": {
+    "fiis": {
+      "id": "fiis",
+      "nome": "Fundos Imobiliários",
+      "icone": "🏢",
+      "cor": "#3fb950"
+    },
+    "criptomoedas": {
+      "id": "criptomoedas",
+      "nome": "Criptomoedas",
+      "icone": "₿",
+      "cor": "#f0c14b"
+    },
+    "acoes-br": {
+      "id": "acoes-br",
+      "nome": "Ações Brasileiras",
+      "icone": "🇧🇷",
+      "cor": "#3fb950"
+    },
+    "internacional": {
+      "id": "internacional",
+      "nome": "Internacional",
+      "icone": "🌎",
+      "cor": "#58a6ff"
+    },
+    "imoveis": {
+      "id": "imoveis",
+      "nome": "Imóveis",
+      "icone": "🏠",
+      "cor": "#f0c14b"
+    },
+    "tesouro": {
+      "id": "tesouro",
+      "nome": "Tesouro Direto",
+      "icone": "💰",
+      "cor": "#3fb950"
+    },
+    "analise-ativo": {
+      "id": "analise-ativo",
+      "nome": "Análise de Ativos",
+      "icone": "🔍",
+      "cor": "#58a6ff"
+    },
+    "conceitos": {
+      "id": "conceitos",
+      "nome": "Conceitos Financeiros",
+      "icone": "📚",
+      "cor": "#f0c14b"
+    }
+  },
+
   "artigos": [
+    {
+      "id": "tgar11-gestor-explica-queda-live-2026",
+      "titulo": "TGAR11: R$375 Milhões Evaporaram e Gestor Explica o que Aconteceu",
+      "subtitulo": "Queda de 15% eliminou R$375 milhões do valor de mercado. 151 mil cotistas em pânico. O gestor explicou tudo em live de 1h30.",
+      "descricao": "TGAR11 caiu 15% e R$375 milhões evaporaram do valor de mercado. O gestor fez uma live de 1h30 explicando TUDO. Extraí os 10 pontos cruciais sobre guidance, repasse bancário e futuro do fundo.",
+      "arquivo": "tgar11-gestor-explica-queda-live-2026.html",
+      "nivel": "avancado",
+      "categoria": "renda-variavel",
+      "tema": "fiis",
+      "tags": ["TGAR11", "FIIs", "desenvolvimento", "guidance", "repasse bancário", "live gestor", "Pedro Ernesto", "crise"],
+      "dataPublicacao": "2026-01-29",
+      "tempoLeitura": 12,
+      "destaque": true,
+      "setorRelacionado": "fiis"
+    },
     {
       "id": "tgar11-panico-ou-oportunidade-2026",
       "titulo": "Comprei TGAR11 a R$80: Pechincha Após Dividendos Menores",
@@ -50,6 +116,7 @@
       "arquivo": "tgar11-panico-ou-oportunidade-2026.html",
       "nivel": "avancado",
       "categoria": "renda-variavel",
+      "tema": "fiis",
       "tags": ["TGAR11", "FIIs", "desenvolvimento", "dividendos", "queda", "oportunidade", "timing"],
       "dataPublicacao": "2026-01-28",
       "tempoLeitura": 10,
@@ -65,6 +132,7 @@
       "arquivo": "blmg11-2026-analise.html",
       "nivel": "avancado",
       "categoria": "renda-variavel",
+      "tema": "fiis",
       "tags": ["BLMG11", "FIIs", "logística", "multiestratégia", "risco gestor", "baixa liquidez"],
       "dataPublicacao": "2026-01-28",
       "tempoLeitura": 6,
@@ -80,6 +148,7 @@
       "arquivo": "ouro-sinal-rebalanceamento-2026.html",
       "nivel": "intermediario",
       "categoria": "estrategias",
+      "tema": "internacional",
       "tags": ["ouro", "carteira", "alocação", "FIIs", "IBOV", "TLT", "dólar", "proteção", "bolha IA"],
       "dataPublicacao": "2026-01-27",
       "tempoLeitura": 12,
@@ -95,6 +164,7 @@
       "arquivo": "o-mercado-ja-precificou.html",
       "nivel": "intermediario",
       "categoria": "estrategias",
+      "tema": "conceitos",
       "tags": ["mercado eficiente", "precificação", "consenso", "CDI", "TLT", "Buffett", "risco", "estratégia"],
       "dataPublicacao": "2026-01-14",
       "tempoLeitura": 18,
@@ -111,6 +181,7 @@
       "arquivo": "mercado-imobiliario-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "estrategias",
+      "tema": "imoveis",
       "tags": ["imóveis", "FIPEZAP", "aluguel", "investimento imobiliário", "preços", "rentabilidade"],
       "dataPublicacao": "2026-01-13",
       "tempoLeitura": 15,
@@ -125,6 +196,7 @@
       "arquivo": "leiloes-imoveis-oportunidade-2026.html",
       "nivel": "intermediario",
       "categoria": "estrategias",
+      "tema": "imoveis",
       "tags": ["leilão", "imóveis", "investimento imobiliário", "Caixa", "juros", "inadimplência", "oportunidade"],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 20,
@@ -139,6 +211,7 @@
       "arquivo": "inflacao-o-imposto-invisivel-2026.html",
       "nivel": "iniciante",
       "categoria": "educacao",
+      "tema": "conceitos",
       "tags": ["inflação", "IPCA", "poder de compra", "economia", "iniciante", "IGP-M", "preços"],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 18,
@@ -153,6 +226,7 @@
       "arquivo": "oportunidades-mercado-ineficiencias-2026.html",
       "nivel": "intermediario",
       "categoria": "estrategias",
+      "tema": "conceitos",
       "tags": ["mercado eficiente", "EMH", "small caps", "oportunidades", "behavioral finance", "value investing"],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 10,
@@ -167,6 +241,7 @@
       "arquivo": "risco-retorno-investimentos-2026.html",
       "nivel": "iniciante",
       "categoria": "educacao",
+      "tema": "conceitos",
       "tags": ["risco", "retorno", "bets", "apostas", "loteria", "patrimônio", "diversificação"],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 12,
@@ -181,6 +256,7 @@
       "arquivo": "quanto-tempo-para-ficar-rico-2026.html",
       "nivel": "iniciante",
       "categoria": "educacao",
+      "tema": "conceitos",
       "tags": ["juros compostos", "inflação", "iniciante", "quanto investir", "independência financeira", "renda"],
       "dataPublicacao": "2026-01-06",
       "tempoLeitura": 15,
@@ -195,6 +271,7 @@
       "arquivo": "bitcoin-proposta-vs-realidade-2026.html",
       "nivel": "avancado",
       "categoria": "macroeconomia",
+      "tema": "criptomoedas",
       "tags": ["bitcoin", "satoshi", "valor intrínseco", "ciclos", "ouro digital", "warren buffett"],
       "dataPublicacao": "2026-01-06",
       "tempoLeitura": 18,
@@ -211,6 +288,7 @@
       "arquivo": "strategy-mstr-2026-analise.html",
       "nivel": "avancado",
       "categoria": "macroeconomia",
+      "tema": "criptomoedas",
       "tags": ["strategy", "microstrategy", "mstr", "bitcoin", "risco sistêmico", "michael saylor"],
       "dataPublicacao": "2026-01-06",
       "tempoLeitura": 12,
@@ -225,6 +303,7 @@
       "arquivo": "bitcoin-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "macroeconomia",
+      "tema": "criptomoedas",
       "tags": ["bitcoin", "criptomoedas", "ciclo", "strategy", "bear market"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 8,
@@ -239,6 +318,7 @@
       "arquivo": "tlt-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-fixa",
+      "tema": "internacional",
       "tags": ["tlt", "tesouro americano", "bonds", "proteção"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 6,
@@ -253,6 +333,7 @@
       "arquivo": "tesouro-ipca-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-fixa",
+      "tema": "tesouro",
       "tags": ["tesouro", "ipca", "renda fixa", "risco fiscal"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 7,
@@ -267,6 +348,7 @@
       "arquivo": "fiis-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-variavel",
+      "tema": "fiis",
       "tags": ["fiis", "fundos imobiliários", "renda passiva", "dividendos"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 6,
@@ -281,6 +363,7 @@
       "arquivo": "dolar-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "macroeconomia",
+      "tema": "internacional",
       "tags": ["dólar", "câmbio", "carry trade", "selic", "refúgio"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 7,
@@ -295,6 +378,7 @@
       "arquivo": "acoes-brasileiras-2026-analise.html",
       "nivel": "intermediario",
       "categoria": "renda-variavel",
+      "tema": "acoes-br",
       "tags": ["ações", "ibovespa", "selic", "eleições"],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 8,

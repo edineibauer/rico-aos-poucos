@@ -489,12 +489,30 @@
     <!-- Main -->
     <main class="main-content">
 
-      <!-- Filtros -->
-      <div class="filters-row" id="filtersRow">
-        <button class="filter-chip active" data-filter="todos">Todos</button>
-        <button class="filter-chip" data-filter="iniciante">Iniciante</button>
-        <button class="filter-chip" data-filter="intermediario">Intermediario</button>
-        <button class="filter-chip" data-filter="avancado">Avancado</button>
+      <!-- Filtros por Nível -->
+      <div style="margin-bottom: 8px;">
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Nível</span>
+      </div>
+      <div class="filters-row" id="filtersNivel">
+        <button class="filter-chip active" data-filter="todos" data-type="nivel">Todos</button>
+        <button class="filter-chip" data-filter="iniciante" data-type="nivel">🎓 Iniciante</button>
+        <button class="filter-chip" data-filter="intermediario" data-type="nivel">📊 Intermediário</button>
+        <button class="filter-chip" data-filter="avancado" data-type="nivel">🔥 Avançado</button>
+      </div>
+
+      <!-- Filtros por Tema -->
+      <div style="margin: 24px 0 8px 0;">
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tema</span>
+      </div>
+      <div class="filters-row" id="filtersTema">
+        <button class="filter-chip active" data-filter="todos" data-type="tema">Todos</button>
+        <button class="filter-chip" data-filter="fiis" data-type="tema">🏢 FIIs</button>
+        <button class="filter-chip" data-filter="criptomoedas" data-type="tema">₿ Cripto</button>
+        <button class="filter-chip" data-filter="acoes-br" data-type="tema">🇧🇷 Ações BR</button>
+        <button class="filter-chip" data-filter="internacional" data-type="tema">🌎 Internacional</button>
+        <button class="filter-chip" data-filter="imoveis" data-type="tema">🏠 Imóveis</button>
+        <button class="filter-chip" data-filter="tesouro" data-type="tema">💰 Tesouro</button>
+        <button class="filter-chip" data-filter="conceitos" data-type="tema">📚 Conceitos</button>
       </div>
 
       <!-- Lista de Artigos -->
@@ -511,13 +529,24 @@
 
   <script>
     let artigosData = null;
-    let filtroAtual = 'todos';
+    let filtroNivel = 'todos';
+    let filtroTema = 'todos';
 
     const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
     const niveis = {
-      iniciante: { emoji: '', label: 'Iniciante' },
-      intermediario: { emoji: '', label: 'Intermediario' },
-      avancado: { emoji: '', label: 'Avancado' }
+      iniciante: { emoji: '🎓', label: 'Iniciante' },
+      intermediario: { emoji: '📊', label: 'Intermediário' },
+      avancado: { emoji: '🔥', label: 'Avançado' }
+    };
+
+    const temas = {
+      fiis: { emoji: '🏢', label: 'FIIs' },
+      criptomoedas: { emoji: '₿', label: 'Cripto' },
+      'acoes-br': { emoji: '🇧🇷', label: 'Ações BR' },
+      internacional: { emoji: '🌎', label: 'Internacional' },
+      imoveis: { emoji: '🏠', label: 'Imóveis' },
+      tesouro: { emoji: '💰', label: 'Tesouro' },
+      conceitos: { emoji: '📚', label: 'Conceitos' }
     };
 
     async function carregarArtigos() {
@@ -529,10 +558,19 @@
         // Verificar se tem filtro na URL
         const params = new URLSearchParams(window.location.search);
         const nivel = params.get('nivel');
+        const tema = params.get('tema');
+
         if (nivel && ['iniciante', 'intermediario', 'avancado'].includes(nivel)) {
-          filtroAtual = nivel;
-          document.querySelectorAll('.filter-chip').forEach(btn => {
+          filtroNivel = nivel;
+          document.querySelectorAll('[data-type="nivel"]').forEach(btn => {
             btn.classList.toggle('active', btn.dataset.filter === nivel);
+          });
+        }
+
+        if (tema) {
+          filtroTema = tema;
+          document.querySelectorAll('[data-type="tema"]').forEach(btn => {
+            btn.classList.toggle('active', btn.dataset.filter === tema);
           });
         }
 
@@ -560,8 +598,14 @@
       const container = document.getElementById('artigosContainer');
       let artigos = artigosData.artigos;
 
-      if (filtroAtual !== 'todos') {
-        artigos = artigos.filter(a => a.nivel === filtroAtual);
+      // Aplicar filtro de nível
+      if (filtroNivel !== 'todos') {
+        artigos = artigos.filter(a => a.nivel === filtroNivel);
+      }
+
+      // Aplicar filtro de tema
+      if (filtroTema !== 'todos') {
+        artigos = artigos.filter(a => a.tema === filtroTema);
       }
 
       artigos.sort((a, b) => new Date(b.dataPublicacao) - new Date(a.dataPublicacao));
@@ -570,8 +614,8 @@
         container.innerHTML = `
           <div class="empty-state">
             <div class="icon">📚</div>
-            <h3>Nenhum artigo</h3>
-            <p>${filtroAtual === 'todos' ? 'Em breve, novos conteudos!' : 'Nao ha artigos neste nivel.'}</p>
+            <h3>Nenhum artigo encontrado</h3>
+            <p>Nao ha artigos com esses filtros. Tente outra combinacao.</p>
           </div>
         `;
         return;
@@ -580,12 +624,16 @@
       container.innerHTML = artigos.map(artigo => {
         const data = formatarData(artigo.dataPublicacao);
         const nivel = niveis[artigo.nivel];
+        const tema = artigo.tema ? temas[artigo.tema] : null;
         const destaqueClass = artigo.destaque ? 'destaque' : '';
         const temCapa = artigo.capa ? 'com-capa' : '';
 
+        // Badge de tema (se existir)
+        const temaBadge = tema ? `<span class="artigo-nivel" style="background: rgba(88, 166, 255, 0.15); color: #58a6ff;">${tema.emoji} ${tema.label}</span>` : '';
+
         if (artigo.capa) {
           return `
-            <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass} ${temCapa}" data-nivel="${artigo.nivel}">
+            <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass} ${temCapa}" data-nivel="${artigo.nivel}" data-tema="${artigo.tema || ''}">
               <img decoding="async" src="../${artigo.capa}" alt="${artigo.titulo}" class="artigo-capa" loading="lazy">
               <div class="artigo-content-row">
                 <div class="artigo-date">
@@ -593,7 +641,10 @@
                   <span class="month">${data.mes}</span>
                 </div>
                 <div class="artigo-info">
-                  <span class="artigo-nivel ${artigo.nivel}">${nivel.label}</span>
+                  <div style="display: flex; gap: 4px; margin-bottom: 6px; flex-wrap: wrap;">
+                    <span class="artigo-nivel ${artigo.nivel}">${nivel.emoji} ${nivel.label}</span>
+                    ${temaBadge}
+                  </div>
                   <h3 class="artigo-titulo">${artigo.titulo}</h3>
                   <p class="artigo-desc">${artigo.descricao}</p>
                   <div class="artigo-meta">
@@ -609,13 +660,16 @@
         }
 
         return `
-          <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass}" data-nivel="${artigo.nivel}">
+          <a href="${artigo.arquivo}" class="artigo-card ${destaqueClass}" data-nivel="${artigo.nivel}" data-tema="${artigo.tema || ''}">
             <div class="artigo-date">
               <span class="day">${data.dia}</span>
               <span class="month">${data.mes}</span>
             </div>
             <div class="artigo-info">
-              <span class="artigo-nivel ${artigo.nivel}">${nivel.label}</span>
+              <div style="display: flex; gap: 4px; margin-bottom: 6px; flex-wrap: wrap;">
+                <span class="artigo-nivel ${artigo.nivel}">${nivel.emoji} ${nivel.label}</span>
+                ${temaBadge}
+              </div>
               <h3 class="artigo-titulo">${artigo.titulo}</h3>
               <p class="artigo-desc">${artigo.descricao}</p>
               <div class="artigo-meta">
@@ -630,13 +684,25 @@
       }).join('');
     }
 
-    // Filtros
-    document.getElementById('filtersRow').addEventListener('click', (e) => {
+    // Filtros de Nível
+    document.getElementById('filtersNivel').addEventListener('click', (e) => {
       const chip = e.target.closest('.filter-chip');
       if (!chip) return;
 
-      filtroAtual = chip.dataset.filter;
-      document.querySelectorAll('.filter-chip').forEach(btn => {
+      filtroNivel = chip.dataset.filter;
+      document.querySelectorAll('[data-type="nivel"]').forEach(btn => {
+        btn.classList.toggle('active', btn === chip);
+      });
+      renderizarArtigos();
+    });
+
+    // Filtros de Tema
+    document.getElementById('filtersTema').addEventListener('click', (e) => {
+      const chip = e.target.closest('.filter-chip');
+      if (!chip) return;
+
+      filtroTema = chip.dataset.filter;
+      document.querySelectorAll('[data-type="tema"]').forEach(btn => {
         btn.classList.toggle('active', btn === chip);
       });
       renderizarArtigos();

@@ -848,7 +848,7 @@
               <div class="fii-tags">
                 ${fii.tags.slice(0, 3).map(tag => `<span class="fii-tag">${tag}</span>`).join('')}
               </div>
-              <span class="fii-tempo">${fii.tempoLeitura} min</span>
+              <span class="fii-tempo">Análise: ${new Date(fii.dataAnalise).toLocaleDateString('pt-BR')}</span>
             </div>
           </a>
         `;

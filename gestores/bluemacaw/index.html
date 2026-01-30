@@ -45,6 +45,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
+        /* Critical CSS - Prevent FOUC */
+        html, body { background-color: #0d1117; color: #e6edf3; }
+        .min-h-screen { min-height: 100vh; }
+        .bg-\[\#0d1117\] { background-color: #0d1117; }
+        .text-white { color: #fff; }
+        .text-gray-400 { color: #8b949e; }
+        .text-gray-300 { color: #8b949e; }
+        .max-w-6xl { max-width: 72rem; }
+        .mx-auto { margin-left: auto; margin-right: auto; }
+        .px-4 { padding-left: 1rem; padding-right: 1rem; }
+        .py-12 { padding-top: 3rem; padding-bottom: 3rem; }
+        .py-20 { padding-top: 5rem; padding-bottom: 5rem; }
+        .pt-8 { padding-top: 2rem; }
+        .pb-16 { padding-bottom: 4rem; }
+        .text-center { text-align: center; }
+        .grid { display: grid; }
+        .gap-6 { gap: 1.5rem; }
+        .rounded-2xl { border-radius: 1rem; }
+        .p-6 { padding: 1.5rem; }
+        .flex { display: flex; }
+        .items-center { align-items: center; }
+        .justify-between { justify-content: space-between; }
+        .mb-6 { margin-bottom: 1.5rem; }
+        .mb-8 { margin-bottom: 2rem; }
+        .space-y-1 > * + * { margin-top: 0.25rem; }
+
         * { font-family: 'Inter', system-ui, sans-serif; }
 
         /* Override site CSS - remove default section padding */

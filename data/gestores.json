@@ -1,0 +1,175 @@
+{
+  "gestores": [
+    {
+      "id": "bluemacaw",
+      "nome": "BlueMacaw Gestora de Recursos",
+      "slug": "bluemacaw",
+      "cnpj": "24.649.164/0001-06",
+      "cvmAtoDeclaratorio": "CVM 16.423",
+      "avaliacao": "ruim",
+      "nota": 3,
+      "fundosGeridos": [
+        {
+          "ticker": "BLMG11",
+          "nome": "BlueMacaw FII Multi-estratégia",
+          "patrimonioLiquido": 236000000,
+          "cotistas": 12869
+        }
+      ],
+      "fundosRenunciados": [
+        {
+          "ticker": "TRPL11",
+          "nome": "Triple A FII",
+          "dataRenuncia": "2023-04",
+          "motivo": "Sócios saíram para formar Huma Capital"
+        }
+      ],
+      "metricas": {
+        "retornoMedioFundos": -15.2,
+        "taxaAdministracaoMedia": 0.95,
+        "tempoMercado": 7,
+        "patrimonioTotalGerido": 236000000
+      },
+      "eventosRelevantes": [
+        {
+          "data": "2018-06",
+          "tipo": "positivo",
+          "titulo": "Fundação da BlueMacaw",
+          "descricao": "Gestora fundada com foco em ativos logísticos"
+        },
+        {
+          "data": "2019-05",
+          "tipo": "positivo",
+          "titulo": "IPO do BLMG11",
+          "descricao": "Lançamento do fundo de logística com cota inicial de R$ 100"
+        },
+        {
+          "data": "2022-01",
+          "tipo": "negativo",
+          "titulo": "Início da derrocada",
+          "descricao": "Cota começa queda de R$ 104,55 para R$ 35 (-67%)"
+        },
+        {
+          "data": "2023-04",
+          "tipo": "negativo",
+          "titulo": "Renúncia Triple A FII",
+          "descricao": "BlueMacaw renuncia à gestão do Triple A. Antigos sócios saem para formar Huma Capital"
+        },
+        {
+          "data": "2023-11",
+          "tipo": "negativo",
+          "titulo": "Emissão cancelada",
+          "descricao": "4ª emissão cancelada por não atingir montante mínimo - mercado rejeitou captação"
+        },
+        {
+          "data": "2024-06",
+          "tipo": "neutro",
+          "titulo": "Venda 50% Triple A",
+          "descricao": "Venda de 50% do Triple A para GGRC11 - desinvestimento forçado para desalavancar"
+        },
+        {
+          "data": "2025-10",
+          "tipo": "neutro",
+          "titulo": "Mudança para Multi-estratégia",
+          "descricao": "Fundo muda regulamento, remove 'Logística' do nome e passa a permitir qualquer tipo de imóvel"
+        }
+      ],
+      "pontosFortes": [
+        "Taxas de administração competitivas (0,95% a.a.)",
+        "Reestruturação em andamento com zero alavancagem",
+        "Nova estratégia multi-ativo pode ampliar oportunidades"
+      ],
+      "pontosFracos": [
+        "Histórico de queda de -67% na cota do BLMG11",
+        "Renúncia à gestão do Triple A FII em 2023",
+        "Emissão cancelada por falta de demanda do mercado",
+        "Mudança frequente de estratégia gera incerteza",
+        "Track record curto com resultados negativos"
+      ],
+      "conclusao": "A BlueMacaw possui um histórico problemático que inclui a renúncia à gestão de um fundo e uma emissão cancelada por falta de demanda. O BLMG11 perdeu 67% de valor sob sua gestão. A reestruturação de 2024/2025 pode representar um ponto de virada, mas o histórico recente não inspira confiança. Adequado apenas para investidores experientes que compreendem os riscos e acompanham de perto."
+    },
+    {
+      "id": "merito",
+      "nome": "Mérito Investimentos",
+      "slug": "merito",
+      "cnpj": "13.870.411/0001-70",
+      "cvmAtoDeclaratorio": "CVM 13.248",
+      "avaliacao": "bom",
+      "nota": 7,
+      "fundosGeridos": [
+        {
+          "ticker": "MFII11",
+          "nome": "Mérito Desenvolvimento Imobiliário I FII",
+          "patrimonioLiquido": 669900000,
+          "cotistas": 32290
+        }
+      ],
+      "fundosRenunciados": [],
+      "metricas": {
+        "retornoMedioFundos": 324,
+        "taxaAdministracaoMedia": 2.0,
+        "tempoMercado": 13,
+        "patrimonioTotalGerido": 669900000
+      },
+      "eventosRelevantes": [
+        {
+          "data": "2012-01",
+          "tipo": "positivo",
+          "titulo": "Fundação da Mérito",
+          "descricao": "Gestora fundada com foco em desenvolvimento imobiliário"
+        },
+        {
+          "data": "2013-04",
+          "tipo": "positivo",
+          "titulo": "IPO do MFII11",
+          "descricao": "Lançamento do FII com cota inicial de R$ 100"
+        },
+        {
+          "data": "2016-2017",
+          "tipo": "negativo",
+          "titulo": "Crise imobiliária",
+          "descricao": "Cota cai para R$ 56 durante recessão econômica brasileira"
+        },
+        {
+          "data": "2019-03",
+          "tipo": "positivo",
+          "titulo": "Recuperação completa",
+          "descricao": "Cota retorna ao patamar de R$ 100, completando recuperação"
+        },
+        {
+          "data": "2022-01",
+          "tipo": "positivo",
+          "titulo": "Pico histórico",
+          "descricao": "Cota atinge R$ 123 no pico do ciclo"
+        },
+        {
+          "data": "2023-01",
+          "tipo": "positivo",
+          "titulo": "Lançamento Livus",
+          "descricao": "Criação da marca Livus para empreendimentos habitacionais"
+        },
+        {
+          "data": "2024-01",
+          "tipo": "positivo",
+          "titulo": "9ª Emissão",
+          "descricao": "Captação de R$ 161M demonstra confiança do mercado"
+        }
+      ],
+      "pontosFortes": [
+        "13 anos de track record com retorno de +324%",
+        "Gestão experiente no segmento MCMV",
+        "Marca Livus estabelecida no mercado",
+        "Histórico de entregas consistente",
+        "Superou IFIX (+174%) e CDI (+165%) desde o início"
+      ],
+      "pontosFracos": [
+        "Taxa de administração elevada (2,0% a.a.)",
+        "5 das 7 subscrições desde 2019 geraram prejuízo aos subscritores",
+        "Risco de execução inerente a FIIs de desenvolvimento",
+        "Volatilidade elevada da cota"
+      ],
+      "conclusao": "A Mérito Investimentos possui um track record sólido de 13 anos com retorno total de +324%. A gestão demonstra competência no segmento MCMV através da marca Livus. As taxas são elevadas mas justificadas pela complexidade do segmento de desenvolvimento. Os riscos são inerentes ao tipo de ativo (desenvolvimento) e não à qualidade da gestão. Recomendado para investidores com horizonte longo que buscam yield elevado."
+    }
+  ],
+  "ultimaAtualizacao": "2026-01-30"
+}

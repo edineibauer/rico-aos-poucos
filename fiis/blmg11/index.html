@@ -1,0 +1,1542 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BLMG11 - Análise Completa | BlueMacaw FII Multi-estratégia</title>
+    <meta name="description" content="Análise completa do FII BLMG11 baseada em 439 documentos oficiais. Fundo multi-estratégia (ex-logística), agora FOF do GGRC11. Riscos, preço justo e projeções 2026.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/blmg11/">
+
+    <!-- Keywords -->
+    <meta name="keywords" content="BLMG11, BlueMacaw Logística, FII logística, análise BLMG11, dividend yield BLMG11, preço justo BLMG11">
+    <meta name="author" content="Rico aos Poucos">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="BLMG11 - Análise Completa do FII BlueMacaw Multi-estratégia 2026">
+    <meta property="og:description" content="Análise detalhada do BLMG11: de logística para multi-estratégia. Agora é FOF do GGRC11 + 1 imóvel. Histórico, riscos e projeções 2026.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/blmg11/">
+    <meta property="og:image" content="https://ricoaospoucos.com.br/icon-512.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rico aos Poucos">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@ricoaospoucos">
+    <meta name="twitter:title" content="BLMG11 - Análise Completa | FII BlueMacaw Logística">
+    <meta name="twitter:description" content="Análise do BLMG11: história completa, reestruturação 2022-2024, taxas e projeções 2026.">
+    <meta name="twitter:image" content="https://ricoaospoucos.com.br/icon-512.png">
+
+    <!-- PWA / Theme -->
+    <meta name="theme-color" content="#0d1117">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="shortcut icon" href="../../icon-192.png">
+
+    <!-- Site CSS -->
+    <link rel="stylesheet" href="../../css/style.css">
+
+    <script defer src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        * { font-family: 'Inter', system-ui, sans-serif; }
+
+        /* Override site CSS - remove default section padding */
+        section { padding: 0; }
+
+        .hero-gradient {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-gradient::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+
+        .dark-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-card {
+            background: var(--bg-card);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border-color);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            border-color: var(--primary-light);
+        }
+
+        .pulse-dot {
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .score-ring {
+            transform: rotate(-90deg);
+        }
+
+        .chart-container {
+            position: relative;
+            height: 300px;
+        }
+
+        .chart-container-lg {
+            position: relative;
+            height: 350px;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 24px;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 50%, var(--secondary) 100%);
+        }
+
+        .timeline-dot {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: relative;
+            z-index: 10;
+        }
+
+        .progress-bar {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+            transition: width 1s ease-out;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .nav-sticky {
+            backdrop-filter: blur(12px);
+            background: rgba(13, 17, 23, 0.95);
+        }
+
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+        .asset-row:hover {
+            background: rgba(45, 138, 110, 0.1);
+        }
+
+        .glow-blue {
+            box-shadow: 0 0 20px rgba(45, 138, 110, 0.3);
+        }
+
+        .glow-amber {
+            box-shadow: 0 0 20px rgba(240, 193, 75, 0.3);
+        }
+
+        .glow-red {
+            box-shadow: 0 0 20px rgba(248, 81, 73, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
+    <div class="page-wrapper">
+
+    <!-- Site Header -->
+    <header class="app-header">
+      <a href="../" class="header-back">
+        <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div class="app-logo">
+        <svg viewBox="0 0 1024 1024" width="36" height="36">
+          <defs><clipPath id="rc"><rect width="1024" height="1024" rx="205"/></clipPath></defs>
+          <g clip-path="url(#rc)">
+            <rect width="1024" height="1024" fill="#fdfdfd"/>
+            <path d="M329.73 475.84C318.03 487.75 291.26 514.98 270.23 536.35L232 575.21V218.91l129.25.35c127.97.35 129.38.37 142.25 2.56 44.75 7.62 77.89 21.45 104.52 43.63 19.83 16.51 36.07 40.45 41.44 61.07l1.53 5.87-9.75 10.06c-5.36 5.53-29.55 30.3-53.75 55.05-24.21 24.75-48.25 49.39-53.42 54.75-5.18 5.36-9.91 9.75-10.51 9.75s-5.76-4.68-11.47-10.41l-10.38-10.41 5.36-2.71c16.69-8.46 27.74-21.74 32.49-39.04 2.49-9.07 3.04-29.21 1.06-38.93-4.86-23.89-21.8-40.39-47.62-46.39-16.32-3.79-26.87-4.26-85.51-3.77-30.79.25-56.1.5-56.24.56-.14.05-.25 32.32-.25 71.69v71.6zm438.27 271.66c0 .28-32.06.48-71.25.45l-71.25-.05-22.31-31.2c-12.27-17.16-31.31-43.7-42.31-58.99l-20-27.78 2.6-3.09c4.52-5.37 76.91-78.84 77.68-78.84 1.08 0 39.66 51.87 88.5 119 11 15.12 28.63 39.31 39.17 53.75s19.17 26.79 19.17 27.06zM356 687.92V748h-59c-32.45 0-59-.34-58.99-.75.01-.9 115.72-118.6 117.06-119.08.57-.21.93 23.06.93 59.75z" fill="rgb(32,58,87)"/>
+            <path d="M298.21 658.25C261.73 694.96 231.8 725 231.69 725s-.19-27.65-.19-61.45v-61.44l16-16.26c8.8-8.96 50.21-51.0 92.03-93.35 41.82-42.36 79.13-80.27 82.92-84.26 3.78-3.99 7.25-7.25 7.72-7.25s10.62 9.34 22.59 20.75c11.96 11.41 32.71 31.06 46.11 43.66 23.13 21.77 24.46 22.85 26.49 21.5 2.26-1.49 29.72-29.31 97.15-98.41 22.54-23.10 48.53-49.65 57.76-58.99l16.79-17 -4.34-4c-2.39-2.2-14.67-13.41-27.28-24.92s-23.07-21.23-23.23-21.61c-.30-.72.32-.88 36.29-9.40 12.65-2.99 32.22-7.70 43.5-10.45s28.15-6.85 37.5-9.11c9.35-2.26 23.30-5.64 31-7.51 32.51-7.91 64.33-15.50 64.96-15.50.15 0-.54 3.94-1.54 8.75-4.91 23.62-11.24 53.92-15.42 73.75-2.54 12.10-6.61 31.67-9.03 43.5s-5.78 23.83-7.48 31.81c-1.70 7.98-4.34 20.47-5.88 27.76s-3.06 13.52-3.38 13.84c-.61.61-9.56-6.89-25.23-21.16-4.95-4.51-12.15-10.97-16-14.36l-7-6.17-3.91 4.29c-4.90 5.38-32.10 33.35-61.08 62.80-26.70 27.13-158.79 162.16-166.52 170.22l-5.49 5.72-21.50-20.59c-55.42-53.08-73.11-69.87-73.91-70.14-.47-.17-1.47.34-2.22 1.13-4.59 4.81-75.04 75.93-131.66 132.91z" fill="rgb(214,164,45)"/>
+          </g>
+        </svg>
+      </div>
+      <div class="app-title-group">
+        <h1 class="app-name">Rico aos Poucos</h1>
+        <span class="app-subtitle">Análise BLMG11</span>
+      </div>
+    </header>
+
+    <!-- Sticky Navigation (scroll) -->
+    <nav class="nav-sticky fixed top-0 left-0 right-0 z-50 border-b border-[var(--border-color)] hidden" id="stickyNav">
+        <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center gap-3">
+                <a href="../" class="text-[var(--text-secondary)] hover:text-[var(--text-primary)] mr-2">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+                </a>
+                <span class="text-xl font-bold text-white">BLMG11</span>
+                <span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded">CAUTELOSO</span>
+            </div>
+            <div class="flex items-center gap-4">
+                <span class="text-lg font-semibold text-white">R$ 35,00</span>
+                <span class="text-[var(--bullish)] font-medium">DY 14,1%</span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero-gradient text-white py-16 pb-32 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
+                <!-- Left side -->
+                <div class="space-y-4">
+                    <div class="flex items-center gap-3 flex-wrap">
+                        <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight">BLMG11</h1>
+                        <div class="flex gap-2">
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-amber-500/20 text-amber-400 text-sm font-semibold border border-amber-500/30">
+                                <svg class="w-4 h-4 mr-1.5" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+                                NOTA 5/10
+                            </span>
+                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-amber-500/90 text-white text-sm font-semibold">
+                                CAUTELOSO
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-xl lg:text-2xl text-blue-200 font-light">BlueMacaw Fundo de Investimento Imobiliário <span class="text-amber-400">(ex-Logística)</span></p>
+                    <div class="flex flex-wrap gap-2 text-sm">
+                        <span class="px-3 py-1 rounded-full bg-amber-500/30 border border-amber-400/50 text-amber-300">Multi-estratégia</span>
+                        <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">FOF do GGRC11</span>
+                        <span class="px-3 py-1 rounded-full bg-white/10 border border-white/20">Reestruturado 2025</span>
+                    </div>
+                </div>
+
+                <!-- Right side - Price -->
+                <div class="text-right space-y-1">
+                    <div class="text-sm text-blue-300 uppercase tracking-wider">Cota Atual</div>
+                    <div class="text-5xl lg:text-6xl font-extrabold">R$ 35,00</div>
+                    <div class="flex items-center justify-end gap-4 mt-2">
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-emerald-400">14,1%</div>
+                            <div class="text-xs text-blue-300">DY Anual</div>
+                        </div>
+                        <div class="w-px h-10 bg-white/20"></div>
+                        <div class="text-center">
+                            <div class="text-2xl font-bold text-emerald-400">0,69</div>
+                            <div class="text-xs text-blue-300">P/VP</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Quick Stats Cards -->
+    <section class="max-w-7xl mx-auto px-4 -mt-20 relative z-20 mb-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Patrimônio</span>
+                </div>
+                <div class="text-3xl font-bold text-white">R$ 236M</div>
+                <div class="text-xs text-slate-500 mt-1">VP/cota: <span class="font-semibold text-blue-400">R$ 50,49</span></div>
+            </div>
+
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Rendimento</span>
+                </div>
+                <div class="text-2xl font-bold text-emerald-400">R$ 0,41<span class="text-base text-slate-500">/mês</span></div>
+                <div class="text-xs text-emerald-400 mt-1 font-medium">R$ 4,92/ano | DY 14,1%</div>
+            </div>
+
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-purple-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Cotistas</span>
+                </div>
+                <div class="text-3xl font-bold text-white">12.869</div>
+                <div class="text-xs text-slate-500 mt-1">4.674.548 cotas</div>
+            </div>
+
+            <div class="stat-card rounded-2xl p-6 shadow-xl">
+                <div class="flex items-center gap-3 mb-3">
+                    <div class="w-10 h-10 rounded-xl bg-amber-500/20 flex items-center justify-center">
+                        <svg class="w-5 h-5 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    </div>
+                    <span class="text-sm text-slate-400 font-medium">Preço Justo</span>
+                </div>
+                <div class="text-3xl font-bold text-blue-400">R$ 37</div>
+                <div class="text-xs text-emerald-400 mt-1 flex items-center gap-1">
+                    <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5.293 9.707a1 1 0 010-1.414l4-4a1 1 0 011.414 0l4 4a1 1 0 01-1.414 1.414L11 7.414V15a1 1 0 11-2 0V7.414L6.707 9.707a1 1 0 01-1.414 0z"/></svg>
+                    +6% upside
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 pb-16">
+
+        <!-- Recommendation Box -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 relative overflow-hidden">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/10 to-red-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
+                        <div class="space-y-4 flex-1">
+                            <div class="flex items-center gap-3">
+                                <h2 class="text-2xl font-bold text-white">Recomendação</h2>
+                                <span class="px-4 py-2 rounded-lg bg-amber-500 text-white font-bold text-lg">CAUTELOSO</span>
+                            </div>
+                            <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+                                O <strong class="text-emerald-400">DY de 14,1%</strong> é atrativo e o desconto de <strong class="text-emerald-400">31% sobre o VP</strong> parece uma oportunidade. Porém, o fundo passou por <strong class="text-amber-400">liquidação massiva em 2025</strong>, vendeu todos os ativos logísticos e virou essencialmente um <strong class="text-amber-400">FOF do GGRC11</strong>. A gestora alterou o regulamento para <strong class="text-blue-400">multi-estratégia</strong> e planeja vender GGRC11 para novas aquisições. Adequado apenas para investidores experientes que entendem os riscos da BlueMacaw.
+                            </p>
+                        </div>
+                        <div class="flex-shrink-0">
+                            <div class="relative w-32 h-32">
+                                <svg class="w-32 h-32 score-ring" viewBox="0 0 100 100">
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="#1e293b" stroke-width="8"/>
+                                    <circle cx="50" cy="50" r="45" fill="none" stroke="url(#scoreGradient)" stroke-width="8"
+                                            stroke-dasharray="282.7" stroke-dashoffset="141.35" stroke-linecap="round"/>
+                                    <defs>
+                                        <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                            <stop offset="0%" style="stop-color:#f59e0b"/>
+                                            <stop offset="100%" style="stop-color:#ef4444"/>
+                                        </linearGradient>
+                                    </defs>
+                                </svg>
+                                <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                    <span class="text-4xl font-extrabold text-white">5</span>
+                                    <span class="text-sm text-slate-400">/10</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ALERTA: RISCO DO GESTOR -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 relative overflow-hidden glow-red">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-red-500/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Risco do Gestor</h2>
+                            <p class="text-red-400 text-sm font-semibold">Atenção: histórico problemático da BlueMacaw</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-900/20 rounded-2xl p-6 border border-red-500/30 mb-6">
+                        <h3 class="text-red-400 font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/></svg>
+                            Eventos Preocupantes
+                        </h3>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                <span><strong class="text-red-400">Abr/2023:</strong> BlueMacaw renunciou à gestão do Triple A FII - antigos sócios saíram para formar a Huma Capital</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                <span><strong class="text-red-400">Nov/2023:</strong> 4ª emissão cancelada por não atingir montante mínimo - mercado rejeitou a captação</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                <span><strong class="text-red-400">2022-2024:</strong> Cota despencou de R$ 104,55 para R$ 35 (<strong>-67%</strong>) durante a gestão</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                <span><strong class="text-red-400">Jun/2024:</strong> Venda de 50% do Triple A para GGRC11 - desinvestimento forçado para desalavancar</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <p class="text-slate-400 text-sm">
+                        <strong class="text-amber-400">Conclusão:</strong> O futuro do BLMG11 depende inteiramente das próximas decisões da BlueMacaw. O histórico recente não inspira confiança, mas a reestruturação de 2024 pode ter sido um ponto de virada. Monitore de perto.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- GESTORA DO FUNDO -->
+        <section class="mb-12 fade-in">
+            <a href="../../gestores/bluemacaw/" class="block dark-card rounded-3xl p-8 relative overflow-hidden hover:border-red-500/50 transition-colors">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-red-500/10 to-orange-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center justify-between mb-6">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-2xl bg-red-500/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                            </div>
+                            <div>
+                                <h2 class="text-2xl font-bold text-white">Gestora do Fundo</h2>
+                                <p class="text-slate-400 text-sm">BlueMacaw Gestora de Recursos</p>
+                            </div>
+                        </div>
+                        <div class="text-right">
+                            <span class="px-3 py-1 rounded-lg bg-red-500/20 text-red-400 text-sm font-semibold border border-red-500/30">RUIM</span>
+                            <div class="text-2xl font-bold text-red-400 mt-1">3/10</div>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-3 gap-4 mb-4">
+                        <div class="bg-slate-800/50 rounded-xl p-4 text-center">
+                            <div class="text-lg font-bold text-white">7 anos</div>
+                            <div class="text-xs text-slate-500">No mercado</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-xl p-4 text-center">
+                            <div class="text-lg font-bold text-white">R$ 236M</div>
+                            <div class="text-xs text-slate-500">Patrimônio</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-xl p-4 text-center">
+                            <div class="text-lg font-bold text-white">1</div>
+                            <div class="text-xs text-slate-500">Fundo gerido</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-red-900/20 rounded-xl p-4 border border-red-500/20 mb-4">
+                        <p class="text-slate-300 text-sm">
+                            Histórico problemático: renúncia à gestão do Triple A FII (2023), emissão cancelada por falta de demanda, queda de -67% na cota do BLMG11 desde 2022.
+                        </p>
+                    </div>
+
+                    <div class="text-blue-400 text-sm font-medium flex items-center gap-1">
+                        Ver análise completa da gestora
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                    </div>
+                </div>
+            </a>
+        </section>
+
+        <!-- NOVA ESTRATÉGIA MULTI-ATIVO -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 relative overflow-hidden glow-amber">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-amber-500/10 to-yellow-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-amber-500/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-amber-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Nova Estratégia: Multi-Ativo</h2>
+                            <p class="text-amber-400 text-sm font-semibold">Outubro 2025 - Mudança de regulamento</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-amber-900/20 rounded-2xl p-6 border border-amber-500/30 mb-6">
+                        <h3 class="text-amber-400 font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg>
+                            O que mudou em Outubro 2025
+                        </h3>
+                        <ul class="space-y-3 text-slate-300">
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2"></span>
+                                <span><strong class="text-amber-400">Removeu "Logística" do nome:</strong> Fundo agora se chama apenas "BlueMacaw FII"</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2"></span>
+                                <span><strong class="text-amber-400">Multi-estratégia:</strong> Pode investir em <strong>qualquer tipo de imóvel</strong> - comercial, residencial, logística, varejo, etc.</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2"></span>
+                                <span><strong class="text-amber-400">Recompra de cotas:</strong> Programa de recompra aprovado para aproveitar desconto no P/VP</span>
+                            </li>
+                            <li class="flex items-start gap-2">
+                                <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2"></span>
+                                <span><strong class="text-amber-400">Zero alavancagem:</strong> Encerrou toda dívida (direta e indireta via Triple A)</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="bg-blue-900/20 rounded-2xl p-6 border border-blue-500/30 mb-6">
+                        <h3 class="text-blue-400 font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"/></svg>
+                            Intenção declarada: Vender GGRC11 para novas aquisições
+                        </h3>
+                        <p class="text-slate-300 mb-3">
+                            A gestora declarou nos relatórios gerenciais que <strong class="text-blue-400">pretende vender as cotas de GGRC11</strong> para realizar novas aquisições de ativos dentro do conceito de multi-estratégia.
+                        </p>
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-slate-800/50 rounded-xl p-4">
+                                <h4 class="text-emerald-400 font-semibold mb-2">Potenciais benefícios:</h4>
+                                <ul class="text-sm text-slate-400 space-y-1">
+                                    <li>• Elimina dupla camada de taxas</li>
+                                    <li>• Gestão direta dos ativos</li>
+                                    <li>• Maior flexibilidade de alocação</li>
+                                    <li>• Amplia universo de oportunidades</li>
+                                </ul>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-xl p-4">
+                                <h4 class="text-red-400 font-semibold mb-2">Potenciais riscos:</h4>
+                                <ul class="text-sm text-slate-400 space-y-1">
+                                    <li>• Depende da capacidade de execução</li>
+                                    <li>• Histórico problemático da gestora</li>
+                                    <li>• Pode demorar para concretizar</li>
+                                    <li>• Qualidade dos novos ativos é incerta</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
+                        <p class="text-slate-400 text-sm">
+                            <strong class="text-white">Citação do relatório (Out/2025):</strong> <em>"O Fundo deixa de concentrar suas operações exclusivamente em ativos logísticos e amplia sua atuação para todos os tipos de imóveis e transações com lastro imobiliário. O objetivo é expandir o universo de oportunidades e, dessa forma, acelerar o crescimento do portfólio."</em>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TAXAS DE GESTÃO -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 relative overflow-hidden glow-blue">
+                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-emerald-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-emerald-500/20 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Taxas de Gestão</h2>
+                            <p class="text-emerald-400 text-sm font-semibold">Competitivas para o segmento</p>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-3 gap-6 mb-6">
+                        <div class="bg-slate-800/50 rounded-2xl p-5 border border-emerald-500/30">
+                            <div class="text-sm text-slate-400 mb-2">Taxa de Administração</div>
+                            <div class="text-3xl font-extrabold text-emerald-400">0,95% a.a.</div>
+                            <div class="text-xs text-slate-500 mt-2">Sobre o PL</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-2xl p-5 border border-amber-500/30">
+                            <div class="text-sm text-slate-400 mb-2">Taxa de Performance</div>
+                            <div class="text-3xl font-extrabold text-amber-400">20%</div>
+                            <div class="text-xs text-slate-500 mt-2">Sobre o que exceder IPCA + 6%</div>
+                        </div>
+                        <div class="bg-slate-800/50 rounded-2xl p-5 border border-slate-500/30">
+                            <div class="text-sm text-slate-400 mb-2">Taxa de Custódia</div>
+                            <div class="text-3xl font-extrabold text-slate-300">0%</div>
+                            <div class="text-xs text-slate-500 mt-2">Incluída na administração</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-emerald-900/20 rounded-2xl p-5 border border-emerald-500/30">
+                        <h3 class="text-emerald-400 font-semibold mb-3 flex items-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                            Comparativo com FIIs de Logística
+                        </h3>
+                        <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-emerald-400">BLMG11</div>
+                                <div class="text-xl font-extrabold text-white">0,95%</div>
+                                <div class="text-xs text-slate-500 mt-1">+20% perf. s/ IPCA+6%</div>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-slate-400">HGLG11</div>
+                                <div class="text-xl font-extrabold text-emerald-400">0,60%</div>
+                                <div class="text-xs text-slate-500 mt-1">sem performance</div>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-slate-400">XPLG11</div>
+                                <div class="text-xl font-extrabold text-emerald-400">0,75%</div>
+                                <div class="text-xs text-slate-500 mt-1">sem performance</div>
+                            </div>
+                            <div class="bg-slate-800/50 rounded-lg p-3 text-center">
+                                <div class="text-lg font-bold text-slate-400">MFII11</div>
+                                <div class="text-xl font-extrabold text-red-400">2,00%</div>
+                                <div class="text-xs text-slate-500 mt-1">+20% perf. s/ CDI</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- TIMELINE - HISTÓRIA DO FUNDO -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 overflow-hidden">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">História do Fundo (2019-2026)</h2>
+                        <p class="text-slate-400 text-sm">Da formação à grande reestruturação</p>
+                    </div>
+                </div>
+
+                <div class="relative pl-12">
+                    <div class="timeline-line"></div>
+
+                    <!-- 2019-2020: IPO e Início -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-blue-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-slate-700/50">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-blue-400 font-bold">2019-2020</span>
+                                <span class="px-2 py-1 bg-blue-500/20 text-blue-400 text-xs rounded">IPO E INÍCIO</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Constituído em Jul/2019. IPO em Out/2020 a R$ 100/cota, captando R$ 190M.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Nov/2020: Aquisição do BTS Rio de Janeiro (Via Varejo) por R$ 235M</li>
+                                <li>• Início da distribuição de rendimentos</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2021: Expansão Agressiva -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-emerald-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-emerald-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-emerald-400 font-bold">2021</span>
+                                <span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">EXPANSÃO AGRESSIVA</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Ano de múltiplas aquisições - ABL total atingiu 285.133 m².</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Abr/2021: BMLog São Bernardo (Mercado Livre + Toyota) - R$ 108M</li>
+                                <li>• Mai/2021: BMLog Extrema LEAP Dafiti - R$ 272,7M</li>
+                                <li>• Jun/2021: BMLog Jandira Park - R$ 162M</li>
+                                <li>• Set/2021: 3ª Emissão capta R$ 100M a R$ 99,37</li>
+                                <li>• Cota atinge R$ 104,55 (pico histórico)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2022: Início da Crise -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-amber-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-amber-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-amber-400 font-bold">2022</span>
+                                <span class="px-2 py-1 bg-amber-500/20 text-amber-400 text-xs rounded">DESAFIOS</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Alta de juros pressiona. Necessidade de reestruturação.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Set/2022: Venda do galpão Jandira II por R$ 45M</li>
+                                <li>• Out/2022: Parceria estratégica com Oaktree Capital (R$ 210M)</li>
+                                <li>• Cota cai para R$ 83 (<strong class="text-red-400">-21%</strong> no ano)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2023: Crise Profunda -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-red-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-red-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-red-400 font-bold">2023</span>
+                                <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">CRISE PROFUNDA</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Problemas de gestão e captação. Mudanças internas.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Abr/2023: BlueMacaw renuncia à gestão do Triple A FII</li>
+                                <li>• Nov/2023: 4ª emissão CANCELADA por não atingir mínimo</li>
+                                <li>• Nov/2023: 5ª emissão aprovada a R$ 87,28</li>
+                                <li>• Resultado do ano: prejuízo de R$ 28,3M</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2024: Reestruturação -->
+                    <div class="mb-8 relative">
+                        <div class="timeline-dot bg-purple-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-purple-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-purple-400 font-bold">2024</span>
+                                <span class="px-2 py-1 bg-purple-500/20 text-purple-400 text-xs rounded">REESTRUTURAÇÃO</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Grande desinvestimento para zerar alavancagem.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Jun/2024: Venda de 50% do Triple A para GGRC11 - R$ 112,5M</li>
+                                <li>• Alavancagem: de R$ 64M de dívida para R$ 49M de caixa líquido</li>
+                                <li>• Nov/2024: 6ª emissão a R$ 70,23 (1.566.282 novas cotas)</li>
+                                <li>• Resultado do ano: prejuízo de R$ 17M (melhora vs 2023)</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2025-2026: Liquidação e Concentração -->
+                    <div class="relative">
+                        <div class="timeline-dot bg-red-500 absolute -left-12"></div>
+                        <div class="bg-slate-800/50 rounded-xl p-5 border border-red-500/30">
+                            <div class="flex items-center justify-between mb-2">
+                                <span class="text-red-400 font-bold">2025-2026</span>
+                                <span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">LIQUIDAÇÃO MASSIVA</span>
+                            </div>
+                            <p class="text-slate-300 text-sm mb-2">Venda de praticamente todos os ativos imobiliários.</p>
+                            <ul class="text-xs text-slate-400 mt-2 space-y-1">
+                                <li>• Abr/2025: Aquisição BM Salvador (Atento) - R$ 37,5M</li>
+                                <li>• <strong class="text-red-400">Out/2025: Venda total do Triple A FII</strong> (R$ 132M)</li>
+                                <li>• <strong class="text-red-400">Out/2025: Venda Galpão Jandira + Cabreúva</strong> (~R$ 81M)</li>
+                                <li>• Fundo agora: 80% em GGRC11 + 1 imóvel único</li>
+                                <li>• Cotação: R$ 35,00 | VP: R$ 50,49 | P/VP: 0,69</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 bg-red-900/20 rounded-xl p-5 border border-red-500/30">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/></svg>
+                        <div>
+                            <p class="text-red-400 font-medium">Resumo da trajetória - ATENÇÃO:</p>
+                            <p class="text-slate-400 text-sm mt-1">O BLMG11 passou de um FII de logística com 285.000 m² de ABL para essencialmente um <strong class="text-red-400">FOF do GGRC11</strong> com um único imóvel de call center. A cota despencou <strong class="text-red-400">-67%</strong> do pico de R$ 104,55 para R$ 35 atuais. A carteira atual NÃO tem qualquer relação com a tese original do IPO. O investidor precisa avaliar se quer exposição indireta ao GGRC11 com dupla camada de taxas.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Investment Thesis -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Tese de Investimento</h2>
+                    </div>
+
+                    <p class="text-lg text-slate-300 leading-relaxed mb-8">
+                        BLMG11 é atualmente um <strong class="text-red-400">FOF concentrado em GGRC11</strong> (80% do patrimônio) com um único imóvel de call center em Salvador. Oferece <strong class="text-emerald-400">DY elevado (14,5% a.a.)</strong> com desconto de 34% sobre o VP. A gestora <strong class="text-amber-400">BlueMacaw tem histórico problemático</strong> e vendeu praticamente todos os ativos imobiliários originais em 2025. Quem investe no BLMG11 hoje está essencialmente comprando exposição indireta ao GGRC11 com uma camada extra de taxas.
+                    </p>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div class="bg-emerald-900/20 rounded-2xl p-6 border border-emerald-500/30">
+                            <h3 class="flex items-center gap-2 font-bold text-emerald-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/></svg>
+                                Para quem serve
+                            </h3>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Investidores que buscam yield elevado e aceitam riscos</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Quem gosta de apostas de turnaround</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Posições pequenas em carteiras diversificadas</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
+                                    <span>Horizonte de investimento superior a 3 anos</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="bg-red-900/20 rounded-2xl p-6 border border-red-500/30">
+                            <h3 class="flex items-center gap-2 font-bold text-red-400 mb-4">
+                                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z"/></svg>
+                                Para quem não serve
+                            </h3>
+                            <ul class="space-y-3 text-slate-300">
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Investidores conservadores ou iniciantes</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Quem precisa de liquidez elevada</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Posições concentradas (evite mais de 5%)</span>
+                                </li>
+                                <li class="flex items-start gap-2">
+                                    <span class="w-1.5 h-1.5 rounded-full bg-red-500 mt-2"></span>
+                                    <span>Quem não tolera volatilidade extrema</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CARTEIRA DE ATIVOS -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-8 overflow-hidden">
+                <div class="flex items-center justify-between mb-6">
+                    <div class="flex items-center gap-3">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        </div>
+                        <div>
+                            <h2 class="text-2xl font-bold text-white">Carteira Atual (Out/2025)</h2>
+                            <p class="text-slate-400">Predominantemente FOF | R$ 237M em ativos</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Distribution -->
+                <div class="grid md:grid-cols-4 gap-4 mb-6">
+                    <div class="bg-blue-900/20 rounded-xl p-4 border border-blue-500/30 text-center">
+                        <div class="text-2xl font-bold text-blue-400">80%</div>
+                        <div class="text-sm text-blue-300">Cotas de FIIs</div>
+                    </div>
+                    <div class="bg-purple-900/20 rounded-xl p-4 border border-purple-500/30 text-center">
+                        <div class="text-2xl font-bold text-purple-400">16%</div>
+                        <div class="text-sm text-purple-300">Imóvel Único</div>
+                    </div>
+                    <div class="bg-emerald-900/20 rounded-xl p-4 border border-emerald-500/30 text-center">
+                        <div class="text-2xl font-bold text-emerald-400">3%</div>
+                        <div class="text-sm text-emerald-300">CRIs</div>
+                    </div>
+                    <div class="bg-amber-900/20 rounded-xl p-4 border border-amber-500/30 text-center">
+                        <div class="text-2xl font-bold text-amber-400">0%</div>
+                        <div class="text-sm text-amber-300">Alavancagem</div>
+                    </div>
+                </div>
+
+                <!-- Assets Table -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm">
+                        <thead>
+                            <tr class="border-b border-slate-700">
+                                <th class="text-left py-3 px-2 text-slate-400 font-semibold">Ativo</th>
+                                <th class="text-center py-3 px-2 text-slate-400 font-semibold">Tipo</th>
+                                <th class="text-right py-3 px-2 text-slate-400 font-semibold">Valor (R$ mil)</th>
+                                <th class="text-center py-3 px-2 text-slate-400 font-semibold">%</th>
+                                <th class="text-left py-3 px-2 text-slate-400 font-semibold">Observação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- GGRC11 -->
+                            <tr class="asset-row border-b border-slate-800/50 bg-blue-900/10">
+                                <td class="py-3 px-2 font-medium text-blue-400">GGRC11 (GGR Covepi Renda)</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-blue-500/20 text-blue-400 text-xs rounded">FOF</span></td>
+                                <td class="text-right py-3 px-2 text-white font-semibold">190.514</td>
+                                <td class="text-center py-3 px-2 text-blue-400 font-bold">80%</td>
+                                <td class="py-3 px-2 text-slate-400 text-xs">Posição concentrada em um único FII</td>
+                            </tr>
+                            <!-- BM Salvador -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">BM Salvador (Atento)</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-purple-500/20 text-purple-400 text-xs rounded">IMÓVEL</span></td>
+                                <td class="text-right py-3 px-2 text-white font-semibold">38.081</td>
+                                <td class="text-center py-3 px-2 text-blue-400 font-bold">16%</td>
+                                <td class="py-3 px-2 text-slate-400 text-xs">ABL 12.000 m² | Call center Itaú via Atento</td>
+                            </tr>
+                            <!-- CRIs -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-white">CRIs</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-amber-500/20 text-amber-400 text-xs rounded">CRÉDITO</span></td>
+                                <td class="text-right py-3 px-2 text-white font-semibold">7.679</td>
+                                <td class="text-center py-3 px-2 text-blue-400 font-bold">3%</td>
+                                <td class="py-3 px-2 text-slate-400 text-xs">Posição em recebíveis imobiliários</td>
+                            </tr>
+                            <!-- Caixa -->
+                            <tr class="asset-row border-b border-slate-800/50">
+                                <td class="py-3 px-2 font-medium text-slate-400">Caixa e Recebíveis</td>
+                                <td class="text-center py-3 px-2"><span class="px-2 py-0.5 bg-emerald-500/20 text-emerald-400 text-xs rounded">CAIXA</span></td>
+                                <td class="text-right py-3 px-2 text-white font-semibold">765</td>
+                                <td class="text-center py-3 px-2 text-blue-400 font-bold">0%</td>
+                                <td class="py-3 px-2 text-slate-400 text-xs">Liquidez mínima</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Alerta sobre o imóvel Salvador -->
+                <div class="mt-6 bg-purple-900/20 rounded-xl p-5 border border-purple-500/30">
+                    <h3 class="text-purple-400 font-semibold mb-3 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"/></svg>
+                        Único Imóvel: BM Salvador
+                    </h3>
+                    <div class="grid md:grid-cols-2 gap-4 mb-3">
+                        <div>
+                            <h4 class="text-slate-400 text-sm mb-2">Características:</h4>
+                            <ul class="text-sm text-slate-300 space-y-1">
+                                <li>• Localização: Rua do Uruguay, 43 - Salvador/BA</li>
+                                <li>• ABL: 12.000 m²</li>
+                                <li>• Uso: Call center</li>
+                                <li>• Inquilino: Atento Brasil S/A</li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4 class="text-slate-400 text-sm mb-2">Riscos do Imóvel:</h4>
+                            <ul class="text-sm text-slate-300 space-y-1">
+                                <li>• <span class="text-amber-400">Regularização</span> de área de terreno em andamento</li>
+                                <li>• <span class="text-amber-400">Inquilino único</span> - risco de vacância total</li>
+                                <li>• Setor de call center em transformação (IA)</li>
+                                <li>• Localização fora do eixo principal (Sudeste)</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <p class="text-slate-400 text-xs">
+                        <strong>Contrato:</strong> Atento até maio de 2029 | <strong>Cliente final:</strong> Itaú Unibanco
+                    </p>
+                </div>
+
+                <div class="mt-4 bg-red-900/20 rounded-xl p-4 border border-red-500/30">
+                    <p class="text-slate-400 text-sm">
+                        <strong class="text-red-400">Atenção:</strong> O BLMG11 é essencialmente um <strong>FOF do GGRC11</strong> com um único imóvel. 80% do patrimônio está concentrado em cotas do GGRC11, o que significa dupla camada de taxas e exposição indireta. Esta configuração é COMPLETAMENTE diferente da tese original de logística do IPO.
+                    </p>
+                </div>
+
+                <!-- O que foi vendido -->
+                <div class="mt-4 bg-slate-800/50 rounded-xl p-4 border border-slate-700/50">
+                    <h4 class="text-slate-300 font-semibold mb-2">Ativos Vendidos em 2025:</h4>
+                    <div class="grid md:grid-cols-3 gap-3 text-sm">
+                        <div class="text-slate-400">
+                            <span class="text-red-400">Triple A FII:</span> R$ 132M vendido
+                        </div>
+                        <div class="text-slate-400">
+                            <span class="text-red-400">Galpão Jandira:</span> R$ 119M vendido
+                        </div>
+                        <div class="text-slate-400">
+                            <span class="text-red-400">Terreno Cabreúva:</span> Vendido
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Valuation Section -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Valuation & Preço Justo</h2>
+                    </div>
+
+                    <div class="grid md:grid-cols-4 gap-6 mb-8">
+                        <div class="text-center p-6 rounded-2xl bg-slate-800/50">
+                            <div class="text-sm text-slate-400 mb-2 uppercase tracking-wider">Preço Atual</div>
+                            <div class="text-4xl font-extrabold text-white">R$ 35,00</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-blue-900/30 border-2 border-blue-500/30">
+                            <div class="text-sm text-blue-400 mb-2 uppercase tracking-wider font-semibold">Preço Justo</div>
+                            <div class="text-4xl font-extrabold text-blue-400">R$ 37</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-slate-800/50">
+                            <div class="text-sm text-slate-400 mb-2 uppercase tracking-wider">VP por Cota</div>
+                            <div class="text-4xl font-extrabold text-slate-300">R$ 50,49</div>
+                        </div>
+                        <div class="text-center p-6 rounded-2xl bg-emerald-900/30">
+                            <div class="text-sm text-emerald-400 mb-2 uppercase tracking-wider">Upside Potencial</div>
+                            <div class="text-4xl font-extrabold text-emerald-400">+6%</div>
+                        </div>
+                    </div>
+
+                    <!-- Price Scenarios -->
+                    <h3 class="font-semibold text-white mb-4">Cenários de Preço (baseado em dividendos)</h3>
+                    <div class="relative mb-4">
+                        <div class="flex h-12 rounded-xl overflow-hidden">
+                            <div class="flex-1 bg-gradient-to-r from-red-600 to-red-500 flex items-center justify-center text-white font-bold">
+                                R$ 33
+                            </div>
+                            <div class="flex-1 bg-gradient-to-r from-amber-500 to-amber-400 flex items-center justify-center text-slate-900 font-bold relative">
+                                R$ 37
+                                <div class="absolute -top-8 left-1/2 transform -translate-x-1/2 bg-white text-slate-900 text-xs px-2 py-1 rounded whitespace-nowrap">Atual: R$ 35</div>
+                            </div>
+                            <div class="flex-1 bg-gradient-to-r from-emerald-500 to-emerald-400 flex items-center justify-center text-white font-bold">
+                                R$ 49
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between text-sm text-slate-400 px-4">
+                        <div class="text-center">
+                            <div class="font-medium text-slate-300">Pessimista</div>
+                            <div class="text-xs">R$ 4,92/ano ÷ 15% DY</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium text-slate-300">Justo (Base)</div>
+                            <div class="text-xs">R$ 4,92/ano ÷ 13,3% DY</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="font-medium text-slate-300">Otimista</div>
+                            <div class="text-xs">R$ 4,92/ano ÷ 10% DY</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Dividend Projection Chart -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg p-8">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Histórico de Dividendos</h2>
+                        <p class="text-slate-400 text-sm">80 eventos de distribuição desde 2019</p>
+                    </div>
+                </div>
+
+                <!-- Toggle Buttons -->
+                <div class="flex gap-2 mb-4">
+                    <button id="btnViewYear" class="px-4 py-2 rounded-lg bg-emerald-500 text-white font-semibold text-sm transition-all">
+                        Por Ano
+                    </button>
+                    <button id="btnViewMonth" class="px-4 py-2 rounded-lg bg-slate-700 text-slate-300 font-semibold text-sm hover:bg-slate-600 transition-all">
+                        Por Mês (últimos 12)
+                    </button>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-6 mb-6">
+                    <div class="chart-container-lg">
+                        <canvas id="dividendHistoryChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-slate-800/50 rounded-xl p-4">
+                        <div class="text-slate-400 text-sm mb-1">Dividendo Atual</div>
+                        <div class="text-2xl font-extrabold text-white">R$ 0,41</div>
+                    </div>
+                    <div class="bg-emerald-900/30 rounded-xl p-4 border border-emerald-500/30">
+                        <div class="text-emerald-400 text-sm mb-1">DY Mensal</div>
+                        <div class="text-2xl font-extrabold text-emerald-400">1,17%</div>
+                    </div>
+                    <div class="bg-amber-900/30 rounded-xl p-4 border border-amber-500/30">
+                        <div class="text-amber-400 text-sm mb-1">DY Anualizado</div>
+                        <div class="text-lg font-bold text-amber-400">14,1%</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4">
+                        <div class="text-slate-400 text-sm mb-1">Regularidade</div>
+                        <div class="text-lg font-bold text-emerald-400">MENSAL</div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-amber-900/20 rounded-xl p-4 border border-amber-500/30">
+                    <p class="text-slate-400 text-sm">
+                        <strong class="text-amber-400">Lacuna histórica:</strong> Entre Fev/2020 e Fev/2021 o fundo não distribuiu rendimentos (possível impacto COVID-19 ou reestruturação inicial). Distribuições regulares desde Mar/2021.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projeção de Dividendos 2026 -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg p-8">
+                <div class="flex items-center gap-3 mb-8">
+                    <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <div>
+                        <h2 class="text-2xl font-bold text-white">Projeção de Dividendos 2026</h2>
+                        <p class="text-slate-400 text-sm">Cenário base - dividendo estabilizado em R$ 0,41/mês</p>
+                    </div>
+                </div>
+
+                <div class="bg-slate-800/50 rounded-2xl p-6 mb-6">
+                    <div class="chart-container-lg">
+                        <canvas id="dividendProjectionChart"></canvas>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-4 gap-4">
+                    <div class="bg-slate-800/50 rounded-xl p-4">
+                        <div class="text-slate-400 text-sm mb-1">Total 2026 (base)</div>
+                        <div class="text-2xl font-extrabold text-white">R$ 4,92</div>
+                    </div>
+                    <div class="bg-emerald-900/30 rounded-xl p-4 border border-emerald-500/30">
+                        <div class="text-emerald-400 text-sm mb-1">DY 2026 (preço atual)</div>
+                        <div class="text-2xl font-extrabold text-emerald-400">14,1%</div>
+                    </div>
+                    <div class="bg-amber-900/30 rounded-xl p-4 border border-amber-500/30">
+                        <div class="text-amber-400 text-sm mb-1">Faixa de Confiança</div>
+                        <div class="text-lg font-bold text-amber-400">R$ 4,50 - R$ 5,04</div>
+                    </div>
+                    <div class="bg-slate-800/50 rounded-xl p-4">
+                        <div class="text-slate-400 text-sm mb-1">Confiabilidade</div>
+                        <div class="text-lg font-bold text-amber-400">MÉDIA</div>
+                    </div>
+                </div>
+
+                <div class="mt-6 bg-blue-900/20 rounded-xl p-4 border border-blue-500/30">
+                    <div class="flex items-start gap-3">
+                        <svg class="w-5 h-5 text-blue-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/></svg>
+                        <p class="text-slate-300 text-sm">
+                            <strong class="text-blue-400">Guidance 2026:</strong> Com o dividendo estabilizado em R$ 0,41/mês desde Nov/2025, a projeção base considera manutenção deste patamar. A gestora indicou nos relatórios que avança em negociações para novas aquisições. O cenário pessimista considera possível redução caso a venda do GGRC11 impacte a receita temporariamente. O cenário otimista considera potencial aumento com novos ativos gerando renda.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Comparativo de Emissões -->
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl shadow-lg overflow-hidden">
+                <div class="p-8">
+                    <div class="flex items-center gap-3 mb-8">
+                        <div class="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold text-white">Histórico de Emissões</h2>
+                    </div>
+
+                    <div class="overflow-x-auto mb-6">
+                        <table class="w-full">
+                            <thead>
+                                <tr class="border-b border-slate-700">
+                                    <th class="text-left py-4 px-4 font-semibold text-slate-400">Emissão</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">Data</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">Preço</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">Volume</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">Status</th>
+                                    <th class="text-center py-4 px-4 font-semibold text-slate-400">Retorno*</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">1ª (IPO)</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">Out/2020</td>
+                                    <td class="text-center py-4 px-4 text-white font-semibold">R$ 100,00</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">R$ 190M</td>
+                                    <td class="text-center py-4 px-4"><span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Realizada</span></td>
+                                    <td class="text-center py-4 px-4 text-red-400 font-bold">-65%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">2ª</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">Mar/2021</td>
+                                    <td class="text-center py-4 px-4 text-white font-semibold">R$ 100,85</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">R$ 400M</td>
+                                    <td class="text-center py-4 px-4"><span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Realizada</span></td>
+                                    <td class="text-center py-4 px-4 text-red-400 font-bold">-65%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">3ª</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">Set/2021</td>
+                                    <td class="text-center py-4 px-4 text-white font-semibold">R$ 99,37</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">R$ 100M</td>
+                                    <td class="text-center py-4 px-4"><span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Realizada</span></td>
+                                    <td class="text-center py-4 px-4 text-red-400 font-bold">-65%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800 bg-red-900/10">
+                                    <td class="py-4 px-4 font-medium text-red-400">4ª</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">Dez/2022</td>
+                                    <td class="text-center py-4 px-4 text-white font-semibold">R$ 90,98</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">R$ 50M</td>
+                                    <td class="text-center py-4 px-4"><span class="px-2 py-1 bg-red-500/20 text-red-400 text-xs rounded">CANCELADA</span></td>
+                                    <td class="text-center py-4 px-4 text-slate-500">-</td>
+                                </tr>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">5ª</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">Nov/2023</td>
+                                    <td class="text-center py-4 px-4 text-white font-semibold">R$ 87,28</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">R$ 50M</td>
+                                    <td class="text-center py-4 px-4"><span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Realizada</span></td>
+                                    <td class="text-center py-4 px-4 text-red-400 font-bold">-60%</td>
+                                </tr>
+                                <tr class="border-b border-slate-800">
+                                    <td class="py-4 px-4 font-medium text-white">6ª</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">Nov/2024</td>
+                                    <td class="text-center py-4 px-4 text-white font-semibold">R$ 70,23</td>
+                                    <td class="text-center py-4 px-4 text-slate-300">R$ 110M</td>
+                                    <td class="text-center py-4 px-4"><span class="px-2 py-1 bg-emerald-500/20 text-emerald-400 text-xs rounded">Realizada</span></td>
+                                    <td class="text-center py-4 px-4 text-red-400 font-bold">-50%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="bg-red-900/20 rounded-2xl p-5 border border-red-500/30">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-red-400 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z"/></svg>
+                            <p class="text-slate-300">
+                                <strong class="text-red-400">Atenção:</strong> TODAS as emissões geraram prejuízo substancial para os subscritores. O cotista do IPO que investiu R$ 100 hoje tem cotas valendo R$ 35 (<strong class="text-red-400">-65%</strong>). Mesmo considerando os dividendos recebidos, o retorno total é negativo.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Conclusion -->
+        <section class="mb-12 fade-in">
+            <div class="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 rounded-3xl p-8 text-white relative overflow-hidden border border-slate-700/50">
+                <div class="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-amber-500/10 to-red-500/10 rounded-full blur-3xl"></div>
+                <div class="relative z-10">
+                    <div class="flex items-center gap-3 mb-6">
+                        <div class="w-12 h-12 rounded-2xl bg-white/10 flex items-center justify-center">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <h2 class="text-2xl font-bold">Conclusão Analítica</h2>
+                    </div>
+
+                    <div class="prose prose-invert max-w-none mb-8">
+                        <p class="text-lg text-slate-300 leading-relaxed">
+                            O <strong class="text-white">BLMG11</strong> é hoje <strong class="text-red-400">essencialmente um FOF do GGRC11</strong> com um único imóvel de call center em Salvador. O dividend yield de 14,1% e o desconto de 31% sobre o VP parecem atrativos, mas quem compra BLMG11 está pagando <strong class="text-amber-400">dupla camada de taxas</strong> para ter exposição indireta ao GGRC11. A gestora BlueMacaw vendeu praticamente todos os ativos originais de logística em 2025, resultando em <strong class="text-red-400">destruição de valor de -67%</strong> desde o pico. A tese original do IPO simplesmente não existe mais.
+                        </p>
+                    </div>
+
+                    <div class="bg-white/5 rounded-2xl p-6 border border-white/10">
+                        <h3 class="text-lg font-semibold mb-4">Veredicto Final</h3>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <h4 class="text-emerald-400 font-semibold mb-2">Pontos a favor</h4>
+                                <ul class="text-sm text-slate-300 space-y-1">
+                                    <li>• DY elevado (14,5% a.a.)</li>
+                                    <li>• Desconto de 34% sobre VP</li>
+                                    <li>• Alavancagem zerada</li>
+                                    <li>• Taxas competitivas (0,95%)</li>
+                                    <li>• Dividendos regulares mensais</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-red-400 font-semibold mb-2">Pontos contra</h4>
+                                <ul class="text-sm text-slate-300 space-y-1">
+                                    <li>• <strong>80% concentrado em GGRC11</strong></li>
+                                    <li>• Dupla camada de taxas (FOF)</li>
+                                    <li>• Histórico do gestor problemático</li>
+                                    <li>• Único imóvel: call center (risco IA)</li>
+                                    <li>• Todas emissões com prejuízo</li>
+                                    <li>• Liquidez muito limitada</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h4 class="text-amber-400 font-semibold mb-2">Recomendação</h4>
+                                <p class="text-sm text-slate-300 mb-3">
+                                    <strong class="text-white">CAUTELOSO</strong> - Avalie se não é melhor comprar GGRC11 diretamente. Apenas para quem entende os riscos de concentração.
+                                </p>
+                                <p class="text-xs text-slate-400">
+                                    Alocação máxima sugerida: 2-3% de uma carteira diversificada de FIIs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-[#0a0a12] text-white py-12 border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-8 mb-8">
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Sobre esta análise</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Análise baseada em <strong class="text-white">439 documentos oficiais</strong> do BLMG11, incluindo relatórios gerenciais, fatos relevantes, prospectos e demonstrações financeiras. Dados extraídos e consolidados via inteligência artificial a partir de documentos divulgados pelo fundo.
+                    </p>
+                </div>
+                <div>
+                    <h3 class="font-bold text-lg mb-3">Disclaimer</h3>
+                    <p class="text-slate-400 leading-relaxed">
+                        Esta análise <strong class="text-amber-400">não constitui recomendação de investimento</strong>. Rentabilidade passada não é garantia de rentabilidade futura. Consulte seu assessor antes de investir. Os dados apresentados podem conter imprecisões.
+                    </p>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div class="text-slate-500 text-sm">
+                    Gerado em 30/01/2026 - Dados até Jan/2026
+                </div>
+                <div class="flex items-center gap-2 text-slate-400 text-sm">
+                    <span class="w-2 h-2 rounded-full bg-emerald-500 pulse-dot"></span>
+                    Dados atualizados automaticamente
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Charts Scripts -->
+    <script>
+        Chart.defaults.color = '#94a3b8';
+        Chart.defaults.borderColor = '#1e293b';
+
+        // Dividend History Chart - Com toggle Ano/Mês
+        const dividendHistoryCtx = document.getElementById('dividendHistoryChart').getContext('2d');
+
+        // Dados por ano
+        const yearData = {
+            labels: ['2021', '2022', '2023', '2024', '2025'],
+            data: [6.50, 5.80, 5.20, 4.17, 4.30],
+            colors: [
+                'rgba(16, 185, 129, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(245, 158, 11, 0.8)',
+                'rgba(16, 185, 129, 0.8)'
+            ],
+            max: 8,
+            tooltipSuffix: '/ano'
+        };
+
+        // Dados mensais (últimos 12 meses - Fev/2025 a Jan/2026)
+        const monthData = {
+            labels: ['Fev/25', 'Mar/25', 'Abr/25', 'Mai/25', 'Jun/25', 'Jul/25', 'Ago/25', 'Set/25', 'Out/25', 'Nov/25', 'Dez/25', 'Jan/26'],
+            data: [0.35, 0.35, 0.35, 0.35, 0.35, 0.36, 0.36, 0.36, 0.36, 0.36, 0.40, 0.4159],
+            colors: [
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(59, 130, 246, 0.8)',
+                'rgba(16, 185, 129, 0.8)',
+                'rgba(16, 185, 129, 0.8)',
+                'rgba(16, 185, 129, 0.8)'
+            ],
+            max: 0.6,
+            tooltipSuffix: '/mês'
+        };
+
+        let currentView = 'year';
+
+        const dividendChart = new Chart(dividendHistoryCtx, {
+            type: 'bar',
+            data: {
+                labels: yearData.labels,
+                datasets: [{
+                    label: 'Dividendos por Ano (R$)',
+                    data: yearData.data,
+                    backgroundColor: yearData.colors,
+                    borderRadius: 8,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        padding: 12,
+                        cornerRadius: 8,
+                        callbacks: {
+                            label: function(context) {
+                                const suffix = currentView === 'year' ? '/ano' : '/mês';
+                                return 'R$ ' + context.parsed.y.toFixed(2) + suffix;
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#64748b' }
+                    },
+                    y: {
+                        min: 0,
+                        max: yearData.max,
+                        grid: { color: '#1e293b' },
+                        ticks: {
+                            color: '#64748b',
+                            callback: function(value) {
+                                return 'R$ ' + value.toFixed(2);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Toggle buttons
+        const btnViewYear = document.getElementById('btnViewYear');
+        const btnViewMonth = document.getElementById('btnViewMonth');
+
+        btnViewYear.addEventListener('click', function() {
+            if (currentView === 'year') return;
+            currentView = 'year';
+
+            btnViewYear.classList.remove('bg-slate-700', 'text-slate-300');
+            btnViewYear.classList.add('bg-emerald-500', 'text-white');
+            btnViewMonth.classList.remove('bg-emerald-500', 'text-white');
+            btnViewMonth.classList.add('bg-slate-700', 'text-slate-300');
+
+            dividendChart.data.labels = yearData.labels;
+            dividendChart.data.datasets[0].data = yearData.data;
+            dividendChart.data.datasets[0].backgroundColor = yearData.colors;
+            dividendChart.data.datasets[0].label = 'Dividendos por Ano (R$)';
+            dividendChart.options.scales.y.max = yearData.max;
+            dividendChart.update();
+        });
+
+        btnViewMonth.addEventListener('click', function() {
+            if (currentView === 'month') return;
+            currentView = 'month';
+
+            btnViewMonth.classList.remove('bg-slate-700', 'text-slate-300');
+            btnViewMonth.classList.add('bg-emerald-500', 'text-white');
+            btnViewYear.classList.remove('bg-emerald-500', 'text-white');
+            btnViewYear.classList.add('bg-slate-700', 'text-slate-300');
+
+            dividendChart.data.labels = monthData.labels;
+            dividendChart.data.datasets[0].data = monthData.data;
+            dividendChart.data.datasets[0].backgroundColor = monthData.colors;
+            dividendChart.data.datasets[0].label = 'Dividendos por Mês (R$)';
+            dividendChart.options.scales.y.max = monthData.max;
+            dividendChart.update();
+        });
+
+        // Dividend Projection Chart 2026
+        const dividendProjectionCtx = document.getElementById('dividendProjectionChart').getContext('2d');
+        new Chart(dividendProjectionCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'],
+                datasets: [{
+                    label: 'Cenário Base (R$)',
+                    data: [0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41, 0.41],
+                    backgroundColor: 'rgba(16, 185, 129, 0.8)',
+                    borderRadius: 4,
+                    borderSkipped: false,
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false },
+                    tooltip: {
+                        backgroundColor: '#1e293b',
+                        titleColor: '#fff',
+                        bodyColor: '#fff',
+                        padding: 12,
+                        cornerRadius: 8,
+                        callbacks: {
+                            label: function(context) {
+                                return 'R$ ' + context.parsed.y.toFixed(2) + '/cota';
+                            }
+                        }
+                    }
+                },
+                scales: {
+                    x: {
+                        grid: { display: false },
+                        ticks: { color: '#64748b' }
+                    },
+                    y: {
+                        min: 0.30,
+                        max: 0.50,
+                        grid: { color: '#1e293b' },
+                        ticks: {
+                            color: '#64748b',
+                            callback: function(value) {
+                                return 'R$ ' + value.toFixed(2);
+                            }
+                        }
+                    }
+                }
+            }
+        });
+
+        // Sticky Navigation
+        const stickyNav = document.getElementById('stickyNav');
+        window.addEventListener('scroll', function() {
+            if (window.scrollY > 400) {
+                stickyNav.classList.remove('hidden');
+            } else {
+                stickyNav.classList.add('hidden');
+            }
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('fade-in');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "BLMG11 - Análise Completa do FII BlueMacaw Logística",
+        "description": "Análise detalhada do BLMG11 com histórico completo desde 2019, reestruturação 2022-2024, taxas de gestão, carteira e projeções de dividendos para 2026.",
+        "datePublished": "2026-01-30",
+        "dateModified": "2026-01-30",
+        "author": {
+            "@type": "Organization",
+            "name": "Rico aos Poucos"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Rico aos Poucos",
+            "url": "https://ricoaospoucos.com.br"
+        }
+    }
+    </script>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+    </div><!-- .page-wrapper -->
+
+    <script defer src="../../js/footer.js"></script>
+</body>
+</html>

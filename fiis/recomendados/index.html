@@ -340,6 +340,99 @@
       }
     }
 
+    /* MOBILE OPTIMIZATIONS - Correcoes de UX/UI para mobile */
+    @media (max-width: 767px) {
+      /* Prevenir overflow horizontal */
+      body { overflow-x: hidden; }
+
+      /* Otimizar padding do container principal */
+      .main-content {
+        padding: 12px 16px !important;
+      }
+
+      /* Intro section */
+      .intro-section {
+        padding: 16px !important;
+        margin-bottom: 20px !important;
+      }
+
+      .intro-section h2 {
+        font-size: 1.1rem !important;
+      }
+
+      .intro-section p {
+        font-size: 0.8rem !important;
+      }
+
+      /* Warning alert */
+      .warning-alert {
+        padding: 14px !important;
+        margin-bottom: 20px !important;
+      }
+
+      /* FII Cards */
+      .fii-card {
+        padding: 14px !important;
+      }
+
+      .fii-ticker {
+        font-size: 1rem !important;
+      }
+
+      .fii-nome {
+        font-size: 0.8rem !important;
+      }
+
+      /* Price info */
+      .price-info {
+        padding: 12px !important;
+        gap: 8px !important;
+      }
+
+      .price-current {
+        font-size: 1.1rem !important;
+      }
+
+      .price-range {
+        padding: 10px !important;
+      }
+
+      .price-label {
+        font-size: 0.65rem !important;
+      }
+
+      .price-value {
+        font-size: 0.85rem !important;
+      }
+
+      /* Indicadores */
+      .fii-indicadores {
+        gap: 8px !important;
+      }
+
+      .indicador-item {
+        padding: 8px !important;
+      }
+
+      .indicador-label {
+        font-size: 0.6rem !important;
+      }
+
+      .indicador-valor {
+        font-size: 0.8rem !important;
+      }
+
+      /* Price legend */
+      .price-legend {
+        gap: 10px !important;
+        padding: 14px !important;
+      }
+
+      .legend-item {
+        font-size: 0.75rem !important;
+      }
+    }
+
     @media (min-width: 768px) {
       .main-content {
         padding: 24px 32px;

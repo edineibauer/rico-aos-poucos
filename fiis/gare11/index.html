@@ -124,6 +124,72 @@
         .glow-green { box-shadow: 0 0 20px rgba(45, 138, 110, 0.3); }
         .glow-amber { box-shadow: 0 0 20px rgba(240, 193, 75, 0.3); }
         .glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+
+        /* MOBILE OPTIMIZATIONS - Correcoes de UX/UI para mobile */
+        @media (max-width: 767px) {
+            /* Prevenir overflow horizontal */
+            body { overflow-x: hidden; }
+            * { max-width: 100%; }
+
+            /* Otimizar padding dos containers principais */
+            .max-w-7xl { padding-left: 12px !important; padding-right: 12px !important; }
+
+            /* Reduzir padding interno dos cards */
+            .dark-card, .stat-card { padding: 16px !important; }
+            .dark-card.rounded-3xl { padding: 20px !important; }
+
+            /* Hero section - reduzir espacamento */
+            .hero-gradient { padding-top: 32px !important; padding-bottom: 64px !important; }
+
+            /* Grids - forcar 1 coluna em elementos com 3+ colunas */
+            .grid.grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+            .grid.grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+            .grid.grid-cols-5 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+            /* Charts - garantir responsividade */
+            .chart-container, .chart-container-lg {
+                height: 250px !important;
+                min-width: 0 !important;
+                max-width: 100% !important;
+                width: 100% !important;
+            }
+
+            /* Tabelas - melhorar scroll horizontal */
+            .overflow-x-auto {
+                -webkit-overflow-scrolling: touch;
+                margin-left: -12px;
+                margin-right: -12px;
+                padding-left: 12px;
+                padding-right: 12px;
+            }
+
+            .overflow-x-auto table { min-width: 600px; }
+
+            /* Reduzir tamanhos de fonte em areas densas */
+            .overflow-x-auto table { font-size: 0.75rem; }
+            .overflow-x-auto th, .overflow-x-auto td { padding: 8px 6px !important; }
+
+            /* Garantir que cards nao ultrapassem a tela */
+            .rounded-3xl, .rounded-2xl, .rounded-xl {
+                box-sizing: border-box;
+                max-width: 100%;
+            }
+
+            /* Espacamento entre secoes */
+            section.mb-12 { margin-bottom: 24px !important; }
+
+            /* Hero - ajustar fonte */
+            .hero-gradient h1 { font-size: 2.5rem !important; }
+            .hero-gradient .text-5xl { font-size: 2.5rem !important; }
+            .hero-gradient .text-6xl { font-size: 3rem !important; }
+
+            /* Stats cards no hero */
+            .stat-card.rounded-2xl { padding: 16px !important; }
+            .stat-card .text-3xl { font-size: 1.5rem !important; }
+
+            /* Flexbox wrap melhorado */
+            .flex-wrap { gap: 8px !important; }
+        }
     </style>
 </head>
 <body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">

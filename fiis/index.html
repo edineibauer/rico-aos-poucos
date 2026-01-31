@@ -42,6 +42,13 @@
   <title>Analise de FIIs - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
+    /* v2.0 - Mobile optimizations 2026-01-31 */
+
+    /* Sobrescrever estilo global do style.css */
+    section {
+      padding: 0 !important;
+    }
+
     .page-wrapper {
       min-height: 100vh;
       display: flex;
@@ -114,29 +121,6 @@
       max-width: 1200px;
       margin: 0 auto;
       width: 100%;
-    }
-
-    /* Intro section */
-    .intro-section {
-      text-align: center;
-      margin-bottom: 24px;
-      padding: 20px;
-      background: var(--bg-card);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-
-    .intro-section h2 {
-      font-size: 1.2rem;
-      margin: 0 0 8px;
-      color: var(--text-primary);
-    }
-
-    .intro-section p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin: 0;
-      line-height: 1.5;
     }
 
     /* CTA FIIs Recomendados */
@@ -468,34 +452,6 @@
       color: var(--text-muted);
     }
 
-    /* Stats summary */
-    .stats-summary {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 12px;
-      margin-bottom: 24px;
-    }
-
-    .stat-card {
-      padding: 16px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      text-align: center;
-    }
-
-    .stat-value {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--primary-light);
-    }
-
-    .stat-label {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-      margin-top: 4px;
-    }
-
     /* Empty state */
     .empty-state {
       text-align: center;
@@ -523,6 +479,98 @@
       color: var(--text-muted);
     }
 
+    /* MOBILE OPTIMIZATIONS - Correcoes de UX/UI para mobile */
+    @media (max-width: 767px) {
+      /* Prevenir overflow horizontal */
+      body { overflow-x: hidden; }
+
+      /* Otimizar padding do container principal */
+      .main-content {
+        padding: 12px 16px !important;
+      }
+
+      /* FII Cards - otimizar espacamento */
+      .fii-card {
+        padding: 14px !important;
+      }
+
+      .fii-indicadores {
+        grid-template-columns: repeat(2, 1fr) !important;
+        gap: 10px !important;
+      }
+
+      .indicador-label {
+        font-size: 0.6rem !important;
+      }
+
+      .indicador-valor {
+        font-size: 0.85rem !important;
+      }
+
+      /* CTA Recomendados - reduzir padding */
+      .cta-recomendados {
+        padding: 16px 18px !important;
+        margin-bottom: 16px !important;
+      }
+
+      .cta-icon {
+        font-size: 1.5rem !important;
+      }
+
+      .cta-content h3 {
+        font-size: 1rem !important;
+      }
+
+      .cta-content p {
+        font-size: 0.8rem !important;
+      }
+
+      /* Search input */
+      .search-input {
+        font-size: 0.85rem !important;
+        padding: 10px 14px 10px 40px !important;
+      }
+
+      /* Filters row - reorganizar para incluir select de ordenacao */
+      .filters-row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 8px !important;
+        margin-bottom: 12px !important;
+      }
+
+      .filter-chip {
+        padding: 7px 12px !important;
+        font-size: 0.75rem !important;
+      }
+
+      /* Esconder botoes de sort no mobile */
+      .sort-options {
+        display: none !important;
+      }
+
+      /* Select de ordenacao mobile */
+      .mobile-sort-select {
+        flex: 0 0 auto;
+        padding: 7px 12px !important;
+        background: var(--bg-tertiary);
+        border: 1px solid var(--border-color);
+        border-radius: 20px;
+        font-size: 0.75rem !important;
+        color: var(--text-primary);
+        outline: none;
+        cursor: pointer;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+        background-repeat: no-repeat;
+        background-position: right 8px center;
+        background-size: 12px;
+        padding-right: 28px !important;
+      }
+    }
+
     /* Desktop */
     @media (min-width: 768px) {
       .main-content {
@@ -539,16 +587,17 @@
         padding: 20px;
       }
 
-      .stats-summary {
-        grid-template-columns: repeat(4, 1fr);
-      }
-
       .filters-row {
         justify-content: center;
       }
 
       .sort-options {
         justify-content: center;
+      }
+
+      /* Esconder select mobile no desktop */
+      .mobile-sort-select {
+        display: none;
       }
     }
 
@@ -606,12 +655,6 @@
 
     <!-- Main -->
     <main class="main-content">
-      <!-- Intro -->
-      <section class="intro-section">
-        <h2>Analise de Fundos Imobiliarios</h2>
-        <p>Analises detalhadas de FIIs com indicadores, riscos, pontos positivos e nossa opiniao. Conteudo educacional - nao e recomendacao de investimento.</p>
-      </section>
-
       <!-- CTA para FIIs Recomendados -->
       <a href="recomendados/" class="cta-recomendados">
         <div class="cta-icon">🎯</div>
@@ -623,22 +666,6 @@
           <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
         </svg>
       </a>
-
-      <!-- Stats summary -->
-      <div class="stats-summary" id="statsSummary">
-        <div class="stat-card">
-          <div class="stat-value" id="totalFiis">0</div>
-          <div class="stat-label">FIIs Analisados</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" id="avgDY">0%</div>
-          <div class="stat-label">DY Medio</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-value" id="avgPVP">0</div>
-          <div class="stat-label">P/VP Medio</div>
-        </div>
-      </div>
 
       <!-- Search and filters -->
       <section class="search-section">
@@ -657,6 +684,17 @@
           <button class="filter-chip" data-filter="papel">Papel</button>
           <button class="filter-chip" data-filter="hibrido">Hibrido</button>
           <button class="filter-chip" data-filter="fof">FoF</button>
+          <!-- Select de ordenacao para mobile -->
+          <select class="mobile-sort-select" id="mobileSortSelect">
+            <option value="ticker-asc">Ticker ↑</option>
+            <option value="ticker-desc">Ticker ↓</option>
+            <option value="dividendYield-desc">DY ↓</option>
+            <option value="dividendYield-asc">DY ↑</option>
+            <option value="pvp-asc">P/VP ↑</option>
+            <option value="pvp-desc">P/VP ↓</option>
+            <option value="cotacao-asc">Preço ↑</option>
+            <option value="cotacao-desc">Preço ↓</option>
+          </select>
         </div>
 
         <div class="sort-options">
@@ -710,7 +748,6 @@
         const response = await fetch('../data/fiis.json');
         if (!response.ok) throw new Error('Erro ao carregar dados');
         fiisData = await response.json();
-        atualizarStats();
         renderizarFiis();
       } catch (error) {
         document.getElementById('fiisContainer').innerHTML = `
@@ -723,16 +760,6 @@
       }
     }
 
-    function atualizarStats() {
-      const fiis = fiisData.fiis;
-      document.getElementById('totalFiis').textContent = fiis.length;
-
-      const avgDY = fiis.reduce((sum, f) => sum + f.indicadores.dividendYield, 0) / fiis.length;
-      document.getElementById('avgDY').textContent = avgDY.toFixed(1) + '%';
-
-      const avgPVP = fiis.reduce((sum, f) => sum + f.indicadores.pvp, 0) / fiis.length;
-      document.getElementById('avgPVP').textContent = avgPVP.toFixed(2);
-    }
 
     function filtrarFiis(fiis) {
       let resultado = [...fiis];
@@ -894,6 +921,16 @@
       buscaAtual = e.target.value.trim();
       renderizarFiis();
     });
+
+    // Event listener para select de ordenacao mobile
+    const mobileSortSelect = document.getElementById('mobileSortSelect');
+    if (mobileSortSelect) {
+      mobileSortSelect.addEventListener('change', (e) => {
+        const [campo, ordem] = e.target.value.split('-');
+        ordenacaoAtual = { campo, ordem };
+        renderizarFiis();
+      });
+    }
 
     document.addEventListener('DOMContentLoaded', carregarFiis);
   </script>

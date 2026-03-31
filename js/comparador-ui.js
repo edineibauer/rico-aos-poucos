@@ -298,6 +298,7 @@ const Comparador2 = {
     this.applyPercentageMasks();
     this.applyCurrencyMasks();
     this.bindPortfolioEvents();
+    this.bindHistoricoSliders();
     this.handleUrlHash();
     this.waitForData();
   },
@@ -353,17 +354,116 @@ const Comparador2 = {
   waitForData() {
     const checkData = () => {
       if (typeof Comparador !== 'undefined' && Comparador.dadosMensais && Comparador.dadosMensais.meses) {
-        // Mostrar conteúdo inicial
         setTimeout(() => {
           this.showPattern('dotcom');
-          // Auto-iniciar duelo com IBOV vs S&P500
-          this.iniciarDuelo();
+          // Auto-executar comparação histórica ao carregar
+          this.compararHistorico();
         }, 300);
       } else {
         setTimeout(checkData, 100);
       }
     };
     checkData();
+  },
+
+  // Sliders reativas do Histórico + auto-comparar
+  bindHistoricoSliders() {
+    let debounce = null;
+    const autoCompare = () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(() => this.compararHistorico(), 150);
+    };
+
+    // Valor inicial slider + edit button
+    const valRange = document.getElementById('comp2ValorRange');
+    const valDisplay = document.getElementById('comp2ValorDisplay');
+    const valHidden = document.getElementById('comp2Valor');
+    const valEdit = document.getElementById('comp2ValorEdit');
+    const valManual = document.querySelector('.comp2-input-manual');
+
+    if (valRange) {
+      valRange.addEventListener('input', () => {
+        const v = parseInt(valRange.value);
+        valDisplay.textContent = v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 });
+        valHidden.value = v.toLocaleString('pt-BR');
+        autoCompare();
+      });
+    }
+
+    if (valEdit && valManual) {
+      valEdit.addEventListener('click', () => {
+        const isShowing = valManual.style.display !== 'none';
+        valManual.style.display = isShowing ? 'none' : '';
+        valRange.parentElement.style.display = isShowing ? '' : 'none';
+      });
+      valManual.addEventListener('input', () => {
+        let raw = valManual.value.replace(/\D/g, '');
+        if (raw) {
+          const v = parseInt(raw);
+          valManual.value = v.toLocaleString('pt-BR');
+          valHidden.value = v.toLocaleString('pt-BR');
+          valRange.value = v;
+          valDisplay.textContent = v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 });
+        }
+        autoCompare();
+      });
+    }
+
+    // Dólar extra slider
+    const dolarRange = document.getElementById('comp2DolarExtraRange');
+    const dolarDisplay = document.getElementById('comp2DolarExtraDisplay');
+    const dolarHidden = document.getElementById('comp2DolarExtra');
+    if (dolarRange) {
+      dolarRange.addEventListener('input', () => {
+        const v = parseFloat(dolarRange.value);
+        dolarDisplay.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
+        dolarHidden.value = v.toString().replace('.', ',');
+        autoCompare();
+      });
+    }
+
+    // Imóveis renda slider
+    const imovRange = document.getElementById('comp2ImoveisRendaRange');
+    const imovDisplay = document.getElementById('comp2ImoveisRendaDisplay');
+    const imovHidden = document.getElementById('comp2ImoveisRenda');
+    if (imovRange) {
+      imovRange.addEventListener('input', () => {
+        const v = parseFloat(imovRange.value);
+        imovDisplay.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
+        imovHidden.value = v.toString().replace('.', ',');
+        autoCompare();
+      });
+    }
+
+    // Inflação slider
+    const infRange = document.getElementById('comp2InflacaoRange');
+    const infDisplay = document.getElementById('comp2InflacaoDisplay');
+    const infHidden = document.getElementById('comp2InflacaoCustom');
+    if (infRange) {
+      infRange.addEventListener('input', () => {
+        const v = parseFloat(infRange.value);
+        if (v === 0) {
+          infDisplay.textContent = 'Histórica';
+          infHidden.value = '';
+        } else {
+          infDisplay.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
+          infHidden.value = v.toString().replace('.', ',');
+        }
+        autoCompare();
+      });
+    }
+
+    // Auto-comparar ao mudar período ou chips
+    document.querySelectorAll('.comp2-date-select select').forEach(sel => {
+      sel.addEventListener('change', autoCompare);
+    });
+
+    // Chips já tinham binding, mas agora também auto-comparam
+    document.querySelectorAll('#comp2-historico .comp2-chip').forEach(chip => {
+      chip.addEventListener('click', () => {
+        setTimeout(autoCompare, 50);
+      });
+    });
   },
 
   // ==========================================

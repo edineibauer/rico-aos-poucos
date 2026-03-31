@@ -20,7 +20,6 @@
       valorizacao: 6,
       yieldAluguel: 6,
       rendimentoInv: 12,
-      horizonte: 30,
       ehTerreno: false,
       taxaFin: 9,
       prazoFin: 30,
@@ -37,25 +36,22 @@
       yieldAluguel: 6,
       valorizacao: 7,
       rendimentoInv: 13.5,
-      horizonte: 10,
       ehTerreno: false
     }
   };
 
   const PRESETS = {
     convencional: {
-      conservador: { valorMercado: 500000, entrada: 20, valorizacao: 5, yieldAluguel: 5, rendimentoInv: 10, horizonte: 30, taxaFin: 10, prazoFin: 30, sistema: 'sac' },
-      moderado:    { valorMercado: 500000, entrada: 20, valorizacao: 6, yieldAluguel: 6, rendimentoInv: 12, horizonte: 30, taxaFin: 9, prazoFin: 30, sistema: 'sac' },
-      otimista:    { valorMercado: 500000, entrada: 20, valorizacao: 8, yieldAluguel: 7, rendimentoInv: 15, horizonte: 25, taxaFin: 8, prazoFin: 25, sistema: 'sac' }
+      conservador: { valorMercado: 500000, entrada: 20, valorizacao: 5, yieldAluguel: 5, rendimentoInv: 10, taxaFin: 10, prazoFin: 30, sistema: 'sac' },
+      moderado:    { valorMercado: 500000, entrada: 20, valorizacao: 6, yieldAluguel: 6, rendimentoInv: 12, taxaFin: 9, prazoFin: 30, sistema: 'sac' },
+      otimista:    { valorMercado: 500000, entrada: 20, valorizacao: 8, yieldAluguel: 7, rendimentoInv: 15, taxaFin: 8, prazoFin: 25, sistema: 'sac' }
     },
     leilao: {
-      conservador: { valorMercado: 500000, valorArrematacao: 375000, entrada: 30, parcelas: 30, correcao: 'ipca', custas: 35000, mesesSemImovel: 6, yieldAluguel: 5, valorizacao: 5, rendimentoInv: 10, horizonte: 10 },
-      moderado:    { valorMercado: 500000, valorArrematacao: 350000, entrada: 25, parcelas: 30, correcao: 'ipca', custas: 30000, mesesSemImovel: 4, yieldAluguel: 6, valorizacao: 7, rendimentoInv: 13.5, horizonte: 10 },
-      otimista:    { valorMercado: 500000, valorArrematacao: 300000, entrada: 20, parcelas: 12, correcao: 'nenhuma', custas: 25000, mesesSemImovel: 3, yieldAluguel: 7, valorizacao: 9, rendimentoInv: 16, horizonte: 10 }
+      conservador: { valorMercado: 500000, valorArrematacao: 375000, entrada: 30, parcelas: 30, correcao: 'ipca', custas: 35000, mesesSemImovel: 6, yieldAluguel: 5, valorizacao: 5, rendimentoInv: 10 },
+      moderado:    { valorMercado: 500000, valorArrematacao: 350000, entrada: 25, parcelas: 30, correcao: 'ipca', custas: 30000, mesesSemImovel: 4, yieldAluguel: 6, valorizacao: 7, rendimentoInv: 13.5 },
+      otimista:    { valorMercado: 500000, valorArrematacao: 300000, entrada: 20, parcelas: 12, correcao: 'nenhuma', custas: 25000, mesesSemImovel: 3, yieldAluguel: 7, valorizacao: 9, rendimentoInv: 16 }
     }
   };
-
-  const HORIZONTES = [5, 10, 15, 20, 25, 30];
 
   /* ============================================================
      UTILITY FORMATTERS
@@ -150,7 +146,6 @@
                     return fmtP(v) + ' a.a. <span class="sf-computed">= ' + fmt(mensal) + '/mês</span>';
                   })}
                 </div>
-                ${this._horizonte(DEFAULTS[this.modo].horizonte)}
                 <div class="sim-fin-checkbox-wrap">
                   <label><input type="checkbox" id="sf-terreno"> É terreno (sem aluguel)</label>
                 </div>
@@ -199,10 +194,18 @@
                     </div>
                     <select class="sim-fin-select" id="sf-correcao">
                       <option value="nenhuma">Nenhuma</option>
-                      <option value="igpm">IGP-M (~5,5% a.a.)</option>
-                      <option value="ipca" selected>IPCA (~5% a.a.)</option>
+                      <option value="igpm">IGP-M (média 7,2% a.a.)</option>
+                      <option value="ipca" selected>IPCA (média 5,2% a.a.)</option>
                     </select>
                   </div>
+                  ${this._slider('taxaFixa', 'Taxa fixa adicional', 0, 5, 0.5, 0, v => {
+                    const corr = document.getElementById('sf-correcao')?.value;
+                    const base = corr === 'igpm' ? 'IGP-M' : corr === 'ipca' ? 'IPCA' : '';
+                    if (v === 0 && !base) return 'Nenhuma';
+                    if (v === 0) return base + ' apenas';
+                    if (!base) return fmtP(v) + ' a.a. fixa';
+                    return base + ' + ' + fmtP(v) + ' a.a.';
+                  })}
                 </div>
                 ${this._slider('custas', 'Custas totais', 0, 100000, 1000, DEFAULTS.leilao.custas, v => fmt(v) + ' <span class="sf-computed">(leiloeiro + ITBI + cart.)</span>')}
                 ${this._slider('mesesSemImovel', 'Meses sem o imóvel', 0, 12, 1, DEFAULTS.leilao.mesesSemImovel, v => v + (v === 1 ? ' mês' : ' meses'))}
@@ -237,17 +240,6 @@
             <span class="sim-fin-slider-value" id="sf-val-${id}">${fmtFn(val)}</span>
           </div>
           <input type="range" class="sim-fin-range" id="sf-${id}" min="${min}" max="${max}" step="${step}" value="${val}">
-        </div>`;
-    },
-
-    _horizonte(val) {
-      const opts = HORIZONTES.map(h => `<option value="${h}"${h === val ? ' selected' : ''}>${h} anos</option>`).join('');
-      return `
-        <div class="sim-fin-slider-field">
-          <div class="sim-fin-slider-header">
-            <span class="sim-fin-slider-label">Horizonte</span>
-          </div>
-          <select class="sim-fin-select" id="sf-horizonte">${opts}</select>
         </div>`;
     },
 
@@ -337,19 +329,21 @@
       this.params.valorizacao = g('sf-valorizacao');
       this.params.yieldAluguel = g('sf-yieldAluguel');
       this.params.rendimentoInv = g('sf-rendimentoInv');
-      this.params.horizonte = parseInt(document.getElementById('sf-horizonte')?.value) || 10;
       this.params.ehTerreno = document.getElementById('sf-terreno')?.checked || false;
 
       if (this.modo === 'convencional') {
         this.params.taxaFin = g('sf-taxaFin');
         this.params.prazoFin = g('sf-prazoFin');
+        this.params.horizonte = this.params.prazoFin;
         // sistema is read from toggle click
       } else {
         this.params.valorArrematacao = g('sf-valorArrematacao');
         this.params.parcelas = parseInt(document.getElementById('sf-parcelas')?.value) || 30;
         this.params.correcao = document.getElementById('sf-correcao')?.value || 'nenhuma';
+        this.params.taxaFixa = g('sf-taxaFixa');
         this.params.custas = g('sf-custas');
         this.params.mesesSemImovel = g('sf-mesesSemImovel');
+        this.params.horizonte = Math.ceil((this.params.parcelas || 30) / 12) || 3;
       }
 
       // Clamp arrematação to valorMercado
@@ -426,7 +420,7 @@
       s('sf-valorizacao', p.valorizacao);
       s('sf-yieldAluguel', p.yieldAluguel);
       s('sf-rendimentoInv', p.rendimentoInv);
-      s('sf-horizonte', p.horizonte);
+
 
       const terrenoEl = document.getElementById('sf-terreno');
       if (terrenoEl) terrenoEl.checked = p.ehTerreno || false;
@@ -446,6 +440,7 @@
         s('sf-valorArrematacao', p.valorArrematacao);
         s('sf-parcelas', p.parcelas);
         s('sf-correcao', p.correcao);
+        s('sf-taxaFixa', p.taxaFixa || 0);
         s('sf-custas', p.custas);
         s('sf-mesesSemImovel', p.mesesSemImovel);
         // Update arrematação max
@@ -472,7 +467,8 @@
     _simular(p) {
       const valorMercado = p.valorMercado;
       const isL = this.modo === 'leilao';
-      const totalMeses = (p.horizonte || 10) * 12;
+      // Horizonte = prazo do financiamento/parcelas
+      const totalMeses = isL ? (p.parcelas || 30) : ((p.prazoFin || 30) * 12);
       const txInvMensal = Math.pow(1 + p.rendimentoInv / 100, 1/12) - 1;
       const valMensal = Math.pow(1 + p.valorizacao / 100, 1/12) - 1;
       const yieldMensal = p.ehTerreno ? 0 : (p.yieldAluguel / 100 / 12);
@@ -487,8 +483,9 @@
         mesesFin = p.parcelas || 1;
 
         let txCorr = 0;
-        if (p.correcao === 'igpm') txCorr = 5.5;
-        else if (p.correcao === 'ipca') txCorr = 5.0;
+        if (p.correcao === 'igpm') txCorr = 7.2; // média últimos 10 anos
+        else if (p.correcao === 'ipca') txCorr = 5.2; // média últimos 10 anos
+        txCorr += (p.taxaFixa || 0); // soma taxa fixa adicional
         txFinMensal = Math.pow(1 + txCorr / 100, 1/12) - 1;
       } else {
         entradaAbs = valorMercado * (p.entrada / 100);

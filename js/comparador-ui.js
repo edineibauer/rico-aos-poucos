@@ -367,6 +367,21 @@ const Comparador2 = {
   },
 
   // Sliders reativas do Histórico + auto-comparar
+  // Atualiza o preenchimento visual do slider (cor da esquerda)
+  _updateSliderFill(range) {
+    if (!range) return;
+    const min = parseFloat(range.min) || 0;
+    const max = parseFloat(range.max) || 100;
+    const val = parseFloat(range.value) || 0;
+    const pct = ((val - min) / (max - min)) * 100;
+    range.style.setProperty('--fill', pct + '%');
+  },
+
+  // Atualiza fill de todos os sliders do histórico
+  _updateAllSliderFills() {
+    document.querySelectorAll('#comp2-historico .comp2-range').forEach(r => this._updateSliderFill(r));
+  },
+
   bindHistoricoSliders() {
     let debounce = null;
     const autoCompare = () => {
@@ -374,7 +389,6 @@ const Comparador2 = {
       debounce = setTimeout(() => this.compararHistorico(), 150);
     };
 
-    // Valor inicial slider + edit button
     const valRange = document.getElementById('comp2ValorRange');
     const valDisplay = document.getElementById('comp2ValorDisplay');
     const valHidden = document.getElementById('comp2Valor');
@@ -382,10 +396,16 @@ const Comparador2 = {
     const valManual = document.querySelector('.comp2-input-manual');
 
     if (valRange) {
+      // Step dinâmico: 10k até 500k, 25k de 500k a 1M
       valRange.addEventListener('input', () => {
-        const v = parseInt(valRange.value);
+        let v = parseInt(valRange.value);
+        // Snap to nice intervals
+        if (v <= 500000) v = Math.round(v / 10000) * 10000;
+        else v = Math.round(v / 25000) * 25000;
+        valRange.value = v;
         valDisplay.textContent = v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 });
         valHidden.value = v.toLocaleString('pt-BR');
+        this._updateSliderFill(valRange);
         autoCompare();
       });
     }
@@ -402,68 +422,49 @@ const Comparador2 = {
           const v = parseInt(raw);
           valManual.value = v.toLocaleString('pt-BR');
           valHidden.value = v.toLocaleString('pt-BR');
-          valRange.value = v;
+          if (v <= 1000000) { valRange.value = v; this._updateSliderFill(valRange); }
           valDisplay.textContent = v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 });
         }
         autoCompare();
       });
     }
 
-    // Dólar extra slider
-    const dolarRange = document.getElementById('comp2DolarExtraRange');
-    const dolarDisplay = document.getElementById('comp2DolarExtraDisplay');
-    const dolarHidden = document.getElementById('comp2DolarExtra');
-    if (dolarRange) {
-      dolarRange.addEventListener('input', () => {
-        const v = parseFloat(dolarRange.value);
-        dolarDisplay.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
-        dolarHidden.value = v.toString().replace('.', ',');
-        autoCompare();
-      });
-    }
-
-    // Imóveis renda slider
-    const imovRange = document.getElementById('comp2ImoveisRendaRange');
-    const imovDisplay = document.getElementById('comp2ImoveisRendaDisplay');
-    const imovHidden = document.getElementById('comp2ImoveisRenda');
-    if (imovRange) {
-      imovRange.addEventListener('input', () => {
-        const v = parseFloat(imovRange.value);
-        imovDisplay.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
-        imovHidden.value = v.toString().replace('.', ',');
-        autoCompare();
-      });
-    }
-
-    // Inflação slider
-    const infRange = document.getElementById('comp2InflacaoRange');
-    const infDisplay = document.getElementById('comp2InflacaoDisplay');
-    const infHidden = document.getElementById('comp2InflacaoCustom');
-    if (infRange) {
-      infRange.addEventListener('input', () => {
-        const v = parseFloat(infRange.value);
-        if (v === 0) {
-          infDisplay.textContent = 'Histórica';
-          infHidden.value = '';
+    // Helper para sliders de porcentagem
+    const bindPctSlider = (rangeId, displayId, hiddenId, suffix) => {
+      const range = document.getElementById(rangeId);
+      const display = document.getElementById(displayId);
+      const hidden = document.getElementById(hiddenId);
+      if (!range) return;
+      range.addEventListener('input', () => {
+        const v = parseFloat(range.value);
+        if (suffix === 'inflacao' && v === 0) {
+          display.textContent = 'Histórica';
+          hidden.value = '';
         } else {
-          infDisplay.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
-          infHidden.value = v.toString().replace('.', ',');
+          display.textContent = v.toLocaleString('pt-BR', { minimumFractionDigits: 1 }) + '%';
+          hidden.value = v.toString().replace('.', ',');
         }
+        this._updateSliderFill(range);
         autoCompare();
       });
-    }
+    };
 
-    // Auto-comparar ao mudar período ou chips
+    bindPctSlider('comp2DolarExtraRange', 'comp2DolarExtraDisplay', 'comp2DolarExtra', 'pct');
+    bindPctSlider('comp2ImoveisRendaRange', 'comp2ImoveisRendaDisplay', 'comp2ImoveisRenda', 'pct');
+    bindPctSlider('comp2InflacaoRange', 'comp2InflacaoDisplay', 'comp2InflacaoCustom', 'inflacao');
+
+    // Auto-comparar ao mudar período
     document.querySelectorAll('.comp2-date-select select').forEach(sel => {
       sel.addEventListener('change', autoCompare);
     });
 
-    // Chips já tinham binding, mas agora também auto-comparam
+    // Chips auto-comparam
     document.querySelectorAll('#comp2-historico .comp2-chip').forEach(chip => {
-      chip.addEventListener('click', () => {
-        setTimeout(autoCompare, 50);
-      });
+      chip.addEventListener('click', () => setTimeout(autoCompare, 50));
     });
+
+    // Preencher todos os sliders na inicialização
+    setTimeout(() => this._updateAllSliderFills(), 100);
   },
 
   // ==========================================

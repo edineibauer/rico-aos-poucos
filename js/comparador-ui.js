@@ -374,7 +374,7 @@ const Comparador2 = {
     const max = parseFloat(range.max) || 100;
     const val = parseFloat(range.value) || 0;
     const pct = ((val - min) / (max - min)) * 100;
-    range.style.setProperty('--fill', pct + '%');
+    range.style.background = `linear-gradient(to right, rgba(45,138,110,0.45) 0%, rgba(45,138,110,0.45) ${pct}%, #30363d ${pct}%, #30363d 100%)`;
   },
 
   // Atualiza fill de todos os sliders do histórico
@@ -1160,7 +1160,7 @@ const Comparador2 = {
       if (idx >= 0) chart.data.datasets.splice(idx, 1);
     }
 
-    chart.update('none'); // Sem animação de rebuild
+    chart.update({ duration: 600, easing: 'easeInOutQuart' }); // Sem animação de rebuild
 
     // Atualizar _chartData para o toggle nominal/real
     const resultados = {};
@@ -1224,7 +1224,7 @@ const Comparador2 = {
       }
     });
 
-    chart.update('none');
+    chart.update({ duration: 600, easing: 'easeInOutQuart' });
   },
 
   renderChartEvolucao(resultados, dados, valorInicial) {

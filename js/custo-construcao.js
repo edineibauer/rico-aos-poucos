@@ -15,6 +15,7 @@
       padrao: 'medio_baixo',
       areaTotal: 100,
       areaTerreno: 0,
+      valorTerreno: 0,
       numQuartos: 3,
       numSuites: 0,
       numBanheiros: 1,
@@ -283,6 +284,14 @@
                     <input type="number" id="cc-area-terreno" value="${state.config.areaTerreno || ''}" min="0" max="100000" step="10" placeholder="Opcional">
                     <span class="cc-unit">m²</span>
                   </div>
+                </div>
+                <div class="cc-field" id="cc-terreno-valor-section" style="display:${state.config.areaTerreno ? 'block' : 'none'}">
+                  <label>Valor estimado do terreno</label>
+                  <div class="cc-slider-wrap">
+                    <input type="range" class="cc-range" id="cc-terreno-valor-range" min="0" max="500000" step="5000" value="${state.config.valorTerreno || 0}">
+                    <span class="cc-slider-val" id="cc-terreno-valor-display">${state.config.valorTerreno ? 'R$ ' + (state.config.valorTerreno).toLocaleString('pt-BR') : 'Não informado'}</span>
+                  </div>
+                  <div class="cc-hint" style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">Informe quanto vale o terreno na região. Será separado do custo de construção no resultado.</div>
                 </div>
               </div>
             </div>
@@ -2325,6 +2334,12 @@
       const el = document.getElementById('cc-tipo-vaga');
       if (el) el.value = extras.garagemTipo;
     }
+    // Churrasqueira na garagem
+    if (config.garagemChurrasqueira) {
+      state.config.garagemChurrasqueira = true;
+      const el = document.getElementById('cc-garagem-churrasqueira');
+      if (el) el.checked = true;
+    }
 
     // Aplicar cidade detectada pelo parser (para ajuste de localização)
     if (config.cidadeInfo) {
@@ -2827,8 +2842,28 @@
     // Área do terreno
     document.getElementById('cc-area-terreno')?.addEventListener('input', function() {
       state.config.areaTerreno = parseInt(this.value) || 0;
+      // Mostrar/esconder campo de valor do terreno
+      const valorSection = document.getElementById('cc-terreno-valor-section');
+      if (valorSection) valorSection.style.display = state.config.areaTerreno > 0 ? 'block' : 'none';
       calculate();
     });
+
+    // Slider de valor do terreno
+    const terrenoRange = document.getElementById('cc-terreno-valor-range');
+    const terrenoDisplay = document.getElementById('cc-terreno-valor-display');
+    if (terrenoRange) {
+      terrenoRange.addEventListener('input', function() {
+        const v = parseInt(this.value) || 0;
+        state.config.valorTerreno = v;
+        if (terrenoDisplay) {
+          terrenoDisplay.textContent = v > 0 ? 'R$ ' + v.toLocaleString('pt-BR') : 'Não informado';
+        }
+        // Preenchimento visual do slider
+        const pct = ((v - parseInt(this.min)) / (parseInt(this.max) - parseInt(this.min))) * 100;
+        this.style.background = 'linear-gradient(to right, rgba(45,138,110,0.45) 0%, rgba(45,138,110,0.45) ' + pct + '%, #30363d ' + pct + '%, #30363d 100%)';
+        calculate();
+      });
+    }
 
     // Ajuste de localização (valorização do local)
     const ajusteInput = document.getElementById('cc-ajuste-localizacao');
@@ -3447,8 +3482,16 @@
       custoTerreno = areaTerreno * custoTerrenoM2;
     }
 
+    // Se o usuário informou valor do terreno manualmente, usar esse valor
+    if (state.config.valorTerreno > 0) {
+      custoTerreno = state.config.valorTerreno;
+    }
+
+    // Custo só da construção (sem terreno)
+    const custoConstrucao = custoBase + custoExtras + custoAdicionais;
+
     // TOTAL
-    const custoTotal = custoBase + custoExtras + custoAdicionais + custoTerreno;
+    const custoTotal = custoConstrucao + custoTerreno;
     const custoM2Final = custoTotal / area;
 
     // Calcular breakdown detalhado de materiais por tipo de construção
@@ -3465,6 +3508,7 @@
     // Salvar para exportação
     state.calculoAtual = {
       custoTotal,
+      custoConstrucao,
       custoM2Final,
       custoBase,
       custoMateriais,
@@ -3533,6 +3577,19 @@
           <span class="cc-resultado-valor">R$ ${formatNumber(custoTotal)}</span>
           <span class="cc-resultado-m2">R$ ${formatNumber(custoM2Final)}/m²</span>
         </div>
+
+        ${custoTerreno > 0 ? `
+          <div class="cc-resultado-separacao">
+            <div class="cc-resultado-sep-item">
+              <span>Construção</span>
+              <strong>R$ ${formatNumber(custoConstrucao)}</strong>
+            </div>
+            <div class="cc-resultado-sep-item">
+              <span>Terreno${state.config.valorTerreno > 0 ? ' (informado)' : ' (estimado)'}</span>
+              <strong>R$ ${formatNumber(custoTerreno)}</strong>
+            </div>
+          </div>
+        ` : ''}
 
         ${isReforma ? `
           <div class="cc-resultado-reforma-info">

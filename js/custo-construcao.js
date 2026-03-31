@@ -289,9 +289,8 @@
                   <label>Valor estimado do terreno</label>
                   <div class="cc-slider-wrap">
                     <input type="range" class="cc-range" id="cc-terreno-valor-range" min="0" max="500000" step="5000" value="${state.config.valorTerreno || 0}">
-                    <span class="cc-slider-val" id="cc-terreno-valor-display">${state.config.valorTerreno ? 'R$ ' + (state.config.valorTerreno).toLocaleString('pt-BR') : 'Não informado'}</span>
+                    <span class="cc-slider-val" id="cc-terreno-valor-display">R$ 0</span>
                   </div>
-                  <div class="cc-hint" style="font-size:0.72rem;color:var(--text-muted);margin-top:2px;">Informe quanto vale o terreno na região. Será separado do custo de construção no resultado.</div>
                 </div>
               </div>
             </div>
@@ -2876,6 +2875,7 @@
       terrenoRange.addEventListener('input', function() {
         const v = parseInt(this.value) || 0;
         state.config.valorTerreno = v;
+        state.config._terrenoManual = true; // flag: usuário moveu manualmente
         if (terrenoDisplay) {
           terrenoDisplay.textContent = v > 0 ? 'R$ ' + v.toLocaleString('pt-BR') : 'Não informado';
         }
@@ -3503,9 +3503,19 @@
       custoTerreno = areaTerreno * custoTerrenoM2;
     }
 
-    // Se o usuário informou valor do terreno manualmente, usar esse valor
-    if (state.config.valorTerreno > 0) {
+    // Sincronizar slider do terreno com valor estimado (se não informado manualmente)
+    const terrenoRange = document.getElementById('cc-terreno-valor-range');
+    const terrenoDisplay = document.getElementById('cc-terreno-valor-display');
+    if (state.config.valorTerreno > 0 && state.config._terrenoManual) {
+      // Usuário informou manualmente
       custoTerreno = state.config.valorTerreno;
+    } else if (custoTerreno > 0 && terrenoRange) {
+      // Mostrar valor estimado no slider
+      const estimado = Math.round(custoTerreno / 1000) * 1000;
+      terrenoRange.value = Math.min(estimado, 500000);
+      if (terrenoDisplay) terrenoDisplay.textContent = 'R$ ' + estimado.toLocaleString('pt-BR');
+      const pct = ((estimado) / 500000) * 100;
+      terrenoRange.style.background = 'linear-gradient(to right, rgba(45,138,110,0.45) 0%, rgba(45,138,110,0.45) ' + pct + '%, #30363d ' + pct + '%, #30363d 100%)';
     }
 
     // Custo só da construção (sem terreno)

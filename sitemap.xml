@@ -6,7 +6,7 @@
   <!-- Home Page -->
   <url>
     <loc>https://ricoaospoucos.com.br/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -39,6 +39,14 @@
   <url>
     <loc>https://ricoaospoucos.com.br/simulador-investimentos/</loc>
     <lastmod>2026-01-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Simulador de Financiamento Imobiliário -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/simulador-financiamento/</loc>
+    <lastmod>2026-03-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -142,7 +150,7 @@
   <!-- Artigos Index -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/</loc>
-    <lastmod>2026-01-29</lastmod>
+    <lastmod>2026-01-31</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -150,15 +158,679 @@
   <!-- Analise de FIIs Index -->
   <url>
     <loc>https://ricoaospoucos.com.br/fiis/</loc>
-    <lastmod>2026-01-23</lastmod>
+    <lastmod>2026-01-30</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
+  </url>
+
+  <!-- FII: ALZR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/alzr11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: ALMI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/almi11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: AIEC11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/aiec11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: AFHI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/afhi11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: ABCP11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/abcp11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: ALZC11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/alzc11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
   </url>
 
   <!-- FII: MFII11 -->
   <url>
     <loc>https://ricoaospoucos.com.br/fiis/mfii11/</loc>
     <lastmod>2026-01-27</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BLMG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/blmg11/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GARE11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/gare11/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: APTO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/apto11/</loc>
+    <lastmod>2026-02-09</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: ARRI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/arri11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BTCR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/btcr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GLOG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/glog11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: ALZM11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/alzm11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BARI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bari11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BBFO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bbfo11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BBRC11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bbrc11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BCFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bcff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BCIA11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bcia11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BCRI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bcri11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BIME11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bime11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BLMR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/blmr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BNFS11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bnfs11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BPFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/bpff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BRCO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/brco11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BRCR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/brcr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BROF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/brof11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BTAL11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/btal11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BTCI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/btci11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BTLG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/btlg11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: BTRA11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/btra11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CACR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cacr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CARE11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/care11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CBOP11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cbop11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CEOC11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/ceoc11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CNES11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cnes11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CPFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cpff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CPTS11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cpts11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CRFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/crff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CXAG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cxag11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CXCI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cxci11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CXCO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cxco11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CXRI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cxri11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CXTL11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cxtl11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: CYCR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/cycr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: DEVA11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/deva11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: DVFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/dvff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: EDGA11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/edga11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: EQIR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/eqir11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: EURO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/euro11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FAED11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/faed11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FATN11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/fatn11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FCFL11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/fcfl11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FIGS11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/figs11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FIIB11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/fiib11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FLCR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/flcr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FLMA11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/flma11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FLRP11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/flrp11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FPAB11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/fpab11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: FVPQ11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/fvpq11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GAME11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/game11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GCFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/gcff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GCRI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/gcri11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GGRC11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/ggrc11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: GTWR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/gtwr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HABT11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/habt11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HBRH11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hbrh11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HCHG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hchg11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HCRI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hcri11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HCTR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hctr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HFOF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hfof11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGBS11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hgbs11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGCR11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hgcr11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGFF11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hgff11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGLG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hglg11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGPO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hgpo11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGRE11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hgre11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HGRU11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hgru11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HLOG11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hlog11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HOFC11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hofc11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: HOSI11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/hosi11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: OUJP11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/oujp11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: VGIP11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/vgip11/</loc>
+    <lastmod>2026-02-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- FII: VSHO11 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/fiis/vsho11/</loc>
+    <lastmod>2026-02-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
@@ -364,6 +1036,19 @@
     </image:image>
   </url>
 
+  <!-- Artigo: TGAR11 Dividendo R$0,71 -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/artigos/tgar11-dividendo-071-analise-2026.html</loc>
+    <lastmod>2026-01-31</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://ricoaospoucos.com.br/imagens/TGAR11.jpg</image:loc>
+      <image:title>TGAR11: Dividendo de R$0,71 Muda Tudo</image:title>
+      <image:caption>Análise completa: valuation revisado, cenários e estratégias práticas após dividendo de R$0,71</image:caption>
+    </image:image>
+  </url>
+
   <!-- Artigo: O Ouro Esta Falando -->
   <url>
     <loc>https://ricoaospoucos.com.br/artigos/ouro-sinal-rebalanceamento-2026.html</loc>
@@ -406,6 +1091,343 @@
     <lastmod>2026-01-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
+  </url>
+
+  <!-- Gestor: Guardian -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/guardian/</loc>
+    <lastmod>2026-01-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+
+  <!-- Gestor: af-invest-real-estate -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/af-invest-real-estate/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: alianza -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/alianza/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: arch-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/arch-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: banestes -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/banestes/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: bb-asset-management -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/bb-asset-management/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: bgr-asset-management -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/bgr-asset-management/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: bradesco-asset -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/bradesco-asset/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: bresco-investimentos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/bresco-investimentos/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: brio-investimentos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/brio-investimentos/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: btg-pactual -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/btg-pactual/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: caixa-asset -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/caixa-asset/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: capitania -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/capitania/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: cartesia-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/cartesia-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: coinvalores -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/coinvalores/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: cy-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/cy-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: devant-asset -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/devant-asset/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: eqi-asset -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/eqi-asset/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: faria-lima-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/faria-lima-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: galapagos-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/galapagos-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: genial-gestao -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/genial-gestao/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: hectare-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/hectare-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: hedge-investments -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/hedge-investments/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: housi -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/housi/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: jpp-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/jpp-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: navi-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/navi-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: oliveira-trust -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/oliveira-trust/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: open-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/open-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: patagonia-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/patagonia-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: patria-investimentos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/patria-investimentos/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: plural-gestao-de-recursos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/plural-gestao-de-recursos/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: rb-asset-management -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/rb-asset-management/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: rio-bravo -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/rio-bravo/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: sequoia-properties -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/sequoia-properties/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: tivio-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/tivio-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: unitas -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/unitas/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: v2-investimentos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/v2-investimentos/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: valora-gestao-de-investimentos -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/valora-gestao-de-investimentos/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: vbi-real-estate -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/vbi-real-estate/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: xp-vista -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/xp-vista/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: zagros-capital -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/zagros-capital/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Gestor: zion-gestao -->
+  <url>
+    <loc>https://ricoaospoucos.com.br/gestores/zion-gestao/</loc>
+    <lastmod>2026-02-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
 </urlset>

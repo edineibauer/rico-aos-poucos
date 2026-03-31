@@ -50,6 +50,7 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="stylesheet" href="../css/comparador.css">
   <link rel="stylesheet" href="../css/custo-construcao.css">
+  <link rel="stylesheet" href="../css/simulador-financiamento.css">
 
   <!-- JSON-LD Structured Data -->
   <script type="application/ld+json">
@@ -76,7 +77,8 @@
       "Calculadora de juros compostos",
       "Simulador de carteira diversificada",
       "Ferramenta de rebalanceamento",
-      "Análise de padrões históricos"
+      "Análise de padrões históricos",
+      "Simulador de financiamento imobiliário vs investimento"
     ]
   }
   </script>
@@ -131,6 +133,12 @@
             </svg>
             <span>Construção</span>
           </button>
+          <button class="comp2-nav-btn" data-tab="financiamento" title="Financiamento vs Investimento">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M3 21h18"/><path d="M9 21V9l3-6 3 6v12"/><path d="M3 21l6-12"/><path d="M21 21l-6-12"/>
+            </svg>
+            <span>Financiar</span>
+          </button>
 
           <!-- Mobile More Button -->
           <button class="comp2-nav-more" id="comp2NavMore" title="Mais opções">
@@ -162,6 +170,12 @@
                 <path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/>
               </svg>
               <span>Construção</span>
+            </button>
+            <button class="comp2-dropup-btn" data-tab="financiamento" title="Financiamento vs Investimento">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 21h18"/><path d="M9 21V9l3-6 3 6v12"/><path d="M3 21l6-12"/><path d="M21 21l-6-12"/>
+              </svg>
+              <span>Financiar</span>
             </button>
           </div>
         </div>
@@ -965,6 +979,13 @@
           </div>
         </section>
 
+        <!-- Tab: Financiamento vs Investimento -->
+        <section class="comp2-tab" id="comp2-financiamento">
+          <div class="comp2-panel">
+            <div id="financiamento-container"></div>
+          </div>
+        </section>
+
       </div>
     </main>
 
@@ -982,6 +1003,7 @@
   <script defer src="../js/dados-mercado-imoveis.js"></script>
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.18.5/xlsx.full.min.js"></script>
   <script defer src="../js/custo-construcao.js"></script>
+  <script defer src="../js/simulador-financiamento.js"></script>
   <script defer src="../js/i18n.js"></script>
   <script>
     // Mobile dropup menu handler

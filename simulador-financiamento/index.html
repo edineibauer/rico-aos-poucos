@@ -1,0 +1,719 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Simulador gratuito: compare financiar um imóvel com aluguel vs investir todo o dinheiro. Descubra qual cenário gera mais patrimônio considerando juros, valorização, vacância e inflação.">
+  <meta name="keywords" content="simulador financiamento imobiliário, financiar ou investir, comprar imóvel vale a pena, financiamento vs investimento, calculadora financiamento, alavancagem imobiliária, aluguel para pagar financiamento, comprar ou alugar">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/simulador-financiamento/">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Financiamento Imobiliário vs Investimento | Simulador Gratuito">
+  <meta property="og:description" content="Compare: financiar um imóvel e alugar para pagar as parcelas vs investir todo o capital. Simulador completo com gráficos e análise detalhada.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/simulador-financiamento/">
+  <meta property="og:image" content="https://ricoaospoucos.com.br/icon-512.png">
+  <meta property="og:image:width" content="512">
+  <meta property="og:image:height" content="512">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ricoaospoucos">
+  <meta name="twitter:title" content="Financiamento Imobiliário vs Investimento | Simulador">
+  <meta name="twitter:description" content="Compare financiar um imóvel vs investir o dinheiro. Simulação com aluguel, vacância, valorização e juros compostos.">
+  <meta name="twitter:image" content="https://ricoaospoucos.com.br/icon-512.png">
+
+  <!-- PWA -->
+  <meta name="theme-color" content="#0d1117">
+  <link rel="manifest" href="../manifest.json">
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+
+  <title>Financiamento Imobiliário vs Investimento | Simulador - Rico aos Poucos</title>
+
+  <link rel="preload" href="../css/style.css" as="style">
+  <link rel="stylesheet" href="../css/style.css">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Simulador Financiamento Imobiliário vs Investimento",
+    "description": "Compare financiar um imóvel com aluguel versus investir todo o capital. Simulação mês a mês com gráficos e análise detalhada.",
+    "url": "https://ricoaospoucos.com.br/simulador-financiamento/",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "BRL"
+    },
+    "provider": {
+      "@type": "Organization",
+      "name": "Rico aos Poucos",
+      "url": "https://ricoaospoucos.com.br"
+    },
+    "featureList": [
+      "Simulação de financiamento SAC e Price",
+      "Cálculo de aluguel com taxa de vacância",
+      "Comparação com investimento a juros compostos",
+      "Gráfico de evolução patrimonial",
+      "Análise de alavancagem imobiliária"
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Vale a pena financiar um imóvel para alugar?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Depende de vários fatores: taxa de juros do financiamento, valor do aluguel em relação ao imóvel, taxa de vacância, valorização do imóvel e rendimento de investimentos alternativos. Use nosso simulador para comparar os cenários com seus números reais."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "O que é alavancagem imobiliária?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "É o efeito de controlar um ativo de alto valor (ex: R$500 mil) com um capital menor (ex: R$100 mil de entrada). Se o imóvel valoriza 5% ao ano, são R$25 mil sobre R$500 mil, mas representam 25% de retorno sobre seus R$100 mil investidos."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Qual a diferença entre SAC e Price?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No SAC (Sistema de Amortização Constante), a amortização é fixa e os juros diminuem, então as parcelas começam maiores e vão diminuindo. No Price (Tabela Price), as parcelas são fixas do início ao fim, mas você paga mais juros no total."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Quanto de aluguel posso cobrar por um imóvel?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "O valor típico de aluguel fica entre 0,3% e 0,6% do valor do imóvel por mês. Um imóvel de R$500 mil geralmente é alugado entre R$1.500 e R$3.000/mês, dependendo da localização, estado de conservação e demanda da região."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .lp-wrapper {
+      max-width: 100%;
+      overflow-x: hidden;
+    }
+
+    /* Hero */
+    .lp-hero {
+      position: relative;
+      padding: 80px 24px 60px;
+      text-align: center;
+      background: linear-gradient(180deg, rgba(26, 95, 74, 0.15) 0%, transparent 100%);
+      overflow: hidden;
+    }
+
+    .lp-float-elements {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+
+    .lp-float-icon {
+      position: absolute;
+      font-size: 2rem;
+      opacity: 0.12;
+      animation: lpFloat 6s ease-in-out infinite;
+    }
+
+    .lp-float-icon:nth-child(1) { top: 15%; left: 8%; animation-delay: 0s; }
+    .lp-float-icon:nth-child(2) { top: 25%; right: 10%; animation-delay: 1.5s; }
+    .lp-float-icon:nth-child(3) { bottom: 30%; left: 15%; animation-delay: 3s; }
+    .lp-float-icon:nth-child(4) { top: 10%; right: 25%; animation-delay: 0.8s; }
+    .lp-float-icon:nth-child(5) { bottom: 20%; right: 8%; animation-delay: 2.2s; }
+
+    @keyframes lpFloat {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-15px) rotate(5deg); }
+    }
+
+    .lp-hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .lp-hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 16px;
+      background: rgba(45, 138, 110, 0.15);
+      border: 1px solid rgba(45, 138, 110, 0.3);
+      border-radius: 20px;
+      font-size: 0.8rem;
+      color: var(--primary-light);
+      margin-bottom: 24px;
+    }
+
+    .lp-hero-badge::before {
+      content: '';
+      width: 6px;
+      height: 6px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      animation: lpPulse 2s ease-in-out infinite;
+    }
+
+    @keyframes lpPulse {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .lp-hero h1 {
+      font-size: clamp(1.8rem, 5vw, 3rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 20px;
+    }
+
+    .text-white { color: var(--text-primary); }
+
+    .text-gradient {
+      background: linear-gradient(135deg, var(--primary-light), #34d399, var(--secondary));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .lp-hero-desc {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      color: var(--text-secondary);
+      line-height: 1.7;
+      max-width: 600px;
+      margin: 0 auto 32px;
+    }
+
+    .lp-cta-group {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 40px;
+    }
+
+    .lp-btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 32px;
+      background: linear-gradient(135deg, var(--primary), var(--primary-light));
+      color: #fff;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .lp-btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(26, 95, 74, 0.4);
+    }
+
+    .lp-btn-primary svg {
+      width: 18px;
+      height: 18px;
+    }
+
+    .lp-btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 24px;
+      background: transparent;
+      color: var(--text-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+
+    .lp-btn-secondary:hover {
+      border-color: var(--text-secondary);
+      color: var(--text-primary);
+    }
+
+    /* Stats */
+    .lp-hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .lp-stat-pill {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 16px;
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+    }
+
+    .lp-stat-pill .icon { font-size: 1.2rem; }
+    .lp-stat-pill .value { font-weight: 600; color: var(--text-primary); font-size: 0.88rem; }
+    .lp-stat-pill .label { color: var(--text-muted); font-size: 0.78rem; }
+
+    /* Scroll Indicator */
+    .lp-scroll-indicator {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      animation: lpBounce 2s ease-in-out infinite;
+    }
+
+    @keyframes lpBounce {
+      0%, 100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(8px); }
+    }
+
+    /* Sections */
+    .lp-section {
+      padding: 64px 24px;
+    }
+
+    .lp-section-inner {
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .lp-section-header {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .lp-section-header .overline {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--primary-light);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+
+    .lp-section-header h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .lp-section-header p {
+      color: var(--text-secondary);
+      max-width: 600px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Bento Grid */
+    .lp-bento-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 16px;
+    }
+
+    .lp-bento-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 28px 24px;
+      transition: all 0.3s;
+    }
+
+    .lp-bento-card:hover {
+      border-color: var(--primary-light);
+      transform: translateY(-4px);
+    }
+
+    .lp-bento-card.wide {
+      grid-column: span 2;
+    }
+
+    .lp-bento-icon {
+      font-size: 2rem;
+      margin-bottom: 16px;
+    }
+
+    .lp-bento-card h3 {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .lp-bento-card p {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.6;
+    }
+
+    /* Rules grid */
+    .lp-rules-section {
+      background: linear-gradient(180deg, transparent, rgba(26, 95, 74, 0.05), transparent);
+    }
+
+    .lp-rules-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .lp-rule-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      padding: 28px 24px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .lp-rule-card:hover {
+      transform: translateY(-4px);
+    }
+
+    .lp-rule-card.leverage { border-top: 3px solid #22c55e; }
+    .lp-rule-card.cost { border-top: 3px solid #f85149; }
+    .lp-rule-card.balance { border-top: 3px solid #3b82f6; }
+
+    .lp-rule-number {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .lp-rule-card.leverage .lp-rule-number { color: #22c55e; }
+    .lp-rule-card.cost .lp-rule-number { color: #f85149; }
+    .lp-rule-card.balance .lp-rule-number { color: #3b82f6; }
+
+    .lp-rule-card h3 {
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .lp-rule-card p {
+      color: var(--text-secondary);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+
+    /* FAQ */
+    .lp-faq-list {
+      max-width: 700px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .lp-faq-item {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .lp-faq-item summary {
+      padding: 18px 20px;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.2s;
+    }
+
+    .lp-faq-item summary:hover {
+      background: var(--bg-tertiary);
+    }
+
+    .lp-faq-item summary::after {
+      content: '+';
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      transition: transform 0.3s;
+    }
+
+    .lp-faq-item[open] summary::after {
+      content: '-';
+    }
+
+    .lp-faq-item summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .lp-faq-answer {
+      padding: 0 20px 18px;
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    /* Final CTA */
+    .lp-final-cta {
+      text-align: center;
+      padding: 64px 24px;
+      background: linear-gradient(180deg, transparent, rgba(26, 95, 74, 0.1));
+    }
+
+    .lp-final-cta h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      margin-bottom: 12px;
+    }
+
+    .lp-final-cta h2 span {
+      color: var(--primary-light);
+    }
+
+    .lp-final-cta p {
+      color: var(--text-secondary);
+      margin-bottom: 24px;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    @media (max-width: 768px) {
+      .lp-hero { padding: 60px 20px 50px; }
+      .lp-bento-card.wide { grid-column: span 1; }
+      .lp-stat-pill { padding: 6px 12px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="page-header" data-subtitle="Simulador de Financiamento"></header>
+
+    <main class="lp-wrapper">
+      <!-- Hero Section -->
+      <section class="lp-hero">
+        <div class="lp-float-elements">
+          <span class="lp-float-icon">🏠</span>
+          <span class="lp-float-icon">📈</span>
+          <span class="lp-float-icon">💰</span>
+          <span class="lp-float-icon">🔑</span>
+          <span class="lp-float-icon">🏦</span>
+        </div>
+
+        <div class="lp-hero-content">
+          <div class="lp-hero-badge">Ferramenta 100% Gratuita</div>
+          <h1>
+            <span class="text-white">Financiar um Imóvel ou</span><br>
+            <span class="text-gradient">Investir o Dinheiro?</span>
+          </h1>
+          <p class="lp-hero-desc">
+            Compare os dois cenários com números reais: financie um imóvel, alugue e invista o restante
+            <strong>vs</strong> investir todo o capital. Descubra qual gera mais patrimônio.
+          </p>
+
+          <div class="lp-cta-group">
+            <a href="../ferramentas-financeiras/#financiamento" class="lp-btn-primary">
+              Simular Agora
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+            <a href="#como-funciona" class="lp-btn-secondary">Como funciona</a>
+          </div>
+
+          <div class="lp-hero-stats">
+            <div class="lp-stat-pill">
+              <span class="icon">🏠</span>
+              <span class="value">SAC e Price</span>
+              <span class="label">Sistemas</span>
+            </div>
+            <div class="lp-stat-pill">
+              <span class="icon">📊</span>
+              <span class="value">Mês a mês</span>
+              <span class="label">Simulação</span>
+            </div>
+            <div class="lp-stat-pill">
+              <span class="icon">💡</span>
+              <span class="value">Aluguel + Vacância</span>
+              <span class="label">Realista</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="lp-scroll-indicator">
+          <span>Saiba mais</span>
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M6 9l6 6 6-6"/>
+          </svg>
+        </div>
+      </section>
+
+      <!-- Como Funciona -->
+      <section class="lp-section" id="como-funciona">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">COMO FUNCIONA</span>
+            <h2>Dois cenários, uma resposta</h2>
+            <p>O simulador compara investir todo o dinheiro vs financiar um imóvel para alugar, considerando todos os custos e receitas reais.</p>
+          </div>
+
+          <div class="lp-bento-grid">
+            <div class="lp-bento-card">
+              <div class="lp-bento-icon">📈</div>
+              <h3>Cenário A: Investir Tudo</h3>
+              <p>Você pega todo o dinheiro (ex: R$500 mil) e investe a uma taxa fixa mensal. Sem dor de cabeça, sem inquilino, sem manutenção. Juros compostos trabalhando por você.</p>
+            </div>
+            <div class="lp-bento-card">
+              <div class="lp-bento-icon">🏠</div>
+              <h3>Cenário B: Financiar + Alugar</h3>
+              <p>Você dá uma entrada (ex: 20%), financia o resto, aluga o imóvel para ajudar a pagar as parcelas, e investe o que sobrou. O imóvel valoriza e o aluguel ajuda no financiamento.</p>
+            </div>
+            <div class="lp-bento-card wide">
+              <div class="lp-bento-icon">🔬</div>
+              <h3>Simulação Detalhada Mês a Mês</h3>
+              <p>O simulador calcula a evolução patrimonial de ambos os cenários considerando: juros compostos, amortização (SAC ou Price), valorização do imóvel, aluguel com taxa de vacância, custos de manutenção, IPTU/ITR, reajuste do aluguel e inflação. Tudo para você ver qual cenário realmente gera mais riqueza.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Conceitos Chave -->
+      <section class="lp-section lp-rules-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">CONCEITOS CHAVE</span>
+            <h2>Por que financiar pode valer a pena</h2>
+          </div>
+
+          <div class="lp-rules-grid">
+            <div class="lp-rule-card leverage">
+              <div class="lp-rule-number">5x</div>
+              <h3>Alavancagem</h3>
+              <p>Com 20% de entrada, você controla um ativo 5x maior que seu investimento. Se o imóvel de R$500 mil valoriza 5%, são R$25 mil de ganho sobre apenas R$100 mil investidos.</p>
+            </div>
+            <div class="lp-rule-card cost">
+              <div class="lp-rule-number">~9%</div>
+              <h3>Custo do Financiamento</h3>
+              <p>A taxa de juros do financiamento é o principal inimigo. Quanto menor a taxa, mais a alavancagem trabalha a seu favor. Taxas abaixo de 9% a.a. costumam favorecer o financiamento.</p>
+            </div>
+            <div class="lp-rule-card balance">
+              <div class="lp-rule-number">0,5%</div>
+              <h3>Aluguel como Aliado</h3>
+              <p>Um aluguel de 0,5% do valor do imóvel ao mês reduz significativamente o custo efetivo do financiamento. Com R$500 mil, são R$2.500/mês ajudando a pagar as parcelas.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="lp-section">
+        <div class="lp-section-inner">
+          <div class="lp-section-header">
+            <span class="overline">PERGUNTAS FREQUENTES</span>
+            <h2>Tire suas dúvidas</h2>
+          </div>
+
+          <div class="lp-faq-list">
+            <details class="lp-faq-item">
+              <summary>Vale a pena financiar um imóvel para alugar?</summary>
+              <div class="lp-faq-answer">
+                Depende de vários fatores: taxa de juros do financiamento, valor do aluguel, vacância, valorização do imóvel e rendimento de investimentos alternativos. Em geral, se a taxa de financiamento for <strong>menor que a taxa de valorização do imóvel + rendimento do aluguel</strong>, pode valer a pena pela alavancagem. Use o simulador para comparar com seus números reais.
+              </div>
+            </details>
+            <details class="lp-faq-item">
+              <summary>O que é alavancagem imobiliária?</summary>
+              <div class="lp-faq-answer">
+                É o efeito de controlar um ativo de alto valor com um capital menor. Ao financiar um imóvel de R$500 mil com R$100 mil de entrada, você tem alavancagem de 5x. Toda a valorização do imóvel (sobre R$500 mil) beneficia você, mesmo tendo investido apenas R$100 mil. Funciona como uma "alavanca" que amplifica seus ganhos (e também seus riscos).
+              </div>
+            </details>
+            <details class="lp-faq-item">
+              <summary>SAC ou Price: qual é melhor?</summary>
+              <div class="lp-faq-answer">
+                No <strong>SAC</strong>, as parcelas começam maiores e vão diminuindo. Você paga menos juros no total. No <strong>Price</strong>, as parcelas são fixas, facilitando o planejamento, mas o custo total é maior. Para quem vai alugar o imóvel, o SAC costuma ser melhor porque as parcelas caem ao longo do tempo enquanto o aluguel tende a subir.
+              </div>
+            </details>
+            <details class="lp-faq-item">
+              <summary>O que é taxa de vacância?</summary>
+              <div class="lp-faq-answer">
+                É o percentual de tempo que o imóvel fica sem inquilino. Uma vacância de 10% significa que, em média, o imóvel fica 1,2 meses por ano sem gerar aluguel. Isso é normal e deve ser considerado no cálculo para um resultado mais realista. Imóveis bem localizados e com bom preço têm vacância menor (5-8%).
+              </div>
+            </details>
+            <details class="lp-faq-item">
+              <summary>Qual taxa de investimento devo usar para comparar?</summary>
+              <div class="lp-faq-answer">
+                Use uma taxa realista e consistente. Para renda fixa (CDB, Tesouro), considere entre <strong>0,7% e 1% ao mês</strong>. A taxa CDI atual rende aproximadamente 0,9% ao mês. Lembre-se: taxas muito altas podem não ser sustentáveis por décadas, e taxas baixas podem subestimar o potencial do investimento.
+              </div>
+            </details>
+            <details class="lp-faq-item">
+              <summary>Posso usar para decidir se compro minha casa própria?</summary>
+              <div class="lp-faq-answer">
+                O simulador foca em imóveis para investimento (comprar para alugar). Para casa própria, o cálculo é diferente porque você não recebe aluguel, mas também não paga aluguel onde mora. A decisão de comprar para morar envolve outros fatores além do financeiro, como estabilidade e qualidade de vida.
+              </div>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Final -->
+      <section class="lp-final-cta">
+        <h2>Pronto para <span>simular?</span></h2>
+        <p>Descubra se financiar um imóvel é a melhor estratégia para o seu dinheiro.</p>
+        <a href="../ferramentas-financeiras/#financiamento" class="lp-btn-primary">
+          Simular Agora
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M5 12h14M12 5l7 7-7 7"/>
+          </svg>
+        </a>
+      </section>
+    </main>
+
+    <div id="footer-container"></div>
+  </div>
+
+  <script defer src="../js/page-header.js"></script>
+  <script defer src="../js/footer.js"></script>
+  <script defer src="../js/i18n.js"></script>
+</body>
+</html>

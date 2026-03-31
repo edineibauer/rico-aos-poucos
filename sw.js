@@ -1,4 +1,4 @@
-const APP_VERSION = '4.3';
+const APP_VERSION = '4.6';
 const CACHE_NAME = `rico-aos-poucos-v${APP_VERSION}`;
 
 // Recursos críticos - cacheados na instalação (mínimo para funcionar)
@@ -13,6 +13,9 @@ const CRITICAL_ASSETS = [
   './js/footer.js',
   './js/publicacoes.js',
   './js/comments.js',
+  './js/fii-template.js',
+  './js/gestora-template.js',
+  './css/fii-page.css',
   './data/historico-mensal.json',
   './manifest.json',
   './favicon.svg',
@@ -33,7 +36,8 @@ const PAGES_TO_CACHE = [
   './ferramentas-financeiras/index.html',
   './calculadora-aposentadoria/index.html',
   './calculadora-custo-construcao/index.html',
-  './simulador-investimentos/index.html'
+  './simulador-investimentos/index.html',
+  './simulador-financiamento/index.html'
 ];
 
 // Instalar - cachear recursos críticos e forçar ativação imediata

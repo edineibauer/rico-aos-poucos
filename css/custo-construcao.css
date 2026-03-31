@@ -1650,3 +1650,85 @@
 #cc-ajuste-custom {
   margin-top: 10px;
 }
+
+/* Slider de valor do terreno */
+.cc-slider-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.cc-range {
+  flex: 1;
+  height: 3px;
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 3px;
+  outline: none;
+  cursor: pointer;
+  background: #30363d;
+}
+
+.cc-range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-light, #2d8a6e);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2.5px solid var(--bg-primary, #0d1117);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.35);
+}
+
+.cc-range::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary-light, #2d8a6e);
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2.5px solid var(--bg-primary, #0d1117);
+  box-shadow: 0 1px 6px rgba(0,0,0,0.35);
+}
+
+.cc-range::-moz-range-track {
+  height: 3px;
+  border: none;
+  background: transparent;
+}
+
+.cc-slider-val {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary, #f0f6fc);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+/* Separação construção/terreno no resultado */
+.cc-resultado-separacao {
+  display: flex;
+  gap: 12px;
+  margin: 12px 0;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-color, #30363d);
+  border-bottom: 1px solid var(--border-color, #30363d);
+}
+
+.cc-resultado-sep-item {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: rgba(45, 138, 110, 0.06);
+  border-radius: 8px;
+  font-size: 0.85rem;
+}
+
+.cc-resultado-sep-item span {
+  color: var(--text-secondary, #8b949e);
+}
+
+.cc-resultado-sep-item strong {
+  color: var(--text-primary, #f0f6fc);
+}

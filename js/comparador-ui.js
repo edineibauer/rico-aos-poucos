@@ -449,8 +449,11 @@ const Comparador2 = {
       });
     };
 
+    // Dólar slider: só recalcula dólar no gráfico
     bindPctSlider('comp2DolarExtraRange', 'comp2DolarExtraDisplay', 'comp2DolarExtra', 'pct');
+    // Imóveis slider: só recalcula imóveis no gráfico
     bindPctSlider('comp2ImoveisRendaRange', 'comp2ImoveisRendaDisplay', 'comp2ImoveisRenda', 'pct');
+    // Inflação: afeta todos (muda retorno real)
     bindPctSlider('comp2InflacaoRange', 'comp2InflacaoDisplay', 'comp2InflacaoCustom', 'inflacao');
 
     // Auto-comparar ao mudar período
@@ -458,9 +461,21 @@ const Comparador2 = {
       sel.addEventListener('change', autoCompare);
     });
 
-    // Chips auto-comparam
+    // Chips: atualização incremental do gráfico (sem rebuild)
     document.querySelectorAll('#comp2-historico .comp2-chip').forEach(chip => {
-      chip.addEventListener('click', () => setTimeout(autoCompare, 50));
+      chip.addEventListener('click', () => {
+        const asset = chip.dataset.asset;
+        const isActive = chip.classList.contains('active');
+        // O toggle já foi feito pelo bindAssetChips
+        setTimeout(() => {
+          if (this.charts.main && this._allResultados) {
+            this._updateChartForChipToggle(asset, isActive);
+            this._updateNonChartResults();
+          } else {
+            autoCompare();
+          }
+        }, 50);
+      });
     });
 
     // Preencher todos os sliders na inicialização
@@ -686,8 +701,10 @@ const Comparador2 = {
         parent.querySelectorAll('button').forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         this.viewMode = btn.dataset.view;
-        // Re-renderizar gráfico com novo modo
-        if (this._chartData) {
+        // Atualizar dados do gráfico sem rebuild (só muda nominal/real)
+        if (this._chartData && this.charts.main) {
+          this._syncChartDatasets(this._chartData.resultados, this._chartData.dadosFiltrados);
+        } else if (this._chartData) {
           this.renderChartEvolucao(this._chartData.resultados, this._chartData.dadosFiltrados, this._chartData.valorInicial);
         }
       });
@@ -1048,66 +1065,166 @@ const Comparador2 = {
   // ==========================================
   // ABA 1: COMPARADOR HISTÓRICO
   // ==========================================
+  // Lista de todos os ativos possíveis
+  _allAssets: ['ibovespa', 'ibovtr', 'dolar', 'ouro', 'fii_ifix', 'idiv', 'cdi', 'imab5', 'sp500_brl', 'tlt_brl', 'imoveis_fipezap', 'bitcoin_brl'],
+  _allResultados: null,
+  _lastPeriodo: null,
+
   compararHistorico() {
-    if (!Comparador.dadosMensais?.meses) {
-      alert('Dados ainda não carregados. Aguarde...');
-      return;
-    }
+    if (!Comparador.dadosMensais?.meses) return;
 
     const periodoInicio = document.getElementById('comp2PeriodoInicio')?.value || '2011-01';
     const periodoFim = document.getElementById('comp2PeriodoFim')?.value || '2025-12';
     const valorStr = document.getElementById('comp2Valor')?.value || '100.000';
     const valorInicial = this.parseCurrency(valorStr) || 100000;
 
-    // Ler valores de ajuste
     const dolarExtra = this.parsePercentage(document.getElementById('comp2DolarExtra')?.value) || 0;
     const imoveisRenda = this.parsePercentage(document.getElementById('comp2ImoveisRenda')?.value) || 0;
     const inflacaoCustom = this.parsePercentage(document.getElementById('comp2InflacaoCustom')?.value) || 0;
 
-    // Armazenar ajustes para uso em outras funções
     this.ajustes.dolarExtra = dolarExtra;
     this.ajustes.imoveisRenda = imoveisRenda;
     this.ajustes.inflacaoCustom = inflacaoCustom;
 
-    // Pegar ativos selecionados dos chips
+    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
+    if (dadosFiltrados.length === 0) return;
+
+    // Calcular TODOS os ativos (não só os selecionados)
+    const allResultados = {};
+    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados, inflacaoCustom);
+
+    this._allAssets.forEach(ativo => {
+      allResultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial, dolarExtra, inflacaoCustom);
+    });
+
+    this._allResultados = allResultados;
+    this._lastDados = dadosFiltrados;
+    this._lastValorInicial = valorInicial;
+    this._lastInflacao = inflacaoAcumulada;
+
+    // Pegar ativos selecionados
     const ativosSelecionados = [];
-    document.querySelectorAll('.comp2-chip.active').forEach(chip => {
+    document.querySelectorAll('#comp2-historico .comp2-chip.active').forEach(chip => {
       ativosSelecionados.push(chip.dataset.asset);
     });
 
-    if (ativosSelecionados.length === 0) {
-      alert('Selecione pelo menos um ativo para comparar.');
-      return;
-    }
-
-    // Filtrar dados mensais pelo período selecionado
-    const dadosFiltrados = this.filtrarDadosMensais(periodoInicio, periodoFim);
-
-    if (dadosFiltrados.length === 0) {
-      alert('Não há dados suficientes para o período selecionado.');
-      return;
-    }
-
-    // Calcular evolução de cada ativo
+    // Filtrar resultados dos selecionados
     const resultados = {};
-    const inflacaoAcumulada = this.calcularInflacaoAcumulada(dadosFiltrados, inflacaoCustom);
+    ativosSelecionados.forEach(a => { if (allResultados[a]) resultados[a] = allResultados[a]; });
 
-    ativosSelecionados.forEach(ativo => {
-      resultados[ativo] = this.calcularEvolucao(ativo, dadosFiltrados, valorInicial, dolarExtra, inflacaoCustom);
-    });
-
-    // Salvar para toggle nominal/real
     this._chartData = { resultados, dadosFiltrados, valorInicial };
 
-    // Mostrar container de resultados
     const resultsContainer = document.getElementById('comp2Results');
     if (resultsContainer) resultsContainer.style.display = 'block';
 
-    // Renderizar resultados
-    this.renderChartEvolucao(resultados, dadosFiltrados, valorInicial);
+    // Verificar se período mudou (precisa rebuild do chart)
+    const periodoKey = periodoInicio + '-' + periodoFim;
+    const needsRebuild = !this.charts.main || this._lastPeriodo !== periodoKey;
+    this._lastPeriodo = periodoKey;
+
+    if (needsRebuild) {
+      this.renderChartEvolucao(resultados, dadosFiltrados, valorInicial);
+    } else {
+      this._syncChartDatasets(resultados, dadosFiltrados);
+    }
+
     this.renderRanking(resultados, inflacaoAcumulada);
     this.renderStats(resultados, inflacaoAcumulada);
     this.renderConclusoes(resultados, inflacaoAcumulada);
+  },
+
+  // Atualização incremental: adicionar/remover dataset por chip toggle
+  _updateChartForChipToggle(asset, wasActive) {
+    const chart = this.charts.main;
+    if (!chart || !this._allResultados) return;
+
+    const isNowActive = document.querySelector(`.comp2-chip[data-asset="${asset}"]`)?.classList.contains('active');
+
+    if (isNowActive && this._allResultados[asset]) {
+      // Adicionar dataset
+      const data = this._allResultados[asset];
+      const values = data.evolucao.map(e => this.viewMode === 'real' ? e.real : e.nominal);
+      chart.data.datasets.push({
+        label: Comparador.assetNames[asset] || asset,
+        data: values,
+        borderColor: Comparador.chartColors[asset] || '#888',
+        backgroundColor: 'transparent',
+        tension: 0.3,
+        pointRadius: 2,
+        borderWidth: 2.5,
+        _asset: asset
+      });
+    } else {
+      // Remover dataset
+      const idx = chart.data.datasets.findIndex(ds => ds._asset === asset || ds.label === (Comparador.assetNames[asset] || asset));
+      if (idx >= 0) chart.data.datasets.splice(idx, 1);
+    }
+
+    chart.update('none'); // Sem animação de rebuild
+
+    // Atualizar _chartData para o toggle nominal/real
+    const resultados = {};
+    document.querySelectorAll('#comp2-historico .comp2-chip.active').forEach(chip => {
+      const a = chip.dataset.asset;
+      if (this._allResultados[a]) resultados[a] = this._allResultados[a];
+    });
+    this._chartData = { resultados, dadosFiltrados: this._lastDados, valorInicial: this._lastValorInicial };
+  },
+
+  // Atualizar resultados não-gráfico (ranking, stats, conclusões)
+  _updateNonChartResults() {
+    if (!this._allResultados || !this._lastInflacao) return;
+    const resultados = {};
+    document.querySelectorAll('#comp2-historico .comp2-chip.active').forEach(chip => {
+      const a = chip.dataset.asset;
+      if (this._allResultados[a]) resultados[a] = this._allResultados[a];
+    });
+    if (Object.keys(resultados).length === 0) return;
+    this.renderRanking(resultados, this._lastInflacao);
+    this.renderStats(resultados, this._lastInflacao);
+    this.renderConclusoes(resultados, this._lastInflacao);
+  },
+
+  // Sincronizar datasets do chart quando sliders mudam (sem rebuild)
+  _syncChartDatasets(resultados, dados) {
+    const chart = this.charts.main;
+    if (!chart) return;
+
+    // Atualizar datasets existentes e adicionar/remover conforme necessário
+    const activeAssets = Object.keys(resultados);
+    const existingAssets = chart.data.datasets.map(ds => ds._asset);
+
+    // Remover datasets que não estão mais ativos
+    for (let i = chart.data.datasets.length - 1; i >= 0; i--) {
+      if (!activeAssets.includes(chart.data.datasets[i]._asset)) {
+        chart.data.datasets.splice(i, 1);
+      }
+    }
+
+    // Atualizar ou adicionar datasets
+    activeAssets.forEach(asset => {
+      const data = resultados[asset];
+      if (!data) return;
+      const values = data.evolucao.map(e => this.viewMode === 'real' ? e.real : e.nominal);
+      const existing = chart.data.datasets.find(ds => ds._asset === asset);
+
+      if (existing) {
+        existing.data = values;
+      } else {
+        chart.data.datasets.push({
+          label: Comparador.assetNames[asset] || asset,
+          data: values,
+          borderColor: Comparador.chartColors[asset] || '#888',
+          backgroundColor: 'transparent',
+          tension: 0.3,
+          pointRadius: 2,
+          borderWidth: 2.5,
+          _asset: asset
+        });
+      }
+    });
+
+    chart.update('none');
   },
 
   renderChartEvolucao(resultados, dados, valorInicial) {
@@ -1140,7 +1257,8 @@ const Comparador2 = {
         backgroundColor: 'transparent',
         tension: 0.3,
         pointRadius: 2,
-        borderWidth: 2.5
+        borderWidth: 2.5,
+        _asset: ativo
       });
     });
 

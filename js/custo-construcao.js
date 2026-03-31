@@ -1394,10 +1394,15 @@
     // Padrão 3: Área direta do terreno em m²
     if (!terrenoEncontrado) {
       const areaTerrenoPatterns = [
-        /terreno\s*(?:de\s*)?(\d+)\s*m[²2]/i,
-        /lote\s*(?:de\s*)?(\d+)\s*m[²2]/i,
-        /(\d+)\s*m[²2]\s*(?:de\s*)?terreno/i,
-        /(\d+)\s*m[²2]\s*(?:de\s*)?lote/i
+        /terreno\s*(?:de\s*)?(\d+)\s*m[²2e]/i,
+        /lote\s*(?:de\s*)?(\d+)\s*m[²2e]/i,
+        /(\d+)\s*m[²2e]\s*(?:de\s*)?terreno/i,
+        /(\d+)\s*m[²2e]\s*(?:de\s*)?lote/i,
+        /terreno\s*(?:de\s*)?(\d+)\s*metros?\s*quadrados?/i,
+        /lote\s*(?:de\s*)?(\d+)\s*metros?\s*quadrados?/i,
+        /(\d+)\s*metros?\s*quadrados?\s*(?:de\s*)?terreno/i,
+        /dentro\s*(?:de\s*)?(?:um\s*)?terreno\s*(?:de\s*)?(\d+)\s*m/i,
+        /dentro\s*(?:de\s*)?(?:um\s*)?terreno\s*(?:de\s*)?(\d+)\s*metros/i
       ];
 
       for (const pattern of areaTerrenoPatterns) {
@@ -1438,18 +1443,32 @@
       }
     }
 
+    // Mapear números por extenso
+    const numExtenso = { 'um': 1, 'uma': 1, 'dois': 2, 'duas': 2, 'tres': 3, 'quatro': 4, 'cinco': 5, 'seis': 6, 'sete': 7, 'oito': 8, 'nove': 9, 'dez': 10 };
+    function parseNum(str) {
+      const n = parseInt(str);
+      if (!isNaN(n)) return n;
+      const norm = str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g, '');
+      return numExtenso[norm] || 0;
+    }
+
     // Quartos
     const quartosPatterns = [
       /(\d+)\s*quartos?/i,
       /(\d+)\s*dormitorios?/i,
-      /(\d+)\s*dorms?/i
+      /(\d+)\s*dorms?/i,
+      /(um|uma|dois|duas|tres|três|quatro|cinco|seis)\s*quartos?/i,
+      /(um|uma|dois|duas|tres|três|quatro|cinco|seis)\s*dormitorios?/i
     ];
     for (const pattern of quartosPatterns) {
       const match = textoLower.match(pattern);
       if (match) {
-        resultado.config.numQuartos = parseInt(match[1]);
-        resultado.encontrados.push(`Quartos: ${match[1]}`);
-        break;
+        const num = parseNum(match[1]);
+        if (num > 0) {
+          resultado.config.numQuartos = num;
+          resultado.encontrados.push(`Quartos: ${num}`);
+          break;
+        }
       }
     }
 
@@ -1481,15 +1500,18 @@
     const banheirosPatterns = [
       /(\d+)\s*banheiros?/i,
       /(\d+)\s*wc/i,
-      /(\d+)\s*sanitarios?/i
+      /(\d+)\s*sanitarios?/i,
+      /(um|uma|dois|duas|tres|três|quatro|cinco)\s*banheiros?/i
     ];
     for (const pattern of banheirosPatterns) {
       const match = textoLower.match(pattern);
       if (match) {
-        const numBanheiros = parseInt(match[1]);
-        resultado.config.numBanheiros = numBanheiros;
-        resultado.encontrados.push(`Banheiros: ${numBanheiros}`);
-        break;
+        const numBanheiros = parseNum(match[1]);
+        if (numBanheiros > 0) {
+          resultado.config.numBanheiros = numBanheiros;
+          resultado.encontrados.push(`Banheiros: ${numBanheiros}`);
+          break;
+        }
       }
     }
 
@@ -1594,7 +1616,7 @@
       'nova': ['\\bnov[oa]\\b', '\\brecem construid[oa]\\b', '\\bzerad[oa]\\b', '\\bnunca habitad[oa]\\b', '\\bnunca morad[oa]\\b', '\\bnunca usad[oa]\\b', '\\bsem uso\\b', '\\bconstrucao nova\\b', '\\bprimeir[oa] morador\\b', '\\b0\\s*km\\b'],
       'bom': ['\\bbom estado\\b', '\\bbem conservad[ao]\\b', '\\bconservad[ao]\\b', '\\botimo estado\\b', '\\bexcelente estado\\b'],
       'medio': ['\\bmedio estado\\b', '\\bestado regular\\b', '\\busad[ao]\\b'],
-      'ruim': ['\\bmal estado\\b', '\\bmau estado\\b', '\\bprecisa de reforma\\b', '\\breformar\\b', '\\bdeteriorad[ao]\\b', '\\bantig[ao]\\b'],
+      'ruim': ['\\bmal estado\\b', '\\bmau estado\\b', '\\bprecisa de reforma\\b', '\\breformar\\b', '\\bdeteriorad[ao]\\b', '\\bantig[ao]\\b', '\\bvelh[ao]\\b', '\\bvelho\\b', '\\benvelhecid[ao]\\b', '\\bdesgastad[ao]\\b', '\\bcaindo aos pedacos\\b'],
       'so_estrutura': ['\\bso estrutura\\b', '\\bapenas estrutura\\b', '\\binacabad[ao]\\b', '\\bem construcao\\b', '\\bna obra\\b', '\\bem obra\\b']
     };
     for (const [key, termos] of Object.entries(conservacaoMap)) {
@@ -1610,9 +1632,9 @@
       if (resultado.config.estadoConservacao) break;
     }
 
-    // Se não detectou conservação, assumir bom estado (padrão para imóveis à venda)
+    // Se não detectou conservação, assumir médio (não afirmar bom sem evidência)
     if (!resultado.config.estadoConservacao) {
-      resultado.config.estadoConservacao = 'bom';
+      resultado.config.estadoConservacao = 'medio';
     }
 
     // Tipo de estrutura - com priorização inteligente
@@ -1810,14 +1832,27 @@
       }
     }
 
-    // Área Gourmet / Churrasqueira (faz parte da casa principal, NÃO é edícula)
-    const temGourmet = textoLower.includes('churrasqueira') ||
-                       textoLower.includes('espaco gourmet') ||
-                       textoLower.includes('area gourmet');
-    if (temGourmet && !isNegado('churrasqueira') && !isNegado('gourmet')) {
+    // Área Gourmet / Churrasqueira
+    // Distinguir: "garagem com churrasqueira" NÃO é área gourmet
+    // Área gourmet = mencionou "área gourmet" ou "espaço gourmet" explicitamente
+    // Churrasqueira na garagem = mencionou garagem + churrasqueira no mesmo contexto
+    const temAreaGourmetExplicita = textoLower.includes('espaco gourmet') ||
+                                    textoLower.includes('area gourmet');
+    const temChurrasqueira = textoLower.includes('churrasqueira');
+    const churrasqueiraContextoGaragem = temChurrasqueira && (
+      /garagem\s*(?:com|de|e)\s*(?:.*)?churrasqueira/i.test(textoLower) ||
+      /churrasqueira\s*(?:na|da|dentro\s*da)\s*garagem/i.test(textoLower) ||
+      /garagem\s*\d*\s*m[²2]?\s*(?:.*)?churrasqueira/i.test(textoLower)
+    );
+
+    // Só marcar área gourmet se foi mencionada explicitamente OU churrasqueira sem contexto de garagem
+    const deveMarcarGourmet = temAreaGourmetExplicita ||
+                              (temChurrasqueira && !churrasqueiraContextoGaragem && !isNegado('churrasqueira') && !isNegado('gourmet'));
+
+    if (deveMarcarGourmet) {
       resultado.extras.churrasqueira = true;
       resultado.config.temAreaGourmet = true;
-      resultado.config.gourmetChurrasqueira = textoLower.includes('churrasqueira');
+      resultado.config.gourmetChurrasqueira = temChurrasqueira;
 
       // Detectar tamanho da área gourmet (ex: "área gourmet 30m²")
       // Usar textoLower (normalizado) para a regex
@@ -1924,7 +1959,14 @@
       }
 
       const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : (tipoGaragem === 'aberta' ? 'aberta' : 'coberta');
-      resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel})`);
+
+      // Churrasqueira na garagem (não é área gourmet separada)
+      if (churrasqueiraContextoGaragem) {
+        resultado.config.garagemChurrasqueira = true;
+        resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel}) com churrasqueira`);
+      } else {
+        resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel})`);
+      }
     }
 
     // Muro

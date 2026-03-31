@@ -1310,12 +1310,14 @@
     }
 
     // Padrão 1: Área explícita total/construída/privativa (maior prioridade)
-    // Aceita decimais com vírgula (BR) ou ponto: 48,37m² ou 48.37m²
+    // Aceita: "79m²", "79 m²", "79 metros quadrados"
+    const mPattern = '(?:m[²2]|metros?\\s*quadrados?)';
     const areaTotalPatterns = [
-      /area\s*(?:total|construida|privativa|util)\s*(?:de\s*)?:?\s*(\d+(?:[,\.]\d+)?)\s*m[²2]?/i,
-      /(\d+(?:[,\.]\d+)?)\s*m[²2]?\s*(?:de\s*)?area\s*(?:total|construida|privativa|util)/i,
-      /(?:casa|imovel|apartamento|apto|sobrado|residencia)\s+(?:de\s+|com\s+)?(\d+(?:[,\.]\d+)?)\s*m[²2]/i,
-      /(\d+(?:[,\.]\d+)?)\s*m[²2]\s*(?:de\s*)?(?:casa|imovel|apartamento|apto|sobrado|residencia)/i
+      new RegExp(`area\\s*(?:total|construida|privativa|util)\\s*(?:de\\s*)?:?\\s*(\\d+(?:[,\\.]\\d+)?)\\s*${mPattern}`, 'i'),
+      new RegExp(`(\\d+(?:[,\\.]\\d+)?)\\s*${mPattern}\\s*(?:de\\s*)?area\\s*(?:total|construida|privativa|util)`, 'i'),
+      new RegExp(`(?:casa|imovel|apartamento|apto|sobrado|residencia)\\s+(?:de\\s+|com\\s+)?(\\d+(?:[,\\.]\\d+)?)\\s*${mPattern}`, 'i'),
+      new RegExp(`(\\d+(?:[,\\.]\\d+)?)\\s*${mPattern}\\s*(?:de\\s*)?(?:casa|imovel|apartamento|apto|sobrado|residencia)`, 'i'),
+      new RegExp(`(?:casa|imovel|apartamento|apto|sobrado|residencia)\\s+(?:de\\s+)?\\S+\\s+(?:de\\s+)?(\\d+(?:[,\\.]\\d+)?)\\s*${mPattern}`, 'i')
     ];
 
     let areaEncontrada = false;
@@ -1336,7 +1338,7 @@
 
     // Padrão 2: Se não encontrou área explícita, buscar m² que NÃO esteja associado a cômodo
     if (!areaEncontrada) {
-      const areaRegex = /(\d+(?:[,\.]\d+)?)\s*m[²2]/gi;
+      const areaRegex = /(\d+(?:[,\.]\d+)?)\s*(?:m[²2]|metros?\s*quadrados?)/gi;
       let match;
       const areasEncontradas = [];
 
@@ -1969,12 +1971,28 @@
 
       const tipoLabel = tipoGaragem === 'fechada' ? 'fechada' : (tipoGaragem === 'aberta' ? 'aberta' : 'coberta');
 
+      // Detectar área explícita da garagem (ex: "garagem de 30m²", "garagem de 30 metros quadrados")
+      const garagemAreaMatch = textoLower.match(/garagem\s*(?:de\s*)?(\d+)\s*(?:m[²2]|metros?\s*quadrados?)/i);
+      let garagemArea = 0;
+      if (garagemAreaMatch) {
+        garagemArea = parseInt(garagemAreaMatch[1]);
+        // Somar área da garagem à área total da construção
+        if (resultado.config.areaTotal && garagemArea > 0) {
+          resultado.config.areaTotal += garagemArea;
+          // Atualizar o texto do encontrado para refletir a soma
+          resultado.encontrados = resultado.encontrados.map(e => {
+            if (e.startsWith('Área:')) return `Área: ${resultado.config.areaTotal}m² (casa + garagem ${garagemArea}m²)`;
+            return e;
+          });
+        }
+      }
+
       // Churrasqueira na garagem (não é área gourmet separada)
       if (churrasqueiraContextoGaragem) {
         resultado.config.garagemChurrasqueira = true;
-        resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel}) com churrasqueira`);
+        resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel})${garagemArea ? ' ' + garagemArea + 'm²' : ''} com churrasqueira`);
       } else {
-        resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel})`);
+        resultado.encontrados.push(`Garagem: ${qtdCarros} vaga${qtdCarros > 1 ? 's' : ''} (${tipoLabel})${garagemArea ? ' ' + garagemArea + 'm²' : ''}`);
       }
     }
 
@@ -2291,6 +2309,9 @@
       state.config.areaTerreno = config.areaTerreno;
       const el = document.getElementById('cc-area-terreno');
       if (el) el.value = config.areaTerreno;
+      // Mostrar slider de valor do terreno
+      const valorSection = document.getElementById('cc-terreno-valor-section');
+      if (valorSection) valorSection.style.display = 'block';
     }
 
     // Escritórios

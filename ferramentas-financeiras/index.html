@@ -97,11 +97,11 @@
             </svg>
             <span>Histórico</span>
           </button>
-          <button class="comp2-nav-btn" data-tab="duelo" title="Comparar Ativos">
+          <button class="comp2-nav-btn" data-tab="financiamento" title="Financiamento vs Investimento">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M21 3l-7 7"/><path d="M3 3l7 7"/><path d="M21 21l-7-7"/><path d="M3 21l7-7"/><path d="M16 21h5v-5"/><path d="M8 21H3v-5"/>
+              <path d="M3 21h18"/><path d="M9 21V9l3-6 3 6v12"/><path d="M3 21l6-12"/><path d="M21 21l-6-12"/>
             </svg>
-            <span>Comparar</span>
+            <span>Financiar</span>
           </button>
           <button class="comp2-nav-btn" data-tab="carteira" title="Carteira Diversificada">
             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
@@ -132,12 +132,6 @@
               <path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/>
             </svg>
             <span>Construção</span>
-          </button>
-          <button class="comp2-nav-btn" data-tab="financiamento" title="Financiamento vs Investimento">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-              <path d="M3 21h18"/><path d="M9 21V9l3-6 3 6v12"/><path d="M3 21l6-12"/><path d="M21 21l-6-12"/>
-            </svg>
-            <span>Financiar</span>
           </button>
 
           <!-- Mobile More Button -->
@@ -170,12 +164,6 @@
                 <path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/><path d="M9 9h.01"/><path d="M15 9h.01"/><path d="M9 13h.01"/><path d="M15 13h.01"/>
               </svg>
               <span>Construção</span>
-            </button>
-            <button class="comp2-dropup-btn" data-tab="financiamento" title="Financiamento vs Investimento">
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 21h18"/><path d="M9 21V9l3-6 3 6v12"/><path d="M3 21l6-12"/><path d="M21 21l-6-12"/>
-              </svg>
-              <span>Financiar</span>
             </button>
           </div>
         </div>
@@ -217,14 +205,14 @@
               </div>
               <div class="comp2-config-row comp2-adjustments">
                 <div class="comp2-field">
-                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <label>Dólar + renda (a.a.) <span class="comp2-tooltip" title="Base: valorização do dólar (câmbio BRL/USD histórico). Este campo adiciona rendimento extra, ex: conta em corretora americana rendendo 4% ao ano sobre o capital dolarizado.">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2DolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
-                  <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
+                  <label>Imóveis + aluguel (a.a.) <span class="comp2-tooltip" title="Base: valorização real de imóveis pelo índice FipeZap (média ~3-5% a.a. nominal). Este campo adiciona o rendimento de aluguel líquido anual. Ex: 4,5% = R$4.500/ano para imóvel de R$100.000.">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2ImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>
@@ -344,8 +332,8 @@
           </div>
         </section>
 
-        <!-- Tab: Duelo (Frente a Frente) -->
-        <section class="comp2-tab" id="comp2-duelo">
+        <!-- Tab: Duelo (Removido - funcionalidade integrada ao Histórico) -->
+        <section class="comp2-tab" id="comp2-duelo" style="display:none !important">
           <div class="comp2-panel">
             <div class="comp2-config">
               <div class="comp2-config-row">
@@ -534,14 +522,14 @@
               </div>
               <div class="comp2-config-row comp2-adjustments">
                 <div class="comp2-field">
-                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <label>Dólar + renda (a.a.) <span class="comp2-tooltip" title="Base: valorização do dólar (câmbio histórico). Adiciona rendimento extra sobre capital dolarizado.">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2CarteiraDolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
-                  <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
+                  <label>Imóveis + aluguel (a.a.) <span class="comp2-tooltip" title="Base: valorização FipeZap (~3-5% a.a.). Adiciona rendimento de aluguel líquido anual.">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2CarteiraImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>
@@ -731,14 +719,14 @@
               </div>
               <div class="comp2-config-row comp2-adjustments">
                 <div class="comp2-field">
-                  <label>Dólar + (a.a.) <span class="comp2-tooltip" title="Adiciona rendimento extra ao dólar, ex: conta em corretora americana rendendo 4% ao ano">?</span></label>
+                  <label>Dólar + renda (a.a.) <span class="comp2-tooltip" title="Base: valorização do dólar (câmbio histórico). Adiciona rendimento extra sobre capital dolarizado.">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2RebalDolarExtra" value="4" inputmode="decimal">
                     <span>%</span>
                   </div>
                 </div>
                 <div class="comp2-field">
-                  <label>Imóveis + (a.a.) <span class="comp2-tooltip" title="Rendimento anual líquido de aluguel. Ex: 5% significa R$5.000/ano para imóvel de R$100.000">?</span></label>
+                  <label>Imóveis + aluguel (a.a.) <span class="comp2-tooltip" title="Base: valorização FipeZap (~3-5% a.a.). Adiciona rendimento de aluguel líquido anual.">?</span></label>
                   <div class="comp2-input-group">
                     <input type="text" id="comp2RebalImoveisRenda" value="4,5" inputmode="decimal">
                     <span>%</span>

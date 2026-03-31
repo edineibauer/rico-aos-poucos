@@ -6,6 +6,79 @@
 }
 
 .sim-fin-intro {
+  margin-bottom: 20px;
+}
+
+/* Mode Toggle */
+.sim-fin-modo-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 4px;
+}
+
+.sim-fin-modo-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border: none;
+  border-radius: 10px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.sim-fin-modo-btn:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.sim-fin-modo-btn.active {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(26, 95, 74, 0.3);
+}
+
+.sim-fin-modo-icon {
+  font-size: 1.2rem;
+}
+
+/* Checkbox field */
+.sim-fin-field-checkbox {
+  display: flex;
+  align-items: flex-end;
+}
+
+.sim-fin-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  padding: 10px 0;
+}
+
+.sim-fin-checkbox-label input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+  accent-color: var(--primary-light);
+  cursor: pointer;
+}
+
+/* Leilão resumo card */
+.sim-fin-leilao-resumo {
+  border-color: rgba(234, 179, 8, 0.3);
+  background: rgba(234, 179, 8, 0.04);
   margin-bottom: 24px;
 }
 

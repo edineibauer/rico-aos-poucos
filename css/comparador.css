@@ -2626,6 +2626,39 @@
   color: var(--primary-light);
 }
 
+/* Carteira toggle Simular / Rebalancear */
+.comp2-carteira-toggle {
+  display: inline-flex;
+  gap: 4px;
+  background: var(--bg-tertiary);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 3px;
+  margin-bottom: 16px;
+}
+
+.comp2-carteira-mode {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 0.88rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.comp2-carteira-mode:hover {
+  background: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+.comp2-carteira-mode.active {
+  background: var(--primary);
+  color: #fff;
+}
+
 .comp2-input-manual {
   background: var(--bg-tertiary);
   border: 1px solid var(--primary-light);

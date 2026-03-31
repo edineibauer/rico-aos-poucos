@@ -421,15 +421,16 @@
       container.innerHTML = `
         <div class="sim-fin-wrapper">
           <div class="sim-fin-intro"><h2>Financiamento Imobiliário vs Investimento</h2><p>Ajuste os parâmetros e veja o resultado em tempo real.</p></div>
-          <div class="sim-fin-layout">
-            <div class="sim-fin-config">
+          <div class="sim-fin-config">
+            <div class="sim-fin-top-bar">
               <div class="sim-fin-modo-toggle">
                 <button class="sim-fin-modo-btn active" data-modo="convencional"><span class="sim-fin-modo-icon">🏦</span><span>Convencional</span></button>
                 <button class="sim-fin-modo-btn" data-modo="leilao"><span class="sim-fin-modo-icon">🔨</span><span>Leilão</span></button>
               </div>
               <div class="sim-fin-presets sim-fin-presets-conv"><span class="sim-fin-presets-label">Cenários:</span><button class="sim-fin-preset" data-preset="conservador">Conservador</button><button class="sim-fin-preset active" data-preset="moderado">Moderado</button><button class="sim-fin-preset" data-preset="otimista">Otimista</button></div>
               <div class="sim-fin-presets sim-fin-presets-leilao" style="display:none"><span class="sim-fin-presets-label">Cenários:</span><button class="sim-fin-preset" data-preset="leilao-conservador">Conservador</button><button class="sim-fin-preset" data-preset="leilao-moderado">Moderado</button><button class="sim-fin-preset" data-preset="leilao-otimista">Otimista</button></div>
-              <div class="sim-fin-form">
+            </div>
+            <div class="sim-fin-form">
                 <div class="sim-fin-section"><h3>Imóvel</h3><div class="sim-fin-fields">
                   <div class="sim-fin-field"><label>Valor de mercado</label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-valor-imovel" value="500.000" inputmode="numeric"></div></div>
                   <div class="sim-fin-field sim-fin-leilao-only" style="display:none"><label>Arrematação <span class="sim-fin-tip" title="Valor pago no leilão">?</span></label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-valor-arrematacao" value="350.000" inputmode="numeric"></div></div>
@@ -469,10 +470,9 @@
                   <div class="sim-fin-field"><label>Manutenção</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-manutencao" value="0,5" inputmode="decimal"><span>% a.a.</span></div></div>
                   <div class="sim-fin-field"><label>IPTU/ITR</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-itr" value="0,3" inputmode="decimal"><span>% a.a.</span></div></div>
                 </div></div>
-              </div>
             </div>
-            <div class="sim-fin-results"><div id="sim-fin-results-inner" class="sim-fin-results-inner"></div></div>
           </div>
+          <div class="sim-fin-results"><div id="sim-fin-results-inner" class="sim-fin-results-inner"></div></div>
         </div>
       `;
       this.aplicarPreset('moderado');

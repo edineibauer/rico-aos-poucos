@@ -1,484 +1,863 @@
 /**
- * Simulador: Financiamento Imobiliário vs Investimento
+ * Simulador: Financiamento Imobiliário vs Investimento — v2
  * Rico aos Poucos
  *
  * Modos: Convencional | Leilão
- * Layout: configs à esquerda, resultado à direita (desktop)
- * Resultado atualiza em tempo real conforme inputs mudam
+ * Slider-based inputs, card results, inline SVG chart
+ * Real-time updates, no Chart.js dependency
  */
 
-(function() {
+(function () {
   'use strict';
 
+  /* ============================================================
+     DEFAULTS & PRESETS
+     ============================================================ */
+  const DEFAULTS = {
+    convencional: {
+      valorMercado: 500000,
+      entrada: 20,
+      valorizacao: 6,
+      yieldAluguel: 6,
+      rendimentoInv: 12,
+      horizonte: 30,
+      ehTerreno: false,
+      taxaFin: 9,
+      prazoFin: 30,
+      sistema: 'sac'
+    },
+    leilao: {
+      valorMercado: 500000,
+      valorArrematacao: 350000,
+      entrada: 25,
+      parcelas: 30,
+      correcao: 'ipca',
+      custas: 30000,
+      mesesSemImovel: 4,
+      yieldAluguel: 6,
+      valorizacao: 7,
+      rendimentoInv: 13.5,
+      horizonte: 10,
+      ehTerreno: false
+    }
+  };
+
+  const PRESETS = {
+    convencional: {
+      conservador: { valorMercado: 500000, entrada: 20, valorizacao: 5, yieldAluguel: 5, rendimentoInv: 10, horizonte: 30, taxaFin: 10, prazoFin: 30, sistema: 'sac' },
+      moderado:    { valorMercado: 500000, entrada: 20, valorizacao: 6, yieldAluguel: 6, rendimentoInv: 12, horizonte: 30, taxaFin: 9, prazoFin: 30, sistema: 'sac' },
+      otimista:    { valorMercado: 500000, entrada: 20, valorizacao: 8, yieldAluguel: 7, rendimentoInv: 15, horizonte: 25, taxaFin: 8, prazoFin: 25, sistema: 'sac' }
+    },
+    leilao: {
+      conservador: { valorMercado: 500000, valorArrematacao: 375000, entrada: 30, parcelas: 30, correcao: 'ipca', custas: 35000, mesesSemImovel: 6, yieldAluguel: 5, valorizacao: 5, rendimentoInv: 10, horizonte: 10 },
+      moderado:    { valorMercado: 500000, valorArrematacao: 350000, entrada: 25, parcelas: 30, correcao: 'ipca', custas: 30000, mesesSemImovel: 4, yieldAluguel: 6, valorizacao: 7, rendimentoInv: 13.5, horizonte: 10 },
+      otimista:    { valorMercado: 500000, valorArrematacao: 300000, entrada: 20, parcelas: 12, correcao: 'nenhuma', custas: 25000, mesesSemImovel: 3, yieldAluguel: 7, valorizacao: 9, rendimentoInv: 16, horizonte: 10 }
+    }
+  };
+
+  const HORIZONTES = [5, 10, 15, 20, 25, 30];
+
+  /* ============================================================
+     UTILITY FORMATTERS
+     ============================================================ */
+  function fmt(v) {
+    return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0 });
+  }
+  function fmtK(v) {
+    if (Math.abs(v) >= 1e6) return 'R$' + (v / 1e6).toFixed(1).replace('.', ',') + 'M';
+    if (Math.abs(v) >= 1e3) return 'R$' + (v / 1e3).toFixed(0) + 'k';
+    return fmt(v);
+  }
+  function fmtP(v, d) { return v.toLocaleString('pt-BR', { minimumFractionDigits: d || 1, maximumFractionDigits: d || 1 }) + '%'; }
+
+  function calcPMT(principal, monthlyRate, nMonths) {
+    if (monthlyRate === 0) return principal / nMonths;
+    return principal * (monthlyRate * Math.pow(1 + monthlyRate, nMonths)) / (Math.pow(1 + monthlyRate, nMonths) - 1);
+  }
+
+  /* ============================================================
+     MAIN MODULE
+     ============================================================ */
   const SIM = {
-    chart: null,
-    chartComp: null,
     modo: 'convencional',
+    params: {},
     debounceTimer: null,
+    lastResult: null,
 
     init() {
       const container = document.getElementById('financiamento-container');
       if (!container) return;
-      this.render(container);
+      this.container = container;
+      Object.assign(this.params, DEFAULTS.convencional);
+      this.render();
       this.bindEvents();
       this.executar();
     },
 
-    fmt(v) { return v.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0, maximumFractionDigits: 0 }); },
-    fmtP(v) { return v.toLocaleString('pt-BR', { minimumFractionDigits: 1, maximumFractionDigits: 1 }) + '%'; },
-    parseC(s) { if (!s) return 0; return parseFloat(s.replace(/[^\d,.-]/g, '').replace(/\./g, '').replace(',', '.')) || 0; },
-    parseP(s) { if (!s) return 0; return parseFloat(s.replace(',', '.')) || 0; },
+    /* ============================================================
+       RENDER HTML
+       ============================================================ */
+    render() {
+      this.container.innerHTML = `
+        <div class="sim-fin-wrapper">
+          <div class="sim-fin-intro">
+            <h2>Financiamento vs Investimento</h2>
+            <p>Ajuste os controles e compare em tempo real: vale mais financiar um imóvel ou investir o dinheiro?</p>
+          </div>
 
-    applyMask(el) {
-      el.addEventListener('input', function() {
-        let v = this.value.replace(/\D/g, '');
-        if (!v) { this.value = ''; return; }
-        this.value = parseInt(v).toLocaleString('pt-BR');
-      });
-    },
+          <!-- Mode toggle -->
+          <div class="sim-fin-modo-toggle">
+            <button class="sim-fin-modo-btn active" data-modo="convencional"><span class="sim-fin-modo-icon">🏦</span><span>Convencional</span></button>
+            <button class="sim-fin-modo-btn" data-modo="leilao"><span class="sim-fin-modo-icon">🔨</span><span>Leilão</span></button>
+          </div>
 
-    calcPMT(p, r, n) {
-      if (r === 0) return p / n;
-      return p * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-    },
+          <!-- Presets -->
+          <div class="sim-fin-presets sf-presets-conv">
+            <span class="sim-fin-presets-label">Cenários:</span>
+            <button class="sim-fin-preset" data-preset="conservador">Conservador</button>
+            <button class="sim-fin-preset active" data-preset="moderado">Moderado</button>
+            <button class="sim-fin-preset" data-preset="otimista">Otimista</button>
+          </div>
+          <div class="sim-fin-presets sf-presets-leilao" style="display:none">
+            <span class="sim-fin-presets-label">Cenários:</span>
+            <button class="sim-fin-preset" data-preset="conservador">Conservador</button>
+            <button class="sim-fin-preset active" data-preset="moderado">Moderado</button>
+            <button class="sim-fin-preset" data-preset="otimista">Otimista</button>
+          </div>
 
-    simular(params) {
-      const { modo, valorMercado, percentualEntrada, valorizacaoImovelAnual, aluguelPercentualMensal, taxaVacancia, taxaInvestimentoMensal, inflacaoAnual, reajusteAluguelAnual, custoManutencaoAnual, itrAnual, ehTerreno, horizonte, taxaFinanciamentoAnual, prazoFinanciamentoAnos, sistemaAmortizacao, valorArrematacao, comissaoLeiloeiro, itbiPercentual, custoEscritura, custoRegistro, custoImissao, mesesImissao, prazoParcelasLeilao, correcaoLeilao, taxaFixaLeilao } = params;
+          <!-- CONFIG SECTIONS -->
+          <div class="sim-fin-config" id="sf-config">
 
-      const txInv = taxaInvestimentoMensal / 100;
-      const valMensal = Math.pow(1 + valorizacaoImovelAnual / 100, 1/12) - 1;
-      const infMensal = Math.pow(1 + inflacaoAnual / 100, 1/12) - 1;
-
-      let entrada, financiado, custoInicial, capInv, capResto, mesesFin, txFin;
-
-      if (modo === 'leilao') {
-        entrada = valorArrematacao * (percentualEntrada / 100);
-        financiado = valorArrematacao - entrada;
-        const custas = valorArrematacao * (comissaoLeiloeiro / 100) + valorArrematacao * (itbiPercentual / 100) + custoEscritura + custoRegistro + custoImissao;
-        custoInicial = entrada + custas;
-        capInv = custoInicial + financiado;
-        capResto = capInv - custoInicial;
-        mesesFin = prazoParcelasLeilao;
-        let txCorr = 0;
-        if (correcaoLeilao === 'igpm') txCorr = 5.5;
-        else if (correcaoLeilao === 'ipca') txCorr = inflacaoAnual;
-        txFin = Math.pow(1 + txCorr / 100, 1/12) - 1 + (Math.pow(1 + (taxaFixaLeilao || 0) / 100, 1/12) - 1);
-      } else {
-        entrada = valorMercado * (percentualEntrada / 100);
-        financiado = valorMercado - entrada;
-        custoInicial = entrada;
-        capInv = valorMercado;
-        capResto = valorMercado - entrada;
-        mesesFin = prazoFinanciamentoAnos * 12;
-        txFin = Math.pow(1 + taxaFinanciamentoAnual / 100, 1/12) - 1;
-      }
-
-      const totalMeses = horizonte * 12;
-      const cA = { h: [], hr: [] };
-      let sA = capInv;
-
-      const cB = { h: [], hr: [], vi: [], si: [], sd: [], pa: [], al: [] };
-      let sB = capResto, sd = financiado, vi = valorMercado;
-      let alug = ehTerreno ? 0 : valorMercado * (aluguelPercentualMensal / 100);
-      let totPago = 0, totAlug = 0, totCusto = 0, finQuit = false;
-      const pmt = this.calcPMT(financiado, txFin, mesesFin);
-
-      for (let m = 1; m <= totalMeses; m++) {
-        sA *= (1 + txInv);
-        cA.h.push(sA);
-        cA.hr.push(sA / Math.pow(1 + infMensal, m));
-
-        vi *= (1 + valMensal);
-        if (!ehTerreno && m > 1 && (m - 1) % 12 === 0) alug *= (1 + reajusteAluguelAnual / 100);
-
-        const emIm = modo === 'leilao' && m <= mesesImissao;
-        const alRec = (ehTerreno || emIm) ? 0 : alug * (1 - taxaVacancia / 100);
-        const custos = emIm ? 0 : (vi * (custoManutencaoAnual / 100) + vi * (itrAnual / 100)) / 12;
-
-        let parc = 0;
-        if (!finQuit && sd > 0.5 && m <= mesesFin) {
-          if (modo === 'leilao') {
-            if (txFin > 0) sd *= (1 + txFin);
-            parc = pmt > 0 ? Math.min(pmt, sd) : financiado / mesesFin;
-            sd -= parc;
-          } else if (sistemaAmortizacao === 'sac') {
-            const am = financiado / mesesFin;
-            parc = am + sd * txFin;
-            sd -= am;
-          } else {
-            parc = pmt;
-            sd -= (pmt - sd * txFin);
-          }
-          if (sd < 0.5) { sd = 0; finQuit = true; }
-          totPago += parc;
-        }
-
-        const fluxo = alRec - parc - custos;
-        totAlug += alRec;
-        totCusto += custos;
-        sB = sB * (1 + txInv) + fluxo;
-
-        const patB = vi + sB - sd;
-        cB.h.push(patB); cB.hr.push(patB / Math.pow(1 + infMensal, m));
-        cB.vi.push(vi); cB.si.push(sB); cB.sd.push(sd);
-        cB.pa.push(parc); cB.al.push(alRec);
-      }
-
-      const anos = totalMeses / 12;
-      const patBF = cB.h[totalMeses - 1];
-      const txAnA = (Math.pow(sA / capInv, 1 / anos) - 1) * 100;
-      const txAnB = (Math.pow(Math.max(patBF, 1) / capInv, 1 / anos) - 1) * 100;
-
-      return {
-        modo, totalMeses, capInv, custoInicial, financiado,
-        cA: { final: sA, finalR: cA.hr[totalMeses-1], retN: ((sA/capInv)-1)*100, retR: ((cA.hr[totalMeses-1]/capInv)-1)*100, txAn: txAnA, h: cA.h, hr: cA.hr },
-        cB: { final: patBF, finalR: cB.hr[totalMeses-1], retN: ((patBF/capInv)-1)*100, retR: ((cB.hr[totalMeses-1]/capInv)-1)*100, txAn: txAnB, h: cB.h, hr: cB.hr, vi, si: sB, sd, totPago, totAlug, totCusto, entrada, financiado, p1: cB.pa[0]||0, pN: cB.pa[Math.min(mesesFin-1,cB.pa.length-1)]||0, viH: cB.vi, siH: cB.si, sdH: cB.sd },
-        leilao: modo === 'leilao' ? { valorArrematacao, desc: ((1-valorArrematacao/valorMercado)*100), com: valorArrematacao*(comissaoLeiloeiro/100), itbi: valorArrematacao*(itbiPercentual/100), esc: custoEscritura, reg: custoRegistro, im: custoImissao, mIm: mesesImissao, custasT: custoInicial - entrada } : null,
-        venc: patBF > sA ? 'imovel' : 'investimento',
-        diff: Math.abs(patBF - sA)
-      };
-    },
-
-    renderResultados(r, p) {
-      const el = document.getElementById('sim-fin-results-inner');
-      if (!el) return;
-
-      const { cA, cB, venc, diff, totalMeses, modo, leilao } = r;
-      const anos = totalMeses / 12;
-      const ml = modo === 'leilao' ? 'Leilão' : 'Financiamento';
-      const vl = venc === 'imovel' ? `${ml} + Aluguel` : 'Investimento Puro';
-      const vc = venc === 'imovel' ? 'bullish' : 'neutral';
-
-      let leilaoHTML = '';
-      if (leilao) {
-        leilaoHTML = `<div class="sim-fin-detalhe-card sim-fin-leilao-resumo">
-          <h5>Arrematação</h5>
-          <div class="sim-fin-metric highlight"><span class="label">Desconto</span><span class="value positive">${this.fmtP(leilao.desc)}</span></div>
-          <div class="sim-fin-metric"><span class="label">Avaliação</span><span class="value">${this.fmt(p.valorMercado)}</span></div>
-          <div class="sim-fin-metric"><span class="label">Arrematado</span><span class="value">${this.fmt(leilao.valorArrematacao)}</span></div>
-          <div class="sim-fin-metric"><span class="label">Comissão</span><span class="value negative">${this.fmt(leilao.com)}</span></div>
-          <div class="sim-fin-metric"><span class="label">ITBI</span><span class="value negative">${this.fmt(leilao.itbi)}</span></div>
-          <div class="sim-fin-metric"><span class="label">Escritura + Registro</span><span class="value negative">${this.fmt(leilao.esc + leilao.reg)}</span></div>
-          ${leilao.im > 0 ? `<div class="sim-fin-metric"><span class="label">Imissão</span><span class="value negative">${this.fmt(leilao.im)}</span></div>` : ''}
-          <div class="sim-fin-metric" style="border-top:1px solid var(--border-color);padding-top:6px;margin-top:2px"><span class="label"><strong>Total custas</strong></span><span class="value negative"><strong>${this.fmt(leilao.custasT)}</strong></span></div>
-          ${leilao.mIm > 0 ? `<div class="sim-fin-metric"><span class="label">Sem o imóvel</span><span class="value">${leilao.mIm} mes${leilao.mIm>1?'es':''}</span></div>` : ''}
-        </div>`;
-      }
-
-      el.innerHTML = `
-        <div class="sim-fin-vencedor ${vc}">
-          <span class="sim-fin-vencedor-icon">${venc==='imovel'?(modo==='leilao'?'🔨':'🏠'):'📈'}</span>
-          <div><span class="sim-fin-vencedor-label">Vencedor em ${anos} anos</span><span class="sim-fin-vencedor-nome">${vl}</span></div>
-          <span class="sim-fin-vencedor-diff">+${this.fmt(diff)}</span>
-        </div>
-        ${leilaoHTML}
-        <div class="sim-fin-comparativo">
-          <div class="sim-fin-cenario ${venc==='investimento'?'winner':''}">
-            <div class="sim-fin-cenario-header"><span class="sim-fin-cenario-icon">📈</span><h4>Investimento Puro</h4></div>
-            <div class="sim-fin-cenario-body">
-              <div class="sim-fin-metric"><span class="label">Capital</span><span class="value">${this.fmt(r.capInv)}</span></div>
-              <div class="sim-fin-metric"><span class="label">Taxa</span><span class="value">${this.fmtP(p.taxaInvestimentoMensal)} a.m.</span></div>
-              <div class="sim-fin-metric highlight"><span class="label">Patrimônio</span><span class="value">${this.fmt(cA.final)}</span></div>
-              <div class="sim-fin-metric"><span class="label">Retorno real</span><span class="value">${this.fmtP(cA.retR)}</span></div>
-              <div class="sim-fin-metric"><span class="label">Equiv. anual</span><span class="value">${this.fmtP(cA.txAn)} a.a.</span></div>
+            <!-- IMOVEL -->
+            <div class="sim-fin-section" id="sf-sec-imovel">
+              <div class="sim-fin-section-title"><span class="sim-fin-section-icon">🏠</span> Imóvel</div>
+              <div class="sim-fin-fields">
+                ${this._slider('valorMercado', 'Valor de mercado', 100000, 2000000, 25000, DEFAULTS[this.modo].valorMercado, v => fmt(v))}
+                <div id="sf-field-arrematacao" style="display:none">
+                  ${this._slider('valorArrematacao', 'Valor arrematação', 50000, 2000000, 25000, DEFAULTS.leilao.valorArrematacao, (v) => {
+                    const desc = ((1 - v / (this.params.valorMercado || 500000)) * 100);
+                    return fmt(v) + ' <span class="sf-computed">(' + (desc > 0 ? desc.toFixed(0) + '% desconto' : 'sem desconto') + ')</span>';
+                  })}
+                </div>
+                ${this._slider('entrada', 'Entrada', 5, 100, 5, DEFAULTS[this.modo].entrada, v => {
+                  const abs = (this.params.valorMercado || 500000) * v / 100;
+                  return fmtP(v) + ' <span class="sf-computed">= ' + fmt(abs) + '</span>';
+                })}
+                ${this._slider('valorizacao', 'Valorização anual', 0, 15, 0.5, DEFAULTS[this.modo].valorizacao, v => fmtP(v) + ' a.a.')}
+                <div id="sf-field-yield">
+                  ${this._slider('yieldAluguel', 'Yield aluguel anual', 0, 12, 0.5, DEFAULTS[this.modo].yieldAluguel, v => {
+                    const mensal = (this.params.valorMercado || 500000) * v / 100 / 12;
+                    return fmtP(v) + ' a.a. <span class="sf-computed">= ' + fmt(mensal) + '/mês</span>';
+                  })}
+                </div>
+                ${this._horizonte(DEFAULTS[this.modo].horizonte)}
+                <div class="sim-fin-checkbox-wrap">
+                  <label><input type="checkbox" id="sf-terreno"> É terreno (sem aluguel)</label>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="sim-fin-vs">VS</div>
-          <div class="sim-fin-cenario ${venc==='imovel'?'winner':''}">
-            <div class="sim-fin-cenario-header"><span class="sim-fin-cenario-icon">${modo==='leilao'?'🔨':'🏠'}</span><h4>${ml}</h4></div>
-            <div class="sim-fin-cenario-body">
-              <div class="sim-fin-metric"><span class="label">${modo==='leilao'?'Entrada + custas':'Entrada'}</span><span class="value">${this.fmt(r.custoInicial)}</span></div>
-              <div class="sim-fin-metric"><span class="label">1ª parcela</span><span class="value">${this.fmt(cB.p1)}</span></div>
-              <div class="sim-fin-metric highlight"><span class="label">Patrimônio</span><span class="value">${this.fmt(cB.final)}</span></div>
-              <div class="sim-fin-metric"><span class="label">Retorno real</span><span class="value">${this.fmtP(cB.retR)}</span></div>
-              <div class="sim-fin-metric"><span class="label">Equiv. anual</span><span class="value">${this.fmtP(cB.txAn)} a.a.</span></div>
+
+            <!-- FINANCIAMENTO (convencional only) -->
+            <div class="sim-fin-section sf-conv-only" id="sf-sec-fin">
+              <div class="sim-fin-section-title"><span class="sim-fin-section-icon">🏦</span> Financiamento</div>
+              <div class="sim-fin-fields">
+                ${this._slider('taxaFin', 'Taxa de juros', 6, 15, 0.5, DEFAULTS.convencional.taxaFin, v => fmtP(v) + ' a.a.')}
+                ${this._slider('prazoFin', 'Prazo', 10, 35, 1, DEFAULTS.convencional.prazoFin, v => v + ' anos')}
+                <div class="sim-fin-slider-field">
+                  <div class="sim-fin-slider-header">
+                    <span class="sim-fin-slider-label">Sistema de amortização</span>
+                  </div>
+                  <div class="sim-fin-toggle-btns" id="sf-sistema">
+                    <button class="sim-fin-toggle-btn active" data-val="sac">SAC</button>
+                    <button class="sim-fin-toggle-btn" data-val="price">Price</button>
+                  </div>
+                </div>
+              </div>
             </div>
+
+            <!-- LEILAO (leilao only) -->
+            <div class="sim-fin-section sf-section-leilao sf-leilao-only" id="sf-sec-leilao" style="display:none">
+              <div class="sim-fin-section-title"><span class="sim-fin-section-icon">🔨</span> Parcelamento e Custas</div>
+              <div class="sim-fin-fields">
+                <div class="sim-fin-row-2">
+                  <div class="sim-fin-slider-field">
+                    <div class="sim-fin-slider-header">
+                      <span class="sim-fin-slider-label">Parcelas</span>
+                    </div>
+                    <select class="sim-fin-select" id="sf-parcelas">
+                      <option value="1">1x (à vista)</option>
+                      <option value="12">12x</option>
+                      <option value="24">24x</option>
+                      <option value="30" selected>30x</option>
+                      <option value="48">48x</option>
+                      <option value="60">60x</option>
+                    </select>
+                  </div>
+                  <div class="sim-fin-slider-field">
+                    <div class="sim-fin-slider-header">
+                      <span class="sim-fin-slider-label">Correção</span>
+                    </div>
+                    <select class="sim-fin-select" id="sf-correcao">
+                      <option value="nenhuma">Nenhuma</option>
+                      <option value="igpm">IGP-M (~5,5% a.a.)</option>
+                      <option value="ipca" selected>IPCA (~5% a.a.)</option>
+                    </select>
+                  </div>
+                </div>
+                ${this._slider('custas', 'Custas totais', 0, 100000, 1000, DEFAULTS.leilao.custas, v => fmt(v) + ' <span class="sf-computed">(leiloeiro + ITBI + cart.)</span>')}
+                ${this._slider('mesesSemImovel', 'Meses sem o imóvel', 0, 12, 1, DEFAULTS.leilao.mesesSemImovel, v => v + (v === 1 ? ' mês' : ' meses'))}
+              </div>
+            </div>
+
+            <!-- INVESTIMENTO -->
+            <div class="sim-fin-section sf-section-investimento" id="sf-sec-inv">
+              <div class="sim-fin-section-title"><span class="sim-fin-section-icon">📈</span> Investimento Alternativo</div>
+              <div class="sim-fin-fields">
+                ${this._slider('rendimentoInv', 'Rendimento', 6, 25, 0.5, DEFAULTS[this.modo].rendimentoInv, v => {
+                  const mensal = (Math.pow(1 + v / 100, 1/12) - 1) * 100;
+                  return fmtP(v) + ' a.a. <span class="sf-computed">= ' + fmtP(mensal) + '/mês</span>';
+                })}
+              </div>
+            </div>
+
           </div>
-        </div>
-        <div class="sim-fin-detalhes-grid">
-          <div class="sim-fin-detalhe-card"><h5>Composição Final</h5>
-            <div class="sim-fin-metric"><span class="label">Valor imóvel</span><span class="value">${this.fmt(cB.vi)}</span></div>
-            <div class="sim-fin-metric"><span class="label">Saldo investido</span><span class="value ${cB.si<0?'negative':''}">${this.fmt(cB.si)}</span></div>
-            <div class="sim-fin-metric"><span class="label">Saldo devedor</span><span class="value">${this.fmt(cB.sd)}</span></div>
-          </div>
-          <div class="sim-fin-detalhe-card"><h5>Fluxos</h5>
-            <div class="sim-fin-metric"><span class="label">Total parcelas</span><span class="value negative">${this.fmt(cB.totPago)}</span></div>
-            <div class="sim-fin-metric"><span class="label">Total aluguel</span><span class="value positive">${this.fmt(cB.totAlug)}</span></div>
-            <div class="sim-fin-metric"><span class="label">Total custos</span><span class="value negative">${this.fmt(cB.totCusto)}</span></div>
-          </div>
-        </div>
-        <div class="sim-fin-chart-container">
-          <div class="sim-fin-chart-header"><h5>Evolução Patrimonial</h5>
-            <div class="sim-fin-chart-toggle"><button class="active" data-view="nominal">Nominal</button><button data-view="real">Real</button></div>
-          </div>
-          <div class="sim-fin-chart-wrap"><canvas id="sim-fin-chart"></canvas></div>
-        </div>
-        <div class="sim-fin-chart-container">
-          <h5>Composição (${ml})</h5>
-          <div class="sim-fin-chart-wrap"><canvas id="sim-fin-chart-comp"></canvas></div>
-        </div>
-        <div class="sim-fin-conclusao"><h5>Análise</h5><ul>${this.conclusoes(r, p)}</ul>
-          <p class="sim-fin-disclaimer">Simulação educacional. Não constitui recomendação de investimento.</p>
+
+          <!-- RESULTS -->
+          <div class="sim-fin-results" id="sf-results"></div>
         </div>
       `;
-
-      el.querySelectorAll('.sim-fin-chart-toggle button').forEach(btn => {
-        btn.addEventListener('click', () => {
-          el.querySelectorAll('.sim-fin-chart-toggle button').forEach(b => b.classList.remove('active'));
-          btn.classList.add('active');
-          this.drawChart(r, btn.dataset.view);
-        });
-      });
-
-      this.drawChart(r, 'nominal');
-      this.drawComp(r);
     },
 
-    conclusoes(r, p) {
-      const { cA, cB, venc, diff, totalMeses, modo, leilao } = r;
-      const anos = totalMeses / 12;
-      const c = [];
-      if (venc === 'investimento') c.push(`<li>Investir a ${this.fmtP(p.taxaInvestimentoMensal)}/mês rende <strong>${this.fmt(diff)}</strong> a mais em ${anos} anos.</li>`);
-      else c.push(`<li>${modo==='leilao'?'A arrematação':'O financiamento'} gerou <strong>${this.fmt(diff)}</strong> a mais via <strong>alavancagem</strong>.</li>`);
-      if (leilao) {
-        c.push(`<li>Desconto de <strong>${this.fmtP(leilao.desc)}</strong> gera yield efetivo maior.</li>`);
-        if (leilao.mIm > 0) c.push(`<li>${leilao.mIm} meses sem o imóvel considerados como custo de oportunidade.</li>`);
-      }
-      if (cB.totAlug > 0 && cB.totPago > 0) c.push(`<li>Aluguel cobriu <strong>${this.fmtP(cB.totAlug/cB.totPago*100)}</strong> das parcelas.</li>`);
-      if (cB.si < 0) c.push(`<li class="warning">Saldo ficou negativo (${this.fmt(cB.si)}). Necessária renda extra.</li>`);
-      const val = cB.vi - p.valorMercado;
-      c.push(`<li>Imóvel valorizou <strong>${this.fmt(val)}</strong> (${this.fmt(p.valorMercado)} → ${this.fmt(cB.vi)}).</li>`);
-      return c.join('');
+    /* ---------- HTML helpers ---------- */
+    _slider(id, label, min, max, step, val, fmtFn) {
+      return `
+        <div class="sim-fin-slider-field" data-sf-slider="${id}">
+          <div class="sim-fin-slider-header">
+            <span class="sim-fin-slider-label">${label}</span>
+            <span class="sim-fin-slider-value" id="sf-val-${id}">${fmtFn(val)}</span>
+          </div>
+          <input type="range" class="sim-fin-range" id="sf-${id}" min="${min}" max="${max}" step="${step}" value="${val}">
+        </div>`;
     },
 
-    drawChart(r, view) {
-      const ctx = document.getElementById('sim-fin-chart');
-      if (!ctx) return;
-      if (this.chart) this.chart.destroy();
-      const real = view === 'real';
-      const dA = real ? r.cA.hr : r.cA.h, dB = real ? r.cB.hr : r.cB.h;
-      const labels = [], a = [], b = [];
-      const step = Math.max(1, Math.floor(dA.length / 60));
-      for (let i = 0; i < dA.length; i++) {
-        if (i % step === 0 || i === dA.length - 1) {
-          labels.push(Math.floor(i/12) > 0 ? `${Math.floor(i/12)}a` : `${(i%12)+1}m`);
-          a.push(dA[i]); b.push(dB[i]);
-        }
-      }
-      const ml = r.modo === 'leilao' ? 'Leilão' : 'Financiamento';
-      this.chart = new Chart(ctx, {
-        type: 'line',
-        data: { labels, datasets: [
-          { label: 'Investimento', data: a, borderColor: '#3b82f6', fill: false, tension: 0.3, pointRadius: 0, borderWidth: 2 },
-          { label: ml, data: b, borderColor: '#22c55e', fill: false, tension: 0.3, pointRadius: 0, borderWidth: 2 }
-        ]},
-        options: { responsive: true, maintainAspectRatio: false, interaction: { intersect: false, mode: 'index' },
-          plugins: { legend: { labels: { color: '#8b949e', font: { size: 11 } } }, tooltip: { backgroundColor: '#1c2128', titleColor: '#f0f6fc', bodyColor: '#f0f6fc', borderColor: '#30363d', borderWidth: 1, callbacks: { label: c => c.dataset.label + ': ' + c.raw.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL', minimumFractionDigits: 0 }) } } },
-          scales: { x: { ticks: { color: '#6e7681', font: { size: 9 }, maxTicksLimit: 10 }, grid: { color: 'rgba(48,54,61,0.3)' } }, y: { ticks: { color: '#6e7681', font: { size: 9 }, callback: v => v >= 1e6 ? 'R$'+(v/1e6).toFixed(1)+'M' : v >= 1e3 ? 'R$'+(v/1e3).toFixed(0)+'k' : 'R$'+v }, grid: { color: 'rgba(48,54,61,0.3)' } } }
-        }
-      });
+    _horizonte(val) {
+      const opts = HORIZONTES.map(h => `<option value="${h}"${h === val ? ' selected' : ''}>${h} anos</option>`).join('');
+      return `
+        <div class="sim-fin-slider-field">
+          <div class="sim-fin-slider-header">
+            <span class="sim-fin-slider-label">Horizonte</span>
+          </div>
+          <select class="sim-fin-select" id="sf-horizonte">${opts}</select>
+        </div>`;
     },
 
-    drawComp(r) {
-      const ctx = document.getElementById('sim-fin-chart-comp');
-      if (!ctx) return;
-      if (this.chartComp) this.chartComp.destroy();
-      const labels = [], di = [], ds = [], dd = [];
-      const step = Math.max(1, Math.floor(r.cB.viH.length / 40));
-      for (let i = 0; i < r.cB.viH.length; i++) {
-        if (i % step === 0 || i === r.cB.viH.length - 1) {
-          labels.push(Math.floor(i/12) > 0 ? `${Math.floor(i/12)}a` : `${(i%12)+1}m`);
-          di.push(r.cB.viH[i]); ds.push(Math.max(0, r.cB.siH[i])); dd.push(-r.cB.sdH[i]);
-        }
-      }
-      this.chartComp = new Chart(ctx, {
-        type: 'bar',
-        data: { labels, datasets: [
-          { label: 'Imóvel', data: di, backgroundColor: 'rgba(34,197,94,0.7)', stack: 'p' },
-          { label: 'Investido', data: ds, backgroundColor: 'rgba(59,130,246,0.7)', stack: 'p' },
-          { label: 'Dívida', data: dd, backgroundColor: 'rgba(248,81,73,0.7)', stack: 'n' }
-        ]},
-        options: { responsive: true, maintainAspectRatio: false, interaction: { intersect: false, mode: 'index' },
-          plugins: { legend: { labels: { color: '#8b949e', font: { size: 10 } } }, tooltip: { backgroundColor: '#1c2128', titleColor: '#f0f6fc', bodyColor: '#f0f6fc', borderColor: '#30363d', borderWidth: 1, callbacks: { label: c => c.dataset.label+': '+(c.raw<0?'-':'')+Math.abs(c.raw).toLocaleString('pt-BR',{style:'currency',currency:'BRL',minimumFractionDigits:0}) } } },
-          scales: { x: { stacked: true, ticks: { color: '#6e7681', font: { size: 9 }, maxTicksLimit: 10 }, grid: { color: 'rgba(48,54,61,0.3)' } }, y: { stacked: true, ticks: { color: '#6e7681', font: { size: 9 }, callback: v => { const a=Math.abs(v),p=v<0?'-R$':'R$'; return a>=1e6?p+(a/1e6).toFixed(1)+'M':a>=1e3?p+(a/1e3).toFixed(0)+'k':p+a; } }, grid: { color: 'rgba(48,54,61,0.3)' } } }
-        }
-      });
-    },
-
+    /* ============================================================
+       EVENTS
+       ============================================================ */
     bindEvents() {
-      const form = document.querySelector('.sim-fin-config');
-      if (form) {
-        form.addEventListener('input', () => this.debouncedExecutar());
-        form.addEventListener('change', () => this.debouncedExecutar());
+      const cfg = document.getElementById('sf-config');
+      if (cfg) {
+        cfg.addEventListener('input', (e) => {
+          if (e.target.classList.contains('sim-fin-range') || e.target.tagName === 'SELECT') {
+            this._readParams();
+            this._updateSliderDisplays();
+            this._debouncedExecutar();
+          }
+        });
+        cfg.addEventListener('change', (e) => {
+          if (e.target.tagName === 'SELECT' || e.target.type === 'checkbox') {
+            this._readParams();
+            this._updateSliderDisplays();
+            this.executar();
+          }
+        });
       }
-      ['sim-fin-valor-imovel', 'sim-fin-valor-arrematacao', 'sim-fin-escritura', 'sim-fin-registro', 'sim-fin-imissao'].forEach(id => {
-        const el = document.getElementById(id);
-        if (el) this.applyMask(el);
-      });
-      document.querySelectorAll('.sim-fin-modo-btn').forEach(btn => {
+
+      // Mode toggle
+      this.container.querySelectorAll('.sim-fin-modo-btn').forEach(btn => {
         btn.addEventListener('click', () => {
-          document.querySelectorAll('.sim-fin-modo-btn').forEach(b => b.classList.remove('active'));
+          this.container.querySelectorAll('.sim-fin-modo-btn').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
           this.modo = btn.dataset.modo;
-          this.toggleSections();
+          this._applyDefaults();
+          this._toggleSections();
+          this._updateSliderDisplays();
           this.executar();
         });
       });
-      document.querySelectorAll('.sim-fin-preset').forEach(btn => {
+
+      // Presets
+      this.container.querySelectorAll('.sim-fin-preset').forEach(btn => {
         btn.addEventListener('click', () => {
-          document.querySelectorAll('.sim-fin-preset').forEach(b => b.classList.remove('active'));
+          const wrap = btn.closest('.sim-fin-presets');
+          wrap.querySelectorAll('.sim-fin-preset').forEach(b => b.classList.remove('active'));
           btn.classList.add('active');
-          this.aplicarPreset(btn.dataset.preset);
-          this.executar();
+          this._applyPreset(btn.dataset.preset);
         });
       });
-      document.getElementById('sim-fin-terreno')?.addEventListener('change', () => {
-        this.toggleAluguelSection();
-        this.executar();
-      });
-    },
 
-    debouncedExecutar() {
-      clearTimeout(this.debounceTimer);
-      this.debounceTimer = setTimeout(() => this.executar(), 300);
-    },
-
-    toggleSections() {
-      document.querySelectorAll('.sim-fin-conv-only').forEach(el => el.style.display = this.modo === 'convencional' ? '' : 'none');
-      document.querySelectorAll('.sim-fin-leilao-only').forEach(el => el.style.display = this.modo === 'leilao' ? '' : 'none');
-      const pc = document.querySelector('.sim-fin-presets-conv');
-      const pl = document.querySelector('.sim-fin-presets-leilao');
-      if (pc) pc.style.display = this.modo === 'convencional' ? '' : 'none';
-      if (pl) pl.style.display = this.modo === 'leilao' ? '' : 'none';
-    },
-
-    toggleAluguelSection() {
-      const s = document.querySelector('.sim-fin-aluguel-section');
-      if (s) s.style.display = document.getElementById('sim-fin-terreno')?.checked ? 'none' : '';
-    },
-
-    aplicarPreset(preset) {
-      const P = {
-        conservador: { vi:'500.000',en:'20',tf:'9',pz:'30',vl:'5',al:'0,4',vc:'10',ti:'0,8',si:'sac',inf:'5',ra:'5',mn:'1',it:'0,5',hz:'30' },
-        moderado: { vi:'500.000',en:'20',tf:'9',pz:'30',vl:'6',al:'0,5',vc:'8',ti:'1',si:'sac',inf:'5',ra:'6',mn:'0,5',it:'0,3',hz:'30' },
-        otimista: { vi:'500.000',en:'20',tf:'8',pz:'25',vl:'8',al:'0,6',vc:'5',ti:'1',si:'sac',inf:'4,5',ra:'7',mn:'0,5',it:'0,3',hz:'25' },
-        'leilao-conservador': { vi:'500.000',va:'375.000',en:'25',cm:'5',ib:'3',es:'1.500',rg:'1.500',im:'3.000',mi:'6',pl:'30',cr:'ipca',tx:'0',vl:'5',al:'0,5',vc:'10',ti:'0,8',inf:'5',ra:'5',mn:'1',it:'0,5',hz:'10' },
-        'leilao-moderado': { vi:'500.000',va:'350.000',en:'25',cm:'5',ib:'3',es:'1.500',rg:'1.500',im:'2.000',mi:'4',pl:'30',cr:'ipca',tx:'0',vl:'6',al:'0,5',vc:'8',ti:'1',inf:'5',ra:'6',mn:'0,5',it:'0,3',hz:'10' },
-        'leilao-otimista': { vi:'500.000',va:'300.000',en:'20',cm:'5',ib:'3',es:'1.500',rg:'1.500',im:'1.000',mi:'3',pl:'12',cr:'nenhuma',tx:'0',vl:'8',al:'0,6',vc:'5',ti:'1',inf:'4,5',ra:'7',mn:'0,5',it:'0,3',hz:'10' }
-      };
-      const p = P[preset]; if (!p) return;
-      const s = (id, v) => { const e = document.getElementById(id); if (e && v !== undefined) e.value = v; };
-      s('sim-fin-valor-imovel',p.vi); s('sim-fin-entrada',p.en); s('sim-fin-valorizacao',p.vl);
-      s('sim-fin-aluguel',p.al); s('sim-fin-vacancia',p.vc); s('sim-fin-taxa-inv',p.ti);
-      s('sim-fin-inflacao',p.inf); s('sim-fin-reajuste',p.ra); s('sim-fin-manutencao',p.mn);
-      s('sim-fin-itr',p.it); s('sim-fin-horizonte',p.hz);
-      s('sim-fin-taxa-fin',p.tf); s('sim-fin-prazo',p.pz); s('sim-fin-sistema',p.si);
-      s('sim-fin-valor-arrematacao',p.va); s('sim-fin-comissao',p.cm); s('sim-fin-itbi',p.ib);
-      s('sim-fin-escritura',p.es); s('sim-fin-registro',p.rg); s('sim-fin-imissao',p.im);
-      s('sim-fin-meses-imissao',p.mi); s('sim-fin-parcelas-leilao',p.pl); s('sim-fin-correcao',p.cr);
-      s('sim-fin-taxa-fixa',p.tx);
-    },
-
-    executar() {
-      const g = id => document.getElementById(id);
-      const isL = this.modo === 'leilao';
-      const params = {
-        modo: this.modo, valorMercado: this.parseC(g('sim-fin-valor-imovel')?.value),
-        percentualEntrada: this.parseP(g('sim-fin-entrada')?.value),
-        valorizacaoImovelAnual: this.parseP(g('sim-fin-valorizacao')?.value),
-        aluguelPercentualMensal: this.parseP(g('sim-fin-aluguel')?.value),
-        taxaVacancia: this.parseP(g('sim-fin-vacancia')?.value),
-        taxaInvestimentoMensal: this.parseP(g('sim-fin-taxa-inv')?.value),
-        inflacaoAnual: this.parseP(g('sim-fin-inflacao')?.value),
-        reajusteAluguelAnual: this.parseP(g('sim-fin-reajuste')?.value),
-        custoManutencaoAnual: this.parseP(g('sim-fin-manutencao')?.value),
-        itrAnual: this.parseP(g('sim-fin-itr')?.value),
-        ehTerreno: g('sim-fin-terreno')?.checked || false,
-        horizonte: parseInt(g('sim-fin-horizonte')?.value) || (isL ? 10 : 30)
-      };
-      if (isL) {
-        params.valorArrematacao = this.parseC(g('sim-fin-valor-arrematacao')?.value);
-        params.comissaoLeiloeiro = this.parseP(g('sim-fin-comissao')?.value);
-        params.itbiPercentual = this.parseP(g('sim-fin-itbi')?.value);
-        params.custoEscritura = this.parseC(g('sim-fin-escritura')?.value);
-        params.custoRegistro = this.parseC(g('sim-fin-registro')?.value);
-        params.custoImissao = this.parseC(g('sim-fin-imissao')?.value);
-        params.mesesImissao = parseInt(g('sim-fin-meses-imissao')?.value) || 0;
-        params.prazoParcelasLeilao = parseInt(g('sim-fin-parcelas-leilao')?.value) || 30;
-        params.correcaoLeilao = g('sim-fin-correcao')?.value || 'nenhuma';
-        params.taxaFixaLeilao = this.parseP(g('sim-fin-taxa-fixa')?.value);
-        if (!params.valorArrematacao || params.valorArrematacao <= 0) return;
-      } else {
-        params.taxaFinanciamentoAnual = this.parseP(g('sim-fin-taxa-fin')?.value);
-        params.prazoFinanciamentoAnos = parseInt(g('sim-fin-prazo')?.value) || 30;
-        params.sistemaAmortizacao = g('sim-fin-sistema')?.value || 'sac';
+      // SAC / Price toggle
+      const sistemaWrap = document.getElementById('sf-sistema');
+      if (sistemaWrap) {
+        sistemaWrap.addEventListener('click', (e) => {
+          const btn = e.target.closest('.sim-fin-toggle-btn');
+          if (!btn) return;
+          sistemaWrap.querySelectorAll('.sim-fin-toggle-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          this.params.sistema = btn.dataset.val;
+          this.executar();
+        });
       }
-      if (params.valorMercado <= 0 || params.percentualEntrada <= 0 || params.percentualEntrada >= 100) return;
-      this.renderResultados(this.simular(params), params);
+
+      // Terreno checkbox
+      const terreno = document.getElementById('sf-terreno');
+      if (terreno) {
+        terreno.addEventListener('change', () => {
+          this.params.ehTerreno = terreno.checked;
+          const yieldField = document.getElementById('sf-field-yield');
+          if (yieldField) yieldField.style.display = terreno.checked ? 'none' : '';
+          this.executar();
+        });
+      }
     },
 
-    render(container) {
-      container.innerHTML = `
-        <div class="sim-fin-wrapper">
-          <div class="sim-fin-intro"><h2>Financiamento Imobiliário vs Investimento</h2><p>Ajuste os parâmetros e veja o resultado em tempo real.</p></div>
-          <div class="sim-fin-config">
-            <div class="sim-fin-top-bar">
-              <div class="sim-fin-modo-toggle">
-                <button class="sim-fin-modo-btn active" data-modo="convencional"><span class="sim-fin-modo-icon">🏦</span><span>Convencional</span></button>
-                <button class="sim-fin-modo-btn" data-modo="leilao"><span class="sim-fin-modo-icon">🔨</span><span>Leilão</span></button>
-              </div>
-              <div class="sim-fin-presets sim-fin-presets-conv"><span class="sim-fin-presets-label">Cenários:</span><button class="sim-fin-preset" data-preset="conservador">Conservador</button><button class="sim-fin-preset active" data-preset="moderado">Moderado</button><button class="sim-fin-preset" data-preset="otimista">Otimista</button></div>
-              <div class="sim-fin-presets sim-fin-presets-leilao" style="display:none"><span class="sim-fin-presets-label">Cenários:</span><button class="sim-fin-preset" data-preset="leilao-conservador">Conservador</button><button class="sim-fin-preset" data-preset="leilao-moderado">Moderado</button><button class="sim-fin-preset" data-preset="leilao-otimista">Otimista</button></div>
+    _debouncedExecutar() {
+      clearTimeout(this.debounceTimer);
+      this.debounceTimer = setTimeout(() => this.executar(), 80);
+    },
+
+    _readParams() {
+      const g = (id) => {
+        const el = document.getElementById(id);
+        return el ? parseFloat(el.value) : 0;
+      };
+
+      this.params.valorMercado = g('sf-valorMercado');
+      this.params.entrada = g('sf-entrada');
+      this.params.valorizacao = g('sf-valorizacao');
+      this.params.yieldAluguel = g('sf-yieldAluguel');
+      this.params.rendimentoInv = g('sf-rendimentoInv');
+      this.params.horizonte = parseInt(document.getElementById('sf-horizonte')?.value) || 10;
+      this.params.ehTerreno = document.getElementById('sf-terreno')?.checked || false;
+
+      if (this.modo === 'convencional') {
+        this.params.taxaFin = g('sf-taxaFin');
+        this.params.prazoFin = g('sf-prazoFin');
+        // sistema is read from toggle click
+      } else {
+        this.params.valorArrematacao = g('sf-valorArrematacao');
+        this.params.parcelas = parseInt(document.getElementById('sf-parcelas')?.value) || 30;
+        this.params.correcao = document.getElementById('sf-correcao')?.value || 'nenhuma';
+        this.params.custas = g('sf-custas');
+        this.params.mesesSemImovel = g('sf-mesesSemImovel');
+      }
+
+      // Clamp arrematação to valorMercado
+      if (this.modo === 'leilao') {
+        const arrSlider = document.getElementById('sf-valorArrematacao');
+        if (arrSlider) {
+          arrSlider.max = this.params.valorMercado;
+          if (this.params.valorArrematacao > this.params.valorMercado) {
+            this.params.valorArrematacao = this.params.valorMercado;
+            arrSlider.value = this.params.valorArrematacao;
+          }
+        }
+      }
+    },
+
+    _updateSliderDisplays() {
+      const p = this.params;
+      this._setVal('valorMercado', fmt(p.valorMercado));
+      this._setVal('entrada', fmtP(p.entrada) + ' <span class="sf-computed">= ' + fmt(p.valorMercado * p.entrada / 100) + '</span>');
+      this._setVal('valorizacao', fmtP(p.valorizacao) + ' a.a.');
+      const alugMensal = p.valorMercado * p.yieldAluguel / 100 / 12;
+      this._setVal('yieldAluguel', fmtP(p.yieldAluguel) + ' a.a. <span class="sf-computed">= ' + fmt(alugMensal) + '/mês</span>');
+      const rendMensal = (Math.pow(1 + p.rendimentoInv / 100, 1/12) - 1) * 100;
+      this._setVal('rendimentoInv', fmtP(p.rendimentoInv) + ' a.a. <span class="sf-computed">= ' + fmtP(rendMensal) + '/mês</span>');
+
+      if (this.modo === 'convencional') {
+        this._setVal('taxaFin', fmtP(p.taxaFin) + ' a.a.');
+        this._setVal('prazoFin', p.prazoFin + ' anos');
+      } else {
+        const desc = ((1 - p.valorArrematacao / p.valorMercado) * 100);
+        this._setVal('valorArrematacao', fmt(p.valorArrematacao) + ' <span class="sf-computed">(' + (desc > 0 ? desc.toFixed(0) + '% desconto' : 'sem desconto') + ')</span>');
+        this._setVal('custas', fmt(p.custas) + ' <span class="sf-computed">(leiloeiro + ITBI + cart.)</span>');
+        this._setVal('mesesSemImovel', p.mesesSemImovel + (p.mesesSemImovel === 1 ? ' mês' : ' meses'));
+      }
+    },
+
+    _setVal(id, html) {
+      const el = document.getElementById('sf-val-' + id);
+      if (el) el.innerHTML = html;
+    },
+
+    _toggleSections() {
+      const isL = this.modo === 'leilao';
+      this.container.querySelectorAll('.sf-conv-only').forEach(el => el.style.display = isL ? 'none' : '');
+      this.container.querySelectorAll('.sf-leilao-only').forEach(el => el.style.display = isL ? '' : 'none');
+      const arrField = document.getElementById('sf-field-arrematacao');
+      if (arrField) arrField.style.display = isL ? '' : 'none';
+      const pcv = this.container.querySelector('.sf-presets-conv');
+      const plj = this.container.querySelector('.sf-presets-leilao');
+      if (pcv) pcv.style.display = isL ? 'none' : '';
+      if (plj) plj.style.display = isL ? '' : 'none';
+    },
+
+    _applyDefaults() {
+      const d = DEFAULTS[this.modo];
+      Object.assign(this.params, d);
+      this._syncSlidersToParams();
+    },
+
+    _applyPreset(name) {
+      const preset = PRESETS[this.modo]?.[name];
+      if (!preset) return;
+      Object.assign(this.params, preset);
+      this._syncSlidersToParams();
+      this._updateSliderDisplays();
+      this.executar();
+    },
+
+    _syncSlidersToParams() {
+      const p = this.params;
+      const s = (id, v) => { const el = document.getElementById(id); if (el) el.value = v; };
+      s('sf-valorMercado', p.valorMercado);
+      s('sf-entrada', p.entrada);
+      s('sf-valorizacao', p.valorizacao);
+      s('sf-yieldAluguel', p.yieldAluguel);
+      s('sf-rendimentoInv', p.rendimentoInv);
+      s('sf-horizonte', p.horizonte);
+
+      const terrenoEl = document.getElementById('sf-terreno');
+      if (terrenoEl) terrenoEl.checked = p.ehTerreno || false;
+      const yieldField = document.getElementById('sf-field-yield');
+      if (yieldField) yieldField.style.display = (p.ehTerreno) ? 'none' : '';
+
+      if (this.modo === 'convencional') {
+        s('sf-taxaFin', p.taxaFin);
+        s('sf-prazoFin', p.prazoFin);
+        const sistemaWrap = document.getElementById('sf-sistema');
+        if (sistemaWrap) {
+          sistemaWrap.querySelectorAll('.sim-fin-toggle-btn').forEach(b => {
+            b.classList.toggle('active', b.dataset.val === (p.sistema || 'sac'));
+          });
+        }
+      } else {
+        s('sf-valorArrematacao', p.valorArrematacao);
+        s('sf-parcelas', p.parcelas);
+        s('sf-correcao', p.correcao);
+        s('sf-custas', p.custas);
+        s('sf-mesesSemImovel', p.mesesSemImovel);
+        // Update arrematação max
+        const arrSlider = document.getElementById('sf-valorArrematacao');
+        if (arrSlider) arrSlider.max = p.valorMercado;
+      }
+
+      this._updateSliderDisplays();
+    },
+
+    /* ============================================================
+       SIMULATION ENGINE
+       ============================================================ */
+    executar() {
+      const p = this.params;
+      if (!p.valorMercado || p.valorMercado <= 0) return;
+      if (!p.entrada || p.entrada <= 0 || p.entrada >= 100) return;
+
+      const r = this._simular(p);
+      this.lastResult = r;
+      this._renderResults(r, p);
+    },
+
+    _simular(p) {
+      const valorMercado = p.valorMercado;
+      const isL = this.modo === 'leilao';
+      const totalMeses = (p.horizonte || 10) * 12;
+      const txInvMensal = Math.pow(1 + p.rendimentoInv / 100, 1/12) - 1;
+      const valMensal = Math.pow(1 + p.valorizacao / 100, 1/12) - 1;
+      const yieldMensal = p.ehTerreno ? 0 : (p.yieldAluguel / 100 / 12);
+
+      let entradaAbs, financiado, custasTotal, mesesFin, txFinMensal;
+
+      if (isL) {
+        const arr = p.valorArrematacao || valorMercado;
+        entradaAbs = arr * (p.entrada / 100);
+        financiado = arr - entradaAbs;
+        custasTotal = p.custas || 0;
+        mesesFin = p.parcelas || 1;
+
+        let txCorr = 0;
+        if (p.correcao === 'igpm') txCorr = 5.5;
+        else if (p.correcao === 'ipca') txCorr = 5.0;
+        txFinMensal = Math.pow(1 + txCorr / 100, 1/12) - 1;
+      } else {
+        entradaAbs = valorMercado * (p.entrada / 100);
+        financiado = valorMercado - entradaAbs;
+        custasTotal = 0;
+        mesesFin = (p.prazoFin || 30) * 12;
+        txFinMensal = Math.pow(1 + (p.taxaFin || 9) / 100, 1/12) - 1;
+      }
+
+      // Capital that the investor would have invested instead
+      const capitalTotal = isL ? (entradaAbs + custasTotal + financiado) : valorMercado;
+
+      // ---- Cenário A: Investimento puro ----
+      let saldoInv = capitalTotal;
+      const histInv = [];
+      for (let m = 1; m <= totalMeses; m++) {
+        saldoInv *= (1 + txInvMensal);
+        histInv.push(saldoInv);
+      }
+
+      // ---- Cenário B: Imóvel ----
+      let valorImovel = valorMercado;
+      let saldoResto = capitalTotal - entradaAbs - custasTotal; // leftover invested
+      let saldoDevedor = financiado;
+      let aluguelBase = valorMercado * yieldMensal;
+      let totalParcelas = 0;
+      let totalAlugueis = 0;
+      let finQuitado = false;
+      const mesesImissao = isL ? (p.mesesSemImovel || 0) : 0;
+
+      const pmtPrice = calcPMT(financiado, txFinMensal, mesesFin);
+      const amortSAC = financiado / mesesFin;
+
+      const histImovel = [];
+      let primeiraParcela = 0;
+      let ultimaParcela = 0;
+
+      for (let m = 1; m <= totalMeses; m++) {
+        // Valorização do imóvel
+        valorImovel *= (1 + valMensal);
+
+        // Reajuste anual do aluguel (pela valorização, ao completar cada ano)
+        if (!p.ehTerreno && m > 1 && (m - 1) % 12 === 0) {
+          aluguelBase = valorImovel * yieldMensal;
+        }
+
+        // Aluguel recebido (0 durante imissão)
+        const emImissao = isL && m <= mesesImissao;
+        const alugRec = (p.ehTerreno || emImissao) ? 0 : aluguelBase;
+
+        // Parcela do financiamento
+        let parcela = 0;
+        if (!finQuitado && saldoDevedor > 0.5 && m <= mesesFin) {
+          if (isL) {
+            // Leilão: parcelas iguais com correção
+            if (txFinMensal > 0) saldoDevedor *= (1 + txFinMensal);
+            parcela = Math.min(financiado / (p.parcelas || 1), saldoDevedor);
+            if (txFinMensal > 0) parcela = calcPMT(financiado, txFinMensal, p.parcelas || 1);
+            parcela = Math.min(parcela, saldoDevedor);
+            saldoDevedor -= parcela;
+          } else if (p.sistema === 'sac') {
+            parcela = amortSAC + saldoDevedor * txFinMensal;
+            saldoDevedor -= amortSAC;
+          } else {
+            // Price
+            parcela = pmtPrice;
+            saldoDevedor -= (pmtPrice - saldoDevedor * txFinMensal);
+          }
+          if (saldoDevedor < 0.5) { saldoDevedor = 0; finQuitado = true; }
+          totalParcelas += parcela;
+          if (m === 1) primeiraParcela = parcela;
+          ultimaParcela = parcela;
+        }
+
+        totalAlugueis += alugRec;
+
+        // Saldo investido restante: rende + aluguel - parcela
+        const fluxo = alugRec - parcela;
+        saldoResto = saldoResto * (1 + txInvMensal) + fluxo;
+
+        const patrimonioImovel = valorImovel + saldoResto - saldoDevedor;
+        histImovel.push(patrimonioImovel);
+      }
+
+      const patrimonioFinalInv = histInv[totalMeses - 1];
+      const patrimonioFinalImovel = histImovel[totalMeses - 1];
+      const anos = totalMeses / 12;
+
+      const roiInv = ((patrimonioFinalInv / capitalTotal) - 1) * 100;
+      const roiImovel = ((Math.max(patrimonioFinalImovel, 1) / capitalTotal) - 1) * 100;
+      const lucroInv = patrimonioFinalInv - capitalTotal;
+      const lucroImovel = patrimonioFinalImovel - capitalTotal;
+
+      const vencedor = patrimonioFinalImovel > patrimonioFinalInv ? 'imovel' : 'investimento';
+      const diff = Math.abs(patrimonioFinalImovel - patrimonioFinalInv);
+
+      // Equity instantâneo (leilão)
+      let equityInstantaneo = 0;
+      if (isL) {
+        equityInstantaneo = valorMercado - (p.valorArrematacao || valorMercado) - custasTotal;
+      }
+
+      return {
+        modo: this.modo,
+        totalMeses, anos, capitalTotal, entradaAbs, financiado, custasTotal,
+        vencedor, diff,
+        inv: { final: patrimonioFinalInv, lucro: lucroInv, roi: roiInv, hist: histInv },
+        imovel: {
+          final: patrimonioFinalImovel, lucro: lucroImovel, roi: roiImovel, hist: histImovel,
+          valorFinal: valorImovel, saldoInvestido: saldoResto, saldoDevedor,
+          totalParcelas, totalAlugueis,
+          primeiraParcela, ultimaParcela,
+          equityInstantaneo
+        }
+      };
+    },
+
+    /* ============================================================
+       RENDER RESULTS
+       ============================================================ */
+    _renderResults(r, p) {
+      const el = document.getElementById('sf-results');
+      if (!el) return;
+
+      const isL = r.modo === 'leilao';
+      const nomeModo = isL ? 'Leilão' : 'Financiamento';
+      const nomeVenc = r.vencedor === 'imovel' ? nomeModo + ' + Aluguel' : 'Investimento Puro';
+      const classVenc = r.vencedor === 'imovel' ? 'bullish' : 'neutral';
+      const iconVenc = r.vencedor === 'imovel' ? (isL ? '🔨' : '🏠') : '📈';
+
+      // Equity card
+      let equityHTML = '';
+      if (isL && r.imovel.equityInstantaneo > 0) {
+        equityHTML = `
+          <div class="sim-fin-equity">
+            <span class="sim-fin-equity-icon">💰</span>
+            <div class="sim-fin-equity-text">
+              <strong>Equity instantâneo: ${fmt(r.imovel.equityInstantaneo)}</strong><br>
+              Você compraria por ${fmt(p.valorArrematacao)} + ${fmt(r.custasTotal)} de custas um imóvel avaliado em ${fmt(p.valorMercado)}.
             </div>
-            <div class="sim-fin-form">
-                <div class="sim-fin-section"><h3>Imóvel</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field"><label>Valor de mercado</label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-valor-imovel" value="500.000" inputmode="numeric"></div></div>
-                  <div class="sim-fin-field sim-fin-leilao-only" style="display:none"><label>Arrematação <span class="sim-fin-tip" title="Valor pago no leilão">?</span></label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-valor-arrematacao" value="350.000" inputmode="numeric"></div></div>
-                  <div class="sim-fin-field"><label>Entrada</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-entrada" value="20" inputmode="decimal"><span>%</span></div></div>
-                  <div class="sim-fin-field"><label>Valorização anual</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-valorizacao" value="6" inputmode="decimal"><span>% a.a.</span></div></div>
-                  <div class="sim-fin-field"><label>Horizonte</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-horizonte" value="30" inputmode="numeric"><span>anos</span></div></div>
-                  <div class="sim-fin-field sim-fin-field-checkbox"><label class="sim-fin-checkbox-label"><input type="checkbox" id="sim-fin-terreno"><span>Terreno (sem aluguel)</span></label></div>
-                </div></div>
-                <div class="sim-fin-section sim-fin-conv-only"><h3>Financiamento</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field"><label>Juros anuais</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-taxa-fin" value="9" inputmode="decimal"><span>% a.a.</span></div></div>
-                  <div class="sim-fin-field"><label>Prazo</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-prazo" value="30" inputmode="numeric"><span>anos</span></div></div>
-                  <div class="sim-fin-field full-width"><label>Sistema</label><select id="sim-fin-sistema"><option value="sac" selected>SAC</option><option value="price">Price</option></select></div>
-                </div></div>
-                <div class="sim-fin-section sim-fin-leilao-only" style="display:none"><h3>Parcelamento</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field"><label>Parcelas</label><select id="sim-fin-parcelas-leilao"><option value="1">À vista</option><option value="12">12x</option><option value="24">24x</option><option value="30" selected>30x</option><option value="48">48x</option><option value="60">60x</option></select></div>
-                  <div class="sim-fin-field"><label>Correção</label><select id="sim-fin-correcao"><option value="nenhuma">Nenhuma</option><option value="igpm">IGP-M</option><option value="ipca" selected>IPCA</option></select></div>
-                  <div class="sim-fin-field"><label>Taxa fixa +</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-taxa-fixa" value="0" inputmode="decimal"><span>% a.a.</span></div></div>
-                </div></div>
-                <div class="sim-fin-section sim-fin-leilao-only" style="display:none"><h3>Custas</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field"><label>Comissão</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-comissao" value="5" inputmode="decimal"><span>%</span></div></div>
-                  <div class="sim-fin-field"><label>ITBI</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-itbi" value="3" inputmode="decimal"><span>%</span></div></div>
-                  <div class="sim-fin-field"><label>Escritura</label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-escritura" value="1.500" inputmode="numeric"></div></div>
-                  <div class="sim-fin-field"><label>Registro</label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-registro" value="1.500" inputmode="numeric"></div></div>
-                  <div class="sim-fin-field"><label>Imissão</label><div class="sim-fin-input-group"><span>R$</span><input type="text" id="sim-fin-imissao" value="2.000" inputmode="numeric"></div></div>
-                  <div class="sim-fin-field"><label>Prazo imissão</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-meses-imissao" value="4" inputmode="numeric"><span>meses</span></div></div>
-                </div></div>
-                <div class="sim-fin-section sim-fin-aluguel-section"><h3>Aluguel</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field"><label>Aluguel mensal <span class="sim-fin-tip" title="% do valor de mercado/mês">?</span></label><div class="sim-fin-input-group"><input type="text" id="sim-fin-aluguel" value="0,5" inputmode="decimal"><span>% valor</span></div></div>
-                  <div class="sim-fin-field"><label>Vacância</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-vacancia" value="8" inputmode="decimal"><span>%</span></div></div>
-                  <div class="sim-fin-field"><label>Reajuste</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-reajuste" value="6" inputmode="decimal"><span>% a.a.</span></div></div>
-                </div></div>
-                <div class="sim-fin-section"><h3>Investimento</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field full-width"><label>Rendimento mensal <span class="sim-fin-tip" title="1% a.m. ≈ 12,68% a.a.">?</span></label><div class="sim-fin-input-group"><input type="text" id="sim-fin-taxa-inv" value="1" inputmode="decimal"><span>% a.m.</span></div></div>
-                </div></div>
-                <div class="sim-fin-section"><h3>Custos e Inflação</h3><div class="sim-fin-fields">
-                  <div class="sim-fin-field"><label>Inflação</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-inflacao" value="5" inputmode="decimal"><span>% a.a.</span></div></div>
-                  <div class="sim-fin-field"><label>Manutenção</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-manutencao" value="0,5" inputmode="decimal"><span>% a.a.</span></div></div>
-                  <div class="sim-fin-field"><label>IPTU/ITR</label><div class="sim-fin-input-group"><input type="text" id="sim-fin-itr" value="0,3" inputmode="decimal"><span>% a.a.</span></div></div>
-                </div></div>
-            </div>
+          </div>`;
+      }
+
+      // SVG chart
+      const chartHTML = this._buildSVGChart(r);
+
+      // Result cards
+      const valorizacaoImovel = r.imovel.valorFinal - p.valorMercado;
+      const alugMedio = r.imovel.totalAlugueis / r.totalMeses;
+
+      el.innerHTML = `
+        <!-- Vencedor -->
+        <div class="sim-fin-vencedor ${classVenc}">
+          <span class="sim-fin-vencedor-icon">${iconVenc}</span>
+          <div class="sim-fin-vencedor-text">
+            <span class="sim-fin-vencedor-label">Vencedor em ${r.anos} anos</span>
+            <span class="sim-fin-vencedor-nome">${nomeVenc}</span>
           </div>
-          <div class="sim-fin-results"><div id="sim-fin-results-inner" class="sim-fin-results-inner"></div></div>
+          <span class="sim-fin-vencedor-diff">+${fmt(r.diff)}</span>
+        </div>
+
+        ${equityHTML}
+
+        <!-- Chart -->
+        ${chartHTML}
+
+        <!-- Cards -->
+        <div class="sim-fin-cards">
+          <div class="sim-fin-card">
+            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">📈</span><span class="sim-fin-card-title">Patrimônio Investimento</span></div>
+            <div class="sim-fin-card-value">${fmt(r.inv.final)}</div>
+            <div class="sim-fin-card-sub">Lucro: <strong>${fmt(r.inv.lucro)}</strong> · ROI: <strong>${fmtP(r.inv.roi, 0)}</strong></div>
+          </div>
+          <div class="sim-fin-card">
+            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">${isL ? '🔨' : '🏠'}</span><span class="sim-fin-card-title">Patrimônio Imóvel</span></div>
+            <div class="sim-fin-card-value">${fmt(r.imovel.final)}</div>
+            <div class="sim-fin-card-sub">Lucro: <strong>${fmt(r.imovel.lucro)}</strong> · ROI: <strong>${fmtP(r.imovel.roi, 0)}</strong></div>
+          </div>
+          <div class="sim-fin-card">
+            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💳</span><span class="sim-fin-card-title">Parcela mensal</span></div>
+            <div class="sim-fin-card-value">${fmt(r.imovel.primeiraParcela)}</div>
+            <div class="sim-fin-card-sub">${r.imovel.ultimaParcela !== r.imovel.primeiraParcela ? 'Última: <strong>' + fmt(r.imovel.ultimaParcela) + '</strong>' : 'Parcela fixa'}</div>
+          </div>
+          <div class="sim-fin-card">
+            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">🏡</span><span class="sim-fin-card-title">Valor final do imóvel</span></div>
+            <div class="sim-fin-card-value">${fmt(r.imovel.valorFinal)}</div>
+            <div class="sim-fin-card-sub">Valorização: <strong>+${fmt(valorizacaoImovel)}</strong></div>
+          </div>
+          <div class="sim-fin-card">
+            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">🔑</span><span class="sim-fin-card-title">Aluguéis recebidos</span></div>
+            <div class="sim-fin-card-value">${fmt(r.imovel.totalAlugueis)}</div>
+            <div class="sim-fin-card-sub">Média: <strong>${fmt(alugMedio)}/mês</strong></div>
+          </div>
+          <div class="sim-fin-card">
+            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💰</span><span class="sim-fin-card-title">Saldo investido restante</span></div>
+            <div class="sim-fin-card-value ${r.imovel.saldoInvestido < 0 ? 'negative' : ''}">${fmt(r.imovel.saldoInvestido)}</div>
+            <div class="sim-fin-card-sub">${r.imovel.saldoDevedor > 0.5 ? 'Dívida restante: <strong>' + fmt(r.imovel.saldoDevedor) + '</strong>' : 'Financiamento quitado'}</div>
+          </div>
+        </div>
+
+        <!-- Como funciona -->
+        <div class="sim-fin-como">
+          <h4>Como chegamos nesse valor</h4>
+          <ul class="sim-fin-como-steps">
+            ${this._buildExplanation(r, p)}
+          </ul>
+          <p class="sim-fin-disclaimer">Simulação educacional simplificada. Não constitui recomendação de investimento. Valores não consideram IR sobre rendimentos.</p>
         </div>
       `;
-      this.aplicarPreset('moderado');
+    },
+
+    /* ============================================================
+       SVG CHART
+       ============================================================ */
+    _buildSVGChart(r) {
+      const W = 800, H = 240, PAD_L = 55, PAD_R = 15, PAD_T = 15, PAD_B = 30;
+      const chartW = W - PAD_L - PAD_R;
+      const chartH = H - PAD_T - PAD_B;
+
+      const dInv = r.inv.hist;
+      const dImov = r.imovel.hist;
+      const n = dInv.length;
+      if (n < 2) return '';
+
+      // Sample points (max ~80)
+      const step = Math.max(1, Math.floor(n / 80));
+      const pts = [];
+      for (let i = 0; i < n; i++) {
+        if (i % step === 0 || i === n - 1) {
+          pts.push({ m: i + 1, inv: dInv[i], imov: dImov[i] });
+        }
+      }
+
+      const allVals = pts.flatMap(p => [p.inv, p.imov]);
+      const minV = Math.min(...allVals) * 0.95;
+      const maxV = Math.max(...allVals) * 1.05;
+      const rangeV = maxV - minV || 1;
+
+      const x = (idx) => PAD_L + (idx / (pts.length - 1)) * chartW;
+      const y = (val) => PAD_T + chartH - ((val - minV) / rangeV) * chartH;
+
+      // Build path strings
+      let pathInv = '', pathImov = '';
+      pts.forEach((p, i) => {
+        const cmd = i === 0 ? 'M' : 'L';
+        pathInv += `${cmd}${x(i).toFixed(1)},${y(p.inv).toFixed(1)} `;
+        pathImov += `${cmd}${x(i).toFixed(1)},${y(p.imov).toFixed(1)} `;
+      });
+
+      // Y axis labels (5 ticks)
+      let yLabels = '';
+      let gridLines = '';
+      for (let i = 0; i <= 4; i++) {
+        const val = minV + (rangeV * i / 4);
+        const yPos = y(val);
+        yLabels += `<text x="${PAD_L - 8}" y="${yPos + 3}" text-anchor="end" fill="#6e7681" font-size="10">${fmtK(val)}</text>`;
+        gridLines += `<line x1="${PAD_L}" y1="${yPos}" x2="${W - PAD_R}" y2="${yPos}" stroke="#30363d" stroke-width="0.5" stroke-dasharray="3,3"/>`;
+      }
+
+      // X axis labels
+      let xLabels = '';
+      const labelInterval = Math.max(1, Math.floor(pts.length / 6));
+      pts.forEach((p, i) => {
+        if (i % labelInterval === 0 || i === pts.length - 1) {
+          const anos = Math.floor(p.m / 12);
+          const label = anos > 0 ? anos + 'a' : p.m + 'm';
+          xLabels += `<text x="${x(i)}" y="${H - 5}" text-anchor="middle" fill="#6e7681" font-size="10">${label}</text>`;
+        }
+      });
+
+      // Final value markers
+      const lastPt = pts[pts.length - 1];
+      const finalInvY = y(lastPt.inv);
+      const finalImovY = y(lastPt.imov);
+      const finalX = x(pts.length - 1);
+
+      return `
+        <div class="sim-fin-chart-box">
+          <div class="sim-fin-chart-title">Evolução patrimonial</div>
+          <div class="sim-fin-svg-wrap">
+            <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
+              <!-- Grid -->
+              ${gridLines}
+              <!-- Axes labels -->
+              ${yLabels}
+              ${xLabels}
+              <!-- Lines -->
+              <path d="${pathInv}" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="${pathImov}" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <!-- End dots -->
+              <circle cx="${finalX}" cy="${finalInvY}" r="4" fill="#3b82f6"/>
+              <circle cx="${finalX}" cy="${finalImovY}" r="4" fill="#22c55e"/>
+              <!-- End labels -->
+              <text x="${finalX - 8}" y="${finalInvY - 8}" text-anchor="end" fill="#3b82f6" font-size="10" font-weight="600">${fmtK(lastPt.inv)}</text>
+              <text x="${finalX - 8}" y="${finalImovY - 8}" text-anchor="end" fill="#22c55e" font-size="10" font-weight="600">${fmtK(lastPt.imov)}</text>
+            </svg>
+          </div>
+          <div class="sim-fin-chart-legend">
+            <span class="sim-fin-legend-item"><span class="sim-fin-legend-dot" style="background:#3b82f6"></span> Investimento</span>
+            <span class="sim-fin-legend-item"><span class="sim-fin-legend-dot" style="background:#22c55e"></span> ${r.modo === 'leilao' ? 'Leilão' : 'Financiamento'}</span>
+          </div>
+        </div>`;
+    },
+
+    /* ============================================================
+       "COMO FUNCIONA" EXPLANATION
+       ============================================================ */
+    _buildExplanation(r, p) {
+      const items = [];
+      const isL = r.modo === 'leilao';
+      const nomeModo = isL ? 'leilão' : 'financiamento';
+
+      // 1. Capital
+      items.push(`Você tem <strong>${fmt(r.capitalTotal)}</strong> para investir.`);
+
+      // 2. Cenário investimento
+      const rendMensal = (Math.pow(1 + p.rendimentoInv / 100, 1/12) - 1) * 100;
+      items.push(`<strong>Cenário A (Investimento Puro):</strong> aplica tudo a <strong>${fmtP(p.rendimentoInv)} a.a.</strong> (${fmtP(rendMensal)}/mês). Em ${r.anos} anos vira <strong>${fmt(r.inv.final)}</strong>.`);
+
+      // 3. Cenário imóvel - entrada
+      if (isL) {
+        items.push(`<strong>Cenário B (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)}):</strong> arremata por <strong>${fmt(p.valorArrematacao)}</strong> (${fmtP((1 - p.valorArrematacao / p.valorMercado) * 100)} de desconto) um imóvel de <strong>${fmt(p.valorMercado)}</strong>. Paga <strong>${fmt(r.entradaAbs)}</strong> de entrada + <strong>${fmt(r.custasTotal)}</strong> de custas.`);
+      } else {
+        items.push(`<strong>Cenário B (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)}):</strong> compra o imóvel de <strong>${fmt(p.valorMercado)}</strong> com entrada de <strong>${fmt(r.entradaAbs)}</strong> (${fmtP(p.entrada)}). Financia <strong>${fmt(r.financiado)}</strong> a ${fmtP(p.taxaFin)} a.a. em ${p.prazoFin} anos (${p.sistema?.toUpperCase()}).`);
+      }
+
+      // 4. Parcela
+      if (r.imovel.primeiraParcela > 0) {
+        if (r.imovel.primeiraParcela !== r.imovel.ultimaParcela) {
+          items.push(`Parcela inicial: <strong>${fmt(r.imovel.primeiraParcela)}</strong>, última: <strong>${fmt(r.imovel.ultimaParcela)}</strong>. Total pago em parcelas: <strong>${fmt(r.imovel.totalParcelas)}</strong>.`);
+        } else {
+          items.push(`Parcela fixa de <strong>${fmt(r.imovel.primeiraParcela)}</strong>. Total pago: <strong>${fmt(r.imovel.totalParcelas)}</strong>.`);
+        }
+      }
+
+      // 5. Aluguel
+      if (!p.ehTerreno && r.imovel.totalAlugueis > 0) {
+        items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor. Total recebido em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>. Os aluguéis cobrem parcelas e o excedente é reinvestido.`);
+      }
+
+      // 6. Valorização
+      const valoriz = r.imovel.valorFinal - p.valorMercado;
+      items.push(`O imóvel valoriza <strong>${fmtP(p.valorizacao)} a.a.</strong> e passa de ${fmt(p.valorMercado)} para <strong>${fmt(r.imovel.valorFinal)}</strong> (+${fmt(valoriz)}).`);
+
+      // 7. Saldo investido restante
+      if (r.imovel.saldoInvestido < 0) {
+        items.push(`<span class="sf-step-warn-inline">Atenção:</span> o saldo investido ficou <strong>negativo</strong> (${fmt(r.imovel.saldoInvestido)}), indicando que as parcelas superaram aluguel + rendimentos. Seria necessário aportar renda extra.`);
+      }
+
+      // 8. Resultado
+      if (r.vencedor === 'imovel') {
+        items.push(`<strong>Resultado:</strong> patrimônio com imóvel (<strong>${fmt(r.imovel.final)}</strong>) supera investimento puro (<strong>${fmt(r.inv.final)}</strong>) em <strong>${fmt(r.diff)}</strong>. A alavancagem do ${nomeModo} e a renda de aluguel fizeram a diferença.`);
+      } else {
+        items.push(`<strong>Resultado:</strong> investimento puro (<strong>${fmt(r.inv.final)}</strong>) supera o imóvel (<strong>${fmt(r.imovel.final)}</strong>) em <strong>${fmt(r.diff)}</strong>. O rendimento de ${fmtP(p.rendimentoInv)} a.a. compensou mais que a alavancagem imobiliária.`);
+      }
+
+      return items.map((txt, i) => {
+        const isWarn = txt.includes('sf-step-warn-inline') || txt.includes('negativo');
+        return `<li${isWarn ? ' class="sf-step-warn"' : ''}>${txt}</li>`;
+      }).join('');
     }
   };
 
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', () => SIM.init());
-  else SIM.init();
+  /* ============================================================
+     INIT
+     ============================================================ */
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => SIM.init());
+  } else {
+    SIM.init();
+  }
 })();

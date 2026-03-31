@@ -588,6 +588,39 @@
   line-height: 1.4;
 }
 
+/* ========== ANALISE VENDER (leilão) ========== */
+.sim-fin-analise-vender {
+  background: var(--bg-secondary);
+  border: 1px solid rgba(234, 179, 8, 0.25);
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 16px;
+}
+
+.sim-fin-analise-vender h4 {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #e8a84c;
+  margin-bottom: 14px;
+}
+
+.sim-fin-card-highlight {
+  border: 1.5px solid rgba(234, 179, 8, 0.4) !important;
+  background: rgba(234, 179, 8, 0.06) !important;
+}
+
+.sim-fin-card-highlight .sim-fin-card-value {
+  color: #e8a84c !important;
+  font-size: 1.3rem !important;
+}
+
+.sim-fin-slider-sub {
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  margin-top: -2px;
+  font-style: italic;
+}
+
 /* ========== RESPONSIVE ========== */
 @media (max-width: 600px) {
   .sim-fin-wrapper {

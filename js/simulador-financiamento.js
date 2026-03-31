@@ -1,5 +1,5 @@
 /**
- * Simulador: Financiamento Imobiliário vs Investimento — v2
+ * Simulador: Financiamento Imobiliário vs Investimento — v3
  * Rico aos Poucos
  *
  * Modos: Convencional | Leilão
@@ -31,7 +31,11 @@
       entrada: 25,
       parcelas: 30,
       correcao: 'ipca',
-      custas: 30000,
+      comissao: 5,
+      itbi: 3,
+      escrituracao: 2000,
+      custosAdicionais: 2000,
+      descontoVenda: 10,
       mesesSemImovel: 4,
       yieldAluguel: 6,
       valorizacao: 7,
@@ -47,9 +51,9 @@
       otimista:    { valorMercado: 500000, entrada: 20, valorizacao: 8, yieldAluguel: 7, rendimentoInv: 15, taxaFin: 8, prazoFin: 25, sistema: 'sac' }
     },
     leilao: {
-      conservador: { valorMercado: 500000, valorArrematacao: 375000, entrada: 30, parcelas: 30, correcao: 'ipca', custas: 35000, mesesSemImovel: 6, yieldAluguel: 5, valorizacao: 5, rendimentoInv: 10 },
-      moderado:    { valorMercado: 500000, valorArrematacao: 350000, entrada: 25, parcelas: 30, correcao: 'ipca', custas: 30000, mesesSemImovel: 4, yieldAluguel: 6, valorizacao: 7, rendimentoInv: 13.5 },
-      otimista:    { valorMercado: 500000, valorArrematacao: 300000, entrada: 20, parcelas: 12, correcao: 'nenhuma', custas: 25000, mesesSemImovel: 3, yieldAluguel: 7, valorizacao: 9, rendimentoInv: 16 }
+      conservador: { valorMercado: 500000, valorArrematacao: 375000, entrada: 30, parcelas: 30, correcao: 'ipca', comissao: 5, itbi: 3, escrituracao: 3000, custosAdicionais: 5000, descontoVenda: 15, mesesSemImovel: 6, yieldAluguel: 5, valorizacao: 5, rendimentoInv: 10 },
+      moderado:    { valorMercado: 500000, valorArrematacao: 350000, entrada: 25, parcelas: 30, correcao: 'ipca', comissao: 5, itbi: 3, escrituracao: 2000, custosAdicionais: 2000, descontoVenda: 10, mesesSemImovel: 4, yieldAluguel: 6, valorizacao: 7, rendimentoInv: 13.5 },
+      otimista:    { valorMercado: 500000, valorArrematacao: 300000, entrada: 20, parcelas: 12, correcao: 'nenhuma', comissao: 5, itbi: 3, escrituracao: 1500, custosAdicionais: 1000, descontoVenda: 5, mesesSemImovel: 3, yieldAluguel: 7, valorizacao: 9, rendimentoInv: 16 }
     }
   };
 
@@ -136,7 +140,8 @@
                   })}
                 </div>
                 ${this._slider('entrada', 'Entrada', 5, 100, 5, DEFAULTS[this.modo].entrada, v => {
-                  const abs = (this.params.valorMercado || 500000) * v / 100;
+                  const base = this.modo === 'leilao' ? (this.params.valorArrematacao || 350000) : (this.params.valorMercado || 500000);
+                  const abs = base * v / 100;
                   return fmtP(v) + ' <span class="sf-computed">= ' + fmt(abs) + '</span>';
                 })}
                 ${this._slider('valorizacao', 'Valorização anual', 0, 15, 0.5, DEFAULTS[this.modo].valorizacao, v => fmtP(v) + ' a.a.')}
@@ -207,8 +212,24 @@
                     return base + ' + ' + fmtP(v) + ' a.a.';
                   })}
                 </div>
-                ${this._slider('custas', 'Custas totais', 0, 100000, 1000, DEFAULTS.leilao.custas, v => fmt(v) + ' <span class="sf-computed">(leiloeiro + ITBI + cart.)</span>')}
+                ${this._slider('comissao', 'Comissão leiloeiro', 0, 10, 1, DEFAULTS.leilao.comissao, v => {
+                  const arr = this.params.valorArrematacao || DEFAULTS.leilao.valorArrematacao;
+                  const val = arr * v / 100;
+                  return fmtP(v, 0) + ' <span class="sf-computed">= ' + fmt(val) + '</span>';
+                })}
+                ${this._slider('itbi', 'ITBI', 0, 5, 0.5, DEFAULTS.leilao.itbi, v => {
+                  const arr = this.params.valorArrematacao || DEFAULTS.leilao.valorArrematacao;
+                  const val = arr * v / 100;
+                  return fmtP(v) + ' <span class="sf-computed">= ' + fmt(val) + '</span>';
+                })}
+                ${this._slider('escrituracao', 'Escrituração e cartório', 0, 10000, 500, DEFAULTS.leilao.escrituracao, v => fmt(v))}
+                ${this._sliderWithSub('custosAdicionais', 'Custos adicionais', '(regularização, imissão, etc.)', 0, 20000, 1000, DEFAULTS.leilao.custosAdicionais, v => fmt(v))}
                 ${this._slider('mesesSemImovel', 'Meses sem o imóvel', 0, 12, 1, DEFAULTS.leilao.mesesSemImovel, v => v + (v === 1 ? ' mês' : ' meses'))}
+                ${this._slider('descontoVenda', 'Desconto para venda rápida', 0, 20, 1, DEFAULTS.leilao.descontoVenda, v => {
+                  const vm = this.params.valorMercado || DEFAULTS.leilao.valorMercado;
+                  const venderia = vm * (1 - v / 100);
+                  return fmtP(v, 0) + ' <span class="sf-computed">— venderia por ' + fmt(venderia) + '</span>';
+                })}
               </div>
             </div>
 
@@ -237,6 +258,17 @@
         <div class="sim-fin-slider-field" data-sf-slider="${id}">
           <div class="sim-fin-slider-header">
             <span class="sim-fin-slider-label">${label}</span>
+            <span class="sim-fin-slider-value" id="sf-val-${id}">${fmtFn(val)}</span>
+          </div>
+          <input type="range" class="sim-fin-range" id="sf-${id}" min="${min}" max="${max}" step="${step}" value="${val}">
+        </div>`;
+    },
+
+    _sliderWithSub(id, label, subtitle, min, max, step, val, fmtFn) {
+      return `
+        <div class="sim-fin-slider-field" data-sf-slider="${id}">
+          <div class="sim-fin-slider-header">
+            <span class="sim-fin-slider-label">${label} <span class="sf-computed">${subtitle}</span></span>
             <span class="sim-fin-slider-value" id="sf-val-${id}">${fmtFn(val)}</span>
           </div>
           <input type="range" class="sim-fin-range" id="sf-${id}" min="${min}" max="${max}" step="${step}" value="${val}">
@@ -341,7 +373,11 @@
         this.params.parcelas = parseInt(document.getElementById('sf-parcelas')?.value) || 30;
         this.params.correcao = document.getElementById('sf-correcao')?.value || 'nenhuma';
         this.params.taxaFixa = g('sf-taxaFixa');
-        this.params.custas = g('sf-custas');
+        this.params.comissao = g('sf-comissao');
+        this.params.itbi = g('sf-itbi');
+        this.params.escrituracao = g('sf-escrituracao');
+        this.params.custosAdicionais = g('sf-custosAdicionais');
+        this.params.descontoVenda = g('sf-descontoVenda');
         this.params.mesesSemImovel = g('sf-mesesSemImovel');
         this.params.horizonte = Math.ceil((this.params.parcelas || 30) / 12) || 3;
       }
@@ -359,10 +395,22 @@
       }
     },
 
+    _computeCustasTotal(p) {
+      const arr = p.valorArrematacao || p.valorMercado;
+      return (arr * (p.comissao || 0) / 100) +
+             (arr * (p.itbi || 0) / 100) +
+             (p.escrituracao || 0) +
+             (p.custosAdicionais || 0);
+    },
+
     _updateSliderDisplays() {
       const p = this.params;
       this._setVal('valorMercado', fmt(p.valorMercado));
-      this._setVal('entrada', fmtP(p.entrada) + ' <span class="sf-computed">= ' + fmt(p.valorMercado * p.entrada / 100) + '</span>');
+
+      // Entrada: base depends on mode
+      const entradaBase = this.modo === 'leilao' ? (p.valorArrematacao || p.valorMercado) : p.valorMercado;
+      this._setVal('entrada', fmtP(p.entrada) + ' <span class="sf-computed">= ' + fmt(entradaBase * p.entrada / 100) + '</span>');
+
       this._setVal('valorizacao', fmtP(p.valorizacao) + ' a.a.');
       const alugMensal = p.valorMercado * p.yieldAluguel / 100 / 12;
       this._setVal('yieldAluguel', fmtP(p.yieldAluguel) + ' a.a. <span class="sf-computed">= ' + fmt(alugMensal) + '/mês</span>');
@@ -373,10 +421,20 @@
         this._setVal('taxaFin', fmtP(p.taxaFin) + ' a.a.');
         this._setVal('prazoFin', p.prazoFin + ' anos');
       } else {
+        const arr = p.valorArrematacao || p.valorMercado;
         const desc = ((1 - p.valorArrematacao / p.valorMercado) * 100);
         this._setVal('valorArrematacao', fmt(p.valorArrematacao) + ' <span class="sf-computed">(' + (desc > 0 ? desc.toFixed(0) + '% desconto' : 'sem desconto') + ')</span>');
-        this._setVal('custas', fmt(p.custas) + ' <span class="sf-computed">(leiloeiro + ITBI + cart.)</span>');
+
+        // Custas breakdown displays
+        this._setVal('comissao', fmtP(p.comissao, 0) + ' <span class="sf-computed">= ' + fmt(arr * p.comissao / 100) + '</span>');
+        this._setVal('itbi', fmtP(p.itbi) + ' <span class="sf-computed">= ' + fmt(arr * p.itbi / 100) + '</span>');
+        this._setVal('escrituracao', fmt(p.escrituracao));
+        this._setVal('custosAdicionais', fmt(p.custosAdicionais));
         this._setVal('mesesSemImovel', p.mesesSemImovel + (p.mesesSemImovel === 1 ? ' mês' : ' meses'));
+
+        // Desconto venda rápida
+        const venderia = p.valorMercado * (1 - p.descontoVenda / 100);
+        this._setVal('descontoVenda', fmtP(p.descontoVenda, 0) + ' <span class="sf-computed">— venderia por ' + fmt(venderia) + '</span>');
       }
     },
 
@@ -441,7 +499,11 @@
         s('sf-parcelas', p.parcelas);
         s('sf-correcao', p.correcao);
         s('sf-taxaFixa', p.taxaFixa || 0);
-        s('sf-custas', p.custas);
+        s('sf-comissao', p.comissao);
+        s('sf-itbi', p.itbi);
+        s('sf-escrituracao', p.escrituracao);
+        s('sf-custosAdicionais', p.custosAdicionais);
+        s('sf-descontoVenda', p.descontoVenda);
         s('sf-mesesSemImovel', p.mesesSemImovel);
         // Update arrematação max
         const arrSlider = document.getElementById('sf-valorArrematacao');
@@ -479,7 +541,7 @@
         const arr = p.valorArrematacao || valorMercado;
         entradaAbs = arr * (p.entrada / 100);
         financiado = arr - entradaAbs;
-        custasTotal = p.custas || 0;
+        custasTotal = this._computeCustasTotal(p);
         mesesFin = p.parcelas || 1;
 
         let txCorr = 0;
@@ -588,6 +650,62 @@
         equityInstantaneo = valorMercado - (p.valorArrematacao || valorMercado) - custasTotal;
       }
 
+      // Leilão-specific: ficar ou vender analysis
+      let analiseVender = null;
+      if (isL) {
+        const arr = p.valorArrematacao || valorMercado;
+        const custoAquisicao = arr + custasTotal;
+
+        // Lucro bruto na arrematação
+        const lucroBruto = valorMercado - arr - custasTotal;
+
+        // Lucro se vender rápido (com desconto)
+        const precoVendaRapida = valorMercado * (1 - (p.descontoVenda || 0) / 100);
+        const lucroVendaRapida = precoVendaRapida - arr - custasTotal;
+
+        // Yield real vs yield mercado
+        const alugMensal = valorMercado * yieldMensal;
+        const yieldRealAnual = custoAquisicao > 0 ? (alugMensal / custoAquisicao) * 12 * 100 : 0;
+        const yieldMercadoAnual = p.yieldAluguel || 0;
+
+        // Break-even calculation:
+        // If you sell at price X now, net after selling costs (~6%) = X * 0.94 - remaining debt
+        // (for simplicity, we assume selling at start so remaining debt = financiado, and we have the invested rest)
+        // Scenario SELL: sell at X, pay 6% selling costs, pay off debt, invest remainder for full period
+        //   Net from sale = X * 0.94 - saldoDevedor_at_sale
+        //   But if selling immediately: saldoDevedor = financiado, saldoResto from investment capital
+        //   Total cash if sell = (X * 0.94 - financiado) + (capitalTotal - entradaAbs - custasTotal) = X*0.94 - financiado + financiado = X*0.94
+        //   Wait, let's think differently:
+        //   You already spent: entradaAbs + custasTotal (upfront). You owe: financiado (paid over time).
+        //   If you sell immediately: you get X * 0.94, pay off financiado, keep the rest.
+        //   Cash in hand = X * 0.94 - financiado + saldoResto_initial
+        //   saldoResto_initial = capitalTotal - entradaAbs - custasTotal = financiado
+        //   Cash in hand = X * 0.94 - financiado + financiado = X * 0.94
+        //   Actually, saldoResto at time 0 = capitalTotal - entradaAbs - custasTotal
+        //   capitalTotal = entradaAbs + custasTotal + financiado → saldoResto_0 = financiado
+        //   So cash if sell at time 0 = X*0.94 - financiado + financiado = X * 0.94
+        //   This invested for totalMeses = X * 0.94 * (1+txInvMensal)^totalMeses
+        //
+        // Scenario KEEP: patrimonio final = patrimonioFinalImovel (already computed)
+        //
+        // Break-even: X * 0.94 * (1+txInvMensal)^totalMeses = patrimonioFinalImovel
+        //   X = patrimonioFinalImovel / (0.94 * (1+txInvMensal)^totalMeses)
+
+        const taxaVenda = 0.06; // 6% corretagem + impostos
+        const fatorInv = Math.pow(1 + txInvMensal, totalMeses);
+        const precoEquilibrio = patrimonioFinalImovel / ((1 - taxaVenda) * fatorInv);
+
+        analiseVender = {
+          lucroBruto,
+          precoVendaRapida,
+          lucroVendaRapida,
+          yieldRealAnual,
+          yieldMercadoAnual,
+          precoEquilibrio,
+          custoAquisicao
+        };
+      }
+
       return {
         modo: this.modo,
         totalMeses, anos, capitalTotal, entradaAbs, financiado, custasTotal,
@@ -599,7 +717,8 @@
           totalParcelas, totalAlugueis,
           primeiraParcela, ultimaParcela,
           equityInstantaneo
-        }
+        },
+        analiseVender
       };
     },
 
@@ -635,6 +754,41 @@
       // Result cards
       const valorizacaoImovel = r.imovel.valorFinal - p.valorMercado;
       const alugMedio = r.imovel.totalAlugueis / r.totalMeses;
+
+      // Ficar ou Vender section (leilão only)
+      let analiseHTML = '';
+      if (isL && r.analiseVender) {
+        const a = r.analiseVender;
+        const lucroBrutoClass = a.lucroBruto >= 0 ? 'positive' : 'negative';
+        const lucroVendaClass = a.lucroVendaRapida >= 0 ? 'positive' : 'negative';
+
+        analiseHTML = `
+          <div class="sim-fin-analise-vender">
+            <h4>Análise: Ficar ou Vender?</h4>
+            <div class="sim-fin-cards">
+              <div class="sim-fin-card">
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💎</span><span class="sim-fin-card-title">Lucro bruto na arrematação</span></div>
+                <div class="sim-fin-card-value ${lucroBrutoClass}">${fmt(a.lucroBruto)}</div>
+                <div class="sim-fin-card-sub">${fmt(p.valorMercado)} - ${fmt(p.valorArrematacao)} - ${fmt(r.custasTotal)} custas</div>
+              </div>
+              <div class="sim-fin-card">
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">⚡</span><span class="sim-fin-card-title">Lucro se vender rápido</span></div>
+                <div class="sim-fin-card-value ${lucroVendaClass}">${fmt(a.lucroVendaRapida)}</div>
+                <div class="sim-fin-card-sub">Venda por ${fmt(a.precoVendaRapida)} (${fmtP(p.descontoVenda, 0)} desconto)</div>
+              </div>
+              <div class="sim-fin-card">
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">📊</span><span class="sim-fin-card-title">Yield real</span></div>
+                <div class="sim-fin-card-value">${fmtP(a.yieldRealAnual)} a.a.</div>
+                <div class="sim-fin-card-sub">Pagando valor de mercado: ${fmtP(a.yieldMercadoAnual)} a.a.</div>
+              </div>
+              <div class="sim-fin-card sim-fin-card-highlight">
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">⚖️</span><span class="sim-fin-card-title">Preço de equilíbrio</span></div>
+                <div class="sim-fin-card-value">${fmt(a.precoEquilibrio)}</div>
+                <div class="sim-fin-card-sub">Acima disso, melhor vender. Abaixo, melhor ficar.</div>
+              </div>
+            </div>
+          </div>`;
+      }
 
       el.innerHTML = `
         <!-- Vencedor -->
@@ -685,6 +839,8 @@
             <div class="sim-fin-card-sub">${r.imovel.saldoDevedor > 0.5 ? 'Dívida restante: <strong>' + fmt(r.imovel.saldoDevedor) + '</strong>' : 'Financiamento quitado'}</div>
           </div>
         </div>
+
+        ${analiseHTML}
 
         <!-- Como funciona -->
         <div class="sim-fin-como">
@@ -807,7 +963,11 @@
 
       // 3. Cenário imóvel - entrada
       if (isL) {
-        items.push(`<strong>Cenário B (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)}):</strong> arremata por <strong>${fmt(p.valorArrematacao)}</strong> (${fmtP((1 - p.valorArrematacao / p.valorMercado) * 100)} de desconto) um imóvel de <strong>${fmt(p.valorMercado)}</strong>. Paga <strong>${fmt(r.entradaAbs)}</strong> de entrada + <strong>${fmt(r.custasTotal)}</strong> de custas.`);
+        const arr = p.valorArrematacao || p.valorMercado;
+        const valComissao = arr * (p.comissao || 0) / 100;
+        const valItbi = arr * (p.itbi || 0) / 100;
+        const custasBreakdown = `comissão leiloeiro ${fmt(valComissao)} (${fmtP(p.comissao, 0)}) + ITBI ${fmt(valItbi)} (${fmtP(p.itbi)}) + escrituração ${fmt(p.escrituracao)} + custos adicionais ${fmt(p.custosAdicionais)}`;
+        items.push(`<strong>Cenário B (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)}):</strong> arremata por <strong>${fmt(p.valorArrematacao)}</strong> (${fmtP((1 - p.valorArrematacao / p.valorMercado) * 100)} de desconto) um imóvel de <strong>${fmt(p.valorMercado)}</strong>. Paga <strong>${fmt(r.entradaAbs)}</strong> de entrada + <strong>${fmt(r.custasTotal)}</strong> de custas (${custasBreakdown}).`);
       } else {
         items.push(`<strong>Cenário B (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)}):</strong> compra o imóvel de <strong>${fmt(p.valorMercado)}</strong> com entrada de <strong>${fmt(r.entradaAbs)}</strong> (${fmtP(p.entrada)}). Financia <strong>${fmt(r.financiado)}</strong> a ${fmtP(p.taxaFin)} a.a. em ${p.prazoFin} anos (${p.sistema?.toUpperCase()}).`);
       }
@@ -830,12 +990,23 @@
       const valoriz = r.imovel.valorFinal - p.valorMercado;
       items.push(`O imóvel valoriza <strong>${fmtP(p.valorizacao)} a.a.</strong> e passa de ${fmt(p.valorMercado)} para <strong>${fmt(r.imovel.valorFinal)}</strong> (+${fmt(valoriz)}).`);
 
-      // 7. Saldo investido restante
+      // 7. Yield advantage (leilão only)
+      if (isL && r.analiseVender) {
+        const a = r.analiseVender;
+        items.push(`Como você pagou menos, seu yield real é <strong>${fmtP(a.yieldRealAnual)} a.a.</strong> vs <strong>${fmtP(a.yieldMercadoAnual)} a.a.</strong> se tivesse pago valor de mercado.`);
+      }
+
+      // 8. Saldo investido restante
       if (r.imovel.saldoInvestido < 0) {
         items.push(`<span class="sf-step-warn-inline">Atenção:</span> o saldo investido ficou <strong>negativo</strong> (${fmt(r.imovel.saldoInvestido)}), indicando que as parcelas superaram aluguel + rendimentos. Seria necessário aportar renda extra.`);
       }
 
-      // 8. Resultado
+      // 9. Break-even (leilão only)
+      if (isL && r.analiseVender) {
+        items.push(`O preço de equilíbrio para venda é <strong>${fmt(r.analiseVender.precoEquilibrio)}</strong>. Se conseguir vender acima desse valor, o resultado é melhor do que ficar com o imóvel pelo período completo.`);
+      }
+
+      // 10. Resultado
       if (r.vencedor === 'imovel') {
         items.push(`<strong>Resultado:</strong> patrimônio com imóvel (<strong>${fmt(r.imovel.final)}</strong>) supera investimento puro (<strong>${fmt(r.inv.final)}</strong>) em <strong>${fmt(r.diff)}</strong>. A alavancagem do ${nomeModo} e a renda de aluguel fizeram a diferença.`);
       } else {

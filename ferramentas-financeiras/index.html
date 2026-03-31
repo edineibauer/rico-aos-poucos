@@ -195,35 +195,40 @@
                     <input type="hidden" id="comp2PeriodoFim" value="2025-12">
                   </div>
                 </div>
-                <div class="comp2-field">
+                <div class="comp2-field comp2-field-slider">
                   <label>Valor inicial</label>
-                  <div class="comp2-input-group">
-                    <span>R$</span>
-                    <input type="text" id="comp2Valor" value="100.000" inputmode="numeric">
+                  <div class="comp2-slider-wrap">
+                    <input type="range" class="comp2-range" id="comp2ValorRange" min="10000" max="5000000" step="10000" value="100000">
+                    <span class="comp2-slider-val" id="comp2ValorDisplay">R$ 100.000</span>
+                    <button class="comp2-edit-btn" id="comp2ValorEdit" title="Digitar valor">✏️</button>
                   </div>
+                  <input type="text" id="comp2Valor" value="100.000" inputmode="numeric" class="comp2-input-manual" style="display:none">
                 </div>
               </div>
               <div class="comp2-config-row comp2-adjustments">
-                <div class="comp2-field">
-                  <label>Dólar + renda (a.a.) <span class="comp2-tooltip" title="Base: valorização do dólar (câmbio BRL/USD histórico). Este campo adiciona rendimento extra, ex: conta em corretora americana rendendo 4% ao ano sobre o capital dolarizado.">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2DolarExtra" value="4" inputmode="decimal">
-                    <span>%</span>
+                <div class="comp2-field comp2-field-slider">
+                  <label>Dólar + renda (a.a.) <span class="comp2-tooltip" title="Base: câmbio BRL/USD histórico. Adiciona rendimento extra (ex: Treasury 4% a.a.)">?</span></label>
+                  <div class="comp2-slider-wrap">
+                    <input type="range" class="comp2-range" id="comp2DolarExtraRange" min="0" max="10" step="0.5" value="4">
+                    <span class="comp2-slider-val" id="comp2DolarExtraDisplay">4,0%</span>
                   </div>
+                  <input type="hidden" id="comp2DolarExtra" value="4">
                 </div>
-                <div class="comp2-field">
-                  <label>Imóveis + aluguel (a.a.) <span class="comp2-tooltip" title="Base: valorização real de imóveis pelo índice FipeZap (média ~3-5% a.a. nominal). Este campo adiciona o rendimento de aluguel líquido anual. Ex: 4,5% = R$4.500/ano para imóvel de R$100.000.">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2ImoveisRenda" value="4,5" inputmode="decimal">
-                    <span>%</span>
+                <div class="comp2-field comp2-field-slider">
+                  <label>Imóveis + aluguel (a.a.) <span class="comp2-tooltip" title="Base: FipeZap (~3-5% a.a.). Adiciona rendimento de aluguel líquido anual.">?</span></label>
+                  <div class="comp2-slider-wrap">
+                    <input type="range" class="comp2-range" id="comp2ImoveisRendaRange" min="0" max="10" step="0.5" value="4.5">
+                    <span class="comp2-slider-val" id="comp2ImoveisRendaDisplay">4,5%</span>
                   </div>
+                  <input type="hidden" id="comp2ImoveisRenda" value="4,5">
                 </div>
-                <div class="comp2-field">
-                  <label>Simular inflação <span class="comp2-tooltip" title="Opcional: se informado, substitui a inflação histórica real por este valor fixo anual em todos os cálculos de retorno real">?</span></label>
-                  <div class="comp2-input-group">
-                    <input type="text" id="comp2InflacaoCustom" value="" placeholder="--" inputmode="decimal">
-                    <span>% a.a.</span>
+                <div class="comp2-field comp2-field-slider">
+                  <label>Simular inflação <span class="comp2-tooltip" title="Opcional: substitui inflação histórica por valor fixo anual">?</span></label>
+                  <div class="comp2-slider-wrap">
+                    <input type="range" class="comp2-range" id="comp2InflacaoRange" min="0" max="15" step="0.5" value="0">
+                    <span class="comp2-slider-val" id="comp2InflacaoDisplay">Histórica</span>
                   </div>
+                  <input type="hidden" id="comp2InflacaoCustom" value="">
                 </div>
               </div>
 
@@ -232,25 +237,25 @@
                 <button class="comp2-chip" data-asset="ibovespa">
                   <span class="chip-dot" style="background:#3b82f6"></span>IBOV
                 </button>
-                <button class="comp2-chip active" data-asset="ibovtr">
+                <button class="comp2-chip" data-asset="ibovtr">
                   <span class="chip-dot" style="background:#2563eb"></span>IBOV TR
                 </button>
-                <button class="comp2-chip active" data-asset="dolar">
+                <button class="comp2-chip" data-asset="dolar">
                   <span class="chip-dot" style="background:#22c55e"></span>Dólar
                 </button>
-                <button class="comp2-chip active" data-asset="ouro">
+                <button class="comp2-chip" data-asset="ouro">
                   <span class="chip-dot" style="background:#eab308"></span>Ouro
                 </button>
-                <button class="comp2-chip active" data-asset="fii_ifix">
+                <button class="comp2-chip" data-asset="fii_ifix">
                   <span class="chip-dot" style="background:#8b5cf6"></span>FIIs
                 </button>
                 <button class="comp2-chip" data-asset="idiv">
                   <span class="chip-dot" style="background:#10b981"></span>IDIV
                 </button>
-                <button class="comp2-chip" data-asset="cdi">
+                <button class="comp2-chip active" data-asset="cdi">
                   <span class="chip-dot" style="background:#ec4899"></span>CDI
                 </button>
-                <button class="comp2-chip active" data-asset="imab5">
+                <button class="comp2-chip" data-asset="imab5">
                   <span class="chip-dot" style="background:#06b6d4"></span>IMA-B 5+
                 </button>
                 <button class="comp2-chip" data-asset="sp500_brl">
@@ -259,7 +264,7 @@
                 <button class="comp2-chip" data-asset="tlt_brl">
                   <span class="chip-dot" style="background:#0ea5e9"></span>TLT
                 </button>
-                <button class="comp2-chip" data-asset="imoveis_fipezap">
+                <button class="comp2-chip active" data-asset="imoveis_fipezap">
                   <span class="chip-dot" style="background:#14b8a6"></span>Imóveis
                 </button>
                 <button class="comp2-chip" data-asset="bitcoin_brl">
@@ -267,17 +272,11 @@
                 </button>
               </div>
 
-              <!-- Action button -->
-              <button class="comp2-btn-run" id="comp2BtnRun">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <polygon points="5 3 19 12 5 21 5 3"/>
-                </svg>
-                Comparar
-              </button>
+              <!-- Botão removido: comparação é automática -->
             </div>
 
             <!-- Results -->
-            <div class="comp2-results" id="comp2Results" style="display: none;">
+            <div class="comp2-results" id="comp2Results">
               <!-- Chart -->
               <div class="comp2-card comp2-chart-card">
                 <div class="comp2-card-header">

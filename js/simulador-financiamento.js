@@ -111,20 +111,6 @@
             <button class="sim-fin-modo-btn" data-modo="leilao"><span class="sim-fin-modo-icon">🔨</span><span>Leilão</span></button>
           </div>
 
-          <!-- Presets -->
-          <div class="sim-fin-presets sf-presets-conv">
-            <span class="sim-fin-presets-label">Cenários:</span>
-            <button class="sim-fin-preset" data-preset="conservador">Conservador</button>
-            <button class="sim-fin-preset active" data-preset="moderado">Moderado</button>
-            <button class="sim-fin-preset" data-preset="otimista">Otimista</button>
-          </div>
-          <div class="sim-fin-presets sf-presets-leilao" style="display:none">
-            <span class="sim-fin-presets-label">Cenários:</span>
-            <button class="sim-fin-preset" data-preset="conservador">Conservador</button>
-            <button class="sim-fin-preset active" data-preset="moderado">Moderado</button>
-            <button class="sim-fin-preset" data-preset="otimista">Otimista</button>
-          </div>
-
           <!-- CONFIG SECTIONS -->
           <div class="sim-fin-config" id="sf-config">
 

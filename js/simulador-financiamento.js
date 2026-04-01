@@ -57,6 +57,9 @@
     }
   };
 
+  // Reajuste anual do aluguel: IGP-M médio histórico (últimos 20 anos, excl. outliers 2020/2021)
+  const REAJUSTE_ALUGUEL = 4.5;
+
   /* ============================================================
      UTILITY FORMATTERS
      ============================================================ */
@@ -579,9 +582,9 @@
         // Valorização do imóvel
         valorImovel *= (1 + valMensal);
 
-        // Reajuste anual do aluguel (pela valorização, ao completar cada ano)
+        // Reajuste anual do aluguel pelo IGP-M (média histórica)
         if (!p.ehTerreno && m > 1 && (m - 1) % 12 === 0) {
-          aluguelBase = valorImovel * yieldMensal;
+          aluguelBase *= (1 + REAJUSTE_ALUGUEL / 100);
         }
 
         // Aluguel recebido (0 durante imissão)
@@ -988,12 +991,12 @@
         items.push(`Os <strong>${fmt(capitalInvestido)}</strong> restantes ficam aplicados a <strong>${fmtP(p.rendimentoInv)} a.a.</strong> — o mesmo rendimento do Cenário A. Desse montante saem os pagamentos das parcelas, e os aluguéis recebidos são reinvestidos ali.`);
       }
 
-      // 6. Aluguel (com crescimento)
+      // 6. Aluguel (com reajuste IGP-M)
       if (!p.ehTerreno && r.imovel.totalAlugueis > 0) {
         const alugInicio = r.imovel.primeiroAluguel;
         const alugFim = r.imovel.ultimoAluguel;
-        if (p.valorizacao > 0 && alugFim > alugInicio * 1.1) {
-          items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor de mercado: <strong>${fmt(alugInicio)}/mês</strong> no início. Como o imóvel valoriza <strong>${fmtP(p.valorizacao)} a.a.</strong>, o aluguel é reajustado anualmente, chegando a <strong>${fmt(alugFim)}/mês</strong> no último ano. Total em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>.`);
+        if (alugFim > alugInicio * 1.05) {
+          items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor de mercado: <strong>${fmt(alugInicio)}/mês</strong> no início. O aluguel é reajustado anualmente pelo IGP-M (média histórica de <strong>${fmtP(REAJUSTE_ALUGUEL)} a.a.</strong>), chegando a <strong>${fmt(alugFim)}/mês</strong> no último ano. Total em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>.`);
         } else {
           items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor. Total recebido em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>.`);
         }

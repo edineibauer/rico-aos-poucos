@@ -57,6 +57,9 @@
     }
   };
 
+  // Reajuste anual do aluguel: IGP-M médio histórico (últimos 20 anos, excl. outliers 2020/2021)
+  const REAJUSTE_ALUGUEL = 4.5;
+
   /* ============================================================
      UTILITY FORMATTERS
      ============================================================ */
@@ -570,14 +573,18 @@
       const histImovel = [];
       let primeiraParcela = 0;
       let ultimaParcela = 0;
+      let mesCrossoverAluguel = 0;
+      let primeiroAluguel = 0;
+      let ultimoAluguel = 0;
+      let rendInvMes1 = 0;
 
       for (let m = 1; m <= totalMeses; m++) {
         // Valorização do imóvel
         valorImovel *= (1 + valMensal);
 
-        // Reajuste anual do aluguel (pela valorização, ao completar cada ano)
+        // Reajuste anual do aluguel pelo IGP-M (média histórica)
         if (!p.ehTerreno && m > 1 && (m - 1) % 12 === 0) {
-          aluguelBase = valorImovel * yieldMensal;
+          aluguelBase *= (1 + REAJUSTE_ALUGUEL / 100);
         }
 
         // Aluguel recebido (0 durante imissão)
@@ -609,6 +616,16 @@
         }
 
         totalAlugueis += alugRec;
+
+        // Track metrics
+        if (m === 1) {
+          primeiroAluguel = alugRec;
+          rendInvMes1 = saldoResto * txInvMensal;
+        }
+        ultimoAluguel = alugRec;
+        if (!mesCrossoverAluguel && parcela > 0 && alugRec >= parcela) {
+          mesCrossoverAluguel = m;
+        }
 
         // Saldo investido restante: rende + aluguel - parcela
         const fluxo = alugRec - parcela;
@@ -702,6 +719,7 @@
           valorFinal: valorImovel, saldoInvestido: saldoResto, saldoDevedor,
           totalParcelas, totalAlugueis,
           primeiraParcela, ultimaParcela,
+          mesCrossoverAluguel, primeiroAluguel, ultimoAluguel, rendInvMes1,
           equityInstantaneo
         },
         analiseVender
@@ -967,23 +985,63 @@
         }
       }
 
-      // 5. Aluguel
-      if (!p.ehTerreno && r.imovel.totalAlugueis > 0) {
-        items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor. Total recebido em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>. Os aluguéis cobrem parcelas e o excedente é reinvestido.`);
+      // 5. Capital investido restante
+      const capitalInvestido = r.capitalTotal - r.entradaAbs - (r.custasTotal || 0);
+      if (capitalInvestido > 0) {
+        items.push(`Os <strong>${fmt(capitalInvestido)}</strong> restantes ficam aplicados a <strong>${fmtP(p.rendimentoInv)} a.a.</strong> — o mesmo rendimento do Cenário A. Desse montante saem os pagamentos das parcelas, e os aluguéis recebidos são reinvestidos ali.`);
       }
 
-      // 6. Valorização
+      // 6. Aluguel (com reajuste IGP-M)
+      if (!p.ehTerreno && r.imovel.totalAlugueis > 0) {
+        const alugInicio = r.imovel.primeiroAluguel;
+        const alugFim = r.imovel.ultimoAluguel;
+        if (alugFim > alugInicio * 1.05) {
+          items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor de mercado: <strong>${fmt(alugInicio)}/mês</strong> no início. O aluguel é reajustado anualmente pelo IGP-M (média histórica de <strong>${fmtP(REAJUSTE_ALUGUEL)} a.a.</strong>), chegando a <strong>${fmt(alugFim)}/mês</strong> no último ano. Total em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>.`);
+        } else {
+          items.push(`O imóvel gera aluguel a <strong>${fmtP(p.yieldAluguel)} a.a.</strong> do valor. Total recebido em ${r.anos} anos: <strong>${fmt(r.imovel.totalAlugueis)}</strong>.`);
+        }
+      }
+
+      // 7. Fluxo mensal detalhado
+      if (r.imovel.primeiraParcela > 0 && capitalInvestido > 0) {
+        const receitaMes1 = r.imovel.primeiroAluguel + r.imovel.rendInvMes1;
+        const fluxoMes1 = receitaMes1 - r.imovel.primeiraParcela;
+        const partsReceita = [];
+        if (r.imovel.primeiroAluguel > 0) partsReceita.push(`aluguel <strong>${fmt(r.imovel.primeiroAluguel)}</strong>`);
+        partsReceita.push(`rendimento do capital <strong>${fmt(r.imovel.rendInvMes1)}</strong>`);
+        const receitaStr = partsReceita.join(' + ');
+        if (fluxoMes1 >= 0) {
+          items.push(`No mês 1, ${receitaStr} = <strong>${fmt(receitaMes1)}</strong> contra a parcela de <strong>${fmt(r.imovel.primeiraParcela)}</strong> — sobram <strong>${fmt(fluxoMes1)}</strong> que são reinvestidos.`);
+        } else {
+          items.push(`No mês 1, ${receitaStr} = <strong>${fmt(receitaMes1)}</strong>, não cobrem a parcela de <strong>${fmt(r.imovel.primeiraParcela)}</strong>. Déficit de <strong>${fmt(Math.abs(fluxoMes1))}/mês</strong> reduz o capital investido.`);
+        }
+        if (r.imovel.mesCrossoverAluguel > 0) {
+          const mc = r.imovel.mesCrossoverAluguel;
+          const anosCross = Math.floor(mc / 12);
+          const mesesCross = mc % 12;
+          const tempoStr = anosCross > 0 ? anosCross + (anosCross > 1 ? ' anos' : ' ano') + (mesesCross > 0 ? ' e ' + mesesCross + (mesesCross > 1 ? ' meses' : ' mês') : '') : mesesCross + (mesesCross > 1 ? ' meses' : ' mês');
+          items.push(`A partir do mês ${mc} (${tempoStr}), o aluguel sozinho já supera a parcela do ${nomeModo}.`);
+        }
+      }
+
+      // 8. Valorização
       const valoriz = r.imovel.valorFinal - p.valorMercado;
       items.push(`O imóvel valoriza <strong>${fmtP(p.valorizacao)} a.a.</strong> e passa de ${fmt(p.valorMercado)} para <strong>${fmt(r.imovel.valorFinal)}</strong> (+${fmt(valoriz)}).`);
 
-      // 7. Yield advantage (leilão only)
+      // 9. Yield advantage (leilão only)
       if (isL && r.analiseVender) {
         const a = r.analiseVender;
         items.push(`Como você pagou menos, seu yield real é <strong>${fmtP(a.yieldRealAnual)} a.a.</strong> vs <strong>${fmtP(a.yieldMercadoAnual)} a.a.</strong> se tivesse pago valor de mercado.`);
       }
 
-      // 8. Saldo investido restante
-      if (r.imovel.saldoInvestido < 0) {
+      // 10. Saldo final do capital investido
+      if (capitalInvestido > 0) {
+        if (r.imovel.saldoInvestido >= 0) {
+          items.push(`Ao final de ${r.anos} anos, o capital investido de <strong>${fmt(capitalInvestido)}</strong> está em <strong>${fmt(r.imovel.saldoInvestido)}</strong>. O capital não apenas cobriu todas as parcelas como ainda cresceu.`);
+        } else {
+          items.push(`<span class="sf-step-warn-inline">Atenção:</span> ao final de ${r.anos} anos, o capital investido de <strong>${fmt(capitalInvestido)}</strong> ficou <strong>negativo</strong> em <strong>${fmt(r.imovel.saldoInvestido)}</strong>. As parcelas superaram aluguel + rendimentos — seria necessário aportar renda extra.`);
+        }
+      } else if (r.imovel.saldoInvestido < 0) {
         items.push(`<span class="sf-step-warn-inline">Atenção:</span> o saldo investido ficou <strong>negativo</strong> (${fmt(r.imovel.saldoInvestido)}), indicando que as parcelas superaram aluguel + rendimentos. Seria necessário aportar renda extra.`);
       }
 
@@ -992,11 +1050,16 @@
         items.push(`O preço de equilíbrio para venda é <strong>${fmt(r.analiseVender.precoEquilibrio)}</strong>. Se conseguir vender acima desse valor, o resultado é melhor do que ficar com o imóvel pelo período completo.`);
       }
 
-      // 10. Resultado
+      // Resultado com decomposição
+      const partes = [`imóvel ${fmt(r.imovel.valorFinal)}`];
+      if (Math.abs(r.imovel.saldoInvestido) > 1) partes.push(`${r.imovel.saldoInvestido >= 0 ? '+' : '−'} investimentos ${fmt(Math.abs(r.imovel.saldoInvestido))}`);
+      if (r.imovel.saldoDevedor > 0.5) partes.push(`− dívida ${fmt(r.imovel.saldoDevedor)}`);
+      const decomposicao = partes.join(' ');
+
       if (r.vencedor === 'imovel') {
-        items.push(`<strong>Resultado:</strong> patrimônio com imóvel (<strong>${fmt(r.imovel.final)}</strong>) supera investimento puro (<strong>${fmt(r.inv.final)}</strong>) em <strong>${fmt(r.diff)}</strong>. A alavancagem do ${nomeModo} e a renda de aluguel fizeram a diferença.`);
+        items.push(`<strong>Resultado:</strong> patrimônio com imóvel = ${decomposicao} = <strong>${fmt(r.imovel.final)}</strong>, superando investimento puro (<strong>${fmt(r.inv.final)}</strong>) em <strong>${fmt(r.diff)}</strong>.`);
       } else {
-        items.push(`<strong>Resultado:</strong> investimento puro (<strong>${fmt(r.inv.final)}</strong>) supera o imóvel (<strong>${fmt(r.imovel.final)}</strong>) em <strong>${fmt(r.diff)}</strong>. O rendimento de ${fmtP(p.rendimentoInv)} a.a. compensou mais que a alavancagem imobiliária.`);
+        items.push(`<strong>Resultado:</strong> patrimônio com imóvel = ${decomposicao} = <strong>${fmt(r.imovel.final)}</strong>. Investimento puro (<strong>${fmt(r.inv.final)}</strong>) supera em <strong>${fmt(r.diff)}</strong>.`);
       }
 
       return items.map((txt, i) => {

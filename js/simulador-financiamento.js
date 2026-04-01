@@ -17,11 +17,11 @@
     convencional: {
       valorMercado: 500000,
       entrada: 20,
-      valorizacao: 6,
-      yieldAluguel: 6,
+      valorizacao: 7,
+      yieldAluguel: 4.5,
       rendimentoInv: 12,
       ehTerreno: false,
-      taxaFin: 9,
+      taxaFin: 10,
       prazoFin: 30,
       sistema: 'sac'
     },

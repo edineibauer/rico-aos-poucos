@@ -402,6 +402,153 @@
   flex-shrink: 0;
 }
 
+/* ========== RANKING ========== */
+.sim-fin-ranking {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  padding: 16px 18px;
+}
+
+.sim-fin-ranking-title {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+}
+
+.sim-fin-rank-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  margin-bottom: 4px;
+  background: var(--bg-tertiary);
+}
+
+.sim-fin-rank-item.sim-fin-rank-winner {
+  background: rgba(63, 185, 80, 0.07);
+}
+
+.sim-fin-rank-pos {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  min-width: 24px;
+}
+
+.sim-fin-rank-winner .sim-fin-rank-pos {
+  color: var(--bullish);
+}
+
+.sim-fin-rank-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.sim-fin-rank-nome {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  flex: 1;
+  min-width: 0;
+}
+
+.sim-fin-rank-val {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  white-space: nowrap;
+}
+
+.sim-fin-rank-diff {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  white-space: nowrap;
+}
+
+/* ========== COMPARISON TABLE ========== */
+.sim-fin-tabela-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-secondary);
+}
+
+.sim-fin-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+.sim-fin-tabela thead th {
+  background: var(--bg-tertiary);
+  color: var(--text-muted);
+  font-weight: 600;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+  padding: 10px 12px;
+  text-align: center;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sim-fin-tabela thead th:first-child {
+  text-align: left;
+}
+
+.sim-fin-tabela tbody td {
+  padding: 9px 12px;
+  text-align: center;
+  color: var(--text-secondary);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.sim-fin-tabela tbody td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.sim-fin-tabela tbody tr:last-child td {
+  border-bottom: none;
+}
+
+/* ========== INSIGHTS ========== */
+.sim-fin-insights {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.sim-fin-insight {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 12px 16px;
+  border-radius: 10px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  font-size: 0.82rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.sim-fin-insight-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+
+.sim-fin-insight strong {
+  color: var(--text-primary);
+}
+
 /* ========== EQUITY CARD ========== */
 .sim-fin-equity {
   display: flex;
@@ -660,17 +807,35 @@
     font-size: 1.05rem;
   }
 
-  .sim-fin-vencedor {
-    flex-wrap: wrap;
-    padding: 14px 16px;
+  .sim-fin-rank-item {
+    padding: 8px 10px;
+    gap: 8px;
   }
 
-  .sim-fin-vencedor-diff {
-    width: 100%;
-    text-align: center;
-    padding-top: 8px;
-    border-top: 1px solid rgba(255,255,255,0.06);
-    margin-top: 4px;
+  .sim-fin-rank-nome {
+    font-size: 0.78rem;
+  }
+
+  .sim-fin-rank-val {
+    font-size: 0.85rem;
+  }
+
+  .sim-fin-rank-diff {
+    display: none;
+  }
+
+  .sim-fin-tabela {
+    font-size: 0.75rem;
+  }
+
+  .sim-fin-tabela thead th,
+  .sim-fin-tabela tbody td {
+    padding: 8px 10px;
+  }
+
+  .sim-fin-chart-legend {
+    flex-wrap: wrap;
+    gap: 8px 14px;
   }
 
   .sim-fin-equity {

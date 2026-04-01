@@ -552,14 +552,10 @@
       // ---- Cenário A: Investimento puro ----
       let saldoInv = capitalTotal;
       const histInv = [];
-      for (let m = 1; m <= totalMeses; m++) {
-        saldoInv *= (1 + txInvMensal);
-        histInv.push(saldoInv);
-      }
 
-      // ---- Cenário B: Imóvel ----
+      // ---- Cenário B: Financiar e Investir ----
       let valorImovel = valorMercado;
-      let saldoResto = capitalTotal - entradaAbs - custasTotal; // leftover invested
+      let saldoResto = capitalTotal - entradaAbs - custasTotal;
       let saldoDevedor = financiado;
       let aluguelBase = valorMercado * yieldMensal;
       let totalParcelas = 0;
@@ -577,6 +573,21 @@
       let primeiroAluguel = 0;
       let ultimoAluguel = 0;
       let rendInvMes1 = 0;
+
+      // ---- Cenário C: Compra à Vista ----
+      let saldoRestoC = 0;
+      const histVista = [];
+
+      // ---- Cenário D: Financiar e Amortizar ----
+      let saldoRestoD = financiado;
+      let saldoDevedorD = financiado;
+      let finQuitadoD = false;
+      let totalParcelasD = 0;
+      let totalAmortExtraD = 0;
+      let mesFimDividaD = 0;
+      let primeiraParcelaD = 0;
+      let ultimaParcelaD = 0;
+      const histAmort = [];
 
       for (let m = 1; m <= totalMeses; m++) {
         // Valorização do imóvel
@@ -633,16 +644,75 @@
 
         const patrimonioImovel = valorImovel + saldoResto - saldoDevedor;
         histImovel.push(patrimonioImovel);
+
+        // ---- A: Investimento puro ----
+        saldoInv *= (1 + txInvMensal);
+        histInv.push(saldoInv);
+
+        // ---- C: Compra à Vista ----
+        saldoRestoC = saldoRestoC * (1 + txInvMensal) + alugRec;
+        histVista.push(valorImovel + saldoRestoC);
+
+        // ---- D: Financiar e Amortizar ----
+        let parcelaD = 0;
+        if (!finQuitadoD && saldoDevedorD > 0.5 && m <= mesesFin) {
+          if (isL) {
+            if (txFinMensal > 0) saldoDevedorD *= (1 + txFinMensal);
+            parcelaD = txFinMensal > 0 ? calcPMT(financiado, txFinMensal, p.parcelas || 1) : financiado / (p.parcelas || 1);
+            parcelaD = Math.min(parcelaD, saldoDevedorD);
+            saldoDevedorD -= parcelaD;
+          } else if (p.sistema === 'sac') {
+            const amortD = Math.min(amortSAC, saldoDevedorD);
+            parcelaD = amortD + saldoDevedorD * txFinMensal;
+            saldoDevedorD -= amortD;
+          } else {
+            const jurosD = saldoDevedorD * txFinMensal;
+            parcelaD = Math.min(pmtPrice, saldoDevedorD + jurosD);
+            saldoDevedorD -= (parcelaD - jurosD);
+          }
+          if (saldoDevedorD < 0.5) { saldoDevedorD = 0; finQuitadoD = true; if (!mesFimDividaD) mesFimDividaD = m; }
+          totalParcelasD += parcelaD;
+          if (!primeiraParcelaD) primeiraParcelaD = parcelaD;
+          ultimaParcelaD = parcelaD;
+        }
+
+        const rendD = saldoRestoD * txInvMensal;
+        const cashFlowD = rendD + alugRec - parcelaD;
+        let amortExtraMes = 0;
+        if (cashFlowD > 0 && saldoDevedorD > 0) {
+          amortExtraMes = Math.min(cashFlowD, saldoDevedorD);
+          saldoDevedorD -= amortExtraMes;
+          if (saldoDevedorD < 0.5) { saldoDevedorD = 0; if (!finQuitadoD) { finQuitadoD = true; if (!mesFimDividaD) mesFimDividaD = m; } }
+          totalAmortExtraD += amortExtraMes;
+        }
+        saldoRestoD = saldoRestoD + cashFlowD - amortExtraMes;
+
+        histAmort.push(valorImovel + saldoRestoD - saldoDevedorD);
       }
 
       const patrimonioFinalInv = histInv[totalMeses - 1];
       const patrimonioFinalImovel = histImovel[totalMeses - 1];
+      const patrimonioFinalVista = histVista[totalMeses - 1];
+      const patrimonioFinalAmort = histAmort[totalMeses - 1];
       const anos = totalMeses / 12;
 
       const roiInv = ((patrimonioFinalInv / capitalTotal) - 1) * 100;
       const roiImovel = ((Math.max(patrimonioFinalImovel, 1) / capitalTotal) - 1) * 100;
       const lucroInv = patrimonioFinalInv - capitalTotal;
       const lucroImovel = patrimonioFinalImovel - capitalTotal;
+      const roiVista = ((Math.max(patrimonioFinalVista, 1) / capitalTotal) - 1) * 100;
+      const lucroVista = patrimonioFinalVista - capitalTotal;
+      const roiAmort = ((Math.max(patrimonioFinalAmort, 1) / capitalTotal) - 1) * 100;
+      const lucroAmort = patrimonioFinalAmort - capitalTotal;
+
+      // Ranking dos 4 cenários
+      const nomeModo = isL ? 'Leilão' : 'Financiar';
+      const ranking = [
+        { key: 'inv', nome: 'Investimento Puro', icon: '📈', cor: '#3b82f6', final: patrimonioFinalInv, lucro: lucroInv, roi: roiInv },
+        { key: 'fin', nome: nomeModo + ' e Investir', icon: isL ? '🔨' : '🏦', cor: '#22c55e', final: patrimonioFinalImovel, lucro: lucroImovel, roi: roiImovel },
+        { key: 'vista', nome: 'Compra à Vista', icon: '🏠', cor: '#f59e0b', final: patrimonioFinalVista, lucro: lucroVista, roi: roiVista },
+        { key: 'amort', nome: nomeModo + ' e Amortizar', icon: '⚡', cor: '#a855f7', final: patrimonioFinalAmort, lucro: lucroAmort, roi: roiAmort }
+      ].sort((a, b) => b.final - a.final);
 
       const vencedor = patrimonioFinalImovel > patrimonioFinalInv ? 'imovel' : 'investimento';
       const diff = Math.abs(patrimonioFinalImovel - patrimonioFinalInv);
@@ -712,7 +782,7 @@
       return {
         modo: this.modo,
         totalMeses, anos, capitalTotal, entradaAbs, financiado, custasTotal,
-        vencedor, diff,
+        ranking, vencedor, diff,
         inv: { final: patrimonioFinalInv, lucro: lucroInv, roi: roiInv, hist: histInv },
         imovel: {
           final: patrimonioFinalImovel, lucro: lucroImovel, roi: roiImovel, hist: histImovel,
@@ -721,6 +791,17 @@
           primeiraParcela, ultimaParcela,
           mesCrossoverAluguel, primeiroAluguel, ultimoAluguel, rendInvMes1,
           equityInstantaneo
+        },
+        vista: {
+          final: patrimonioFinalVista, lucro: lucroVista, roi: roiVista, hist: histVista,
+          saldoInvestido: saldoRestoC, totalAlugueis
+        },
+        amort: {
+          final: patrimonioFinalAmort, lucro: lucroAmort, roi: roiAmort, hist: histAmort,
+          saldoInvestido: saldoRestoD, saldoDevedor: saldoDevedorD,
+          totalParcelas: totalParcelasD, totalAmortExtra: totalAmortExtraD,
+          mesFimDivida: mesFimDividaD,
+          primeiraParcela: primeiraParcelaD, ultimaParcela: ultimaParcelaD
         },
         analiseVender
       };
@@ -734,12 +815,21 @@
       if (!el) return;
 
       const isL = r.modo === 'leilao';
-      const nomeModo = isL ? 'Leilão' : 'Financiamento';
-      const nomeVenc = r.vencedor === 'imovel' ? nomeModo + ' + Aluguel' : 'Investimento Puro';
-      const classVenc = r.vencedor === 'imovel' ? 'bullish' : 'neutral';
-      const iconVenc = r.vencedor === 'imovel' ? (isL ? '🔨' : '🏠') : '📈';
 
-      // Equity card
+      // Ranking HTML
+      const rankingHTML = r.ranking.map((c, i) => {
+        const diff = i === 0 ? '' : `<span class="sim-fin-rank-diff">−${fmt(r.ranking[0].final - c.final)}</span>`;
+        const medal = i === 0 ? ' sim-fin-rank-winner' : '';
+        return `<div class="sim-fin-rank-item${medal}" style="border-left: 3px solid ${c.cor}">
+          <span class="sim-fin-rank-pos">${i + 1}º</span>
+          <span class="sim-fin-rank-icon">${c.icon}</span>
+          <span class="sim-fin-rank-nome">${c.nome}</span>
+          <span class="sim-fin-rank-val">${fmt(c.final)}</span>
+          ${diff}
+        </div>`;
+      }).join('');
+
+      // Equity card (leilão)
       let equityHTML = '';
       if (isL && r.imovel.equityInstantaneo > 0) {
         equityHTML = `
@@ -755,54 +845,118 @@
       // SVG chart
       const chartHTML = this._buildSVGChart(r);
 
-      // Result cards
-      const valorizacaoImovel = r.imovel.valorFinal - p.valorMercado;
-      const alugMedio = r.imovel.totalAlugueis / r.totalMeses;
+      // Comparison table
+      const nomeFin = isL ? 'Leilão + Investir' : 'Financiar e Investir';
+      const nomeAmort = isL ? 'Leilão + Amortizar' : 'Financiar e Amortizar';
+      const quitacaoB = r.imovel.saldoDevedor > 0.5 ? r.anos + ' anos' : r.anos + ' anos';
+      const quitacaoD = r.amort.mesFimDivida > 0
+        ? (r.amort.mesFimDivida >= 12 ? Math.floor(r.amort.mesFimDivida / 12) + 'a ' + (r.amort.mesFimDivida % 12) + 'm' : r.amort.mesFimDivida + 'm')
+        : r.anos + ' anos';
 
-      // Ficar ou Vender section (leilão only)
+      const tabelaHTML = `
+        <div class="sim-fin-tabela-wrap">
+          <table class="sim-fin-tabela">
+            <thead>
+              <tr>
+                <th></th>
+                <th><span style="color:#3b82f6">📈</span> Investimento</th>
+                <th><span style="color:#22c55e">${isL ? '🔨' : '🏦'}</span> ${nomeFin}</th>
+                <th><span style="color:#f59e0b">🏠</span> À Vista</th>
+                <th><span style="color:#a855f7">⚡</span> ${nomeAmort}</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Patrimônio final</td>
+                <td>${fmt(r.inv.final)}</td>
+                <td>${fmt(r.imovel.final)}</td>
+                <td>${fmt(r.vista.final)}</td>
+                <td>${fmt(r.amort.final)}</td>
+              </tr>
+              <tr>
+                <td>Lucro</td>
+                <td>${fmt(r.inv.lucro)}</td>
+                <td>${fmt(r.imovel.lucro)}</td>
+                <td>${fmt(r.vista.lucro)}</td>
+                <td>${fmt(r.amort.lucro)}</td>
+              </tr>
+              <tr>
+                <td>ROI</td>
+                <td>${fmtP(r.inv.roi, 0)}</td>
+                <td>${fmtP(r.imovel.roi, 0)}</td>
+                <td>${fmtP(r.vista.roi, 0)}</td>
+                <td>${fmtP(r.amort.roi, 0)}</td>
+              </tr>
+              <tr>
+                <td>Parcelas pagas</td>
+                <td>—</td>
+                <td>${fmt(r.imovel.totalParcelas)}</td>
+                <td>—</td>
+                <td>${fmt(r.amort.totalParcelas)}</td>
+              </tr>
+              <tr>
+                <td>Quitação</td>
+                <td>—</td>
+                <td>${quitacaoB}</td>
+                <td>À vista</td>
+                <td>${quitacaoD}</td>
+              </tr>
+              <tr>
+                <td>Saldo investido</td>
+                <td>${fmt(r.inv.final)}</td>
+                <td>${fmt(r.imovel.saldoInvestido)}</td>
+                <td>${fmt(r.vista.saldoInvestido)}</td>
+                <td>${fmt(r.amort.saldoInvestido)}</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>`;
+
+      // Insights
+      const insights = [];
+      if (r.amort.mesFimDivida > 0) {
+        const anosD = (r.amort.mesFimDivida / 12).toFixed(1).replace('.', ',');
+        const econParcelas = r.imovel.totalParcelas - r.amort.totalParcelas;
+        insights.push(`<div class="sim-fin-insight"><span class="sim-fin-insight-icon">⚡</span>Amortizar quita o financiamento em <strong>${anosD} anos</strong> (em vez de ${r.anos}) e economiza <strong>${fmt(econParcelas)}</strong> em parcelas.</div>`);
+      }
+      const diffVistaInv = r.inv.final - r.vista.final;
+      if (diffVistaInv > 0) {
+        insights.push(`<div class="sim-fin-insight"><span class="sim-fin-insight-icon">🏠</span>Compra à vista rende <strong>${fmt(r.vista.saldoInvestido)}</strong> em aluguéis reinvestidos, mas sem alavancagem perde <strong>${fmt(diffVistaInv)}</strong> para o investimento puro.</div>`);
+      }
+
+      // Ficar ou Vender (leilão)
       let analiseHTML = '';
       if (isL && r.analiseVender) {
         const a = r.analiseVender;
-        const lucroBrutoClass = a.lucroBruto >= 0 ? 'positive' : 'negative';
-        const lucroVendaClass = a.lucroVendaRapida >= 0 ? 'positive' : 'negative';
-
         analiseHTML = `
           <div class="sim-fin-analise-vender">
             <h4>Análise: Ficar ou Vender?</h4>
             <div class="sim-fin-cards">
               <div class="sim-fin-card">
-                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💎</span><span class="sim-fin-card-title">Lucro bruto na arrematação</span></div>
-                <div class="sim-fin-card-value ${lucroBrutoClass}">${fmt(a.lucroBruto)}</div>
-                <div class="sim-fin-card-sub">${fmt(p.valorMercado)} - ${fmt(p.valorArrematacao)} - ${fmt(r.custasTotal)} custas</div>
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💎</span><span class="sim-fin-card-title">Lucro bruto</span></div>
+                <div class="sim-fin-card-value ${a.lucroBruto >= 0 ? 'positive' : 'negative'}">${fmt(a.lucroBruto)}</div>
               </div>
               <div class="sim-fin-card">
-                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">⚡</span><span class="sim-fin-card-title">Lucro se vender rápido</span></div>
-                <div class="sim-fin-card-value ${lucroVendaClass}">${fmt(a.lucroVendaRapida)}</div>
-                <div class="sim-fin-card-sub">Venda por ${fmt(a.precoVendaRapida)} (${fmtP(p.descontoVenda, 0)} desconto)</div>
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">⚡</span><span class="sim-fin-card-title">Venda rápida</span></div>
+                <div class="sim-fin-card-value ${a.lucroVendaRapida >= 0 ? 'positive' : 'negative'}">${fmt(a.lucroVendaRapida)}</div>
               </div>
               <div class="sim-fin-card">
                 <div class="sim-fin-card-header"><span class="sim-fin-card-icon">📊</span><span class="sim-fin-card-title">Yield real</span></div>
                 <div class="sim-fin-card-value">${fmtP(a.yieldRealAnual)} a.a.</div>
-                <div class="sim-fin-card-sub">Pagando valor de mercado: ${fmtP(a.yieldMercadoAnual)} a.a.</div>
               </div>
               <div class="sim-fin-card sim-fin-card-highlight">
-                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">⚖️</span><span class="sim-fin-card-title">Preço de equilíbrio</span></div>
+                <div class="sim-fin-card-header"><span class="sim-fin-card-icon">⚖️</span><span class="sim-fin-card-title">Equilíbrio</span></div>
                 <div class="sim-fin-card-value">${fmt(a.precoEquilibrio)}</div>
-                <div class="sim-fin-card-sub">Acima disso, melhor vender. Abaixo, melhor ficar.</div>
               </div>
             </div>
           </div>`;
       }
 
       el.innerHTML = `
-        <!-- Vencedor -->
-        <div class="sim-fin-vencedor ${classVenc}">
-          <span class="sim-fin-vencedor-icon">${iconVenc}</span>
-          <div class="sim-fin-vencedor-text">
-            <span class="sim-fin-vencedor-label">Vencedor em ${r.anos} anos</span>
-            <span class="sim-fin-vencedor-nome">${nomeVenc}</span>
-          </div>
-          <span class="sim-fin-vencedor-diff">+${fmt(r.diff)}</span>
+        <!-- Ranking -->
+        <div class="sim-fin-ranking">
+          <div class="sim-fin-ranking-title">Ranking em ${r.anos} anos</div>
+          ${rankingHTML}
         </div>
 
         ${equityHTML}
@@ -810,45 +964,17 @@
         <!-- Chart -->
         ${chartHTML}
 
-        <!-- Cards -->
-        <div class="sim-fin-cards">
-          <div class="sim-fin-card">
-            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">📈</span><span class="sim-fin-card-title">Patrimônio Investimento</span></div>
-            <div class="sim-fin-card-value">${fmt(r.inv.final)}</div>
-            <div class="sim-fin-card-sub">Lucro: <strong>${fmt(r.inv.lucro)}</strong> · ROI: <strong>${fmtP(r.inv.roi, 0)}</strong></div>
-          </div>
-          <div class="sim-fin-card">
-            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">${isL ? '🔨' : '🏠'}</span><span class="sim-fin-card-title">Patrimônio Imóvel</span></div>
-            <div class="sim-fin-card-value">${fmt(r.imovel.final)}</div>
-            <div class="sim-fin-card-sub">Lucro: <strong>${fmt(r.imovel.lucro)}</strong> · ROI: <strong>${fmtP(r.imovel.roi, 0)}</strong></div>
-          </div>
-          <div class="sim-fin-card">
-            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💳</span><span class="sim-fin-card-title">Parcela mensal</span></div>
-            <div class="sim-fin-card-value">${fmt(r.imovel.primeiraParcela)}</div>
-            <div class="sim-fin-card-sub">${r.imovel.ultimaParcela !== r.imovel.primeiraParcela ? 'Última: <strong>' + fmt(r.imovel.ultimaParcela) + '</strong>' : 'Parcela fixa'}</div>
-          </div>
-          <div class="sim-fin-card">
-            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">🏡</span><span class="sim-fin-card-title">Valor final do imóvel</span></div>
-            <div class="sim-fin-card-value">${fmt(r.imovel.valorFinal)}</div>
-            <div class="sim-fin-card-sub">Valorização: <strong>+${fmt(valorizacaoImovel)}</strong></div>
-          </div>
-          <div class="sim-fin-card">
-            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">🔑</span><span class="sim-fin-card-title">Aluguéis recebidos</span></div>
-            <div class="sim-fin-card-value">${fmt(r.imovel.totalAlugueis)}</div>
-            <div class="sim-fin-card-sub">Média: <strong>${fmt(alugMedio)}/mês</strong></div>
-          </div>
-          <div class="sim-fin-card">
-            <div class="sim-fin-card-header"><span class="sim-fin-card-icon">💰</span><span class="sim-fin-card-title">Saldo investido restante</span></div>
-            <div class="sim-fin-card-value ${r.imovel.saldoInvestido < 0 ? 'negative' : ''}">${fmt(r.imovel.saldoInvestido)}</div>
-            <div class="sim-fin-card-sub">${r.imovel.saldoDevedor > 0.5 ? 'Dívida restante: <strong>' + fmt(r.imovel.saldoDevedor) + '</strong>' : 'Financiamento quitado'}</div>
-          </div>
-        </div>
+        <!-- Tabela comparativa -->
+        ${tabelaHTML}
+
+        <!-- Insights -->
+        ${insights.length ? '<div class="sim-fin-insights">' + insights.join('') + '</div>' : ''}
 
         ${analiseHTML}
 
         <!-- Como funciona -->
         <div class="sim-fin-como">
-          <h4>Como chegamos nesse valor</h4>
+          <h4>Como chegamos nesses valores</h4>
           <ul class="sim-fin-como-steps">
             ${this._buildExplanation(r, p)}
           </ul>
@@ -861,13 +987,19 @@
        SVG CHART
        ============================================================ */
     _buildSVGChart(r) {
-      const W = 800, H = 240, PAD_L = 55, PAD_R = 15, PAD_T = 15, PAD_B = 30;
+      const W = 800, H = 280, PAD_L = 55, PAD_R = 15, PAD_T = 15, PAD_B = 30;
       const chartW = W - PAD_L - PAD_R;
       const chartH = H - PAD_T - PAD_B;
 
-      const dInv = r.inv.hist;
-      const dImov = r.imovel.hist;
-      const n = dInv.length;
+      const isL = r.modo === 'leilao';
+      const series = [
+        { key: 'inv', data: r.inv.hist, cor: '#3b82f6', nome: 'Investimento' },
+        { key: 'fin', data: r.imovel.hist, cor: '#22c55e', nome: isL ? 'Leilão + Investir' : 'Financiar + Investir' },
+        { key: 'vista', data: r.vista.hist, cor: '#f59e0b', nome: 'Compra à Vista' },
+        { key: 'amort', data: r.amort.hist, cor: '#a855f7', nome: isL ? 'Leilão + Amortizar' : 'Financiar + Amortizar' }
+      ];
+
+      const n = series[0].data.length;
       if (n < 2) return '';
 
       // Sample points (max ~80)
@@ -875,11 +1007,13 @@
       const pts = [];
       for (let i = 0; i < n; i++) {
         if (i % step === 0 || i === n - 1) {
-          pts.push({ m: i + 1, inv: dInv[i], imov: dImov[i] });
+          const pt = { m: i + 1 };
+          series.forEach(s => pt[s.key] = s.data[i]);
+          pts.push(pt);
         }
       }
 
-      const allVals = pts.flatMap(p => [p.inv, p.imov]);
+      const allVals = pts.flatMap(p => series.map(s => p[s.key]));
       const minV = Math.min(...allVals) * 0.95;
       const maxV = Math.max(...allVals) * 1.05;
       const rangeV = maxV - minV || 1;
@@ -887,17 +1021,15 @@
       const x = (idx) => PAD_L + (idx / (pts.length - 1)) * chartW;
       const y = (val) => PAD_T + chartH - ((val - minV) / rangeV) * chartH;
 
-      // Build path strings
-      let pathInv = '', pathImov = '';
-      pts.forEach((p, i) => {
-        const cmd = i === 0 ? 'M' : 'L';
-        pathInv += `${cmd}${x(i).toFixed(1)},${y(p.inv).toFixed(1)} `;
-        pathImov += `${cmd}${x(i).toFixed(1)},${y(p.imov).toFixed(1)} `;
+      // Build path strings for each series
+      const paths = series.map(s => {
+        let d = '';
+        pts.forEach((p, i) => { d += `${i === 0 ? 'M' : 'L'}${x(i).toFixed(1)},${y(p[s.key]).toFixed(1)} `; });
+        return `<path d="${d}" fill="none" stroke="${s.cor}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
       });
 
       // Y axis labels (5 ticks)
-      let yLabels = '';
-      let gridLines = '';
+      let yLabels = '', gridLines = '';
       for (let i = 0; i <= 4; i++) {
         const val = minV + (rangeV * i / 4);
         const yPos = y(val);
@@ -911,41 +1043,44 @@
       pts.forEach((p, i) => {
         if (i % labelInterval === 0 || i === pts.length - 1) {
           const anos = Math.floor(p.m / 12);
-          const label = anos > 0 ? anos + 'a' : p.m + 'm';
-          xLabels += `<text x="${x(i)}" y="${H - 5}" text-anchor="middle" fill="#6e7681" font-size="10">${label}</text>`;
+          xLabels += `<text x="${x(i)}" y="${H - 5}" text-anchor="middle" fill="#6e7681" font-size="10">${anos > 0 ? anos + 'a' : p.m + 'm'}</text>`;
         }
       });
 
-      // Final value markers
+      // End markers - sort by final value to offset labels that overlap
       const lastPt = pts[pts.length - 1];
-      const finalInvY = y(lastPt.inv);
-      const finalImovY = y(lastPt.imov);
       const finalX = x(pts.length - 1);
+      const endMarkers = series.map(s => ({ cor: s.cor, val: lastPt[s.key], yPos: y(lastPt[s.key]) }))
+        .sort((a, b) => a.yPos - b.yPos);
+      // Prevent label overlap: ensure min 14px gap
+      for (let i = 1; i < endMarkers.length; i++) {
+        if (endMarkers[i].yPos - endMarkers[i - 1].yPos < 14) {
+          endMarkers[i].yPos = endMarkers[i - 1].yPos + 14;
+        }
+      }
+      const markersHTML = endMarkers.map(em =>
+        `<circle cx="${finalX}" cy="${y(em.val)}" r="3" fill="${em.cor}"/>
+         <text x="${finalX - 8}" y="${em.yPos - 2}" text-anchor="end" fill="${em.cor}" font-size="9" font-weight="600">${fmtK(em.val)}</text>`
+      ).join('');
+
+      const legendHTML = series.map(s =>
+        `<span class="sim-fin-legend-item"><span class="sim-fin-legend-dot" style="background:${s.cor}"></span> ${s.nome}</span>`
+      ).join('');
 
       return `
         <div class="sim-fin-chart-box">
           <div class="sim-fin-chart-title">Evolução patrimonial</div>
           <div class="sim-fin-svg-wrap">
             <svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid meet">
-              <!-- Grid -->
               ${gridLines}
-              <!-- Axes labels -->
               ${yLabels}
               ${xLabels}
-              <!-- Lines -->
-              <path d="${pathInv}" fill="none" stroke="#3b82f6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <path d="${pathImov}" fill="none" stroke="#22c55e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <!-- End dots -->
-              <circle cx="${finalX}" cy="${finalInvY}" r="4" fill="#3b82f6"/>
-              <circle cx="${finalX}" cy="${finalImovY}" r="4" fill="#22c55e"/>
-              <!-- End labels -->
-              <text x="${finalX - 8}" y="${finalInvY - 8}" text-anchor="end" fill="#3b82f6" font-size="10" font-weight="600">${fmtK(lastPt.inv)}</text>
-              <text x="${finalX - 8}" y="${finalImovY - 8}" text-anchor="end" fill="#22c55e" font-size="10" font-weight="600">${fmtK(lastPt.imov)}</text>
+              ${paths.join('\n              ')}
+              ${markersHTML}
             </svg>
           </div>
           <div class="sim-fin-chart-legend">
-            <span class="sim-fin-legend-item"><span class="sim-fin-legend-dot" style="background:#3b82f6"></span> Investimento</span>
-            <span class="sim-fin-legend-item"><span class="sim-fin-legend-dot" style="background:#22c55e"></span> ${r.modo === 'leilao' ? 'Leilão' : 'Financiamento'}</span>
+            ${legendHTML}
           </div>
         </div>`;
     },
@@ -1050,17 +1185,20 @@
         items.push(`O preço de equilíbrio para venda é <strong>${fmt(r.analiseVender.precoEquilibrio)}</strong>. Se conseguir vender acima desse valor, o resultado é melhor do que ficar com o imóvel pelo período completo.`);
       }
 
-      // Resultado com decomposição
-      const partes = [`imóvel ${fmt(r.imovel.valorFinal)}`];
-      if (Math.abs(r.imovel.saldoInvestido) > 1) partes.push(`${r.imovel.saldoInvestido >= 0 ? '+' : '−'} investimentos ${fmt(Math.abs(r.imovel.saldoInvestido))}`);
-      if (r.imovel.saldoDevedor > 0.5) partes.push(`− dívida ${fmt(r.imovel.saldoDevedor)}`);
-      const decomposicao = partes.join(' ');
+      // Cenário C: Compra à Vista
+      items.push(`<strong>Cenário C (Compra à Vista):</strong> usa os <strong>${fmt(r.capitalTotal)}</strong> para comprar o imóvel sem financiar. Aluguéis são reinvestidos a ${fmtP(p.rendimentoInv)} a.a. Patrimônio final: imóvel ${fmt(r.imovel.valorFinal)} + investimentos ${fmt(r.vista.saldoInvestido)} = <strong>${fmt(r.vista.final)}</strong>.`);
 
-      if (r.vencedor === 'imovel') {
-        items.push(`<strong>Resultado:</strong> patrimônio com imóvel = ${decomposicao} = <strong>${fmt(r.imovel.final)}</strong>, superando investimento puro (<strong>${fmt(r.inv.final)}</strong>) em <strong>${fmt(r.diff)}</strong>.`);
+      // Cenário D: Financiar e Amortizar
+      if (r.amort.mesFimDivida > 0) {
+        const anosD = (r.amort.mesFimDivida / 12).toFixed(1).replace('.', ',');
+        items.push(`<strong>Cenário D (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)} + Amortizar):</strong> mesmo financiamento do Cenário B, mas toda a sobra mensal (aluguel + rendimentos − parcela) é usada para amortizar a dívida. A dívida é quitada em <strong>${anosD} anos</strong> (em vez de ${r.anos}). Total pago em parcelas: <strong>${fmt(r.amort.totalParcelas)}</strong> (economia de ${fmt(r.imovel.totalParcelas - r.amort.totalParcelas)}). Patrimônio final: <strong>${fmt(r.amort.final)}</strong>.`);
       } else {
-        items.push(`<strong>Resultado:</strong> patrimônio com imóvel = ${decomposicao} = <strong>${fmt(r.imovel.final)}</strong>. Investimento puro (<strong>${fmt(r.inv.final)}</strong>) supera em <strong>${fmt(r.diff)}</strong>.`);
+        items.push(`<strong>Cenário D (${nomeModo.charAt(0).toUpperCase() + nomeModo.slice(1)} + Amortizar):</strong> mesmo financiamento do Cenário B, mas toda a sobra mensal é usada para amortizar a dívida. Total pago em parcelas: <strong>${fmt(r.amort.totalParcelas)}</strong>. Patrimônio final: <strong>${fmt(r.amort.final)}</strong>.`);
       }
+
+      // Resultado: ranking final
+      const rankStr = r.ranking.map((c, i) => `${i + 1}º ${c.nome} (<strong>${fmt(c.final)}</strong>)`).join(' · ');
+      items.push(`<strong>Ranking final:</strong> ${rankStr}.`);
 
       return items.map((txt, i) => {
         const isWarn = txt.includes('sf-step-warn-inline') || txt.includes('negativo');

@@ -1,0 +1,576 @@
+{
+  "meta": {
+    "ticker": "HBRH11",
+    "nome": "V2 Multi Renda FII",
+    "nomeExtra": "(negocia como VVMR11)",
+    "segmento": "Tijolo - Multicategoria",
+    "badges": [
+      "Corporativo + Educacional + Coworking",
+      "5 Imóveis",
+      "Vacância ~33%"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 364
+  },
+  "seo": {
+    "title": "HBRH11 - Análise Completa | V2 Multi Renda FII",
+    "description": "Análise completa do FII HBRH11 (VVMR11) baseada em 364 documentos oficiais. Fundo tijolo multicategoria com 5 imóveis, 28 mil m² ABL, vacância de 33%. Riscos, portfólio e projeções 2026.",
+    "keywords": "HBRH11, VVMR11, V2 Multi Renda, FII multicategoria, análise HBRH11, dividend yield HBRH11, V2 Investimentos",
+    "ogTitle": "HBRH11 - Análise Completa do FII V2 Multi Renda 2026",
+    "ogDescription": "Análise detalhada do HBRH11 (VVMR11): 5 imóveis entre corporativo, educacional e coworking. 28 mil m² ABL, vacância de 33%, DY ~2,8%. Histórico, riscos e projeções 2026.",
+    "twitterTitle": "HBRH11 - Análise Completa | FII V2 Multi Renda",
+    "twitterDescription": "Análise do HBRH11 (VVMR11): 5 imóveis em SP e RJ. Vacância de 33%, dividendo R$ 0,20/mês. Taxas, portfólio e projeções 2026."
+  },
+  "indicadores": {
+    "cotacao": 85,
+    "cotacaoData": "24/02/2026",
+    "pvp": 0.96,
+    "pvpDesconto": "4% de desconto",
+    "dividendYield": 2.82,
+    "dividendoMensal": 0.2,
+    "dividendoAnual": 2.4,
+    "patrimonioLiquido": "R$ 250,9 Mi",
+    "vpCota": 88.88,
+    "cotistas": 549,
+    "cotistasDetalhe": "2,8 milhões de cotas",
+    "ocupacao": 67,
+    "wault": null,
+    "numImoveis": 5,
+    "ablTotal": "28.104",
+    "numEstados": 2,
+    "numInquilinos": 6
+  },
+  "recomendacao": {
+    "nota": 4.5,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">HBRH11</strong> (VVMR11) apresenta <strong class=\"text-red-400\">vacância elevada de 33%</strong>, fundo muito pequeno com apenas <strong class=\"text-red-400\">549 cotistas</strong>, <strong class=\"text-red-400\">baixíssima liquidez</strong> diária (presença em pregões ~53%), DY de apenas 2,82% a.a. (muito abaixo da Selic e da média dos FIIs), e <strong class=\"text-red-400\">saldo acumulado em queda</strong> (de R$ 1,28 para R$ 0,77/cota em 6 meses), indicando que os dividendos distribuídos superam o resultado operacional."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 250,9 Mi",
+      "detalhe": "VP/cota: R$ 88,88",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 88,88</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,20",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 2,40/ano | DY 2,82%",
+      "icone": "money",
+      "corIcone": "red",
+      "corValor": "red"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "549",
+      "detalhe": "2,8 milhões de cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Vacância",
+      "valor": "33,1%",
+      "detalhe": "9.310 m² vagos de 28.104 m²",
+      "icone": "chart",
+      "corIcone": "red",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Vacância Elevada",
+      "descricao": "33% de vacância física, concentrada nos imóveis Neolink Office (89%) e Barra Private (100%) no Rio de Janeiro. Impacta diretamente a geração de receita e a sustentabilidade dos dividendos.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Distribuição Acima do Resultado",
+      "descricao": "O fundo distribui R$ 0,20/cota enquanto o resultado médio é R$ 0,11/cota. O saldo acumulado caiu de R$ 1,28 para R$ 0,77/cota em 6 meses, indicando uso de reservas para manter o dividendo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez Muito Baixa",
+      "descricao": "Presença em apenas 53% dos pregões no último mês, volume mensal de R$ 2,2 milhões. Apenas 549 cotistas, dificultando entrada e saída de posições.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Dívida Relevante",
+      "descricao": "Obrigações por securitização de recebíveis de R$ 14-32 milhões (dependendo do mês), representando carga de despesas financeiras de ~R$ 176 mil/mês que pressiona o resultado.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "V2 Investimentos",
+    "nota": 5,
+    "notaLabel": "REGULAR",
+    "link": "../../gestores/v2-investimentos/",
+    "stats": [
+      {
+        "label": "FIIs Listados",
+        "valor": "5"
+      },
+      {
+        "label": "Patrimônio Total",
+        "valor": "~R$ 850 Mi"
+      },
+      {
+        "label": "Fundos sob Gestão",
+        "valor": "10"
+      }
+    ],
+    "resumo": "V2 Investimentos gerencia 5 FIIs listados com mais de 50 mil investidores no total. Gestão ativa com foco em corporativos, recebíveis e renda urbana. O HBRH11/VVMR11 é o fundo mais desafiador da casa, com vacância persistente e resultado operacional pressionado."
+  },
+  "taxas": {
+    "subtitulo": "Compatíveis com o mercado",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,80-0,86% a.a.",
+        "detalhe": "Escalonada conforme PL",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder IPCA + 6%",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "0%",
+        "detalhe": "Incluída na administração",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs Multicategoria/Corporativos",
+    "comparativo": [
+      {
+        "ticker": "HBRH11",
+        "taxa": "0,86%",
+        "perf": "+20% perf. s/ IPCA+6%",
+        "destaque": true
+      },
+      {
+        "ticker": "VVCO11",
+        "taxa": "0,86%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "VPPR11",
+        "taxa": "0,86%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "BRCR11",
+        "taxa": "0,75%",
+        "perf": "+20% perf. s/ CDI"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Escriturador",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "V2 Investimentos Ltda."
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "5"
+      },
+      {
+        "label": "m2 ABL",
+        "valor": "28.104"
+      },
+      {
+        "label": "Vacância",
+        "valor": "33,1%",
+        "cor": "red"
+      },
+      {
+        "label": "Estados",
+        "valor": "2 (SP/RJ)"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Educacional",
+        "Coworking",
+        "Corporativo",
+        "Multiuso"
+      ],
+      "data": [
+        40,
+        38,
+        4,
+        18
+      ],
+      "cores": [
+        "#3b82f6",
+        "#f59e0b",
+        "#8b5cf6",
+        "#10b981"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "São Judas (Ânima)",
+        "WeWork",
+        "Pitzi",
+        "Outros",
+        "Vago"
+      ],
+      "data": [
+        40,
+        38,
+        3,
+        2,
+        17
+      ],
+      "cores": [
+        "#3b82f6",
+        "#f59e0b",
+        "#10b981",
+        "#8b5cf6",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Ânima Educação (São Judas)",
+        "setor": "Educação",
+        "receita": "40%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Baixo (Atípico)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "WeWork",
+        "setor": "Coworking",
+        "receita": "38%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Pitzi + Outros",
+        "setor": "Tecnologia/Diversos",
+        "receita": "5%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Ativos Ocupados Baixo Risco",
+        "valor": 1,
+        "cor": "emerald"
+      },
+      {
+        "label": "Ativos Ocupados Risco Moderado",
+        "valor": 2,
+        "cor": "amber"
+      },
+      {
+        "label": "Ativos com Vacância Total",
+        "valor": 1,
+        "cor": "red"
+      },
+      {
+        "label": "Ativos com Vacância Parcial",
+        "valor": 1,
+        "cor": "orange"
+      }
+    ],
+    "riscoNota": "O principal risco do portfólio está na <strong class=\"text-red-400\">concentração geográfica no RJ</strong> com dois imóveis problemáticos: Neolink Office (89% vago) e Barra Private (100% vago). Os imóveis em SP (Trilogy, One Eleven, Cittyplex) apresentam melhor desempenho, mas o Cittyplex ainda tem ~20% de vacância."
+  },
+  "ativos": {
+    "subtitulo": "5 imóveis | 28.104 m² ABL | 2 estados (SP e RJ)",
+    "legendaRisco": [
+      {
+        "label": "Baixo - Contrato atípico, ocupação total",
+        "cor": "emerald"
+      },
+      {
+        "label": "Moderado - Contrato típico, ocupação total",
+        "cor": "blue"
+      },
+      {
+        "label": "Atenção - Vacância parcial",
+        "cor": "amber"
+      },
+      {
+        "label": "Alto - Vacância elevada ou total",
+        "cor": "red"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "Imóveis em São Paulo (3 imóveis) - ~83% da receita",
+        "cor": "emerald",
+        "itens": [
+          {
+            "nome": "Trilogy",
+            "cidade": "São Bernardo do Campo/SP",
+            "tipo": "Educacional",
+            "tipoCor": "blue",
+            "abl": 10543,
+            "locatario": "Ânima (São Judas)",
+            "vencimento": "Atípico",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "One Eleven",
+            "cidade": "São Paulo/SP",
+            "tipo": "Coworking",
+            "tipoCor": "amber",
+            "abl": 3831,
+            "locatario": "WeWork",
+            "vencimento": "Típico",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "The Cittyplex",
+            "cidade": "Osasco/SP",
+            "tipo": "Corporativo",
+            "tipoCor": "purple",
+            "abl": 4832,
+            "locatario": "Diversos",
+            "vencimento": "Típico",
+            "risco": "Vacância 20%",
+            "riscoCor": "amber"
+          }
+        ]
+      },
+      {
+        "nome": "Imóveis no Rio de Janeiro (2 imóveis) - Alta Vacância",
+        "cor": "red",
+        "itens": [
+          {
+            "nome": "Neolink Office",
+            "cidade": "Rio de Janeiro/RJ",
+            "tipo": "Corporativo",
+            "tipoCor": "purple",
+            "abl": 4988,
+            "locatario": "Unimed FERJ (parcial)",
+            "vencimento": "Típico",
+            "risco": "89% vago",
+            "riscoCor": "red"
+          },
+          {
+            "nome": "Barra Private",
+            "cidade": "Rio de Janeiro/RJ",
+            "tipo": "Corporativo",
+            "tipoCor": "purple",
+            "abl": 3910,
+            "locatario": "Sem locatário",
+            "vencimento": "-",
+            "risco": "100% vago",
+            "riscoCor": "red"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "Fundo de multirrenda com desafios de vacância",
+    "periodos": [
+      {
+        "periodo": "2018-2020",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em junho/2018, início de funcionamento em janeiro/2020.",
+        "pontos": [
+          "CNPJ: 30.871.698/0001-81",
+          "Código ISIN: BRHBRHCTF000 | Negocia como VVMR11",
+          "Classificação ANBIMA: Tijolo - Renda - Gestão Ativa - Multicategoria",
+          "Público Alvo: Investidores em Geral"
+        ]
+      },
+      {
+        "periodo": "2021-2023",
+        "label": "AQUISIÇÕES",
+        "cor": "emerald",
+        "descricao": "Montagem do portfólio com 5 imóveis entre SP e RJ.",
+        "pontos": [
+          "Aquisição Trilogy (SBC/SP) - Contrato atípico com Ânima Educação",
+          "Aquisição One Eleven (SP) - Contrato típico com WeWork",
+          "Aquisição Neolink Office e Barra Private (RJ) - Imóveis corporativos",
+          "Aquisição Cittyplex (Osasco/SP) - Imóvel multiuso"
+        ]
+      },
+      {
+        "periodo": "2024-2026",
+        "label": "DESAFIOS",
+        "cor": "red",
+        "descricao": "Vacância persistente no RJ e resultado operacional pressionado.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Barra Private 100% vago</strong> - Sem perspectiva de locação divulgada",
+          "<strong class=\"text-red-400\">Neolink Office 89% vago</strong> - Mercado corporativo RJ fragilizado",
+          "<strong class=\"text-amber-400\">Saldo acumulado caindo</strong> - De R$ 1,28 para R$ 0,77/cota em 6 meses",
+          "Gestão reduzindo vacância do Cittyplex (de 35% para 20%)"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O HBRH11 (VVMR11) é um <strong class=\"text-red-400\">FII micro-cap</strong> com apenas 549 cotistas e R$ 250 milhões de patrimônio, enfrentando <strong class=\"text-red-400\">vacância elevada de 33%</strong> concentrada em dois imóveis no Rio de Janeiro. O DY de 2,82% é muito abaixo da Selic e da média dos FIIs, e os dividendos distribuídos <strong class=\"text-red-400\">superam o resultado operacional</strong>, consumindo reservas acumuladas. A liquidez é precária, com presença em apenas 53% dos pregões.",
+    "paraQuem": [
+      "Investidores <strong class=\"text-amber-400\">especulativos</strong> que acreditam na recuperação do mercado corporativo RJ",
+      "Quem busca <strong class=\"text-amber-400\">ativos descontados</strong> com potencial de upside por redução de vacância",
+      "Investidores com <strong class=\"text-amber-400\">horizonte muito longo</strong> e alta tolerância a risco"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-red-400\">renda mensal consistente</strong>",
+      "Investidores que precisam de <strong class=\"text-red-400\">liquidez</strong>",
+      "Perfil <strong class=\"text-red-400\">conservador ou moderado</strong>",
+      "Quem não aceita <strong class=\"text-red-400\">fundos com micro liquidez</strong> (549 cotistas)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.13,
+      0,
+      0,
+      0.19,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2,
+      0.2
+    ],
+    "chartCor": "#ef4444",
+    "chartYMin": 0,
+    "chartYMax": 0.25,
+    "totaisAnuais": [
+      {
+        "ano": "2024",
+        "valor": "~R$ 1,80"
+      },
+      {
+        "ano": "2025",
+        "valor": "~R$ 1,72"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S26",
+      "faixa": "R$ 0,12 - R$ 0,20",
+      "unidade": "por cota/mês"
+    },
+    "stats": [
+      {
+        "label": "Último Dividendo",
+        "valor": "R$ 0,20"
+      },
+      {
+        "label": "Resultado Médio/Cota",
+        "valor": "R$ 0,11",
+        "cor": "red"
+      },
+      {
+        "label": "Saldo Acumulado",
+        "valor": "R$ 0,77/cota"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "2,82%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Insustentável",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,96",
+      "descricao": "Cota negociada com <span class=\"text-blue-400\">4% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 88,88"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 85,00",
+          "cor": "blue"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "-12,18%",
+      "label": "Spread vs Selic",
+      "cor": "red",
+      "descricao": "DY muito abaixo da taxa livre de risco",
+      "detalhe": "DY HBRH11 (2,82%) vs Selic (15,00%)"
+    },
+    "recomendacoes": {
+      "valor": 0,
+      "label": "Recomendações",
+      "cor": "red",
+      "descricao": "Sem menções em carteiras recomendadas de corretoras",
+      "detalhe": "Fundo com baixa cobertura de analistas"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">HBRH11</strong> (VVMR11) enfrenta desafios significativos: <strong class=\"text-red-400\">vacância de 33%</strong> concentrada em dois imóveis no Rio de Janeiro (Neolink Office com 89% vago e Barra Private com 100% vago), resultado operacional insuficiente para cobrir os dividendos distribuídos, e liquidez muito baixa com apenas 549 cotistas.",
+      "O fundo distribui <strong class=\"text-amber-400\">R$ 0,20/cota/mês</strong> mas o resultado médio é de apenas R$ 0,11/cota, consumindo o saldo acumulado que caiu de R$ 1,28 para <strong class=\"text-red-400\">R$ 0,77/cota</strong> em 6 meses. Se esse ritmo continuar, o dividendo precisará ser reduzido em ~4 meses.",
+      "A gestão demonstra esforço na locação do Cittyplex em Osasco (vacância reduzida de 35% para 20%), mas os imóveis no RJ continuam sendo um <strong class=\"text-red-400\">peso morto no portfólio</strong>. O DY de 2,82% é muito inferior à Selic de 15%, tornando o fundo pouco atrativo frente a alternativas de renda fixa."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,96 com desconto sobre patrimônio",
+      "Contrato atípico Trilogy (Ânima) com ocupação 100%",
+      "Gestora ativa na redução de vacância do Cittyplex",
+      "Taxa de administração competitiva (0,80-0,86%)"
+    ],
+    "pontosDeAtencao": [
+      "Vacância de 33% com dois imóveis praticamente vazios no RJ",
+      "Dividendo insustentável - distribuição supera resultado operacional",
+      "Apenas 549 cotistas - liquidez extremamente baixa",
+      "DY de 2,82% - muito abaixo da Selic e média dos FIIs",
+      "Saldo acumulado em queda acelerada",
+      "Mercado corporativo do RJ ainda fragilizado"
+    ],
+    "conclusaoFinal": "O HBRH11 <strong class=\"text-red-400\">não é recomendado</strong> para a maioria dos investidores. A combinação de vacância elevada, dividendo insustentável, micro liquidez e DY muito abaixo do CDI tornam o investimento pouco atrativo. Apenas investidores especulativos com alta tolerância a risco e horizonte muito longo devem considerar este fundo, apostando em eventual recuperação do mercado corporativo carioca."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 364,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

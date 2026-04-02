@@ -1,0 +1,594 @@
+{
+  "meta": {
+    "ticker": "TGAR11",
+    "nome": "TG Ativo Real FII",
+    "segmento": "Desenvolvimento / Multiestratégia",
+    "badges": [
+      "Gestão Ativa",
+      "174 Ativos",
+      "TIR Real 14,25%"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "02/04/2026",
+    "totalDocumentos": 47
+  },
+  "seo": {
+    "title": "TGAR11 - Análise Completa | TG Ativo Real FII",
+    "description": "TGAR11 a R$70: lucro +48% mas fundo distribui mais do que ganha. P/VP 0,64 (desconto 36%), DY 12,3% perde para CDI de 14,75%. Balanço KPMG analisado. Aguardar virada de cenário.",
+    "keywords": "TGAR11, TG Ativo Real, FII desenvolvimento, análise TGAR11, TG Core Asset, dividend yield TGAR11, preço de entrada",
+    "ogTitle": "TGAR11 - Análise Completa do FII TG Ativo Real 2026",
+    "ogDescription": "TGAR11 a R$70: lucro +48% mas distribui mais do que ganha. P/VP 0,64, DY 12,3% perde para CDI. Balanço KPMG analisado. Aguardar virada de cenário.",
+    "twitterTitle": "TGAR11 - Análise Completa | TG Ativo Real FII",
+    "twitterDescription": "TGAR11 a R$70: desconto de 36% sobre VP, mas DY 12,3% perde para CDI 14,75%. Fundo distribui mais do que ganha. Aguardar."
+  },
+  "indicadores": {
+    "cotacao": 70.00,
+    "cotacaoData": "02/04/2026",
+    "pvp": 0.64,
+    "pvpDesconto": "36% de desconto",
+    "dividendYield": 12.34,
+    "dividendoMensal": 0.72,
+    "dividendoAnual": 8.64,
+    "patrimonioLiquido": "R$ 2,65 Bi",
+    "vpCota": 110.16,
+    "cotistas": 147891
+  },
+  "recomendacao": {
+    "nota": 5.0,
+    "veredicto": "AGUARDAR",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">TGAR11</strong> tem ativos reais (174 em 20 estados) e lucro crescente (+48% em 2025). Mas o fundo <strong class=\"text-red-400\">distribui mais do que ganha</strong>: pagou R$282 MI em dividendos contra R$221 MI de lucro, aprofundando prejuízos acumulados de -R$187 MI. Quase metade da receita (R$117 MI) é ganho contábil (equivalência patrimonial), não caixa. A R$70, o DY no piso (12,3%) <strong class=\"text-red-400\">perde para o CDI de ~14,75%</strong>. Sem catalisador de curto prazo, o cenário não aponta para melhora. <strong class=\"text-amber-400\">Esperar sinalização de queda da Selic ou dividendo acima de R$0,85 antes de entrar.</strong>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 2,60 Bi",
+      "detalhe": "VP/cota: R$ 110,16",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 110,16</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,72",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 8,64/ano | DY 12,3% (anualizado)",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "amber"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "147.891",
+      "detalhe": "Liquidez: R$ 7,87 Mi/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,64x",
+      "detalhe": "36% de desconto sobre VP",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Dividendo no Piso do Guidance (R$0,72)",
+      "descricao": "O fundo distribui R$0,71-0,72 desde janeiro/2026, na banda inferior do guidance (R$0,70-1,00). Com reserva acumulada de apenas R$0,13/cota, não há colchão. O dividendo depende inteiramente da geração mensal de caixa, e a gestão prioriza novos investimentos (R$367 MI aportados em SPEs em 2025).",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Inadimplência Subindo em Todos os Segmentos",
+      "descricao": "Urbanismo: 4,51%, Incorporação: 5,81% (tendência de alta), Multipropriedade: 7,24% (alarmante). Com Selic a 15%, financiamentos ficam proibitivos e compradores têm mais dificuldade para honrar parcelas. Se o macro piorar, esses números podem escalar.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "CRIs Liquidados em 85% (R$368 Mi → R$55 Mi)",
+      "descricao": "O fundo vendeu massivamente sua carteira de CRIs em 2025. Pode ter gerado caixa a taxas favoráveis, mas também pode indicar necessidade de liquidar ativos para manter distribuições. Reduz a diversificação da carteira.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Viel Participações Sem Vender (R$258 Mi)",
+      "descricao": "A negociação da Viel, que geraria ~R$90 MI de lucro (~R$4/cota), continua travada. O valor contábil subiu para R$258 MI com equivalência patrimonial positiva, mas enquanto não vende, não distribui. Catalisador potencial que destravaria valor significativo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cenário Macro Deteriorando",
+      "descricao": "Guerra internacional elevando petróleo, materiais de construção sob pressão, Selic a 15% travando repasses bancários (9-12 meses de espera), casas de análise retirando TGAR11 das carteiras. Ano eleitoral 2026 adiciona incerteza. Possível catalisador se direita ganhar.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Prejuízos Acumulados Crescendo (-R$187 Mi)",
+      "descricao": "Os prejuízos acumulados saltaram de -R$126 MI (2024) para -R$187 MI (2025). O fundo distribuiu R$282 MI em dividendos contra lucro de R$221 MI, pagando parcialmente acima do resultado retido. Não compromete solvência (6,6% do capital social), mas a tendência preocupa.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "TG Core Asset",
+    "nota": 7,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Patrimônio TGAR",
+        "valor": "R$ 2,60 Bi"
+      },
+      {
+        "label": "Retorno Total 12M",
+        "valor": "13,6%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Ativos no Portfólio",
+        "valor": "174"
+      }
+    ],
+    "resumo": "A <strong class=\"text-blue-400\">TG Core Asset</strong> é a gestora do TGAR11, especializada em desenvolvimento imobiliário com foco no interior do Brasil. Administrado pela Vórtx DTVM e auditado pela KPMG (parecer limpo em 2025). A gestora demonstrou <strong class=\"text-emerald-400\">transparência exemplar</strong> durante a crise de janeiro/2026: live de 90 minutos do diretor Pedro Ernesto explicando a revisão do guidance, webcasts mensais a partir de março/2026, e correspondente bancário dedicado para acelerar repasses. Voluntariamente reduziu taxa de performance em 2020. Gestão que <strong class=\"text-amber-400\">prioriza valor patrimonial sobre dividendos de curto prazo</strong>.",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas típica de FII de desenvolvimento",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,22% a.a.",
+        "detalhe": "Inclui custódia, controladoria e escrituração",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "1,28% a.a.",
+        "detalhe": "Sobre o valor de mercado do Fundo. Não cobrada sobre ativos de liquidez imediata.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "30%",
+        "detalhe": "Sobre o que exceder 100% do CDI",
+        "corBorda": "amber"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Desenvolvimento",
+    "comparativo": [
+      {
+        "ticker": "TGAR11",
+        "taxa": "1,50% total",
+        "perf": "+30% perf. s/ 100% CDI",
+        "destaque": true
+      },
+      {
+        "ticker": "MFII11",
+        "taxa": "2,00%",
+        "perf": "+20% perf. s/ 100% CDI"
+      },
+      {
+        "ticker": "URPR11",
+        "taxa": "1,50%",
+        "perf": "+20% perf. s/ 100% CDI"
+      },
+      {
+        "ticker": "HGBS11",
+        "taxa": "0,60%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Vórtx DTVM Ltda."
+      },
+      {
+        "label": "Gestor",
+        "valor": "TG Core Asset Ltda."
+      },
+      {
+        "label": "Auditor",
+        "valor": "KPMG Auditores Independentes"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "25.032.881/0001-53"
+      },
+      {
+        "label": "Início",
+        "valor": "Dezembro/2016"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Equity Performado",
+        "valor": "70,12%"
+      },
+      {
+        "label": "Equity Desenv.",
+        "valor": "14,02%"
+      },
+      {
+        "label": "Crédito (CRI)",
+        "valor": "4,32%"
+      },
+      {
+        "label": "Landbank",
+        "valor": "4,22%"
+      },
+      {
+        "label": "Obras",
+        "valor": "94%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Vendas",
+        "valor": "73%"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Urbanismo",
+        "Incorporação",
+        "Multipropriedade",
+        "Shopping",
+        "Renda"
+      ],
+      "data": [
+        60.99,
+        25.70,
+        10.24,
+        2.94,
+        0.13
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "GO (Goiás)",
+        "SP (São Paulo)",
+        "PA (Pará)",
+        "SC (Santa Catarina)",
+        "MT (Mato Grosso)",
+        "Outros (15 estados)"
+      ],
+      "data": [
+        35,
+        19,
+        12,
+        8,
+        8,
+        18
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#f97316",
+        "#06b6d4",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "TGAR11 Loteamentos",
+        "setor": "Urbanismo",
+        "receita": "37,2%",
+        "rating": "100%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "TGAR Incorporações",
+        "setor": "Incorporação/Multi",
+        "receita": "39,9%",
+        "rating": "100%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "TG House Incorporações",
+        "setor": "Incorporação",
+        "receita": "11,0%",
+        "rating": "100%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Viel Participações",
+        "setor": "Urbanismo",
+        "receita": "11,1%",
+        "rating": "99,94%",
+        "ratingCor": "amber",
+        "risco": "Elevado",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Equity Performado",
+        "valor": 70,
+        "cor": "emerald"
+      },
+      {
+        "label": "Equity Desenv.",
+        "valor": 14,
+        "cor": "blue"
+      },
+      {
+        "label": "Crédito/Landbank",
+        "valor": 9,
+        "cor": "amber"
+      },
+      {
+        "label": "Outros",
+        "valor": 7,
+        "cor": "slate"
+      }
+    ],
+    "riscoNota": "Portfólio com <strong class=\"text-emerald-400\">174 ativos</strong> em 20 estados e 104 municípios. A TIR Real consolidada é de <strong class=\"text-emerald-400\">14,25% a.a. + inflação</strong>, com 94% das obras concluídas e 73% das vendas realizadas. O VP a receber é de <strong class=\"text-blue-400\">R$ 2,50 bilhões</strong> e o VGV de estoque + landbank é de R$ 4,80 bilhões. Concentração geográfica relevante em GO (35%) e SP (19%). <strong class=\"text-amber-400\">Inadimplência crescente</strong>: urbanismo 4,51%, incorporação 5,81%, multipropriedade 7,24%. <strong class=\"text-amber-400\">CRIs caíram 85%</strong> (de R$368 Mi para R$55 Mi em 2025)."
+  },
+  "timeline": {
+    "subtitulo": "De R$10 Mi em 2016 a R$2,6 Bi de patrimônio em uma década",
+    "periodos": [
+      {
+        "periodo": "Dez/2016",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Constituição do FII TG Ativo Real. Início como fundo fechado voltado para investidores em geral.",
+        "pontos": [
+          "CNPJ: 25.032.881/0001-53",
+          "Gestor: TG Core Asset",
+          "Administrador: Vórtx DTVM",
+          "Foco em desenvolvimento imobiliário no interior do Brasil"
+        ]
+      },
+      {
+        "periodo": "2017-2020",
+        "label": "CRESCIMENTO ACELERADO",
+        "cor": "emerald",
+        "descricao": "13 emissões de cotas, patrimônio saltou de R$10 Mi para mais de R$1 Bi. Fundo se consolidou como referência em desenvolvimento imobiliário.",
+        "pontos": [
+          "Múltiplas emissões bem-sucedidas (2ª a 11ª)",
+          "Capital autorizado ampliado de R$2 Bi para R$10 Bi (2022)",
+          "Gestora reduziu voluntariamente taxa de performance em 2020",
+          "Retorno acumulado de 131% desde o IPO (cota patrimonial)"
+        ]
+      },
+      {
+        "periodo": "2021-2024",
+        "label": "MATURAÇÃO E DESAFIOS",
+        "cor": "purple",
+        "descricao": "Fundo atingiu pico de ~R$93/cota em 2025, mas ciclo de alta de juros começou a pressionar repasses bancários e vendas.",
+        "pontos": [
+          "Dividendos de R$1,00/cota mensais (estáveis por 7 meses)",
+          "DY anualizado acima de 14%",
+          "Retorno total acumulado de 157% (patrimonial)",
+          "Portfólio passou de 159 para 174 ativos"
+        ]
+      },
+      {
+        "periodo": "Jan/2026 - Atual",
+        "label": "CRISE E CORREÇÃO",
+        "cor": "red",
+        "descricao": "Cota caiu de R$93 para ~R$70 (-25%). Guidance revisado para R$0,70-1,00. Balanço 2025 revela que fundo distribui mais do que ganha. DY no piso perde para CDI.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Cota caiu de R$93 para ~R$70 (-25%)</strong>",
+          "<strong class=\"text-red-400\">Fundo distribui mais do que ganha (payout 128%)</strong>",
+          "<strong class=\"text-red-400\">Prejuízo acumulado: -R$187 MI</strong>",
+          "<strong class=\"text-amber-400\">46% da receita é contábil (equiv. patrimonial)</strong>",
+          "<strong class=\"text-amber-400\">DY no piso (12,3%) perde para CDI ~14,75%</strong>",
+          "Cotistas caíram de 162 mil para 147 mil"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - AGUARDAR VIRADA DE CENÁRIO:",
+      "texto": "O TGAR11 cresceu de R$10 MI para R$2,65 BI em uma década, com <strong class=\"text-emerald-400\">retorno patrimonial acumulado de 157%</strong>. O balanço 2025 mostra lucro +48%, mas o fundo <strong class=\"text-red-400\">distribui mais do que ganha</strong> (payout 128%) e acumula -R$187 MI em prejuízos. A cota a R$70 parece barata (desconto 36% para VP), mas o <strong class=\"text-red-400\">DY de 12,3% perde para o CDI de ~14,75%</strong>. O cenário macro não aponta para melhora de curto prazo. Aguardar sinais de virada (queda de Selic, melhora do dividendo) antes de posicionar."
+    },
+    "crescimento": [
+      {
+        "label": "Lucro 2025",
+        "valor": "R$ 221 Mi",
+        "detalhe": "+48% vs 2024"
+      },
+      {
+        "label": "Fluxo Operac.",
+        "valor": "+R$ 419 Mi",
+        "detalhe": "vs -R$14 Mi em 2024"
+      },
+      {
+        "label": "TIR Real",
+        "valor": "14,25%",
+        "detalhe": "Acima da inflação"
+      },
+      {
+        "label": "VP a Receber",
+        "valor": "R$ 2,50 Bi",
+        "detalhe": "Vendas já realizadas"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "TGAR11 é um <strong class=\"text-blue-400\">FII de desenvolvimento multiestratégia</strong> com 174 ativos em 20 estados. O balanço 2025 (KPMG) mostra lucro +48%, mas <strong class=\"text-red-400\">o fundo distribuiu R$282 MI contra R$221 MI de lucro</strong> — pagando mais do que ganha. Quase metade da receita (R$117 MI) é equivalência patrimonial contábil, não caixa. O <strong class=\"text-emerald-400\">P/VP de 0,64</strong> (desconto de 36%) parece atraente, mas o DY no piso (12,3%) <strong class=\"text-red-400\">perde para o CDI de ~14,75%</strong>. Barato não é sinônimo de bom investimento. O que importa é para onde o ativo aponta — e hoje não aponta para cima. Catalisador: queda sustentada da Selic e/ou sinalização política favorável.",
+    "paraQuem": [
+      "Investidores com <strong class=\"text-emerald-400\">horizonte longo</strong> (3+ anos) e convicção em virada de ciclo",
+      "Perfil <strong class=\"text-emerald-400\">arrojado</strong> que aceita dividendos abaixo do CDI em troca de potencial valorização",
+      "Quem busca <strong class=\"text-emerald-400\">desconto de 36% sobre VP</strong> com ativos reais construídos",
+      "Apostadores em <strong class=\"text-emerald-400\">queda de Selic</strong> e/ou mudança política em 2026"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-amber-400\">depende de renda mensal</strong> (dividendo perde para CDI e sem previsão de melhora)",
+      "Investidores que <strong class=\"text-amber-400\">preferem CDI a ~14,75%</strong> sem risco (yield atual do TGAR11 é 12,3%)",
+      "Perfil <strong class=\"text-amber-400\">conservador</strong> que não tolera volatilidade e perda de capital",
+      "Quem busca <strong class=\"text-amber-400\">catalisadores de curto prazo</strong> (não há nenhum visível)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      1.00,
+      0.71,
+      0.72
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0.5,
+    "chartYMax": 1.15,
+    "totaisAnuais": [
+      {
+        "ano": "Distribuído 12M",
+        "valor": "R$ 11,43"
+      },
+      {
+        "ano": "DY 12 Meses",
+        "valor": "14,01%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "DY Anualizado Atual",
+        "valor": "11,33%"
+      },
+      {
+        "ano": "Reserva Acumulada",
+        "valor": "R$ 0,13/cota"
+      },
+      {
+        "ano": "Lucro/Cota 2025",
+        "valor": "R$ 10,31",
+        "cor": "emerald"
+      }
+    ],
+    "guidance": {
+      "periodo": "1º Semestre 2026",
+      "faixa": "R$ 0,70 a R$ 1,00/cota",
+      "unidade": "Reserva: R$ 0,13/cota (sem colchão)"
+    },
+    "stats": [
+      {
+        "label": "Maior (Mar-Nov/25)",
+        "valor": "R$ 1,00",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Jan/26)",
+        "valor": "R$ 0,71"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "2017"
+      },
+      {
+        "label": "Total 12M",
+        "valor": "R$ 11,43",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Queda",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,64",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">36% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 110,16"
+        },
+        {
+          "label": "Preço",
+          "valor": "~R$ 70,00",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,3%",
+      "label": "DY Anualizado (piso)",
+      "cor": "amber",
+      "descricao": "DY anualizado de 12,3% no piso (R$0,72/mês). Perde para o CDI de ~14,75%. O DY 12M histórico (14%) inclui 10 meses de R$1,00 que não se repetirão.",
+      "detalhe": "Abaixo do CDI (~14,75%). Precisa subir para R$0,85+ para competir."
+    },
+    "recomendacoes": {
+      "valor": "1,50% + 30% perf.",
+      "label": "Taxa Total",
+      "cor": "amber",
+      "descricao": "Administração 0,22% + Gestão 1,28% = 1,50%. Performance de 30% sobre excedente do CDI. Taxa de gestão incide sobre valor de mercado, não PL.",
+      "detalhe": "Performance elevada (30%), mas taxa de gestão sobre VM reduz impacto com desconto"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">TGAR11</strong> tem 174 ativos em 20 estados e patrimônio de R$2,65 bilhões. O balanço 2025 (KPMG, parecer limpo) mostra lucro de R$221 MI (+48%). Parece ótimo. Mas o fundo <strong class=\"text-red-400\">distribuiu R$282 MI em dividendos — R$61 MI a mais do que ganhou</strong>. E quase metade da receita (R$117 MI) é equivalência patrimonial: ganho contábil de revalorização de SPEs, não dinheiro na conta.",
+      "O prejuízo acumulado cresceu de -R$126 MI para <strong class=\"text-red-400\">-R$187 MI</strong>. Os CRIs foram vendidos (de R$368 MI para R$55 MI), eliminando o colchão de liquidez. A inadimplência sobe em todos os segmentos (multipropriedade 7,24%). Cotistas saindo (162 mil → 147 mil). A redução do dividendo de R$1,00 para R$0,72 é uma <strong class=\"text-amber-400\">correção de responsabilidade</strong> — o fundo tenta alinhar distribuição com realidade.",
+      "A cota a ~R$70 negocia com desconto de 36% sobre o VP. Parece barato. Mas o DY no piso (12,3%) <strong class=\"text-red-400\">perde para o CDI de ~14,75%</strong>. Barato pelo VP não é sinônimo de bom investimento. O que importa é para onde o ativo aponta — e hoje não aponta para cima. <strong class=\"text-amber-400\">Esperar o cenário mudar antes de entrar.</strong>"
+    ],
+    "pontosFortes": [
+      "Balanço KPMG com parecer limpo (2025)",
+      "Lucro +48% (R$221 Mi, R$10,31/cota)",
+      "Fluxo operacional +R$419 Mi (curva-J confirmada)",
+      "P/VP 0,73 (desconto de 27% sobre VP)",
+      "174 ativos em 20 estados (diversificação)",
+      "TIR Real de 14,25% a.a. + inflação",
+      "94% das obras concluídas, 73% vendas realizadas",
+      "VP a receber de R$ 2,50 bilhões",
+      "Gestora transparente e proativa",
+      "Liquidez de R$ 7,87 Mi/dia"
+    ],
+    "pontosDeAtencao": [
+      "Dividendo no piso (R$0,72) sem colchão (reserva R$0,13)",
+      "Inadimplência crescente (multipropriedade 7,24%)",
+      "CRIs liquidados 85% (R$368 Mi → R$55 Mi)",
+      "Viel sem vender (R$258 Mi travados)",
+      "Prejuízos acumulados crescendo (-R$187 Mi)",
+      "Fundo distribui mais do que ganha (payout 128%)",
+      "46% da receita é contábil (equivalência patrimonial), não caixa",
+      "DY no piso (12,3%) perde para CDI de ~14,75%",
+      "Cenário macro adverso (Selic 14,75%, guerra, petróleo)",
+      "Cotistas saindo (162 mil → 147 mil em 11 meses)",
+      "Taxa de performance elevada (30% sobre CDI)",
+      "Casas de análise retirando da carteira",
+      "Sem catalisador de curto prazo até eleições"
+    ],
+    "conclusaoFinal": "<strong class=\"text-red-400\">Não compraríamos TGAR11 a R$70 hoje.</strong> O DY no piso (12,3%) perde para o CDI de ~14,75% sem risco. O fundo distribui mais do que ganha (payout 128%), tem prejuízo acumulado crescente (-R$187 MI) e quase metade da receita é contábil, não caixa. Barato pelo VP não é a mesma coisa que bom investimento — o que importa é para onde o ativo aponta, e hoje não aponta para cima. <strong class=\"text-amber-400\">Esperar o cenário apontar para melhora</strong>: queda sustentada da Selic, dividendo subindo para R$0,85+, ou sinalização política favorável. Quando a direção mudar, mesmo que a cota já tenha subido, será hora de entrar. Até lá, <strong class=\"text-emerald-400\">CDI é o melhor amigo do investidor paciente</strong>."
+  },
+  "footer": {
+    "dataAnalise": "02/04/2026",
+    "totalDocumentos": 47,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Análise baseada no balanço auditado pela KPMG (31/12/2025), relatório gerencial de fevereiro/2026 e 47 documentos oficiais do fundo."
+  }
+}

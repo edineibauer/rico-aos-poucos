@@ -17,14 +17,25 @@ const Calculadora = {
   // Traduções
   translations: {
     'pt-BR': {
-      mode1Title: 'Quanto preciso investir por mês?',
-      mode1Desc: 'Descubra o aporte mensal necessário',
-      mode2Title: 'Quanto vou acumular?',
-      mode2Desc: 'Descubra quanto terá no futuro',
-      mode3Title: 'Quanto tempo irá levar?',
-      mode3Desc: 'Descubra o prazo para atingir seu objetivo',
-      mode4Title: 'Independência Financeira',
-      mode4Desc: 'Quando poderei viver de renda?',
+      mode1Title: 'Alcançar uma meta',
+      mode1Desc: 'Tenho um valor e um prazo — quanto aportar por mês?',
+      mode2Title: 'Projetar meus aportes',
+      mode2Desc: 'Aporto um valor todo mês — quanto terei no futuro?',
+      mode3Title: 'Prazo para minha meta',
+      mode3Desc: 'Tenho um valor e um aporte — quanto tempo leva?',
+      mode4Title: 'Aposentadoria',
+      mode4Desc: 'Quero me aposentar com R$X/mês — quanto aportar?',
+      mode5Title: 'Venda parcelada',
+      mode5Desc: 'Entrada + parcelas equivalem ao valor à vista?',
+      mode5CashLabel: 'Valor desejado à vista',
+      mode5DownLabel: 'Entrada oferecida',
+      mode5InstLabel: 'Valor da parcela mensal',
+      mode5RateLabel: 'Taxa de rendimento mensal (CDI)',
+      mode5AdjLabel: 'Reajuste anual das parcelas (IGP-M)',
+      ageLabel: 'Quantos anos você tem?',
+      retirementAgeLabel: 'Com quantos anos quer se aposentar?',
+      advancedOptions: 'Opções avançadas',
+      alreadyInvestedLabel: 'Já tem algo investido?',
       goalLabel: 'Objetivo (valor em reais de hoje)',
       goalPlaceholder: 'Ex: 300000',
       timeLabel: 'Tempo de investimento',
@@ -364,14 +375,14 @@ const Calculadora = {
   // Aplicar máscaras aos campos do formulário
   applyMasks() {
     // Campos monetários
-    const currencyFields = ['objetivo', 'valorInicial', 'aporte', 'rendaPassiva'];
+    const currencyFields = ['objetivo', 'valorInicial', 'aporte', 'rendaPassiva', 'valorVistaParc', 'entradaParc', 'parcelaValor'];
     currencyFields.forEach(id => {
       const input = document.getElementById(id);
       if (input) this.maskCurrency(input);
     });
 
     // Campos de porcentagem
-    const percentFields = ['rentabilidade', 'inflacao'];
+    const percentFields = ['rentabilidade', 'inflacao', 'taxaCDI', 'reajusteParc'];
     percentFields.forEach(id => {
       const input = document.getElementById(id);
       if (input) this.maskPercentage(input);
@@ -418,6 +429,13 @@ const Calculadora = {
           <span class="mode-text">
             <strong>${this.t('mode4Title')}</strong>
             <small>${this.t('mode4Desc')}</small>
+          </span>
+        </button>
+        <button class="calc-mode-btn" data-mode="5">
+          <span class="mode-icon">🤝</span>
+          <span class="mode-text">
+            <strong>${this.t('mode5Title')}</strong>
+            <small>${this.t('mode5Desc')}</small>
           </span>
         </button>
       </div>
@@ -566,7 +584,7 @@ const Calculadora = {
         <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
       `;
     } else if (this.currentMode === 4) {
-      // Modo 4: Independência Financeira
+      // Modo 4: Aposentadoria simplificada
       return `
         <div class="calc-field">
           <label for="rendaPassiva">${this.t('passiveIncomeLabel')}</label>
@@ -577,30 +595,88 @@ const Calculadora = {
         </div>
 
         <div class="calc-field">
-          <label for="valorInicial">${this.t('initialLabel')}</label>
+          <label for="idade">${this.t('ageLabel')}</label>
           <div class="input-group">
-            <span class="input-prefix">R$</span>
-            <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
+            <input type="text" id="idade" value="25" inputmode="numeric">
+            <span class="input-suffix">anos</span>
           </div>
         </div>
 
         <div class="calc-field">
-          <label for="aporte">${this.t('monthlyLabel')}</label>
+          <label for="idadeAposentar">${this.t('retirementAgeLabel')}</label>
+          <div class="input-group">
+            <input type="text" id="idadeAposentar" value="60" inputmode="numeric">
+            <span class="input-suffix">anos</span>
+          </div>
+        </div>
+
+        <details class="calc-advanced">
+          <summary>${this.t('advancedOptions')}</summary>
+          <div class="calc-field">
+            <label for="valorInicial">${this.t('alreadyInvestedLabel')}</label>
+            <div class="input-group">
+              <span class="input-prefix">R$</span>
+              <input type="text" id="valorInicial" value="${d.valorInicial}" placeholder="${this.t('initialPlaceholder')}" inputmode="numeric">
+            </div>
+          </div>
+
+          ${this.renderReturnField()}
+
+          <div class="calc-field">
+            <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+            <div class="input-group">
+              <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
+              <span class="input-suffix">%</span>
+            </div>
+          </div>
+        </details>
+
+        <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
+      `;
+    } else if (this.currentMode === 5) {
+      // Modo 5: Venda parcelada
+      return `
+        <div class="calc-field">
+          <label for="valorVistaParc">${this.t('mode5CashLabel')}</label>
           <div class="input-group">
             <span class="input-prefix">R$</span>
-            <input type="text" id="aporte" value="${d.aporteMensal}" placeholder="${this.t('monthlyPlaceholder')}" inputmode="numeric">
+            <input type="text" id="valorVistaParc" value="90000" inputmode="numeric">
           </div>
         </div>
-
-        ${this.renderReturnField()}
 
         <div class="calc-field">
-          <label for="inflacao">${this.t('inflationLabel')} <a href="${inflationLink}" class="calc-info-link" target="_blank">${this.t('inflationLink')}</a></label>
+          <label for="entradaParc">${this.t('mode5DownLabel')}</label>
           <div class="input-group">
-            <input type="text" id="inflacao" value="${d.inflacaoAnual}" inputmode="decimal">
-            <span class="input-suffix">%</span>
+            <span class="input-prefix">R$</span>
+            <input type="text" id="entradaParc" value="30000" inputmode="numeric">
           </div>
         </div>
+
+        <div class="calc-field">
+          <label for="parcelaValor">${this.t('mode5InstLabel')}</label>
+          <div class="input-group">
+            <span class="input-prefix">R$</span>
+            <input type="text" id="parcelaValor" value="1000" inputmode="numeric">
+          </div>
+        </div>
+
+        <details class="calc-advanced">
+          <summary>${this.t('advancedOptions')}</summary>
+          <div class="calc-field">
+            <label for="taxaCDI">${this.t('mode5RateLabel')}</label>
+            <div class="input-group">
+              <input type="text" id="taxaCDI" value="1,0" inputmode="decimal">
+              <span class="input-suffix">% a.m.</span>
+            </div>
+          </div>
+          <div class="calc-field">
+            <label for="reajusteParc">${this.t('mode5AdjLabel')}</label>
+            <div class="input-group">
+              <input type="text" id="reajusteParc" value="4,5" inputmode="decimal">
+              <span class="input-suffix">% a.a.</span>
+            </div>
+          </div>
+        </details>
 
         <button class="calc-btn" id="btnCalcular">${this.t('calculate')}</button>
       `;
@@ -734,32 +810,104 @@ const Calculadora = {
         inflacaoMensal
       });
     } else if (this.currentMode === 4) {
-      // Modo 4: Independência Financeira
+      // Modo 4: Aposentadoria simplificada (calcula aporte necessário a partir da idade)
       const rendaPassivaHoje = this.parseCurrency(document.getElementById('rendaPassiva')?.value) || 0;
-      const aporteInicial = this.parseCurrency(document.getElementById('aporte')?.value) || 0;
+      const idade = parseInt(document.getElementById('idade')?.value) || 25;
+      const idadeAposentar = parseInt(document.getElementById('idadeAposentar')?.value) || 60;
+      const anosParaAposentar = Math.max(1, idadeAposentar - idade);
+      const meses = anosParaAposentar * 12;
 
-      // Calcular para renda exata
-      const resultadoExato = this.calcularIndependenciaFinanceira(
-        rendaPassivaHoje, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial
-      );
+      // Capital necessário hoje para gerar a renda passiva desejada
+      const capitalHoje = rendaPassivaHoje / rentabilidadeMensal;
 
-      // Calcular com margem de 30%
+      // Capital nominal necessário na data da aposentadoria (ajustado pela inflação)
+      const capitalNominal = capitalHoje * Math.pow(1 + inflacaoAnual, anosParaAposentar);
+
+      // Calcular aporte mensal necessário para atingir o capital nominal (usando busca binária existente)
+      const aporteNecessario = this.calcularAporteNecessario(capitalNominal, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
+
+      // Simular com o aporte encontrado para obter projeção ano a ano
+      const projecao = this.simularInvestimento(aporteNecessario, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
+
+      // Também calcular com margem de 30%
       const rendaComMargem = rendaPassivaHoje * 1.3;
+      const capitalComMargem = (rendaComMargem / rentabilidadeMensal) * Math.pow(1 + inflacaoAnual, anosParaAposentar);
+      const aporteComMargem = this.calcularAporteNecessario(capitalComMargem, meses, rentabilidadeMensal, inflacaoMensal, valorInicial);
+
+      // Simular para resultado exato (compatibilidade com showResult existente)
+      const resultadoExato = this.calcularIndependenciaFinanceira(
+        rendaPassivaHoje, aporteNecessario, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial
+      );
       const resultadoMargem = this.calcularIndependenciaFinanceira(
-        rendaComMargem, aporteInicial, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial
+        rendaComMargem, aporteComMargem, rentabilidadeMensal, inflacaoMensal, inflacaoAnual, valorInicial
       );
 
       this.showResult({
         mode: 4,
         rendaPassivaHoje,
         rendaComMargem,
-        aporteInicial,
+        aporteInicial: aporteNecessario,
+        aporteComMargem,
         valorInicial,
         rentabilidadeMensal,
         inflacaoAnual,
         inflacaoMensal,
+        capitalHoje,
+        idade,
+        idadeAposentar,
+        anosParaAposentar,
         resultadoExato,
         resultadoMargem
+      });
+    } else if (this.currentMode === 5) {
+      // Modo 5: Venda parcelada — calcular quantas parcelas equivalem ao valor à vista
+      const valorVista = this.parseCurrency(document.getElementById('valorVistaParc')?.value) || 0;
+      const entrada = this.parseCurrency(document.getElementById('entradaParc')?.value) || 0;
+      const parcela = this.parseCurrency(document.getElementById('parcelaValor')?.value) || 0;
+      const taxaMensal = this.parsePercentage(document.getElementById('taxaCDI')?.value) / 100 || 0.01;
+      const reajusteAnual = this.parsePercentage(document.getElementById('reajusteParc')?.value) / 100 || 0.045;
+
+      if (valorVista <= 0 || parcela <= 0) return;
+
+      const diferenca = valorVista - entrada;
+      if (diferenca <= 0) {
+        this.showResult({ mode: 5, tipo: 'coberto', valorVista, entrada });
+        return;
+      }
+
+      // 1) Calcular número de parcelas FIXAS pelo valor presente (desconto = CDI)
+      let pvAcumulado = 0;
+      let numParcelas = 0;
+      const maxParcelas = 600;
+
+      for (let i = 1; i <= maxParcelas; i++) {
+        pvAcumulado += parcela / Math.pow(1 + taxaMensal, i);
+        if (pvAcumulado >= diferenca) {
+          numParcelas = i;
+          break;
+        }
+      }
+
+      // 2) Calcular total SEM reajuste (parcelas fixas)
+      const totalSemReajuste = entrada + numParcelas * parcela;
+
+      // 3) Calcular total COM reajuste anual (IGP-M sobre as mesmas N parcelas)
+      let totalComReajuste = entrada;
+      let parcelaAtual = parcela;
+      for (let i = 1; i <= numParcelas; i++) {
+        if (i > 1 && (i - 1) % 12 === 0) {
+          parcelaAtual = parcela * Math.pow(1 + reajusteAnual, Math.floor((i - 1) / 12));
+        }
+        totalComReajuste += parcelaAtual;
+      }
+      const parcelaFinal = parcelaAtual;
+
+      this.showResult({
+        mode: 5,
+        tipo: numParcelas === 0 ? 'insuficiente' : 'calculado',
+        valorVista, entrada, parcela, numParcelas,
+        totalSemReajuste, totalComReajuste, parcelaFinal,
+        diferenca, taxaMensal, reajusteAnual
       });
     }
   },
@@ -1119,50 +1267,41 @@ const Calculadora = {
         `;
       }
     } else if (data.mode === 4) {
-      // Resultado do modo 4: Independência Financeira
+      // Resultado do modo 4: Aposentadoria (aporte necessário)
       const exato = data.resultadoExato;
       const margem = data.resultadoMargem;
 
-      const tempoExatoFormatado = exato.mesesRestantes > 0
-        ? `${exato.anos} ${this.t('years')} ${this.t('and')} ${exato.mesesRestantes} ${this.t('months')}`
-        : `${exato.anos} ${this.t('years')}`;
+      html = `<h3>Resultado da Aposentadoria</h3>`;
 
-      const tempoMargemFormatado = margem.mesesRestantes > 0
-        ? `${margem.anos} ${this.t('years')} ${this.t('and')} ${margem.mesesRestantes} ${this.t('months')}`
-        : `${margem.anos} ${this.t('years')}`;
-
-      if (exato.naoAtingiu) {
-        html += `
-          <div class="result-main result-warning">
-            <div class="result-value">+50 ${this.t('years')}</div>
-            <div class="result-label">${this.t('fiTimeNeeded')}</div>
-            <div class="result-note">${this.t('fiNeverReach')}</div>
-          </div>
-        `;
-      } else {
-        html = `<h3>${this.t('fiResultTitle')}</h3>`;
-
-        html += `
+      html += `
           <div class="result-main">
-            <div class="result-value">${tempoExatoFormatado}</div>
-            <div class="result-label">${this.t('fiTimeNeeded')}</div>
-            <div class="result-margin-inline">${margem.naoAtingiu ? '+50 ' + this.t('years') : tempoMargemFormatado} ${this.t('fiMarginTimeShort')}</div>
+            <div class="result-value">${this.formatCurrency(data.aporteInicial)}${this.t('perMonth')}</div>
+            <div class="result-label">Aporte mensal necessário</div>
+            <div class="result-margin-inline">${this.formatCurrency(data.aporteComMargem)}${this.t('perMonth')} com margem de segurança de 30%</div>
           </div>
 
           <div class="result-secondary">
             <div class="result-value-secondary">${this.formatCurrency(data.rendaPassivaHoje)}${this.t('perMonth')}</div>
-            <div class="result-label">${this.t('fiPassiveIncome')}</div>
-            <div class="result-note">${this.t('fiPassiveIncomeNote')}</div>
+            <div class="result-label">Renda passiva na aposentadoria</div>
+            <div class="result-note">Em valores de hoje, já considerando a inflação</div>
           </div>
 
           <div class="result-details">
             <div class="result-detail">
-              <span class="detail-label">${this.t('fiCapitalNeeded')}</span>
-              <span class="detail-value">${this.formatCurrency(exato.capitalHoje)}</span>
+              <span class="detail-label">Sua idade atual</span>
+              <span class="detail-value">${data.idade} anos</span>
             </div>
             <div class="result-detail">
-              <span class="detail-label">${this.t('fiCapitalAdjusted')}</span>
-              <span class="detail-value">${this.formatCurrency(exato.capitalNecessario)}</span>
+              <span class="detail-label">Aposentadoria aos</span>
+              <span class="detail-value">${data.idadeAposentar} anos</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">Tempo de aportes</span>
+              <span class="detail-value">${data.anosParaAposentar} ${this.t('years')}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">${this.t('fiCapitalNeeded')}</span>
+              <span class="detail-value">${this.formatCurrency(data.capitalHoje)}</span>
             </div>
             <div class="result-detail">
               <span class="detail-label">${this.t('totalInvested')}</span>
@@ -1174,27 +1313,60 @@ const Calculadora = {
             </div>
           </div>
 
-          <div class="result-margin-section">
-            <h4>${this.t('fiMarginTitle')}</h4>
-            <p class="result-note">${this.t('fiMarginNote')}</p>
+          ${exato.saldosPorAno ? this.renderFIProjection(exato.saldosPorAno, exato.aportesPorAno, data.inflacaoAnual) : ''}
+        `;
+    } else if (data.mode === 5) {
+      // Resultado do modo 5: Venda parcelada
+      if (data.tipo === 'coberto') {
+        html = `<h3>Resultado</h3>
+          <div class="result-main">
+            <div class="result-value" style="color: var(--bullish)">Entrada cobre o valor</div>
+            <div class="result-label">A entrada de ${this.formatCurrency(data.entrada)} já cobre ${this.formatCurrency(data.valorVista)}</div>
+          </div>`;
+      } else if (data.tipo === 'insuficiente') {
+        html = `<h3>Resultado</h3>
+          <div class="result-main result-warning">
+            <div class="result-value">Proposta inviável</div>
+            <div class="result-label">Mesmo em 50 anos, as parcelas não compensam o valor à vista</div>
+            <div class="result-note">Aumente o valor da parcela ou da entrada.</div>
+          </div>`;
+      } else {
+        const anos = Math.floor(data.numParcelas / 12);
+        const meses = data.numParcelas % 12;
+        const tempoStr = anos > 0
+          ? `${anos} ano${anos > 1 ? 's' : ''}${meses > 0 ? ` e ${meses} ${meses > 1 ? 'meses' : 'mês'}` : ''}`
+          : `${meses} ${meses > 1 ? 'meses' : 'mês'}`;
 
-            <div class="result-margin-grid">
-              <div class="margin-item">
-                <span class="margin-label">${this.t('fiMarginIncome')}</span>
-                <span class="margin-value">${this.formatCurrency(data.rendaComMargem)}${this.t('perMonth')}</span>
-              </div>
-              <div class="margin-item">
-                <span class="margin-label">${this.t('fiMarginCapital')}</span>
-                <span class="margin-value">${this.formatCurrency(margem.capitalNecessario)}</span>
-              </div>
-              <div class="margin-item">
-                <span class="margin-label">${this.t('fiMarginTime')}</span>
-                <span class="margin-value">${margem.naoAtingiu ? '+50 ' + this.t('years') : tempoMargemFormatado}</span>
-              </div>
+        html = `<h3>Resultado da Negociação</h3>
+          <div class="result-main">
+            <div class="result-value">${data.numParcelas} parcelas</div>
+            <div class="result-label">${tempoStr} de parcelamento</div>
+            <div class="result-note">Para que entrada + parcelas equivalham a ${this.formatCurrency(data.valorVista)} à vista (considerando rendimento de ${(data.taxaMensal * 100).toFixed(1)}% a.m.)</div>
+          </div>
+
+          <div class="result-details">
+            <div class="result-detail">
+              <span class="detail-label">Entrada</span>
+              <span class="detail-value">${this.formatCurrency(data.entrada)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">Parcela mensal</span>
+              <span class="detail-value">${this.formatCurrency(data.parcela)}/mês</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">Total sem reajuste</span>
+              <span class="detail-value">${this.formatCurrency(data.totalSemReajuste)}</span>
+            </div>
+            <div class="result-detail">
+              <span class="detail-label">Total com reajuste ${(data.reajusteAnual * 100).toFixed(1)}% a.a.</span>
+              <span class="detail-value highlight">${this.formatCurrency(data.totalComReajuste)}</span>
             </div>
           </div>
 
-          ${this.renderFIProjection(exato.saldosPorAno, exato.aportesPorAno, data.inflacaoAnual)}
+          <div class="result-secondary">
+            <div class="result-value-secondary" style="color: var(--bullish)">Proposta equivalente ao valor à vista</div>
+            <div class="result-note">Com o reajuste anual de ${(data.reajusteAnual * 100).toFixed(1)}%, a parcela começa em ${this.formatCurrency(data.parcela)} e termina em ${this.formatCurrency(data.parcelaFinal)}. Você recebe ${this.formatCurrency(data.totalComReajuste - data.totalSemReajuste)} a mais do que sem reajuste, protegendo contra a inflação.</div>
+          </div>
         `;
       }
     }

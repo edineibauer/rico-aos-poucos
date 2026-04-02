@@ -1,0 +1,53 @@
+{
+  "slug": "tivio-capital",
+  "nome": "Tivio Capital",
+  "nota": 6.7,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 3,
+  "segmentos": [
+    "Tijolo - Lajes Corporativas",
+    "Tijolo - Shopping Centers"
+  ],
+  "resumo": "Gestora com 3 fundos analisados: GTWR11, BBRC11, VSHO11. Nota média 6.7/10 (BOM).",
+  "seo": {
+    "title": "Tivio Capital - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Tivio Capital. 3 fundos geridos com nota média 6.7/10. Veja os FIIs: GTWR11, BBRC11, VSHO11.",
+    "ogTitle": "Tivio Capital - Análise da Gestora de FIIs",
+    "ogDescription": "Tivio Capital: 3 fundos, nota média 6.7/10. Fundos: GTWR11, BBRC11, VSHO11.",
+    "twitterTitle": "Tivio Capital - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Tivio Capital: 3 fundos, nota 6.7/10."
+  },
+  "fundos": [
+    {
+      "ticker": "GTWR11",
+      "nome": "FII Green Towers",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "nota": 7,
+      "notaLabel": "BOM",
+      "dividendYield": 13.01,
+      "pvp": 0.82,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "BBRC11",
+      "nome": "BB Renda Corporativa FII",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 24.47,
+      "pvp": 0.98,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "VSHO11",
+      "nome": "Votorantim Shopping FII",
+      "segmento": "Tijolo - Shopping Centers",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 14.89,
+      "pvp": 0.67,
+      "sentimento": "neutro"
+    }
+  ]
+}

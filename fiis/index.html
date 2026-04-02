@@ -2,7 +2,6 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <!-- Performance: Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="dns-prefetch" href="https://www.youtube.com">
@@ -15,7 +14,6 @@
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/">
 
-  <!-- Open Graph -->
   <meta property="og:title" content="Análise de FIIs 2026: Melhores Fundos Imobiliários | Rico aos Poucos">
   <meta property="og:description" content="Análises completas de FIIs com indicadores, riscos e conclusões. Encontre os melhores fundos para renda passiva.">
   <meta property="og:type" content="website">
@@ -24,30 +22,23 @@
   <meta property="og:locale" content="pt_BR">
   <meta property="og:site_name" content="Rico aos Poucos">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:site" content="@ricoaospoucos">
   <meta name="twitter:title" content="Análise de FIIs 2026 | Rico aos Poucos">
   <meta name="twitter:description" content="Análises completas de FIIs: dividend yield, P/VP, vacância e conclusões.">
   <meta name="twitter:image" content="https://ricoaospoucos.com.br/icon-512.png">
 
-  <!-- Keywords -->
   <meta name="keywords" content="FIIs 2026, fundos imobiliários, análise FII, dividend yield, P/VP, melhores FIIs, investimento imobiliário, renda passiva, IFIX, FII recomendados">
 
-  <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
   <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
   <link rel="icon" type="image/svg+xml" href="../favicon.svg">
   <link rel="shortcut icon" href="../icon-192.png">
-  <title>Analise de FIIs - Rico aos Poucos</title>
+  <title>Análise de FIIs - Rico aos Poucos</title>
   <link rel="stylesheet" href="../css/style.css">
   <style>
-    /* v2.0 - Mobile optimizations 2026-01-31 */
-
-    /* Sobrescrever estilo global do style.css */
-    section {
-      padding: 0 !important;
-    }
+    /* v3.0 - Filtros avançados 2026-02-24 */
+    section { padding: 0 !important; }
 
     .page-wrapper {
       min-height: 100vh;
@@ -79,9 +70,7 @@
       flex-shrink: 0;
     }
 
-    .header-back:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
+    .header-back:hover { background: rgba(255, 255, 255, 0.1); }
 
     .header-back svg {
       width: 18px;
@@ -91,16 +80,9 @@
       fill: none;
     }
 
-    .app-logo {
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
-    }
+    .app-logo { width: 36px; height: 36px; flex-shrink: 0; }
 
-    .app-title-group {
-      flex: 1;
-      min-width: 0;
-    }
+    .app-title-group { flex: 1; min-width: 0; }
 
     .app-name {
       font-size: 1rem;
@@ -109,10 +91,7 @@
       margin: 0;
     }
 
-    .app-subtitle {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
+    .app-subtitle { font-size: 0.7rem; color: var(--text-muted); }
 
     /* Main content */
     .main-content {
@@ -123,115 +102,151 @@
       width: 100%;
     }
 
-    /* CTA FIIs Recomendados */
+    /* CTA FIIs Recomendados (compact inline) */
     .cta-recomendados {
-      display: flex;
+      display: inline-flex;
       align-items: center;
-      gap: 16px;
-      padding: 20px 24px;
-      margin-bottom: 24px;
+      gap: 8px;
+      padding: 6px 14px;
       background: linear-gradient(145deg, rgba(26, 95, 74, 0.2) 0%, rgba(13, 17, 23, 0.95) 100%);
       border: 1px solid rgba(26, 95, 74, 0.3);
-      border-radius: 16px;
+      border-radius: 20px;
       text-decoration: none;
       color: inherit;
       transition: all 0.3s ease;
+      font-size: 0.8rem;
+      white-space: nowrap;
     }
 
     .cta-recomendados:hover {
       border-color: var(--primary-light);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 24px rgba(26, 95, 74, 0.2);
+      box-shadow: 0 4px 12px rgba(26, 95, 74, 0.2);
     }
 
-    .cta-icon {
-      font-size: 2rem;
-      flex-shrink: 0;
+    .cta-icon { font-size: 1rem; flex-shrink: 0; }
+    .cta-label { color: var(--text-primary); font-weight: 600; }
+    .cta-arrow { color: var(--primary-light); flex-shrink: 0; transition: transform 0.3s ease; }
+    .cta-recomendados:hover .cta-arrow { transform: translateX(3px); }
+
+    /* Search and filters - compact control bar */
+    .search-section { margin-bottom: 16px; }
+
+    .controls-bar {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      margin-bottom: 8px;
     }
 
-    .cta-content {
-      flex: 1;
-    }
-
-    .cta-content h3 {
-      font-size: 1.1rem;
-      color: var(--text-primary);
-      margin: 0 0 4px;
-    }
-
-    .cta-content p {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin: 0;
-    }
-
-    .cta-content strong {
-      color: var(--primary-light);
-    }
-
-    .cta-arrow {
-      color: var(--primary-light);
-      flex-shrink: 0;
-      transition: transform 0.3s ease;
-    }
-
-    .cta-recomendados:hover .cta-arrow {
-      transform: translateX(4px);
-    }
-
-    /* Search and filters */
-    .search-section {
-      margin-bottom: 20px;
-    }
-
-    .search-input-wrapper {
-      position: relative;
-      margin-bottom: 12px;
-    }
+    .search-input-wrapper { position: relative; flex: 1; min-width: 0; }
 
     .search-input {
       width: 100%;
-      padding: 12px 16px 12px 44px;
+      padding: 10px 14px 10px 38px;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
-      font-size: 0.9rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
       color: var(--text-primary);
       outline: none;
       transition: border-color 0.3s ease;
     }
 
-    .search-input:focus {
-      border-color: var(--primary-light);
-    }
-
-    .search-input::placeholder {
-      color: var(--text-muted);
-    }
+    .search-input:focus { border-color: var(--primary-light); }
+    .search-input::placeholder { color: var(--text-muted); }
 
     .search-icon {
       position: absolute;
-      left: 14px;
+      left: 12px;
       top: 50%;
       transform: translateY(-50%);
-      width: 20px;
-      height: 20px;
+      width: 18px;
+      height: 18px;
       color: var(--text-muted);
     }
 
-    /* Filters */
+    /* Compact filter toggle button */
+    .filter-toggle-btn {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      padding: 10px 14px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.3s ease;
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    .filter-toggle-btn:hover { border-color: var(--primary-light); color: var(--text-primary); }
+    .filter-toggle-btn.has-filters { border-color: var(--primary-light); color: var(--primary-light); }
+    .filter-toggle-btn.open { background: var(--bg-tertiary); border-color: var(--primary-light); }
+
+    .filter-toggle-btn svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 0.3s ease;
+    }
+
+    .filter-toggle-btn.open svg { transform: rotate(180deg); }
+
+    .filter-toggle-btn .badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 18px;
+      height: 18px;
+      padding: 0 5px;
+      background: var(--primary);
+      border-radius: 9px;
+      font-size: 0.65rem;
+      color: white;
+      font-weight: 700;
+    }
+
+    /* Sort select (replaces sort buttons) */
+    .sort-select {
+      flex: 0 0 auto;
+      padding: 10px 30px 10px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+      font-size: 0.8rem;
+      color: var(--text-primary);
+      outline: none;
+      cursor: pointer;
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+      background-repeat: no-repeat;
+      background-position: right 8px center;
+      background-size: 12px;
+    }
+
+    .filter-section {
+      margin-bottom: 14px;
+      padding-bottom: 14px;
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .filter-section .range-label { margin-bottom: 8px; }
+
+    /* Filter chips */
     .filters-row {
       display: flex;
       gap: 8px;
       overflow-x: auto;
-      padding-bottom: 8px;
+      padding-bottom: 4px;
       -webkit-overflow-scrolling: touch;
       scrollbar-width: none;
     }
 
-    .filters-row::-webkit-scrollbar {
-      display: none;
-    }
+    .filters-row::-webkit-scrollbar { display: none; }
 
     .filter-chip {
       display: inline-flex;
@@ -249,52 +264,241 @@
       flex-shrink: 0;
     }
 
-    .filter-chip:hover {
-      border-color: var(--primary-light);
-      color: var(--text-primary);
+    .filter-chip:hover { border-color: var(--primary-light); color: var(--text-primary); }
+    .filter-chip.active { background: var(--primary); border-color: var(--primary); color: white; }
+
+    /* Filter labels */
+    .filter-group-label {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+      font-weight: 600;
     }
 
-    .filter-chip.active {
-      background: var(--primary);
-      border-color: var(--primary);
-      color: white;
+    .filter-group { margin-bottom: 12px; }
+
+    .advanced-panel {
+      display: none;
+      padding: 16px;
+      margin-top: 8px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
     }
 
-    /* Sorting options */
-    .sort-options {
+    .advanced-panel.open { display: block; }
+
+    .advanced-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 16px;
+    }
+
+    /* Range filters */
+    .range-filter { display: flex; flex-direction: column; gap: 6px; }
+
+    .range-header {
       display: flex;
-      gap: 8px;
-      margin-top: 12px;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .range-label {
+      font-size: 0.75rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .range-value {
+      font-size: 0.75rem;
+      color: var(--primary-light);
+      font-weight: 600;
+      min-width: 45px;
+      text-align: right;
+    }
+
+    .range-slider {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      background: var(--bg-tertiary);
+      border-radius: 3px;
+      outline: none;
+      cursor: pointer;
+    }
+
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 18px;
+      height: 18px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid var(--bg-primary);
+      box-shadow: 0 0 0 3px rgba(26, 95, 74, 0.3);
+      transition: box-shadow 0.2s ease;
+    }
+
+    .range-slider::-webkit-slider-thumb:hover {
+      box-shadow: 0 0 0 5px rgba(26, 95, 74, 0.4);
+    }
+
+    .range-slider::-moz-range-thumb {
+      width: 18px;
+      height: 18px;
+      background: var(--primary-light);
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid var(--bg-primary);
+    }
+
+    .range-ticks {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.6rem;
+      color: var(--text-muted);
+      padding: 0 2px;
+    }
+
+    /* Veredicto chips */
+    .veredicto-chips {
+      display: flex;
+      gap: 6px;
       flex-wrap: wrap;
     }
 
-    .sort-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
+    .veredicto-chip {
       padding: 6px 12px;
-      background: transparent;
-      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      font-size: 0.72rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      border: 1px solid transparent;
+    }
+
+    .veredicto-chip.compra {
+      background: rgba(52, 211, 153, 0.1);
+      color: #34d399;
+      border-color: rgba(52, 211, 153, 0.3);
+    }
+    .veredicto-chip.compra.active {
+      background: rgba(52, 211, 153, 0.25);
+      border-color: #34d399;
+    }
+
+    .veredicto-chip.manter {
+      background: rgba(251, 191, 36, 0.1);
+      color: #fbbf24;
+      border-color: rgba(251, 191, 36, 0.3);
+    }
+    .veredicto-chip.manter.active {
+      background: rgba(251, 191, 36, 0.25);
+      border-color: #fbbf24;
+    }
+
+    .veredicto-chip.venda {
+      background: rgba(248, 81, 73, 0.1);
+      color: #f85149;
+      border-color: rgba(248, 81, 73, 0.3);
+    }
+    .veredicto-chip.venda.active {
+      background: rgba(248, 81, 73, 0.25);
+      border-color: #f85149;
+    }
+
+    .veredicto-chip.outro {
+      background: rgba(139, 148, 158, 0.1);
+      color: #8b949e;
+      border-color: rgba(139, 148, 158, 0.3);
+    }
+    .veredicto-chip.outro.active {
+      background: rgba(139, 148, 158, 0.25);
+      border-color: #8b949e;
+    }
+
+    /* Clear filters */
+    .clear-filters {
+      display: none;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      margin-top: 8px;
+      background: rgba(248, 81, 73, 0.1);
+      border: 1px solid rgba(248, 81, 73, 0.3);
       border-radius: 8px;
       font-size: 0.75rem;
-      color: var(--text-secondary);
+      color: #f85149;
       cursor: pointer;
       transition: all 0.3s ease;
     }
 
-    .sort-btn:hover {
-      border-color: var(--primary-light);
+    .clear-filters.visible { display: inline-flex; }
+    .clear-filters:hover { background: rgba(248, 81, 73, 0.2); }
+
+    /* Results bar (counter + CTA) */
+    .results-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 16px;
+      padding: 0 4px;
+    }
+
+    .results-count {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .results-count strong {
       color: var(--text-primary);
+      font-weight: 600;
     }
 
-    .sort-btn.active {
-      background: var(--bg-tertiary);
-      border-color: var(--primary-light);
-      color: var(--primary-light);
+    /* Pagination */
+    .pagination {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 4px;
+      margin-top: 24px;
+      padding: 16px 0;
+      flex-wrap: wrap;
     }
 
-    .sort-btn .arrow {
-      font-size: 0.65rem;
+    .page-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      height: 36px;
+      padding: 0 10px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--text-secondary);
+      cursor: pointer;
+      transition: all 0.2s ease;
+    }
+
+    .page-btn:hover { border-color: var(--primary-light); color: var(--text-primary); }
+    .page-btn.active { background: var(--primary); border-color: var(--primary); color: white; font-weight: 600; }
+    .page-btn:disabled { opacity: 0.3; cursor: default; }
+    .page-btn:disabled:hover { border-color: var(--border-color); color: var(--text-secondary); }
+
+    .page-ellipsis {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      width: 32px;
+      height: 36px;
+      color: var(--text-muted);
+      font-size: 0.8rem;
     }
 
     /* FII Cards Grid */
@@ -331,7 +535,8 @@
     .fii-ticker-section {
       display: flex;
       align-items: center;
-      gap: 12px;
+      gap: 10px;
+      flex-wrap: wrap;
     }
 
     .fii-ticker {
@@ -344,11 +549,17 @@
       display: inline-flex;
       align-items: center;
       gap: 4px;
-      padding: 4px 8px;
+      padding: 3px 8px;
       background: var(--bg-tertiary);
       border-radius: 6px;
-      font-size: 0.7rem;
+      font-size: 0.68rem;
       color: var(--text-secondary);
+    }
+
+    .fii-badges {
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
     .fii-sentimento {
@@ -361,20 +572,23 @@
       font-weight: 600;
     }
 
-    .fii-sentimento.otimista {
-      background: rgba(63, 185, 80, 0.15);
-      color: var(--bullish);
+    .fii-sentimento.otimista { background: rgba(63, 185, 80, 0.15); color: var(--bullish); }
+    .fii-sentimento.neutro { background: rgba(240, 193, 75, 0.15); color: var(--neutral); }
+    .fii-sentimento.pessimista { background: rgba(248, 81, 73, 0.15); color: var(--bearish); }
+
+    .fii-nota {
+      display: inline-flex;
+      align-items: center;
+      gap: 3px;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 0.68rem;
+      font-weight: 700;
     }
 
-    .fii-sentimento.neutro {
-      background: rgba(240, 193, 75, 0.15);
-      color: var(--neutral);
-    }
-
-    .fii-sentimento.pessimista {
-      background: rgba(248, 81, 73, 0.15);
-      color: var(--bearish);
-    }
+    .fii-nota.alta { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+    .fii-nota.media { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+    .fii-nota.baixa { background: rgba(248, 81, 73, 0.15); color: #f85149; }
 
     .fii-nome {
       font-size: 0.85rem;
@@ -389,9 +603,7 @@
       margin-bottom: 12px;
     }
 
-    .indicador-item {
-      text-align: center;
-    }
+    .indicador-item { text-align: center; }
 
     .indicador-label {
       font-size: 0.65rem;
@@ -406,13 +618,8 @@
       color: var(--text-primary);
     }
 
-    .indicador-valor.positivo {
-      color: var(--bullish);
-    }
-
-    .indicador-valor.negativo {
-      color: var(--bearish);
-    }
+    .indicador-valor.positivo { color: var(--bullish); }
+    .indicador-valor.negativo { color: var(--bearish); }
 
     .fii-resumo {
       font-size: 0.8rem;
@@ -433,11 +640,7 @@
       border-top: 1px solid var(--border-color);
     }
 
-    .fii-tags {
-      display: flex;
-      gap: 4px;
-      flex-wrap: wrap;
-    }
+    .fii-tags { display: flex; gap: 4px; flex-wrap: wrap; }
 
     .fii-tag {
       font-size: 0.6rem;
@@ -447,135 +650,60 @@
       color: var(--text-muted);
     }
 
-    .fii-tempo {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
+    .fii-tempo { font-size: 0.7rem; color: var(--text-muted); }
 
     /* Empty state */
-    .empty-state {
-      text-align: center;
-      padding: 48px 20px;
-    }
+    .empty-state { text-align: center; padding: 48px 20px; }
+    .empty-state .icon { font-size: 3rem; margin-bottom: 16px; }
+    .empty-state h3 { font-size: 1rem; margin-bottom: 8px; }
+    .empty-state p { color: var(--text-secondary); font-size: 0.9rem; }
 
-    .empty-state .icon {
-      font-size: 3rem;
-      margin-bottom: 16px;
-    }
+    .loading { text-align: center; padding: 32px; color: var(--text-muted); }
 
-    .empty-state h3 {
-      font-size: 1rem;
-      margin-bottom: 8px;
-    }
-
-    .empty-state p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
-    .loading {
-      text-align: center;
-      padding: 32px;
-      color: var(--text-muted);
-    }
-
-    /* MOBILE OPTIMIZATIONS - Correcoes de UX/UI para mobile */
+    /* MOBILE */
     @media (max-width: 767px) {
-      /* Prevenir overflow horizontal */
       body { overflow-x: hidden; }
+      .main-content { padding: 12px 16px !important; }
 
-      /* Otimizar padding do container principal */
-      .main-content {
-        padding: 12px 16px !important;
-      }
-
-      /* FII Cards - otimizar espacamento */
-      .fii-card {
-        padding: 14px !important;
-      }
+      .fii-card { padding: 14px !important; }
 
       .fii-indicadores {
         grid-template-columns: repeat(2, 1fr) !important;
         gap: 10px !important;
       }
 
-      .indicador-label {
-        font-size: 0.6rem !important;
-      }
+      .indicador-label { font-size: 0.6rem !important; }
+      .indicador-valor { font-size: 0.85rem !important; }
 
-      .indicador-valor {
-        font-size: 0.85rem !important;
-      }
+      .controls-bar { flex-wrap: wrap; }
+      .search-input-wrapper { flex: 1 1 100%; }
 
-      /* CTA Recomendados - reduzir padding */
-      .cta-recomendados {
-        padding: 16px 18px !important;
-        margin-bottom: 16px !important;
-      }
-
-      .cta-icon {
-        font-size: 1.5rem !important;
-      }
-
-      .cta-content h3 {
-        font-size: 1rem !important;
-      }
-
-      .cta-content p {
-        font-size: 0.8rem !important;
-      }
-
-      /* Search input */
       .search-input {
         font-size: 0.85rem !important;
-        padding: 10px 14px 10px 40px !important;
+        padding: 10px 14px 10px 36px !important;
       }
 
-      /* Filters row - reorganizar para incluir select de ordenacao */
-      .filters-row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        gap: 8px !important;
-        margin-bottom: 12px !important;
+      .filter-toggle-btn { flex: 1; justify-content: center; }
+      .sort-select { flex: 1; }
+      .filter-toggle-btn .filter-label-text { display: none; }
+
+      .filter-chip { padding: 7px 12px !important; font-size: 0.75rem !important; }
+
+      .advanced-grid {
+        grid-template-columns: 1fr !important;
       }
 
-      .filter-chip {
-        padding: 7px 12px !important;
-        font-size: 0.75rem !important;
-      }
+      .fii-badges { gap: 4px; }
 
-      /* Esconder botoes de sort no mobile */
-      .sort-options {
-        display: none !important;
-      }
+      .results-bar { flex-wrap: wrap; gap: 8px; }
 
-      /* Select de ordenacao mobile */
-      .mobile-sort-select {
-        flex: 0 0 auto;
-        padding: 7px 12px !important;
-        background: var(--bg-tertiary);
-        border: 1px solid var(--border-color);
-        border-radius: 20px;
-        font-size: 0.75rem !important;
-        color: var(--text-primary);
-        outline: none;
-        cursor: pointer;
-        -webkit-appearance: none;
-        -moz-appearance: none;
-        appearance: none;
-        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23e6edf3' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
-        background-repeat: no-repeat;
-        background-position: right 8px center;
-        background-size: 12px;
-        padding-right: 28px !important;
-      }
+      .pagination { gap: 2px; }
+      .page-btn { min-width: 32px; height: 32px; font-size: 0.75rem; }
     }
 
-    /* Desktop */
+    /* DESKTOP */
     @media (min-width: 768px) {
-      .main-content {
-        padding: 24px 32px;
-      }
+      .main-content { padding: 24px 32px; }
 
       .fiis-grid {
         display: grid;
@@ -583,43 +711,26 @@
         gap: 20px;
       }
 
-      .fii-card {
-        padding: 20px;
-      }
+      .fii-card { padding: 20px; }
 
-      .filters-row {
-        justify-content: center;
-      }
-
-      .sort-options {
-        justify-content: center;
-      }
-
-      /* Esconder select mobile no desktop */
-      .mobile-sort-select {
-        display: none;
+      .advanced-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
     @media (min-width: 1024px) {
-      .main-content {
-        max-width: 1400px;
-        padding: 32px 40px;
-      }
-
-      .fiis-grid {
-        grid-template-columns: repeat(3, 1fr);
-      }
+      .main-content { max-width: 1400px; padding: 32px 40px; }
+      .fiis-grid { grid-template-columns: repeat(3, 1fr); }
+      .advanced-grid { grid-template-columns: repeat(3, 1fr); }
     }
   </style>
 
-  <!-- JSON-LD -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "CollectionPage",
-    "name": "Analise de FIIs - Rico aos Poucos",
-    "description": "Analises completas de Fundos de Investimento Imobiliario com indicadores, riscos e conclusoes.",
+    "name": "Análise de FIIs - Rico aos Poucos",
+    "description": "Análises completas de Fundos de Investimento Imobiliário com indicadores, riscos e conclusões.",
     "url": "https://ricoaospoucos.com.br/fiis/",
     "inLanguage": "pt-BR",
     "isPartOf": {
@@ -649,74 +760,162 @@
       </div>
       <div class="app-title-group">
         <h1 class="app-name">Rico aos Poucos</h1>
-        <span class="app-subtitle">Analise de FIIs</span>
+        <span class="app-subtitle">Análise de FIIs</span>
       </div>
     </header>
 
     <!-- Main -->
     <main class="main-content">
-      <!-- CTA para FIIs Recomendados -->
-      <a href="recomendados/" class="cta-recomendados">
-        <div class="cta-icon">🎯</div>
-        <div class="cta-content">
-          <h3>FIIs Recomendados</h3>
-          <p>Veja a lista de FIIs com <strong>preços de entrada</strong> e <strong>saída</strong> definidos</p>
-        </div>
-        <svg class="cta-arrow" viewBox="0 0 24 24" width="24" height="24">
-          <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2" fill="none"/>
-        </svg>
-      </a>
-
-      <!-- Search and filters -->
+      <!-- Search, filter toggle, and sort - compact control bar -->
       <section class="search-section">
-        <div class="search-input-wrapper">
-          <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"></circle>
-            <path d="m21 21-4.35-4.35"></path>
-          </svg>
-          <input type="text" class="search-input" id="searchInput" placeholder="Buscar por ticker, nome ou tag...">
-        </div>
+        <div class="controls-bar">
+          <div class="search-input-wrapper">
+            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" class="search-input" id="searchInput" placeholder="Buscar ticker, nome, gestora...">
+          </div>
 
-        <div class="filters-row" id="filtersRow">
-          <button class="filter-chip active" data-filter="todos">Todos</button>
-          <button class="filter-chip" data-filter="desenvolvimento">Desenvolvimento</button>
-          <button class="filter-chip" data-filter="tijolo">Tijolo</button>
-          <button class="filter-chip" data-filter="papel">Papel</button>
-          <button class="filter-chip" data-filter="hibrido">Hibrido</button>
-          <button class="filter-chip" data-filter="fof">FoF</button>
-          <!-- Select de ordenacao para mobile -->
-          <select class="mobile-sort-select" id="mobileSortSelect">
-            <option value="ticker-asc">Ticker ↑</option>
-            <option value="ticker-desc">Ticker ↓</option>
-            <option value="dividendYield-desc">DY ↓</option>
-            <option value="dividendYield-asc">DY ↑</option>
-            <option value="pvp-asc">P/VP ↑</option>
-            <option value="pvp-desc">P/VP ↓</option>
-            <option value="cotacao-asc">Preço ↑</option>
-            <option value="cotacao-desc">Preço ↓</option>
+          <button class="filter-toggle-btn" id="advancedToggle">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M4 21V14M4 10V3M12 21V12M12 8V3M20 21V16M20 12V3M1 14h6M9 8h6M17 16h6"/>
+            </svg>
+            <span class="filter-label-text">Filtros</span>
+            <span class="badge" id="advancedBadge" style="display:none">0</span>
+          </button>
+
+          <select class="sort-select" id="sortSelect">
+            <option value="ticker-asc">Ticker A-Z</option>
+            <option value="ticker-desc">Ticker Z-A</option>
+            <option value="nota-desc">Maior Nota</option>
+            <option value="nota-asc">Menor Nota</option>
+            <option value="dividendYield-desc">Maior DY</option>
+            <option value="dividendYield-asc">Menor DY</option>
+            <option value="pvp-asc">Menor P/VP</option>
+            <option value="pvp-desc">Maior P/VP</option>
+            <option value="cotacao-asc">Menor Preço</option>
+            <option value="cotacao-desc">Maior Preço</option>
+            <option value="notaGestora-desc">Melhor Gestora</option>
           </select>
         </div>
 
-        <div class="sort-options">
-          <button class="sort-btn active" data-sort="ticker" data-order="asc">
-            Ticker <span class="arrow">↑</span>
-          </button>
-          <button class="sort-btn" data-sort="dividendYield" data-order="desc">
-            DY <span class="arrow">↓</span>
-          </button>
-          <button class="sort-btn" data-sort="pvp" data-order="asc">
-            P/VP <span class="arrow">↑</span>
-          </button>
-          <button class="sort-btn" data-sort="cotacao" data-order="asc">
-            Preco <span class="arrow">↑</span>
+        <!-- Painel de filtros -->
+        <div class="advanced-panel" id="advancedPanel">
+          <!-- Segmento -->
+          <div class="filter-section">
+            <div class="range-label">Segmento</div>
+            <div class="filters-row" id="segmentoRow">
+              <button class="filter-chip active" data-segmento="todos">Todos</button>
+              <button class="filter-chip" data-segmento="tijolo">Tijolo</button>
+              <button class="filter-chip" data-segmento="papel">Papel</button>
+              <button class="filter-chip" data-segmento="hibrido">Híbrido</button>
+              <button class="filter-chip" data-segmento="fof">FoF</button>
+              <button class="filter-chip" data-segmento="desenvolvimento">Desenvolvimento</button>
+            </div>
+          </div>
+
+          <!-- Sentimento -->
+          <div class="filter-section">
+            <div class="range-label">Sentimento</div>
+            <div class="filters-row" id="sentimentoRow">
+              <button class="filter-chip active" data-sentimento="todos">Todos</button>
+              <button class="filter-chip" data-sentimento="otimista">Otimista</button>
+              <button class="filter-chip" data-sentimento="neutro">Neutro</button>
+              <button class="filter-chip" data-sentimento="pessimista">Pessimista</button>
+            </div>
+          </div>
+
+          <div class="advanced-grid">
+            <!-- Veredicto -->
+            <div class="range-filter">
+              <div class="range-label">Veredicto</div>
+              <div class="veredicto-chips" id="veredictoChips">
+                <button class="veredicto-chip compra" data-veredicto="COMPRA">Compra</button>
+                <button class="veredicto-chip manter" data-veredicto="MANTER">Manter</button>
+                <button class="veredicto-chip venda" data-veredicto="VENDA">Venda</button>
+                <button class="veredicto-chip outro" data-veredicto="OUTRO">Outros</button>
+              </div>
+            </div>
+
+            <!-- DY mínimo -->
+            <div class="range-filter">
+              <div class="range-header">
+                <span class="range-label">Dividend Yield mínimo</span>
+                <span class="range-value" id="dyValue">0%</span>
+              </div>
+              <input type="range" class="range-slider" id="dySlider" min="0" max="25" step="0.5" value="0">
+              <div class="range-ticks"><span>0%</span><span>5%</span><span>10%</span><span>15%</span><span>20%</span><span>25%</span></div>
+            </div>
+
+            <!-- P/VP máximo -->
+            <div class="range-filter">
+              <div class="range-header">
+                <span class="range-label">P/VP máximo</span>
+                <span class="range-value" id="pvpValue">Sem limite</span>
+              </div>
+              <input type="range" class="range-slider" id="pvpSlider" min="0" max="1.2" step="0.05" value="1.2">
+              <div class="range-ticks"><span>0.20</span><span>0.50</span><span>0.70</span><span>0.90</span><span>1.00</span><span>1.20</span></div>
+            </div>
+
+            <!-- Nota mínima -->
+            <div class="range-filter">
+              <div class="range-header">
+                <span class="range-label">Nota mínima (recomendação)</span>
+                <span class="range-value" id="notaValue">0</span>
+              </div>
+              <input type="range" class="range-slider" id="notaSlider" min="0" max="10" step="0.5" value="0">
+              <div class="range-ticks"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span></div>
+            </div>
+
+            <!-- Nota gestora mínima -->
+            <div class="range-filter">
+              <div class="range-header">
+                <span class="range-label">Nota mínima (gestora)</span>
+                <span class="range-value" id="notaGestoraValue">0</span>
+              </div>
+              <input type="range" class="range-slider" id="notaGestoraSlider" min="0" max="10" step="0.5" value="0">
+              <div class="range-ticks"><span>0</span><span>2</span><span>4</span><span>6</span><span>8</span><span>10</span></div>
+            </div>
+
+            <!-- Patrimônio mínimo -->
+            <div class="range-filter">
+              <div class="range-header">
+                <span class="range-label">Patrimônio líquido mínimo</span>
+                <span class="range-value" id="plValue">Qualquer</span>
+              </div>
+              <input type="range" class="range-slider" id="plSlider" min="0" max="5000000000" step="100000000" value="0">
+              <div class="range-ticks"><span>0</span><span>500M</span><span>1Bi</span><span>2Bi</span><span>3Bi</span><span>5Bi</span></div>
+            </div>
+          </div>
+
+          <button class="clear-filters" id="clearFilters">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M18 6L6 18M6 6l12 12"/>
+            </svg>
+            Limpar todos os filtros
           </button>
         </div>
+
       </section>
+
+      <!-- Results bar -->
+      <div class="results-bar">
+        <span class="results-count" id="resultsCount"></span>
+        <a href="recomendados/" class="cta-recomendados">
+          <span class="cta-icon">⭐</span>
+          <span class="cta-label">FIIs Recomendados</span>
+          <span class="cta-arrow">→</span>
+        </a>
+      </div>
 
       <!-- FII cards -->
       <div class="fiis-grid" id="fiisContainer">
         <div class="loading">Carregando FIIs...</div>
       </div>
+
+      <!-- Pagination -->
+      <div class="pagination" id="pagination"></div>
     </main>
 
     <!-- Footer -->
@@ -725,22 +924,38 @@
 
   <script>
     let fiisData = null;
-    let filtroAtual = 'todos';
+    let paginaAtual = 1;
+    const ITEMS_PER_PAGE = 24;
+    const filtros = {
+      segmento: 'todos',
+      sentimento: 'todos',
+      busca: '',
+      dyMin: 0,
+      pvpMax: 1.2,
+      notaMin: 0,
+      notaGestoraMin: 0,
+      plMin: 0,
+      veredictos: []
+    };
     let ordenacaoAtual = { campo: 'ticker', ordem: 'asc' };
-    let buscaAtual = '';
 
     const segmentoIcons = {
-      desenvolvimento: '🏗️',
-      tijolo: '🏢',
-      papel: '📄',
-      hibrido: '🔀',
-      fof: '📊'
+      desenvolvimento: '🏗️', tijolo: '🏢', papel: '📄', hibrido: '🔀', fof: '📊'
     };
 
     const sentimentoLabels = {
-      otimista: 'Otimista',
-      neutro: 'Neutro',
-      pessimista: 'Pessimista'
+      otimista: 'Otimista', neutro: 'Neutro', pessimista: 'Pessimista'
+    };
+
+    const veredictoMap = {
+      'COMPRA': 'COMPRA',
+      'MANTER': 'MANTER',
+      'CAUTELOSO': 'MANTER',
+      'VENDA': 'VENDA',
+      'LIQUIDADO': 'OUTRO',
+      'EM LIQUIDACAO': 'OUTRO',
+      'ENCERRADO': 'OUTRO',
+      'N/A': 'OUTRO'
     };
 
     async function carregarFiis() {
@@ -754,29 +969,58 @@
           <div class="empty-state">
             <div class="icon">⚠️</div>
             <h3>Erro ao carregar</h3>
-            <p>Tente recarregar a pagina.</p>
+            <p>Tente recarregar a página.</p>
           </div>
         `;
       }
     }
 
-
     function filtrarFiis(fiis) {
       let resultado = [...fiis];
 
-      // Filtro por segmento
-      if (filtroAtual !== 'todos') {
-        resultado = resultado.filter(f => f.segmento === filtroAtual);
+      if (filtros.segmento !== 'todos') {
+        resultado = resultado.filter(f => f.segmento === filtros.segmento);
       }
 
-      // Filtro por busca
-      if (buscaAtual) {
-        const termo = buscaAtual.toLowerCase();
+      if (filtros.sentimento !== 'todos') {
+        resultado = resultado.filter(f => f.sentimento === filtros.sentimento);
+      }
+
+      if (filtros.busca) {
+        const termo = filtros.busca.toLowerCase();
         resultado = resultado.filter(f =>
           f.ticker.toLowerCase().includes(termo) ||
           f.nome.toLowerCase().includes(termo) ||
+          f.gestora.toLowerCase().includes(termo) ||
           f.tags.some(t => t.toLowerCase().includes(termo))
         );
+      }
+
+      if (filtros.dyMin > 0) {
+        resultado = resultado.filter(f => f.indicadores.dividendYield >= filtros.dyMin);
+      }
+
+      if (filtros.pvpMax < 1.2) {
+        resultado = resultado.filter(f => f.indicadores.pvp <= filtros.pvpMax);
+      }
+
+      if (filtros.notaMin > 0) {
+        resultado = resultado.filter(f => (f.nota || 0) >= filtros.notaMin);
+      }
+
+      if (filtros.notaGestoraMin > 0) {
+        resultado = resultado.filter(f => (f.notaGestora || 0) >= filtros.notaGestoraMin);
+      }
+
+      if (filtros.plMin > 0) {
+        resultado = resultado.filter(f => (f.indicadores.patrimonioLiquido || 0) >= filtros.plMin);
+      }
+
+      if (filtros.veredictos.length > 0) {
+        resultado = resultado.filter(f => {
+          const grupo = veredictoMap[f.veredicto] || 'OUTRO';
+          return filtros.veredictos.includes(grupo);
+        });
       }
 
       return resultado;
@@ -784,40 +1028,59 @@
 
     function ordenarFiis(fiis) {
       const { campo, ordem } = ordenacaoAtual;
-      const multiplicador = ordem === 'asc' ? 1 : -1;
+      const mult = ordem === 'asc' ? 1 : -1;
 
       return fiis.sort((a, b) => {
-        let valorA, valorB;
-
+        let vA, vB;
         switch (campo) {
           case 'ticker':
-            valorA = a.ticker;
-            valorB = b.ticker;
-            return multiplicador * valorA.localeCompare(valorB);
+            return mult * a.ticker.localeCompare(b.ticker);
           case 'dividendYield':
-            valorA = a.indicadores.dividendYield;
-            valorB = b.indicadores.dividendYield;
-            break;
+            vA = a.indicadores.dividendYield; vB = b.indicadores.dividendYield; break;
           case 'pvp':
-            valorA = a.indicadores.pvp;
-            valorB = b.indicadores.pvp;
-            break;
+            vA = a.indicadores.pvp; vB = b.indicadores.pvp; break;
           case 'cotacao':
-            valorA = a.indicadores.cotacao;
-            valorB = b.indicadores.cotacao;
-            break;
-          default:
-            return 0;
+            vA = a.indicadores.cotacao; vB = b.indicadores.cotacao; break;
+          case 'nota':
+            vA = a.nota || 0; vB = b.nota || 0; break;
+          case 'notaGestora':
+            vA = a.notaGestora || 0; vB = b.notaGestora || 0; break;
+          default: return 0;
         }
-
-        return multiplicador * (valorA - valorB);
+        return mult * (vA - vB);
       });
+    }
+
+    function getNotaClass(nota) {
+      if (nota >= 7) return 'alta';
+      if (nota >= 5) return 'media';
+      return 'baixa';
     }
 
     function renderizarFiis() {
       const container = document.getElementById('fiisContainer');
       let fiis = filtrarFiis(fiisData.fiis);
       fiis = ordenarFiis(fiis);
+
+      const totalFiis = fiisData.fiis.length;
+      const totalFiltrado = fiis.length;
+
+      // Pagination
+      const totalPages = Math.ceil(totalFiltrado / ITEMS_PER_PAGE);
+      if (paginaAtual > totalPages) paginaAtual = 1;
+      const inicio = (paginaAtual - 1) * ITEMS_PER_PAGE;
+      const fiisPagina = fiis.slice(inicio, inicio + ITEMS_PER_PAGE);
+
+      // Results counter
+      const de = totalFiltrado > 0 ? inicio + 1 : 0;
+      const ate = Math.min(inicio + ITEMS_PER_PAGE, totalFiltrado);
+      if (totalFiltrado === totalFiis) {
+        document.getElementById('resultsCount').innerHTML =
+          `<strong>${de}-${ate}</strong> de ${totalFiis} FIIs analisados`;
+      } else {
+        document.getElementById('resultsCount').innerHTML =
+          `<strong>${de}-${ate}</strong> de ${totalFiltrado} FIIs (${totalFiis} total)`;
+      }
 
       if (fiis.length === 0) {
         container.innerHTML = `
@@ -827,16 +1090,18 @@
             <p>Tente ajustar os filtros ou a busca.</p>
           </div>
         `;
+        document.getElementById('pagination').innerHTML = '';
         return;
       }
 
-      container.innerHTML = fiis.map(fii => {
+      container.innerHTML = fiisPagina.map(fii => {
         const segmentoIcon = segmentoIcons[fii.segmento] || '📊';
         const segmentoNome = fiisData.segmentos[fii.segmento]?.nome || fii.segmento;
         const sentimentoLabel = sentimentoLabels[fii.sentimento] || fii.sentimento;
-
         const pvpClass = fii.indicadores.pvp < 1 ? 'negativo' : '';
         const dyClass = fii.indicadores.dividendYield >= 10 ? 'positivo' : '';
+        const nota = fii.nota || 0;
+        const notaClass = getNotaClass(nota);
 
         return `
           <a href="${fii.arquivo}" class="fii-card">
@@ -845,14 +1110,17 @@
                 <span class="fii-ticker">${fii.ticker}</span>
                 <span class="fii-segmento">${segmentoIcon} ${segmentoNome}</span>
               </div>
-              <span class="fii-sentimento ${fii.sentimento}">${sentimentoLabel}</span>
+              <div class="fii-badges">
+                <span class="fii-nota ${notaClass}">${nota.toFixed(1)}</span>
+                <span class="fii-sentimento ${fii.sentimento}">${sentimentoLabel}</span>
+              </div>
             </div>
 
-            <div class="fii-nome">${fii.nome}</div>
+            <div class="fii-nome">${fii.nome} · <span style="color:var(--text-muted);font-size:0.75rem">${fii.gestora}</span></div>
 
             <div class="fii-indicadores">
               <div class="indicador-item">
-                <div class="indicador-label">Cotacao</div>
+                <div class="indicador-label">Cotação</div>
                 <div class="indicador-valor">R$ ${fii.indicadores.cotacao.toFixed(2)}</div>
               </div>
               <div class="indicador-item">
@@ -875,62 +1143,245 @@
               <div class="fii-tags">
                 ${fii.tags.slice(0, 3).map(tag => `<span class="fii-tag">${tag}</span>`).join('')}
               </div>
-              <span class="fii-tempo">Análise: ${new Date(fii.dataAnalise).toLocaleDateString('pt-BR')}</span>
+              <span class="fii-tempo">${fii.veredicto || ''}</span>
             </div>
           </a>
         `;
       }).join('');
+
+      renderPagination(totalPages);
     }
 
-    // Event listeners
-    document.getElementById('filtersRow').addEventListener('click', (e) => {
-      const chip = e.target.closest('.filter-chip');
-      if (!chip) return;
+    function renderPagination(totalPages) {
+      const container = document.getElementById('pagination');
+      if (totalPages <= 1) { container.innerHTML = ''; return; }
 
-      filtroAtual = chip.dataset.filter;
-      document.querySelectorAll('.filter-chip').forEach(btn => {
-        btn.classList.toggle('active', btn === chip);
-      });
-      renderizarFiis();
-    });
+      let html = '';
 
-    document.querySelector('.sort-options').addEventListener('click', (e) => {
-      const btn = e.target.closest('.sort-btn');
-      if (!btn) return;
+      // Prev button
+      html += `<button class="page-btn" ${paginaAtual === 1 ? 'disabled' : ''} data-page="${paginaAtual - 1}">‹</button>`;
 
-      const campo = btn.dataset.sort;
-      const ordemAtual = btn.dataset.order;
-
-      // Toggle order if same field, otherwise use default order
-      if (ordenacaoAtual.campo === campo) {
-        ordenacaoAtual.ordem = ordemAtual === 'asc' ? 'desc' : 'asc';
-        btn.dataset.order = ordenacaoAtual.ordem;
-        btn.querySelector('.arrow').textContent = ordenacaoAtual.ordem === 'asc' ? '↑' : '↓';
-      } else {
-        ordenacaoAtual = { campo, ordem: ordemAtual };
+      // Page numbers with ellipsis
+      const pages = [];
+      pages.push(1);
+      if (paginaAtual > 3) pages.push('...');
+      for (let i = Math.max(2, paginaAtual - 1); i <= Math.min(totalPages - 1, paginaAtual + 1); i++) {
+        pages.push(i);
       }
+      if (paginaAtual < totalPages - 2) pages.push('...');
+      if (totalPages > 1) pages.push(totalPages);
 
-      document.querySelectorAll('.sort-btn').forEach(b => {
-        b.classList.toggle('active', b === btn);
+      pages.forEach(p => {
+        if (p === '...') {
+          html += '<span class="page-ellipsis">…</span>';
+        } else {
+          html += `<button class="page-btn ${p === paginaAtual ? 'active' : ''}" data-page="${p}">${p}</button>`;
+        }
       });
 
-      renderizarFiis();
-    });
+      // Next button
+      html += `<button class="page-btn" ${paginaAtual === totalPages ? 'disabled' : ''} data-page="${paginaAtual + 1}">›</button>`;
 
-    document.getElementById('searchInput').addEventListener('input', (e) => {
-      buscaAtual = e.target.value.trim();
-      renderizarFiis();
-    });
-
-    // Event listener para select de ordenacao mobile
-    const mobileSortSelect = document.getElementById('mobileSortSelect');
-    if (mobileSortSelect) {
-      mobileSortSelect.addEventListener('change', (e) => {
-        const [campo, ordem] = e.target.value.split('-');
-        ordenacaoAtual = { campo, ordem };
-        renderizarFiis();
-      });
+      container.innerHTML = html;
     }
+
+    function contarFiltrosAtivos() {
+      let count = 0;
+      if (filtros.segmento !== 'todos') count++;
+      if (filtros.sentimento !== 'todos') count++;
+      if (filtros.dyMin > 0) count++;
+      if (filtros.pvpMax < 1.2) count++;
+      if (filtros.notaMin > 0) count++;
+      if (filtros.notaGestoraMin > 0) count++;
+      if (filtros.plMin > 0) count++;
+      if (filtros.veredictos.length > 0) count++;
+      return count;
+    }
+
+    function atualizarBadge() {
+      const count = contarFiltrosAtivos();
+      const badge = document.getElementById('advancedBadge');
+      const toggle = document.getElementById('advancedToggle');
+      const clearBtn = document.getElementById('clearFilters');
+
+      if (count > 0) {
+        badge.textContent = count;
+        badge.style.display = 'inline-flex';
+        toggle.classList.add('has-filters');
+        clearBtn.classList.add('visible');
+      } else {
+        badge.style.display = 'none';
+        toggle.classList.remove('has-filters');
+        clearBtn.classList.remove('visible');
+      }
+    }
+
+    function formatPL(value) {
+      if (value === 0) return 'Qualquer';
+      if (value >= 1000000000) return 'R$ ' + (value / 1000000000).toFixed(1) + ' Bi';
+      return 'R$ ' + (value / 1000000).toFixed(0) + ' Mi';
+    }
+
+    // === Event Listeners ===
+
+    // Segmento chips
+    document.getElementById('segmentoRow').addEventListener('click', (e) => {
+      const chip = e.target.closest('.filter-chip');
+      if (!chip || !chip.dataset.segmento) return;
+      filtros.segmento = chip.dataset.segmento;
+      document.querySelectorAll('#segmentoRow .filter-chip').forEach(btn =>
+        btn.classList.toggle('active', btn === chip)
+      );
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Sentimento chips
+    document.getElementById('sentimentoRow').addEventListener('click', (e) => {
+      const chip = e.target.closest('.filter-chip');
+      if (!chip || !chip.dataset.sentimento) return;
+      filtros.sentimento = chip.dataset.sentimento;
+      document.querySelectorAll('#sentimentoRow .filter-chip').forEach(btn =>
+        btn.classList.toggle('active', btn === chip)
+      );
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Search
+    document.getElementById('searchInput').addEventListener('input', (e) => {
+      filtros.busca = e.target.value.trim();
+      paginaAtual = 1;
+      renderizarFiis();
+    });
+
+    // Advanced toggle
+    document.getElementById('advancedToggle').addEventListener('click', () => {
+      const panel = document.getElementById('advancedPanel');
+      const toggle = document.getElementById('advancedToggle');
+      panel.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+
+    // DY slider
+    document.getElementById('dySlider').addEventListener('input', (e) => {
+      filtros.dyMin = parseFloat(e.target.value);
+      document.getElementById('dyValue').textContent = filtros.dyMin > 0 ? filtros.dyMin.toFixed(1) + '%' : '0%';
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // P/VP slider
+    document.getElementById('pvpSlider').addEventListener('input', (e) => {
+      filtros.pvpMax = parseFloat(e.target.value);
+      document.getElementById('pvpValue').textContent = filtros.pvpMax >= 1.2 ? 'Sem limite' : filtros.pvpMax.toFixed(2);
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Nota slider
+    document.getElementById('notaSlider').addEventListener('input', (e) => {
+      filtros.notaMin = parseFloat(e.target.value);
+      document.getElementById('notaValue').textContent = filtros.notaMin > 0 ? filtros.notaMin.toFixed(1) : '0';
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Nota gestora slider
+    document.getElementById('notaGestoraSlider').addEventListener('input', (e) => {
+      filtros.notaGestoraMin = parseFloat(e.target.value);
+      document.getElementById('notaGestoraValue').textContent = filtros.notaGestoraMin > 0 ? filtros.notaGestoraMin.toFixed(1) : '0';
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // PL slider
+    document.getElementById('plSlider').addEventListener('input', (e) => {
+      filtros.plMin = parseInt(e.target.value);
+      document.getElementById('plValue').textContent = formatPL(filtros.plMin);
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Veredicto chips (multi-select)
+    document.getElementById('veredictoChips').addEventListener('click', (e) => {
+      const chip = e.target.closest('.veredicto-chip');
+      if (!chip) return;
+      const v = chip.dataset.veredicto;
+      chip.classList.toggle('active');
+      if (filtros.veredictos.includes(v)) {
+        filtros.veredictos = filtros.veredictos.filter(x => x !== v);
+      } else {
+        filtros.veredictos.push(v);
+      }
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Clear filters
+    document.getElementById('clearFilters').addEventListener('click', () => {
+      filtros.segmento = 'todos';
+      filtros.sentimento = 'todos';
+      filtros.dyMin = 0;
+      filtros.pvpMax = 1.2;
+      filtros.notaMin = 0;
+      filtros.notaGestoraMin = 0;
+      filtros.plMin = 0;
+      filtros.veredictos = [];
+      paginaAtual = 1;
+
+      // Reset segmento chips
+      document.querySelectorAll('#segmentoRow .filter-chip').forEach(btn =>
+        btn.classList.toggle('active', btn.dataset.segmento === 'todos')
+      );
+
+      // Reset sentimento chips
+      document.querySelectorAll('#sentimentoRow .filter-chip').forEach(btn =>
+        btn.classList.toggle('active', btn.dataset.sentimento === 'todos')
+      );
+
+      document.getElementById('dySlider').value = 0;
+      document.getElementById('pvpSlider').value = 1.2;
+      document.getElementById('notaSlider').value = 0;
+      document.getElementById('notaGestoraSlider').value = 0;
+      document.getElementById('plSlider').value = 0;
+
+      document.getElementById('dyValue').textContent = '0%';
+      document.getElementById('pvpValue').textContent = 'Sem limite';
+      document.getElementById('notaValue').textContent = '0';
+      document.getElementById('notaGestoraValue').textContent = '0';
+      document.getElementById('plValue').textContent = 'Qualquer';
+
+      document.querySelectorAll('.veredicto-chip').forEach(c => c.classList.remove('active'));
+
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Sort select
+    document.getElementById('sortSelect').addEventListener('change', (e) => {
+      const [campo, ordem] = e.target.value.split('-');
+      ordenacaoAtual = { campo, ordem };
+      paginaAtual = 1;
+      renderizarFiis();
+    });
+
+    // Pagination clicks
+    document.getElementById('pagination').addEventListener('click', (e) => {
+      const btn = e.target.closest('.page-btn');
+      if (!btn || btn.disabled) return;
+      paginaAtual = parseInt(btn.dataset.page);
+      renderizarFiis();
+      document.querySelector('.search-section').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    });
 
     document.addEventListener('DOMContentLoaded', carregarFiis);
   </script>

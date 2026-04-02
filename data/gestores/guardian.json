@@ -1,0 +1,43 @@
+{
+  "slug": "guardian",
+  "nome": "Guardian Gestora",
+  "nota": 7.3,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 2,
+  "segmentos": [
+    "Híbrido",
+    "Papel - Híbrido (CRI + FII)"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: GARE11, GAME11. Nota média 7.3/10 (BOM).",
+  "seo": {
+    "title": "Guardian Gestora - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Guardian Gestora. 2 fundos geridos com nota média 7.3/10. Veja os FIIs: GARE11, GAME11.",
+    "ogTitle": "Guardian Gestora - Análise da Gestora de FIIs",
+    "ogDescription": "Guardian Gestora: 2 fundos, nota média 7.3/10. Fundos: GARE11, GAME11.",
+    "twitterTitle": "Guardian Gestora - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Guardian Gestora: 2 fundos, nota 7.3/10."
+  },
+  "fundos": [
+    {
+      "ticker": "GARE11",
+      "nome": "Guardian Real Estate FII",
+      "segmento": "Híbrido",
+      "nota": 7.5,
+      "notaLabel": "BOM",
+      "dividendYield": 10.78,
+      "pvp": 0.94,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "GAME11",
+      "nome": "Guardian Multiestratégia Imobiliária I FII",
+      "segmento": "Papel - Híbrido (CRI + FII)",
+      "nota": 7,
+      "notaLabel": "BOM",
+      "dividendYield": 13.32,
+      "pvp": 0.94,
+      "sentimento": "neutro"
+    }
+  ]
+}

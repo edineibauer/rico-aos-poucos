@@ -1,0 +1,43 @@
+{
+  "slug": "galapagos-capital",
+  "nome": "Galapagos Capital",
+  "nota": 6,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 2,
+  "segmentos": [
+    "Papel - CRI",
+    "Fundo de Fundos (FOF)"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: GCRI11, GCFF11. Nota média 6/10 (BOM).",
+  "seo": {
+    "title": "Galapagos Capital - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Galapagos Capital. 2 fundos geridos com nota média 6/10. Veja os FIIs: GCRI11, GCFF11.",
+    "ogTitle": "Galapagos Capital - Análise da Gestora de FIIs",
+    "ogDescription": "Galapagos Capital: 2 fundos, nota média 6/10. Fundos: GCRI11, GCFF11.",
+    "twitterTitle": "Galapagos Capital - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Galapagos Capital: 2 fundos, nota 6/10."
+  },
+  "fundos": [
+    {
+      "ticker": "GCRI11",
+      "nome": "Galapagos Recebíveis Imobiliários FII",
+      "segmento": "Papel - CRI",
+      "nota": 6,
+      "notaLabel": "BOM",
+      "dividendYield": 15.18,
+      "pvp": 0.69,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "GCFF11",
+      "nome": "Galapagos Fundo de Fundos FII",
+      "segmento": "Fundo de Fundos (FOF)",
+      "nota": 0,
+      "notaLabel": "RUIM",
+      "dividendYield": 0,
+      "pvp": 0,
+      "sentimento": "pessimista"
+    }
+  ]
+}

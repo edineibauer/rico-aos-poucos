@@ -1,0 +1,444 @@
+{
+  "meta": {
+    "ticker": "GCFF11",
+    "nome": "Galapagos Fundo de Fundos FII",
+    "segmento": "Fundo de Fundos (FOF)",
+    "badges": [
+      "LIQUIDADO Jul/2023",
+      "Amortizado em GCRI11",
+      "Galapagos Capital"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 203
+  },
+  "seo": {
+    "title": "GCFF11 - Análise Completa | Galapagos Fundo de Fundos FII (LIQUIDADO)",
+    "description": "Análise do FII GCFF11 baseada em 203 documentos oficiais. Fundo de Fundos da Galapagos Capital, LIQUIDADO em julho/2023 com amortização total das cotas convertidas em GCRI11. Performance final: 10,46% desde o IPO.",
+    "keywords": "GCFF11, Galapagos Fundo de Fundos, FII FOF, análise GCFF11, GCRI11, Galapagos Capital, FII liquidado, fundo encerrado",
+    "ogTitle": "GCFF11 - Galapagos Fundo de Fundos FII (LIQUIDADO em Jul/2023)",
+    "ogDescription": "Análise do GCFF11: FII FOF da Galapagos Capital, liquidado em julho/2023. Cotas amortizadas e convertidas em GCRI11. Performance total de 10,46% desde o IPO.",
+    "twitterTitle": "GCFF11 - Galapagos Fundo de Fundos FII (LIQUIDADO)",
+    "twitterDescription": "GCFF11: FII FOF liquidado em jul/2023. Amortização total convertida em cotas GCRI11. Performance 10,46% desde IPO."
+  },
+  "indicadores": {
+    "cotacao": 0,
+    "cotacaoData": "31/07/2023",
+    "pvp": 0,
+    "pvpDesconto": "Fundo liquidado",
+    "dividendYield": 0,
+    "dividendoMensal": 0,
+    "dividendoAnual": 0,
+    "patrimonioLiquido": "R$ 0 (liquidado)",
+    "vpCota": 76.82,
+    "cotistas": 0
+  },
+  "recomendacao": {
+    "nota": 0,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">GCFF11</strong> foi <strong class=\"text-red-400\">LIQUIDADO em julho/2023</strong>. As cotas foram totalmente amortizadas mediante entrega de cotas do GCRI11 (fundo de CRI da Galapagos). Performance total desde o IPO: <strong class=\"text-amber-400\">10,46%</strong>. Cada cotista recebeu <strong class=\"text-blue-400\">0,80920281 cotas de GCRI11</strong> por cota de GCFF11 detida, mais R$ 3,07/cota em caixa residual. O fundo não está mais em negociação."
+  },
+  "quickStats": [
+    {
+      "label": "Status",
+      "valor": "LIQUIDADO",
+      "detalhe": "Amortização total em jul/2023",
+      "icone": "building",
+      "corIcone": "red"
+    },
+    {
+      "label": "Performance Total",
+      "valor": "10,46%",
+      "detalhe": "Desde o IPO até liquidação",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
+    },
+    {
+      "label": "Conversão",
+      "valor": "0,8092",
+      "valorSufixo": " GCRI11/cota",
+      "detalhe": "+ R$ 3,07/cota em caixa",
+      "icone": "money",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Ex-Cotistas",
+      "valor": "1.759",
+      "detalhe": "360.477 cotas emitidas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Encerrado",
+      "descricao": "O GCFF11 foi liquidado em julho/2023 após aprovação em assembleia. As cotas não são mais negociadas na B3. Os ex-cotistas receberam cotas do GCRI11 em substituição.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Underperformance vs Peers",
+      "descricao": "O GCFF11 performou abaixo dos pares do segmento FOF durante boa parte de sua existência. A valorização das cotas do GCFF11 foi de 3,5% em um período em que a média dos peers FOF foi de 11,0% e o IFIX 6,7%.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Tributação na Amortização",
+      "descricao": "A amortização foi fato gerador de IR (20% sobre ganho de capital). O custo de aquisição das cotas GCRI11 recebidas foi fixado em R$ 91,14/cota para fins de cálculo futuro de IR.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Galapagos Capital",
+    "nota": 5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Início GCFF11",
+        "valor": "Jun/2020"
+      },
+      {
+        "label": "Encerramento",
+        "valor": "Jul/2023"
+      },
+      {
+        "label": "Performance",
+        "valor": "10,46%",
+        "cor": "amber"
+      }
+    ],
+    "resumo": "A <strong class=\"text-amber-400\">Galapagos Capital</strong> decidiu encerrar o GCFF11 após identificar que o fundo apresentava dificuldade em acompanhar a performance dos peers FOF. A conversão para cotas do GCRI11 (fundo de CRI da mesma gestora) foi aprovada em assembleia. O GCRI11 apresenta performance superior e segue ativo.",
+    "link": "../../gestores/galapagos-capital/"
+  },
+  "taxas": {
+    "subtitulo": "Taxas do fundo encerrado (histórico)",
+    "glowCor": "red",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,0% a.a.",
+        "detalhe": "Sobre o patrimônio líquido",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder o IFIX",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Status",
+        "valor": "ENCERRADO",
+        "detalhe": "Liquidação total em julho/2023",
+        "corBorda": "red"
+      }
+    ],
+    "comparativoTitulo": "N/A - Fundo liquidado",
+    "comparativo": [],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Início",
+        "valor": "Junho/2020"
+      },
+      {
+        "label": "Encerramento",
+        "valor": "Julho/2023"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Status",
+        "valor": "Liquidado"
+      },
+      {
+        "label": "Cotas emitidas",
+        "valor": "360.477"
+      },
+      {
+        "label": "PL final",
+        "valor": "R$ 27,9 Mi"
+      },
+      {
+        "label": "VP final/cota",
+        "valor": "R$ 77,51"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Cotas FII (pré-liquidação)",
+        "Caixa"
+      ],
+      "data": [
+        96,
+        4
+      ],
+      "cores": [
+        "#3b82f6",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "GCRI11 (conversão final)"
+      ],
+      "data": [
+        100
+      ],
+      "cores": [
+        "#10b981"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "GCRI11 (destino da conversão)",
+        "setor": "Fundo de CRI",
+        "receita": "100%",
+        "rating": "Galapagos",
+        "ratingCor": "blue",
+        "risco": "Conversão",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Fundo Liquidado",
+        "valor": 100,
+        "cor": "red"
+      }
+    ],
+    "riscoNota": "O GCFF11 foi totalmente liquidado em julho/2023. Todo o patrimônio foi convertido em cotas do GCRI11 (291.699 cotas) e distribuído aos cotistas na proporção de 0,80920281 cotas GCRI11 por cota GCFF11. O caixa residual de R$ 3,07/cota foi pago em agosto/2023."
+  },
+  "timeline": {
+    "subtitulo": "De FOF a liquidação e conversão em GCRI11",
+    "periodos": [
+      {
+        "periodo": "Jun/2020",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Constituição do Galapagos Fundo de Fundos como FII FOF com oferta ICVM 476.",
+        "pontos": [
+          "1ª emissão: 80.430 cotas",
+          "Gestora: Galapagos Capital",
+          "Administrador: BTG Pactual"
+        ]
+      },
+      {
+        "periodo": "Dez/2020",
+        "label": "2ª EMISSÃO",
+        "cor": "emerald",
+        "descricao": "2ª emissão (ICVM 400) ampliou base para investidores em geral.",
+        "pontos": [
+          "258.168 novas cotas distribuídas",
+          "Cotas disponíveis para negociação na B3",
+          "Foco em cotas de outros FIIs diversificados"
+        ]
+      },
+      {
+        "periodo": "2021-2022",
+        "label": "OPERAÇÃO",
+        "cor": "amber",
+        "descricao": "Período operacional com underperformance em relação aos peers FOF.",
+        "pontos": [
+          "Performance abaixo dos peers FOF",
+          "GCFF11: 3,5% vs Peers: 11,0% vs IFIX: 6,7% (ago-out/22)",
+          "Gestora identificou dificuldade competitiva"
+        ]
+      },
+      {
+        "periodo": "Mar-Jul/2023",
+        "label": "LIQUIDAÇÃO",
+        "cor": "red",
+        "descricao": "Assembleia aprova amortização total via conversão em cotas GCRI11.",
+        "pontos": [
+          "3ª emissão encerrada em jun/2023 (21.879 cotas)",
+          "Assembleia aprova liquidação via amortização em GCRI11",
+          "Fator conversão: 0,80920281 cotas GCRI11 por cota GCFF11",
+          "<strong class=\"text-red-400\">Caixa residual: R$ 3,07/cota pago em 07/08/2023</strong>",
+          "Performance final: 10,46% desde IPO"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - ENCERRADA:",
+      "texto": "O GCFF11 operou de junho/2020 a julho/2023, totalizando pouco mais de 3 anos. A <strong class=\"text-red-400\">performance de 10,46% desde o IPO</strong> ficou abaixo dos peers FOF. A gestora optou por encerrar o fundo e converter as cotas em GCRI11 (fundo de CRI com melhor performance). Considerando o PL de amortização vs preço em 22/03/2023, a rentabilidade total foi de 15,38%, superando marginalmente o IFIX (14,91%)."
+    },
+    "crescimento": [
+      {
+        "label": "Performance Total",
+        "valor": "10,46%",
+        "detalhe": "Desde IPO até liquidação"
+      },
+      {
+        "label": "Período",
+        "valor": "3 anos",
+        "detalhe": "Jun/2020 a Jul/2023"
+      },
+      {
+        "label": "Cotas Emitidas",
+        "valor": "360.477",
+        "detalhe": "3 emissões"
+      },
+      {
+        "label": "PL Máximo",
+        "valor": "R$ 28 Mi",
+        "detalhe": "Fundo de pequeno porte"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O GCFF11 foi <strong class=\"text-red-400\">LIQUIDADO em julho/2023</strong>. Era um Fundo de Fundos gerido pela Galapagos Capital que apresentou underperformance consistente em relação aos peers. A gestora optou por encerrar o fundo via amortização total, convertendo as cotas em GCRI11 (fundo de CRI com melhor track record). <strong class=\"text-red-400\">Não há mais cotas em negociação.</strong>",
+    "paraQuem": [
+      "<strong class=\"text-red-400\">Fundo liquidado - não disponível para investimento</strong>"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">Fundo liquidado - não disponível para investimento</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jun/20",
+      "Set/20",
+      "Dez/20",
+      "Mar/21",
+      "Jun/21",
+      "Set/21",
+      "Dez/21",
+      "Mar/22",
+      "Jun/22",
+      "Set/22",
+      "Dez/22",
+      "Mar/23"
+    ],
+    "chartData": [
+      0,
+      0.4,
+      0.5,
+      0.6,
+      0.65,
+      0.55,
+      0.5,
+      0.45,
+      0.4,
+      0.35,
+      0.3,
+      0
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 1,
+    "totaisAnuais": [
+      {
+        "ano": "Total Distribuído",
+        "valor": "R$ 18,87/cota"
+      },
+      {
+        "ano": "Amortização Final",
+        "valor": "R$ 3,07/cota"
+      },
+      {
+        "ano": "GCRI11 Recebido",
+        "valor": "0,8092/cota"
+      },
+      {
+        "ano": "Performance Total",
+        "valor": "10,46%",
+        "cor": "amber"
+      },
+      {
+        "ano": "Status",
+        "valor": "LIQUIDADO",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "N/A",
+      "faixa": "Fundo liquidado",
+      "unidade": "Sem distribuições futuras"
+    },
+    "stats": [
+      {
+        "label": "Status",
+        "valor": "Liquidado"
+      },
+      {
+        "label": "Último Pagamento",
+        "valor": "Ago/2023"
+      },
+      {
+        "label": "Amortização Final",
+        "valor": "R$ 3,07"
+      },
+      {
+        "label": "Total Distribuído",
+        "valor": "R$ 18,87"
+      },
+      {
+        "label": "Conversão",
+        "valor": "GCRI11"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "N/A",
+      "descricao": "Fundo <span class=\"text-red-400\">liquidado em julho/2023</span>. Não há mais cotas em negociação",
+      "detalhes": [
+        {
+          "label": "VP Final/Cota",
+          "valor": "R$ 76,82"
+        },
+        {
+          "label": "Status",
+          "valor": "Liquidado",
+          "cor": "red"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "N/A",
+      "label": "Fundo encerrado",
+      "cor": "red",
+      "descricao": "O GCFF11 não está mais ativo. Ex-cotistas receberam cotas do GCRI11",
+      "detalhe": "Performance total: 10,46% desde IPO"
+    },
+    "recomendacoes": {
+      "valor": "0",
+      "label": "Recomendações atuais",
+      "cor": "red",
+      "descricao": "Fundo liquidado, sem recomendações",
+      "detalhe": "Verificar GCRI11 como alternativa"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">GCFF11</strong> foi um Fundo de Fundos (FOF) gerido pela Galapagos Capital que operou de junho/2020 a julho/2023. O fundo apresentou <strong class=\"text-amber-400\">underperformance consistente</strong> em relação aos peers do segmento FOF, o que levou a gestora a propor sua liquidação.",
+      "A amortização total foi aprovada em assembleia e executada mediante entrega de <strong class=\"text-blue-400\">0,80920281 cotas de GCRI11</strong> por cota GCFF11, mais R$ 3,07/cota em caixa residual. A performance total desde o IPO foi de 10,46%.",
+      "Para ex-cotistas do GCFF11 que receberam cotas do GCRI11, recomenda-se consultar a análise do <strong class=\"text-blue-400\">GCRI11</strong>, que é o fundo de CRI da Galapagos atualmente ativo com performance superior."
+    ],
+    "pontosFortes": [
+      "Gestora transparente na comunicação da liquidação",
+      "Conversão ordenada para GCRI11",
+      "Performance final positiva de 10,46%"
+    ],
+    "pontosDeAtencao": [
+      "Fundo liquidado - não investível",
+      "Underperformance vs peers FOF",
+      "Patrimônio pequeno (R$ 28 Mi)",
+      "Baixa liquidez durante toda existência",
+      "Apenas 3 anos de operação",
+      "Performance abaixo do IFIX na maior parte do período"
+    ],
+    "conclusaoFinal": "O GCFF11 <strong class=\"text-red-400\">não está mais disponível para investimento</strong>. Ex-cotistas que receberam cotas do GCRI11 devem acompanhar a análise desse fundo de CRI. A experiência do GCFF11 ilustra os riscos de FOFs pequenos com dificuldade de gerar alpha em relação aos pares do mercado."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 203,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

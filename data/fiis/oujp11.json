@@ -1,0 +1,563 @@
+{
+  "meta": {
+    "ticker": "OUJP11",
+    "nome": "Ourinvest JPP FII",
+    "segmento": "Papel - CRI",
+    "badges": [
+      "Gestão Ativa",
+      "IPCA+10%/CDI+5%",
+      "LTV 49,5%"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 559
+  },
+  "seo": {
+    "title": "OUJP11 - Análise Completa | Ourinvest JPP FII",
+    "description": "Análise completa do FII OUJP11 baseada em 559 documentos oficiais. Fundo de crédito com 68% IPCA+10% e 31% CDI+5%, P/VP 0,75, DY 15,7% sobre cota de mercado. LTV médio 49,5%, reserva R$ 0,83/cota.",
+    "keywords": "OUJP11, Ourinvest JPP, FII crédito, CRI, análise OUJP11, dividend yield OUJP11, FII papel, JPP Capital, Fator ORE",
+    "ogTitle": "OUJP11 - Análise Completa do FII Ourinvest JPP 2026",
+    "ogDescription": "Análise detalhada do OUJP11: FII de crédito com 68% IPCA+10%, 31% CDI+5%, P/VP 0,75. DY 15,7% sobre cota de mercado, reserva R$ 0,83/cota, LTV médio 49,5%.",
+    "twitterTitle": "OUJP11 - Análise Completa | FII Ourinvest JPP",
+    "twitterDescription": "Análise do OUJP11: 68% IPCA+10%, 31% CDI+5%, P/VP 0,75. R$ 329 Mi de patrimônio, DY 15,7% sobre cota de mercado. LTV, portfólio e projeções 2026."
+  },
+  "indicadores": {
+    "cotacao": 76.49,
+    "cotacaoData": "21/02/2026",
+    "pvp": 0.75,
+    "pvpDesconto": "25% de desconto",
+    "dividendYield": 15.7,
+    "dividendoMensal": 1.03,
+    "dividendoAnual": 12.61,
+    "patrimonioLiquido": "R$ 329 Mi",
+    "vpCota": 101.23,
+    "cotistas": 26020
+  },
+  "recomendacao": {
+    "nota": 6.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">OUJP11</strong> apresenta carteira de CRIs com taxas elevadas (<strong class=\"text-emerald-400\">IPCA+10% e CDI+5%</strong>) e <strong class=\"text-emerald-400\">P/VP de 0,75</strong> (desconto de 25% sobre VP), o que gera um DY de 15,7% sobre a cota de mercado. Porém, o <strong class=\"text-amber-400\">deságio persistente</strong> do P/VP, a <strong class=\"text-amber-400\">provisão para contingências</strong> de R$ 1,5 Mi, a <strong class=\"text-amber-400\">baixa liquidez</strong> (R$ 0,3 Mi/dia) e o <strong class=\"text-amber-400\">fato de a cota de mercado não convergir ao VP</strong> há anos exigem cautela. A reserva de R$ 0,83/cota e o LTV médio de 49,5% são positivos."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 329 Mi",
+      "detalhe": "VP/cota: R$ 101,23",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 101,23</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,03",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 12,61/ano | DY 15,7%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "26.020",
+      "detalhe": "Liquidez: R$ 0,3 Mi/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,75x",
+      "detalhe": "25% de desconto sobre VP",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Deságio Persistente (P/VP 0,75)",
+      "descricao": "A cota de mercado negocia com 25% de desconto sobre o valor patrimonial há um período prolongado. Esse deságio pode indicar desconfiança do mercado em relação à qualidade de crédito, à liquidação dos ativos ou à gestora. Embora gere DY elevado, a convergência ao VP não é garantida.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Provisão para Contingências (R$ 1,5 Mi)",
+      "descricao": "O fundo possui R$ 1,477 Mi em provisões para contingências, o que pode indicar processos judiciais ou riscos de crédito materializados. Isso representa ~0,4% do PL, mas merece monitoramento.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Baixa Liquidez (R$ 0,3 Mi/dia)",
+      "descricao": "O volume médio diário de R$ 0,3 milhão é baixo para um fundo de R$ 329 Mi de PL. Isso dificulta a entrada e saída de posições maiores sem impacto no preço, aumentando o risco de liquidez.",
+      "severidade": "orange"
+    }
+  ],
+  "gestora": {
+    "nome": "JPP Capital / Fator ORE Asset",
+    "nota": 6,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Patrimônio OUJP",
+        "valor": "R$ 329 Mi"
+      },
+      {
+        "label": "Retorno Total 12M",
+        "valor": "16,4%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Reserva Acumulada",
+        "valor": "R$ 0,83/cota"
+      }
+    ],
+    "resumo": "O OUJP11 é co-gerido pela <strong class=\"text-blue-400\">JPP Capital</strong> e pela <strong class=\"text-blue-400\">Fator ORE Asset</strong>, com administração da Finaxis CTVM. A gestão ativa inclui rotação de CRIs (venda da posição CRI Trisul com TIR de 15,79% em 14 meses) e calibração de dividendos com uso da reserva acumulada. O fundo possui rating proprietário para avaliação de crédito, dado que muitos CRIs não possuem classificação de agências.",
+    "link": "../../gestores/jpp-capital/"
+  },
+  "taxas": {
+    "subtitulo": "Acima da média com taxa de performance",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,05% a.a.",
+        "detalhe": "Sobre o patrimônio líquido do Fundo",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o retorno acima do IMA-B5 + 0,50% a.a.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Incluída",
+        "detalhe": "Incluída na taxa de administração",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Crédito",
+    "comparativo": [
+      {
+        "ticker": "OUJP11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IMA-B5+0,5%",
+        "destaque": true
+      },
+      {
+        "ticker": "VGIP11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IPCA+IMA-B5"
+      },
+      {
+        "ticker": "KNIP11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IPCA+3,5%"
+      },
+      {
+        "ticker": "AFHI11",
+        "taxa": "1,00%",
+        "perf": "Sem performance"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Finaxis CTVM S.A."
+      },
+      {
+        "label": "Gestores",
+        "valor": "JPP Capital / Fator ORE Asset"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "26.091.656/0001-50"
+      },
+      {
+        "label": "Início",
+        "valor": "Novembro/2016"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Em CRIs",
+        "valor": "89%"
+      },
+      {
+        "label": "Caixa",
+        "valor": "10%"
+      },
+      {
+        "label": "FIIs",
+        "valor": "0,4%"
+      },
+      {
+        "label": "LTV Médio",
+        "valor": "49,5%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Incorporação",
+        "Loteamento",
+        "Varejo",
+        "Energia",
+        "Logística",
+        "Shopping",
+        "Têxtil",
+        "Outros"
+      ],
+      "data": [
+        38,
+        23,
+        9,
+        8,
+        6,
+        6,
+        4,
+        6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#f97316",
+        "#06b6d4",
+        "#8b5cf6",
+        "#ec4899",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+ (10,0% a.a.)",
+        "CDI+ (5,0% a.a.)",
+        "IGPM+ (8,0% a.a.)"
+      ],
+      "data": [
+        68,
+        31,
+        1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Celeste",
+        "setor": "Corporativo",
+        "receita": "6,3%",
+        "rating": "Misto",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Carvalho Hosken",
+        "setor": "Incorporação",
+        "receita": "5,1%",
+        "rating": "Misto",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "GPCI",
+        "setor": "Corporativo",
+        "receita": "5,1%",
+        "rating": "Misto",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Laken / Minas Brisa",
+        "setor": "Incorporação",
+        "receita": "8,9%",
+        "rating": "Misto",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Outros (~20 CRIs)",
+        "setor": "Diversificado",
+        "receita": "74,6%",
+        "rating": "Rating Proprietário",
+        "ratingCor": "slate",
+        "risco": "Variável",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Corporativo",
+        "valor": 74,
+        "cor": "emerald"
+      },
+      {
+        "label": "BTS/Aluguel",
+        "valor": 18,
+        "cor": "blue"
+      },
+      {
+        "label": "Shopping",
+        "valor": 6,
+        "cor": "amber"
+      },
+      {
+        "label": "Pulverizado",
+        "valor": 2,
+        "cor": "slate"
+      }
+    ],
+    "riscoNota": "Carteira com 89% em CRIs distribuídos em 68% IPCA+10%, 31% CDI+5% e 1% IGPM+8%. O LTV médio de <strong class=\"text-emerald-400\">49,5%</strong> indica colateralização adequada. A gestão utiliza <strong class=\"text-blue-400\">metodologia proprietária de rating</strong> para classificação de crédito, avaliando critérios quantitativos e qualitativos. Concentração geográfica relevante em SP (54%), seguido por MG (10%), PR (7%) e SC (6%). O maior devedor (Celeste) representa 6,3% do PL."
+  },
+  "timeline": {
+    "subtitulo": "Fundo veterano desde 2016 com gestão ativa",
+    "periodos": [
+      {
+        "periodo": "Jul/2016",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Constituição do Ourinvest JPP FII. Início de funcionamento em novembro/2016.",
+        "pontos": [
+          "CNPJ: 26.091.656/0001-50",
+          "Gestores: JPP Capital + Fator ORE Asset",
+          "Administrador: Finaxis CTVM",
+          "Foco em CRIs diversificados"
+        ]
+      },
+      {
+        "periodo": "2017-2020",
+        "label": "CRESCIMENTO INICIAL",
+        "cor": "emerald",
+        "descricao": "Construção da carteira e expansão do patrimônio. Fundo passou por período de alta dos FIIs e início da pandemia.",
+        "pontos": [
+          "Diversificação em múltiplos segmentos de CRIs",
+          "Foco em operações corporativas e BTS",
+          "Retorno acumulado patrimonial superando benchmarks"
+        ]
+      },
+      {
+        "periodo": "2021-2023",
+        "label": "MATURAÇÃO",
+        "cor": "purple",
+        "descricao": "Período de ciclo de alta de juros. O fundo se beneficiou com taxas elevadas nos CRIs adquiridos.",
+        "pontos": [
+          "Carteira com cupons elevados (IPCA+10%, CDI+5%)",
+          "Retorno total acumulado superando CDI e IMA-B5",
+          "Base de cotistas crescente"
+        ]
+      },
+      {
+        "periodo": "2024-2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Fundo consolidado com carteira madura. P/VP persistentemente abaixo de 1,0.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">PL: R$ 329 Mi | 26.020 cotistas</strong>",
+          "<strong class=\"text-emerald-400\">DY 15,7% (mercado) | 11,8% (patrimonial)</strong>",
+          "<strong class=\"text-amber-400\">P/VP: 0,75x (desconto de 25%)</strong>",
+          "Nov/2025: Venda CRI Trisul com TIR de 15,79% a.a.",
+          "Reserva acumulada: R$ 0,83/cota"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - MISTA:",
+      "texto": "O OUJP11 é um dos FIIs de crédito mais antigos do mercado (desde 2016), com <strong class=\"text-emerald-400\">retorno total patrimonial consistentemente acima do CDI e IMA-B5</strong>. Porém, a cota de mercado negocia com <strong class=\"text-amber-400\">desconto de 25% sobre o VP</strong>, o que gera um DY de 15,7% mas indica desconfiança do mercado. O fundo mantém gestão ativa com rotação de CRIs e reserva acumulada de R$ 0,83/cota."
+    },
+    "crescimento": [
+      {
+        "label": "Retorno 12M",
+        "valor": "16,4%",
+        "detalhe": "vs CDI 11,9% (líq. IR)"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "~25",
+        "detalhe": "Diversificação em setores"
+      },
+      {
+        "label": "DY Mercado",
+        "valor": "15,7%",
+        "detalhe": "Elevado pelo deságio P/VP"
+      },
+      {
+        "label": "Reserva",
+        "valor": "R$ 0,83/cota",
+        "detalhe": "Colchão de segurança"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "OUJP11 é um <strong class=\"text-blue-400\">FII de crédito veterano</strong> (desde 2016) com carteira de CRIs diversificada em 68% IPCA+10% e 31% CDI+5%. O <strong class=\"text-emerald-400\">P/VP de 0,75</strong> gera um DY de 15,7% sobre a cota de mercado, mas o <strong class=\"text-amber-400\">deságio persistente</strong> é um sinal de alerta. O LTV médio de 49,5% e a reserva de R$ 0,83/cota são positivos. A gestão ativa gera rotação de CRIs com TIRs elevadas. Recomendação de manter para quem já possui; para novos investidores, há opções com melhor risco-retorno.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">DY elevado</strong> e aceitam o risco do deságio",
+      "Perfil <strong class=\"text-emerald-400\">arrojado</strong> que busca exposição a CRIs com taxas altas",
+      "Quem busca <strong class=\"text-emerald-400\">proteção inflacionária</strong> com IPCA+10%",
+      "Investidores pacientes que apostam na <strong class=\"text-emerald-400\">convergência do P/VP</strong>"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-amber-400\">liquidez elevada</strong> (volume diário de R$ 0,3 Mi)",
+      "Investidores que <strong class=\"text-amber-400\">não toleram deságio persistente</strong> no P/VP",
+      "Perfil <strong class=\"text-amber-400\">conservador</strong> que prefere fundos com P/VP próximo de 1,0",
+      "Quem busca <strong class=\"text-amber-400\">fundos de gestoras de primeira linha</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.91,
+      0.93,
+      0.95,
+      1.05,
+      1.15,
+      1.34,
+      1,
+      1,
+      1.2,
+      1.05,
+      1,
+      1.03
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0.8,
+    "chartYMax": 1.45,
+    "totaisAnuais": [
+      {
+        "ano": "Distribuído 2025",
+        "valor": "R$ 12,61"
+      },
+      {
+        "ano": "DY Mercado",
+        "valor": "15,7%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "DY Patrimonial",
+        "valor": "11,8%"
+      },
+      {
+        "ano": "Reserva Acumulada",
+        "valor": "R$ 0,83/cota"
+      },
+      {
+        "ano": "Resultado 2025",
+        "valor": "R$ 12,04/cota"
+      }
+    ],
+    "guidance": {
+      "periodo": "Último dividendo (Dez/25)",
+      "faixa": "R$ 1,03/cota",
+      "unidade": "Reserva: R$ 0,83/cota"
+    },
+    "stats": [
+      {
+        "label": "Maior (Jun/25)",
+        "valor": "R$ 1,34",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Jan/25)",
+        "valor": "R$ 0,91"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "2017"
+      },
+      {
+        "label": "Total 2025",
+        "valor": "R$ 12,61",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "blue"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,75",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">25% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 101,23"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 76,49",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "15,7%",
+      "label": "DY Anualizado (mercado)",
+      "cor": "emerald",
+      "descricao": "Rendimento elevado pela combinação de taxas altas nos CRIs e deságio de 25% sobre VP",
+      "detalhe": "Carteira IPCA+10% e CDI+5%"
+    },
+    "recomendacoes": {
+      "valor": "1,05%",
+      "label": "Taxa Total (s/ perf.)",
+      "cor": "amber",
+      "descricao": "Taxa de administração de 1,05% + performance 20% sobre excedente do IMA-B5+0,5%",
+      "detalhe": "Ligeiramente acima da média do segmento"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">OUJP11</strong> é um FII de crédito veterano (desde 2016) com carteira de CRIs com taxas atrativas: <strong class=\"text-emerald-400\">68% em IPCA+10% e 31% em CDI+5%</strong>. O LTV médio de 49,5% indica boa colateralização, e a reserva acumulada de R$ 0,83/cota oferece colchão para manutenção dos dividendos. O retorno total de 16,4% nos últimos 12 meses superou tanto o CDI (11,9%) quanto o IMA-B5 (14,1%).",
+      "Porém, o <strong class=\"text-amber-400\">P/VP de 0,75</strong> (desconto de 25%) que persiste há meses é um sinal de alerta significativo. Embora gere um DY de 15,7% sobre a cota de mercado, a não convergência do preço ao VP pode indicar que o mercado precifica riscos adicionais: provisão para contingências de R$ 1,5 Mi, gestoras de menor porte, e baixa liquidez (R$ 0,3 Mi/dia).",
+      "A gestão ativa demonstra capacidade de gerar valor: a venda do CRI Trisul rendeu TIR de 15,79% em 14 meses, e a calibração de dividendos com uso da reserva mostra disciplina. A concentração geográfica em SP (54%) e a diversificação setorial (incorporação 38%, loteamento 23%) são adequadas para o segmento."
+    ],
+    "pontosFortes": [
+      "P/VP 0,75 (25% de desconto sobre VP)",
+      "Taxas elevadas: IPCA+10% e CDI+5%",
+      "DY 15,7% sobre cota de mercado",
+      "LTV médio de 49,5% (boa colateralização)",
+      "Reserva acumulada de R$ 0,83/cota",
+      "Retorno total 12M de 16,4% (acima CDI e IMA-B5)",
+      "Fundo veterano operando desde 2016"
+    ],
+    "pontosDeAtencao": [
+      "Deságio persistente no P/VP (0,75 há meses)",
+      "Baixa liquidez (R$ 0,3 Mi/dia)",
+      "Provisão para contingências de R$ 1,5 Mi",
+      "Gestoras de menor expressão (JPP Capital + Fator ORE)",
+      "Taxa de administração de 1,05% + performance 20%",
+      "Concentração em incorporação (38%) e loteamento (23%)",
+      "Rating proprietário (sem agências externas)"
+    ],
+    "conclusaoFinal": "O OUJP11 é uma opção para investidores <strong class=\"text-amber-400\">arrojados que buscam DY elevado</strong> e aceitam o risco do deságio persistente. A carteira de CRIs com IPCA+10% e CDI+5% gera rendimentos atrativos, e o LTV de 49,5% oferece proteção. Porém, a <strong class=\"text-amber-400\">baixa liquidez</strong>, as <strong class=\"text-amber-400\">provisões para contingências</strong> e o <strong class=\"text-amber-400\">deságio crônico no P/VP</strong> limitam a recomendação. Para quem já possui a posição, manter faz sentido dado o DY elevado; para novos investidores, fundos como VGIP11 ou AFHI11 oferecem melhor relação risco-retorno."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 559,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

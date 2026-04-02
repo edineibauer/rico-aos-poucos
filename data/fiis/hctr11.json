@@ -1,0 +1,915 @@
+{
+  "meta": {
+    "ticker": "HCTR11",
+    "nome": "Hectare CE FII",
+    "segmento": "Papel - CRI High Yield",
+    "badges": [
+      "High Yield",
+      "Multipropriedade/Loteamento",
+      "~30 CRIs"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 500
+  },
+  "seo": {
+    "title": "HCTR11 - Análise Completa | Hectare CE FII",
+    "description": "Análise completa do FII HCTR11 baseada em 500 documentos oficiais. Fundo de crédito high yield com CRIs de multipropriedade e loteamento, DY 18,17%. P/VP 0,20, inadimplência presente. Riscos e projeções 2026.",
+    "keywords": "HCTR11, Hectare CE, FII high yield, CRI, análise HCTR11, dividend yield HCTR11, Hectare Capital, multipropriedade, loteamento",
+    "ogTitle": "HCTR11 - Análise Completa do FII Hectare CE 2026",
+    "ogDescription": "Análise detalhada do HCTR11: FII de crédito high yield com DY 18,17%, P/VP 0,20, CRIs de multipropriedade e loteamento. Inadimplência e riscos elevados.",
+    "twitterTitle": "HCTR11 - Análise Completa | FII Hectare CE",
+    "twitterDescription": "Análise do HCTR11: CRI high yield, DY 18,17%, P/VP 0,20. Multipropriedade, loteamento e hotelaria. Inadimplência presente. Perfil arrojado."
+  },
+  "indicadores": {
+    "cotacao": 20.7,
+    "cotacaoData": "24/02/2026",
+    "pvp": 0.2,
+    "pvpDesconto": "80% de desconto",
+    "dividendYield": 18.17,
+    "dividendoMensal": 0.29,
+    "dividendoAnual": 3.76,
+    "patrimonioLiquido": "R$ 2,34 Bi",
+    "vpCota": 105.74,
+    "cotistas": 130689
+  },
+  "recomendacao": {
+    "nota": 4,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">HCTR11</strong> é um fundo de <strong class=\"text-red-400\">crédito high yield de alto risco</strong>, com CRIs concentrados em segmentos de maior complexidade: <strong class=\"text-amber-400\">multipropriedade (45%)</strong>, hoteleiro (25%), loteamento (9%) e shopping (9%). A cota negocia com <strong class=\"text-red-400\">80% de desconto</strong> sobre o VP (R$ 20,70 vs R$ 105,74), refletindo a desconfiança do mercado com a qualidade dos créditos. A gestora reconhece haver <strong class=\"text-red-400\">ativos inadimplentes</strong> e atua na execução de garantias. O DY de 18,17% é atrativo mas insustentável dada a deterioração da carteira."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 2,34 Bi",
+      "detalhe": "VP/cota: R$ 105,74",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 105,74</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,29",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 3,76/ano | DY 18,17%",
+      "icone": "money",
+      "corIcone": "amber",
+      "corValor": "amber"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "130.689",
+      "detalhe": "Liquidez: R$ 1,0 Mi/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,20",
+      "detalhe": "80% desconto | Risco extremo",
+      "icone": "chart",
+      "corIcone": "red",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Inadimplência na Carteira",
+      "descricao": "A gestora reconhece haver ativos inadimplentes e atua na cobrança junto à securitizadora, incluindo execução de garantias. Empresas com waivers recebem monitoramento financeiro mensal. A qualidade dos créditos é o principal risco do fundo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "P/VP 0,20 - Desconto Extremo",
+      "descricao": "A cota negocia a R$ 20,70 contra VP de R$ 105,74 - desconto de 80%. O mercado precifica risco de perdas significativas nos CRIs. A recuperação depende da efetiva cobrança dos créditos inadimplentes e execução de garantias reais.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração em Multipropriedade/Hotelaria",
+      "descricao": "Cerca de 70% da carteira de CRIs está concentrada em multipropriedade (45%) e hoteleiro (25%) - segmentos com histórico de inadimplência elevada no mercado imobiliário brasileiro.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Dividendos Instáveis",
+      "descricao": "Os dividendos caíram de R$ 0,69/cota (dez/24) para R$ 0,28-0,32 ao longo de 2025, refletindo menor geração de caixa. O pagamento de R$ 0,40 em dez/25 indica alguma recuperação pontual.",
+      "severidade": "orange"
+    }
+  ],
+  "gestora": {
+    "nome": "Hectare Capital Gestora de Recursos",
+    "nota": 4,
+    "notaLabel": "FRACA",
+    "stats": [
+      {
+        "label": "Patrimônio HCTR",
+        "valor": "R$ 2,34 Bi"
+      },
+      {
+        "label": "Cotistas",
+        "valor": "130.689"
+      },
+      {
+        "label": "Inadimplência",
+        "valor": "Presente",
+        "cor": "red"
+      }
+    ],
+    "resumo": "A <strong class=\"text-amber-400\">Hectare Capital</strong> é gestora especializada em crédito imobiliário high yield. O HCTR11 foi pioneiro neste segmento no Brasil, mas enfrenta desafios significativos com <strong class=\"text-red-400\">inadimplência em parte da carteira</strong>. A gestora atua na cobrança e execução de garantias, mas a complexidade dos ativos (multipropriedade, hotelaria, loteamentos) dificulta a recuperação. A aprovação da liquidação do fundo investido HCHG11 em novembro/2025 demonstra reestruturação ativa.",
+    "link": "../../gestores/hectare-capital/"
+  },
+  "taxas": {
+    "subtitulo": "Múltiplas taxas com performance sobre CDI",
+    "glowCor": "orange",
+    "itens": [
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,99% a.a.",
+        "detalhe": "Sobre PL a mercado",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Adm. e Controladoria",
+        "valor": "0,21% a.a.",
+        "detalhe": "Sobre PL a mercado",
+        "corBorda": "slate"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10%",
+        "detalhe": "Sobre o que exceder 100% do CDI",
+        "corBorda": "orange"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Crédito High Yield",
+    "comparativo": [
+      {
+        "ticker": "HCTR11",
+        "taxa": "1,20%",
+        "perf": "+10% perf. s/ CDI",
+        "destaque": true
+      },
+      {
+        "ticker": "DEVA11",
+        "taxa": "1,20%",
+        "perf": "+10% perf. s/ CDI"
+      },
+      {
+        "ticker": "TORD11",
+        "taxa": "1,20%",
+        "perf": "+20% perf. s/ CDI"
+      },
+      {
+        "ticker": "URPR11",
+        "taxa": "1,35%",
+        "perf": "+10% perf. s/ IPCA+6%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Vórtx DTVM Ltda."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Hectare Capital Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Início",
+        "valor": "Setembro/2018"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "91%"
+      },
+      {
+        "label": "FIIs",
+        "valor": "8%"
+      },
+      {
+        "label": "Caixa",
+        "valor": "0,6%"
+      },
+      {
+        "label": "Taxa Média",
+        "valor": "Inflação+11,3%",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Multipropriedade",
+        "Hoteleiro",
+        "Loteamento",
+        "Shopping",
+        "Parques Temáticos",
+        "Mixed-use",
+        "Incorporação",
+        "Condo-hotel"
+      ],
+      "data": [
+        45,
+        25,
+        9,
+        9,
+        7,
+        2,
+        2,
+        0.5
+      ],
+      "cores": [
+        "#ef4444",
+        "#f59e0b",
+        "#10b981",
+        "#3b82f6",
+        "#8b5cf6",
+        "#06b6d4",
+        "#ec4899",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+ (10,6% a.a.)",
+        "IGPM+ (11,3% a.a.)",
+        "PRÉ (10,0% a.a.)",
+        "CDI+ (4,2% a.a.)"
+      ],
+      "data": [
+        92,
+        3,
+        3,
+        2
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Circuito de Compras (Shopping)",
+        "setor": "Shopping Center",
+        "receita": "8,2%",
+        "rating": "IPCA+8%/16%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Brasil Parques (Sr. + Sub.)",
+        "setor": "Parques Temáticos",
+        "receita": "6,2%",
+        "rating": "IPCA+9,25%/10,5%",
+        "ratingCor": "blue",
+        "risco": "Carência 100%",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "CRI Nova Feira da Madrugada (FII)",
+        "setor": "Shopping Popular",
+        "receita": "9,1%",
+        "rating": "FII Investido",
+        "ratingCor": "amber",
+        "risco": "Concentração",
+        "riscoCor": "orange"
+      },
+      {
+        "nome": "CRIs Gramado Parks (4 operações)",
+        "setor": "Multipropriedade/Hotelaria",
+        "receita": "~15%",
+        "rating": "IPCA+8,5% a 10%",
+        "ratingCor": "amber",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Outros CRIs (~20 operações)",
+        "setor": "Diversificado",
+        "receita": "~61%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Variável",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Sênior",
+        "valor": 60,
+        "cor": "emerald"
+      },
+      {
+        "label": "Subordinada",
+        "valor": 30,
+        "cor": "amber"
+      },
+      {
+        "label": "Única/Mezanino",
+        "valor": 10,
+        "cor": "red"
+      }
+    ],
+    "riscoNota": "Carteira com taxa média de <strong class=\"text-amber-400\">Inflação + 11,30%</strong> e Duration média de 2,9 anos. A senioridade é distribuída em 60% sênior, 30% subordinada e 10% única/mezanino. A concentração em <strong class=\"text-red-400\">multipropriedade (45%) e hoteleiro (25%)</strong> representa alto risco - são segmentos com histórico de inadimplência elevada. O fundo mantém posição em 5 FIIs investidos (HCHG11 em liquidação, HCST11, XBXO11, IC Loteamentos, Serra Verde), totalizando 8% da carteira. <strong class=\"text-red-400\">Há ativos inadimplentes com execução de garantias em andamento.</strong>"
+  },
+  "timeline": {
+    "subtitulo": "Do pioneirismo high yield à crise de crédito",
+    "periodos": [
+      {
+        "periodo": "Set/2018",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início do Hectare CE FII como um dos pioneiros em crédito high yield no mercado de FIIs.",
+        "pontos": [
+          "CNPJ: 30.248.180/0001-96",
+          "Administrador: Vórtx DTVM",
+          "Gestor: Hectare Capital",
+          "Foco em CRIs de maior complexidade e retorno"
+        ]
+      },
+      {
+        "periodo": "2019-2021",
+        "label": "CRESCIMENTO",
+        "cor": "emerald",
+        "descricao": "Período de forte expansão com múltiplas emissões e crescimento do portfólio de CRIs.",
+        "pontos": [
+          "Patrimônio cresceu de ~R$ 200 Mi para R$ 2,3 Bi",
+          "Portfólio expandiu para ~30 CRIs + 5 FIIs",
+          "Dividendos elevados: R$ 1,00-1,50/cota/mês",
+          "Cotistas: de poucos milhares para 130 mil+"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "CRISE DE CRÉDITO",
+        "cor": "red",
+        "descricao": "Eventos de crédito em diversos CRIs da carteira, inadimplência e colapso da cota.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Inadimplência em múltiplos CRIs (multipropriedade, hotelaria)</strong>",
+          "<strong class=\"text-red-400\">Cota caiu de R$ 100+ para R$ 20-30</strong>",
+          "Dividendos reduzidos drasticamente",
+          "Execução de garantias e reestruturação de créditos"
+        ]
+      },
+      {
+        "periodo": "2024-2026",
+        "label": "RECUPERAÇÃO PARCIAL",
+        "cor": "amber",
+        "descricao": "Gestão focada em recuperação de créditos, cobrança e desinvestimentos estratégicos.",
+        "pontos": [
+          "Dividendos estabilizados em R$ 0,29-0,40/cota",
+          "Pré-pagamento CRI Thermas São Pedro (R$ 8,4 Mi)",
+          "Aprovação liquidação HCHG11 (nov/2025)",
+          "Cota estável entre R$ 20-22 | P/VP 0,20"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - NEGATIVA:",
+      "texto": "O HCTR11 foi um dos <strong class=\"text-red-400\">pioneiros do crédito high yield</strong> em FIIs brasileiros, atingindo patrimônio de R$ 2,3 bilhões e mais de 130 mil cotistas. Porém, a concentração em CRIs de <strong class=\"text-red-400\">multipropriedade e hotelaria</strong> resultou em eventos de crédito severos em 2022-2023, com a cota despencando de R$ 100+ para ~R$ 20. A gestora trabalha na recuperação dos créditos inadimplentes, mas o P/VP de 0,20 reflete a <strong class=\"text-red-400\">desconfiança persistente do mercado</strong>."
+    },
+    "crescimento": [
+      {
+        "label": "Cota IPO vs Atual",
+        "valor": "-80%",
+        "detalhe": "R$ 100+ para R$ 20,70"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "18,17%",
+        "detalhe": "Atrativo mas arriscado"
+      },
+      {
+        "label": "Cotistas",
+        "valor": "130.689",
+        "detalhe": "Muitos investidores PF presos"
+      },
+      {
+        "label": "P/VP",
+        "valor": "0,20",
+        "detalhe": "80% desconto sobre VP"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "HCTR11 é um <strong class=\"text-red-400\">FII de crédito high yield de alto risco</strong>, com carteira de ~30 CRIs concentrada em multipropriedade (45%), hotelaria (25%) e loteamentos (9%). O fundo sofreu <strong class=\"text-red-400\">eventos de crédito severos</strong> em 2022-2023, com a cota caindo 80%. Há inadimplência presente e a gestora atua em execuções de garantias. O DY de 18,17% é atrativo na superfície, mas reflete o risco extremo da carteira. O P/VP de 0,20 é o mercado precificando <strong class=\"text-red-400\">perda significativa do patrimônio</strong>.",
+    "paraQuem": [
+      "Investidores com <strong class=\"text-red-400\">perfil altamente especulativo</strong>",
+      "Quem acredita na <strong class=\"text-amber-400\">recuperação dos créditos inadimplentes</strong>",
+      "Investidores que aceitam <strong class=\"text-red-400\">risco de perda de capital</strong>",
+      "Quem tem <strong class=\"text-amber-400\">horizonte de longo prazo</strong> e entende crédito estruturado"
+    ],
+    "naoParaQuem": [
+      "Investidores <strong class=\"text-emerald-400\">conservadores ou moderados</strong>",
+      "Quem busca <strong class=\"text-emerald-400\">renda previsível</strong> e consistente",
+      "Investidores que não entendem <strong class=\"text-amber-400\">CRIs de desenvolvimento</strong>",
+      "Quem não aceita <strong class=\"text-red-400\">volatilidade extrema nos dividendos</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.69,
+      0.32,
+      0.32,
+      0.3,
+      0.32,
+      0.28,
+      0.38,
+      0.3,
+      0.3,
+      0.29,
+      0.29,
+      0.29
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0.15,
+    "chartYMax": 0.8,
+    "totaisAnuais": [
+      {
+        "ano": "Média 2025",
+        "valor": "R$ 0,34"
+      },
+      {
+        "ano": "Total 2025",
+        "valor": "R$ 4,08"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "18,17%",
+        "cor": "amber"
+      },
+      {
+        "ano": "Último (Dez/25)",
+        "valor": "R$ 0,40",
+        "destaque": true
+      },
+      {
+        "ano": "Taxa Média CRIs",
+        "valor": "IPCA+11,3%"
+      }
+    ],
+    "guidance": {
+      "periodo": "2025",
+      "faixa": "R$ 0,28 - R$ 0,69",
+      "unidade": "alta volatilidade mensal"
+    },
+    "stats": [
+      {
+        "label": "Maior (Jan/25 - ref dez/24)",
+        "valor": "R$ 0,69",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Jun/25)",
+        "valor": "R$ 0,28"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "Dez/18"
+      },
+      {
+        "label": "Volatilidade",
+        "valor": "ALTA",
+        "cor": "red"
+      },
+      {
+        "label": "Tendência 2025",
+        "valor": "Queda",
+        "cor": "red"
+      }
+    ]
+  },
+  "ativosDetalhados": {
+    "subtitulo": "Análise dos principais grupos de CRIs em carteira (Nov/2025)",
+    "itens": [
+      {
+        "nome": "CRIs Hope (Hoteleiro) — Sr. + Sub.",
+        "tipo": "CRI Corporativo — Rede Hoteleira (Wish/Prodigy)",
+        "icone": "🏨",
+        "corIcone": "red",
+        "corBorda": "red",
+        "participacao": "21,6%",
+        "participacaoCor": "red",
+        "descricao": "Maior posição individual do fundo, lastreada em debênture da rede hoteleira com 8 hotéis (Wish Serrano, Wish Foz, Wish Bahia, Prodigy Santos Dumont, etc.). Garantias incluem alienação fiduciária de quotas, cessão de 100% das receitas e fundos de reserva/juros. Imóveis avaliados em R$ 700 Mi com potencial VGV de R$ 3,8 Bi em multipropriedade.",
+        "risco": "Alto",
+        "qualidade": "Crítica",
+        "relevancia": "Maior CRI — R$ 488 Mi (14,6% Sr. + 7,0% Sub.)",
+        "contrato": {
+          "tipo": "CRI Corporativo — Debênture hoteleira",
+          "termino": "Fev/2034",
+          "terminoCor": "amber",
+          "reajuste": "IPCA+10,00% (Sr.) / IPCA+13,34% (Sub.)"
+        },
+        "pontos": [
+          {
+            "texto": "Maior posição do fundo: R$ 329,7 Mi (Sr.) + R$ 158,4 Mi (Sub.) = R$ 488,1 Mi | 21,6% do PL total",
+            "cor": "red"
+          },
+          {
+            "texto": "Em carência de juros: Sênior 92% e Subordinada 94% — o fundo recebe apenas fração mínima dos juros devidos",
+            "cor": "red"
+          },
+          {
+            "texto": "Duration de 4,3-4,5 anos — prazo longo para recuperação em cenário de carência",
+            "cor": "amber"
+          },
+          {
+            "texto": "Garantias robustas: alienação fiduciária de quotas, cessão de 100% da receita, imóveis avaliados em R$ 700 Mi",
+            "cor": "blue"
+          },
+          {
+            "texto": "Potencial de VGV com projetos de multipropriedade de R$ 3,8 Bi — upside relevante se a operação normalizar",
+            "cor": "blue"
+          },
+          {
+            "texto": "Concentração extrema: um único grupo devedor responde por mais de 1/5 do patrimônio do fundo",
+            "cor": "red"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs WAM Holding — Sr. + Sub.",
+        "tipo": "CRI Corporativo — Multipropriedade/Hotelaria (Grupo WAM)",
+        "icone": "🏖️",
+        "corIcone": "red",
+        "corBorda": "red",
+        "participacao": "19,3%",
+        "participacaoCor": "red",
+        "descricao": "Segunda maior posição, lastreada em debênture do Grupo WAM com garantia nos recebíveis de 7+ empreendimentos (Praias do Lago, Alta Vista, Golden Gramado, Ondas Praia Resort, etc.). Garantias incluem fiança de PF/PJ, cessão fiduciária de recebíveis e alienação fiduciária de ações de 5 empresas do grupo.",
+        "risco": "Alto",
+        "qualidade": "Crítica",
+        "relevancia": "2ª maior posição — R$ 436 Mi (10,8% Sr. + 8,5% Sub.)",
+        "contrato": {
+          "tipo": "CRI Corporativo — Debênture WAM",
+          "termino": "Dez/2027",
+          "terminoCor": "amber",
+          "reajuste": "IPCA+9,06% (Sr.) / IPCA+13,06% (Sub.)"
+        },
+        "pontos": [
+          {
+            "texto": "R$ 243,5 Mi (Sr.) + R$ 192,8 Mi (Sub.) = R$ 436,3 Mi | 19,3% do PL — segunda maior concentração",
+            "cor": "red"
+          },
+          {
+            "texto": "Em carência de juros: 100% em ambas as séries — nenhum pagamento de juros regular no momento",
+            "cor": "red"
+          },
+          {
+            "texto": "Duration curta de 1,2-1,9 anos — vencimento em dez/2027 pode forçar resolução ou reestruturação",
+            "cor": "amber"
+          },
+          {
+            "texto": "Grupo WAM é um dos maiores operadores de multipropriedade do Brasil — carteira diversificada de empreendimentos",
+            "cor": "blue"
+          },
+          {
+            "texto": "Garantias cruzadas entre 5 empresas do grupo e fiança de PF — rede de proteção ampla",
+            "cor": "blue"
+          },
+          {
+            "texto": "Subordinada com taxa elevada de IPCA+13,06% — prêmio de risco reflete incerteza sobre recuperação",
+            "cor": "amber"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Gramado Parks (GPK + GPK II + BV + Termas + Dilly)",
+        "tipo": "CRI Corporativo/Pulverizado — Multipropriedade Gramado Parks",
+        "icone": "⛷️",
+        "corIcone": "amber",
+        "corBorda": "amber",
+        "participacao": "~10%",
+        "participacaoCor": "amber",
+        "descricao": "Conjunto de 5 operações ligadas ao Grupo Gramado Parks: GPK Sênior (R$ 83,3 Mi), GPK Subordinada (R$ 63 Mi), GPK II Única (R$ 81,5 Mi), Gramado BV Sênior (R$ 5,1 Mi), Gramado Dilly Única e Termas Resort Sub. (R$ 0,1 Mi). Lastro em debêntures e recebíveis de multipropriedade em Gramado-RS.",
+        "risco": "Alto",
+        "qualidade": "Fraca",
+        "relevancia": "3º maior grupo — R$ 233 Mi | ~10% do PL",
+        "contrato": {
+          "tipo": "CRI Corporativo + Pulverizado — Gramado Parks",
+          "termino": "Jul/2025 a Jul/2030",
+          "terminoCor": "amber",
+          "reajuste": "IPCA+8,0% a 15,8% a.a."
+        },
+        "pontos": [
+          {
+            "texto": "GPK Sr. e Sub. em carência de juros 100% — sem pagamento regular, duration curta de 0,8 anos (vencem jul/2030 mas com carência)",
+            "cor": "red"
+          },
+          {
+            "texto": "GPK II (Única, R$ 81,5 Mi, 3,6% PL) também em carência 100% — IPCA+10%, duration 2,6 anos",
+            "cor": "red"
+          },
+          {
+            "texto": "Gramado BV: 70% obras concluídas, vendas com distratos líquidos negativos (-36) — performance fraca de vendas",
+            "cor": "amber"
+          },
+          {
+            "texto": "Termas Resort Sub.: valor residual de R$ 0,1 Mi, vencimento jan/2026 — próximo de liquidação",
+            "cor": "blue"
+          },
+          {
+            "texto": "Garantias incluem cessão de 100% dos recebíveis, alienação fiduciária de ações e aval da Brasil Parques S.A.",
+            "cor": "blue"
+          },
+          {
+            "texto": "Concentração de risco no ecossistema Gramado Parks — se o grupo fraquejar, impacto em múltiplos CRIs",
+            "cor": "red"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Multipropriedade Pulverizados — 8 operações",
+        "tipo": "CRI Pulverizado — Multipropriedade (diversos empreendimentos)",
+        "icone": "🏝️",
+        "corIcone": "amber",
+        "corBorda": "amber",
+        "participacao": "~15%",
+        "participacaoCor": "amber",
+        "descricao": "Conjunto de CRIs pulverizados lastreados em vendas de frações de multipropriedade: Solar das Águas (Olímpia-SP), GVI/Eco Resort/Resort do Lago (Caldas Novas-GO), Aquan Prime (Foz do Iguaçu-PR), Búzios Beach (Búzios-RJ), OP Resort (Porto Seguro-BA), EDA (Caldas Novas-GO), Itaperapuã (Porto Seguro-BA) e Alta Vista (Caldas Novas-GO).",
+        "risco": "Alto",
+        "qualidade": "Fraca-Moderada",
+        "relevancia": "~R$ 355 Mi em 8 operações Sr.+Sub. | ~15% do PL",
+        "contrato": {
+          "tipo": "CRI Pulverizado — Recebíveis de multipropriedade",
+          "termino": "Nov/2025 a Mar/2032",
+          "terminoCor": "amber",
+          "reajuste": "IPCA+7,0% a 19,95% / IGPM+10,0% a 13,0%"
+        },
+        "pontos": [
+          {
+            "texto": "Eco Resort (Sr.+Sub.): em dia, 90% obras, Razão SD 88-127%, Duration 2,6 anos — uma das operações mais saudáveis",
+            "cor": "emerald"
+          },
+          {
+            "texto": "OP Resort (Sr.+Sub.): em dia, 90% obras, Razão SD 95-136%, vendas líquidas +26 — performance sólida",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Búzios Beach: em dia, mas apenas 42% vendido e 8% obra — risco de execução elevado",
+            "cor": "amber"
+          },
+          {
+            "texto": "Resort do Lago Park/IV: em carência 100%, apenas 23-53% vendido, distratos superam vendas (-286, -347) — situação crítica",
+            "cor": "red"
+          },
+          {
+            "texto": "Itaperapuã: inadimplência acumulada de 23,9% — a mais alta da carteira, fundo de reserva zerado (0,8 PMTs)",
+            "cor": "red"
+          },
+          {
+            "texto": "EDA Sênior: em carência 100%, vendas líquidas -177 (distratos massivos) — operação em colapso",
+            "cor": "red"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Loteamento — 10 operações (Sr.+Sub.)",
+        "tipo": "CRI Pulverizado — Loteamentos (diversos estados)",
+        "icone": "🏗️",
+        "corIcone": "emerald",
+        "corBorda": "emerald",
+        "participacao": "~9%",
+        "participacaoCor": "emerald",
+        "descricao": "Carteira de CRIs lastreados em recebíveis de loteamentos: Gran Viver II (R$ 93,9 Mi), Loteamentos Goiás Sr./Mez./Sub. (R$ 60,8 Mi), Macapá (R$ 22,2 Mi), NG30 Sr.+Sub. (R$ 7 Mi), AeC Lima/II (R$ 4,2 Mi), Fix Laguna (R$ 2,4 Mi), LR Loteamentos (R$ 4,2 Mi), Eldorado Minas (R$ 1,4 Mi) e Servic (R$ 6 Mi). Diversificação geográfica: GO, PE, MA, AP, PB, TO, RS, MG, PA.",
+        "risco": "Moderado-Alto",
+        "qualidade": "Moderada",
+        "relevancia": "~R$ 202 Mi em 10 operações | ~9% do PL",
+        "contrato": {
+          "tipo": "CRI Pulverizado — Recebíveis de loteamentos",
+          "termino": "Nov/2026 a Jun/2037",
+          "terminoCor": "emerald",
+          "reajuste": "IPCA+9,0% a 16,25% / IGPM+9,0% a 19,5% / PRÉ 10,0%"
+        },
+        "pontos": [
+          {
+            "texto": "Gran Viver II (R$ 93,9 Mi, 4% PL): em dia, 83% vendido, inadimplência de 8,3% — maior operação do segmento",
+            "cor": "amber"
+          },
+          {
+            "texto": "Macapá (R$ 22,2 Mi): em dia, 72% vendido, Razão SD 225% — sobrecolateralizado, boa cobertura",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Fix Laguna Sr.+Sub.: em dia, 81% vendido, Razão SD 324-509% — altamente sobrecolateralizado",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Loteamentos Goiás (3 tranches, R$ 60,8 Mi): em dia, 96% vendido mas inadimplência de 7,3%, indexado a PRÉ 10% e IGPM",
+            "cor": "amber"
+          },
+          {
+            "texto": "NG30 Sr.+Sub.: inadimplência de 11,9%, fundo de reserva zerado (0,0 PMTs) — em deterioração",
+            "cor": "red"
+          },
+          {
+            "texto": "Segmento com melhor diversificação geográfica (9 estados) e maioria em dia — setor mais saudável da carteira",
+            "cor": "emerald"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Shopping, Parques e Mixed-use — 4 operações",
+        "tipo": "CRI Pulverizado/Corporativo — Shopping, Parques e Mixed-use",
+        "icone": "🏬",
+        "corIcone": "blue",
+        "corBorda": "blue",
+        "participacao": "~18%",
+        "participacaoCor": "blue",
+        "descricao": "Operações diversificadas: Circuito de Compras Sr.+Mez. (Shopping Popular no Brás, R$ 197 Mi), Brasil Parques Sr.+Sub. (Snowland, Acquamotion, rodas gigantes, R$ 148,3 Mi), Ingleses Beach Sr.+Sub. (mixed-use em Florianópolis, R$ 39,7 Mi) e CRI Pride Sênior (incorporação, R$ 41,1 Mi).",
+        "risco": "Moderado-Alto",
+        "qualidade": "Moderada",
+        "relevancia": "~R$ 426 Mi em 4 operações | ~18% do PL",
+        "contrato": {
+          "tipo": "CRI Pulverizado/Corporativo — Diversificado",
+          "termino": "Jun/2025 a Fev/2034",
+          "terminoCor": "amber",
+          "reajuste": "IPCA+8,0% a 17,5%"
+        },
+        "pontos": [
+          {
+            "texto": "Circuito de Compras Sr. (R$ 172,1 Mi, 7,2% PL): em carência 25%, IPCA+8%, Duration 9 anos — longa maturação mas lastro em shopping ativo no Brás-SP",
+            "cor": "blue"
+          },
+          {
+            "texto": "Brasil Parques Sr.+Sub. (R$ 148,3 Mi, 6,2% PL): em carência 100% — parques de diversão/rodas gigantes, segmento incomum e de difícil precificação",
+            "cor": "red"
+          },
+          {
+            "texto": "CRI Pride (R$ 41,1 Mi, 1,7% PL): em dia, IPCA+10%, lastro em 48 empreendimentos de incorporação — operação mais recente (abr/2024)",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Ingleses Beach Sr.+Sub. (R$ 39,7 Mi): em dia, mas apenas 22% vendido com distratos líquidos negativos — risco de execução",
+            "cor": "amber"
+          },
+          {
+            "texto": "Circuito de Compras: rating BB-/B+, XP como coordenador líder, 4.002 boxes + 1.440 lojas — escala relevante",
+            "cor": "blue"
+          },
+          {
+            "texto": "Brasil Parques com garantias de alienação fiduciária de imóveis e cessão de 100% das receitas dos parques",
+            "cor": "blue"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Corporativos Menores — GJP, STX, Bewiki, Golani",
+        "tipo": "CRI Corporativo — Hoteleiro, Condo-hotel, Mixed-use e Incorporação",
+        "icone": "🏢",
+        "corIcone": "slate",
+        "corBorda": "slate",
+        "participacao": "~3%",
+        "participacaoCor": "slate",
+        "descricao": "Operações corporativas menores: GJP-RB (R$ 40 Mi, CDI+4,2%, hoteleiro), STX (R$ 16,2 Mi, IPCA+14%, condo-hotel Days Inn), Bewiki (R$ 1,9 Mi, IPCA+12%, mixed-use) e Golani (vencido, IPCA+8,5%, incorporação em SP).",
+        "risco": "Alto",
+        "qualidade": "Fraca",
+        "relevancia": "~R$ 58 Mi em operações menores | ~3% do PL",
+        "contrato": {
+          "tipo": "CRI Corporativo — Diversificado",
+          "termino": "Set/2025 a Dez/2031",
+          "terminoCor": "amber",
+          "reajuste": "CDI+4,2% / IPCA+8,5% a 14,0%"
+        },
+        "pontos": [
+          {
+            "texto": "GJP (R$ 40 Mi): único CRI indexado ao CDI+4,2% da carteira, em dia, Duration 4,25 anos — risco moderado",
+            "cor": "blue"
+          },
+          {
+            "texto": "STX (R$ 16,2 Mi): condo-hotel Days Inn Vila Mariana, vencido em jan/2024 — inadimplente, sem geração de caixa",
+            "cor": "red"
+          },
+          {
+            "texto": "Bewiki (R$ 1,9 Mi): dados não disponíveis (N.D.) para razões de garantia — falta de transparência",
+            "cor": "red"
+          },
+          {
+            "texto": "Posições pequenas individualmente, mas somam risco adicional à carteira já estressada",
+            "cor": "amber"
+          }
+        ]
+      },
+      {
+        "nome": "Carteira de FIIs — 5 fundos investidos",
+        "tipo": "Cotas de FII — Diversificado",
+        "icone": "📊",
+        "corIcone": "purple",
+        "corBorda": "purple",
+        "participacao": "7,9%",
+        "participacaoCor": "purple",
+        "descricao": "Posições em 5 FIIs investidos: HCHG11 (R$ 76,1 Mi, 3,37%), HCST11 (R$ 60,5 Mi, 2,68%), XBXO11 (R$ 19,7 Mi, 0,87%), IC Loteamentos (R$ 18,1 Mi, 0,80%) e Serra Verde (R$ 3,2 Mi, 0,14%). HCHG11 em processo de liquidação aprovado em nov/2025.",
+        "risco": "Alto",
+        "qualidade": "Fraca",
+        "relevancia": "R$ 177,5 Mi em 5 FIIs | 7,9% do PL",
+        "contrato": {
+          "tipo": "Cotas de FII (sem vencimento)",
+          "reajuste": "Variação de mercado + dividendos"
+        },
+        "pontos": [
+          {
+            "texto": "HCHG11 (R$ 76,1 Mi): liquidação aprovada em nov/2025 — desinvestimento em curso pode gerar caixa",
+            "cor": "blue"
+          },
+          {
+            "texto": "HCST11 (R$ 60,5 Mi): student housing, cota a R$ 70,95 (preço médio R$ 49,64) — com ganho de capital teórico",
+            "cor": "emerald"
+          },
+          {
+            "texto": "XBXO11 (R$ 19,7 Mi): cota a R$ 8,52 vs preço médio de R$ 100 — perda de 91,5% sobre o custo de aquisição",
+            "cor": "red"
+          },
+          {
+            "texto": "Todos FIIs geridos pela própria Hectare — conflito de interesse e falta de diversificação de gestora",
+            "cor": "red"
+          },
+          {
+            "texto": "Dividendos de FIIs geraram R$ 592 mil no mês (nov/25), contribuição marginal para resultado caixa",
+            "cor": "amber"
+          }
+        ]
+      }
+    ],
+    "resumo": "<strong class=\"text-blue-400\">Composição do ativo (Nov/2025):</strong> R$ 2.070 Mi em CRIs (91%) + R$ 177,5 Mi em FIIs (7,9%) + R$ 20,9 Mi em caixa (0,9%) = <strong class=\"text-white\">R$ 2.331 Mi de patrimônio líquido</strong>. A carteira de CRIs está concentrada em <strong class=\"text-red-400\">multipropriedade (45%) e hoteleiro (25%)</strong>, seguidos de loteamento (9%), shopping (9%), parques temáticos (7%), mixed-use (2%), incorporação (2%) e condo-hotel (0,5%). Taxa média de <strong class=\"text-amber-400\">Inflação+11,30%</strong>, Duration média de 2,9 anos. Indexação: <strong class=\"text-blue-400\">92% IPCA, 3% IGPM, 3% PRÉ, 2% CDI</strong>. Senioridade: 60% sênior, 30% subordinada, 7% única, 3% mezanino. <strong class=\"text-red-400\">Situação crítica:</strong> apenas 12% dos CRIs em dia, 74% em carência de juros e 14% inadimplentes. Os dois maiores devedores (Hope e WAM Holding) somam 41% do PL e estão em carência de 92-100%. Resultado caixa de R$ 0,34/cota em nov/25, distribuição de R$ 0,29/cota. Pré-pagamento do CRI Thermas São Pedro (R$ 8,4 Mi) e liquidação do HCHG11 são eventos positivos pontuais."
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,20",
+      "descricao": "Cota negociada com <span class=\"text-red-400\">80% de desconto extremo</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 105,74"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 20,70",
+          "cor": "red"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "18,17%",
+      "label": "DY Anualizado",
+      "cor": "amber",
+      "descricao": "DY elevado reflete o risco extremo dos créditos, não necessariamente retorno real",
+      "detalhe": "Dividend Yield sobre a cota a mercado de R$ 20,70"
+    },
+    "recomendacoes": {
+      "valor": "0",
+      "label": "Recomendações",
+      "cor": "red",
+      "descricao": "Sem recomendações de compra por analistas de mercado",
+      "detalhe": "Fundo classificado como especulativo pela maioria dos analistas"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">HCTR11</strong> é um caso emblemático dos riscos do crédito high yield em FIIs. O fundo, que foi pioneiro no segmento e chegou a ter patrimônio de R$ 2,3 bilhões com mais de 130 mil cotistas, <strong class=\"text-red-400\">perdeu 80% do valor de mercado</strong> devido a eventos de crédito em CRIs de multipropriedade e hotelaria.",
+      "A carteira atual de ~30 CRIs e 5 FIIs investidos mantém taxa média de <strong class=\"text-amber-400\">Inflação + 11,30%</strong>, mas com <strong class=\"text-red-400\">inadimplência presente</strong> em parte dos ativos. A gestora atua na cobrança junto à securitizadora e na execução de garantias reais. O pré-pagamento do CRI Thermas São Pedro (R$ 8,4 Mi) e a aprovação da liquidação do HCHG11 são sinais de reestruturação ativa.",
+      "O P/VP de 0,20 é <strong class=\"text-red-400\">o mais baixo entre os grandes FIIs da B3</strong>, refletindo a percepção do mercado de que uma parcela significativa do patrimônio líquido contábil (R$ 2,34 Bi) pode não ser realizável. Os dividendos de R$ 0,29-0,40/cota são instáveis e dependem da efetiva geração de caixa dos CRIs adimplentes."
+    ],
+    "pontosFortes": [
+      "DY de 18,17% (sobre cota de mercado)",
+      "Patrimônio líquido contábil de R$ 2,34 Bi",
+      "Gestão ativa em reestruturação de créditos",
+      "Pré-pagamentos pontuais (Thermas São Pedro)",
+      "Duration média curta de 2,9 anos",
+      "130 mil cotistas - boa liquidez relativa"
+    ],
+    "pontosDeAtencao": [
+      "P/VP 0,20 - desconto extremo de 80%",
+      "Inadimplência presente em múltiplos CRIs",
+      "Concentração em multipropriedade (45%) e hoteleiro (25%)",
+      "Dividendos instáveis (R$ 0,28 a R$ 0,69 em 2025)",
+      "CRIs com carência de juros (Brasil Parques 100%)",
+      "30% da carteira em cotas subordinadas/mezanino",
+      "Histórico de perdas de capital significativas",
+      "Execução de garantias é processo longo e incerto"
+    ],
+    "conclusaoFinal": "O HCTR11 é um fundo <strong class=\"text-red-400\">para investidores altamente especulativos</strong> que acreditam na recuperação dos créditos inadimplentes. O P/VP de 0,20 pode representar oportunidade se a gestora conseguir realizar as garantias e recuperar parte do patrimônio, mas também pode ser uma <strong class=\"text-red-400\">armadilha de valor</strong> se as perdas forem maiores que o estimado. Recomendamos <strong class=\"text-red-400\">VENDA</strong> para a maioria dos perfis de investidor. Apenas investidores com alta tolerância a risco e conhecimento de crédito estruturado devem considerar manter posição."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 500,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "ticker": "BIME11",
+    "nome": "Brio Multiestratégia FII",
+    "segmento": "Multiestratégia",
+    "badges": [
+      "CRI Estruturado",
+      "Permutas Residenciais",
+      "FIIs Selecionados"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 276
+  },
+  "seo": {
+    "title": "BIME11 - Análise Completa | Brio Multiestratégia FII",
+    "description": "Análise completa do FII BIME11 baseada em 276 documentos oficiais. Fundo multiestratégia com CRIs estruturados (71%), cotas de FII (17%) e permutas residenciais (12%). DY 12,6%, P/VP 0,80.",
+    "keywords": "BIME11, Brio Multiestratégia, FII multiestratégia, análise BIME11, dividend yield BIME11, CRI estruturado, permuta imobiliária, Brio Investimentos",
+    "ogTitle": "BIME11 - Análise Completa do FII Brio Multiestratégia 2026",
+    "ogDescription": "Análise detalhada do BIME11: fundo multiestratégia com CRIs estruturados, permutas residenciais e cotas de FII. DY 12,6%, P/VP 0,80, PL R$ 49 Mi.",
+    "twitterTitle": "BIME11 - Análise Completa | FII Brio Multiestratégia",
+    "twitterDescription": "Análise do BIME11: multiestratégia com CRIs (71%), FIIs (17%), permutas (12%). DY 12,6%, P/VP 0,80. Gestão Brio Investimentos."
+  },
+  "indicadores": {
+    "cotacao": 6.8,
+    "cotacaoData": "31/10/2025",
+    "pvp": 0.8,
+    "pvpDesconto": "20% de desconto",
+    "dividendYield": 12.6,
+    "dividendoMensal": 0.07,
+    "dividendoAnual": 0.86,
+    "patrimonioLiquido": "R$ 49,4 Mi",
+    "vpCota": 8.45,
+    "cotistas": 8319
+  },
+  "recomendacao": {
+    "nota": 6,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">BIME11</strong> é um fundo multiestratégia com foco em <strong class=\"text-blue-400\">CRIs estruturados pela própria Brio</strong> (71% do PL), complementado por cotas de FII (17%) e permutas residenciais (12%). O <strong class=\"text-emerald-400\">P/VP de 0,80</strong> oferece desconto expressivo de 20% e o DY de 12,6% é atrativo. Porém, o <strong class=\"text-amber-400\">PL pequeno (R$ 49 Mi)</strong>, a <strong class=\"text-amber-400\">baixa liquidez</strong>, a <strong class=\"text-amber-400\">duration curta</strong> (0,5 ano) dos CRIs e a <strong class=\"text-amber-400\">tendência de redução nos dividendos</strong> (guidance R$ 0,06-0,07) limitam a atratividade. Resultado gerado em outubro/2025 caiu para R$ 0,043/cota, pressionando distribuições."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 49,4 Mi",
+      "detalhe": "VP/cota: R$ 8,45",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 8,45</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,070",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 0,86/ano | DY 12,6%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "8.319",
+      "detalhe": "Liquidez reduzida",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,80",
+      "detalhe": "20% de desconto",
+      "detalheIcone": "arrowDown",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Pequeno e Baixa Liquidez",
+      "descricao": "Com PL de apenas R$ 49 milhões e ~5,8 milhões de cotas emitidas, o BIME11 possui liquidez muito limitada no mercado secundário. Apesar de contar com 8.319 cotistas, o volume negociado é restrito, dificultando entrada e saída de posições relevantes.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Dividendos em Tendência de Queda",
+      "descricao": "A gestão sinalizou guidance de R$ 0,060-0,070/cota para os próximos meses, abaixo dos R$ 0,090 pagos no 1S2025. A reestruturação dos CRIs Aurora, Sampa e Essência, a queda no resultado gerado (R$ 0,043/cota em out/25) e expectativa de menor inflação pressionam as distribuições.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em Residencial SP",
+      "descricao": "100% dos CRIs estruturados têm lastro em incorporação residencial na cidade de São Paulo. A carteira de permutas também é integralmente focada em bairros nobres paulistanos. Qualquer desaceleração no mercado imobiliário da capital pode impactar todo o portfólio.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Brio Investimentos",
+    "nota": 7,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Início do Fundo",
+        "valor": "Out/2021"
+      },
+      {
+        "label": "Patrimônio BIME",
+        "valor": "R$ 49,4 Mi"
+      },
+      {
+        "label": "CRIs Estruturados",
+        "valor": "100% próprios",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">Brio Investimentos</strong> é gestora especializada no mercado imobiliário residencial de São Paulo, com mais de <strong class=\"text-blue-400\">45 projetos investidos</strong>. A originação própria de CRIs é um diferencial, permitindo acesso a operações off-market com acompanhamento próximo pelo time de asset management. <strong class=\"text-emerald-400\">Não cobra taxa de gestão em duplicidade</strong> nos veículos próprios investidos pelo BIME11. Taxa efetiva de 1,00% a.a. (desconto concedido pelo gestor sobre os 1,50% nominais). Em 2025, originou novos CRIs como o Conx Evo (CDI+3,50%) e ampliou o CRI Açaí (IPCA+11,0%).",
+    "link": "../../gestores/brio-investimentos/"
+  },
+  "taxas": {
+    "subtitulo": "Taxa efetiva reduzida por desconto do gestor",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Admin + Gestão",
+        "valor": "1,00% a.a.",
+        "detalhe": "Nominal 1,50%, desconto do gestor",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder IPCA + 5,0% a.a.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Dupla Cobrança",
+        "valor": "Não há",
+        "detalhe": "Veículos Brio isentos de taxa",
+        "corBorda": "emerald"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs Multiestratégia",
+    "comparativo": [
+      {
+        "ticker": "BIME11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IPCA+5%",
+        "destaque": true
+      },
+      {
+        "ticker": "MFII11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "RBRX11",
+        "taxa": "1,20%",
+        "perf": "+20% perf. s/ CDI"
+      },
+      {
+        "ticker": "TRXF11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ CDI"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust Investimentos Ltda."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Brio Investimentos Ltda."
+      },
+      {
+        "label": "CNPJ",
+        "valor": "41.081.356/0001-84"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRI Estruturado",
+        "valor": "71,1%"
+      },
+      {
+        "label": "Cotas de FII",
+        "valor": "16,5%"
+      },
+      {
+        "label": "Permutas",
+        "valor": "12,3%"
+      },
+      {
+        "label": "Caixa",
+        "valor": "0,1%"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRI Estruturado",
+        "Cotas de FII",
+        "Permutas",
+        "Caixa"
+      ],
+      "data": [
+        71.1,
+        16.5,
+        12.3,
+        0.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+ (10,6% a.a.)",
+        "CDI+ (3,5% a.a.)"
+      ],
+      "data": [
+        91,
+        9
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Selenza (Residencial)",
+        "setor": "Incorporação Residencial",
+        "receita": "13,1%",
+        "rating": "IPCA+13,0%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Aurora / Sampa / Essência",
+        "setor": "Incorporação Residencial",
+        "receita": "29,0%",
+        "rating": "IPCA+9,0%",
+        "ratingCor": "blue",
+        "risco": "Reestruturação",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Jacarezinho (Sênior + Sub.)",
+        "setor": "Incorporação Residencial",
+        "receita": "10,1%",
+        "rating": "IPCA+11-12%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI C290 / Açaí / SWA / Conx Evo",
+        "setor": "Incorporação Residencial",
+        "receita": "17,5%",
+        "rating": "IPCA+10,9-11,3% / CDI+3,5%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "TRXY11 (TRX Multiestratégia)",
+        "setor": "FII Multiestratégia",
+        "receita": "9,4%",
+        "rating": "Cota FII",
+        "ratingCor": "blue",
+        "risco": "Mercado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "MCRE11 / APTO11 / CYCR11 / CPTS11",
+        "setor": "FIIs Recebíveis e Residencial",
+        "receita": "7,1%",
+        "rating": "Cota FII",
+        "ratingCor": "blue",
+        "risco": "Mercado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Permutas Brio (BIPD11/BIPE11/BRIP11/Indi 70)",
+        "setor": "Residencial SP Alto Padrão",
+        "receita": "12,3%",
+        "rating": "Equity",
+        "ratingCor": "amber",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "CRI Estruturado (próprio)",
+        "valor": 71,
+        "cor": "emerald"
+      },
+      {
+        "label": "Cotas FII (mercado)",
+        "valor": 17,
+        "cor": "blue"
+      },
+      {
+        "label": "Permutas (equity)",
+        "valor": 12,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "A carteira do BIME11 é concentrada em <strong class=\"text-blue-400\">CRIs estruturados pela própria Brio</strong> (71%), todos com lastro em incorporação residencial em São Paulo. Os CRIs possuem taxa média ponderada de IPCA+10,63% com duration de 0,5 ano. O maior CRI é o Selenza (13,1% do PL, IPCA+13%), seguido pelo trio Aurora/Sampa/Essência (29% do PL, IPCA+9%) que passaram por <strong class=\"text-amber-400\">reestruturação</strong>. Novos CRIs originados em 2025: Conx Evo (CDI+3,50%) e Açaí (IPCA+11,0%). A carteira de FIIs (16,5%) é liderada pelo TRXY11 (57% da posição), complementada por MCRE11, APTO11, CYCR11 e CPTS11. As permutas (12,3%) concentram-se em empreendimentos residenciais de alto padrão em bairros nobres de SP como Alto de Pinheiros, Moema, Jardim Paulista e Guaramomis."
+  },
+  "timeline": {
+    "subtitulo": "Fundo jovem com foco em originação própria",
+    "periodos": [
+      {
+        "periodo": "Out/2021",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início do Brio Multiestratégia FII com captação de R$ 55,9 milhões para investir em CRIs, FIIs e permutas residenciais.",
+        "pontos": [
+          "CNPJ: 41.081.356/0001-84",
+          "Gestor: Brio Investimentos",
+          "Administrador: BRL Trust",
+          "5.845.602 cotas emitidas",
+          "VP inicial: R$ 9,56/cota"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "CONSOLIDAÇÃO",
+        "cor": "emerald",
+        "descricao": "Montagem da carteira com CRIs estruturados, entrada na estratégia de permutas e crescimento acelerado de cotistas (+5.733 em 2022).",
+        "pontos": [
+          "Distribuição 2023: R$ 0,990/cota",
+          "Pico de 8.703 cotistas em 2023",
+          "Entrada em permutas via BRIP11, BIPD11",
+          "100% dos CRIs originados pela Brio",
+          "Transferência do controle da BRL Trust para Apex Fund Holding (mar/2023)"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "MATURAÇÃO",
+        "cor": "emerald",
+        "descricao": "Distribuição recorde e venda de participação em permuta na Av. Jamaris (Moema) com TIR projetada de 18,2% a.a.",
+        "pontos": [
+          "Distribuição 2024: R$ 1,001/cota",
+          "Venda de permuta Jamaris por R$ 590 mil (pro-rata 2%)",
+          "Múltiplo de equity projetado: 1,65x",
+          "Originação do CRI Jacarezinho e CRI SWA Patriarca"
+        ]
+      },
+      {
+        "periodo": "2025-2026",
+        "label": "REESTRUTURAÇÃO",
+        "cor": "amber",
+        "descricao": "Reestruturação de CRIs Aurora, Sampa e Essência. Novos CRIs originados. Queda nos dividendos e no número de cotistas.",
+        "pontos": [
+          "Reestruturação de 3 CRIs (29% do PL)",
+          "Novo CRI Conx Evo (CDI+3,50%) em set/25",
+          "Novo CRI Açaí (IPCA+11,0%) ampliado em out/25",
+          "Cotistas caíram de 8.703 para 8.319 (-384)",
+          "<strong class=\"text-amber-400\">Guidance: R$ 0,060-0,070/cota/mês</strong>",
+          "PL: R$ 49,4 Mi | VP/cota: R$ 8,45",
+          "Reserva de resultados: R$ 0,025/cota"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - NEUTRA:",
+      "texto": "O BIME11 é um fundo jovem (desde out/2021) que combina três estratégias: CRIs estruturados pela Brio (71%), cotas de FII (17%) e permutas residenciais em SP (12%). O fundo distribuiu <strong class=\"text-blue-400\">R$ 0,990/cota em 2023</strong> e <strong class=\"text-blue-400\">R$ 1,001/cota em 2024</strong>, mas enfrenta redução nos dividendos em 2025-2026 devido à reestruturação de 3 CRIs e cenário de menor inflação. O resultado gerado caiu para R$ 0,043/cota em outubro/25, bem abaixo da distribuição de R$ 0,070/cota. O <strong class=\"text-emerald-400\">desconto de 20% no P/VP</strong> é expressivo, mas reflete a baixa liquidez e incertezas operacionais. O número de cotistas vem caindo (-384 em 2025)."
+    },
+    "crescimento": [
+      {
+        "label": "Dist. 2023",
+        "valor": "R$ 0,99",
+        "detalhe": "Por cota no ano"
+      },
+      {
+        "label": "Dist. 2024",
+        "valor": "R$ 1,00",
+        "detalhe": "Por cota no ano"
+      },
+      {
+        "label": "P/VP",
+        "valor": "0,80",
+        "detalhe": "20% de desconto"
+      },
+      {
+        "label": "Taxa CRI",
+        "valor": "IPCA+10,6%",
+        "detalhe": "Média ponderada"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O BIME11 é um <strong class=\"text-blue-400\">FII multiestratégia</strong> gerido pela Brio Investimentos, focado em CRIs estruturados com lastro residencial em São Paulo (71%), complementado por cotas de FII (17%) e permutas (12%). O <strong class=\"text-emerald-400\">P/VP de 0,80</strong> é atrativo, mas reflete a baixa liquidez do fundo (PL de R$ 49 Mi) e a perda de cotistas. A <strong class=\"text-amber-400\">reestruturação de 3 CRIs</strong> (29% do PL) e o resultado gerado de apenas R$ 0,043/cota em outubro/25 pressionam os dividendos futuros. A originação própria de CRIs com taxas elevadas e a estratégia diferenciada de permutas são pontos positivos, mas o tamanho reduzido e a concentração setorial limitam a diversificação.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">desconto expressivo no P/VP</strong> (20%)",
+      "Perfil <strong class=\"text-emerald-400\">arrojado</strong> que aceita baixa liquidez e volatilidade nos dividendos",
+      "Quem valoriza <strong class=\"text-emerald-400\">originação própria de CRIs</strong> com taxas elevadas (IPCA+10,6%)",
+      "Investidores com visão de <strong class=\"text-emerald-400\">longo prazo</strong> no mercado residencial de SP"
+    ],
+    "naoParaQuem": [
+      "Quem precisa de <strong class=\"text-amber-400\">liquidez diária</strong> para entrar e sair de posições",
+      "Investidores que buscam <strong class=\"text-amber-400\">dividendos crescentes e estáveis</strong>",
+      "Perfil <strong class=\"text-amber-400\">conservador</strong> que prefere fundos com PL grande e diversificado",
+      "Quem <strong class=\"text-amber-400\">não aceita concentração setorial</strong> (100% residencial SP)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.09,
+      0.09,
+      0.09,
+      0.08,
+      0.07,
+      0.07,
+      0.06,
+      0.08
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0.04,
+    "chartYMax": 0.12,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 0,990"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,001"
+      },
+      {
+        "ano": "2025 (parcial)",
+        "valor": "~R$ 0,850"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "12,6%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Reserva",
+        "valor": "R$ 0,025/cota"
+      }
+    ],
+    "guidance": {
+      "periodo": "Próximos meses",
+      "faixa": "R$ 0,060 - R$ 0,070",
+      "unidade": "por cota/mês"
+    },
+    "stats": [
+      {
+        "label": "Maior (2025)",
+        "valor": "R$ 0,090",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Nov/25)",
+        "valor": "R$ 0,060"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "Dez/21"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "12,6%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Em queda",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,80",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">20% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 8,45"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 6,80",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "IPCA+10,6%",
+      "label": "Taxa média CRIs",
+      "cor": "emerald",
+      "descricao": "Taxa ponderada de aquisição dos CRIs estruturados pela Brio. Na cota de mercado (R$ 6,80), o yield implícito da carteira de CRIs sobe para IPCA+13,2%.",
+      "detalhe": "Duration: 0,5 ano | 91% IPCA+ / 9% CDI+"
+    },
+    "recomendacoes": {
+      "valor": "1,00%",
+      "label": "Taxa Efetiva",
+      "cor": "emerald",
+      "descricao": "Taxa efetiva de 1,00% após desconto do gestor (nominal 1,50%). Sem dupla cobrança nos veículos Brio.",
+      "detalhe": "Performance de 20% cobrada semestralmente s/ IPCA+5%"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">BIME11</strong> é um fundo multiestratégia de nicho, gerido pela Brio Investimentos, com foco em <strong class=\"text-blue-400\">CRIs estruturados de incorporação residencial</strong> em São Paulo (71% do PL), complementado por cotas de FII (17%) e permutas em terrenos nobres de SP (12%). A originação própria de 100% dos CRIs é um diferencial, permitindo taxas médias de IPCA+10,63% e acesso a operações off-market. A carteira conta com 10 CRIs, 5 FIIs e 4 veículos de permuta.",
+      "O <strong class=\"text-emerald-400\">P/VP de 0,80</strong> oferece desconto expressivo de 20%, mas reflete a baixa liquidez (PL de apenas R$ 49 Mi) e as incertezas operacionais. A <strong class=\"text-amber-400\">reestruturação de 3 CRIs</strong> (Aurora, Sampa e Essência, representando 29% do PL, todos com duration zero) levou tempo para estabilização. O resultado gerado em outubro/25 foi de apenas R$ 0,043/cota, bem abaixo da distribuição de R$ 0,070, consumindo reservas (R$ 0,025/cota restante). A gestão mantém guidance conservador de R$ 0,060-0,070/cota.",
+      "A estratégia de permutas residenciais em bairros nobres de São Paulo (Alto de Pinheiros, Moema, Jardim Paulista, Guaramomis) é diferenciada e acessível apenas via BIME11 para investidores em geral. Os fundos BRIP11 e BIPD11 já estão em período de desinvestimento, enquanto o BIPE11 ainda possui integralizações programadas. O número de cotistas vem caindo (-384 em 2025, de 8.703 para 8.319), sinalizando perda de confiança do mercado."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,80 (20% de desconto)",
+      "CRIs 100% originados pela gestora (off-market)",
+      "Taxa média IPCA+10,63% na carteira de CRIs",
+      "Acesso a permutas residenciais em bairros nobres de SP",
+      "Taxa efetiva de 1,00% (com desconto do gestor)",
+      "Sem dupla cobrança em veículos Brio",
+      "Yield implícito IPCA+13,2% na cota de mercado"
+    ],
+    "pontosDeAtencao": [
+      "PL de apenas R$ 49 Mi (baixa liquidez)",
+      "Dividendos em tendência de queda (guidance R$ 0,06-0,07)",
+      "3 CRIs em reestruturação (29% do PL, duration zero)",
+      "Resultado gerado (R$ 0,043/cota) abaixo da distribuição",
+      "Reserva de resultados baixa (R$ 0,025/cota)",
+      "100% concentrado em residencial SP",
+      "Cotistas em queda (-384 em 2025)",
+      "Duration curta (0,5 ano) limita proteção inflacionária"
+    ],
+    "conclusaoFinal": "O BIME11 é uma opção para investidores de perfil arrojado que buscam <strong class=\"text-emerald-400\">desconto no P/VP</strong> e exposição diferenciada a CRIs residenciais e permutas em São Paulo. A originação própria, a taxa efetiva competitiva e o yield implícito elevado na cota de mercado são pontos positivos. Porém, a <strong class=\"text-amber-400\">baixa liquidez, os dividendos em queda, a reestruturação de CRIs e a reserva de resultados reduzida</strong> justificam cautela. A queda no número de cotistas e o resultado gerado abaixo da distribuição são sinais de alerta. Recomendação de MANTER para quem já possui, com acompanhamento atento da evolução dos CRIs reestruturados e da capacidade de geração de resultado operacional."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 276,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

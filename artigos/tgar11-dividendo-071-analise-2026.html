@@ -1,0 +1,1049 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <!-- Performance: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="dns-prefetch" href="https://www.youtube.com">
+  <link rel="dns-prefetch" href="https://www.google-analytics.com">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="TGAR11 pagou R$0,71 em janeiro, batendo a banda inferior do guidance. Análise completa: por que aconteceu, valuation revisado, cenários e o que fazer agora.">
+  <meta name="keywords" content="TGAR11, dividendo 0,71, FII desenvolvimento, análise TGAR11, valuation FII">
+  <meta name="author" content="Rico aos Poucos">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://ricoaospoucos.com.br/artigos/tgar11-dividendo-071-analise-2026.html">
+  <meta name="theme-color" content="#0d1117">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="TGAR11: Dividendo de R$0,71 Muda Tudo. O Que Fazer Agora?">
+  <meta property="og:description" content="Cotistas esperavam R$0,90. Veio R$0,71. Análise sem filtro: valuation revisado, cenários e estratégias práticas.">
+  <meta property="og:image" content="https://ricoaospoucos.com.br/imagens/TGAR11.jpg">
+  <meta property="og:url" content="https://ricoaospoucos.com.br/artigos/tgar11-dividendo-071-analise-2026.html">
+  <meta property="og:type" content="article">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="Rico aos Poucos">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@ricoaospoucos">
+  <meta name="twitter:title" content="TGAR11: Dividendo R$0,71 - Análise Completa">
+  <meta name="twitter:description" content="O que fazer agora? Análise objetiva com estratégias práticas.">
+  <meta name="twitter:image" content="https://ricoaospoucos.com.br/imagens/TGAR11.jpg">
+
+  <link rel="icon" type="image/png" sizes="192x192" href="../icon-192.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="../icon-512.png">
+  <link rel="icon" type="image/svg+xml" href="../favicon.svg">
+  <link rel="shortcut icon" href="../icon-192.png">
+  <link rel="apple-touch-icon" sizes="192x192" href="../icon-192.png">
+  <link rel="manifest" href="../manifest.json">
+  <title>TGAR11: Dividendo de R$0,71 Muda Tudo. O Que Fazer Agora? - Rico aos Poucos</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    .article-container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+    }
+    .article-header {
+      margin-bottom: 32px;
+    }
+    .article-header h1 {
+      font-size: 2rem;
+      margin: 16px 0;
+      line-height: 1.3;
+    }
+    .article-meta {
+      display: flex;
+      gap: 16px;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+    .article-content {
+      line-height: 1.8;
+      color: var(--text-secondary);
+    }
+    .article-content h2 {
+      color: var(--text-primary);
+      margin: 40px 0 20px;
+      font-size: 1.5rem;
+      border-bottom: 2px solid var(--border-color);
+      padding-bottom: 8px;
+    }
+    .article-content h3 {
+      color: var(--text-primary);
+      margin: 28px 0 12px;
+      font-size: 1.2rem;
+    }
+    .article-content p {
+      margin-bottom: 16px;
+    }
+    .article-content ul, .article-content ol {
+      margin-bottom: 16px;
+      padding-left: 24px;
+    }
+    .article-content li {
+      margin-bottom: 8px;
+    }
+    .stat-box {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      margin: 24px 0;
+    }
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    .stat-number.bearish { color: var(--bearish); }
+    .stat-number.bullish { color: var(--bullish); }
+    .stat-number.neutral { color: var(--neutral); }
+    .stat-label {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-top: 8px;
+    }
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 16px;
+      margin: 24px 0;
+    }
+    .stat-item {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+    }
+    .stat-item .value {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--primary-light);
+    }
+    .stat-item .value.bearish { color: var(--bearish); }
+    .stat-item .value.bullish { color: var(--bullish); }
+    .stat-item .value.neutral { color: var(--neutral); }
+    .stat-item .label {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+    .callout {
+      background: linear-gradient(135deg, rgba(240, 193, 75, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border: 1px solid rgba(240, 193, 75, 0.3);
+      border-radius: 12px;
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .callout.positive {
+      background: linear-gradient(135deg, rgba(63, 185, 80, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(63, 185, 80, 0.3);
+    }
+    .callout.danger {
+      background: linear-gradient(135deg, rgba(248, 81, 73, 0.1) 0%, rgba(13, 17, 23, 0.95) 100%);
+      border-color: rgba(248, 81, 73, 0.3);
+    }
+    .callout h3 {
+      margin: 0 0 12px 0;
+      color: var(--text-primary);
+    }
+    .strategy-box {
+      background: var(--bg-tertiary);
+      border-left: 4px solid var(--primary-light);
+      border-radius: 0 12px 12px 0;
+      padding: 20px;
+      margin: 24px 0;
+    }
+    .strategy-box h4 {
+      color: var(--primary-light);
+      margin: 0 0 12px 0;
+      font-size: 1.1rem;
+    }
+    .strategy-box .pros-cons {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 12px;
+    }
+    .strategy-box .pros-cons > div {
+      font-size: 0.9rem;
+    }
+    .strategy-box .pros-cons strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 24px 0;
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .comparison-table th, .comparison-table td {
+      padding: 12px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .comparison-table th {
+      background: var(--bg-secondary);
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+    .comparison-table tr:last-child td { border-bottom: none; }
+    .comparison-table td:first-child { font-weight: 600; }
+    .comparison-table td.center { text-align: center; }
+    .quote-box {
+      background: var(--bg-tertiary);
+      border-left: 4px solid var(--primary-light);
+      padding: 20px;
+      margin: 24px 0;
+      font-style: italic;
+    }
+    .quote-box .author {
+      font-style: normal;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+    .timeline-scenario {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .timeline-scenario h4 {
+      color: var(--primary-light);
+      margin: 0 0 16px 0;
+    }
+    .timeline-scenario .scenario-item {
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border-color);
+    }
+    .timeline-scenario .scenario-item:last-child {
+      border-bottom: none;
+    }
+    .timeline-scenario .scenario-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .timeline-scenario .scenario-header strong {
+      color: var(--text-primary);
+    }
+    .timeline-scenario .timeline-badge {
+      background: rgba(240, 193, 75, 0.2);
+      color: var(--neutral);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+    .price-action-box {
+      background: var(--bg-tertiary);
+      border-radius: 12px;
+      padding: 24px;
+      margin: 24px 0;
+    }
+    .price-action-box h4 {
+      margin: 0 0 16px 0;
+      color: var(--text-primary);
+    }
+    .price-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 12px;
+      margin-bottom: 8px;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+    }
+    .price-row .price {
+      font-size: 1.2rem;
+      font-weight: 700;
+      min-width: 80px;
+    }
+    .price-row .action {
+      flex: 1;
+      font-size: 0.95rem;
+    }
+    .price-row .action strong {
+      color: var(--text-primary);
+    }
+    .nivel-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+      padding: 4px 12px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+    .nivel-badge.urgente {
+      background: rgba(248, 81, 73, 0.15);
+      color: var(--bearish);
+    }
+    .nivel-badge.estrategia {
+      background: rgba(63, 185, 80, 0.15);
+      color: var(--bullish);
+    }
+    .disclaimer {
+      background: var(--bg-tertiary);
+      border: 1px solid var(--border-color);
+      border-radius: 12px;
+      padding: 20px;
+      margin-top: 40px;
+    }
+    .disclaimer h4 {
+      margin-bottom: 8px;
+      color: var(--neutral);
+    }
+    @media (max-width: 600px) {
+      .article-header h1 { font-size: 1.5rem; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .strategy-box .pros-cons { grid-template-columns: 1fr; }
+      .comparison-table th, .comparison-table td { padding: 8px 6px; font-size: 0.85rem; }
+      .price-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .price-row .price { min-width: auto; }
+    }
+
+    html, body, .page-wrapper {
+      overflow-x: hidden;
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "TGAR11: Dividendo de R$0,71 Muda Tudo. O Que Fazer Agora?",
+    "description": "Análise completa do dividendo de R$0,71 do TGAR11: por que aconteceu, valuation revisado e estratégias práticas.",
+    "datePublished": "2026-01-31",
+    "dateModified": "2026-01-31",
+    "author": {"@type": "Organization", "name": "Rico aos Poucos", "url": "https://ricoaospoucos.com.br"},
+    "publisher": {"@type": "Organization", "name": "Rico aos Poucos", "url": "https://ricoaospoucos.com.br", "logo": {"@type": "ImageObject", "url": "https://ricoaospoucos.com.br/icon-512.png"}},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://ricoaospoucos.com.br/artigos/tgar11-dividendo-071-analise-2026.html"},
+    "image": "https://ricoaospoucos.com.br/imagens/TGAR11.jpg"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://ricoaospoucos.com.br/"},
+      {"@type": "ListItem", "position": 2, "name": "Artigos", "item": "https://ricoaospoucos.com.br/artigos/"},
+      {"@type": "ListItem", "position": 3, "name": "TGAR11: Dividendo R$0,71", "item": "https://ricoaospoucos.com.br/artigos/tgar11-dividendo-071-analise-2026.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="page-wrapper" style="min-height:100vh;display:flex;flex-direction:column;">
+
+    <header class="app-header" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color);">
+      <a href="./" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.05);border-radius:10px;color:var(--text-primary);text-decoration:none;">
+        <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      </a>
+      <div style="width:36px;height:36px;flex-shrink:0;">
+        <svg viewBox="0 0 1024 1024" width="36" height="36">
+          <defs><clipPath id="rc"><rect width="1024" height="1024" rx="205"/></clipPath></defs>
+          <g clip-path="url(#rc)">
+            <rect width="1024" height="1024" fill="#fdfdfd"/>
+            <path d="M329.73 475.84C318.03 487.75 291.26 514.98 270.23 536.35L232 575.21V218.91l129.25.35c127.97.35 129.38.37 142.25 2.56 44.75 7.62 77.89 21.45 104.52 43.63 19.83 16.51 36.07 40.45 41.44 61.07l1.53 5.87-9.75 10.06c-5.36 5.53-29.55 30.3-53.75 55.05-24.21 24.75-48.25 49.39-53.42 54.75-5.18 5.36-9.91 9.75-10.51 9.75s-5.76-4.68-11.47-10.41l-10.38-10.41 5.36-2.71c16.69-8.46 27.74-21.74 32.49-39.04 2.49-9.07 3.04-29.21 1.06-38.93-4.86-23.89-21.8-40.39-47.62-46.39-16.32-3.79-26.87-4.26-85.51-3.77-30.79.25-56.1.5-56.24.56-.14.05-.25 32.32-.25 71.69v71.6zm438.27 271.66c0 .28-32.06.48-71.25.45l-71.25-.05-22.31-31.2c-12.27-17.16-31.31-43.7-42.31-58.99l-20-27.78 2.6-3.09c4.52-5.37 76.91-78.84 77.68-78.84 1.08 0 39.66 51.87 88.5 119 11 15.12 28.63 39.31 39.17 53.75s19.17 26.79 19.17 27.06zM356 687.92V748h-59c-32.45 0-59-.34-58.99-.75.01-.9 115.72-118.6 117.06-119.08.57-.21.93 23.06.93 59.75z" fill="rgb(32,58,87)"/>
+            <path d="M298.21 658.25C261.73 694.96 231.8 725 231.69 725s-.19-27.65-.19-61.45v-61.44l16-16.26c8.8-8.96 50.21-51.0 92.03-93.35 41.82-42.36 79.13-80.27 82.92-84.26 3.78-3.99 7.25-7.25 7.72-7.25s10.62 9.34 22.59 20.75c11.96 11.41 32.71 31.06 46.11 43.66 23.13 21.77 24.46 22.85 26.49 21.5 2.26-1.49 29.72-29.31 97.15-98.41 22.54-23.10 48.53-49.65 57.76-58.99l16.79-17 -4.34-4c-2.39-2.2-14.67-13.41-27.28-24.92s-23.07-21.23-23.23-21.61c-.3-.72.32-.88 36.29-9.4 12.65-2.99 32.22-7.70 43.5-10.45s28.15-6.85 37.5-9.11c9.35-2.26 23.3-5.64 31-7.51 32.51-7.91 64.33-15.5 64.96-15.5.15 0-.54 3.94-1.54 8.75-4.91 23.62-11.24 53.92-15.42 73.75-2.54 12.10-6.61 31.67-9.03 43.5s-5.78 23.83-7.48 31.81c-1.70 7.98-4.34 20.47-5.88 27.76s-3.06 13.52-3.38 13.84c-.61.61-9.56-6.89-25.23-21.16-4.95-4.51-12.15-10.97-16-14.36l-7-6.17-3.91 4.29c-4.90 5.38-32.10 33.35-61.08 62.80-26.70 27.13-158.79 162.16-166.52 170.22l-5.49 5.72-21.5-20.59c-55.42-53.08-73.11-69.87-73.91-70.14-.47-.17-1.47.34-2.22 1.13-4.59 4.81-75.04 75.93-131.66 132.91z" fill="rgb(214,164,45)"/>
+          </g>
+        </svg>
+      </div>
+      <div style="flex:1;min-width:0;">
+        <h1 style="font-size:1rem;font-weight:600;color:var(--text-primary);margin:0;">Rico aos Poucos</h1>
+        <span style="font-size:0.7rem;color:var(--text-muted);">Artigo</span>
+      </div>
+    </header>
+
+    <article class="article-container" style="flex:1;">
+
+      <div class="article-header">
+        <span class="nivel-badge urgente">🚨 Análise Urgente</span>
+        <span class="nivel-badge estrategia">💡 Estratégias Práticas</span>
+        <h1>TGAR11: Dividendo de R$0,71 Muda Tudo. O Que Fazer Agora?</h1>
+        <p style="color: var(--text-secondary); font-size: 1.1rem;">
+          Cotistas esperavam R$0,90. Veio R$0,71, batendo a banda inferior do guidance logo no primeiro mês. Análise sem filtro: por que aconteceu, valuation revisado, cenários reais e o que fazer agora.
+        </p>
+        <div class="article-meta">
+          <span>📅 31 de Janeiro de 2026</span>
+          <span>⏱️ 12 min de leitura</span>
+          <span>🏷️ TGAR11, Estratégia</span>
+        </div>
+      </div>
+
+      <!-- Imagem de Capa -->
+      <div style="margin: 24px 0; border-radius: 12px; overflow: hidden;">
+        <img src="../imagens/TGAR11.jpg" alt="TGAR11 Dividendo R$0,71" style="width: 100%; height: auto; display: block;" loading="eager">
+      </div>
+
+      <div class="article-content">
+
+        <div class="callout danger">
+          <h3>⚠️ O Golpe Dentro do Golpe</h3>
+          <p style="margin:0;">
+            <a href="tgar11-panico-ou-oportunidade-2026.html" style="color:var(--primary-light);">A cota já havia derretido de R$93 para R$80</a> após o guidance ser revisado.
+            <a href="tgar11-gestor-explica-queda-live-2026.html" style="color:var(--primary-light);">O gestor fez uma live explicando tudo</a>, o mercado aliviou para R$82. Então veio o dividendo de janeiro:
+            <strong>R$0,71</strong>. A banda inferior do guidance. Logo no primeiro mês. A cota caiu para <strong>R$78,20</strong>.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="value bearish">R$0,71</div>
+            <div class="label">Dividendo janeiro/2026</div>
+          </div>
+          <div class="stat-item">
+            <div class="value bearish">-29%</div>
+            <div class="label">vs R$1,00 anterior</div>
+          </div>
+          <div class="stat-item">
+            <div class="value bearish">R$78,20</div>
+            <div class="label">Cotação atual</div>
+          </div>
+          <div class="stat-item">
+            <div class="value bearish">-16%</div>
+            <div class="label">Queda desde R$93</div>
+          </div>
+        </div>
+
+        <p>
+          Este não é um artigo para especular sobre o futuro. Este é um artigo para <strong>tomar decisões agora</strong>.
+          Se você tem TGAR11 na carteira, precisa decidir: segurar, reduzir, zerar ou até aumentar.
+          Se não tem, precisa decidir: entrar, esperar ou ignorar.
+        </p>
+
+        <p>
+          Vamos direto ao ponto.
+        </p>
+
+        <h2>1. Por Que Veio R$0,71 (E Não R$0,90)?</h2>
+
+        <p>
+          A expectativa era de queda gradual (R$0,90 → R$0,85 → R$0,80...). <strong>Veio R$0,71 logo no primeiro mês.</strong> Três hipóteses:
+        </p>
+
+        <div class="timeline-scenario">
+          <h4>Hipóteses Para o R$0,71</h4>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>Hipótese 1: O Resultado Caixa É R$0,71</strong>
+              <span class="timeline-badge" style="background:rgba(248,81,73,0.2);color:var(--bearish);">Pior Caso</span>
+            </div>
+            <p style="margin:0;font-size:0.95rem;color:var(--text-muted);">
+              O fundo realmente fez apenas R$0,71 de caixa em janeiro. Os repasses bancários travaram mais do que o previsto.
+              As vendas desaceleraram. A Viel não fechou. O cenário está pior do que o gestor imaginava na live.
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>Hipótese 2: Fez R$0,85-0,90 mas Guardou Reserva</strong>
+              <span class="timeline-badge" style="background:rgba(240,193,75,0.2);color:var(--neutral);">Caso Base</span>
+            </div>
+            <p style="margin:0;font-size:0.95rem;color:var(--text-muted);">
+              O resultado foi próximo de R$0,85-0,90, mas o gestor decidiu distribuir apenas R$0,71 e criar uma reserva
+              de ~R$0,15-0,19 por cota. Estratégia de precaução para os próximos meses, caso o cenário piore.
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>Hipótese 3: Estratégia de Começar Baixo</strong>
+              <span class="timeline-badge" style="background:rgba(63,185,80,0.2);color:var(--bullish);">Otimista</span>
+            </div>
+            <p style="margin:0;font-size:0.95rem;color:var(--text-muted);">
+              O gestor preferiu começar na banda inferior para <strong>aumentar gradualmente</strong> ao longo do semestre,
+              conforme os repasses forem chegando e o cenário melhorando. É psicologicamente melhor subir de R$0,71 para R$0,85
+              do que cair de R$0,90 para R$0,75.
+            </p>
+          </div>
+        </div>
+
+        <p>
+          <strong>Mais provável: Hipótese 2.</strong> O fundo vinha fazendo R$1,00/mês. Dificilmente caiu para R$0,71 de uma vez.
+          Provavelmente está criando reserva para não revisar guidance de novo. <strong>Mas não temos certeza</strong> — e essa incerteza
+          é o problema. O cotista não sabe se deve precificar R$0,71 ou R$0,85.
+        </p>
+
+        <h2>2. Múltiplas Variáveis (Não É Só a Selic)</h2>
+
+        <p>
+          A recuperação não depende só da Selic. <a href="tgar11-gestor-explica-queda-live-2026.html" style="color:var(--primary-light);">Conforme explicado na live do gestor</a>, há cinco variáveis-chave:
+        </p>
+
+        <ol>
+          <li><strong>Selic:</strong> Mesmo caindo em março, efeito só em 6-9 meses (2º sem/2026 ou 2027)</li>
+          <li><strong>Viel (R$300 mi):</strong> Se venda fechar, R$3,50/cota de ganho + destrava caixa</li>
+          <li><strong>Eleições 2026:</strong> Mudança de governo pode acelerar recuperação</li>
+          <li><strong>Repasses bancários:</strong> R$300 mi travados, tempo triplicou (9-12 meses)</li>
+          <li><strong>Bolha americana:</strong> Se estourar, contágio global piora tudo</li>
+        </ol>
+
+        <div class="callout danger">
+          <h3>⚠️ O Problema</h3>
+          <p style="margin:0;">
+            O TGAR11 não depende de <strong>uma</strong> coisa dar certo. Depende de <strong>várias</strong> não darem errado ao mesmo tempo.
+          </p>
+        </div>
+
+        <h2>3. Valuation Revisado (Cálculo Brutal)</h2>
+
+        <p>
+          Vamos fazer a conta que ninguém quer fazer: <strong>quanto vale o TGAR11 se ficar distribuindo R$0,71/mês?</strong>
+        </p>
+
+        <p>
+          O mercado de FII brasileiro precifica fundos por <strong>dividend yield</strong>. A média de FIIs de desenvolvimento
+          oscila entre <strong>0,90% a 1,10% ao mês</strong>, dependendo do risco e liquidez.
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Cenário de Dividendo</th>
+              <th class="center">Dividendo Mensal</th>
+              <th class="center">Yield Esperado</th>
+              <th class="center">Preço Justo</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Dividendo atual (R$0,71)</td>
+              <td class="center" style="color:var(--bearish);">R$0,71</td>
+              <td class="center">1,00%</td>
+              <td class="center" style="color:var(--bearish);"><strong>R$71</strong></td>
+            </tr>
+            <tr>
+              <td>Recuperação parcial (R$0,85)</td>
+              <td class="center" style="color:var(--neutral);">R$0,85</td>
+              <td class="center">1,00%</td>
+              <td class="center" style="color:var(--neutral);"><strong>R$85</strong></td>
+            </tr>
+            <tr>
+              <td>Normalização (R$1,00)</td>
+              <td class="center" style="color:var(--bullish);">R$1,00</td>
+              <td class="center">1,00%</td>
+              <td class="center" style="color:var(--bullish);"><strong>R$100</strong></td>
+            </tr>
+            <tr>
+              <td>Cenário otimista (R$1,10)</td>
+              <td class="center" style="color:var(--bullish);">R$1,10</td>
+              <td class="center">1,00%</td>
+              <td class="center" style="color:var(--bullish);"><strong>R$110</strong></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          <strong>Interpretação:</strong>
+        </p>
+
+        <ul>
+          <li>Se o TGAR11 ficar distribuindo <strong>R$0,71/mês</strong> pelos próximos 12 meses, o preço justo é <strong>R$71</strong></li>
+          <li>Se recuperar para <strong>R$0,85/mês</strong> em 6 meses, o preço justo vai para <strong>R$85</strong></li>
+          <li>Se voltar a <strong>R$1,00/mês</strong>, a cota pode bater <strong>R$100</strong></li>
+        </ul>
+
+        <div class="callout">
+          <h3>📊 E a R$78,20 (Preço Atual)?</h3>
+          <p style="margin:0 0 12px 0;">
+            Com dividendo de R$0,71, o yield é <strong>0,91% ao mês</strong> (10,9% ao ano). Isso está <strong>levemente abaixo</strong>
+            do que o mercado costuma pagar para FIIs de desenvolvimento.
+          </p>
+          <p style="margin:0;">
+            <strong>Ou seja:</strong> O mercado está precificando que o dividendo vai ficar entre R$0,71 e R$0,80 pelos próximos meses,
+            mas com alguma chance de recuperação no segundo semestre.
+          </p>
+        </div>
+
+        <h2>4. Cenários com Timeline Real</h2>
+
+        <p>
+          Agora vamos aos cenários. <strong>Não vou prometer nada.</strong> Vou apenas mapear as possibilidades e atribuir probabilidades.
+        </p>
+
+        <div class="timeline-scenario">
+          <h4>Cenário 1: Pior Caso (Probabilidade: 25%)</h4>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>O Que Acontece</strong>
+              <span class="timeline-badge" style="background:rgba(248,81,73,0.2);color:var(--bearish);">18-24 meses</span>
+            </div>
+            <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.95rem;">
+              <li>Selic não cai ou cai muito devagar (fica acima de 13%)</li>
+              <li>Governo atual se reelege, reformas não avançam</li>
+              <li>Venda da Viel não fecha</li>
+              <li>Repasses bancários continuam lentos</li>
+              <li>Dividendo fica em <strong>R$0,70-0,75/mês</strong></li>
+            </ul>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>Preço da Cota</strong>
+            </div>
+            <p style="margin:0;font-size:0.95rem;">
+              Cota oscila entre <strong>R$70-75</strong> durante 18-24 meses. Recuperação só em 2027-2028.
+              Retorno total (dividendos + valorização): <strong>+5% a +10% ao ano</strong>.
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>O Que Fazer Nesse Cenário</strong>
+            </div>
+            <p style="margin:0;font-size:0.95rem;color:var(--text-muted);">
+              Se você não aguenta ver a cota a R$70-75 por 18-24 meses, <strong>não deveria estar no TGAR11</strong>.
+              Melhor sair agora a R$78 e ir para FII de tijolo ou Tesouro IPCA+.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-scenario">
+          <h4>Cenário 2: Caso Base (Probabilidade: 50%)</h4>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>O Que Acontece</strong>
+              <span class="timeline-badge">9-12 meses</span>
+            </div>
+            <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.95rem;">
+              <li>Selic começa a cair em março, chega a 12-13% até o fim de 2026</li>
+              <li>Repasses bancários começam a normalizar no segundo semestre</li>
+              <li>Viel pode ou não fechar (50/50)</li>
+              <li>Dividendo sobe gradualmente: R$0,75 → R$0,80 → R$0,85</li>
+            </ul>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>Preço da Cota</strong>
+            </div>
+            <p style="margin:0;font-size:0.95rem;">
+              Cota oscila entre <strong>R$75-85</strong> durante 2026. Se chegar a R$0,85/mês até o final do ano,
+              a cota fecha 2026 em <strong>R$85-88</strong>. Retorno total: <strong>+18% a +22%</strong> (considerando dividendos).
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>O Que Fazer Nesse Cenário</strong>
+            </div>
+            <p style="margin:0;font-size:0.95rem;color:var(--text-muted);">
+              Este é o cenário mais provável. Se você acredita nele, faz sentido <strong>segurar a posição</strong> e
+              até aumentar em quedas para R$75 ou abaixo. Retorno de 18-22% ao ano é excelente para um FII.
+            </p>
+          </div>
+        </div>
+
+        <div class="timeline-scenario">
+          <h4>Cenário 3: Melhor Caso (Probabilidade: 25%)</h4>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>O Que Acontece</strong>
+              <span class="timeline-badge" style="background:rgba(63,185,80,0.2);color:var(--bullish);">6-8 meses</span>
+            </div>
+            <ul style="margin:8px 0 0 0;padding-left:20px;font-size:0.95rem;">
+              <li>Selic cai forte (chega a 11-12% até o fim do ano)</li>
+              <li>Venda da Viel fecha (R$300 mi destravados)</li>
+              <li>Mudança de governo favorável nas eleições (confiança sobe)</li>
+              <li>Repasses bancários aceleram forte</li>
+              <li>Dividendo volta para <strong>R$0,95-1,00/mês</strong> ainda em 2026</li>
+            </ul>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>Preço da Cota</strong>
+            </div>
+            <p style="margin:0;font-size:0.95rem;">
+              Cota dispara para <strong>R$95-100</strong> no segundo semestre de 2026.
+              Retorno total: <strong>+35% a +40%</strong> (considerando dividendos).
+            </p>
+          </div>
+
+          <div class="scenario-item">
+            <div class="scenario-header">
+              <strong>O Que Fazer Nesse Cenário</strong>
+            </div>
+            <p style="margin:0;font-size:0.95rem;color:var(--text-muted);">
+              Se você acredita nesse cenário, <strong>deveria estar comprando agressivamente</strong> qualquer coisa abaixo de R$80.
+              Mas lembre-se: é o cenário de <strong>menor probabilidade</strong>.
+            </p>
+          </div>
+        </div>
+
+        <h2>5. Estratégias Práticas - O Que Fazer Agora</h2>
+
+        <p>
+          Chega de teoria. Vamos às estratégias para quem tem posição e para quem está de fora.
+        </p>
+
+        <h3>A) Para Quem TEM Posição</h3>
+
+        <div class="strategy-box">
+          <h4>Estratégia 1: HOLD (Aguentar a Dor)</h4>
+          <p style="margin:0 0 12px 0;font-size:0.95rem;">
+            <strong>Descrição:</strong> Segurar a posição, ignorar a volatilidade, focar nos dividendos e esperar
+            a recuperação em 9-18 meses.
+          </p>
+          <div class="pros-cons">
+            <div>
+              <strong style="color:var(--bullish);">✅ Prós</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Não perde o timing de recuperação</li>
+                <li>Continua recebendo dividendos</li>
+                <li>Não realiza prejuízo</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:var(--bearish);">❌ Contras</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Pode cair mais (R$75, R$70)</li>
+                <li>Dinheiro travado por meses</li>
+                <li>Estresse emocional</li>
+              </ul>
+            </div>
+          </div>
+          <p style="margin:12px 0 0 0;font-size:0.9rem;color:var(--text-muted);">
+            <strong>Para quem:</strong> Investidor paciente, horizonte 18+ meses, acredita na tese, posição não muito grande.
+          </p>
+        </div>
+
+        <div class="strategy-box" style="border-left-color:var(--neutral);">
+          <h4>Estratégia 2: VENDER e RECOMPRAR (Trading)</h4>
+          <p style="margin:0 0 12px 0;font-size:0.95rem;">
+            <strong>Descrição:</strong> Vender a posição atual a R$78-79, esperar uma queda para R$70-72 e recomprar com mais cotas.
+          </p>
+          <div class="pros-cons">
+            <div>
+              <strong style="color:var(--bullish);">✅ Prós</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Se funcionar, ganha 10-15% em cotas</li>
+                <li>Reduz preço médio</li>
+                <li>Pode ter sorte no timing</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:var(--bearish);">❌ Contras</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>E se não cair para R$70?</li>
+                <li>Perde dividendos no meio</li>
+                <li>Paga IR sobre ganho (se tiver)</li>
+                <li>Risco de ficar de fora</li>
+              </ul>
+            </div>
+          </div>
+          <p style="margin:12px 0 0 0;font-size:0.9rem;color:var(--text-muted);">
+            <strong>Para quem:</strong> Trader experiente, consegue controlar emoção, aceita o risco de perder o trem.
+            <strong style="color:var(--bearish);">NÃO recomendado para iniciantes.</strong>
+          </p>
+        </div>
+
+        <div class="strategy-box" style="border-left-color:var(--neutral);">
+          <h4>Estratégia 3: REDUZIR EXPOSIÇÃO</h4>
+          <p style="margin:0 0 12px 0;font-size:0.95rem;">
+            <strong>Descrição:</strong> Vender 30-50% da posição a R$78-80, usar o dinheiro para diversificar (FII tijolo, CRI, Tesouro).
+          </p>
+          <div class="pros-cons">
+            <div>
+              <strong style="color:var(--bullish);">✅ Prós</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Reduz risco sem sair totalmente</li>
+                <li>Mantém exposição à recuperação</li>
+                <li>Diversifica em ativos mais estáveis</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:var(--bearish);">❌ Contras</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Realiza prejuízo parcial</li>
+                <li>Ganha menos na recuperação</li>
+                <li>Pode se arrepender se subir</li>
+              </ul>
+            </div>
+          </div>
+          <p style="margin:12px 0 0 0;font-size:0.9rem;color:var(--text-muted);">
+            <strong>Para quem:</strong> Posição muito grande (>15% da carteira), não aguenta mais volatilidade, quer dormir tranquilo.
+          </p>
+        </div>
+
+        <div class="strategy-box" style="border-left-color:var(--bearish);">
+          <h4>Estratégia 4: ZERAR TUDO</h4>
+          <p style="margin:0 0 12px 0;font-size:0.95rem;">
+            <strong>Descrição:</strong> Vender 100% da posição e migrar para ativos mais previsíveis (FII tijolo, Tesouro IPCA+, CRI).
+          </p>
+          <div class="pros-cons">
+            <div>
+              <strong style="color:var(--bullish);">✅ Prós</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Elimina estresse</li>
+                <li>Libera capital para outras oportunidades</li>
+                <li>Renda mais previsível</li>
+              </ul>
+            </div>
+            <div>
+              <strong style="color:var(--bearish);">❌ Contras</strong>
+              <ul style="margin:4px 0 0 0;padding-left:18px;font-size:0.85rem;">
+                <li>Realiza prejuízo total</li>
+                <li>Perde toda a recuperação</li>
+                <li>Pode se arrepender em 2027</li>
+              </ul>
+            </div>
+          </div>
+          <p style="margin:12px 0 0 0;font-size:0.9rem;color:var(--text-muted);">
+            <strong>Para quem:</strong> Não aguenta mais volatilidade, precisa de renda estável, não confia mais na gestão,
+            ou simplesmente não entende o produto e comprou por indicação.
+          </p>
+        </div>
+
+        <h3>B) Para Quem NÃO TEM Posição</h3>
+
+        <p>
+          Se você está de fora e quer entrar, os pontos de entrada são:
+        </p>
+
+        <div class="price-action-box">
+          <h4>Pontos de Entrada</h4>
+
+          <div class="price-row">
+            <div class="price" style="color:var(--neutral);">R$78-80</div>
+            <div class="action">
+              <strong>Entrada Cautelosa</strong> — Só se você acredita no caso base (recuperação em 9-12 meses).
+              Posição pequena (5% da carteira).
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price" style="color:var(--bullish);">R$75</div>
+            <div class="action">
+              <strong>Entrada Boa</strong> — Preço justo se dividendo ficar em R$0,75-0,80. Assimetria favorável.
+              Pode montar posição maior (10% da carteira).
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price" style="color:var(--bullish);">R$70-72</div>
+            <div class="action">
+              <strong>Entrada Excelente</strong> — Mercado em pânico. Yield de 1% ao mês mesmo com dividendo baixo.
+              Compra mais agressiva.
+            </div>
+          </div>
+
+          <div class="price-row">
+            <div class="price" style="color:var(--bullish);">Abaixo de R$70</div>
+            <div class="action">
+              <strong>All-In</strong> — Se chegar aqui, é pânico total ou algo estrutural quebrou.
+              Analise com cuidado antes de comprar.
+            </div>
+          </div>
+        </div>
+
+        <div class="callout">
+          <h3>💡 Estratégia de Entrada Inteligente</h3>
+          <p style="margin:0;">
+            Não compre tudo de uma vez. <strong>Fracionecompra</strong> 33% a R$78, 33% a R$75, 34% a R$70 (se chegar).
+            Assim você garante preço médio bom sem arriscar tudo em um único ponto.
+          </p>
+        </div>
+
+        <h3>C) Sinais Para Monitorar</h3>
+
+        <p>
+          Se você vai segurar ou comprar, precisa monitorar estes sinais:
+        </p>
+
+        <ol>
+          <li>
+            <strong>Dividendo de fevereiro (final de fevereiro):</strong> Se vier R$0,75-0,80, é sinal de recuperação.
+            Se vier R$0,71 de novo, problema maior.
+          </li>
+          <li>
+            <strong>Relatório gerencial de março + webcast (início março):</strong> Gestor prometeu webcast mensal.
+            Ali ele vai explicar o que aconteceu em janeiro.
+          </li>
+          <li>
+            <strong>Notícias sobre a Viel:</strong> Se a venda fechar, é gatilho forte de valorização.
+          </li>
+          <li>
+            <strong>Decisão da Selic (março, maio):</strong> Se começar a cair, é positivo para médio prazo.
+          </li>
+          <li>
+            <strong>Pesquisas eleitorais (segundo semestre):</strong> Indicam possibilidade de mudança de governo.
+          </li>
+        </ol>
+
+        <h2>6. TGAR11 vs Alternativas (Comparação Brutal)</h2>
+
+        <p>
+          Vale a pena segurar TGAR11 a R$0,71/mês? Ou é melhor migrar para outras opções?
+        </p>
+
+        <table class="comparison-table">
+          <thead>
+            <tr>
+              <th>Ativo</th>
+              <th class="center">Renda Mensal</th>
+              <th class="center">Yield Anual</th>
+              <th class="center">Volatilidade</th>
+              <th class="center">Perspectiva</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>TGAR11 (R$78)</strong></td>
+              <td class="center">R$0,71</td>
+              <td class="center">10,9%</td>
+              <td class="center" style="color:var(--bearish);">Alta</td>
+              <td class="center">Recuperação em 9-18m</td>
+            </tr>
+            <tr>
+              <td>FII Tijolo (média)</td>
+              <td class="center">~0,85%</td>
+              <td class="center">10,2%</td>
+              <td class="center" style="color:var(--neutral);">Média</td>
+              <td class="center">Estável</td>
+            </tr>
+            <tr>
+              <td>CRI (CDI+2%)</td>
+              <td class="center">~1,2%</td>
+              <td class="center">15%+</td>
+              <td class="center" style="color:var(--bullish);">Baixa</td>
+              <td class="center">Rentabilidade garantida</td>
+            </tr>
+            <tr>
+              <td>Tesouro IPCA+ 2035</td>
+              <td class="center">IPCA+6,5%</td>
+              <td class="center">~11-12%</td>
+              <td class="center" style="color:var(--bullish);">Baixa</td>
+              <td class="center">Sem risco de crédito</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <div class="callout">
+          <h3>🤔 Então Vale Mais CRI ou Tesouro?</h3>
+          <p style="margin:0 0 12px 0;">
+            <strong>No curto prazo (6-12 meses), sim.</strong> CRI pagando CDI+2% rende ~15% ao ano com baixíssimo risco.
+            TGAR11 pode render 10-11% com dividendos + alguma valorização, mas com muito mais volatilidade.
+          </p>
+          <p style="margin:0;">
+            <strong>No médio prazo (18+ meses), não necessariamente.</strong> Se o TGAR11 recuperar para R$0,90-1,00 e a cota subir para R$90-95,
+            o retorno total pode ser 25-35%, bem superior a CRI ou Tesouro.
+          </p>
+        </div>
+
+        <p>
+          <strong>Conclusão:</strong> Se você precisa de renda estável e não aguenta volatilidade, CRI e Tesouro são melhores.
+          Se você aceita risco e tem paciência, TGAR11 tem potencial de retorno superior.
+        </p>
+
+        <h2>7. A Tese Ainda Faz Sentido?</h2>
+
+        <p>
+          <strong>O que mudou:</strong> Timing piorou (12-18 meses), dividendo caiu 29%, incerteza aumentou.<br>
+          <strong>O que NÃO mudou:</strong> R$2,5 bi em ativos, 72% já performado, fundamento intacto.
+        </p>
+
+        <div class="quote-box">
+          "A pergunta não é <em>se</em> o TGAR11 vai se recuperar. É <strong>quando</strong> e se você aguenta esperar."
+        </div>
+
+        <p>
+          <strong>Faz sentido se:</strong> Horizonte 18+ meses, aceita volatilidade, posição <10-15% da carteira.<br>
+          <strong>NÃO faz sentido se:</strong> Precisa de renda estável, não aguenta cair 20-30%, posição >20%.
+        </p>
+
+        <h2>8. Conclusão - Minha Posição (E Um Erro)</h2>
+
+        <p>
+          <strong>Ainda acredito no TGAR11.</strong> Mas preciso ser honesto: <strong>errei na expectativa do dividendo.</strong>
+        </p>
+
+        <div class="strategy-box" style="border-left-color:var(--bearish);">
+          <h4>⚠️ Transparência Total: O Que Eu Fiz</h4>
+          <p style="margin:0 0 12px 0;font-size:0.95rem;">
+            <strong>Comprei a R$80</strong> (artigo anterior) esperando dividendo de R$0,85-0,90. <strong>Veio R$0,71.</strong>
+            Errei. E tomei uma decisão difícil: <strong>vendi a R$79</strong> (perdi R$1 + corretagem).
+          </p>
+          <p style="margin:0 0 12px 0;font-size:0.9rem;background:rgba(248,81,73,0.1);padding:12px;border-radius:6px;">
+            <strong>Por que vendi?</strong> O mercado precifica FIIs por dividend yield (~1% ao mês). Se o dividendo ficar em R$0,71,
+            a cota tende a R$71. Se fevereiro vier R$0,71 de novo, o preço vai buscar esse patamar. Preferi sair a R$79 e tentar
+            recomprar a R$75-72 do que segurar uma queda até R$71.
+          </p>
+          <p style="margin:0 0 12px 0;font-size:0.9rem;background:rgba(63,185,80,0.1);padding:12px;border-radius:6px;">
+            <strong>⚠️ IMPORTANTE:</strong> Se você comprou a R$80 e está segurando, <strong>você NÃO está errado</strong>.
+            A tese continua válida, os ativos estão lá, o dinheiro vai chegar. Você só precisa ter mais paciência (18-24 meses em vez de 12).
+            Meu trade é uma aposta arriscada que <strong>pode dar muito errado</strong>.
+          </p>
+          <ul style="margin:0 0 12px 0;padding-left:20px;font-size:0.95rem;">
+            <li><strong>R$75:</strong> Vou tentar recomprar</li>
+            <li><strong>R$70:</strong> Aumentar posição</li>
+            <li><strong>R$65-67:</strong> Comprar mais forte</li>
+          </ul>
+          <p style="margin:0;font-size:0.85rem;color:var(--bearish);">
+            <strong>Riscos do meu trade:</strong> Se não cair para R$75 e voltar a R$82-85 (por exemplo, se fevereiro vier R$0,85),
+            eu perdi o trem. Vendi no prejuízo e fiquei de fora da recuperação. <strong>É uma decisão pessoal arriscada, não uma recomendação.</strong>
+          </p>
+        </div>
+
+        <h3>Recomendação Final</h3>
+
+        <p>
+          <strong>Se tem posição a R$80:</strong> A tese continua válida. Você pode segurar (18-24 meses), reduzir exposição (30-50%)
+          ou fazer trade (arriscado). <strong>Não há resposta certa.</strong> Depende do seu perfil e tamanho da posição.
+        </p>
+
+        <p><strong>Se não tem:</strong> R$75 (boa entrada) | R$70-72 (excelente) | R$65-67 (muito barato)</p>
+
+        <div class="callout danger">
+          <h3>⚠️ O Que Me Faria Sair</h3>
+          <p style="margin:0;">
+            R$0,71 por 3 meses seguidos | Revisão de guidance | Problema estrutural | Cota < R$62
+          </p>
+        </div>
+
+        <div class="callout positive" style="margin-top:32px;">
+          <h3>🔗 Artigos Relacionados</h3>
+          <ul style="margin:0;padding-left:20px;">
+            <li><a href="tgar11-panico-ou-oportunidade-2026.html" style="color:var(--primary-light);">Comprei TGAR11 a R$80: Pechincha Após Dividendos Menores</a></li>
+            <li><a href="tgar11-gestor-explica-queda-live-2026.html" style="color:var(--primary-light);">TGAR11: R$375 Milhões Evaporaram e Gestor Explica (10 Pontos Cruciais)</a></li>
+            <li><a href="fiis-2026-analise.html" style="color:var(--primary-light);">FIIs em 2026: Renda Passiva com Cautela</a></li>
+            <li><a href="risco-retorno-investimentos-2026.html" style="color:var(--primary-light);">Timing de Entrada: Quando a Margem de Queda é Pequena</a></li>
+          </ul>
+        </div>
+
+        <div class="disclaimer">
+          <h4>⚠️ Aviso Importante</h4>
+          <p style="margin:0;font-size:0.9rem;color:var(--text-muted);">
+            Este artigo é apenas educacional e reflete minha opinião pessoal. Não constitui recomendação de investimento.
+            Faça sua própria análise e consulte um assessor financeiro antes de tomar qualquer decisão. Rentabilidade
+            passada não garante resultados futuros.
+          </p>
+        </div>
+
+      </div>
+
+    </article>
+
+    <div id="footer-container"></div>
+  </div>
+  <script defer src="../js/article-header.js"></script>
+  <script defer src="../js/footer.js"></script>
+</body>
+</html>

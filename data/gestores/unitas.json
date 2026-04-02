@@ -1,0 +1,43 @@
+{
+  "slug": "unitas",
+  "nome": "Unitas Real Estate",
+  "nota": 7,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 2,
+  "segmentos": [
+    "Lajes Corporativas",
+    "Híbrido (Lajes Corporativas + Hotel)"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: FATN11, FLMA11. Nota média 7/10 (BOM).",
+  "seo": {
+    "title": "Unitas Real Estate - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Unitas Real Estate. 2 fundos geridos com nota média 7/10. Veja os FIIs: FATN11, FLMA11.",
+    "ogTitle": "Unitas Real Estate - Análise da Gestora de FIIs",
+    "ogDescription": "Unitas Real Estate: 2 fundos, nota média 7/10. Fundos: FATN11, FLMA11.",
+    "twitterTitle": "Unitas Real Estate - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Unitas Real Estate: 2 fundos, nota 7/10."
+  },
+  "fundos": [
+    {
+      "ticker": "FATN11",
+      "nome": "BRC Renda Corporativa FII",
+      "segmento": "Lajes Corporativas",
+      "nota": 7.5,
+      "notaLabel": "BOM",
+      "dividendYield": 11.2,
+      "pvp": 0.89,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "FLMA11",
+      "nome": "Continental Square Faria Lima FII",
+      "segmento": "Híbrido (Lajes Corporativas + Hotel)",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 8,
+      "pvp": 0.64,
+      "sentimento": "neutro"
+    }
+  ]
+}

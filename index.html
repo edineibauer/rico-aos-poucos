@@ -235,146 +235,61 @@
       </div>
     </nav>
 
-    <!-- Breaking News - Horizontal Slider -->
-    <section class="breaking-news">
-      <div class="news-slider" id="newsSlider">
-        <div class="news-track">
-          <a href="artigos/bitcoin-2026-analise.html" class="news-item" data-type="bearish">
-            <span class="news-badge bearish">BTC</span>
-            <span class="news-title">Pessimista - fim de ciclo, exposicao 0%</span>
-          </a>
-          <a href="artigos/tlt-2026-analise.html" class="news-item" data-type="bullish">
-            <span class="news-badge bullish">TLT</span>
-            <span class="news-title">Muda para Otimista - precos baixos, baixo risco</span>
-          </a>
-          <a href="artigos/tesouro-ipca-2026-analise.html" class="news-item" data-type="neutral">
-            <span class="news-badge neutral">IPCA+</span>
-            <span class="news-title">Neutro - risco fiscal real</span>
-          </a>
-          <a href="artigos/dolar-2026-analise.html" class="news-item" data-type="bullish">
-            <span class="news-badge bullish">Dolar</span>
-            <span class="news-title">Otimistas apos queda de 11% em 2025</span>
-          </a>
-          <a href="artigos/fiis-2026-analise.html" class="news-item" data-type="neutral">
-            <span class="news-badge neutral">FIIs</span>
-            <span class="news-title">Renda passiva - precos esticados</span>
-          </a>
-        </div>
-      </div>
-      <div class="slider-indicators" id="sliderIndicators"></div>
-    </section>
-
-    <!-- Main Content - Cards de Resumo -->
+    <!-- Main Content -->
     <section class="app-content">
 
-      <!-- Layout Desktop: dois cards lado a lado -->
-      <div class="home-cards-grid">
+      <!-- Ferramentas Financeiras — Bento Grid -->
+      <div class="tools-bento">
+        <a href="simulador-financiamento/" class="bento-card bento-hero bento-blue">
+          <div class="bento-tag">Simulador</div>
+          <div class="bento-emoji">🏠</div>
+          <h3>Pagar imóvel à vista é erro de quem não faz conta. Financiar é mais lucrativo</h3>
+          <p>Quem financia e investe a diferença sai na frente. Simule e veja por quê.</p>
+          <span class="bento-cta">Simular meu cenário <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="ferramentas-financeiras/#calculadora" class="bento-card bento-orange">
+          <div class="bento-tag">Calculadora</div>
+          <div class="bento-emoji">🏖️</div>
+          <h3>Aposente-se com R$5.000/mês fazendo aportes de apenas R$500/mês</h3>
+          <p>Se você tem 25 anos ou menos, são 35 anos até a aposentadoria — o tempo joga a seu favor. Já considerando a inflação.</p>
+          <span class="bento-cta">Simular aposentadoria <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="calculadora-custo-construcao/" class="bento-card bento-green">
+          <div class="bento-tag">Calculadora</div>
+          <div class="bento-emoji">🏗️</div>
+          <h3>Um imóvel pronto de R$400 mil custa R$240 mil para construir. A diferença paga o terreno</h3>
+          <p>Simule o custo real da sua obra por m², método construtivo e nível de acabamento.</p>
+          <span class="bento-cta">Simular custo da obra <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="ferramentas-financeiras/#historico" class="bento-card bento-gold">
+          <div class="bento-tag">Comparador</div>
+          <div class="bento-emoji">📊</div>
+          <h3>Imóvel para aluguel bateu Bolsa, FIIs e Tesouro nos últimos 20 anos</h3>
+          <p>Os números não mentem. Compare e descubra quanto você deixou na mesa.</p>
+          <span class="bento-cta">Comparar investimentos <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+        <a href="simulador-investimentos/" class="bento-card bento-purple">
+          <div class="bento-tag">Simulador</div>
+          <div class="bento-emoji">💼</div>
+          <h3>Apostar tudo em um ativo achando que vai subir não é investir. É fazer bet com o seu patrimônio</h3>
+          <p>Quem já perdeu dinheiro assim sabe a dor. Diversificar é o que separa investidor de apostador.</p>
+          <span class="bento-cta">Montar minha carteira <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+        </a>
+      </div>
 
-        <!-- Card Expectativas do Canal (menor, esquerda) -->
-        <div class="summary-card card-featured card-expectativas">
-          <a href="setores/" class="card-header">
-            <div class="card-icon-box">
-              <span>🎯</span>
-            </div>
-            <div class="card-title-group">
-              <h2 data-i18n="home.expectations">Expectativas do Canal</h2>
-              <span class="card-subtitle" data-i18n="home.sentimentBySector">Sentimento por setor</span>
-              <div class="card-badge" data-i18n="home.mediumTerm">Médio Prazo</div>
-            </div>
-          </a>
-          <div class="card-body">
-            <div class="expectativas-visual">
-              <div class="setores-legend">
-                <a href="setores/fiis/" class="setor-item bullish">
-                  <span class="setor-icon">🏢</span>
-                  <span class="setor-name">FIIs</span>
-                  <span class="setor-exp">20%</span>
-                </a>
-                <a href="setores/dolar/" class="setor-item bullish">
-                  <span class="setor-icon">💲</span>
-                  <span class="setor-name">Dólar</span>
-                  <span class="setor-exp">20%</span>
-                </a>
-                <a href="setores/imoveis/" class="setor-item bullish">
-                  <span class="setor-icon">🏠</span>
-                  <span class="setor-name">Imóveis</span>
-                  <span class="setor-exp">15%</span>
-                </a>
-                <a href="setores/ibov/" class="setor-item bearish">
-                  <span class="setor-icon">📈</span>
-                  <span class="setor-name">IBOV</span>
-                  <span class="setor-exp">10%</span>
-                </a>
-                <a href="setores/caixa/" class="setor-item bullish">
-                  <span class="setor-icon">💵</span>
-                  <span class="setor-name">Caixa</span>
-                  <span class="setor-exp">15%</span>
-                </a>
-                <a href="setores/tlt/" class="setor-item neutral">
-                  <span class="setor-icon">📊</span>
-                  <span class="setor-name">TLT</span>
-                  <span class="setor-exp">10%</span>
-                </a>
-                <a href="setores/tesouro-ipca/" class="setor-item neutral">
-                  <span class="setor-icon">🏦</span>
-                  <span class="setor-name">IPCA+</span>
-                  <span class="setor-exp">10%</span>
-                </a>
-                <a href="setores/ouro/" class="setor-item neutral zero">
-                  <span class="setor-icon">🥇</span>
-                  <span class="setor-name">Ouro</span>
-                  <span class="setor-exp">0%</span>
-                </a>
-                <a href="setores/sp500/" class="setor-item bearish zero">
-                  <span class="setor-icon">🇺🇸</span>
-                  <span class="setor-name">S&P500</span>
-                  <span class="setor-exp">0%</span>
-                </a>
-                <a href="setores/bitcoin/" class="setor-item bearish zero">
-                  <span class="setor-icon">₿</span>
-                  <span class="setor-name">Bitcoin</span>
-                  <span class="setor-exp">0%</span>
-                </a>
-              </div>
-            </div>
-            <a href="setores/" class="sentimento-resumo">
-              <div class="sentimento-stat bullish">
-                <span class="sentimento-count">4</span>
-                <span class="sentimento-label" data-i18n="sentiments.bullishPlural">Otimistas</span>
-              </div>
-              <div class="sentimento-stat neutral">
-                <span class="sentimento-count">3</span>
-                <span class="sentimento-label" data-i18n="sentiments.neutralPlural">Neutros</span>
-              </div>
-              <div class="sentimento-stat bearish">
-                <span class="sentimento-count">3</span>
-                <span class="sentimento-label" data-i18n="sentiments.bearishPlural">Pessimistas</span>
-              </div>
-            </a>
-          </div>
-          <div class="card-footer-multi">
-            <a href="setores/" class="btn btn-primary">
-              <span data-i18n="home.seeFullAnalysis">Ver análise completa</span>
-              <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </a>
-          </div>
-        </div>
+      <!-- Conteúdo: Artigos + Sidebar (Expectativas + FIIs) -->
+      <div class="home-content-grid">
 
-        <!-- Card Publicações/Notícias (maior, direita) -->
+        <!-- Publicações (carregado dinamicamente) -->
         <div class="summary-card card-featured card-publicacoes">
           <div class="card-body">
-            <!-- Publicação em destaque (carregado dinamicamente) -->
             <div class="pub-featured" id="pubFeatured">
               <div class="pub-loading">
                 <span class="pub-loading-spinner"></span>
                 <span>Carregando...</span>
               </div>
             </div>
-
-            <!-- Lista de publicações (carregado dinamicamente) -->
-            <div class="pub-list" id="pubList">
-              <!-- Conteúdo carregado via JS de data/artigos.json -->
-            </div>
+            <div class="pub-list" id="pubList"></div>
           </div>
           <div class="card-footer">
             <a href="artigos/" class="btn btn-primary">
@@ -384,95 +299,88 @@
           </div>
         </div>
 
-      </div>
+        <!-- Sidebar direita: Expectativas + FIIs -->
+        <div class="home-sidebar">
 
-      <!-- Cards Destaque: FIIs e Construção lado a lado no desktop -->
-      <div class="home-featured-row">
-        <!-- Card Análise de FIIs -->
-        <a href="fiis/" class="card-fiis-featured">
-          <div class="fiis-visual">
-            <span class="fiis-icon-main">🏢</span>
-            <div class="fiis-floating">
-              <span>📊</span>
-              <span>💰</span>
-              <span>📈</span>
+          <!-- Expectativas de Mercado — Donut Chart -->
+          <div class="summary-card card-featured card-expectativas">
+            <a href="setores/" class="card-header">
+              <div class="card-icon-box">
+                <span>🎯</span>
+              </div>
+              <div class="card-title-group">
+                <h2>Expectativas de Mercado</h2>
+                <span class="card-subtitle">Alocação e sentimento por setor</span>
+                <div class="card-badge">Médio Prazo</div>
+              </div>
+            </a>
+            <div class="card-body">
+              <div class="exp-chart-area">
+                <div class="donut-chart">
+                  <div class="donut-hole">
+                    <span class="donut-number">10</span>
+                    <span class="donut-label">setores</span>
+                  </div>
+                </div>
+                <div class="exp-legend">
+                  <a href="setores/" class="exp-legend-group">
+                    <span class="exp-dot bullish"></span>
+                    <div class="exp-legend-info">
+                      <span class="exp-legend-title">Otimistas</span>
+                      <span class="exp-legend-sectors">FIIs · Dólar · Imóveis · Caixa</span>
+                    </div>
+                    <span class="exp-legend-pct bullish">70%</span>
+                  </a>
+                  <a href="setores/" class="exp-legend-group">
+                    <span class="exp-dot neutral"></span>
+                    <div class="exp-legend-info">
+                      <span class="exp-legend-title">Neutros</span>
+                      <span class="exp-legend-sectors">TLT · IPCA+ · Ouro</span>
+                    </div>
+                    <span class="exp-legend-pct neutral">20%</span>
+                  </a>
+                  <a href="setores/" class="exp-legend-group">
+                    <span class="exp-dot bearish"></span>
+                    <div class="exp-legend-info">
+                      <span class="exp-legend-title">Pessimistas</span>
+                      <span class="exp-legend-sectors">IBOV · S&P500 · Bitcoin</span>
+                    </div>
+                    <span class="exp-legend-pct bearish">10%</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card-footer">
+              <a href="setores/" class="btn btn-primary">
+                <span>Ver análise completa</span>
+                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </a>
             </div>
           </div>
-          <div class="fiis-content">
-            <div class="fiis-badge">Novo</div>
-            <h3>Análise de FIIs</h3>
-            <p>Dossiês completos de fundos imobiliários com indicadores, riscos e nossa opinião.</p>
-            <span class="fiis-cta">
-              Ver análises
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
 
-        <!-- Card Calculadora de Construção -->
-        <a href="calculadora-custo-construcao/" class="card-construcao-featured">
-          <div class="construcao-visual">
-            <span class="construcao-icon-main">🏗️</span>
-            <div class="construcao-floating">
-              <span>🧱</span>
-              <span>📐</span>
-              <span>🔨</span>
+          <!-- Análise de FIIs -->
+          <a href="fiis/" class="card-fiis-featured card-fiis-sidebar">
+            <div class="fiis-visual">
+              <span class="fiis-icon-main">🏢</span>
+              <div class="fiis-floating">
+                <span>📊</span>
+                <span>💰</span>
+                <span>📈</span>
+              </div>
             </div>
-          </div>
-          <div class="construcao-content">
-            <div class="construcao-badge">Ferramenta</div>
-            <h3>Calculadora de Construção</h3>
-            <p>Descubra quanto custa construir sua casa. Compare métodos e materiais.</p>
-            <span class="construcao-cta">
-              Calcular agora
-              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </a>
-      </div>
+            <div class="fiis-content">
+              <div class="fiis-badge">Novo</div>
+              <h3>Análise de FIIs</h3>
+              <p>Dossiês completos com indicadores, riscos e opinião.</p>
+              <span class="fiis-cta">
+                Ver análises
+                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </span>
+            </div>
+          </a>
 
-      <!-- Cards Row: Ferramentas + YouTube lado a lado no desktop -->
-      <div class="home-bottom-row">
-        <!-- Card Ferramentas de Investimento -->
-        <div class="card-calculadora card-ferramentas">
-        <div class="calc-card-header">
-          <div class="calc-card-icon">🛠️</div>
-          <div class="calc-card-title">
-            <h3 data-i18n="home.toolsTitle">Ferramentas de Investimento</h3>
-            <span data-i18n="home.toolsSubtitle">Planeje e compare seus investimentos</span>
-          </div>
         </div>
-        <div class="calc-card-features">
-          <a href="calculadora-aposentadoria/" class="calc-feature"><span>🏖️</span> <span data-i18n="home.toolFeature1">Calculadora de Aposentadoria</span></a>
-          <a href="ferramentas-financeiras/#historico" class="calc-feature"><span>📊</span> <span data-i18n="home.toolFeature2">Comparador Histórico</span></a>
-          <a href="simulador-investimentos/" class="calc-feature"><span>💼</span> <span data-i18n="home.toolFeature3">Simulador de Carteira</span></a>
-          <a href="simulador-financiamento/" class="calc-feature"><span>🏠</span> <span>Financiamento vs Investimento</span></a>
-        </div>
-        <a href="ferramentas/" class="calc-card-cta">
-          <span data-i18n="home.useTools">Acessar ferramentas</span>
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </div>
 
-      <!-- Card YouTube -->
-      <a href="https://www.youtube.com/@ricoaospoucos-com-br" target="_blank" class="summary-card card-youtube">
-        <div class="youtube-card-content">
-          <div class="youtube-icon-area">
-            <svg class="youtube-logo" viewBox="0 0 24 24" fill="currentColor">
-              <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
-            </svg>
-            <div class="youtube-play-pulse"></div>
-          </div>
-          <div class="youtube-info">
-            <h2 data-i18n="home.youtubeChannel">Canal no YouTube</h2>
-            <span class="card-subtitle" data-i18n="home.youtubeSubtitle">Vídeos e análises em tempo real</span>
-            <span class="youtube-cta">
-              <span class="cta-text" data-i18n="home.watchNow">Assistir agora</span>
-              <svg class="cta-arrow" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-            </span>
-          </div>
-        </div>
-      </a>
       </div>
 
     </section>

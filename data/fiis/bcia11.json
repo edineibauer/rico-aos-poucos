@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "ticker": "BCIA11",
+    "nome": "Bradesco Carteira Imobiliária Ativa FII",
+    "segmento": "Híbrido (FoF + CRI)",
+    "badges": [
+      "Bradesco Asset",
+      "Duplo Desconto 23%",
+      "Gestão Ativa"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 774
+  },
+  "seo": {
+    "title": "BCIA11 - Análise Completa | Bradesco Carteira Imobiliária Ativa FII",
+    "description": "Análise completa do FII BCIA11 baseada em 774 documentos oficiais. FoF híbrido da Bradesco Asset com duplo desconto de 23,4%, DY 12,3%, retorno total 166% desde IPO (mai/2015). Cota patrimonial +21,33% em 2025. Corte da Selic em mar/26 é catalisador.",
+    "keywords": "BCIA11, Bradesco Carteira Imobiliária, FII híbrido, FoF, Bradesco Asset, análise BCIA11, dividend yield BCIA11, duplo desconto, corte Selic 2026",
+    "ogTitle": "BCIA11 - Análise Completa do FII Bradesco Carteira Imobiliária 2026",
+    "ogDescription": "Análise do BCIA11: FoF híbrido da Bradesco Asset com duplo desconto 23,4%. DY 12,3%, cota patrimonial +21,33% em 2025, retorno total 166% desde IPO. Início do corte da Selic em mar/26.",
+    "twitterTitle": "BCIA11 - Análise Completa | Bradesco Carteira Imobiliária Ativa FII",
+    "twitterDescription": "Análise do BCIA11: Bradesco Asset, duplo desconto 23,4%, DY 12,3%, retorno total 166% desde IPO. 774 documentos analisados. Corte da Selic esperado para mar/26."
+  },
+  "indicadores": {
+    "cotacao": 88.8,
+    "cotacaoData": "31/12/2025",
+    "pvp": 0.86,
+    "pvpDesconto": "14% de desconto",
+    "dividendYield": 12.3,
+    "dividendoMensal": 0.86,
+    "dividendoAnual": 10.14,
+    "patrimonioLiquido": "R$ 384 Mi",
+    "vpCota": 103.15,
+    "cotistas": 20629,
+    "cotistasDetalhe": "3,7 milhões de cotas"
+  },
+  "recomendacao": {
+    "nota": 7.5,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "O <strong class=\"text-emerald-400\">BCIA11</strong> é um FoF híbrido gerido pela <strong class=\"text-emerald-400\">Bradesco Asset Management</strong> com quase 11 anos de histórico (desde mai/2015). A gestão ativa entregou <strong class=\"text-emerald-400\">retorno total de 166% desde o IPO</strong> e cota patrimonial +21,33% em 2025 (superando IFIX +21,15%). O duplo desconto de <strong class=\"text-emerald-400\">23,4%</strong> combina o desconto da cota (14%) com o desconto médio da carteira de FIIs (11%). Com o <strong class=\"text-emerald-400\">início esperado dos cortes da Selic em mar/26</strong> (terminal 12% a.a. segundo a BRAM), a carteira com 62% em tijolo está bem posicionada para capturar valorização."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 384 Mi",
+      "detalhe": "VP/cota: R$ 103,15",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 103,15</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,86",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 10,14/ano | DY 12,3%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "20.629",
+      "detalhe": "Liquidez: R$ 740 mil/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Duplo Desconto",
+      "valor": "23,4%",
+      "detalhe": "P/VP: 0,86 | Carteira: 0,89",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Taxa de Performance sobre IFIX",
+      "descricao": "O fundo cobra 20% de performance sobre o que exceder o IFIX, o que pode reduzir o retorno em períodos de outperformance significativa. Em 2025, a cota patrimonial superou o IFIX em apenas 19 bps, minimizando esse impacto. Com o ciclo de corte da Selic se iniciando em 2026, a taxa de performance pode ter maior relevância caso os FIIs de tijolo valorizem fortemente.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Risco de Dupla Tributação",
+      "descricao": "Como FoF, o BCIA11 paga IR sobre ganho de capital na venda de cotas dos FIIs investidos. Em nov e dez/2025, a gestão realizou ajustes relevantes na carteira com prejuízo de R$ 0,10 e R$ 0,28/cota respectivamente, para reposicionar a carteira frente ao ciclo de queda da Selic. O resultado total distribuído de 99% do gerado mostra gestão adequada desse risco.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Volatilidade Eleitoral 2026",
+      "descricao": "A própria gestão alerta que as eleições presidenciais de 2026 podem acarretar volatilidade aos mercados e à precificação dos FIIs. Com 62% da carteira em tijolo, o fundo está mais exposto a oscilações de mercado. Porém, a tendência de queda da Selic deve prevalecer como driver positivo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Desconto Persistente no P/VP",
+      "descricao": "O fundo negocia com desconto de 14% sobre o VP há bastante tempo (P/VP 0,86). Embora represente oportunidade, reflete a percepção do mercado sobre FoFs, que tipicamente negociam abaixo do VP. A cota de mercado acumulou alta de apenas 15,24% em 2025 vs 21,33% da cota patrimonial.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Bradesco Asset Management",
+    "nota": 8,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM BRAM",
+        "valor": "R$ 700+ Bi"
+      },
+      {
+        "label": "Desde",
+        "valor": "Mai/2015"
+      },
+      {
+        "label": "Retorno Total IPO",
+        "valor": "166%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">Bradesco Asset Management (BRAM)</strong> é uma das maiores gestoras do Brasil, com mais de R$ 700 bilhões sob gestão. O BCIA11 é o FoF emblemático da casa, com quase <strong class=\"text-emerald-400\">11 anos de histórico</strong>. A equipe econômica da BRAM projeta início dos cortes da Selic em <strong class=\"text-emerald-400\">mar/2026</strong>, com taxa terminal de <strong class=\"text-emerald-400\">12% a.a.</strong>, favorecendo os FIIs de tijolo que representam 62% da carteira. A gestão demonstrou competência ao aumentar tijolo de 48% para 62% ao longo de 2025, antecipando o ciclo.",
+    "link": "../../gestores/bradesco-asset/"
+  },
+  "taxas": {
+    "subtitulo": "Competitiva com taxa de performance",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,50% a.a.",
+        "detalhe": "Inclui gestão e escrituração",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder o IFIX",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Despesas/cota (dez)",
+        "valor": "R$ 0,05",
+        "detalhe": "~0,6% a.a. de despesas recorrentes",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FoFs do mercado",
+    "comparativo": [
+      {
+        "ticker": "BCIA11",
+        "taxa": "0,50%",
+        "perf": "+20% perf. s/ IFIX",
+        "destaque": true
+      },
+      {
+        "ticker": "BBFO11",
+        "taxa": "0,51%",
+        "perf": "Sem performance"
+      },
+      {
+        "ticker": "KFOF11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IFIX"
+      },
+      {
+        "ticker": "HFOF11",
+        "taxa": "0,60%",
+        "perf": "+20% perf. s/ IFIX"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador/Gestor",
+        "valor": "Banco Bradesco S.A."
+      },
+      {
+        "label": "CNPJ",
+        "valor": "20.216.935/0001-17"
+      },
+      {
+        "label": "Início",
+        "valor": "19/05/2015"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Tijolo",
+        "valor": "62%"
+      },
+      {
+        "label": "Recebíveis",
+        "valor": "38%"
+      },
+      {
+        "label": "P/VP Carteira",
+        "valor": "0,89x"
+      },
+      {
+        "label": "Duplo Desconto",
+        "valor": "23,4%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRI/Recebíveis",
+        "Lajes Corporativas",
+        "Shopping Center",
+        "Galpões Logísticos",
+        "FoF",
+        "Agências",
+        "Varejo",
+        "Universidades"
+      ],
+      "data": [
+        37.6,
+        23.5,
+        16.0,
+        12.2,
+        4.4,
+        3.2,
+        1.8,
+        1.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#ec4899",
+        "#10b981",
+        "#f59e0b",
+        "#06b6d4",
+        "#ef4444",
+        "#f97316"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Tijolo (62%)",
+        "Recebíveis CRI (38%)"
+      ],
+      "data": [
+        62,
+        38
+      ],
+      "cores": [
+        "#10b981",
+        "#3b82f6"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "HGRE11, JSRE11, PVBI11, BRCR11, VGRI11, RCRB11",
+        "setor": "Lajes Corporativas",
+        "receita": "23,5%",
+        "rating": "Tier 1",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "XPML11, CPSH11, VISC11",
+        "setor": "Shopping Center",
+        "receita": "16,0%",
+        "rating": "Tier 1",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "VILG11, INLG11, LVBI11",
+        "setor": "Galpões Logísticos",
+        "receita": "12,2%",
+        "rating": "Tier 1",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "BARI11, RBRY11, PCIP11, KNHY11",
+        "setor": "Recebíveis CRI",
+        "receita": "37,6%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "FOFs, Agências, Varejo, Educacional",
+        "setor": "Outros",
+        "receita": "10,5%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Tijolo (escritórios + logística + shops)",
+        "valor": 52,
+        "cor": "emerald"
+      },
+      {
+        "label": "Recebíveis (CRI)",
+        "valor": 38,
+        "cor": "blue"
+      },
+      {
+        "label": "FoF + Agências + Varejo + Educ.",
+        "valor": 10,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "Carteira de dez/2025 com 62% em FIIs de tijolo (lajes 23,5%, shoppings 16%, galpões 12,2%) e 38% em recebíveis (fundos CRI 34,1% + CRI direto 3,5%). P/VP médio ponderado da carteira: 0,89x. A gestão realizou ampliação relevante da exposição a tijolo ao longo de 2025 (de 48% em mar para 62% em dez), antecipando o ciclo de cortes da Selic projetado para mar/2026. Giro de R$ 14,9 Mi em dez/25 (3,9% PL) com foco em reduzir CRIs com spread baixo e FIIs de tijolo com vacância estrutural elevada."
+  },
+  "timeline": {
+    "subtitulo": "FoF institucional do Bradesco com quase 11 anos de histórico",
+    "periodos": [
+      {
+        "periodo": "Mai/2015",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Constituição do Bradesco Carteira Imobiliária Ativa FII pela BRAM.",
+        "pontos": [
+          "CNPJ: 20.216.935/0001-17",
+          "Gestor: Banco Bradesco S.A. (BRAM)",
+          "Estratégia: FoF híbrido com gestão ativa",
+          "Benchmark: IFIX"
+        ]
+      },
+      {
+        "periodo": "2016-2019",
+        "label": "CONSOLIDAÇÃO",
+        "cor": "emerald",
+        "descricao": "Período de construção e consolidação da carteira, aproveitando o ciclo de queda da Selic (14,25% para 4,50%). Retorno total de 34,9% em 2019.",
+        "pontos": [
+          "Diversificação por segmentos de FIIs",
+          "Crescimento do patrimônio e base de cotistas",
+          "Captura do ciclo de queda de juros 2016-2019",
+          "Retorno total consistente acima do CDI"
+        ]
+      },
+      {
+        "periodo": "2020-2022",
+        "label": "RESILIÊNCIA",
+        "cor": "amber",
+        "descricao": "Período desafiador com pandemia e alta da Selic. 2a emissão em set/2020 elevou cotas para 3,7 Mi. Gestão ativa preservou valor com ajustes entre tijolo e recebíveis.",
+        "pontos": [
+          "Pandemia: queda de 15% em mar/2020, recuperação gradual",
+          "2a emissão (set/2020): de 1,7 Mi para 3,7 Mi cotas",
+          "Aumento de exposição a CRIs durante alta da Selic",
+          "Contratação de formador de mercado (XP, jun/2021)"
+        ]
+      },
+      {
+        "periodo": "2023-2024",
+        "label": "RECUPERAÇÃO",
+        "cor": "blue",
+        "descricao": "Cota patrimonial +20% em 2023. Em 2024, cenário adverso com alta da Selic de 10,5% para 12,25% resultou em queda de -5,4% na cota patrimonial.",
+        "pontos": [
+          "2023: cota patrimonial +20,06%, superando IFIX",
+          "Distribuição crescente: R$ 0,76 para R$ 0,87/cota",
+          "2024: cota patrimonial -5,36% com alta da Selic",
+          "AGE abr/2024: aprovação de demonstrações, reprovação de itens 2 e 3"
+        ]
+      },
+      {
+        "periodo": "2025-2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Gestão ativa com aumento de tijolo de 48% para 62%. Cota patrimonial +21,33% em 2025. Corte da Selic esperado para mar/2026.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">Cota patrimonial 2025: +21,33% (vs IFIX +21,15%)</strong>",
+          "<strong class=\"text-emerald-400\">Retorno total desde IPO: 166,29%</strong>",
+          "Tijolo aumentou de 48% (mar/25) para 62% (dez/25)",
+          "BRAM projeta Selic terminal 12% a.a. no final de 2026",
+          "Duplo desconto de 23,4% oferece margem de segurança"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - POSITIVA:",
+      "texto": "O BCIA11 acumula quase <strong class=\"text-emerald-400\">11 anos de histórico</strong> com retorno total de <strong class=\"text-emerald-400\">166% desde o IPO</strong>, comparável ao IFIX (168%) e acima do CDI líquido (129%). A gestão ativa da BRAM demonstra capacidade de navegar diferentes ciclos econômicos, ajustando a alocação entre tijolo e recebíveis. Em 2025, a cota patrimonial superou o IFIX em 19 bps (+21,33% vs +21,15%). A perspectiva para 2026 é favorável com o início do ciclo de cortes da Selic em mar/26."
+    },
+    "crescimento": [
+      {
+        "label": "Retorno Total IPO",
+        "valor": "166%",
+        "detalhe": "vs. IFIX 168%, CDI liq. 129%"
+      },
+      {
+        "label": "Cota Patrimonial 2025",
+        "valor": "+21,33%",
+        "detalhe": "vs. IFIX +21,15%"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "12,3%",
+        "detalhe": "R$ 0,86/cota mensal"
+      },
+      {
+        "label": "Duplo Desconto",
+        "valor": "23,4%",
+        "detalhe": "P/VP 0,86 x Carteira 0,89"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "BCIA11 é um <strong class=\"text-emerald-400\">FoF híbrido da Bradesco Asset Management</strong> com quase 11 anos de histórico e retorno total de 166% desde o IPO. A carteira combina <strong class=\"text-emerald-400\">62% em FIIs de tijolo</strong> (lajes 23,5%, shoppings 16%, galpões 12,2%) e <strong class=\"text-emerald-400\">38% em recebíveis</strong>. O cenário para 2026 é favorável com o <strong class=\"text-emerald-400\">início do corte da Selic esperado para mar/2026</strong> (terminal 12% a.a. segundo a BRAM), que deve impulsionar valorização dos FIIs de tijolo que dominam a carteira. O duplo desconto de 23,4% oferece margem de segurança significativa.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">exposição diversificada a FIIs</strong> com gestão profissional institucional",
+      "Perfil <strong class=\"text-emerald-400\">moderado</strong> que aceita volatilidade de FoF e horizonte de médio/longo prazo",
+      "Quem busca <strong class=\"text-emerald-400\">duplo desconto de 23,4%</strong> como margem de segurança",
+      "Investidores apostando no <strong class=\"text-emerald-400\">ciclo de corte da Selic em 2026</strong> e valorização de tijolo"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-amber-400\">alta liquidez diária</strong> (R$ 740 mil/dia em dez, média anual de R$ 410 mil)",
+      "Investidores que preferem <strong class=\"text-amber-400\">FIIs de tijolo diretos</strong> sem camada FoF",
+      "Perfil que <strong class=\"text-amber-400\">rejeita taxa de performance</strong> de 20% sobre IFIX",
+      "Quem não aceita <strong class=\"text-amber-400\">risco de dupla tributação</strong> e volatilidade eleitoral 2026"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.84,
+      0.84,
+      0.84,
+      0.84,
+      0.84,
+      0.84,
+      0.84,
+      0.84,
+      0.84,
+      0.86,
+      0.86,
+      0.86
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.7,
+    "chartYMax": 1,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 8,72"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 9,78"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 10,30"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 10,14",
+        "cor": "emerald"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "11,4% a.a.",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "Dez/2025",
+      "faixa": "R$ 0,86/cota",
+      "unidade": "DY 12,3% a.a. anualizado"
+    },
+    "stats": [
+      {
+        "label": "Distribuição 2025",
+        "valor": "R$ 10,14/cota",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY Anualizado (Mercado)",
+        "valor": "12,3% a.a.",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY 12M (Mercado)",
+        "valor": "11,4% a.a."
+      },
+      {
+        "label": "DY Cota Patrimonial",
+        "valor": "10,5% a.a."
+      },
+      {
+        "label": "Resultado Distribuído/Gerado",
+        "valor": "99% em 2025"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável/Crescente",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,86",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">14% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 103,15"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 88,80",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "23,4%",
+      "label": "Duplo Desconto",
+      "cor": "emerald",
+      "descricao": "Desconto da cota BCIA (14%) + desconto médio da carteira de FIIs investidos (11%) = 23,4% de desconto efetivo. Investidor acessa carteira diversificada de FIIs por ~77% do valor patrimonial",
+      "detalhe": "Cota BCIA: 0,86x | Carteira FIIs: 0,89x | Efetivo: ~0,77x"
+    },
+    "recomendacoes": {
+      "valor": "166%",
+      "label": "Retorno Total desde IPO",
+      "cor": "emerald",
+      "descricao": "Retorno total acumulado desde maio/2015 (vs IFIX 168%, CDI líq. 129%)",
+      "detalhe": "Cota patrimonial 2025: +21,33% (superou IFIX em 19 bps)"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-emerald-400\">BCIA11</strong> é um dos FoFs mais consistentes do mercado, com quase <strong class=\"text-emerald-400\">11 anos de histórico</strong> e retorno total de 166% desde o IPO, gerido pela Bradesco Asset Management. A cota patrimonial acumulou <strong class=\"text-emerald-400\">+21,33% em 2025</strong>, superando o IFIX (+21,15%) em 19 bps. O resultado líquido de 2025 foi de R$ 38 Mi, com 99% distribuído aos cotistas (R$ 10,14/cota).",
+      "A carteira está <strong class=\"text-emerald-400\">estrategicamente posicionada para o ciclo de cortes da Selic</strong> esperado a partir de mar/2026. A BRAM projeta Selic terminal de 12% a.a. em 2026. A gestão aumentou tijolo de 48% para 62% ao longo de 2025, demonstrando visão antecipada. Os FIIs de tijolo continuam com desconto médio de 11% sobre VP (P/VP 0,89x), com espaço para valorização adicional.",
+      "O duplo desconto de <strong class=\"text-emerald-400\">23,4%</strong> oferece margem de segurança significativa - o investidor acessa a carteira completa com ~23% de desconto efetivo. O DY de <strong class=\"text-emerald-400\">12,3% a.a.</strong> é sustentado pela geração recorrente de R$ 0,87/cota em rendimentos de FIIs. Destaque para a análise da gestão sobre FIIs de escritórios (JSRE e RCRB com descontos de 34-35%), setor com fundamentos em recuperação (vacância lajes SP caiu de 23% para 16%)."
+    ],
+    "pontosFortes": [
+      "Quase 11 anos de histórico (desde mai/2015)",
+      "Retorno total de 166% desde IPO (acima do CDI líq. 129%)",
+      "Cota patrimonial +21,33% em 2025 (acima do IFIX)",
+      "Duplo desconto de 23,4% como margem de segurança",
+      "Bradesco Asset: gestora de ponta (R$ 700+ Bi AuM)",
+      "Taxa de administração competitiva (0,50% a.a.)",
+      "Posicionamento estratégico para queda da Selic (62% tijolo)",
+      "Seleção de ativos de qualidade: HGRE, JSRE, PVBI, VILG, INLG"
+    ],
+    "pontosDeAtencao": [
+      "Taxa de performance de 20% sobre IFIX",
+      "Risco de dupla tributação em FoFs",
+      "Liquidez moderada (média R$ 410 mil/dia em 2025, R$ 740 mil em dez)",
+      "P/VP persistentemente abaixo de 1 (0,86)",
+      "Prejuízo com vendas de FIIs impacta resultado (R$ -0,28 em dez/25, R$ -0,10 em nov/25)",
+      "Volatilidade eleitoral 2026 pode afetar FIIs de tijolo",
+      "Exposição a CRIs como PCIP e KNHY com performance abaixo do IFIX em 2025"
+    ],
+    "conclusaoFinal": "O BCIA11 é uma opção sólida para investidores que buscam <strong class=\"text-emerald-400\">exposição diversificada ao mercado de FIIs com gestão institucional</strong> do Bradesco. O track record de quase 11 anos, duplo desconto de 23,4%, e posicionamento estratégico com 62% em tijolo tornam a relação risco-retorno atrativa. O <strong class=\"text-emerald-400\">início do ciclo de cortes da Selic em mar/2026</strong> (terminal 12% a.a. segundo a BRAM) é o principal catalisador para valorização. Os FIIs de tijolo continuam descontados sob múltiplas métricas (P/VP, preço por m2, custo de reposição), e o BCIA oferece acesso a essa carteira com desconto adicional de 14%."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 774,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

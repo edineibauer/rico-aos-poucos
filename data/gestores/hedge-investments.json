@@ -1,0 +1,96 @@
+{
+  "slug": "hedge-investments",
+  "nome": "Hedge Investments",
+  "nota": 6.2,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 7,
+  "segmentos": [
+    "Tijolo - Shopping Centers",
+    "Fundo de Fundos (FoF)",
+    "Tijolo - Shopping Center",
+    "Tijolo - Logística",
+    "Tijolo - Lajes Corporativas"
+  ],
+  "resumo": "Gestora com 7 fundos analisados: HGBS11, HFOF11, FLRP11, FIGS11, HLOG11, FVPQ11, HOFC11. Nota média 6.2/10 (BOM).",
+  "seo": {
+    "title": "Hedge Investments - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Hedge Investments. 7 fundos geridos com nota média 6.2/10. Veja os FIIs: HGBS11, HFOF11, FLRP11, FIGS11, HLOG11, FVPQ11, HOFC11.",
+    "ogTitle": "Hedge Investments - Análise da Gestora de FIIs",
+    "ogDescription": "Hedge Investments: 7 fundos, nota média 6.2/10. Fundos: HGBS11, HFOF11, FLRP11, FIGS11, HLOG11, FVPQ11, HOFC11.",
+    "twitterTitle": "Hedge Investments - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Hedge Investments: 7 fundos, nota 6.2/10."
+  },
+  "fundos": [
+    {
+      "ticker": "HGBS11",
+      "nome": "Hedge Brasil Shopping FII",
+      "segmento": "Tijolo - Shopping Centers",
+      "nota": 8,
+      "notaLabel": "EXCELENTE",
+      "dividendYield": 9,
+      "pvp": 0.96,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "HFOF11",
+      "nome": "Hedge TOP FOFII 3 FII",
+      "segmento": "Fundo de Fundos (FoF)",
+      "nota": 7.5,
+      "notaLabel": "BOM",
+      "dividendYield": 10.14,
+      "pvp": 0.85,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "FLRP11",
+      "nome": "Hedge Floripa Shopping FII",
+      "segmento": "Tijolo - Shopping Center",
+      "nota": 7,
+      "notaLabel": "BOM",
+      "dividendYield": 8.66,
+      "pvp": 1.02,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "FIGS11",
+      "nome": "General Shopping Ativo e Renda FII",
+      "segmento": "Tijolo - Shopping Centers",
+      "nota": 6,
+      "notaLabel": "BOM",
+      "dividendYield": 12.25,
+      "pvp": 0.67,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "HLOG11",
+      "nome": "Hedge Logística FII",
+      "segmento": "Tijolo - Logística",
+      "nota": 6,
+      "notaLabel": "BOM",
+      "dividendYield": 9.5,
+      "pvp": 0.77,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "FVPQ11",
+      "nome": "Via Parque Shopping FII",
+      "segmento": "Tijolo - Shopping Center",
+      "nota": 5.5,
+      "notaLabel": "REGULAR",
+      "dividendYield": 7.66,
+      "pvp": 0.76,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "HOFC11",
+      "nome": "Hedge Office Income FII",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "nota": 3.5,
+      "notaLabel": "RUIM",
+      "dividendYield": 0,
+      "pvp": 0.52,
+      "sentimento": "pessimista"
+    }
+  ]
+}

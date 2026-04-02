@@ -5235,6 +5235,56 @@ body.home-page {
 }
 
 /* Calculate Button */
+/* Advanced options toggle */
+.calc-advanced {
+  margin-top: 16px;
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.calc-advanced summary {
+  padding: 12px 16px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  cursor: pointer;
+  background: rgba(255, 255, 255, 0.03);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.calc-advanced summary::-webkit-details-marker {
+  display: none;
+}
+
+.calc-advanced summary::before {
+  content: '▸';
+  transition: transform 0.2s;
+}
+
+.calc-advanced[open] summary::before {
+  transform: rotate(90deg);
+}
+
+.calc-advanced[open] summary {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calc-advanced .calc-field {
+  padding: 0 16px;
+}
+
+.calc-advanced .calc-field:first-child {
+  padding-top: 12px;
+}
+
+.calc-advanced .calc-field:last-child {
+  padding-bottom: 12px;
+}
+
 .calc-btn {
   width: 100%;
   padding: 16px;
@@ -5843,6 +5893,486 @@ body.home-page {
 
 .card-calculadora:hover .calc-card-cta svg {
   transform: translateX(4px);
+}
+
+/* ==========================================
+   Tools Bento Grid (Home Hero)
+   ========================================== */
+.tools-bento {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.bento-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 22px 20px;
+  border-radius: 18px;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.bento-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.bento-card:hover::after {
+  opacity: 1;
+}
+
+/* Bento color themes */
+.bento-blue {
+  background: linear-gradient(150deg, rgba(30, 60, 114, 0.35) 0%, rgba(13, 17, 23, 0.95) 70%);
+}
+.bento-blue::after {
+  background: linear-gradient(90deg, #4a90d9, #1e3c72);
+}
+
+.bento-orange {
+  background: linear-gradient(150deg, rgba(244, 162, 97, 0.2) 0%, rgba(13, 17, 23, 0.95) 70%);
+}
+.bento-orange::after {
+  background: linear-gradient(90deg, #f4a261, #e76f51);
+}
+
+.bento-green {
+  background: linear-gradient(150deg, rgba(26, 95, 74, 0.25) 0%, rgba(13, 17, 23, 0.95) 70%);
+}
+.bento-green::after {
+  background: linear-gradient(90deg, #2d8a6e, #1a5f4a);
+}
+
+.bento-gold {
+  background: linear-gradient(150deg, rgba(240, 193, 75, 0.18) 0%, rgba(13, 17, 23, 0.95) 70%);
+}
+.bento-gold::after {
+  background: linear-gradient(90deg, #f0c14b, #daa520);
+}
+
+.bento-purple {
+  background: linear-gradient(150deg, rgba(139, 92, 246, 0.2) 0%, rgba(13, 17, 23, 0.95) 70%);
+}
+.bento-purple::after {
+  background: linear-gradient(90deg, #8b5cf6, #6d28d9);
+}
+
+/* Bento card content */
+.bento-tag {
+  display: inline-block;
+  width: fit-content;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-muted);
+}
+
+.bento-emoji {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.bento-card h3 {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.4;
+  margin: 0;
+}
+
+.bento-card p {
+  font-size: 0.78rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+}
+
+.bento-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--primary-light);
+  margin-top: auto;
+  padding-top: 4px;
+  transition: all 0.2s ease;
+}
+
+.bento-cta svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.3s;
+}
+
+.bento-card:hover .bento-cta {
+  gap: 10px;
+}
+
+.bento-card:hover .bento-cta svg {
+  transform: translateX(3px);
+}
+
+/* Desktop: 3-column bento grid */
+@media (min-width: 600px) {
+  .tools-bento {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+
+  .bento-hero {
+    grid-column: span 2;
+  }
+
+  .bento-hero h3 {
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 900px) {
+  .tools-bento {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .bento-hero {
+    grid-column: span 2;
+  }
+
+  .bento-hero {
+    padding: 28px 24px;
+  }
+
+  .bento-hero .bento-emoji {
+    font-size: 2.5rem;
+  }
+
+  .bento-hero h3 {
+    font-size: 1.15rem;
+  }
+
+  .bento-hero p {
+    font-size: 0.85rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  .tools-bento {
+    gap: 18px;
+  }
+
+  .bento-card {
+    padding: 26px 24px;
+  }
+
+  .bento-hero {
+    padding: 32px 28px;
+  }
+
+  .bento-card h3 {
+    font-size: 1rem;
+  }
+
+  .bento-hero h3 {
+    font-size: 1.25rem;
+  }
+}
+
+/* ==========================================
+   Home Content Grid (Artigos + Expectativas)
+   ========================================== */
+.home-content-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+@media (min-width: 768px) {
+  .home-content-grid {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .home-content-grid .card-publicacoes {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .home-content-grid .card-publicacoes .card-body {
+    flex: 1;
+    overflow-y: auto;
+    min-height: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-content-grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* Home Sidebar (Expectativas + FIIs stacked) */
+.home-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.home-sidebar .card-expectativas {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.home-sidebar .exp-legend {
+  min-width: 0;
+}
+
+.home-sidebar .exp-legend-group {
+  min-width: 0;
+}
+
+.home-sidebar .exp-legend-info {
+  overflow: hidden;
+}
+
+/* FIIs card compact in sidebar */
+.card-fiis-sidebar {
+  flex-direction: row;
+  margin-bottom: 0;
+}
+
+.card-fiis-sidebar .fiis-visual {
+  width: 70px;
+  height: 70px;
+  padding: 12px;
+}
+
+.card-fiis-sidebar .fiis-icon-main {
+  font-size: 2rem;
+}
+
+.card-fiis-sidebar .fiis-content {
+  padding: 14px 14px 14px 0;
+}
+
+.card-fiis-sidebar .fiis-content h3 {
+  font-size: 1rem;
+}
+
+.card-fiis-sidebar .fiis-content p {
+  font-size: 0.78rem;
+  margin-bottom: 8px;
+}
+
+/* ==========================================
+   Expectativas Donut Chart
+   ========================================== */
+.exp-chart-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Donut chart via conic-gradient */
+.donut-chart {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background: conic-gradient(
+    #3fb950 0% 20%,
+    rgba(255,255,255,0.08) 20% 20.4%,
+    #34a847 20.4% 40.4%,
+    rgba(255,255,255,0.08) 40.4% 40.8%,
+    #2d9a3e 40.8% 55.8%,
+    rgba(255,255,255,0.08) 55.8% 56.2%,
+    #48c060 56.2% 71.2%,
+    rgba(255,255,255,0.08) 71.2% 71.6%,
+    #f0c14b 71.6% 81.6%,
+    rgba(255,255,255,0.08) 81.6% 82%,
+    #e5b340 82% 92%,
+    rgba(255,255,255,0.08) 92% 92.4%,
+    #f85149 92.4% 100%
+  );
+  flex-shrink: 0;
+  box-shadow: 0 0 30px rgba(63, 185, 80, 0.12);
+}
+
+.donut-hole {
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  width: 56%;
+  height: 56%;
+  background: linear-gradient(145deg, rgba(22, 27, 34, 0.98) 0%, rgba(13, 17, 23, 1) 100%);
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+}
+
+.donut-number {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-primary);
+  line-height: 1;
+}
+
+.donut-label {
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
+
+/* Legend groups */
+.exp-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.exp-legend-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 12px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 10px;
+  text-decoration: none;
+  color: inherit;
+  transition: all 0.25s ease;
+  border: 1px solid transparent;
+}
+
+.exp-legend-group:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: translateX(3px);
+}
+
+.exp-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 3px;
+  flex-shrink: 0;
+}
+
+.exp-dot.bullish { background: var(--bullish); }
+.exp-dot.neutral { background: var(--neutral); }
+.exp-dot.bearish { background: var(--bearish); }
+
+.exp-legend-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.exp-legend-title {
+  display: block;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  line-height: 1.2;
+}
+
+.exp-legend-sectors {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.exp-legend-pct {
+  font-size: 1.1rem;
+  font-weight: 800;
+  flex-shrink: 0;
+}
+
+.exp-legend-pct.bullish { color: var(--bullish); }
+.exp-legend-pct.neutral { color: var(--neutral); }
+.exp-legend-pct.bearish { color: var(--bearish); }
+
+/* Chart always stacked in sidebar to prevent overflow */
+.home-sidebar .exp-chart-area {
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Side-by-side only on wide mobile (not in sidebar context) */
+@media (min-width: 500px) and (max-width: 767px) {
+  .exp-chart-area {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+  }
+}
+
+/* YouTube link button in Expectativas footer */
+.btn-yt-link {
+  background: rgba(255, 0, 0, 0.1) !important;
+  color: #ff6666 !important;
+  border: 1px solid rgba(255, 0, 0, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-yt-link:hover {
+  background: rgba(255, 0, 0, 0.18) !important;
+  transform: translateY(-2px);
+}
+
+.btn-yt-link .yt-sm {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+  flex-shrink: 0;
+}
+
+/* FIIs card in bottom row */
+.home-bottom-row .card-fiis-featured {
+  flex: 7;
+}
+
+.home-bottom-row .card-youtube {
+  flex: 5;
 }
 
 /* Card Calculadora de Construção - Destaque */

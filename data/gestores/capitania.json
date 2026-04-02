@@ -1,0 +1,43 @@
+{
+  "slug": "capitania",
+  "nome": "Capitânia Investimentos",
+  "nota": 8,
+  "notaLabel": "EXCELENTE",
+  "avaliacao": "excelente",
+  "totalFundos": 2,
+  "segmentos": [
+    "Papel Híbrido - CRI + FOF",
+    "Fundo de Fundos"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: CPTS11, CPFF11. Nota média 8/10 (EXCELENTE).",
+  "seo": {
+    "title": "Capitânia Investimentos - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Capitânia Investimentos. 2 fundos geridos com nota média 8/10. Veja os FIIs: CPTS11, CPFF11.",
+    "ogTitle": "Capitânia Investimentos - Análise da Gestora de FIIs",
+    "ogDescription": "Capitânia Investimentos: 2 fundos, nota média 8/10. Fundos: CPTS11, CPFF11.",
+    "twitterTitle": "Capitânia Investimentos - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Capitânia Investimentos: 2 fundos, nota 8/10."
+  },
+  "fundos": [
+    {
+      "ticker": "CPTS11",
+      "nome": "Capitânia Securities II FII",
+      "segmento": "Papel Híbrido - CRI + FOF",
+      "nota": 8,
+      "notaLabel": "EXCELENTE",
+      "dividendYield": 13.47,
+      "pvp": 0.84,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "CPFF11",
+      "nome": "Capitânia Reit FOF FII",
+      "segmento": "Fundo de Fundos",
+      "nota": 0,
+      "notaLabel": "RUIM",
+      "dividendYield": 8.81,
+      "pvp": 0.96,
+      "sentimento": "neutro"
+    }
+  ]
+}

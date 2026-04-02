@@ -1,0 +1,589 @@
+{
+  "meta": {
+    "ticker": "BCRI11",
+    "nome": "Banestes Recebíveis Imobiliários FII",
+    "segmento": "Crédito (CRI)",
+    "badges": [
+      "Gestão Ativa",
+      "137% CDI",
+      "~44 CRIs"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 780
+  },
+  "seo": {
+    "title": "BCRI11 - Análise Completa | Banestes Recebíveis Imobiliários FII",
+    "description": "Análise completa do FII BCRI11 baseada em 780 documentos oficiais. Fundo de crédito imobiliário com DY 15%, 137% do CDI, ~44 CRIs diversificados. Benchmark IGP-M + 6% a.a.",
+    "keywords": "BCRI11, Banestes Recebíveis Imobiliários, FII crédito, CRI, análise BCRI11, dividend yield BCRI11, FII papel, Banestes DTVM",
+    "ogTitle": "BCRI11 - Análise Completa do FII Banestes Recebíveis Imobiliários 2026",
+    "ogDescription": "Análise detalhada do BCRI11: FII de crédito com 137% do CDI, DY 15%, ~44 CRIs. PL R$ 529 Mi, 42.062 cotistas, benchmark IGP-M + 6%.",
+    "twitterTitle": "BCRI11 - Análise Completa | FII Banestes Recebíveis Imobiliários",
+    "twitterDescription": "Análise do BCRI11: 137% do CDI, DY 15%, ~44 CRIs diversificados. R$ 529 Mi de patrimônio, 9 emissões realizadas. Desde IPO: R$ 118,40/cota distribuídos."
+  },
+  "indicadores": {
+    "cotacao": 68.09,
+    "cotacaoData": "31/12/2025",
+    "pvp": 0.81,
+    "pvpDesconto": "19% de desconto",
+    "dividendYield": 14.99,
+    "dividendoMensal": 0.85,
+    "dividendoAnual": 10.21,
+    "patrimonioLiquido": "R$ 529 Mi",
+    "vpCota": 84.61,
+    "cotistas": 42062
+  },
+  "recomendacao": {
+    "nota": 6.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">BCRI11</strong> é um FII de crédito veterano (desde 2018), entregando <strong class=\"text-emerald-400\">137% do CDI</strong> e DY de 15% nos últimos 12 meses. A carteira de <strong class=\"text-emerald-400\">~44 CRIs</strong> é diversificada por setor e gera receita consistente. Porém, a <strong class=\"text-amber-400\">inadimplência de 10,8% da carteira</strong> (CRIs Pesa, GVI, Kroton, BR Distribuidora, Correios, Artenge e Skanix) permanece elevada e exige monitoramento contínuo. O acordo do CRI Pesa, com previsão de liquidação da Série 301 em março/2026, pode reduzir significativamente esse percentual. O P/VP de 0,81 oferece <strong class=\"text-emerald-400\">desconto de 19%</strong>, mas reflete em parte os riscos de crédito."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 529 Mi",
+      "detalhe": "VP/cota: R$ 84,61",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 84,61</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,85",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 10,21/ano | DY 15,0%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "42.062",
+      "detalhe": "6,26 milhões de cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Performance",
+      "valor": "137% CDI",
+      "detalhe": "IGP-M + 17,68% líquido",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Inadimplência de 10,8% da Carteira",
+      "descricao": "Sete CRIs estão inadimplentes ou em processo judicial: CRI Pesa (3,60% - acordo aprovado com quitação Série 301 prevista para mar/2026), CRI GVI (1,91% - inadimplente em amortização desde jul/2025), CRI Correios (1,49% - inadimplente desde out/2025), CRI Skanix (1,23% - processo judicial, R$ 7 Mi de R$ 11 Mi recuperados), CRI Kroton (1,08% - arbitragem), CRI Artenge (0,79% - execução de garantias), CRI BR Distribuidora (0,72% - disputa arbitral com Vibra).",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "CRI Pesa: Acordo em Andamento",
+      "descricao": "Em assembleia de 24/12/2025, foi aprovado acordo para quitação da Série 301 (3,13% da carteira) com desconto de ~20% e amortização parcial da Série 302 com desconto de ~48%. A venda do imóvel garantia tem prazo até 27/02/2026. Série 302 (0,47%) repactuada para CDI + 3,5% a.a. com waiver de 12 meses (juros) e 24 meses (amortização). Se concretizado, ~R$ 15,2 Mi retornam ao caixa.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "CRI com Waiver (4,15%)",
+      "descricao": "CRI WAM (2,43% - waiver até dez/2025, vencimento estendido para dez/2027) e CRI Circuito das Compras (1,72% - waiver parcial de juros até 2025, pagamento integral de juros retorna em 2026). Esses CRIs geraram menos receita durante o período de carência.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Banestes DTVM S.A.",
+    "nota": 6,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Patrimônio BCRI",
+        "valor": "R$ 529 Mi"
+      },
+      {
+        "label": "DY Total desde IPO",
+        "valor": "118%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Emissões",
+        "valor": "9 realizadas"
+      }
+    ],
+    "resumo": "A <strong class=\"text-blue-400\">Banestes DTVM</strong> (subsidiária do Banco Banestes - ES) gere o BCRI11 desde 2018. Realiza <strong class=\"text-emerald-400\">lives mensais com cotistas</strong> via Webex e YouTube, e disponibiliza carteira detalhada em Excel. Em 2025, demonstrou gestão ativa ao renegociar o CRI Pesa (acordo com recuperação de ~R$ 15,2 Mi), liquidar o CRI Thermas São Pedro com prêmio, e recuperar R$ 7 Mi do CRI Skanix. Adquiriu mais de R$ 52 Mi em novos CRIs, renovando ~10% da carteira. O nível de inadimplência de 10,8%, porém, indica necessidade de melhorias na originação.",
+    "link": "../../gestores/banestes/"
+  },
+  "taxas": {
+    "subtitulo": "Padrão do segmento",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre o valor de mercado do fundo",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Diferencial competitivo",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Incluída",
+        "detalhe": "Na taxa de administração",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Crédito",
+    "comparativo": [
+      {
+        "ticker": "BCRI11",
+        "taxa": "1,00%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "KNSC11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ CDI+1%"
+      },
+      {
+        "ticker": "MCCI11",
+        "taxa": "0,80%",
+        "perf": "+20% perf. s/ IPCA+3%"
+      },
+      {
+        "ticker": "RBRR11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ CDI+2%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Banestes DTVM S.A."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "BRL Trust DTVM S.A."
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "~44"
+      },
+      {
+        "label": "Caixa",
+        "valor": "7,9%"
+      },
+      {
+        "label": "Duration",
+        "valor": "3,26 anos"
+      },
+      {
+        "label": "LTV Médio",
+        "valor": "56,7%"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Corporativo",
+        "Residencial",
+        "Shopping",
+        "Pulverizado",
+        "Logístico",
+        "Loteamento",
+        "FIIs",
+        "Caixa"
+      ],
+      "data": [
+        35.6,
+        13.4,
+        6.4,
+        6.3,
+        5.1,
+        2.5,
+        2.7,
+        7.9
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#f59e0b",
+        "#10b981",
+        "#06b6d4",
+        "#ec4899",
+        "#ef4444",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+",
+        "CDI+",
+        "IGP-M+",
+        "Caixa/Compromissada"
+      ],
+      "data": [
+        79.5,
+        4.7,
+        1.1,
+        14.7
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Direcional",
+        "setor": "Corporativo",
+        "receita": "6,70%",
+        "rating": "AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Sendas (Assaí)",
+        "setor": "Corporativo",
+        "receita": "5,99%",
+        "rating": "IPCA+4,90%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Rede D'or",
+        "setor": "Corporativo",
+        "receita": "5,15%",
+        "rating": "AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Villa XP",
+        "setor": "Corporativo",
+        "receita": "3,50%",
+        "rating": "IPCA+5,00%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Trisul",
+        "setor": "Corporativo",
+        "receita": "3,29%",
+        "rating": "AA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Almeida Júnior",
+        "setor": "Shopping",
+        "receita": "2,79%",
+        "rating": "AA-",
+        "ratingCor": "emerald",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Outros (~38 CRIs + FIIs)",
+        "setor": "Diversificado",
+        "receita": "72,58%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "CRIs Adimplentes",
+        "valor": 85,
+        "cor": "emerald"
+      },
+      {
+        "label": "CRIs com Waiver",
+        "valor": 4,
+        "cor": "amber"
+      },
+      {
+        "label": "CRIs Inadimplentes",
+        "valor": 11,
+        "cor": "red"
+      }
+    ],
+    "riscoNota": "Carteira com ~44 CRIs ativos (incluindo 3 FIIs: DEVA11, VSLH11, HCTR11), majoritariamente indexados ao IPCA (79,5%). Duration média de 3,26 anos e LTV médio de 56,7%. <strong class=\"text-orange-400\">Atenção:</strong> 10,82% da carteira está inadimplente ou em processo de recuperação (7 CRIs), e 4,15% em waiver (2 CRIs). Em 2025 a gestão adquiriu +R$ 52 Mi em novos CRIs (Almeida Júnior AA-, Atacadão AAA, Impegno, Portfólio Residencial), renovando ~10% da carteira. O CRI Pesa tem acordo aprovado com previsão de quitação parcial em mar/2026."
+  },
+  "timeline": {
+    "subtitulo": "Desde 2018 com foco em CRIs diversificados",
+    "periodos": [
+      {
+        "periodo": "Mar/2015 - Abr/2018",
+        "label": "CONSTITUIÇÃO E INÍCIO",
+        "cor": "blue",
+        "descricao": "Constituição em 2015 e início das operações em abril de 2018.",
+        "pontos": [
+          "CNPJ: 22.219.335/0001-38 | Constituído em 19/03/2015",
+          "Registro CVM: 30/06/2015 | Código CVM: 0315014",
+          "Gestor: Banestes DTVM S.A. | Admin: BRL Trust DTVM S.A.",
+          "Cota inicial: R$ 100,00 | Benchmark: IGP-M + 6% a.a."
+        ]
+      },
+      {
+        "periodo": "2018-2021",
+        "label": "CRESCIMENTO INICIAL",
+        "cor": "emerald",
+        "descricao": "Expansão da carteira de CRIs e base de cotistas via emissões.",
+        "pontos": [
+          "Primeiras emissões de cotas (até 4.400.000 cotas em jan/2021)",
+          "PL alcançou R$ 464 Mi em jan/2021",
+          "Construção da carteira de CRIs diversificados",
+          "Foco em ativos corporativos e pulverizados"
+        ]
+      },
+      {
+        "periodo": "2022-2024",
+        "label": "CONSOLIDAÇÃO",
+        "cor": "purple",
+        "descricao": "Emissões adicionais expandiram patrimônio para ~R$ 530 Mi e 6,26 Mi de cotas.",
+        "pontos": [
+          "9 emissões de cotas realizadas no total",
+          "PL expandido para R$ 529 Mi | 6.257.873 cotas",
+          "Carteira diversificada em ~44 CRIs",
+          "BRL Trust: transferência de controle para Apex Fund (mar/2023)",
+          "Lives mensais com cotistas no YouTube"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "DESAFIOS E RESULTADOS",
+        "cor": "amber",
+        "descricao": "Ano desafiador com inadimplências, mas resultados acima do benchmark.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">DY 15% | 137% do CDI líquido</strong>",
+          "<strong class=\"text-emerald-400\">R$ 10,21/cota distribuídos no ano | DY mensal sempre >1%</strong>",
+          "Desde IPO: R$ 118,40/cota distribuídos (DY total 118%)",
+          "CRI Thermas São Pedro: quitado com prêmio em out/2025",
+          "CRI Pesa: acordo aprovado (dez/2025) com recuperação de ~R$ 15,2 Mi",
+          "CRI Skanix: R$ 7 Mi recuperados dos R$ 11 Mi aportados",
+          "Aquisição de +R$ 52 Mi em novos CRIs (~10% da carteira renovada)",
+          "CRI Almeida Júnior (AA-, R$ 15 Mi) e CRI Atacadão (AAA) adquiridos",
+          "Cota valorizou 14,38% no mercado secundário em 2025"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - MODERADA:",
+      "texto": "O BCRI11 é um fundo veterano (desde 2018) que distribuiu <strong class=\"text-emerald-400\">R$ 118,40/cota desde o IPO</strong> (DY total de 118% sobre a cota inicial de R$ 100). A carteira de ~44 CRIs gera <strong class=\"text-emerald-400\">137% do CDI</strong> consistentemente. O ano de 2025 foi desafiador no cenário macro (aumento de juros, incertezas fiscais), mas o fundo entregou DY mensal sempre acima de 1% e renovou ~10% da carteira com novos CRIs de qualidade. O nível de <strong class=\"text-amber-400\">inadimplência de 10,8%</strong> permanece elevado, mas a resolução do CRI Pesa (prevista para mar/2026) pode reduzir significativamente esse percentual."
+    },
+    "crescimento": [
+      {
+        "label": "DY Total IPO",
+        "valor": "118%",
+        "detalhe": "R$ 118,40/cota distribuídos"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "~44",
+        "detalhe": "Diversificação setorial ampla"
+      },
+      {
+        "label": "Performance 2025",
+        "valor": "137% CDI",
+        "detalhe": "IGP-M + 17,68%"
+      },
+      {
+        "label": "Emissões",
+        "valor": "9",
+        "detalhe": "6,26 Mi cotas emitidas"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "BCRI11 é um <strong class=\"text-emerald-400\">FII de crédito imobiliário veterano</strong> gerido pelo Banestes, com carteira de ~44 CRIs diversificados por setor. Entrega <strong class=\"text-emerald-400\">137% do CDI</strong> e DY de 15%, com R$ 118,40/cota distribuídos desde o IPO. O P/VP de 0,81 oferece desconto de 19%, mas reflete em parte o risco de crédito com <strong class=\"text-amber-400\">10,8% da carteira inadimplente</strong>. A resolução do CRI Pesa (acordo aprovado em dez/2025) e a renovação de ~10% da carteira com CRIs de melhor qualidade (Atacadão AAA, Almeida Júnior AA-) são catalisadores positivos. A ausência de taxa de performance e a transparência da gestão (lives mensais) são diferenciais.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">renda mensal acima do CDI</strong> com isenção de IR",
+      "Perfil <strong class=\"text-emerald-400\">moderado a arrojado</strong> que aceita risco de crédito",
+      "Quem busca <strong class=\"text-emerald-400\">desconto no P/VP</strong> em fundo de papel com DY alto",
+      "Investidores que acompanham de perto <strong class=\"text-emerald-400\">a qualidade dos CRIs</strong> e lives mensais"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-amber-400\">não tolera inadimplência</strong> em CRIs (10,8% da carteira)",
+      "Investidores que buscam <strong class=\"text-amber-400\">fundos com carteira 100% adimplente</strong>",
+      "Perfil <strong class=\"text-amber-400\">conservador</strong> que prefere somente Tesouro Direto",
+      "Quem busca <strong class=\"text-amber-400\">fundo de tijolo</strong> com imóveis físicos"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.84,
+      0.77,
+      0.76,
+      0.81,
+      0.88,
+      0.85,
+      0.91,
+      0.83,
+      0.88,
+      0.92,
+      0.85,
+      0.91
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.65,
+    "chartYMax": 1,
+    "totaisAnuais": [
+      {
+        "ano": "Média 2025",
+        "valor": "R$ 0,85"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "14,99%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Total 2025",
+        "valor": "R$ 10,21",
+        "cor": "emerald"
+      },
+      {
+        "ano": "% CDI (líquido)",
+        "valor": "137%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Desde IPO",
+        "valor": "R$ 118,40/cota"
+      }
+    ],
+    "guidance": {
+      "periodo": "Desde IPO (R$ 100,00)",
+      "faixa": "R$ 118,40 distribuídos",
+      "unidade": "DY Total: 118%"
+    },
+    "stats": [
+      {
+        "label": "Maior (Out/25)",
+        "valor": "R$ 0,92",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Mar/25)",
+        "valor": "R$ 0,76"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "2018"
+      },
+      {
+        "label": "Total 2025",
+        "valor": "R$ 10,21",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendência 2025",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,81",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">desconto de 19%</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 84,61"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 68,09",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "137%",
+      "label": "% CDI (líquido)",
+      "cor": "emerald",
+      "descricao": "Rendimento equivalente a 137% do CDI líquido de IR para pessoa física",
+      "detalhe": "DY BCRI11 (15,0%) com isenção de IR para PF"
+    },
+    "recomendacoes": {
+      "valor": "1,00%",
+      "label": "Taxa Total",
+      "cor": "blue",
+      "descricao": "Sem taxa de performance. Taxa padrão do segmento",
+      "detalhe": "Benchmark: IGP-M + 6% a.a."
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-emerald-400\">BCRI11</strong> é um dos FIIs de crédito mais antigos do mercado, com operação desde 2018 e <strong class=\"text-emerald-400\">R$ 118,40/cota distribuídos desde o IPO</strong> (DY total de 118%). A carteira de ~44 CRIs com taxa média ponderada atrativa e duration de 3,26 anos gerou <strong class=\"text-emerald-400\">137% do CDI</strong> em 2025, com DY mensal sempre acima de 1%. O fundo renovou ~10% da carteira com novos CRIs de qualidade (Atacadão AAA, Almeida Júnior AA-, Impegno IPCA+13,5%), demonstrando capacidade de originação.",
+      "O principal desafio permanece o <strong class=\"text-amber-400\">nível de inadimplência de 10,82%</strong> da carteira, distribuído em 7 CRIs problemáticos. A gestão atua ativamente: o CRI Pesa tem acordo aprovado (dez/2025) com previsão de quitação da Série 301 e recuperação de ~R$ 15,2 Mi para o caixa em mar/2026; o CRI Thermas São Pedro foi quitado com prêmio em out/2025; e o CRI Skanix recuperou R$ 7 Mi de R$ 11 Mi via processo judicial. Os CRIs Correios (inadimplente desde out/2025), GVI (inadimplente em amortização desde jul/2025), Kroton e BR Distribuidora permanecem em situação indefinida.",
+      "O P/VP de 0,81 oferece um <strong class=\"text-emerald-400\">desconto de 19%</strong>, que reflete tanto a oportunidade de compra quanto o risco de crédito dos ativos problemáticos. O cenário macro desafiador de 2025 (Selic elevada, incertezas fiscais) beneficiou a rentabilidade do fundo pela indexação ao IPCA, mas também elevou o risco de inadimplência corporativa. A ausência de taxa de performance, a transparência da gestão (lives mensais, carteira em Excel) e o histórico de 118% de DY desde o IPO são diferenciais relevantes."
+    ],
+    "pontosFortes": [
+      "DY 15% | 137% do CDI líquido em 2025",
+      "R$ 118,40/cota distribuídos desde IPO (DY total 118%)",
+      "P/VP 0,81: desconto de 19% sobre o VP",
+      "Sem taxa de performance",
+      "Carteira diversificada (~44 CRIs, 3 FIIs)",
+      "Renovação de ~10% da carteira com novos CRIs em 2025",
+      "Novos CRIs de qualidade: Atacadão (AAA), Almeida Júnior (AA-)",
+      "Transparência: lives mensais e carteira em Excel",
+      "Gestão ativa na recuperação de créditos inadimplentes",
+      "Cota valorizou 14,38% no mercado secundário em 2025"
+    ],
+    "pontosDeAtencao": [
+      "Inadimplência de 10,82% da carteira (7 CRIs)",
+      "CRI Pesa: 3,60% - acordo com desconto de 20-48% aprovado",
+      "CRI GVI: 1,91% - inadimplente em amortização desde jul/2025",
+      "CRI Correios: 1,49% - inadimplente desde out/2025",
+      "CRI Skanix: 1,23% - processo judicial em curso",
+      "CRI Kroton: 1,08% - arbitragem por rompimento de contrato",
+      "CRI Artenge: 0,79% - execução de garantias",
+      "CRI BR Distribuidora: 0,72% - disputa arbitral com Vibra",
+      "Waiver de 4,15%: WAM (2,43%) e Circuito das Compras (1,72%)",
+      "VP pode ser ajustado caso perdas se materializem"
+    ],
+    "conclusaoFinal": "O BCRI11 é um fundo para investidores que <strong class=\"text-emerald-400\">aceitam o risco de crédito</strong> em troca de um DY elevado de 15% e desconto de 19% no P/VP. O ano de 2025 comprovou a resiliência do fundo: entregou 137% do CDI, renovou ~10% da carteira e avançou na resolução dos CRIs inadimplentes. O principal catalisador de curto prazo é a <strong class=\"text-emerald-400\">resolução do CRI Pesa</strong> (mar/2026), que pode reduzir a inadimplência para ~7% e devolver R$ 15,2 Mi ao caixa para novos investimentos. Os riscos permanecem nos CRIs Correios, GVI, Kroton e BR Distribuidora, que exigem <strong class=\"text-amber-400\">monitoramento contínuo</strong>. Para quem busca renda alta com tolerância a volatilidade de crédito, o BCRI11 oferece uma relação risco-retorno atrativa, especialmente pelo P/VP descontado."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 780,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

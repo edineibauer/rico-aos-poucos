@@ -1,0 +1,615 @@
+{
+  "meta": {
+    "ticker": "EDGA11",
+    "nome": "Edifício Galeria FII",
+    "segmento": "Lajes Corporativas",
+    "badges": [
+      "Mono-ativo",
+      "Centro RJ",
+      "77% Ocupação"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 704
+  },
+  "seo": {
+    "title": "EDGA11 - Análise Completa | Edifício Galeria FII",
+    "description": "Análise completa do FII EDGA11 baseada em 704 documentos oficiais. Fundo mono-ativo de lajes corporativas no Centro do RJ, ocupação 77%, P/VP 0,33, dividendos irregulares. Riscos e oportunidades.",
+    "keywords": "EDGA11, Edifício Galeria, FII lajes corporativas, análise EDGA11, dividend yield EDGA11, FII tijolo, BTG Pactual, Centro Rio de Janeiro",
+    "ogTitle": "EDGA11 - Análise Completa do Edifício Galeria FII 2026",
+    "ogDescription": "Análise detalhada do EDGA11: FII mono-ativo de lajes corporativas no Centro do RJ. Ocupação 77%, P/VP 0,33, dividendos irregulares. Inadimplência e vacância elevada.",
+    "twitterTitle": "EDGA11 - Análise Completa | Edifício Galeria FII",
+    "twitterDescription": "Análise do EDGA11: lajes corporativas no Centro RJ, ocupação 77%, P/VP 0,33. Dividendos irregulares com 4 meses zerados em 2025. 3.750 cotistas."
+  },
+  "indicadores": {
+    "cotacao": 14.92,
+    "cotacaoData": "31/10/2025",
+    "pvp": 0.33,
+    "pvpDesconto": "67% de desconto",
+    "dividendYield": 3.8,
+    "dividendoMensal": 0.047,
+    "dividendoAnual": 0.57,
+    "patrimonioLiquido": "R$ 171,7 Mi",
+    "vpCota": 45.04,
+    "cotistas": 3750,
+    "ocupacao": 77.13,
+    "numImoveis": 1,
+    "ablTotal": "24.834"
+  },
+  "recomendacao": {
+    "nota": 3.5,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">EDGA11</strong> apresenta fundamentos fracos: <strong class=\"text-red-400\">ocupação de 77%</strong> (vacância de 23%), <strong class=\"text-red-400\">dividendos zerados por 4 meses</strong> consecutivos em 2025 (jul-out), <strong class=\"text-red-400\">inadimplência</strong> de locatários com ações judiciais em curso, e patrimônio líquido em queda (-4,2% só em dezembro/2025). Apesar do P/VP de 0,33 (67% de desconto), o fundo é <strong class=\"text-red-400\">mono-ativo</strong> localizado no Centro do Rio de Janeiro, região com altíssima vacância e imóveis abandonados. A liquidez é muito baixa (~R$ 658 mil/mês)."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 171,7 Mi",
+      "detalhe": "VP/cota: R$ 45,04",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 45,04</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,047",
+      "valorSufixo": "/mês (média)",
+      "detalhe": "R$ 0,57/ano | DY ~3,8%",
+      "icone": "money",
+      "corIcone": "red",
+      "corValor": "red"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "3.750",
+      "detalhe": "Liquidez: R$ 658 mil/mês",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "77,1%",
+      "detalhe": "Vacância: 22,9%",
+      "detalheIcone": "arrowDown",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Dividendos Zerados por 4 Meses (Jul-Out/2025)",
+      "descricao": "O fundo não distribuiu dividendos entre julho e outubro de 2025 devido à inadimplência de locatários e custos judiciais. Em novembro retomou com apenas R$ 0,02/cota. Risco elevado de novos períodos sem distribuição.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Inadimplência - Grupo Mauá Bank",
+      "descricao": "O Grupo Mauá Bank (Loja 103 e Sala 901) está inadimplente com ações de execução e despejo em andamento. A administradora também tem ação contra a Tramonto pela rescisão antecipada da Loja 107. Processos judiciais geram custos e incerteza.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Vacância Elevada (22,9%)",
+      "descricao": "Apesar de ser o melhor nível desde 2020 (+15 p.p.), a vacância de 22,9% ainda é elevada. O Centro do RJ tem alta vacância geral e imóveis abandonados, dificultando novas locações com preços adequados.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Risco de Mono-ativo no Centro do RJ",
+      "descricao": "O fundo possui um único imóvel (Edifício Galeria) no Centro do Rio de Janeiro, região que sofre com esvaziamento corporativo desde 2015. Sem diversificação geográfica ou de ativos, qualquer problema no imóvel ou na região impacta 100% do fundo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "P/VP de 0,33 (67% de Desconto)",
+      "descricao": "O desconto extremo de 67% sobre o valor patrimonial reflete a percepção negativa do mercado sobre o ativo. Embora possa representar oportunidade em cenário de revitalização do Centro do RJ, o desconto persistente indica riscos estruturais.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BTG Pactual (Administração)",
+    "nota": 5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Início do Fundo",
+        "valor": "Set/2012"
+      },
+      {
+        "label": "Emissões",
+        "valor": "1 (IPO)"
+      },
+      {
+        "label": "Ocupação",
+        "valor": "77,1%",
+        "cor": "amber"
+      }
+    ],
+    "resumo": "O <strong class=\"text-amber-400\">BTG Pactual</strong> atua como administrador com gestão definida (não ativa). O consultor imobiliário é a <strong class=\"text-blue-400\">CBRE (CB Richard Ellis)</strong>, referência global em real estate. No entanto, a gestão definida limita a capacidade de reciclagem de portfólio. O fundo teve <strong class=\"text-red-400\">apenas 1 emissão</strong> (IPO em 2012) e nunca ampliou seu patrimônio. A inadimplência de locatários e a vacância elevada evidenciam desafios na gestão do ativo.",
+    "link": "../../gestores/btg-pactual/"
+  },
+  "taxas": {
+    "subtitulo": "Baixa taxa de administração, mas taxa de consultoria relevante",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,20% a.a.",
+        "detalhe": "Sobre valor de mercado + até 0,30% escrituração",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Consultoria (CBRE)",
+        "valor": "2,5% a.m.",
+        "detalhe": "Sobre aluguéis recebidos (regime de caixa)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Gestão definida, sem performance fee",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Lajes Corporativas",
+    "comparativo": [
+      {
+        "ticker": "EDGA11",
+        "taxa": "0,20%+consultoria",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "HGRE11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "BRCR11",
+        "taxa": "0,75%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "JSRE11",
+        "taxa": "0,75%",
+        "perf": "+20% perf. s/ 100% CDI"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S/A DTVM"
+      },
+      {
+        "label": "Consultor Imobiliário",
+        "valor": "CB Richard Ellis Ltda. (CBRE)"
+      },
+      {
+        "label": "Início",
+        "valor": "Setembro/2012"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóvel",
+        "valor": "1"
+      },
+      {
+        "label": "m2 ABL",
+        "valor": "24.834"
+      },
+      {
+        "label": "Ocupação",
+        "valor": "77,1%",
+        "cor": "amber"
+      },
+      {
+        "label": "Vacância",
+        "valor": "22,9%",
+        "cor": "red"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Lajes Corporativas",
+        "Lojas",
+        "Mall (térreo/subsolo)"
+      ],
+      "data": [
+        60,
+        25,
+        15
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Ocupado",
+        "Vago"
+      ],
+      "data": [
+        77.13,
+        22.87
+      ],
+      "cores": [
+        "#3b82f6",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Bramex",
+        "setor": "Comércio",
+        "receita": "Loja 107 + Sala 3º andar",
+        "rating": "Contrato ativo",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Demais locatários",
+        "setor": "Diversos",
+        "receita": "Lajes e lojas",
+        "rating": "Contrato ativo",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Grupo Mauá Bank",
+        "setor": "Financeiro",
+        "receita": "Loja 103 + Sala 901",
+        "rating": "INADIMPLENTE",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Áreas Vagas",
+        "setor": "-",
+        "receita": "22,9% da ABL",
+        "rating": "Vago",
+        "ratingCor": "slate",
+        "risco": "Vacância",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Áreas Ocupadas",
+        "valor": 77,
+        "cor": "blue"
+      },
+      {
+        "label": "Áreas Vagas",
+        "valor": 23,
+        "cor": "red"
+      }
+    ],
+    "riscoNota": "O Edifício Galeria é um imóvel classe A localizado na Rua da Quitanda, 86, Centro do Rio de Janeiro. Com <strong class=\"text-blue-400\">8 pavimentos de lajes corporativas</strong>, 2 lojas e 1 mall (térreo e subsolo), ocupa quadra inteira entre as ruas da Quitanda, do Rosário, do Carmo e do Ouvidor. Proximidade com Avenida Rio Branco, Aeroporto Santos Dumont e estações de metrô (Largo da Carioca e Uruguaiana). <strong class=\"text-red-400\">Inadimplência ativa do Grupo Mauá Bank</strong> com ações judiciais de execução e despejo. Rescisão antecipada da Tramonto na Loja 107, substituída pela Bramex."
+  },
+  "ativos": {
+    "subtitulo": "1 imóvel | 24.834 m² ABL | Centro do Rio de Janeiro",
+    "legendaRisco": [
+      {
+        "label": "Ocupado - Contrato ativo e adimplente",
+        "cor": "emerald"
+      },
+      {
+        "label": "Risco - Locatário inadimplente ou em litígio",
+        "cor": "red"
+      },
+      {
+        "label": "Vago - Área sem locação",
+        "cor": "slate"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "Edifício Galeria - Rua da Quitanda, 86, Centro/RJ",
+        "cor": "blue",
+        "itens": [
+          {
+            "nome": "Lajes Corporativas (8 pavimentos)",
+            "cidade": "Centro/RJ",
+            "tipo": "Lajes Corporativas",
+            "tipoCor": "blue",
+            "abl": 14900,
+            "locatario": "Múltiplos",
+            "vencimento": "Diversos",
+            "risco": "Vacância parcial",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "Lojas (2 unidades)",
+            "cidade": "Centro/RJ",
+            "tipo": "Lojas",
+            "tipoCor": "emerald",
+            "abl": 6200,
+            "locatario": "Bramex e outros",
+            "vencimento": "Diversos",
+            "risco": "Inadimplência parcial",
+            "riscoCor": "red"
+          },
+          {
+            "nome": "Mall (térreo + subsolo)",
+            "cidade": "Centro/RJ",
+            "tipo": "Mall",
+            "tipoCor": "amber",
+            "abl": 3734,
+            "locatario": "Múltiplos",
+            "vencimento": "Diversos",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "De promessa a desafio no Centro do RJ",
+    "periodos": [
+      {
+        "periodo": "Ago/2012",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Constituição e IPO do FII Edifício Galeria. Aquisição de 100% do imóvel comercial classe A no Centro do RJ.",
+        "pontos": [
+          "CNPJ: 15.333.306/0001-37",
+          "Administrador: BTG Pactual",
+          "Consultor: CBRE (CB Richard Ellis)",
+          "Única emissão realizada (IPO)",
+          "ABL: 24.834 m²"
+        ]
+      },
+      {
+        "periodo": "2013-2019",
+        "label": "PERÍODO ÁUREO",
+        "cor": "emerald",
+        "descricao": "Primeiros anos de operação com ocupação mais elevada e distribuições regulares de dividendos.",
+        "pontos": [
+          "Ocupação acima de 80%",
+          "Dividendos regulares mensais",
+          "Centro do RJ ainda com demanda corporativa",
+          "VP/cota acima de R$ 50,00"
+        ]
+      },
+      {
+        "periodo": "2020-2023",
+        "label": "CRISE",
+        "cor": "red",
+        "descricao": "Pandemia e esvaziamento do Centro do RJ impactaram severamente o fundo. Ocupação caiu para mínimas históricas.",
+        "pontos": [
+          "Ocupação caiu para ~62% em 2024",
+          "Vacância estrutural no Centro do RJ",
+          "Imóveis abandonados no entorno",
+          "Cota de mercado despencou de ~R$ 40 para ~R$ 15",
+          "PL caiu de ~R$ 200M para ~R$ 172M"
+        ]
+      },
+      {
+        "periodo": "2024-2025",
+        "label": "RECUPERAÇÃO PARCIAL",
+        "cor": "amber",
+        "descricao": "Melhora gradual da ocupação (+15 p.p.), mas inadimplência e custos judiciais geraram 4 meses sem dividendos.",
+        "pontos": [
+          "Ocupação subiu de 62% para 77% (+15 p.p.)",
+          "Inadimplência Grupo Mauá Bank (ações judiciais)",
+          "<strong class=\"text-red-400\">4 meses sem dividendos (Jul-Out/2025)</strong>",
+          "Nova locação: Bramex na Loja 107",
+          "Vacância no Centro RJ nos menores níveis desde 2015"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Fundo retomou distribuições, mas com valores baixos. Perspectiva de melhora depende da resolução de inadimplências e da revitalização do Centro do RJ.",
+        "pontos": [
+          "PL: R$ 171,7 Mi | 3.750 cotistas",
+          "VP/cota: R$ 45,04 | Cotação: ~R$ 14,92",
+          "<strong class=\"text-red-400\">P/VP: 0,33 (67% de desconto)</strong>",
+          "Ocupação: 77,1% (melhor desde 2020)",
+          "Dividendo Dez/25: R$ 0,062/cota"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - NEGATIVA:",
+      "texto": "O EDGA11 sofreu deterioração progressiva desde o IPO em 2012. O esvaziamento do Centro do Rio de Janeiro e a pandemia derrubaram a ocupação para mínimas históricas. Apesar da <strong class=\"text-amber-400\">recuperação parcial para 77%</strong> de ocupação, o fundo enfrentou <strong class=\"text-red-400\">4 meses sem dividendos</strong> em 2025 por conta de inadimplência. O P/VP de 0,33 reflete o ceticismo do mercado. A <strong class=\"text-amber-400\">revitalização do Centro do RJ</strong> é o principal catalisador para recuperação, mas a concretização é incerta."
+    },
+    "crescimento": [
+      {
+        "label": "Queda do VP/Cota",
+        "valor": "-24%",
+        "detalhe": "De ~R$ 59 (IPO) para R$ 45,04"
+      },
+      {
+        "label": "Queda da Cotação",
+        "valor": "-75%",
+        "detalhe": "De ~R$ 60 para R$ 14,92"
+      },
+      {
+        "label": "Vacância",
+        "valor": "22,9%",
+        "detalhe": "Melhor que 38% de 2024"
+      },
+      {
+        "label": "Meses sem Dividendo",
+        "valor": "4",
+        "detalhe": "Jul-Out/2025"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "EDGA11 é um <strong class=\"text-red-400\">FII mono-ativo de lajes corporativas</strong> no Centro do Rio de Janeiro, região que sofre com esvaziamento corporativo há anos. Com <strong class=\"text-red-400\">ocupação de 77%</strong>, <strong class=\"text-red-400\">inadimplência ativa</strong> e <strong class=\"text-red-400\">4 meses sem dividendos</strong> em 2025, o fundo apresenta alto risco operacional. O P/VP de 0,33 (67% de desconto) pode atrair especuladores apostando na revitalização do Centro do RJ, mas os fundamentos atuais não sustentam uma tese de investimento sólida.",
+    "paraQuem": [
+      "Investidores <strong class=\"text-amber-400\">especulativos</strong> que apostam na revitalização do Centro do RJ",
+      "Perfil <strong class=\"text-amber-400\">arrojado</strong> que aceita alto risco por potencial de valorização",
+      "Quem busca <strong class=\"text-amber-400\">desconto extremo no P/VP</strong> (0,33) como margem de segurança",
+      "Investidores com <strong class=\"text-amber-400\">horizonte de longo prazo</strong> (5+ anos)"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-red-400\">renda mensal previsível</strong> (dividendos irregulares)",
+      "Investidores que <strong class=\"text-red-400\">não aceitam meses sem dividendos</strong>",
+      "Perfil <strong class=\"text-red-400\">conservador ou moderado</strong>",
+      "Quem busca <strong class=\"text-red-400\">diversificação de ativos</strong> (fundo mono-ativo)",
+      "Investidores que <strong class=\"text-red-400\">precisam de liquidez</strong> (volume muito baixo)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.12,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.08,
+      0,
+      0,
+      0,
+      0,
+      0.02,
+      0.06
+    ],
+    "chartCor": "#ef4444",
+    "chartYMin": 0,
+    "chartYMax": 0.15,
+    "totaisAnuais": [
+      {
+        "ano": "Total 2025",
+        "valor": "R$ 0,57"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "~3,8%",
+        "cor": "red"
+      },
+      {
+        "ano": "Meses sem Divid.",
+        "valor": "4 (Jul-Out)",
+        "cor": "red"
+      },
+      {
+        "ano": "Média Mensal",
+        "valor": "R$ 0,047"
+      },
+      {
+        "ano": "Prejudicado por",
+        "valor": "Inadimplência",
+        "cor": "red"
+      }
+    ],
+    "guidance": {
+      "periodo": "Sem guidance",
+      "faixa": "R$ 0,00 - R$ 0,12",
+      "unidade": "altamente irregular"
+    },
+    "stats": [
+      {
+        "label": "Maior (Jan/25)",
+        "valor": "R$ 0,12",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Jul-Out/25)",
+        "valor": "R$ 0,00",
+        "cor": "red"
+      },
+      {
+        "label": "Início Distribuições",
+        "valor": "2012"
+      },
+      {
+        "label": "Dez/2025",
+        "valor": "R$ 0,062"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Muito irregular",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,33",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">67% de desconto</span> sobre o valor patrimonial - reflete riscos estruturais",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 45,04"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 14,92",
+          "cor": "red"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "3,8%",
+      "label": "DY 12 meses",
+      "cor": "red",
+      "descricao": "Dividend yield muito baixo e irregular, com 4 meses sem distribuição em 2025",
+      "detalhe": "Abaixo da poupança e do CDI, mesmo com isenção de IR"
+    },
+    "recomendacoes": {
+      "valor": "0,20%",
+      "label": "Taxa Admin",
+      "cor": "emerald",
+      "descricao": "Taxa de administração baixa, mas somada à consultoria CBRE (2,5% sobre aluguéis)",
+      "detalhe": "Custo total efetivo elevado pela baixa receita"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">EDGA11</strong> é um caso emblemático dos desafios de FIIs mono-ativo em regiões com vacância estrutural. O Edifício Galeria, apesar de ser classe A e bem localizado no Centro do Rio de Janeiro, sofre com o <strong class=\"text-red-400\">esvaziamento corporativo</strong> da região que se intensificou após a pandemia.",
+      "A ocupação de <strong class=\"text-amber-400\">77,1%</strong> é o melhor nível desde 2020 (evolução de +15 p.p.), mas os <strong class=\"text-red-400\">4 meses sem dividendos</strong> (julho a outubro/2025), causados pela inadimplência do Grupo Mauá Bank e custos judiciais, evidenciam a fragilidade operacional. O DRE de junho/2025 registrou <strong class=\"text-red-400\">prejuízo de R$ 1 milhão</strong>, impactado diretamente pela inadimplência.",
+      "O P/VP de 0,33 (67% de desconto) é um dos mais baixos entre FIIs listados e pode atrair investidores especulativos apostando na <strong class=\"text-amber-400\">revitalização do Centro do RJ</strong>. Dados recentes indicam que a vacância de escritórios no Centro está nos menores patamares desde 2015. No entanto, a concretização dessa tese depende de fatores externos fora do controle do fundo."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,33 (67% de desconto sobre VP)",
+      "Imóvel classe A em localização central do RJ",
+      "Ocupação em recuperação (+15 p.p. desde 2024)",
+      "Taxa de administração baixa (0,20% a.a.)",
+      "Consultor CBRE (referência global)",
+      "Vacância no Centro RJ em mínima desde 2015",
+      "Proximidade de metrô e Aeroporto Santos Dumont"
+    ],
+    "pontosDeAtencao": [
+      "4 meses sem dividendos em 2025 (Jul-Out)",
+      "Inadimplência ativa (Grupo Mauá Bank)",
+      "Mono-ativo sem diversificação",
+      "Centro do RJ com esvaziamento estrutural",
+      "Liquidez muito baixa (~R$ 658 mil/mês)",
+      "PL em queda (-4,2% só em dez/2025)",
+      "DY de 3,8% abaixo da poupança",
+      "Gestão definida (não ativa) limita reciclagem"
+    ],
+    "conclusaoFinal": "O EDGA11 <strong class=\"text-red-400\">não é recomendado</strong> para investidores que buscam renda mensal previsível ou preservação de capital. A combinação de <strong class=\"text-red-400\">mono-ativo, vacância elevada, inadimplência, dividendos irregulares</strong> e localização em região com esvaziamento estrutural cria um perfil de alto risco. O P/VP de 0,33 pode representar oportunidade <strong class=\"text-amber-400\">apenas para investidores especulativos</strong> com horizonte de longo prazo apostando na revitalização do Centro do Rio de Janeiro. Monitorar: <strong class=\"text-amber-400\">evolução da ocupação, resolução judicial da inadimplência</strong> e projetos de revitalização do Centro do RJ."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 704,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

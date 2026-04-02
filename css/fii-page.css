@@ -1,0 +1,196 @@
+/* ==========================================================================
+   FII Page Styles - Shared CSS for all FII landing pages
+   Extracted from inline styles to reduce duplication across ~83 pages
+   ========================================================================== */
+
+/* Base overrides for FII pages */
+html, body { background-color: #0d1117; color: #e6edf3; }
+* { font-family: 'Inter', system-ui, sans-serif; }
+section { padding: 0; }
+
+/* Hero gradient background */
+.hero-gradient {
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-gradient::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.02'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Dark cards */
+.dark-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+}
+
+/* Stat cards with hover effect */
+.stat-card {
+    background: var(--bg-card);
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.stat-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+    border-color: var(--primary-light);
+}
+
+/* Animations */
+.pulse-dot { animation: pulse 2s infinite; }
+@keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+
+.fade-in { animation: fadeIn 0.6s ease-out; }
+@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+
+/* Gradient text effect */
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-light) 0%, var(--secondary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Score ring (recommendation) */
+.score-ring { transform: rotate(-90deg); }
+
+/* Chart containers */
+.chart-container { position: relative; height: 300px; }
+
+/* Timeline */
+.timeline-line {
+    position: absolute;
+    left: 24px;
+    top: 0; bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, var(--primary) 0%, var(--primary-light) 50%, var(--secondary) 100%);
+}
+
+.timeline-dot {
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    position: relative;
+    z-index: 10;
+}
+
+/* Progress bar */
+.progress-bar {
+    background: linear-gradient(90deg, var(--primary) 0%, var(--primary-light) 100%);
+    transition: width 1s ease-out;
+}
+
+/* Sticky navigation */
+.nav-sticky {
+    backdrop-filter: blur(12px);
+    background: rgba(13, 17, 23, 0.95);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: var(--bg-secondary); }
+::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: var(--primary-light); }
+
+/* Asset table row hover */
+.asset-row:hover { background: rgba(45, 138, 110, 0.1); }
+
+/* Glow effects for section cards */
+.glow-green { box-shadow: 0 0 20px rgba(45, 138, 110, 0.3); }
+.glow-amber { box-shadow: 0 0 20px rgba(240, 193, 75, 0.3); }
+.glow-purple { box-shadow: 0 0 20px rgba(168, 85, 247, 0.3); }
+
+/* Loading skeleton */
+.fii-skeleton {
+    background: var(--bg-card);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.fii-skeleton-pulse {
+    animation: skeletonPulse 1.5s ease-in-out infinite;
+    background: linear-gradient(90deg, var(--bg-secondary) 25%, var(--bg-tertiary, #1c2333) 50%, var(--bg-secondary) 75%);
+    background-size: 200% 100%;
+}
+
+@keyframes skeletonPulse {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* ==========================================================================
+   MOBILE OPTIMIZATIONS
+   ========================================================================== */
+@media (max-width: 767px) {
+    /* Prevent horizontal overflow */
+    body { overflow-x: hidden; }
+    * { max-width: 100%; }
+
+    /* Header - increase padding-bottom */
+    .app-header {
+        padding-bottom: 20px !important;
+    }
+
+    /* Optimize main container padding */
+    .max-w-7xl { padding-left: 12px !important; padding-right: 12px !important; }
+
+    /* Reduce card inner padding */
+    .dark-card, .stat-card { padding: 16px !important; }
+    .dark-card.rounded-3xl { padding: 20px !important; }
+
+    /* Hero section spacing */
+    .hero-gradient { padding-top: 32px !important; padding-bottom: 110px !important; }
+
+    /* Force grids to fewer columns */
+    .grid.grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
+    .grid.grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+    .grid.grid-cols-5 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+
+    /* Charts responsiveness */
+    .chart-container, .chart-container-lg {
+        height: 250px !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Table horizontal scroll */
+    .overflow-x-auto {
+        -webkit-overflow-scrolling: touch;
+        margin-left: -12px;
+        margin-right: -12px;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    .overflow-x-auto table { min-width: 600px; }
+
+    /* Smaller font in dense areas */
+    .overflow-x-auto table { font-size: 0.75rem; }
+    .overflow-x-auto th, .overflow-x-auto td { padding: 8px 6px !important; }
+
+    /* Cards don't overflow screen */
+    .rounded-3xl, .rounded-2xl, .rounded-xl {
+        box-sizing: border-box;
+        max-width: 100%;
+    }
+
+    /* Section spacing */
+    section.mb-12 { margin-bottom: 24px !important; }
+
+    /* Hero font adjustments */
+    .hero-gradient h1 { font-size: 2.5rem !important; }
+    .hero-gradient .text-5xl { font-size: 2.5rem !important; }
+    .hero-gradient .text-6xl { font-size: 3rem !important; }
+
+    /* Stats cards in hero */
+    .stat-card.rounded-2xl { padding: 16px !important; }
+    .stat-card .text-3xl { font-size: 1.5rem !important; }
+
+    /* Flexbox wrap improvement */
+    .flex-wrap { gap: 8px !important; }
+}

@@ -1,0 +1,592 @@
+{
+  "meta": {
+    "ticker": "BTCR11",
+    "nome": "BTG Pactual Crédito Imobiliário FII",
+    "nomeExtra": "(incorporado ao BTCI11 em nov/2022)",
+    "segmento": "Papel - CRI",
+    "badges": [
+      "High Grade",
+      "135% CDI (12M)",
+      "~20 CRIs",
+      "Incorporado"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 668
+  },
+  "seo": {
+    "title": "BTCR11 - Análise Completa | BTG Pactual Crédito Imobiliário FII",
+    "description": "Análise completa do FII BTCR11 baseada em 668 documentos oficiais. Fundo de crédito imobiliário high grade da BTG Pactual, incorporado ao BTCI11 em nov/2022. DY 11,8%, 135% CDI, ~20 CRIs diversificados. Histórico completo desde 2018.",
+    "keywords": "BTCR11, BTG Pactual Crédito Imobiliário, FII papel, CRI, análise BTCR11, BTCI11, incorporação, BTG Pactual, FII high grade, FEXC11",
+    "ogTitle": "BTCR11 - Análise Completa do FII BTG Pactual Crédito Imobiliário",
+    "ogDescription": "Análise detalhada do BTCR11: FII de crédito high grade incorporado ao BTCI11 em nov/2022. DY 11,8%, 135% CDI, ~20 CRIs. Retrospectiva completa de 4,7 anos de operação.",
+    "twitterTitle": "BTCR11 - Análise Completa | FII BTG Pactual Crédito Imobiliário",
+    "twitterDescription": "Análise do BTCR11: FII de CRI high grade da BTG Pactual. DY 11,8%, 135% CDI, PL R$ 458 Mi. Incorporado ao BTCI11 em nov/2022. 668 documentos analisados."
+  },
+  "indicadores": {
+    "cotacao": 91.69,
+    "cotacaoData": "28/11/2022 (último pregão)",
+    "pvp": 0.96,
+    "pvpDesconto": "4% de desconto",
+    "dividendYield": 11.8,
+    "dividendoMensal": 0.9,
+    "dividendoAnual": 12.06,
+    "patrimonioLiquido": "R$ 458 Mi",
+    "vpCota": 95.27,
+    "cotistas": 16934
+  },
+  "recomendacao": {
+    "nota": 6,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">BTCR11</strong> foi um FII de crédito imobiliário high grade da BTG Pactual que operou de março/2018 a novembro/2022, quando foi <strong class=\"text-amber-400\">incorporado ao FEXC11</strong> (passando a operar como BTCI11). Nos últimos 12 meses de operação, entregou <strong class=\"text-emerald-400\">DY de 11,8%</strong> (equivalente a 135% do CDI) e retorno total de 151% do CDI líquido, com <strong class=\"text-emerald-400\">inadimplência zero</strong> em toda a carteira de ~20 CRIs. A nota reflete um fundo encerrado que foi sólido enquanto operou, mas sem continuidade sob este ticker. A incorporação foi aprovada com 26,76% dos votos favoráveis (48,79% de quórum) e entrou em vigor em 28/nov/2022."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 458 Mi",
+      "detalhe": "VP/cota: R$ 95,27",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 95,27</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,90",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 12,06/ano | DY 11,8%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "16.934",
+      "detalhe": "99,4% pessoa física | 4,8 Mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Status",
+      "valor": "INCORPORADO",
+      "detalhe": "Migrou para BTCI11 em 28/nov/2022",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Incorporado ao BTCI11",
+      "descricao": "O BTCR11 foi incorporado pelo FEXC11 em novembro de 2022, passando ambos a operar sob o ticker BTCI11. A relação de troca foi de 1 cota BTCR11 para 1,03 cotas BTCI11 (base VP 30/set/2022: R$ 94,66 vs R$ 91,87). As cotas foram convertidas automaticamente e o BTCR11 não é mais negociado na B3.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Concentração em Incorporação Residencial (38%)",
+      "descricao": "A carteira final possuía 38% de exposição ao setor residencial (Vitacon 13,8%, Nortis 6,0%, You 10,8%, Gafisa 2,4%), segmento sensível a ciclos econômicos, taxas de juros e vendas de imóveis na planta.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "5ª Emissão Revogada em Out/2022",
+      "descricao": "A 5ª emissão de cotas (até R$ 257,7 Mi a R$ 95,86/cota) foi aprovada em abr/2022, teve preço mantido em jun/2022, mas foi revogada em outubro/2022 em função da decisão estratégica de incorporação ao FEXC11.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Exposição ao IGP-M (5% via Bossa Nova Mall)",
+      "descricao": "Embora pequena (5% do PL, R$ 21,9 Mi), a parcela indexada ao IGP-M via CRI Bossa Nova Mall (shopping no Aeroporto Santos Dumont/RJ) introduzia volatilidade no resultado, dado o comportamento errático deste índice.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BTG Pactual Gestora de Recursos",
+    "nota": 9,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM BTG FIIs",
+        "valor": "R$ 30+ Bi"
+      },
+      {
+        "label": "Patrimônio BTCR",
+        "valor": "R$ 458 Mi"
+      },
+      {
+        "label": "% CDI 12M",
+        "valor": "135%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">BTG Pactual</strong> é a maior gestora de FIIs do Brasil, com mais de R$ 30 bilhões sob gestão em fundos imobiliários. A gestão do BTCR11 demonstrou excelência na seleção e monitoramento de créditos, entregando <strong class=\"text-emerald-400\">135% do CDI</strong> nos últimos 12 meses de operação, com inadimplência zero e retorno total de 151% do CDI líquido. Realizou reciclagem ativa de carteira (ex: venda do CRI GJP em jan/2022 com ganho de 3,7% e reinvestimento em CDI+4,5%). A incorporação ao BTCI11 visou aumentar escala, liquidez e diversificação.",
+    "link": "../../gestores/btg-pactual/"
+  },
+  "taxas": {
+    "subtitulo": "Competitivas e sem taxa de performance",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre o patrimônio líquido do fundo (0,0858%/mês efetivo)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Diferencial competitivo importante vs. pares",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Incluída",
+        "detalhe": "Na taxa de administração (0% adicional)",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Crédito",
+    "comparativo": [
+      {
+        "ticker": "BTCR11",
+        "taxa": "1,00%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "KNSC11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ CDI+1%"
+      },
+      {
+        "ticker": "MCCI11",
+        "taxa": "0,80%",
+        "perf": "+20% perf. s/ IPCA+3%"
+      },
+      {
+        "ticker": "RBRR11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ CDI+2%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Custódia",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestão",
+        "valor": "BTG Pactual Gestora de Recursos Ltda"
+      },
+      {
+        "label": "Início",
+        "valor": "21/03/2018 (constituído em 21/02/2018)"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "29.787.928/0001-40"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "92%"
+      },
+      {
+        "label": "FIIs",
+        "valor": "7%"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "20",
+        "cor": "emerald"
+      },
+      {
+        "label": "Inadimplência",
+        "valor": "0%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Residencial",
+        "Logístico",
+        "Shoppings",
+        "Varejo",
+        "Outros"
+      ],
+      "data": [
+        38,
+        38,
+        10,
+        10,
+        4
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+ (6,1%)",
+        "CDI+ (3,4%)",
+        "IGP-M+ (8,3%)"
+      ],
+      "data": [
+        54,
+        41,
+        5
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Vitacon (Brooklyn + Domingos de Morais)",
+        "setor": "Incorporação Residencial",
+        "receita": "9,5%",
+        "rating": "CDI+4,5%",
+        "ratingCor": "emerald",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "HBR Multi Ativos (Helbor)",
+        "setor": "Incorporação Diversificada",
+        "receita": "8,7%",
+        "rating": "IPCA+6,0%",
+        "ratingCor": "blue",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "BTG Shoppings (BR Malls/BPML11)",
+        "setor": "Shoppings (8 unidades)",
+        "receita": "8,3%",
+        "rating": "CDI+1,5%",
+        "ratingCor": "emerald",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Emergent Cold LatAm",
+        "setor": "Logística Refrigerada",
+        "receita": "6,7%",
+        "rating": "CDI+4,0%",
+        "ratingCor": "emerald",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Nortis (Carlos Terepins/Even)",
+        "setor": "Incorporação Residencial",
+        "receita": "6,0%",
+        "rating": "IPCA+7,2%",
+        "ratingCor": "blue",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Bossa Nova Mall (Santos Dumont/RJ)",
+        "setor": "Shopping Corporativo",
+        "receita": "5,2%",
+        "rating": "IGP-M+8,3%",
+        "ratingCor": "amber",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "JSL (Série I + II)",
+        "setor": "Logística (líder no Brasil)",
+        "receita": "10,0%",
+        "rating": "IPCA+6,0%",
+        "ratingCor": "blue",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "GPA (I + II) via RBVA11",
+        "setor": "Varejo (Supermercados)",
+        "receita": "9,8%",
+        "rating": "IPCA+5,0% a 5,6%",
+        "ratingCor": "blue",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Demais CRIs (~8 operações)",
+        "setor": "Diversificado",
+        "receita": "35,8%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Core",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Core / High Grade",
+        "valor": 100,
+        "cor": "emerald"
+      }
+    ],
+    "riscoNota": "Carteira 100% classificada como <strong class=\"text-emerald-400\">Core</strong> pela gestão BTG Pactual. Exposição por indexador: 54% IPCA+ (taxa média 6,1%), 41% CDI+ (taxa média 3,4%) e 5% IGP-M+ (taxa 8,3%). Duration média ponderada de 5,1 anos. <strong class=\"text-blue-400\">Concentração geográfica:</strong> 89% Sudeste, 7% Sul, 4% Nordeste (Fortaleza/CE via Jereissati). Todas as operações com garantias reais robustas: alienação fiduciária de imóveis, cessão fiduciária de recebíveis, fundos de reserva, aval de holdings e fiança dos sócios. Ativo total de R$ 497,5 Mi, sendo R$ 422 Mi em CRIs, R$ 38,9 Mi em FIIs (XPCI11, KNIP11, MCCI11, MGCR11) e R$ 36,7 Mi em fundos de renda fixa (liquidez)."
+  },
+  "timeline": {
+    "subtitulo": "De fundo independente a incorporação ao BTCI11",
+    "periodos": [
+      {
+        "periodo": "Fev-Mar/2018",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Constituição (21/fev/2018) e início das atividades (21/mar/2018) do BTG Pactual Crédito Imobiliário. 1ª emissão com 680 mil cotas a R$ 100,00 cada, captando R$ 68 milhões. Foco em CRIs high grade com lastro diversificado.",
+        "pontos": [
+          "CNPJ: 29.787.928/0001-40 | ISIN: BRBTCRCTF006",
+          "Gestora: BTG Pactual Gestora de Recursos Ltda",
+          "Administrador: BTG Pactual Serviços Financeiros S.A. DTVM",
+          "680 mil cotas a R$ 100,00 = R$ 68 milhões"
+        ]
+      },
+      {
+        "periodo": "Dez/2018 - Fev/2020",
+        "label": "EMISSÕES",
+        "cor": "emerald",
+        "descricao": "Crescimento acelerado com 3 emissões adicionais. 2ª emissão (dez/2018) de até 850 mil cotas a R$ 100, 3ª emissão (mai/2019) e 4ª emissão (fev/2020) de 1,8 Mi cotas totalizando R$ 180 Mi. Patrimônio salta para R$ 458 Mi.",
+        "pontos": [
+          "2ª emissão: dez/2018 (850 mil cotas a R$ 100)",
+          "3ª emissão: jun/2019 (distribuição via ICVM 400)",
+          "4ª emissão: fev/2020 (1,8 Mi cotas, R$ 180 Mi, 100% colocado)",
+          "Base atinge 4.810.097 cotas emitidas"
+        ]
+      },
+      {
+        "periodo": "2020-2021",
+        "label": "MATURAÇÃO",
+        "cor": "emerald",
+        "descricao": "Operação madura com carteira de ~20 CRIs diversificados. Crescimento orgânico de cotistas mesmo sem novas emissões. Gestão ativa com reciclagem de carteira e distribuição mensal consistente.",
+        "pontos": [
+          "AGO 2020 via consulta formal (covid-19)",
+          "Diversificação em residencial, logístico, shoppings e varejo",
+          "Distribuição mensal de R$ 0,55 a R$ 0,75/cota (2020-2021)",
+          "Rendimento anual de R$ 7,10 (2020) e R$ 8,75 (2021)"
+        ]
+      },
+      {
+        "periodo": "Jan-Nov/2022",
+        "label": "AUGE E INCORPORAÇÃO",
+        "cor": "amber",
+        "descricao": "Melhor fase do fundo: beneficiado pela Selic a 13,75%, entrega excepcional nos rendimentos. Reciclagem do CRI GJP com ganho de 3,7%. 5ª emissão aprovada em abr/2022 mas revogada em out/2022. Incorporação ao FEXC11 aprovada em consulta formal (26,76% a favor) com migração em 28/nov/2022.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">DY 11,8% a.a. | 135% CDI em 12M</strong>",
+          "<strong class=\"text-emerald-400\">Retorno total de 16,43% = 151% do CDI líquido</strong>",
+          "Reciclagem CRI GJP: venda R$ 51,2 Mi com lucro R$ 2,2 Mi (R$ 0,46/cota)",
+          "Base cresceu 65% orgânica em 12M: 10.258 → 16.934 cotistas",
+          "<strong class=\"text-amber-400\">Incorporação ao BTCI11 em 28/nov/2022 (1 cota = 1,03 BTCI11)</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - FUNDO ENCERRADO:",
+      "texto": "O BTCR11 operou de março/2018 a novembro/2022 (4 anos e 8 meses), entregando desempenho consistente como FII de crédito high grade. Realizou 4 emissões, alcançando PL de R$ 458 Mi com 4,8 Mi de cotas e 16.934 cotistas. Nos últimos 12 meses, atingiu <strong class=\"text-emerald-400\">135% do CDI</strong> (DY 11,8%) com inadimplência zero e retorno total de <strong class=\"text-emerald-400\">151% do CDI líquido</strong>. Em jan/2022, demonstrou gestão ativa ao reciclar o CRI GJP (CDI+1,675%), vendendo por R$ 51,2 Mi com ganho de R$ 2,2 Mi e reinvestindo em operações CDI+4,5%. Foi incorporado ao FEXC11 em novembro/2022, passando a operar sob o ticker <strong class=\"text-amber-400\">BTCI11</strong>, com relação de troca de 1:1,03 (base VP set/2022)."
+    },
+    "crescimento": [
+      {
+        "label": "Operação",
+        "valor": "4,7 anos",
+        "detalhe": "Mar/2018 a Nov/2022"
+      },
+      {
+        "label": "Emissões",
+        "valor": "4",
+        "detalhe": "4,81 Mi cotas emitidas"
+      },
+      {
+        "label": "DY 12M Final",
+        "valor": "11,8%",
+        "detalhe": "135% CDI | R$ 12,06/cota"
+      },
+      {
+        "label": "Destino",
+        "valor": "BTCI11",
+        "detalhe": "1 cota = 1,03 BTCI11"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "BTCR11 foi um <strong class=\"text-emerald-400\">FII de crédito imobiliário high grade</strong> gerido pela BTG Pactual, com carteira de 20 CRIs diversificados por segmento (residencial 38%, logístico 38%, shoppings 10%, varejo 10%) e indexador (IPCA+ 54%, CDI+ 41%, IGP-M 5%). Operou de mar/2018 a nov/2022, realizando 4 emissões e acumulando PL de R$ 458 Mi. Entregou <strong class=\"text-emerald-400\">135% do CDI</strong> nos últimos 12 meses com inadimplência zero e gestão ativa (reciclagem de carteira com ganho de capital). Foi <strong class=\"text-amber-400\">incorporado ao BTCI11</strong> em 28/nov/2022 para aumentar escala e liquidez, com relação de troca de 1:1,03. A análise é retrospectiva e serve como referência para o fundo sucessor e para avaliação do track record da gestão BTG Pactual em crédito imobiliário.",
+    "paraQuem": [
+      "Investidores que detinham cotas e foram migrados para o <strong class=\"text-emerald-400\">BTCI11</strong> (relação 1:1,03)",
+      "Quem busca entender o <strong class=\"text-emerald-400\">track record da gestão BTG Pactual</strong> em crédito imobiliário",
+      "Investidores pesquisando <strong class=\"text-emerald-400\">fundos sucessores</strong> do BTCR11 para avaliação do BTCI11",
+      "Quem estuda <strong class=\"text-emerald-400\">processos de incorporação</strong> entre FIIs de crédito"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-amber-400\">investir ativamente</strong> (fundo não é mais negociado na B3)",
+      "Investidores que não possuem posição no <strong class=\"text-amber-400\">BTCI11</strong>",
+      "Quem busca <strong class=\"text-amber-400\">FIIs de tijolo</strong> com imóveis físicos",
+      "Quem procura <strong class=\"text-amber-400\">fundos com histórico longo</strong> (operação de apenas 4,7 anos)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mai/22",
+      "Jun/22",
+      "Jul/22",
+      "Ago/22",
+      "Set/22",
+      "Out/22"
+    ],
+    "chartData": [
+      1.15,
+      1.25,
+      1.1,
+      0.95,
+      0.9,
+      0.9
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.7,
+    "chartYMax": 1.4,
+    "totaisAnuais": [
+      {
+        "ano": "2018 (6M)",
+        "valor": "R$ 3,50"
+      },
+      {
+        "ano": "2019",
+        "valor": "R$ 7,70"
+      },
+      {
+        "ano": "2020",
+        "valor": "R$ 7,10"
+      },
+      {
+        "ano": "2021",
+        "valor": "R$ 8,75"
+      },
+      {
+        "ano": "2022 (10M)",
+        "valor": "R$ 12,06",
+        "cor": "emerald"
+      },
+      {
+        "ano": "12M DY",
+        "valor": "11,8%",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "Fundo encerrado",
+      "faixa": "Incorporado ao BTCI11",
+      "unidade": "em 28/nov/2022"
+    },
+    "stats": [
+      {
+        "label": "Maior (Abr/22)",
+        "valor": "R$ 1,28",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Out/22)",
+        "valor": "R$ 0,90"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "Jul/2018"
+      },
+      {
+        "label": "12M Final",
+        "valor": "R$ 12,06",
+        "cor": "emerald"
+      },
+      {
+        "label": "% CDI 12M",
+        "valor": "135%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Retorno Total 12M",
+        "valor": "151% CDI líq.",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,96",
+      "descricao": "No último pregão (28/nov/2022), a cota era negociada com <span class=\"text-emerald-400\">4% de desconto</span> sobre o valor patrimonial. A relação de troca na incorporação usou VP de set/2022 (R$ 94,66/cota BTCR vs R$ 91,87/cota FEXC).",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 95,27"
+        },
+        {
+          "label": "Preço (último pregão)",
+          "valor": "R$ 91,69",
+          "cor": "emerald"
+        },
+        {
+          "label": "Relação de Troca",
+          "valor": "1 BTCR = 1,03 BTCI"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "135%",
+      "label": "% CDI (12M)",
+      "cor": "emerald",
+      "descricao": "Rendimento equivalente a 135% do CDI bruto nos últimos 12 meses de operação (Selic a 13,75%). Distribuição acumulada de R$ 12,06/cota. Retorno total (dividendos + variação patrimonial) de 16,43% em 12 meses.",
+      "detalhe": "Retorno total de 151% do CDI líquido (IR 15%)"
+    },
+    "recomendacoes": {
+      "valor": "1,00%",
+      "label": "Taxa Total",
+      "cor": "emerald",
+      "descricao": "Sem taxa de performance, competitivo para o segmento high grade. Despesa mensal efetiva de 0,0858% do PL (equivalente a ~R$ 393 mil/mês ou R$ 0,08/cota).",
+      "detalhe": "Custo total de administração: R$ 7,76 Mi/ano (12M final)"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">BTCR11</strong> encerrou suas operações em 28 de novembro de 2022 ao ser <strong class=\"text-amber-400\">incorporado pelo FEXC11</strong>, passando ambos a operar sob o ticker BTCI11. Durante seus 4 anos e 8 meses de operação (março/2018 a novembro/2022), o fundo se consolidou como um dos principais FIIs de crédito imobiliário do mercado, com foco em operações <strong class=\"text-emerald-400\">100% classificadas como Core/High Grade</strong> pela gestão BTG Pactual.",
+      "A carteira final contava com 20 CRIs diversificados por segmento (residencial 38%, logístico 38%, shoppings 10%, varejo 10%), indexador (IPCA+ 54% a 6,1% média, CDI+ 41% a 3,4% média, IGP-M 5% a 8,3%) e geografia (89% Sudeste, 7% Sul, 4% Nordeste). Além dos CRIs (R$ 422 Mi), mantinha posição tática em FIIs (R$ 38,9 Mi em XPCI11, KNIP11, MCCI11, MGCR11) e liquidez em fundos de renda fixa (R$ 36,7 Mi). Todas as operações mantiveram <strong class=\"text-emerald-400\">inadimplência zero</strong> e contavam com garantias reais robustas.",
+      "Nos últimos 12 meses de operação, o fundo entregou <strong class=\"text-emerald-400\">DY de 11,8% a.a.</strong> (135% do CDI) e retorno total de 16,43% (151% do CDI líquido). O resultado em 12 meses foi de R$ 62,8 Mi (R$ 12,87/cota de lucro, R$ 12,06/cota distribuído), com rendimentos acumulados e não distribuídos de R$ 0,70/cota. A receita era predominantemente de CRIs (R$ 64,4 Mi ou 91% do total), complementada por FIIs (R$ 3,3 Mi) e renda fixa (R$ 2,8 Mi). A gestão demonstrou habilidade na reciclagem de carteira, vendendo o CRI GJP em jan/2022 por R$ 51,2 Mi (ganho de R$ 2,2 Mi, 3,7% sobre saldo devedor) e reinvestindo em operações CDI+4,5%.",
+      "A incorporação ao BTCI11 foi aprovada em consulta formal em 17/nov/2022 (26,76% aprovaram, 0,42% reprovaram, 0,78% se abstiveram, com quórum de 48,79%). A relação de troca foi de 1 cota BTCR11 para 1,03 cotas do BTCI11, baseada nos valores patrimoniais de 30/set/2022. O fundo combinado manteve a mesma equipe de gestão da BTG Pactual, com objetivo de maior escala, liquidez e diversificação."
+    ],
+    "pontosFortes": [
+      "Gestão BTG Pactual (maior gestora de FIIs do Brasil, AuM R$ 30+ Bi)",
+      "135% CDI nos últimos 12M | retorno total 151% CDI líquido",
+      "Inadimplência zero em toda a operação (4,7 anos)",
+      "Taxa de 1,0% sem performance fee (despesa efetiva R$ 0,08/cota/mês)",
+      "Carteira 100% Core: 20 CRIs com garantias reais robustas",
+      "Gestão ativa: reciclagem de carteira com ganho de capital",
+      "Crescimento orgânico: base de cotistas +65% em 12M sem emissão",
+      "Composição patrimonial sólida: R$ 458 Mi PL, R$ 497 Mi ativo total"
+    ],
+    "pontosDeAtencao": [
+      "Fundo incorporado ao BTCI11 em nov/2022 (não mais negociado)",
+      "38% concentrado em incorporação residencial (Vitacon, You, Nortis, Gafisa)",
+      "5ª emissão de R$ 257 Mi revogada antes da incorporação",
+      "Liquidez limitada (R$ 610 mil/dia no último mês de negociação)",
+      "Exposição de 5% ao IGP-M (Bossa Nova Mall, Santos Dumont/RJ)",
+      "Duration de apenas 4,7 anos de operação do fundo",
+      "Quórum de aprovação da incorporação: apenas 48,79% participaram"
+    ],
+    "conclusaoFinal": "O BTCR11 foi um fundo sólido de crédito imobiliário que entregou <strong class=\"text-emerald-400\">resultados consistentes</strong> durante toda sua operação, com destaque para os últimos 12 meses (135% CDI, 151% CDI líquido total). A gestão BTG Pactual demonstrou competência tanto na originação e seleção de CRIs high grade quanto na gestão ativa da carteira (reciclagem com ganho de capital). A incorporação ao BTCI11 foi uma decisão estratégica para criar um fundo maior e mais líquido, mantendo a mesma equipe de gestão. Para quem detinha cotas, a migração se deu a 1:1,03 (favorável ao cotista do BTCR). Esta análise retrospectiva serve como <strong class=\"text-emerald-400\">referência do track record da gestão BTG</strong> em crédito imobiliário e como base para avaliação do fundo sucessor BTCI11."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 668,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. O BTCR11 foi incorporado ao BTCI11 em novembro/2022 e não é mais negociado na B3."
+  }
+}

@@ -1,0 +1,733 @@
+{
+  "meta": {
+    "ticker": "CBOP11",
+    "nome": "Castello Branco Office Park FII",
+    "segmento": "Tijolo - Lajes Corporativas",
+    "badges": [
+      "Edifício Jatobá",
+      "Alphaville/Barueri-SP",
+      "Mono-ativo"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 1078
+  },
+  "seo": {
+    "title": "CBOP11 - Análise Completa | Castello Branco Office Park FII",
+    "description": "Análise completa do FII CBOP11 baseada em 1.078 documentos oficiais. Fundo de lajes corporativas em Alphaville (Barueri/SP), vacância de 23,2%, P/VP 0,46x, DY 18,1%. Reavaliação +7,4%, gestão Pátria, riscos e projeções 2026.",
+    "keywords": "CBOP11, Castello Branco Office Park, FII lajes corporativas, análise CBOP11, dividend yield CBOP11, Alphaville, Barueri, Pátria Investimentos, escritórios",
+    "ogTitle": "CBOP11 - Análise Completa do FII Castello Branco Office Park 2026",
+    "ogDescription": "Análise detalhada do CBOP11: lajes corporativas em Alphaville. Vacância caiu de 56% para 23,2% em 2025. P/VP 0,46x, DY 18,1%. Reavaliação +7,4%. Possível revisão de rendimentos no 1S26.",
+    "twitterTitle": "CBOP11 - Análise Completa | Castello Branco Office Park FII",
+    "twitterDescription": "Análise do CBOP11: lajes corporativas em Alphaville. Vacância 23,2%, P/VP 0,46x com 54% de desconto. DY 18,1%. Recuperação operacional com 5 novos locatários em 2025."
+  },
+  "indicadores": {
+    "cotacao": 33.17,
+    "cotacaoData": "30/12/2025",
+    "pvp": 0.46,
+    "pvpDesconto": "54% de desconto",
+    "dividendYield": 18.1,
+    "dividendoMensal": 0.1,
+    "dividendoAnual": 1.6,
+    "patrimonioLiquido": "R$ 102,1 Mi",
+    "vpCota": 72.18,
+    "cotistas": 2077,
+    "cotistasDetalhe": "1,41 milhão de cotas",
+    "ocupacao": 76.8,
+    "wault": 3.1,
+    "numImoveis": 1,
+    "ablTotal": "16.739",
+    "numEstados": 1,
+    "numInquilinos": 11
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-blue-400\">CBOP11</strong> apresenta um cenário de <strong class=\"text-emerald-400\">recuperação operacional em andamento</strong>, com vacância reduzida de 56% para 23,2% em 2025 e reavaliação positiva de 7,4%. A gestão Pátria sinalizou <strong class=\"text-emerald-400\">possível revisão no patamar de rendimentos</strong> para o 1S26, com término de carências. Contudo, persistem <strong class=\"text-amber-400\">riscos estruturais relevantes</strong>: fundo <strong class=\"text-red-400\">mono-ativo</strong>, <strong class=\"text-red-400\">liquidez muito baixa</strong> (ADTV R$ 8,9 mil), <strong class=\"text-amber-400\">base de cotistas em queda</strong> (2.077) e <strong class=\"text-amber-400\">concentração na Azul</strong> (38% da receita). O P/VP de 0,46x reflete desconto substancial mas também os riscos do fundo."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 102,1 Mi",
+      "detalhe": "VP/cota: R$ 72,18",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 72,18</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,10",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 1,60/ano | DY 18,1%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "2.077",
+      "detalhe": "99,2% pessoa física",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Preço Justo",
+      "valor": "R$ 42,00",
+      "detalhe": "+27% upside",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Mono-ativo",
+      "descricao": "Todo o portfólio está concentrado em 50% do Edifício Jatobá (Castello Branco Office Park, Alphaville/SP). Zero diversificação geográfica ou de ativos. Qualquer problema no imóvel impacta 100% do fundo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez Muito Baixa",
+      "descricao": "ADTV de apenas R$ 8,9 mil em dezembro/2025 dificulta entrada e saída de posições. Com 2.077 cotistas (99,2% PF) e 1,41 milhão de cotas, o fundo possui altíssima concentração e baixa liquidez. Base de cotistas caindo consistentemente (-16% em 2025).",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração na Azul Linhas Aéreas",
+      "descricao": "A Azul representa 38% da receita contratada do fundo. A companhia aérea passou por reestruturação financeira nos últimos anos, gerando risco de crédito relevante. Eventual saída ou renegociação impactaria fortemente o resultado.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Pátria Investimentos",
+    "nota": 8,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "No mercado",
+        "valor": "+35 anos"
+      },
+      {
+        "label": "Patrimônio RE",
+        "valor": "R$ 30 Bi"
+      },
+      {
+        "label": "FIIs listados",
+        "valor": "+20"
+      }
+    ],
+    "resumo": "Maior gestora independente de FIIs do Brasil. <strong class=\"text-emerald-400\">Mais de 35 anos</strong> de atuação em alternativos e <strong class=\"text-blue-400\">R$ 30 bilhões sob gestão</strong> em Real Estate. Assumiu a gestão do CBOP11 em julho/2024, após aquisição da carteira de FIIs do Credit Suisse (CSHG). Atuação global em 4 continentes com mais de R$ 272 bilhões sob gestão total.",
+    "link": "../../gestores/patria-investimentos/"
+  },
+  "taxas": {
+    "subtitulo": "Competitivas para o segmento",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,30% a.a.",
+        "detalhe": "Sobre valor de mercado, mínimo R$ 30 mil/mês (reaj. IGP-M)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Sem taxa de performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "~0%",
+        "detalhe": "0,0004% a.m. sobre PL",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Lajes Corporativas",
+    "comparativo": [
+      {
+        "ticker": "CBOP11",
+        "taxa": "0,30%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "BRCR11",
+        "taxa": "0,25%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "HGPO11",
+        "taxa": "0,60%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "JSRE11",
+        "taxa": "0,75%",
+        "perf": "+20% perf. s/ CDI"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Banco Genial S.A."
+      },
+      {
+        "label": "Escriturador",
+        "valor": "Banco Genial S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Pátria Investimentos Ltda."
+      },
+      {
+        "label": "Auditor",
+        "valor": "Grant Thornton Auditores Independentes"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "1"
+      },
+      {
+        "label": "m² ABL",
+        "valor": "16.739"
+      },
+      {
+        "label": "Anos WAULT",
+        "valor": "3,1",
+        "cor": "amber"
+      },
+      {
+        "label": "Ocupação",
+        "valor": "76,8%",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Lajes Corporativas"
+      ],
+      "data": [
+        100
+      ],
+      "cores": [
+        "#3b82f6"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Azul",
+        "Armac",
+        "PwC",
+        "6P Bank",
+        "Mega Promo",
+        "Rede D'Or",
+        "WCM",
+        "Outros"
+      ],
+      "data": [
+        38,
+        10,
+        9,
+        8,
+        8,
+        7,
+        6,
+        14
+      ],
+      "cores": [
+        "#3b82f6",
+        "#f59e0b",
+        "#10b981",
+        "#8b5cf6",
+        "#ec4899",
+        "#ef4444",
+        "#06b6d4",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Azul Linhas Aéreas",
+        "setor": "Transporte Aéreo",
+        "receita": "38%",
+        "rating": "-",
+        "ratingCor": "amber",
+        "risco": "Concentração",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Armac",
+        "setor": "Logística",
+        "receita": "10%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "PricewaterhouseCoopers (PwC)",
+        "setor": "Auditoria",
+        "receita": "9%",
+        "rating": "AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "6P Bank",
+        "setor": "Financeiro",
+        "receita": "8%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Mega Promo",
+        "setor": "Marketing",
+        "receita": "8%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Rede D'Or",
+        "setor": "Saúde",
+        "receita": "7%",
+        "rating": "AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "WCM",
+        "setor": "Assessoria",
+        "receita": "6%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Outros (BlackBox, Mil Digital, Caique Castro Adv.)",
+        "setor": "Diversos",
+        "receita": "14%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Locatários Baixo Risco",
+        "valor": 2,
+        "cor": "emerald"
+      },
+      {
+        "label": "Locatários Risco Moderado",
+        "valor": 5,
+        "cor": "blue"
+      },
+      {
+        "label": "Concentração (Azul 38%)",
+        "valor": 1,
+        "cor": "amber"
+      },
+      {
+        "label": "Vacância Residual",
+        "valor": 1,
+        "cor": "orange"
+      }
+    ],
+    "riscoNota": "O fundo possui um único ativo (50% do Edifício Jatobá) com 11 locatários. A Azul Linhas Aéreas representa 38% da receita, gerando risco de concentração. Em 2025, 5 novos locatários entraram (Blackbox, WCM, Mil Digital, Caique Castro Advogados e Rede D'Or), reduzindo a vacância de 56% para 23,2%. A diversificação setorial melhorou com presença em 8 segmentos distintos (transporte aéreo, logística, auditoria, banco, marketing, saúde, assessoria e tecnologia). Contratos são 98% indexados ao IPCA e 100% típicos. O ativo foi reavaliado em dez/2025 com <strong class=\"text-emerald-400\">valorização de 7,4%</strong> (de R$ 94 Mi para R$ 100,9 Mi, equivalente a R$ 6.028/m²)."
+  },
+  "ativos": {
+    "subtitulo": "1 imóvel | 16.739 m² ABL | Alphaville/SP",
+    "legendaRisco": [
+      {
+        "label": "Baixo - Contrato longo + Rating AAA",
+        "cor": "emerald"
+      },
+      {
+        "label": "Moderado - Rating AA ou contrato médio",
+        "cor": "blue"
+      },
+      {
+        "label": "Atenção - Concentração ou vencimento próximo",
+        "cor": "amber"
+      },
+      {
+        "label": "Alto - Vacância elevada ou mono-ativo",
+        "cor": "orange"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "Edifício Jatobá - 100% do portfólio",
+        "cor": "blue",
+        "itens": [
+          {
+            "nome": "Torre Jatobá (50%)",
+            "cidade": "Barueri/SP (Alphaville)",
+            "tipo": "Lajes Corporativas",
+            "tipoCor": "blue",
+            "abl": 16739,
+            "locatario": "Multi-inquilino (11)",
+            "vencimento": "40% em 2026, 10% em 2027, 50% em 2029+",
+            "risco": "Mono-ativo",
+            "riscoCor": "amber"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "De escritórios em crise para recuperação operacional",
+    "periodos": [
+      {
+        "periodo": "2012-2019",
+        "label": "IPO E OPERAÇÃO",
+        "cor": "blue",
+        "descricao": "IPO em Dez/2012 com foco em 50% do Edifício Jatobá no Castello Branco Office Park (Alphaville/Barueri-SP). Gestão pela CSHG (Credit Suisse).",
+        "pontos": [
+          "Foco em lajes corporativas no Castello Branco Office Park",
+          "Localização em Alphaville, região empresarial consolidada",
+          "Gestão originalmente pela Credit Suisse (CSHG)"
+        ]
+      },
+      {
+        "periodo": "2020-2024",
+        "label": "CRISE E TRANSIÇÃO",
+        "cor": "red",
+        "descricao": "Pandemia e home office impactaram fortemente o segmento de escritórios. Em 2024, gestão transferida da CSHG para Pátria Investimentos.",
+        "pontos": [
+          "Vacância chegou a ultrapassar 55% durante o período",
+          "Mercado de Alphaville sofreu com excesso de oferta",
+          "Reavaliação negativa do ativo em dez/2024 (-6,15%)",
+          "<strong class=\"text-blue-400\">Jul/2024: gestão transferida para Pátria Investimentos</strong>",
+          "Administração migrou para Banco Genial S.A."
+        ]
+      },
+      {
+        "periodo": "2025-2026",
+        "label": "RECUPERAÇÃO",
+        "cor": "emerald",
+        "descricao": "Redução significativa da vacância, reavaliação positiva e sinalização de aumento nos rendimentos.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">Vacância caiu de 56% (jan/25) para 23,2% (dez/25)</strong>",
+          "Entrada de 5 novos locatários no 2º semestre de 2025",
+          "<strong class=\"text-emerald-400\">Reavaliação do ativo: +7,4% em dez/2025 (CBRE)</strong>",
+          "Distribuição extraordinária de R$ 0,50/cota em dez/25",
+          "<strong class=\"text-emerald-400\">Gestão sinalizou possível revisão no patamar de rendimentos para 1S26</strong>",
+          "Receita anual de R$ 5,6 Mi (R$ 3,97/cota)"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - EM RECUPERAÇÃO:",
+      "texto": "O CBOP11 passou por uma crise severa de vacância no período pós-pandemia, com ocupação chegando a mínimas históricas. A transferência de gestão para a Pátria Investimentos em julho/2024 marcou uma inflexão. A partir do 2S25, a gestão conseguiu uma <strong class=\"text-emerald-400\">recuperação expressiva, reduzindo a vacância de 56% para 23,2%</strong> com a entrada de 5 novos locatários. A reavaliação positiva de 7,4% pela CBRE em dez/2025 (após queda de 6,15% em dez/2024) confirma a melhora operacional. A gestão sinalizou <strong class=\"text-emerald-400\">possível revisão de rendimentos para o 1S26</strong>, com término das carências dos novos contratos."
+    },
+    "crescimento": [
+      {
+        "label": "Redução Vacância 2025",
+        "valor": "-58%",
+        "detalhe": "56% para 23,2%"
+      },
+      {
+        "label": "Reavaliação Ativo",
+        "valor": "+7,4%",
+        "detalhe": "R$ 94 Mi para R$ 100,9 Mi"
+      },
+      {
+        "label": "Novos Locatários 2S25",
+        "valor": "+5",
+        "detalhe": "Blackbox, WCM, Mil Digital, Caique Castro, Rede D'Or"
+      },
+      {
+        "label": "Evolução Cotistas",
+        "valor": "-16%",
+        "detalhe": "2.471 para 2.077 em 2025"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "CBOP11 é um <strong class=\"text-blue-400\">FII mono-ativo de lajes corporativas</strong> com 50% do Edifício Jatobá em Alphaville/SP. O fundo está em <strong class=\"text-emerald-400\">fase de recuperação operacional</strong>, tendo reduzido a vacância de 56% para 23,2% em 2025, com reavaliação positiva de 7,4% pela CBRE. A gestão Pátria sinalizou <strong class=\"text-emerald-400\">possível aumento de rendimentos no 1S26</strong> com término das carências. O P/VP de 0,46x oferece desconto de 54%, mas reflete os riscos estruturais: <strong class=\"text-amber-400\">mono-ativo, baixa liquidez, concentração na Azul (38%) e base de cotistas em queda</strong>. Contratos 98% IPCA e sem alavancagem. Receita total de R$ 5,6 Mi em 2025 com resultado distribuível de R$ 2,3 Mi (R$ 1,65/cota).",
+    "paraQuem": [
+      "Investidores com <strong class=\"text-emerald-400\">alta tolerância a risco</strong> e horizonte de longo prazo",
+      "Quem busca <strong class=\"text-emerald-400\">deep value</strong> em FIIs com desconto extremo sobre VP",
+      "Investidores que entendem o <strong class=\"text-emerald-400\">ciclo de escritórios</strong> e apostam na recuperação",
+      "Perfil que aceita <strong class=\"text-emerald-400\">baixa liquidez</strong> em troca de potencial valorização e renda"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-amber-400\">liquidez para entrada e saída rápida</strong>",
+      "Investidores que <strong class=\"text-amber-400\">não aceitam concentração em mono-ativo</strong>",
+      "Perfil <strong class=\"text-amber-400\">conservador</strong> que prioriza renda estável e previsível",
+      "Quem <strong class=\"text-amber-400\">não aceita risco de crédito</strong> em locatários como Azul"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.5
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.6,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 0,70"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,14"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,60",
+        "cor": "emerald",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "1S26",
+      "faixa": "R$ 0,10 - R$ 0,15",
+      "unidade": "por cota/mês (gestão sinalizou possível revisão para cima)"
+    },
+    "stats": [
+      {
+        "label": "Distribuição Regular",
+        "valor": "R$ 0,10/mês"
+      },
+      {
+        "label": "Extraordinário Dez/25",
+        "valor": "R$ 0,50",
+        "cor": "emerald"
+      },
+      {
+        "label": "Média 12M",
+        "valor": "R$ 0,13"
+      },
+      {
+        "label": "DY Mercado",
+        "valor": "18,1% a.a.",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY Patrimonial",
+        "valor": "8,3% a.a."
+      },
+      {
+        "label": "Resultado 2025",
+        "valor": "R$ 1,65/cota"
+      }
+    ]
+  },
+  "ativosDetalhados": {
+    "subtitulo": "Análise detalhada do portfólio mono-ativo (Dez/2025)",
+    "itens": [
+      {
+        "nome": "Torre Jatobá (50%) — Castello Branco Office Park, Barueri/SP",
+        "tipo": "Lajes Corporativas — Alphaville (Multi-inquilino)",
+        "icone": "🏢",
+        "corIcone": "blue",
+        "corBorda": "blue",
+        "participacao": "97,4%",
+        "participacaoCor": "blue",
+        "abl": "16.739 m² (50% do edifício)",
+        "valor": "R$ 100,9 Mi",
+        "ocupacao": "76,8%",
+        "ocupacaoCor": "amber",
+        "aluguel": "R$ 48,10/m²",
+        "risco": "Elevado",
+        "qualidade": "Moderada",
+        "relevancia": "Ativo único do fundo — 100% da receita imobiliária",
+        "contrato": {
+          "tipo": "Típico (100%)",
+          "termino": "40% em 2026, 10% em 2027, 50% em 2029+",
+          "terminoCor": "amber",
+          "reajuste": "IPCA (98%) + IGP-M (2%)",
+          "multa": "Proporcional ao prazo restante"
+        },
+        "pontos": [
+          {
+            "texto": "Reavaliação positiva de 7,4% pela CBRE em dez/2025 — valor patrimonial passou de R$ 94,0 Mi para R$ 100,9 Mi (R$ 6.028/m²)",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Vacância reduzida de 56% (jan/25) para 23,2% (dez/25) — entrada de 5 novos locatários no 2S25 (Blackbox, WCM, Mil Digital, Caique Castro Adv., Rede D'Or)",
+            "cor": "emerald"
+          },
+          {
+            "texto": "11 locatários em 8 segmentos distintos — diversificação setorial crescente (transporte aéreo, logística, auditoria, banco, marketing, saúde, assessoria, tecnologia)",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Receita de locação de R$ 4,5 Mi em 2025 (R$ 3,18/cota) — média mensal de R$ 375 mil, com tendência de alta à medida que carências dos novos contratos expiram",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Preço médio de mercado do portfólio em R$ 2.730/m² — competitivo para a região de Alphaville, com potencial de valorização",
+            "cor": "blue"
+          },
+          {
+            "texto": "98% dos contratos indexados ao IPCA e 100% típicos — proteção inflacionária sólida, mas sem atipicidade para reter locatários",
+            "cor": "blue"
+          },
+          {
+            "texto": "Azul Linhas Aéreas representa 38% da receita contratada — risco de concentração elevado em empresa que passou por reestruturação financeira",
+            "cor": "amber"
+          },
+          {
+            "texto": "40% dos contratos vencem em 2026 — risco de renovação significativo no curto prazo, demandando atenção da gestão",
+            "cor": "amber"
+          },
+          {
+            "texto": "Vacância ainda em 23,2% (financeira e física iguais) — acima da média setorial de lajes corporativas, com 3.883 m² vagos",
+            "cor": "amber"
+          },
+          {
+            "texto": "Fundo mono-ativo com 100% de exposição em Alphaville — região com histórico de excesso de oferta de escritórios, zero diversificação geográfica",
+            "cor": "red"
+          },
+          {
+            "texto": "Revisionais concentradas em janeiro (54%) e outubro/dezembro (13% cada) — sazonalidade nos reajustes de receita",
+            "cor": "blue"
+          },
+          {
+            "texto": "Gestão sinalizou possível revisão no patamar de rendimentos para o 1S26 — término de carências dos novos contratos deve elevar receita recorrente",
+            "cor": "emerald"
+          }
+        ]
+      },
+      {
+        "nome": "Caixa e Renda Fixa — Liquidez Imediata",
+        "tipo": "Fundos de Renda Fixa (CDI) — Liquidez Diária",
+        "icone": "💰",
+        "corIcone": "emerald",
+        "corBorda": "emerald",
+        "participacao": "2,1%",
+        "participacaoCor": "emerald",
+        "valor": "R$ 2,2 Mi",
+        "risco": "Muito Baixo",
+        "qualidade": "Boa",
+        "relevancia": "Reserva de liquidez do fundo",
+        "pontos": [
+          {
+            "texto": "R$ 2,2 Mi em fundos de renda fixa (R$ 2.199 mil) e disponibilidades (R$ 5 mil) — reserva enxuta para despesas operacionais",
+            "cor": "emerald"
+          },
+          {
+            "texto": "Receita mobiliária de R$ 174 mil em 2025 (R$ 0,12/cota no ano) — complemento modesto ao resultado recorrente",
+            "cor": "blue"
+          },
+          {
+            "texto": "Apenas 2,1% do ativo total — gestão mantém máxima alocação em imóvel produtivo, sem excesso de caixa ocioso",
+            "cor": "blue"
+          },
+          {
+            "texto": "Sem obrigações por aquisição de ativos e sem alavancagem — fundo opera sem compromissos financeiros pendentes",
+            "cor": "emerald"
+          }
+        ]
+      }
+    ],
+    "resumo": "O portfólio do CBOP11 é composto por um <strong class=\"text-blue-400\">único ativo imobiliário</strong> (50% da Torre Jatobá no Castello Branco Office Park, Alphaville/SP), avaliado em <strong class=\"text-emerald-400\">R$ 100,9 Mi</strong> após reavaliação positiva de 7,4% pela CBRE em dez/2025. O imóvel possui 16.739 m² de ABL com <strong class=\"text-amber-400\">ocupação de 76,8%</strong> e 11 locatários em 8 segmentos. A <strong class=\"text-amber-400\">Azul Linhas Aéreas concentra 38%</strong> da receita. Contratos 98% IPCA, 100% típicos, com WALE de 3,1 anos e <strong class=\"text-amber-400\">40% vencendo em 2026</strong>. Aluguel médio de R$ 48,10/m². O caixa de R$ 2,2 Mi (2,1% do ativo) serve como reserva operacional. Sem alavancagem."
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,46",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">54% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 72,18"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 33,17",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "10,8%",
+      "label": "Spread vs NTN-B",
+      "cor": "emerald",
+      "descricao": "Prêmio sobre o título público (elevado por desconto no P/VP)",
+      "detalhe": "DY CBOP11 (18,1%) vs NTN-B 2035 (7,34%)"
+    },
+    "recomendacoes": {
+      "valor": 0,
+      "label": "Recomendações",
+      "cor": "slate",
+      "descricao": "Fundo pequeno, fora do radar das principais casas de análise",
+      "detalhe": "Sem cobertura relevante de analistas"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-blue-400\">CBOP11</strong> encerra 2025 em um momento de <strong class=\"text-emerald-400\">inflexão operacional positiva</strong>. Sob a nova gestão da Pátria Investimentos (desde jul/2024), a vacância caiu de 56% para 23,2% com a entrada de 5 novos locatários no 2S25. A reavaliação pela CBRE em dezembro mostrou <strong class=\"text-emerald-400\">valorização de 7,4%</strong> (R$ 94 Mi para R$ 100,9 Mi), revertendo a desvalorização de 6,15% do ano anterior. A distribuição extraordinária de R$ 0,50/cota em dezembro refletiu a obrigação semestral de distribuir 95% do lucro caixa, e a gestão sinalizou possível revisão no patamar de rendimentos com o término das carências.",
+      "Os fundamentos financeiros de 2025 mostram receita total de R$ 5,6 Mi (R$ 3,97/cota), com receita de locação de R$ 4,5 Mi e resultado distribuível de R$ 2,3 Mi (R$ 1,65/cota). A carteira está 98% indexada ao IPCA, 100% em contratos típicos, sem alavancagem e com 97% dos ativos em imóveis e 3% em caixa. Os vencimentos dos contratos se concentram: 40% em 2026 e 50% em 2029+, demandando atenção na renovação dos contratos de curto prazo.",
+      "Entretanto, persistem <strong class=\"text-red-400\">riscos estruturais significativos</strong>: mono-ativo com 100% da exposição em Alphaville, liquidez extremamente baixa (ADTV R$ 8,9 mil), base de cotistas pequena e em queda (-16% em 2025, 99,2% pessoa física), concentração na Azul (38% da receita) e vacância ainda em 23,2%. O P/VP de 0,46x reflete o desconto por esses riscos. Para investidores com alta tolerância a risco e horizonte longo, o fundo oferece potencial de valorização e renda se a recuperação prosseguir."
+    ],
+    "pontosFortes": [
+      "Desconto de 54% sobre o VP (P/VP 0,46x)",
+      "Taxa de administração baixa (0,30%) sem performance",
+      "Reavaliação positiva do ativo (+7,4% pela CBRE em dez/25)",
+      "Recuperação expressiva da vacância em 2025 (56% para 23,2%)",
+      "Gestora Pátria de renome e experiência (+35 anos)",
+      "Sem alavancagem e sem obrigações de aquisição",
+      "Contratos 98% indexados ao IPCA",
+      "Sinalização de possível aumento de rendimentos no 1S26",
+      "Diversificação de inquilinos melhorando (11 locatários, 8 setores)"
+    ],
+    "pontosDeAtencao": [
+      "Fundo mono-ativo (100% Edifício Jatobá)",
+      "Liquidez muito baixa (ADTV R$ 8,9 mil)",
+      "Base de cotistas pequena e em queda (2.077, -16% a.a.)",
+      "Concentração na Azul Linhas Aéreas (38% da receita)",
+      "40% dos contratos vencem em 2026",
+      "Localização em Alphaville com excesso de oferta histórico",
+      "Vacância ainda em 23,2% (acima da média setorial)",
+      "Rendimento recorrente baixo (R$ 0,10/mês = 3,6% a.a. s/ mercado)",
+      "Performance desde o início negativa (-0,2% a.a. vs CDI 9,9%)"
+    ],
+    "conclusaoFinal": "O CBOP11 apresenta uma tese de <strong class=\"text-blue-400\">turnaround</strong> em andamento com catalisadores reais: redução de vacância, reavaliação positiva e possível aumento de rendimentos. A mudança de veredicto de VENDA para <strong class=\"text-amber-400\">MANTER</strong> reflete a melhora operacional sob gestão da Pátria, mas os riscos estruturais de mono-ativo, baixa liquidez e concentração de locatário impedem uma recomendação de compra. Indicado para investidores que já possuem posição e acreditam na continuidade da recuperação."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 1078,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

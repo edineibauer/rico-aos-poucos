@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "ticker": "VGIP11",
+    "nome": "Valora CRI Índice de Preços FII",
+    "segmento": "Papel - CRI IPCA+",
+    "badges": [
+      "100% IPCA+",
+      "52 CRIs",
+      "IPCA+8,7% a.a."
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 449
+  },
+  "seo": {
+    "title": "VGIP11 - Análise Completa | Valora CRI Índice de Preços FII",
+    "description": "Análise completa do FII VGIP11 baseada em 449 documentos oficiais. Fundo de crédito 100% IPCA+ com 52 CRIs, DY 12,7%, inadimplência zero e gestão ativa Valora. Taxas, portfólio e projeções 2026.",
+    "keywords": "VGIP11, Valora CRI, FII IPCA, CRI IPCA, análise VGIP11, dividend yield VGIP11, FII papel, Valora Investimentos, BTG Pactual",
+    "ogTitle": "VGIP11 - Análise Completa do FII Valora CRI Índice de Preços 2026",
+    "ogDescription": "Análise detalhada do VGIP11: FII de crédito 100% IPCA+ com 52 CRIs, DY 12,7%, inadimplência zero. Cupom médio IPCA+8,7% a.a., R$ 1,06 Bi de patrimônio.",
+    "twitterTitle": "VGIP11 - Análise Completa | FII Valora CRI Índice de Preços",
+    "twitterDescription": "Análise do VGIP11: 100% IPCA+, 52 CRIs, DY 12,7%, inadimplência zero. R$ 1,06 Bi de patrimônio, gestão ativa Valora. Taxas, portfólio e projeções 2026."
+  },
+  "indicadores": {
+    "cotacao": 82.5,
+    "cotacaoData": "21/02/2026",
+    "pvp": 0.92,
+    "pvpDesconto": "8% de desconto",
+    "dividendYield": 12.7,
+    "dividendoMensal": 0.71,
+    "dividendoAnual": 11.42,
+    "patrimonioLiquido": "R$ 1,06 Bi",
+    "vpCota": 90.33,
+    "cotistas": 84201
+  },
+  "recomendacao": {
+    "nota": 7.5,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "O <strong class=\"text-emerald-400\">VGIP11</strong> é um FII de crédito <strong class=\"text-emerald-400\">100% indexado ao IPCA</strong> com carteira diversificada de <strong class=\"text-emerald-400\">52 CRIs</strong>, inadimplência zero e rentabilidade de <strong class=\"text-emerald-400\">IPCA+8,7% a.a.</strong> O DY de 12,7% nos últimos 12 meses é consistente. A gestão ativa da Valora realiza rotação de carteira com ganhos de capital. O P/VP de 0,92 oferece <strong class=\"text-emerald-400\">8% de margem de segurança</strong>, e a carteira saudável com cupom médio elevado sustenta a recomendação."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 1,06 Bi",
+      "detalhe": "VP/cota: R$ 90,33",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 90,33</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,71",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 11,42/ano | DY 12,7%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "84.201",
+      "detalhe": "Liquidez: R$ 1,9 Mi/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Performance",
+      "valor": "IPCA+8,7%",
+      "detalhe": "Inadimplência: 0%",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Volatilidade nos Dividendos",
+      "descricao": "Os dividendos do VGIP11 variam significativamente mês a mês (R$ 0,65 a R$ 0,92 nos últimos meses) devido à defasagem de 2 meses do IPCA (M-2) e amortizações extraordinárias nos CRIs. Meses com IPCA negativo (como ago/2025) impactam diretamente os proventos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de Performance",
+      "descricao": "O fundo cobra 20% de taxa de performance sobre o que exceder IPCA + média do yield IMA-B5 (atualmente IPCA+7,76%). Em períodos de alta rentabilidade, essa taxa pode reduzir parte dos ganhos extraordinários do cotista.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Concentração em Poucos CRIs",
+      "descricao": "Os 10 maiores CRIs representam aproximadamente 50% do PL. Embora a carteira tenha 52 operações, a concentração nos maiores ativos (Tecnisa 6,6%, JSTX 5,9%, VFDL 5,5%) exige monitoramento contínuo.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Valora Gestão de Investimentos",
+    "nota": 8,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM Valora",
+        "valor": "R$ 13+ Bi"
+      },
+      {
+        "label": "Patrimônio VGIP",
+        "valor": "R$ 1,06 Bi"
+      },
+      {
+        "label": "Rentabilidade 12M",
+        "valor": "IPCA+8,7%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">Valora Investimentos</strong> é uma das principais gestoras independentes do Brasil, com mais de R$ 13 bilhões sob gestão. A expertise em crédito estruturado e originação de CRIs permite ao VGIP11 acessar operações diferenciadas. A gestão ativa inclui <strong class=\"text-emerald-400\">rotação de carteira com ganho de capital</strong> (R$ 22,9 Mi em negociações em 2025) e monitoramento intensivo de todos os ativos.",
+    "link": "../../gestores/valora-gestao-de-investimentos/"
+  },
+  "taxas": {
+    "subtitulo": "Dentro da média do segmento, com performance fee",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração e Gestão",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre o patrimônio líquido do Fundo",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o excedente de IPCA + yield IMA-B5",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Escrituração",
+        "valor": "0,05% a.a.",
+        "detalhe": "Sobre o patrimônio líquido",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Crédito IPCA+",
+    "comparativo": [
+      {
+        "ticker": "VGIP11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IPCA+IMA-B5",
+        "destaque": true
+      },
+      {
+        "ticker": "KNIP11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IPCA+3,5%"
+      },
+      {
+        "ticker": "RBRR11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ CDI+2%"
+      },
+      {
+        "ticker": "AFHI11",
+        "taxa": "1,00%",
+        "perf": "Sem performance"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Escriturador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers Auditores Independentes"
+      },
+      {
+        "label": "Início",
+        "valor": "Março/2020"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Em CRIs",
+        "valor": "99,1%"
+      },
+      {
+        "label": "Caixa",
+        "valor": "0,9%"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "52",
+        "cor": "emerald"
+      },
+      {
+        "label": "Inadimplência",
+        "valor": "0%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Residencial",
+        "Shopping",
+        "BTS/Logística",
+        "Pulverizado",
+        "Infraestrutura",
+        "Escritório",
+        "Hospital",
+        "Outros"
+      ],
+      "data": [
+        16,
+        23.5,
+        18.5,
+        15.3,
+        5.4,
+        3,
+        2.1,
+        16.2
+      ],
+      "cores": [
+        "#3b82f6",
+        "#f59e0b",
+        "#10b981",
+        "#8b5cf6",
+        "#06b6d4",
+        "#ec4899",
+        "#ef4444",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+ (média 8,0%)",
+        "IGPM+ (7,0%)",
+        "Caixa"
+      ],
+      "data": [
+        98.5,
+        0.6,
+        0.9
+      ],
+      "cores": [
+        "#3b82f6",
+        "#f59e0b",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Tecnisa 397S",
+        "setor": "Residencial",
+        "receita": "6,6%",
+        "rating": "A (S&P)",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI JSTX",
+        "setor": "BTS",
+        "receita": "5,9%",
+        "rating": "IPCA+9,84%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI VFDL",
+        "setor": "Logística",
+        "receita": "5,5%",
+        "rating": "IPCA+9,98%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Matarazzo 451S/545S",
+        "setor": "Shopping",
+        "receita": "7,7%",
+        "rating": "IPCA+9,50%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Outros (~48 CRIs)",
+        "setor": "Diversificado",
+        "receita": "74,3%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "CRIs Com Rating",
+        "valor": 12,
+        "cor": "emerald"
+      },
+      {
+        "label": "CRIs Sem Rating",
+        "valor": 40,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "Carteira com 99,1% em CRIs indexados ao IPCA, com cupom médio de ~8,0% a.a. e duration média de ~3,5 anos. A gestão monitora intensivamente todos os ativos e declara que a <strong class=\"text-emerald-400\">carteira encontra-se 100% adimplente</strong>. Em janeiro/2026, o fundo vendeu R$ 73,3 Mi de um CRI IPCA+7,0% e reinvestiu R$ 82,1 Mi em três CRIs com cupom médio de IPCA+9,6%, aumentando o carrego da carteira. 7 emissões realizadas desde o IPO."
+  },
+  "timeline": {
+    "subtitulo": "Crescimento consistente focado em IPCA+",
+    "periodos": [
+      {
+        "periodo": "Mar/2020",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Constituição do Valora CRI Índice de Preço FII. Início em março/2020, durante o início da pandemia.",
+        "pontos": [
+          "CNPJ: 34.197.811/0001-46",
+          "Gestora: Valora Gestão de Investimentos",
+          "Administrador: BTG Pactual",
+          "Foco 100% em CRIs indexados ao IPCA"
+        ]
+      },
+      {
+        "periodo": "2020-2022",
+        "label": "CRESCIMENTO INICIAL",
+        "cor": "emerald",
+        "descricao": "Primeiras emissões e construção da carteira de CRIs. Patrimônio cresceu de R$ 100 Mi para R$ 500 Mi.",
+        "pontos": [
+          "4 emissões concluídas até 2022",
+          "Carteira diversificada em múltiplos segmentos",
+          "Inadimplência zero desde o início",
+          "Distribuições consistentes acima do IPCA"
+        ]
+      },
+      {
+        "periodo": "2023-2024",
+        "label": "CONSOLIDAÇÃO",
+        "cor": "purple",
+        "descricao": "Novas emissões e amadurecimento da carteira. Base de cotistas ultrapassou 80 mil.",
+        "pontos": [
+          "5ª e 6ª emissões concluídas",
+          "PL ultrapassou R$ 1 bilhão",
+          "Gestão ativa com rotação de CRIs e ganho de capital",
+          "Cupom médio mantido acima de IPCA+8%"
+        ]
+      },
+      {
+        "periodo": "2025-2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "7ª emissão concluída. Gestão ativa ampliando carrego da carteira em cenário de juros elevados.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">PL: R$ 1,06 Bi | 84.201 cotistas</strong>",
+          "<strong class=\"text-emerald-400\">DY 12,7% | IPCA+8,7% a.a.</strong>",
+          "52 CRIs na carteira, 100% adimplentes",
+          "Jan/2026: Venda de CRI IPCA+7% e reinvestimento em IPCA+9,6%",
+          "R$ 0,10/cota de IPCA acruado a distribuir"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - POSITIVA:",
+      "texto": "O VGIP11 cresceu consistentemente desde a constituição em 2020, expandindo de ~R$ 100M para <strong class=\"text-emerald-400\">R$ 1,06 bilhão de patrimônio</strong> através de 7 emissões. A carteira diversificou para <strong class=\"text-emerald-400\">52 CRIs 100% indexados ao IPCA</strong> com inadimplência zero. A gestão ativa da Valora mantém o cupom médio em patamares elevados (IPCA+8,7%), com rotações estratégicas para aumentar o carrego."
+    },
+    "crescimento": [
+      {
+        "label": "Crescimento PL",
+        "valor": "+960%",
+        "detalhe": "~R$ 100 Mi para R$ 1,06 Bi"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "52",
+        "detalhe": "100% IPCA+"
+      },
+      {
+        "label": "DY 12 Meses",
+        "valor": "12,7%",
+        "detalhe": "IPCA+8,7% a.a."
+      },
+      {
+        "label": "Emissões",
+        "valor": "7",
+        "detalhe": "Crescimento via ofertas"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "VGIP11 é um <strong class=\"text-emerald-400\">FII de crédito 100% indexado ao IPCA</strong> com carteira de 52 CRIs diversificados por segmento, cupom médio de IPCA+8,0% e <strong class=\"text-emerald-400\">inadimplência zero</strong>. A gestão ativa da Valora realiza rotação de ativos para otimizar o carrego, com destaque para a recente troca de CRI IPCA+7% por IPCA+9,6%. O P/VP de 0,92 oferece <strong class=\"text-emerald-400\">8% de margem de segurança</strong>, e o DY de 12,7% é atrativo para quem busca proteção contra inflação.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">proteção inflacionária pura</strong> (100% IPCA+)",
+      "Perfil <strong class=\"text-emerald-400\">moderado</strong> que aceita exposição a crédito imobiliário",
+      "Quem busca <strong class=\"text-emerald-400\">renda mensal acima da inflação</strong> com isenção de IR",
+      "Investidores que valorizam <strong class=\"text-emerald-400\">gestão ativa e diversificação de CRIs</strong>"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-amber-400\">dividendos estáveis mês a mês</strong> (IPCA M-2 causa volatilidade)",
+      "Investidores que <strong class=\"text-amber-400\">não toleram taxa de performance</strong>",
+      "Perfil <strong class=\"text-amber-400\">ultra-conservador</strong> que prefere somente Tesouro IPCA+",
+      "Quem busca <strong class=\"text-amber-400\">exposição a CDI</strong> (fundo é 100% IPCA+)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      1.4,
+      1.13,
+      0.61,
+      0.91,
+      0.82,
+      1.19,
+      1.37,
+      0.43,
+      0.74,
+      0.65,
+      0.92,
+      0.71
+    ],
+    "chartCor": "#3b82f6",
+    "chartYMin": 0.3,
+    "chartYMax": 1.6,
+    "totaisAnuais": [
+      {
+        "ano": "Acum. 2025",
+        "valor": "R$ 11,42"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "12,7%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Rentabilidade",
+        "valor": "IPCA+8,7% a.a."
+      },
+      {
+        "ano": "IPCA Acruado",
+        "valor": "R$ 0,10/cota"
+      },
+      {
+        "ano": "Tendência",
+        "valor": "Variável (IPCA M-2)"
+      }
+    ],
+    "guidance": {
+      "periodo": "Último dividendo (Dez/25)",
+      "faixa": "R$ 0,71/cota",
+      "unidade": "IPCA+8,8% a.a. (cota patrimonial)"
+    },
+    "stats": [
+      {
+        "label": "Maior (Jan/25)",
+        "valor": "R$ 1,40",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Ago/25)",
+        "valor": "R$ 0,43"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "2020"
+      },
+      {
+        "label": "Acumulado 2025",
+        "valor": "R$ 11,42",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendência",
+        "valor": "IPCA M-2",
+        "cor": "blue"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,92",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">8% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 90,33"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 82,50",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "IPCA+8,7%",
+      "label": "Rentabilidade 12M",
+      "cor": "emerald",
+      "descricao": "Rendimento equivalente a IPCA+8,7% a.a. sobre a cota patrimonial, com isenção de IR para PF",
+      "detalhe": "Cupom médio da carteira acima do benchmark"
+    },
+    "recomendacoes": {
+      "valor": "1,05%",
+      "label": "Taxa Total (s/ perf.)",
+      "cor": "blue",
+      "descricao": "Administração 1,00% + Escrituração 0,05%. Performance 20% sobre excedente",
+      "detalhe": "Dentro da média do segmento IPCA+"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-emerald-400\">VGIP11</strong> se destaca como um dos principais FIIs de crédito <strong class=\"text-emerald-400\">100% indexados ao IPCA</strong> do mercado, com patrimônio de R$ 1,06 bilhão e carteira de <strong class=\"text-emerald-400\">52 CRIs com inadimplência zero</strong>. A rentabilidade de IPCA+8,7% a.a. nos últimos 12 meses demonstra a capacidade da gestão Valora de manter cupons elevados através de originação e rotação ativa de ativos.",
+      "A gestão ativa é um diferencial importante: em janeiro/2026, o fundo vendeu R$ 73,3 Mi de um CRI IPCA+7,0% e reinvestiu R$ 82,1 Mi em três CRIs com cupom médio de IPCA+9,6%, <strong class=\"text-emerald-400\">aumentando o carrego da carteira</strong>. Em 2025, as negociações de CRIs geraram R$ 22,9 Mi em ganhos de capital. O fundo ainda possui R$ 0,10/cota em IPCA acruado a distribuir.",
+      "O P/VP de 0,92 oferece <strong class=\"text-emerald-400\">8% de margem de segurança</strong> sobre o valor patrimonial, em um fundo que mantém carteira saudável e diversificada. Os dividendos são naturalmente voláteis mês a mês devido à indexação IPCA M-2, mas a rentabilidade acumulada é consistentemente acima do benchmark."
+    ],
+    "pontosFortes": [
+      "100% indexado ao IPCA (proteção inflacionária pura)",
+      "Inadimplência zero em 52 CRIs",
+      "DY 12,7% (IPCA+8,7% a.a.)",
+      "P/VP 0,92 (8% de desconto)",
+      "Gestão ativa com rotação de CRIs",
+      "Patrimônio robusto de R$ 1,06 Bi",
+      "84.201 cotistas com liquidez de R$ 1,9 Mi/dia"
+    ],
+    "pontosDeAtencao": [
+      "Dividendos voláteis mês a mês (IPCA M-2)",
+      "Taxa de performance de 20% sobre excedente do benchmark",
+      "Concentração nos 10 maiores CRIs (~50% do PL)",
+      "Sensível a cenários de deflação ou IPCA abaixo do esperado",
+      "Muitos CRIs sem rating de agência externa",
+      "Risco de crédito inerente aos CRIs"
+    ],
+    "conclusaoFinal": "O VGIP11 é uma opção sólida para investidores que buscam <strong class=\"text-emerald-400\">proteção inflacionária pura com renda mensal</strong>. A combinação de carteira 100% IPCA+ com inadimplência zero, gestão ativa comprovada e desconto de 8% sobre o VP cria relação risco-retorno atrativa. O principal monitoramento deve ser sobre a <strong class=\"text-amber-400\">volatilidade dos dividendos</strong> (inerente ao IPCA M-2) e a <strong class=\"text-amber-400\">qualidade de crédito dos CRIs</strong> sem rating externo. Para investidores com horizonte de médio/longo prazo que buscam hedge contra inflação, o fundo é uma das melhores opções do segmento."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 449,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

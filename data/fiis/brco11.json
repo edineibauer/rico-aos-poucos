@@ -1,0 +1,806 @@
+{
+  "meta": {
+    "ticker": "BRCO11",
+    "nome": "Bresco Logística FII",
+    "segmento": "Tijolo - Logística",
+    "badges": [
+      "Logística",
+      "14 Propriedades",
+      "86% Inquilinos Grau de Investimento"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 998
+  },
+  "seo": {
+    "title": "BRCO11 - Análise Completa | Bresco Logística FII",
+    "description": "Análise completa do FII BRCO11 baseada em 998 documentos oficiais. Fundo logístico com 14 propriedades, ~586 mil m² ABL, vacância 5,3%, DY 8,9%. 6ª emissão concluída, aquisição de Viracopos e Simões Filho. Projeções 2026.",
+    "keywords": "BRCO11, Bresco Logística, FII logístico, análise BRCO11, dividend yield BRCO11, galpões logísticos, last mile, Natura, Mercado Livre, Bresco Viracopos, 6ª emissão",
+    "ogTitle": "BRCO11 - Análise Completa do Bresco Logística FII 2026",
+    "ogDescription": "Análise detalhada do BRCO11: 14 propriedades logísticas, ~586 mil m² ABL, DY 8,9%. 6ª emissão concluída com R$ 248 Mi. Aquisição de Viracopos e Simões Filho aprovada. 86% grau de investimento. Projeções 2026.",
+    "twitterTitle": "BRCO11 - Análise Completa | Bresco Logística FII",
+    "twitterDescription": "Análise do BRCO11: 14 propriedades logísticas, ~586 mil m² ABL, DY 8,9%. 76% last mile, 86% grau de investimento. 6ª emissão e novas aquisições. Projeções 2026."
+  },
+  "indicadores": {
+    "cotacao": 117,
+    "cotacaoData": "14/03/2026",
+    "pvp": 0.99,
+    "pvpDesconto": "1% de desconto",
+    "dividendYield": 8.9,
+    "dividendoMensal": 0.87,
+    "dividendoAnual": 10.44,
+    "patrimonioLiquido": "R$ 2,12 Bi",
+    "vpCota": 117.57,
+    "cotistas": 122000,
+    "cotistasDetalhe": "18 milhões de cotas",
+    "ocupacao": 94.7,
+    "wault": 4.7,
+    "numImoveis": 14,
+    "ablTotal": "586 mil",
+    "numEstados": 8,
+    "numInquilinos": 30
+  },
+  "recomendacao": {
+    "nota": 8,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "O <strong class=\"text-emerald-400\">BRCO11</strong> vive um momento transformacional com a <strong class=\"text-emerald-400\">conclusão da 6ª emissão (R$ 248 Mi)</strong> e a <strong class=\"text-emerald-400\">aquisição do Bresco Viracopos e Bresco Simões Filho</strong>, elevando o portfólio de 12 para 14 propriedades (~586 mil m² ABL). A gestão ativa segue impecável: <strong class=\"text-emerald-400\">Reckitt expandiu para 100% do Bresco Itupeva</strong>, <strong class=\"text-emerald-400\">Correios substituíram Americanas com +29,4% no aluguel</strong>, e <strong class=\"text-emerald-400\">Olist renovou com +27% de reajuste</strong>. Com 86% de inquilinos grau de investimento, 100% IPCA e projeção de aumento de +7,6% no resultado recorrente, o BRCO11 consolida-se como referência premium no segmento logístico."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 2,12 Bi",
+      "detalhe": "VP/cota: R$ 117,57",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 117,57</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,87",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 10,44/ano | DY 8,9%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "122.000",
+      "detalhe": "18 milhões de cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Preço Justo",
+      "valor": "R$ 130,00",
+      "detalhe": "+11% upside",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Vacância no Bresco Canoas (53%)",
+      "descricao": "O imóvel Bresco Canoas (RS) possui 53% de vacância após a saída da FM Logistic em ago/2025. A M. Dias Branco ocupou 47% do imóvel (15.553 m²) em set/2025, mas restam 17.724 m² vagos (3,0% da ABL total pós-aquisições). Pipeline ativo com conversas para 1,49x a área vaga.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Bresco Embu - 100% Vago",
+      "descricao": "O imóvel Bresco Embu (7.476 m²) está 100% vago após saída da MRO em ago/2025. Representa 1,3% da ABL pós-aquisições. Pipeline com conversas para 1,0x a área vaga. Potencial de expansão de 4.815 m² adicional.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "WestRock saindo do Bresco Itupeva (abr/26)",
+      "descricao": "A WestRock notificou rescisão antecipada em jul/2025 de 14.212 m² (3,0% ABL original). Previsão de desocupação em abr/2026, com pagamento de multa indenizatória. Porém, a Reckitt já expandiu para absorver 39.013 m² do mesmo imóvel (até 2031). O Fundo possui conversas avançadas e iniciais para 2,4x a área a ser desocupada.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Bresco Bahia - Vencimento curto (0,4 ano)",
+      "descricao": "O contrato com Magalu no Bresco Bahia (58.715 m² - 10% da ABL) vence em meados de 2026. É o maior prazo remanescente curto do portfólio. A renovação ou relocação é crucial para manutenção da receita. A aquisição do Bresco Simões Filho (vizinho na BA) diversifica o risco na região.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Bresco Investimentos",
+    "nota": 9,
+    "notaLabel": "EXCELENTE",
+    "link": "../../gestores/bresco-investimentos/",
+    "stats": [
+      {
+        "label": "No mercado",
+        "valor": "6 anos"
+      },
+      {
+        "label": "Patrimônio",
+        "valor": "R$ 2,12 Bi"
+      },
+      {
+        "label": "DY desde IPO",
+        "valor": "+56%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "Bresco Investimentos é uma das gestoras mais especializadas em logística do Brasil. <strong class=\"text-emerald-400\">100% de participação em todos os ativos</strong>, sem utilização de Renda Mínima Garantida (RMG). Gestão ativa com foco em <strong class=\"text-emerald-400\">inquilinos grau de investimento</strong> (86%) e propriedades padrão A+ (87%). Dividendos cresceram 56% desde o IPO. Em 2025, demonstrou excelência na reciclagem de inquilinos: substituiu Americanas por Correios (+29,4%), renovou Olist (+27%), expandiu Reckitt para 100% do Itupeva e <strong class=\"text-emerald-400\">concluiu a 6ª emissão e aquisição de 2 novos ativos</strong>."
+  },
+  "taxas": {
+    "subtitulo": "Competitivas para o segmento logístico",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Gestão",
+        "valor": "1,0% a.a.",
+        "detalhe": "Sobre patrimônio líquido",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre distribuição > 6,00% s/ emissões atualizadas IPCA",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,03-0,05%",
+        "detalhe": "Oliveira Trust (varia conforme PL)",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs Logísticos",
+    "comparativo": [
+      {
+        "ticker": "BRCO11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ 6% IPCA",
+        "destaque": true
+      },
+      {
+        "ticker": "BTLG11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "HGLG11",
+        "taxa": "0,60%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "XPLG11",
+        "taxa": "0,95%",
+        "perf": "+20% perf. s/ CDI"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Bresco Investimentos e Gestão Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Oliveira Trust DTVM S.A."
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Propriedades",
+        "valor": "14"
+      },
+      {
+        "label": "m² ABL",
+        "valor": "~586 mil"
+      },
+      {
+        "label": "Anos WAULT",
+        "valor": "4,7",
+        "cor": "emerald"
+      },
+      {
+        "label": "Ocupação",
+        "valor": "94,7%",
+        "cor": "blue"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Last Mile",
+        "Centros de Distribuição",
+        "Outros (Hotel/Escritórios)"
+      ],
+      "data": [
+        76,
+        20,
+        4
+      ],
+      "cores": [
+        "#10b981",
+        "#3b82f6",
+        "#8b5cf6"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Natura",
+        "Mercado Livre",
+        "Whirlpool",
+        "GPA",
+        "Magalu",
+        "BRF",
+        "Correios",
+        "Reckitt",
+        "Outros"
+      ],
+      "data": [
+        15,
+        12,
+        10,
+        8,
+        7,
+        5,
+        4,
+        4,
+        35
+      ],
+      "cores": [
+        "#10b981",
+        "#f59e0b",
+        "#3b82f6",
+        "#8b5cf6",
+        "#ec4899",
+        "#14b8a6",
+        "#ef4444",
+        "#06b6d4",
+        "#6b7280"
+      ]
+    },
+    "locatariosNota": {
+      "titulo": "Inquilinos de Alto Padrão",
+      "texto": "O BRCO11 possui <strong class=\"text-emerald-400\">86% dos inquilinos com grau de investimento</strong> (ratings AAA ou AA em escala brasileira ou equivalentes globais). Com a incorporação do Bresco Viracopos (19 inquilinos) e Simões Filho, o fundo passa a contar com ~30 inquilinos nos setores de varejo/e-commerce (39%), bens de consumo (49%), operador logístico (3%) e indústria (10%). <strong class=\"text-emerald-400\">100% dos contratos são indexados ao IPCA</strong>. Destaque para a entrada de Nubank no portfólio via Bresco Viracopos."
+    },
+    "locatarios": [
+      {
+        "nome": "Natura",
+        "setor": "Bens de Consumo",
+        "receita": "15%",
+        "rating": "AAA (br)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Mercado Livre",
+        "setor": "E-commerce",
+        "receita": "12%",
+        "rating": "AAA (br)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Whirlpool",
+        "setor": "Indústria",
+        "receita": "10%",
+        "rating": "AA+ (Global)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "GPA (Pão de Açúcar)",
+        "setor": "Varejo Supermercados",
+        "receita": "8%",
+        "rating": "AA+ (br)",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Reckitt",
+        "setor": "Bens de Consumo",
+        "receita": "4%",
+        "rating": "AA+ (Global)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Nubank",
+        "setor": "Fintech / Pagamentos",
+        "receita": "~1%",
+        "rating": "Investment Grade",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Outros (~24 inquilinos)",
+        "setor": "Diversos (Magalu, BRF, Correios, Heineken, M.Dias Branco, etc.)",
+        "receita": "50%",
+        "rating": "Investment Grade",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Ativos Baixo Risco",
+        "valor": 10,
+        "cor": "emerald"
+      },
+      {
+        "label": "Ativos Risco Moderado",
+        "valor": 2,
+        "cor": "blue"
+      },
+      {
+        "label": "Ativos Vacância Relevante",
+        "valor": 2,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "A vacância está concentrada no Bresco Canoas (53% vago - 17.724 m²) e Bresco Embu (100% vago - 7.476 m²). Os demais 12 ativos operam com ocupação alta. O Bresco Bahia (Magalu) com 0,4 ano de prazo remanescente demanda atenção para renovação. A WestRock sairá do Bresco Itupeva em abr/26, mas a Reckitt já absorveu 39.013 m² do mesmo imóvel até 2031. Com as novas aquisições (Viracopos e Simões Filho), o fundo diversifica significativamente o risco por inquilino e região."
+  },
+  "ativos": {
+    "subtitulo": "14 propriedades | ~586 mil m² ABL | 8 estados",
+    "legendaRisco": [
+      {
+        "label": "Baixo - Ocupação plena + contrato longo",
+        "cor": "emerald"
+      },
+      {
+        "label": "Moderado - Vencimento médio ou parcialmente vago",
+        "cor": "blue"
+      },
+      {
+        "label": "Atenção - Vacância relevante ou vencimento curto",
+        "cor": "amber"
+      },
+      {
+        "label": "Alto - Vacância elevada ou vencimento iminente",
+        "cor": "orange"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "São Paulo Capital (4 propriedades) - ~21% ABL",
+        "cor": "blue",
+        "itens": [
+          {
+            "nome": "Whirlpool São Paulo",
+            "cidade": "São Paulo/SP",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 50952,
+            "locatario": "Whirlpool",
+            "vencimento": "2034",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "GPA CD04 São Paulo",
+            "cidade": "São Paulo/SP",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 35510,
+            "locatario": "GPA",
+            "vencimento": "2031",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Bresco Osasco",
+            "cidade": "Osasco/SP",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 29637,
+            "locatario": "Olist, RodoLuki, Heineken",
+            "vencimento": "2030-2031",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Bresco Embu",
+            "cidade": "Embu das Artes/SP",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 7476,
+            "locatario": "Vago",
+            "vencimento": "-",
+            "risco": "Alto",
+            "riscoCor": "orange"
+          }
+        ]
+      },
+      {
+        "nome": "Interior SP (3 propriedades) - ~28% ABL",
+        "cor": "emerald",
+        "itens": [
+          {
+            "nome": "Bresco Viracopos (NOVO)",
+            "cidade": "Campinas/SP",
+            "tipo": "Multiuso A/A+",
+            "tipoCor": "emerald",
+            "abl": 87100,
+            "locatario": "Nubank, 18 outros inquilinos",
+            "vencimento": "2030 (média)",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Bresco Itupeva",
+            "cidade": "Itupeva/SP",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 38965,
+            "locatario": "Reckitt (100%), WestRock (saída abr/26)",
+            "vencimento": "2031",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "HUB Natura Itupeva",
+            "cidade": "Itupeva/SP",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 34845,
+            "locatario": "Natura",
+            "vencimento": "2028",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          }
+        ]
+      },
+      {
+        "nome": "Sul (2 propriedades) - ~10% ABL",
+        "cor": "amber",
+        "itens": [
+          {
+            "nome": "Bresco Canoas",
+            "cidade": "Canoas/RS",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 33296,
+            "locatario": "M. Dias Branco (47%)",
+            "vencimento": "2030",
+            "risco": "Atenção",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "BRF Londrina",
+            "cidade": "Londrina/PR",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 23173,
+            "locatario": "BRF",
+            "vencimento": "2032",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          }
+        ]
+      },
+      {
+        "nome": "Sudeste/Nordeste (5 propriedades) - ~41% ABL",
+        "cor": "emerald",
+        "itens": [
+          {
+            "nome": "Bresco Contagem",
+            "cidade": "Contagem/MG",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 72941,
+            "locatario": "Bunzl, Correios",
+            "vencimento": "2029-2030",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Bresco Bahia",
+            "cidade": "Lauro de Freitas/BA",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 58715,
+            "locatario": "Magalu",
+            "vencimento": "2026",
+            "risco": "Atenção",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "Natura Murici",
+            "cidade": "Murici/AL",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 50291,
+            "locatario": "Natura",
+            "vencimento": "2039",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Bresco Simões Filho (NOVO)",
+            "cidade": "Simões Filho/BA",
+            "tipo": "Logístico AAA",
+            "tipoCor": "emerald",
+            "abl": 26500,
+            "locatario": "Pague Menos, FedEx, Nextracker, outros",
+            "vencimento": "2028 (média)",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Bresco Resende",
+            "cidade": "Resende/RJ",
+            "tipo": "Logístico A+",
+            "tipoCor": "emerald",
+            "abl": 25488,
+            "locatario": "Correios",
+            "vencimento": "2026",
+            "risco": "Atenção",
+            "riscoCor": "amber"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "De IPO em 2019 a referência em logística",
+    "periodos": [
+      {
+        "periodo": "2016-2019",
+        "label": "FUNDAÇÃO E IPO",
+        "cor": "blue",
+        "descricao": "Bresco Logística constituído em 2016, IPO na B3 em dezembro de 2019.",
+        "pontos": [
+          "Constituição do fundo em julho de 2016",
+          "IPO em dez/2019 com portfólio logístico de qualidade",
+          "Foco em galpões logísticos de alto padrão (A+)",
+          "Gestão 100% dedicada ao segmento logístico"
+        ]
+      },
+      {
+        "periodo": "2020-2022",
+        "label": "CRESCIMENTO PÓS-IPO",
+        "cor": "emerald",
+        "descricao": "Expansão do portfólio e valorização com o boom do e-commerce.",
+        "pontos": [
+          "Crescimento de 17x na base de cotistas desde o IPO",
+          "Expansão do portfólio com novas aquisições",
+          "Desinvestimento estratégico do Bresco São Paulo",
+          "Presença de 100% nos pregões da B3"
+        ]
+      },
+      {
+        "periodo": "2023-2024",
+        "label": "MATURAÇÃO",
+        "cor": "purple",
+        "descricao": "Consolidação do portfólio e manutenção da qualidade dos inquilinos.",
+        "pontos": [
+          "Manutenção de inquilinos grau de investimento (86%+)",
+          "100% dos contratos indexados ao IPCA",
+          "Aumento consistente do dividendo desde IPO (+56%)",
+          "Liquidez diária de R$ 3 Mi e 100% presença em pregões"
+        ]
+      },
+      {
+        "periodo": "2025-2026",
+        "label": "EXPANSÃO TRANSFORMACIONAL",
+        "cor": "emerald",
+        "descricao": "6ª emissão, aquisição de Viracopos e Simões Filho, reciclagem ativa de inquilinos.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">Abr/25: Natura Murici renovado até 2039 (+obras ETE e estacionamento)</strong>",
+          "<strong class=\"text-emerald-400\">Mai/25: Reckitt renova Itupeva até 2031 (72 meses)</strong>",
+          "<strong class=\"text-blue-400\">Jun/25: BRCO11 integra índice internacional</strong>",
+          "<strong class=\"text-emerald-400\">Jul/25: Correios substituem Americanas em Contagem (+29,4% aluguel)</strong>",
+          "<strong class=\"text-amber-400\">Jul/25: WestRock rescinde Itupeva (14.212 m²) - saída prevista abr/26</strong>",
+          "<strong class=\"text-emerald-400\">Set/25: M. Dias Branco ocupa 15.553 m² no Bresco Canoas</strong>",
+          "<strong class=\"text-blue-400\">Out/25: Contratação S&P Ratings para o Fundo</strong>",
+          "<strong class=\"text-emerald-400\">Nov/25: AGE aprova aquisição de Viracopos (R$ 448 Mi) e Simões Filho (R$ 81 Mi)</strong>",
+          "<strong class=\"text-emerald-400\">Nov/25: Reckitt expande para 100% do Bresco Itupeva (39.013 m² até 2031)</strong>",
+          "<strong class=\"text-blue-400\">Dez/25: 6ª emissão concluída - R$ 248,6 Mi (2.116.170 novas cotas)</strong>",
+          "<strong class=\"text-emerald-400\">Dez/25: Nubank assina contrato no Bresco Viracopos (9.150 m²)</strong>",
+          "<strong class=\"text-emerald-400\">Jan/26: Olist renova Bresco Osasco até 2031 (+27% reajuste aluguel)</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - MUITO POSITIVA:",
+      "texto": "O BRCO11 vive o <strong class=\"text-emerald-400\">momento mais transformacional desde o IPO</strong>. A 6ª emissão (R$ 248 Mi) e a aprovação da aquisição do Bresco Viracopos e Simões Filho elevam o portfólio de 12 para 14 propriedades e de ~472 para ~586 mil m² de ABL. A gestão ativa da Bresco brilhou em 2025: <strong class=\"text-emerald-400\">substituiu Americanas por Correios (+29,4%)</strong>, <strong class=\"text-emerald-400\">renovou Olist (+27%)</strong>, <strong class=\"text-emerald-400\">expandiu Reckitt para 100% do Itupeva</strong> e <strong class=\"text-emerald-400\">trouxe Nubank para o portfólio</strong>. O fundo se consolida como referência premium no segmento logístico brasileiro."
+    },
+    "crescimento": [
+      {
+        "label": "Crescimento DY",
+        "valor": "+56%",
+        "detalhe": "Desde o IPO em dez/2019"
+      },
+      {
+        "label": "Crescimento Cotistas",
+        "valor": "17x",
+        "detalhe": "IPO até 122 mil cotistas"
+      },
+      {
+        "label": "Rentabilidade Total",
+        "valor": "+86,3%",
+        "detalhe": "Desde o IPO (vs 23,2% IFIX)"
+      },
+      {
+        "label": "6ª Emissão",
+        "valor": "R$ 248 Mi",
+        "detalhe": "2.116.170 novas cotas"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "BRCO11 é um <strong class=\"text-emerald-400\">FII logístico premium em fase de expansão</strong> com 14 propriedades (87% padrão A+), inquilinos de primeira linha (<strong class=\"text-emerald-400\">86% grau de investimento</strong>), e <strong class=\"text-emerald-400\">100% dos contratos indexados ao IPCA</strong>. O foco em ativos last mile (76% da ABL) posiciona o fundo no segmento mais demandado da logística. A 6ª emissão (R$ 248 Mi) financiou a aquisição do <strong class=\"text-emerald-400\">Bresco Viracopos</strong> (87 mil m² + 81 mil m² expansão, vizinho do maior aeroporto de carga da América Latina) e <strong class=\"text-emerald-400\">Bresco Simões Filho</strong> (26,5 mil m² + 10 mil m² expansão). A projeção de resultado indica <strong class=\"text-emerald-400\">+7,6% de incremento recorrente</strong> e rendimentos estimados de R$ 0,87-0,97/cota no 1S26-1S27.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">exposição premium ao segmento logístico</strong> em expansão",
+      "Perfil <strong class=\"text-emerald-400\">moderado</strong> com horizonte de médio/longo prazo",
+      "Quem valoriza <strong class=\"text-emerald-400\">qualidade de inquilinos</strong> e proteção inflacionária (IPCA)",
+      "Investidores que apreciam <strong class=\"text-emerald-400\">gestão especializada e ativa</strong> com track record comprovado",
+      "Quem busca <strong class=\"text-emerald-400\">crescimento do portfólio</strong> com potencial de expansão de ABL de 21%"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-amber-400\">dividend yield acima de 10%</strong> no curto prazo",
+      "Investidores que preferem <strong class=\"text-amber-400\">FIIs de papel</strong> com maior rendimento mensal",
+      "Perfil <strong class=\"text-amber-400\">especulativo</strong> focado em ganho de capital rápido",
+      "Quem <strong class=\"text-amber-400\">não aceita diluição</strong> de novas emissões ou aquisições com partes relacionadas"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.87,
+      0.87,
+      0.87,
+      1.05,
+      0.87,
+      0.87,
+      0.87,
+      0.87,
+      0.87,
+      0.87,
+      0.87,
+      0.87
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.7,
+    "chartYMax": 1.15,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 8,40"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 9,24"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 10,08"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 10,62",
+        "cor": "emerald"
+      },
+      {
+        "ano": "2026 (est.)",
+        "valor": "R$ 10,44 - R$ 11,16",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "1S26 - 1S27",
+      "faixa": "R$ 0,87 - R$ 0,97",
+      "unidade": "por cota/mês (est. gestão)"
+    },
+    "stats": [
+      {
+        "label": "Último Dividendo",
+        "valor": "R$ 0,87"
+      },
+      {
+        "label": "Período de Referência",
+        "valor": "Fev/2026"
+      },
+      {
+        "label": "Maior (Jun/25)",
+        "valor": "R$ 1,05",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Recorrente)",
+        "valor": "R$ 0,87"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Crescente (est. 2S26)",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,99",
+      "descricao": "Cota negociada <span class=\"text-emerald-400\">levemente abaixo</span> do valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 117,57"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 117,00",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "1,56%",
+      "label": "Spread vs NTN-B",
+      "cor": "blue",
+      "descricao": "Prêmio sobre o título público com isenção de IR para PF",
+      "detalhe": "DY BRCO11 (8,9%) vs NTN-B 2035 (7,34%)"
+    },
+    "recomendacoes": {
+      "valor": 25,
+      "label": "Recomendações",
+      "cor": "blue",
+      "descricao": "Menções em carteiras recomendadas de corretoras e analistas",
+      "detalhe": "Um dos FIIs logísticos mais recomendados do mercado"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-emerald-400\">BRCO11</strong> atravessa um momento transformacional. Com a <strong class=\"text-emerald-400\">conclusão da 6ª emissão (R$ 248 Mi)</strong> e a <strong class=\"text-emerald-400\">aprovação da aquisição do Bresco Viracopos e Simões Filho</strong>, o portfólio cresce de 12 para 14 propriedades, totalizando ~586 mil m² de ABL em 8 estados. O Bresco Viracopos, vizinho do maior aeroporto de carga da América Latina, traz 87 mil m² de ABL com potencial de expansão de 81 mil m² e receita anual estabilizada de +R$ 53 Mi (combinado com Simões Filho).",
+      "A gestão ativa da Bresco em 2025 foi excepcional: <strong class=\"text-emerald-400\">Correios substituíram Americanas com +29,4% no aluguel</strong>, <strong class=\"text-emerald-400\">Olist renovou até 2031 com +27% de reajuste</strong>, <strong class=\"text-emerald-400\">Reckitt expandiu para 100% do Itupeva</strong>, <strong class=\"text-emerald-400\">Natura estendeu Murici até 2039</strong> e <strong class=\"text-emerald-400\">Nubank entrou no portfólio via Viracopos</strong>. O fundo distribuiu R$ 0,87/cota recorrente com lucro caixa acumulado de R$ 27,3 Mi (R$ 1,72/cota). A projeção da gestão indica <strong class=\"text-emerald-400\">rendimentos crescentes: R$ 0,87 no 1S26, R$ 0,90-0,95 no 2S26 e R$ 0,97 no 1S27</strong>.",
+      "Os <strong class=\"text-amber-400\">pontos de monitoramento</strong> são: a vacância no Bresco Canoas (53%) e Bresco Embu (100%), a saída da WestRock do Itupeva em abr/26, o vencimento do Bresco Bahia (Magalu) em 2026, e o endividamento incremental (LTV projetado de 14%). A contratação da S&P Ratings e a inclusão em índice internacional reforçam a institucionalização do fundo."
+    ],
+    "pontosFortes": [
+      "86% dos inquilinos com grau de investimento",
+      "100% dos contratos indexados ao IPCA",
+      "76% da ABL em ativos last mile (pós-aquisições)",
+      "87% das propriedades padrão A+/AAA",
+      "Dividendos crescentes (+56% desde IPO, projeção +7,6%)",
+      "Gestão especializada sem uso de RMG",
+      "Lucro caixa acumulado de R$ 27 Mi (colchão)",
+      "6ª emissão concluída - portfólio cresce para 14 ativos",
+      "Potencial de expansão de ABL de ~21% (81 mil m²)",
+      "Rating S&P contratado - institucionalização crescente"
+    ],
+    "pontosDeAtencao": [
+      "Vacância no Bresco Canoas (53%) e Bresco Embu (100%)",
+      "Saída da WestRock do Bresco Itupeva em abr/2026",
+      "Vencimento do Bresco Bahia (Magalu) em 2026 e Bresco Resende (Correios) em 2026",
+      "LTV projetado de 14% com financiamento via CRI para aquisições",
+      "Aquisição de partes relacionadas (Bresco Growth/Coinvestimento)",
+      "DY de 8,9% abaixo de FIIs de papel (mas superior para tijolo logístico)",
+      "Bresco Viracopos com 11,3% de vacância residual (em absorção)"
+    ],
+    "conclusaoFinal": "O BRCO11 é uma <strong class=\"text-emerald-400\">escolha premium no segmento logístico em momento de expansão</strong>, ideal para investidores que priorizam qualidade de inquilinos, proteção inflacionária e gestão especializada. A 6ª emissão e as aquisições de Viracopos e Simões Filho representam um <strong class=\"text-emerald-400\">salto qualitativo e quantitativo</strong> no portfólio, com receita anual estabilizada projetada de +R$ 217 milhões e potencial de expansão de 21%. O principal monitoramento deve ser sobre a <strong class=\"text-amber-400\">absorção da vacância em Canoas e Embu</strong>, a <strong class=\"text-amber-400\">renovação dos contratos de Bahia e Resende</strong>, e a <strong class=\"text-amber-400\">integração dos novos ativos adquiridos</strong>."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 998,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

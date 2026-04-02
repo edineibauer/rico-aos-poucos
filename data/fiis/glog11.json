@@ -1,0 +1,550 @@
+{
+  "meta": {
+    "ticker": "GLOG11",
+    "nome": "Genial Logística FII",
+    "segmento": "Tijolo - Logística",
+    "badges": [
+      "Parque Logístico PE",
+      "79,6% Ocupação",
+      "3 Galpões"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 268
+  },
+  "seo": {
+    "title": "GLOG11 - Análise Completa | Genial Logística FII",
+    "description": "Análise completa do FII GLOG11 baseada em 268 documentos oficiais. Fundo logístico com 3 galpões em Pernambuco, 35 mil m² ABL, próximo ao Porto de Suape. DY 7,5%, WAULT 9,7 anos.",
+    "keywords": "GLOG11, Genial Logística, FII logístico, análise GLOG11, Pernambuco, Porto de Suape, Ipojuca, galpão logístico, Genial Gestão",
+    "ogTitle": "GLOG11 - Análise Completa do FII Genial Logística 2026",
+    "ogDescription": "Análise detalhada do GLOG11: FII logístico com 3 galpões em Ipojuca/PE, 35 mil m² ABL, próximo ao Porto de Suape. DY 7,5%, WAULT 9,7 anos. Vacância de 20,4%.",
+    "twitterTitle": "GLOG11 - Análise Completa | FII Genial Logística",
+    "twitterDescription": "Análise do GLOG11: 3 galpões logísticos em PE, 35 mil m² ABL, Porto de Suape. DY 7,5%, WAULT 9,7 anos. Ação judicial e vacância em foco."
+  },
+  "indicadores": {
+    "cotacao": 65.42,
+    "cotacaoData": "28/11/2025",
+    "pvp": 0.6,
+    "pvpDesconto": "40% de desconto",
+    "dividendYield": 7.52,
+    "dividendoMensal": 0.41,
+    "dividendoAnual": 5.01,
+    "patrimonioLiquido": "R$ 81,4 Mi",
+    "vpCota": 108.58,
+    "cotistas": 1714,
+    "ocupacao": 79.6,
+    "wault": 9.7,
+    "numImoveis": 3,
+    "ablTotal": "35.111"
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">GLOG11</strong> é um micro-FII com apenas <strong class=\"text-red-400\">R$ 81 Mi de PL</strong> e <strong class=\"text-red-400\">1.714 cotistas</strong>, concentrado em um único empreendimento (Parque Logístico Pernambuco). A <strong class=\"text-red-400\">vacância de 20,4%</strong> (Galpão C desocupado), a <strong class=\"text-red-400\">ação judicial</strong> com ex-locatária CT Distribuição, e a <strong class=\"text-red-400\">liquidez muito baixa</strong> (~R$ 154 mil/dia) tornam o risco elevado. O P/VP de 0,60 reflete esses problemas. Apesar do WAULT de 9,7 anos, a concentração em um único ativo e região é preocupante."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 81,4 Mi",
+      "detalhe": "VP/cota: R$ 108,58",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 108,58</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,41",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 5,01/ano | DY 7,52%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.714",
+      "detalhe": "750 mil cotas emitidas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,60",
+      "detalhe": "40% de desconto sobre VP",
+      "detalheIcone": "arrowDown",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Vacância de 20,4% (Galpão C)",
+      "descricao": "O Galpão C (14.344 m²) está vago desde a saída da CT Distribuição e Logística. A vacância reduz a receita operacional e impacta diretamente o resultado por cota.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Ação Judicial - CT Distribuição",
+      "descricao": "Ação judicial de R$ 1 Mi com a ex-locatária CT Distribuição sobre entrega do imóvel e multa contratual. Sentença favorável ao fundo em 2025, mas recurso de apelação em andamento.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Micro-FII com Liquidez Muito Baixa",
+      "descricao": "Apenas 1.714 cotistas e volume médio diário de ~R$ 154 mil. Patrimônio de R$ 81 Mi com apenas 750 mil cotas emitidas. Dificuldade para montar ou desmontar posição.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração Geográfica Total",
+      "descricao": "100% do portfólio concentrado em um único empreendimento em Ipojuca/PE. Qualquer problema regional (econômico, climático, político) impacta 100% do fundo.",
+      "severidade": "red"
+    }
+  ],
+  "gestora": {
+    "nome": "Genial Gestão",
+    "nota": 6,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Grupo",
+        "valor": "Genial Investimentos"
+      },
+      {
+        "label": "Patrimônio GLOG",
+        "valor": "R$ 81,4 Mi"
+      },
+      {
+        "label": "Ocupação",
+        "valor": "79,6%",
+        "cor": "amber"
+      }
+    ],
+    "resumo": "A <strong class=\"text-blue-400\">Genial Gestão</strong> é subsidiária do grupo Genial Investimentos, atuando na gestão de fundos imobiliários. O GLOG11 é o principal FII logístico da casa. A gestão enfrenta desafios com a vacância do Galpão C e a ação judicial com ex-locatária. A administração é feita pelo <strong class=\"text-blue-400\">Banco Genial S.A.</strong>",
+    "link": "../../gestores/genial-gestao/"
+  },
+  "taxas": {
+    "subtitulo": "Competitivas com mínimo mensal indexado",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,70% a.a.",
+        "detalhe": "Mínimo mensal R$ 44.323 (IGP-M)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Diferencial positivo",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Incluída",
+        "detalhe": "Na taxa de administração",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs Logísticos",
+    "comparativo": [
+      {
+        "ticker": "GLOG11",
+        "taxa": "0,70%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "HGLG11",
+        "taxa": "0,60%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "BTLG11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "XPLG11",
+        "taxa": "0,95%",
+        "perf": "+20% perf. s/ IPCA+5%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Banco Genial S.A."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Banco Genial S.A."
+      },
+      {
+        "label": "Início",
+        "valor": "Março/2021"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Galpões",
+        "valor": "3"
+      },
+      {
+        "label": "m2 ABL",
+        "valor": "35.111"
+      },
+      {
+        "label": "Anos WAULT",
+        "valor": "9,7",
+        "cor": "emerald"
+      },
+      {
+        "label": "Ocupação",
+        "valor": "79,6%",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Armazenagem",
+        "Entrepostagem"
+      ],
+      "data": [
+        64,
+        36
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Supporte (Locado)",
+        "Vago"
+      ],
+      "data": [
+        80,
+        20
+      ],
+      "cores": [
+        "#10b981",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Supporte Logística",
+        "setor": "Logística/Armazenagem",
+        "receita": "100%",
+        "rating": "Contrato típico",
+        "ratingCor": "blue",
+        "risco": "Concentração",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Galpões Locados",
+        "valor": 2,
+        "cor": "emerald"
+      },
+      {
+        "label": "Galpão Vago",
+        "valor": 1,
+        "cor": "red"
+      }
+    ],
+    "riscoNota": "O fundo detém 50% da fração ideal do Parque Logístico Pernambuco (os outros 50% pertencem ao Vinci Logística FII). São 3 galpões com ABL total de 70.222 m² (35.111 m² proporcionais). Os galpões A e B estão locados para a Supporte Logística (contratos até dez/2038 e mai/2030). O Galpão C (14.344 m²) está <strong class=\"text-red-400\">vago</strong> desde a saída da CT Distribuição. <strong class=\"text-blue-400\">Índices de reajuste:</strong> 58% IPCA e 42% IGP-M. Contratos 100% típicos."
+  },
+  "ativos": {
+    "subtitulo": "3 galpões | 35.111 m² ABL própria | Ipojuca/PE",
+    "legendaRisco": [
+      {
+        "label": "Locado - Contrato vigente",
+        "cor": "emerald"
+      },
+      {
+        "label": "Atenção - Concentração",
+        "cor": "amber"
+      },
+      {
+        "label": "Vago - Sem locatário",
+        "cor": "red"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "Parque Logístico Pernambuco (50% fração ideal)",
+        "cor": "blue",
+        "itens": [
+          {
+            "nome": "Galpão A",
+            "cidade": "Ipojuca/PE",
+            "tipo": "Armazenagem",
+            "tipoCor": "blue",
+            "abl": 24197,
+            "locatario": "Supporte",
+            "vencimento": "12/2038",
+            "risco": "Concentração",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "Galpão B",
+            "cidade": "Ipojuca/PE",
+            "tipo": "Entrepostagem",
+            "tipoCor": "emerald",
+            "abl": 31682,
+            "locatario": "Supporte",
+            "vencimento": "05/2030",
+            "risco": "Concentração",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "Galpão C",
+            "cidade": "Ipojuca/PE",
+            "tipo": "Cross Docking",
+            "tipoCor": "purple",
+            "abl": 14344,
+            "locatario": "Vago",
+            "vencimento": "-",
+            "risco": "Vago",
+            "riscoCor": "red"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "De IPO em 2021 a desafios operacionais em 2025",
+    "periodos": [
+      {
+        "periodo": "Mar/2021",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Oferta pública ICVM 400 com captação de R$ 75 milhões. Aquisição de 50% do Parque Logístico Pernambuco.",
+        "pontos": [
+          "Emissão de 750.000 cotas a R$ 100,00",
+          "Aquisição conjunta com Vinci Logística FII (50/50)",
+          "Valor total: R$ 132,8 Mi (R$ 66,4 Mi para cada fundo)",
+          "Cap rate de aquisição: 10,1% a.a.",
+          "ABL total: 70.222 m² (35.111 m² proporcionais)"
+        ]
+      },
+      {
+        "periodo": "2021-2023",
+        "label": "OPERAÇÃO ESTÁVEL",
+        "cor": "emerald",
+        "descricao": "Operação com 100% de ocupação nos 3 galpões. Distribuição regular de dividendos.",
+        "pontos": [
+          "3 galpões locados: Supporte (A e B) + CT Distribuição (C)",
+          "Dividendos entre R$ 0,50 e R$ 0,60/cota/mês",
+          "Localização estratégica: 9 km Porto de Suape",
+          "Galpões com pé direito 12m, piso 5 ton/m², 180+ docas"
+        ]
+      },
+      {
+        "periodo": "2024-2025",
+        "label": "DESAFIOS",
+        "cor": "red",
+        "descricao": "Saída da CT Distribuição do Galpão C gera vacância e ação judicial.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Saída da CT Distribuição: Galpão C vago (14.344 m²)</strong>",
+          "<strong class=\"text-red-400\">Ação judicial: CT questiona data de entrega e multa</strong>",
+          "<strong class=\"text-emerald-400\">Sentença favorável ao fundo em 2025</strong>",
+          "Dividendos reduzidos para R$ 0,41/cota/mês",
+          "Cota de mercado cai para R$ 65,42 (P/VP 0,60)"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - DESAFIADORA:",
+      "texto": "O GLOG11 iniciou em 2021 com aquisição estratégica próxima ao Porto de Suape, mas enfrentou dificuldades operacionais. A saída da CT Distribuição do Galpão C gerou <strong class=\"text-red-400\">vacância de 20,4%</strong> e uma ação judicial. A cota de mercado sofreu queda de <strong class=\"text-red-400\">34,6%</strong> desde o IPO, embora o valor patrimonial tenha se mantido acima de R$ 108/cota. A liquidez limitada e a concentração em um único ativo tornam a recuperação incerta."
+    },
+    "crescimento": [
+      {
+        "label": "Operação",
+        "valor": "4,7 anos",
+        "detalhe": "Desde Mar/2021"
+      },
+      {
+        "label": "Desvalorização Cota",
+        "valor": "-34,6%",
+        "detalhe": "R$ 100 para R$ 65,42"
+      },
+      {
+        "label": "Dividendos Acumulados",
+        "valor": "R$ 25,56",
+        "detalhe": "DY total desde IPO: 34%"
+      },
+      {
+        "label": "Rentabilidade Total",
+        "valor": "-0,51%",
+        "detalhe": "Desde o início"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "GLOG11 é um <strong class=\"text-amber-400\">micro-FII logístico</strong> concentrado em um único empreendimento em Ipojuca/PE, com <strong class=\"text-red-400\">vacância de 20,4%</strong> e uma ação judicial pendente. O desconto de 40% no P/VP pode atrair especuladores, mas a <strong class=\"text-red-400\">liquidez muito baixa</strong>, a concentração extrema e os riscos operacionais superam os potenciais benefícios. O WAULT de 9,7 anos dos contratos vigentes é positivo, mas insuficiente para compensar os riscos estruturais do fundo.",
+    "paraQuem": [
+      "Investidores <strong class=\"text-amber-400\">especulativos</strong> que aceitam alto risco por desconto no P/VP",
+      "Quem acredita na <strong class=\"text-amber-400\">relocação do Galpão C</strong> e resolução judicial",
+      "Investidores com <strong class=\"text-amber-400\">horizonte de longo prazo</strong> e tolerância a iliquidez"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-red-400\">liquidez</strong> e facilidade de entrada/saída",
+      "Investidores que rejeitam <strong class=\"text-red-400\">concentração em ativo único</strong>",
+      "Perfil <strong class=\"text-red-400\">conservador</strong> que evita fundos com vacância e processos judiciais",
+      "Quem busca <strong class=\"text-red-400\">dividendos crescentes</strong> e previsíveis"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25"
+    ],
+    "chartData": [
+      0.5,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41,
+      0.41
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0.3,
+    "chartYMax": 0.6,
+    "totaisAnuais": [
+      {
+        "ano": "2021 (10M)",
+        "valor": "R$ 5,20"
+      },
+      {
+        "ano": "2022",
+        "valor": "R$ 6,30"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 6,00"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 5,80"
+      },
+      {
+        "ano": "2025 (11M)",
+        "valor": "R$ 4,51",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "Últimos 12 meses",
+      "faixa": "R$ 0,41/cota",
+      "unidade": "por cota/mês (estável)"
+    },
+    "stats": [
+      {
+        "label": "Maior (Dez/24)",
+        "valor": "R$ 0,50",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Jan-Nov/25)",
+        "valor": "R$ 0,41"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "Mar/21"
+      },
+      {
+        "label": "DY Anualizado Mercado",
+        "valor": "7,52%",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY Anualizado VP",
+        "valor": "4,53%"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,60",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">40% de desconto</span> sobre o valor patrimonial, refletindo vacância e riscos",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 108,58"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 65,42",
+          "cor": "red"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "-0,51%",
+      "label": "Retorno Total desde IPO",
+      "cor": "red",
+      "descricao": "Resultado negativo considerando valorização da cota + dividendos acumulados",
+      "detalhe": "IFIX no mesmo período: +29,3%"
+    },
+    "recomendacoes": {
+      "valor": "~R$ 154k",
+      "label": "Liquidez Diária",
+      "cor": "red",
+      "descricao": "Volume médio negociado muito baixo, dificultando entrada e saída",
+      "detalhe": "Apenas 1.714 cotistas | 750 mil cotas emitidas"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">GLOG11</strong> é um caso de estudo sobre os riscos de <strong class=\"text-red-400\">concentração extrema</strong> em FIIs: um único empreendimento, uma região, poucos locatários. Embora o Parque Logístico Pernambuco tenha localização estratégica (9 km do Porto de Suape) e especificações técnicas de qualidade (piso 5 ton/m², pé direito 12m), a saída da CT Distribuição expôs a fragilidade do portfólio concentrado.",
+      "O <strong class=\"text-emerald-400\">P/VP de 0,60</strong> pode parecer atrativo (40% de desconto), mas reflete riscos reais: vacância de 20,4%, ação judicial pendente, liquidez muito baixa (~R$ 154 mil/dia) e apenas 1.714 cotistas. O DY de 7,52% (cota de mercado) é sustentado parcialmente por base acumulada de resultados (R$ 0,56/cota), não apenas por receita corrente.",
+      "A sentença favorável na ação judicial com a CT Distribuição é positiva, porém o recurso de apelação mantém a incerteza. A relocação do Galpão C é o principal catalisador para melhora dos resultados. O mercado logístico de Pernambuco tem taxa de vacância de 11% (2T2025), o que pode dificultar a renegociação em condições favoráveis."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,60 (40% de desconto)",
+      "WAULT de 9,7 anos nos contratos vigentes",
+      "Localização estratégica: 9 km Porto de Suape",
+      "Taxa de administração competitiva (0,70%)",
+      "Sentença favorável na ação judicial (1ª instância)",
+      "Galpões de qualidade (piso 5 ton/m², PD 12m)",
+      "Sem taxa de performance"
+    ],
+    "pontosDeAtencao": [
+      "Vacância de 20,4% (Galpão C vago)",
+      "Concentração em ativo único (Ipojuca/PE)",
+      "Liquidez muito baixa (~R$ 154 mil/dia)",
+      "Apenas 1.714 cotistas (micro-FII)",
+      "Ação judicial pendente (recurso de apelação)",
+      "Cota de mercado -34,6% desde IPO",
+      "Retorno total negativo (-0,51% desde IPO vs +29,3% IFIX)",
+      "Dividendos dependem parcialmente de base acumulada"
+    ],
+    "conclusaoFinal": "O GLOG11 é um fundo com <strong class=\"text-red-400\">riscos estruturais elevados</strong> que superam os potenciais benefícios do desconto no P/VP. A concentração extrema em ativo único, a vacância persistente, a liquidez limitada e a ação judicial pendente tornam o investimento inadequado para a maioria dos perfis. Para investidores especulativos que aceitam alto risco, a <strong class=\"text-amber-400\">relocação do Galpão C</strong> seria o catalisador de valorização, mas o cenário de vacância logística em PE (11%) e a baixa liquidez adicionam incerteza significativa."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 268,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

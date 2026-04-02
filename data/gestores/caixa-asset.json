@@ -1,0 +1,53 @@
+{
+  "slug": "caixa-asset",
+  "nome": "Caixa Asset",
+  "nota": 6.3,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 3,
+  "segmentos": [
+    "Fundo de Fundos",
+    "Fundo de Fundos (FOF)"
+  ],
+  "resumo": "Gestora com 3 fundos analisados: CXCI11, CXRI11, CRFF11. Nota média 6.3/10 (BOM).",
+  "seo": {
+    "title": "Caixa Asset - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Caixa Asset. 3 fundos geridos com nota média 6.3/10. Veja os FIIs: CXCI11, CXRI11, CRFF11.",
+    "ogTitle": "Caixa Asset - Análise da Gestora de FIIs",
+    "ogDescription": "Caixa Asset: 3 fundos, nota média 6.3/10. Fundos: CXCI11, CXRI11, CRFF11.",
+    "twitterTitle": "Caixa Asset - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Caixa Asset: 3 fundos, nota 6.3/10."
+  },
+  "fundos": [
+    {
+      "ticker": "CXCI11",
+      "nome": "Caixa Carteira Imobiliaria FII",
+      "segmento": "Fundo de Fundos",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 15.82,
+      "pvp": 0.79,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "CXRI11",
+      "nome": "Caixa Rio Bravo Fundo de Fundos FII",
+      "segmento": "Fundo de Fundos (FOF)",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 10.4,
+      "pvp": 0.8,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "CRFF11",
+      "nome": "Caixa Rio Bravo FoF FII",
+      "segmento": "Fundo de Fundos",
+      "nota": 6,
+      "notaLabel": "BOM",
+      "dividendYield": 10.3,
+      "pvp": 0.85,
+      "sentimento": "neutro"
+    }
+  ]
+}

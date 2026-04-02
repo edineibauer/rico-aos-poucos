@@ -1,0 +1,460 @@
+{
+  "meta": {
+    "ticker": "APTO11",
+    "nome": "Navi Residencial FII",
+    "segmento": "Residencial",
+    "badges": [
+      "Híbrido",
+      "Short Stay",
+      "São Paulo"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026"
+  },
+  "seo": {
+    "title": "APTO11 - Análise Completa | Navi Residencial FII",
+    "description": "Análise completa do FII APTO11. Fundo híbrido residencial com CRIs (71,6% PL) e imóveis premium SP, DY 12,72%, P/VP 0,86. Patrimônio R$ 45 Mi, vendas de imóveis e reciclagem de portfólio.",
+    "keywords": "APTO11, Navi Residencial, FII híbrido, short stay, análise APTO11, dividend yield APTO11, Navi Capital, CRI residencial",
+    "ogTitle": "APTO11 - Análise Completa do FII Navi Residencial 2026",
+    "ogDescription": "Análise detalhada do APTO11: FII híbrido residencial com CRIs e imóveis premium SP. DY 12,72%, P/VP 0,86. Reciclagem ativa de portfólio e rentabilidade em recuperação.",
+    "twitterTitle": "APTO11 - Análise Completa | FII Navi Residencial",
+    "twitterDescription": "Análise do APTO11: DY 12,72%, P/VP 0,86, 12 CRIs residenciais e imóveis premium no Jardins e Faria Lima. Patrimônio R$ 45 Mi."
+  },
+  "indicadores": {
+    "cotacao": 8.38,
+    "cotacaoData": "16/03/2026",
+    "pvp": 0.86,
+    "pvpDesconto": "14% de desconto",
+    "dividendYield": 12.72,
+    "dividendoMensal": 0.09,
+    "dividendoAnual": 1.08,
+    "patrimonioLiquido": "R$ 45,1 Mi",
+    "vpCota": 9.78,
+    "cotistas": 7938
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">APTO11</strong> oferece um <strong class=\"text-amber-400\">DY atrativo de 12,72%</strong> e <strong class=\"text-amber-400\">P/VP com desconto de 14%</strong>, mas mantém desafios estruturais importantes. O patrimônio pequeno (<strong class=\"text-amber-400\">R$ 45,1 Mi</strong>) e a <strong class=\"text-amber-400\">liquidez ainda baixa (R$ 48,9k/dia)</strong> limitam a capacidade de entrada e saída. A rentabilidade melhorou para 7,64% (vs 7,29% no exercício anterior), e o fundo está em fase de reciclagem de portfólio com vendas de imóveis e reforço em CRIs. A alavancagem de 26,7% do PL via securitização permanece como risco. Recomendação de <strong class=\"text-amber-400\">MANTER</strong> para quem já está posicionado."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 45,1 Mi",
+      "detalhe": "VP/cota: R$ 9,78",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 9,78</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,09",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 1,08/ano | DY 12,72%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "7.938",
+      "detalhe": "Liquidez R$ 48,9k/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Alavancagem",
+      "valor": "26,7%",
+      "detalhe": "Securitização R$ 12 Mi sobre PL",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Liquidez Ainda Baixa",
+      "descricao": "Liquidez média diária de R$ 48,9 mil melhorou significativamente (+138% vs R$ 20,5k anterior), mas ainda dificulta saídas de posições relevantes. Para vender R$ 100 mil, levaria cerca de 2 dias de volume total.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Patrimônio Pequeno e Sem Escala",
+      "descricao": "Com R$ 45,1 Mi de PL e 4.612.227 cotas, o fundo não tem escala para diluir custos operacionais. A taxa de administração + gestão totalizou 1,49% a.a. (R$ 683 mil), pesando no resultado.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Alavancagem via Securitização",
+      "descricao": "R$ 12,1 Mi de obrigações por securitização de recebíveis (26,7% do PL). A despesa financeira com essa dívida foi de R$ 1,33 Mi no exercício findo em jun/2025, consumindo parte relevante das receitas de aluguel.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Reciclagem de Portfólio com Perdas",
+      "descricao": "O fundo vendeu imóveis IT Home e parte do Clarion no exercício, com ajuste negativo ao valor justo de R$ 314 mil. A carteira de imóveis caiu de R$ 21,6 Mi para R$ 19,5 Mi (-9,5%), mas gerou lucro de R$ 310 mil nas vendas.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Distribuição Acima do Lucro Contábil",
+      "descricao": "O auditor Baker Tilly destacou que o valor distribuído (R$ 4,98 Mi) foi superior ao lucro contábil do exercício (R$ 3,68 Mi). Embora permitido pela Lei 8.668/93 via regime de caixa, isso pode pressionar o VP a longo prazo.",
+      "severidade": "orange"
+    }
+  ],
+  "gestora": {
+    "nome": "Navi Capital / BRL Trust DTVM",
+    "nota": 5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "No mercado",
+        "valor": "4+ anos"
+      },
+      {
+        "label": "Patrimônio APTO",
+        "valor": "R$ 45,1 Mi"
+      },
+      {
+        "label": "Rentabilidade",
+        "valor": "7,64% a.a.",
+        "cor": "amber"
+      }
+    ],
+    "resumo": "A <strong class=\"text-amber-400\">Navi Capital</strong> (Navi Real Estate Ventures) é gestora focada em residencial. O fundo foi constituído em junho de 2021 como \"Matisse FII\" e renomeado. A administração é da <strong class=\"text-amber-400\">BRL Trust DTVM</strong>, cuja transferência acionária para Apex Fund Holding foi concluída em março de 2023. A gestora reciclou ativamente o portfólio em 2024-2025, vendendo imóveis e reforçando a carteira de CRIs. Auditoria sem ressalvas pela Baker Tilly. A taxa de gestão de 1,35% a.a. pesa num fundo pequeno.",
+    "link": "../../gestores/navi-capital/"
+  },
+  "taxas": {
+    "subtitulo": "Alta para fundo pequeno",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,10% a.a. + 0,05% custódia",
+        "detalhe": "Sobre o patrimônio líquido (mínimo R$ 6 mil/mês)",
+        "corBorda": "slate"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "1,35% a.a.",
+        "detalhe": "Sobre o PL (reduz para 1,20% acima de R$ 500 Mi)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Sim (conforme regulamento)",
+        "detalhe": "Não cobrada no exercício findo em jun/2025",
+        "corBorda": "slate"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Escriturador/Custodiante",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "Baker Tilly 4Partners"
+      },
+      {
+        "label": "Constituição",
+        "valor": "Junho/2021"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "42.432.327/0001-82"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "71,6%",
+        "cor": "blue"
+      },
+      {
+        "label": "Imóveis",
+        "valor": "43,2%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Caixa",
+        "valor": "9,8%",
+        "cor": "slate"
+      },
+      {
+        "label": "Cotas FIIs",
+        "valor": "0,6%",
+        "cor": "purple"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRIs",
+        "Imóveis",
+        "Caixa",
+        "Cotas FIIs"
+      ],
+      "data": [
+        71.6,
+        43.2,
+        9.8,
+        0.6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#6b7280",
+        "#8b5cf6"
+      ]
+    },
+    "detalhes": [
+      {
+        "titulo": "Carteira de CRIs (R$ 32,3 Mi | 71,6% PL)",
+        "descricao": "12 CRIs residenciais diversificados por emissor (Virgosec, Canal, True Securit, Opea). Taxas entre IPCA+5,5% e IPCA+10,5% ou CDI+2% a CDI+4%. Vencimentos de 2027 a 2033. Sem rating em sua maioria, mas com garantias como alienação fiduciária de imóveis, cessão de recebíveis e fundos de reserva."
+      },
+      {
+        "titulo": "Imóveis Físicos (R$ 19,5 Mi | 43,2% PL)",
+        "descricao": "3 imóveis remanescentes após vendas: <strong class=\"text-blue-400\">Dialago</strong> (16 unidades, Jardim Paulista, R$ 15,1 Mi - 77% dos imóveis), <strong class=\"text-blue-400\">Edição Jardins</strong> (Alameda Fernão Cardim, R$ 3,4 Mi), <strong class=\"text-blue-400\">Clarion Faria Lima</strong> (2 flats, Jardim Europa, R$ 1,1 Mi). IT Home foi vendido integralmente no exercício."
+      },
+      {
+        "titulo": "Cotas FII (R$ 264 mil | 0,6% PL)",
+        "descricao": "Posição residual em LFTT11 (FII Loft II) com 46.031 cotas (1,41% do fundo). Valor caiu de R$ 1,05 Mi para R$ 264 mil (-75%) por ajuste ao valor justo. Posição sendo reduzida progressivamente."
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "Trajetória do APTO11",
+    "periodos": [
+      {
+        "periodo": "Jun/2021",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Constituição como \"Matisse FII\", renomeado para Navi Residencial FII.",
+        "pontos": [
+          "Administrado por BRL Trust DTVM",
+          "Gestão: Navi Real Estate Ventures",
+          "CNPJ: 42.432.327/0001-82"
+        ]
+      },
+      {
+        "periodo": "Ago-Dez/2021",
+        "label": "1ª E 2ª EMISSÕES",
+        "cor": "emerald",
+        "descricao": "Captação inicial de R$ 41,4 Mi em duas emissões.",
+        "pontos": [
+          "1ª emissão: 99.000 cotas a R$ 100 (R$ 9,9 Mi)",
+          "2ª emissão: 3.022.857 cotas a R$ 10,43 (R$ 31,5 Mi)",
+          "Início das operações de short stay"
+        ]
+      },
+      {
+        "periodo": "Set/2022",
+        "label": "AQUISIÇÃO",
+        "cor": "purple",
+        "descricao": "Aquisição de 3 unidades do Edição Jardins por R$ 2,31 Mi.",
+        "pontos": [
+          "55,4 m² cada, a R$ 13.891/m²",
+          "Total de 16 unidades no empreendimento",
+          "Localização premium no Jardim Paulista"
+        ]
+      },
+      {
+        "periodo": "Dez/2022",
+        "label": "ALIENAÇÃO",
+        "cor": "emerald",
+        "descricao": "Venda do imóvel Radisson Vila Olímpia com TIR de 33%.",
+        "pontos": [
+          "Valor: R$ 430 mil (19% acima do VP, 34% acima do custo)",
+          "Troca de operadora: Locazione para Charlie (Casai)"
+        ]
+      },
+      {
+        "periodo": "Dez/2023",
+        "label": "3ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "3ª emissão com captação modesta de R$ 6 Mi.",
+        "pontos": [
+          "599.370 cotas a R$ 10,04",
+          "Objetivo inicial era R$ 50 Mi, captou 12%",
+          "Total de cotas: 4.612.227"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "ADAPTAÇÃO CVM 175",
+        "cor": "amber",
+        "descricao": "Alteração do regulamento para adaptação à Resolução CVM 175.",
+        "pontos": [
+          "Adoção de responsabilidade limitada",
+          "Novo nome: Navi Residencial FII - Responsabilidade Limitada"
+        ]
+      },
+      {
+        "periodo": "2024-2025",
+        "label": "RECICLAGEM",
+        "cor": "purple",
+        "descricao": "Vendas de imóveis IT Home e parte do Clarion, reforço em CRIs.",
+        "pontos": [
+          "Vendas geraram R$ 2,05 Mi e lucro de R$ 310 mil",
+          "Carteira de CRIs cresceu de R$ 31,2 Mi para R$ 32,3 Mi",
+          "Novos CRIs com taxas IPCA+7,87% a 8,25%"
+        ]
+      },
+      {
+        "periodo": "Mar/2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Fundo com PL de R$ 45,1 Mi, DY 12,72%, reciclagem de portfólio em andamento.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">PL: R$ 45,1 Mi | 7.938 cotistas</strong>",
+          "<strong class=\"text-amber-400\">DY 12,72% | P/VP 0,86</strong>",
+          "Liquidez diária: R$ 48,9k (melhora significativa)",
+          "Rentabilidade: 7,64% a.a. (em recuperação)",
+          "CRIs: 71,6% PL | Imóveis: 43,2% PL"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "APTO11 é um <strong class=\"text-amber-400\">FII híbrido residencial</strong> com foco principal em CRIs (71,6% do PL) e imóveis premium em São Paulo (43,2% do PL). Oferece <strong class=\"text-amber-400\">DY de 12,72%</strong> e <strong class=\"text-amber-400\">P/VP com desconto de 14%</strong>. O fundo está em fase de <strong class=\"text-amber-400\">reciclagem de portfólio</strong>, vendendo imóveis e reforçando a carteira de CRIs com taxas atrativas (IPCA+5,5% a 10,5%). A rentabilidade melhorou para 7,64% (vs 7,29%). A alavancagem de 26,7% via securitização e o patrimônio pequeno (R$ 45,1 Mi) permanecem como principais riscos. Distribuiu 95,96% do lucro base caixa, com dividendo médio de R$ 1,09/cota/ano.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">DY acima de 12%</strong> com exposição a CRIs residenciais",
+      "Quem <strong class=\"text-emerald-400\">aceita iliquidez</strong> e não precisa vender a curto prazo",
+      "Investidores que <strong class=\"text-emerald-400\">gostam de imóveis premium</strong> em SP (Jardins, Faria Lima)",
+      "Quem aceita <strong class=\"text-emerald-400\">fundos pequenos em reciclagem</strong> com potencial de melhora"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-amber-400\">precisa de liquidez</strong> para saídas acima de R$ 50 mil/dia",
+      "Investidores que <strong class=\"text-amber-400\">não aceitam alavancagem</strong> (26,7% do PL em securitização)",
+      "Quem busca <strong class=\"text-amber-400\">fundos grandes com escala</strong> e custos diluídos",
+      "Investidores preocupados com <strong class=\"text-amber-400\">distribuição acima do lucro contábil</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.09,
+      0.09,
+      0.096,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.08,
+      0.08,
+      0.09
+    ],
+    "chartCor": "#10b981",
+    "chartCorFunction": true,
+    "chartYMin": 0.07,
+    "chartYMax": 0.10,
+    "stats": [
+      {
+        "label": "Dividendo Típico",
+        "valor": "R$ 0,09",
+        "cor": "emerald"
+      },
+      {
+        "label": "Máximo (12m)",
+        "valor": "R$ 0,096",
+        "cor": "emerald"
+      },
+      {
+        "label": "Mínimo (12m)",
+        "valor": "R$ 0,08"
+      },
+      {
+        "label": "DY 12 meses",
+        "valor": "12,72%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Total 12m/cota",
+        "valor": "R$ 1,08"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,86",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">14% de desconto</span> sobre o valor patrimonial. VP/cota caiu de R$ 10,09 para R$ 9,78 em 12 meses (-3%) pela distribuição acima do lucro contábil.",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,78"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 8,38",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,72%",
+      "label": "DY Anualizado",
+      "cor": "emerald",
+      "descricao": "Rendimento anualizado baseado em R$ 1,08/cota nos últimos 12 meses. Distribuição de 95,96% do lucro base caixa (R$ 5,22 Mi base caixa vs R$ 3,68 Mi lucro contábil).",
+      "detalhe": "DY acima da média de FIIs residenciais"
+    },
+    "recomendacoes": {
+      "valor": "R$ 45,1 Mi",
+      "label": "Patrimônio Líquido",
+      "cor": "blue",
+      "descricao": "Fundo pequeno: 4.612.227 cotas a R$ 9,78 cada. Escala limitada com custos proporcionalmente altos (1,49% a.a. em administração e gestão).",
+      "detalhe": "Rentabilidade contábil: 7,64% a.a."
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">APTO11</strong> apresenta um <strong class=\"text-amber-400\">DY de 12,72%</strong> e desconto de 14% sobre o VP (P/VP 0,86), o que o torna atrativo para renda passiva. A carteira migrou para predominância de <strong class=\"text-amber-400\">CRIs (71,6% do PL)</strong> com taxas entre IPCA+5,5% e IPCA+10,5%, complementada por <strong class=\"text-amber-400\">3 imóveis premium em São Paulo</strong> (Jardins, Faria Lima). A receita de CRIs (R$ 5,2 Mi) compensou amplamente a queda de receita de aluguéis (R$ 1,18 Mi, -8,3% YoY).",
+      "O fundo está em <strong class=\"text-amber-400\">fase de reciclagem ativa</strong>: vendeu imóveis IT Home e parte do Clarion, gerando lucro de R$ 310 mil nas vendas, e reforçou a carteira de CRIs com 3 novos papéis em 2024-2025. A rentabilidade contábil melhorou para <strong class=\"text-amber-400\">7,64%</strong> (vs 7,29% no exercício anterior). A liquidez diária mais que dobrou para <strong class=\"text-amber-400\">R$ 48,9k/dia</strong>, embora ainda seja baixa para posições relevantes.",
+      "Pontos de atenção: a <strong class=\"text-amber-400\">distribuição acima do lucro contábil</strong> (R$ 4,98 Mi distribuídos vs R$ 3,68 Mi de lucro) pressiona o VP gradualmente. A alavancagem de 26,7% do PL via securitização (R$ 12,1 Mi) gera despesa financeira de R$ 1,33 Mi/ano. O VP/cota caiu 3% em 12 meses. O número de cotistas diminuiu de 8.006 para 7.938, indicando falta de atratividade para novos investidores. Sem demandas judiciais e auditoria limpa pela Baker Tilly são pontos positivos."
+    ],
+    "pontosFortes": [
+      "DY de 12,72% com dividendos estáveis R$ 0,08-0,09/mês",
+      "P/VP 0,86 oferece desconto de 14% sobre o VP",
+      "Carteira de CRIs diversificada (12 papéis, taxas atrativas IPCA+5,5% a 10,5%)",
+      "Imóveis em localizações premium (Jardins, Faria Lima, Itaim)",
+      "Reciclagem ativa com vendas de imóveis gerando lucro",
+      "Auditoria sem ressalvas (Baker Tilly)",
+      "Liquidez diária melhorou 138% (R$ 48,9k/dia)",
+      "Sem demandas judiciais ou contingências"
+    ],
+    "pontosDeAtencao": [
+      "Patrimônio R$ 45,1 Mi (pequeno, sem escala)",
+      "Distribuição acima do lucro contábil pressiona VP",
+      "Alavancagem 26,7% PL via securitização (R$ 12,1 Mi)",
+      "VP/cota caiu 3% em 12 meses (R$ 10,09 para R$ 9,78)",
+      "Liquidez R$ 48,9k/dia ainda baixa para posições relevantes",
+      "Custos de 1,49% a.a. pesam em fundo pequeno",
+      "3ª emissão captou apenas 12% do objetivo (R$ 6 Mi de R$ 50 Mi)",
+      "Concentração no Dialago (77% do portfólio imobiliário)",
+      "Cotistas em queda (7.938 vs 8.006 anterior)"
+    ],
+    "conclusaoFinal": "O APTO11 é uma opção para quem <strong class=\"text-amber-400\">já está posicionado</strong> e busca renda passiva com DY de 12,72%. A reciclagem do portfólio rumo a mais CRIs e menos imóveis é positiva em termos de diversificação de risco de crédito. No entanto, <strong class=\"text-amber-400\">não é ideal para novas entradas relevantes</strong> devido à liquidez ainda limitada, falta de escala, distribuição acima do lucro contábil e concentração de portfólio. A expectativa é de dividendos estáveis em R$ 0,08-0,09/mês, mas o <strong class=\"text-amber-400\">VP pode continuar pressionado</strong> se a distribuição persistir acima do lucro contábil. Monitorar a evolução das vendas de imóveis remanescentes e a qualidade dos CRIs."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 182,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "ticker": "BARI11",
+    "nome": "Barigui Recebíveis Imobiliários FII",
+    "nomeExtra": "(Liquidado - Migrado para CVBI11)",
+    "segmento": "Papel - CRI (Gestão Ativa)",
+    "badges": [
+      "Liquidado",
+      "Migrado p/ CVBI11",
+      "Patria-VBI"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 314
+  },
+  "seo": {
+    "title": "BARI11 - Análise Completa | Barigui Recebíveis Imobiliários FII (Liquidado)",
+    "description": "Análise completa do FII BARI11 baseada em 314 documentos oficiais. Fundo de CRIs gerido pela Patria-VBI liquidado em set/2025, migrado para CVBI11. Retorno total 65,7% desde IPO, valor de liquidação R$ 78,49/cota.",
+    "keywords": "BARI11, Barigui Recebíveis, FII papel, CRI, Patria VBI, CVBI11, análise BARI11, dividend yield BARI11, liquidação BARI11",
+    "ogTitle": "BARI11 - Análise Completa do FII Barigui Recebíveis (Liquidado)",
+    "ogDescription": "Análise do BARI11: fundo de CRIs da Patria-VBI liquidado em set/2025. Migrado para CVBI11 com valor de R$ 78,49/cota. Retorno total 65,7% desde IPO.",
+    "twitterTitle": "BARI11 - Análise Completa | Barigui Recebíveis Imobiliários FII (Liquidado)",
+    "twitterDescription": "Análise do BARI11: fundo de CRIs liquidado em set/2025. Migrado para CVBI11. Retorno total 65,7% desde IPO."
+  },
+  "indicadores": {
+    "cotacao": 79.2,
+    "cotacaoData": "22/07/2025 (último dia de negociação)",
+    "pvp": 0.89,
+    "pvpDesconto": "11% de desconto (última negociação)",
+    "dividendYield": 12.9,
+    "dividendoMensal": 0.95,
+    "dividendoAnual": 10.8,
+    "patrimonioLiquido": "R$ 410 Mi (jul/2025)",
+    "vpCota": 85.37,
+    "cotistas": 31744,
+    "cotistasDetalhe": "4,6 milhões de cotas (migradas para CVBI11)"
+  },
+  "recomendacao": {
+    "nota": 0,
+    "veredicto": "LIQUIDADO",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">BARI11</strong> foi <strong class=\"text-red-400\">liquidado em setembro/2025</strong>, após aprovação em AGE de 15/07/2025. Todos os ativos foram vendidos ao <strong class=\"text-blue-400\">CVBI (VBI CRI)</strong>. Os cotistas receberam <strong class=\"text-emerald-400\">0,8743 cotas do CVBI</strong> por cota do BARI11 (R$ 74,10/cota) mais <strong class=\"text-emerald-400\">R$ 4,38/cota em dinheiro</strong>, totalizando <strong class=\"text-emerald-400\">R$ 78,49/cota</strong> de valor de liquidação. A conversão dos recibos em cotas negociáveis do CVBI ocorreu em 15/09/2025. O fundo operou por quase 7 anos (dez/2018 a set/2025) com <strong class=\"text-emerald-400\">retorno total de 65,7%</strong>, superando o IFIX (29,5%) e próximo ao CDI bruto (66,3%). <strong class=\"text-red-400\">Este fundo não existe mais.</strong>"
+  },
+  "quickStats": [
+    {
+      "label": "Valor de Liquidação",
+      "valor": "R$ 78,49",
+      "detalhe": "VP véspera: R$ 85,37/cota",
+      "detalheHtml": "VP véspera: <span class=\"font-semibold text-blue-400\">R$ 85,37/cota</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Parcela em Cotas CVBI",
+      "valor": "R$ 74,10",
+      "valorSufixo": "/cota",
+      "detalhe": "0,8743 cotas CVBI por cota BARI",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Parcela em Dinheiro",
+      "valor": "R$ 4,38",
+      "valorSufixo": "/cota",
+      "detalhe": "Amortização paga em 09/09/2025",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Status",
+      "valor": "LIQUIDADO",
+      "detalhe": "Concluído em set/2025",
+      "icone": "chart",
+      "corIcone": "red",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Liquidado",
+      "descricao": "O BARI11 foi completamente liquidado em setembro/2025. A totalidade dos ativos foi vendida ao CVBI (VBI CRI) em 29/08/2025. Os cotistas receberam recibos de cotas CVBI em 05/09/2025, amortização em dinheiro em 09/09/2025, e os recibos foram convertidos em cotas negociáveis em 15/09/2025.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Valor de Liquidação abaixo do VP",
+      "descricao": "O valor de liquidação foi de R$ 78,49/cota, enquanto o VP na véspera da alienação era R$ 85,37/cota. A diferença se deve ao uso do valor de mercado das cotas do CVBI (R$ 84,76/cota) como base para a Parcela A, resultando em desconto implícito de 8,1% sobre o VP.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Imposto de Renda na Liquidação",
+      "descricao": "A liquidação gerou fato tributável com IR de 20% sobre ganho de capital. Cotistas que não informaram o custo médio de aquisição tiveram como base o preço mínimo histórico de R$ 87,15 (ou R$ 57,15 conforme versão do fato relevante), com o IR descontado da Parcela B em dinheiro.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Patria - VBI Securities",
+    "nota": 7,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "AuM Patria RE",
+        "valor": "R$ 10+ Bi"
+      },
+      {
+        "label": "PL Final BARI",
+        "valor": "R$ 410 Mi"
+      },
+      {
+        "label": "Retorno Total IPO",
+        "valor": "65,7%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "O <strong class=\"text-emerald-400\">Patria Investimentos</strong> (ex-VBI Real Estate) é uma das maiores gestoras de FIIs do Brasil. Em dez/2024, a VBI Securities realizou reorganização societária e passou a se chamar <strong class=\"text-blue-400\">Pátria - VBI Securities Ltda</strong>. A gestão ativa do BARI11 combinou CRIs corporativos e pulverizados com <strong class=\"text-emerald-400\">retorno total de 65,7%</strong> desde o IPO. A decisão de liquidar e migrar para o CVBI visou consolidação da plataforma de crédito imobiliário da Patria.",
+    "link": "../../gestores/patria-investimentos/"
+  },
+  "taxas": {
+    "subtitulo": "Taxas vigentes até a liquidação",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,305% a.a.",
+        "detalhe": "1,105% repassado ao Gestor",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder CDI + 1,5% a.a.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Incluída",
+        "detalhe": "Na taxa de administração",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de CRI",
+    "comparativo": [
+      {
+        "ticker": "BARI11",
+        "taxa": "1,305%",
+        "perf": "+20% perf. s/ CDI+1,5%",
+        "destaque": true
+      },
+      {
+        "ticker": "CVBI11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ CDI+1%"
+      },
+      {
+        "ticker": "KNSC11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ CDI+1%"
+      },
+      {
+        "ticker": "RBRR11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ CDI+2%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador Original",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Novo Administrador (liquidação)",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Gestora",
+        "valor": "Pátria - VBI Securities Ltda."
+      },
+      {
+        "label": "CNPJ",
+        "valor": "29.267.567/0001-00"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "86,5%"
+      },
+      {
+        "label": "FIIs",
+        "valor": "9,4%"
+      },
+      {
+        "label": "Caixa",
+        "valor": "4,1%"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "40",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Pulverizado",
+        "Residencial",
+        "Loteamento",
+        "Logística",
+        "Hotel",
+        "Varejo",
+        "Escritório",
+        "Saúde"
+      ],
+      "data": [
+        58,
+        12,
+        9,
+        7,
+        6,
+        5,
+        3,
+        1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#06b6d4",
+        "#8b5cf6",
+        "#ef4444",
+        "#ec4899",
+        "#f97316"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA+ (11,6% a.a.)",
+        "IGPM+ (15,3% a.a.)",
+        "CDI+ (3,96% a.a.)"
+      ],
+      "data": [
+        80,
+        17,
+        3
+      ],
+      "cores": [
+        "#3b82f6",
+        "#f59e0b",
+        "#10b981"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Bari IX (Tecnisa) - 88ª - Pulverizado",
+        "setor": "Pulverizado Residencial",
+        "receita": "7,8%",
+        "rating": "IPCA+5,8%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "CRI Rosewood II - Hotel",
+        "setor": "Hotelaria",
+        "receita": "4,8%",
+        "rating": "IPCA+7,4%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "CRI Visconde Icaraí A+B - Residencial",
+        "setor": "Residencial",
+        "receita": "8,2%",
+        "rating": "IPCA+12,5%",
+        "ratingCor": "emerald",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "CRI Bari IX (Tecnisa) - 114ª - Pulverizado",
+        "setor": "Pulverizado Residencial",
+        "receita": "4,1%",
+        "rating": "IPCA+8,0%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Outros (~36 CRIs + 7 FIIs)",
+        "setor": "Diversificado",
+        "receita": "75,1%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "CRIs Corporativos (baixo risco)",
+        "valor": 35,
+        "cor": "emerald"
+      },
+      {
+        "label": "CRIs Pulverizados (moderado)",
+        "valor": 58,
+        "cor": "blue"
+      },
+      {
+        "label": "FIIs (oportunístico)",
+        "valor": 9,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "Carteira final (jul/2025) com 40 CRIs e 7 FIIs. Taxa média ponderada de 17,2% a.a. (IPCA+11,4%), prazo médio de 3,2 anos e spread médio de 3,0% a.a. A carteira pulverizada possuía 1.582 contratos ativos com LTV médio de 60% e inadimplência de 6% acima de 90 dias (47 contratos em negociação/execução). Maior concentração geográfica em SP (41,9%) e DF (21,2%). Todos os ativos foram alienados ao CVBI em 29/08/2025."
+  },
+  "timeline": {
+    "subtitulo": "De fundo de CRI da Barigui a liquidação e migração para CVBI",
+    "periodos": [
+      {
+        "periodo": "Dez/2018",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das operações como Barigui Recebíveis Imobiliários. Foco em CRIs com gestão ativa.",
+        "pontos": [
+          "CNPJ: 29.267.567/0001-00",
+          "Gestora original: Barigui (depois VBI, depois Patria)",
+          "Administrador: Oliveira Trust DTVM",
+          "Estratégia: CRIs corporativos e pulverizados"
+        ]
+      },
+      {
+        "periodo": "2019-2021",
+        "label": "CRESCIMENTO",
+        "cor": "emerald",
+        "descricao": "Expansão da carteira de CRIs e início da alocação oportunística em FIIs de crédito.",
+        "pontos": [
+          "Abr/2020: Início da alocação em FIIs de crédito",
+          "Diversificação: pulverizado, corporativo, hotel",
+          "Emissões de cotas ampliando PL para R$ 400+ Mi",
+          "Retorno total superando IFIX consistentemente"
+        ]
+      },
+      {
+        "periodo": "2022-2024",
+        "label": "MATURAÇÃO",
+        "cor": "purple",
+        "descricao": "Gestão transferida para VBI (depois Patria). Carteira consolidada com ~40 CRIs. Reorganização societária da gestora em dez/2024.",
+        "pontos": [
+          "Gestão migra de Barigui para VBI Securities",
+          "VBI é adquirida pelo Patria Investimentos",
+          "Dez/2024: VBI Securities muda nome para Pátria - VBI Securities",
+          "Dez/2024: Fundo reclassificado como Papel Híbrido Multicategoria"
+        ]
+      },
+      {
+        "periodo": "Jun-Jul/2025",
+        "label": "APROVAÇÃO",
+        "cor": "amber",
+        "descricao": "AGE convocada em 12/06 e resultado divulgado em 15/07/2025. Liquidação aprovada com 33,12% a favor.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">12/06/2025: Edital de convocação da AGE</strong>",
+          "<strong class=\"text-red-400\">15/07/2025: AGE aprova liquidação (33,12% a favor)</strong>",
+          "22/07/2025: Último dia de negociação na B3",
+          "Administração transferida para BRL Trust DTVM"
+        ]
+      },
+      {
+        "periodo": "Ago-Set/2025",
+        "label": "LIQUIDAÇÃO",
+        "cor": "red",
+        "descricao": "Processo de liquidação concluído. Ativos alienados ao CVBI, cotas entregues aos cotistas.",
+        "pontos": [
+          "29/08/2025: Alienação total dos ativos para CVBI",
+          "02/09/2025: Divulgação do valor de liquidação (R$ 78,49/cota)",
+          "05/09/2025: Entrega de recibos de cotas CVBI",
+          "<strong class=\"text-red-400\">09/09/2025: Pagamento da amortização (R$ 4,38/cota)</strong>",
+          "<strong class=\"text-emerald-400\">15/09/2025: Conversão dos recibos em cotas CVBI negociáveis</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - LIQUIDADO:",
+      "texto": "O BARI11 operou por quase <strong class=\"text-blue-400\">7 anos</strong> (dez/2018 a set/2025) como fundo de CRIs com gestão ativa. O retorno total de <strong class=\"text-emerald-400\">65,7% superou o IFIX (29,5%)</strong> e ficou próximo ao CDI bruto (66,3%). A carteira combinou CRIs corporativos e pulverizados com taxa média de IPCA+11,4%. A liquidação foi concluída em set/2025, com cada cotista recebendo <strong class=\"text-emerald-400\">0,8743 cotas do CVBI + R$ 4,38 em dinheiro</strong> por cota BARI11, totalizando R$ 78,49/cota de valor de liquidação."
+    },
+    "crescimento": [
+      {
+        "label": "Retorno Total",
+        "valor": "65,7%",
+        "detalhe": "vs. IFIX 29,5%"
+      },
+      {
+        "label": "Valor Liquidação",
+        "valor": "R$ 78,49",
+        "detalhe": "Por cota (set/2025)"
+      },
+      {
+        "label": "Duração",
+        "valor": "~7 anos",
+        "detalhe": "Dez/2018 a Set/2025"
+      },
+      {
+        "label": "Status",
+        "valor": "Liquidado",
+        "detalhe": "Migrado para CVBI11"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O BARI11 foi <strong class=\"text-red-400\">liquidado em setembro/2025</strong>, após aprovação em AGE de 15/07/2025 com 33,12% dos votos a favor. O fundo entregou <strong class=\"text-emerald-400\">retorno total de 65,7%</strong> desde o IPO (dez/2018), com carteira final de 40 CRIs diversificados por segmento (pulverizado 58%, residencial 12%, loteamento 9%) e indexador (IPCA 80%, IGPM 17%). Os cotistas receberam <strong class=\"text-emerald-400\">0,8743 cotas CVBI + R$ 4,38</strong> por cota BARI11, com valor total de R$ 78,49/cota. O preço de aquisição das cotas CVBI recebidas foi definido em R$ 84,76/cota para fins de apuração de IRRF.",
+    "paraQuem": [
+      "Este fundo <strong class=\"text-red-400\">não existe mais</strong> - foi liquidado em set/2025",
+      "Ex-cotistas receberam cotas do <strong class=\"text-blue-400\">CVBI11 (VBI CRI)</strong>",
+      "Para estratégia similar, consulte o <strong class=\"text-blue-400\">CVBI11</strong> que absorveu os ativos",
+      "Fundo era indicado para perfil <strong class=\"text-emerald-400\">moderado a arrojado</strong> buscando renda via CRIs"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">Fundo liquidado</strong> - não é possível investir",
+      "Cotas BARI11 <strong class=\"text-red-400\">não existem mais</strong> na B3",
+      "Cotistas foram <strong class=\"text-blue-400\">convertidos para CVBI11</strong> em set/2025",
+      "Para exposição a CRIs Patria-VBI, busque o <strong class=\"text-blue-400\">CVBI11</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Ago/24",
+      "Set/24",
+      "Out/24",
+      "Nov/24",
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25"
+    ],
+    "chartData": [
+      0.8,
+      0.76,
+      0.71,
+      0.79,
+      0.95,
+      0.95,
+      0.88,
+      0.95,
+      1.0,
+      0.97,
+      1.05,
+      0.95
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.6,
+    "chartYMax": 1.15,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 10,44"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 9,60"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 9,72"
+      },
+      {
+        "ano": "2025 (jan-jul)",
+        "valor": "R$ 6,75",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Liquidação set/25",
+        "valor": "R$ 78,49/cota (total)",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "Liquidado",
+      "faixa": "Fundo encerrado em set/2025",
+      "unidade": "Cotistas migraram para CVBI11"
+    },
+    "stats": [
+      {
+        "label": "Maior (Jun/25)",
+        "valor": "R$ 1,05",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Out/24)",
+        "valor": "R$ 0,71"
+      },
+      {
+        "label": "Resultado Jul/25",
+        "valor": "R$ 0,71 (distribuível)"
+      },
+      {
+        "label": "DY Médio 12M",
+        "valor": "12,9% a.a.",
+        "cor": "emerald"
+      },
+      {
+        "label": "Status",
+        "valor": "Liquidado set/25",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,92",
+      "descricao": "Valor de liquidação <span class=\"text-red-400\">R$ 78,49</span> vs VP véspera <span class=\"text-blue-400\">R$ 85,37</span> (desconto de 8,1%)",
+      "detalhes": [
+        {
+          "label": "VP/Cota (véspera alienação)",
+          "valor": "R$ 85,37"
+        },
+        {
+          "label": "Valor de Liquidação",
+          "valor": "R$ 78,49",
+          "cor": "red"
+        },
+        {
+          "label": "Parcela A (cotas CVBI)",
+          "valor": "R$ 74,10",
+          "cor": "emerald"
+        },
+        {
+          "label": "Parcela B (dinheiro)",
+          "valor": "R$ 4,38",
+          "cor": "blue"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "IPCA+11,4%",
+      "label": "Taxa Média CRIs (final)",
+      "cor": "emerald",
+      "descricao": "Taxa média ponderada da carteira final de CRIs com spread de 3,0% sobre NTN-B equivalente",
+      "detalhe": "Rentabilidade bruta da carteira: 17,2% a.a."
+    },
+    "recomendacoes": {
+      "valor": "0",
+      "label": "Recomendações Atuais",
+      "cor": "red",
+      "descricao": "Fundo liquidado, sem recomendações vigentes",
+      "detalhe": "Cotistas migraram para CVBI11 em set/2025"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">BARI11</strong> foi <strong class=\"text-red-400\">liquidado em setembro/2025</strong>, concluindo um ciclo de quase 7 anos como fundo de CRIs com gestão ativa da Patria-VBI. O retorno total de <strong class=\"text-emerald-400\">65,7%</strong> superou o IFIX (29,5%) e ficou próximo ao CDI bruto (66,3%). A liquidação foi aprovada em AGE de 15/07/2025, com 33,12% dos votos a favor, e a administração foi transferida da Oliveira Trust para a BRL Trust para conduzir o processo.",
+      "A carteira final contava com <strong class=\"text-emerald-400\">40 CRIs</strong> diversificados por segmento (pulverizado 58%, residencial 12%, loteamento 9%, logística 7%, hotel 6%, varejo 5%) e indexador (IPCA 80%, IGPM 17%, CDI 3%), com taxa média de <strong class=\"text-emerald-400\">IPCA+11,4%</strong>, prazo médio de 3,2 anos e spread médio de 3,0% a.a. A carteira pulverizada de 1.582 contratos tinha LTV médio de 60% e inadimplência de 6% acima de 90 dias. Além dos CRIs, o fundo mantinha 7 FIIs de crédito (RBRY11, RECD11, CYCR11, KNHY11, VGIP11, KNIP11, GAME11) representando 9,4% do PL.",
+      "Os ativos foram alienados ao <strong class=\"text-blue-400\">CVBI (VBI CRI)</strong> em 29/08/2025 pelo valor contábil. Os cotistas receberam <strong class=\"text-emerald-400\">0,8743 cotas CVBI</strong> por cota BARI11 (R$ 74,10 com base no preço de mercado do CVBI de R$ 84,76) mais <strong class=\"text-emerald-400\">R$ 4,38 em dinheiro</strong>, totalizando R$ 78,49/cota de valor de liquidação. A conversão dos recibos em cotas negociáveis ocorreu em 15/09/2025."
+    ],
+    "pontosFortes": [
+      "Retorno total de 65,7% desde IPO (superou IFIX em 36 p.p.)",
+      "40 CRIs diversificados por segmento e indexador",
+      "Taxa média atrativa: IPCA+11,4% a.a. com spread de 3,0%",
+      "DY consistente de 12-15% a.a. ao longo da vida do fundo",
+      "Gestão ativa Patria-VBI com track record comprovado",
+      "Liquidação ordeira com cronograma cumprido"
+    ],
+    "pontosDeAtencao": [
+      "Fundo liquidado - não existe mais",
+      "Valor de liquidação (R$ 78,49) 8,1% abaixo do VP (R$ 85,37)",
+      "Inadimplência de 6% na carteira pulverizada no momento da liquidação",
+      "Exposição de 9,4% a CRIs da securitizadora Virgo (falhas de governança)",
+      "Taxa de administração elevada (1,305% + 20% perf.) durante a vida do fundo",
+      "IR de 20% sobre ganho de capital na liquidação"
+    ],
+    "conclusaoFinal": "O BARI11 demonstrou ao longo de 7 anos a capacidade de entregar <strong class=\"text-emerald-400\">retorno total competitivo via CRIs</strong>, com gestão ativa que combinou operações corporativas e pulverizadas. A liquidação e migração para o CVBI foi uma decisão estratégica da Patria visando <strong class=\"text-blue-400\">consolidação e escala</strong> de sua plataforma de crédito imobiliário. Os cotistas receberam <strong class=\"text-emerald-400\">R$ 78,49/cota</strong> em cotas CVBI e dinheiro, com custo de aquisição das cotas CVBI fixado em R$ 84,76. Para investidores que buscam exposição a CRIs com gestão Patria-VBI, o <strong class=\"text-blue-400\">CVBI11</strong> é o sucessor natural que absorveu integralmente a carteira do BARI11. <strong class=\"text-red-400\">Este fundo não existe mais.</strong>"
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 314,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. O BARI11 foi liquidado em setembro/2025, com seus ativos migrados para o CVBI11."
+  }
+}

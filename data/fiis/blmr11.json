@@ -1,0 +1,604 @@
+{
+  "meta": {
+    "ticker": "BLMR11",
+    "nome": "VBI Renda+ FOF FII",
+    "nomeExtra": "(Liquidado - Consolidado no RVBI11)",
+    "segmento": "Fundo de Fundos",
+    "badges": [
+      "LIQUIDADO Mar/2024",
+      "Consolidado no RVBI11",
+      "Ex-BlueMacaw"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 300
+  },
+  "seo": {
+    "title": "BLMR11 - Análise Completa | VBI Renda+ FOF FII (Liquidado em 2024)",
+    "description": "Análise completa do FII BLMR11 baseada em 300 documentos oficiais. Fundo de fundos liquidado em março/2024 e consolidado no RVBI11. Ex-gestão BlueMacaw, adquirida pela VBI Real Estate. PL era R$ 192 Mi, 18.558 cotistas. Cotistas receberam R$ 7,80/cota.",
+    "keywords": "BLMR11, VBI Renda+, FOF, fundo de fundos, análise BLMR11, RVBI11, VBI Real Estate, BlueMacaw, liquidado, consolidação",
+    "ogTitle": "BLMR11 - VBI Renda+ FOF FII (Liquidado em Março/2024)",
+    "ogDescription": "BLMR11 foi liquidado em 27/03/2024 e consolidado no RVBI11. FOF com PL de R$ 192 Mi e 18.558 cotistas recebeu R$ 7,80/cota (R$ 7,42 em cotas RVBI + R$ 0,37 em dinheiro). Rentabilidade total de -11,6% desde o IPO.",
+    "twitterTitle": "BLMR11 - VBI Renda+ FOF FII (Liquidado em 2024)",
+    "twitterDescription": "BLMR11: fundo de fundos liquidado em mar/2024 e consolidado no RVBI11. Rentabilidade total -11,6% vs IFIX +15,7%. Cotistas receberam R$ 7,80/cota."
+  },
+  "indicadores": {
+    "cotacao": 6.64,
+    "cotacaoData": "30/11/2023 (último pregão regular)",
+    "pvp": 0.87,
+    "pvpDesconto": "13% de desconto (último)",
+    "dividendYield": 0,
+    "dividendoMensal": 0,
+    "dividendoAnual": 0.666,
+    "patrimonioLiquido": "R$ 192 Mi",
+    "vpCota": 7.61,
+    "cotistas": 18558
+  },
+  "recomendacao": {
+    "nota": 0,
+    "veredicto": "LIQUIDADO",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">BLMR11</strong> foi <strong class=\"text-red-400\">liquidado em 27 de março de 2024</strong> e seus ativos foram consolidados no <strong class=\"text-blue-400\">RVBI11 (VBI REITS Multiestratégia FII)</strong>. Cada cotista recebeu R$ 7,42383/cota em cotas do RVBI11 (fator de 0,08587 cotas RVBI por cota BLMR, a R$ 86,45/cota RVBI) + R$ 0,37333/cota em dinheiro, totalizando <strong class=\"text-amber-400\">R$ 7,79717/cota</strong>. O fundo encerrou com <strong class=\"text-red-400\">rentabilidade total de -11,6%</strong> desde o IPO (jan/2021 a nov/2023), enquanto o IFIX rendeu +15,7% e o CDI +32,2% no mesmo período. A decisão de consolidação foi aprovada em AGE de 29/11/2023 com 34,09% das cotas votando a favor. <strong class=\"text-red-400\">Este fundo não existe mais.</strong>"
+  },
+  "quickStats": [
+    {
+      "label": "Status",
+      "valor": "LIQUIDADO",
+      "detalhe": "27 de Março/2024",
+      "icone": "building",
+      "corIcone": "red"
+    },
+    {
+      "label": "Valor Liquidação",
+      "valor": "R$ 7,797",
+      "valorSufixo": "/cota",
+      "detalhe": "R$ 7,424 RVBI + R$ 0,373 cash",
+      "icone": "money",
+      "corIcone": "amber",
+      "corValor": "amber"
+    },
+    {
+      "label": "Cotistas (último)",
+      "valor": "18.558",
+      "detalhe": "Migrados para RVBI11",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Rentabilidade Total",
+      "valor": "-11,6%",
+      "detalhe": "Jan/2021 a Nov/2023 (vs IFIX +15,7%)",
+      "icone": "chart",
+      "corIcone": "red",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Liquidado em 27/03/2024",
+      "descricao": "O BLMR11 foi dissolvido e liquidado em 27 de março de 2024 após aprovação em AGE de 29/11/2023 (34,09% das cotas a favor vs 0,24% contra). Todos os ativos foram vendidos ao RVBI11 e os cotistas receberam cotas do RVBI11 + saldo em dinheiro. As cotas deixaram de negociar na B3 em 02/02/2024.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Performance Negativa Persistente",
+      "descricao": "Desde o IPO (jan/2021), o fundo acumulou rentabilidade total de -11,6% (dividendos + variação da cota). No mesmo período, o IFIX rendeu +15,7%, o CDI +32,2% e o Ibovespa -18,8%. A cota caiu de R$ 10,00 (emissão) para R$ 6,64 (-33,6%), e os dividendos acumulados de R$ 2,20 não compensaram a queda.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Prejuízo Acumulado e Suspensão de Dividendos",
+      "descricao": "O fundo operava com prejuízo acumulado de ~R$ 0,18/cota em novembro/2023, resultado de perdas de capital na carteira (R$ 6,018 Mi em nov/23). A gestão optou por não distribuir dividendos nos últimos meses para reter receitas e aumentar o PL antes da consolidação, beneficiando os cotistas na troca por cotas do RVBI11.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Mudança de Gestão em Abril/2023",
+      "descricao": "Em abril/2023, a VBI Real Estate assumiu o controle da BlueMacaw Asset, passando a gerir o BLMR11. A mudança foi parte de uma operação societária que incluiu cisão parcial da BlueMacaw Gestora e incorporação pela BlueMacaw Asset, posteriormente controlada pela VBI.",
+      "severidade": "yellow"
+    }
+  ],
+  "gestora": {
+    "nome": "VBI Real Estate",
+    "nota": 6,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "AuM VBI",
+        "valor": "R$ 9+ Bi"
+      },
+      {
+        "label": "PL BLMR (último)",
+        "valor": "R$ 192 Mi"
+      },
+      {
+        "label": "Rent. Total BLMR",
+        "valor": "-11,6%",
+        "cor": "red"
+      }
+    ],
+    "resumo": "A <strong class=\"text-blue-400\">VBI Real Estate</strong> é uma das maiores gestoras de FIIs do Brasil com mais de <strong class=\"text-emerald-400\">R$ 9 bilhões comprometidos em 95 investimentos</strong> em mais de 18 estados. O BLMR11 (originalmente BlueMacaw Renda+ FOF) passou para gestão da VBI em abril/2023 após aquisição da BlueMacaw Asset. A consolidação no RVBI11 fez parte de uma estratégia de <strong class=\"text-amber-400\">fusão de 4 fundos</strong> (BLMR11, BLMC11, MORE11, MORC11) em um único veículo multiestratégia. A VBI alegou que a fusão geraria aumento de liquidez, expansão de múltiplo, possibilidade de ganho de capital e otimização de portfólio. Time liderado por Ken Wainer e Rodrigo Abbud (sócios fundadores), com Ricardo Vieira como head de fundos de fundos.",
+    "link": "../../gestores/vbi-real-estate/"
+  },
+  "taxas": {
+    "subtitulo": "Taxas do fundo quando ativo",
+    "glowCor": "yellow",
+    "itens": [
+      {
+        "label": "Taxa de Administração Total",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre o Patrimônio Líquido",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder IGPM+3% ou 4,5% (o maior), calculado semestralmente",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Status",
+        "valor": "Encerrado",
+        "detalhe": "Fundo liquidado em 27/03/2024",
+        "corBorda": "red"
+      }
+    ],
+    "comparativoTitulo": "Dados finais do fundo",
+    "comparativo": [
+      {
+        "ticker": "BLMR11",
+        "taxa": "1,00%",
+        "perf": "LIQUIDADO 27/03/2024",
+        "destaque": true
+      },
+      {
+        "ticker": "RVBI11",
+        "taxa": "1,05%",
+        "perf": "Fundo sucessor"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM S.A. (Apex Group)"
+      },
+      {
+        "label": "Gestor",
+        "valor": "VBI Asset Management Ltda. (ex-BlueMacaw Asset)"
+      },
+      {
+        "label": "Escriturador",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "CNPJ do Fundo",
+        "valor": "36.368.869/0001-30"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "FIIs Líquidos",
+        "valor": "58%"
+      },
+      {
+        "label": "FIIs Pvt Placement",
+        "valor": "31%"
+      },
+      {
+        "label": "CRI",
+        "valor": "4%"
+      },
+      {
+        "label": "Caixa",
+        "valor": "6%"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Logísticos",
+        "Recebíveis",
+        "Lajes Comerciais",
+        "Outros",
+        "CRI",
+        "Caixa"
+      ],
+      "data": [
+        34,
+        21,
+        16,
+        18,
+        4,
+        6
+      ],
+      "cores": [
+        "#10b981",
+        "#3b82f6",
+        "#8b5cf6",
+        "#f59e0b",
+        "#06b6d4",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "FIIs Líquidos",
+        "FIIs Private Placement",
+        "CRI",
+        "Ações",
+        "Caixa"
+      ],
+      "data": [
+        58,
+        31,
+        4,
+        0.4,
+        6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Prime Hotels FII (Pvt)",
+        "setor": "Hoteleiro",
+        "receita": "12%",
+        "rating": "Private",
+        "ratingCor": "amber",
+        "risco": "Alto (Ilíquido)",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "BLMG11 (VBI Logístico)",
+        "setor": "Logístico",
+        "receita": "8%",
+        "rating": "Líquido",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "MCHY11 (Private)",
+        "setor": "Recebíveis",
+        "receita": "8%",
+        "rating": "Private",
+        "ratingCor": "amber",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "XPLG11 / RBRL11 / BTLG11 / CCRF11",
+        "setor": "Logístico / Recebíveis",
+        "receita": "26%",
+        "rating": "Líquido",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "BRCR11 / JSRE11 / AIEC11",
+        "setor": "Lajes Comerciais",
+        "receita": "14%",
+        "rating": "Líquido",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Outros (~20 ativos)",
+        "setor": "Diversificado",
+        "receita": "32%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Variado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "FIIs Líquidos",
+        "valor": 58,
+        "cor": "emerald"
+      },
+      {
+        "label": "FIIs Private Placement",
+        "valor": 31,
+        "cor": "amber"
+      },
+      {
+        "label": "CRI + Outros",
+        "valor": 11,
+        "cor": "blue"
+      }
+    ],
+    "riscoNota": "A carteira final do BLMR11 (nov/2023) era composta por <strong class=\"text-blue-400\">~30 ativos</strong>, sendo 89,4% em cotas de FIIs, 3,8% em CRI e 0,4% em ações. Por tipo de acesso: 58% em FIIs líquidos e 31% em private placement. A exposição setorial era diversificada: logísticos (34%), recebíveis (21%), lajes comerciais (16%) e outros (18%). A gestão realizou R$ 24 Mi em giro de carteira (~15% do PL) nos meses finais para homogeneizar o portfólio com o RVBI11 antes da consolidação. <strong class=\"text-red-400\">Este fundo foi liquidado em 27/03/2024.</strong>"
+  },
+  "timeline": {
+    "subtitulo": "Do IPO à liquidação em menos de 3,5 anos",
+    "periodos": [
+      {
+        "periodo": "Set/2020",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Início das atividades do BlueMacaw Renda+ FOF FII. Fundo constituído sob gestão da BlueMacaw Gestora de Recursos.",
+        "pontos": [
+          "CNPJ: 36.368.869/0001-30",
+          "Gestor original: BlueMacaw Gestora de Recursos",
+          "Administrador: BRL Trust DTVM S.A."
+        ]
+      },
+      {
+        "periodo": "Jan/2021",
+        "label": "2ª EMISSÃO (IPO)",
+        "cor": "emerald",
+        "descricao": "Emissão principal com captação de R$ 255 milhões a R$ 10,00/cota. Início efetivo da negociação na B3.",
+        "pontos": [
+          "Cota de emissão: R$ 10,00",
+          "25.541.630 cotas emitidas",
+          "Encerramento da oferta: 29/01/2021",
+          "PL alcançou ~R$ 255 milhões"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "DIFICULDADES",
+        "cor": "amber",
+        "descricao": "Queda expressiva no valor da cota, underperformance vs IFIX e prejuízo acumulado na carteira. Dividendos decrescentes.",
+        "pontos": [
+          "Cota caiu de R$ 10,00 para R$ 6,64 (-33,6%)",
+          "Dividendo caiu de R$ 0,065 para R$ 0,053/cota",
+          "Prejuízo acumulado impediu distribuições",
+          "31% do PL em ativos ilíquidos (private placement)"
+        ]
+      },
+      {
+        "periodo": "Mar-Abr/2023",
+        "label": "VBI ASSUME GESTÃO",
+        "cor": "blue",
+        "descricao": "VBI Real Estate adquire controle da BlueMacaw Asset e passa a gerir o BLMR11. Inicia-se análise de integração com o RVBI11.",
+        "pontos": [
+          "Cisão parcial da BlueMacaw Gestora",
+          "VBI Real Estate controla indiretamente a gestora",
+          "Início do giro de carteira (~R$ 24 Mi)",
+          "BRL Trust transferida para Apex Group"
+        ]
+      },
+      {
+        "periodo": "Nov/2023",
+        "label": "AGE CONSOLIDAÇÃO",
+        "cor": "orange",
+        "descricao": "Cotistas aprovam dissolução e consolidação no RVBI11 por consulta formal encerrada em 29/11/2023.",
+        "pontos": [
+          "34,09% das cotas votaram a favor",
+          "Apenas 0,24% votaram contra",
+          "Fusão de 4 fundos: BLMR, BLMC, MORE, MORC",
+          "Dividendos suspensos para reter receitas no PL"
+        ]
+      },
+      {
+        "periodo": "Fev/2024",
+        "label": "BLOQUEIO COTAS",
+        "cor": "orange",
+        "descricao": "Cotas bloqueadas para negociação na B3 a partir de 02/02/2024. Cotistas informaram custo médio de aquisição até 01/03/2024.",
+        "pontos": [
+          "Último pregão: 02/02/2024",
+          "Prazo para custo médio prorrogado para 01/03",
+          "Custo mínimo histórico na B3: R$ 6,05",
+          "AGE do RVBI aprovada em 24/01/2024"
+        ]
+      },
+      {
+        "periodo": "27/Mar/2024",
+        "label": "LIQUIDAÇÃO",
+        "cor": "red",
+        "descricao": "Fundo oficialmente liquidado. Cotistas receberam cotas do RVBI11 + saldo em dinheiro (pago em 10/04/2024).",
+        "pontos": [
+          "<strong class=\"text-red-400\">Liquidação em 27/03/2024</strong>",
+          "R$ 7,42383/cota em cotas RVBI11",
+          "R$ 0,37333/cota em dinheiro (10/04/2024)",
+          "Total: R$ 7,79717/cota (vs R$ 10,00 de emissão)",
+          "Fator: 0,08587 cotas RVBI por cota BLMR",
+          "Cota RVBI na liquidação: R$ 86,45"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - NEGATIVA:",
+      "texto": "O BLMR11 teve uma trajetória curta e negativa. Constituído em setembro/2020 como BlueMacaw Renda+ FOF e emitido a R$ 10,00/cota em janeiro/2021, o fundo <strong class=\"text-red-400\">acumulou perda total de -11,6%</strong> até novembro/2023, enquanto o IFIX rendeu +15,7% e o CDI +32,2%. Em abril/2023, a VBI Real Estate assumiu a gestão após aquisição da BlueMacaw Asset. A combinação de alta vacância em FIIs de tijolo da carteira, alocações em private placement ilíquidos (31% do PL) e prejuízo acumulado de R$ 0,18/cota levou à decisão de <strong class=\"text-red-400\">consolidação e liquidação</strong> em março/2024. Cotistas receberam R$ 7,797/cota em troca (0,08587 cotas do RVBI11 a R$ 86,45 + R$ 0,373 em dinheiro), uma perda de ~22% em relação ao preço de emissão."
+    },
+    "crescimento": [
+      {
+        "label": "Cota Emissão",
+        "valor": "R$ 10,00",
+        "detalhe": "Janeiro/2021"
+      },
+      {
+        "label": "Cota Liquidação",
+        "valor": "R$ 7,797",
+        "detalhe": "27/Março/2024"
+      },
+      {
+        "label": "Perda Total",
+        "valor": "-11,6%",
+        "detalhe": "Incluindo dividendos"
+      },
+      {
+        "label": "IFIX (mesmo período)",
+        "valor": "+15,7%",
+        "detalhe": "Underperformance de ~27 p.p."
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O BLMR11 foi um <strong class=\"text-red-400\">fundo de fundos liquidado em 27/03/2024</strong>, consolidado no RVBI11 (VBI REITS Multiestratégia). Originalmente chamado BlueMacaw Renda+ FOF, passou para gestão da VBI Real Estate em abril/2023. Investia em cotas de FIIs (89,4%) com exposição diversificada: logísticos (34%), recebíveis (21%), lajes comerciais (16%). A <strong class=\"text-red-400\">rentabilidade total de -11,6%</strong> desde o IPO (vs IFIX +15,7% e CDI +32,2%), o prejuízo acumulado de R$ 0,18/cota e a alta exposição a private placements ilíquidos (31% do PL) levaram à decisão de consolidação em 4 fundos no RVBI11. Cotistas receberam R$ 7,797/cota (0,08587 cotas RVBI a R$ 86,45 + R$ 0,373 em dinheiro).",
+    "paraQuem": [
+      "<strong class=\"text-red-400\">FUNDO LIQUIDADO</strong> - Não é mais possível investir no BLMR11",
+      "Ex-cotistas foram migrados para o <strong class=\"text-blue-400\">RVBI11</strong> em 27/03/2024",
+      "Para quem busca FOF VBI, o veículo atual é o <strong class=\"text-blue-400\">RVBI11 (VBI REITS Multiestratégia)</strong>"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">FUNDO LIQUIDADO</strong> - Cotas não são mais negociadas desde 02/02/2024",
+      "Não há mais como comprar ou vender BLMR11 na B3",
+      "O ticker foi desativado e o CNPJ está em processo de cancelamento"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Dez/22",
+      "Jan/23",
+      "Fev/23",
+      "Mar/23",
+      "Abr/23",
+      "Mai/23",
+      "Jun/23",
+      "Jul/23",
+      "Ago/23",
+      "Set/23",
+      "Out/23",
+      "Nov/23"
+    ],
+    "chartData": [
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.065,
+      0.055,
+      0.06,
+      0.06,
+      0.06,
+      0.053,
+      0.053,
+      0
+    ],
+    "chartCor": "#ef4444",
+    "chartYMin": 0,
+    "chartYMax": 0.08,
+    "totaisAnuais": [
+      {
+        "ano": "2021 (parcial)",
+        "valor": "~R$ 0,78"
+      },
+      {
+        "ano": "2022",
+        "valor": "~R$ 0,78"
+      },
+      {
+        "ano": "2023 (até out)",
+        "valor": "~R$ 0,60"
+      },
+      {
+        "ano": "Liquidação (mar/24)",
+        "valor": "R$ 7,797/cota",
+        "cor": "amber"
+      },
+      {
+        "ano": "Status",
+        "valor": "LIQUIDADO",
+        "cor": "red"
+      }
+    ],
+    "guidance": {
+      "periodo": "Fundo Liquidado",
+      "faixa": "R$ 0,000",
+      "unidade": "Sem mais distribuições"
+    },
+    "stats": [
+      {
+        "label": "Maior (dez/22-abr/23)",
+        "valor": "R$ 0,065",
+        "cor": "emerald"
+      },
+      {
+        "label": "Último (out/23)",
+        "valor": "R$ 0,053"
+      },
+      {
+        "label": "Nov/23 em diante",
+        "valor": "R$ 0,000",
+        "cor": "red"
+      },
+      {
+        "label": "Div. Total IPO-Fim",
+        "valor": "~R$ 2,20"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Encerrado",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "N/A",
+      "descricao": "Fundo <span class=\"text-red-400\">liquidado em 27/03/2024</span>. Cotistas receberam 0,08587 cotas do RVBI11 por cota BLMR + R$ 0,373 em dinheiro.",
+      "detalhes": [
+        {
+          "label": "Último VP/Cota (nov/23)",
+          "valor": "R$ 7,61"
+        },
+        {
+          "label": "Último P/VP (nov/23)",
+          "valor": "0,87x"
+        },
+        {
+          "label": "Valor Liquidação",
+          "valor": "R$ 7,797",
+          "cor": "amber"
+        },
+        {
+          "label": "Cota RVBI na liquidação",
+          "valor": "R$ 86,45"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "-11,6%",
+      "label": "Rentabilidade Total",
+      "cor": "red",
+      "descricao": "Rentabilidade total desde o IPO (jan/2021) incluindo dividendos distribuídos e variação da cota",
+      "detalhe": "Cota: -33,6% | Dividendos: +22,0% | IFIX: +15,7% | CDI: +32,2%"
+    },
+    "recomendacoes": {
+      "valor": "RVBI11",
+      "label": "Fundo Sucessor",
+      "cor": "blue",
+      "descricao": "Cotistas do BLMR11 foram migrados para o RVBI11 (VBI REITS Multiestratégia). Fator de conversão: 0,08587 cotas RVBI por cada cota BLMR.",
+      "detalhe": "Custo base das cotas RVBI recebidas: R$ 86,45/cota para fins tributários"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">BLMR11 foi liquidado em 27 de março de 2024</strong> e consolidado no RVBI11 (VBI REITS Multiestratégia FII). O fundo, originalmente chamado BlueMacaw Renda+ FOF e posteriormente VBI Renda+ FOF após aquisição pela VBI Real Estate em abril/2023, operou por menos de 3,5 anos (set/2020 a mar/2024) com <strong class=\"text-red-400\">resultado negativo de -11,6%</strong> para os cotistas.",
+      "A trajetória do BLMR11 foi marcada por uma <strong class=\"text-amber-400\">underperformance significativa</strong> em relação aos benchmarks: enquanto o fundo perdeu 11,6% no total, o IFIX rendeu +15,7%, o CDI +32,2% e até o Ibovespa caiu menos (-18,8%, embora sem considerar dividendos). A carteira com 31% em private placement ilíquidos, exposição a FIIs com alta vacância e alavancagem, e a realização de prejuízos no giro de carteira foram os principais fatores.",
+      "A consolidação de 4 fundos (BLMR11, BLMC11, MORE11 e MORC11) no RVBI11 foi a solução encontrada pela VBI. A AGE de 29/11/2023 aprovou a operação com 34,09% de votos a favor (apenas 0,24% contra). Cada cotista recebeu exatamente <strong class=\"text-amber-400\">R$ 7,79717/cota</strong>: R$ 7,42383 em cotas do RVBI11 (fator 0,08587 cotas RVBI a R$ 86,45) + R$ 0,37333 em dinheiro (pago em 10/04/2024). Para quem não informou custo médio, foi considerado o mínimo histórico de R$ 6,05, gerando retenção de IR de 20% sobre a diferença.",
+      "O BLMR11 serve como caso de estudo sobre os riscos de FOFs com alta exposição a private placements, concentração setorial e gestão que não conseguiu gerar alfa. A consolidação no RVBI11, embora tenha cristalizado perdas, ofereceu aos cotistas maior liquidez e diversificação no novo veículo."
+    ],
+    "pontosFortes": [
+      "Gestora VBI com track record e R$ 9+ Bi em ativos",
+      "Consolidação no RVBI11 deu liquidez e escala aos cotistas",
+      "Diversificação setorial na carteira (logístico, recebíveis, lajes)",
+      "Transparência no processo de liquidação e comunicação",
+      "Retenção de receitas no PL final beneficiou cotistas na troca"
+    ],
+    "pontosDeAtencao": [
+      "FUNDO LIQUIDADO - Não negocia mais desde 02/02/2024",
+      "Rentabilidade total negativa (-11,6% vs IFIX +15,7%)",
+      "Underperformance de ~27 p.p. vs IFIX e ~44 p.p. vs CDI",
+      "Prejuízo acumulado de R$ 0,18/cota impediu dividendos finais",
+      "31% do PL em private placement ilíquidos",
+      "Perda de ~22% em relação ao preço de emissão (R$ 10,00)",
+      "Quórum baixo nas assembleias (2-6% nas AGEs anteriores)"
+    ],
+    "conclusaoFinal": "O BLMR11 <strong class=\"text-red-400\">não existe mais</strong>. Foi liquidado em 27/03/2024 e consolidado no RVBI11. Para ex-cotistas migrados para o RVBI11, recomenda-se avaliar o desempenho do fundo sucessor e considerar se a tese de investimento do RVBI11 se adequa ao perfil. O custo base das cotas RVBI recebidas é R$ 86,45 para fins de IR. Esta página serve como <strong class=\"text-amber-400\">registro histórico completo</strong> do fundo, baseado na análise de 300 documentos oficiais."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 300,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. O BLMR11 foi liquidado em 27/03/2024 e suas cotas não são mais negociadas na B3. Esta página é um registro histórico baseado na análise de 300 documentos oficiais da CVM/B3."
+  }
+}

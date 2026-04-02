@@ -1,0 +1,542 @@
+{
+  "meta": {
+    "ticker": "CXTL11",
+    "nome": "Caixa Seq Logistica Renda FII",
+    "segmento": "Tijolo - Logistica/Industrial",
+    "badges": [
+      "Logistica",
+      "Mono-ativo",
+      "Duque de Caxias/RJ"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 615
+  },
+  "seo": {
+    "title": "CXTL11 - Analise Completa | Caixa Seq Logistica Renda FII",
+    "description": "Analise completa do FII CXTL11 baseada em 615 documentos oficiais. Fundo de logistica com 1 imovel em Duque de Caxias/RJ, 100% ocupado, DY impactado por reforma do telhado. Riscos e projecoes 2026.",
+    "keywords": "CXTL11, Caixa Seq Logistica, FII logistica, analise CXTL11, dividend yield CXTL11, Duque de Caxias, Atmosfera, Sequoia Properties",
+    "ogTitle": "CXTL11 - Analise Completa do Caixa Seq Logistica Renda FII 2026",
+    "ogDescription": "Analise detalhada do CXTL11: fundo logistico mono-ativo em Duque de Caxias/RJ. 7.671 m2 ABL, 100% ocupado, dividendos reduzidos por reforma de R$ 1,4 Mi. Riscos e projecoes.",
+    "twitterTitle": "CXTL11 - Analise Completa | Caixa Seq Logistica Renda FII",
+    "twitterDescription": "Analise do CXTL11: galpao logistico em Duque de Caxias/RJ. 100% ocupado, locatario unico Atmosfera, contrato ate 2031. Dividendos impactados por reforma do telhado."
+  },
+  "indicadores": {
+    "cotacao": 310.14,
+    "cotacaoData": "29/11/2025",
+    "pvp": 0.75,
+    "pvpDesconto": "25% de desconto",
+    "dividendYield": 4.81,
+    "dividendoMensal": 1.24,
+    "dividendoAnual": 14.92,
+    "patrimonioLiquido": "R$ 22,2 Mi",
+    "vpCota": 414.62,
+    "cotistas": 585,
+    "cotistasDetalhe": "53.597 cotas",
+    "ocupacao": 100,
+    "wault": 6,
+    "numImoveis": 1,
+    "ablTotal": "7.671",
+    "numEstados": 1,
+    "numInquilinos": 1
+  },
+  "recomendacao": {
+    "nota": 4,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">CXTL11</strong> apresenta riscos significativos: <strong class=\"text-red-400\">fundo mono-ativo e mono-locatario</strong> com apenas 1 galpao em Duque de Caxias/RJ locado para a Atmosfera (setor textil), <strong class=\"text-red-400\">dividendos severamente impactados</strong> pela reforma do telhado de R$ 1,4 Mi (sem rendimento em junho, e valores irrisorios de jul a dez/2025), <strong class=\"text-red-400\">liquidez praticamente inexistente</strong> com apenas 585 cotistas e patrimonio de R$ 22 Mi. O <strong class=\"text-emerald-400\">P/VP de 0,75</strong> reflete corretamente os riscos estruturais do fundo."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimonio",
+      "valor": "R$ 22,2 Mi",
+      "detalhe": "VP/cota: R$ 414,62",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 414,62</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,24",
+      "valorSufixo": "/mes (media)",
+      "detalhe": "R$ 14,92/ano | DY 4,81%",
+      "icone": "money",
+      "corIcone": "red",
+      "corValor": "red"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "585",
+      "detalhe": "53.597 cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Preco Justo",
+      "valor": "R$ 280,00",
+      "detalhe": "-10% downside",
+      "detalheIcone": "arrowDown",
+      "icone": "chart",
+      "corIcone": "red",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Mono-ativo e Mono-locatario",
+      "descricao": "O fundo possui um unico imovel locado para um unico inquilino (Atmosfera Gestao e Higienizacao de Texteis). Qualquer problema com o locatario ou o imovel impacta 100% do fundo. Setor textil de nicho.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Reforma do Telhado - R$ 1,4 Mi",
+      "descricao": "Reforma do telhado custando R$ 1,4 Mi consumiu os dividendos do fundo por 12 meses (jun/2025 a mai/2026). Sem rendimento em jun/25, e valores irrisorios de jul a dez/2025 (R$ 0,16 a R$ 0,65 vs R$ 2,21 anteriores).",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez Praticamente Inexistente",
+      "descricao": "Apenas 585 cotistas e 53.597 cotas emitidas. Volume de negociacao extremamente baixo, dificultando entrada e saida de posicoes. Patrimonio de apenas R$ 22 Mi e um dos menores FIIs listados.",
+      "severidade": "red"
+    }
+  ],
+  "gestora": {
+    "nome": "Caixa Economica Federal / Sequoia Properties",
+    "nota": 5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Administrador",
+        "valor": "Caixa"
+      },
+      {
+        "label": "Consultor",
+        "valor": "Sequoia"
+      },
+      {
+        "label": "Patrimonio",
+        "valor": "R$ 22 Mi"
+      }
+    ],
+    "resumo": "Administracao pela <strong class=\"text-blue-400\">Caixa Economica Federal</strong> com consultoria imobiliaria da <strong class=\"text-blue-400\">Sequoia Properties</strong>. Gestao passiva com foco em manutencao do ativo existente. Taxa combinada de administracao e consultoria elevada para o porte do fundo (1,20% a.a. + minimos mensais).",
+    "link": "../../gestores/sequoia-properties/"
+  },
+  "taxas": {
+    "subtitulo": "Elevadas para o porte do fundo",
+    "glowCor": "red",
+    "itens": [
+      {
+        "label": "Taxa de Administracao e Gestao",
+        "valor": "0,35% a.a.",
+        "detalhe": "Sobre PL + R$ 205 mil/ano | Min. mensal R$ 37.424",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Consultoria",
+        "valor": "0,85% a.a.",
+        "detalhe": "Sobre PL | Min. mensal R$ 31.404 (red. 20% desde out/2023)",
+        "corBorda": "red"
+      },
+      {
+        "label": "Custo Total Estimado",
+        "valor": "~5,0% a.a.",
+        "detalhe": "Sobre PL - impacto dos minimos mensais em fundo pequeno",
+        "corBorda": "red"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Logistica",
+    "comparativo": [
+      {
+        "ticker": "CXTL11",
+        "taxa": "~5,0%*",
+        "perf": "Sem taxa de performance",
+        "destaque": true
+      },
+      {
+        "ticker": "HGLG11",
+        "taxa": "0,60%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "BTLG11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IPCA+5,5%"
+      },
+      {
+        "ticker": "XPLG11",
+        "taxa": "0,95%",
+        "perf": "+20% perf. s/ CDI"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador/Gestor",
+        "valor": "Caixa Economica Federal"
+      },
+      {
+        "label": "Consultor Imobiliario",
+        "valor": "Sequoia Desenvolvimento Imobiliario S.A."
+      },
+      {
+        "label": "Nota*",
+        "valor": "Custo efetivo alto devido a minimos mensais sobre PL pequeno"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imoveis",
+        "valor": "1"
+      },
+      {
+        "label": "m2 ABL",
+        "valor": "7.671"
+      },
+      {
+        "label": "Contrato",
+        "valor": "Tipico"
+      },
+      {
+        "label": "Ocupacao",
+        "valor": "100%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Centro Operacional Logistico"
+      ],
+      "data": [
+        100
+      ],
+      "cores": [
+        "#10b981"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Atmosfera"
+      ],
+      "data": [
+        100
+      ],
+      "cores": [
+        "#3b82f6"
+      ]
+    },
+    "locatariosNota": {
+      "titulo": "Locatario Unico - Atmosfera",
+      "texto": "A <strong class=\"text-white\">Atmosfera Gestao e Higienizacao de Texteis S.A.</strong> e a unica locataria do fundo, ocupando 100% do imovel desde dezembro de 2012. Contrato aditado em fevereiro de 2021 com ampliacao do prazo ate <strong class=\"text-blue-400\">dezembro de 2031</strong>. Contrato tipico com reajuste pelo IPCA e garantia por seguro fianca. Aluguel atual de <strong class=\"text-emerald-400\">R$ 198.549/mes</strong> (R$ 25,88/m2)."
+    },
+    "locatarios": [
+      {
+        "nome": "Atmosfera Gestao e Higienizacao de Texteis",
+        "setor": "Textil / Higienizacao",
+        "receita": "100%",
+        "rating": "N/A",
+        "ratingCor": "slate",
+        "risco": "Concentracao Total",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "100% Ocupado",
+        "valor": 1,
+        "cor": "emerald"
+      },
+      {
+        "label": "Contrato Longo (2031)",
+        "valor": 1,
+        "cor": "blue"
+      },
+      {
+        "label": "Mono-locatario",
+        "valor": 1,
+        "cor": "red"
+      },
+      {
+        "label": "Setor de Nicho",
+        "valor": 1,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "O fundo esta <strong class=\"text-emerald-400\">100% ocupado</strong> com contrato ate dezembro de 2031 (WAULT ~6 anos), o que garante receita previsivel. Porem, a <strong class=\"text-red-400\">concentracao total em um unico locatario</strong> de um setor de nicho (higienizacao textil) representa risco elevado. A Atmosfera esta adimplente, mas nao possui rating de credito publico."
+  },
+  "ativos": {
+    "subtitulo": "1 imovel | 7.671 m2 ABL | Duque de Caxias/RJ",
+    "legendaRisco": [
+      {
+        "label": "Positivo - 100% ocupado, contrato longo",
+        "cor": "emerald"
+      },
+      {
+        "label": "Moderado - Localizacao secundaria",
+        "cor": "blue"
+      },
+      {
+        "label": "Atencao - Reforma em andamento",
+        "cor": "amber"
+      },
+      {
+        "label": "Critico - Mono-ativo e mono-locatario",
+        "cor": "red"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "Atmosfera - Duque de Caxias/RJ - 100% do fundo",
+        "cor": "red",
+        "itens": [
+          {
+            "nome": "Centro Operacional Atmosfera",
+            "cidade": "Duque de Caxias/RJ",
+            "tipo": "Logistico",
+            "tipoCor": "emerald",
+            "abl": 7671,
+            "locatario": "Atmosfera",
+            "vencimento": "12/2031",
+            "risco": "Mono-ativo",
+            "riscoCor": "red"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "Fundo logistico desde 2011 com ativo unico",
+    "periodos": [
+      {
+        "periodo": "2011-2012",
+        "label": "CONSTITUICAO",
+        "cor": "blue",
+        "descricao": "Constituicao do FII e aquisicao do imovel em Duque de Caxias/RJ.",
+        "pontos": [
+          "Inicio na B3 em novembro de 2011",
+          "Aquisicao do imovel em Duque de Caxias/RJ",
+          "Locacao para Atmosfera a partir de dezembro de 2012",
+          "Patrimonio inicial com foco em logistica"
+        ]
+      },
+      {
+        "periodo": "2013-2020",
+        "label": "OPERACAO ESTAVEL",
+        "cor": "emerald",
+        "descricao": "Periodo de estabilidade operacional com dividendos regulares.",
+        "pontos": [
+          "Receita imobiliaria estavel com locatario adimplente",
+          "Dividendos regulares acima de R$ 2,00/cota",
+          "100% de ocupacao mantida",
+          "Fundo pequeno com liquidez limitada"
+        ]
+      },
+      {
+        "periodo": "2021",
+        "label": "RENOVACAO CONTRATO",
+        "cor": "purple",
+        "descricao": "Aditamento do contrato com Atmosfera ampliando prazo ate 2031.",
+        "pontos": [
+          "Fev/2021: Aditamento do contrato de locacao",
+          "Novo vencimento: dezembro de 2031",
+          "Manutencao das condicoes comerciais",
+          "Reajuste anual pelo IPCA"
+        ]
+      },
+      {
+        "periodo": "2025-2026",
+        "label": "REFORMA E IMPACTO",
+        "cor": "red",
+        "descricao": "Reforma do telhado impacta severamente os dividendos por 12 meses.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Jun/2025: Reforma do telhado - R$ 1,4 Mi (benfeitoria necessaria)</strong>",
+          "<strong class=\"text-red-400\">Jun/2025: Zero dividendo | Jul-Dez/25: dividendos irrisorios</strong>",
+          "Pagamento parcelado: sinal + 5 parcelas mensais",
+          "Obra com 75% de avanco fisico em nov/2025",
+          "Ultima parcela condicionada a entrega da obra",
+          "Impacto estimado por 12 meses (jun/2025 a mai/2026)"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetoria - NEGATIVA:",
+      "texto": "O CXTL11 e um <strong class=\"text-red-400\">micro-fundo logistico</strong> com patrimonio de apenas R$ 22 Mi, <strong class=\"text-red-400\">585 cotistas</strong> e <strong class=\"text-red-400\">liquidez praticamente inexistente</strong>. Apos anos de operacao estavel com dividendos regulares, a <strong class=\"text-red-400\">reforma do telhado de R$ 1,4 Mi</strong> expoe a fragilidade de um fundo mono-ativo sem reservas. O DY despencou de ~12% para ~4,8% nos ultimos 12 meses. As taxas de administracao e consultoria consomem parcela significativa da receita."
+    },
+    "crescimento": [
+      {
+        "label": "DY 12M Anterior",
+        "valor": "~12%",
+        "detalhe": "Antes da reforma"
+      },
+      {
+        "label": "DY 12M Atual",
+        "valor": "4,81%",
+        "detalhe": "Impactado pela reforma"
+      },
+      {
+        "label": "Reforma",
+        "valor": "R$ 1,4 Mi",
+        "detalhe": "75% concluida em nov/25"
+      },
+      {
+        "label": "Desconto P/VP",
+        "valor": "25%",
+        "detalhe": "Cota vs VP"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O CXTL11 e um <strong class=\"text-red-400\">micro-FII logistico mono-ativo</strong> com um galpao em Duque de Caxias/RJ locado para a Atmosfera (textil). Embora <strong class=\"text-emerald-400\">100% ocupado com contrato ate 2031</strong>, o fundo sofre com <strong class=\"text-red-400\">taxas efetivas altissimas</strong> (~5% a.a. sobre PL devido aos minimos mensais), <strong class=\"text-red-400\">liquidez quase inexistente</strong> (585 cotistas), e <strong class=\"text-red-400\">dividendos severamente impactados</strong> pela reforma do telhado. O P/VP de 0,75 parece atrativo, mas reflete corretamente os riscos estruturais do fundo.",
+    "paraQuem": [
+      "Investidores <strong class=\"text-red-400\">nao recomendado para a maioria dos perfis</strong>",
+      "Eventualmente para quem busca <strong class=\"text-amber-400\">exposicao logistica barata</strong> com horizonte muito longo",
+      "Investidores que <strong class=\"text-amber-400\">aceitam iliquidez total</strong>",
+      "Quem aposta na <strong class=\"text-amber-400\">normalizacao dos dividendos</strong> apos termino da reforma (2S26)"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-red-400\">liquidez para entrar e sair</strong>",
+      "Investidores que <strong class=\"text-red-400\">nao aceitam concentracao total</strong> em 1 ativo/1 locatario",
+      "Perfil <strong class=\"text-red-400\">conservador ou moderado</strong>",
+      "Quem prioriza <strong class=\"text-red-400\">renda mensal consistente</strong>",
+      "Investidores <strong class=\"text-red-400\">senssiveis a taxas elevadas</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25"
+    ],
+    "chartData": [
+      2.21,
+      2.23,
+      2.2,
+      2.17,
+      1.81,
+      2.15,
+      0,
+      0.29,
+      0.65,
+      0.66,
+      0.39,
+      0.16
+    ],
+    "chartCor": "#ef4444",
+    "chartYMin": 0,
+    "chartYMax": 2.5,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 26,56"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 26,00",
+        "cor": "emerald"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 14,92",
+        "cor": "red",
+        "destaque": true
+      }
+    ],
+    "guidance": {
+      "periodo": "2026",
+      "faixa": "Normalizacao esperada apos conclusao da reforma",
+      "unidade": "estimativa pos-reforma ~R$ 2,00/cota/mes"
+    },
+    "stats": [
+      {
+        "label": "Dividendo Medio UDM",
+        "valor": "R$ 1,24/mes"
+      },
+      {
+        "label": "DY 12 Meses (mercado)",
+        "valor": "4,81%",
+        "cor": "red"
+      },
+      {
+        "label": "Maior (Jan/25)",
+        "valor": "R$ 2,23",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Jun/25)",
+        "valor": "R$ 0,00",
+        "cor": "red"
+      },
+      {
+        "label": "Tendencia",
+        "valor": "Recuperacao lenta",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,75",
+      "descricao": "Cota negociada com <span class=\"text-amber-400\">25% de desconto</span> sobre o valor patrimonial, porem justificado pelos riscos estruturais",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 414,62"
+        },
+        {
+          "label": "Preco",
+          "valor": "R$ 310,14"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "-2,53%",
+      "label": "Spread vs NTN-B",
+      "cor": "red",
+      "descricao": "DY abaixo da renda fixa, sem compensar o risco do ativo",
+      "detalhe": "DY CXTL11 (4,81%) vs NTN-B 2035 (7,34%)"
+    },
+    "recomendacoes": {
+      "valor": 0,
+      "label": "Recomendacoes",
+      "cor": "slate",
+      "descricao": "Sem cobertura de analistas conhecida",
+      "detalhe": "Fundo micro-cap sem visibilidade no mercado"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">CXTL11</strong> e um caso classico de <strong class=\"text-red-400\">micro-fundo armadilha</strong>: embora o ativo esteja 100% ocupado com contrato longo (2031), os <strong class=\"text-red-400\">custos estruturais</strong> consomem parcela desproporcional da receita. As taxas de administracao e consultoria somam aproximadamente 5% a.a. sobre o PL, muito acima da media do setor logistico (0,6% a 1,0%).",
+      "A <strong class=\"text-red-400\">reforma do telhado</strong> de R$ 1,4 Mi expoe a fragilidade de um fundo sem reservas: representou mais de 6% do PL e eliminou dividendos por meses. Em um fundo diversificado, este tipo de despesa seria absorvido sem impacto material nas distribuicoes. A obra estava 75% concluida em novembro/2025.",
+      "Com apenas <strong class=\"text-red-400\">585 cotistas</strong> e volume de negociacao minimo, sair de uma posicao no CXTL11 pode ser extremamente dificil. O P/VP de 0,75 parece atrativo, mas quando se consideram as taxas efetivas (~5% a.a.) e a concentracao total, o desconto se justifica."
+    ],
+    "pontosFortes": [
+      "100% de ocupacao com locatario adimplente",
+      "Contrato ate dezembro de 2031 (WAULT ~6 anos)",
+      "Reajuste pelo IPCA com seguro fianca",
+      "Localizacao proxima a BR-040 em regiao logistica",
+      "Aluguel de R$ 25,88/m2 - compativel com mercado"
+    ],
+    "pontosDeAtencao": [
+      "Mono-ativo e mono-locatario (risco concentracao total)",
+      "Taxas efetivas de ~5% a.a. sobre PL (minimos mensais)",
+      "Liquidez praticamente inexistente (585 cotistas)",
+      "Dividendos impactados por 12 meses (reforma telhado)",
+      "Patrimonio de apenas R$ 22 Mi (micro-fundo)",
+      "DY de 4,81% abaixo da renda fixa (NTN-B 7,34%)",
+      "Locatario sem rating de credito publico"
+    ],
+    "conclusaoFinal": "O CXTL11 <strong class=\"text-red-400\">nao e recomendado</strong> para a maioria dos investidores. Os <strong class=\"text-red-400\">riscos estruturais</strong> (mono-ativo, mono-locatario, taxas elevadas, micro-fundo, iliquidez) superam os pontos positivos (100% ocupacao, contrato longo). O DY de 4,81% <strong class=\"text-red-400\">nao compensa o risco</strong> quando comparado a renda fixa. Investidores que ja possuem o ativo devem avaliar a <strong class=\"text-amber-400\">possibilidade de saida</strong> quando a liquidez permitir, especialmente apos normalizacao dos dividendos pos-reforma."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 615,
+    "disclaimer": "Este material tem carater exclusivamente informativo e nao constitui recomendacao de investimento. Rentabilidade passada nao e garantia de rentabilidade futura."
+  }
+}

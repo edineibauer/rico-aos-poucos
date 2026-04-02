@@ -261,109 +261,41 @@
 
         <!-- Filters -->
         <section class="mb-8 fade-in">
-            <div class="flex flex-wrap gap-2">
+            <div class="flex flex-wrap gap-2 mb-3">
                 <button class="filter-btn active" data-filter="todos">Todos</button>
                 <button class="filter-btn" data-filter="excelente">Excelente</button>
                 <button class="filter-btn" data-filter="bom">Bom</button>
                 <button class="filter-btn" data-filter="regular">Regular</button>
                 <button class="filter-btn" data-filter="ruim">Ruim</button>
             </div>
+            <div class="flex items-center gap-2 flex-wrap">
+                <span class="text-slate-500 text-sm">Ordenar:</span>
+                <button class="filter-btn sort-btn active" data-sort="nota-desc">Maior Nota</button>
+                <button class="filter-btn sort-btn" data-sort="nota-asc">Menor Nota</button>
+                <button class="filter-btn sort-btn" data-sort="fundos-desc">Mais Fundos</button>
+                <button class="filter-btn sort-btn" data-sort="az">A-Z</button>
+            </div>
         </section>
 
-        <!-- Gestores Grid -->
-        <section class="grid md:grid-cols-2 gap-6">
-
-            <!-- BlueMacaw -->
-            <a href="bluemacaw/" class="gestor-card rounded-2xl p-6 fade-in block" data-avaliacao="ruim">
-                <div class="flex items-start justify-between mb-4">
-                    <div>
-                        <h2 class="text-xl font-bold text-white mb-1">BlueMacaw Gestora</h2>
-                        <p class="text-slate-400 text-sm">CNPJ: 24.649.164/0001-06</p>
-                    </div>
-                    <div class="flex flex-col items-end gap-2">
-                        <span class="px-3 py-1 rounded-lg badge-ruim text-sm font-semibold">RUIM</span>
-                        <span class="text-2xl font-bold text-red-400">3/10</span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-4 mb-4">
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-white">1</div>
-                        <div class="text-xs text-slate-500">Fundo gerido</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-white">R$ 236M</div>
-                        <div class="text-xs text-slate-500">Patrimônio</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-white">7 anos</div>
-                        <div class="text-xs text-slate-500">No mercado</div>
-                    </div>
-                </div>
-
-                <div class="bg-red-900/20 rounded-xl p-4 border border-red-500/20 mb-4">
-                    <p class="text-slate-300 text-sm">
-                        Histórico problemático com renúncia à gestão do Triple A FII, emissão cancelada e queda de -67% na cota do BLMG11.
-                    </p>
-                </div>
-
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">BLMG11</span>
-                    <span class="px-2 py-1 bg-red-500/20 rounded text-xs text-red-400">1 fundo renunciado</span>
-                </div>
-
-                <div class="mt-4 text-blue-400 text-sm font-medium flex items-center gap-1">
-                    Ver análise completa
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </div>
-            </a>
-
-            <!-- Mérito -->
-            <a href="merito/" class="gestor-card rounded-2xl p-6 fade-in block" data-avaliacao="bom">
-                <div class="flex items-start justify-between mb-4">
-                    <div>
-                        <h2 class="text-xl font-bold text-white mb-1">Mérito Investimentos</h2>
-                        <p class="text-slate-400 text-sm">CNPJ: 13.870.411/0001-70</p>
-                    </div>
-                    <div class="flex flex-col items-end gap-2">
-                        <span class="px-3 py-1 rounded-lg badge-bom text-sm font-semibold">BOM</span>
-                        <span class="text-2xl font-bold text-blue-400">7/10</span>
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-3 gap-4 mb-4">
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-white">1</div>
-                        <div class="text-xs text-slate-500">Fundo gerido</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-white">R$ 670M</div>
-                        <div class="text-xs text-slate-500">Patrimônio</div>
-                    </div>
-                    <div class="text-center">
-                        <div class="text-lg font-bold text-white">13 anos</div>
-                        <div class="text-xs text-slate-500">No mercado</div>
-                    </div>
-                </div>
-
-                <div class="bg-blue-900/20 rounded-xl p-4 border border-blue-500/20 mb-4">
-                    <p class="text-slate-300 text-sm">
-                        Track record sólido de 13 anos com retorno de +324%. Gestão experiente no segmento MCMV através da marca Livus.
-                    </p>
-                </div>
-
-                <div class="flex flex-wrap gap-2">
-                    <span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">MFII11</span>
-                    <span class="px-2 py-1 bg-emerald-500/20 rounded text-xs text-emerald-400">+324% retorno</span>
-                </div>
-
-                <div class="mt-4 text-blue-400 text-sm font-medium flex items-center gap-1">
-                    Ver análise completa
-                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
-                </div>
-            </a>
-
+        <!-- Gestores Grid (loaded dynamically) -->
+        <section id="gestores-grid" class="grid md:grid-cols-2 gap-6">
+            <!-- Loading skeleton -->
+            <div class="gestor-card rounded-2xl p-6 animate-pulse">
+                <div class="h-6 bg-slate-700/50 rounded w-3/4 mb-4"></div>
+                <div class="h-4 bg-slate-700/50 rounded w-1/2 mb-6"></div>
+                <div class="h-20 bg-slate-700/50 rounded mb-4"></div>
+                <div class="h-4 bg-slate-700/50 rounded w-1/3"></div>
+            </div>
+            <div class="gestor-card rounded-2xl p-6 animate-pulse">
+                <div class="h-6 bg-slate-700/50 rounded w-3/4 mb-4"></div>
+                <div class="h-4 bg-slate-700/50 rounded w-1/2 mb-6"></div>
+                <div class="h-20 bg-slate-700/50 rounded mb-4"></div>
+                <div class="h-4 bg-slate-700/50 rounded w-1/3"></div>
+            </div>
         </section>
+
+        <!-- Counter -->
+        <div id="gestores-counter" class="text-center text-slate-500 text-sm mt-4 mb-4" style="display:none;"></div>
 
         <!-- Info Box -->
         <section class="mt-12 fade-in">
@@ -397,23 +329,129 @@
     </div>
 
     <script>
-        // Filter functionality
-        document.querySelectorAll('.filter-btn').forEach(btn => {
-            btn.addEventListener('click', () => {
-                // Update active state
-                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
-                btn.classList.add('active');
+        const badgeClasses = {
+            excelente: 'badge-excelente',
+            bom: 'badge-bom',
+            regular: 'badge-regular',
+            ruim: 'badge-ruim'
+        };
+        const notaColors = {
+            excelente: 'text-emerald-400',
+            bom: 'text-blue-400',
+            regular: 'text-amber-400',
+            ruim: 'text-red-400'
+        };
+        const bgColors = {
+            excelente: 'bg-emerald-900/20 border-emerald-500/20',
+            bom: 'bg-blue-900/20 border-blue-500/20',
+            regular: 'bg-amber-900/20 border-amber-500/20',
+            ruim: 'bg-red-900/20 border-red-500/20'
+        };
 
-                const filter = btn.dataset.filter;
-                document.querySelectorAll('.gestor-card').forEach(card => {
-                    if (filter === 'todos' || card.dataset.avaliacao === filter) {
-                        card.style.display = 'block';
-                    } else {
-                        card.style.display = 'none';
-                    }
-                });
+        function renderCard(g) {
+            const av = g.avaliacao;
+            const fundosLabel = g.totalFundos === 1 ? '1 fundo' : `${g.totalFundos} fundos`;
+            const tickers = g.tickers.map(t =>
+                `<span class="px-2 py-1 bg-slate-700/50 rounded text-xs text-slate-300">${t}</span>`
+            ).join('');
+
+            return `
+            <a href="${g.slug}/" class="gestor-card rounded-2xl p-6 fade-in block" data-avaliacao="${av}">
+                <div class="flex items-start justify-between mb-4">
+                    <div>
+                        <h2 class="text-xl font-bold text-white mb-1">${g.nome}</h2>
+                        <p class="text-slate-400 text-sm">${fundosLabel}</p>
+                    </div>
+                    <div class="flex flex-col items-end gap-2">
+                        <span class="px-3 py-1 rounded-lg ${badgeClasses[av] || 'badge-regular'} text-sm font-semibold">${g.notaLabel}</span>
+                        <span class="text-2xl font-bold ${notaColors[av] || 'text-white'}">${g.nota}/10</span>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4 mb-4">
+                    <div class="text-center">
+                        <div class="text-lg font-bold text-white">${g.totalFundos}</div>
+                        <div class="text-xs text-slate-500">${g.totalFundos === 1 ? 'Fundo gerido' : 'Fundos geridos'}</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-lg font-bold text-white">${g.segmentos.length}</div>
+                        <div class="text-xs text-slate-500">${g.segmentos.length === 1 ? 'Segmento' : 'Segmentos'}</div>
+                    </div>
+                </div>
+
+                <div class="${bgColors[av] || bgColors.regular} rounded-xl p-4 border mb-4">
+                    <p class="text-slate-300 text-sm">${g.resumo}</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2">
+                    ${tickers}
+                </div>
+
+                <div class="mt-4 text-blue-400 text-sm font-medium flex items-center gap-1">
+                    Ver análise completa
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                </div>
+            </a>`;
+        }
+
+        let allGestores = [];
+        let currentFilter = 'todos';
+        let currentSort = 'nota-desc';
+
+        const sortFns = {
+            'nota-desc': (a, b) => b.nota - a.nota,
+            'nota-asc': (a, b) => a.nota - b.nota,
+            'fundos-desc': (a, b) => b.totalFundos - a.totalFundos || b.nota - a.nota,
+            'az': (a, b) => a.nome.localeCompare(b.nome, 'pt-BR')
+        };
+
+        function applyFilterAndSort() {
+            const grid = document.getElementById('gestores-grid');
+            const counter = document.getElementById('gestores-counter');
+
+            let result = currentFilter === 'todos'
+                ? [...allGestores]
+                : allGestores.filter(g => g.avaliacao === currentFilter);
+
+            result.sort(sortFns[currentSort] || sortFns['nota-desc']);
+
+            grid.innerHTML = result.map(renderCard).join('');
+            counter.style.display = 'block';
+            counter.textContent = `${result.length} gestora${result.length !== 1 ? 's' : ''} encontrada${result.length !== 1 ? 's' : ''}`;
+        }
+
+        // Filter buttons (avaliação)
+        document.querySelectorAll('.filter-btn:not(.sort-btn)').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn:not(.sort-btn)').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentFilter = btn.dataset.filter;
+                applyFilterAndSort();
             });
         });
+
+        // Sort buttons
+        document.querySelectorAll('.sort-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.sort-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                currentSort = btn.dataset.sort;
+                applyFilterAndSort();
+            });
+        });
+
+        // Load data
+        fetch('../data/gestores-index.json')
+            .then(r => r.json())
+            .then(data => {
+                allGestores = data;
+                applyFilterAndSort();
+            })
+            .catch(err => {
+                console.error('Failed to load gestores index', err);
+                document.getElementById('gestores-grid').innerHTML =
+                    '<div class="text-center text-red-400 py-8 col-span-2">Erro ao carregar gestoras.</div>';
+            });
     </script>
 </body>
 </html>

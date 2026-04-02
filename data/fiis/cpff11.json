@@ -1,0 +1,532 @@
+{
+  "meta": {
+    "ticker": "CPFF11",
+    "nome": "Capitânia Reit FOF FII",
+    "nomeExtra": "(Liquidado)",
+    "segmento": "Fundo de Fundos",
+    "badges": [
+      "LIQUIDADO",
+      "Cisão Concluída Jul/2025",
+      "Migração CPTS11"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 742
+  },
+  "seo": {
+    "title": "CPFF11 - Análise | Capitânia Reit FOF FII (Liquidado)",
+    "description": "Análise do FII CPFF11 baseada em 742 documentos oficiais. FOF da Capitânia liquidado em jul/2025 após cisão. Cotistas receberam R$ 61,39/cota em amortização (R$ 4,99 caixa + 7,78 cotas CPTS11). TIR 8,6% a.a. em 7 anos.",
+    "keywords": "CPFF11, Capitânia Reit FOF, fundo de fundos, análise CPFF11, CPTS11, CPHH11, Capitânia Investimentos, liquidação, cisão",
+    "ogTitle": "CPFF11 - Capitânia Reit FOF FII (Liquidado)",
+    "ogDescription": "CPFF11 liquidado em jul/2025. FOF da Capitânia com TIR 8,6% a.a. em 7 anos. Amortização total de R$ 61,39/cota. Cotistas migrados para CPTS11 ou CPHH11.",
+    "twitterTitle": "CPFF11 - Capitânia Reit FOF FII (Liquidado)",
+    "twitterDescription": "CPFF11 liquidado: FOF Capitânia com TIR 8,6% a.a. (vs IFIX 0%). 193 operações em 7 anos. Amortização R$ 61,39/cota. Migração para CPTS11/CPHH11."
+  },
+  "indicadores": {
+    "cotacao": 70,
+    "cotacaoData": "17/03/2025 (último pregão)",
+    "pvp": 0.96,
+    "pvpDesconto": "4% de desconto",
+    "dividendYield": 8.81,
+    "dividendoMensal": 0,
+    "dividendoAnual": 6.17,
+    "patrimonioLiquido": "R$ 67 Mi (pós-cisão)",
+    "vpCota": 62.49,
+    "cotistas": 6536
+  },
+  "recomendacao": {
+    "nota": 0,
+    "veredicto": "LIQUIDADO",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">CPFF11</strong> foi <strong class=\"text-red-400\">liquidado em julho/2025</strong>, após aprovação em assembleia de fevereiro/2025 da cisão parcial e posterior dissolução do fundo. Cotistas que optaram pelo Fundo Cindido (<strong class=\"text-blue-400\">CPHH11</strong>) receberam suas cotas em 04/04/2025. Os demais foram migrados automaticamente para o <strong class=\"text-blue-400\">CPTS11</strong>, recebendo 7,78 cotas CPTS11 por cada cota CPFF11, mais R$ 4,99/cota em caixa (amortização total de R$ 61,39/cota). O leilão de frações foi concluído em 14/07/2025. Em 7 anos, o fundo foi o <strong class=\"text-emerald-400\">melhor FOF desde 2020</strong>: TIR de 8,6% a.a. vs IFIX 0,0% e lucro total de R$ 120 milhões."
+  },
+  "quickStats": [
+    {
+      "label": "Status",
+      "valor": "LIQUIDADO",
+      "detalhe": "Concluído jul/2025",
+      "icone": "building",
+      "corIcone": "red"
+    },
+    {
+      "label": "TIR 7 Anos",
+      "valor": "8,6% a.a.",
+      "detalhe": "vs IFIX 0,0% a.a.",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Amortização Total",
+      "valor": "R$ 61,39",
+      "detalhe": "R$ 4,99 caixa + R$ 56,40 CPTS",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
+    },
+    {
+      "label": "Fator Conversão",
+      "valor": "7,78x",
+      "detalhe": "Cotas CPTS11 por CPFF11",
+      "icone": "users",
+      "corIcone": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo Liquidado",
+      "descricao": "O CPFF11 foi completamente liquidado em julho/2025. A cisão parcial foi aprovada em assembleia de fevereiro/2025 com 28,9% de votos favoráveis (quórum qualificado de 25%). Negociação em bolsa encerrada em 17/03/2025.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Duas Opções de Destino",
+      "descricao": "Cotistas puderam escolher entre: (1) migrar para o CPHH11 (Fundo Cindido, com prazo de liquidação de até 1 ano), recebendo cotas em 04/04/2025; ou (2) permanecer para conversão automática em cotas do CPTS11, recebendo 7,78 cotas CPTS11 por CPFF11 em 20/06/2025.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Prejuízo na Venda Forçada",
+      "descricao": "A liquidação forçou a venda de posições em FIIs a preços de mercado abaixo do custo de aquisição, gerando prejuízo de R$ -7,2 Mi em fevereiro/2025 e resultado acumulado de R$ -6,0 Mi. Sem rendimentos distribuídos de fev a jun/2025.",
+      "severidade": "orange"
+    }
+  ],
+  "gestora": {
+    "nome": "Capitânia Investimentos",
+    "nota": 8,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "TIR CPFF11",
+        "valor": "8,6% a.a.",
+        "cor": "emerald"
+      },
+      {
+        "label": "Operações",
+        "valor": "193 em 7 anos"
+      },
+      {
+        "label": "Alpha vs IFIX",
+        "valor": "+8,6 p.p.",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">Capitânia Investimentos</strong> é uma das maiores e mais respeitadas gestoras independentes do Brasil. O CPFF11 foi o <strong class=\"text-emerald-400\">FOF com melhor performance desde 2020</strong> entre seus pares, com retorno patrimonial ajustado de +29,0% (vs IFIX +1,2%). A decisão de liquidar o fundo reflete a estratégia de concentrar esforços no CPTS11, com maior escala e liquidez. A gestão ativa realizou 193 operações com TIR de 8,6% a.a. e lucro total de R$ 120 milhões.",
+    "link": "../../gestores/capitania/"
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas para FOF ativo (encerrado)",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Admin + Escrituração",
+        "valor": "0,15% a.a.",
+        "detalhe": "Sobre valor de mercado",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,75% a.a.",
+        "detalhe": "Sobre valor de mercado",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder o IFIX",
+        "corBorda": "amber"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FOFs de gestão ativa",
+    "comparativo": [
+      {
+        "ticker": "CPFF11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IFIX",
+        "destaque": true
+      },
+      {
+        "ticker": "RVBI11",
+        "taxa": "1,05%",
+        "perf": "+20% perf. s/ IFIX"
+      },
+      {
+        "ticker": "KFOF11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IFIX"
+      },
+      {
+        "ticker": "BCIA11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IFIX+2%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serv. Financeiros S/A DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Capitânia S/A"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "34.081.611/0001-23"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Operações",
+        "valor": "193"
+      },
+      {
+        "label": "TIR Total",
+        "valor": "8,6% a.a.",
+        "cor": "emerald"
+      },
+      {
+        "label": "Ganho Total",
+        "valor": "R$ 120 Mi",
+        "cor": "emerald"
+      },
+      {
+        "label": "Status",
+        "valor": "Liquidado"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Renda Urbana",
+        "Lajes Corp.",
+        "Logística",
+        "Shoppings",
+        "CRI",
+        "Residencial",
+        "Outros"
+      ],
+      "data": [
+        30,
+        19,
+        19,
+        15,
+        10,
+        1,
+        6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#06b6d4",
+        "#ec4899",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Posições Encerradas (66%)",
+        "Posições Abertas (34%)"
+      ],
+      "data": [
+        66,
+        34
+      ],
+      "cores": [
+        "#10b981",
+        "#3b82f6"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Renda Urbana (13 operações)",
+        "setor": "FIIs de Renda Urbana",
+        "receita": "R$ 48,5 Mi lucro",
+        "rating": "TIR 17,5%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI (36 operações)",
+        "setor": "FIIs de Recebíveis",
+        "receita": "R$ 12,2 Mi lucro",
+        "rating": "TIR 12,7%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FOF (27 operações)",
+        "setor": "Fundos de Fundos",
+        "receita": "R$ 4,7 Mi lucro",
+        "rating": "TIR 29,8%",
+        "ratingCor": "emerald",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Logística (31 operações)",
+        "setor": "FIIs Logísticos",
+        "receita": "R$ 16,7 Mi lucro",
+        "rating": "TIR 7,0%",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Lajes + Shoppings (62 operações)",
+        "setor": "FIIs Tijolo",
+        "receita": "R$ 32,4 Mi lucro",
+        "rating": "TIR ~4,7%",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Posições Encerradas com Lucro",
+        "valor": 128,
+        "cor": "emerald"
+      },
+      {
+        "label": "Posições Abertas (na liquidação)",
+        "valor": 65,
+        "cor": "blue"
+      }
+    ],
+    "riscoNota": "A carteira do CPFF11 foi construída ao longo de 7 anos com <strong class=\"text-emerald-400\">193 operações</strong> em 12 segmentos de FIIs. O fundo gerou lucro total de <strong class=\"text-emerald-400\">R$ 120,1 milhões</strong> (TIR 8,6% a.a.), enquanto o IFIX no mesmo período gerou essencialmente retorno zero. Destaques: Renda Urbana (TIR 17,5%), FOFs (TIR 29,8%) e CRIs (TIR 12,7%). O segmento com pior desempenho foi Hotel (TIR -9,8%). O processo de liquidação forçou vendas de ativos a preço de mercado em fev/2025, gerando prejuízo de R$ 7,2 Mi naquele mês. <strong class=\"text-red-400\">Fundo liquidado em julho/2025.</strong>"
+  },
+  "timeline": {
+    "subtitulo": "7 anos de FOF ativo com melhor retorno da classe",
+    "periodos": [
+      {
+        "periodo": "Dez/2019",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início do Capitânia Reit FOF FII. Foco em alocação ativa em cotas de FIIs.",
+        "pontos": [
+          "CNPJ: 34.081.611/0001-23",
+          "Gestor: Capitânia S/A",
+          "Administrador: BTG Pactual",
+          "Classificação ANBIMA: TVM Renda Gestão Ativa"
+        ]
+      },
+      {
+        "periodo": "2020-2022",
+        "label": "CRESCIMENTO",
+        "cor": "emerald",
+        "descricao": "Período de intensa atividade. 119 operações, incluindo o pior e melhor ano (COVID e recuperação).",
+        "pontos": [
+          "2020: 81 operações, TIR 10,7% (vs IFIX -0,1%)",
+          "2021: 43 operações, TIR 7,8% (vs IFIX 3,4%)",
+          "2022: 19 operações, TIR 23,1% (vs IFIX 7,2%)",
+          "PL atingiu ~R$ 200 milhões"
+        ]
+      },
+      {
+        "periodo": "2023-2024",
+        "label": "MATURAÇÃO",
+        "cor": "purple",
+        "descricao": "Fundo maduro com retorno acumulado significativo. Desempenho resiliente em mercado adverso.",
+        "pontos": [
+          "2023: 13 operações, TIR 6,0% (vs IFIX 4,6%)",
+          "2024: 17 operações, TIR -10,5% (vs IFIX -10,8%)",
+          "Dividendos mensais: R$ 0,33 a R$ 0,60/cota",
+          "Top 5 posições: HSRE, MALL, GSFI, CPSH, CPTS (35% do PL)"
+        ]
+      },
+      {
+        "periodo": "Fev-Jul/2025",
+        "label": "CISÃO E LIQUIDAÇÃO",
+        "cor": "red",
+        "descricao": "Assembleia aprova cisão em fev/2025. Processo de liquidação executado entre mar e jul/2025.",
+        "pontos": [
+          "<strong class=\"text-red-400\">AGE 24/02/2025: cisão aprovada com 28,9% votos favoráveis</strong>",
+          "17/03/2025: último dia de negociação em bolsa",
+          "04/04/2025: entrega de cotas CPHH11 (Fundo Cindido)",
+          "20/06/2025: entrega de 7,78 cotas CPTS11 por cota CPFF11",
+          "27/06/2025: amortização em caixa de R$ 4,99/cota",
+          "14/07/2025: leilão de frações concluído (R$ 7,47/cota)",
+          "<strong class=\"text-emerald-400\">Amortização total: R$ 61,39/cota</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - POSITIVA (encerrada):",
+      "texto": "O CPFF11 foi o <strong class=\"text-emerald-400\">FOF com melhor performance desde 2020</strong> entre seus pares, com retorno patrimonial ajustado de +29,0% (vs IFIX +1,2%). Em 7 anos, a Capitânia realizou 193 operações gerando <strong class=\"text-emerald-400\">R$ 120 milhões de lucro</strong> com TIR de 8,6% a.a. A liquidação foi concluída em julho/2025 com amortização total de R$ 61,39/cota (R$ 4,99 em caixa + R$ 56,40 em cotas CPTS11). A decisão de liquidação reflete a estratégia da gestora de consolidar veículos no CPTS11."
+    },
+    "crescimento": [
+      {
+        "label": "Retorno Patrimonial",
+        "valor": "+29,0%",
+        "detalhe": "Ajustado, desde dez/2019"
+      },
+      {
+        "label": "TIR vs IFIX",
+        "valor": "+8,6 p.p.",
+        "detalhe": "8,6% vs 0,0% a.a."
+      },
+      {
+        "label": "Lucro Total",
+        "valor": "R$ 120 Mi",
+        "detalhe": "Em 193 operações"
+      },
+      {
+        "label": "Amortização Final",
+        "valor": "R$ 61,39",
+        "detalhe": "Por cota (caixa + CPTS11)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O CPFF11 foi um <strong class=\"text-emerald-400\">FOF de gestão ativa da Capitânia</strong> que entregou o melhor retorno entre seus pares desde 2020: +29,0% patrimonial ajustado (vs IFIX +1,2%). Em 7 anos, realizou 193 operações com TIR de 8,6% a.a. e lucro total de R$ 120 Mi. A <strong class=\"text-red-400\">cisão e liquidação foram concluídas em jul/2025</strong>. Cotistas receberam amortização total de R$ 61,39/cota: R$ 4,99 em caixa (pago 27/06/2025) e ~7,78 cotas do CPTS11 por cota CPFF11 (entregues 20/06/2025). O leilão de frações residuais foi concluído em 14/07/2025.",
+    "paraQuem": [
+      "<strong class=\"text-red-400\">FUNDO LIQUIDADO</strong> - Processo concluído em jul/2025",
+      "Ex-cotistas foram migrados para o <strong class=\"text-blue-400\">CPTS11</strong> ou <strong class=\"text-blue-400\">CPHH11</strong>",
+      "Para quem busca FOF Capitânia, não há veículo substituto direto"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">FUNDO LIQUIDADO</strong> - Não é possível comprar ou vender",
+      "O CPTS11 (fundo destino majoritário) é de crédito, não de FIIs",
+      "O CPHH11 (Fundo Cindido) tem prazo de até 1 ano para liquidação"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Set/24",
+      "Out/24",
+      "Nov/24",
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Jun/25 (Amort.)"
+    ],
+    "chartData": [
+      0.6,
+      0.49,
+      0.33,
+      0.4,
+      0.5,
+      0,
+      4.99
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 5.5,
+    "totaisAnuais": [
+      {
+        "ano": "Amort. Total",
+        "valor": "R$ 61,39/cota",
+        "cor": "amber"
+      },
+      {
+        "ano": "Caixa (jun/25)",
+        "valor": "R$ 4,99/cota"
+      },
+      {
+        "ano": "CPTS11 (~7,78 cotas)",
+        "valor": "R$ 56,40/cota",
+        "cor": "blue"
+      },
+      {
+        "ano": "Status",
+        "valor": "LIQUIDADO",
+        "cor": "red"
+      }
+    ],
+    "guidance": {
+      "periodo": "Fundo Liquidado",
+      "faixa": "Sem novos proventos",
+      "unidade": "Concluído jul/2025"
+    },
+    "stats": [
+      {
+        "label": "Maior Mensal",
+        "valor": "R$ 0,60",
+        "cor": "emerald"
+      },
+      {
+        "label": "Último Rendimento",
+        "valor": "R$ 0,50 (jan/25)"
+      },
+      {
+        "label": "Amort. Caixa",
+        "valor": "R$ 4,99 (jun/25)",
+        "cor": "amber"
+      },
+      {
+        "label": "Amort. CPTS11",
+        "valor": "~7,78 cotas/cota",
+        "cor": "blue"
+      },
+      {
+        "label": "Status",
+        "valor": "Liquidado",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "N/A",
+      "descricao": "Fundo <span class=\"text-red-400\">liquidado</span> em julho/2025",
+      "detalhes": [
+        {
+          "label": "Último VP/Cota",
+          "valor": "R$ 62,49 (mai/25)"
+        },
+        {
+          "label": "VP Pré-Cisão",
+          "valor": "R$ 72,75 (fev/25)",
+          "cor": "amber"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "+29,0%",
+      "label": "Retorno Patrimonial Total",
+      "cor": "emerald",
+      "descricao": "Retorno patrimonial ajustado desde o início (dez/2019), líquido de custos e impostos",
+      "detalhe": "IFIX no período: +1,2% | CDI: +54,3%"
+    },
+    "recomendacoes": {
+      "valor": "CPTS11 / CPHH11",
+      "label": "Fundos Destino",
+      "cor": "blue",
+      "descricao": "Cotistas foram migrados para CPTS11 (padrão) ou CPHH11 (Fundo Cindido, mediante manifestação até 31/03/2025)",
+      "detalhe": "CPTS11: Capitânia Securities II (CRIs) | CPHH11: Capitânia Reit FOF III (liquidação em até 1 ano)"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">CPFF11</strong> encerrou sua história em julho/2025 como o <strong class=\"text-emerald-400\">fundo de fundos com melhor performance desde 2020</strong> entre seus pares, com retorno patrimonial ajustado de +29,0% (vs IFIX +1,2% e CDI +54,3%). Em 7 anos de operação, a Capitânia realizou 193 operações com lucro total de R$ 120 milhões e TIR anualizada de 8,6%.",
+      "A cisão parcial foi aprovada em 24/02/2025 com 28,9% dos votos (quórum qualificado de 25%). A negociação em bolsa foi encerrada em 17/03/2025. Cotistas que optaram pelo <strong class=\"text-blue-400\">Fundo Cindido (CPHH11)</strong> receberam cotas em 04/04/2025. Os demais receberam automaticamente <strong class=\"text-blue-400\">~7,78 cotas do CPTS11</strong> por cota CPFF11 em 20/06/2025, mais R$ 4,99/cota em caixa pago em 27/06/2025, totalizando amortização de R$ 61,39/cota.",
+      "O processo foi finalizado com o <strong class=\"text-amber-400\">leilão de frações residuais</strong> em 14/07/2025, resultando em R$ 7,47/cota para os cotistas com frações. Os destaques da carteira foram: <strong class=\"text-emerald-400\">Renda Urbana (TIR 17,5%)</strong>, FOFs (TIR 29,8%) e CRIs (TIR 12,7%). O pior segmento foi Hotel (TIR -9,8%). Nenhum rendimento foi distribuído de fevereiro a junho de 2025, em razão do prejuízo gerado pela venda forçada de ativos."
+    ],
+    "pontosFortes": [
+      "Melhor FOF desde 2020 (+29% vs IFIX +1,2%)",
+      "TIR 8,6% a.a. em 193 operações (vs IFIX 0%)",
+      "R$ 120 milhões de lucro gerado em 7 anos",
+      "Gestora Capitânia com track record excelente",
+      "Taxa total competitiva (0,90% a.a.)",
+      "Amortização total de R$ 61,39/cota na liquidação"
+    ],
+    "pontosDeAtencao": [
+      "FUNDO LIQUIDADO desde jul/2025",
+      "Prejuízo de R$ 7,2 Mi na venda forçada de ativos em fev/2025",
+      "Sem rendimentos distribuídos de fev a jun/2025",
+      "CPTS11 (destino majoritário) é fundo de crédito, não FOF",
+      "Cotistas reduziram de 7.084 para 6.536 durante a liquidação",
+      "CPHH11 (Fundo Cindido) tem prazo de até 1 ano para liquidação"
+    ],
+    "conclusaoFinal": "O CPFF11 foi <strong class=\"text-red-400\">liquidado em julho/2025</strong> e não existe mais como veículo de investimento. Para ex-cotistas migrados para o CPTS11, recomenda-se avaliar se o perfil de crédito (CRI) é adequado ao portfólio, já que difere significativamente do perfil FOF original. Para os que optaram pelo CPHH11, o fundo será liquidado em até 1 ano com devolução do patrimônio. A Capitânia demonstrou <strong class=\"text-emerald-400\">excelência na gestão ativa de FIIs</strong> com o CPFF11, gerando alpha consistente sobre o IFIX em praticamente todos os anos de operação."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 742,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. O CPFF11 foi liquidado em julho/2025. Cotistas foram migrados para CPTS11 ou CPHH11."
+  }
+}

@@ -1,0 +1,707 @@
+{
+  "meta": {
+    "ticker": "HCHG11",
+    "nome": "Hectare Recebíveis High Grade FII",
+    "nomeExtra": "(em liquidação)",
+    "segmento": "Papel - CRI",
+    "badges": [
+      "100% IPCA+",
+      "13 CRIs",
+      "Em Liquidação"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 268
+  },
+  "seo": {
+    "title": "HCHG11 - Análise Completa | Hectare Recebíveis High Grade FII",
+    "description": "Análise completa do FII HCHG11 baseada em 268 documentos oficiais. Fundo de papel CRI com 13 operações, 100% IPCA+, taxa média IPCA+7,09%. Aprovada liquidação e incorporação pelo VVCR11.",
+    "keywords": "HCHG11, Hectare Capital, FII CRI, análise HCHG11, dividend yield HCHG11, recebíveis imobiliários, high grade, VVCR11",
+    "ogTitle": "HCHG11 - Análise Completa do FII Hectare Recebíveis High Grade 2026",
+    "ogDescription": "Análise detalhada do HCHG11: fundo de CRIs high grade com 13 operações, 100% IPCA+7,09%. Aprovada incorporação pelo VVCR11. Histórico, riscos e projeções 2026.",
+    "twitterTitle": "HCHG11 - Análise Completa | FII Hectare Recebíveis High Grade",
+    "twitterDescription": "Análise do HCHG11: 13 CRIs high grade, 100% IPCA+. Duration 2,49 anos. PL R$ 115 Mi. Em processo de liquidação/incorporação pelo VVCR11."
+  },
+  "indicadores": {
+    "cotacao": 78.29,
+    "cotacaoData": "24/02/2026",
+    "pvp": 0.82,
+    "pvpDesconto": "18% de desconto",
+    "dividendYield": 11.72,
+    "dividendoMensal": 0.7,
+    "dividendoAnual": 9.18,
+    "patrimonioLiquido": "R$ 115 Mi",
+    "vpCota": 95.91,
+    "cotistas": 569,
+    "cotistasDetalhe": "1,2 milhão de cotas",
+    "ocupacao": null,
+    "wault": null,
+    "numImoveis": null,
+    "ablTotal": null,
+    "numEstados": null,
+    "numInquilinos": null,
+    "numCRIs": 13,
+    "taxaMedia": "IPCA + 7,09%",
+    "duration": 2.49
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-amber-400\">HCHG11</strong> teve aprovada em consulta formal a <strong class=\"text-red-400\">aquisição pelo VVCR11 e subsequente liquidação</strong>. Apesar de fundamentos razoáveis (carteira 100% IPCA+7,09%, sem taxa de performance, duration curta de 2,49 anos), o fundo está <strong class=\"text-red-400\">em processo de encerramento</strong>. O P/VP de 0,82 reflete o desconto pela liquidação iminente. Dividendos foram voláteis (R$ 0,61 a R$ 1,11) e a <strong class=\"text-amber-400\">liquidez é muito baixa</strong> (569 cotistas, ~R$ 96 mil/dia)."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 115 Mi",
+      "detalhe": "VP/cota: R$ 95,91",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 95,91</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,70",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 9,18/ano | DY 11,72%",
+      "icone": "money",
+      "corIcone": "amber",
+      "corValor": "amber"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "569",
+      "detalhe": "1,2 milhão de cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Duration",
+      "valor": "2,49 anos",
+      "detalhe": "Carteira curta | 100% IPCA+",
+      "icone": "chart",
+      "corIcone": "emerald",
+      "corValor": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Liquidação Aprovada",
+      "descricao": "Em novembro/2025, a consulta formal aprovou a aquisição dos ativos pelo VVCR11 e a subsequente liquidação do fundo. O processo está em andamento e cotistas receberão cotas do VVCR11 ou valores em espécie.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez Muito Baixa",
+      "descricao": "Apenas 569 cotistas, liquidez diária média de R$ 96 mil. Dificuldade significativa para entrar ou sair de posições no mercado secundário.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Dividendos Voláteis",
+      "descricao": "Distribuições oscilam entre R$ 0,61 e R$ 1,11/cota nos últimos 6 meses, reflexo de eventos pontuais como a recompra do CRI Grupo Mateus que gerou R$ 0,48/cota extra em novembro.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "25% em Caixa",
+      "descricao": "R$ 29,2 milhões (25% do PL) alocados em Fundos DI, reflexo da preparação para a liquidação e do recebimento da recompra do CRI Grupo Mateus. Reduz o rendimento efetivo da carteira.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Hectare Capital",
+    "nota": 6,
+    "notaLabel": "BOM",
+    "link": "../../gestores/hectare-capital/",
+    "stats": [
+      {
+        "label": "Início do Fundo",
+        "valor": "Fev/2021"
+      },
+      {
+        "label": "CRIs na Carteira",
+        "valor": "13"
+      },
+      {
+        "label": "Taxa Média",
+        "valor": "IPCA+7,09%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "Hectare Capital é uma gestora especializada em recebíveis imobiliários. O HCHG11 foi estruturado como fundo high grade com foco em CRIs com lastro real (varejo, logístico, shoppings, loteamentos). A gestora conduziu o processo de liquidação de forma transparente através de consulta formal aos cotistas."
+  },
+  "taxas": {
+    "subtitulo": "Competitivas e sem performance",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,20% a.a.",
+        "detalhe": "Vórtx DTVM Ltda.",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,70% a.a.",
+        "detalhe": "Hectare Capital",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "0%",
+        "detalhe": "Não cobra taxa de performance",
+        "corBorda": "emerald"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Papel/CRI",
+    "comparativo": [
+      {
+        "ticker": "HCHG11",
+        "taxa": "0,90%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "KNIP11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "KNCR11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ CDI+2%"
+      },
+      {
+        "ticker": "MXRF11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Vórtx DTVM Ltda."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Hectare Capital Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Vórtx DTVM Ltda."
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "13"
+      },
+      {
+        "label": "Duration",
+        "valor": "2,49 anos"
+      },
+      {
+        "label": "Taxa Média",
+        "valor": "IPCA+7,09%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Caixa",
+        "valor": "25,4%",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRI",
+        "Caixa"
+      ],
+      "data": [
+        75,
+        25
+      ],
+      "cores": [
+        "#3b82f6",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Varejo",
+        "Logístico",
+        "Shopping",
+        "Incorporação",
+        "Loteamento",
+        "Hotéis"
+      ],
+      "data": [
+        25,
+        17,
+        16,
+        16,
+        21,
+        5
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#ec4899",
+        "#06b6d4"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Canopus (PPP SP)",
+        "setor": "Incorporação",
+        "receita": "9,4%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "Via Varejo",
+        "setor": "Varejo",
+        "receita": "9,3%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Shopping Metrô Itaquera",
+        "setor": "Shopping",
+        "receita": "6,9%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "GPA II",
+        "setor": "Varejo",
+        "receita": "6,8%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Reiter Log",
+        "setor": "Logístico",
+        "receita": "6,7%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Outros (8 CRIs)",
+        "setor": "Diversos",
+        "receita": "60,9%",
+        "rating": "-",
+        "ratingCor": "slate",
+        "risco": "Variado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "CRIs Baixo Risco",
+        "valor": 5,
+        "cor": "emerald"
+      },
+      {
+        "label": "CRIs Risco Moderado",
+        "valor": 6,
+        "cor": "blue"
+      },
+      {
+        "label": "CRIs Atenção",
+        "valor": 2,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "A carteira é <strong class=\"text-blue-400\">100% indexada ao IPCA</strong> com taxa média de 7,09% a.a., duration curta de 2,49 anos. Os CRIs possuem garantias reais (alienação fiduciária de imóveis, cessão de recebíveis) e diversificação setorial entre varejo, logístico, shoppings, incorporação e loteamentos. O CRI General Shopping possui rating brAA (S&P)."
+  },
+  "ativos": {
+    "subtitulo": "13 CRIs | 100% IPCA+ | Duration 2,49 anos",
+    "legendaRisco": [
+      {
+        "label": "Baixo - Lastro sólido + garantias reais",
+        "cor": "emerald"
+      },
+      {
+        "label": "Moderado - Garantias adequadas",
+        "cor": "blue"
+      },
+      {
+        "label": "Atenção - Risco de crédito ou concentração",
+        "cor": "amber"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "CRIs Varejo (18,7% do PL)",
+        "cor": "blue",
+        "itens": [
+          {
+            "nome": "CRI Via Varejo",
+            "cidade": "Varejo",
+            "tipo": "IPCA+5,34%",
+            "tipoCor": "blue",
+            "abl": null,
+            "locatario": "Via Varejo",
+            "vencimento": "11/2030",
+            "risco": "Moderado",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "CRI GPA II",
+            "cidade": "Varejo",
+            "tipo": "IPCA+5,60%",
+            "tipoCor": "blue",
+            "abl": null,
+            "locatario": "GPA",
+            "vencimento": "12/2035",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "CRI Riachuelo",
+            "cidade": "Varejo",
+            "tipo": "IPCA+7,20%",
+            "tipoCor": "blue",
+            "abl": null,
+            "locatario": "Riachuelo",
+            "vencimento": "12/2028",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Logístico (12,1% do PL)",
+        "cor": "emerald",
+        "itens": [
+          {
+            "nome": "CRI Reiter Log",
+            "cidade": "Logístico",
+            "tipo": "IPCA+9,00%",
+            "tipoCor": "emerald",
+            "abl": null,
+            "locatario": "Reiter Log",
+            "vencimento": "12/2028",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "CRI BTLG Mauá",
+            "cidade": "Logístico",
+            "tipo": "IPCA+5,90%",
+            "tipoCor": "emerald",
+            "abl": null,
+            "locatario": "BTLG",
+            "vencimento": "12/2028",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Shopping (13,0% do PL)",
+        "cor": "amber",
+        "itens": [
+          {
+            "nome": "CRI Shopping Metrô Itaquera",
+            "cidade": "Shopping",
+            "tipo": "IPCA+9,65%",
+            "tipoCor": "amber",
+            "abl": null,
+            "locatario": "Shopping Itaquera",
+            "vencimento": "03/2039",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "CRI General Shopping",
+            "cidade": "Shopping",
+            "tipo": "IPCA+5,00%",
+            "tipoCor": "amber",
+            "abl": null,
+            "locatario": "GSFI11",
+            "vencimento": "07/2032",
+            "risco": "Rating brAA",
+            "riscoCor": "blue"
+          }
+        ]
+      },
+      {
+        "nome": "CRIs Incorporação + Loteamento + Hotéis (30,8% do PL)",
+        "cor": "purple",
+        "itens": [
+          {
+            "nome": "CRI Canopus (PPP SP)",
+            "cidade": "Incorporação",
+            "tipo": "IPCA+6,00%",
+            "tipoCor": "purple",
+            "abl": null,
+            "locatario": "Estado SP",
+            "vencimento": "02/2035",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "CRI Haus Garten",
+            "cidade": "Loteamento",
+            "tipo": "IPCA+9,15%",
+            "tipoCor": "purple",
+            "abl": null,
+            "locatario": "Haus Garten",
+            "vencimento": "07/2028",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "CRI Araguaína Park",
+            "cidade": "Loteamento",
+            "tipo": "IPCA+7,50%",
+            "tipoCor": "purple",
+            "abl": null,
+            "locatario": "Araguaína Park",
+            "vencimento": "08/2036",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "CRI Recanto dos Pássaros",
+            "cidade": "Loteamento",
+            "tipo": "IPCA+9,00%",
+            "tipoCor": "purple",
+            "abl": null,
+            "locatario": "Recanto Pássaros",
+            "vencimento": "02/2030",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "CRI B&B Hotel",
+            "cidade": "Hotéis",
+            "tipo": "IPCA+7,50%",
+            "tipoCor": "purple",
+            "abl": null,
+            "locatario": "B&B Hotels",
+            "vencimento": "08/2031",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "CRI Pulverizado II",
+            "cidade": "Incorporação",
+            "tipo": "IPCA+6,50%",
+            "tipoCor": "purple",
+            "abl": null,
+            "locatario": "Pulverizado",
+            "vencimento": "06/2036",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "Do IPO à liquidação aprovada",
+    "periodos": [
+      {
+        "periodo": "2021",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início do fundo em fevereiro/2021, focado em CRIs high grade.",
+        "pontos": [
+          "Início de funcionamento: 04/02/2021",
+          "Captação inicial: R$ 120 milhões | 1.200.000 cotas",
+          "Estratégia: CRIs com lastro real e garantias sólidas",
+          "Gestora: Hectare Capital | Administrador: Vórtx DTVM"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "OPERAÇÃO",
+        "cor": "emerald",
+        "descricao": "Montagem completa da carteira com 13 CRIs diversificados.",
+        "pontos": [
+          "Carteira 100% indexada ao IPCA",
+          "13 CRIs em 6 segmentos diferentes",
+          "Taxa média de emissão: IPCA + 7,09% a.a.",
+          "Zero inadimplência na carteira"
+        ]
+      },
+      {
+        "periodo": "2024-2025",
+        "label": "MATURIDADE E LIQUIDAÇÃO",
+        "cor": "amber",
+        "descricao": "Recompras de CRIs, acúmulo de caixa e aprovação da liquidação.",
+        "pontos": [
+          "Nov/2025: CRI Grupo Mateus recomprado pela cedente (R$ 576 mil resultado extra)",
+          "<strong class=\"text-amber-400\">Caixa subiu para 25% do PL</strong> após recompras",
+          "<strong class=\"text-red-400\">27/11/2025: Consulta formal aprova aquisição pelo VVCR11</strong>",
+          "43% dos cotistas votaram, maioria aprovando a liquidação"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O HCHG11 é um <strong class=\"text-amber-400\">FII de CRIs high grade em processo de liquidação</strong>. A carteira possui fundamentos razoáveis: 100% IPCA + 7,09% a.a., sem taxa de performance, duration curta de 2,49 anos, e garantias reais em todos os CRIs. Porém, a <strong class=\"text-red-400\">aprovação da incorporação pelo VVCR11</strong> torna o investimento uma operação de evento, não mais um investimento de longo prazo. O P/VP de 0,82 reflete o desconto pela liquidação, e a liquidez é muito baixa com 569 cotistas.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-amber-400\">arbitragem de evento</strong> com desconto no P/VP",
+      "Cotistas atuais que devem <strong class=\"text-blue-400\">avaliar os termos da incorporação pelo VVCR11</strong>",
+      "Quem aceita <strong class=\"text-amber-400\">risco de liquidação</strong> em troca de potencial ganho no desconto"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-red-400\">investimento de longo prazo</strong>",
+      "Investidores que precisam de <strong class=\"text-red-400\">liquidez diária</strong>",
+      "Perfil <strong class=\"text-red-400\">conservador</strong> que evita operações de evento",
+      "Quem não acompanha <strong class=\"text-red-400\">processos de liquidação de FIIs</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Nov/24",
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.77,
+      1.23,
+      0.78,
+      0.72,
+      0.77,
+      0.9,
+      0.95,
+      0.88,
+      0.71,
+      0.65,
+      0.65,
+      0.61,
+      1.11,
+      0.7
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0.4,
+    "chartYMax": 1.4,
+    "totaisAnuais": [
+      {
+        "ano": "2024",
+        "valor": "~R$ 10,00"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 9,93",
+        "cor": "emerald"
+      }
+    ],
+    "guidance": {
+      "periodo": "Liquidação",
+      "faixa": "Variável conforme processo",
+      "unidade": "por cota/mês"
+    },
+    "stats": [
+      {
+        "label": "Último Dividendo (Dez/25)",
+        "valor": "R$ 0,70"
+      },
+      {
+        "label": "Maior (Dez/24)",
+        "valor": "R$ 1,23",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (Out/25)",
+        "valor": "R$ 0,61"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "11,72%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Liquidação",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,82",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">18% de desconto</span> sobre o valor patrimonial (reflexo da liquidação)",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 95,91"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 78,29",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "-3,28%",
+      "label": "Spread vs Selic",
+      "cor": "amber",
+      "descricao": "DY abaixo da taxa livre de risco, mitigado pelo desconto no P/VP",
+      "detalhe": "DY HCHG11 (11,72%) vs Selic (15,00%)"
+    },
+    "recomendacoes": {
+      "valor": 0,
+      "label": "Recomendações",
+      "cor": "red",
+      "descricao": "Sem menções em carteiras recomendadas (fundo em liquidação)",
+      "detalhe": "Processo de incorporação pelo VVCR11 em andamento"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">HCHG11</strong> é um fundo de CRIs high grade com carteira bem estruturada: <strong class=\"text-blue-400\">100% IPCA + 7,09%</strong>, sem taxa de performance, duration curta de 2,49 anos, e diversificação entre 13 CRIs em 6 segmentos diferentes. As taxas totais de 0,90% a.a. são competitivas para o mercado.",
+      "Porém, em novembro/2025, a consulta formal <strong class=\"text-red-400\">aprovou a aquisição dos ativos pelo VVCR11 e a subsequente liquidação do fundo</strong>. Isso transforma o HCHG11 em uma operação de evento, onde o retorno depende dos termos da incorporação versus o preço de mercado atual.",
+      "O <strong class=\"text-emerald-400\">P/VP de 0,82 (18% de desconto)</strong> pode representar oportunidade para quem acredita que a liquidação distribuirá valor próximo ao patrimonial. Porém, a <strong class=\"text-red-400\">liquidez é muito baixa</strong> (569 cotistas, ~R$ 96 mil/dia) e o timing da liquidação é incerto."
+    ],
+    "pontosFortes": [
+      "Carteira 100% IPCA+ com taxa média de 7,09% a.a.",
+      "Sem taxa de performance (raro no mercado)",
+      "Duration curta de 2,49 anos",
+      "Garantias reais em todos os CRIs",
+      "P/VP de 0,82 com desconto de 18%",
+      "Taxas totais competitivas (0,90% a.a.)"
+    ],
+    "pontosDeAtencao": [
+      "Em processo de liquidação (aprovada em nov/2025)",
+      "Apenas 569 cotistas - liquidez extremamente baixa",
+      "25% do PL em caixa (reduz rendimento efetivo)",
+      "Dividendos voláteis (R$ 0,61 a R$ 1,23)",
+      "Termos exatos da incorporação pelo VVCR11 ainda em definição",
+      "Risco de timing na conclusão da liquidação"
+    ],
+    "conclusaoFinal": "O HCHG11 <strong class=\"text-red-400\">não é recomendado para novos investidores</strong> dado o processo de liquidação em andamento. Cotistas atuais devem acompanhar atentamente os termos da incorporação pelo VVCR11 para avaliar se é mais vantajoso manter as cotas até a conversão ou vender no mercado secundário. O desconto de 18% no P/VP pode gerar ganho se a liquidação for conduzida próxima ao valor patrimonial, mas envolve risco de evento e timing."
+  },
+  "footer": {
+    "dataAnalise": "24/02/2026",
+    "totalDocumentos": 268,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

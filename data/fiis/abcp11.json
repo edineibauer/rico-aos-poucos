@@ -1,0 +1,622 @@
+{
+  "meta": {
+    "ticker": "ABCP11",
+    "nome": "Grand Plaza Shopping FII",
+    "segmento": "Shopping Center",
+    "badges": [
+      "Shopping Center",
+      "Santo André/SP",
+      "98,8% Ocupação",
+      "Desde 1997"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 894
+  },
+  "seo": {
+    "title": "ABCP11 - Análise Completa | Grand Plaza Shopping FII",
+    "description": "Análise completa do FII ABCP11 baseada em 894 documentos oficiais. Shopping center em Santo André/SP, ocupação 98,8%, P/VP 0,73, DY 9,7%. Contingência tributária R$ 221M, portfólio e projeções 2026.",
+    "keywords": "ABCP11, Grand Plaza Shopping, FII shopping, análise ABCP11, dividend yield ABCP11, shopping center FII, Rio Bravo, Santo André",
+    "ogTitle": "ABCP11 - Análise Completa do FII Grand Plaza Shopping 2026",
+    "ogDescription": "Análise detalhada do ABCP11: FII de shopping center com ocupação 98,8%. DY 9,7%, P/VP 0,73. Contingência tributária atualizada para R$ 221M. Portfólio e projeções 2026.",
+    "twitterTitle": "ABCP11 - Análise Completa | FII Grand Plaza Shopping",
+    "twitterDescription": "Análise do ABCP11: ocupação 98,8%, inadimplência 0,26%, DY 9,7%. Shopping consolidado há quase 30 anos em Santo André/SP. Contingência de R$ 221M no CARF."
+  },
+  "indicadores": {
+    "cotacao": 80.37,
+    "cotacaoData": "31/12/2025",
+    "pvp": 0.73,
+    "pvpDesconto": "27% de desconto",
+    "dividendYield": 9.7,
+    "dividendoMensal": 0.625,
+    "dividendoAnual": 7.5,
+    "patrimonioLiquido": "R$ 519 Mi",
+    "vpCota": 110.80,
+    "cotistas": 14076,
+    "cotistasDetalhe": "4.709.082 cotas",
+    "ocupacao": 98.8
+  },
+  "recomendacao": {
+    "nota": 6.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">ABCP11</strong> é um FII de shopping center consolidado com <strong class=\"text-emerald-400\">ocupação excelente de 98,8%</strong> e <strong class=\"text-emerald-400\">inadimplência de apenas 0,26%</strong>. O P/VP de 0,73 oferece desconto de 27% sobre o patrimônio, e o DY de 9,7% é competitivo. No entanto, o <strong class=\"text-red-400\">processo tributário foi atualizado para R$ 221 milhões</strong> (retornou à DRJ após decisão do CARF em fev/2025) e a <strong class=\"text-amber-400\">concentração em ativo único</strong> limitam o upside. Nota-se que em 2025 o fundo distribuiu R$ 7,50/cota, acima do resultado realizado de R$ 6,93/cota, gerando resultado acumulado negativo de -R$ 0,57. A taxa de administração de 0,1% a.a. permanece uma das mais baixas do mercado."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 519 Mi",
+      "detalhe": "VP/cota: R$ 110,80",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 110,80</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,625",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 7,50/ano | DY 9,7%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "14.076",
+      "detalhe": "4.709.082 cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "98,8%",
+      "detalhe": "Inadimplência: 0,26%",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Processo Tributário R$ 221M+",
+      "descricao": "Auto de Infração da RFB (2020) enquadra o fundo como pessoa jurídica. Valor atualizado para <strong class=\"text-red-400\">R$ 221 milhões</strong> (mar/2025). CARF anulou por unanimidade a decisão da DRJ em fev/2025 e processo retornou à 1ª instância. Novo julgamento estimado em 1-2 anos. Classificado como \"perda possível\" sem provisão contábil. Em caso de materialização, responsabilidade dividida: 38,59% do fundo e 61,41% da SYN (conforme acordo de cisão).",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração em Ativo Único",
+      "descricao": "100% do portfólio em um único shopping em Santo André/SP. Qualquer evento adverso no empreendimento ou na região impacta diretamente todo o fundo. Sem diversificação geográfica ou setorial. Estrutura de condomínio pro indiviso com o Grand Plaza II (SYN) após a cisão de 2022.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Resultado Abaixo da Distribuição",
+      "descricao": "Em 2025, o fundo distribuiu R$ 7,50/cota mas gerou resultado de apenas R$ 6,93/cota, acumulando resultado negativo de -R$ 0,57/cota. Distribuições variaram de R$ 0,50 a R$ 1,15 no ano. A linearização semestral cria picos (jun R$ 1,15) e vales (R$ 0,50), e o fundo está pagando mais do que gera no 2º semestre.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Segmento de Lazer em Queda",
+      "descricao": "Vendas do segmento de lazer caíram -22,6% em novembro/2025 (YoY), puxadas por Playcenter Family, Cinemark e Labirinto. Queda persistente ao longo do 2S25 (-21,6% em outubro, -4,2% em setembro). Fluxo de estacionamento também negativo na maioria dos meses de 2025.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Rio Bravo Investimentos DTVM Ltda.",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Fundo ativo",
+        "valor": "~30 anos"
+      },
+      {
+        "label": "Patrimônio ABCP",
+        "valor": "R$ 519 Mi"
+      },
+      {
+        "label": "Taxa Admin",
+        "valor": "0,1% a.a.",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A Rio Bravo é uma das gestoras mais tradicionais do mercado de FIIs brasileiro, com amplo portfólio de fundos. Demonstra <strong class=\"text-emerald-400\">transparência exemplar</strong> nos relatórios gerenciais, com dados detalhados de vendas por segmento, inadimplência, vacância e NOI mensal. A defesa do contencioso tributário tem sido diligente — obteve anulação unânime no CARF em fev/2025. Coordena a gestão conjunta do shopping com o Grand Plaza II (SYN) após a cisão de 2022, incluindo garantias cruzadas para contingências. Auditoria independente pela Grant Thornton sem ressalvas em 2024.",
+    "link": "../../gestores/rio-bravo/"
+  },
+  "taxas": {
+    "subtitulo": "Extremamente competitivas",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,10% a.a.",
+        "detalhe": "Mínimo: R$ 103.776/mês (reajuste IGP-M, base jan/2024)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "100% do resultado vai para o cotista",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Distribuição",
+        "valor": "95%+",
+        "detalhe": "Dos lucros auferidos (regime de caixa semestral)",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Shopping",
+    "comparativo": [
+      {
+        "ticker": "ABCP11",
+        "taxa": "0,10%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "VISC11",
+        "taxa": "1,35%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "XPML11",
+        "taxa": "0,95%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "HGBS11",
+        "taxa": "1,50%",
+        "perf": "+20% perf. s/ IGPM+6%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Rio Bravo Investimentos DTVM Ltda."
+      },
+      {
+        "label": "CNPJ",
+        "valor": "01.201.140/0001-90"
+      },
+      {
+        "label": "Início",
+        "valor": "Maio/1996"
+      },
+      {
+        "label": "Auditor",
+        "valor": "Grant Thornton Auditores Independentes"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "ABL Shopping",
+        "valor": "63.768 m²",
+        "cor": "blue"
+      },
+      {
+        "label": "Operações",
+        "valor": "284",
+        "cor": "purple"
+      },
+      {
+        "label": "Participação do FII",
+        "valor": "38,58%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Vendas 2025",
+        "valor": "R$ 990 Mi",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Alimentação",
+        "Âncoras",
+        "Vestuário",
+        "Mega Lojas",
+        "Calçados",
+        "Conv./Serviços",
+        "Mall & Mídia",
+        "Lazer",
+        "Outros"
+      ],
+      "data": [
+        21,
+        16,
+        9,
+        9,
+        7,
+        7,
+        4,
+        2,
+        25
+      ],
+      "cores": [
+        "#f59e0b",
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#ef4444",
+        "#06b6d4",
+        "#ec4899",
+        "#6b7280",
+        "#475569"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Satélites",
+        "Mega Lojas",
+        "Âncoras",
+        "Conv./Serv.",
+        "Mall & Mídia",
+        "Lazer"
+      ],
+      "data": [
+        11.1,
+        6.3,
+        4.0,
+        -4.0,
+        -6.2,
+        -22.6
+      ],
+      "cores": [
+        "#10b981",
+        "#10b981",
+        "#10b981",
+        "#ef4444",
+        "#ef4444",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Vendas Mensais",
+        "setor": "R$ 109,7 Mi",
+        "receita": "+6,5%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Vendas Acum. 2025",
+        "setor": "R$ 990,4 Mi",
+        "receita": "+5,7%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "SSS (Same Store Sales)",
+        "setor": "-",
+        "receita": "+4,6%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Aluguel Mínimo",
+        "setor": "-",
+        "receita": "+12,0%",
+        "rating": "Destaque",
+        "ratingCor": "emerald",
+        "risco": "Destaque",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "NOI do Shopping",
+        "setor": "R$ 8,9 Mi/mês",
+        "receita": "+5,0%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "NOI Acumulado 2025",
+        "setor": "R$ 97,0 Mi",
+        "receita": "+4,0%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Vacância",
+        "setor": "1,2%",
+        "receita": "Estável",
+        "rating": "Excelente",
+        "ratingCor": "emerald",
+        "risco": "Excelente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Inadimplência Líq.",
+        "setor": "0,26%",
+        "receita": "Baixa",
+        "rating": "Excelente",
+        "ratingCor": "emerald",
+        "risco": "Excelente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Receita Operacional",
+        "setor": "R$ 103,4 Mi",
+        "receita": "+4,3%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Estacionamento",
+        "setor": "R$ 20,6 Mi",
+        "receita": "+7,3%",
+        "rating": "Positivo",
+        "ratingCor": "emerald",
+        "risco": "Positivo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoResumo": [],
+    "riscoNota": "Inaugurado em 23 de setembro de 1997, o Grand Plaza Shopping é o principal centro de compras do Grande ABC. Conta com 10 salas de cinema Cinemark, Parque Temático Playland, 24 pistas de boliche, Boulevard Gastronômico e prédio comercial com 5.735 m² (3 andares, 9 salas). O FII detém 38,58% do empreendimento; os 61,42% restantes pertencem ao Grand Plaza II (SYN) após a cisão de dez/2022. Destaques em 2025: exposição Van Gogh & Impressionistas (25.686 ingressos, R$ 1,36M arrecadados), promoção de Natal com R$ 30,3M em notas cadastradas, e novos contratos com Ri Happy, Panini (Copa 2026), Montana e Griletto."
+  },
+  "timeline": {
+    "subtitulo": "Quase 30 anos de história no mercado de FIIs",
+    "periodos": [
+      {
+        "periodo": "1996-1997",
+        "label": "FUNDAÇÃO",
+        "cor": "blue",
+        "descricao": "Constituição do FII (mai/1996) e inauguração do Grand Plaza Shopping (set/1997) em Santo André/SP.",
+        "pontos": [
+          "Principal centro de compras do Grande ABC",
+          "63.768 m² de ABL + prédio comercial 5.735 m²",
+          "Administrado pela Rio Bravo desde o início"
+        ]
+      },
+      {
+        "periodo": "Ago/2020",
+        "label": "AUTO DE INFRAÇÃO",
+        "cor": "red",
+        "descricao": "RFB lavra Auto de Infração enquadrando o fundo como pessoa jurídica. Valor inicial de R$ 158,9 milhões (IRPJ, CSLL, PIS e COFINS de 2016-2018).",
+        "pontos": [
+          "Base: cotista com mais de 25% das cotas (SYN)",
+          "Atualizado para <strong class=\"text-red-400\">R$ 221 milhões</strong> em mar/2025",
+          "Rio Bravo defende: lei não se aplica ao caso"
+        ]
+      },
+      {
+        "periodo": "Dez/2022",
+        "label": "CISÃO",
+        "cor": "purple",
+        "descricao": "Cisão parcial: SYN Prop e Tech saiu com 61,41% do patrimônio, criando o FII Grand Plaza II.",
+        "pontos": [
+          "De 12,2 milhões para 4,7 milhões de cotas",
+          "Cotistas pulverizados: de 38% para 100% do fundo",
+          "Garantias cruzadas para contingências tributárias",
+          "ITBI: R$ 13,2 milhões arcado proporcionalmente"
+        ]
+      },
+      {
+        "periodo": "Fev/2025",
+        "label": "CARF",
+        "cor": "amber",
+        "descricao": "CARF anulou por unanimidade o acórdão da DRJ. Processo retorna à 1ª instância administrativa para reanálise.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">Novo julgamento esperado em 1-2 anos</strong>",
+          "Sem provisão contábil (perda possível)",
+          "Valor atualizado: R$ 221 milhões (mar/2025)",
+          "Responsabilidade do fundo: 38,59% = ~R$ 85 Mi"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "OPERACIONAL",
+        "cor": "emerald",
+        "descricao": "Ano de forte desempenho operacional do shopping com vendas de R$ 990 milhões e NOI de R$ 97 milhões.",
+        "pontos": [
+          "Vendas +5,7% YoY, NOI +4,0% YoY",
+          "Vacância reduzida para 1,2% (mínima histórica)",
+          "Novos contratos: Ri Happy, Panini, Montana, Griletto",
+          "Exposição Van Gogh: 25.686 ingressos vendidos"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória:",
+      "texto": "O ABCP11 é um dos FIIs mais antigos do mercado brasileiro, com operação consolidada no Grand Plaza Shopping há quase 30 anos. A cisão de 2022 removeu o cotista relevante (SYN) e democratizou o fundo, mas o <strong class=\"text-red-400\">processo tributário de R$ 221M+</strong> permanece como principal risco. A operação em 2025 foi sólida, com vendas de R$ 990 milhões (+5,7%) e vacância no menor patamar histórico (1,2%). O fundo gerou rentabilidade total de mercado de 17,5% em 2025."
+    },
+    "crescimento": [
+      {
+        "label": "Vendas 2025",
+        "valor": "+5,7%",
+        "detalhe": "R$ 990 Mi acumulado"
+      },
+      {
+        "label": "Aluguel Mínimo",
+        "valor": "+12%",
+        "detalhe": "YoY nov/25 vs nov/24"
+      },
+      {
+        "label": "NOI Acumulado",
+        "valor": "+4%",
+        "detalhe": "R$ 97,0 Mi em 2025"
+      },
+      {
+        "label": "Rent. Mercado 2025",
+        "valor": "+17,5%",
+        "detalhe": "Cota ajustada + dividendos"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "ABCP11 é um <strong class=\"text-emerald-400\">FII de shopping center maduro e consolidado</strong>, dono de 38,58% do Grand Plaza Shopping em Santo André/SP. A operação é saudável: <strong class=\"text-emerald-400\">ocupação de 98,8%</strong>, inadimplência de 0,26%, vendas crescentes (+5,7% em 2025) e NOI em alta. A <strong class=\"text-emerald-400\">taxa de administração de 0,1% é excepcional</strong>. O P/VP de 0,73 oferece desconto de 27%, mas o <strong class=\"text-red-400\">processo tributário de R$ 221M+</strong> (atualizado em 2025) e a concentração em ativo único justificam cautela. Em 2025, o fundo distribuiu R$ 0,57/cota acima do resultado gerado, sinalizando necessidade de atenção ao equilíbrio entre distribuição e geração de caixa.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">renda passiva de shopping center</strong> consolidado",
+      "Perfil <strong class=\"text-emerald-400\">moderado</strong> que aceita risco de concentração em ativo único",
+      "Quem valoriza <strong class=\"text-emerald-400\">taxas baixíssimas</strong> (0,1% a.a. sem performance) e gestão transparente",
+      "Investidores que entendem o <strong class=\"text-amber-400\">risco tributário</strong> e aceitam exposição proporcional (~R$ 85M)"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-red-400\">não aceita risco tributário</strong> de R$ 221M+ pendente no CARF/DRJ",
+      "Investidores que buscam <strong class=\"text-amber-400\">dividendos estáveis</strong> mês a mês (variação de R$ 0,50 a R$ 1,15)",
+      "Quem prefere <strong class=\"text-amber-400\">diversificação de ativos</strong> em um único FII",
+      "Perfil que <strong class=\"text-amber-400\">precisa de alta liquidez</strong> (giro ~0,5%/mês, volume R$ 1,9M/mês)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.50,
+      0.50,
+      0.50,
+      0.60,
+      0.80,
+      1.15,
+      0.50,
+      0.50,
+      0.50,
+      0.65,
+      0.65,
+      0.65
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 1.4,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "total": "R$ 6,45",
+        "variacao": "-"
+      },
+      {
+        "ano": "2024",
+        "total": "R$ 6,66",
+        "variacao": "+3,3%"
+      },
+      {
+        "ano": "2025",
+        "total": "R$ 7,50",
+        "variacao": "+12,6%"
+      }
+    ],
+    "guidance": {
+      "periodo": "Distribuição",
+      "faixa": "95% dos lucros",
+      "unidade": "regime de caixa semestral"
+    },
+    "stats": [
+      {
+        "label": "Média 2025",
+        "valor": "R$ 0,625",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "9,7%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Total 2025",
+        "valor": "R$ 7,50/cota"
+      },
+      {
+        "label": "Total 2024",
+        "valor": "R$ 6,66/cota"
+      },
+      {
+        "label": "Resultado Dez/25",
+        "valor": "R$ 0,71/cota"
+      },
+      {
+        "label": "Resultado Acum. 2025",
+        "valor": "R$ 6,93/cota"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,73",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">27% de desconto</span> sobre o valor patrimonial. Imóvel avaliado a valor justo em R$ 492 milhões (laudo dez/2024), representando 97,4% do PL.",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 110,80"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 80,37",
+          "cor": "emerald"
+        },
+        {
+          "label": "Valor Justo Imóvel",
+          "valor": "R$ 492 Mi"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "9,7%",
+      "label": "DY Anualizado",
+      "cor": "emerald",
+      "descricao": "Competitivo para FIIs de shopping center, com taxa de administração de apenas 0,1%. Rentabilidade patrimonial acumulada de 10,65% em 2025. Retorno total de mercado de 17,5% em 2025."
+    },
+    "recomendacoes": {
+      "valor": "0,10%",
+      "label": "Taxa Admin (a.a.)",
+      "cor": "blue",
+      "descricao": "Uma das menores do mercado de FIIs. Sem taxa de performance. Taxa mínima de R$ 103.776/mês (reajuste IGP-M).",
+      "detalhe": "~13x menor que a média de FIIs de shopping"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-emerald-400\">ABCP11</strong> é um dos FIIs mais antigos do mercado brasileiro, com operação consolidada no Grand Plaza Shopping há quase 30 anos. Os indicadores operacionais são excelentes: <strong class=\"text-emerald-400\">ocupação de 98,8%</strong>, inadimplência líquida de 0,26%, vendas de R$ 990 milhões em 2025 (+5,7%), aluguel mínimo em alta de 12% e NOI de R$ 97 milhões acumulado (+4%). Novos contratos com Ri Happy, Panini (Copa 2026), Montana e Griletto reforçam o mix de lojas.",
+      "O principal risco permanece o <strong class=\"text-red-400\">processo tributário, agora atualizado para R$ 221 milhões</strong> (mar/2025). O CARF anulou por unanimidade a decisão da DRJ em fev/2025, e o processo retornou à 1ª instância para reanálise, com novo julgamento esperado em 1-2 anos. Em caso de materialização, o fundo arcaria com 38,59% (~R$ 85 milhões), e a SYN com 61,41%, conforme acordo de cisão. Não há provisão contábil (perda classificada como possível).",
+      "Ponto de atenção adicional: em 2025, o fundo distribuiu R$ 7,50/cota mas gerou resultado de apenas R$ 6,93/cota, acumulando déficit de -R$ 0,57/cota. Isso demonstra que a política de linearização semestral pode gerar distribuições acima da capacidade de geração de caixa em determinados períodos. O segmento de lazer também preocupa, com queda de -22,6% nas vendas em novembro.",
+      "O P/VP de 0,73 oferece margem de segurança, e a <strong class=\"text-emerald-400\">taxa de administração de 0,1%</strong> é uma das mais baixas do mercado — cerca de 13x menor que FIIs comparáveis. A gestão da Rio Bravo é transparente e diligente, com relatórios gerenciais detalhados e defesa ativa do contencioso tributário. A recomendação é <strong class=\"text-amber-400\">MANTER</strong> para quem já possui, com monitoramento do processo tributário como principal gatilho de reavaliação."
+    ],
+    "pontosFortes": [
+      "Ocupação 98,8% e inadimplência 0,26% — melhores patamares históricos",
+      "Taxa de administração 0,1% sem performance (13x menor que a média)",
+      "P/VP 0,73 (desconto de 27% sobre valor justo de R$ 492M)",
+      "Vendas crescentes (+5,7% em 2025, R$ 990 Mi)",
+      "Shopping consolidado há quase 30 anos no Grande ABC",
+      "Aluguel mínimo em alta de +12% YoY (boas renegociações)",
+      "Gestora transparente com relatórios detalhados e auditoria sem ressalvas",
+      "Rentabilidade total de mercado de +17,5% em 2025"
+    ],
+    "pontosDeAtencao": [
+      "Processo tributário atualizado para R$ 221M+ (perda possível)",
+      "Ativo único em Santo André/SP sem diversificação",
+      "Distribuição acima do resultado em 2025 (-R$ 0,57/cota)",
+      "Lazer em queda persistente (-22,6% em nov/25)",
+      "Liquidez limitada (giro 0,5%/mês, ~R$ 1,9M/mês)",
+      "Estrutura de condomínio pro indiviso pós-cisão",
+      "Fluxo de estacionamento negativo na maioria dos meses"
+    ],
+    "conclusaoFinal": "O ABCP11 oferece uma combinação de <strong class=\"text-emerald-400\">operação excelente</strong> com <strong class=\"text-red-400\">risco jurídico relevante e crescente</strong> (de R$ 158M para R$ 221M). Para quem já possui, a recomendação é manter e monitorar o desdobramento do processo na DRJ, esperado para 2026-2027. Para novos investidores, o desconto de 27% sobre o VP, a taxa mínima e os indicadores operacionais são atrativos, mas é essencial entender e aceitar o risco do contencioso tributário. A responsabilidade do fundo em caso de perda seria de ~R$ 85 milhões (38,59%), o que representaria ~R$ 18/cota. Nota <strong class=\"text-white\">6,5/10</strong>."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 894,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Análise baseada em 894 documentos oficiais do fundo."
+  }
+}

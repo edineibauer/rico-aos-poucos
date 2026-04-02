@@ -1,0 +1,557 @@
+{
+  "meta": {
+    "ticker": "CXCI11",
+    "nome": "Caixa Carteira Imobiliaria FII",
+    "segmento": "Fundo de Fundos",
+    "badges": [
+      "Gestao Caixa Asset",
+      "113% CDI",
+      "43 FIIs Investidos"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 410
+  },
+  "seo": {
+    "title": "CXCI11 - Analise Completa | Caixa Carteira Imobiliaria FII",
+    "description": "Analise completa do FII CXCI11 baseada em 410 documentos oficiais. Fundo de Fundos gerido pela Caixa Asset, DY 13,7%, 113% CDI, P/VP 0,79. Carteira de 43 FIIs diversificados.",
+    "keywords": "CXCI11, Caixa Carteira Imobiliaria, FoF, Fundo de Fundos, analise CXCI11, dividend yield CXCI11, Caixa Asset",
+    "ogTitle": "CXCI11 - Analise Completa do FII Caixa Carteira Imobiliaria 2026",
+    "ogDescription": "Analise detalhada do CXCI11: FoF gerido pela Caixa Asset. 43 FIIs investidos, DY 13,7%, 113% CDI, P/VP 0,79. Retorno de 20,66% em 2025.",
+    "twitterTitle": "CXCI11 - Analise Completa | Caixa Carteira Imobiliaria FII",
+    "twitterDescription": "Analise do CXCI11: FoF Caixa Asset com 43 FIIs, DY 13,7%, 113% CDI, P/VP 0,79. Patrimonio R$ 178,7 Mi, retorno 20,66% em 2025."
+  },
+  "indicadores": {
+    "cotacao": 68.24,
+    "cotacaoData": "30/12/2025",
+    "pvp": 0.79,
+    "pvpDesconto": "21% de desconto",
+    "dividendYield": 13.71,
+    "dividendoMensal": 0.9,
+    "dividendoAnual": 9.35,
+    "patrimonioLiquido": "R$ 178,7 Mi",
+    "vpCota": 86.84,
+    "cotistas": 5414
+  },
+  "recomendacao": {
+    "nota": 6.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">CXCI11</strong> e um Fundo de Fundos gerido pela <strong class=\"text-emerald-400\">Caixa Asset</strong>, com carteira de <strong class=\"text-emerald-400\">43 FIIs diversificados</strong> e rendimento equivalente a <strong class=\"text-emerald-400\">113% do CDI</strong>. O P/VP de 0,79 oferece <strong class=\"text-emerald-400\">21% de desconto</strong> e o DY de 13,7% e atrativo. Entretanto, a <strong class=\"text-amber-400\">liquidez baixa</strong> (R$ 191 mil/dia), o <strong class=\"text-amber-400\">fundo jovem</strong> (desde mar/2022) e a <strong class=\"text-amber-400\">taxa de performance de 20% sobre IFIX</strong> sao pontos a considerar. A distribuicao oscilou entre R$ 0,75 e R$ 0,90 ao longo de 2025, evidenciando <strong class=\"text-amber-400\">volatilidade nos proventos</strong>."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimonio",
+      "valor": "R$ 178,7 Mi",
+      "detalhe": "VP/cota: R$ 86,84",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 86,84</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,90",
+      "valorSufixo": "/mes",
+      "detalhe": "R$ 9,35/ano | DY 13,7%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "5.414",
+      "detalhe": "Liquidez: R$ 191 mil/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Performance",
+      "valor": "113% CDI",
+      "detalhe": "Retorno 2025: +20,66%",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Distribuicao Volatil em 2025",
+      "descricao": "Os proventos do CXCI11 oscilaram significativamente em 2025, variando entre R$ 0,75 e R$ 0,90 por cota. O resultado mensal frequentemente ficou abaixo da distribuicao (ex: R$ 0,77 em dez/25, R$ 0,74 em nov/25, R$ 0,75 em out/25), sendo complementado pela reserva acumulada.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de Performance 20% sobre IFIX",
+      "descricao": "O CXCI11 cobra taxa de performance de 20% sobre o que exceder o IFIX. Em anos de forte alta do mercado de FIIs, isso pode impactar significativamente o resultado distribuido ao cotista.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Reserva em Queda",
+      "descricao": "A reserva acumulada caiu de R$ 0,82/cota em outubro/2025 para R$ 0,62/cota em dezembro/2025. Como o fundo distribui mais do que gera em varios meses, essa reserva vem sendo consumida, o que pode pressionar reducao nos proventos futuros.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez Limitada",
+      "descricao": "Volume medio diario de R$ 191 mil com 5.414 cotistas. Para posicoes maiores, a saida pode exigir varios dias e potencialmente impactar o preco.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Caixa Asset",
+    "nota": 7,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Inicio do Fundo",
+        "valor": "Mar/2022"
+      },
+      {
+        "label": "Patrimonio",
+        "valor": "R$ 178,7 Mi"
+      },
+      {
+        "label": "Retorno 2025",
+        "valor": "+20,66%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">Caixa Asset</strong> e a gestora do fundo, vinculada a Caixa Economica Federal. O CXCI11 entregou retorno de 20,66% em 2025, marginalmente abaixo do IFIX (21,15%). A gestao foca em <strong class=\"text-blue-400\">recebiveis (39,2%)</strong> como base de renda e complementa com FIIs de tijolo e FoFs para capturar valorizacao. A reserva acumulada caiu de R$ 0,82 para R$ 0,62/cota ao longo do 4T25, indicando que a distribuicao tem superado o resultado operacional em alguns meses.",
+    "link": "../../gestores/caixa-asset/"
+  },
+  "taxas": {
+    "subtitulo": "Taxa competitiva com performance sobre IFIX",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administracao",
+        "valor": "0,70% a.a.",
+        "detalhe": "Sobre o Patrimonio Liquido",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder o IFIX",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Custodia",
+        "valor": "Itau Unibanco",
+        "detalhe": "0,09% a.a.",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FoFs",
+    "comparativo": [
+      {
+        "ticker": "CXCI11",
+        "taxa": "0,70%",
+        "perf": "+20% perf. s/ IFIX",
+        "destaque": true
+      },
+      {
+        "ticker": "CRFF11",
+        "taxa": "1,15%",
+        "perf": "Sem performance"
+      },
+      {
+        "ticker": "BCFF11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IFIX"
+      },
+      {
+        "ticker": "KFOF11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IFIX"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Caixa Economica Federal"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Caixa Asset"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Itau Unibanco / Itau Corretora"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "FIIs na Carteira",
+        "valor": "43"
+      },
+      {
+        "label": "Em Cotas de FII",
+        "valor": "93,75%"
+      },
+      {
+        "label": "Em Liquidez",
+        "valor": "6,25%"
+      },
+      {
+        "label": "Reserva Acum.",
+        "valor": "R$ 0,62/cota",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Recebiveis/CRI",
+        "Logistica",
+        "Corporativo",
+        "Shopping",
+        "FoF",
+        "Outros"
+      ],
+      "data": [
+        39.2,
+        18.5,
+        15.3,
+        12.8,
+        7.5,
+        6.7
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#8b5cf6",
+        "#f59e0b",
+        "#06b6d4",
+        "#6b7280"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Recebiveis/Papel",
+        "Tijolo",
+        "FoF",
+        "Liquidez"
+      ],
+      "data": [
+        39.2,
+        46.6,
+        7.5,
+        6.7
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "FIIs de Recebiveis/CRI",
+        "setor": "Papel",
+        "receita": "39,2%",
+        "rating": "43,4% da receita",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FIIs de Logistica",
+        "setor": "Tijolo",
+        "receita": "18,5%",
+        "rating": "Tijolo",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FIIs Corporativos",
+        "setor": "Tijolo",
+        "receita": "15,3%",
+        "rating": "Tijolo",
+        "ratingCor": "purple",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "FIIs de Shopping",
+        "setor": "Tijolo",
+        "receita": "12,8%",
+        "rating": "Tijolo",
+        "ratingCor": "amber",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FoFs e Outros",
+        "setor": "Diversificado",
+        "receita": "14,2%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Moderado",
+        "riscoCor": "blue"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Recebiveis (previsibilidade)",
+        "valor": 39,
+        "cor": "emerald"
+      },
+      {
+        "label": "Tijolo (valorizacao)",
+        "valor": 47,
+        "cor": "blue"
+      },
+      {
+        "label": "FoF/Outros",
+        "valor": 14,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "Carteira de 43 FIIs com predominancia de recebiveis (39,2%) para previsibilidade de renda e FIIs de tijolo (46,6%) para captura de valorizacao. Em dezembro/2025, os destaques positivos foram GRUL11 (resultado operacional robusto com receitas de R$ 2,05 Mi e zero vacancia), BRCR11 (+9,46% com recuperacao de lajes corporativas em SP) e TRBL11 (quitacao de aluguel atrasado). Os destaques negativos incluiram FVPQ11 (-10,18% com reavaliacao do imovel, queda de -40,69% no VP), IRIM11 (pressao de venda apos incorporacao do IRDM11) e CNES11 (reducao de PL e inadimplencia elevada)."
+  },
+  "timeline": {
+    "subtitulo": "FoF institucional gerido pela Caixa Asset",
+    "periodos": [
+      {
+        "periodo": "Mar/2022",
+        "label": "INICIO",
+        "cor": "blue",
+        "descricao": "Constituicao do FII Caixa Carteira Imobiliaria. Cota inicial de R$ 100,00 (R$ 97,00 descontando custos de distribuicao).",
+        "pontos": [
+          "CNPJ: 42.066.916/0001-94",
+          "Gestora: Caixa Asset",
+          "Administrador: Caixa Economica Federal",
+          "2.057.726 cotas emitidas"
+        ]
+      },
+      {
+        "periodo": "2022-2024",
+        "label": "CONSTRUCAO",
+        "cor": "emerald",
+        "descricao": "Periodo de montagem e diversificacao da carteira em multiplos segmentos de FIIs.",
+        "pontos": [
+          "Diversificacao para 43+ FIIs investidos",
+          "Foco em recebiveis para previsibilidade",
+          "Complemento com tijolo e FoFs para valorizacao",
+          "Acumulo de reserva para estabilizar distribuicoes"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "CONSOLIDACAO",
+        "cor": "purple",
+        "descricao": "Ano de forte recuperacao com retorno de 20,66%, quase atingindo o IFIX (21,15%). Distribuicoes oscilaram entre R$ 0,75 e R$ 0,90.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">Retorno 2025: +20,66%</strong>",
+          "Distribuicoes de R$ 0,75 a R$ 0,90/cota/mes",
+          "Total distribuido 2025: R$ 9,35/cota",
+          "Reserva caiu de R$ 0,82 para R$ 0,62/cota no 4T25"
+        ]
+      },
+      {
+        "periodo": "2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Cenario de juros ainda restritivos mas com perspectiva de queda gradual. Recebiveis continuam gerando previsibilidade e tijolo oferece potencial de valorizacao.",
+        "pontos": [
+          "Ultimo provento: R$ 0,90/cota (ref. dez/25)",
+          "Reserva de R$ 0,62/cota para estabilidade",
+          "43 FIIs investidos, 93,75% alocado",
+          "Gestao monitora spread NTN-B vs DY IFIX"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetoria - ESTAVEL:",
+      "texto": "O CXCI11 se consolidou como um FoF institucional com gestao da Caixa Asset, entregando <strong class=\"text-emerald-400\">retorno de 20,66% em 2025</strong>. A carteira de 43 FIIs diversificados entre recebiveis (39,2%) e tijolo (46,6%) oferece equilibrio entre renda e valorizacao. Porem, a <strong class=\"text-amber-400\">distribuicao variou de R$ 0,75 a R$ 0,90</strong> ao longo de 2025 e a reserva acumulada caiu no 4T25, sinalizando que o resultado operacional nem sempre cobre o provento distribuido."
+    },
+    "crescimento": [
+      {
+        "label": "Retorno 2025",
+        "valor": "+20,66%",
+        "detalhe": "Cota patrimonial ajustada"
+      },
+      {
+        "label": "DY 12M (mercado)",
+        "valor": "13,7%",
+        "detalhe": "Sobre cota R$ 68,24"
+      },
+      {
+        "label": "% CDI (gross up)",
+        "valor": "113%",
+        "detalhe": "Rendimento equivalente"
+      },
+      {
+        "label": "FIIs Investidos",
+        "valor": "43",
+        "detalhe": "Diversificacao ampla"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "CXCI11 e um <strong class=\"text-amber-400\">Fundo de Fundos gerido pela Caixa Asset</strong>, investindo em 43 FIIs diversificados com foco em recebiveis (39,2%) e tijolo (46,6%). O DY de 13,7% e equivalente a <strong class=\"text-emerald-400\">113% do CDI</strong>, com P/VP de 0,79 oferecendo 21% de desconto. A reserva de R$ 0,62/cota traz alguma previsibilidade, mas vem diminuindo. A taxa de 0,70% e competitiva, mas a performance de 20% sobre IFIX pode reduzir retornos em anos bons. A distribuicao em 2025 variou entre R$ 0,75 e R$ 0,90, mostrando volatilidade nos proventos.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">diversificacao em FIIs</strong> com gestao institucional",
+      "Perfil <strong class=\"text-emerald-400\">moderado</strong> que aceita oscilacao nos proventos mensais",
+      "Quem valoriza <strong class=\"text-emerald-400\">desconto no P/VP</strong> (21% abaixo do patrimonial)",
+      "Investidores que aceitam <strong class=\"text-emerald-400\">liquidez moderada</strong> e base pequena de cotistas"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-amber-400\">precisa de alta liquidez</strong> diaria",
+      "Investidores que <strong class=\"text-amber-400\">rejeitam taxa de performance</strong>",
+      "Quem busca <strong class=\"text-amber-400\">proventos estaveis e previsíveis</strong> mes a mes",
+      "Perfil que prefere <strong class=\"text-amber-400\">investir diretamente em FIIs</strong> sem dupla camada de taxas"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.90,
+      0.75,
+      0.75,
+      0.75,
+      0.75,
+      0.80,
+      0.90
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.6,
+    "chartYMax": 1,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 9,30"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 9,90"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 9,35"
+      },
+      {
+        "ano": "DY 12M (mercado)",
+        "valor": "13,7%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Reserva Acum.",
+        "valor": "R$ 0,62/cota"
+      }
+    ],
+    "guidance": {
+      "periodo": "Tendencia",
+      "faixa": "R$ 0,75 - R$ 0,90",
+      "unidade": "por cota/mes (faixa 2025)"
+    },
+    "stats": [
+      {
+        "label": "Distribuicao Dez/25",
+        "valor": "R$ 0,90",
+        "cor": "emerald"
+      },
+      {
+        "label": "Resultado Dez/25",
+        "valor": "R$ 0,77"
+      },
+      {
+        "label": "Reserva Acumulada",
+        "valor": "R$ 0,62/cota"
+      },
+      {
+        "label": "% CDI (gross up)",
+        "valor": "113%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendencia",
+        "valor": "Variavel",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,79",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">21% de desconto</span> sobre o valor patrimonial",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 86,84"
+        },
+        {
+          "label": "Preco",
+          "valor": "R$ 68,24",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "113%",
+      "label": "% CDI (gross up)",
+      "cor": "emerald",
+      "descricao": "Rendimento equivalente a 113% do CDI bruto, com isencao de IR para pessoa fisica",
+      "detalhe": "DY CXCI11 (13,7%) com isencao de IR para PF"
+    },
+    "recomendacoes": {
+      "valor": "0,70%",
+      "label": "Taxa Admin",
+      "cor": "emerald",
+      "descricao": "Competitiva para FoFs, mas com taxa de performance de 20% sobre IFIX",
+      "detalhe": "Abaixo da media do segmento"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">CXCI11</strong> e um Fundo de Fundos institucional gerido pela Caixa Asset que entregou <strong class=\"text-emerald-400\">retorno de 20,66% em 2025</strong>, marginalmente abaixo do IFIX (21,15%). A carteira de 43 FIIs e bem diversificada entre recebiveis (39,2%), logistica (18,5%), corporativo (15,3%) e shopping (12,8%). O total distribuido em 2025 foi de R$ 9,35/cota, representando DY de 13,7% sobre a cota de mercado.",
+      "O P/VP de 0,79 oferece <strong class=\"text-emerald-400\">desconto de 21%</strong> sobre o valor patrimonial. Porem, a reserva acumulada <strong class=\"text-amber-400\">caiu de R$ 0,82 para R$ 0,62/cota</strong> entre outubro e dezembro/2025, evidenciando que o resultado operacional (R$ 0,74-0,77/cota) tem ficado abaixo da distribuicao (R$ 0,80-0,90/cota). Isso levanta preocupacao sobre a sustentabilidade do patamar atual de proventos.",
+      "Em dezembro/2025, os destaques positivos foram GRUL11 (resultado operacional robusto de R$ 1,87 Mi), BRCR11 (+9,46% com recuperacao de lajes corporativas) e TRBL11 (quitacao de aluguel atrasado). Os destaques negativos incluiram FVPQ11 (-10,18%), IRIM11 (pressao pos-incorporacao do IRDM11) e CNES11 (inadimplencia elevada e reducao de PL). O cenario de juros restritivos favorece os recebiveis, enquanto uma eventual queda da Selic beneficiaria os FIIs de tijolo."
+    ],
+    "pontosFortes": [
+      "P/VP 0,79 com 21% de desconto",
+      "DY 13,7% equivalente a 113% CDI",
+      "Carteira diversificada em 43 FIIs",
+      "Taxa de administracao competitiva (0,70%)",
+      "Gestao institucional Caixa Asset",
+      "Retorno total 2025 de +20,66%",
+      "Recebiveis (39,2%) geram previsibilidade de receita"
+    ],
+    "pontosDeAtencao": [
+      "Distribuicao variavel entre R$ 0,75 e R$ 0,90 em 2025",
+      "Reserva acumulada em queda (R$ 0,82 -> R$ 0,62 no 4T25)",
+      "Resultado operacional abaixo da distribuicao em varios meses",
+      "Taxa de performance 20% sobre IFIX",
+      "Fundo jovem (~4 anos, desde mar/2022)",
+      "Liquidez limitada (R$ 191 mil/dia, 5.414 cotistas)",
+      "Exposicao a FIIs problematicos (FVPQ11, CNES11)"
+    ],
+    "conclusaoFinal": "O CXCI11 e uma opcao para investidores que buscam <strong class=\"text-emerald-400\">diversificacao em FIIs com gestao institucional</strong> e aceitam liquidez moderada. O desconto de 21% no P/VP e o retorno de 20,66% em 2025 sao pontos fortes. Porem, a <strong class=\"text-amber-400\">volatilidade nos proventos</strong> (R$ 0,75 a R$ 0,90) e a queda na reserva acumulada geram incerteza sobre a estabilidade das distribuicoes. A recomendacao de MANTER reflete o equilibrio entre o bom desconto patrimonial e os <strong class=\"text-amber-400\">riscos de sustentabilidade dos proventos, taxa de performance e liquidez limitada</strong>."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 410,
+    "disclaimer": "Este material tem carater exclusivamente informativo e nao constitui recomendacao de investimento. Rentabilidade passada nao e garantia de rentabilidade futura."
+  }
+}

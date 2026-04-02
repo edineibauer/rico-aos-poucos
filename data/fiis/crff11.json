@@ -1,0 +1,586 @@
+{
+  "meta": {
+    "ticker": "CRFF11",
+    "nome": "Caixa Rio Bravo FoF FII",
+    "segmento": "Fundo de Fundos",
+    "badges": [
+      "Gestao Ativa",
+      "Co-Gestao Rio Bravo",
+      "~33 FIIs"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 770
+  },
+  "seo": {
+    "title": "CRFF11 - Analise Completa | Caixa Rio Bravo FoF FII",
+    "description": "Analise completa do FII CRFF11 baseada em 770 documentos oficiais. Fundo de Fundos com gestao ativa Caixa Asset + Rio Bravo, DY 10,3%, retorno 22,1% em 2025. Carteira diversificada em ~33 FIIs com guidance elevado para 1S26.",
+    "keywords": "CRFF11, Caixa Rio Bravo, FoF, Fundo de Fundos, analise CRFF11, dividend yield CRFF11, Caixa Asset, Rio Bravo",
+    "ogTitle": "CRFF11 - Analise Completa do FII Caixa Rio Bravo FoF 2026",
+    "ogDescription": "Analise detalhada do CRFF11: FoF com gestao ativa Caixa + Rio Bravo. Retorno 22,1% em 2025, DY 10,3%, P/VP 0,85. Guidance 1S26 elevado: R$ 0,59-0,67/cota. Expectativa de corte de juros favorece carteira.",
+    "twitterTitle": "CRFF11 - Analise Completa | Caixa Rio Bravo FoF FII",
+    "twitterDescription": "Analise do CRFF11: FoF ativo Caixa + Rio Bravo. Retorno 22,1% em 2025, DY 10,3%, P/VP 0,85. Patrimonio R$ 59,5 Mi, ~33 FIIs na carteira. Guidance 1S26 elevado."
+  },
+  "indicadores": {
+    "cotacao": 73.44,
+    "cotacaoData": "30/12/2025",
+    "pvp": 0.85,
+    "pvpDesconto": "15% de desconto",
+    "dividendYield": 10.3,
+    "dividendoMensal": 0.63,
+    "dividendoAnual": 7.34,
+    "patrimonioLiquido": "R$ 59,5 Mi",
+    "vpCota": 86.16,
+    "cotistas": 1198
+  },
+  "recomendacao": {
+    "nota": 6,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "O <strong class=\"text-amber-400\">CRFF11</strong> e um Fundo de Fundos com co-gestao <strong class=\"text-amber-400\">Caixa Asset + Rio Bravo</strong>, que entregou <strong class=\"text-emerald-400\">retorno de 22,1%</strong> em 2025 (superando o IFIX de 21,1%). O P/VP de 0,85 oferece <strong class=\"text-emerald-400\">15% de desconto</strong> sobre o valor patrimonial, com potencial de upside de 32,3%. O guidance 1S26 foi <strong class=\"text-emerald-400\">elevado</strong> para R$ 0,59-0,67/cota, sinalizando confianca da gestao. Porem, o <strong class=\"text-amber-400\">patrimonio pequeno</strong> (R$ 59,5 Mi), <strong class=\"text-amber-400\">baixa liquidez</strong> (R$ 17,7 mil/dia) e <strong class=\"text-amber-400\">taxa de administracao de 1,15%</strong> limitam a atratividade frente a pares maiores."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimonio",
+      "valor": "R$ 59,5 Mi",
+      "detalhe": "VP/cota: R$ 86,16",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 86,16</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,63",
+      "valorSufixo": "/mes",
+      "detalhe": "R$ 7,34/ano | DY 10,3%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.198",
+      "detalhe": "Liquidez: R$ 17,7 mil/dia",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Performance",
+      "valor": "+22,1%",
+      "detalhe": "Retorno 2025 (patrimonial)",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "emerald"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Baixa Liquidez",
+      "descricao": "Volume medio diario negociado de apenas R$ 17,7 mil em dez/25, com presenca em pregoes de 96% no ano. Para investidores com posicoes maiores, a saida pode ser dificil sem impacto no preco. Em novembro/25, o volume medio caiu para R$ 5,3 mil/dia.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Patrimonio Pequeno",
+      "descricao": "Com R$ 59,5 milhoes de patrimonio liquido e apenas 690.040 cotas, o fundo tem escala limitada. Nunca realizou uma emissao alem da inicial, o que limita o crescimento. O patrimonio caiu de R$ 69 Mi iniciais (2019) para os atuais R$ 59,5 Mi.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de Administracao Elevada",
+      "descricao": "A taxa total de 1,15% a.a. e acima da media dos FoFs do mercado, que cobram em torno de 0,80-1,00%. Considerando a dupla camada de taxas (FoF + FIIs investidos), o custo efetivo e ainda maior para o cotista.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Caixa Asset + Rio Bravo",
+    "nota": 7,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Inicio do Fundo",
+        "valor": "Abr/2019"
+      },
+      {
+        "label": "Patrimonio",
+        "valor": "R$ 59,5 Mi"
+      },
+      {
+        "label": "Retorno 2025",
+        "valor": "+22,1%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A <strong class=\"text-emerald-400\">Caixa Asset</strong> e gestora e a <strong class=\"text-blue-400\">Rio Bravo</strong> atua como co-gestora. A combinacao oferece solidez institucional da Caixa com a expertise em FIIs da Rio Bravo. O fundo superou o IFIX em 2025 (+22,1% vs +21,1%) e apresentou aumento de 10,3% no resultado recorrente versus 2024. Em junho/2025, o regulamento foi atualizado para adequacao a Resolucao CVM 175.",
+    "link": "../../gestores/caixa-asset/"
+  },
+  "taxas": {
+    "subtitulo": "Acima da media para FoFs",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administracao",
+        "valor": "1,15% a.a.",
+        "detalhe": "Sobre o Patrimonio Liquido",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Nao ha",
+        "detalhe": "Sem taxa de performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Custodia/Escrituracao",
+        "valor": "Oliveira Trust",
+        "detalhe": "Inclusa na administracao",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FoFs",
+    "comparativo": [
+      {
+        "ticker": "CRFF11",
+        "taxa": "1,15%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "BCFF11",
+        "taxa": "0,90%",
+        "perf": "+20% perf. s/ IFIX"
+      },
+      {
+        "ticker": "RBRF11",
+        "taxa": "0,80%",
+        "perf": "+20% perf. s/ IPCA+6%"
+      },
+      {
+        "ticker": "KFOF11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ IFIX"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Caixa Economica Federal"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Oliveira Trust"
+      },
+      {
+        "label": "Escriturador",
+        "valor": "Oliveira Trust"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "FIIs na Carteira",
+        "valor": "~33"
+      },
+      {
+        "label": "Em Cotas de FII",
+        "valor": "95,4%"
+      },
+      {
+        "label": "Em Renda Fixa",
+        "valor": "4,6%"
+      },
+      {
+        "label": "Retorno 2025",
+        "valor": "+22,1%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRI/Papel",
+        "Logistica",
+        "Shopping",
+        "Corporativo",
+        "FoF",
+        "Multiestrat.",
+        "Desenv.",
+        "Varejo"
+      ],
+      "data": [
+        34.9,
+        29.7,
+        16.7,
+        8.9,
+        4.9,
+        2.2,
+        1.7,
+        1.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#06b6d4",
+        "#ec4899",
+        "#f97316",
+        "#ef4444"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "Estrategica",
+        "Tatica",
+        "High Yield"
+      ],
+      "data": [
+        73.6,
+        24.5,
+        1.9
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "BTCI11",
+        "setor": "CRI/Papel",
+        "receita": "8,6%",
+        "rating": "Estrategica",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "BTLG11",
+        "setor": "Logistica",
+        "receita": "6,4%",
+        "rating": "Estrategica",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "XPLG11",
+        "setor": "Logistica",
+        "receita": "6,3%",
+        "rating": "Estrategica",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "VILG11",
+        "setor": "Logistica",
+        "receita": "5,4%",
+        "rating": "Estrategica",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FOFs",
+        "setor": "FoF",
+        "receita": "4,7%",
+        "rating": "Estrategica",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "XPCI11",
+        "setor": "CRI/Papel",
+        "receita": "4,7%",
+        "rating": "Tatica",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "MXRF11",
+        "setor": "Multiestrat.",
+        "receita": "4,7%",
+        "rating": "Estrategica",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Outros (~26 FIIs)",
+        "setor": "Diversificado",
+        "receita": "65,2%",
+        "rating": "Misto",
+        "ratingCor": "slate",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "Estrategica (Core)",
+        "valor": 74,
+        "cor": "emerald"
+      },
+      {
+        "label": "Tatica (Oportunidade)",
+        "valor": 24,
+        "cor": "blue"
+      },
+      {
+        "label": "High Yield",
+        "valor": 2,
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "Carteira diversificada em ~33 FIIs com predominancia de alocacao estrategica (73,6%). Os setores mais representativos sao CRI/Papel (34,9%) e Logistica (29,7%). Em 2025, a gestao aumentou exposicao a FIIs de CRI indexados ao IPCA (high grade e middle grade) e manteve posicoes em FIIs de tijolo de alta qualidade. Os FIIs que mais contribuiram para a performance foram VILG11 (+2,1%) e BTCI11 (+2,0%). Para 2026, a estrategia prioriza FIIs de tijolo em regioes primarias, visando capturar upside com o ciclo de corte de juros."
+  },
+  "timeline": {
+    "subtitulo": "FoF institucional com gestao ativa desde 2019",
+    "periodos": [
+      {
+        "periodo": "Out/2018 - Abr/2019",
+        "label": "INICIO",
+        "cor": "blue",
+        "descricao": "Constituicao em outubro/2018 e inicio de funcionamento em abril/2019. Oferta publica inicial com valor de R$ 100/cota.",
+        "pontos": [
+          "CNPJ: 31.887.401/0001-39",
+          "Gestao: Caixa Asset + Rio Bravo (co-gestao)",
+          "690.040 cotas emitidas a R$ 100,00",
+          "Patrimonio inicial: R$ 69 milhoes",
+          "Administrador: Caixa Economica Federal"
+        ]
+      },
+      {
+        "periodo": "2020-2023",
+        "label": "CONSOLIDACAO",
+        "cor": "emerald",
+        "descricao": "Periodo de construcao e maturacao da carteira, com distribuicoes mensais consistentes entre R$ 0,61 e R$ 0,65/cota.",
+        "pontos": [
+          "Dividendos estaveis entre R$ 0,61 e R$ 0,65/cota",
+          "Carteira diversificada em multiplos segmentos de FIIs",
+          "Estrategia conservadora com foco em qualidade",
+          "Patrimonio reduzido de R$ 69 Mi para ~R$ 57-60 Mi"
+        ]
+      },
+      {
+        "periodo": "2024-2025",
+        "label": "GESTAO ATIVA",
+        "cor": "purple",
+        "descricao": "Movimentacao ativa da carteira com vendas lucrativas e aumento de exposicao a CRI e Logistica. Desinvestimentos com TIR ate 23,1% a.a.",
+        "pontos": [
+          "Resultado recorrente +10,3% vs 2024",
+          "Desinvestimentos com TIR ate 23,1% a.a. (VGIR11)",
+          "Performance 2025: +22,1% (patrimonial), +25,2% (mercado)",
+          "Superou o IFIX (21,1%) em ambas as metricas",
+          "Regulamento atualizado para Resolucao CVM 175 (Jun/25)"
+        ]
+      },
+      {
+        "periodo": "2026",
+        "label": "PERSPECTIVA",
+        "cor": "amber",
+        "descricao": "Guidance de dividendos elevado para 1S26. Foco em FIIs de tijolo em regioes primarias para capturar ciclo de corte de juros.",
+        "pontos": [
+          "Guidance 1S26: R$ 0,59 a R$ 0,67/cota (banda elevada)",
+          "Estrategia: maior exposicao a FIIs de tijolo em regioes primarias",
+          "Expectativa de Selic em 12,25% ao final de 2026 (-275bps)",
+          "Potencial de upside de 32,3% (cota mercado vs VP potencial)",
+          "Spread DY IFIX vs NTN-B de 4,3% acima da media historica"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetoria - ESTAVEL:",
+      "texto": "O CRFF11 manteve uma trajetoria consistente desde 2019, com distribuicoes regulares e gestao ativa que superou o IFIX em 2025. O fundo entregou <strong class=\"text-emerald-400\">retorno de 22,1%</strong> no ano, com aumento de 10,3% no resultado recorrente. A carteira e bem diversificada em ~33 FIIs, com predominancia de estrategias conservadoras. Em junho/2025, o regulamento foi atualizado para adequacao a Resolucao CVM 175. O principal limitador e o <strong class=\"text-amber-400\">tamanho reduzido</strong> (R$ 59,5 Mi) e a baixa liquidez, sem novas emissoes desde o IPO."
+    },
+    "crescimento": [
+      {
+        "label": "Retorno 2025 (Patrimonial)",
+        "valor": "+22,1%",
+        "detalhe": "Superou IFIX (21,1%)"
+      },
+      {
+        "label": "Retorno 2025 (Mercado)",
+        "valor": "+25,2%",
+        "detalhe": "Cota mercado + dividendos"
+      },
+      {
+        "label": "Resultado Recorrente",
+        "valor": "+10,3%",
+        "detalhe": "vs 2024"
+      },
+      {
+        "label": "Potencial Upside",
+        "valor": "+32,3%",
+        "detalhe": "Cota mercado vs VP potencial"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "CRFF11 e um <strong class=\"text-amber-400\">Fundo de Fundos com gestao ativa</strong> da Caixa Asset e Rio Bravo, investindo em ~33 FIIs diversificados por segmento. O fundo entregou <strong class=\"text-emerald-400\">retorno de 22,1% em 2025</strong>, superando o IFIX. O P/VP de 0,85 oferece desconto de 15%, com potencial de upside de 32,3%. O guidance 1S26 foi elevado para R$ 0,59-0,67/cota, e a expectativa de corte de juros de ~275bps em 2026 favorece a carteira voltada para FIIs de tijolo. Porem, o patrimonio reduzido (R$ 59,5 Mi), baixa liquidez e taxa de 1,15% limitam a atratividade frente a pares maiores.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">diversificacao em FIIs</strong> com gestao profissional institucional",
+      "Perfil <strong class=\"text-emerald-400\">moderado</strong> que aceita baixa liquidez em troca de desconto no P/VP",
+      "Quem valoriza <strong class=\"text-emerald-400\">gestao institucional</strong> (Caixa + Rio Bravo) e regulamento atualizado",
+      "Investidores com <strong class=\"text-emerald-400\">posicoes pequenas</strong> que buscam renda mensal estavel"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-amber-400\">precisa de liquidez</strong> (volume de R$ 17,7 mil/dia, com meses abaixo de R$ 5 mil/dia)",
+      "Investidores que buscam <strong class=\"text-amber-400\">fundos maiores e mais liquidos</strong> como BCFF11, KFOF11",
+      "Quem nao aceita <strong class=\"text-amber-400\">dupla camada de taxas</strong> (FoF + FIIs investidos) com administracao de 1,15%",
+      "Perfil <strong class=\"text-amber-400\">trader</strong> ou quem opera posicoes acima de R$ 10 mil"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.61,
+      0.63
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.5,
+    "chartYMax": 0.7,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 7,49"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 7,37"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 7,34"
+      },
+      {
+        "ano": "DY 12M",
+        "valor": "10,3%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "Reserva Acum.",
+        "valor": "R$ 0,31/cota"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,59 - R$ 0,67",
+      "unidade": "por cota/mes"
+    },
+    "stats": [
+      {
+        "label": "Maior (Dez/25)",
+        "valor": "R$ 0,63",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor (2025)",
+        "valor": "R$ 0,61"
+      },
+      {
+        "label": "Primeiro Dividendo",
+        "valor": "2019"
+      },
+      {
+        "label": "Linearizacao",
+        "valor": "Sim"
+      },
+      {
+        "label": "Tendencia",
+        "valor": "Estavel",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,85",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">15% de desconto</span> sobre o valor patrimonial. Em jan/25 o desconto dos FIIs chegou a 21%, proximo ao maior deságio historico.",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 86,16"
+        },
+        {
+          "label": "Preco",
+          "valor": "R$ 73,44",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "32,3%",
+      "label": "Potencial Upside",
+      "cor": "emerald",
+      "descricao": "Potencial de valorizacao considerando FIIs do portfolio ao valor patrimonial + correcao do desconto do CRFF11. Cota patrimonial potencial de R$ 97,18.",
+      "detalhe": "Cota mercado R$ 73,44 vs VP potencial R$ 97,18"
+    },
+    "recomendacoes": {
+      "valor": "1,15%",
+      "label": "Taxa Admin",
+      "cor": "amber",
+      "descricao": "Acima da media de FoFs do mercado (0,80-1,00%). Sem taxa de performance compensa parcialmente.",
+      "detalhe": "Sem taxa de performance"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-amber-400\">CRFF11</strong> encerrou 2025 com desempenho solido, entregando <strong class=\"text-emerald-400\">retorno de 22,1%</strong> na cota patrimonial e 25,2% na cota de mercado, superando o IFIX (21,1%) em ambas as metricas. A gestao ativa da Caixa Asset + Rio Bravo acertou na estrategia de aumentar exposicao a CRIs indexados ao IPCA (high grade e middle grade) e manter posicoes em FIIs de tijolo de alta qualidade, com desinvestimentos lucrativos (TIR ate 23,1% no VGIR11, 17,5% no FCFL11 e 15,7% no LFTT11).",
+      "O guidance para 1S26 foi <strong class=\"text-emerald-400\">elevado</strong> para R$ 0,59-0,67/cota (banda superior e inferior elevadas), refletindo a reserva acumulada de R$ 0,31/cota e a expectativa de melhora no resultado recorrente. A estrategia para 2026 prioriza FIIs de tijolo em regioes primarias, visando capturar o potencial de valorizacao com o ciclo de corte de juros esperado (Selic de 15% para 12,25% ate o final de 2026). O spread DY IFIX vs NTN-B de 4,3% esta acima da media historica de 3,9%, indicando premio de risco atrativo.",
+      "Entretanto, o fundo possui <strong class=\"text-amber-400\">limitacoes estruturais</strong> persistentes: patrimonio de apenas R$ 59,5 Mi (vs R$ 69 Mi iniciais), liquidez muito baixa (R$ 17,7 mil/dia em dez/25, com meses de apenas R$ 5,3 mil/dia) e taxa de administracao de 1,15% acima da media. Em junho/2025, o regulamento foi atualizado para adequacao a Resolucao CVM 175, sem alteracao das caracteristicas do fundo. A AGO de abril/2025 aprovou por maioria as demonstracoes financeiras de 2024."
+    ],
+    "pontosFortes": [
+      "Retorno 2025 superior ao IFIX (+22,1% vs 21,1%)",
+      "P/VP 0,85 com 15% de desconto patrimonial",
+      "Potencial de upside de 32,3% (cota vs VP potencial)",
+      "Gestao institucional Caixa + Rio Bravo com track record",
+      "Carteira diversificada em ~33 FIIs com 73,6% estrategica",
+      "Sem taxa de performance",
+      "Resultado recorrente crescente (+10,3% vs 2024)",
+      "Guidance 1S26 elevado para R$ 0,59-0,67/cota",
+      "Regulamento atualizado para Resolucao CVM 175"
+    ],
+    "pontosDeAtencao": [
+      "Liquidez muito baixa (R$ 17,7 mil/dia em dez/25, R$ 5,3 mil em nov/25)",
+      "Patrimonio pequeno (R$ 59,5 Mi vs R$ 69 Mi iniciais)",
+      "Taxa de administracao de 1,15% acima da media dos FoFs",
+      "Apenas 1.198 cotistas (queda de 1.214 em set/25)",
+      "Nunca realizou nova emissao apos o IPO em 7 anos",
+      "Dupla camada de taxas (FoF + FIIs investidos)",
+      "Patrimonio em declinio desde o inicio (R$ 69 Mi para R$ 59,5 Mi)"
+    ],
+    "conclusaoFinal": "O CRFF11 e uma opcao valida para investidores que buscam <strong class=\"text-emerald-400\">diversificacao em FIIs via gestao profissional</strong> e que nao necessitam de alta liquidez. O desconto de 15% no P/VP, o potencial de upside de 32,3% e o guidance 1S26 elevado sao atrativos, especialmente no contexto de expectativa de corte de juros de 275bps em 2026. Porem, a <strong class=\"text-amber-400\">baixa liquidez cronica, patrimonio em declinio e taxa elevada</strong> limitam a recomendacao a MANTER para quem ja possui. Novos investidores devem considerar FoFs maiores e mais liquidos, salvo se a posicao pretendida for pequena (abaixo de R$ 5 mil)."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 770,
+    "disclaimer": "Este material tem carater exclusivamente informativo e nao constitui recomendacao de investimento. Rentabilidade passada nao e garantia de rentabilidade futura."
+  }
+}

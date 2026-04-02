@@ -1,0 +1,661 @@
+{
+  "meta": {
+    "ticker": "ALZC11",
+    "nome": "Alianza Crédito Imobiliário FII",
+    "segmento": "Crédito (CRI)",
+    "badges": [
+      "Crédito (CRI)",
+      "High Yield",
+      "Carrego IPCA+12,8%",
+      "Recompra Ativa",
+      "121% CDI"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 60
+  },
+  "seo": {
+    "title": "ALZC11 - Análise Completa | Alianza Crédito Imobiliário FII",
+    "description": "Análise completa do FII ALZC11 baseada em 60 documentos oficiais. Fundo de crédito imobiliário high yield, carrego IPCA+12,8%, DY 15,4%, P/VP 0,85. Programa de recompra aprovado, mudanças regulatórias e projeções 2026.",
+    "keywords": "ALZC11, Alianza Crédito, FII crédito, CRI, análise ALZC11, dividend yield ALZC11, high yield FII, Alianza Gestão, recompra cotas",
+    "ogTitle": "ALZC11 - Análise Completa do FII Alianza Crédito Imobiliário 2026",
+    "ogDescription": "Análise detalhada do ALZC11: FII de crédito high yield com carrego IPCA+12,8%. DY 15,4%, P/VP 0,85. Programa de recompra de cotas, alterações regulamentares e projeções 2026.",
+    "twitterTitle": "ALZC11 - Análise Completa | FII Alianza Crédito Imobiliário",
+    "twitterDescription": "Análise do ALZC11: carrego IPCA+12,8%, DY 15,4%, retorno total 54,4% desde o IPO. Recompra de cotas aprovada, regulamento atualizado e projeções 2026."
+  },
+  "indicadores": {
+    "cotacao": 7.81,
+    "cotacaoData": "15/12/2025",
+    "pvp": 0.85,
+    "pvpDesconto": "15% de desconto",
+    "dividendYield": 15.4,
+    "dividendoMensal": 0.1,
+    "dividendoAnual": 1.27,
+    "patrimonioLiquido": "R$ 188 Mi",
+    "vpCota": 9.39,
+    "cotistas": 9759,
+    "cotistasDetalhe": "+2,0% vs. mês anterior"
+  },
+  "recomendacao": {
+    "nota": 7,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "O <strong class=\"text-emerald-400\">ALZC11</strong> é um FII de crédito high yield com <strong class=\"text-emerald-400\">carrego atrativo de IPCA+12,8%</strong>, rendimento equivalente a <strong class=\"text-emerald-400\">121% do CDI</strong>, e <strong class=\"text-emerald-400\">retorno total de 54,4% desde o IPO</strong> (superando CDI, IFIX e benchmark). O P/VP de 0,85 oferece desconto de 15% sobre o patrimônio, e a gestora aprovou um <strong class=\"text-emerald-400\">programa de recompra de até 10% das cotas</strong> por preços abaixo do VP, sinalizando confiança na carteira. Alterações regulamentares recentes ampliam flexibilidade de gestão."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 188 Mi",
+      "detalhe": "VP/cota: R$ 9,39",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 9,39</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,10",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 1,27/ano | DY 15,4%",
+      "icone": "money",
+      "corIcone": "emerald",
+      "corValor": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "9.759",
+      "detalhe": "+2,0% vs. mês anterior",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Carrego",
+      "valor": "IPCA+12,8%",
+      "detalhe": "MtM: IPCA+14,6%",
+      "detalheIcone": "arrowUp",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Inadimplência CRI Fragnani",
+      "descricao": "O CRI Fragnani permanece inadimplente e em fase de negociação com o devedor. Representa ~0,5% do PL. Todos os demais ativos seguem adimplentes e com pagamentos pontuais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "IPCA Baixo Limita Rendimentos",
+      "descricao": "IPCA 2025 encerrou em 4,27%, com média mensal inferior a 0,30% entre maio e outubro. A meta de inflação de 3,0% para 2026 (0,22% a.m.) pode continuar pressionando os rendimentos. Gestora utiliza reserva de lucros para linearizar distribuições.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "P/VP com Desconto de 15%",
+      "descricao": "O P/VP de 0,85 indica desconto, mas reflete a diferença entre taxa de aquisição (IPCA+12,8%) e marcação a mercado (IPCA+14,6%), impactando o VP em -6,1% desde o IPO. A gestora lançou programa de recompra para aproveitar esse desconto.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Alterações Regulamentares Aprovadas",
+      "descricao": "Em dez/2025, assembleia aprovou redução da alocação mínima em CRIs de 80% para 75% e permissão para investir até 5% em fundos destinados a investidores profissionais. Amplia flexibilidade mas pode diluir exposição ao mandato original.",
+      "severidade": "blue"
+    }
+  ],
+  "gestora": {
+    "nome": "Alianza Gestão de Recursos",
+    "nota": 7,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "No mercado",
+        "valor": "4+ anos"
+      },
+      {
+        "label": "Patrimônio ALZC",
+        "valor": "R$ 188 Mi"
+      },
+      {
+        "label": "Retorno Total IPO",
+        "valor": "54,4%",
+        "cor": "emerald"
+      }
+    ],
+    "resumo": "A Alianza é especialista em crédito imobiliário, gerindo também o <strong class=\"text-emerald-400\">ALZR11</strong> (renda imobiliária). Gestão ativa com rotação estratégica de CRIs para otimizar carrego. Em 2025, incorporou os antigos ALZM e ALZT, realizou desdobramento 1:10, aprovou programa de recompra de até 10% das cotas e alterou o regulamento para maior flexibilidade de investimento. Comunicação frequente com cotistas via lives e relatórios detalhados.",
+    "link": "../../gestores/alianza/"
+  },
+  "taxas": {
+    "subtitulo": "Alinhadas ao segmento high yield",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração + Gestão",
+        "valor": "1,30% a.a.",
+        "detalhe": "Sobre PL ou valor de mercado (se no IFIX)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder IPCA + 5% a.a.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Custódia e Escrituração",
+        "valor": "Inclusa",
+        "detalhe": "Já contemplada na taxa de 1,30%",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Crédito High Yield",
+    "comparativo": [
+      {
+        "ticker": "ALZC11",
+        "taxa": "1,30%",
+        "perf": "+20% perf. s/ IPCA+5%",
+        "destaque": true
+      },
+      {
+        "ticker": "KNHY11",
+        "taxa": "1,20%",
+        "perf": "+20% perf. s/ CDI+2%"
+      },
+      {
+        "ticker": "VGIR11",
+        "taxa": "1,00%",
+        "perf": "+20% perf. s/ CDI+2%"
+      },
+      {
+        "ticker": "HABT11",
+        "taxa": "1,20%",
+        "perf": "+20% perf. s/ IPCA+4%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Escriturador",
+        "valor": "BTG Pactual"
+      },
+      {
+        "label": "Início",
+        "valor": "Julho/2021"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "83,0%"
+      },
+      {
+        "label": "FIIs",
+        "valor": "16,9%"
+      },
+      {
+        "label": "Caixa Líquido",
+        "valor": "0,1%"
+      },
+      {
+        "label": "% do CDI",
+        "valor": "121%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRI Série Única",
+        "FIIs",
+        "CRI Sênior",
+        "CRI Mezanino",
+        "CRI Subordinado",
+        "Nota Comercial",
+        "Caixa"
+      ],
+      "data": [
+        62.3,
+        16.9,
+        14.3,
+        3.1,
+        2.8,
+        0.5,
+        0.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#06b6d4",
+        "#f59e0b",
+        "#ef4444",
+        "#6b7280",
+        "#374151"
+      ]
+    },
+    "locatarioChart": {
+      "labels": [
+        "IPCA",
+        "CDI/DI",
+        "Prefixado"
+      ],
+      "data": [
+        78.9,
+        20.4,
+        0.6
+      ],
+      "cores": [
+        "#10b981",
+        "#f59e0b",
+        "#6b7280"
+      ]
+    },
+    "riscoNota": "<strong class=\"text-blue-400\">Política de Investimentos (atualizada Dez/2025):</strong> Mínimo de 75% e máximo de 130% do PL em CRIs (reduzido de 80% para 75% em assembleia de dez/2025). Até 5% em fundos de investimento financeiro destinados a investidores profissionais. LTV máximo de 80% para CRIs pulverizados e 70% para corporativos sem cessão fiduciária. Concentração máxima de 15% do PL por emissão e 25% por grupo econômico."
+  },
+  "ativos": {
+    "subtitulo": "Carteira de CRIs diversificada por tipo de risco - 26 operações",
+    "grupos": [
+      {
+        "nome": "Carteira de CRIs - Principais Posições",
+        "cor": "blue",
+        "itens": [
+          {
+            "nome": "MLPar",
+            "cidade": "SP",
+            "tipo": "Corporativo",
+            "tipoCor": "emerald",
+            "abl": 0,
+            "locatario": "IPCA+12,0%",
+            "vencimento": "7,6% PL",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Meri Itacimirim (IPCA)",
+            "cidade": "BA",
+            "tipo": "Término de Obra",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+15,0%",
+            "vencimento": "3,7% PL",
+            "risco": "Moderado",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "Meri Itacimirim (DI)",
+            "cidade": "BA",
+            "tipo": "Término de Obra",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "DI+4,3%",
+            "vencimento": "3,7% PL",
+            "risco": "Moderado",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "Scopel (Arujá, Ibirapit., Lorena)",
+            "cidade": "SP",
+            "tipo": "Loteamentos Sênior",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+10,8%",
+            "vencimento": "7,2% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Scopel (Terra Luz, Calixto, Aruã)",
+            "cidade": "SP",
+            "tipo": "Loteamentos Mez.",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+14,0%",
+            "vencimento": "3,1% PL",
+            "risco": "Moderado",
+            "riscoCor": "amber"
+          },
+          {
+            "nome": "City",
+            "cidade": "GO",
+            "tipo": "Corporativo",
+            "tipoCor": "emerald",
+            "abl": 0,
+            "locatario": "DI+4,5%",
+            "vencimento": "5,0% PL",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Tribeca",
+            "cidade": "PR",
+            "tipo": "Término de Obra",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+10,0%",
+            "vencimento": "5,0% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Terras Alpha Betim",
+            "cidade": "MG",
+            "tipo": "Loteamentos",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+11,5%",
+            "vencimento": "4,6% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Recanto Roselândia",
+            "cidade": "SP",
+            "tipo": "Loteamentos Sênior",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+12,0%",
+            "vencimento": "4,6% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Cidade Nova III",
+            "cidade": "BA",
+            "tipo": "Loteamentos",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+12,0%",
+            "vencimento": "4,5% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "ABmais Jardim Arizona",
+            "cidade": "SP",
+            "tipo": "Loteamentos",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+11,0%",
+            "vencimento": "4,2% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "You (Vista Madalena + Park Mariana)",
+            "cidade": "SP",
+            "tipo": "Término de Obra",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "DI+3,8%",
+            "vencimento": "4,1% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "Neo Garden",
+            "cidade": "MT",
+            "tipo": "Término de Obra",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+12,0%",
+            "vencimento": "3,4% PL",
+            "risco": "Moderado",
+            "riscoCor": "blue"
+          },
+          {
+            "nome": "ONM Health",
+            "cidade": "MG",
+            "tipo": "Corporativo",
+            "tipoCor": "emerald",
+            "abl": 0,
+            "locatario": "IPCA+10,4%",
+            "vencimento": "2,6% PL",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Pereda (Levon Morumbi)",
+            "cidade": "SP",
+            "tipo": "Término de Obra",
+            "tipoCor": "blue",
+            "abl": 0,
+            "locatario": "IPCA+11,7%",
+            "vencimento": "2,5% PL",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Braspark",
+            "cidade": "PR",
+            "tipo": "Corporativo",
+            "tipoCor": "emerald",
+            "abl": 0,
+            "locatario": "IPCA+10,7%",
+            "vencimento": "2,4% PL",
+            "risco": "Baixo",
+            "riscoCor": "emerald"
+          },
+          {
+            "nome": "Outros CRIs (11 operações)",
+            "cidade": "BR",
+            "tipo": "Diversos",
+            "tipoCor": "slate",
+            "abl": 0,
+            "locatario": "Misto",
+            "vencimento": "~20% PL",
+            "risco": "Diversificado",
+            "riscoCor": "blue"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "De fundo de crédito para plataforma consolidada com recompra ativa",
+    "periodos": [
+      {
+        "periodo": "Jul/2021",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das operações do ALZC11 como fundo de crédito imobiliário (CRI) da Alianza Gestão de Recursos.",
+        "pontos": [
+          "Administrado por BTG Pactual",
+          "Foco em CRIs com lastro imobiliário",
+          "Cota IPO: R$ 100,00 (pré-split)"
+        ]
+      },
+      {
+        "periodo": "Jan-Fev/2025",
+        "label": "INCORPORAÇÃO",
+        "cor": "purple",
+        "descricao": "Incorporação dos fundos ALZM11 e ALZT11, consolidando a plataforma de crédito da Alianza.",
+        "pontos": [
+          "Unificação da gestão de crédito imobiliário",
+          "Aumento da escala e diversificação",
+          "Rendimentos atípicos em jan-fev (processo)"
+        ]
+      },
+      {
+        "periodo": "Abr/2025",
+        "label": "DESDOBRAMENTO",
+        "cor": "emerald",
+        "descricao": "Split 1:10 aprovado para aumentar acessibilidade e liquidez.",
+        "pontos": [
+          "De 2.005.023 cotas para 20.050.230 cotas",
+          "Negociação desdobrada a partir de 25/04/2025",
+          "Cota: de ~R$ 95,00 para ~R$ 9,50"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "ASSEMBLEIA",
+        "cor": "blue",
+        "descricao": "Assembleia Geral Especial aprovou alterações estratégicas no regulamento do fundo.",
+        "pontos": [
+          "Deliberação sobre questões operacionais",
+          "Venda integral da posição em ARRI11",
+          "Enquadramento à proporção mínima de CRIs"
+        ]
+      },
+      {
+        "periodo": "Nov-Dez/2025",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Fundo consolida estratégia com recompra de cotas, alteração regulamentar e AGO aprovada.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">PL: R$ 188 Mi | 9.759 cotistas</strong>",
+          "<strong class=\"text-emerald-400\">DY 15,4% | 121% CDI | Retorno total 54,4%</strong>",
+          "Programa de recompra: até 10% das cotas abaixo do VP",
+          "Regulamento: CRIs mínimo 75% (era 80%); até 5% FIF profissional",
+          "AGO: contas do exercício jun/2025 aprovadas (73,17%)"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "ALZC11 é um <strong class=\"text-emerald-400\">FII de crédito imobiliário high yield</strong> gerido pela Alianza, com foco em CRIs de lastro diversificado (loteamentos 38,7%, corporativo 29,6%, término de obra 27,0%). O carrego da carteira de <strong class=\"text-emerald-400\">IPCA+12,8%</strong> resulta em rendimentos equivalentes a <strong class=\"text-emerald-400\">121% do CDI</strong>. O retorno total desde o IPO de <strong class=\"text-emerald-400\">54,4%</strong> supera CDI (53,5%), IFIX (47,7%) e benchmark IPCA+5% (27,2%). O programa de recompra de cotas reforça o alinhamento com o cotista.",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">rendimento acima do CDI</strong> com isenção de IR",
+      "Perfil <strong class=\"text-emerald-400\">moderado a arrojado</strong> que aceita volatilidade do IPCA",
+      "Quem busca <strong class=\"text-emerald-400\">exposição ao crédito imobiliário high yield</strong> diversificado",
+      "Investidores que apreciam <strong class=\"text-emerald-400\">gestão ativa com recompra de cotas</strong>"
+    ],
+    "naoParaQuem": [
+      "Quem <strong class=\"text-amber-400\">não tolera risco de crédito</strong> (inadimplência em CRIs)",
+      "Investidores que buscam <strong class=\"text-amber-400\">estabilidade absoluta</strong> nos dividendos",
+      "Perfil <strong class=\"text-amber-400\">ultra-conservador</strong> que prefere CDI puro",
+      "Quem <strong class=\"text-amber-400\">não acompanha cenário de inflação</strong> (IPCA impacta rendimentos diretamente)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25"
+    ],
+    "chartData": [
+      0.127,
+      0.039,
+      0.1548,
+      0.11,
+      0.115,
+      0.115,
+      0.1019,
+      0.105,
+      0.105,
+      0.1,
+      0.095,
+      0.1
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.18,
+    "stats": [
+      {
+        "label": "Média 12M",
+        "valor": "R$ 0,1056",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor Recente (Out/25)",
+        "valor": "R$ 0,095"
+      },
+      {
+        "label": "DY LTM (mercado)",
+        "valor": "15,9%",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY LTM (IPO)",
+        "valor": "12,7%",
+        "cor": "blue"
+      },
+      {
+        "label": "Reserva de Lucros",
+        "valor": "R$ 0,095/cota",
+        "cor": "blue"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Sensível ao IPCA",
+        "cor": "amber"
+      }
+    ],
+    "guidance": {
+      "periodo": "Dez/2025",
+      "faixa": "R$ 0,09 - R$ 0,10",
+      "unidade": "por cota/mês"
+    }
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,85",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">15% de desconto</span> sobre o valor patrimonial. Programa de recompra aprovado para comprar cotas abaixo do VP.",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,39"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 7,81",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "121%",
+      "label": "% CDI (gross up)",
+      "cor": "emerald",
+      "descricao": "Rendimento distribuído equivalente a 121% do CDI bruto, com isenção de IR para PF"
+    },
+    "recomendacoes": {
+      "valor": "12,9%",
+      "label": "DY LTM (s/ IPO)",
+      "cor": "blue",
+      "descricao": "Superior à mediana dos FIIs high yield do IFIX (12,1%)",
+      "detalhe": "6,5% acima da mediana do segmento"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-emerald-400\">ALZC11</strong> se consolidou como uma opção competitiva no segmento de FIIs de crédito high yield, entregando <strong class=\"text-emerald-400\">retorno total de 54,4% desde o IPO</strong>, superando CDI (53,5%), IFIX (47,7%) e seu benchmark IPCA+5% (27,2%). A carteira de crédito com 26 operações concentra 83% do PL, com diversificação entre loteamentos (38,7%), corporativos (29,6%) e término de obra (27,0%).",
+      "No 2S25, a gestora manteve o guidance de <strong class=\"text-blue-400\">R$ 0,09 a R$ 0,10/cota/mês</strong>, sustentado pela reserva de lucros de R$ 0,095/cota. O IPCA 2025 encerrou em 4,27%, e o cenário para 2026 com meta de 3,0% pode continuar limitando rendimentos. A indexação predominante ao IPCA (78,9% da carteira de crédito) é fator de atenção, compensada parcialmente pela parcela em CDI (20,4%).",
+      "Destaque para as movimentações estratégicas do 2S25: <strong class=\"text-emerald-400\">programa de recompra de até 10% das cotas</strong> abaixo do VP (sinal de confiança da gestora), <strong class=\"text-emerald-400\">alteração regulamentar</strong> reduzindo alocação mínima em CRIs de 80% para 75% e permitindo até 5% em FIF profissionais, e aprovação das contas na AGO. A gestão ativa de rotação vendeu CRIs Balaroti, Copagril e MLPar, comprando Wimo IV, ONM Health e Terras Alpha Betim."
+    ],
+    "pontosFortes": [
+      "Carrego IPCA+12,8% (acima de pares)",
+      "DY LTM 15,9% (mercado) / 12,7% (IPO)",
+      "Retorno total 54,4% supera todos os benchmarks",
+      "121% CDI com isenção de IR para PF",
+      "Programa de recompra de até 10% das cotas",
+      "Gestão ativa e rotação estratégica constante",
+      "Reserva de lucros de R$ 0,095/cota",
+      "P/VP 0,85 oferece margem de segurança",
+      "26 operações de CRI com diversificação por tipo"
+    ],
+    "pontosDeAtencao": [
+      "CRI Fragnani inadimplente (~0,5% do PL)",
+      "IPCA baixo limita rendimentos (meta 3% em 2026)",
+      "VP caiu 6,1% desde IPO (MtM dos CRIs)",
+      "Fundo relativamente pequeno (R$ 188 Mi)",
+      "Liquidez moderada (9.759 cotistas)",
+      "78,9% da carteira indexada ao IPCA",
+      "Alocação mínima em CRIs reduzida de 80% para 75%"
+    ],
+    "conclusaoFinal": "O ALZC11 é uma opção sólida para investidores que buscam <strong class=\"text-emerald-400\">rendimento acima do CDI</strong> com exposição ao crédito imobiliário high yield. A combinação de carrego elevado, gestão ativa, programa de recompra e desconto sobre o VP cria uma relação risco-retorno atrativa. O principal monitoramento é o <strong class=\"text-amber-400\">cenário de IPCA</strong>, que impacta diretamente a apuração de resultados, a <strong class=\"text-amber-400\">qualidade de crédito</strong> da carteira e os <strong class=\"text-amber-400\">efeitos das alterações regulamentares</strong> na composição do portfólio."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 60,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

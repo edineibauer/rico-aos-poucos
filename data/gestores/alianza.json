@@ -1,0 +1,54 @@
+{
+  "slug": "alianza",
+  "nome": "Alianza Gestão de Recursos",
+  "nota": 6.7,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 3,
+  "segmentos": [
+    "Híbrido",
+    "Crédito (CRI)",
+    "Multiestratégia (FoF + CRI)"
+  ],
+  "resumo": "Gestora com 3 fundos analisados: ALZR11, ALZC11, ALZM11. Nota média 6.7/10 (BOM).",
+  "seo": {
+    "title": "Alianza Gestão de Recursos - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Alianza Gestão de Recursos. 3 fundos geridos com nota média 6.7/10. Veja os FIIs: ALZR11, ALZC11, ALZM11.",
+    "ogTitle": "Alianza Gestão de Recursos - Análise da Gestora de FIIs",
+    "ogDescription": "Alianza Gestão de Recursos: 3 fundos, nota média 6.7/10. Fundos: ALZR11, ALZC11, ALZM11.",
+    "twitterTitle": "Alianza Gestão de Recursos - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Alianza Gestão de Recursos: 3 fundos, nota 6.7/10."
+  },
+  "fundos": [
+    {
+      "ticker": "ALZR11",
+      "nome": "Alianza Trust Renda Imobiliária FII",
+      "segmento": "Híbrido",
+      "nota": 8,
+      "notaLabel": "EXCELENTE",
+      "dividendYield": 9.3,
+      "pvp": 1.01,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "ALZC11",
+      "nome": "Alianza Crédito Imobiliário FII",
+      "segmento": "Crédito (CRI)",
+      "nota": 7,
+      "notaLabel": "BOM",
+      "dividendYield": 15.4,
+      "pvp": 0.85,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "ALZM11",
+      "nome": "Alianza Multiestratégia FII",
+      "segmento": "Multiestratégia (FoF + CRI)",
+      "nota": 5,
+      "notaLabel": "REGULAR",
+      "dividendYield": 15,
+      "pvp": 0.85,
+      "sentimento": "neutro"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "hectare-capital",
+  "nome": "Hectare Capital",
+  "nota": 4.8,
+  "notaLabel": "REGULAR",
+  "avaliacao": "regular",
+  "totalFundos": 2,
+  "segmentos": [
+    "Papel - CRI",
+    "Papel - CRI High Yield"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: HCHG11, HCTR11. Nota média 4.8/10 (REGULAR).",
+  "seo": {
+    "title": "Hectare Capital - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Hectare Capital. 2 fundos geridos com nota média 4.8/10. Veja os FIIs: HCHG11, HCTR11.",
+    "ogTitle": "Hectare Capital - Análise da Gestora de FIIs",
+    "ogDescription": "Hectare Capital: 2 fundos, nota média 4.8/10. Fundos: HCHG11, HCTR11.",
+    "twitterTitle": "Hectare Capital - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Hectare Capital: 2 fundos, nota 4.8/10."
+  },
+  "fundos": [
+    {
+      "ticker": "HCHG11",
+      "nome": "Hectare Recebíveis High Grade FII",
+      "segmento": "Papel - CRI",
+      "nota": 5.5,
+      "notaLabel": "REGULAR",
+      "dividendYield": 11.72,
+      "pvp": 0.82,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "HCTR11",
+      "nome": "Hectare CE FII",
+      "segmento": "Papel - CRI High Yield",
+      "nota": 4,
+      "notaLabel": "REGULAR",
+      "dividendYield": 18.17,
+      "pvp": 0.2,
+      "sentimento": "pessimista"
+    }
+  ]
+}

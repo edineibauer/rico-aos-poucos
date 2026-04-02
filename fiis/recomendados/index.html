@@ -535,11 +535,12 @@
 
         // Verificar se há FIIs
         if (!data.fiis || data.fiis.length === 0) {
+          const msg = data.mensagem || 'A lista será atualizada em breve.';
           container.innerHTML = `
             <div class="empty-state">
               <div class="icon">📋</div>
-              <h3>Nenhum FII no momento</h3>
-              <p>A lista será atualizada em breve.</p>
+              <h3>Nenhuma recomendação no momento</h3>
+              <p>${msg}</p>
             </div>
           `;
           return;

@@ -1,0 +1,43 @@
+{
+  "slug": "coinvalores",
+  "nome": "Coinvalores CCVM",
+  "nota": 6,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 2,
+  "segmentos": [
+    "Tijolo - Logistica/Industrial",
+    "Tijolo - Industrial/Logística"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: EURO11, FIIB11. Nota média 6/10 (BOM).",
+  "seo": {
+    "title": "Coinvalores CCVM - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Coinvalores CCVM. 2 fundos geridos com nota média 6/10. Veja os FIIs: EURO11, FIIB11.",
+    "ogTitle": "Coinvalores CCVM - Análise da Gestora de FIIs",
+    "ogDescription": "Coinvalores CCVM: 2 fundos, nota média 6/10. Fundos: EURO11, FIIB11.",
+    "twitterTitle": "Coinvalores CCVM - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Coinvalores CCVM: 2 fundos, nota 6/10."
+  },
+  "fundos": [
+    {
+      "ticker": "EURO11",
+      "nome": "FII Europar",
+      "segmento": "Tijolo - Logistica/Industrial",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 7.77,
+      "pvp": 0.76,
+      "sentimento": "neutro"
+    },
+    {
+      "ticker": "FIIB11",
+      "nome": "Industrial do Brasil FII",
+      "segmento": "Tijolo - Industrial/Logística",
+      "nota": 5.5,
+      "notaLabel": "REGULAR",
+      "dividendYield": 8.97,
+      "pvp": 0.81,
+      "sentimento": "pessimista"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+{
+  "slug": "devant-asset",
+  "nome": "Devant Asset",
+  "nota": 6.3,
+  "notaLabel": "BOM",
+  "avaliacao": "bom",
+  "totalFundos": 2,
+  "segmentos": [
+    "Fundo de Fundos",
+    "Papel - CRI High Yield"
+  ],
+  "resumo": "Gestora com 2 fundos analisados: DVFF11, DEVA11. Nota média 6.3/10 (BOM).",
+  "seo": {
+    "title": "Devant Asset - Análise da Gestora | Rico aos Poucos",
+    "description": "Análise da gestora Devant Asset. 2 fundos geridos com nota média 6.3/10. Veja os FIIs: DVFF11, DEVA11.",
+    "ogTitle": "Devant Asset - Análise da Gestora de FIIs",
+    "ogDescription": "Devant Asset: 2 fundos, nota média 6.3/10. Fundos: DVFF11, DEVA11.",
+    "twitterTitle": "Devant Asset - Gestora de FIIs | Rico aos Poucos",
+    "twitterDescription": "Análise da Devant Asset: 2 fundos, nota 6.3/10."
+  },
+  "fundos": [
+    {
+      "ticker": "DVFF11",
+      "nome": "Devant FoF FII",
+      "segmento": "Fundo de Fundos",
+      "nota": 6.5,
+      "notaLabel": "BOM",
+      "dividendYield": 13.57,
+      "pvp": 0.67,
+      "sentimento": "otimista"
+    },
+    {
+      "ticker": "DEVA11",
+      "nome": "Devant Recebíveis Imobiliários FII",
+      "segmento": "Papel - CRI High Yield",
+      "nota": 6,
+      "notaLabel": "BOM",
+      "dividendYield": 20.5,
+      "pvp": 0.24,
+      "sentimento": "neutro"
+    }
+  ]
+}

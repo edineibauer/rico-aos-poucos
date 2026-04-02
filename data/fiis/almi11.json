@@ -1,0 +1,450 @@
+{
+  "meta": {
+    "ticker": "ALMI11",
+    "nome": "Torre Almirante FII",
+    "segmento": "Lajes Corporativas",
+    "badges": [
+      "Lajes Corporativas",
+      "Mono-Ativo",
+      "Centro RJ",
+      "40% Copropriedade"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "16/03/2026",
+    "totalDocumentos": 776
+  },
+  "seo": {
+    "title": "ALMI11 - Análise Completa | Torre Almirante FII",
+    "description": "Análise completa do FII ALMI11 - Torre Almirante. Fundo de lajes corporativas mono-ativo no Centro RJ, vacância 46%, dividendos retomados em 2024, P/VP 0,30. Riscos, portfólio e projeções 2026.",
+    "keywords": "ALMI11, Torre Almirante, FII lajes corporativas, análise ALMI11, Centro RJ, BTG Pactual, vacância, dividendos",
+    "ogTitle": "ALMI11 - Análise Completa do FII Torre Almirante 2026",
+    "ogDescription": "Análise detalhada do ALMI11: FII de lajes corporativas mono-ativo no Centro RJ. Vacância 46%, DY 7,1%, P/VP 0,30. Dividendos retomados mas instáveis. Riscos e projeções 2026.",
+    "twitterTitle": "ALMI11 - Análise Completa | Torre Almirante FII",
+    "twitterDescription": "Análise do ALMI11: vacância 46%, dividendos retomados desde jun/2024 com média R$ 3,76/cota. Mono-ativo Centro RJ com P/VP 0,30."
+  },
+  "indicadores": {
+    "cotacao": 640,
+    "cotacaoData": "31/10/2025",
+    "pvp": 0.30,
+    "pvpDesconto": "70% de desconto",
+    "dividendYield": 7.1,
+    "dividendoMensal": 3.76,
+    "dividendoAnual": 45.14,
+    "patrimonioLiquido": "R$ 234 Mi",
+    "vpCota": 2103.33,
+    "cotistas": 1910,
+    "cotistasDetalhe": "Base pequena e estável",
+    "ocupacao": 53.66,
+    "numImoveis": 1
+  },
+  "recomendacao": {
+    "nota": 4.0,
+    "veredicto": "VENDA",
+    "cor": "red",
+    "resumo": "O <strong class=\"text-red-400\">ALMI11</strong> apresenta múltiplos riscos críticos: <strong class=\"text-red-400\">vacância estrutural de 46%</strong> estável há mais de 2 anos (andares 3 a 18 vazios), <strong class=\"text-red-400\">liquidez extrema de ~R$ 247 mil/mês</strong> que dificulta saída, e mono-ativo de <strong class=\"text-red-400\">copropriedade de apenas 40%</strong> no Centro do Rio. O lado positivo é que <strong class=\"text-amber-400\">dividendos foram retomados desde jun/2024</strong> com distribuição mensal entre R$ 1,99 e R$ 5,26/cota, mas permanecem <strong class=\"text-red-400\">voláteis e insuficientes</strong> considerando o risco. O P/VP de 0,30 é armadilha de valor clássica."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 234 Mi",
+      "detalhe": "VP/cota: R$ 2.103,33",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 2.103,33</span>",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 3,76",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 45,14/ano | DY 7,1%",
+      "icone": "money",
+      "corIcone": "amber",
+      "corValor": "amber"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.910",
+      "detalhe": "Base pequena e estável",
+      "icone": "users",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Vacância",
+      "valor": "46,34%",
+      "detalhe": "Andares 3 a 18 vazios",
+      "detalheIcone": "arrowDown",
+      "icone": "chart",
+      "corIcone": "red",
+      "corValor": "red"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Vacância Estrutural de 46% Estagnada",
+      "descricao": "Os andares 3 a 18 permanecem completamente vagos há mais de 2 anos. A ocupação de 53,66% está estagnada, concentrada nos andares superiores (22 a 36) e térreo. Centro do RJ enfrenta desafios estruturais de longo prazo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez Muito Baixa ~R$ 247k/mês",
+      "descricao": "Volume de outubro/2025 foi de apenas R$ 247 mil (409 cotas no mês inteiro). Média diária em torno de R$ 11 mil torna praticamente impossível desinvestir sem impactar severamente o preço.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Dividendos Retomados mas Voláteis",
+      "descricao": "Após 7 anos sem distribuições (2017-2024), dividendos foram retomados em jun/2024 e são pagos mensalmente desde dez/2024. Porém, oscilam entre R$ 1,99 e R$ 5,26/cota com média de R$ 3,76, reflexo de receitas instáveis.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Depósito Judicial ITBI R$ 2,5M + Contingência",
+      "descricao": "Execuções fiscais de ITBI com depósito judicial de R$ 2,47 milhões (abril/2022). Reserva de contingência constituída em set/2025 (R$ 48 mil). Processo ainda em andamento com risco de perda definitiva.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BTG Pactual (Gestão Passiva)",
+    "nota": 5,
+    "notaLabel": "MEDIANA",
+    "stats": [
+      {
+        "label": "Fundo de 2004",
+        "valor": "21+ anos"
+      },
+      {
+        "label": "Patrimônio",
+        "valor": "R$ 234 Mi"
+      },
+      {
+        "label": "Tipo de gestão",
+        "valor": "Passiva",
+        "cor": "red"
+      }
+    ],
+    "resumo": "<strong class=\"text-amber-400\">Gestão Passiva:</strong> O BTG Pactual atua como administrador, mas a gestão é passiva (classificação ANBIMA: Renda Gestão Passiva). A gestão de propriedade é feita pela <strong class=\"text-blue-400\">Cushman & Wakefield</strong>, que trabalha a vacância com corretores e gerencia o imóvel. A administradora destaca otimismo com o <strong class=\"text-amber-400\">Projeto Reviver Centro</strong> da Prefeitura do RJ, mas sem resultados concretos na ocupação.",
+    "link": "../../gestores/btg-pactual/"
+  },
+  "taxas": {
+    "subtitulo": "Baixas para o segmento",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,383% a.a.",
+        "detalhe": "Sobre PL (mínimo R$ 30k/mês corrigido IGPM)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Sem cobrança de performance",
+        "corBorda": "slate"
+      },
+      {
+        "label": "Custódia e Escrituração",
+        "valor": "Inclusa",
+        "detalhe": "Já contemplada na taxa",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Lajes Corporativas",
+    "comparativo": [
+      {
+        "ticker": "ALMI11",
+        "taxa": "0,383%",
+        "perf": "Sem performance",
+        "destaque": true
+      },
+      {
+        "ticker": "GALG11",
+        "taxa": "0,60%",
+        "perf": "Média FIIs lajes"
+      },
+      {
+        "ticker": "BTLG11",
+        "taxa": "0,70%",
+        "perf": "Gestão ativa"
+      },
+      {
+        "ticker": "HGRE11",
+        "taxa": "1,00%",
+        "perf": "+20% perf."
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestão de Propriedade",
+        "valor": "Cushman & Wakefield"
+      },
+      {
+        "label": "Início",
+        "valor": "19/11/2004"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "07.122.725/0001-00"
+      },
+      {
+        "label": "Cotas Emitidas",
+        "valor": "111.177"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Copropriedade Torre",
+        "valor": "40,0%"
+      },
+      {
+        "label": "Taxa de Ocupação",
+        "valor": "53,66%",
+        "cor": "red"
+      },
+      {
+        "label": "Vacância",
+        "valor": "46,34%",
+        "cor": "red"
+      },
+      {
+        "label": "ABL Total",
+        "valor": "41.811 m²"
+      }
+    ],
+    "riscoNota": "O ALMI11 possui <strong class=\"text-red-400\">100% do patrimônio concentrado em apenas 40% de copropriedade</strong> do Edifício Torre Almirante. O edifício possui 34 pavimentos de escritórios, cobertura e heliponto, mais 11 pavimentos de estacionamento (382 vagas). A vacância de 46% concentra-se nos <strong class=\"text-red-400\">andares inferiores (3 a 18)</strong>, completamente vazios, enquanto os andares superiores (22 a 36) mantêm ocupação. O Centro do RJ enfrenta <strong class=\"text-red-400\">desafios estruturais de longo prazo</strong>, apesar do Projeto Reviver Centro da Prefeitura."
+  },
+  "ativos": {
+    "subtitulo": "1 imóvel | 40% copropriedade | Centro RJ",
+    "legendaRisco": [
+      {
+        "label": "Atenção - Mono-ativo e vacância elevada",
+        "cor": "red"
+      }
+    ],
+    "grupos": [
+      {
+        "nome": "Edifício Torre Almirante - 100% da receita",
+        "cor": "red",
+        "itens": [
+          {
+            "nome": "Torre Almirante",
+            "cidade": "Av. Almirante Barroso, 81 - Centro, Rio de Janeiro/RJ",
+            "tipo": "Lajes Corporativas",
+            "tipoCor": "blue",
+            "abl": 41811,
+            "locatario": "13 locatários (incl. WeWork, Caixa, Marsh, DSV)",
+            "vencimento": "57% >2028 | 21% 2027 | 14% 2026",
+            "risco": "Alto",
+            "riscoCor": "red"
+          }
+        ]
+      }
+    ]
+  },
+  "timeline": {
+    "subtitulo": "Fundo antigo com recuperação recente",
+    "periodos": [
+      {
+        "periodo": "2004",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Constituição do fundo em 19/11/2004. Aquisição de 40% do Edifício Torre Almirante em 3 emissões de cotas.",
+        "pontos": [
+          "Foco em lajes corporativas Centro RJ",
+          "40% de copropriedade do edifício",
+          "ABL total: 41.811 m²"
+        ]
+      },
+      {
+        "periodo": "2017-2024",
+        "label": "SEM DIVIDENDOS",
+        "cor": "red",
+        "descricao": "Período de 7 anos consecutivos sem distribuição de dividendos. Vacância elevada e despesas superando receitas.",
+        "pontos": [
+          "Vacância elevada no Centro do Rio",
+          "Crise imobiliária de escritórios pós-COVID",
+          "Despesas superando receitas consistentemente"
+        ]
+      },
+      {
+        "periodo": "Abr/2022",
+        "label": "ITBI",
+        "cor": "red",
+        "descricao": "Depósito judicial de R$ 2,47 milhões referente a execuções fiscais de ITBI. Impacto negativo de R$ 22,20/cota.",
+        "pontos": [
+          "Execuções Fiscais nº 0067147 e 0231749",
+          "Depósito judicial R$ 2.468.385,62",
+          "Processo ainda em andamento"
+        ]
+      },
+      {
+        "periodo": "Jun/2024",
+        "label": "RETOMADA",
+        "cor": "emerald",
+        "descricao": "Retomada de distribuição de dividendos após 7 anos sem pagamentos. Marco relevante na história do fundo.",
+        "pontos": [
+          "Primeiros dividendos desde jul/2017",
+          "WeWork inadimplente nos primeiros meses",
+          "WeWork quitou atrasos em set/2024 (R$ 7,47/cota)"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "ESTABILIZAÇÃO",
+        "cor": "amber",
+        "descricao": "Dividendos mensais estabilizados entre R$ 1,99 e R$ 5,26/cota. Vacância permanece em 46% sem evolução. 13 locatários ativos.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">12 meses consecutivos de dividendos</strong>",
+          "<strong class=\"text-red-400\">Vacância: 46,34% (estagnada)</strong>",
+          "Cotação: R$ 580-640 (P/VP ~0,30)",
+          "Administradora otimista com Reviver Centro"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "ALMI11 é um <strong class=\"text-red-400\">FII mono-ativo de alto risco</strong> com exposição a apenas 40% de copropriedade de um edifício de lajes corporativas no Centro do Rio. O fundo <strong class=\"text-amber-400\">retomou dividendos em jun/2024</strong> após 7 anos zerado, distribuindo mensalmente entre R$ 1,99 e R$ 5,26/cota. Porém, a <strong class=\"text-red-400\">vacância estrutural de 46%</strong> permanece estagnada há mais de 2 anos, a <strong class=\"text-red-400\">liquidez é extremamente baixa</strong> (~R$ 11k/dia), e o Centro do RJ ainda não demonstrou recuperação concreta apesar do Projeto Reviver Centro.",
+    "paraQuem": [
+      "Especuladores apostando em <strong class=\"text-amber-400\">recuperação do Centro RJ</strong> (Projeto Reviver Centro)",
+      "Investidores <strong class=\"text-amber-400\">muito arrojados</strong> que entendem risco de ficarem presos",
+      "Quem aceita <strong class=\"text-amber-400\">dividendos voláteis</strong> entre R$ 2-5/cota/mês",
+      "Apostadores em <strong class=\"text-amber-400\">eventual redução da vacância</strong> de longo prazo"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong class=\"text-red-400\">renda mensal estável</strong> (dividendos oscilam 2x-3x entre meses)",
+      "Investidores que <strong class=\"text-red-400\">precisam de liquidez</strong> (~R$ 11k/dia é extremo)",
+      "Perfil <strong class=\"text-red-400\">conservador ou moderado</strong>",
+      "Quem busca <strong class=\"text-red-400\">diversificação</strong> (mono-ativo de copropriedade parcial)",
+      "Investidores que <strong class=\"text-red-400\">não toleram risco de perda significativa</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Dez/24",
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25"
+    ],
+    "chartData": [
+      4.04,
+      4.77,
+      3.39,
+      1.99,
+      2.10,
+      3.40,
+      5.26,
+      3.93,
+      4.23,
+      4.17,
+      3.04,
+      4.82
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 7,
+    "stats": [
+      {
+        "label": "Período Zerado",
+        "valor": "2017-2024",
+        "cor": "red"
+      },
+      {
+        "label": "Retomada",
+        "valor": "Jun/2024",
+        "cor": "emerald"
+      },
+      {
+        "label": "DY Anual",
+        "valor": "7,1%",
+        "cor": "amber"
+      },
+      {
+        "label": "Média Mensal (12m)",
+        "valor": "R$ 3,76/cota"
+      },
+      {
+        "label": "Faixa Mensal",
+        "valor": "R$ 1,99-5,26",
+        "cor": "amber"
+      }
+    ],
+    "guidance": {
+      "periodo": "2026",
+      "faixa": "R$ 2,00 - 5,50",
+      "unidade": "/cota/mês (depende de locação e inadimplência)"
+    }
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,30",
+      "descricao": "Cota com <span class=\"text-red-400\">70% de desconto</span> sobre VP - risco estrutural alto",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 2.103,33"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 640,00",
+          "cor": "red"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "7,1%",
+      "label": "DY Anual (12 meses)",
+      "cor": "amber",
+      "descricao": "Yield moderado considerando o risco elevado do ativo. Dividendos retomados há ~18 meses mas com alta volatilidade mensal"
+    },
+    "recomendacoes": {
+      "valor": "~R$ 11k",
+      "label": "Liquidez Diária Média",
+      "cor": "red",
+      "descricao": "Volume mensal de R$ 247 mil (out/25) com apenas 409 cotas negociadas no mês inteiro",
+      "detalhe": "Risco real de ficar \"preso\" no investimento por meses"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-red-400\">ALMI11</strong> apresentou uma evolução relevante desde a última análise: os dividendos mensais estão sendo pagos de forma consistente há 12 meses (dez/2024 a nov/2025), com média de R$ 3,76/cota e DY anualizado de 7,1%. A WeWork, que era motivo de inadimplência em 2024, quitou os atrasos em setembro/2024 e permanece como locatária. Estes são <strong class=\"text-amber-400\">sinais positivos de estabilização</strong>.",
+      "Porém, os <strong class=\"text-red-400\">riscos estruturais permanecem severos</strong>: vacância de 46,34% completamente estagnada (andares 3 a 18 vazios há anos), liquidez extremamente baixa (~R$ 11k/dia), mono-ativo de copropriedade parcial (40%) no Centro do RJ, e depósito judicial de ITBI de R$ 2,47 milhões ainda pendente. O P/VP de 0,30 reflete esses riscos fundamentais, não uma oportunidade de mercado.",
+      "A administradora BTG Pactual mantém discurso otimista citando o <strong class=\"text-amber-400\">Projeto Reviver Centro</strong> da Prefeitura do RJ, mas os resultados concretos na ocupação são <strong class=\"text-red-400\">inexistentes</strong> - a vacância não se moveu em mais de 2 anos. Os 13 locatários atuais estão concentrados nos andares superiores, e preencher 16 andares inteiros vagos (3 a 18) é um desafio monumental. A nota sobe de 3,5 para 4,0 pela retomada de dividendos, mas o veredicto permanece <strong class=\"text-red-400\">VENDA</strong>."
+    ],
+    "pontosFortes": [
+      "Dividendos retomados e pagos 12 meses consecutivos",
+      "DY 7,1% (R$ 3,76/cota/mês em média)",
+      "Taxa de administração baixa (0,383% a.a.)",
+      "P/VP 0,30 - potencial upside se houver recuperação",
+      "WeWork regularizou inadimplência (set/2024)",
+      "Fundo antigo de 2004 com 21+ anos de histórico",
+      "13 locatários diversificados nos andares ocupados",
+      "Localização com acesso a VLT, metrô e Santos Dumont"
+    ],
+    "pontosDeAtencao": [
+      "Mono-ativo (40% copropriedade única)",
+      "Vacância 46% estagnada há 2+ anos (andares 3-18 vazios)",
+      "Liquidez extrema ~R$ 11k/dia (247k/mês)",
+      "Dividendos voláteis (R$ 1,99 a R$ 5,26/mês)",
+      "Centro RJ com desafios estruturais sem solução à vista",
+      "Depósito judicial ITBI R$ 2,47M pendente",
+      "Gestão passiva sem estratégia ativa de reposicionamento",
+      "Reserva de contingência constituída (risco adicional)",
+      "Cotistas em queda (1.939 ago → 1.910 out/2025)"
+    ],
+    "conclusaoFinal": "O ALMI11 melhorou marginalmente com a retomada de dividendos mensais após 7 anos zerado, mas permanece um investimento de <strong class=\"text-red-400\">alto risco</strong> inadequado para a maioria dos investidores. A combinação de <strong class=\"text-red-400\">vacância estrutural estagnada em 46%</strong>, liquidez extrema que impede saída, e concentração total em um ativo de copropriedade parcial no Centro do RJ torna o fundo uma <strong class=\"text-red-400\">aposta especulativa</strong>. A nota sobe para 4,0 reconhecendo a estabilização de dividendos, mas o veredicto continua <strong class=\"text-red-400\">VENDA para quem tem e EVITAR para quem não tem</strong>."
+  },
+  "footer": {
+    "dataAnalise": "16/03/2026",
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

@@ -717,9 +717,20 @@ const Calculadora = {
       if (isActive) activeBtn = btn;
     });
 
-    // Centraliza o botão ativo no carrossel horizontal (mobile)
-    if (activeBtn && activeBtn.scrollIntoView) {
-      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    // Centraliza o botão ativo no carrossel horizontal (mobile) deixando
+    // peek dos vizinhos. Calculamos manualmente porque scrollIntoView
+    // pode não centralizar quando o item já está visível.
+    if (activeBtn) {
+      const scroller = activeBtn.closest('.calc-modes');
+      if (scroller && scroller.scrollWidth > scroller.clientWidth) {
+        const scrollerRect = scroller.getBoundingClientRect();
+        const btnRect = activeBtn.getBoundingClientRect();
+        const btnLeftInScroller = (btnRect.left - scrollerRect.left) + scroller.scrollLeft;
+        const target = btnLeftInScroller - (scroller.clientWidth - btnRect.width) / 2;
+        // scrollTo clampa automaticamente em 0 e em scrollWidth - clientWidth,
+        // então primeiro/último item ficam corretamente alinhados na borda.
+        scroller.scrollTo({ left: target, behavior: 'smooth' });
+      }
     }
 
     // Re-renderizar form

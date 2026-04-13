@@ -1,14 +1,12 @@
 /* Comparador v2 - Improved UX */
 
-/* Prevent horizontal overflow on this page (fixed bottom navbar on mobile) */
+/* overflow-x: clip evita o scroll horizontal sem criar um scroll
+   container (como overflow-x: hidden criaria), o que quebraria
+   position: sticky em descendentes (ex: header-resumo da construção). */
 html:has(.comp2-main),
-body:has(.comp2-main) {
-  overflow-x: hidden;
-  max-width: 100vw;
-}
-
+body:has(.comp2-main),
 .page-wrapper:has(.comp2-main) {
-  overflow-x: hidden;
+  overflow-x: clip;
   max-width: 100vw;
 }
 
@@ -16,7 +14,17 @@ body:has(.comp2-main) {
 .comp2-main {
   display: block;
   min-height: calc(100vh - 140px);
-  overflow-x: hidden;
+}
+
+.comp2-content {
+  max-width: 100%;
+  min-width: 0;
+}
+
+.comp2-tab,
+.comp2-panel {
+  max-width: 100%;
+  min-width: 0;
 }
 
 /* Sidebar Navigation - Fixed on desktop */
@@ -1634,9 +1642,46 @@ body:has(.comp2-main) {
 
   /* Ranking */
   .comp2-ranking-item {
-    padding: 10px;
-    gap: 8px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 10px;
+    row-gap: 8px;
+    padding: 12px;
+    width: 100%;
+    box-sizing: border-box;
+    align-items: center;
+  }
+
+  .comp2-ranking-item > .ranking-pos {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .comp2-ranking-item > .ranking-info {
+    grid-column: 2;
+    grid-row: 1;
+    min-width: 0;
+  }
+
+  .comp2-ranking-item > div:last-child {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: left !important;
+    padding-top: 8px;
+    border-top: 1px dashed var(--border-color);
+    width: 100%;
+    min-width: 0;
+  }
+
+  .comp2-ranking-item > div:last-child > .ranking-return {
+    display: inline-block;
+    margin-right: 12px;
+  }
+
+  .comp2-ranking-item > div:last-child > div {
+    display: inline-block;
+    margin-right: 12px;
   }
 
   .ranking-pos {
@@ -1644,17 +1689,15 @@ body:has(.comp2-main) {
     min-width: 24px;
   }
 
-  .ranking-info {
-    flex: 1;
-    min-width: 80px;
-  }
-
   .ranking-name {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
   }
 
   .ranking-return {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
   }
 
   /* Stats */
@@ -2147,15 +2190,32 @@ body:has(.comp2-main) {
 @media (max-width: 768px) {
   #comp2-calculadora .calc-modes {
     display: flex;
-    flex-direction: column;
-    gap: 8px;
+    flex-direction: row;
+    gap: 10px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    margin-left: -4px;
+    margin-right: -4px;
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+
+  #comp2-calculadora .calc-modes::-webkit-scrollbar {
+    display: none;
   }
 
   #comp2-calculadora .calc-mode-btn {
+    flex: 0 0 82%;
     flex-direction: row;
     text-align: left;
     padding: 12px 14px;
     gap: 12px;
+    scroll-snap-align: start;
+    min-width: 0;
   }
 
   #comp2-calculadora .calc-mode-btn .mode-icon {
@@ -2164,6 +2224,8 @@ body:has(.comp2-main) {
 
   #comp2-calculadora .calc-mode-btn .mode-text {
     align-items: flex-start;
+    min-width: 0;
+    overflow: hidden;
   }
 
   #comp2-calculadora .calc-mode-btn .mode-text strong {
@@ -2189,6 +2251,7 @@ body:has(.comp2-main) {
   #comp2-calculadora .calc-mode-btn {
     padding: 10px 12px;
     gap: 10px;
+    flex: 0 0 85%;
   }
 
   #comp2-calculadora .calc-mode-btn .mode-icon {

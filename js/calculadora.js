@@ -710,9 +710,17 @@ const Calculadora = {
     this.currentMode = mode;
 
     // Atualizar botões ativos
+    let activeBtn = null;
     document.querySelectorAll('.calc-mode-btn').forEach(btn => {
-      btn.classList.toggle('active', parseInt(btn.dataset.mode) === mode);
+      const isActive = parseInt(btn.dataset.mode) === mode;
+      btn.classList.toggle('active', isActive);
+      if (isActive) activeBtn = btn;
     });
+
+    // Centraliza o botão ativo no carrossel horizontal (mobile)
+    if (activeBtn && activeBtn.scrollIntoView) {
+      activeBtn.scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
 
     // Re-renderizar form
     const form = document.getElementById('calcForm');

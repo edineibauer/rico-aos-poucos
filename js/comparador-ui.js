@@ -306,17 +306,31 @@ const Comparador2 = {
   // Handle URL hash to open specific tab (e.g., #calculadora)
   handleUrlHash() {
     const hash = window.location.hash.replace('#', '');
-    if (hash) {
-      const tabBtn = document.querySelector(`.comp2-nav-btn[data-tab="${hash}"]`);
-      if (tabBtn) {
-        // Simulate click to switch tab
-        document.querySelectorAll('.comp2-nav-btn').forEach(b => b.classList.remove('active'));
-        tabBtn.classList.add('active');
-        document.querySelectorAll('.comp2-tab').forEach(t => t.classList.remove('active'));
-        const tabEl = document.getElementById(`comp2-${hash}`);
-        if (tabEl) tabEl.classList.add('active');
-        this.currentTab = hash;
-      }
+    if (!hash) return;
+
+    const tabBtn = document.querySelector(`.comp2-nav-btn[data-tab="${hash}"]`);
+    const dropupBtn = document.querySelector(`.comp2-dropup-btn[data-tab="${hash}"]`);
+    const tabEl = document.getElementById(`comp2-${hash}`);
+
+    if (!tabEl) return;
+
+    document.querySelectorAll('.comp2-nav-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.comp2-dropup-btn').forEach(b => b.classList.remove('active'));
+    document.querySelectorAll('.comp2-tab').forEach(t => t.classList.remove('active'));
+
+    if (tabBtn) tabBtn.classList.add('active');
+    if (dropupBtn) dropupBtn.classList.add('active');
+    tabEl.classList.add('active');
+
+    const moreBtn = document.getElementById('comp2NavMore');
+    if (moreBtn) {
+      moreBtn.classList.toggle('has-active', !!dropupBtn);
+    }
+
+    this.currentTab = hash;
+
+    if (window.scrollTo) {
+      setTimeout(() => window.scrollTo(0, 0), 0);
     }
   },
 

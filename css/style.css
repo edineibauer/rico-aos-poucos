@@ -5014,9 +5014,24 @@ body.home-page {
 /* Mode Buttons */
 .calc-modes {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 12px;
   margin-bottom: 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 4px;
+  /* Escapa do padding lateral do painel para o peek do próximo item ficar evidente */
+  margin-left: -4px;
+  margin-right: -4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+.calc-modes::-webkit-scrollbar {
+  display: none;
 }
 
 .calc-mode-btn {
@@ -5030,6 +5045,9 @@ body.home-page {
   cursor: pointer;
   transition: all 0.2s ease;
   text-align: left;
+  flex: 0 0 82%;
+  min-width: 0;
+  scroll-snap-align: start;
 }
 
 .calc-mode-btn:hover {
@@ -6169,31 +6187,36 @@ body.home-page {
 
 /* FIIs card compact in sidebar */
 .card-fiis-sidebar {
-  flex-direction: row;
   margin-bottom: 0;
 }
 
-.card-fiis-sidebar .fiis-visual {
-  width: 70px;
-  height: 70px;
-  padding: 12px;
-}
+@media (min-width: 768px) {
+  .card-fiis-sidebar {
+    flex-direction: row;
+  }
 
-.card-fiis-sidebar .fiis-icon-main {
-  font-size: 2rem;
-}
+  .card-fiis-sidebar .fiis-visual {
+    width: 70px;
+    height: 70px;
+    padding: 12px;
+  }
 
-.card-fiis-sidebar .fiis-content {
-  padding: 14px 14px 14px 0;
-}
+  .card-fiis-sidebar .fiis-icon-main {
+    font-size: 2rem;
+  }
 
-.card-fiis-sidebar .fiis-content h3 {
-  font-size: 1rem;
-}
+  .card-fiis-sidebar .fiis-content {
+    padding: 14px 14px 14px 0;
+  }
 
-.card-fiis-sidebar .fiis-content p {
-  font-size: 0.78rem;
-  margin-bottom: 8px;
+  .card-fiis-sidebar .fiis-content h3 {
+    font-size: 1rem;
+  }
+
+  .card-fiis-sidebar .fiis-content p {
+    font-size: 0.78rem;
+    margin-bottom: 8px;
+  }
 }
 
 /* ==========================================

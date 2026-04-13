@@ -2194,7 +2194,7 @@ body:has(.comp2-main),
     gap: 10px;
     overflow-x: auto;
     overflow-y: hidden;
-    scroll-snap-type: x mandatory;
+    scroll-snap-type: x proximity;
     -webkit-overflow-scrolling: touch;
     scrollbar-width: none;
     padding-bottom: 4px;
@@ -2214,7 +2214,7 @@ body:has(.comp2-main),
     text-align: left;
     padding: 12px 14px;
     gap: 12px;
-    scroll-snap-align: start;
+    scroll-snap-align: center;
     min-width: 0;
   }
 

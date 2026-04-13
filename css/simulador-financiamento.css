@@ -527,10 +527,7 @@
 }
 
 .sim-fin-insight {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  align-items: start;
-  gap: 10px;
+  display: block;
   padding: 12px 16px;
   border-radius: 10px;
   background: var(--bg-secondary);
@@ -538,24 +535,23 @@
   font-size: 0.82rem;
   color: var(--text-secondary);
   line-height: 1.5;
+  /* Permite quebrar valores longos formatados (ex: R$ 1.234.567,89) em vez
+     de empurrar todo o texto para fora do card. */
   overflow-wrap: anywhere;
   word-break: break-word;
-  min-width: 0;
   max-width: 100%;
 }
 
-.sim-fin-insight > * {
-  min-width: 0;
-}
-
 .sim-fin-insight-icon {
+  display: inline;
+  margin-right: 8px;
   font-size: 1.1rem;
-  margin-top: 1px;
+  vertical-align: baseline;
 }
 
 .sim-fin-insight strong {
   color: var(--text-primary);
-  overflow-wrap: anywhere;
+  /* strong continua inline para preservar o fluxo natural de leitura */
 }
 
 /* ========== EQUITY CARD ========== */

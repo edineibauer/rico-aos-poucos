@@ -2209,7 +2209,7 @@ body:has(.comp2-main),
   }
 
   #comp2-calculadora .calc-mode-btn {
-    flex: 0 0 82%;
+    flex: 0 0 72%;
     flex-direction: row;
     text-align: left;
     padding: 12px 14px;
@@ -2251,7 +2251,7 @@ body:has(.comp2-main),
   #comp2-calculadora .calc-mode-btn {
     padding: 10px 12px;
     gap: 10px;
-    flex: 0 0 85%;
+    flex: 0 0 78%;
   }
 
   #comp2-calculadora .calc-mode-btn .mode-icon {

@@ -262,10 +262,13 @@ def publicar(article: dict, *, bump_sw: bool = False) -> Path:
 
 def _limpar_descricao(s: str) -> str:
     """Remove markdown/HTML residual pra descrição virar texto puro."""
-    s = re.sub(r"\*\*([^*]+)\*\*", r"\1", s)            # **bold** → bold
-    s = re.sub(r"\*([^*]+)\*", r"\1", s)                 # *italic*
-    s = re.sub(r"<[^>]+>", "", s)                         # qualquer tag HTML
-    s = s.replace("&quot;", '"').replace("&amp;", "&")   # entities básicas
+    # primeiro desescapa entities (senão <strong> vira texto e escapa do strip de tags)
+    s = (s.replace("&quot;", '"').replace("&amp;", "&")
+          .replace("&lt;", "<").replace("&gt;", ">").replace("&#39;", "'"))
+    s = re.sub(r"<[^>]*>", "", s)                         # tags HTML completas
+    s = re.sub(r"<[^>]*$", "", s)                         # tag aberta cortada no fim
+    s = re.sub(r"\*\*([^*]+)\*\*", r"\1", s)              # **bold**
+    s = re.sub(r"\*([^*]+)\*", r"\1", s)                  # *italic*
     s = re.sub(r"\s+", " ", s).strip()
     return s
 

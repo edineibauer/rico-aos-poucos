@@ -247,7 +247,11 @@ def publicar(article: dict, *, bump_sw: bool = False) -> Path:
     ARTIGOS_DIR.mkdir(parents=True, exist_ok=True)
     dst.write_text(filled, encoding="utf-8")
 
-    _registrar_em_artigos_json(slug, title, description, categoria, tags, hoje, destaque=bool(article.get("destaque")))
+    _registrar_em_artigos_json(
+        slug, title, description, categoria, tags, hoje,
+        _tempo_leitura(body_md), body_md,
+        destaque=bool(article.get("destaque")),
+    )
     _atualizar_sitemap(slug)
 
     if bump_sw:
@@ -256,28 +260,58 @@ def publicar(article: dict, *, bump_sw: bool = False) -> Path:
     return dst
 
 
+def _limpar_descricao(s: str) -> str:
+    """Remove markdown/HTML residual pra descrição virar texto puro."""
+    s = re.sub(r"\*\*([^*]+)\*\*", r"\1", s)            # **bold** → bold
+    s = re.sub(r"\*([^*]+)\*", r"\1", s)                 # *italic*
+    s = re.sub(r"<[^>]+>", "", s)                         # qualquer tag HTML
+    s = s.replace("&quot;", '"').replace("&amp;", "&")   # entities básicas
+    s = re.sub(r"\s+", " ", s).strip()
+    return s
+
+
 def _registrar_em_artigos_json(
     slug: str, title: str, description: str, categoria: str,
-    tags: list[str], data: date, *, destaque: bool,
+    tags: list[str], data: date, tempo_leitura: int, body_md: str, *, destaque: bool,
 ) -> None:
+    """Registra no data/artigos.json com schema compatível com o template da listagem.
+
+    Template (artigos/index.html) espera: id, titulo, subtitulo, descricao,
+    arquivo (só filename), nivel, categoria, tema, tags, dataPublicacao,
+    tempoLeitura, destaque, setorRelacionado.
+    """
     if not ARTIGOS_META.exists():
         return
     meta = json.loads(ARTIGOS_META.read_text(encoding="utf-8"))
     artigos = meta.get("artigos")
     if artigos is None:
         meta["artigos"] = artigos = []
+
+    desc_limpa = _limpar_descricao(description)
+    # subtítulo = primeiro parágrafo do body_md (cortado em ~220 chars)
+    primeiro_paragrafo = next((p for p in body_md.splitlines() if p.strip() and not p.startswith("#")), desc_limpa)
+    subtitulo = _limpar_descricao(primeiro_paragrafo)[:220]
+
     novo = {
-        "slug": slug,
-        "url": f"artigos/{slug}.html",
+        "id": slug,
         "titulo": title,
-        "descricao": description,
-        "categoria": categoria,
+        "subtitulo": subtitulo,
+        "descricao": desc_limpa[:300],
+        "arquivo": f"{slug}.html",
+        "nivel": "intermediario",
+        "categoria": "renda-variavel",
+        "tema": "fiis",
         "tags": tags,
         "dataPublicacao": data.isoformat(),
+        "tempoLeitura": tempo_leitura,
         "destaque": destaque,
+        "setorRelacionado": "fiis",
         "origem": "fundosnet-automatico",
     }
+    # Remove duplicatas pelo id/slug (reentrancia)
+    artigos = [a for a in artigos if a.get("id") != slug and a.get("slug") != slug]
     artigos.insert(0, novo)
+    meta["artigos"] = artigos
     meta["ultimaAtualizacao"] = data.isoformat()
     ARTIGOS_META.write_text(json.dumps(meta, indent=2, ensure_ascii=False))
 

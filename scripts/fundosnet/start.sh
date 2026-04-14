@@ -2,18 +2,20 @@
 # Inicia o pipeline Fundos.NET de forma idempotente.
 # Se já houver um loop rodando, apenas reporta o status e sai.
 #
+# O loop opera em modo round-robin: cada iteração processa UM FII
+# (o próximo na rotação) e gera artigo/patch se justificável.
+#
 # Uso:
-#   ./start.sh                                  # MFII11,BTAL11 — padrão
-#   ./start.sh "MFII11,BTAL11,HGLG11"           # tickers customizados
-#   ./start.sh "MFII11,BTAL11" 300 720          # intervalo, lookback
+#   ./start.sh            # intervalo padrão 300s
+#   ./start.sh 600        # intervalo 600s
+#   ./start.sh 300 5      # intervalo 300s, até 5 tickers tentados por iter
 set -u
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$DIR"
 
-TICKERS="${1:-MFII11,BTAL11}"
-INTERVAL="${2:-300}"
-LOOKBACK="${3:-720}"
+INTERVAL="${1:-300}"
+MAX_TENTATIVAS="${2:-10}"
 
 PID_FILE="/tmp/fundosnet-loop.pid"
 LOCK_FILE="/tmp/fundosnet.lock"
@@ -39,20 +41,20 @@ fi
 rm -f "$LOCK_FILE"
 export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:$PATH"
 
-nohup ./loop.sh "$TICKERS" "$INTERVAL" "$LOOKBACK" > /dev/null 2>&1 &
+nohup ./loop.sh "$INTERVAL" "$MAX_TENTATIVAS" > /dev/null 2>&1 &
 disown
 sleep 2
 
 if [ -f "$PID_FILE" ]; then
     NEW_PID=$(cat "$PID_FILE")
     echo "==================================================="
-    echo "  Pipeline INICIADO em background"
-    echo "  PID:       $NEW_PID"
-    echo "  Tickers:   $TICKERS"
-    echo "  Intervalo: ${INTERVAL}s"
-    echo "  Lookback:  ${LOOKBACK}h (reduz para 48h apos 1a iter)"
-    echo "  Log:       tail -f /tmp/fundosnet-loop.log"
-    echo "  Parar:     kill $NEW_PID"
+    echo "  Pipeline INICIADO em background (round-robin por FII)"
+    echo "  PID:            $NEW_PID"
+    echo "  Intervalo:      ${INTERVAL}s entre execucoes"
+    echo "  Max tentativas: $MAX_TENTATIVAS tickers por execucao"
+    echo "  Log:            tail -f /tmp/fundosnet-loop.log"
+    echo "  Rotacao:        data/fundosnet-rotacao.json"
+    echo "  Parar:          kill $NEW_PID"
     echo "==================================================="
 else
     echo "ERRO: falha ao iniciar (PID file nao criado)"

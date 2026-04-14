@@ -10,8 +10,8 @@
       "40% Copropriedade"
     ],
     "sentimento": "pessimista",
-    "dataAnalise": "16/03/2026",
-    "totalDocumentos": 776
+    "dataAnalise": "14/04/2026",
+    "totalDocumentos": 780
   },
   "seo": {
     "title": "ALMI11 - Análise Completa | Torre Almirante FII",
@@ -23,18 +23,18 @@
     "twitterDescription": "Análise do ALMI11: vacância 46%, dividendos retomados desde jun/2024 com média R$ 3,76/cota. Mono-ativo Centro RJ com P/VP 0,30."
   },
   "indicadores": {
-    "cotacao": 640,
-    "cotacaoData": "31/10/2025",
-    "pvp": 0.30,
-    "pvpDesconto": "70% de desconto",
-    "dividendYield": 7.1,
-    "dividendoMensal": 3.76,
-    "dividendoAnual": 45.14,
-    "patrimonioLiquido": "R$ 234 Mi",
-    "vpCota": 2103.33,
-    "cotistas": 1910,
-    "cotistasDetalhe": "Base pequena e estável",
-    "ocupacao": 53.66,
+    "cotacao": 675,
+    "cotacaoData": "30/11/2025",
+    "pvp": 0.33,
+    "pvpDesconto": "67% de desconto",
+    "dividendYield": 6.8,
+    "dividendoMensal": 3.83,
+    "dividendoAnual": 45.9,
+    "patrimonioLiquido": "R$ 229 Mi",
+    "vpCota": 2062.46,
+    "cotistas": 1886,
+    "cotistasDetalhe": "Em queda (1.910 → 1.886)",
+    "ocupacao": 53.2,
     "numImoveis": 1
   },
   "recomendacao": {
@@ -46,32 +46,32 @@
   "quickStats": [
     {
       "label": "Patrimônio",
-      "valor": "R$ 234 Mi",
-      "detalhe": "VP/cota: R$ 2.103,33",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 2.103,33</span>",
+      "valor": "R$ 229 Mi",
+      "detalhe": "VP/cota: R$ 2.062,46",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 2.062,46</span> <span class=\"text-red-400\">↓</span>",
       "icone": "building",
       "corIcone": "blue"
     },
     {
       "label": "Rendimento",
-      "valor": "R$ 3,76",
+      "valor": "R$ 3,83",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 45,14/ano | DY 7,1%",
+      "detalhe": "R$ 45,90/ano | DY 6,8%",
       "icone": "money",
       "corIcone": "amber",
       "corValor": "amber"
     },
     {
       "label": "Cotistas",
-      "valor": "1.910",
-      "detalhe": "Base pequena e estável",
+      "valor": "1.886",
+      "detalhe": "Em queda: 1.910 → 1.886 (dez/25)",
       "icone": "users",
       "corIcone": "purple"
     },
     {
       "label": "Vacância",
-      "valor": "46,34%",
-      "detalhe": "Andares 3 a 18 vazios",
+      "valor": "46,80%",
+      "detalhe": "Andares 3-18 vazios | Inadimpl. 42%",
       "detalheIcone": "arrowDown",
       "icone": "chart",
       "corIcone": "red",
@@ -97,6 +97,16 @@
     {
       "titulo": "Depósito Judicial ITBI R$ 2,5M + Contingência",
       "descricao": "Execuções fiscais de ITBI com depósito judicial de R$ 2,47 milhões (abril/2022). Reserva de contingência constituída em set/2025 (R$ 48 mil). Processo ainda em andamento com risco de perda definitiva.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Inadimplência Explode para 42,3% no 4T25",
+      "descricao": "O Informe Trimestral de dez/2025 revela inadimplência de 42,35% (90+ dias de atraso) sobre as receitas do imóvel. Contas a receber de aluguéis em R$ 3,53 milhões. Número alarmante que pode comprometer a sustentabilidade dos dividendos recém-retomados.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "VP/Cota em Queda: R$ 2.062 (Dez/25)",
+      "descricao": "Valor patrimonial da cota caiu de R$ 2.105 (nov/25) para R$ 2.062 (dez/25), reflexo de ajuste negativo ao valor justo de -R$ 4,73 milhões no 4T25. PL recuou de R$ 239M para R$ 229M. Cotistas caem para 1.886 (-24 em 2 meses).",
       "severidade": "amber"
     }
   ],
@@ -200,23 +210,28 @@
       },
       {
         "label": "Taxa de Ocupação",
-        "valor": "53,66%",
+        "valor": "53,20%",
         "cor": "red"
       },
       {
         "label": "Vacância",
-        "valor": "46,34%",
+        "valor": "46,80%",
         "cor": "red"
       },
       {
         "label": "ABL Total",
         "valor": "41.811 m²"
+      },
+      {
+        "label": "Inadimplência (90+dias)",
+        "valor": "42,35%",
+        "cor": "red"
       }
     ],
     "riscoNota": "O ALMI11 possui <strong class=\"text-red-400\">100% do patrimônio concentrado em apenas 40% de copropriedade</strong> do Edifício Torre Almirante. O edifício possui 34 pavimentos de escritórios, cobertura e heliponto, mais 11 pavimentos de estacionamento (382 vagas). A vacância de 46% concentra-se nos <strong class=\"text-red-400\">andares inferiores (3 a 18)</strong>, completamente vazios, enquanto os andares superiores (22 a 36) mantêm ocupação. O Centro do RJ enfrenta <strong class=\"text-red-400\">desafios estruturais de longo prazo</strong>, apesar do Projeto Reviver Centro da Prefeitura."
   },
   "ativos": {
-    "subtitulo": "1 imóvel | 40% copropriedade | Centro RJ",
+    "subtitulo": "1 imóvel | 40% copropriedade | Centro RJ | Inadimpl. 42%",
     "legendaRisco": [
       {
         "label": "Atenção - Mono-ativo e vacância elevada",
@@ -234,9 +249,9 @@
             "tipo": "Lajes Corporativas",
             "tipoCor": "blue",
             "abl": 41811,
-            "locatario": "13 locatários (incl. WeWork, Caixa, Marsh, DSV)",
-            "vencimento": "57% >2028 | 21% 2027 | 14% 2026",
-            "risco": "Alto",
+            "locatario": "13 locatários (incl. WeWork, Caixa, Marsh, DSV, Kuehne+Nagel)",
+            "vencimento": "48% >36m | 24% 6-15m | 18% <3m",
+            "risco": "Crítico",
             "riscoCor": "red"
           }
         ]
@@ -301,6 +316,19 @@
           "Cotação: R$ 580-640 (P/VP ~0,30)",
           "Administradora otimista com Reviver Centro"
         ]
+      },
+      {
+        "periodo": "Dez/2025-Jan/2026",
+        "label": "INADIMPLÊNCIA",
+        "cor": "red",
+        "descricao": "Informe Trimestral 4T25 revela inadimplência recorde de 42,35% (90+ dias). VP/cota cai para R$ 2.062 após ajuste negativo de -R$ 4,73 MI. Cotistas caem para 1.886.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Inadimplência: 42,35% (90+ dias de atraso)</strong>",
+          "<strong class=\"text-red-400\">VP/Cota: R$ 2.062,46 (queda de R$ 43)</strong>",
+          "<strong class=\"text-amber-400\">Dividendo Jan/26: R$ 4,53/cota</strong>",
+          "PL recua para R$ 229 Mi (−R$ 10 Mi em 2 meses)",
+          "Indexadores: 50% IGPM / 50% IPCA"
+        ]
       }
     ]
   },
@@ -322,8 +350,6 @@
   },
   "dividendos": {
     "chartLabels": [
-      "Dez/24",
-      "Jan/25",
       "Fev/25",
       "Mar/25",
       "Abr/25",
@@ -333,21 +359,23 @@
       "Ago/25",
       "Set/25",
       "Out/25",
-      "Nov/25"
+      "Nov/25",
+      "Dez/25",
+      "Jan/26"
     ],
     "chartData": [
-      4.04,
-      4.77,
       3.39,
       1.99,
-      2.10,
-      3.40,
+      2.1,
+      3.4,
       5.26,
       3.93,
       4.23,
       4.17,
       3.04,
-      4.82
+      4.82,
+      5.04,
+      4.53
     ],
     "chartCor": "#f59e0b",
     "chartYMin": 0,
@@ -364,53 +392,58 @@
         "cor": "emerald"
       },
       {
-        "label": "DY Anual",
-        "valor": "7,1%",
+        "label": "DY Anual (12m)",
+        "valor": "6,8%",
         "cor": "amber"
       },
       {
         "label": "Média Mensal (12m)",
-        "valor": "R$ 3,76/cota"
+        "valor": "R$ 3,83/cota"
       },
       {
         "label": "Faixa Mensal",
-        "valor": "R$ 1,99-5,26",
+        "valor": "R$ 1,99 – 5,26",
         "cor": "amber"
+      },
+      {
+        "label": "Último Dividendo",
+        "valor": "R$ 4,53 (Jan/26)",
+        "cor": "emerald"
       }
     ],
     "guidance": {
       "periodo": "2026",
-      "faixa": "R$ 2,00 - 5,50",
+      "faixa": "R$ 2,00 – 5,50",
       "unidade": "/cota/mês (depende de locação e inadimplência)"
     }
   },
   "valuation": {
     "pvp": {
-      "valor": "0,30",
-      "descricao": "Cota com <span class=\"text-red-400\">70% de desconto</span> sobre VP - risco estrutural alto",
+      "valor": "0,33",
+      "descricao": "Cota com <span class=\"text-red-400\">67% de desconto</span> sobre VP — risco estrutural e inadimplência alta",
       "detalhes": [
         {
           "label": "VP/Cota",
-          "valor": "R$ 2.103,33"
+          "valor": "R$ 2.062,46"
         },
         {
           "label": "Preço",
-          "valor": "R$ 640,00",
+          "valor": "R$ 675,00",
           "cor": "red"
         }
       ]
     },
     "spread": {
-      "valor": "7,1%",
+      "valor": "6,8%",
       "label": "DY Anual (12 meses)",
       "cor": "amber",
-      "descricao": "Yield moderado considerando o risco elevado do ativo. Dividendos retomados há ~18 meses mas com alta volatilidade mensal"
+      "descricao": "Yield moderado considerando o risco elevado. Inadimplência de 42% no 4T25 ameaça sustentabilidade dos dividendos"
     },
     "recomendacoes": {
-      "valor": "~R$ 11k",
+      "valor": "~R$ 14k",
       "label": "Liquidez Diária Média",
       "cor": "red",
-      "descricao": "Volume mensal de R$ 247 mil (out/25) com apenas 409 cotas negociadas no mês inteiro",
+      "descricao": "Volume mensal de R$ 309 mil (nov/25) com 510 cotas negociadas no mês inteiro",
       "detalhe": "Risco real de ficar \"preso\" no investimento por meses"
     }
   },
@@ -444,7 +477,7 @@
     "conclusaoFinal": "O ALMI11 melhorou marginalmente com a retomada de dividendos mensais após 7 anos zerado, mas permanece um investimento de <strong class=\"text-red-400\">alto risco</strong> inadequado para a maioria dos investidores. A combinação de <strong class=\"text-red-400\">vacância estrutural estagnada em 46%</strong>, liquidez extrema que impede saída, e concentração total em um ativo de copropriedade parcial no Centro do RJ torna o fundo uma <strong class=\"text-red-400\">aposta especulativa</strong>. A nota sobe para 4,0 reconhecendo a estabilização de dividendos, mas o veredicto continua <strong class=\"text-red-400\">VENDA para quem tem e EVITAR para quem não tem</strong>."
   },
   "footer": {
-    "dataAnalise": "16/03/2026",
+    "dataAnalise": "14/04/2026",
     "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }
 }

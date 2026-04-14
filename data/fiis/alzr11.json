@@ -28,7 +28,7 @@
     "pvp": 1.01,
     "pvpDesconto": "próximo ao VP",
     "dividendYield": 9.6,
-    "dividendoMensal": 0.085,
+    "dividendoMensal": 0.0851,
     "dividendoAnual": 1.006,
     "patrimonioLiquido": "R$ 1,3 Bi",
     "vpCota": 10.64,
@@ -467,7 +467,7 @@
       0.084,
       0.084,
       0.084,
-      0.085
+      0.0851
     ],
     "chartCor": "#10b981",
     "chartYMin": 0.07,
@@ -497,6 +497,11 @@
         "label": "Retorno Total IPO",
         "valor": "+96%",
         "cor": "emerald"
+      },
+      {
+        "label": "Reserva de Lucros",
+        "valor": "R$ 0,052/cota",
+        "cor": "blue"
       },
       {
         "label": "Tendência",

@@ -9,8 +9,8 @@
       "13 Anos de História"
     ],
     "sentimento": "neutro",
-    "dataAnalise": "27/01/2026",
-    "totalDocumentos": 106
+    "dataAnalise": "14/04/2026",
+    "totalDocumentos": 110
   },
   "seo": {
     "title": "MFII11 - Análise Completa | Mérito Desenvolvimento Imobiliário FII",
@@ -27,12 +27,13 @@
     "pvp": 0.82,
     "pvpDesconto": "18% de desconto",
     "dividendYield": 16.1,
-    "dividendoMensal": 1.06,
+    "dividendoMensal": 1.05,
     "dividendoAnual": 13.05,
     "patrimonioLiquido": "R$ 669,9M",
     "vpCota": 98.51,
     "cotistas": 32496,
-    "cotistasDetalhe": "6.800.000 cotas"
+    "cotistasDetalhe": "6.800.000 cotas",
+    "dividendoMensalDetalhe": "Referência janeiro/2026 · pagamento 13/02/2026"
   },
   "recomendacao": {
     "nota": 7,
@@ -90,6 +91,11 @@
       "titulo": "Retorno 2025 Negativo",
       "descricao": "Retorno total de -3,87% em 2025 enquanto o IFIX rendeu +21,15% e o CDI +12,04%. Apesar do DY elevado, a desvalorização da cota anulou os dividendos recebidos.",
       "severidade": "orange"
+    },
+    {
+      "titulo": "Rendimento de janeiro/2026 recua para R$ 1,05",
+      "descricao": "O provento declarado em 30/01/2026, com pagamento em <strong class=\"text-white\">13/02/2026</strong>, veio em <strong class=\"text-amber-400\">R$ 1,05/cota</strong> — queda de 1,87% frente aos R$ 1,07 de dez/25 e o menor valor desde jun/2025. Ainda dentro da faixa de guidance (R$ 0,95 a R$ 1,40), mas sinaliza pressão sobre o caixa no início de 2026 após o ciclo de entregas.",
+      "severidade": "amber"
     }
   ],
   "gestora": {
@@ -336,6 +342,16 @@
           "Pipeline de +2.800 unidades",
           "Previsão de +6 obras em 2026"
         ]
+      },
+      {
+        "periodo": "Jan/2026",
+        "label": "RENDIMENTO REDUZIDO",
+        "cor": "amber",
+        "descricao": "Rendimento de janeiro/2026 cai para <strong class=\"text-amber-400\">R$ 1,05/cota</strong> (-1,87% vs dez/25), pagamento em 13/02/2026.",
+        "pontos": [
+          "DY mensal de 1,09% (sobre cota R$ 81,20)",
+          "Fundo segue em ciclo de entregas Livus sob MCMV"
+        ]
       }
     ],
     "resumoTrajetoria": {
@@ -473,8 +489,8 @@
     "conclusaoFinal": "<strong class=\"text-white\">NEUTRO</strong> - Adequado para investidores com horizonte de longo prazo e tolerância a volatilidade. Não é recomendado como posição principal. Alocação sugerida: 5-10% de uma carteira diversificada de FIIs."
   },
   "footer": {
-    "dataAnalise": "27/01/2026",
-    "totalDocumentos": 107,
+    "dataAnalise": "14/04/2026",
+    "totalDocumentos": 110,
     "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }
 }

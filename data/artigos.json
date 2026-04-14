@@ -1,7 +1,6 @@
 {
-  "ultimaAtualizacao": "2026-04-02",
+  "ultimaAtualizacao": "2026-04-14",
   "versao": "2.0",
-
   "categorias": {
     "renda-variavel": {
       "id": "renda-variavel",
@@ -40,7 +39,6 @@
       "descricao": "Comportamento e vieses cognitivos"
     }
   },
-
   "temas": {
     "fiis": {
       "id": "fiis",
@@ -91,8 +89,45 @@
       "cor": "#f0c14b"
     }
   },
-
   "artigos": [
+    {
+      "slug": "oujp11-analise-perspectivas-abr-2026",
+      "url": "artigos/oujp11-analise-perspectivas-abr-2026.html",
+      "titulo": "OUJP11: o FII de CRIs com IPCA+10% e 25% de desconto sobre o VP — vale a pena?",
+      "descricao": "O **OUJP11** é um dos FIIs de crédito mais antigos do mercado, operando desde 2016 com uma carteira de CRIs que entrega taxas agressivas: <strong class=\"text-em",
+      "categoria": "FIIs",
+      "tags": [
+        "OUJP11",
+        "FII",
+        "CRI",
+        "Papel",
+        "IPCA+",
+        "CDI+",
+        "JPP Capital",
+        "Fator ORE"
+      ],
+      "dataPublicacao": "2026-04-14",
+      "destaque": false,
+      "origem": "fundosnet-automatico"
+    },
+    {
+      "slug": "mfii11-analise-perspectivas-abr-2026",
+      "url": "artigos/mfii11-analise-perspectivas-abr-2026.html",
+      "titulo": "MFII11 — análise e perspectivas: 16% de DY, 2025 perdido e a virada para o Livus",
+      "descricao": "O **Mérito Desenvolvimento Imobiliário I (MFII11)** encerrou 2025 pagando <strong class=\"text-emerald-400\">R$ 13,05 por cota</strong> em dividendos — um DY anua",
+      "categoria": "fiis",
+      "tags": [
+        "MFII11",
+        "FII de Desenvolvimento",
+        "MCMV",
+        "Mérito",
+        "Livus",
+        "Análise"
+      ],
+      "dataPublicacao": "2026-04-14",
+      "destaque": false,
+      "origem": "fundosnet-automatico"
+    },
     {
       "id": "tgar11-balanco-2025-preco-entrada-2026",
       "titulo": "TGAR11: Balanço 2025 Revela a Verdade. A Que Preço Vale a Aposta?",
@@ -102,7 +137,17 @@
       "nivel": "avancado",
       "categoria": "renda-variavel",
       "tema": "fiis",
-      "tags": ["TGAR11", "balanço", "KPMG", "preço de entrada", "inadimplência", "Viel", "fluxo de caixa", "curva-J", "valuation"],
+      "tags": [
+        "TGAR11",
+        "balanço",
+        "KPMG",
+        "preço de entrada",
+        "inadimplência",
+        "Viel",
+        "fluxo de caixa",
+        "curva-J",
+        "valuation"
+      ],
       "dataPublicacao": "2026-04-02",
       "tempoLeitura": 15,
       "destaque": true,
@@ -118,7 +163,17 @@
       "nivel": "avancado",
       "categoria": "renda-variavel",
       "tema": "fiis",
-      "tags": ["TGAR11", "dividendo", "valuation", "estratégia", "análise", "R$0,71", "guidance", "cenários", "decisão"],
+      "tags": [
+        "TGAR11",
+        "dividendo",
+        "valuation",
+        "estratégia",
+        "análise",
+        "R$0,71",
+        "guidance",
+        "cenários",
+        "decisão"
+      ],
       "dataPublicacao": "2026-01-31",
       "tempoLeitura": 12,
       "destaque": true,
@@ -134,7 +189,16 @@
       "nivel": "avancado",
       "categoria": "renda-variavel",
       "tema": "fiis",
-      "tags": ["TGAR11", "FIIs", "desenvolvimento", "guidance", "repasse bancário", "live gestor", "Pedro Ernesto", "crise"],
+      "tags": [
+        "TGAR11",
+        "FIIs",
+        "desenvolvimento",
+        "guidance",
+        "repasse bancário",
+        "live gestor",
+        "Pedro Ernesto",
+        "crise"
+      ],
       "dataPublicacao": "2026-01-29",
       "tempoLeitura": 12,
       "destaque": true,
@@ -150,7 +214,15 @@
       "nivel": "avancado",
       "categoria": "renda-variavel",
       "tema": "fiis",
-      "tags": ["TGAR11", "FIIs", "desenvolvimento", "dividendos", "queda", "oportunidade", "timing"],
+      "tags": [
+        "TGAR11",
+        "FIIs",
+        "desenvolvimento",
+        "dividendos",
+        "queda",
+        "oportunidade",
+        "timing"
+      ],
       "dataPublicacao": "2026-01-28",
       "tempoLeitura": 10,
       "destaque": true,
@@ -166,7 +238,14 @@
       "nivel": "avancado",
       "categoria": "renda-variavel",
       "tema": "fiis",
-      "tags": ["BLMG11", "FIIs", "logística", "multiestratégia", "risco gestor", "baixa liquidez"],
+      "tags": [
+        "BLMG11",
+        "FIIs",
+        "logística",
+        "multiestratégia",
+        "risco gestor",
+        "baixa liquidez"
+      ],
       "dataPublicacao": "2026-01-28",
       "tempoLeitura": 6,
       "capa": "imagens/capa-blmg11-2026.jpg",
@@ -182,7 +261,17 @@
       "nivel": "intermediario",
       "categoria": "estrategias",
       "tema": "internacional",
-      "tags": ["ouro", "carteira", "alocação", "FIIs", "IBOV", "TLT", "dólar", "proteção", "bolha IA"],
+      "tags": [
+        "ouro",
+        "carteira",
+        "alocação",
+        "FIIs",
+        "IBOV",
+        "TLT",
+        "dólar",
+        "proteção",
+        "bolha IA"
+      ],
       "dataPublicacao": "2026-01-27",
       "tempoLeitura": 12,
       "destaque": true,
@@ -198,7 +287,16 @@
       "nivel": "intermediario",
       "categoria": "estrategias",
       "tema": "conceitos",
-      "tags": ["mercado eficiente", "precificação", "consenso", "CDI", "TLT", "Buffett", "risco", "estratégia"],
+      "tags": [
+        "mercado eficiente",
+        "precificação",
+        "consenso",
+        "CDI",
+        "TLT",
+        "Buffett",
+        "risco",
+        "estratégia"
+      ],
       "dataPublicacao": "2026-01-14",
       "tempoLeitura": 18,
       "destaque": true,
@@ -215,7 +313,14 @@
       "nivel": "intermediario",
       "categoria": "estrategias",
       "tema": "imoveis",
-      "tags": ["imóveis", "FIPEZAP", "aluguel", "investimento imobiliário", "preços", "rentabilidade"],
+      "tags": [
+        "imóveis",
+        "FIPEZAP",
+        "aluguel",
+        "investimento imobiliário",
+        "preços",
+        "rentabilidade"
+      ],
       "dataPublicacao": "2026-01-13",
       "tempoLeitura": 15,
       "destaque": true,
@@ -230,7 +335,15 @@
       "nivel": "intermediario",
       "categoria": "estrategias",
       "tema": "imoveis",
-      "tags": ["leilão", "imóveis", "investimento imobiliário", "Caixa", "juros", "inadimplência", "oportunidade"],
+      "tags": [
+        "leilão",
+        "imóveis",
+        "investimento imobiliário",
+        "Caixa",
+        "juros",
+        "inadimplência",
+        "oportunidade"
+      ],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 20,
       "destaque": true,
@@ -245,7 +358,15 @@
       "nivel": "iniciante",
       "categoria": "educacao",
       "tema": "conceitos",
-      "tags": ["inflação", "IPCA", "poder de compra", "economia", "iniciante", "IGP-M", "preços"],
+      "tags": [
+        "inflação",
+        "IPCA",
+        "poder de compra",
+        "economia",
+        "iniciante",
+        "IGP-M",
+        "preços"
+      ],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 18,
       "destaque": true,
@@ -260,7 +381,14 @@
       "nivel": "intermediario",
       "categoria": "estrategias",
       "tema": "conceitos",
-      "tags": ["mercado eficiente", "EMH", "small caps", "oportunidades", "behavioral finance", "value investing"],
+      "tags": [
+        "mercado eficiente",
+        "EMH",
+        "small caps",
+        "oportunidades",
+        "behavioral finance",
+        "value investing"
+      ],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 10,
       "destaque": true,
@@ -275,7 +403,15 @@
       "nivel": "iniciante",
       "categoria": "educacao",
       "tema": "conceitos",
-      "tags": ["risco", "retorno", "bets", "apostas", "loteria", "patrimônio", "diversificação"],
+      "tags": [
+        "risco",
+        "retorno",
+        "bets",
+        "apostas",
+        "loteria",
+        "patrimônio",
+        "diversificação"
+      ],
       "dataPublicacao": "2026-01-07",
       "tempoLeitura": 12,
       "destaque": true,
@@ -290,7 +426,14 @@
       "nivel": "iniciante",
       "categoria": "educacao",
       "tema": "conceitos",
-      "tags": ["juros compostos", "inflação", "iniciante", "quanto investir", "independência financeira", "renda"],
+      "tags": [
+        "juros compostos",
+        "inflação",
+        "iniciante",
+        "quanto investir",
+        "independência financeira",
+        "renda"
+      ],
       "dataPublicacao": "2026-01-06",
       "tempoLeitura": 15,
       "destaque": true,
@@ -305,7 +448,14 @@
       "nivel": "avancado",
       "categoria": "macroeconomia",
       "tema": "criptomoedas",
-      "tags": ["bitcoin", "satoshi", "valor intrínseco", "ciclos", "ouro digital", "warren buffett"],
+      "tags": [
+        "bitcoin",
+        "satoshi",
+        "valor intrínseco",
+        "ciclos",
+        "ouro digital",
+        "warren buffett"
+      ],
       "dataPublicacao": "2026-01-06",
       "tempoLeitura": 18,
       "destaque": true,
@@ -322,7 +472,14 @@
       "nivel": "avancado",
       "categoria": "macroeconomia",
       "tema": "criptomoedas",
-      "tags": ["strategy", "microstrategy", "mstr", "bitcoin", "risco sistêmico", "michael saylor"],
+      "tags": [
+        "strategy",
+        "microstrategy",
+        "mstr",
+        "bitcoin",
+        "risco sistêmico",
+        "michael saylor"
+      ],
       "dataPublicacao": "2026-01-06",
       "tempoLeitura": 12,
       "destaque": true,
@@ -337,7 +494,13 @@
       "nivel": "intermediario",
       "categoria": "macroeconomia",
       "tema": "criptomoedas",
-      "tags": ["bitcoin", "criptomoedas", "ciclo", "strategy", "bear market"],
+      "tags": [
+        "bitcoin",
+        "criptomoedas",
+        "ciclo",
+        "strategy",
+        "bear market"
+      ],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 8,
       "destaque": true,
@@ -352,7 +515,12 @@
       "nivel": "intermediario",
       "categoria": "renda-fixa",
       "tema": "internacional",
-      "tags": ["tlt", "tesouro americano", "bonds", "proteção"],
+      "tags": [
+        "tlt",
+        "tesouro americano",
+        "bonds",
+        "proteção"
+      ],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 6,
       "destaque": true,
@@ -367,7 +535,12 @@
       "nivel": "intermediario",
       "categoria": "renda-fixa",
       "tema": "tesouro",
-      "tags": ["tesouro", "ipca", "renda fixa", "risco fiscal"],
+      "tags": [
+        "tesouro",
+        "ipca",
+        "renda fixa",
+        "risco fiscal"
+      ],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 7,
       "destaque": false,
@@ -382,7 +555,12 @@
       "nivel": "intermediario",
       "categoria": "renda-variavel",
       "tema": "fiis",
-      "tags": ["fiis", "fundos imobiliários", "renda passiva", "dividendos"],
+      "tags": [
+        "fiis",
+        "fundos imobiliários",
+        "renda passiva",
+        "dividendos"
+      ],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 6,
       "destaque": false,
@@ -397,7 +575,13 @@
       "nivel": "intermediario",
       "categoria": "macroeconomia",
       "tema": "internacional",
-      "tags": ["dólar", "câmbio", "carry trade", "selic", "refúgio"],
+      "tags": [
+        "dólar",
+        "câmbio",
+        "carry trade",
+        "selic",
+        "refúgio"
+      ],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 7,
       "destaque": false,
@@ -412,7 +596,12 @@
       "nivel": "intermediario",
       "categoria": "renda-variavel",
       "tema": "acoes-br",
-      "tags": ["ações", "ibovespa", "selic", "eleições"],
+      "tags": [
+        "ações",
+        "ibovespa",
+        "selic",
+        "eleições"
+      ],
       "dataPublicacao": "2026-01-04",
       "tempoLeitura": 8,
       "destaque": false,

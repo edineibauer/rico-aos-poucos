@@ -27,11 +27,11 @@
     "pvp": 0.82,
     "pvpDesconto": "18% de desconto",
     "dividendYield": 16.1,
-    "dividendoMensal": 1.07,
+    "dividendoMensal": 1.06,
     "dividendoAnual": 13.05,
     "patrimonioLiquido": "R$ 669,9M",
     "vpCota": 98.51,
-    "cotistas": 32290,
+    "cotistas": 32496,
     "cotistasDetalhe": "6.800.000 cotas"
   },
   "recomendacao": {
@@ -51,7 +51,7 @@
     },
     {
       "label": "Rendimento",
-      "valor": "R$ 1,07",
+      "valor": "R$ 1,06",
       "valorSufixo": "/mês",
       "detalhe": "R$ 13,05/ano (2025)",
       "icone": "money",
@@ -60,7 +60,7 @@
     },
     {
       "label": "Cotistas",
-      "valor": "32.290",
+      "valor": "32.496",
       "detalhe": "6.800.000 cotas",
       "icone": "users",
       "corIcone": "purple"
@@ -77,13 +77,13 @@
   ],
   "pontosAtencao": [
     {
-      "titulo": "Consórcio Cortel (29% da carteira)",
-      "descricao": "O MFII11 possui 35% de participação na SPE Consórcio Cortel SP S.A., que detém concessão de 25 anos para administrar 5 cemitérios públicos de São Paulo. Foge da tese principal de desenvolvimento residencial/MCMV e adiciona risco de concentração em um único ativo.",
-      "severidade": "red"
+      "titulo": "Consórcio Cortel — exposição reduzida, risco persiste",
+      "descricao": "Em nov/2025, o fundo alienou <strong class=\"text-emerald-400\">R$ 45,5M</strong> em cotas do MCEM (Mérito Cemitérios FII), gerando ganho expressivo sobre a aquisição de <strong class=\"text-white\">R$ 12M</strong> em jan/2025. A posição remanescente é de <strong class=\"text-amber-400\">R$ 149,9M</strong> (+14,9% no período), representando ~24% dos ativos listados — abaixo dos ~29% anteriores. A concentração fora da tese MCMV persiste, mas em nível menor.",
+      "severidade": "amber"
     },
     {
-      "titulo": "Taxas Elevadas",
-      "descricao": "Taxa de administração de 2,0% a.a. sobre o PL a mercado, mais 20% de performance sobre o CDI. Está na faixa superior mesmo entre FIIs de desenvolvimento. Custo anual estimado de ~R$ 13,4M (R$ 1,97/cota por ano).",
+      "titulo": "Taxas Elevadas — custo real 2025 abaixo do estimado",
+      "descricao": "Taxa de administração de 2,0% a.a. sobre o PL a mercado, mais 20% de performance sobre o CDI. Custo real em 2025: <strong class=\"text-emerald-400\">R$ 8,9M</strong> (1,32% do PL contábil) — bem abaixo da estimativa de R$ 13,4M porque a performance <strong class=\"text-white\">não foi acionada</strong> (retorno do fundo abaixo do CDI). Em ciclos futuros com performance positiva, o custo total sobe significativamente.",
       "severidade": "amber"
     },
     {
@@ -126,14 +126,14 @@
       {
         "label": "Taxa de Performance",
         "valor": "20%",
-        "detalhe": "Sobre o que exceder o CDI",
+        "detalhe": "Sobre o que exceder o CDI — <strong class=\"text-emerald-400\">não acionada em 2025</strong>",
         "corBorda": "amber"
       },
       {
-        "label": "Custo Anual Estimado",
-        "valor": "~R$ 13,4M",
-        "detalhe": "R$ 1,97/cota por ano",
-        "corBorda": "red"
+        "label": "Custo Real 2025",
+        "valor": "R$ 8,9M",
+        "detalhe": "1,32% do PL contábil · sem performance (retorno abaixo do CDI) · fonte: Informe Anual 12/2025",
+        "corBorda": "emerald"
       }
     ],
     "comparativoTitulo": "Comparativo com FIIs de Desenvolvimento",
@@ -179,7 +179,7 @@
       },
       {
         "label": "Consórcio Cortel",
-        "valor": "29%",
+        "valor": "24%",
         "cor": "red"
       }
     ],
@@ -192,7 +192,7 @@
       ],
       "data": [
         61,
-        29,
+        24,
         21,
         17
       ],
@@ -207,7 +207,7 @@
       {
         "nome": "Consórcio Cortel",
         "setor": "Cemitérios",
-        "receita": "29,0%",
+        "receita": "23,7%",
         "rating": "-",
         "ratingCor": "red",
         "risco": "Fora da tese",
@@ -243,14 +243,14 @@
       {
         "nome": "Demais ativos (26)",
         "setor": "Diversos",
-        "receita": "48,3%",
+        "receita": "53,6%",
         "rating": "Misto",
         "ratingCor": "blue",
         "risco": "Diversificado",
         "riscoCor": "blue"
       }
     ],
-    "riscoNota": "Os Top 5 ativos representam ~52% do patrimônio. O maior ativo (Consórcio Cortel) sozinho representa 29%, gerando risco de concentração significativo. O Consórcio Cortel foge da tese principal de desenvolvimento residencial/MCMV."
+    "riscoNota": "Os Top 5 ativos representam ~52% do patrimônio. O maior ativo (Consórcio Cortel/MCEM) representa <strong class=\"text-amber-400\">~24%</strong> dos ativos listados (<strong class=\"text-white\">R$ 149,9M</strong>) após alienação parcial de <strong class=\"text-emerald-400\">R$ 45,5M</strong> em nov/2025 — abaixo dos 29% anteriores, mas ainda relevante. O Consórcio Cortel foge da tese principal de desenvolvimento residencial/MCMV. Fonte: Informe Anual 12/2025."
   },
   "timeline": {
     "subtitulo": "A jornada completa do fundo desde o IPO",
@@ -465,7 +465,7 @@
     ],
     "pontosDeAtencao": [
       "Taxas elevadas (2% + 20%)",
-      "29% em cemitérios (fora da tese)",
+      "~24% em cemitérios (fora da tese)",
       "Retorno 2025 negativo",
       "Dependência do MCMV",
       "Histórico de subscrições com prejuízo"
@@ -474,7 +474,7 @@
   },
   "footer": {
     "dataAnalise": "27/01/2026",
-    "totalDocumentos": 106,
+    "totalDocumentos": 107,
     "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }
 }

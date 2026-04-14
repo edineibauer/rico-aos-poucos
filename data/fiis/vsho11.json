@@ -9,8 +9,8 @@
       "Tivio Capital"
     ],
     "sentimento": "neutro",
-    "dataAnalise": "24/02/2026",
-    "totalDocumentos": 402
+    "dataAnalise": "14/04/2026",
+    "totalDocumentos": 407
   },
   "seo": {
     "title": "VSHO11 - Análise Completa | Votorantim Shopping FII",
@@ -22,17 +22,17 @@
     "twitterDescription": "Análise do VSHO11: 3 shoppings, DY 14,89%, P/VP 0,67. Rentabilidade 26,7% em 12M. Bay Market, Hortolândia e Valinhos."
   },
   "indicadores": {
-    "cotacao": 76.58,
-    "cotacaoData": "24/02/2026",
-    "pvp": 0.67,
-    "pvpDesconto": "33% de desconto",
-    "dividendYield": 14.89,
-    "dividendoMensal": 0.95,
-    "dividendoAnual": 8.16,
-    "patrimonioLiquido": "R$ 241,7 Mi",
-    "vpCota": 115.15,
-    "cotistas": 2947,
-    "ocupacao": 91.1,
+    "cotacao": 77.5,
+    "cotacaoData": "31/01/2026",
+    "pvp": 0.68,
+    "pvpDesconto": "32% de desconto",
+    "dividendYield": 10.53,
+    "dividendoMensal": 0.68,
+    "dividendoAnual": 8.2,
+    "patrimonioLiquido": "R$ 240,1 Mi",
+    "vpCota": 114.38,
+    "cotistas": 2933,
+    "ocupacao": 90.8,
     "numImoveis": 3,
     "ablTotal": "45.690"
   },
@@ -40,37 +40,37 @@
     "nota": 6.5,
     "veredicto": "MANTER",
     "cor": "amber",
-    "resumo": "O <strong class=\"text-amber-400\">VSHO11</strong> é um FII de shopping centers com 3 ativos no interior de SP. O <strong class=\"text-emerald-400\">DY de 14,89%</strong> e o <strong class=\"text-emerald-400\">desconto de 33% no P/VP</strong> são atrativos, com rentabilidade de 26,7% em 12 meses (superando o IFIX). Porém, enfrenta desafios: <strong class=\"text-amber-400\">vacância de 8,9%</strong> (impactada pela saída do Kinoplex do Bay Market), <strong class=\"text-red-400\">baixíssima liquidez</strong> (R$ 22 mil/dia) e concentração em 3 shoppings de cidades menores. A taxa de 0,75% sem performance é competitiva."
+    "resumo": "O <strong class=\"text-amber-400\">VSHO11</strong> é um FII de shopping centers com 3 ativos. O <strong class=\"text-emerald-400\">DY médio 12M de 11,30%</strong> e o <strong class=\"text-emerald-400\">desconto de 32% no P/VP</strong> são atrativos, com rentabilidade expressiva de 36,1% em 12 meses (vs IFIX 27,8%). Porém, enfrenta desafios: <strong class=\"text-amber-400\">vacância de 9,2%</strong> (Bay Market: 22,3% + inadimplência 14,3%), <strong class=\"text-amber-400\">troca da administradora dos shoppings em andamento</strong> e <strong class=\"text-red-400\">baixa liquidez</strong> (R$ 28 mil/dia). Taxa de 0,75% sem performance."
   },
   "quickStats": [
     {
       "label": "Patrimônio",
-      "valor": "R$ 241,7 Mi",
-      "detalhe": "VP/cota: R$ 115,15",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 115,15</span>",
+      "valor": "R$ 240,1 Mi",
+      "detalhe": "VP/cota: R$ 114,38",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 114,38</span>",
       "icone": "building",
       "corIcone": "blue"
     },
     {
       "label": "Rendimento",
-      "valor": "R$ 0,95",
+      "valor": "R$ 0,68",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 8,16/ano | DY 14,89%",
+      "detalhe": "R$ 8,20/ano | DY 10,53%",
       "icone": "money",
       "corIcone": "emerald",
       "corValor": "emerald"
     },
     {
       "label": "Cotistas",
-      "valor": "2.947",
+      "valor": "2.933",
       "detalhe": "2,09 milhões de cotas",
       "icone": "users",
       "corIcone": "purple"
     },
     {
       "label": "Desconto P/VP",
-      "valor": "33%",
-      "detalhe": "Cota: R$ 76,58 vs VP: R$ 115,15",
+      "valor": "32%",
+      "detalhe": "Cota: R$ 77,50 vs VP: R$ 114,38",
       "detalheIcone": "arrowUp",
       "icone": "chart",
       "corIcone": "amber",
@@ -92,6 +92,16 @@
       "titulo": "Concentração em 3 Shoppings",
       "descricao": "Portfólio concentrado em 3 shoppings no interior de São Paulo: Bay Market (Niterói/RJ), Shopping Hortolândia e Shopping Valinhos. Sem diversificação geográfica relevante.",
       "severidade": "amber"
+    },
+    {
+      "titulo": "Troca da Administradora Operacional dos Shoppings",
+      "descricao": "Em fevereiro/2026, a Tivio Capital divulgou Fato Relevante informando que negocia a substituição da empresa que administra operacionalmente os 3 shoppings do fundo. A conclusão depende de rescisão contratual e formalização com novo prestador. Pode impactar a gestão operacional no curto prazo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Inadimplência Relevante no Bay Market (14,3%)",
+      "descricao": "Em dezembro/2025, retornou a inadimplência de um locatário relevante no Shopping Bay Market. A inadimplência acima de 90 dias atingiu 14,28% no ativo, que já enfrenta vacância de 22,3%. Inadimplência consolidada acumulada em 2025 cresceu 254% vs 2024.",
+      "severidade": "orange"
     }
   ],
   "gestora": {
@@ -109,11 +119,11 @@
       },
       {
         "label": "Rent. 12M",
-        "valor": "26,7%",
+        "valor": "36,1%",
         "cor": "emerald"
       }
     ],
-    "resumo": "A <strong class=\"text-amber-400\">Tivio Capital</strong> é administradora e gestora do VSHO11 desde o início. A taxa de 0,75% a.a. sem performance é <strong class=\"text-emerald-400\">uma das mais competitivas do segmento shopping</strong>. O fundo não possui alavancagem. A gestão está focada na reocupação da área do Kinoplex no Bay Market e nos resultados operacionais dos Shoppings Hortolândia e Valinhos.",
+    "resumo": "A <strong class=\"text-amber-400\">Tivio Capital</strong> é administradora e gestora do VSHO11 desde o início. A taxa de 0,75% a.a. sem performance é <strong class=\"text-emerald-400\">uma das mais competitivas do segmento shopping</strong>. O fundo não possui alavancagem. Em fevereiro/2026, a Tivio divulgou Fato Relevante informando que estão em curso <strong class=\"text-amber-400\">tratativas para trocar a empresa que administra operacionalmente os shoppings</strong>. A gestão segue focada na reocupação do Bay Market e no crescimento dos Shoppings Hortolândia e Valinhos.",
     "link": "../../gestores/tivio-capital/"
   },
   "taxas": {
@@ -299,7 +309,7 @@
       },
       {
         "label": "Vacância",
-        "valor": "8,9%",
+        "valor": "9,2%",
         "cor": "amber"
       },
       {
@@ -346,29 +356,29 @@
       {
         "nome": "Shopping Hortolândia",
         "setor": "Shopping Center",
-        "receita": "~40%",
+        "receita": "41,6%",
         "rating": "Consolidado",
         "ratingCor": "emerald",
-        "risco": "Baixo",
+        "risco": "Vacância 1,4%",
         "riscoCor": "emerald"
       },
       {
         "nome": "Shopping Bay Market",
         "setor": "Shopping Center",
-        "receita": "~30%",
+        "receita": "29,5%",
         "rating": "Em recuperação",
         "ratingCor": "amber",
-        "risco": "Vacância 22%",
-        "riscoCor": "orange"
+        "risco": "Vacância 22,3% | Inadimpl. 14,3%",
+        "riscoCor": "red"
       },
       {
         "nome": "Shopping Valinhos",
         "setor": "Shopping Center",
-        "receita": "~30%",
+        "receita": "27,6%",
         "rating": "Estável",
         "ratingCor": "emerald",
-        "risco": "Baixo",
-        "riscoCor": "emerald"
+        "risco": "Vacância 8,5%",
+        "riscoCor": "amber"
       }
     ],
     "riscoResumo": [
@@ -383,7 +393,7 @@
         "cor": "orange"
       }
     ],
-    "riscoNota": "O portfólio de R$ 234,9 Mi em imóveis está concentrado em 3 shoppings. O Shopping Hortolândia e o Valinhos apresentam crescimento consistente de 5,7% e 5,9% acima da inflação. O Bay Market enfrenta vacância de 22% após saída do Kinoplex em setembro/2025. O fundo <strong class=\"text-emerald-400\">não possui alavancagem</strong> e tem R$ 3,2 Mi em caixa."
+    "riscoNota": "O portfólio de R$ 234,9 Mi em imóveis está concentrado em 3 shoppings. O Shopping Hortolândia (41,6% da receita, vacância 1,4%) e o Valinhos (27,6%, vacância 8,5%) apresentam crescimento real de NOI de 6,4% e 6,5% no acumulado de 2025. O Bay Market (29,5% da receita) enfrenta <strong class=\"text-red-400\">vacância de 22,3% e inadimplência de 14,3%</strong> após saída do Kinoplex. O fundo <strong class=\"text-emerald-400\">não possui alavancagem</strong> e tem R$ 3,2 Mi em caixa."
   },
   "timeline": {
     "subtitulo": "De fundo de shopping regional a operação consolidada",
@@ -444,6 +454,19 @@
           "<strong class=\"text-amber-400\">Vacância total: 8,9% (Bay Market: 22%)</strong>",
           "Saída do Kinoplex impacta Bay Market desde set/2025"
         ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "FATO RELEVANTE",
+        "cor": "amber",
+        "descricao": "Tivio Capital anuncia tratativas para troca da empresa que administra operacionalmente os 3 shoppings do fundo.",
+        "pontos": [
+          "Negociação para substituir administradora dos shoppings",
+          "Conclusão depende de rescisão contratual e novo prestador",
+          "<strong class=\"text-emerald-400\">Rent. 12M: 36,1% | DY médio 12M: 11,30%</strong>",
+          "<strong class=\"text-amber-400\">Bay Market: vacância 22,3% + inadimplência 14,3%</strong>",
+          "<strong class=\"text-emerald-400\">Hortolândia +6,4% e Valinhos +6,5% NOI acum. 2025</strong>"
+        ]
       }
     ],
     "resumoTrajetoria": {
@@ -474,7 +497,7 @@
     ]
   },
   "tese": {
-    "resumo": "VSHO11 é um <strong class=\"text-emerald-400\">FII de shopping centers</strong> com 3 ativos no interior de SP, gerido pela Tivio Capital. O <strong class=\"text-emerald-400\">DY de 14,89%</strong> e o <strong class=\"text-emerald-400\">desconto de 33% no P/VP</strong> são atrativos. A taxa de 0,75% sem performance é uma das mais competitivas do segmento. O desafio principal é a <strong class=\"text-amber-400\">vacância de 22% no Bay Market</strong> (saída Kinoplex) e a baixíssima liquidez. Sem alavancagem.",
+    "resumo": "VSHO11 é um <strong class=\"text-emerald-400\">FII de shopping centers</strong> com 3 ativos, gerido pela Tivio Capital. O <strong class=\"text-emerald-400\">DY médio 12M de 11,30%</strong> e o <strong class=\"text-emerald-400\">desconto de 32% no P/VP</strong> são atrativos, com rentabilidade de 36,1% nos últimos 12 meses. A taxa de 0,75% a.a. sem performance é uma das mais competitivas. Os desafios são a <strong class=\"text-amber-400\">vacância de 22,3% e inadimplência de 14,3% no Bay Market</strong>, a troca da administradora dos shoppings em andamento e a baixa liquidez. Sem alavancagem.",
     "paraQuem": [
       "Investidores que buscam <strong class=\"text-emerald-400\">DY elevado em shopping centers</strong> (14,89%)",
       "Perfil <strong class=\"text-emerald-400\">arrojado</strong> que aceita baixa liquidez e concentração",
@@ -490,7 +513,6 @@
   },
   "dividendos": {
     "chartLabels": [
-      "Jan/25",
       "Fev/25",
       "Mar/25",
       "Abr/25",
@@ -501,10 +523,10 @@
       "Set/25",
       "Out/25",
       "Nov/25",
-      "Dez/25"
+      "Dez/25",
+      "Jan/26"
     ],
     "chartData": [
-      0.65,
       0.65,
       0.6,
       0.6,
@@ -515,7 +537,8 @@
       0.6,
       0.7,
       0.8,
-      0.95
+      0.95,
+      0.68
     ],
     "chartCor": "#10b981",
     "chartYMin": 0.3,
@@ -523,32 +546,37 @@
     "totaisAnuais": [
       {
         "ano": "DY Anualizado",
-        "valor": "14,89%",
+        "valor": "10,53%",
+        "cor": "emerald"
+      },
+      {
+        "ano": "DY Médio 12M",
+        "valor": "11,30%",
         "cor": "emerald"
       },
       {
         "ano": "Rent. 12M",
-        "valor": "26,7%",
+        "valor": "36,1%",
         "cor": "emerald"
       },
       {
-        "ano": "Resultado Dez/25",
-        "valor": "R$ 0,69/cota"
+        "ano": "Resultado Jan/26",
+        "valor": "R$ 0,71/cota"
       },
       {
         "ano": "Reserva Caixa",
-        "valor": "R$ 0,25/cota"
+        "valor": "R$ 0,28/cota"
       },
       {
-        "ano": "Distribuição Dez",
-        "valor": "R$ 0,95/cota",
+        "ano": "Distribuição Jan",
+        "valor": "R$ 0,68/cota",
         "destaque": true
       }
     ],
     "guidance": {
-      "periodo": "Semestral",
-      "faixa": "~100% do resultado semestral",
-      "unidade": "distribuído ao final"
+      "periodo": "Mensal",
+      "faixa": "95-100% do resultado financeiro",
+      "unidade": "pago no 6º dia útil do mês seguinte"
     },
     "stats": [
       {
@@ -561,8 +589,8 @@
         "valor": "R$ 0,46"
       },
       {
-        "label": "Resultado Ano",
-        "valor": "R$ 17,5 Mi"
+        "label": "Resultado 12M",
+        "valor": "R$ 16,1 Mi"
       },
       {
         "label": "Primeiro Dividendo",
@@ -577,26 +605,26 @@
   },
   "valuation": {
     "pvp": {
-      "valor": "0,67",
-      "descricao": "Cota negociada com <span class=\"text-emerald-400\">desconto expressivo de 33%</span> sobre o valor patrimonial. Reavaliação anual dos imóveis impactou +9,27% na cota patrimonial",
+      "valor": "0,68",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">desconto de 32%</span> sobre o valor patrimonial. VP ajustado para R$ 114,38 em janeiro/2026",
       "detalhes": [
         {
           "label": "VP/Cota",
-          "valor": "R$ 115,15"
+          "valor": "R$ 114,38"
         },
         {
           "label": "Preço",
-          "valor": "R$ 76,58",
+          "valor": "R$ 77,50",
           "cor": "emerald"
         }
       ]
     },
     "spread": {
-      "valor": "26,7%",
+      "valor": "36,1%",
       "label": "Rentabilidade 12M",
       "cor": "emerald",
       "descricao": "Retorno total considerando dividendos e valorização das cotas nos últimos 12 meses",
-      "detalhe": "VSHO11 (26,7%) vs IFIX (21,1%) vs CDI Líquido (12,2%)"
+      "detalhe": "VSHO11 (36,1%) vs IFIX (27,8%) vs CDI Líquido (12,3%)"
     },
     "recomendacoes": {
       "valor": "0,75%",
@@ -608,33 +636,33 @@
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-amber-400\">VSHO11</strong> é um FII de shopping centers com 3 ativos no interior de São Paulo, administrado pela Tivio Capital. O <strong class=\"text-emerald-400\">DY de 14,89%</strong> e o <strong class=\"text-emerald-400\">desconto de 33% no P/VP</strong> são significativos, refletindo tanto oportunidade quanto riscos. A rentabilidade de 26,7% nos últimos 12 meses supera o IFIX e o CDI líquido.",
-      "Os Shoppings <strong class=\"text-emerald-400\">Hortolândia e Valinhos</strong> apresentam crescimento consistente de 5,7% e 5,9% acima da inflação no acumulado do ano. O principal desafio é o <strong class=\"text-amber-400\">Shopping Bay Market</strong>, que enfrenta vacância de 22% após a saída do cinema Kinoplex em setembro/2025. A equipe de gestão está prospectando novos locatários.",
-      "A <strong class=\"text-emerald-400\">taxa de 0,75% sem performance</strong> é uma das mais competitivas do segmento, e o fundo não possui alavancagem. Porém, a <strong class=\"text-red-400\">baixíssima liquidez</strong> (R$ 22 mil/dia, 2.947 cotistas) é o principal fator limitante para novos investidores."
+      "O <strong class=\"text-amber-400\">VSHO11</strong> é um FII de shopping centers com 3 ativos, administrado pela Tivio Capital. A <strong class=\"text-emerald-400\">rentabilidade de 36,1% nos últimos 12 meses</strong> supera o IFIX (27,8%) e o CDI líquido (12,3%). O <strong class=\"text-emerald-400\">desconto de 32% no P/VP</strong> e o DY médio 12M de 11,30% continuam atrativos.",
+      "Os Shoppings <strong class=\"text-emerald-400\">Hortolândia e Valinhos</strong> apresentam crescimento real de NOI de 6,4% e 6,5% no acumulado de 2025, com vacância controlada (1,4% e 8,5%). O <strong class=\"text-amber-400\">Shopping Bay Market</strong> segue como principal desafio: vacância de 22,3% (saída Kinoplex) e inadimplência de 14,3% acima de 90 dias. Um <strong class=\"text-amber-400\">Fato Relevante</strong> de fevereiro/2026 informa tratativas para troca da empresa que administra os shoppings.",
+      "A <strong class=\"text-emerald-400\">taxa de 0,75% sem performance</strong> é uma das mais competitivas do segmento, e o fundo não possui alavancagem. A <strong class=\"text-red-400\">baixa liquidez</strong> (R$ 28 mil/dia, 2.933 cotistas) permanece como principal fator limitante."
     ],
     "pontosFortes": [
-      "DY 14,89% com desconto 33% no P/VP",
-      "Rentabilidade 26,7% em 12M (acima IFIX)",
+      "Rentabilidade 36,1% em 12M (acima IFIX 27,8%)",
+      "Desconto 32% no P/VP (cota R$ 77,50 vs VP R$ 114,38)",
+      "DY médio 12M de 11,30%",
       "Taxa 0,75% sem performance (competitiva)",
       "Zero alavancagem",
-      "Hortolândia e Valinhos crescem acima da inflação",
-      "Reavaliação patrimonial +9,27%",
+      "Hortolândia e Valinhos: NOI +6,4% e +6,5% acum. 2025",
       "Auditado por PwC"
     ],
     "pontosDeAtencao": [
-      "Baixíssima liquidez (R$ 22 mil/dia)",
-      "Apenas 2.947 cotistas",
-      "Bay Market: vacância 22% (saída Kinoplex)",
+      "Bay Market: vacância 22,3% + inadimplência 14,3%",
+      "Troca da administradora dos shoppings em andamento",
+      "Baixa liquidez (R$ 28 mil/dia)",
+      "Apenas 2.933 cotistas",
       "Concentração em 3 shoppings regionais",
-      "Dividendos sazonais (variação jan-dez)",
-      "Shoppings de cidades menores (risco regional)",
-      "Obras da prefeitura impactaram Bay Market"
+      "Dividendos sazonais (R$ 0,46 a R$ 0,99)",
+      "Inadimplência acumulada 2025 cresceu 254% vs 2024"
     ],
-    "conclusaoFinal": "O VSHO11 é para investidores com <strong class=\"text-emerald-400\">perfil arrojado</strong> que aceitam baixa liquidez e concentração em shoppings regionais. O <strong class=\"text-emerald-400\">DY de 14,89%, o desconto de 33% no P/VP e a taxa competitiva de 0,75%</strong> são atrativos relevantes. O principal monitoramento deve ser sobre a <strong class=\"text-amber-400\">reocupação do Bay Market</strong> e a evolução da vacância. Para quem já possui, recomendação de <strong class=\"text-amber-400\">MANTER</strong> acompanhando os resultados operacionais mensais."
+    "conclusaoFinal": "O VSHO11 é para investidores com <strong class=\"text-emerald-400\">perfil arrojado</strong> que aceitam baixa liquidez e concentração. O <strong class=\"text-emerald-400\">retorno de 36,1% em 12M, o desconto de 32% no P/VP e a taxa de 0,75%</strong> são atrativos relevantes. Os principais monitoramentos são: (1) conclusão da <strong class=\"text-amber-400\">troca da administradora dos shoppings</strong>, (2) <strong class=\"text-amber-400\">reocupação e inadimplência do Bay Market</strong>, e (3) sustentabilidade do resultado. Para quem já possui, recomendação de <strong class=\"text-amber-400\">MANTER</strong>."
   },
   "footer": {
-    "dataAnalise": "24/02/2026",
-    "totalDocumentos": 402,
+    "dataAnalise": "14/04/2026",
+    "totalDocumentos": 407,
     "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }
 }

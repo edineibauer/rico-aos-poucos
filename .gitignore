@@ -4,3 +4,12 @@ package-lock.json
 .DS_Store
 .idea/
 documentos
+
+# pipeline Fundos.NET
+data/fiis/.backups/
+data/fundosnet-log/
+data/fundosnet-seen.json
+data/fundosnet-orfaos.json
+scripts/spike-fundosnet/output/
+__pycache__/
+*.pyc

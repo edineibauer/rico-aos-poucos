@@ -356,7 +356,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderGestora() {
         const g = this.data.gestora;
-        if (!g) return '';
+        if (!g || !Array.isArray(g.stats) || g.stats.length === 0) return '';
 
         // Stats grid
         let statsHtml = '';
@@ -424,7 +424,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderTaxas() {
         const t = this.data.taxas;
-        if (!t) return '';
+        if (!t || !Array.isArray(t.itens) || t.itens.length === 0) return '';
 
         const glowCor = t.glowCor || 'green';
 
@@ -645,7 +645,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderPortfolio() {
         const p = this.data.portfolio;
-        if (!p) return '';
+        if (!p || !Array.isArray(p.stats) || p.stats.length === 0) return '';
 
         // Stats
         let statsHtml = '';
@@ -982,7 +982,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderTimeline() {
         const t = this.data.timeline;
-        if (!t) return '';
+        if (!t || !Array.isArray(t.periodos) || t.periodos.length === 0) return '';
 
         // Periodos
         let periodosHtml = '';
@@ -1075,7 +1075,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderTese() {
         const t = this.data.tese;
-        if (!t) return '';
+        if (!t || !Array.isArray(t.paraQuem) || !Array.isArray(t.naoParaQuem)) return '';
 
         // Para quem serve
         let paraQuemHtml = '';
@@ -1143,7 +1143,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderDividendos() {
         const div = this.data.dividendos;
-        if (!div) return '';
+        if (!div || !Array.isArray(div.totaisAnuais) || !Array.isArray(div.stats)) return '';
 
         // Totais anuais
         let totaisHtml = '';
@@ -1219,7 +1219,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderValuation() {
         const v = this.data.valuation;
-        if (!v) return '';
+        if (!v || !v.pvp) return '';
 
         // PVP card
         let pvpDetalhesHtml = '';
@@ -1290,7 +1290,7 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderConclusao() {
         const c = this.data.conclusao;
-        if (!c) return '';
+        if (!c || !Array.isArray(c.paragrafos) || !Array.isArray(c.pontosFortes) || !Array.isArray(c.pontosDeAtencao)) return '';
 
         // Paragrafos
         let paragrafosHtml = '';

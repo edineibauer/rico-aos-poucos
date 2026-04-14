@@ -1,0 +1,704 @@
+{
+  "ultimaAtualizacao": "2026-04-14",
+  "total": 87,
+  "com_cnpj": 41,
+  "sem_cnpj": 46,
+  "fundos": [
+    {
+      "ticker": "ABCP11",
+      "nome": "Grand Plaza Shopping FII",
+      "cnpj": "01.201.140/0001-90",
+      "segmento": "Shopping Center",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/abcp11.json"
+    },
+    {
+      "ticker": "AFHI11",
+      "nome": "AF Invest CRI FII",
+      "cnpj": "36.642.293/0001-58",
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/afhi11.json"
+    },
+    {
+      "ticker": "AIEC11",
+      "nome": "Arch Edifícios Corporativos FII",
+      "cnpj": null,
+      "segmento": "Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/aiec11.json"
+    },
+    {
+      "ticker": "ALMI11",
+      "nome": "Torre Almirante FII",
+      "cnpj": "07.122.725/0001-00",
+      "segmento": "Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/almi11.json"
+    },
+    {
+      "ticker": "ALZC11",
+      "nome": "Alianza Crédito Imobiliário FII",
+      "cnpj": null,
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/alzc11.json"
+    },
+    {
+      "ticker": "ALZM11",
+      "nome": "Alianza Multiestratégia FII",
+      "cnpj": "34.847.063/0001-08",
+      "segmento": "Multiestratégia (FoF + CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/alzm11.json"
+    },
+    {
+      "ticker": "ALZR11",
+      "nome": "Alianza Trust Renda Imobiliária FII",
+      "cnpj": null,
+      "segmento": "Híbrido",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/alzr11.json"
+    },
+    {
+      "ticker": "APTO11",
+      "nome": "Navi Residencial FII",
+      "cnpj": "42.432.327/0001-82",
+      "segmento": "Residencial",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/apto11.json"
+    },
+    {
+      "ticker": "ARRI11",
+      "nome": "Open K Ativos e Recebíveis Imobiliários FII",
+      "cnpj": null,
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/arri11.json"
+    },
+    {
+      "ticker": "BARI11",
+      "nome": "Barigui Recebíveis Imobiliários FII",
+      "cnpj": "29.267.567/0001-00",
+      "segmento": "Papel - CRI (Gestão Ativa)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bari11.json"
+    },
+    {
+      "ticker": "BBFO11",
+      "nome": "BB Fundo de Fundos Imobiliário",
+      "cnpj": null,
+      "segmento": "Fundo de Fundos (FoF)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bbfo11.json"
+    },
+    {
+      "ticker": "BBRC11",
+      "nome": "BB Renda Corporativa FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bbrc11.json"
+    },
+    {
+      "ticker": "BCFF11",
+      "nome": "BTG Pactual Fundo de Fundos FII",
+      "cnpj": null,
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bcff11.json"
+    },
+    {
+      "ticker": "BCIA11",
+      "nome": "Bradesco Carteira Imobiliária Ativa FII",
+      "cnpj": "20.216.935/0001-17",
+      "segmento": "Híbrido (FoF + CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bcia11.json"
+    },
+    {
+      "ticker": "BCRI11",
+      "nome": "Banestes Recebíveis Imobiliários FII",
+      "cnpj": "22.219.335/0001-38",
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bcri11.json"
+    },
+    {
+      "ticker": "BIME11",
+      "nome": "Brio Multiestratégia FII",
+      "cnpj": "41.081.356/0001-84",
+      "segmento": "Multiestratégia",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bime11.json"
+    },
+    {
+      "ticker": "BLMG11",
+      "nome": "BlueMacaw Fundo de Investimento Imobiliário",
+      "cnpj": null,
+      "segmento": "Multi-estratégia",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/blmg11.json"
+    },
+    {
+      "ticker": "BLMR11",
+      "nome": "VBI Renda+ FOF FII",
+      "cnpj": "36.368.869/0001-30",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/blmr11.json"
+    },
+    {
+      "ticker": "BNFS11",
+      "nome": "Banrisul Novas Fronteiras FII",
+      "cnpj": "15.570.431/0001-60",
+      "segmento": "Agências Bancárias",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bnfs11.json"
+    },
+    {
+      "ticker": "BPFF11",
+      "nome": "Brasil Plural Absoluto FoF FII",
+      "cnpj": "17.324.357/0001-28",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/bpff11.json"
+    },
+    {
+      "ticker": "BRCO11",
+      "nome": "Bresco Logística FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Logística",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/brco11.json"
+    },
+    {
+      "ticker": "BRCR11",
+      "nome": "BTG Pactual Corporate Office Fund",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/brcr11.json"
+    },
+    {
+      "ticker": "BROF11",
+      "nome": "BR Properties Corporate Offices FII",
+      "cnpj": "48.978.859/0001-04",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/brof11.json"
+    },
+    {
+      "ticker": "BTAL11",
+      "nome": "BTG Pactual Agro Logística FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Agro/Logística",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/btal11.json"
+    },
+    {
+      "ticker": "BTCI11",
+      "nome": "BTG Pactual Crédito Imobiliário FII",
+      "cnpj": "09.552.812/0001-14",
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/btci11.json"
+    },
+    {
+      "ticker": "BTCR11",
+      "nome": "BTG Pactual Crédito Imobiliário FII",
+      "cnpj": "29.787.928/0001-40",
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/btcr11.json"
+    },
+    {
+      "ticker": "BTLG11",
+      "nome": "BTG Pactual Logística FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Logística",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/btlg11.json"
+    },
+    {
+      "ticker": "BTRA11",
+      "nome": "BTG Pactual Terras Agricolas Fiagro",
+      "cnpj": null,
+      "segmento": "Fiagro - Terras Agricolas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/btra11.json"
+    },
+    {
+      "ticker": "CACR11",
+      "nome": "Cartesia Recebíveis Imobiliários FII",
+      "cnpj": "32.065.364/0001-46",
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cacr11.json"
+    },
+    {
+      "ticker": "CARE11",
+      "nome": "Brazilian Graveyard & Death Care Services FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Cemitérios e Serviços Funerários",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/care11.json"
+    },
+    {
+      "ticker": "CBOP11",
+      "nome": "Castello Branco Office Park FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cbop11.json"
+    },
+    {
+      "ticker": "CEOC11",
+      "nome": "CEO Cyrela Commercial Properties FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/ceoc11.json"
+    },
+    {
+      "ticker": "CNES11",
+      "nome": "Cenesp FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cnes11.json"
+    },
+    {
+      "ticker": "CPFF11",
+      "nome": "Capitânia Reit FOF FII",
+      "cnpj": "34.081.611/0001-23",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cpff11.json"
+    },
+    {
+      "ticker": "CPTS11",
+      "nome": "Capitânia Securities II FII",
+      "cnpj": "18.979.895/0001-13",
+      "segmento": "Papel Híbrido - CRI + FOF",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cpts11.json"
+    },
+    {
+      "ticker": "CRFF11",
+      "nome": "Caixa Rio Bravo FoF FII",
+      "cnpj": "31.887.401/0001-39",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/crff11.json"
+    },
+    {
+      "ticker": "CXAG11",
+      "nome": "Caixa Agencias FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Agencias Bancarias",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cxag11.json"
+    },
+    {
+      "ticker": "CXCI11",
+      "nome": "Caixa Carteira Imobiliaria FII",
+      "cnpj": "42.066.916/0001-94",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cxci11.json"
+    },
+    {
+      "ticker": "CXCO11",
+      "nome": "Caixa Corporativo FII",
+      "cnpj": "38.658.984/0001-75",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cxco11.json"
+    },
+    {
+      "ticker": "CXRI11",
+      "nome": "Caixa Rio Bravo Fundo de Fundos FII",
+      "cnpj": "17.098.794/0001-70",
+      "segmento": "Fundo de Fundos (FOF)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cxri11.json"
+    },
+    {
+      "ticker": "CXTL11",
+      "nome": "Caixa Seq Logistica Renda FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Logistica/Industrial",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cxtl11.json"
+    },
+    {
+      "ticker": "CYCR11",
+      "nome": "Cyrela Crédito Imobiliário FII",
+      "cnpj": "36.501.233/0001-15",
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/cycr11.json"
+    },
+    {
+      "ticker": "DEVA11",
+      "nome": "Devant Recebíveis Imobiliários FII",
+      "cnpj": "37.087.810/0001-37",
+      "segmento": "Papel - CRI High Yield",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/deva11.json"
+    },
+    {
+      "ticker": "DVFF11",
+      "nome": "Devant FoF FII",
+      "cnpj": "39.863.059/0001-49",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/dvff11.json"
+    },
+    {
+      "ticker": "EDGA11",
+      "nome": "Edifício Galeria FII",
+      "cnpj": "15.333.306/0001-37",
+      "segmento": "Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/edga11.json"
+    },
+    {
+      "ticker": "EQIR11",
+      "nome": "EQI Recebíveis Imobiliários FII",
+      "cnpj": "41.076.380/0001-25",
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/eqir11.json"
+    },
+    {
+      "ticker": "EURO11",
+      "nome": "FII Europar",
+      "cnpj": null,
+      "segmento": "Tijolo - Logistica/Industrial",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/euro11.json"
+    },
+    {
+      "ticker": "FAED11",
+      "nome": "Anhanguera Educacional FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Educacional",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/faed11.json"
+    },
+    {
+      "ticker": "FATN11",
+      "nome": "BRC Renda Corporativa FII",
+      "cnpj": "30.567.216/0001-02",
+      "segmento": "Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/fatn11.json"
+    },
+    {
+      "ticker": "FCFL11",
+      "nome": "Campus Faria Lima FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Educacional",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/fcfl11.json"
+    },
+    {
+      "ticker": "FIGS11",
+      "nome": "General Shopping Ativo e Renda FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Shopping Centers",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/figs11.json"
+    },
+    {
+      "ticker": "FIIB11",
+      "nome": "Industrial do Brasil FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Industrial/Logística",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/fiib11.json"
+    },
+    {
+      "ticker": "FLCR11",
+      "nome": "Faria Lima Capital Recebíveis Imobiliários I FII",
+      "cnpj": "33.884.145/0001-51",
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/flcr11.json"
+    },
+    {
+      "ticker": "FLMA11",
+      "nome": "Continental Square Faria Lima FII",
+      "cnpj": "04.141.645/0001-03",
+      "segmento": "Híbrido (Lajes Corporativas + Hotel)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/flma11.json"
+    },
+    {
+      "ticker": "FLRP11",
+      "nome": "Hedge Floripa Shopping FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Shopping Center",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/flrp11.json"
+    },
+    {
+      "ticker": "FPAB11",
+      "nome": "FII Projeto Água Branca",
+      "cnpj": null,
+      "segmento": "Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/fpab11.json"
+    },
+    {
+      "ticker": "FVPQ11",
+      "nome": "Via Parque Shopping FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Shopping Center",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/fvpq11.json"
+    },
+    {
+      "ticker": "GAME11",
+      "nome": "Guardian Multiestratégia Imobiliária I FII",
+      "cnpj": null,
+      "segmento": "Papel - Híbrido (CRI + FII)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/game11.json"
+    },
+    {
+      "ticker": "GARE11",
+      "nome": "Guardian Real Estate FII",
+      "cnpj": null,
+      "segmento": "Híbrido",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/gare11.json"
+    },
+    {
+      "ticker": "GCFF11",
+      "nome": "Galapagos Fundo de Fundos FII",
+      "cnpj": null,
+      "segmento": "Fundo de Fundos (FOF)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/gcff11.json"
+    },
+    {
+      "ticker": "GCRI11",
+      "nome": "Galapagos Recebíveis Imobiliários FII",
+      "cnpj": null,
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/gcri11.json"
+    },
+    {
+      "ticker": "GGRC11",
+      "nome": "GGR Covepi Renda FII",
+      "cnpj": null,
+      "segmento": "Logístico/Industrial",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/ggrc11.json"
+    },
+    {
+      "ticker": "GLOG11",
+      "nome": "Genial Logística FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Logística",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/glog11.json"
+    },
+    {
+      "ticker": "GTWR11",
+      "nome": "FII Green Towers",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/gtwr11.json"
+    },
+    {
+      "ticker": "HABT11",
+      "nome": "Habitat Recebíveis Pulverizados FII",
+      "cnpj": "30.578.417/0001-05",
+      "segmento": "Papel - CRI Pulverizado",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/habt11.json"
+    },
+    {
+      "ticker": "HBRH11",
+      "nome": "V2 Multi Renda FII",
+      "cnpj": "30.871.698/0001-81",
+      "segmento": "Tijolo - Multicategoria",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hbrh11.json"
+    },
+    {
+      "ticker": "HCHG11",
+      "nome": "Hectare Recebíveis High Grade FII",
+      "cnpj": null,
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hchg11.json"
+    },
+    {
+      "ticker": "HCRI11",
+      "nome": "FII Hospital da Criança",
+      "cnpj": null,
+      "segmento": "Tijolo - Hospital",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hcri11.json"
+    },
+    {
+      "ticker": "HCTR11",
+      "nome": "Hectare CE FII",
+      "cnpj": "30.248.180/0001-96",
+      "segmento": "Papel - CRI High Yield",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hctr11.json"
+    },
+    {
+      "ticker": "HFOF11",
+      "nome": "Hedge TOP FOFII 3 FII",
+      "cnpj": "18.307.582/0001-19",
+      "segmento": "Fundo de Fundos (FoF)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hfof11.json"
+    },
+    {
+      "ticker": "HGBS11",
+      "nome": "Hedge Brasil Shopping FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Shopping Centers",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hgbs11.json"
+    },
+    {
+      "ticker": "HGCR11",
+      "nome": "Pátria Recebíveis Imobiliários FII",
+      "cnpj": "11.160.521/0001-22",
+      "segmento": "Crédito (CRI)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hgcr11.json"
+    },
+    {
+      "ticker": "HGFF11",
+      "nome": "Patria Multi FoF FII",
+      "cnpj": "32.784.898/0001-22",
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hgff11.json"
+    },
+    {
+      "ticker": "HGLG11",
+      "nome": "Patria Log FII",
+      "cnpj": null,
+      "segmento": "Logistica",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hglg11.json"
+    },
+    {
+      "ticker": "HGPO11",
+      "nome": "Patria Edifícios Corporativos FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas (em liquidação)",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hgpo11.json"
+    },
+    {
+      "ticker": "HGRE11",
+      "nome": "Patria Escritórios FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hgre11.json"
+    },
+    {
+      "ticker": "HGRU11",
+      "nome": "Patria Renda Urbana FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Renda Urbana",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hgru11.json"
+    },
+    {
+      "ticker": "HLOG11",
+      "nome": "Hedge Logística FII",
+      "cnpj": "27.486.542/0001-72",
+      "segmento": "Tijolo - Logística",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hlog11.json"
+    },
+    {
+      "ticker": "HOFC11",
+      "nome": "Hedge Office Income FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Lajes Corporativas",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hofc11.json"
+    },
+    {
+      "ticker": "HOSI11",
+      "nome": "Housi FII",
+      "cnpj": null,
+      "segmento": "Tijolo - Desenvolvimento Residencial",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/hosi11.json"
+    },
+    {
+      "ticker": "KFOF11",
+      "nome": "Kinea FOF FII",
+      "cnpj": null,
+      "segmento": "Fundo de Fundos",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/kfof11.json"
+    },
+    {
+      "ticker": "KISU11",
+      "nome": "Kinea Suno Income FII",
+      "cnpj": null,
+      "segmento": "Papel/Hibrido",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/kisu11.json"
+    },
+    {
+      "ticker": "MFII11",
+      "nome": "Mérito Desenvolvimento Imobiliário I FII",
+      "cnpj": null,
+      "segmento": "Desenvolvimento",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/mfii11.json"
+    },
+    {
+      "ticker": "OUJP11",
+      "nome": "Ourinvest JPP FII",
+      "cnpj": "26.091.656/0001-50",
+      "segmento": "Papel - CRI",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/oujp11.json"
+    },
+    {
+      "ticker": "TGAR11",
+      "nome": "TG Ativo Real FII",
+      "cnpj": "25.032.881/0001-53",
+      "segmento": "Desenvolvimento / Multiestratégia",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/tgar11.json"
+    },
+    {
+      "ticker": "VGIP11",
+      "nome": "Valora CRI Índice de Preços FII",
+      "cnpj": "34.197.811/0001-46",
+      "segmento": "Papel - CRI IPCA+",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/vgip11.json"
+    },
+    {
+      "ticker": "VSHO11",
+      "nome": "Votorantim Shopping FII",
+      "cnpj": "23.740.595/0001-17",
+      "segmento": "Tijolo - Shopping Centers",
+      "cobertura": "ativa",
+      "arquivoJson": "data/fiis/vsho11.json"
+    }
+  ]
+}

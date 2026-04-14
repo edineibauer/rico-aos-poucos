@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Admin — Pipeline Fundos.NET</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <style>
+    body { font-family: Inter, -apple-system, system-ui, sans-serif; padding: 24px; max-width: 1100px; margin: 0 auto; }
+    h1 { font-size: 1.5rem; margin-bottom: 4px; }
+    .sub { color: var(--text-muted); margin-bottom: 24px; font-size: 0.9rem; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 24px; }
+    .card { background: rgba(255,255,255,0.04); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px; }
+    .card .label { font-size: 0.75rem; color: var(--text-muted); text-transform: uppercase; letter-spacing: 0.05em; }
+    .card .valor { font-size: 1.6rem; font-weight: 600; margin-top: 4px; }
+    section { margin-top: 28px; }
+    section h2 { font-size: 1.1rem; margin-bottom: 10px; color: var(--text-primary); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    th, td { padding: 8px 10px; text-align: left; border-bottom: 1px solid var(--border-color); }
+    th { font-weight: 600; color: var(--text-muted); text-transform: uppercase; font-size: 0.7rem; letter-spacing: 0.05em; }
+    tr:hover { background: rgba(255,255,255,0.03); }
+    .pill { display: inline-block; padding: 2px 8px; border-radius: 10px; font-size: 0.7rem; font-weight: 500; }
+    .pill.ok { background: rgba(63,185,80,0.15); color: #3fb950; }
+    .pill.warn { background: rgba(217,155,40,0.15); color: #d99b28; }
+    .pill.err { background: rgba(248,81,73,0.15); color: #f85149; }
+    .pill.info { background: rgba(88,166,255,0.15); color: #58a6ff; }
+    .empty { color: var(--text-muted); padding: 20px; text-align: center; background: rgba(255,255,255,0.02); border-radius: 8px; }
+    details summary { cursor: pointer; padding: 6px 0; color: var(--text-muted); }
+    pre { background: rgba(0,0,0,0.3); padding: 12px; border-radius: 6px; overflow-x: auto; font-size: 0.8rem; }
+  </style>
+</head>
+<body>
+  <h1>Pipeline Fundos.NET</h1>
+  <p class="sub">Monitoramento do sistema de ingestão automática · atualiza a cada refresh</p>
+
+  <div class="grid" id="cards"></div>
+
+  <section>
+    <h2>Últimas execuções</h2>
+    <div id="execucoes"></div>
+  </section>
+
+  <section>
+    <h2>FIIs atualizados recentemente</h2>
+    <div id="fiis-recentes"></div>
+  </section>
+
+  <section>
+    <h2>Artigos publicados automaticamente</h2>
+    <div id="artigos-auto"></div>
+  </section>
+
+  <section>
+    <h2>Mapa pregão → ticker</h2>
+    <div id="mapa-stats"></div>
+  </section>
+
+  <script>
+    const fmtNum = n => (n ?? 0).toLocaleString('pt-BR');
+    const fmtDt = s => s ? new Date(s).toLocaleString('pt-BR', {dateStyle:'short', timeStyle:'short'}) : '—';
+    const pill = (t, label) => `<span class="pill ${t}">${label}</span>`;
+
+    async function getJson(url) {
+      try { const r = await fetch(url, { cache: 'no-store' }); return r.ok ? r.json() : null; }
+      catch { return null; }
+    }
+
+    async function listDir(dir) {
+      // Sem backend — lista por convenção de datas recentes (últimos 30 dias)
+      const hoje = new Date();
+      const arquivos = [];
+      for (let i = 0; i < 30; i++) {
+        const d = new Date(hoje); d.setDate(d.getDate() - i);
+        const iso = d.toISOString().split('T')[0];
+        const url = `${dir}/${iso}.json`;
+        const data = await getJson(url);
+        if (data) arquivos.push({ dia: iso, execucoes: data });
+      }
+      return arquivos;
+    }
+
+    async function render() {
+      const [mapa, universo, artigos, logs] = await Promise.all([
+        getJson('../data/fundosnet-mapa.json'),
+        getJson('../data/fundosnet-universo.json'),
+        getJson('../data/artigos.json'),
+        listDir('../data/fundosnet-log'),
+      ]);
+
+      // Métricas agregadas
+      const todasExec = logs.flatMap(l => l.execucoes || []);
+      const totalExec = todasExec.length;
+      const totalFetched = todasExec.reduce((s, e) => s + (e.docs_fetched || 0), 0);
+      const totalNew = todasExec.reduce((s, e) => s + (e.docs_new || 0), 0);
+      const totalFiisUp = new Set(todasExec.flatMap(e => e.fiis_updated || [])).size;
+      const totalArtigos = todasExec.flatMap(e => e.articles_published || []).length;
+      const erros30d = todasExec.reduce((s, e) => s + (e.errors?.length || 0), 0);
+
+      const cards = document.getElementById('cards');
+      cards.innerHTML = [
+        ['Universo', `${universo?.total ?? 0} FIIs`],
+        ['Mapa', `${mapa?.total ?? 0} pregões`],
+        ['Execuções (30d)', fmtNum(totalExec)],
+        ['Docs processados', fmtNum(totalFetched)],
+        ['FIIs atualizados', fmtNum(totalFiisUp)],
+        ['Artigos publicados', fmtNum(totalArtigos)],
+        ['Erros (30d)', fmtNum(erros30d)],
+      ].map(([l, v]) => `<div class="card"><div class="label">${l}</div><div class="valor">${v}</div></div>`).join('');
+
+      // Execuções recentes
+      const ultimas = todasExec.slice(-10).reverse();
+      document.getElementById('execucoes').innerHTML = ultimas.length ? `
+        <table>
+          <thead><tr><th>Quando</th><th>Docs</th><th>Novos</th><th>FIIs atualizados</th><th>Artigos</th><th>Erros</th><th>Duração</th></tr></thead>
+          <tbody>${ultimas.map(e => {
+            const dur = e.finished_at && e.started_at ? ((new Date(e.finished_at) - new Date(e.started_at)) / 1000).toFixed(0) + 's' : '—';
+            const errCount = e.errors?.length || 0;
+            return `<tr>
+              <td>${fmtDt(e.started_at)}</td>
+              <td>${fmtNum(e.docs_fetched)}</td>
+              <td>${fmtNum(e.docs_new)}</td>
+              <td>${(e.fiis_updated || []).length}</td>
+              <td>${(e.articles_published || []).length}</td>
+              <td>${errCount ? pill('err', errCount) : pill('ok', 0)}</td>
+              <td>${dur}</td>
+            </tr>`;
+          }).join('')}</tbody>
+        </table>` : `<div class="empty">Nenhuma execução registrada ainda.</div>`;
+
+      // FIIs atualizados
+      const fiisSet = new Set();
+      todasExec.forEach(e => (e.fiis_updated || []).forEach(t => fiisSet.add(t)));
+      const fiisList = [...fiisSet].sort();
+      document.getElementById('fiis-recentes').innerHTML = fiisList.length ? `
+        <div style="display:flex; flex-wrap:wrap; gap:6px;">
+          ${fiisList.map(t => `<a href="../fiis/${t.toLowerCase()}/" style="text-decoration:none">${pill('info', t)}</a>`).join('')}
+        </div>` : `<div class="empty">Nenhum FII atualizado pelo pipeline ainda.</div>`;
+
+      // Artigos automáticos
+      const artigosAuto = (artigos?.artigos || []).filter(a => a.origem === 'fundosnet-automatico').slice(0, 15);
+      document.getElementById('artigos-auto').innerHTML = artigosAuto.length ? `
+        <table>
+          <thead><tr><th>Data</th><th>Título</th><th>Tags</th></tr></thead>
+          <tbody>${artigosAuto.map(a => `
+            <tr>
+              <td>${a.dataPublicacao}</td>
+              <td><a href="../${a.url}">${a.titulo}</a></td>
+              <td>${(a.tags || []).map(t => pill('info', t)).join(' ')}</td>
+            </tr>`).join('')}</tbody>
+        </table>` : `<div class="empty">Nenhum artigo publicado pelo pipeline ainda.</div>`;
+
+      // Mapa stats
+      document.getElementById('mapa-stats').innerHTML = mapa ? `
+        <p>${mapa.total} pregões mapeados · janela de ${mapa.janelaDias} dias · atualizado em ${mapa.ultimaAtualizacao}</p>
+        <details><summary>Ver primeiros 20</summary><pre>${Object.entries(mapa.mapa).slice(0, 20).map(([k, v]) => `${k.padEnd(25)} → ${v.ticker}`).join('\n')}</pre></details>
+      ` : `<div class="empty">Mapa ainda não gerado.</div>`;
+    }
+
+    render();
+  </script>
+</body>
+</html>

@@ -2,26 +2,28 @@
   "meta": {
     "ticker": "ARRI11",
     "nome": "Open K Ativos e Recebíveis Imobiliários FII",
-    "segmento": "Crédito (CRI)",
+    "segmento": "Papel - Híbrido / Recebíveis",
     "badges": [
-      "High Yield",
+      "High Yield (84% da carteira)",
       "Carrego IPCA+11,60%",
-      "133% CDI"
+      "133% CDI (Dez/25)",
+      "CRI Ipatinga Inadimplente"
     ],
     "sentimento": "neutro",
-    "dataAnalise": "14/04/2026"
+    "dataAnalise": "15/04/2026",
+    "totalDocumentos": 576
   },
   "seo": {
-    "title": "ARRI11: Análise Completa - Open K Recebíveis Imobiliários FII | Rico aos Poucos",
-    "description": "Análise detalhada do ARRI11 (Open K Ativos e Recebíveis Imobiliários). Cotação R$ 6,80, DY 15,77%, P/VP 0,81. Recomendação MANTER. Nota 6,5/10.",
-    "keywords": "ARRI11, Open K, FII crédito, CRI, análise ARRI11, dividend yield ARRI11, high yield FII, Open Kapital",
+    "title": "ARRI11 - Análise Completa | Open K Recebíveis Imobiliários FII",
+    "description": "Análise completa do FII ARRI11 baseada em 576 documentos oficiais. Fundo de crédito high yield com carrego IPCA+11,60%, DY 15,77%, P/VP 0,81. Portfólio de 20 CRIs em 8 estados, 84% high yield. Gestor: Open Kapital.",
+    "keywords": "ARRI11, Open K, Open Kapital, FII crédito, CRI, análise ARRI11, dividend yield ARRI11, high yield FII, recebíveis imobiliários, IPCA+11,60",
     "ogTitle": "ARRI11 - Análise Completa do FII Open K Recebíveis Imobiliários 2026",
-    "ogDescription": "Análise detalhada do ARRI11: FII de crédito high yield com carrego IPCA+11,60%. DY 15,77%, P/VP 0,81. Portfólio de CRIs diversificado, histórico e projeções 2026.",
+    "ogDescription": "Análise detalhada do ARRI11: FII de crédito high yield com carrego IPCA+11,60%. DY 15,77%, P/VP 0,81, 133% CDI. 20 CRIs em 8 estados e 5 setores. Resultado 2025: +121% vs 2024.",
     "twitterTitle": "ARRI11 - Análise Completa | FII Open K Recebíveis Imobiliários",
-    "twitterDescription": "Análise do ARRI11: carrego IPCA+11,60%, DY 15,77%, 133% do CDI. Portfólio, taxas e projeções 2026."
+    "twitterDescription": "Análise do ARRI11: carrego IPCA+11,60%, DY 15,77%, 133% CDI. 20 CRIs diversificados, R$ 175 Mi PL. Resultado 2025 dobrou vs 2024."
   },
   "indicadores": {
-    "cotacao": 6.8,
+    "cotacao": 6.80,
     "cotacaoData": "30/12/2025",
     "pvp": 0.81,
     "pvpDesconto": "19% de desconto",
@@ -31,13 +33,23 @@
     "patrimonioLiquido": "R$ 175 Mi",
     "vpCota": 8.36,
     "cotistas": 23698,
-    "cotasEmitidas": 20726973
+    "cotistasDetalhe": "20,73 milhões de cotas emitidas",
+    "ocupacao": null,
+    "wault": null,
+    "numImoveis": null,
+    "ablTotal": "N/D",
+    "numAtivos": 27,
+    "numCRIs": 20,
+    "cotasEmitidas": 20726973,
+    "carregoIPCA": "IPCA+11,60%",
+    "carregoCDI": "CDI+4,98%",
+    "pctCDI": "133%"
   },
   "recomendacao": {
     "nota": 6.5,
     "veredicto": "MANTER",
     "cor": "amber",
-    "resumo": "O <strong class=\"text-amber-400\">ARRI11</strong> é um FII de crédito high yield com <strong class=\"text-amber-400\">carrego médio de IPCA+11,60%</strong> e rendimento equivalente a <strong class=\"text-amber-400\">133% do CDI</strong> em dezembro/2025. O P/VP de 0,81 oferece desconto de 19% sobre o patrimônio, e o DY LTM de 15,77% é atrativo. O resultado líquido de 2025 (R$ 22,5M) mais que dobrou frente a 2024 (R$ 10,2M), sinalizando recuperação operacional. Porém, a <strong class=\"text-orange-400\">ressalva do auditor PwC</strong> persiste sobre o FIDC Diamante e o <strong class=\"text-orange-400\">CRI Ipatinga</strong> segue inadimplente. A 8ª emissão teve apenas 13% de adesão, mas o gestor espera cenário favorável com queda da Selic projetada para 12% em dez/2026."
+    "resumo": "O <strong class=\"text-amber-400\">ARRI11</strong> é um FII de crédito <strong class=\"text-amber-400\">high yield</strong> gerido pela Open Kapital, com <strong class=\"text-amber-400\">carrego médio de IPCA+11,60%</strong> e rendimento equivalente a <strong class=\"text-emerald-400\">133% do CDI</strong> em dezembro/2025. O P/VP de 0,81 oferece <strong class=\"text-emerald-400\">19% de desconto</strong> sobre o patrimônio, e o DY de 15,77% é atrativo. O resultado líquido de 2025 (R$ 22,5M) <strong class=\"text-emerald-400\">mais que dobrou</strong> frente a 2024 (R$ 10,2M), sinalizando forte recuperação. Porém, a <strong class=\"text-red-400\">ressalva do auditor PwC</strong> persiste sobre o FIDC Diamante (R$ 5,98M) e o <strong class=\"text-red-400\">CRI Ipatinga segue inadimplente</strong> desde jul/2022. A 8ª emissão teve apenas 13% de adesão, sinalizando cautela do mercado. Recomendação <strong class=\"text-amber-400\">MANTER</strong> com monitoramento ativo da qualidade de crédito."
   },
   "quickStats": [
     {
@@ -60,14 +72,14 @@
     {
       "label": "Cotistas",
       "valor": "23.698",
-      "detalhe": "Liquidez média R$ 250k/dia",
+      "detalhe": "Liquidez: R$ 250 mil/dia",
       "icone": "users",
       "corIcone": "purple"
     },
     {
-      "label": "Carrego",
-      "valor": "IPCA+11,60%",
-      "detalhe": "CDI+: 4,98%",
+      "label": "Preço Justo",
+      "valor": "R$ 8,36",
+      "detalhe": "P/VP 0,81 | 19% desconto",
       "detalheIcone": "arrowUp",
       "icone": "chart",
       "corIcone": "amber",
@@ -76,28 +88,38 @@
   ],
   "pontosAtencao": [
     {
-      "titulo": "CRI Ipatinga Inadimplente",
-      "descricao": "Desde julho/2022, o CRI Ipatinga está inadimplente. Saldo a mercado em dez/2025: R$ 2,02M (1,17% do PL). Garantias via penhora de lotes e aval dos sócios. Processo judicial em andamento.",
+      "titulo": "CRI Ipatinga Inadimplente desde Jul/2022",
+      "descricao": "O CRI Ipatinga está inadimplente desde julho/2022. Saldo a mercado em dez/2025: R$ 2,02 milhões (1,17% do PL). As garantias incluem penhora de lotes e aval dos sócios, com processo judicial em andamento. Resgate antecipado foi registrado em R$ 4,68 milhões, mas a recuperação depende do desfecho judicial.",
       "severidade": "red"
     },
     {
       "titulo": "Ressalva do Auditor PwC (2024)",
-      "descricao": "A PwC manteve opinião com ressalva nas demonstrações financeiras de 2024 por falta de demonstrações auditadas do FIDC Diamante (R$ 5,98M | 3,45% do PL em dez/2025). Não foi possível concluir sobre adequação do saldo desse investimento.",
+      "descricao": "A PricewaterhouseCoopers manteve opinião com ressalva nas demonstrações financeiras de 2024 por falta de demonstrações auditadas do FIDC Diamante (R$ 5,98 milhões | 3,45% do PL em dez/2025). Não foi possível concluir sobre a adequação do saldo deste investimento. A persistência da ressalva enfraquece a confiança na integridade contábil do fundo.",
       "severidade": "orange"
     },
     {
-      "titulo": "8ª Emissão com Baixa Adesão",
-      "descricao": "A 8ª emissão (nov/2024) teve apenas 13,1% de adesão: 1.080.087 cotas subscritas de 8.254.717 (R$ 9,45M de R$ 70M pretendidos). Período de subscrição estendido até maio/2025.",
+      "titulo": "8ª Emissão com Baixa Adesão (13%)",
+      "descricao": "A 8ª emissão (nov/2024) teve apenas 13,1% de adesão: 1.080.087 cotas subscritas de 8.254.717 ofertadas (R$ 9,45M de R$ 70M pretendidos). Preço de R$ 8,75 por cota (R$ 8,48 + R$ 0,27 custos). O período de subscrição foi estendido até maio/2025. A baixa adesão sinaliza cautela do mercado com o fundo.",
       "severidade": "amber"
+    },
+    {
+      "titulo": "Carteira 84% High Yield",
+      "descricao": "A carteira de CRIs é composta por 84,1% de operações classificadas como High Yield, 15,6% Middle Grade e apenas 0,4% High Grade. O carrego elevado (IPCA+11,60%) remunera o risco de crédito acima da média, mas amplia a exposição a eventos de inadimplência — como já ocorreu com o CRI Ipatinga.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Resultado 2025: Forte Recuperação",
+      "descricao": "O resultado líquido de 2025 totalizou R$ 22,5 milhões, mais que dobrando frente a 2024 (R$ 10,2M). A rentabilidade acumulada desde o IPO atingiu 94%, superando o CDI acumulado de 74% no mesmo período. O rendimento equivaleu a 133% do CDI bruto em dezembro/2025. No Q3/2025, o resultado financeiro trimestral foi de R$ 5,34 milhões (R$ 0,258/cota).",
+      "severidade": "emerald"
     }
   ],
   "gestora": {
     "nome": "Open Capital Gestão de Ativos (Open Kapital)",
-    "nota": 6.5,
+    "nota": 6,
     "notaLabel": "REGULAR",
     "stats": [
       {
-        "label": "No mercado",
+        "label": "No Mercado",
         "valor": "7+ anos"
       },
       {
@@ -105,67 +127,91 @@
         "valor": "R$ 175 Mi"
       },
       {
-        "label": "Taxa Total Estimada",
-        "valor": "~0,94% a.a.",
-        "cor": "amber"
+        "label": "Rent. Acum. IPO",
+        "valor": "+94%",
+        "cor": "emerald"
       }
     ],
-    "resumo": "A Open Capital (Open Kapital) é especializada em crédito imobiliário high yield. O ARRI11 foi constituído em novembro/2018 como Átrio REIT e passou por reestruturação CVM 175 em dezembro/2023. Em dezembro/2024, foi reclassificado como 'Papel - Híbrido'. O gestor projeta Selic a 12% em dez/2026, o que favoreceria a classe de ativos. A gestora modernizou seus sistemas de gestão e antecipou a publicação dos relatórios gerenciais a partir de set/2025.",
+    "resumo": "A <strong class=\"text-blue-400\">Open Capital (Open Kapital)</strong> é uma gestora especializada em <strong class=\"text-blue-400\">crédito imobiliário high yield</strong>. O ARRI11 foi constituído em novembro/2018 como Átrio REIT pela REIT Gestão de Ativos, passando por reestruturação CVM 175 em dezembro/2023 quando foi renomeado para Open K. O fundo é administrado pela <strong class=\"text-blue-400\">Oliveira Trust DTVM</strong> e auditado pela <strong class=\"text-amber-400\">PwC (com ressalva em 2024)</strong>. A gestora modernizou seus sistemas e antecipou a publicação dos relatórios gerenciais a partir de set/2025. O gestor projeta <strong class=\"text-emerald-400\">Selic a 12% em dez/2026</strong>, cenário que favoreceria a classe de ativos. A rentabilidade acumulada de <strong class=\"text-emerald-400\">94% desde o IPO</strong> superou o CDI (74%), demonstrando competência na seleção de crédito — embora com o ônus de um CRI inadimplente e uma ressalva de auditoria.",
     "link": "../../gestores/open-capital/"
   },
   "taxas": {
-    "subtitulo": "Competitivas no segmento high yield",
-    "glowCor": "green",
+    "subtitulo": "Competitivas na administração, mas com performance fee sobre CDI",
+    "glowCor": "yellow",
     "itens": [
       {
         "label": "Taxa de Administração",
         "valor": "0,14% a.a.",
-        "detalhe": "Competitiva",
+        "detalhe": "Oliveira Trust — competitiva",
         "corBorda": "emerald"
       },
       {
         "label": "Taxa de Gestão",
         "valor": "0,50% a.a.",
-        "detalhe": "Sobre PL médio",
+        "detalhe": "Open Kapital — sobre PL médio",
         "corBorda": "blue"
       },
       {
         "label": "Taxa de Performance",
-        "valor": "20%",
-        "detalhe": "Sobre o que exceder CDI",
+        "valor": "20% s/ CDI",
+        "detalhe": "Sobre o que exceder o CDI — impacto relevante em cenário de Selic alta",
         "corBorda": "amber"
       },
       {
         "label": "Escrituração",
         "valor": "0,30% a.a.",
-        "detalhe": "Máximo",
+        "detalhe": "Máximo contratado",
         "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Recebíveis / Híbridos",
+    "comparativo": [
+      {
+        "ticker": "ARRI11",
+        "taxa": "~0,94%",
+        "perf": "20% s/ CDI",
+        "destaque": true
+      },
+      {
+        "ticker": "KNCR11",
+        "taxa": "1,05%",
+        "perf": "Sem performance"
+      },
+      {
+        "ticker": "MCCI11",
+        "taxa": "0,95%",
+        "perf": "Sem performance"
+      },
+      {
+        "ticker": "HSAF11",
+        "taxa": "1,00%",
+        "perf": "20% s/ (4% a.a. ou 110% CDI)"
       }
     ],
     "detalhes": [
       {
         "label": "Administrador",
-        "valor": "Oliveira Trust DTVM"
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Open Capital Gestão de Ativos (Open Kapital)"
       },
       {
         "label": "Auditor",
         "valor": "PwC (com ressalva em 2024)"
-      },
-      {
-        "label": "IPO",
-        "valor": "Outubro/2019"
       }
     ]
   },
   "portfolio": {
     "stats": [
       {
-        "label": "CRIs (21 ativos)",
+        "label": "CRIs (20 operações)",
         "valor": "79,7%",
         "cor": "blue"
       },
       {
-        "label": "FIIs",
+        "label": "FIIs + FIDC",
         "valor": "18,3%",
         "cor": "purple"
       },
@@ -174,72 +220,182 @@
         "valor": "2,0%"
       },
       {
-        "label": "% do CDI",
-        "valor": "133%",
+        "label": "Carrego CRI",
+        "valor": "IPCA+11,60%",
+        "cor": "emerald"
+      },
+      {
+        "label": "% High Yield",
+        "valor": "84,1%",
+        "cor": "amber"
+      },
+      {
+        "label": "Estados",
+        "valor": "8",
         "cor": "emerald"
       }
     ],
     "tipologiaChart": {
       "labels": [
-        "CRIs",
+        "CRIs (IPCA+)",
+        "CRIs (CDI+)",
         "FIIs",
-        "Caixa"
+        "FIDC",
+        "Caixa / RF"
       ],
       "data": [
-        79.7,
-        18.3,
-        2.0
+        64,
+        16,
+        15,
+        3,
+        2
       ],
       "cores": [
-        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
         "#8b5cf6",
+        "#ec4899",
         "#6b7280"
       ]
     },
     "locatarioChart": {
       "labels": [
-        "IPCA+",
-        "CDI+"
+        "Incorporação",
+        "Loteamento",
+        "Corporativo",
+        "Logístico",
+        "Hotelaria"
       ],
       "data": [
-        81.2,
-        18.8
+        37,
+        27,
+        16,
+        10,
+        10
       ],
       "cores": [
+        "#3b82f6",
         "#10b981",
-        "#f59e0b"
+        "#f59e0b",
+        "#8b5cf6",
+        "#ec4899"
       ]
     },
-    "locatariosNota": {
-      "titulo": "Perfil de Risco e Portfólio",
-      "texto": "A carteira possui <strong class=\"text-amber-400\">84,1% de CRIs classificados como High Yield</strong>, 15,6% Middle Grade e 0,4% High Grade. Diversificação geográfica em 8 estados (SP 36,9%, RJ 29,4%, SC 13,0%, TO 8,7%, AM 4,7%, PR 3,1%, BA 2,8%, MG 1,4%) e 5 setores (Incorporação 37,4%, Loteamento 27,1%, Corporativo 15,9%, Logístico 10,3%, Hotelaria 9,2%). O fundo também investe 18,3% em FIIs e FIDCs (AROK11 11,89%, Diamante FIDC 3,45%, RECD11 1,43%, PSEC11 0,70%, ALZC11 0,63%, LIFE11 0,42%)."
-    }
+    "locatarios": [
+      {
+        "nome": "AROK (FII)",
+        "setor": "FII — Posição ilíquida",
+        "receita": "11,89%",
+        "rating": "N/D",
+        "ratingCor": "slate",
+        "risco": "Elevado (não listado)",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "CRI Opea (24C1733665)",
+        "setor": "Recebível Imobiliário",
+        "receita": "8,55%",
+        "rating": "High Yield",
+        "ratingCor": "amber",
+        "risco": "Adimplente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI True SEC (23B2365601)",
+        "setor": "Recebível Imobiliário",
+        "receita": "7,98%",
+        "rating": "High Yield",
+        "ratingCor": "amber",
+        "risco": "Adimplente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI True (21L0848411)",
+        "setor": "Recebível Imobiliário",
+        "receita": "7,39%",
+        "rating": "High Yield",
+        "ratingCor": "amber",
+        "risco": "Adimplente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Opea (22D0891481)",
+        "setor": "Recebível Imobiliário",
+        "receita": "6,49%",
+        "rating": "High Yield",
+        "ratingCor": "amber",
+        "risco": "Adimplente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FIDC Diamante",
+        "setor": "FIDC — Ressalva PwC",
+        "receita": "3,45%",
+        "rating": "Ressalva",
+        "ratingCor": "red",
+        "risco": "Atenção (sem auditoria)",
+        "riscoCor": "orange"
+      }
+    ],
+    "riscoResumo": [
+      {
+        "label": "CRIs Adimplentes",
+        "valor": "19 de 20",
+        "cor": "emerald"
+      },
+      {
+        "label": "CRI Inadimplente",
+        "valor": "1 (Ipatinga)",
+        "cor": "red"
+      },
+      {
+        "label": "FIDC com Ressalva",
+        "valor": "1 (Diamante)",
+        "cor": "orange"
+      },
+      {
+        "label": "FII Ilíquido (AROK)",
+        "valor": "11,89% do PL",
+        "cor": "amber"
+      }
+    ],
+    "riscoNota": "O portfólio do ARRI11 é composto por <strong class=\"text-blue-400\">20 operações de CRI</strong> (~79,7% dos ativos, R$ 138,4 Mi conforme informe trimestral Q3/2025), distribuídas por <strong class=\"text-emerald-400\">7+ securitizadoras</strong> (Opea 30%, True 31%, Virgo 19%, Travessia 16%, outras 4%) e <strong class=\"text-emerald-400\">8 estados</strong> (SP 36,9%, RJ 29,4%, SC 13%, TO 8,7%, AM 4,7%, PR 3,1%, BA 2,8%, MG 1,4%). A exposição setorial concentra-se em <strong class=\"text-blue-400\">Incorporação (37,4%)</strong>, Loteamento (27,1%), Corporativo (15,9%), Logístico (10,3%) e Hotelaria (9,2%). O perfil de risco é agressivo: <strong class=\"text-amber-400\">84,1% High Yield</strong>, 15,6% Middle Grade e apenas 0,4% High Grade. O carrego médio é de <strong class=\"text-emerald-400\">IPCA+11,60%</strong> e <strong class=\"text-emerald-400\">CDI+4,98%</strong>. O <strong class=\"text-red-400\">CRI Ipatinga</strong> (1,17% do PL) está inadimplente desde jul/2022 com processo judicial em andamento. Na carteira de FIIs (15,2%), o <strong class=\"text-amber-400\">AROK (não listado)</strong> domina com 11,89% do PL — risco de iliquidez relevante. O <strong class=\"text-red-400\">FIDC Diamante</strong> (3,45% do PL) é objeto de ressalva pela PwC por ausência de demonstrações auditadas. Demais posições de FII são listadas e de menor porte: RECD11 (1,43%), RVBI11 (0,69%), ALZC11 (0,62%), LIFE11 (0,60%), EDGA11 (0,03%). No Q3/2025, o resultado financeiro trimestral de R$ 5,34 milhões gerou fluxo de caixa robusto para sustentar a distribuição de R$ 0,09/cota/mês."
   },
   "timeline": {
-    "subtitulo": "Trajetória do ARRI11 / Open K",
+    "subtitulo": "De Átrio REIT a Open K Recebíveis",
     "periodos": [
       {
         "periodo": "Nov/2018",
         "label": "CONSTITUIÇÃO",
         "cor": "blue",
-        "descricao": "Constituição do fundo como Átrio REIT Recebíveis Imobiliários pela REIT Gestão de Ativos. Patrimônio inicial de R$ 39,2M com 392.374 cotas a R$ 100.",
-        "pontos": []
+        "descricao": "Constituição do fundo como Átrio REIT Recebíveis Imobiliários pela REIT Gestão de Ativos.",
+        "pontos": [
+          "Patrimônio inicial de R$ 39,2 milhões (392.374 cotas a R$ 100)",
+          "Foco em CRIs de crédito imobiliário",
+          "Administrador: Oliveira Trust DTVM S.A."
+        ]
       },
       {
         "periodo": "Out/2019",
         "label": "IPO",
         "cor": "emerald",
         "descricao": "IPO na B3 como Átrio REIT Recebíveis Imobiliários FII (ARRI11). Registro CVM em julho/2019.",
-        "pontos": []
+        "pontos": [
+          "Ticker ARRI11 listado na B3",
+          "Início da negociação no mercado secundário",
+          "Emissões subsequentes elevaram base para 20,73 Mi de cotas"
+        ]
       },
       {
         "periodo": "Jul/2022",
         "label": "INADIMPLÊNCIA",
         "cor": "red",
-        "descricao": "CRI Ipatinga entra em inadimplência. Valor provisionado: R$ 2,66M. Processo judicial iniciado.",
+        "descricao": "CRI Ipatinga entra em inadimplência — primeiro evento de crédito relevante do fundo.",
         "pontos": [
+          "<strong class=\"text-red-400\">Valor provisionado: R$ 2,66 milhões</strong>",
           "Garantias via penhora de lotes e aval dos sócios",
-          "Resgate antecipado registrado em R$ 4,68M"
+          "Resgate antecipado registrado em R$ 4,68 milhões",
+          "Processo judicial em andamento"
         ]
       },
       {
@@ -249,17 +405,20 @@
         "descricao": "Reestruturação CVM 175. Nome muda para Open K Ativos e Recebíveis Imobiliários FII.",
         "pontos": [
           "Eliminação da consultoria separada (REIT Consultoria)",
-          "Nova estrutura de gestão sob CVM 175"
+          "Nova estrutura de gestão sob CVM 175",
+          "Open Capital (Open Kapital) assume como gestora"
         ]
       },
       {
         "periodo": "Nov/2024",
         "label": "8ª EMISSÃO",
         "cor": "amber",
-        "descricao": "8ª emissão aprovada para até R$ 70M (8.254.717 novas cotas a R$ 8,48). Apenas 13,1% subscrito (R$ 9,45M). Período de subscrição estendido até maio/2025.",
+        "descricao": "8ª emissão aprovada para até R$ 70M, mas com adesão de apenas 13,1%.",
         "pontos": [
-          "Preço de subscrição: R$ 8,75 (R$ 8,48 + R$ 0,27 custos)",
-          "Coordenador líder: Genial Investimentos"
+          "8.254.717 cotas ofertadas a R$ 8,75 (R$ 8,48 + R$ 0,27 custos)",
+          "<strong class=\"text-amber-400\">Apenas 1.080.087 cotas subscritas (R$ 9,45M)</strong>",
+          "Coordenador líder: Genial Investimentos",
+          "Período de subscrição estendido até maio/2025"
         ]
       },
       {
@@ -267,34 +426,68 @@
         "label": "RECLASSIFICAÇÃO",
         "cor": "blue",
         "descricao": "Fundo reclassificado como 'Papel - Híbrido', gestão ativa, multicategoria, conforme normas B3.",
-        "pontos": []
+        "pontos": [
+          "Classificação Anbima: Papel — Híbrido",
+          "Segmento: Multicategoria",
+          "PwC mantém ressalva sobre FIDC Diamante"
+        ]
       },
       {
-        "periodo": "Dez/2025",
-        "label": "ATUAL",
+        "periodo": "2025",
+        "label": "RECUPERAÇÃO",
         "cor": "emerald",
-        "descricao": "Resultado líquido 2025 de R$ 22,5M (+121% vs 2024). ARRI11 com rentabilidade acumulada de 94% desde o IPO, vs 74% do CDI. Negociado a 81% do VP.",
+        "descricao": "Resultado líquido mais que dobra. Rentabilidade acumulada supera CDI desde o IPO.",
         "pontos": [
-          "<strong class=\"text-slate-400\">PL: R$ 175 Mi | VP/cota: R$ 8,36</strong>",
+          "<strong class=\"text-emerald-400\">Resultado líquido 2025: R$ 22,5M (+121% vs 2024)</strong>",
+          "<strong class=\"text-emerald-400\">Rentabilidade acumulada desde IPO: +94% (vs CDI +74%)</strong>",
           "Dividendo consistente de R$ 0,09/mês por 24+ meses",
-          "Gestor projeta Selic 12% em dez/2026 (início de queda no 1T26)"
+          "Rendimento equivalente a 133% do CDI bruto (dez/2025)",
+          "Q3/2025: Resultado financeiro R$ 5,34M (R$ 0,258/cota/trimestre)",
+          "Cotação: R$ 6,80 | VP/cota: R$ 8,36 | P/VP: 0,81",
+          "Gestor projeta Selic a 12% em dez/2026"
         ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória - NEUTRA:",
+      "texto": "O ARRI11 passou por transformações significativas desde sua constituição como Átrio REIT em 2018. A <strong class=\"text-amber-400\">inadimplência do CRI Ipatinga</strong> (jul/2022) e a <strong class=\"text-amber-400\">ressalva da PwC</strong> sobre o FIDC Diamante são marcas negativas. Por outro lado, a <strong class=\"text-emerald-400\">reestruturação CVM 175</strong> modernizou a governança e a <strong class=\"text-emerald-400\">forte recuperação do resultado em 2025</strong> (+121% vs 2024) demonstra capacidade de geração de valor. A rentabilidade acumulada de <strong class=\"text-emerald-400\">94% desde o IPO</strong> supera o CDI (74%), validando a estratégia high yield — embora o NAV tenha recuado de R$ 9,60 (2023) para R$ 8,36 (dez/2025), indicando consumo parcial do patrimônio."
+    },
+    "crescimento": [
+      {
+        "label": "Resultado 2025 vs 2024",
+        "valor": "+121%",
+        "detalhe": "R$ 22,5M vs R$ 10,2M"
+      },
+      {
+        "label": "Rent. Acum. IPO",
+        "valor": "+94%",
+        "detalhe": "vs CDI +74% no período"
+      },
+      {
+        "label": "Dividendo Mensal",
+        "valor": "R$ 0,09",
+        "detalhe": "Estável há 24+ meses"
+      },
+      {
+        "label": "NAV (VP/cota)",
+        "valor": "R$ 8,36",
+        "detalhe": "Queda de R$ 9,60 (2023) — atenção"
       }
     ]
   },
   "tese": {
-    "resumo": "ARRI11 é um <strong class=\"text-amber-400\">FII de crédito imobiliário high yield</strong> gerido pela Open Kapital, com foco em CRIs de lastro diversificado. O carrego da carteira de <strong class=\"text-amber-400\">IPCA+11,60%</strong> resulta em rendimentos equivalentes a <strong class=\"text-amber-400\">133% do CDI</strong> bruto (dez/2025). O DY LTM de 15,77% é atrativo, e o resultado líquido de 2025 mostrou forte recuperação (+121% vs 2024). O gestor espera início de queda da Selic no 1T26, o que deve favorecer os FIIs de crédito. Porém, a ressalva do auditor sobre o FIDC Diamante e o CRI Ipatinga inadimplente seguem como pontos de atenção.",
+    "resumo": "O ARRI11 é um <strong class=\"text-amber-400\">FII de crédito imobiliário high yield</strong> gerido pela Open Kapital, com foco em CRIs de lastro diversificado em 8 estados e 5 setores. O carrego da carteira de <strong class=\"text-emerald-400\">IPCA+11,60%</strong> resulta em rendimentos equivalentes a <strong class=\"text-emerald-400\">133% do CDI bruto</strong> (dez/2025). O DY de 15,77% e o desconto de 19% sobre o VP são atrativos. O resultado líquido de 2025 <strong class=\"text-emerald-400\">mais que dobrou</strong> frente a 2024 (R$ 22,5M vs R$ 10,2M). O gestor projeta Selic a 12% em dez/2026, cenário favorável para CRIs. Contudo, a <strong class=\"text-red-400\">inadimplência do CRI Ipatinga</strong>, a <strong class=\"text-amber-400\">ressalva da PwC</strong> e a <strong class=\"text-amber-400\">baixa adesão na 8ª emissão</strong> exigem monitoramento contínuo. O NAV em queda (R$ 9,60 → R$ 8,36) é preocupante.",
     "paraQuem": [
-      "Investidores <strong class=\"text-emerald-400\">moderados a arrojados</strong> que buscam renda mensal acima do CDI",
-      "Perfil que <strong class=\"text-emerald-400\">aceita risco de crédito</strong> high yield e volatilidade de NAV",
-      "Quem busca <strong class=\"text-emerald-400\">exposição a crédito imobiliário</strong> com carrego elevado (IPCA+11,60%)",
+      "Investidores <strong class=\"text-emerald-400\">moderados a arrojados</strong> que buscam renda mensal acima do CDI líquido",
+      "Perfil que <strong class=\"text-emerald-400\">aceita risco de crédito high yield</strong> e volatilidade de NAV em troca de carrego elevado",
+      "Quem busca <strong class=\"text-emerald-400\">exposição diversificada a CRIs</strong> em 8 estados e 5 setores imobiliários",
       "Investidores com <strong class=\"text-emerald-400\">foco em dividendos mensais</strong> consistentes (R$ 0,09/mês há 24+ meses)"
     ],
     "naoParaQuem": [
-      "Investidores <strong class=\"text-amber-400\">conservadores</strong> que não toleram risco de crédito high yield",
+      "Investidores <strong class=\"text-amber-400\">conservadores</strong> que não toleram risco de crédito high yield (84% da carteira)",
       "Quem busca <strong class=\"text-amber-400\">crescimento de patrimônio</strong> (NAV caiu de R$ 9,60 em 2023 para R$ 8,36)",
-      "Perfil que <strong class=\"text-amber-400\">exige auditoria limpa</strong> (PwC com ressalva sobre FIDC Diamante)",
-      "Investidores que <strong class=\"text-amber-400\">não acompanham fundos médios</strong> (R$ 175M de PL)"
+      "Perfil que <strong class=\"text-amber-400\">exige auditoria limpa</strong> (PwC com ressalva sobre FIDC Diamante desde 2024)",
+      "Quem precisa de <strong class=\"text-amber-400\">alta liquidez</strong> (volume médio de R$ 250 mil/dia)"
     ]
   },
   "dividendos": {
@@ -329,37 +522,67 @@
     "chartCor": "#10b981",
     "chartYMin": 0,
     "chartYMax": 0.12,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "N/D"
+      },
+      {
+        "ano": "2023",
+        "valor": "N/D"
+      },
+      {
+        "ano": "2024",
+        "valor": "~R$ 1,08 (est.)"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,08",
+        "cor": "emerald",
+        "destaque": true
+      },
+      {
+        "ano": "2026 (jan-abr)",
+        "valor": "~R$ 0,36 (est.)",
+        "cor": "blue"
+      }
+    ],
     "guidance": {
-      "periodo": "Projeção 2026",
+      "periodo": "2026",
       "faixa": "R$ 0,09 - R$ 0,10",
-      "unidade": "por cota/mês"
+      "unidade": "por cota/mês (projeção gestora)"
     },
     "stats": [
+      {
+        "label": "Meses Consecutivos",
+        "valor": "24+",
+        "cor": "emerald"
+      },
       {
         "label": "Dividendo Anual",
         "valor": "R$ 1,08",
         "cor": "emerald"
       },
       {
-        "label": "DY Dez/2025",
-        "valor": "1,31%"
-      },
-      {
-        "label": "Consistência",
-        "valor": "24+ meses estável",
-        "cor": "emerald"
-      },
-      {
         "label": "% CDI (Dez/25)",
         "valor": "133%",
         "cor": "emerald"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "15,77%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "blue"
       }
     ]
   },
   "valuation": {
     "pvp": {
       "valor": "0,81",
-      "descricao": "Cota negociada com <span class=\"text-emerald-400\">19% de desconto</span> sobre o valor patrimonial de R$ 8,36",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">19% de desconto</span> sobre o valor patrimonial de R$ 8,36. O desconto reflete a percepção de risco do mercado sobre a carteira high yield, a inadimplência do CRI Ipatinga e a ressalva da PwC.",
       "detalhes": [
         {
           "label": "VP/Cota",
@@ -369,54 +592,62 @@
           "label": "Preço",
           "valor": "R$ 6,80",
           "cor": "emerald"
+        },
+        {
+          "label": "VP Histórico (2023)",
+          "valor": "R$ 9,60",
+          "cor": "red"
         }
       ]
     },
     "spread": {
       "valor": "133%",
-      "label": "% CDI (Dez/25)",
+      "label": "% CDI bruto (Dez/25)",
       "cor": "emerald",
-      "descricao": "Rendimento distribuído equivalente a 133% do CDI bruto em dez/2025, com isenção de IR para PF"
+      "descricao": "Rendimento distribuído equivalente a 133% do CDI bruto em dezembro/2025, com isenção de IR para pessoa física. O carrego da carteira (IPCA+11,60%) oferece prêmio significativo sobre a NTN-B, mas com risco de crédito materialmente superior.",
+      "detalhe": "DY ARRI11 (15,77%) vs CDI Líquido (~12,75%) vs NTN-B 2035 (~7,3%)"
     },
     "recomendacoes": {
-      "valor": "15,77%",
-      "label": "DY LTM",
-      "cor": "blue",
-      "descricao": "Dividend yield últimos 12 meses, entre os maiores do segmento de recebíveis",
-      "detalhe": "DY anualizado: 16,96%"
+      "valor": "Desconto",
+      "label": "Posicionamento",
+      "cor": "amber",
+      "descricao": "O desconto de 19% sobre VP pode representar oportunidade se a qualidade de crédito se mantiver — mas o NAV em queda (R$ 9,60 → R$ 8,36) sugere que parte do desconto reflete deterioração real, não apenas mispricing.",
+      "detalhe": "HSAF11 (P/VP 0,88) e JSAF11 (P/VP 0,85) negociam com descontos menores"
     }
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-amber-400\">ARRI11</strong> encerrou 2025 com desempenho operacional consistente: dividendo estável de R$ 0,09/mês por 24+ meses consecutivos, DY LTM de 15,77% e carrego de IPCA+11,60%. O resultado líquido de 2025 (R$ 22,5M) mais que dobrou frente a 2024 (R$ 10,2M), evidenciando recuperação dos ganhos de capital na carteira de CRIs.",
-      "O P/VP de 0,81 oferece desconto de 19% sobre o patrimônio, e a cota acumulou rentabilidade de <strong class=\"text-emerald-400\">94% desde o IPO</strong> (incluindo dividendos), superando o CDI acumulado de 74% no mesmo período. O gestor projeta Selic a 12% em dez/2026, o que favoreceria a classe de fundos de recebíveis.",
-      "Entre os riscos, o <strong class=\"text-orange-400\">CRI Ipatinga permanece inadimplente</strong> desde jul/2022 (R$ 2,66M provisionados, 1,5% do PL). A <strong class=\"text-orange-400\">PwC manteve ressalva</strong> nas demonstrações de 2024 sobre o FIDC Diamante (R$ 5,8M, 3,3% do PL). A 8ª emissão teve apenas 13,1% de adesão, sinalizando cautela do mercado, embora o período de subscrição tenha sido estendido. A carteira concentra 84,1% em High Yield, o que implica maior risco de crédito."
+      "O <strong class=\"text-amber-400\">ARRI11</strong> é um FII de crédito imobiliário <strong class=\"text-amber-400\">high yield</strong> gerido pela Open Kapital (Open Capital), com patrimônio de R$ 175 milhões e portfólio de 27 ativos: 20 CRIs (79,7%), 6 FIIs (15,2%), 1 FIDC (3,5%) e caixa (1,6%). O fundo foi constituído em 2018 como Átrio REIT e passou por reestruturação CVM 175 em dezembro/2023, sendo renomeado para Open K Ativos e Recebíveis Imobiliários. A carteira de CRIs se distribui por <strong class=\"text-blue-400\">8 estados</strong> e <strong class=\"text-blue-400\">5 setores</strong> (Incorporação 37%, Loteamento 27%, Corporativo 16%, Logístico 10%, Hotelaria 9%), com carrego médio de <strong class=\"text-emerald-400\">IPCA+11,60%</strong> e <strong class=\"text-emerald-400\">CDI+4,98%</strong>.",
+      "O desempenho em 2025 foi o destaque: resultado líquido de <strong class=\"text-emerald-400\">R$ 22,5 milhões</strong> (+121% vs R$ 10,2M em 2024) e rendimento equivalente a <strong class=\"text-emerald-400\">133% do CDI bruto</strong> em dezembro. O dividendo de R$ 0,09/cota/mês se mantém estável há mais de 24 meses, resultando em DY de 15,77% sobre o preço de mercado (R$ 6,80) e 12,9% sobre o VP (R$ 8,36). A rentabilidade acumulada de <strong class=\"text-emerald-400\">94% desde o IPO</strong> supera o CDI acumulado de 74% no mesmo período. No Q3/2025, o resultado financeiro trimestral de R$ 5,34 milhões demonstrou capacidade de geração de caixa robusto e diversificado entre receitas de CRIs (R$ 4,2M), ajustes de valor (R$ 1,6M de ganhos realizados) e renda fixa (R$ 149 mil).",
+      "Os riscos, no entanto, são materiais e não devem ser subestimados. O <strong class=\"text-red-400\">CRI Ipatinga</strong> permanece inadimplente desde julho/2022 (R$ 2,02M, 1,17% do PL), com recuperação dependente de processo judicial. A <strong class=\"text-amber-400\">PwC manteve ressalva</strong> nas demonstrações de 2024 sobre o FIDC Diamante (R$ 5,98M, 3,45% do PL), por falta de demonstrações auditadas — um ponto que compromete a integridade contábil percebida. A <strong class=\"text-amber-400\">8ª emissão</strong> teve adesão de apenas 13,1% (R$ 9,45M de R$ 70M pretendidos), sinalizando ceticismo do mercado. A carteira concentra <strong class=\"text-amber-400\">84,1% em High Yield</strong>, amplificando o risco de crédito. O <strong class=\"text-amber-400\">NAV em queda</strong> (R$ 9,60 em 2023 → R$ 8,36 em dez/2025) indica consumo patrimonial parcial, possivelmente por provisões e marcações a mercado adversas.",
+      "O fundo também apresenta concentração na posição AROK (11,89% do PL), um FII aparentemente não listado cuja avaliação é opaca. A diversificação por securitizadora é razoável (7+), mas Opea (~30%) e True (~31%) concentram juntas 61% da carteira de CRIs. O gestor projeta Selic a 12% em dezembro/2026, cenário que favoreceria a classe de recebíveis imobiliários e potencialmente reduziria o desconto no P/VP."
     ],
     "pontosFortes": [
-      "DY LTM 15,77% | DY anualizado 16,96%",
-      "Carrego IPCA+11,60% + CDI+4,98%",
-      "Dividendo R$ 0,09/mês consistente por 24+ meses",
-      "Resultado líquido 2025 +121% vs 2024 (R$ 22,5M)",
-      "P/VP 0,81 oferece desconto de 19%",
-      "133% do CDI bruto (dez/2025) com isenção de IR",
+      "DY LTM 15,77% — rendimento equivalente a 133% do CDI bruto (dez/2025)",
+      "Carrego elevado: IPCA+11,60% e CDI+4,98%",
+      "Dividendo de R$ 0,09/mês estável por 24+ meses consecutivos",
+      "Resultado líquido 2025: R$ 22,5M (+121% vs R$ 10,2M em 2024)",
+      "P/VP 0,81 — desconto de 19% sobre VP",
       "Rentabilidade acumulada 94% desde IPO (vs CDI 74%)",
-      "Diversificação: 21 CRIs em 8 estados e 5 setores",
-      "Gestor projeta queda Selic para 12% em dez/2026"
+      "Diversificação: 20 CRIs em 8 estados e 5 setores imobiliários",
+      "Isenção de IR para pessoa física sobre dividendos",
+      "Perspectiva de queda da Selic (12% em dez/2026 conforme gestor)"
     ],
     "pontosDeAtencao": [
-      "NAV em queda: R$ 9,60 (2023) → R$ 8,36 (dez/2025)",
-      "CRI Ipatinga inadimplente desde jul/2022 (1,17% PL | saldo MTM R$ 2,02M)",
-      "PwC com ressalva sobre FIDC Diamante (3,45% PL | R$ 5,98M)",
-      "8ª emissão: apenas 13,1% de adesão (R$ 9,45M de R$ 70M)",
-      "84,1% High Yield (maior risco de crédito)",
-      "Distribuição rente ao resultado financeiro — sem folga para aumentos",
-      "Patrimônio médio (R$ 175M)"
+      "NAV em queda: R$ 9,60 (2023) → R$ 8,36 (dez/2025) — consumo patrimonial",
+      "CRI Ipatinga inadimplente desde jul/2022 (1,17% do PL | R$ 2,02M)",
+      "PwC com ressalva sobre FIDC Diamante (3,45% do PL | R$ 5,98M)",
+      "84,1% High Yield — risco de crédito acima da média do segmento",
+      "8ª emissão: apenas 13,1% de adesão (R$ 9,45M de R$ 70M) — ceticismo do mercado",
+      "Concentração no AROK (11,89% do PL) — posição ilíquida e não listada",
+      "Liquidez limitada: R$ 250 mil/dia de volume médio",
+      "Performance fee de 20% sobre CDI encarece o fundo em cenário de Selic alta"
     ],
-    "conclusaoFinal": "O ARRI11 é uma opção para investidores <strong class=\"text-amber-400\">moderados a arrojados</strong> que buscam <strong class=\"text-amber-400\">renda mensal acima do CDI</strong> e aceitam risco de crédito imobiliário high yield. A forte recuperação do resultado em 2025, o desconto de 19% sobre o VP e a perspectiva de queda da Selic são pontos positivos. Porém, a <strong class=\"text-orange-400\">ressalva do auditor</strong>, o CRI inadimplente e a <strong class=\"text-orange-400\">baixa adesão na última emissão</strong> exigem monitoramento contínuo. Recomendação <strong class=\"text-amber-400\">MANTER</strong> para quem já possui, com atenção ao cenário de IPCA e qualidade de crédito da carteira."
+    "conclusaoFinal": "O ARRI11 é uma opção para investidores <strong class=\"text-amber-400\">moderados a arrojados</strong> que buscam <strong class=\"text-emerald-400\">renda mensal acima do CDI</strong> e aceitam o risco inerente ao crédito imobiliário high yield. A forte recuperação do resultado em 2025, o carrego de IPCA+11,60%, o desconto de 19% sobre VP e a perspectiva de queda da Selic são catalisadores positivos. Porém, a <strong class=\"text-red-400\">ressalva do auditor PwC</strong>, o <strong class=\"text-red-400\">CRI inadimplente</strong>, o <strong class=\"text-amber-400\">NAV em queda</strong> e a <strong class=\"text-amber-400\">baixa adesão na última emissão</strong> são sinais de alerta que justificam cautela. Recomendação <strong class=\"text-amber-400\">MANTER</strong> para quem já possui, com posição limitada e monitoramento ativo da qualidade de crédito. Novos aportes devem ser condicionados à resolução da ressalva contábil e à estabilização do NAV."
   },
   "footer": {
-    "dataAnalise": "14/04/2026",
+    "dataAnalise": "15/04/2026",
     "totalDocumentos": 576,
-    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fundos de investimento imobiliário não contam com garantia do administrador, do gestor ou do FGC."
   }
 }

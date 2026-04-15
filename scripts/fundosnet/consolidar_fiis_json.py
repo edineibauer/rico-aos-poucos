@@ -154,10 +154,30 @@ def consolidar() -> dict:
             ignorados += 1
             continue
         try:
-            entries.append(_mapear(ticker, d))
+            entry = _mapear(ticker, d)
         except Exception as e:
             print(f"  [warn] erro mapeando {ticker}: {e}")
             ignorados += 1
+            continue
+
+        # Filtra FII sem dados mínimos pra listagem (JS quebra com .toFixed em null)
+        ind = entry["indicadores"]
+        indicadores_preenchidos = sum(
+            1 for k in ("cotacao", "pvp", "dividendYield", "dividendoMensal")
+            if ind.get(k) is not None
+        )
+        if indicadores_preenchidos < 2:
+            print(f"  [skip] {ticker}: só {indicadores_preenchidos}/4 indicadores principais — precisa de análise")
+            ignorados += 1
+            continue
+
+        # Preenche None restante com 0 pra proteger .toFixed()
+        for k in ("cotacao", "pvp", "dividendYield", "dividendoMensal",
+                  "patrimonioLiquido", "liquidezMediaDiaria", "cotistas", "vpCota"):
+            if ind.get(k) is None:
+                ind[k] = 0
+
+        entries.append(entry)
 
     out = {
         "ultimaAtualizacao": date.today().isoformat(),

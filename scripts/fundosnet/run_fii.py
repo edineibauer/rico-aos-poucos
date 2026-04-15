@@ -298,32 +298,45 @@ Você recebe no contexto o campo `artigo_existente`. Ele é o critério DECISOR:
      Se não há novidade material → article = null. O patch ainda pode
      atualizar números (indicadores, quickStats, timeline).
 
-# TÍTULO — o filtro de 5 segundos. TRATE COMO SE FOSSE UMA MANCHETE DE JORNAL.
+# TÍTULO — o filtro de 2 segundos. OU ELE MORDE OU ELE PASSA DIRETO.
 
-O leitor é um investidor brasileiro que já conhece o ticker. Vai ler o título
-em 5 segundos no feed/newsletter/Google. Ou clica, ou ignora para sempre.
+O leitor é um investidor brasileiro que já tem o ticker ou está pesquisando sobre.
+Vai ler o título em 2 segundos no feed/newsletter/Google. Nosso objetivo: **acender
+uma curiosidade que ele precisa apagar lendo o artigo.**
 
-**Padrão obrigatório**: Duas partes separadas por ":" OU "—"
-  - Parte 1: ticker + fato concreto (com número quando possível)
-  - Parte 2: pergunta ou provocação que ele PRECISA responder
+**Estrutura obrigatória (sem exceção):**
+  - Parte 1: ticker + FATO CONCRETO com número real (R$, %, quantidade, data)
+  - Separador ":" OU "—"
+  - Parte 2: tensão — uma pergunta não respondida, contradição ou provocação
 
-## ❌ Títulos proibidos (genéricos, sem gancho):
+## ❌ Proibido (genérico, ninguém clica):
   - "MFII11 — análise e perspectivas: 16% de DY, 2025 perdido e a virada para o Livus"
   - "KFOF11: Análise do Fundo de Fundos Kinea"
   - "VSHO11 — Relatório gerencial de março"
+  - Qualquer coisa com "análise e perspectivas", "visão geral", "entenda", "saiba mais"
 
-## ✅ Títulos fortes (padrão Rico aos Poucos):
+## ✅ Padrão Rico aos Poucos (cole-se a esses modelos):
   - "TGAR11: Balanço 2025 — Lucro Subiu, Dividendo Caiu. Por Quê?"
   - "MFII11 distribuiu R$61 MI a mais do que lucrou em 2025. É hora de sair?"
-  - "BTAL11 aprova conversão em Fiagro com 68% dos votos: o cotista precisa decidir até quando?"
-  - "VISC11 a R$98 com desconto de 22%: oportunidade histórica ou armadilha de valor?"
-  - "KFOF11: Kinea vendeu 4 FIIs em março. A estratégia mudou ou é desalavancagem?"
-  - "VGIP11 com 52 CRIs e zero inadimplência: como eles seguram isso com Selic 13,8%?"
+  - "BTAL11 aprova conversão em Fiagro com 68% dos votos: e agora, cotista?"
+  - "VISC11 a R$98 com desconto de 22%: oportunidade histórica ou armadilha?"
+  - "KFOF11: Kinea vendeu 4 FIIs em março. A estratégia mudou?"
+  - "VGIP11: 52 CRIs, zero inadimplência, Selic 13,8%. Até quando dá pra segurar?"
+  - "ABCP11 tem taxa de 0,1% — mas R$ 221 MI em processo tributário. Ainda vale?"
 
-## Regra de ouro do título:
-  - Sempre tem pelo menos UM número concreto (R$, %, quantidade, data)
-  - Sempre deixa uma pergunta não respondida ("Por quê?" / "Vale a pena?" / "É hora de?")
-  - Nunca usa "análise e perspectivas" ou "visão geral"
+## Gatilhos emocionais que funcionam:
+  - **Contradição**: "Lucro subiu, dividendo caiu" / "Taxa baixa, risco alto"
+  - **Urgência**: "e agora?" / "até quando?" / "até quando dá pra segurar?"
+  - **Dúvida binária**: "oportunidade ou armadilha?" / "comprar ou fugir?"
+  - **Número que choca**: "R$ 61 MI a mais do que lucrou" / "-36% de desconto"
+  - **Ação decisiva**: "é hora de sair?" / "vale a pena entrar?"
+
+## Regras absolutas:
+  1. SEMPRE 1+ número concreto (R$, %, qtd) no título.
+  2. SEMPRE termina com provocação/pergunta/tensão.
+  3. Máximo 90 caracteres. Ideal 60-80.
+  4. NUNCA "análise", "perspectivas", "visão geral", "entenda", "saiba".
+  5. NUNCA clickbait falso ("você não vai acreditar"). Substância + tensão honesta.
 
 # SUBTÍTULO (campo `subtitle`) — a promessa que fecha o clique
 

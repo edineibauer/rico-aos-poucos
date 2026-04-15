@@ -156,17 +156,10 @@ TEMPLATE = """<!DOCTYPE html>
   }}
   </script>
 </head>
-<body>
+<body data-ticker="{TICKER}">
   <div class="page-wrapper" style="min-height:100vh;display:flex;flex-direction:column;">
-    <header class="app-header" style="display:flex;align-items:center;gap:12px;padding:14px 20px;background:var(--bg-secondary);border-bottom:1px solid var(--border-color);">
-      <a href="./" style="display:flex;align-items:center;justify-content:center;width:36px;height:36px;background:rgba(255,255,255,0.05);border-radius:10px;color:var(--text-primary);text-decoration:none;">
-        <svg viewBox="0 0 24 24" style="width:18px;height:18px;stroke:currentColor;stroke-width:2;fill:none;"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-      </a>
-      <div style="flex:1;min-width:0;">
-        <h1 style="font-size:1rem;font-weight:600;color:var(--text-primary);margin:0;">Rico aos Poucos</h1>
-        <span style="font-size:0.7rem;color:var(--text-muted);">Artigo</span>
-      </div>
-    </header>
+
+    <header id="site-header"></header>
 
     <article class="article-container" style="flex:1;">
       <div class="article-header">
@@ -191,9 +184,12 @@ TEMPLATE = """<!DOCTYPE html>
         </div>
       </div>
     </article>
+
+    <footer id="site-footer"></footer>
+
   </div>
 
-  <script defer src="../js/article-header.js"></script>
+  <script defer src="../js/article-layout.js"></script>
 </body>
 </html>
 """
@@ -279,6 +275,7 @@ def publicar(article: dict, *, bump_sw: bool = False) -> Path:
         DESCRIPTION=html.escape(description),
         KEYWORDS=html.escape(", ".join(tags) or title),
         SLUG=slug,
+        TICKER=html.escape(ticker or ""),
         DATE_ISO=hoje.isoformat(),
         DATE_BR=_agora_br(),
         READ_MIN=tempo_leitura,

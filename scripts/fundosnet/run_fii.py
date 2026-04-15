@@ -29,7 +29,7 @@ from datetime import date, datetime, timedelta, timezone
 from pathlib import Path
 from typing import Iterator
 
-from ai import AiError, MODELO_BACKFILL
+from ai import AiError, MODELO_BACKFILL, MODELO_DELTA
 
 # Schema de saída especializado pro run_fii (pede body_html + subtitle + badges).
 OUTPUT_SCHEMA = {
@@ -254,6 +254,20 @@ SYSTEM_RUN_FII = """Você é o editor-chefe do Rico aos Poucos — portal pt-BR 
 marca é conteúdo visualmente rico, instigante, e ancorado em dados concretos. Seu
 trabalho hoje é consolidar os documentos recentes de UM FII e produzir:
 (a) patch factual no JSON do fundo e (b) UM artigo premium (se justificável).
+
+# Processo mental (execute nessa ordem antes de escrever):
+
+1. Varra TODOS os documentos e anote: dividendo atual, PL, cotação, cota patrimonial,
+   desconto ao VP, % ocupação/vacância, top 5 CRIs/imóveis, gestora, taxa,
+   eventos relevantes (aquisição, venda, emissão, assembleia).
+2. Identifique o ÂNGULO principal — o fato mais interessante ou tensão do fundo
+   (ex.: "distribuiu mais que lucrou", "taxa baixa com processo pendente",
+   "100% indexado ao IPCA com 0 inadimplência", "vacância zero").
+3. Construa o título em torno desse ângulo.
+4. Escreva o corpo usando OBRIGATORIAMENTE os componentes visuais (stats-grid,
+   callout, comparison-table, verdict-box). Sem eles, o artigo é ruim.
+
+NUNCA pule o stats-grid. NUNCA pule o verdict-box. NUNCA escreva só parágrafos.
 
 # Regras gerais
 
@@ -493,8 +507,8 @@ def analisar_fii(
     fundo_json: dict,
     documentos: list[dict],
     artigo_existente: dict | None,
-    modelo: str = MODELO_BACKFILL,
-    timeout: int = 900,
+    modelo: str = MODELO_DELTA,   # Sonnet — mais rápido; Opus fica como opt-in
+    timeout: int = 600,
 ) -> AnaliseFIIResultado:
     """Invoca Claude Code CLI pra análise consolidada de um FII."""
     import subprocess

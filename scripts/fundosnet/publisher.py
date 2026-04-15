@@ -363,10 +363,10 @@ def publicar(article: dict, *, bump_sw: bool = False) -> Path:
         for b in badges_raw[:3]
     )
 
-    # Capa: prioriza imagens/{TICKER}.(jpg|png|webp|svg) existente; se não houver,
-    # gera SVG programático com ticker + badge semântico.
+    # Capa: usa imagens/{TICKER}.(jpg|png|webp|svg) apenas se existir manualmente.
+    # Geração automática de SVG desabilitada — fallback pro icon padrão.
     ticker = _extrair_ticker(slug)
-    cover_rel = _encontrar_capa(ticker) or _gerar_capa_svg(ticker, article) if ticker else None
+    cover_rel = _encontrar_capa(ticker) if ticker else None
     if cover_rel:
         og_image = f"https://ricoaospoucos.com.br/{cover_rel}"
         cover_html = (

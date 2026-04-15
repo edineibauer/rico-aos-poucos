@@ -18,6 +18,7 @@ import json
 import re
 import subprocess
 import sys
+import time
 from datetime import datetime
 from pathlib import Path
 
@@ -156,7 +157,28 @@ def _carregar_dossie(ticker: str) -> dict:
     }
 
 
+# Keywords que indicam erro RECUPERÁVEL (rate limit, crédito, overload, network).
+# Casos assim: espera e tenta de novo, não aborta.
+_TRANSIENT_PATTERNS = [
+    r"rate[ _-]?limit", r"credit", r"quota", r"429", r"too many",
+    r"overloaded", r"overload", r"unavailable", r"busy", r"temporarily",
+    r"try again", r"try later", r"exceeded", r"limit.*reached",
+    r"limit.*exhaust", r"please wait", r"service.*unavailable",
+    r"upgrade.*plan", r"insufficient",
+]
+
+
+def _is_transient(err_text: str) -> bool:
+    if not err_text:
+        return False
+    low = err_text.lower()
+    return any(re.search(p, low) for p in _TRANSIENT_PATTERNS)
+
+
 def _chamar_opus(ticker: str, dossie: dict, exemplo: dict) -> dict:
+    """Chama Opus via claude CLI. Faz retry com backoff em erro recuperável
+    (rate limit, crédito, overload). Espera indefinidamente — sistema deve
+    sobreviver a 'crédito acabou' durante a noite até recuperar."""
     user_msg = (
         f"Gere a análise completa do FII **{ticker}** ({dossie.get('descricaoFundo','')}).\n\n"
         f"# EXEMPLO DO SCHEMA — use exatamente esta estrutura, adaptando os valores\n\n"
@@ -166,7 +188,6 @@ def _chamar_opus(ticker: str, dossie: dict, exemplo: dict) -> dict:
         f"Devolva APENAS o JSON do {ticker}. Sem markdown, sem comentários."
     )
 
-    # Prompt vai via stdin para evitar 'Argument list too long' (E2BIG ~128KB).
     cmd = [
         "claude",
         "--print",
@@ -176,16 +197,31 @@ def _chamar_opus(ticker: str, dossie: dict, exemplo: dict) -> dict:
         "--system-prompt", SYSTEM_GERAR_PAGINA,
     ]
 
-    try:
-        proc = subprocess.run(
-            cmd, input=user_msg,
-            capture_output=True, text=True, timeout=TIMEOUT_CLI,
-        )
-    except subprocess.TimeoutExpired as e:
-        raise RuntimeError(f"claude CLI timeout após {TIMEOUT_CLI}s") from e
+    tentativa = 0
+    backoff = 60  # 1 min inicial; dobra até 30 min
+    while True:
+        tentativa += 1
+        try:
+            proc = subprocess.run(
+                cmd, input=user_msg,
+                capture_output=True, text=True, timeout=TIMEOUT_CLI,
+            )
+        except subprocess.TimeoutExpired:
+            raise RuntimeError(f"claude CLI timeout após {TIMEOUT_CLI}s (tentativa {tentativa})")
 
-    if proc.returncode != 0:
-        raise RuntimeError(f"claude CLI falhou (code {proc.returncode}): "
+        if proc.returncode == 0:
+            break
+
+        err = (proc.stderr or "") + " " + (proc.stdout[-1000:] or "")
+        if _is_transient(err):
+            print(f"  [retry-transiente #{tentativa}] {err.strip()[:200]}")
+            print(f"  esperando {backoff}s antes de tentar de novo (aguarda indefinidamente)…")
+            time.sleep(backoff)
+            backoff = min(backoff * 2, 1800)  # até 30 min entre tentativas
+            continue
+
+        # erro permanente — não fica em loop eterno
+        raise RuntimeError(f"claude CLI falhou (code {proc.returncode}) — não transiente: "
                            f"stderr={proc.stderr[:300]!r}")
 
     envelope = json.loads(proc.stdout)

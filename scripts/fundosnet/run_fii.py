@@ -512,6 +512,23 @@ class AnaliseFIIResultado:
         )
 
 
+# Keywords que indicam erro RECUPERÁVEL (rate limit, crédito, overload, network).
+_TRANSIENT_PATTERNS_ART = [
+    r"rate[ _-]?limit", r"credit", r"quota", r"429", r"too many",
+    r"overloaded", r"overload", r"unavailable", r"busy", r"temporarily",
+    r"try again", r"try later", r"exceeded", r"limit.*reached",
+    r"limit.*exhaust", r"please wait", r"service.*unavailable",
+    r"upgrade.*plan", r"insufficient",
+]
+
+
+def _is_transient_err(err_text: str) -> bool:
+    if not err_text:
+        return False
+    low = err_text.lower()
+    return any(re.search(p, low) for p in _TRANSIENT_PATTERNS_ART)
+
+
 def analisar_fii(
     *,
     ticker: str,
@@ -521,8 +538,12 @@ def analisar_fii(
     modelo: str = MODELO_DELTA,   # Sonnet — mais rápido; Opus fica como opt-in
     timeout: int = 600,
 ) -> AnaliseFIIResultado:
-    """Invoca Claude Code CLI pra análise consolidada de um FII."""
-    import subprocess
+    """Invoca Claude Code CLI pra análise consolidada de um FII.
+
+    Retry com backoff em erros transientes (rate limit, crédito, overload) —
+    espera indefinidamente até o serviço voltar, sem abortar.
+    """
+    import subprocess, time as _time
 
     payload_docs = []
     for d in documentos:
@@ -563,12 +584,24 @@ def analisar_fii(
         user_msg,
     ]
 
-    try:
-        proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
-    except subprocess.TimeoutExpired as e:
-        raise AiError(f"claude CLI timeout após {timeout}s") from e
+    tentativa = 0
+    backoff = 60
+    while True:
+        tentativa += 1
+        try:
+            proc = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
+        except subprocess.TimeoutExpired as e:
+            raise AiError(f"claude CLI timeout após {timeout}s (tentativa {tentativa})") from e
 
-    if proc.returncode != 0:
+        if proc.returncode == 0:
+            break
+
+        err = (proc.stderr or "") + " " + (proc.stdout[-1000:] or "")
+        if _is_transient_err(err):
+            print(f"    [retry-transiente #{tentativa}] aguardando {backoff}s…")
+            _time.sleep(backoff)
+            backoff = min(backoff * 2, 1800)
+            continue
         raise AiError(f"claude CLI falhou (code {proc.returncode}): "
                       f"stderr={proc.stderr[:300]!r} stdout_tail={proc.stdout[-300:]!r}")
 

@@ -15,7 +15,7 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT="$(cd "$DIR/../.." && pwd)"
 cd "$DIR"
 
-INTERVAL="${1:-60}"
+INTERVAL="${1:-30}"
 
 LOG="/tmp/fundosnet-gerar.log"
 PID_FILE="/tmp/fundosnet-gerar.pid"

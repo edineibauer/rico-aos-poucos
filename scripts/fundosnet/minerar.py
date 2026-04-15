@@ -25,6 +25,8 @@ from paths import DATA, MAPA, MAPA_OVERLAY, UNIVERSO
 from triage import classify
 
 FIIS_RAW = DATA / "fiis-raw"
+FIIS_TICKERS = DATA / "fiis-tickers.json"   # lista expandida (Funds Explorer + mapa + universo)
+MAX_PDF_BYTES = 2 * 1024 * 1024              # pula PDFs > 2MB (relatórios pesados)
 
 # Prioridade de tipos de docs a preservar (em ordem). O objetivo é construir
 # um dossiê representativo sem baixar tudo.
@@ -166,8 +168,10 @@ def _minerar_ticker(ticker: str, mapa: dict, *, dias: int, max_docs: int) -> dic
             continue
         try:
             raw = baixar_documento(doc_id)
-            # descobre extensão grosseira (PDF começa com %PDF)
             ext = "pdf" if raw[:4] == b"%PDF" else "html"
+            if ext == "pdf" and len(raw) > MAX_PDF_BYTES:
+                print(f"    [pula] {doc_id} PDF de {len(raw)//1024}kb > {MAX_PDF_BYTES//1024}kb")
+                continue
             dst = pasta_docs / f"{doc_id}.{ext}"
             dst.write_bytes(raw)
             lista_meta.append({
@@ -217,8 +221,12 @@ def main() -> int:
     mapa = _carregar_mapa()
 
     if args.todos:
-        universo = json.loads(UNIVERSO.read_text(encoding="utf-8"))
-        tickers = [f["ticker"].upper() for f in universo["fundos"]]
+        # Prioriza lista expandida (fiis-tickers.json com 540+) sobre universo (87)
+        if FIIS_TICKERS.exists():
+            tickers = json.loads(FIIS_TICKERS.read_text(encoding="utf-8"))["tickers"]
+        else:
+            universo = json.loads(UNIVERSO.read_text(encoding="utf-8"))
+            tickers = [f["ticker"].upper() for f in universo["fundos"]]
     elif args.tickers:
         tickers = [t.strip().upper() for t in args.tickers.split(",") if t.strip()]
     elif args.ticker:

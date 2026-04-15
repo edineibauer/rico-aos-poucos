@@ -362,6 +362,14 @@ def _processar(ticker: str, exemplo: dict) -> dict:
     html_path = _garantir_pagina_html(ticker, fii_json)
     print(f"  HTML pronto: {html_path.relative_to(ROOT)}")
 
+    # Sincroniza lista mestre data/fiis.json (que a página fiis/ consulta)
+    try:
+        from consolidar_fiis_json import consolidar
+        stats = consolidar()
+        print(f"  data/fiis.json sincronizado: {stats['total']} FIIs")
+    except Exception as e:
+        print(f"  [warn] falha ao consolidar fiis.json: {e}")
+
     return {"ticker": ticker, "ok": True, "elapsed": elapsed}
 
 

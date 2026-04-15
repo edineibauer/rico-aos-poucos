@@ -210,12 +210,123 @@ def _encontrar_capa(ticker: str | None) -> str | None:
     if not ticker:
         return None
     imagens_dir = ROOT / "imagens"
-    for ext in ("jpg", "jpeg", "png", "webp"):
+    for ext in ("jpg", "jpeg", "png", "webp", "svg"):
         for name in (ticker, ticker.upper(), ticker.lower()):
             p = imagens_dir / f"{name}.{ext}"
             if p.exists():
                 return f"imagens/{p.name}"
     return None
+
+
+def _gerar_capa_svg(ticker: str, article: dict) -> str | None:
+    """Gera um card social SVG 1200x630 para servir de og:image/capa do artigo.
+
+    Usa dados do artigo (título, primeiro badge) e do ticker pra compor um card
+    com gradient, ticker grande, linha de destaque e chamada curta. Retorna path
+    relativo pra `imagens/{TICKER}.svg` se criar, None caso contrário.
+    """
+    if not ticker:
+        return None
+    imagens_dir = ROOT / "imagens"
+    imagens_dir.mkdir(parents=True, exist_ok=True)
+    dst = imagens_dir / f"{ticker}.svg"
+    if dst.exists():
+        return f"imagens/{dst.name}"
+
+    # pega primeiro badge semântico pra escolher paleta
+    badges = article.get("badges") or []
+    primeira_label = ""
+    paleta = "neutra"
+    if badges:
+        tipo = badges[0].get("tipo", "atualizado")
+        primeira_label = badges[0].get("label", "").upper()
+        paleta = tipo
+
+    paletas = {
+        "urgente":   ("#0d1117", "#2a0a0f", "#f85149", "Ponto de Atenção"),
+        "estrategia":("#0d1117", "#0a2615", "#3fb950", "Estratégia"),
+        "atualizado":("#0d1117", "#0d1f3a", "#58a6ff", "Dossiê Atualizado"),
+        "novato":    ("#0d1117", "#2a2315", "#f0c14b", "Análise Inicial"),
+        "neutra":    ("#0d1117", "#1a1f2a", "#58a6ff", "Rico aos Poucos"),
+    }
+    bg1, bg2, cor, fallback_label = paletas.get(paleta, paletas["neutra"])
+    label_topo = primeira_label or fallback_label
+
+    # título: pega do article; se muito longo, quebra em 2 linhas
+    titulo = (article.get("title") or "").strip()
+    linha1, linha2 = titulo, ""
+    if len(titulo) > 42:
+        # quebra no espaço mais próximo do meio
+        meio = len(titulo) // 2
+        esq = titulo.rfind(" ", 0, meio)
+        dir_ = titulo.find(" ", meio)
+        quebra = esq if abs(meio - esq) <= abs(meio - dir_) else dir_
+        if quebra > 0:
+            linha1 = titulo[:quebra].strip()
+            linha2 = titulo[quebra:].strip()
+
+    def esc(s: str) -> str:
+        return s.replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
+
+    svg = f'''<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="{bg1}"/>
+      <stop offset="1" stop-color="{bg2}"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="{cor}" stop-opacity="0.8"/>
+      <stop offset="1" stop-color="{cor}" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bg)"/>
+  <rect x="0" y="0" width="1200" height="6" fill="url(#accent)"/>
+
+  <!-- marca d'água: ticker gigante -->
+  <text x="1160" y="580" text-anchor="end"
+        font-family="Inter, Arial, sans-serif" font-weight="900" font-size="340"
+        fill="{cor}" fill-opacity="0.07">{esc(ticker)}</text>
+
+  <!-- top label -->
+  <rect x="80" y="80" width="{max(140, len(label_topo) * 14 + 40)}" height="36" rx="18" ry="18"
+        fill="{cor}" fill-opacity="0.18" stroke="{cor}" stroke-opacity="0.4"/>
+  <text x="{80 + max(140, len(label_topo) * 14 + 40) / 2}" y="105"
+        text-anchor="middle"
+        font-family="Inter, Arial, sans-serif" font-weight="700" font-size="16"
+        fill="{cor}">{esc(label_topo)}</text>
+
+  <!-- ticker destaque -->
+  <text x="80" y="240"
+        font-family="Inter, Arial, sans-serif" font-weight="900" font-size="120"
+        fill="#fdfdfd">{esc(ticker)}</text>
+
+  <!-- título -->
+  <text x="80" y="340"
+        font-family="Inter, Arial, sans-serif" font-weight="700" font-size="44"
+        fill="#e6edf3">{esc(linha1)}</text>'''
+    if linha2:
+        svg += f'''
+  <text x="80" y="398"
+        font-family="Inter, Arial, sans-serif" font-weight="700" font-size="44"
+        fill="#e6edf3">{esc(linha2)}</text>'''
+    svg += f'''
+
+  <!-- divisor -->
+  <line x1="80" y1="480" x2="280" y2="480" stroke="{cor}" stroke-width="3"/>
+
+  <!-- rodapé marca -->
+  <text x="80" y="540"
+        font-family="Inter, Arial, sans-serif" font-weight="600" font-size="22"
+        fill="#8b949e">Rico aos Poucos</text>
+  <text x="80" y="568"
+        font-family="Inter, Arial, sans-serif" font-weight="400" font-size="18"
+        fill="#6e7681">ricoaospoucos.com.br · análise de FIIs com dados oficiais</text>
+</svg>
+'''
+    dst.write_text(svg, encoding="utf-8")
+    return f"imagens/{dst.name}"
 
 
 def publicar(article: dict, *, bump_sw: bool = False) -> Path:
@@ -252,9 +363,10 @@ def publicar(article: dict, *, bump_sw: bool = False) -> Path:
         for b in badges_raw[:3]
     )
 
-    # Capa: se existe imagens/{TICKER}.jpg/png/webp usa, senão fallback pro icon
+    # Capa: prioriza imagens/{TICKER}.(jpg|png|webp|svg) existente; se não houver,
+    # gera SVG programático com ticker + badge semântico.
     ticker = _extrair_ticker(slug)
-    cover_rel = _encontrar_capa(ticker)
+    cover_rel = _encontrar_capa(ticker) or _gerar_capa_svg(ticker, article) if ticker else None
     if cover_rel:
         og_image = f"https://ricoaospoucos.com.br/{cover_rel}"
         cover_html = (

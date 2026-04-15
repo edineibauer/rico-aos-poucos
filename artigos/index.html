@@ -489,20 +489,9 @@
     <!-- Main -->
     <main class="main-content">
 
-      <!-- Filtros por Nível -->
+      <!-- Filtros por Categoria -->
       <div style="margin-bottom: 8px;">
-        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Nível</span>
-      </div>
-      <div class="filters-row" id="filtersNivel">
-        <button class="filter-chip active" data-filter="todos" data-type="nivel">Todos</button>
-        <button class="filter-chip" data-filter="iniciante" data-type="nivel">🎓 Iniciante</button>
-        <button class="filter-chip" data-filter="intermediario" data-type="nivel">📊 Intermediário</button>
-        <button class="filter-chip" data-filter="avancado" data-type="nivel">🔥 Avançado</button>
-      </div>
-
-      <!-- Filtros por Tema -->
-      <div style="margin: 24px 0 8px 0;">
-        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Tema</span>
+        <span style="font-size: 0.75rem; color: var(--text-muted); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">Categoria</span>
       </div>
       <div class="filters-row" id="filtersTema">
         <button class="filter-chip active" data-filter="todos" data-type="tema">Todos</button>
@@ -529,7 +518,7 @@
 
   <script>
     let artigosData = null;
-    let filtroNivel = 'todos';
+    // filtroNivel removido — não há mais filtro por nível
     let filtroTema = 'todos';
 
     const meses = ['Jan', 'Fev', 'Mar', 'Abr', 'Mai', 'Jun', 'Jul', 'Ago', 'Set', 'Out', 'Nov', 'Dez'];
@@ -557,15 +546,7 @@
 
         // Verificar se tem filtro na URL
         const params = new URLSearchParams(window.location.search);
-        const nivel = params.get('nivel');
         const tema = params.get('tema');
-
-        if (nivel && ['iniciante', 'intermediario', 'avancado'].includes(nivel)) {
-          filtroNivel = nivel;
-          document.querySelectorAll('[data-type="nivel"]').forEach(btn => {
-            btn.classList.toggle('active', btn.dataset.filter === nivel);
-          });
-        }
 
         if (tema) {
           filtroTema = tema;
@@ -598,12 +579,7 @@
       const container = document.getElementById('artigosContainer');
       let artigos = artigosData.artigos;
 
-      // Aplicar filtro de nível
-      if (filtroNivel !== 'todos') {
-        artigos = artigos.filter(a => a.nivel === filtroNivel);
-      }
-
-      // Aplicar filtro de tema
+      // Aplicar filtro de categoria (tema)
       if (filtroTema !== 'todos') {
         artigos = artigos.filter(a => a.tema === filtroTema);
       }
@@ -684,19 +660,7 @@
       }).join('');
     }
 
-    // Filtros de Nível
-    document.getElementById('filtersNivel').addEventListener('click', (e) => {
-      const chip = e.target.closest('.filter-chip');
-      if (!chip) return;
-
-      filtroNivel = chip.dataset.filter;
-      document.querySelectorAll('[data-type="nivel"]').forEach(btn => {
-        btn.classList.toggle('active', btn === chip);
-      });
-      renderizarArtigos();
-    });
-
-    // Filtros de Tema
+    // Filtros de Categoria
     document.getElementById('filtersTema').addEventListener('click', (e) => {
       const chip = e.target.closest('.filter-chip');
       if (!chip) return;

@@ -9,7 +9,7 @@
       "133% CDI"
     ],
     "sentimento": "neutro",
-    "dataAnalise": "16/03/2026"
+    "dataAnalise": "14/04/2026"
   },
   "seo": {
     "title": "ARRI11: Análise Completa - Open K Recebíveis Imobiliários FII | Rico aos Poucos",
@@ -21,7 +21,7 @@
     "twitterDescription": "Análise do ARRI11: carrego IPCA+11,60%, DY 15,77%, 133% do CDI. Portfólio, taxas e projeções 2026."
   },
   "indicadores": {
-    "cotacao": 6.80,
+    "cotacao": 6.8,
     "cotacaoData": "30/12/2025",
     "pvp": 0.81,
     "pvpDesconto": "19% de desconto",
@@ -30,7 +30,8 @@
     "dividendoAnual": 1.08,
     "patrimonioLiquido": "R$ 175 Mi",
     "vpCota": 8.36,
-    "cotistas": 23698
+    "cotistas": 23698,
+    "cotasEmitidas": 20726973
   },
   "recomendacao": {
     "nota": 6.5,
@@ -76,12 +77,12 @@
   "pontosAtencao": [
     {
       "titulo": "CRI Ipatinga Inadimplente",
-      "descricao": "Desde julho/2022, o CRI Ipatinga está inadimplente. Valor provisionado: R$ 2,66M (1,5% do PL). Resgate antecipado registrado em R$ 4,68M no balanço. Garantias via penhora de lotes e aval dos sócios. Processo judicial em andamento.",
+      "descricao": "Desde julho/2022, o CRI Ipatinga está inadimplente. Saldo a mercado em dez/2025: R$ 2,02M (1,17% do PL). Garantias via penhora de lotes e aval dos sócios. Processo judicial em andamento.",
       "severidade": "red"
     },
     {
       "titulo": "Ressalva do Auditor PwC (2024)",
-      "descricao": "A PwC manteve opinião com ressalva nas demonstrações financeiras de 2024 por falta de demonstrações auditadas do FIDC Diamante (R$ 5,8M | 3,3% do PL). Não foi possível concluir sobre adequação do saldo desse investimento.",
+      "descricao": "A PwC manteve opinião com ressalva nas demonstrações financeiras de 2024 por falta de demonstrações auditadas do FIDC Diamante (R$ 5,98M | 3,45% do PL em dez/2025). Não foi possível concluir sobre adequação do saldo desse investimento.",
       "severidade": "orange"
     },
     {
@@ -403,18 +404,18 @@
       "Gestor projeta queda Selic para 12% em dez/2026"
     ],
     "pontosDeAtencao": [
-      "NAV em queda: R$ 9,60 (2023) -> R$ 8,36 (dez/2025)",
-      "CRI Ipatinga inadimplente desde jul/2022 (1,5% PL)",
-      "PwC com ressalva sobre FIDC Diamante (3,3% PL)",
+      "NAV em queda: R$ 9,60 (2023) → R$ 8,36 (dez/2025)",
+      "CRI Ipatinga inadimplente desde jul/2022 (1,17% PL | saldo MTM R$ 2,02M)",
+      "PwC com ressalva sobre FIDC Diamante (3,45% PL | R$ 5,98M)",
       "8ª emissão: apenas 13,1% de adesão (R$ 9,45M de R$ 70M)",
       "84,1% High Yield (maior risco de crédito)",
-      "Resultado líquido por cota caiu: R$ 0,49 em 2024 vs R$ 0,95 em 2023",
+      "Distribuição rente ao resultado financeiro — sem folga para aumentos",
       "Patrimônio médio (R$ 175M)"
     ],
     "conclusaoFinal": "O ARRI11 é uma opção para investidores <strong class=\"text-amber-400\">moderados a arrojados</strong> que buscam <strong class=\"text-amber-400\">renda mensal acima do CDI</strong> e aceitam risco de crédito imobiliário high yield. A forte recuperação do resultado em 2025, o desconto de 19% sobre o VP e a perspectiva de queda da Selic são pontos positivos. Porém, a <strong class=\"text-orange-400\">ressalva do auditor</strong>, o CRI inadimplente e a <strong class=\"text-orange-400\">baixa adesão na última emissão</strong> exigem monitoramento contínuo. Recomendação <strong class=\"text-amber-400\">MANTER</strong> para quem já possui, com atenção ao cenário de IPCA e qualidade de crédito da carteira."
   },
   "footer": {
-    "dataAnalise": "16/03/2026",
+    "dataAnalise": "14/04/2026",
     "totalDocumentos": 576,
     "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }

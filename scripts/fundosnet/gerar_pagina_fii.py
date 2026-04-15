@@ -29,7 +29,7 @@ FIIS_RAW = DATA / "fiis-raw"
 EXEMPLO_BTAL11 = FIIS_DIR / "btal11.json"
 
 MODELO = "opus"
-TIMEOUT_CLI = 1200  # 20 min
+TIMEOUT_CLI = 1800  # 30 min (Opus pode precisar em análises complexas)
 
 
 SYSTEM_GERAR_PAGINA = """Você é o analista-chefe do Rico aos Poucos. Sua missão hoje:

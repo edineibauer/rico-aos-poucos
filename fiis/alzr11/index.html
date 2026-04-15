@@ -49,8 +49,9 @@
     }
     </script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased" data-ticker="ALZR11">
     <div class="page-wrapper">
+    <header id="site-header"></header>
     <div id="fii-loading" style="padding: 20px; max-width: 1280px; margin: 0 auto;">
         <div class="fii-skeleton" style="height: 60px; margin-bottom: 16px;"><div class="fii-skeleton-pulse" style="height: 100%;"></div></div>
         <div class="fii-skeleton" style="height: 280px; margin-bottom: 24px;"><div class="fii-skeleton-pulse" style="height: 100%;"></div></div>
@@ -69,5 +70,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../../js/fii-template.js"></script>
     <script>FIITemplate.init({ dataUrl: '../../data/fiis/alzr11.json' });</script>
+    <footer id="site-footer"></footer>
+    <script defer src="../../js/fii-layout.js"></script>
 </body>
 </html>

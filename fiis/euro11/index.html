@@ -53,8 +53,9 @@
     }
     </script>
 </head>
-<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased">
+<body class="bg-[var(--bg-primary)] text-[var(--text-primary)] antialiased" data-ticker="EURO11">
     <div class="page-wrapper">
+    <header id="site-header"></header>
 
     <!-- Loading Skeleton -->
     <div id="fii-loading" style="padding: 20px; max-width: 1280px; margin: 0 auto;">
@@ -79,5 +80,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="../../js/fii-template.js"></script>
     <script>FIITemplate.init({ dataUrl: '../../data/fiis/euro11.json' });</script>
+    <footer id="site-footer"></footer>
+    <script defer src="../../js/fii-layout.js"></script>
 </body>
 </html>

@@ -83,9 +83,9 @@ from triage import classify
 ROTACAO_FILE = DATA / "fundosnet-rotacao.json"
 LOCK_FILE = Path("/tmp/fundosnet.lock")
 
-LOOKBACK_DIAS = 90            # janela por ticker — 90 dias cobre últimos informes mensais/trimestral
+LOOKBACK_DIAS = 60            # janela por ticker — 60 dias cobre 2 informes mensais + 1 trimestral
 MAX_DOCS_POR_TICKER = 6       # limita envio pra IA (controla custo/tempo)
-EARLY_EXIT_CANDIDATOS = 12    # para de varrer o Fundos.NET assim que encontrar N docs do ticker
+EARLY_EXIT_CANDIDATOS = 8     # para de varrer o Fundos.NET assim que encontrar N docs do ticker
 
 # Thresholds diferenciados: artigo inicial é prioridade, aceita confidence baixa
 CONFIDENCE_APPLY_PATCH_INICIAL = 0.30
@@ -173,23 +173,34 @@ def _data_ultimo_artigo(ticker: str) -> datetime | None:
 # Busca de documentos por ticker
 # ────────────────────────────────────────────────────────────────────────────
 
+def _tipo_fundo_do_ticker(ticker: str, mapa: dict) -> int:
+    """Descobre o tipoFundo do ticker via mapa (1=FII, 11=Fiagro). Default: 1."""
+    for entrada in mapa.get("mapa", {}).values():
+        if entrada.get("ticker", "").upper() == ticker.upper():
+            tf = entrada.get("tipoFundo")
+            if tf in (1, 11):
+                return tf
+    return 1
+
+
 def _buscar_docs_do_ticker(ticker: str, mapa: dict, lookback_dias: int) -> list[dict]:
     """Varre o Fundos.NET e devolve apenas os docs que mapeiam para `ticker`.
 
-    Early-exit: para a varredura assim que encontra EARLY_EXIT_CANDIDATOS docs
-    do ticker (para evitar baixar 15k+ docs pra filtrar no cliente).
+    Otimizações:
+      - Busca apenas no tipo_fundo correto (1=FII ou 11=Fiagro) — reduz 50%.
+      - Early-exit quando encontra EARLY_EXIT_CANDIDATOS docs do ticker.
     """
     hoje = datetime.now()
     di = (hoje - timedelta(days=lookback_dias)).strftime("%d/%m/%Y")
     df = hoje.strftime("%d/%m/%Y")
+    tipo_fundo = _tipo_fundo_do_ticker(ticker, mapa)
     encontrados: list[dict] = []
-    for tipo_fundo in (TIPO_FII, TIPO_FIAGRO):
-        for doc in buscar_publicacoes(di, df, tipo_fundo=tipo_fundo):
-            t = _ticker_do_doc(doc, mapa)
-            if t and t.upper() == ticker.upper():
-                encontrados.append(doc)
-                if len(encontrados) >= EARLY_EXIT_CANDIDATOS:
-                    return encontrados
+    for doc in buscar_publicacoes(di, df, tipo_fundo=tipo_fundo):
+        t = _ticker_do_doc(doc, mapa)
+        if t and t.upper() == ticker.upper():
+            encontrados.append(doc)
+            if len(encontrados) >= EARLY_EXIT_CANDIDATOS:
+                return encontrados
     return encontrados
 
 

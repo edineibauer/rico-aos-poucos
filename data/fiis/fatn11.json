@@ -558,7 +558,6 @@
   },
   "dividendos": {
     "chartLabels": [
-      "Jan/25",
       "Fev/25",
       "Mar/25",
       "Abr/25",
@@ -569,7 +568,8 @@
       "Set/25",
       "Out/25",
       "Nov/25",
-      "Dez/25"
+      "Dez/25",
+      "Jan/26"
     ],
     "chartData": [
       0.80,
@@ -588,6 +588,7 @@
     "chartCor": "#10b981",
     "chartYMin": 0.70,
     "chartYMax": 0.90,
+    "notaChart": "Valores mostrados por <strong>mês de pagamento</strong>. O último provento na base oficial foi divulgado em <strong class=\"text-blue-400\">07/01/2026</strong> (competência dez/2025), pago em 15/01/2026. Até 24/04/2026, os pagamentos referentes a <strong class=\"text-amber-400\">jan, fev e mar/2026 ainda não foram publicados no portal Fundos.NET</strong> na base indexada deste site — o fundo normalmente divulga entre os dias 4 e 7 do mês seguinte.",
     "totaisAnuais": [
       {
         "ano": "2022",
@@ -603,18 +604,25 @@
       },
       {
         "ano": "2025",
-        "valor": "R$ 9,60/cota"
+        "valor": "R$ 9,60/cota",
+        "destaque": true
+      },
+      {
+        "ano": "2026 (YTD)",
+        "valor": "R$ 0,80/cota (pago em jan, ref. dez/25) — fev, mar e abr ainda não divulgados",
+        "cor": "amber"
       }
     ],
     "guidance": {
       "periodo": "2T2026",
       "faixa": "R$ 0,78 a R$ 0,82",
-      "unidade": "por cota / mês (potencial pressão pela 6ª emissão em absorção)"
+      "unidade": "por cota / mês (potencial pressão pela 6ª emissão em absorção e absorção dos custos da incorporação FII-BM)"
     },
     "stats": [
       {
-        "label": "Atual (dez/2025)",
-        "valor": "R$ 0,80"
+        "label": "Último pago",
+        "valor": "R$ 0,80",
+        "detalhe": "15/01/2026 (ref. dez/25)"
       },
       {
         "label": "DY 12m (mercado)",
@@ -628,8 +636,15 @@
       },
       {
         "label": "Estabilidade",
-        "valor": "12/12 meses estável",
+        "valor": "12/12 meses",
+        "detalhe": "Fev/25 a Jan/26: R$ 0,80 fixo",
         "cor": "emerald"
+      },
+      {
+        "label": "Meses 2026 pendentes",
+        "valor": "3",
+        "detalhe": "Jan, fev e mar/26 ainda não divulgados",
+        "cor": "amber"
       }
     ]
   },

@@ -8611,16 +8611,16 @@
       "id": "flcr11",
       "ticker": "FLCR11",
       "nome": "Faria Lima Capital Recebíveis Imobiliários I FII",
-      "gestora": "Faria Lima Capital",
-      "segmento": "crédito-(cri)",
-      "subsegmento": "Crédito (CRI)",
-      "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "gestora": "Faria Lima Capital Ltda.",
+      "segmento": "fii-de-papel-(cri-high-yield)",
+      "subsegmento": "FII de Papel (CRI High Yield)",
+      "sentimento": "positivo",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
         "cotacao": 96.7,
         "pvp": 1.02,
         "dividendYield": 13.8,
-        "dividendoMensal": 1.11,
+        "dividendoMensal": 1.2,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
         "cotistas": 2812,
@@ -8630,79 +8630,120 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Taxa padrão com performance sobre benchmark variável"
+        "comentarioTaxas": "Taxa total de 1,00% a.a. — competitiva — com performance variável atrelada ao IMAB5"
       },
       "estrategia": {
-        "resumo": "FLCR11 é um FII de crédito boutique com carteira concentrada em 14 CRIs de nicho (incorporações, hotéis, logística) com taxas elevadas (IPCA+10,6%) e LTV conservador (43,7%). A gestão da Faria Lima Capital nunca enfrentou defaults. O DY de 13,8% e distribuição acumulada de 78% desde o IPO são atrativos, mas o tamanho reduzido e a baixa liquidez exigem cautela.",
-        "ocupacao": null,
+        "resumo": "A tese do FLCR11 é simples e bem definida: FII boutique de CRI high yield com track record de zero default desde 2019. A carteira combina taxa média alta (IPCA+10,6%, CDI+7,1%) com LTV conservador (43,7%) e duration curta (2,3 anos), distribuindo entre R$ 1,00 e R$ 1,40 mensais — DY 12m de 13,8% (113,4% do CDI líquido). A gestora Faria Lima Capital opera há mais de uma década com foco em crédito imobiliário e mantém transparência alta (relatório gerencial por ativo, lives mensais, contato direto).Os contras são bem conhecidos: PL pequeno (R$ 71 Mi), liquidez baixa (R$ 67,6 mil/dia), 63,2% das cotas concentradas em fundos e sócios, P/VP de 1,02 sem desconto e exposição a CRIs de incorporação/hotelaria que demandam monitoramento ativo (Manhattan II foi repactuado em 2025, Spot tem LTV de 92%). A 3ª emissão captou apenas 37% do alvo, sinalizando dificuldade de crescer rapidamente. O FLCR11 é um instrumento para investidor experiente que entende e aceita o trade-off de fundo pequeno e líquido em troca de yield consistente e gestão criteriosa.",
+        "ocupacao": 90.5,
         "focoGeografico": "",
-        "tipoAtivo": "Crédito (CRI)"
+        "tipoAtivo": "FII de Papel (CRI High Yield)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "DY 13,8% (113,4% CDI líquido)",
-        "Zero defaults desde o IPO",
-        "LTV conservador de 43,7%",
-        "R$ 78,24/cota distribuídos (78% da cota inicial)",
-        "Gestão boutique criteriosa",
-        "Duration curta de 2,3 anos",
-        "Garantias reais robustas em todos os CRIs"
+        "Zero default e zero retomada de garantias em mais de 6 anos de operação — track record raro no segmento de CRI high yield",
+        "DY 12m de 13,8% equivalente a 113,4% do CDI líquido, com isenção de IR para PF",
+        "Taxa média elevada e consistente: IPCA+10,6% (75,7% da carteira) e CDI+7,1% (3,9%)",
+        "LTV ponderado conservador de 43,7% e duration curta de 2,3 anos limitam downside",
+        "Distribuição acumulada de R$ 78,24/cota (78% do valor inicial de R$ 100) em 6 anos",
+        "R$ 29,48 Mi amortizados em 4 CRIs já quitados (Embraed I/II, Colmeia R, Longitude)",
+        "Garantias reais robustas em todos os CRIs: AF de imóveis, cessão de créditos, fundos de obras e reserva, aval dos sócios",
+        "Gestão boutique transparente — relatório gerencial detalhado por ativo, lives frequentes, canal direto com cotistas"
       ],
       "conclusao": {
-        "resumo": "O FLCR11 é um FII boutique com track record sólido e yields elevados. A recomendação é de manter para quem já possui, dado o DY atrativo e o histórico sem defaults. Para novas posições, a baixa liquidez exige paciência na montagem e o P/VP acima de 1,0 não oferece margem de segurança. Ideal para investidores de longo prazo que buscam yield elevado.",
-        "paraQuem": "Investidores que buscam yield elevado em crédito imobiliário",
-        "naoParaQuem": "Quem precisa de alta liquidez para entrar e sair rapidamente"
+        "resumo": "O FLCR11 é o exemplo de FII boutique de CRI high yield bem operado: track record de seis anos sem defaults, gestão transparente da Faria Lima Capital, taxa média de IPCA+10,6%, LTV conservador de 43,7% e DY consistente de 13,8% (113,4% do CDI líquido). A escolha de CRIs em incorporação, hotelaria e loteamento entrega prêmio de risco real, mas mitigado por garantias robustas. Os limitadores estruturais — PL pequeno, liquidez baixa e concentração de cotistas — são compatíveis com o perfil de fundo boutique e devem ser aceitos pelo investidor que entrar nessa tese. Nota 7,5/10 — acima da média do setor de CRI — reflete a qualidade da gestão e a previsibilidade do fluxo, descontando o ágio de 2% sobre VP e a baixa liquidez. Recomendado para investidor experiente, paciente, em horizonte de longo prazo, e como diversificador da posição em FIIs de papel.",
+        "paraQuem": "Investidores que valorizam track record real e auditável — zero default em 6+ anos é raro em CRI high yield",
+        "naoParaQuem": "Quem precisa de liquidez diária ou semanal — R$ 67,6 mil/dia exige planejamento na saída"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "Out/2019",
-            "descricao": "CNPJ: 33.884.145/0001-51",
+            "ano": "Mai/2019",
+            "descricao": "Gestor: Faria Lima Capital Ltda. (CVM AD 14.781/2015)",
             "impacto": ""
           },
           {
-            "ano": "2020-2022",
+            "ano": "Out/2019",
+            "descricao": "Cota inicial: R$ 100,00",
+            "impacto": ""
+          },
+          {
+            "ano": "2020-2021",
             "descricao": "Proventos 2021: R$ 13,97/cota",
             "impacto": ""
           },
           {
-            "ano": "2023-2024",
-            "descricao": "Proventos 2023: R$ 13,44/cota",
+            "ano": "Jun/2021",
+            "descricao": "Adquirente: Apex Fund Holding (CNPJ 37.668.744/0001-99)",
+            "impacto": ""
+          },
+          {
+            "ano": "2022",
+            "descricao": "Proventos 2022: R$ 14,58/cota (recorde)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2024",
+            "descricao": "R$ 6,12 Mi recebidos em Colmeia R",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2024",
+            "descricao": "Preço unitário: R$ 96,00",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2025",
+            "descricao": "Captado: R$ 11,4 Mi (37% do alvo)",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2025",
+            "descricao": "Lucro líquido 2024: R$ 5,52 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Maior provento mensal histórico: R$ 1,40 (jun/25)",
             "impacto": ""
           },
           {
             "ano": "Dez/2025",
-            "descricao": "PL: R$ 71 Mi | 2.812 cotistas",
+            "descricao": "Manhattan II: 6,4% do PL — sem prejuízo, com diluição de yield",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 71,25 Mi",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Gestão Boutique",
-        "IPCA+10,6%",
-        "14 CRIs",
-        "Faria Lima Capital"
+        "FII de CRI High Yield",
+        "Gestão Boutique Faria Lima Capital",
+        "Zero default desde IPO (2019)",
+        "Faria Lima Capital Ltda."
       ],
       "tempoLeitura": 10,
       "arquivo": "flcr11/index.html",
-      "nota": 7,
-      "veredicto": "MANTER",
-      "notaGestora": 7
+      "nota": 7.5,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
     },
     {
       "id": "flma11",
       "ticker": "FLMA11",
-      "nome": "Continental Square Faria Lima FII",
-      "gestora": "Unitas Real Estate / BR-Capital",
-      "segmento": "híbrido-(lajes-corporativas-+-",
-      "subsegmento": "Híbrido (Lajes Corporativas + Hotel)",
+      "nome": "FII Continental Square Faria Lima - Responsabilidade Limitada",
+      "gestora": "BR-Capital DTVM (admin/gestor) + Unitas Real Estate (consultor imobiliário)",
+      "segmento": "híbrido-—-hotel-+-lajes-corpor",
+      "subsegmento": "Híbrido — Hotel + Lajes Corporativas (mesmo edifício)",
       "sentimento": "neutro",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 159,
+        "cotacao": 159.0,
         "pvp": 0.64,
-        "dividendYield": 8,
+        "dividendYield": 8.02,
         "dividendoMensal": 1.06,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
@@ -8713,75 +8754,118 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Uma das menores taxas do mercado de FIIs"
+        "comentarioTaxas": "Estrutura única de taxa: 4% sobre resultado distribuído (~0,24% a.a. sobre PL)"
       },
       "estrategia": {
-        "resumo": "FLMA11 é um FII híbrido com ativo único: hotel Pullman 5 estrelas + lajes corporativas na Vila Olímpia/SP. O desconto de 36% sobre o VP é expressivo, a taxa de ~0,24% é uma das menores do mercado, e a certificação LEED Gold valoriza o ativo. Porém, a receita hoteleira volátil e a baixa liquidez exigem perfil de investidor de longo prazo.",
+        "resumo": "A tese do FLMA11 repousa em três pilares: (i) desconto significativo sobre VP (P/VP 0,64, 36% de margem para o investidor de longo prazo); (ii) localização premium na Vila Olímpia, esquina entre Faria Lima e Juscelino Kubitschek — um dos endereços mais cobiçados da capital paulista, dificilmente replicável; e (iii) estrutura de taxas extraordinariamente baixa (~0,24% a.a. sobre PL), com 25 anos de operação e governança estabilizada na BR-Capital + Unitas + Petros como cotista institucional.Os contrapesos são igualmente claros: 47% da receita depende do desempenho hoteleiro (com volatilidade típica de hotelaria — pandemia 2020 zerou o hotel por meses), 100% do patrimônio está em um único edifício (risco idiossincrático), liquidez modesta (R$ 70-100 mil/dia) limita movimentação de posições maiores, e o DY de 8% pode ser visto como insuficiente diante do risco de execução. O FLMA11 é mais uma aposta em valor (P/VP) e ativo estratégico (localização + LEED Gold) do que em fluxo recorrente previsível.",
         "ocupacao": 100,
         "focoGeografico": "",
-        "tipoAtivo": "Híbrido (Lajes Corporativas + Hotel)"
+        "tipoAtivo": "Híbrido — Hotel + Lajes Corporativas (mesmo edifício)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Desconto de 36% sobre valor patrimonial",
-        "25 anos de track record",
-        "Hotel Pullman 5 estrelas (Accor Hotels)",
-        "Certificação LEED Gold",
-        "Taxa ~0,24% (uma das menores do mercado)",
-        "100% ocupação nos escritórios",
-        "Localização premium Vila Olímpia/SP"
+        "Portfólio único na Vila Olímpia (Faria Lima × JK) — endereço corporativo premium difícil de replicar",
+        "P/VP de 0,64 (36% desconto) — uma das maiores margens de segurança entre FIIs líquidos da B3",
+        "Taxa total de aproximadamente 0,24% a.a. sobre PL — entre as menores do mercado de FIIs",
+        "BR-Capital DTVM administra o fundo desde 2000 — 25+ anos de estabilidade institucional",
+        "Certificação LEED Gold da Torre Comercial valoriza o ativo e reduz custos operacionais",
+        "Reavaliação 2025 do hotel em +29% (R$ 138 Mi → R$ 178 Mi) confirma valor do ativo",
+        "Escritórios 100% ocupados com vencimentos pulverizados de 2026 a 2031 e indexação balanceada (52% IGP-M / 48% IPCA)",
+        "Hotel Pullman 5 estrelas operado pela Accor (Hotelaria Accorinvest Brasil) — marca premium e operador qualificado"
       ],
       "conclusao": {
-        "resumo": "O FLMA11 é uma opção de valor para investidores de longo prazo que aceitam a volatilidade hoteleira em troca do enorme desconto sobre o VP e da taxa extraordinariamente baixa. A recomendação é de manter, com o desconto de 36% oferecendo proteção. Para novas posições, é necessário paciência na montagem dado o baixo volume diário.",
-        "paraQuem": "Investidores que buscam desconto expressivo sobre valor patrimonial",
-        "naoParaQuem": "Quem busca dividendos estáveis e previsíveis"
+        "resumo": "O FLMA11 é um caso clássico de FII de valor: ativo físico de altíssima qualidade em localização premium, taxa baixíssima e desconto expressivo sobre VP — ofuscado por exposição hoteleira volátil, liquidez modesta e concentração em um único endereço. A nota 6,5/10 reflete esse balanço: para investidor paciente, com horizonte de 5+ anos e tolerância a sazonalidade, é oportunidade de comprar Vila Olímpia abaixo do custo patrimonial, com taxa de gestão simbólica e governança estabilizada (Petros como ancla institucional). Para quem busca fluxo de renda estável, há opções melhores em FIIs de tijolo puros com inquilinos AAA. Veredicto: MANTER para posições existentes, COMPRA seletiva para alocação de longo prazo, com compreensão clara de que o retorno virá majoritariamente de fechamento de desconto P/VP (R$ 159 → R$ 175-200) e não do DY corrente.",
+        "paraQuem": "Investidores de longo prazo (5+ anos) que aceitam volatilidade de distribuição em troca de desconto sobre VP",
+        "naoParaQuem": "Quem busca fluxo de renda mensal estável e previsível — distribuição varia de R$ 0,79 a R$ 1,30/cota"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Ago/2000",
-            "descricao": "CNPJ: 04.141.645/0001-03",
+            "descricao": "Patrimônio inicial: 1ª emissão a R$ 1,00 (45.712.000 cotas)",
             "impacto": ""
           },
           {
-            "ano": "2000-2020",
-            "descricao": "Hotel Pullman Vila Olímpia: 5 estrelas, perfil corporativo",
+            "ano": "2001-2019",
+            "descricao": "Total: 69.033.500 cotas (1ª e 2ª emissões)",
             "impacto": ""
           },
           {
-            "ano": "2024-2025",
-            "descricao": "Certificação LEED Gold (Operações e Manutenção)",
+            "ano": "Mar/2020",
+            "descricao": "Hotel zerado de mar/2020 a set/2020",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2020",
+            "descricao": "Recuperação gradual da hotelaria",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2021",
+            "descricao": "1ª emissão pós-grupamento: 914.240 cotas a R$ 50",
+            "impacto": ""
+          },
+          {
+            "ano": "2022-2023",
+            "descricao": "PL salta de R$ 200 Mi (jul/2020) para R$ 299 Mi (dez/2023)",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "Certificação LEED Gold (Torre Comercial)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2025",
+            "descricao": "Retrofit em 24 parcelas mensais",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Classe única de cotas",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2025",
+            "descricao": "Comitê: 4 membros (2 cotistas + 2 admin)",
             "impacto": ""
           },
           {
             "ano": "Dez/2025",
-            "descricao": "PL: R$ 346 Mi | 11.359 cotistas",
+            "descricao": "Hotel reavaliado: ~R$ 138 Mi → R$ 178 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 345,58 Mi",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Hotel Pullman 5 Estrelas",
-        "Vila Olímpia",
-        "LEED Gold",
-        "Unitas Real Estate / BR-Capital"
+        "Híbrido (Hotel + Escritórios)",
+        "Pullman Vila Olímpia (Accor)",
+        "Vila Olímpia / esquina JK × Faria Lima",
+        "Certificação LEED Gold",
+        "1 dos FIIs mais antigos da B3 (desde 2000)",
+        "BR-Capital DTVM (admin/gestor) + Unitas Real Estate (consultor imobiliário)"
       ],
       "tempoLeitura": 10,
       "arquivo": "flma11/index.html",
       "nota": 6.5,
       "veredicto": "MANTER",
-      "notaGestora": 7
+      "notaGestora": 7.0
     },
     {
       "id": "flrp11",
       "ticker": "FLRP11",
       "nome": "Hedge Floripa Shopping FII",
       "gestora": "Hedge Investments",
-      "segmento": "tijolo---shopping-center",
-      "subsegmento": "Tijolo - Shopping Center",
-      "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "segmento": "tijolo---shopping-center-(mono",
+      "subsegmento": "Tijolo - Shopping Center (Mono-ativo)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
         "cotacao": 21.48,
         "pvp": 1.02,
@@ -8796,79 +8880,126 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Muito competitivas para o segmento"
+        "comentarioTaxas": "Taxa total de 0,60% a.a. (admin + gestão, sem performance) — entre as mais baixas do segmento de shopping"
       },
       "estrategia": {
-        "resumo": "FLRP11 e um FII de shopping center mono-ativo com participacao de 35,37% no Floripa Shopping em Florianopolis/SC. O empreendimento apresenta resultados operacionais crescentes (NOI +16,9%), inadimplencia negativa, e 151 operacoes diversificadas entre varejo, corporativo e educacao. O principal driver de valor e o turismo estrangeiro crescente em Florianopolis, que impulsiona vendas sazonais e receitas de estacionamento. A taxa de administracao de 0,60% sem performance e uma das mais competitivas do segmento.",
+        "resumo": "A tese de investimento do FLRP11 repousa sobre três pilares: (i) qualidade operacional do Floripa Shopping — vacância 1,7% (vs mediana SC 4,4%), inadimplência líquida -1,4%, NOI +16,9% e mix diversificado em 151 operações cobrindo varejo, corporativo, saúde e educação; (ii) tese de turismo em Florianópolis — aeroporto consolidado como 3º maior em movimentação internacional do Brasil, Operação Verão 2025/2026 prevê 3 milhões de turistas e malha aérea +19% (38% estrangeiros), gerando picos sazonais de aluguel percentual e estacionamento; (iii) taxa baixa de 0,60% a.a. sem performance e gestão Hedge com governança consolidada.O contraponto é estrutural e exige precificação realista: shopping regional não-dominante em Florianópolis (Iguatemi e BeiraMar atendem segmentos AAA/A no continente e centro), mono-ativo com participação minoritária de 35,37% (sem controle), liquidez muito baixa (R$ 15-19 mil/dia) que dificulta entrada/saída de posições maiores, volatilidade extrema de marcação CBRE (de +27% para -11% para +4% em laudos consecutivos) e P/VP de 1,02 sem desconto sobre o VP — enquanto FIIs de shopping diversificados negociam com desconto de 5-20%. A tese funciona em janela de turismo forte e revitalização entregue, mas tem teto de upside limitado.",
         "ocupacao": 98.3,
         "focoGeografico": "",
-        "tipoAtivo": "Tijolo - Shopping Center"
+        "tipoAtivo": "Tijolo - Shopping Center (Mono-ativo)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Vendas +29,2% no acumulado 2025",
-        "Resultado operacional +16,9%",
-        "Inadimplencia liquida negativa (-1,4%)",
-        "Taxa de 0,60% sem performance",
-        "Turismo estrangeiro crescente em Florianopolis",
-        "151 operacoes diversificadas",
-        "Rendimentos em tendencia de alta"
+        "Vacância de 1,7% — abaixo da mediana de SC (4,4%) e do Brasil (4,3%), com inadimplência líquida negativa (-1,4%)",
+        "NOI cresceu 16,9% em 2025 e vendas +29,2%, fortemente impulsionados pelo turismo de verão e mix diversificado",
+        "Taxa total de 0,60% a.a. (admin + gestão, sem performance) — entre as mais baixas do segmento de shopping",
+        "Mix de receita diversificado em três blocos (varejo 67%, corporativo 20%, educacional 13%) reduz volatilidade vs shopping puro",
+        "Gestão Hedge Investments com transparência alta (planilha de fundamentos pública, relatórios gerenciais detalhados)",
+        "Operação física via Plena Malls — operadora especializada em shopping regional",
+        "Aeroporto Hercílio Luz consolidado como 3º maior em movimentação internacional do Brasil — driver estrutural de turismo",
+        "Resultado acumulado não distribuído de R$ 0,233/cota (dez/25) oferece colchão para distribuições do 1S26"
       ],
       "conclusao": {
-        "resumo": "O FLRP11 e indicado para investidores que buscam exposicao ao turismo em Florianopolis com custos baixos. Os fundamentos operacionais sao solidos e em melhoria. A recomendacao de MANTER reflete o P/VP proximo ao par e a baixa liquidez, mas o ativo apresenta potencial de valorizacao com a continuidade do crescimento turistico na regiao.",
-        "paraQuem": "Investidores que buscam exposicao ao turismo em Florianopolis",
-        "naoParaQuem": "Quem nao aceita concentracao em ativo unico"
+        "resumo": "O FLRP11 é um FII de shopping mono-ativo com fundamentos operacionais correntes sólidos (NOI +16,9%, vacância 1,7%, DY 8,66%) e gestão Hedge consolidada, mas com limitações estruturais relevantes: shopping regional não-dominante em Florianópolis, participação minoritária, liquidez muito baixa, volatilidade extrema de marcação CBRE e ausência de desconto sobre o VP. A tese funciona para investidores que acreditam no turismo crescente em Florianópolis e que aceitam mono-ativo com posições pequenas (compatíveis com R$ 15 mil/dia). Para diversificação setorial em FII de shopping, há alternativas mais sólidas como XPML11, VISC11, HSML11 ou MALL11 com diversificação geográfica e descontos sobre VP. Nota 6,0/10 — manter para quem já está dentro com tese clara, aguardar P/VP < 0,95 para nova entrada.",
+        "paraQuem": "Investidores que acreditam na tese de turismo em Florianópolis e querem exposição direta ao Floripa Shopping",
+        "naoParaQuem": "Quem não aceita concentração mono-ativo — XPML11, VISC11, HSML11 e MALL11 oferecem diversificação por dezenas de shoppings"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "2006-2009",
-            "descricao": "Nov/2006: Inauguracao do Floripa Shopping",
+            "ano": "Nov/2006",
+            "descricao": "ABL inicial menor (foi expandido posteriormente)",
             "impacto": ""
           },
           {
-            "ano": "2019-2023",
-            "descricao": "Programa de renovacao de fachadas e areas comuns",
+            "ano": "Set/2009",
+            "descricao": "Início como FII de tijolo de gestão passiva",
             "impacto": ""
           },
           {
-            "ano": "2024",
-            "descricao": "Aluguel percentual +190% na temporada",
+            "ano": "2017",
+            "descricao": "Preço por cota: R$ 2.130,11 (equivalente pós-split: R$ 21,30)",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "7a Emissao: R$ 7,1 Mi para reforma de interiores",
+            "ano": "2019",
+            "descricao": "Programa plurianual de modernização",
+            "impacto": ""
+          },
+          {
+            "ano": "2020",
+            "descricao": "Distribuições reduzidas drasticamente em 2020",
+            "impacto": ""
+          },
+          {
+            "ano": "Out-Dez/2022",
+            "descricao": "Solicitação via HGBS11 (Hedge era cotista)",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2023",
+            "descricao": "Lucro líquido 2023: R$ 42,4 Mi (efeito ajuste a valor justo)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jul/2024",
+            "descricao": "Preço/cota: R$ 2.109,02 (equivalente pós-split: R$ 21,09)",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2024",
+            "descricao": "Prejuízo líquido 2024: -R$ 7,77 Mi (efeito ajuste valor justo)",
+            "impacto": ""
+          },
+          {
+            "ano": "Mai/2025",
+            "descricao": "Quórum AGO: apenas 0,44% (votos válidos)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun-Ago/2025",
+            "descricao": "Resultado operacional 2025 (acum nov): +16,9% vs 2024",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "PL fim de 2025: R$ 158,7 Mi (vs R$ 147,2 Mi fim de 2024)",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 158,7 Mi | Cotistas: 1.853",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Shopping Center",
-        "Florianopolis/SC",
-        "Vacancia 1,7%",
+        "Shopping Regional",
+        "São José/SC (Grande Floripa)",
+        "Mono-ativo (35,37% Floripa Shopping)",
+        "Gestão Hedge desde dez/2022",
         "Hedge Investments"
       ],
       "tempoLeitura": 10,
       "arquivo": "flrp11/index.html",
-      "nota": 7,
+      "nota": 6.0,
       "veredicto": "MANTER",
-      "notaGestora": 8
+      "notaGestora": 8.0
     },
     {
       "id": "fpab11",
       "ticker": "FPAB11",
-      "nome": "FII Projeto Água Branca",
-      "gestora": "BTG Pactual Gestora de Recursos",
-      "segmento": "lajes-corporativas",
-      "subsegmento": "Lajes Corporativas",
+      "nome": "Projeto Água Branca FII Responsabilidade Limitada",
+      "gestora": "BTG Pactual Gestora de Recursos / BTG Pactual DTVM",
+      "segmento": "lajes-corporativas-(centro-emp",
+      "subsegmento": "Lajes Corporativas (Centro Empresarial Água Branca, Barra Funda – SP)",
       "sentimento": "neutro",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 211,
-        "pvp": 0.59,
-        "dividendYield": 9.1,
+        "cotacao": 211.0,
+        "pvp": 0.58,
+        "dividendYield": 9.27,
         "dividendoMensal": 1.6,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
@@ -8879,60 +9010,97 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Acima da média do segmento"
+        "comentarioTaxas": "Taxa Global de 5% sobre receitas brutas — modelo legado de 1999, sem performance"
       },
       "estrategia": {
-        "resumo": "FPAB11 é um FII de lajes corporativas com 2 torres Classe A (LEED/Well) no Complexo Empresarial Água Branca, Barra Funda/SP. O desconto de 41% sobre o VP é atrativo, mas a liquidez extremamente baixa (680 cotistas, R$ 170 mil/mês negociados) e a taxa de administração de 5% sobre receitas brutas são pontos de atenção relevantes. A ocupação evoluiu de 79% para 89% em 2025, com novas locações em negociação.",
-        "ocupacao": 89,
+        "resumo": "A tese do FPAB11 em abr/2026 se sustenta em três alavancas: (i) desconto patrimonial de 42% (P/VP 0,58) — um dos maiores entre FIIs de lajes corporativas Classe A; (ii) virada institucional recente com substituição de gestora ativista (Coinvalores → BTG Pactual em dez/2023) e recuperação operacional concreta (37% → 89% de ocupação em 21 meses); (iii) imóveis Classe A com certificações LEED e Well em SP, com contratos atípicos de longo prazo (5-10 anos) já assinados pelos novos inquilinos relevantes.O contraponto é robusto: taxa global de 5% sobre receitas brutas drena valor proporcional à recuperação da receita; liquidez crítica (R$ 170 mil/mês, sem formador de mercado) torna entrada/saída lenta e oneram preço; concentração total em ativo único na Barra Funda (região corporativa secundária em SP, distinta da Faria Lima/JK premium); e 23% dos contratos com vencimento em 2026-2027 que exigem renovação sem perda real. O FPAB11 é uma tese de redescoberta com risco de armadilha de liquidez — o desconto pode demorar para fechar, mas a recuperação operacional já é fato e o DY recorrente (~9,1%) é competitivo.",
+        "ocupacao": 89.0,
         "focoGeografico": "",
-        "tipoAtivo": "Lajes Corporativas"
+        "tipoAtivo": "Lajes Corporativas (Centro Empresarial Água Branca, Barra Funda – SP)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Desconto de 41% sobre valor patrimonial",
-        "Imóvel Classe A com certificações LEED e Well",
-        "Localização estratégica na Barra Funda, SP",
-        "Ocupação em recuperação (79% → 89% em 2025)",
-        "Rendimento crescente (R$ 1,30 → R$ 1,60)",
-        "Mais de 25 anos de operação",
-        "Diversificação setorial de locatários"
+        "Imóveis Classe A com certificações LEED e Well em SP — diferencial relevante de ESG e atração de inquilinos",
+        "Recuperação operacional concreta: ocupação saiu de 37% (mar/23) para 89% (dez/25) sob nova gestão BTG",
+        "Desconto patrimonial expressivo: P/VP 0,58 (42% abaixo do VP) — um dos maiores no segmento de lajes",
+        "Carteira setorialmente pulverizada: Serviços (38%), Tech (12%), Telecom (11%), Saúde (10%) sem concentração crítica",
+        "Contratos atípicos de longo prazo já firmados (papelaria 5 anos, esportiva 10 anos atípica até 2034)",
+        "Avaliação patrimonial robusta via Cushman & Wakefield (laudo anual com FCD) — referência de mercado",
+        "Gestão BTG Pactual ativa com track record comprovado em recuperação de ocupação (37% → 89%)",
+        "Lucro líquido virou positivo em 2024 (R$ 17,9 Mi vs prejuízos de R$ 11-12 Mi em 2022/2023)"
       ],
       "conclusao": {
-        "resumo": "O FPAB11 é recomendado para quem tem horizonte de longo prazo e tolera baixa liquidez. O desconto expressivo de 41% sobre o VP e a recuperação da ocupação são atrativos, mas a liquidez limitada e as taxas elevadas representam barreiras significativas. Para investidores que já possuem a posição, manter é razoável, mas novos aportes exigem cautela dado o perfil restrito de negociação.",
-        "paraQuem": "Investidores com horizonte de longo prazo e tolerância a baixa liquidez",
-        "naoParaQuem": "Quem precisa de liquidez para entrar e sair rapidamente"
+        "resumo": "O FPAB11 é um FII pioneiro de 1999 que vive virada institucional desde dez/2023, quando o BTG Pactual substituiu a Coinvalores na administração em movimento ativista capitaneado pelo BTG Pactual Fundo de Fundos. Sob a nova gestão, ocupação saltou de 37% para 89%, lucro virou positivo (R$ 17,9 Mi em 2024) e rendimento mensal mais que dobrou. A tese hoje combina desconto patrimonial real (P/VP 0,58), DY competitivo (~7,2% recorrente, 9,3% com extras) e imóveis Classe A LEED/Well em SP — mas carrega taxa global de 5% sobre receitas brutas (modelo legado), liquidez crítica (R$ 170 mil/mês) e concentração total em ativo único na Barra Funda. Para investidores experientes com horizonte de 5+ anos e tolerância a baixa liquidez, vale acompanhar como tese de redescoberta. Para perfis conservadores, iniciantes ou que precisam de fluxo recorrente previsível, há melhores alternativas no segmento. Nota 5,5/10 pondera virada operacional concreta contra restrições estruturais que seguem onerando a precificação.",
+        "paraQuem": "Investidores com horizonte longo (5+ anos) que toleram baixíssima liquidez e apostam no fechamento gradual do desconto patrimonial",
+        "naoParaQuem": "Quem precisa de liquidez para entrar/sair — volume médio diário de R$ 8 mil torna giro impossível"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "1999",
-            "descricao": "Início em 15/07/1999",
+            "ano": "Jul/1999",
+            "descricao": "Um dos primeiros FIIs do mercado brasileiro",
             "impacto": ""
           },
           {
-            "ano": "2000-2020",
-            "descricao": "Subsolo com 4.500 vagas de garagem + 80 motos",
+            "ano": "2000-2015",
+            "descricao": "Imóvel certificado LEED e Well em meados da década",
             "impacto": ""
           },
           {
-            "ano": "2023-2025",
-            "descricao": "Reestruturação como FII RL em 29/12/2023",
+            "ano": "Dez/2016",
+            "descricao": "Distribuição anual média de ~5% do PL",
+            "impacto": ""
+          },
+          {
+            "ano": "2020",
+            "descricao": "Início do home office reduz demanda corporativa em SP",
+            "impacto": ""
+          },
+          {
+            "ano": "2022-2023",
+            "descricao": "Vacância chega a ~63% (ocupação ~37%) em mar/2023",
+            "impacto": ""
+          },
+          {
+            "ano": "Out-Dez/2023",
+            "descricao": "Cotista solicitante = FII BTG Pactual Fundo de Fundos",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2024",
+            "descricao": "Primeiros frutos da gestão BTG",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar-Dez/2025",
+            "descricao": "Atualização do regulamento em 11/06/2025 (CVM 175)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2026",
+            "descricao": "Distribuição puxada por caixa não recorrente",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 270,6 Mi",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Classe A (LEED/Well)",
-        "2 Torres em SP",
-        "89% Ocupação",
-        "BTG Pactual Gestora de Recursos"
+        "FII pioneiro (1999)",
+        "2 torres CEAB Classe A",
+        "Taxa Global de 5% s/ receitas brutas",
+        "Liquidez crítica (R$ 170 mil/mês)",
+        "BTG Pactual Gestora de Recursos / BTG Pactual DTVM"
       ],
       "tempoLeitura": 10,
       "arquivo": "fpab11/index.html",
-      "nota": 6.5,
-      "veredicto": "MANTER",
-      "notaGestora": 7
+      "nota": 5.5,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.0
     },
     {
       "id": "ftca11",

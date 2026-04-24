@@ -1,0 +1,548 @@
+{
+  "meta": {
+    "ticker": "BMLC11",
+    "nome": "BM Brascan Lajes Corporativas FII",
+    "nomeExtra": "(FII BM Brascan Lajes Corporativas)",
+    "segmento": "Lajes Corporativas (Tijolo)",
+    "badges": [
+      "100% ocupado",
+      "Monoativo Torre Rio Sul",
+      "Liquidez baixa"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 386
+  },
+  "seo": {
+    "title": "BMLC11 - Análise Completa | BM Brascan Lajes Corporativas",
+    "description": "Análise do FII BMLC11: monoativo na Torre Rio Sul (RJ), 100% ocupado, DY 8,3%, P/VP 0,92 e dividendo mensal de R$ 0,71. Veja a tese e riscos.",
+    "keywords": "BMLC11, Argucia, lajes corporativas, Torre Rio Sul, Botafogo, Rio de Janeiro, FII tijolo, dividend yield, BTG Pactual, escritórios",
+    "ogTitle": "BMLC11 - BM Brascan Lajes Corporativas | Dossiê Completo",
+    "ogDescription": "FII monoativo na Torre Rio Sul, em Botafogo (RJ), com 100% de ocupação, DY de 8,3% e P/VP de 0,92. Análise institucional baseada em 386 documentos oficiais.",
+    "twitterTitle": "BMLC11 - Análise Completa do FII de Lajes Corporativas",
+    "twitterDescription": "Monoativo na Torre Rio Sul (Botafogo/RJ), ocupação plena, DY 8,3% e desconto patrimonial. Riscos: liquidez baixa e concentração."
+  },
+  "indicadores": {
+    "cotacao": 101.0,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.92,
+    "pvpDesconto": "8% de desconto",
+    "dividendYield": 8.29,
+    "dividendoMensal": 0.71,
+    "dividendoAnual": 8.5,
+    "patrimonioLiquido": "R$ 109,4 Mi",
+    "vpCota": 109.56,
+    "cotistas": 1227,
+    "ocupacao": 100.0,
+    "numImoveis": 1
+  },
+  "recomendacao": {
+    "nota": 5.8,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">BMLC11</strong> é um FII de tijolo monoativo, proprietário de quatro andares (21º, 27º, 28º e 40º) e 128 vagas na <strong class=\"text-blue-400\">Torre Rio Sul</strong>, em Botafogo (RJ). A tese de curto prazo é positiva: <strong class=\"text-emerald-400\">100% de ocupação</strong>, novos contratos firmados em 2025 com preços <strong class=\"text-emerald-400\">7,2% acima da média do portfólio</strong>, P/VP de <strong class=\"text-emerald-400\">0,92</strong> e DY próximo de <strong class=\"text-emerald-400\">8,3%</strong>.</p><p>Por outro lado, o fundo carrega fragilidades estruturais relevantes: patrimônio líquido pequeno (<strong class=\"text-amber-400\">R$ 109 milhões</strong>), apenas <strong class=\"text-red-400\">1.227 cotistas</strong>, liquidez média diária de <strong class=\"text-red-400\">R$ 33 mil</strong>, base de receita inteiramente dependente de um único edifício no Rio de Janeiro e <strong class=\"text-red-400\">inadimplência em curso da Ambipar Response</strong> desde setembro/2025. O veredicto é <strong class=\"text-amber-400\">MANTER</strong>: ativo com fundamentos operacionais sólidos, mas com risco de concentração e iliquidez que limitam o tamanho da posição.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 109,4 Mi",
+      "detalhe": "VP/cota: R$ 109,56",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,71",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 8,50/ano | DY 8,3%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "100%",
+      "detalhe": "Vacância 0,0%",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.227",
+      "detalhe": "998.405 cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Inadimplência da Ambipar",
+      "descricao": "A locatária Ambipar Response S.A. não pagou o aluguel referente a setembro/2025, impactando a distribuição em R$ 0,06 por cota. O contrato possui seguro fiança equivalente a 12 meses de aluguel, mas o caso permanece em cobrança.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Monoativo no Rio de Janeiro",
+      "descricao": "100% da receita imobiliária vem de quatro andares na Torre Rio Sul, em Botafogo. Qualquer evento adverso ao edifício, ao bairro ou ao mercado de escritórios carioca afeta integralmente o fundo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez muito baixa",
+      "descricao": "Volume médio diário em torno de R$ 33 mil. Em março/2026 foram negociadas apenas 1.167 cotas (R$ 115,9 mil no mês). Saída em volume relevante exige paciência e tende a pressionar o preço.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração de cotistas",
+      "descricao": "Apenas 1.227 cotistas, sendo que três deles concentram quase 50% das cotas (faixas acima de 5%, 15% e 20%). Decisões em assembleia podem ser definidas por poucos investidores.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração setorial nos locatários",
+      "descricao": "Setor de petróleo (CNOOC) representa 24% da ABL, telecom/mídia 20%, naval 14% e advocacia 18%. A saída de um único grande locatário, como CNOOC, Sony ou Trench Rossi, criaria vacância material.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Dividendos em queda recente",
+      "descricao": "A distribuição caiu de R$ 0,74 (jan/2025) para R$ 0,71 (mar/2026), e o total anual recuou de R$ 8,65 (2024) para R$ 8,42 (2025), refletindo a venda dos ativos paulistas e a amortização de R$ 15/cota em maio/2024.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Argucia Capital Management",
+    "nota": 6.5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Sede",
+        "valor": "Rio de Janeiro"
+      },
+      {
+        "label": "Início do fundo",
+        "valor": "Jan/2012"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Argucia Capital</strong> é a gestora do fundo, com escritório no Rio de Janeiro, atuando em conjunto com a <strong>FG/A Consultoria</strong> como consultor especializado (remuneração de 0,95% sobre receita de aluguel) e a <strong>BTG Pactual Serviços Financeiros DTVM</strong> como administradora.</p><p>O fundo opera desde janeiro/2012, com taxa de gestão e administração somadas de <strong class=\"text-emerald-400\">0,40% a.a. sobre o PL</strong>, dentro da média do segmento. A gestão tem demonstrado capacidade comercial — fechou novo contrato com Supermed em 2025, renovou três contratos representando 38% da ABL com preço <strong class=\"text-emerald-400\">7,2% acima da média</strong> e levou a ocupação a 100%. Por outro lado, o portfólio nunca foi expandido para fora do edifício e o fundo segue com PL pequeno e única emissão desde 2012.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas competitiva, mas há remuneração relevante para consultor especializado",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,20% a.a.",
+        "detalhe": "Mínimo R$ 20.000/mês corrigido pelo IGPM",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,20% a.a.",
+        "detalhe": "Mínimo R$ 6.500/mês corrigido pelo IGPM",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Consultor Especializado",
+        "valor": "0,95% a.m.",
+        "detalhe": "Sobre receita de aluguel (FG/A Consultoria)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 33 mil",
+        "detalhe": "Volume médio - muito baixo",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Argucia Capital Management"
+      },
+      {
+        "label": "Consultor Especializado",
+        "valor": "FG/A Consultoria e Gestão de Ativos"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco BTG Pactual S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "Ernst & Young Auditores Independentes"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "10/01/2012"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "14.376.247/0001-11"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "1 (4 andares)"
+      },
+      {
+        "label": "ABL",
+        "valor": "5.859 m²"
+      },
+      {
+        "label": "Vacância",
+        "valor": "0,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Vagas",
+        "valor": "128"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Petróleo (CNOOC)",
+        "Telecom/Mídia (Sony)",
+        "Advocacia (Trench Rossi)",
+        "Outros",
+        "Naval",
+        "Serviços Financeiros"
+      ],
+      "data": [
+        24,
+        20,
+        18,
+        17,
+        14,
+        7
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#6b7280",
+        "#f59e0b",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CNOOC",
+        "setor": "Petróleo & Gás",
+        "receita": "~24% da ABL",
+        "rating": "21º andar",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Sony",
+        "setor": "Telecom/Mídia",
+        "receita": "~20% da ABL",
+        "rating": "40º andar",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Trench Rossi",
+        "setor": "Serviços Advocatícios",
+        "receita": "~18% da ABL",
+        "rating": "28º andar",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Naval Group",
+        "setor": "Naval/Defesa",
+        "receita": "~14% da ABL",
+        "rating": "27º/28º andar",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Ambipar Response",
+        "setor": "Serviços Ambientais",
+        "receita": "27º andar",
+        "rating": "Inadimplente desde set/2025",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Veolia",
+        "setor": "Saneamento",
+        "receita": "27º andar",
+        "rating": "Contrato vigente",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Piemonte",
+        "setor": "Diversos",
+        "receita": "40º andar",
+        "rating": "Contrato vigente",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Supermed",
+        "setor": "Saúde/Benefícios",
+        "receita": "27º andar (126 m²)",
+        "rating": "Novo contrato 60m (jul/2025)",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>O portfólio é <strong class=\"text-red-400\">100% concentrado</strong> em quatro andares de um único edifício corporativo de alto padrão (Torre Rio Sul, anexa ao Shopping Rio Sul, em Botafogo/RJ). A ocupação está em <strong class=\"text-emerald-400\">100%</strong>, mas o vencimento dos contratos mostra que <strong class=\"text-amber-400\">25% da receita vence em 2027</strong> e <strong class=\"text-amber-400\">14% em 2026</strong>, exigindo trabalho contínuo de renovação. A exposição a CNOOC, Sony e Trench Rossi (~62% da ABL combinada) traz qualidade de crédito, mas eleva o risco de concentração.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória de quase 14 anos, marcada pela venda dos ativos de São Paulo e amortização recente",
+    "periodos": [
+      {
+        "periodo": "Jan/2012",
+        "label": "INÍCIO",
+        "cor": "blue",
+        "descricao": "Constituição do fundo, com aprovação CVM em 10/01/2012 e início de atividades em 18/01/2012. Foco em lajes corporativas premium.",
+        "pontos": []
+      },
+      {
+        "periodo": "2023",
+        "label": "DESINVESTIMENTO",
+        "cor": "amber",
+        "descricao": "Venda dos ativos em São Paulo, com receita de R$ 18,2 milhões e custo de R$ 15,2 milhões. O fundo passa a ser monoativo na Torre Rio Sul.",
+        "pontos": [
+          "<strong>R$ 18,2 mi de receita de venda</strong>",
+          "Ganho líquido na alienação"
+        ]
+      },
+      {
+        "periodo": "Mai/2024",
+        "label": "AMORTIZAÇÃO",
+        "cor": "amber",
+        "descricao": "Amortização de R$ 15 por cota, totalizando R$ 14,98 milhões devolvidos aos cotistas. Distribuição anual de 2024 cai para R$ 8,65/cota (-5,3% vs 2023).",
+        "pontos": [
+          "<strong>R$ 14,98 mi devolvidos</strong>",
+          "Redução do PL"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "OCUPAÇÃO PLENA",
+        "cor": "emerald",
+        "descricao": "Renovação de 3 contratos (38% da ABL) com preços 7,2% acima da média do portfólio. Novo contrato com Supermed leva ocupação a 100%.",
+        "pontos": [
+          "<strong>Ocupação 100%</strong>",
+          "<strong>Reajuste +7,2%</strong> sobre média",
+          "Receita potencial cresce para ~R$ 778 mil/mês"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "INADIMPLÊNCIA",
+        "cor": "red",
+        "descricao": "Ambipar Response deixa de pagar aluguel de setembro/2025, impactando distribuição em R$ 0,06/cota. Garantia: seguro fiança de 12 vezes o aluguel mensal.",
+        "pontos": [
+          "<strong>Impacto de R$ 0,06/cota</strong>",
+          "Ação de cobrança em andamento"
+        ]
+      },
+      {
+        "periodo": "Mar/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Cota negociada a R$ 101,00 (P/VP 0,92), DY 8,3%, distribuição de R$ 0,71/cota. PL de R$ 109,4 milhões e 1.227 cotistas.",
+        "pontos": [
+          "<strong>P/VP 0,92</strong> - desconto patrimonial",
+          "<strong>DY 8,3%</strong>",
+          "Volume diário ~R$ 33 mil"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Após 14 anos de operação, o BMLC11 evoluiu de um fundo multiativo para um <strong class=\"text-blue-400\">monoativo</strong> concentrado na Torre Rio Sul. A venda dos ativos paulistas em 2023 e a amortização de R$ 15/cota em 2024 reduziram o tamanho do fundo, mas a gestão recompôs a ocupação para 100% em 2025 com reajustes acima da média de mercado. A trajetória recente é de <strong class=\"text-emerald-400\">eficiência operacional crescente</strong>, mas com <strong class=\"text-amber-400\">distribuição em leve queda</strong> e baixa visibilidade de crescimento.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Cotação atual vs IPO (R$ 100)",
+        "valor": "+1%",
+        "detalhe": "Pouca valorização nominal"
+      },
+      {
+        "label": "Distribuição 2025",
+        "valor": "R$ 8,42",
+        "detalhe": "Ante R$ 8,65 em 2024"
+      },
+      {
+        "label": "Amortização 2024",
+        "valor": "R$ 15,00",
+        "detalhe": "Devolução de capital"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O BMLC11 é uma aposta no <strong class=\"text-blue-400\">prêmio de qualidade da Torre Rio Sul</strong> — edifício corporativo AAA anexo ao Shopping Rio Sul, em Botafogo, com locatários de primeira linha como CNOOC, Sony, Trench Rossi e Naval Group. A tese central combina <strong class=\"text-emerald-400\">ocupação plena, contratos com reajuste acima da inflação e desconto patrimonial</strong> (P/VP 0,92).</p><p>O ponto fraco é estrutural: o fundo é <strong class=\"text-red-400\">monoativo, pequeno e ilíquido</strong>, com remuneração adicional ao consultor especializado de 0,95% sobre receita de aluguel. Para o investidor que aceita esse perfil, é um veículo de renda razoavelmente previsível; para quem busca escala, diversificação e liquidez, há melhores opções no IFIX.</p>",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">renda mensal previsível</strong> em FII de tijolo com 100% de ocupação e contratos longos",
+      "Perfil que aceita <strong class=\"text-blue-400\">monoativo de alta qualidade</strong> e tem horizonte de longo prazo (5+ anos)",
+      "Quem deseja exposição ao <strong class=\"text-blue-400\">mercado corporativo do Rio de Janeiro</strong> em região nobre como Botafogo",
+      "Investidores que toleram <strong class=\"text-amber-400\">baixa liquidez</strong> e enxergam o desconto de P/VP como oportunidade de longo prazo"
+    ],
+    "naoParaQuem": [
+      "Quem precisa de <strong class=\"text-red-400\">liquidez relevante</strong> — volume diário inferior a R$ 50 mil é proibitivo para posições maiores",
+      "Investidores que buscam <strong class=\"text-red-400\">diversificação intrínseca</strong> dentro do próprio fundo (ABL em apenas 5.859 m²)",
+      "Quem prioriza <strong class=\"text-amber-400\">crescimento de patrimônio via novas emissões</strong> — única emissão desde 2012",
+      "Perfil avesso a <strong class=\"text-amber-400\">eventos idiossincráticos</strong> como inadimplência, vacância localizada ou problemas no edifício único"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.7,
+      0.7,
+      0.69,
+      0.7,
+      0.7,
+      0.69,
+      0.7,
+      0.72,
+      0.72,
+      0.72,
+      0.74,
+      0.7,
+      0.71
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.5,
+    "chartYMax": 0.9,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 8,89 (aprox.)"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 8,65"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 8,42"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026 (estimativa própria)",
+      "faixa": "R$ 0,68 a R$ 0,74",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (mar/26)",
+        "valor": "R$ 0,71"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,74"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,69"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,92",
+      "descricao": "<p>Cotação a <strong class=\"text-emerald-400\">8% de desconto</strong> sobre o valor patrimonial. O laudo Cushman & Wakefield avaliou o imóvel a R$ 107,5 milhões em dez/2025, com taxa de desconto de 9,25% a.a. e cap rate de 8,5% a.a.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 109,56"
+        },
+        {
+          "label": "Preço atual",
+          "valor": "R$ 101,00",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "8%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "8,29%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>Yield acima da média do segmento de lajes corporativas. O <strong class=\"text-emerald-400\">spread sobre a NTN-B 10 anos (~7%)</strong> é de cerca de 130 bps, considerado moderado para o nível de risco do ativo (monoativo + iliquidez).</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 95-110",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Estimativa baseada em três métodos: (i) <strong>Gordon</strong>: DPS R$ 8,50 / (10% - 2%) = <strong class=\"text-blue-400\">R$ 106</strong>; (ii) <strong>P/VP histórico</strong>: 0,90-1,00 sobre VP de R$ 109,56 = R$ 99-110; (iii) <strong>DY target 8,5%</strong>: R$ 8,50 / 0,085 = R$ 100. Cotação atual (R$ 101) está <strong class=\"text-amber-400\">próxima do centro da faixa justa</strong>.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O BMLC11 chega ao fim do primeiro trimestre de 2026 em situação operacional confortável: ocupação de 100%, novos contratos firmados em 2025 com preços 7,2% acima da média histórica, patrimônio líquido de R$ 109,4 milhões e cota patrimonial de R$ 109,56. A distribuição mensal de R$ 0,71 por cota equivale a um dividend yield de 8,3% — competitivo, mas não excepcional dentro do universo de FIIs de tijolo com qualidade comparável.",
+      "Tecnicamente, a cotação a R$ 101,00 negocia a P/VP de 0,92, em linha com a faixa estimada de preço justo (R$ 95-110). O laudo da Cushman & Wakefield, baseado em fluxo de caixa descontado a 9,25% a.a. e cap rate de 8,5% a.a., suporta a avaliação do imóvel em R$ 107,5 milhões. Não há, portanto, desconto significativo a ser explorado no curto prazo, e o upside depende muito mais de manutenção da ocupação e de reajustes contratuais do que de reprecificação patrimonial.",
+      "Os catalisadores positivos para os próximos 12 meses são a continuidade dos reajustes IPCA, a normalização do recebimento da Ambipar (com seguro fiança de 12 meses como garantia) e eventual queda da Selic, que beneficia FIIs de tijolo. Os riscos estão concentrados na natureza monoativo do fundo, na exposição exclusiva ao mercado de escritórios do Rio de Janeiro e na liquidez muito baixa, que limita o tamanho da posição que um investidor pode construir sem distorcer o preço."
+    ],
+    "pontosFortes": [
+      "Ocupação de <strong class=\"text-emerald-400\">100%</strong> na Torre Rio Sul, edifício AAA em Botafogo (RJ)",
+      "Locatários de primeira linha: <strong>CNOOC, Sony, Trench Rossi, Naval Group, Veolia</strong>",
+      "Renovações em 2025 com preços <strong class=\"text-emerald-400\">7,2% acima</strong> da média do portfólio",
+      "P/VP de <strong class=\"text-emerald-400\">0,92</strong> oferece desconto patrimonial moderado",
+      "Dividend yield de <strong class=\"text-emerald-400\">8,3%</strong>, acima do segmento de lajes corporativas",
+      "Estrutura de taxas <strong class=\"text-emerald-400\">enxuta</strong> (0,40% a.a. de adm + gestão sobre PL)",
+      "Imóvel anexo ao Shopping Rio Sul, com infraestrutura e amenities diferenciadas",
+      "Reserva de contingência de <strong class=\"text-emerald-400\">R$ 871 mil</strong> oferece colchão para imprevistos"
+    ],
+    "pontosDeAtencao": [
+      "<strong class=\"text-red-400\">Monoativo</strong>: 100% da receita imobiliária vem da Torre Rio Sul",
+      "<strong class=\"text-red-400\">Liquidez muito baixa</strong>: volume médio diário de R$ 33 mil",
+      "<strong class=\"text-orange-400\">Inadimplência da Ambipar</strong> desde setembro/2025 (impacto R$ 0,06/cota)",
+      "Apenas <strong class=\"text-amber-400\">1.227 cotistas</strong>, com três detendo quase 50% das cotas",
+      "<strong class=\"text-amber-400\">25% da receita vence em 2027</strong> e 14% em 2026, exigindo gestão ativa",
+      "Distribuição em leve queda: R$ 8,65 (2024) → R$ 8,42 (2025)",
+      "Remuneração adicional ao consultor (FG/A) de <strong class=\"text-amber-400\">0,95% a.m.</strong> sobre receita de aluguel",
+      "Concentração geográfica total no <strong class=\"text-amber-400\">Rio de Janeiro</strong>",
+      "Única emissão desde 2012 — fundo não cresce via captação"
+    ],
+    "conclusaoFinal": "Para o investidor com perfil de longo prazo, que valoriza renda mensal previsível e aceita as limitações de um monoativo carioca com baixa liquidez, o BMLC11 é uma <strong class=\"text-amber-400\">posição satélite defensável</strong> — nunca posição central. A combinação de ocupação plena, locatários AAA e desconto patrimonial moderado oferece um retorno esperado de 8-10% ao ano em condições normais. A recomendação é <strong class=\"text-amber-400\">MANTER</strong> para quem já possui e <strong class=\"text-blue-400\">limitar a 1-2% do patrimônio</strong> em FIIs para quem está iniciando posição, sempre observando a baixíssima liquidez ao montar e desmontar a posição. Não é um fundo para quem busca crescimento ou para quem precisa girar capital com agilidade."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 386,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

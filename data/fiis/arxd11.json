@@ -1,0 +1,571 @@
+{
+  "meta": {
+    "ticker": "ARXD11",
+    "nome": "ARX Dover Recebíveis FII (Responsabilidade Limitada)",
+    "nomeExtra": "(gestão ARX Investimentos | BNY Mellon Group)",
+    "segmento": "Papel (CRI) - Multicategoria",
+    "badges": [
+      "Carteira 93% em CRIs",
+      "75% IPCA+8,86% a.a.",
+      "Fragnani em RJ impacta cota"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 131
+  },
+  "seo": {
+    "title": "ARXD11 - Análise Completa | ARX Dover Recebíveis FII",
+    "description": "ARXD11 negocia a R$ 8,00 (P/VP 0,88) com DY 13,64% e carteira de 19 CRIs; gestão ARX com recompra ativa, mas CRI Fragnani em RJ pressiona resultado.",
+    "keywords": "ARXD11, ARX Dover, ARX Investimentos, FII papel, CRI, IPCA, Fragnani, recompra cotas, Hedge Investments",
+    "ogTitle": "ARXD11 - ARX Dover Recebíveis FII | Análise Institucional",
+    "ogDescription": "Fundo de CRIs da ARX Investimentos (grupo BNY) com 93% da carteira em papéis, DY 13,64% e desconto de 12% sobre o valor patrimonial.",
+    "twitterTitle": "ARXD11 - ARX Dover Recebíveis FII",
+    "twitterDescription": "P/VP 0,88, DY 13,64%, 19 CRIs em carteira e programa de recompra de cotas ativo até nov/2026."
+  },
+  "indicadores": {
+    "cotacao": 8.0,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.88,
+    "pvpDesconto": "12% de desconto",
+    "dividendYield": 13.64,
+    "dividendoMensal": 0.09,
+    "dividendoAnual": 1.08,
+    "patrimonioLiquido": "R$ 80,6 Mi",
+    "vpCota": 9.13,
+    "cotistas": 2017,
+    "ocupacao": null,
+    "numImoveis": 19
+  },
+  "recomendacao": {
+    "nota": 6.2,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O ARXD11 entrega <strong class=\"text-emerald-400\">DY de 13,64%</strong> com cota negociada a <strong class=\"text-emerald-400\">P/VP 0,88</strong>, combinação atraente na superfície, mas que precisa ser lida junto ao <strong class=\"text-red-400\">impacto do CRI Fragnani em recuperação judicial</strong> — hoje marcado a 34,1% do par, com efeito de <strong class=\"text-red-400\">-R$ 0,42/cota</strong> no patrimônio.</p><p>A carteira de 19 CRIs traz boa pulverização por segmento (incorporação, educação, logística, energia) com <strong class=\"text-blue-400\">75% em IPCA+8,86% a.a.</strong>, o que protege contra inflação mas gera volatilidade de MTM em ciclos de abertura da curva. O <strong class=\"text-emerald-400\">programa de recompra de cotas ativo até nov/2026</strong> (até 901 mil cotas) e a tese de corte da Selic a partir de mar/2026 são catalisadores positivos.</p><p>O veredicto é <strong class=\"text-amber-400\">MANTER</strong>: o fundo tem tese válida, mas baixa liquidez (R$ 71 mil/dia), porte reduzido (R$ 80 Mi de PL) e o caso Fragnani ainda em aberto tornam o papel inadequado para quem busca renda previsível em FII de papel — há alternativas mais líquidas com DY similar.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 80,6 Mi",
+      "detalhe": "VP/cota: R$ 9,13",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,09",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 1,08/ano | DY 13,64%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Carteira CRIs",
+      "valor": "92,7%",
+      "detalhe": "19 operações | Duration 3,75 anos",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "2.017",
+      "detalhe": "8,83 mi cotas em circulação",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "CRI Fragnani em recuperação judicial",
+      "descricao": "O CRI Fragnani (2,40% do PL) foi marcado a 34,1% do par após o pedido de RJ ajuizado em mai/2025. O impacto recorrente na cota patrimonial é de -R$ 0,42/cota. A ARX vota favoravelmente ao vencimento antecipado, mas é minoritária nas assembleias.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez diária muito baixa",
+      "descricao": "Volume médio de negociação de apenas R$ 71 mil/dia e PL de R$ 80,6 milhões tornam o fundo sensível a fluxos pontuais. Investidores com posições maiores podem ter dificuldade de entrada e saída sem impactar o preço.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "MTM pressiona cota patrimonial",
+      "descricao": "A abertura da curva de juros acumulada desde o IPO gerou impacto de -R$ 0,80/cota via marcação a mercado. Se todos os CRIs voltassem à taxa de aquisição (IPCA+8,86%), a cota seria R$ 9,53 — 4,4% acima do atual.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Portfólio de incorporação em construção",
+      "descricao": "Operações como Barra da Tijuca (9,33%), HDOF Itacema (7,87%) e BTS Estácio (6,37%) dependem da performance de obras e vendas. Atrasos e eventuais estouros de orçamento podem afetar o fluxo de pagamento.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Programa de recompra em curso",
+      "descricao": "Desde nov/2025, a gestão recomprou 164.508 cotas (1,83% do total) com desconto médio de 15-18% sobre o VP. O programa vai até nov/2026 e pode acelerar o fechamento do gap entre cotação e valor patrimonial.",
+      "severidade": "emerald"
+    },
+    {
+      "titulo": "Exposição concentrada em IPCA+",
+      "descricao": "75% da carteira está indexada ao IPCA+, com taxa média de aquisição de 8,86% a.a. Em cenário de desinflação acelerada, há risco de compressão de rendimentos distribuídos.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "ARX Investimentos",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "AuM total",
+        "valor": "R$ 53 Bi"
+      },
+      {
+        "label": "AuM imobiliário",
+        "valor": "R$ 345 Mi"
+      },
+      {
+        "label": "Fundada em",
+        "valor": "2001"
+      },
+      {
+        "label": "Controlador",
+        "valor": "Grupo BNY"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">ARX Investimentos</strong> foi fundada em 2001 e é controlada pelo grupo global <strong class=\"text-blue-400\">BNY</strong> desde 2008, somando <strong class=\"text-emerald-400\">R$ 53 bilhões</strong> sob gestão em estratégias de renda variável, multimercados, crédito privado, imobiliário e DI. O braço imobiliário é relativamente novo e pequeno (R$ 345 Mi em três FIIs), mas atua em sinergia com a equipe de crédito privado da casa, focando em CRIs <em>high grade</em> com análise de crédito robusta e estrutura de garantias caso a caso.</p><p>A administração fiduciária fica a cargo da <strong class=\"text-blue-400\">Hedge Investments DTVM</strong>. A governança conta com controles de risco e compliance independentes da mesa de gestão — padrão do grupo BNY. O track record do fundo é curto (março/2023) e o episódio Fragnani é o primeiro grande teste de monitoramento e excussão de garantias do time.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa global de 1,02% a.a. competitiva para FII de CRI ativo",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa Global (adm + gestão)",
+        "valor": "1,02% a.a.",
+        "detalhe": "Sobre PL ou valor de mercado (se no IFIX)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Fundo não cobra performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 71 mil",
+        "detalhe": "Volume médio muito baixo",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Hedge Investments DTVM Ltda."
+      },
+      {
+        "label": "Gestão",
+        "valor": "ARX Investimentos Ltda."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Hedge Investments DTVM Ltda."
+      },
+      {
+        "label": "Auditor",
+        "valor": "Grant Thornton Auditores Independentes"
+      },
+      {
+        "label": "Formador de Mercado",
+        "valor": "XP Investimentos CCTVM"
+      },
+      {
+        "label": "Início",
+        "valor": "Março/2023"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "44.527.494/0001-32"
+      },
+      {
+        "label": "Classificação ANBIMA",
+        "valor": "FII de Títulos e Valores Mobiliários Gestão Ativa"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Operações de CRI",
+        "valor": "19"
+      },
+      {
+        "label": "Alocação em CRIs",
+        "valor": "92,7%"
+      },
+      {
+        "label": "Duration média",
+        "valor": "3,75 anos"
+      },
+      {
+        "label": "Taxa média IPCA+",
+        "valor": "IPCA+8,86%",
+        "cor": "blue"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Incorporação",
+        "Educação",
+        "Carteira de Recebíveis",
+        "Logística",
+        "Energia + Ger. Distribuída",
+        "Shopping",
+        "Outros"
+      ],
+      "data": [
+        24.0,
+        17.3,
+        16.2,
+        8.4,
+        15.3,
+        5.7,
+        13.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#06b6d4",
+        "#ef4444",
+        "#64748b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "FGR Incorporações (Jardins Genebra)",
+        "setor": "Carteira de Recebíveis",
+        "receita": "9,77% do PL",
+        "rating": "IPCA+9,00% · Jun/2041",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "SOD Capital (Barra da Tijuca)",
+        "setor": "Incorporação",
+        "receita": "9,33% do PL",
+        "rating": "INCC+9,00% · Set/2032",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "HDOF Itacema",
+        "setor": "Incorporação (Itaim Bibi)",
+        "receita": "7,87% do PL",
+        "rating": "IPCA+9,00% · Ago/2033",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Martini Meats (Emergent Cold)",
+        "setor": "Logística refrigerada",
+        "receita": "7,82% do PL",
+        "rating": "IPCA+9,42% · Mar/2034",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Cogna Educação",
+        "setor": "Educação",
+        "receita": "7,75% do PL",
+        "rating": "AA+(bra) Fitch · IPCA+8,65%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "PGE Cascata (off-taker Telefônica)",
+        "setor": "Geração Distribuída",
+        "receita": "6,64% do PL",
+        "rating": "BBB+sf(bra) · IPCA+8,00%",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "YDUQS/Estácio (BTS Technion)",
+        "setor": "Educação",
+        "receita": "6,37% do PL",
+        "rating": "IPCA+9,00% · Jan/2035",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Mega Moda Shopping",
+        "setor": "Shopping",
+        "receita": "5,29% do PL",
+        "rating": "AAsf(bra) Fitch · IPCA+8,22%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Petrobras (Ed. Senado)",
+        "setor": "Locação atípica",
+        "receita": "4,69% do PL",
+        "rating": "AAA(bra) Fitch · CDI+1,55%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Agibank",
+        "setor": "Bancos",
+        "receita": "4,41% do PL",
+        "rating": "A+(bra) Fitch · CDI+2,91%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Fragnani (Incefra)",
+        "setor": "Indústria cerâmica",
+        "receita": "2,40% do PL",
+        "rating": "Recuperação Judicial · marcado a 34,1%",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>A carteira combina <strong class=\"text-emerald-400\">emissores investment grade</strong> (Petrobras, Cogna, YDUQS, Agibank) com operações de incorporação em execução. O LTV médio das operações com garantia real fica entre 50-75%, e a maioria dos CRIs possui alienação fiduciária de imóveis, cessão fiduciária de recebíveis e fundos de reserva. O <strong class=\"text-red-400\">CRI Fragnani em RJ</strong> é o principal vetor de perda, com impacto consolidado de -R$ 0,42/cota; a ARX monitora o processo e defende excussão de garantias, mas é minoritária.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória curta desde o IPO em março/2023",
+    "periodos": [
+      {
+        "periodo": "Mar/2023",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "IPO a R$ 100/cota (antes do desdobramento). Captação inicial com foco em CRIs high grade originados pela própria ARX.",
+        "pontos": []
+      },
+      {
+        "periodo": "Out/2023",
+        "label": "2ª Emissão",
+        "cor": "blue",
+        "descricao": "Follow-on para ampliação da carteira de CRIs.",
+        "pontos": []
+      },
+      {
+        "periodo": "Set/2024",
+        "label": "3ª Emissão",
+        "cor": "blue",
+        "descricao": "Nova emissão no valor total de R$ 200 milhões (2,03 mi de novas cotas).",
+        "pontos": []
+      },
+      {
+        "periodo": "Nov/2024",
+        "label": "Desdobramento 1:10",
+        "cor": "amber",
+        "descricao": "Cotas desdobradas na proporção de 1 para 10, alinhando preço unitário ao padrão de mercado.",
+        "pontos": []
+      },
+      {
+        "periodo": "Mai/2025",
+        "label": "Fragnani em RJ",
+        "cor": "red",
+        "descricao": "Devedora do CRI Fragnani ajuíza recuperação judicial. CRI remarcado a 38,5% do par e posteriormente a 34,1%.",
+        "pontos": []
+      },
+      {
+        "periodo": "Nov/2025",
+        "label": "Programa de Recompra",
+        "cor": "emerald",
+        "descricao": "Início do programa de recompra de até 901.117 cotas (10% do total) com vigência até nov/2026.",
+        "pontos": [
+          "<strong>164.508 cotas recompradas até fev/2026 (1,83%)</strong>",
+          "Desconto médio de 15-18% sobre VP"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Cota a R$ 8,00 com P/VP 0,88 e DY projetado de 14,37% a.a. sobre mercado.",
+        "pontos": [
+          "<strong>19 CRIs em carteira | Duration 3,75 anos</strong>",
+          "<strong>75% IPCA+8,86% a.a.</strong>",
+          "Distribuição estável em R$ 0,090/cota/mês"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O ARXD11 acumulou <strong class=\"text-emerald-400\">retorno total de 31,83%</strong> entre abr/2023 e fev/2026, equivalente a <strong class=\"text-blue-400\">107,2% do CDI líquido</strong> no período. O fundo cresceu via três emissões (R$ 90 mi integralizados) e passou a enfrentar dois vetores de pressão simultâneos em 2024-2025: a abertura da curva de juros (que deprimiu a MTM em -R$ 0,80/cota acumulado) e o caso Fragnani (-R$ 0,42/cota). A resposta da gestão foi o programa de recompra iniciado em nov/2025 para capturar o desconto sobre o VP.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Retorno total desde IPO",
+        "valor": "+31,83%",
+        "detalhe": "107,2% do CDI líquido"
+      },
+      {
+        "label": "Rendimento médio mensal",
+        "valor": "R$ 0,10",
+        "detalhe": "Distribuído desde o início"
+      },
+      {
+        "label": "CDI no período",
+        "valor": "+36,13%",
+        "detalhe": "Benchmark (líquido IR)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O ARXD11 é um <strong class=\"text-blue-400\">FII de papel ativo</strong> sob gestão da ARX Investimentos (grupo BNY), com carteira concentrada em 19 CRIs <em>high grade</em> e taxa média de IPCA+8,86% a.a. (duration 3,75 anos). A tese central é <strong class=\"text-emerald-400\">carregamento de carteira com desconto</strong>: o investidor compra hoje a <strong class=\"text-emerald-400\">12% de desconto sobre o valor patrimonial</strong>, captura DY de 14,37% projetado sobre mercado e se beneficia tanto do fechamento do gap (via recompra e queda da Selic) quanto do carrego inflacionário.</p><p>O contraponto é o <strong class=\"text-red-400\">porte reduzido (R$ 80 Mi) com liquidez muito baixa (R$ 71 mil/dia)</strong> e a exposição ao CRI Fragnani em recuperação judicial. Para quem aceita esse perfil, o fundo funciona como alocação tática para capturar ciclo de corte de juros.</p>",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">exposição a CRIs IPCA+ com desconto relevante</strong> ao valor patrimonial e toleram volatilidade de marcação a mercado",
+      "Quem já tem carteira diversificada de FIIs de papel e procura <strong class=\"text-blue-400\">posição tática</strong> para capturar o ciclo de corte da Selic",
+      "Investidores pacientes, com horizonte de 2-3 anos, que não precisam de liquidez imediata e confiam no processo de excussão de garantias da gestora"
+    ],
+    "naoParaQuem": [
+      "Quem precisa de <strong class=\"text-red-400\">liquidez diária relevante</strong> — volume médio de R$ 71 mil/dia torna saídas grandes inviáveis sem pressão no preço",
+      "Investidores avessos a eventos de crédito e que não queiram acompanhar ativamente desdobramentos jurídicos (caso Fragnani ainda em aberto)",
+      "Quem busca FIIs de papel maiores, mais líquidos e com histórico longo — há opções como KNCR11, MXRF11, RBRF11 com mesmo perfil de DY e liquidez muito superior"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.095,
+      0.095,
+      0.095,
+      0.095,
+      0.095,
+      0.095,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.09
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.08,
+    "chartYMax": 0.11,
+    "totaisAnuais": [
+      {
+        "ano": "2023*",
+        "valor": "R$ 0,88"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,18"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,12"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,085 a R$ 0,095",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,09"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,095"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,090"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,88",
+      "descricao": "<p>Cota negociada a <strong class=\"text-emerald-400\">12% de desconto</strong> sobre o valor patrimonial. A MTM acumulada de -R$ 0,80/cota e o caso Fragnani (-R$ 0,42/cota) explicam parte do gap, mas o desconto atual é compatível com o fechamento esperado em ciclo de queda de Selic.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,13"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 8,00",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "13,64%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY de <strong class=\"text-emerald-400\">13,64% a.a.</strong> sobre cotação atual (e 14,37% anualizado pelo guidance de R$ 0,09/mês). Patamar competitivo com FIIs de papel equivalentes como KNCR11, RBRF11 e VGHF11, mas com liquidez muito inferior.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 8,50 - R$ 9,50",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Faixa estimada a partir de: (i) <strong class=\"text-blue-400\">Gordon Growth</strong> — DPS anual R$ 1,08 / (13% - 3%) ≈ R$ 10,80 cenário base; (ii) <strong class=\"text-blue-400\">convergência ao VP</strong> (R$ 9,13) puxada pelo programa de recompra; (iii) <strong class=\"text-blue-400\">DY target</strong> de 12% para FII de papel IPCA+ com credit events ≈ R$ 9,00. O limite inferior (R$ 8,50) reflete o risco Fragnani não resolvido; o superior (R$ 9,50) assume normalização completa da MTM com Selic a 12%.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O ARXD11 entrou no mercado em março/2023 como um FII de papel <em>high grade</em> sob gestão da ARX Investimentos (braço imobiliário do grupo BNY). Em fevereiro de 2026, o fundo reúne 19 CRIs que somam 92,7% do PL, com taxa média de aquisição de IPCA+8,86% a.a. e duration de 3,75 anos. O PL de R$ 80,6 Mi posiciona o ARXD11 como um fundo pequeno no universo de FIIs de papel, o que se reflete na liquidez diária de apenas R$ 71 mil — um ponto crítico para o investidor institucional.",
+      "Do ponto de vista técnico, a cota negocia a R$ 8,00 contra VP de R$ 9,13 (P/VP 0,88), entregando DY anualizado de 14,37% sobre mercado. A carteira tem dois vetores de estresse: a marcação a mercado acumulada de -R$ 0,80/cota desde o IPO (reflexo da abertura da curva IPCA) e o CRI Fragnani, remarcado a 34,1% do par após pedido de recuperação judicial em mai/2025. Em contrapartida, há catalisadores relevantes: programa de recompra até nov/2026 comprando com 15-18% de desconto, expectativa de início do ciclo de corte da Selic em mar/2026 e rotação de caixa para operações táticas de curto prazo (Ed. Senado/Petrobras, Tenda, Agibank).",
+      "Para os próximos 12 meses, a tese depende de três fatores: (i) execução do programa de recompra reduzindo a base de cotas e aproximando preço do VP; (ii) desfecho do caso Fragnani com recuperação parcial do principal via excussão das garantias (duas fábricas avaliadas em R$ 164,9 Mi); e (iii) fechamento da curva de juros reais, que reverte parte do impacto negativo de MTM. A distribuição deve permanecer ancorada em R$ 0,090/cota, com possibilidade de upside se a inflação corrente surpreender."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,88 com desconto relevante sobre valor patrimonial de R$ 9,13",
+      "DY anualizado de 14,37% sobre mercado — competitivo no segmento",
+      "Carteira diversificada com 19 CRIs em segmentos distintos (incorporação, educação, logística, energia)",
+      "Gestão ARX Investimentos (grupo BNY) com R$ 53 bi sob gestão e controles independentes",
+      "Taxa global de apenas 1,02% a.a. sem performance",
+      "Programa de recompra ativo (até 10% das cotas) acelera convergência preço-VP",
+      "75% da carteira em IPCA+8,86% oferece proteção inflacionária em duration de 3,75 anos",
+      "Track record de 107,2% do CDI líquido desde o IPO"
+    ],
+    "pontosDeAtencao": [
+      "CRI Fragnani em recuperação judicial — impacto contínuo de -R$ 0,42/cota",
+      "Liquidez média diária de apenas R$ 71 mil — muito baixa para FII listado",
+      "Porte reduzido (R$ 80,6 Mi de PL) limita fluxo e atração institucional",
+      "MTM acumulada de -R$ 0,80/cota desde IPO pressiona cota patrimonial",
+      "Track record curto (início em mar/2023) sem ciclo completo de juros testado",
+      "Exposição concentrada em incorporação (24% do PL) com operações em construção",
+      "Distribuição mensal caiu de R$ 0,095 para R$ 0,090 a partir de set/2025",
+      "Ausência de rating público em parte relevante das operações"
+    ],
+    "conclusaoFinal": "Para o investidor institucional ou com carteira relevante, o ARXD11 é uma posição <strong class=\"text-amber-400\">MANTER com viés neutro</strong>: o desconto sobre o VP e o DY de 13,64% são atrativos na superfície, mas a combinação de liquidez muito baixa, porte pequeno e caso Fragnani ainda em aberto inferioriza o papel frente a alternativas como KNCR11, RBRF11 ou VGHF11 no mesmo segmento. Para o pequeno investidor que já possui o fundo, faz sentido manter a posição e acompanhar a execução do programa de recompra e o desfecho do Fragnani. Para novos aportes, a recomendação é <strong class=\"text-blue-400\">aguardar maior clareza sobre a recuperação do crédito Fragnani ou buscar FIIs de papel maiores e mais líquidos com perfil similar</strong>. Quem comprar aqui precisa ter convicção de longo prazo (24 meses+) e tolerância a movimentos de cota associados ao tamanho reduzido do fundo."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 131,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

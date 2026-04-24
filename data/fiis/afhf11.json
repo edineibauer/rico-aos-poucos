@@ -1,0 +1,551 @@
+{
+  "meta": {
+    "ticker": "AFHF11",
+    "nome": "AF Invest Real Estate Multiestratégia FII",
+    "nomeExtra": null,
+    "segmento": "Papel (CRI) - Hedge Fund Imobiliário Multiestratégia",
+    "badges": [
+      "DY 12,5% a.a.",
+      "Gestão Ativa",
+      "IPO Jul/2025"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 28
+  },
+  "seo": {
+    "title": "AFHF11 - Análise Completa | AF Invest Real Estate Multiestratégia FII",
+    "description": "Análise do AFHF11: hedge fund imobiliário da AF Invest com DY 12,5%, P/VP 0,98, cota R$ 9,99 e carteira diversificada em CRIs high grade e FIIs.",
+    "keywords": "AFHF11, AF Invest, FII papel, CRI, hedge fund imobiliário, dividend yield, multiestratégia",
+    "ogTitle": "AFHF11 - Hedge Fund Imobiliário da AF Invest | Análise Completa",
+    "ogDescription": "Fundo multiestratégia com DY 12,5%, gestão ativa e carteira diversificada em CRIs CDI+ e IPCA+. P/VP de 0,98 e resultado consistente desde o IPO.",
+    "twitterTitle": "AFHF11 - Análise do Hedge Fund Imobiliário da AF Invest",
+    "twitterDescription": "Análise institucional do AFHF11: DY 12,5%, P/VP 0,98, gestão ativa e carteira de CRIs high grade. Veredicto e projeções."
+  },
+  "indicadores": {
+    "cotacao": 9.99,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.98,
+    "pvpDesconto": "2% de desconto",
+    "dividendYield": 12.49,
+    "dividendoMensal": 1.2,
+    "dividendoAnual": 14.4,
+    "patrimonioLiquido": "R$ 51,0 Mi",
+    "vpCota": 10.21,
+    "cotistas": 782,
+    "ocupacao": null,
+    "numImoveis": 17
+  },
+  "recomendacao": {
+    "nota": 7.3,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "<p>O AFHF11 é um <strong class=\"text-blue-400\">hedge fund imobiliário jovem</strong>, com apenas 9 meses de histórico desde o IPO em julho de 2025, mas já entregou resultados acima do benchmark com rentabilidade média de <strong class=\"text-emerald-400\">127% do CDI</strong> e dividend yield gross-up anualizado próximo de <strong class=\"text-emerald-400\">18% a.a.</strong> A gestão ativa da AF Invest, maior gestora independente de Minas Gerais, demonstrou capacidade técnica ao girar mais de 1,76x o patrimônio líquido nos primeiros 6 meses, capturando ganhos de capital com TIRs de até 33% a.a. em operações táticas.</p><p>A carteira é predominantemente <strong class=\"text-emerald-400\">high grade (77,2%)</strong>, com 88,6% em CRIs e exposição defensiva a CDI+ (68%) em momento de Selic elevada. O P/VP de <strong class=\"text-blue-400\">0,98</strong> e DY de <strong class=\"text-emerald-400\">12,5%</strong> no preço atual colocam o fundo alinhado ao IFIX Papel, mas com potencial de valorização se o ciclo de corte de juros se materializar em 2026.</p><p>Os principais pontos de atenção são o <strong class=\"text-amber-400\">tamanho pequeno</strong> (PL de R$ 51 Mi), <strong class=\"text-amber-400\">baixa liquidez</strong> (R$ 77,6 mil/dia) e o <strong class=\"text-amber-400\">track record curto</strong>, fatores que limitam a indicação para investidores com perfil mais conservador ou que exijam liquidez imediata.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 51,0 Mi",
+      "detalhe": "VP/cota: R$ 10,21",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,12",
+      "valorSufixo": "/mês",
+      "detalhe": "DY 12,49% a.a.",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Carteira High Grade",
+      "valor": "77,2%",
+      "detalhe": "88,6% em CRIs",
+      "icone": "shield",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "782",
+      "detalhe": "5,0 mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Fundo pequeno e recém-listado",
+      "descricao": "PL de apenas R$ 51 milhões e IPO em 01/07/2025 (9 meses de histórico). Track record ainda curto para avaliação completa de consistência e performance em diferentes ciclos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez diária muito baixa",
+      "descricao": "Volume médio de negociação de R$ 77,6 mil/dia, o que dificulta entrada e saída de posições maiores. Investidores com capital acima de R$ 50 mil podem ter problemas de execução.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Taxa de performance relevante",
+      "descricao": "Cobrança de 15% sobre o que exceder 100% do CDI. No 2º semestre de 2025 foram pagos R$109.650,74 (R$0,02 por cota), reduzindo o resultado líquido do cotista em meses pontuais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração elevada em CRIs CDI+",
+      "descricao": "68% da carteira indexada ao CDI, o que torna o fundo vulnerável ao ciclo de corte da Selic em 2026. IPCA representa apenas 32% da exposição em fevereiro/2026.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Exposição de 22,8% a operações High Yield",
+      "descricao": "Ativos como CRI VIC Engenharia (CDI+4,90%), CRI Grupo Comporte (CDI+3,50%), CRI Embraed (CDI+3,50%) e CRI MAC (IPCA+12%) oferecem spreads elevados mas exigem monitoramento próximo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Receitas de correção monetária pressionadas",
+      "descricao": "Janeiro/2026 incorporou IPCA de novembro (0,18%), resultando em queda na receita. Fevereiro/2026 registrou IPCA de 0,70%, que deve impactar positivamente os próximos meses.",
+      "severidade": "emerald"
+    }
+  ],
+  "gestora": {
+    "nome": "AF Invest Real Estate",
+    "nota": 7.8,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Fundação",
+        "valor": "2006"
+      },
+      {
+        "label": "Anos de atuação",
+        "valor": "20 anos"
+      },
+      {
+        "label": "Sede",
+        "valor": "Belo Horizonte/MG"
+      },
+      {
+        "label": "Posicionamento",
+        "valor": "Maior gestora independente de MG"
+      }
+    ],
+    "resumo": "<p>Fundada em <strong class=\"text-blue-400\">2006</strong>, a AF Invest é a <strong class=\"text-emerald-400\">maior gestora de recursos independente de Minas Gerais</strong>, com atuação em crédito privado e renda variável nos mercados de Wealth e Asset Management. Possui time dedicado com equipe de Debt Capital Markets (DCM), originando estruturas próprias para CRIs como observado nas operações Pernambuco Construtora.</p><p>O AFHF11 é seu veículo de hedge fund imobiliário listado, com <strong class=\"text-blue-400\">mandato flexível multiestratégia</strong> (CRIs, FIIs, equity imobiliário e ações listadas). Em 9 meses de operação, o fundo movimentou mais de <strong class=\"text-blue-400\">R$ 87 milhões</strong> (1,76x o PL) em compras e vendas, demonstrando gestão ativa efetiva. Administração pelo Banco Daycoval, com rígido compliance e controle de riscos conforme apresentado nos relatórios.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas competitiva, mas com performance que pode reduzir resultado em períodos de alta rentabilidade",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,03% a.a.",
+        "detalhe": "Inclui adm., gestão, custódia e escrituração",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "15% excedente 100% CDI",
+        "detalhe": "2º sem/2025: R$ 109,6 mil pagos",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 77,6 mil",
+        "detalhe": "Volume médio negociado",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Banco Daycoval S.A."
+      },
+      {
+        "label": "Gestora",
+        "valor": "AF Invest Real Estate"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco Daycoval S.A."
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "01/07/2025"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "60.077.386/0001-61"
+      },
+      {
+        "label": "Código ISIN",
+        "valor": "BR0NZUCTF003"
+      },
+      {
+        "label": "Classificação Anbima",
+        "valor": "Papel - CRI - Gestão Ativa"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Ativos na carteira",
+        "valor": "20"
+      },
+      {
+        "label": "CRIs",
+        "valor": "17 ativos",
+        "cor": "blue"
+      },
+      {
+        "label": "FIIs",
+        "valor": "3 posições",
+        "cor": "purple"
+      },
+      {
+        "label": "Exposição High Grade",
+        "valor": "77,2%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Duration CDI+",
+        "valor": "2,17 anos"
+      },
+      {
+        "label": "Duration IPCA+",
+        "valor": "4,86 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Incorporação",
+        "Varejo Essencial",
+        "Loteamento",
+        "Logístico",
+        "Home Equity",
+        "FIIs/Caixa"
+      ],
+      "data": [
+        52.02,
+        28.1,
+        10.63,
+        5.09,
+        4.16,
+        11.38
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#06b6d4",
+        "#64748b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Muffato",
+        "setor": "Varejo Essencial",
+        "receita": "9,70% carteira",
+        "rating": "CDI+2,50% | Venc. 2035",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Cahima-Direcional",
+        "setor": "Incorporação",
+        "receita": "9,45% carteira",
+        "rating": "CDI+2,00% | Venc. 2031",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI MAC",
+        "setor": "Loteamento",
+        "receita": "9,42% carteira",
+        "rating": "IPCA+12,00% | Venc. 2036",
+        "ratingCor": "amber",
+        "risco": "High Yield",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "FII LPLP15 (Lago da Pedra)",
+        "setor": "Equity Imobiliário",
+        "receita": "9,42% carteira",
+        "rating": "CDI+3,00% equivalente",
+        "ratingCor": "emerald",
+        "risco": "Direcional",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Tibério",
+        "setor": "Incorporação",
+        "receita": "8,49% carteira",
+        "rating": "CDI+2,70% | Venc. 2028",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI RNI (Rodobens)",
+        "setor": "Incorporação",
+        "receita": "7,10% carteira",
+        "rating": "CDI+1,70% | Venc. 2029",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI TRX Mateus",
+        "setor": "Varejo Essencial",
+        "receita": "6,74% carteira",
+        "rating": "IPCA+9,10% | Venc. 2039",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI MRV",
+        "setor": "Incorporação",
+        "receita": "14,78% (3 tranches)",
+        "rating": "CDI+3,00% | Venc. 2027",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI GARE Atacadão",
+        "setor": "Varejo Essencial",
+        "receita": "5,64% carteira",
+        "rating": "IPCA+9,37% | Venc. 2037",
+        "ratingCor": "emerald",
+        "risco": "High Grade",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>Carteira pulverizada em <strong class=\"text-blue-400\">17 CRIs e 3 FIIs</strong>, com <strong class=\"text-emerald-400\">77,2% em ativos High Grade</strong> e 22,8% em High Yield. A concentração por devedor é controlada, com maior ativo representando 9,70% (CRI Muffato) e limite regulatório de 10% após 6 meses da emissão sendo respeitado via vendas táticas. <strong class=\"text-emerald-400\">Todas as operações estão adimplentes</strong> com suas obrigações em fevereiro/2026. A diversificação por segmento é adequada: Incorporação (52%), Varejo Essencial (28%), Loteamento (10%), Logístico (5%) e Home Equity (4%).</p>"
+  },
+  "timeline": {
+    "subtitulo": "Nove meses de histórico desde o IPO, com gestão ativa e crescimento expressivo de cotistas",
+    "periodos": [
+      {
+        "periodo": "Jul/2025",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Anúncio de encerramento da oferta pública com distribuição total de 5.000.000 de cotas, captando R$50 milhões. Início com 127 cotistas e cota patrimonial a R$10,09.",
+        "pontos": [
+          "<strong>R$ 49,9 milhões alocados</strong> em 11 operações no primeiro mês",
+          "86% em ativos indexados ao CDI, 14% em IPCA+"
+        ]
+      },
+      {
+        "periodo": "Ago-Out/2025",
+        "label": "ESTRUTURAÇÃO",
+        "cor": "amber",
+        "descricao": "Fase de ajustes da carteira com reduções de concentração em posições como Muffato e Tibério. TIR de 33% a.a. na venda do CRI FGR em setembro e 22% a.a. no CRI Pátio Limeira.",
+        "pontos": [
+          "Base cotistas cresce de 182 para 336",
+          "<strong class=\"text-emerald-400\">Ganhos de capital relevantes</strong> com vendas táticas",
+          "Início de alocação estratégica em FIIs"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "6 MESES",
+        "cor": "emerald",
+        "descricao": "Primeiro semestre fecha com movimentação acumulada de R$87 milhões (1,76x PL), demonstrando gestão ativa efetiva. Amortização antecipada dos CRIs Almeida Júnior Blumenau (21,1% a.a.) e Nações (23,87% a.a.).",
+        "pontos": [
+          "526 cotistas | PL de R$ 51,2 Mi",
+          "Distribuição de <strong class=\"text-emerald-400\">R$ 0,135/cota</strong> (maior do histórico)",
+          "Rentabilidade desde início: <strong class=\"text-emerald-400\">132% do CDI</strong>"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Carteira madura com 20 ativos, PL de R$51 milhões e 782 cotistas. Pré-pagamento do CRI Rochaverá com prêmio de R$0,01/cota. Novas aquisições de CRI MAC (IPCA+12%) e MRV II (CDI+3%).",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">782 cotistas</strong> (6x desde IPO)",
+          "Cota patrimonial: <strong class=\"text-emerald-400\">R$ 10,21</strong>",
+          "Reserva acumulada: R$ 0,01/cota",
+          "Gestão estruturando 2 novas operações CDI+"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Em <strong class=\"text-blue-400\">9 meses</strong> desde o IPO, o AFHF11 evoluiu de um fundo recém-captado de R$50 milhões para uma carteira madura e diversificada, expandindo a base de cotistas em mais de <strong class=\"text-emerald-400\">6 vezes</strong> (127 → 782). A rentabilidade acumulada desde o início atingiu <strong class=\"text-emerald-400\">127% do CDI</strong>, acima do benchmark e demonstrando a capacidade da gestão ativa em gerar alpha via operações táticas. O fundo distribuiu R$1,02 em rendimentos desde o início, com DY gross-up desde o início de 12,41%. Todas as operações seguem adimplentes.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota Patrimonial",
+        "valor": "+2,1%",
+        "detalhe": "R$ 10,00 → R$ 10,21"
+      },
+      {
+        "label": "Total Distribuído",
+        "valor": "R$ 1,02",
+        "detalhe": "Desde IPO (jul/25 a mar/26)"
+      },
+      {
+        "label": "Crescimento Cotistas",
+        "valor": "+516%",
+        "detalhe": "127 → 782 cotistas"
+      },
+      {
+        "label": "Rentabilidade % CDI",
+        "valor": "127%",
+        "detalhe": "Desde o início (gross-up)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese central do AFHF11 se apoia em três pilares: <strong class=\"text-blue-400\">(1) mandato multiestratégia flexível</strong> que permite rotação entre CRIs, FIIs, equity imobiliário e ações, capturando o melhor momento de cada classe; <strong class=\"text-blue-400\">(2) gestão ativa comprovada</strong> pela AF Invest, com 20 anos de experiência em crédito privado e capacidade demonstrada de gerar ganhos táticos (TIRs de 20-33% a.a. em operações selecionadas); e <strong class=\"text-blue-400\">(3) carteira defensiva</strong> com 77% em CRIs high grade e garantias robustas (alienações fiduciárias, fianças, fundos de reserva).</p><p>Com a Selic a 15% a.a. e perspectiva de início de ciclo de cortes em 2026, o fundo se posiciona para capturar o carrego elevado dos CRIs CDI+ no curto prazo e, simultaneamente, ganhos de capital nos FIIs e CRIs IPCA+ em um cenário de marcação positiva.</p>",
+    "paraQuem": [
+      "<strong>Investidores em construção de carteira de renda</strong> que buscam um componente de crédito estruturado com gestão ativa e diversificação automática",
+      "<strong>Cotistas com perfil moderado</strong>, que toleram exposição a CRIs High Yield controlados (22,8%) em troca de yields superiores",
+      "<strong>Investidores com horizonte de médio prazo (2+ anos)</strong> que buscam capturar alpha da gestão ativa e ganhos de capital em rotação de ativos",
+      "<strong>Cotistas com capital entre R$ 1 mil e R$ 20 mil</strong>, compatível com a liquidez reduzida do fundo"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidores que priorizam alta liquidez</strong> — volume médio de R$ 77 mil/dia limita movimentações maiores",
+      "<strong>Perfis ultraconservadores</strong> que exigem track record longo (5+ anos) — o fundo tem apenas 9 meses listado",
+      "<strong>Grandes alocadores institucionais</strong> — o PL de R$ 51 Mi é pequeno e pode limitar teses de tamanho",
+      "<strong>Investidores focados exclusivamente em DY estável</strong> — a gestão ativa gera oscilações nos rendimentos conforme ganhos de capital"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.12,
+      0.12,
+      0.13,
+      0.13,
+      0.13,
+      0.135,
+      0.12,
+      0.12,
+      0.12
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.1,
+    "chartYMax": 0.15,
+    "totaisAnuais": [
+      {
+        "ano": "2025 (2º sem)",
+        "valor": "R$ 0,775"
+      },
+      {
+        "ano": "2026 (1º tri)",
+        "valor": "R$ 0,36"
+      },
+      {
+        "ano": "Desde IPO",
+        "valor": "R$ 1,135"
+      }
+    ],
+    "guidance": {
+      "periodo": "Projeção 2T/2026",
+      "faixa": "R$ 0,12 a R$ 0,13",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (Fev/26)",
+        "valor": "R$ 0,12"
+      },
+      {
+        "label": "Maior no histórico",
+        "valor": "R$ 0,135",
+        "cor": "emerald"
+      },
+      {
+        "label": "Menor no histórico",
+        "valor": "R$ 0,12"
+      },
+      {
+        "label": "Reserva acumulada",
+        "valor": "R$ 0,01/cota",
+        "cor": "blue"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,98",
+      "descricao": "<p>Fundo negocia com <strong class=\"text-emerald-400\">leve desconto de 2%</strong> em relação ao valor patrimonial, alinhado à média histórica desde o IPO. A cota patrimonial tem apresentado valorização gradual via marcação a mercado.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 10,21"
+        },
+        {
+          "label": "Preço de mercado",
+          "valor": "R$ 9,99",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto implícito",
+          "valor": "R$ 0,22"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,49%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY de <strong class=\"text-emerald-400\">12,49% a.a.</strong> é competitivo frente ao IFIX Papel (média ~12,5%) e equivale a gross-up de aproximadamente <strong class=\"text-emerald-400\">18% a.a.</strong>, capturando integralmente o carrego da carteira de CRIs em momento de Selic elevada.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 10,20 a R$ 10,80",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Faixa estimada via Gordon Growth (DPS R$1,44 / 14% - 0% = R$10,30) e comparação com peers do IFIX Papel (P/VP médio 1,00-1,05x). Considerando a cota patrimonial atual de R$10,21, há espaço para valorização de até <strong class=\"text-emerald-400\">8%</strong> com o início do ciclo de corte da Selic em 2026, capturando ganhos de capital nos CRIs IPCA+ longos.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O AFHF11 se apresenta como um dos hedge funds imobiliários mais interessantes listados recentemente, combinando a expertise de 20 anos da AF Invest em crédito privado com um mandato multiestratégia flexível que permite rotação entre CRIs, FIIs, equity imobiliário e ações. Em 9 meses de operação desde o IPO em julho/2025, o fundo já demonstrou capacidade de gerar alpha via operações táticas, com TIRs anualizadas entre 17% e 33% em vendas pontuais e rentabilidade acumulada de 127% do CDI.",
+      "Do ponto de vista técnico, a carteira é majoritariamente high grade (77,2%) e composta por CRIs com estruturas robustas de garantias — alienações fiduciárias de imóveis com LTVs controlados, cessões de recebíveis, fianças corporativas e fundos de reserva. A exposição defensiva ao CDI+ (68%) protege o carrego no atual patamar de Selic a 15%, enquanto a parcela em IPCA+ (32%) oferece proteção inflacionária. O DY atual de 12,49% e P/VP de 0,98 posicionam o fundo em linha com o IFIX Papel, sem distorções significativas.",
+      "Os principais catalisadores para 2026 são: (i) início do ciclo de corte da Selic previsto para o 1T/2026 pelo próprio COPOM, que deve valorizar os CRIs IPCA+ longos da carteira via fechamento de spreads; (ii) IPCA de fevereiro em 0,70% que impactará positivamente o carrego nos próximos meses dada a defasagem de 2 meses; e (iii) novas operações em estruturação que podem incrementar o yield. Os riscos estão concentrados na pequena escala (PL R$51 Mi), baixa liquidez (R$77 mil/dia) e track record curto."
+    ],
+    "pontosFortes": [
+      "Gestora AF Invest com 20 anos de track record em crédito privado e maior independente de MG",
+      "Rentabilidade desde o IPO de 127% do CDI, acima do benchmark",
+      "Carteira 77,2% high grade com todas as operações adimplentes",
+      "Gestão ativa efetiva: R$87 Mi movimentados (1,76x PL) em 6 meses com TIRs de 17-33%",
+      "Diversificação em 17 CRIs e 3 FIIs, com concentração máxima de 9,70% por ativo",
+      "DY gross-up de 18% a.a., competitivo frente ao IFIX Papel",
+      "Estruturas de garantias robustas em todos os CRIs (alienações, fianças, reservas)",
+      "Crescimento da base de cotistas de 127 para 782 em 9 meses (+516%)",
+      "Cota patrimonial em valorização gradual via marcação a mercado"
+    ],
+    "pontosDeAtencao": [
+      "PL pequeno de R$ 51 milhões limita escala e atratividade institucional",
+      "Liquidez diária de apenas R$ 77,6 mil restringe entrada/saída de posições maiores",
+      "Track record de apenas 9 meses desde o IPO, insuficiente para avaliação completa",
+      "Taxa de performance de 15% sobre o que exceder 100% do CDI reduz resultado em meses de outperformance",
+      "Concentração de 68% em CDI+ deixa o fundo vulnerável ao ciclo de corte da Selic",
+      "Exposição de 22,8% a CRIs High Yield (MAC, VIC, Grupo Comporte, Embraed) exige monitoramento",
+      "Distribuição recente caiu de R$0,135 (dez/25) para R$0,12 (jan-fev/26) por fatores técnicos",
+      "Ausência de histórico em ciclos adversos (crises de crédito ou estresse de mercado)"
+    ],
+    "conclusaoFinal": "Para o investidor que busca diversificação em fundos de papel com gestão ativa comprovada e tolera as limitações de um fundo pequeno, o AFHF11 representa uma <strong class=\"text-emerald-400\">oportunidade interessante de ACUMULAR posição gradualmente</strong>, respeitando a baixa liquidez diária. O veredicto de <strong class=\"text-blue-400\">ACUMULAR com nota 7,3</strong> reflete a qualidade da gestão e da carteira, compensada pelos riscos de escala e maturidade do fundo. Recomenda-se alocação limitada a 2-5% do portfólio de FIIs do investidor, com entrada parcelada em 3-4 tranches para mitigar o impacto do volume reduzido. Cotistas que já possuem posição devem manter, aproveitando o DY competitivo. Para perfis que priorizam liquidez imediata ou exigem track record consolidado, recomenda-se aguardar o fundo consolidar 18-24 meses de histórico antes de iniciar posição."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 28,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Consulte um assessor de investimentos credenciado antes de tomar decisões."
+  }
+}

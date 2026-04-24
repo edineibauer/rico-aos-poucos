@@ -1,0 +1,532 @@
+{
+  "meta": {
+    "ticker": "AZPL11",
+    "nome": "AZ Quest Panorama Logística FII",
+    "nomeExtra": "(Fundo híbrido tijolo + crédito)",
+    "segmento": "Logística / Híbrido (Tijolo + CRI)",
+    "badges": [
+      "100% ocupação",
+      "DY 11,7%",
+      "Leasing spread +22,4%"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 79
+  },
+  "seo": {
+    "title": "AZPL11 - Análise Completa | AZ Quest Panorama Logística FII",
+    "description": "Análise institucional do AZPL11: FII híbrido com 2 galpões em SP (100% ocupados) e carteira de crédito imobiliário. DY 11,7% e P/VP 0,90.",
+    "keywords": "AZPL11, AZ Quest Panorama, fundo imobiliário logística, FII híbrido, CRI, galpão Cajamar, galpão Jandira, Mercado Livre",
+    "ogTitle": "AZPL11 - Análise Completa do FII AZ Quest Panorama Logística",
+    "ogDescription": "FII híbrido com galpões locados para Mercado Livre e Iron Mountain + carteira de crédito rentável. DY 11,7%, P/VP 0,90.",
+    "twitterTitle": "AZPL11 - Análise Completa | AZ Quest Panorama Logística",
+    "twitterDescription": "FII híbrido logística + CRI. 100% ocupação, DY 11,7%, leasing spread +22,4%."
+  },
+  "indicadores": {
+    "cotacao": 7.7,
+    "cotacaoData": "22/04/2026",
+    "pvp": 0.9,
+    "pvpDesconto": "10% de desconto",
+    "dividendYield": 11.69,
+    "dividendoMensal": 0.075,
+    "dividendoAnual": 0.9,
+    "patrimonioLiquido": "R$ 359,6 Mi",
+    "vpCota": 8.58,
+    "cotistas": 5797,
+    "ocupacao": 100.0,
+    "numImoveis": 2
+  },
+  "recomendacao": {
+    "nota": 7.0,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">AZPL11</strong> é um FII híbrido recente (início em jun/2024) que combina <strong class=\"text-emerald-400\">dois galpões logísticos de alta qualidade</strong> na região metropolitana de SP (Cajamar e Jandira, 100% ocupados, com Mercado Livre e Iron Mountain entre os locatários) com uma robusta <strong class=\"text-blue-400\">carteira de crédito imobiliário</strong> que representa ~49% do PL e rende <strong class=\"text-emerald-400\">CDI+2,88% e IPCA+10,87%</strong>.</p><p>Negociado a <strong class=\"text-emerald-400\">P/VP de 0,90</strong> (10% de desconto) com <strong class=\"text-emerald-400\">DY de 11,7%</strong>, o fundo apresenta tese sólida: leasing spread recente de <strong class=\"text-emerald-400\">+22,4%</strong> na revisional de Jandira evidencia que os contratos estão abaixo do mercado, havendo espaço para upside real nos aluguéis ao longo de 2026-2027. A natureza híbrida permite capturar o CDI alto (15%) via CRIs enquanto os tijolos fornecem proteção inflacionária.</p><p>Os principais pontos de atenção são: porte reduzido (R$ 359 mi), <strong class=\"text-amber-400\">baixíssima liquidez (R$ 589 mil/dia)</strong>, concentração em apenas 2 galpões no segmento tijolo e estrutura complexa com alavancagem via CRI de IPCA+7,60% no FII Jandira. Adequado para investidores de perfil moderado que aceitem iliquidez em troca de DY elevado.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 359,6 Mi",
+      "detalhe": "VP/cota: R$ 8,58",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,075",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 0,90/ano | DY 11,7%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "100%",
+      "detalhe": "Vacância zero | 45.561 m²",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "5.797",
+      "detalhe": "41,9 mi cotas | 3ª emissão concluída",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Baixa liquidez diária",
+      "descricao": "Volume médio de apenas R$ 589 mil/dia (abr/2026), limitando entrada e saída de investidores com tickets maiores. É um FII de porte pequeno (R$ 322 mi de valor de mercado).",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Concentração em 2 galpões",
+      "descricao": "O portfólio de tijolo possui apenas 2 ativos (Cajamar com 22,5% de participação e Jandira com 100%), gerando risco de concentração. Qualquer vacância relevante em um deles impacta significativamente a receita imobiliária.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Alavancagem via CRI Jandira",
+      "descricao": "O FII Urdi Jandira possui CRI devedor de R$ 19,8 mi a IPCA+7,60% a.a., com amortização full iniciada em nov/2024 e vencimento em jan/2030. Aumenta sensibilidade ao IPCA.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Carteira de crédito concentrada em Helbor",
+      "descricao": "Várias operações de aquisição de estoque envolvem a Helbor Empreendimentos (Patteo Klabin, Vila Mariana, Mogilar, B.Liv, W Residence). Concentração de risco de contraparte em um único incorporador.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Fundo recente sem track record longo",
+      "descricao": "Fundo iniciou operações em jun/2024 (menos de 2 anos). Gestão imobiliária da AZ Quest Panorama é relativamente nova e ainda construindo histórico.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Queda no número de cotistas",
+      "descricao": "Base caiu de 7.752 em set/2024 para 5.797 em fev/2026 (-25%), sinalizando dificuldade em pulverização e eventual saída de investidores durante a volatilidade recente.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Receita concentrada em poucos locatários",
+      "descricao": "Mercado Livre responde por 79% do galpão Cajamar e Iron Mountain por 50% do Jandira. Rescisão ou não-renovação de qualquer contrato-chave seria material.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Resolução 175 e estrutura via FIIs investidos",
+      "descricao": "Parte do portfólio de crédito é detida indiretamente via FII AZPE (34,7% do PL). Estrutura complexa de fundos cotizados exige atenção especial ao fluxo de dividendos e marcação.",
+      "severidade": "emerald"
+    }
+  ],
+  "gestora": {
+    "nome": "AZ Quest Panorama",
+    "nota": 7.0,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Início no FII",
+        "valor": "Jun/2024"
+      },
+      {
+        "label": "Taxa Adm",
+        "valor": "1,10% a.a."
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">AZ Quest Panorama Ltda</strong> (CNPJ 37.783.771/0001-02) é o braço imobiliário da AZ Quest, asset management tradicional do mercado brasileiro reconhecida por fundos multimercado. A linha Panorama também gere o AZPE11 (crédito estruturado) e AZPR11 (híbrido pulverizado), com o AZPL11 representando o pilar logístico/tijolo da casa.</p><p>A administração fiduciária fica a cargo do <strong class=\"text-blue-400\">Banco Daycoval S.A.</strong> A gestão tem demonstrado disciplina nas alocações (carteira de crédito majoritariamente em SP, 80% AAA nos galpões) e transparência elevada nos relatórios mensais. Ponto de atenção: o track record específico em FIIs é recente.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa competitiva para FII híbrido, sem performance",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,10% a.a.",
+        "detalhe": "Sobre PL ou valor de mercado (se em índice)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há taxa de performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 589 mil",
+        "detalhe": "Média fev/2026 (volume baixo)",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Banco Daycoval S.A."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Banco Daycoval S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "AZ Quest Panorama Ltda"
+      },
+      {
+        "label": "Auditor",
+        "valor": "RSM Brasil Auditores Independentes"
+      },
+      {
+        "label": "Início",
+        "valor": "Junho/2024"
+      },
+      {
+        "label": "ISIN",
+        "valor": "BRAZPLCTF000"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Galpões (tijolo)",
+        "valor": "2 ativos"
+      },
+      {
+        "label": "ABL total",
+        "valor": "45.561 m²"
+      },
+      {
+        "label": "Vacância",
+        "valor": "0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Operações de crédito",
+        "valor": "~20 CRIs/Estoques"
+      },
+      {
+        "label": "Duration crédito",
+        "valor": "1,4 anos"
+      },
+      {
+        "label": "Crédito/PL",
+        "valor": "49,4%"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "FII AZPE (Crédito)",
+        "Galpão Cajamar",
+        "CRIs Diretos",
+        "FII Jandira",
+        "Fundo DI/Caixa"
+      ],
+      "data": [
+        34.7,
+        27.6,
+        20.7,
+        13.5,
+        3.5
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Mercado Livre",
+        "setor": "E-commerce/Logística",
+        "receita": "79% do Cajamar",
+        "rating": "AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CAOA",
+        "setor": "Automotivo",
+        "receita": "21% do Cajamar",
+        "rating": "Grande porte",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Iron Mountain",
+        "setor": "Gestão de documentos",
+        "receita": "50% do Jandira",
+        "rating": "AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Premix / World Mix / LogCare",
+        "setor": "Logística diversos",
+        "receita": "50% do Jandira",
+        "rating": "Médio porte",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Allos (CRI)",
+        "setor": "Shoppings",
+        "receita": "8,7% carteira crédito",
+        "rating": "Corporativo A",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Cury / Direcional (CRI)",
+        "setor": "Incorporação econômica",
+        "receita": "5,8% carteira crédito",
+        "rating": "Corporativo A",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>Portfólio bem localizado (100% raio 40km SP) com <strong class=\"text-emerald-400\">80% de inquilinos AAA</strong> nos galpões. Revisional recente de contrato que representa 50% do ABL de Jandira gerou <strong class=\"text-emerald-400\">leasing spread de +22,4%</strong>, reforçando que os contratos estavam abaixo do mercado. 66,6% dos contratos passam por revisional em 2025, abrindo espaço para novos ganhos reais. Carteira de crédito 100% em São Paulo, com 70% de imóveis prontos ou com entrega em 2026 e taxa média CDI+2,88% + IPCA+10,87%.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória do AZPL11 desde o IPO em jun/2024",
+    "periodos": [
+      {
+        "periodo": "Jun/2024",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Liquidação do fundo em 05/06/2024, com patrimônio líquido inicial de R$ 116,4 mi. Primeira alocação foca em galpões (R$ 43,8 mi) e construção da carteira de crédito.",
+        "pontos": [
+          "PL inicial: <strong>R$ 116,4 mi</strong>",
+          "Cota patrimonial: R$ 10,00"
+        ]
+      },
+      {
+        "periodo": "Jul-Set/2024",
+        "label": "AQUISIÇÃO CAJAMAR",
+        "cor": "blue",
+        "descricao": "Fundo estrutura aquisição do Galpão Cajamar (22,5% de participação) com seller's finance, permitindo alocar parte dos recursos em CRIs e otimizar dividendos iniciais.",
+        "pontos": [
+          "Cajamar: <strong>22,5% de participação</strong> em galpão de 122.356 m²",
+          "Locatários âncora: Mercado Livre (79%) + CAOA (21%)"
+        ]
+      },
+      {
+        "periodo": "Dez/2024",
+        "label": "ENCERRAMENTO DO 1º EXERCÍCIO",
+        "cor": "blue",
+        "descricao": "Fundo encerra 2024 com PL de R$ 177,8 mi, dividendos estáveis em R$ 0,09/cota (yield ~11% na cota IPO) e portfólio 100% ocupado.",
+        "pontos": [
+          "Distribuição 2024: <strong>R$ 0,50/cota</strong>",
+          "Cotistas: 7.225"
+        ]
+      },
+      {
+        "periodo": "Ago/2025",
+        "label": "3ª EMISSÃO",
+        "cor": "purple",
+        "descricao": "3ª emissão capta R$ 177,8 mi (23,7 mi de cotas), elevando PL para ~R$ 352 mi. Parte é integralizada via dação de cotas do AZPE (R$ 125 mi), consolidando estrutura híbrida.",
+        "pontos": [
+          "Captação: <strong>R$ 177,8 mi</strong>",
+          "Integralização via FII AZPE: R$ 125 mi"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "CONSOLIDAÇÃO",
+        "cor": "emerald",
+        "descricao": "Fundo encerra 2025 com 100% de ocupação nos galpões, resultado anual de R$ 30,97 mi e PL de R$ 359,9 mi. Comercialização da área remanescente de Jandira foi feita a preços 20,8% acima do contrato anterior.",
+        "pontos": [
+          "PL: <strong>R$ 359,9 mi</strong>",
+          "Distribuição 2025: ~<strong>R$ 0,99/cota</strong>",
+          "Ganho real de aluguel: <strong>+20,8%</strong> em Jandira"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Leasing spread de +22,4% em revisional que representa 50% do ABL de Jandira, confirmando tese de contratos abaixo do mercado. Reavaliação dos ativos imobiliários valorizou os galpões em +1,25%.",
+        "pontos": [
+          "Leasing spread: <strong>+22,4%</strong>",
+          "Reavaliação imóveis: <strong>+1,25%</strong>",
+          "Crédito/PL: 49,4%"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Em menos de 2 anos o AZPL11 saiu de um PL de R$ 116 mi para R$ 359 mi, triplicando de tamanho via 3 emissões e consolidando estrutura híbrida (galpões + carteira de crédito). A distribuição mensal convergiu para R$ 0,075/cota após a 3ª emissão, refletindo nova base de cotas. A cota de mercado caiu de R$ 10,00 no IPO para R$ 7,70 (-23%), enquanto o VP mantém-se em R$ 8,58 — abrindo desconto de P/VP 0,90 que configura janela de entrada.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação da cota",
+        "valor": "-23%",
+        "detalhe": "R$ 10,00 (IPO) → R$ 7,70"
+      },
+      {
+        "label": "Crescimento do PL",
+        "valor": "+210%",
+        "detalhe": "R$ 116 mi → R$ 359 mi"
+      },
+      {
+        "label": "Total distribuído",
+        "valor": "R$ 1,49",
+        "detalhe": "Desde IPO (jun/2024)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">AZPL11</strong> combina três alavancas: (1) <strong class=\"text-emerald-400\">ganho real de aluguéis</strong> (leasing spreads já materializados de +20,8% e +22,4% mostram que contratos estão defasados), (2) <strong class=\"text-emerald-400\">carteira de crédito rentável</strong> (CDI+2,88% + IPCA+10,87%) que protege o DY durante ciclo de Selic alta, e (3) <strong class=\"text-emerald-400\">desconto patrimonial</strong> (P/VP 0,90) em fundo com 100% de ocupação e locatários AAA.</p><p>A natureza híbrida é sua principal vantagem competitiva no atual ciclo: enquanto FIIs puros de tijolo sofrem com taxas altas, o AZPL11 captura CDI via ~50% da carteira em papéis e recebe inflação via aluguéis indexados ao IPCA. Com Selic prevista para cair em 2026-2027, os galpões tendem a se reprecificar positivamente.</p>",
+    "paraQuem": [
+      "Investidor de perfil <strong class=\"text-blue-400\">moderado</strong> que busca DY elevado (>11%) e está confortável com fundos de menor porte",
+      "Quem deseja <strong class=\"text-blue-400\">exposição híbrida</strong> (logística + crédito) em um único veículo, com ticket médio baixo",
+      "Investidores que <strong class=\"text-blue-400\">acreditam em reprecificação do segmento logístico</strong> com a queda futura da Selic",
+      "Quem valoriza locatários <strong class=\"text-blue-400\">AAA</strong> como Mercado Livre e Iron Mountain e localização em raio de 40km de SP"
+    ],
+    "naoParaQuem": [
+      "Investidor que precisa de <strong class=\"text-red-400\">alta liquidez diária</strong> para movimentar posições grandes — volume de R$ 589k/dia é limitante",
+      "Quem busca <strong class=\"text-red-400\">pura exposição a galpões</strong> (tijolo puro) — aqui quase metade do PL é crédito",
+      "Investidor avesso a <strong class=\"text-red-400\">estruturas complexas</strong> com FIIs cotizados e alavancagem interna via CRI",
+      "Quem prioriza <strong class=\"text-red-400\">track record longo</strong> de gestão — fundo tem menos de 2 anos de operação"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.082,
+      0.07,
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075,
+      0.075
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.05,
+    "chartYMax": 0.1,
+    "totaisAnuais": [
+      {
+        "ano": "2024 (7 meses)",
+        "valor": "R$ 0,50"
+      },
+      {
+        "ano": "2025",
+        "valor": "~R$ 0,99"
+      },
+      {
+        "ano": "2026 (proj)",
+        "valor": "R$ 0,90 a R$ 1,02"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,075 a R$ 0,085",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,075"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,09"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,07"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,90",
+      "descricao": "<p>Fundo negocia com <strong class=\"text-emerald-400\">desconto de 10%</strong> sobre o valor patrimonial. Reavaliação dos ativos imobiliários em fev/2026 agregou +1,25%, e leasing spreads recentes sugerem que os imóveis podem estar subavaliados no laudo.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 8,58"
+        },
+        {
+          "label": "Preço de mercado",
+          "valor": "R$ 7,70",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "11,7%",
+      "label": "Dividend Yield (mensal anualizado)",
+      "cor": "emerald",
+      "descricao": "<p>DY acima da média dos FIIs híbridos (8-10%) e <strong class=\"text-emerald-400\">superior à NTN-B 2035 (~7% real)</strong>. Componente de crédito sustenta o patamar enquanto Selic permanecer em 15%. DY anual considerando distribuições 2025 (~R$ 0,99) sobe para <strong class=\"text-emerald-400\">12,9%</strong>.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 8,50 a R$ 9,50",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Cenário base (Gordon: DPS R$ 0,95 / custo de capital 13% / crescimento 3%) → <strong class=\"text-blue-400\">R$ 9,50</strong>. Cenário pessimista (DPS R$ 0,85, custo 14%) → <strong class=\"text-amber-400\">R$ 8,00</strong>. Cenário otimista com corte de Selic e leasing spread mantido → <strong class=\"text-emerald-400\">R$ 10,00+</strong>. Valor patrimonial de R$ 8,58 serve como piso natural.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O AZPL11 é um FII híbrido de logística relativamente novo (menos de 2 anos de mercado) mas que já demonstra tese estruturada e execução consistente. Com PL de R$ 359 mi, 2 galpões 100% ocupados (Cajamar e Jandira) na Grande SP e carteira de crédito imobiliário de R$ 177 mi gerando CDI+2,88% e IPCA+10,87%, o fundo entrega um DY corrente de 11,7% anualizado — patamar competitivo frente a pares híbridos e FIIs puros de logística.",
+      "Do ponto de vista técnico, a negociação a P/VP 0,90 configura desconto patrimonial de 10%, enquanto o valor justo estimado pelo modelo de Gordon (considerando DPS de R$ 0,90-0,99/ano e custo de capital real de 9-10%) fica na faixa de R$ 8,50-9,50. Vale notar que a reavaliação dos galpões em fev/2026 apontou valorização de +1,25% e que a revisional de 50% do ABL de Jandira gerou leasing spread de +22,4%, sinais claros de que os contratos estão abaixo do mercado e há valor oculto no portfólio.",
+      "Como catalisadores, destacam-se: (i) 66,6% dos contratos passarão por revisional ao longo de 2026, com potencial de novos ganhos reais; (ii) queda esperada da Selic ao longo de 2026-2027 favorece reprecificação de FIIs de tijolo; (iii) portfólio de crédito 70% pronto ou com entrega em 2026, reduzindo risco de execução. Como riscos, permanecem a liquidez limitada (R$ 589 mil/dia), concentração em apenas 2 galpões e complexidade da estrutura com FIIs cotizados e alavancagem via CRI."
+    ],
+    "pontosFortes": [
+      "Ocupação de 100% nos galpões e 80% dos inquilinos classificados AAA (Mercado Livre, Iron Mountain, CAOA)",
+      "Leasing spread materializado de +22,4% e +20,8% comprovam potencial de ganho real nos aluguéis",
+      "Carteira de crédito diversificada em ~20 operações (CRIs + aquisição de estoque) 100% localizadas em SP",
+      "Dividend yield de 11,7% com componente defensivo via CRIs indexados ao CDI",
+      "P/VP de 0,90 oferece desconto patrimonial atrativo com laudo recente valorizando os ativos",
+      "Estrutura híbrida tijolo+crédito captura CDI alto hoje e reprecificação na queda futura da Selic",
+      "Taxa de administração competitiva (1,10% a.a.) sem performance",
+      "Localização premium: 100% dos ativos em raio de 40 km da capital paulista",
+      "Relatórios gerenciais detalhados e transparentes, com breakdown por CRI e ativo"
+    ],
+    "pontosDeAtencao": [
+      "Baixa liquidez diária (R$ 589 mil/dia) limita movimentação de posições maiores",
+      "Concentração do segmento tijolo em apenas 2 galpões (risco de vacância relevante)",
+      "Fundo novo (menos de 2 anos) e gestora imobiliária com track record ainda em construção",
+      "Alavancagem interna via CRI Jandira (IPCA+7,60%, R$ 19,8 mi) eleva sensibilidade ao IPCA",
+      "Carteira de crédito concentrada em Helbor (aquisição de estoque), com múltiplas operações do mesmo incorporador",
+      "Perda de ~25% da base de cotistas desde o IPO (de 7.752 para 5.797)",
+      "Estrutura complexa com FII AZPE cotizado (34,7% do PL) exige acompanhamento da transparência do fundo investido",
+      "Tributação de CRI em IPCA+10,87% reflete marcação agressiva — prêmio de risco elevado no mercado de crédito imobiliário",
+      "Parte significativa dos CRIs possui baixa liquidez (estruturações próprias), dificultando venda rápida em estresse"
+    ],
+    "conclusaoFinal": "Para o investidor moderado que busca alto DY, aceita iliquidez em troca de potencial de valorização e quer exposição simultânea a logística de qualidade e crédito imobiliário, o AZPL11 merece posição de ACUMULAR no patamar atual de R$ 7,70. A combinação de P/VP 0,90, DY 11,7%, ocupação de 100%, locatários AAA e leasing spreads comprovados positivos oferece relação risco/retorno favorável. Recomenda-se, entretanto, limitar a posição a no máximo 3-5% do portfólio de FIIs dado o porte reduzido, liquidez baixa e histórico curto. Investidores conservadores ou que priorizem liquidez devem preferir nomes maiores e consolidados do segmento logístico (BTLG11, HGLG11, BRCO11). O preço-alvo de 12 meses situa-se na faixa de R$ 8,50 a R$ 9,50, com potencial total de retorno (dividendos + valorização) entre 15% e 22%."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 79,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

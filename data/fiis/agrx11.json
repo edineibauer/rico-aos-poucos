@@ -1,0 +1,554 @@
+{
+  "meta": {
+    "ticker": "AGRX11",
+    "nome": "Fundo de Investimento nas Cadeias Produtivas Agroindustriais Exes Araguaia",
+    "nomeExtra": "(Fiagro AGRX - Gestão Éxes)",
+    "segmento": "Fiagro Híbrido (Crédito do Agronegócio - CRA)",
+    "badges": [
+      "Dividend Yield 14,4%",
+      "P/VP 0,84 (16% desconto)",
+      "86% CDI + Crédito Agro Pulverizado"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 176
+  },
+  "seo": {
+    "title": "AGRX11 - Análise Completa | Fiagro Éxes Araguaia",
+    "description": "Análise institucional do AGRX11: Fiagro de CRAs com DY de 14,4%, P/VP 0,84 e carteira pulverizada em 18 operações no agronegócio brasileiro.",
+    "keywords": "AGRX11, Fiagro, Éxes Gestora, CRA, agronegócio, dividend yield, P/VP desconto, crédito privado agro",
+    "ogTitle": "AGRX11 - Fiagro de CRAs com DY 14,4% e desconto de 16% sobre VP",
+    "ogDescription": "Análise completa do AGRX11: portfólio diversificado em CRAs do agronegócio, alto dividend yield e desafios de crédito em ciclo de queda da Selic.",
+    "twitterTitle": "AGRX11 - Análise do Fiagro Éxes Araguaia",
+    "twitterDescription": "Fiagro de CRAs com 18 operações ativas, DY de 14,4% e P/VP de 0,84. Riscos de crédito e queda da Selic no radar."
+  },
+  "indicadores": {
+    "cotacao": 8.88,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.84,
+    "pvpDesconto": "16% de desconto",
+    "dividendYield": 14.4,
+    "dividendoMensal": 1.1,
+    "dividendoAnual": 13.2,
+    "patrimonioLiquido": "R$ 185 Mi",
+    "vpCota": 10.33,
+    "cotistas": 19345,
+    "ocupacao": null,
+    "numImoveis": 18
+  },
+  "recomendacao": {
+    "nota": 6.8,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "<p>O AGRX11 é um Fiagro de crédito (CRA) gerido pela <strong class=\"text-blue-400\">Éxes Gestora de Recursos</strong>, com patrimônio de <strong class=\"text-blue-400\">R$ 185 milhões</strong> distribuído em 18 operações pulverizadas pelas cadeias do agronegócio brasileiro. A combinação de <strong class=\"text-emerald-400\">P/VP de 0,84</strong> (16% de desconto sobre o VP de R$ 10,33) com <strong class=\"text-emerald-400\">dividend yield de 14,4%</strong> nos últimos 12 meses configura precificação atrativa em termos relativos.</p><p>Por outro lado, o portfólio acumula episódios de estresse de crédito relevantes — provisão de <strong class=\"text-red-400\">99% no CRA Agrogalaxy</strong>, vencimento antecipado dos CRAs Valéria (recuperado integralmente) e Denice, e inadimplência da Agrosepac. Com <strong class=\"text-amber-400\">86% da carteira indexada ao CDI</strong>, o início do ciclo de queda da Selic já levou a gestora a sinalizar redução do patamar de distribuição mensal nos próximos meses.</p><p>Veredicto: ACUMULAR para investidores que toleram risco de crédito no agro, atraídos pelo elevado carrego (CDI + 5,5% médio) e pelo desconto patrimonial. Posição moderada na carteira.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 185 Mi",
+      "detalhe": "VP/cota: R$ 10,33",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,13",
+      "valorSufixo": "/mês",
+      "detalhe": "12m: R$ 1,33 | DY 14,4%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Reserva Acumulada",
+      "valor": "R$ 0,20",
+      "detalhe": "Por cota (fev/26)",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "19.345",
+      "detalhe": "17,9 mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Provisão integral em Agrogalaxy",
+      "descricao": "Em dez/25 o administrador elevou a provisão de perdas do CRA Agrogalaxy para 99% do principal, gerando prejuízo contábil de R$ 4,7 milhões. A reserva caiu de R$ 0,49 para R$ 0,23 por cota após o evento, refletindo o ajuste já antecipado pela gestora.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Eventos de crédito em série no portfólio",
+      "descricao": "Nos últimos 12 meses houve vencimento antecipado de CRA Valéria (recuperado em out/25) e CRA Denice (set/25), além de inadimplemento do CRA Agrosepac e prorrogações de pagamento em ROM, Cerrato e Celeste. Demonstra perfil de risco elevado típico do crédito agro.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Selic em queda pressiona distribuição",
+      "descricao": "Com 86% da carteira indexada ao CDI, o início do ciclo de queda da Selic em 2026 já levou a gestora a anunciar redução do patamar de distribuição. A receita mensal por acruo de juros tem caído gradualmente desde nov/25.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez reduzida no secundário",
+      "descricao": "Volume médio diário de aproximadamente R$ 332 mil. Movimentações expressivas podem impactar fortemente o preço da cota, sendo recomendável posicionamento gradual.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em devedores únicos",
+      "descricao": "Os 10 maiores ativos representam mais de 90% do portfólio, com posições individuais entre 7-10% do PL (Manganeli, Celeste, Orbi/CAM, Hinove, Scala/Deale, ROM). Default em qualquer um desses ativos teria impacto material.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cota negociada com 16% de desconto",
+      "descricao": "Cotação de R$ 8,88 frente ao valor patrimonial de R$ 10,33 reflete a percepção do mercado sobre o histórico de provisões. Para o investidor que confia na qualidade da gestão, é janela de carrego implícito superior a CDI + 10% a.a.",
+      "severidade": "emerald"
+    }
+  ],
+  "gestora": {
+    "nome": "Éxes Gestora de Recursos Ltda.",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Foco",
+        "valor": "Crédito Agro"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "Abr/2022"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Éxes Gestora de Recursos</strong>, sediada em São Paulo, é especializada em estruturação e gestão de crédito do agronegócio. A casa demonstra postura ativa na condução de eventos de crédito — em 2025 conduziu com sucesso a recuperação integral do CRA Valéria via excussão de garantias, recuperando até multa e juros (R$ 0,07/cota de ganho extraordinário). Por outro lado, foi exposta a defaults relevantes (Agrogalaxy, Agrosepac).</p><p>A gestão é transparente nas comunicações mensais, com detalhamento granular de cada operação, garantias e atualizações. Adotou postura conservadora ao reter parte do resultado em reservas durante 2025 para suavizar volatilidade futura. O Banco Genial S.A. atua como administrador e custodiante, garantindo segregação adequada.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas para Fiagro de crédito, com performance condicional",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre patrimônio líquido",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10%",
+        "detalhe": "Sobre o que exceder 100% do CDI",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 332 Mil",
+        "detalhe": "Volume médio negociado",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Banco Genial S.A."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco Genial S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Éxes Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Auditor",
+        "valor": "Deloitte Touche Tohmatsu"
+      },
+      {
+        "label": "Início",
+        "valor": "12/04/2022"
+      },
+      {
+        "label": "Encerramento Exercício",
+        "valor": "30/06"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Operações",
+        "valor": "18 CRAs + 1 Fiagro"
+      },
+      {
+        "label": "Indexação CDI",
+        "valor": "86%",
+        "cor": "blue"
+      },
+      {
+        "label": "Indexação IPCA",
+        "valor": "9%",
+        "cor": "amber"
+      },
+      {
+        "label": "Pré-fixado",
+        "valor": "5%",
+        "cor": "purple"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Soja",
+        "Geração Dist.",
+        "Ind. Química",
+        "Ind. Fertilizantes",
+        "Laticínios",
+        "Floresta",
+        "Açúcar/Álcool",
+        "Outros"
+      ],
+      "data": [
+        31,
+        10,
+        10,
+        10,
+        9,
+        7,
+        6,
+        17
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#06b6d4",
+        "#a855f7",
+        "#64748b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Fiagro Éxes Terras",
+        "setor": "Terras Agrícolas",
+        "receita": "10,3% PL",
+        "rating": "CDI",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA Celeste",
+        "setor": "Geração Distribuída/MT",
+        "receita": "9,6% PL",
+        "rating": "IPCA + 11,7%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA CAM/Orbi",
+        "setor": "Indústria Química",
+        "receita": "9,5% PL",
+        "rating": "CDI + 5,5%",
+        "ratingCor": "emerald",
+        "risco": "Pré-pagamento",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "CRA Manganeli",
+        "setor": "Grãos/MATOPIBA",
+        "receita": "9,5% PL",
+        "rating": "CDI + 6,5%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Hinove",
+        "setor": "Fertilizantes",
+        "receita": "9,4% PL",
+        "rating": "CDI + 4,2%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Scala/Deale",
+        "setor": "Laticínios/RS",
+        "receita": "9,4% PL",
+        "rating": "CDI + 4,0%",
+        "ratingCor": "emerald",
+        "risco": "Pré-pago mar/26",
+        "riscoCor": "blue"
+      },
+      {
+        "nome": "CRA ROM",
+        "setor": "Grãos/MT",
+        "receita": "8,8% PL",
+        "rating": "CDI + 5,0%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA Madre de Dios",
+        "setor": "Pecuária+Grãos/MS-MT",
+        "receita": "7,1% PL",
+        "rating": "CDI + 7,0%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Agrosepac",
+        "setor": "Floresta/Madeira",
+        "receita": "6,9% PL",
+        "rating": "CDI + 6,0%",
+        "ratingCor": "amber",
+        "risco": "Inadimplente",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "CRA Agrogalaxy",
+        "setor": "Revenda Insumos",
+        "receita": "0,1% PL",
+        "rating": "CDI + 4,25%",
+        "ratingCor": "red",
+        "risco": "RJ - 99% provisão",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>Carteira distribuída em <strong class=\"text-blue-400\">9 estados</strong> (SP 19%, PR 16%, MA 15%, MT 10%, PI 10%, RS 9%, MS 8%, BA 7%, MG 5%) e <strong class=\"text-blue-400\">9 setores</strong> do agronegócio. As garantias predominantes são alienação fiduciária de imóveis rurais (com cobertura média de venda forçada superior a 200%) e cessão fiduciária de recebíveis. Apesar da pulverização, eventos recentes de default (Agrogalaxy, Agrosepac) demonstram que o risco de crédito no segmento é material e exige gestão ativa permanente.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória desde IPO em abr/2022 até consolidação como Fiagro de crédito pulverizado",
+    "periodos": [
+      {
+        "periodo": "Abr/2022",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Fundo iniciado em 12/04/2022 com captação inicial e foco em CRAs do agronegócio.",
+        "pontos": []
+      },
+      {
+        "periodo": "2023",
+        "label": "EXPANSÃO",
+        "cor": "purple",
+        "descricao": "Patrimônio cresce para R$ 96,9 milhões com aquisição de 23 CRAs diversificados.",
+        "pontos": [
+          "<strong>Resultado anual: R$ 7,4 milhões</strong>",
+          "9.561.172 cotas integralizadas"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "CONSOLIDAÇÃO",
+        "cor": "blue",
+        "descricao": "Captação adicional eleva PL para R$ 179,3 milhões. Default da Agrogalaxy gera primeira provisão de 50%.",
+        "pontos": [
+          "<strong>17,9 milhões de cotas em circulação</strong>",
+          "Distribuição anual de R$ 19,7 milhões",
+          "Resultado: R$ 18,6 milhões"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "ESTRESSE DE CRÉDITO",
+        "cor": "amber",
+        "descricao": "Ano marcado por eventos de crédito: vencimento antecipado de Valéria (recuperado), Denice e inadimplemento Agrosepac. Reserva sobe a R$ 0,49/cota.",
+        "pontos": [
+          "<strong>Provisão Agrogalaxy elevada para 99%</strong>",
+          "Recuperação integral CRA Valéria (R$ 0,07/cota)",
+          "Resultado: R$ 26,6 milhões"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Patrimônio de R$ 185 milhões, 18 operações ativas e 19.345 cotistas. Início da queda da Selic pressiona distribuições.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">DY 12m: 14,4%</strong>",
+          "<strong>P/VP: 0,84 (16% desconto)</strong>",
+          "Reserva: R$ 0,20/cota",
+          "Pré-pagamento CRA Deale (R$ 0,06/cota extraordinário em mar/26)"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O AGRX11 evoluiu de captação inicial de R$ 33,9 milhões em 2022 para patrimônio de <strong class=\"text-blue-400\">R$ 185 milhões em fev/2026</strong>, expandindo a base de cotistas de poucos milhares para mais de 19 mil. A trajetória combina <strong class=\"text-emerald-400\">retornos consistentes acima do CDI</strong> com episódios pontuais de estresse de crédito típicos do segmento. A gestão demonstrou capacidade de execução em recuperações (Valéria), mas também enfrentou perdas materiais (Agrogalaxy).</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota",
+        "valor": "-11%",
+        "detalhe": "R$ 10,00 (IPO) → R$ 8,88"
+      },
+      {
+        "label": "Total Distribuído 12m",
+        "valor": "R$ 1,33",
+        "detalhe": "Por cota - DY 14,4%"
+      },
+      {
+        "label": "Crescimento PL",
+        "valor": "+91%",
+        "detalhe": "R$ 96,9 Mi → R$ 185 Mi (2 anos)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O AGRX11 representa uma <strong class=\"text-blue-400\">tese de crédito privado pulverizado no agronegócio</strong>, oferecendo retorno substancialmente superior ao CDI por meio de uma carteira de 18 operações de CRA com garantias reais (alienação fiduciária de terras e cessão de recebíveis). O posicionamento atual com P/VP de 0,84 e DY de 14,4% precifica adequadamente o risco-retorno para o perfil de investidor adequado.</p><p>A queda esperada da Selic em 2026 reduzirá o resultado nominal (86% da carteira em CDI), mas a desvalorização da cota torna o carrego implícito atrativo (CDI + 10% a.a. nos níveis atuais). É um produto para diversificação táctica de carteira, não posição central.</p>",
+    "paraQuem": [
+      "<strong class=\"text-emerald-400\">Investidores experientes</strong> em renda variável que entendem riscos de crédito privado",
+      "Quem busca <strong class=\"text-emerald-400\">diversificação setorial</strong> em portfólios de FIIs e Fiagros",
+      "Investidores que toleram <strong class=\"text-emerald-400\">volatilidade média</strong> em troca de DY elevado",
+      "Quem aprecia <strong class=\"text-emerald-400\">oportunidades de desconto patrimonial</strong> com catalisadores claros"
+    ],
+    "naoParaQuem": [
+      "Investidores <strong class=\"text-red-400\">conservadores</strong> que priorizam preservação de capital",
+      "Quem busca <strong class=\"text-red-400\">renda totalmente previsível</strong> sem riscos de provisões",
+      "Investidores que <strong class=\"text-red-400\">desconhecem o ciclo agrícola</strong> e dinâmica de safras",
+      "Quem precisa de <strong class=\"text-red-400\">alta liquidez diária</strong> (volume de R$ 332k/dia)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.11,
+      0.0,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.12,
+      0.13,
+      0.13
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.2,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 1,03"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,10"
+      },
+      {
+        "ano": "2025 (12m fev/26)",
+        "valor": "R$ 1,33"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,10 a R$ 0,12",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (fev/26)",
+        "valor": "R$ 0,13"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,13"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,11"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Em queda",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,84",
+      "descricao": "<p>Cotação de <strong class=\"text-emerald-400\">R$ 8,88</strong> frente ao valor patrimonial por cota de <strong class=\"text-blue-400\">R$ 10,33</strong> (fev/26) representa desconto de 16% sobre o PL. O desconto reflete o histórico de provisões e a percepção de risco de crédito, mas oferece margem de segurança para o investidor que confia na qualidade da gestão e do colateral.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 10,33"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 8,88",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "16,0%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "14,4%",
+      "label": "Dividend Yield 12m",
+      "cor": "emerald",
+      "descricao": "<p>DY nominal de <strong class=\"text-emerald-400\">14,4%</strong> sobre cotação atual, considerando R$ 1,33 distribuídos nos últimos 12 meses. Considerando a isenção de IR para PF, equivale a aproximadamente CDI + 5,5% líquido — patamar elevado mesmo para padrões de Fiagros de crédito. A queda da Selic deve reduzir o DY nominal para a faixa de 12-13% nos próximos meses.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 9,00 - R$ 10,30",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Modelagem combinando: (a) <strong>Gordon Growth</strong> com DPS R$ 1,30 / (custo capital 14% - crescimento 1%) ≈ R$ 10,00; (b) <strong>P/VP histórico</strong> de pares Fiagro CRA (0,90-1,00) sobre VP R$ 10,33 ≈ R$ 9,30-10,30; (c) <strong>DY target</strong> de 13% sobre DPS R$ 1,17 ajustado ≈ R$ 9,00. Faixa central: <strong class=\"text-blue-400\">R$ 9,50 a R$ 10,00</strong>, sugerindo upside potencial de 7-13% sobre cotação atual.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O AGRX11 chega ao final do 1º trimestre de 2026 com fundamentos mistos: patrimônio líquido robusto de R$ 185 milhões, base de 19.345 cotistas em crescimento contínuo desde agosto/25, e cota negociada com 16% de desconto sobre o valor patrimonial de R$ 10,33. A reserva acumulada de R$ 0,20 por cota e o pré-pagamento do CRA Deale em março/26 (gerando R$ 0,06/cota de receita extraordinária) reforçam o caixa do fundo no curto prazo.",
+      "Tecnicamente, o portfólio está adequadamente pulverizado em 18 operações de CRA, distribuídas por 9 estados e 9 setores do agronegócio. As garantias reais — alienação fiduciária de imóveis rurais com cobertura média de venda forçada superior a 200% e cessão fiduciária de recebíveis — oferecem proteção estrutural relevante. Os eventos de crédito recentes (Agrogalaxy 99% provisionado, Agrosepac inadimplente, Denice em recuperação) já estão refletidos nas reservas e na precificação atual da cota.",
+      "Em projeção, o início do ciclo de queda da Selic deve reduzir o resultado nominal mensal — a gestora já sinalizou redução do patamar de distribuição. Por outro lado, o desconto sobre VP e o carrego implícito de CDI + 5-6% ao ano sustentam atratividade relativa frente a alternativas de renda fixa. A safra 2025/26 brasileira, projetada como recorde pela Conab, oferece pano de fundo construtivo para a saúde financeira dos devedores agrícolas."
+    ],
+    "pontosFortes": [
+      "Dividend yield elevado de 14,4% nos últimos 12 meses, com isenção de IR para PF",
+      "Cotação 16% abaixo do valor patrimonial, oferecendo margem de segurança",
+      "Carteira pulverizada em 18 CRAs, 9 estados e 9 setores agroindustriais",
+      "Garantias reais robustas: alienação fiduciária com venda forçada média >200% do saldo devedor",
+      "Gestão ativa demonstrada na recuperação integral do CRA Valéria (out/25)",
+      "Reserva acumulada de R$ 0,20/cota oferece colchão para meses de menor resultado",
+      "Pré-pagamento do CRA Deale em mar/26 gerou R$ 0,06/cota extraordinário",
+      "Banco Genial como administrador/custodiante, com auditoria Deloitte"
+    ],
+    "pontosDeAtencao": [
+      "Provisão de 99% sobre saldo devedor da Agrogalaxy (recuperação judicial)",
+      "Inadimplemento atual do CRA Agrosepac, em fase de renegociação",
+      "86% da carteira indexada ao CDI - vulnerável ao ciclo de queda da Selic",
+      "Liquidez baixa no secundário (R$ 332 mil/dia em volume médio)",
+      "Concentração nos 10 maiores ativos representa mais de 90% do PL",
+      "Histórico recente de múltiplos eventos de crédito (Valéria, Denice, Agrosepac)",
+      "Tendência de queda nas distribuições mensais já comunicada pela gestora",
+      "Cotação 11% abaixo do preço de IPO após 4 anos de operação",
+      "Risco climático (La Niña) e cambial (apreciação do real) afetam devedores"
+    ],
+    "conclusaoFinal": "Recomendamos ACUMULAR AGRX11 com posição moderada (até 5% da parcela de Fiagros/FIIs da carteira) para investidores que compreendem e toleram o perfil de risco do crédito privado agrícola. O preço atual de R$ 8,88 oferece margem de segurança razoável (P/VP 0,84) e carrego atrativo (CDI + 5-6% ao ano implícito), com faixa de preço justo estimada entre R$ 9,50 e R$ 10,00. A queda da Selic reduzirá o DY nominal nos próximos trimestres, mas o desconto patrimonial e a qualidade média do colateral justificam a manutenção da exposição. Não é posição para investidores conservadores — é veículo táctico para diversificação setorial em portfólios mais sofisticados."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 176,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

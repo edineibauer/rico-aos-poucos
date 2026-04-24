@@ -1,0 +1,534 @@
+{
+  "meta": {
+    "ticker": "BBGO11",
+    "nome": "BB Fundo de Investimento de Crédito FIAGRO Imobiliário Responsabilidade Limitada",
+    "nomeExtra": "(Fiagro de Crédito do Agronegócio - BB Asset)",
+    "segmento": "Fiagro (Crédito - CRAs do Agronegócio)",
+    "badges": [
+      "Isento de IR",
+      "45+ emissores",
+      "Desconto de 20% do VP"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 160
+  },
+  "seo": {
+    "title": "BBGO11 - Análise Completa | BB Fiagro Crédito Agronegócio",
+    "description": "Análise do BBGO11 FIAGRO do Banco do Brasil: DY de 13,4%, P/VP 0,81, carteira diversificada em 45+ CRAs do agronegócio e rendimentos isentos de IR.",
+    "keywords": "BBGO11, BB Asset, Fiagro, CRA, agronegócio, Banco do Brasil, dividend yield, isento imposto de renda",
+    "ogTitle": "BBGO11 - Fiagro do Banco do Brasil em Análise",
+    "ogDescription": "Fiagro com carteira high grade em CRAs do agro, DY 13,4%, negociado a 0,81x o valor patrimonial.",
+    "twitterTitle": "BBGO11 - Análise do Fiagro BB Asset",
+    "twitterDescription": "DY 13,4% isento, P/VP 0,81 e carteira diversificada em mais de 45 CRAs do agronegócio brasileiro."
+  },
+  "indicadores": {
+    "cotacao": 75.89,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.81,
+    "pvpDesconto": "19% de desconto",
+    "dividendYield": 13.44,
+    "dividendoMensal": 0.85,
+    "dividendoAnual": 10.2,
+    "patrimonioLiquido": "R$ 377,3 Mi",
+    "vpCota": 94.21,
+    "cotistas": 12162,
+    "ocupacao": null,
+    "numImoveis": 45
+  },
+  "recomendacao": {
+    "nota": 7.0,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "<p>O BBGO11 é um Fiagro de crédito administrado pela <strong class=\"text-blue-400\">BB Asset</strong> — maior gestora do Brasil — com carteira diversificada em mais de <strong class=\"text-blue-400\">45 emissores</strong> de Certificados de Recebíveis do Agronegócio (CRAs), majoritariamente <em>high grade</em>. O fundo negocia a <strong class=\"text-emerald-400\">R$ 75,89</strong>, o que representa <strong class=\"text-emerald-400\">19% de desconto</strong> sobre o valor patrimonial de R$ 94,21, e entrega dividend yield atual de aproximadamente <strong class=\"text-emerald-400\">13,4% ao ano isento de IR</strong>, equivalente a mais de 15,8% a.a. tributado equivalente.</p><p>A tese é atravessada por <strong class=\"text-amber-400\">eventos de crédito residuais</strong> — provisões realizadas ao final de 2024 (AgroGalaxy) e monitoramento próximo de Lavoro (0,83% do PL) e Prime Agro (1,24% do PL) —, mas o pior momento do crédito agro parece já ter sido superado, com perspectiva de normalização diante do início do ciclo de corte da Selic.</p><p>Veredicto: <strong class=\"text-blue-400\">ACUMULAR</strong> — combinação de gestora robusta, desconto expressivo sobre o VP, yield elevado isento de IR e carteira pulverizada justifica posição, porém com alocação calibrada dado o risco de crédito inerente ao setor.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 377,3 Mi",
+      "detalhe": "VP/cota: R$ 94,21",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,85",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 10,20/ano | DY 13,4% isento",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Emissores",
+      "valor": "45+",
+      "detalhe": "Carteira pulverizada em CRAs",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "12.162",
+      "detalhe": "4,0 mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Eventos de crédito residuais (Lavoro e Prime Agro)",
+      "descricao": "Prime Agro (1,24% do PL) deixou de pagar parcela de remuneração em fev/2026 e Lavoro (0,83%) teve recuperação extrajudicial homologada em nov/2025 reestruturando R$ 2,5 bilhões em dívidas com fornecedores. Exposição total reduzida mas exige monitoramento contínuo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Provisão realizada no fim de 2024",
+      "descricao": "Fundo registrou R$ 29 milhões em provisões (PDD) em dezembro/2024, com destaque para AgroGalaxy (já vendida em mar/25) e outros emissores do segmento de insumos. Cota patrimonial caiu 6,4% em 2024 em função dessas marcações.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Desvalorização da cota desde o IPO",
+      "descricao": "Iniciada em dez/2021 a R$ 100, a cota de mercado negocia hoje a R$ 75,89, queda de aproximadamente 24% no preço, embora os rendimentos distribuídos tenham compensado parcialmente essa perda de capital.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração setorial em agronegócio",
+      "descricao": "Carteira exposta a riscos climáticos (La Niña/El Niño), preços de commodities, custos de insumos e ciclo de margens do produtor rural. Em 2025, inadimplência em alguns segmentos (insumos e grãos) pressionou resultados.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Risco de tributação futura",
+      "descernido": "O atual debate sobre eventual tributação dos CRAs e rendimentos de Fiagros segue no radar do mercado, podendo reduzir a atratividade relativa do fundo caso a isenção seja alterada.",
+      "descricao": "O atual debate sobre eventual tributação dos CRAs e rendimentos de Fiagros segue no radar do mercado, podendo reduzir a atratividade relativa do fundo caso a isenção seja alterada.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez moderada",
+      "descricao": "Volume médio diário de negociação de aproximadamente R$ 309 mil, inferior a pares maiores, podendo dificultar entrada e saída de posições relevantes sem pressionar preço.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BB Asset Management (BB Gestão de Recursos DTVM)",
+    "nota": 9.0,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM",
+        "valor": "+ de R$ 1,6 Tri"
+      },
+      {
+        "label": "Posição no Brasil",
+        "valor": "Maior gestora"
+      },
+      {
+        "label": "Atuação",
+        "valor": "35+ anos"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">BB Asset Management</strong> é a maior gestora de recursos do Brasil, com patrimônio sob gestão superior a <strong class=\"text-blue-400\">R$ 1,6 trilhão</strong> e atuação consolidada em fundos de investimento de todas as classes. Como braço de gestão do Banco do Brasil, tem acesso privilegiado à cadeia do agronegócio — setor em que o BB é historicamente o maior financiador nacional — e conta com o suporte técnico da Diretoria de Crédito do BB para originação e análise de CRAs. A administração do fundo segue regime de competência em linha com o Ofício-Circular CVM nº 1/2025, reforçando a transparência na política de distribuição.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas para um Fiagro de gestão ativa do maior player nacional",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,85% a.a.",
+        "detalhe": "Sobre o patrimônio líquido",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10% sobre excesso CDI+1% a.a.",
+        "detalhe": "Performance fee sobre ganho acima do benchmark",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 309 Mil",
+        "detalhe": "Volume médio de negociação",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BB Gestão de Recursos DTVM S.A."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Banco do Brasil S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "KPMG Auditores Independentes"
+      },
+      {
+        "label": "Formador de Mercado",
+        "valor": "XP Investimentos CCTVM S.A."
+      },
+      {
+        "label": "Início",
+        "valor": "17/12/2021"
+      },
+      {
+        "label": "Benchmark",
+        "valor": "CDI"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Emissores",
+        "valor": "45+"
+      },
+      {
+        "label": "Alocação em CRAs",
+        "valor": "79,4%"
+      },
+      {
+        "label": "Liquidez (OpCom)",
+        "valor": "17,6%",
+        "cor": "blue"
+      },
+      {
+        "label": "Duration média",
+        "valor": "2,2 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CDI",
+        "IPCA",
+        "OpCom/Caixa",
+        "Prefixado",
+        "FIDCs"
+      ],
+      "data": [
+        49.26,
+        26.76,
+        17.57,
+        3.37,
+        3.05
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Nardini",
+        "setor": "Sucroenergético",
+        "receita": "6,19% PL",
+        "rating": "Venc. 2028",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Neomille",
+        "setor": "Sucroenergético",
+        "receita": "5,69% PL",
+        "rating": "Venc. 2029",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Usina Cerradão",
+        "setor": "Sucroenergético",
+        "receita": "4,54% PL",
+        "rating": "Venc. 2028",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Camil Alimentos",
+        "setor": "Alimentos",
+        "receita": "6,11% PL",
+        "rating": "brAA+",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Eldorado Brasil",
+        "setor": "Celulose",
+        "receita": "5,05% PL",
+        "rating": "AAsf(bra)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Vale do Tijuco",
+        "setor": "Sucroenergético",
+        "receita": "5,47% PL",
+        "rating": "brAA(sf)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Rodoil",
+        "setor": "Dist. Combustíveis",
+        "receita": "1,86% PL",
+        "rating": "N/A",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Lavoro Agro",
+        "setor": "Insumos Agrícolas",
+        "receita": "0,82% PL",
+        "rating": "Em REF",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Prime Agro",
+        "setor": "Insumos Agrícolas",
+        "receita": "1,24% PL",
+        "rating": "Evento de crédito",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>A carteira é pulverizada em <strong class=\"text-blue-400\">45 emissores</strong> com <strong class=\"text-emerald-400\">79,4% em CRAs</strong> e liquidez de <strong class=\"text-emerald-400\">17,6%</strong> em operações compromissadas. Setores principais: Bancos/Financeiras (22,1%), Sucroenergético (21,1%), Grãos (11,5%), Biocombustível (9,5%) e Alimentos (8,9%). Yield médio de <strong class=\"text-emerald-400\">CDI + 1,80% a.a.</strong>. A gestão mantém postura seletiva no segmento de insumos, onde houve os principais eventos de crédito.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Evolução do fundo desde o IPO em dez/2021",
+    "periodos": [
+      {
+        "periodo": "Dez/2021",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "IPO a R$ 100/cota, captando R$ 400,5 milhões em oferta pública (4.005.164 cotas emitidas).",
+        "pontos": []
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "Formação",
+        "cor": "emerald",
+        "descricao": "Fundo montou a carteira de CRAs com foco em emissores high grade do agronegócio. Rendimentos consistentes e cota patrimonial em crescimento.",
+        "pontos": [
+          "Alocação majoritária em CRAs",
+          "Performance acima do CDI"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "Estresse",
+        "cor": "orange",
+        "descricao": "Estreitamento de margens no agro, provisões para perdas em emissores do setor de insumos (AgroGalaxy, Lavoro). PDD de R$ 29 milhões no final do ano.",
+        "pontos": [
+          "<strong>Queda de 6,4%</strong> na cota patrimonial em 2024",
+          "Provisão de R$ 29 mi sobre AgroGalaxy",
+          "Distribuição de R$ 9,29/cota no ano"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "Retomada",
+        "cor": "emerald",
+        "descricao": "Recuperação gradual com resgate antecipado do CRA Aliança Agrícola (jan/26), reversão parcial de provisões. Distribuição total do ano: R$ 10,74/cota.",
+        "pontos": [
+          "<strong>Alta de 2,99%</strong> na cota patrimonial em 2025",
+          "R$ 10,74 distribuídos no ano",
+          "Provisão reduzida para R$ 2,7 mi"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Cota negocia com desconto de 19% ao VP. DY atual de 13,4% isento. Carteira bem diversificada em 45+ emissores. Eventos residuais em Lavoro e Prime Agro sob monitoramento.",
+        "pontos": [
+          "<strong>P/VP 0,81</strong> — desconto relevante sobre o valor patrimonial",
+          "<strong>DY 13,4% isento</strong> equivale a ~15,8% tributado",
+          "Duration de 2,2 anos com yield médio de CDI + 1,80%"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Nos 4 anos de existência, o BBGO11 atravessou o ciclo completo de crédito privado no Brasil. Após período inicial de consolidação da carteira (2022-2023), o fundo enfrentou em 2024 o estresse do setor de insumos e grãos, com provisões que impactaram o patrimônio. Ao longo de 2025, a combinação de gestão ativa, diversificação e início esperado do ciclo de flexibilização monetária permitiu recuperação gradual da cota patrimonial e estabilização dos rendimentos. O fundo entra em 2026 com <strong class=\"text-emerald-400\">carteira high grade, 45+ emissores</strong> e distribuições estabilizadas em torno de R$ 0,85-0,96 por cota.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota Mercado",
+        "valor": "-24%",
+        "detalhe": "R$ 100 → R$ 75,89"
+      },
+      {
+        "label": "Total Distribuído",
+        "valor": "R$ ~35,00",
+        "detalhe": "Desde IPO (dez/2021)"
+      },
+      {
+        "label": "Retorno Total Estimado",
+        "valor": "+11%",
+        "detalhe": "Cota + proventos isentos desde IPO"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O BBGO11 oferece uma combinação atrativa para investidores que buscam <strong class=\"text-emerald-400\">renda isenta de IR com lastro no agronegócio</strong>: gestão do maior player nacional de asset management, carteira diversificada em 45+ emissores high grade e desconto de 19% sobre o valor patrimonial. Com yield médio de CDI + 1,80% e duration de 2,2 anos, o fundo está bem posicionado para capturar o ciclo esperado de queda da Selic, no qual papéis pós-fixados tendem a reduzir spreads e gerar valorização de principal.</p><p>A tese de entrada se fortalece pela estabilização dos eventos de crédito (AgroGalaxy resolvida, Lavoro em reestruturação formal e Prime Agro com baixa exposição). Porém, exige monitoramento contínuo da qualidade do crédito em um setor historicamente cíclico.</p>",
+    "paraQuem": [
+      "<strong class=\"text-emerald-400\">Investidores que buscam renda passiva mensal isenta de IR</strong> com lastro em crédito privado diversificado do agronegócio",
+      "<strong class=\"text-blue-400\">Investidores de médio-longo prazo</strong> confortáveis com a volatilidade típica de crédito privado em ciclos de estresse",
+      "<strong class=\"text-emerald-400\">Quem busca diversificação</strong> dentro da classe de Fiagros de papel, com gestão profissional e track record do maior banco do país"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">Investidores que precisam de liquidez imediata</strong>, dado o volume médio diário moderado (R$ 309 mil)",
+      "<strong class=\"text-red-400\">Perfis avessos a eventos de crédito</strong>: Fiagros de papel estão expostos a inadimplência em ciclos de estresse do setor agropecuário",
+      "<strong class=\"text-red-400\">Quem busca valorização patrimonial acelerada</strong>: por ser fundo de crédito, o retorno esperado vem majoritariamente do fluxo de dividendos, não da apreciação da cota"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.95,
+      0.95,
+      0.95,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.9,
+      0.96,
+      0.96,
+      0.85,
+      0.85
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.7,
+    "chartYMax": 1.1,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 12,16"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 9,29"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 10,74"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,80 a R$ 0,95",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (Mar/26)",
+        "valor": "R$ 0,85"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,96"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,85"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,81",
+      "descricao": "<p>Negocia com <strong class=\"text-emerald-400\">19% de desconto</strong> sobre o valor patrimonial, margem relevante em relação ao histórico do fundo e aos pares de Fiagros.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 94,21"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 75,89",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "19%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "13,4%",
+      "label": "Dividend Yield (proj.)",
+      "cor": "emerald",
+      "descricao": "<p>DY projetado de <strong class=\"text-emerald-400\">13,4% a.a. isento de IR</strong>, equivalente a aproximadamente 15,8% a.a. tributado, representando prêmio significativo sobre o CDI e bem acima de pares de Fiagros de papel.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 85-100",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Pela combinação de <strong class=\"text-blue-400\">Gordon Growth Model</strong> (DPS 10,20 / (13%-4%) ≈ R$ 113), <strong class=\"text-blue-400\">P/VP alvo 0,95-1,05</strong> (R$ 90-99) e DY target para Fiagros high grade de 11-12% (R$ 85-93), a faixa justa converge para <strong class=\"text-emerald-400\">R$ 85-100</strong>, indicando potencial de valorização de <strong class=\"text-emerald-400\">12-32%</strong> mais proventos.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O BBGO11 se posiciona como um dos Fiagros de crédito mais relevantes do mercado brasileiro, administrado pela maior gestora do Brasil (BB Asset), com carteira pulverizada em 45+ emissores de CRAs, yield médio de CDI + 1,80% a.a. e duration de 2,2 anos. Com PL de R$ 377 milhões e mais de 12 mil cotistas, o fundo oferece exposição profissional e diversificada ao crédito privado do agronegócio — setor estratégico da economia brasileira.",
+      "Do ponto de vista técnico e fundamental, a cota negocia a R$ 75,89, 19% abaixo do valor patrimonial de R$ 94,21, enquanto entrega DY isento de aproximadamente 13,4% ao ano — um dos mais altos do segmento. A tese de desconto se sustenta em uma carteira majoritariamente high grade, eventos de crédito residuais bem identificados (Lavoro 0,83% do PL, Prime Agro 1,24%) e provisões já refletidas no VP. Reforçando o ponto positivo, o fundo registrou alta de 2,99% na cota patrimonial em 2025, interrompendo a trajetória de queda de 2024.",
+      "Entre os catalisadores para os próximos trimestres estão: (i) o início esperado do ciclo de queda da Selic, que tende a valorizar posições pós-fixadas e comprimir spreads de crédito; (ii) a normalização do ambiente de crédito agro após 2 anos de estresse; (iii) a recuperação do VP via reversão de provisões. Como contrapontos, persistem: risco climático (El Niño esperado para 2S/2026), eventual tributação de CRAs, e possíveis novos eventos de crédito no setor."
+    ],
+    "pontosFortes": [
+      "<strong class=\"text-emerald-400\">Gestão BB Asset</strong> — maior gestora do Brasil, com acesso privilegiado à cadeia do agronegócio via Banco do Brasil",
+      "<strong class=\"text-emerald-400\">Carteira diversificada em 45+ emissores</strong> de CRAs, com predominância high grade e múltiplos setores",
+      "<strong class=\"text-emerald-400\">Rendimento isento de IR</strong> para pessoas físicas, vantagem estrutural sobre debêntures e fundos tributados",
+      "<strong class=\"text-emerald-400\">Desconto de 19% sobre o VP</strong>, oferecendo margem de segurança para entrada",
+      "<strong class=\"text-emerald-400\">DY de 13,4% projetado</strong>, um dos mais atrativos entre Fiagros de papel",
+      "<strong class=\"text-emerald-400\">Liquidez saudável da carteira</strong> (17,6% em OpCom), permitindo alocações oportunísticas no primário/secundário",
+      "<strong class=\"text-emerald-400\">Duration moderada de 2,2 anos</strong>, balanceando proteção contra juros altos e captura de ciclo de baixa",
+      "<strong class=\"text-emerald-400\">Regime de distribuição normalizado</strong> em linha com o Ofício-Circular CVM 1/2025, trazendo previsibilidade aos cotistas"
+    ],
+    "pontosDeAtencao": [
+      "<strong class=\"text-amber-400\">Eventos de crédito ativos</strong> em Lavoro (recuperação extrajudicial homologada) e Prime Agro (não pagamento de parcela em fev/26)",
+      "<strong class=\"text-amber-400\">Queda acumulada da cota</strong> desde o IPO (-24%), parcialmente compensada pelos proventos isentos distribuídos",
+      "<strong class=\"text-amber-400\">Exposição a riscos climáticos</strong> — probabilidade de 61% de novo El Niño no 2S/2026 adiciona incertezas ao ciclo agrícola 2026/27",
+      "<strong class=\"text-amber-400\">Debate regulatório sobre tributação</strong> de CRAs e Fiagros segue no radar e pode reduzir a atratividade isenta",
+      "<strong class=\"text-amber-400\">Liquidez moderada</strong> de R$ 309 mil/dia, podendo dificultar alocações relevantes",
+      "<strong class=\"text-amber-400\">Concentração setorial</strong> em sucroenergético (21%), grãos (11,5%) e alimentos (9%), todos ciclicamente sensíveis",
+      "<strong class=\"text-amber-400\">Provisão residual de R$ 2,7 mi</strong> ainda no balanço, que pode variar conforme evolução dos emissores em observação"
+    ],
+    "conclusaoFinal": "O BBGO11 configura hoje uma oportunidade interessante para investidores que buscam <strong class=\"text-emerald-400\">renda mensal isenta de IR com lastro no agronegócio brasileiro</strong>. A combinação de gestora de primeira linha, desconto de 19% sobre o patrimônio, DY projetado de 13,4% e carteira amplamente diversificada justifica recomendação de <strong class=\"text-blue-400\">ACUMULAR</strong>, especialmente para carteiras que já tenham alguma exposição a Fiagros e busquem diluir eventos de crédito específicos. A entrada em tranches (50% imediato, 50% em eventuais correções abaixo de R$ 73) é prudente diante da volatilidade típica de crédito privado. Para investidores conservadores ou avessos a eventos de crédito, Fiagros de papel com carteira ainda mais high grade (100% rating AA+ ou superior) podem ser mais adequados."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 160,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fiagros estão sujeitos a riscos de crédito, mercado e liquidez. A isenção de IR aplica-se a pessoas físicas nos termos da legislação vigente, que pode ser alterada a qualquer momento."
+  }
+}

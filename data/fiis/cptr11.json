@@ -1,0 +1,543 @@
+{
+  "meta": {
+    "ticker": "CPTR11",
+    "nome": "Capitânia Agro Strategies FIAGRO-Imobiliário",
+    "nomeExtra": "(FIAGRO CPTR - pós-cisão mai/2025)",
+    "segmento": "Fiagro - Crédito Agro (CRA/CRI/FIDC)",
+    "badges": [
+      "Deságio de 14% sobre VP",
+      "DY 15,2% a.a.",
+      "100% da carteira auditada"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 146
+  },
+  "seo": {
+    "title": "CPTR11 - Análise Completa | Capitânia Agro Strategies FIAGRO",
+    "description": "Análise detalhada do CPTR11: Fiagro de crédito agro da Capitânia com DY 15,2%, 55 ativos diversificados e 14% de deságio sobre valor patrimonial em abr/2026.",
+    "keywords": "cptr11, capitânia, fiagro, crédito agronegócio, CRA, CRI, FIDC, dividend yield, análise fundos",
+    "ogTitle": "CPTR11 - Fiagro Capitânia Agro Strategies | Análise Completa",
+    "ogDescription": "DY 15,2% a.a., deságio de 14% sobre VP e carteira 100% auditada. Veja a análise completa do FIAGRO da Capitânia.",
+    "twitterTitle": "CPTR11 - Análise Completa do FIAGRO Capitânia",
+    "twitterDescription": "DY 15,2% a.a. e deságio de 14% sobre o valor patrimonial. Análise detalhada da carteira agro."
+  },
+  "indicadores": {
+    "cotacao": 8.45,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.84,
+    "pvpDesconto": "16% de desconto sobre o valor patrimonial",
+    "dividendYield": 15.2,
+    "dividendoMensal": 1.15,
+    "dividendoAnual": 13.8,
+    "patrimonioLiquido": "R$ 199,0 Mi",
+    "vpCota": 10.04,
+    "cotistas": 21447,
+    "ocupacao": null,
+    "numImoveis": 55
+  },
+  "recomendacao": {
+    "nota": 6.8,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "O CPTR11 negocia com <strong class=\"text-emerald-400\">deságio de 14% sobre o valor patrimonial</strong> (R$ 8,59 vs R$ 10,04/cota) e entrega <strong class=\"text-emerald-400\">DY anualizado de 15,2%</strong>, equivalente a CDI + 12,0% líquido para o investidor pessoa física isento. A carteira conta com <strong class=\"text-blue-400\">55 ativos diversificados em 41 tomadores</strong>, com 63% em CDI+3,6% e 19% em IPCA+10,9%, duration curta de 1,7 anos e 96% com garantia real/subordinação.<br><br>Por outro lado, o fundo carrega <strong class=\"text-amber-400\">casos estressados relevantes</strong> como Patense (marcado a 55% do par), AgroGalaxy (50%), CRAS Brasil (95%) e Belagrícola (recuperação extrajudicial), que representam risco contínuo de remarcações. A cisão ocorrida em maio/2025 dividiu o patrimônio com o CPTA (fundo em liquidação de 2 anos), reduzindo a escala do fundo remanescente e o ADTV para R$ 322 mil/dia.<br><br>Veredicto: <strong class=\"text-blue-400\">ACUMULAR</strong> para investidores que aceitem risco de crédito agro em troca de prêmio elevado sobre CDI e deságio patrimonial, com Selic em queda favorecendo ativos de renda."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 199,0 Mi",
+      "detalhe": "VP/cota: R$ 10,04",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,15",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 13,80/ano | DY 15,2%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Duration",
+      "valor": "1,7 anos",
+      "detalhe": "Carteira com giro rápido",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "21.447",
+      "detalhe": "19,8 mi cotas | ADTV R$ 322 mil",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Exposição a casos estressados",
+      "descricao": "Patense (3,8% do PL, marcado a 55% do par), AgroGalaxy (3,9%, marcado a 50%) e CRAS Brasil (3,6%, marcado a 95%) somam ~11% do patrimônio com situações de recuperação judicial em andamento.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Belagrícola em recuperação extrajudicial",
+      "descricao": "Em fev/2026, a Belagrícola atingiu quórum de 50% para RE. Crédito será alongado sem desconto do valor de dívida — exposição próxima de 1,1% do PL, menor após amortizações recentes.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cisão reduziu escala do fundo",
+      "descricao": "Em 07/05/2025, 52% do PL migrou para o CPTA11 (em liquidação em 2 anos). O CPTR11 passou de ~R$ 400 Mi para ~R$ 199 Mi de PL, reduzindo liquidez secundária para R$ 322 mil/dia.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração no setor agrícola",
+      "descricao": "Açúcar e etanol (16%), agroindústria (14%), cooperativas (11%) e distribuidores/revendas (10%) dominam a carteira. Ciclos de commodities e eventos climáticos afetam diretamente a qualidade do crédito.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Sem rating nos principais ativos",
+      "descricao": "Dos top 5 ativos, nenhum possui rating formal (Combio, Araguaia, Ultracheese, AgroGalaxy, Patense). A análise de crédito depende integralmente da diligência da gestora.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Ainda negocia abaixo do valor da cota de emissão",
+      "descricao": "A cota de mercado acumula rentabilidade de 51,7% desde o IPO (mar/2022) contra 56,3% do CDI no mesmo período — 93,3% do CDI. A cota patrimonial, porém, rendeu 116,1% do CDI.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Capitânia Investimentos",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Sede",
+        "valor": "Av. Faria Lima/SP"
+      },
+      {
+        "label": "Início do CPTR11",
+        "valor": "Março/2022"
+      },
+      {
+        "label": "Foco",
+        "valor": "Crédito estruturado"
+      }
+    ],
+    "resumo": "A <strong class=\"text-blue-400\">Capitânia Investimentos</strong> é uma gestora independente com sede em São Paulo, especializada em crédito estruturado e fundos listados. A equipe de gestão do CPTR11 tem atuação ativa em análise de crédito agro, mercado primário e secundário de CRAs, com acompanhamento próximo de todos os tomadores da carteira. A gestora demonstrou <strong class=\"text-emerald-400\">transparência acima da média</strong> ao reportar mensalmente o andamento de casos estressados (Patense, AgroGalaxy, CRAS Brasil, Belagrícola) e conduziu a cisão do fundo em mai/2025 para oferecer alternativa de liquidação aos cotistas insatisfeitos, preservando a estratégia no CPTR11.",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa de administração de 1% a.a. competitiva para o segmento, com performance atrelada ao CDI+1%",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,0% a.a.",
+        "detalhe": "Engloba administração, gestão e escrituração",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20% sobre CDI+1%",
+        "detalhe": "Benchmark adequado para fundo de crédito",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 322 mil",
+        "detalhe": "Volume médio em fev/2026",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Capitânia Investimentos"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco BTG Pactual"
+      },
+      {
+        "label": "Auditor",
+        "valor": "Ernst & Young Auditores Independentes"
+      },
+      {
+        "label": "Início",
+        "valor": "Março/2022"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "42.537.579/0001-76"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Ativos em carteira",
+        "valor": "55"
+      },
+      {
+        "label": "Tomadores distintos",
+        "valor": "41"
+      },
+      {
+        "label": "Rating A ou superior",
+        "valor": "0%",
+        "cor": "amber"
+      },
+      {
+        "label": "Duration média",
+        "valor": "1,7 anos"
+      },
+      {
+        "label": "Portfólio com garantia",
+        "valor": "+96%",
+        "cor": "emerald"
+      },
+      {
+        "label": "MTM CDI+",
+        "valor": "CDI + 3,6%"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRA",
+        "Cotas Fiagro",
+        "FIDC",
+        "CRI",
+        "Caixa",
+        "Outros"
+      ],
+      "data": [
+        64,
+        10,
+        9,
+        7,
+        7,
+        3
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#64748b",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Combio (Energia Térmica)",
+        "setor": "Energia de biomassa",
+        "receita": "5,2% do PL",
+        "rating": "IPCA+ 8,3% | Venc. 2028",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Araguaia",
+        "setor": "Distribuidor de insumos",
+        "receita": "4,0% do PL",
+        "rating": "IPCA+ 8,5% | Venc. 2027",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Ultracheese",
+        "setor": "Laticínios",
+        "receita": "3,9% do PL",
+        "rating": "CDI+ 5,7% | Venc. 2028",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "AgroGalaxy",
+        "setor": "Distribuidor de insumos",
+        "receita": "3,9% do PL",
+        "rating": "Em RJ | Marcado a 50%",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Patense",
+        "setor": "Agroindústria (proteínas)",
+        "receita": "3,8% do PL",
+        "rating": "Em RJ | Marcado a 55%",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Solubio",
+        "setor": "Defensivos biológicos",
+        "receita": "3,7% do PL",
+        "rating": "CDI+ 5,25% | Venc. 2029",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRAS Brasil",
+        "setor": "Exportador de óleos",
+        "receita": "3,4% do PL",
+        "rating": "Em RJ | Marcado a 95%",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Minerva (adquirido fev/26)",
+        "setor": "Frigorífico bovino",
+        "receita": "1,3% do PL",
+        "rating": "AAA (Moody's)",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "A carteira apresenta <strong class=\"text-amber-400\">diversificação razoável em 41 tomadores</strong>, com os 5 maiores somando cerca de 21% do PL. A exposição ao <strong class=\"text-amber-400\">setor de açúcar e etanol (16%) e distribuidores/revendas (10%)</strong> traz sensibilidade a ciclos de commodities. Os casos em recuperação judicial/extrajudicial (Patense, AgroGalaxy, CRAS Brasil, Belagrícola) somam aproximadamente <strong class=\"text-amber-400\">12% do patrimônio</strong> já com remarcações refletidas na cota. A incorporação recente de emissores AAA (Minerva, SLC Agrícola) melhora o perfil de risco médio."
+  },
+  "timeline": {
+    "subtitulo": "Do IPO no auge do boom de Fiagros à cisão pós-crise do agro: trajetória marcada por ajuste de carteira e recuperação de preços em 2025-26",
+    "periodos": [
+      {
+        "periodo": "Mar/2022",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "IPO via ICVM 476 a R$ 96,50/cota, captando R$ 100 milhões. Fundo nasce no auge do entusiasmo com os Fiagros como nova classe de ativos.",
+        "pontos": []
+      },
+      {
+        "periodo": "Set/2022",
+        "label": "2ª Emissão",
+        "cor": "blue",
+        "descricao": "Captação adicional de R$ 300 milhões via ICVM 400 a R$ 96,72/cota, levando PL a ~R$ 400 Mi.",
+        "pontos": []
+      },
+      {
+        "periodo": "2024",
+        "label": "CRISE AGRO",
+        "cor": "red",
+        "descricao": "Setor agropecuário enfrenta ciclo adverso. Múltiplos casos de recuperação judicial (AgroGalaxy, Patense, CRAS Brasil) pressionam marcações.",
+        "pontos": [
+          "<strong>Suspensão de distribuição</strong> de set a dez/2024",
+          "Cota de mercado cai para R$ 6,12 em dez/2024"
+        ]
+      },
+      {
+        "periodo": "Mai/2025",
+        "label": "CISÃO",
+        "cor": "amber",
+        "descricao": "Aprovada cisão do fundo: 52% dos cotistas migraram para o CPTA11 (fundo em liquidação em 2 anos); 48% mantiveram posição no CPTR11.",
+        "pontos": [
+          "Número de cotas passa de 41,4 mi para 19,8 mi",
+          "PL cai de ~R$ 400 Mi para ~R$ 199 Mi"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Fundo retomou distribuições mensais de R$ 0,115/cota, cota de mercado a R$ 8,59 (deságio de 14% sobre VP). Carteira com 55 ativos e 41 tomadores.",
+        "pontos": [
+          "<strong>DY anualizado de 15,2%</strong>, equivalente a CDI + 12%",
+          "Duration 1,7 anos | 96% da carteira com garantia",
+          "Reserva de resultado acumulado de R$ 0,268/cota"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "Desde o IPO, a cota de mercado acumula rentabilidade de <strong class=\"text-emerald-400\">51,7%</strong> (equivalente a 93,3% do CDI), enquanto a <strong class=\"text-emerald-400\">cota patrimonial rendeu 67,9%</strong> (116,1% do CDI ou CDI + 1,97% a.a.). A distância entre cota de mercado e patrimonial reflete o ciclo de crédito adverso do agro em 2024, que levou à cisão do fundo. Desde início de 2025, a gestão priorizou a redução de concentração nos 5 maiores emissores (de 23% para 20% do PL) e a incorporação de créditos AAA (Minerva, SLC Agrícola)."
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota",
+        "valor": "-11%",
+        "detalhe": "R$ 96,50 (IPO) → R$ 8,59 (fev/26, após desdobramento)"
+      },
+      {
+        "label": "Total Distribuído",
+        "valor": "R$ 4,835",
+        "detalhe": "Desde o IPO em mar/2022"
+      },
+      {
+        "label": "DY últimos 12 meses",
+        "valor": "R$ 1,305",
+        "detalhe": "DY 15,2% sobre cota atual"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O CPTR11 é uma <strong class=\"text-blue-400\">tese de valor em crédito agro estruturado</strong> para quem aceita o risco de casos estressados em troca de um prêmio elevado. A combinação de deságio de 14% sobre o valor patrimonial, DY de 15,2% anualizado (CDI + 12% líquido) e duration curta de 1,7 anos oferece <strong class=\"text-emerald-400\">proteção natural contra volatilidade de juros</strong> em um cenário de Selic em queda.<br><br>A gestão da Capitânia mostrou disciplina ao reduzir concentração dos maiores emissores, incorporar créditos AAA (Minerva, SLC) e conduzir transparentemente as renegociações de Patense, AgroGalaxy, CRAS Brasil e Belagrícola. O ciclo adverso do agro em 2023-24 aparentemente passou e os novos entrantes da carteira têm perfil de risco melhor.",
+    "paraQuem": [
+      "Investidores que buscam <strong>DY acima de 15% a.a.</strong> isento de IR",
+      "Perfis moderados que aceitem exposição ao <strong>risco de crédito do agronegócio</strong>",
+      "Quem quer diversificar carteira de FIIs com Fiagro <strong>descontado em 14%</strong> sobre VP",
+      "Investidores que enxergam valor em fundo pós-cisão com <strong>carteira depurada</strong>"
+    ],
+    "naoParaQuem": [
+      "Investidores conservadores que não toleram <strong>remarcações de casos em RJ</strong>",
+      "Quem busca <strong>liquidez alta</strong> — ADTV de R$ 322 mil/dia pode ser restritivo",
+      "Perfis que esperam <strong>previsibilidade absoluta</strong> nas distribuições mensais",
+      "Quem não compreende mecânica de <strong>CRAs, CRIs e FIDCs agro</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.1,
+      0.1,
+      0.11,
+      0.11,
+      0.105,
+      0.105,
+      0.11,
+      0.11,
+      0.11,
+      0.115,
+      0.115,
+      0.115
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.08,
+    "chartYMax": 0.13,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 1,088"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 1,485"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 0,805"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,227"
+      },
+      {
+        "ano": "2026*",
+        "valor": "R$ 0,230 (acum. 2M)"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,110 a R$ 0,120",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 1,15"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 1,15"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 1,05"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável/alta",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,86",
+      "descricao": "Cota a mercado em abr/2026 (R$ 8,45) negocia com <strong class=\"text-emerald-400\">desconto de 14-16%</strong> sobre o valor patrimonial (R$ 10,04). Esse desconto reflete tanto o risco de crédito de casos em RJ quanto a menor liquidez pós-cisão.",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 10,04"
+        },
+        {
+          "label": "Preço atual",
+          "valor": "R$ 8,45",
+          "cor": "emerald"
+        },
+        {
+          "label": "Deságio",
+          "valor": "16%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "15,2%",
+      "label": "Dividend Yield anualizado",
+      "cor": "emerald",
+      "descricao": "DY projetado a partir do dividendo de R$ 0,115 (fev/26). Em termos de spread sobre CDI, a sensibilidade da gestora indica retorno líquido após impostos de <strong class=\"text-emerald-400\">CDI + 12,0%</strong> considerando a cota a R$ 8,59 — acima da média do segmento de Fiagros de crédito."
+    },
+    "recomendacoes": {
+      "valor": "R$ 9,00 - R$ 9,80",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "Estimativa considerando: (a) P/VP histórico do segmento para fundos similares entre 0,90 e 0,95 (R$ 9,04 a R$ 9,54); (b) desconto permanente por exposição a RJ de ~8-10% sobre VP; (c) DY target de 13-14% a.a. para o segmento em cenário de Selic em queda. <strong class=\"text-blue-400\">Upside potencial de 6% a 16%</strong> sobre a cotação atual, somado ao carrego de DY elevado."
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O CPTR11 encerrou fevereiro/2026 com patrimônio líquido de R$ 199,0 milhões, cota patrimonial de R$ 10,04 e cota de mercado de R$ 8,59 (R$ 8,45 em abr/26). A carteira conta com 55 ativos em 41 tomadores distintos, duration média de 1,7 anos, 63% indexada a CDI + 3,6% e 19% a IPCA + 10,9%. O fundo distribuiu R$ 0,115/cota em janeiro e fevereiro de 2026, com reserva de resultado acumulado de R$ 0,268/cota suficiente para sustentar as próximas distribuições.",
+      "A estratégia pós-cisão (maio/2025) focou em reduzir concentração dos maiores emissores — de 23% para 20% do PL nos top 5 — e incorporar ativos com rating alto, como CRA Minerva (AAA) e CRA SLC Agrícola (AA). Os casos em recuperação judicial (AgroGalaxy, Patense, CRAS Brasil) continuam marcados de forma conservadora, e a Belagrícola aprovou recuperação extrajudicial sem desconto de dívida. A gestão da Capitânia mantém transparência no reporte mensal desses casos.",
+      "Em termos de catalisadores, o ciclo de queda da Selic (de 15% para esperados 12,2% no final de 2026) tende a favorecer a marcação dos ativos em IPCA+ e reduzir o custo de oportunidade para investidores comparando com renda fixa. Por outro lado, o fundo permanece sujeito a risco de novos eventos de crédito no agro — setor ainda em recuperação após 2023-24 — e a pressão de liquidez secundária após a cisão, com ADTV de apenas R$ 322 mil/dia."
+    ],
+    "pontosFortes": [
+      "DY anualizado de <strong>15,2%</strong> (CDI + 12% líquido) acima da média do segmento",
+      "<strong>Deságio de 14-16%</strong> sobre valor patrimonial oferece margem de segurança",
+      "Carteira <strong>100% auditada e 96% com garantia real ou subordinação</strong>",
+      "<strong>Diversificação em 41 tomadores</strong> diferentes reduz risco idiossincrático",
+      "Duration curta de <strong>1,7 anos</strong> — menor sensibilidade a abertura de juros",
+      "Gestão transparente com reporte detalhado de <strong>casos estressados e renegociações</strong>",
+      "Incorporação de <strong>emissores AAA (Minerva, SLC Agrícola)</strong> melhora perfil médio",
+      "Reserva de R$ 0,268/cota acumulada assegura <strong>estabilidade de distribuições</strong>",
+      "Taxa de administração de <strong>1% a.a.</strong> competitiva para Fiagro de gestão ativa"
+    ],
+    "pontosDeAtencao": [
+      "Casos em recuperação judicial somam <strong>~12% do PL</strong> (Patense, AgroGalaxy, CRAS Brasil, Belagrícola)",
+      "Pós-cisão, o <strong>PL caiu 50%</strong> (de ~R$ 400 Mi para R$ 199 Mi), reduzindo economia de escala",
+      "Liquidez baixa: <strong>ADTV de R$ 322 mil/dia</strong> pode dificultar montagem/desmontagem de posições grandes",
+      "Nenhum dos <strong>top 5 ativos possui rating formal</strong> — dependência da diligência da gestora",
+      "Exposição concentrada em setores <strong>sensíveis a commodities</strong> (açúcar/etanol 16%, revendas 10%)",
+      "<strong>Suspensão de distribuições</strong> entre set-dez/2024 mostra vulnerabilidade em ciclos adversos",
+      "Taxa de performance de 20% sobre CDI+1% é <strong>padrão, mas reduz retorno</strong> em cenários favoráveis",
+      "Cota de mercado ainda <strong>abaixo da cota de emissão</strong> (R$ 96,50 → R$ 8,59 ajustado)"
+    ],
+    "conclusaoFinal": "Para investidores que já compreendem os riscos do crédito agro e buscam complementar a carteira de renda com um ativo isento de IR oferecendo CDI + 12% líquido, o <strong class=\"text-blue-400\">CPTR11 representa uma oportunidade de ACUMULAR gradualmente</strong>, especialmente em quedas técnicas. A combinação de deságio patrimonial, DY elevado e carteira depurada após a cisão cria uma assimetria favorável — mas é fundamental respeitar o limite de exposição, que recomendamos em <strong class=\"text-amber-400\">até 3-4% da carteira total de FIIs/Fiagros</strong> em função dos casos estressados remanescentes. Não é tese para quem não tolera volatilidade mensal ou eventuais remarcações; é tese para o investidor paciente que consegue separar valor patrimonial de preço de mercado em um segmento em processo de recuperação."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 146,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fiagros de crédito estão sujeitos a riscos de inadimplência que podem afetar distribuições e valor patrimonial."
+  }
+}

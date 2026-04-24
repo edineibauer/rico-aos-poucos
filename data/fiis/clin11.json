@@ -1,0 +1,509 @@
+{
+  "meta": {
+    "ticker": "CLIN11",
+    "nome": "Clave Índices de Preços FII",
+    "nomeExtra": "(gestão Clave Alternativos — hoje BTG Pactual Asset Management)",
+    "segmento": "Papel (CRI) — FII de Crédito High Grade",
+    "badges": [
+      "85,9% alocado em 29 CRIs",
+      "97% IPCA+",
+      "DY 12,12% a.a."
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 99
+  },
+  "seo": {
+    "title": "CLIN11 - Análise Completa | Clave Índices de Preços FII",
+    "description": "Análise institucional do CLIN11: FII de CRI com 29 operações, 97% IPCA+, DY 12,12% a.a., P/VP 0,96 e spread médio IPCA+10,18%.",
+    "keywords": "CLIN11, Clave Índices de Preços, BTG Pactual, FII de papel, CRI, IPCA, high grade, residencial MCMV, fundo imobiliário crédito",
+    "ogTitle": "CLIN11 - Análise Completa | FII de CRI Clave/BTG",
+    "ogDescription": "Dossiê institucional do CLIN11: carteira 97% IPCA+, spread IPCA+10,18%, P/VP 0,96 e DY 12,12% a.a. em abril/2026.",
+    "twitterTitle": "CLIN11 - FII de Papel Clave/BTG",
+    "twitterDescription": "Análise completa: 29 CRIs, duration 3 anos, 85,9% alocado, foco residencial/logístico e DY de 12,12% a.a."
+  },
+  "indicadores": {
+    "cotacao": 93.77,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.96,
+    "pvpDesconto": "4% de desconto",
+    "dividendYield": 12.69,
+    "dividendoMensal": 0.95,
+    "dividendoAnual": 12.19,
+    "patrimonioLiquido": "R$ 427,7 Mi",
+    "vpCota": 98.4,
+    "cotistas": 10119,
+    "ocupacao": null,
+    "numImoveis": 29
+  },
+  "recomendacao": {
+    "nota": 7.8,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "<p>O CLIN11 é um <strong class=\"text-blue-400\">FII de papel high grade</strong> com carteira fortemente indexada ao IPCA (97% do portfólio) e spread médio de <strong class=\"text-emerald-400\">IPCA+10,18% a.a.</strong>, gerido por equipe absorvida pela BTG Pactual Asset após aquisição da Clave. São 29 operações adimplentes, duration de 3 anos e forte exposição ao segmento residencial (41% do PL), beneficiado pela ampliação do MCMV em março/2026.</p><p>Negociando a <strong class=\"text-emerald-400\">P/VP 0,96</strong> com DY corrente de <strong class=\"text-emerald-400\">12,12% a.a.</strong>, o fundo oferece carrego real (IPCA+) atrativo em um ciclo de corte de juros (Selic em 14,75% a.a., com expectativa de queda). O principal ponto de atenção é a <strong class=\"text-amber-400\">redução esperada dos dividendos</strong> à medida que a inflação cede e a Selic cai — os R$ 0,95/cota de fev/26 já mostram normalização frente aos R$ 1,15 do pico de 2024.</p><p>Veredicto: posição recomendada para carteiras que buscam renda real protegida contra inflação, com gestão institucional e portfólio pulverizado.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 427,7 Mi",
+      "detalhe": "VP/cota: R$ 98,40",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,95",
+      "valorSufixo": "/mês",
+      "detalhe": "DY 12,12% a.a. · 1,03% a.m.",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Alocação em CRIs",
+      "valor": "85,9%",
+      "detalhe": "29 operações · 97% IPCA+",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "10.119",
+      "detalhe": "4,35 mi cotas · ADTV R$ 1,03 Mi",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Normalização do dividendo em ciclo de queda de juros",
+      "descricao": "O DPC caiu de R$ 1,15 (mai/25) para R$ 0,95 (fev/26), acompanhando a desaceleração da inflação. Com Selic projetada em queda e IPCA em torno de 4% para 2026, a tendência é de dividendos menores em reais, embora o spread real (IPCA+) permaneça atrativo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Parcela relevante em ativos high yield pulverizados",
+      "descricao": "Operações como Metrocasa (IPCA+12,85%), GD Elleven (IPCA+11,50%), Tenda Pró-Soluto e Vila Brasil (IPCA+9,50%) exigem monitoramento contínuo de subordinação e fundo de reserva. O fundo reporta 100% de adimplência, mas a combinação de subordinações e garantias reais é determinante para o risco.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em crédito residencial (41% do PL)",
+      "descricao": "Parcela significativa do portfólio depende da performance do segmento residencial, em grande medida vinculado ao MCMV. A ampliação do programa em março/2026 é positiva, mas uma deterioração macroeconômica ou mudança regulatória pode afetar a qualidade desses créditos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca de controle da gestora (Clave → BTG)",
+      "descricao": "A equipe de gestão foi absorvida pela BTG Pactual Asset em maio/2025. A transição preservou o time original e o mandato, mas integrações desse porte podem gerar ajustes operacionais ao longo do tempo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez moderada",
+      "descricao": "ADTV de aproximadamente R$ 1,03 milhão em fev/2026, compatível com FIIs de papel de tamanho médio, mas ordens maiores exigem execução pulverizada para não impactar o preço.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BTG Pactual Asset Management (ex-Clave Alternativos)",
+    "nota": 8.8,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM BTG Asset",
+        "valor": "R$ 800+ Bi"
+      },
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual DTVM"
+      },
+      {
+        "label": "Taxa de adm.",
+        "valor": "1,05% a.a."
+      }
+    ],
+    "resumo": "<p>A gestão do CLIN11 era originalmente da <strong class=\"text-blue-400\">Clave Alternativos</strong>, butique especializada em crédito privado e imobiliário. Em 2025, a Clave foi adquirida pelo BTG Pactual, que já detinha participação minoritária, e passou a integrar a <strong class=\"text-blue-400\">BTG Pactual Asset Management</strong> — preservando equipe e mandato, mas somando força de originação e estrutura de análise de crédito de uma das maiores gestoras da América Latina.</p><p>A administração fiduciária é exercida pela BTG Pactual Serviços Financeiros DTVM. O track record do fundo desde o IPO (jul/2023) mostra distribuição consistente, alocação criteriosa e carteira 100% adimplente.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa de administração competitiva para FII de papel high grade; taxa de performance bem desenhada",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,05% a.a.",
+        "detalhe": "Sobre PL contábil (ou valor de mercado se no IFIX)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Do que exceder IPCA + Yield IMA-B5",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 1,03 Mi",
+        "detalhe": "ADTV médio fev/2026",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "BTG Pactual Asset (ex-Clave)"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco BTG Pactual S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "KPMG Auditores Independentes"
+      },
+      {
+        "label": "Início",
+        "valor": "Julho/2023"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Nº de CRIs",
+        "valor": "29"
+      },
+      {
+        "label": "Alocação em ativos-alvo",
+        "valor": "85,9% do PL"
+      },
+      {
+        "label": "Duration média",
+        "valor": "~3,0 anos",
+        "cor": "emerald"
+      },
+      {
+        "label": "Spread médio (MTM)",
+        "valor": "IPCA+10,18%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Residencial",
+        "Corporativo Imob.",
+        "Logístico",
+        "Varejo",
+        "Outros",
+        "Escritório"
+      ],
+      "data": [
+        41,
+        18,
+        15,
+        9,
+        8,
+        6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#6b7280",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Diálogo",
+        "setor": "Residencial SP",
+        "receita": "7,3% do PL",
+        "rating": "Venc. 2032",
+        "ratingCor": "emerald",
+        "risco": "Baixo (subord. 60%)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Vila Brasil",
+        "setor": "Residencial GO",
+        "receita": "6,6% do PL",
+        "rating": "Venc. 2031",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Metrocasa",
+        "setor": "Residencial SP",
+        "receita": "5,6% do PL",
+        "rating": "Venc. 2035",
+        "ratingCor": "amber",
+        "risco": "Médio (subord. 36%)",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Diálogo Corporativo",
+        "setor": "Corporativo SP",
+        "receita": "5,4% do PL",
+        "rating": "Venc. 2030",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Pátio Malzoni",
+        "setor": "Escritório SP",
+        "receita": "5,3% do PL",
+        "rating": "LTV 60%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI IBL Logística",
+        "setor": "Logístico SP",
+        "receita": "5,0% do PL",
+        "rating": "Venc. 2038",
+        "ratingCor": "emerald",
+        "risco": "Médio (mezanino)",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI HGRU11",
+        "setor": "Varejo (Atacadão)",
+        "receita": "4,7% do PL",
+        "rating": "LTV 45%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI XPLG (Mercado Livre)",
+        "setor": "Logístico SP/MG",
+        "receita": "4,8% do PL",
+        "rating": "LTV <50%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>Portfólio pulverizado com <strong class=\"text-emerald-400\">100% de adimplência</strong>, 97% indexado ao IPCA e combinação robusta de garantias (subordinação, alienação fiduciária, fundo de reserva). Concentração no maior ativo (Diálogo) em 7,3% do PL é saudável. Exposição a incorporadoras listadas (MRV, Tenda, Direcional, Metrocasa, Mitre, São Carlos, Helbor) adiciona camada de governança pública ao risco corporativo.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Do IPO em 2023 à integração ao BTG Asset em 2025",
+    "periodos": [
+      {
+        "periodo": "Jul/2023",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das atividades em 31/07/2023 com patrimônio inicial e foco em CRIs indexados à inflação.",
+        "pontos": []
+      },
+      {
+        "periodo": "Out/2023",
+        "label": "2ª Emissão",
+        "cor": "blue",
+        "descricao": "Encerramento da 2ª emissão de cotas em 04/10/2023, levando o PL à ordem de R$ 420 milhões.",
+        "pontos": [
+          "<strong>4,35 milhões de cotas</strong> integralizadas",
+          "Expansão da carteira para mais de 25 CRIs"
+        ]
+      },
+      {
+        "periodo": "Mai/2025",
+        "label": "Aquisição pelo BTG",
+        "cor": "blue",
+        "descricao": "Clave Alternativos é adquirida pelo BTG Pactual; equipe e mandato do CLIN11 são mantidos sob a BTG Asset.",
+        "pontos": [
+          "<strong>Preservação da equipe original</strong>",
+          "Ganho de estrutura de originação institucional"
+        ]
+      },
+      {
+        "periodo": "Mar/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Carteira com 29 CRIs, 85,9% alocado, DY 12,12% a.a. e P/VP 0,96.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">100% adimplente</strong>",
+          "Spread médio de <strong>IPCA+10,18%</strong>",
+          "Ampliação do MCMV impulsiona segmento residencial"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Em pouco mais de <strong class=\"text-blue-400\">2,5 anos de vida</strong>, o CLIN11 consolidou-se como um FII de papel high grade com portfólio bem diversificado, foco em inflação e disciplina de originação. A distribuição acumulada desde a 2ª emissão atinge <strong class=\"text-emerald-400\">R$ 29,19/cota</strong>, equivalente a 12,09% a.a., capturando o ciclo de juros altos de 2024-2025. A integração ao BTG Pactual Asset reforça a tese de continuidade e robustez.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Distribuído desde IPO",
+        "valor": "R$ 29,19",
+        "detalhe": "Por cota (desde out/2023)"
+      },
+      {
+        "label": "Retorno anualizado",
+        "valor": "12,09% a.a.",
+        "detalhe": "Sobre cota a mercado"
+      },
+      {
+        "label": "Cotistas",
+        "valor": "10.119",
+        "detalhe": "Base ativa em fev/2026"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do CLIN11 é simples e elegante: construir uma <strong class=\"text-blue-400\">carteira diversificada de CRIs indexados ao IPCA</strong>, com foco em Sudeste e segmentos residencial, logístico e comercial, capturando um spread real acima das NTN-Bs enquanto oferece proteção contra inflação. Em um cenário de Selic ainda elevada e inflação acima da meta, o fundo combina carrego alto em reais com indexação à inflação — um hedge natural para o cotista.</p><p>Com P/VP de 0,96, o investidor compra esse fluxo com pequeno desconto patrimonial e spread atrativo frente a peers de papel high grade.</p>",
+    "paraQuem": [
+      "<strong>Investidor de renda</strong> que busca dividendos mensais com proteção contra inflação",
+      "<strong>Investidor de longo prazo</strong> que prioriza spread real (acima de IPCA+) em detrimento de dividendos nominais",
+      "<strong>Alocador institucional</strong> que deseja exposição diversificada a crédito imobiliário high grade com gestão BTG",
+      "<strong>Carteiras defensivas</strong> que precisam de hedge natural contra picos inflacionários"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidores focados em ganho de capital de curto prazo</strong> — o fundo oscila pouco em relação ao VP",
+      "<strong>Quem espera dividendo nominal crescente</strong> — com Selic e inflação em queda, os DPCs em reais tendem a reduzir",
+      "<strong>Investidores que buscam liquidez alta</strong> — ADTV de R$ 1 milhão é moderado para posições grandes"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "jan/25",
+      "fev/25",
+      "mar/25",
+      "abr/25",
+      "mai/25",
+      "jun/25",
+      "jul/25",
+      "ago/25",
+      "set/25",
+      "out/25",
+      "nov/25",
+      "dez/25",
+      "jan/26",
+      "fev/26"
+    ],
+    "chartData": [
+      1.0,
+      1.01,
+      1.1,
+      1.15,
+      1.15,
+      1.1,
+      1.0,
+      1.0,
+      1.0,
+      0.95,
+      0.96,
+      0.95,
+      0.88,
+      0.95
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.7,
+    "chartYMax": 1.3,
+    "totaisAnuais": [
+      {
+        "ano": "2023 (parc.)",
+        "valor": "R$ 5,29"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 11,81"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 12,37"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,90 a R$ 1,00",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (fev/26)",
+        "valor": "R$ 0,95"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 1,15"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,88"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Normalização",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,96",
+      "descricao": "<p>Cota a mercado de <strong class=\"text-emerald-400\">R$ 93,77</strong> frente a VP de <strong>R$ 98,40</strong>: desconto patrimonial modesto de 4%, saudável para FII de papel high grade em ambiente de IFIX em máxima histórica.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 98,40"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 93,77",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,12%",
+      "label": "Dividend Yield anualizado",
+      "cor": "emerald",
+      "descricao": "<p>DY corrente de <strong class=\"text-emerald-400\">12,12% a.a.</strong> sobre cota a mercado, com carteira pagando <strong>IPCA+10,18%</strong> bruto. Spread sobre NTN-B equivalente ao redor de <strong>3% a.a. real</strong> — retorno atrativo em um FII isento de IR para pessoa física.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 95-102",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Usando Gordon com DPS anualizado projetado de R$ 11,40 (média entre picos e normalização), custo de capital de 12,5% (NTN-B 7% + prêmio 2,5%) e crescimento de 4% (inflação média), chega-se a <strong class=\"text-blue-400\">R$ 134</strong>, acima do VP. Por prudência, ancoramos a faixa de preço justo no intervalo <strong>R$ 95-102</strong>, próximo ao VP contábil (R$ 98,40) e coerente com P/VP de 0,97-1,04 — patamar de FIIs high grade comparáveis.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O CLIN11 entrou em 2026 como um dos FIIs de papel high grade mais bem geridos do mercado: 29 operações, 100% adimplentes, 97% indexado ao IPCA com spread médio de IPCA+10,18% a.a. e duration de 3 anos. A integração da equipe da Clave ao BTG Pactual Asset reforça a estrutura institucional sem quebrar a continuidade da gestão.",
+      "Em fev/2026, o fundo pagou R$ 0,95/cota — abaixo do pico de R$ 1,15 visto em 2024 — refletindo a desaceleração da inflação e o início do ciclo de corte de juros (Selic em 14,75% a.a. após primeiro corte de 25 bps). Esse movimento é esperado e não compromete a tese: o carrego real (IPCA+) permanece intacto, e a queda dos juros tende a ser positiva para o valor patrimonial dos CRIs marcados a mercado.",
+      "Com P/VP 0,96 e DY de 12,12% a.a., o CLIN11 está próximo do preço justo. A oportunidade é menos de arbitragem patrimonial e mais de carrego consistente com proteção à inflação, em um fundo com gestão institucional e carteira pulverizada. Para quem busca renda real em horizonte longo, é uma posição sólida de portfólio."
+    ],
+    "pontosFortes": [
+      "Carteira 100% adimplente, com 29 operações e pulverização adequada",
+      "97% do portfólio indexado ao IPCA, oferecendo proteção inflacionária natural",
+      "Spread médio de IPCA+10,18%, acima da média de peers high grade",
+      "Duration de ~3 anos, equilibrando carrego e sensibilidade a juros",
+      "Gestão absorvida pelo BTG Pactual Asset mantendo equipe original",
+      "Combinação robusta de garantias (subordinação, alienação fiduciária, fundo de reserva)",
+      "Exposição diversificada a incorporadoras listadas de qualidade (MRV, Tenda, Direcional, Helbor)",
+      "P/VP de 0,96 — pequeno desconto patrimonial em mercado de IFIX em máxima",
+      "Track record positivo desde o IPO: 12,09% a.a. distribuídos desde out/2023"
+    ],
+    "pontosDeAtencao": [
+      "Dividendos nominais em R$ devem continuar normalizando com a queda da Selic",
+      "Parcela relevante em ativos high yield (Metrocasa 12,85%, GD Elleven 11,50%, Tenda) exige monitoramento",
+      "Concentração de 41% em residencial cria dependência do ciclo MCMV e da renda real das famílias",
+      "Transição gestora Clave → BTG ainda em maturação operacional",
+      "ADTV médio de R$ 1 milhão limita posições institucionais grandes",
+      "Exposição ao CRI Vila Brasil (GO, 6,6% do PL) e operações corporativas depende da qualidade de aval e recebíveis",
+      "Taxa de performance de 20% sobre IPCA+IMA-B5 reduz upside em cenário de spread elevado",
+      "Carteira relativamente nova (fundo operacional há ~2,7 anos), histórico de crises ainda limitado"
+    ],
+    "conclusaoFinal": "Recomendação ACUMULAR (nota 7,8/10). O CLIN11 é um FII de papel high grade de qualidade institucional, com carteira diversificada, gestão robusta (agora sob BTG Pactual Asset) e carrego real atrativo de IPCA+10,18%. Com P/VP 0,96 e DY de 12,12% a.a., o fundo não está barato, mas oferece uma combinação difícil de bater: renda mensal consistente, proteção inflacionária e portfólio 100% adimplente. Para carteiras que buscam dividendo real no longo prazo e aceitam a normalização natural dos DPCs nominais conforme a Selic cai, o CLIN11 é uma posição sólida — começar com alocação moderada e aumentar em janelas de correção para P/VP abaixo de 0,93."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 99,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

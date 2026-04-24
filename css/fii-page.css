@@ -8,6 +8,11 @@ html, body { background-color: #0d1117; color: #e6edf3; }
 * { font-family: 'Inter', system-ui, sans-serif; }
 section { padding: 0; }
 
+/* Esconde o hero mobile em desktop (reforço do lg:hidden Tailwind) */
+@media (min-width: 1024px) {
+    .hero-mobile { display: none !important; }
+}
+
 /* Hero gradient background */
 .hero-gradient {
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 50%, var(--bg-tertiary) 100%);
@@ -130,67 +135,744 @@ section { padding: 0; }
     body { overflow-x: hidden; }
     * { max-width: 100%; }
 
-    /* Header - increase padding-bottom */
-    .app-header {
-        padding-bottom: 20px !important;
+    /* Container padding */
+    .max-w-7xl { padding-left: 14px !important; padding-right: 14px !important; }
+
+    /* ═══ HERO MOBILE — CONCEITO "COTAÇÃO FIRST" ═══════════
+       Inspiração: apps de corretora/trading (XP, Nubank, Rico).
+       Hierarquia:
+         1. Ticker + nota compacta (linha 1)
+         2. COTAÇÃO gigante = elemento visual dominante
+         3. Barra do VEREDICTO com cor do sentimento
+         4. Métricas em tiras horizontais (nome | valor) tipo lista de app
+         5. Rodapé com nome + segmento em fonte leve
+       ════════════════════════════════════════════════════════ */
+    .hero-mobile { padding: 0 !important; }
+    .hm2-inner {
+        padding: 10px 18px 80px;
+        display: flex;
+        flex-direction: column;
+        text-align: left;
     }
 
-    /* Optimize main container padding */
-    .max-w-7xl { padding-left: 12px !important; padding-right: 12px !important; }
+    /* 1. Topline: ticker + nota pill */
+    .hm2-topline {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 18px;
+    }
+    .hm2-ticker {
+        font-size: 1.25rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+        color: rgb(226 232 240);
+    }
+    .hm2-nota-chip {
+        display: inline-flex;
+        align-items: baseline;
+        padding: 5px 11px;
+        border-radius: 999px;
+        font-weight: 800;
+        font-size: 0.95rem;
+        line-height: 1;
+        border: 1px solid;
+    }
+    .hm2-nota-val { font-size: 1rem; }
+    .hm2-nota-max {
+        font-size: 0.65rem;
+        opacity: 0.7;
+        margin-left: 1px;
+        font-weight: 600;
+    }
+    .hm2-nota-emerald {
+        background: rgba(16,185,129,0.18);
+        border-color: rgba(16,185,129,0.5);
+        color: rgb(110 231 183);
+    }
+    .hm2-nota-amber {
+        background: rgba(245,158,11,0.18);
+        border-color: rgba(245,158,11,0.5);
+        color: rgb(252 211 77);
+    }
+    .hm2-nota-red,
+    .hm2-nota-orange {
+        background: rgba(239,68,68,0.18);
+        border-color: rgba(239,68,68,0.5);
+        color: rgb(252 165 165);
+    }
+    .hm2-nota-blue {
+        background: rgba(59,130,246,0.18);
+        border-color: rgba(59,130,246,0.5);
+        color: rgb(147 197 253);
+    }
 
-    /* Reduce card inner padding */
-    .dark-card, .stat-card { padding: 16px !important; }
-    .dark-card.rounded-3xl { padding: 20px !important; }
+    /* 2. Cotação — HERO VISUAL (alinhamento à esquerda consistente) */
+    .hm2-price-label {
+        font-size: 0.7rem;
+        color: rgb(147 197 253);
+        text-transform: uppercase;
+        letter-spacing: 0.12em;
+        font-weight: 600;
+        margin-bottom: 4px;
+        text-align: left;
+    }
+    .hm2-price {
+        display: flex;
+        align-items: baseline;
+        gap: 8px;
+        justify-content: flex-start;
+    }
+    .hm2-currency {
+        font-size: 1.35rem;
+        color: rgb(148 163 184);
+        font-weight: 600;
+    }
+    .hm2-amount {
+        font-size: 3.75rem;           /* 60px — o ENORME */
+        font-weight: 900;
+        letter-spacing: -0.035em;
+        line-height: 0.9;
+        color: #fff;
+        font-variant-numeric: tabular-nums;
+    }
+    .hm2-price-caption {
+        font-size: 0.75rem;
+        color: rgb(148 163 184);
+        margin-top: 6px;
+    }
 
-    /* Hero section spacing */
-    .hero-gradient { padding-top: 32px !important; padding-bottom: 110px !important; }
+    /* 2b. Bloco comparativo: preço justo com upside/downside */
+    .hm2-fairprice {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 11px 14px;
+        margin-top: 12px;
+        background: rgba(59,130,246,0.08);
+        border: 1px solid rgba(59,130,246,0.25);
+        border-radius: 10px;
+    }
+    .hm2-fairprice-label {
+        font-size: 0.7rem;
+        color: rgb(147 197 253);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+    }
+    .hm2-fairprice-wrap {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+    }
+    .hm2-fairprice-val {
+        font-size: 1rem;
+        font-weight: 700;
+        color: rgb(191 219 254);
+        font-variant-numeric: tabular-nums;
+    }
+    .hm2-upside-green,
+    .hm2-upside-red,
+    .hm2-upside-amber {
+        font-size: 0.72rem;
+        font-weight: 700;
+        padding: 2px 7px;
+        border-radius: 5px;
+        font-variant-numeric: tabular-nums;
+    }
+    .hm2-upside-green {
+        color: rgb(110 231 183);
+        background: rgba(16,185,129,0.18);
+    }
+    .hm2-upside-red {
+        color: rgb(252 165 165);
+        background: rgba(239,68,68,0.18);
+    }
+    .hm2-upside-amber {
+        color: rgb(252 211 77);
+        background: rgba(245,158,11,0.18);
+    }
 
-    /* Force grids to fewer columns */
+    /* 3. Explicação da nota (substitui barra de veredicto) */
+    .hm2-nota-explain {
+        margin-top: 14px;
+        padding: 10px 12px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px dashed rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        font-size: 0.72rem;
+        color: rgb(148 163 184);
+        line-height: 1.45;
+    }
+    .hm2-nota-explain strong {
+        color: rgb(226 232 240);
+        font-weight: 700;
+    }
+    .hm2-nota-explain em {
+        font-style: normal;
+        color: rgb(148 163 184);
+        display: block;
+        margin-top: 3px;
+        font-size: 0.68rem;
+    }
+
+    /* (legado) Barra do VEREDICTO — não é mais renderizada */
+    .hm2-verdict { display: none !important; }
+
+    /* Barra do VEREDICTO (mantida para classes antigas) */
+    .hm2-verdict {
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 14px 16px;
+        border-radius: 12px;
+        border: 1px solid transparent;
+    }
+    .hm2-verdict-label {
+        font-size: 0.7rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 600;
+        opacity: 0.85;
+    }
+    .hm2-verdict-value {
+        font-size: 1.15rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+    }
+    .hm2-verdict-emerald {
+        background: linear-gradient(90deg, rgba(16,185,129,0.22), rgba(16,185,129,0.08));
+        border-color: rgba(16,185,129,0.35);
+        color: rgb(167 243 208);
+    }
+    .hm2-verdict-amber {
+        background: linear-gradient(90deg, rgba(245,158,11,0.22), rgba(245,158,11,0.08));
+        border-color: rgba(245,158,11,0.35);
+        color: rgb(253 230 138);
+    }
+    .hm2-verdict-red,
+    .hm2-verdict-orange {
+        background: linear-gradient(90deg, rgba(239,68,68,0.22), rgba(239,68,68,0.08));
+        border-color: rgba(239,68,68,0.35);
+        color: rgb(254 202 202);
+    }
+    .hm2-verdict-blue {
+        background: linear-gradient(90deg, rgba(59,130,246,0.22), rgba(59,130,246,0.08));
+        border-color: rgba(59,130,246,0.35);
+        color: rgb(191 219 254);
+    }
+
+    /* 4. Métricas em tiras (lista de app) */
+    .hm2-metrics {
+        margin-top: 18px;
+        display: flex;
+        flex-direction: column;
+    }
+    .hm2-metric-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255,255,255,0.06);
+    }
+    .hm2-metric-row:last-child { border-bottom: none; }
+    .hm2-metric-highlight {
+        background: rgba(59,130,246,0.06);
+        margin: 4px -10px 0;
+        padding: 10px;
+        border-radius: 10px;
+        border-bottom: none;
+    }
+    .hm2-metric-name {
+        font-size: 0.8rem;
+        color: rgb(148 163 184);
+        font-weight: 500;
+    }
+    .hm2-metric-val {
+        font-size: 1.1rem;
+        font-weight: 700;
+        color: #fff;
+        font-variant-numeric: tabular-nums;
+    }
+    .hm2-val-green { color: rgb(110 231 183); }
+    .hm2-val-amber { color: rgb(252 211 77); }
+    .hm2-val-blue { color: rgb(147 197 253); }
+    .hm2-val-unit {
+        font-size: 0.68rem;
+        color: rgb(148 163 184);
+        margin-left: 5px;
+        font-weight: 500;
+    }
+
+    /* 5. Identidade no rodapé (leve) */
+    .hm2-identity {
+        margin-top: 22px;
+        padding-top: 14px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+    }
+    .hm2-fund-name {
+        font-size: 0.88rem;
+        color: rgb(226 232 240);
+        font-weight: 500;
+        line-height: 1.3;
+        margin-bottom: 3px;
+    }
+    .hm2-fund-tags {
+        font-size: 0.7rem;
+        color: rgb(148 163 184);
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+    }
+
+    /* 1. Identificação */
+    .hm-identity { text-align: center; }
+    .hm-ticker {
+        font-size: 2.5rem;
+        font-weight: 900;
+        letter-spacing: -0.03em;
+        line-height: 1;
+        margin-bottom: 6px;
+    }
+    .hm-nome {
+        font-size: 0.95rem;
+        color: rgb(191 219 254); /* blue-200 */
+        font-weight: 300;
+        line-height: 1.3;
+        max-width: 300px;
+        margin: 0 auto 4px;
+    }
+    .hm-segmento {
+        font-size: 0.7rem;
+        color: rgb(147 197 253); /* blue-300 */
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+        font-weight: 500;
+    }
+
+    /* 2. Cotação em destaque */
+    .hm-cotacao-block {
+        text-align: center;
+        padding: 14px 0 10px;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .hm-cotacao-label {
+        font-size: 0.65rem;
+        color: rgb(147 197 253);
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        margin-bottom: 4px;
+    }
+    .hm-cotacao-valor {
+        font-size: 3rem;          /* 48px — destaque máximo */
+        font-weight: 900;
+        line-height: 0.95;
+        letter-spacing: -0.025em;
+    }
+    .hm-cotacao-data {
+        font-size: 0.7rem;
+        color: rgb(148 163 184); /* slate-400 */
+        margin-top: 4px;
+    }
+
+    /* 3. Veredicto + Nota (bloco acionável destacado) */
+    .hm-veredicto {
+        border-radius: 14px;
+        padding: 14px 16px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .hm-veredicto-emerald {
+        background: linear-gradient(135deg, rgba(16,185,129,0.18), rgba(16,185,129,0.06));
+        border-color: rgba(16,185,129,0.35);
+    }
+    .hm-veredicto-amber {
+        background: linear-gradient(135deg, rgba(245,158,11,0.18), rgba(245,158,11,0.06));
+        border-color: rgba(245,158,11,0.35);
+    }
+    .hm-veredicto-red,
+    .hm-veredicto-orange {
+        background: linear-gradient(135deg, rgba(239,68,68,0.18), rgba(239,68,68,0.06));
+        border-color: rgba(239,68,68,0.35);
+    }
+    .hm-veredicto-blue {
+        background: linear-gradient(135deg, rgba(59,130,246,0.18), rgba(59,130,246,0.06));
+        border-color: rgba(59,130,246,0.35);
+    }
+    .hm-veredicto-topo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .hm-veredicto-pill {
+        font-size: 1rem;
+        font-weight: 800;
+        letter-spacing: 0.04em;
+        color: #fff;
+    }
+    .hm-veredicto-nota {
+        font-size: 1.8rem;
+        font-weight: 900;
+        line-height: 1;
+        color: #fff;
+    }
+    .hm-veredicto-max {
+        font-size: 0.85rem;
+        color: rgb(203 213 225); /* slate-300 */
+        font-weight: 500;
+    }
+    .hm-veredicto-linha {
+        font-size: 0.7rem;
+        color: rgb(148 163 184);
+        margin-top: 6px;
+        text-transform: uppercase;
+        letter-spacing: 0.06em;
+    }
+
+    /* 4. Métricas — grid 3 colunas */
+    .hm-metricas {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+    .hm-metrica {
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 12px;
+        padding: 12px 6px;
+        text-align: center;
+    }
+    .hm-metrica-label {
+        font-size: 0.6rem;
+        color: rgb(147 197 253);
+        letter-spacing: 0.08em;
+        font-weight: 600;
+        margin-bottom: 6px;
+    }
+    .hm-metrica-valor {
+        font-size: 1.3rem;
+        font-weight: 800;
+        line-height: 1;
+        margin-bottom: 4px;
+    }
+    .hm-metrica-sub {
+        font-size: 0.62rem;
+        color: rgb(148 163 184);
+        line-height: 1.2;
+    }
+
+    /* Esconde o hero desktop no mobile (reforço do lg:hidden Tailwind) */
+    .hero-desktop { display: none !important; }
+
+    /* ── HERO — REDESIGN MOBILE ────────────────────────── */
+    /* Em mobile, o hero é reorganizado como "cartão do fundo" centralizado:
+       TICKER grande → subtítulo → linha divisória → cotação hero →
+       métricas (DY | P/VP) em destaque → badges abaixo. */
+    .hero-gradient {
+        padding-top: 24px !important;
+        padding-bottom: 90px !important;
+        text-align: center;
+    }
+    /* Remove o layout horizontal original no mobile */
+    .hero-gradient .flex.flex-col.lg\:flex-row {
+        gap: 16px !important;
+        align-items: center !important;
+    }
+    /* Bloco esquerdo (ticker + nome + badges) — alinha centralizado */
+    .hero-gradient .space-y-3,
+    .hero-gradient .space-y-4 {
+        width: 100% !important;
+    }
+    .hero-gradient .flex.items-center.gap-2,
+    .hero-gradient .flex.items-center.gap-3 {
+        justify-content: center !important;
+    }
+    .hero-gradient .flex.flex-wrap {
+        justify-content: center !important;
+    }
+    /* Ticker */
+    .hero-gradient h1 {
+        font-size: 2.5rem !important;     /* 40px — grande mas não gigante */
+        line-height: 1 !important;
+        letter-spacing: -0.03em;
+        display: block;
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    /* Pills "NOTA X/10" e veredicto — logo abaixo do ticker */
+    .hero-gradient .rounded-lg {
+        font-size: 0.72rem !important;
+        padding: 5px 10px !important;
+    }
+    /* Nome completo do fundo */
+    .hero-gradient p {
+        font-size: 0.95rem !important;
+        line-height: 1.35 !important;
+        max-width: 320px;
+        margin: 0 auto !important;
+    }
+    /* Badges (segmento, contador de imóveis) — "chips" pequenos */
+    .hero-gradient .rounded-full {
+        font-size: 0.65rem !important;
+        padding: 3px 10px !important;
+    }
+
+    /* Bloco direito (Cota + DY + P/VP) — vira destaque centralizado */
+    .hero-gradient > div > div > div.w-full.lg\:w-auto,
+    .hero-gradient .lg\:text-right {
+        padding-top: 16px !important;
+        margin-top: 8px !important;
+        border-top: 1px solid rgba(255,255,255,0.1) !important;
+        text-align: center !important;
+    }
+    /* "Cota Atual" rótulo */
+    .hero-gradient .uppercase.tracking-wider {
+        font-size: 0.65rem !important;
+        margin-bottom: 6px !important;
+    }
+    /* Cotação principal — destaque */
+    .hero-gradient .flex.items-baseline {
+        justify-content: center !important;
+        gap: 8px !important;
+    }
+    .hero-gradient .text-5xl,
+    .hero-gradient .text-6xl {
+        font-size: 2.6rem !important;     /* 42px — destaque maior */
+        line-height: 1 !important;
+        letter-spacing: -0.02em;
+        font-weight: 900;
+    }
+    /* Container DY | P/VP — boxes iguais centralizados */
+    .hero-gradient .flex.items-center.gap-3,
+    .hero-gradient .flex.items-center.gap-4 {
+        justify-content: center !important;
+        gap: 24px !important;
+        margin-top: 14px !important;
+    }
+    .hero-gradient .text-2xl {
+        font-size: 1.5rem !important;     /* DY e P/VP: 24px */
+        font-weight: 800;
+    }
+
+    /* ── STAT CARDS — REDESIGN MOBILE ───────────────────── */
+    /* Cards ficam mais "chips" com hierarquia vertical: ícone no topo,
+       label pequeno, valor dominante. Layout centralizado. */
+    .stat-card {
+        padding: 16px 10px !important;
+        border-radius: 16px !important;
+        text-align: center;
+    }
+    /* Ícone acima (reorganiza flex em coluna) */
+    .stat-card > .flex.items-center {
+        flex-direction: column !important;
+        gap: 8px !important;
+        justify-content: center !important;
+        margin-bottom: 10px !important;
+    }
+    .stat-card > .flex.items-center > .flex.items-center {
+        justify-content: center !important;
+    }
+    .stat-card .w-8, .stat-card .w-10 {
+        width: 32px !important;
+        height: 32px !important;
+        border-radius: 10px !important;
+    }
+    /* Label acima do valor, sutil */
+    .stat-card .text-sm,
+    .stat-card span.text-sm {
+        font-size: 0.65rem !important;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+    }
+    /* Valor principal — grande e dominante */
+    .stat-card .text-2xl,
+    .stat-card .text-3xl {
+        font-size: 1.5rem !important;    /* 24px */
+        line-height: 1.05 !important;
+        font-weight: 800;
+    }
+    .stat-card .text-xl {
+        font-size: 1.3rem !important;
+        line-height: 1.05 !important;
+        font-weight: 800;
+    }
+    /* Detalhe (abaixo do valor) */
+    .stat-card .text-xs {
+        font-size: 0.7rem !important;
+        line-height: 1.3 !important;
+        margin-top: 4px !important;
+    }
+
+    /* Encaixe dos cards sob o hero */
+    section.-mt-20,
+    section.-mt-16 {
+        margin-top: -64px !important;
+    }
+
+    /* ── RECOMENDAÇÃO — REDESIGN MOBILE ─────────────────── */
+    /* Score ring acima, pill do veredicto integrado no título,
+       texto do resumo limpo e bem legível. */
+    .dark-card {
+        padding: 20px 18px !important;
+        border-radius: 20px !important;
+    }
+    /* Score ring centralizado e com tamanho moderado */
+    .dark-card .flex-shrink-0 {
+        margin: 0 auto 4px !important;
+    }
+    .dark-card h2 {
+        font-size: 1.05rem !important;
+        text-align: center;
+    }
+    /* Título + pill do veredicto — empilhados e centralizados */
+    .dark-card .flex.items-center.gap-2,
+    .dark-card .flex.items-center.gap-3 {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 8px !important;
+    }
+    /* Pill do veredicto em destaque */
+    .dark-card .rounded-lg {
+        font-size: 0.85rem !important;
+        padding: 6px 14px !important;
+    }
+    /* Texto do resumo — fluido */
+    .dark-card p {
+        font-size: 0.92rem !important;
+        line-height: 1.6 !important;
+        text-align: left;
+    }
+
+    /* ── Grids e espaçamentos ──────────────────────────── */
     .grid.grid-cols-3 { grid-template-columns: repeat(1, minmax(0, 1fr)) !important; }
     .grid.grid-cols-4 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
     .grid.grid-cols-5 { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
 
-    /* Charts responsiveness */
+    section.mb-12 { margin-bottom: 20px !important; }
+    section.mb-10 { margin-bottom: 18px !important; }
+    section.mb-8  { margin-bottom: 16px !important; }
+
+    /* ── Charts ───────────────────────────────────────── */
     .chart-container, .chart-container-lg {
-        height: 250px !important;
+        height: 230px !important;
         min-width: 0 !important;
         max-width: 100% !important;
         width: 100% !important;
     }
 
-    /* Table horizontal scroll */
+    /* ── Tabelas com scroll horizontal ─────────────────── */
     .overflow-x-auto {
         -webkit-overflow-scrolling: touch;
-        margin-left: -12px;
-        margin-right: -12px;
-        padding-left: 12px;
-        padding-right: 12px;
+        margin-left: -14px;
+        margin-right: -14px;
+        padding-left: 14px;
+        padding-right: 14px;
     }
-
-    .overflow-x-auto table { min-width: 600px; }
-
-    /* Smaller font in dense areas */
-    .overflow-x-auto table { font-size: 0.75rem; }
+    .overflow-x-auto table { min-width: 600px; font-size: 0.75rem; }
     .overflow-x-auto th, .overflow-x-auto td { padding: 8px 6px !important; }
 
-    /* Cards don't overflow screen */
+    /* Cards nunca estouram a tela */
     .rounded-3xl, .rounded-2xl, .rounded-xl {
         box-sizing: border-box;
         max-width: 100%;
     }
 
-    /* Section spacing */
-    section.mb-12 { margin-bottom: 24px !important; }
-
-    /* Hero font adjustments */
-    .hero-gradient h1 { font-size: 2.5rem !important; }
-    .hero-gradient .text-5xl { font-size: 2.5rem !important; }
-    .hero-gradient .text-6xl { font-size: 3rem !important; }
-
-    /* Stats cards in hero */
-    .stat-card.rounded-2xl { padding: 16px !important; }
-    .stat-card .text-3xl { font-size: 1.5rem !important; }
-
-    /* Flexbox wrap improvement */
+    /* Gap padrão em flex-wrap */
     .flex-wrap { gap: 8px !important; }
+
+    /* ═══ BLOCOS DE CONTEÚDO (fora do hero) ═══════════════
+       Regras gerais para cards e blocos renderizados pelo
+       fii-template dentro do <main> (Portfolio, Ativos,
+       Gestora, Taxas, Timeline, Tese, Dividendos, Valuation,
+       Conclusão etc.)
+       ══════════════════════════════════════════════════════ */
+
+    /* Wrapper dark-card geral (Portfólio, Gestora, Taxas...) */
+    main .dark-card {
+        padding: 16px 14px !important;
+        border-radius: 16px !important;
+    }
+    main .dark-card.rounded-3xl { padding: 18px 14px !important; }
+
+    /* Título do bloco (h2 dentro dos cards escuros) */
+    main .dark-card h2 {
+        font-size: 1.15rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 14px !important;
+    }
+
+    /* Subtítulos h3 */
+    main .dark-card h3 {
+        font-size: 0.95rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 10px !important;
+    }
+
+    /* ── Portfolio: grid de stats (Imóveis, ABL, Vacância, WALE) ── */
+    /* Esses cards pequenos bg-white/5 com números grandes são os
+       principais ofensores no mobile. */
+    main .bg-white\/5.rounded-xl.p-4.text-center {
+        padding: 12px 8px !important;
+        border-radius: 12px !important;
+    }
+    main .bg-white\/5 .text-3xl {
+        font-size: 1.35rem !important;    /* 21.6px — antes 30px */
+        line-height: 1.1 !important;
+        font-weight: 800 !important;
+    }
+    main .bg-white\/5 .text-xs {
+        font-size: 0.65rem !important;
+        line-height: 1.25 !important;
+    }
+
+    /* Grids internos (2 colunas em mobile — vs md:grid-cols-X) */
+    main .grid.md\:grid-cols-2,
+    main .grid.md\:grid-cols-3,
+    main .grid.md\:grid-cols-4,
+    main .grid.md\:grid-cols-5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 10px !important;
+    }
+    /* Casos específicos: alguns blocos quebram melhor em 1 coluna */
+    main .grid.md\:grid-cols-2.chart-wrap {
+        grid-template-columns: 1fr !important;
+    }
+
+    /* ── Gestora: bloco stats de AuM / Anos ── */
+    main .text-3xl.font-bold,
+    main .text-4xl.font-bold {
+        font-size: 1.4rem !important;
+    }
+
+    /* ── Timeline períodos ── */
+    main .timeline-period .text-lg,
+    main .timeline-period .font-semibold {
+        font-size: 0.95rem !important;
+    }
+
+    /* ── Conclusão: pontosFortes / pontosAtencao ── */
+    main section ul li {
+        font-size: 0.88rem !important;
+        line-height: 1.55 !important;
+    }
+
+    /* ── Tabelas pequenas: estão com scroll, mas reduz fonte ── */
+    main table th,
+    main table td {
+        font-size: 0.75rem !important;
+    }
+
+    /* ── Paragrafos em conclusão/tese ── */
+    main p {
+        font-size: 0.9rem !important;
+        line-height: 1.6 !important;
+    }
+
+    /* ── Chart containers: altura menor no mobile ── */
+    main .chart-container { height: 220px !important; }
+
+    /* Badges/pills internos de conteúdo (ratings, risco, etc) */
+    main .px-2.py-1.rounded { font-size: 0.65rem !important; padding: 3px 7px !important; }
 }

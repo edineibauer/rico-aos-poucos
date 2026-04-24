@@ -1,0 +1,504 @@
+{
+  "meta": {
+    "ticker": "AURB11",
+    "nome": "Alianza Urban Hub Renda Fundo de Investimento Imobiliário",
+    "nomeExtra": "(FII ALI URB)",
+    "segmento": "Logística (Last Mile / Urban Hub)",
+    "badges": [
+      "Last Mile São Paulo",
+      "Apenas 2 ativos",
+      "Alta alavancagem (CRI)"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 101
+  },
+  "seo": {
+    "title": "AURB11 - Análise Completa | Alianza Urban Hub Renda FII",
+    "description": "AURB11 negocia a R$ 72,92 (P/VP 0,90) com DY de 5,16%, dois galpões em SP (Guarulhos e Mauá), alavancagem alta via CRI e histórico volátil de distribuições.",
+    "keywords": "AURB11, Alianza Urban Hub, FII logística, last mile, galpões São Paulo, Guarulhos, Mauá, CRI, alavancagem, dividend yield",
+    "ogTitle": "AURB11 - Alianza Urban Hub: FII de last mile com alta alavancagem",
+    "ogDescription": "Análise completa do AURB11: dois galpões logísticos urbanos em SP, P/VP 0,90, DY 5,16%, R$ 87 mi de obrigações por captação via CRI.",
+    "twitterTitle": "AURB11 - Análise do FII de logística urbana da Alianza",
+    "twitterDescription": "FII pequeno, com 2 ativos last mile em SP, alavancado via CRI e com histórico de vacância turbulento. P/VP 0,90, DY 5,16%."
+  },
+  "indicadores": {
+    "cotacao": 72.92,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.9,
+    "pvpDesconto": "10% de desconto",
+    "dividendYield": 5.16,
+    "dividendoMensal": 0.31,
+    "dividendoAnual": 3.76,
+    "patrimonioLiquido": "R$ 74,6 Mi",
+    "vpCota": 82.97,
+    "cotistas": null,
+    "ocupacao": 95.6,
+    "numImoveis": 2
+  },
+  "recomendacao": {
+    "nota": 4.0,
+    "veredicto": "CAUTELA",
+    "cor": "orange",
+    "resumo": "<p>O <strong class=\"text-blue-400\">AURB11</strong> é um FII de logística urbana (last mile) muito pequeno, com patrimônio líquido de apenas <strong class=\"text-amber-400\">R$ 74,6 milhões</strong>, dois ativos concentrados na Grande São Paulo (Guarulhos e Mauá) e <strong class=\"text-red-400\">passivos por captação de recursos (CRI) de R$ 87,1 milhões</strong> — superiores ao próprio PL, o que evidencia alavancagem elevada e despesas financeiras de R$ 10,6 milhões/ano que comprimem fortemente o resultado distribuível.</p><p>O fundo combina <strong class=\"text-amber-400\">liquidez baixa (R$ 228 mil/dia em média)</strong>, <strong class=\"text-amber-400\">concentração extrema</strong> (1 cotista com 55,65% das cotas e top 3 com mais de 94%) e histórico operacional <strong class=\"text-red-400\">turbulento</strong>: ocupação que oscilou entre 79% e 100% nos últimos anos, prejuízos contábeis em 2023 e 2024 e exercício 2024/25 ainda fortemente impactado por despesas financeiras dos CRIs.</p><p>O P/VP de <strong class=\"text-emerald-400\">0,90</strong> e o DY de <strong class=\"text-amber-400\">5,16%</strong> não compensam, no atual nível de Selic (15% a.a.), os riscos de tamanho, alavancagem, governança e concentração. Recomendação: <strong class=\"text-orange-400\">CAUTELA</strong> — produto adequado apenas a investidores qualificados que compreendem os riscos específicos.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 74,6 Mi",
+      "detalhe": "VP/cota: R$ 82,97",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,31",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 3,76/ano | DY 5,16%",
+      "icone": "money",
+      "corIcone": "amber"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "95,6%",
+      "detalhe": "2 imóveis (Guarulhos + Mauá)",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotas emitidas",
+      "valor": "1.085.780",
+      "detalhe": "Concentração: 55,65% em 1 cotista",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Alavancagem acima do patrimônio",
+      "descricao": "Obrigações por captação de recursos via CRI somam R$ 87,1 milhões em 30/06/2025 (116,88% do PL de R$ 74,6 mi). Despesa financeira de R$ 10,6 milhões no exercício 2024/25 consome boa parte do resultado das locações.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração extrema da base de cotistas",
+      "descricao": "Em jun/2025, 1 cotista detinha 55,65% das cotas (500.000), outro 23,60% (212.084) e um terceiro 14,64% (131.559). Apenas 17 cotistas pulverizados detêm 0,25% das cotas. Risco de governança e de pressão vendedora elevado.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez muito baixa",
+      "descricao": "Volume médio diário de apenas R$ 228 mil. Em vários meses do exercício 2024/25 não houve negociação alguma das cotas (jul, ago, set, out, nov, dez/24 e fev/25 sem negócios), o que dificulta entrada e saída em volumes relevantes.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Portfólio com apenas 2 ativos",
+      "descricao": "Toda a receita depende dos galpões Urban Hub Guarulhos (40,9% da receita) e Urban Hub Mauá (59,1%). Eventos pontuais como rescisões ou sinistros têm impacto desproporcional.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Histórico de vacância turbulenta",
+      "descricao": "Ocupação oscilou de 100% (4T22) para 79,2% (3T23) e 84,2% (4T23), com diversas rescisões antecipadas (GFL, Sequoia, Macan, Polarfix, Via Apia, LBGS). No 2T25 a vacância do Mauá chegou a 39,97%.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Distribuição decrescente",
+      "descricao": "Distribuições anuais caíram de R$ 8,07/cota em 2022 para patamares menores em 2024 e 2025. Em 2023 houve período sem distribuição. DY corrente de 5,16% está abaixo da média do segmento de logística.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "3ª Emissão cancelada em 2023",
+      "descricao": "Tentativa de captar recursos para adquirir mais 2 condomínios (Osasco e Mauá) não atingiu o mínimo e foi cancelada em dez/2023, frustrando o plano de diversificação e ganho de escala.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Alianza Gestão de Recursos Ltda.",
+    "nota": 6.5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "FIIs sob gestão",
+        "valor": "Múltiplos (ALZR, ALZM, ALZT, ALZC, AURB)"
+      },
+      {
+        "label": "Especialização",
+        "valor": "Imobiliário"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Alianza Gestão de Recursos Ltda.</strong> (CNPJ 21.950.366/0001-00) é gestora especializada em fundos imobiliários, responsável pela família Alianza (ALZR, ALZM, ALZT, ALZC e AURB). A administração e custódia ficam com o <strong class=\"text-blue-400\">BTG Pactual Serviços Financeiros</strong>, e a auditoria é da Ernst & Young.</p><p>No AURB11, a gestão demonstra acompanhamento ativo das locações, com contratação de consultorias (Paulo Bio) para comercializar áreas vagas no Mauá e troca rápida de inquilinos quando há rescisões. Por outro lado, a tese original de crescimento via 3ª Emissão foi <strong class=\"text-amber-400\">cancelada por falta de demanda em dez/2023</strong>, o que limitou o ganho de escala e mantém o fundo em patamar de PL muito pequeno.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas em linha com fundos pequenos, mas peso relativo é alto pelo tamanho do PL",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração + Gestão + Escrituração",
+        "valor": "1,05% a.a.",
+        "detalhe": "Sobre PL ou Valor de Mercado (se IFIX), mín. R$ 45 mil/mês",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Gestora não cobra performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 228 mil",
+        "detalhe": "Volume médio — baixa liquidez",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Alianza Gestão de Recursos Ltda."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Banco BTG Pactual S.A."
+      },
+      {
+        "label": "Escriturador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Auditor",
+        "valor": "Ernst & Young Auditores Independentes"
+      },
+      {
+        "label": "Início das Operações",
+        "valor": "23/12/2021"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidor Qualificado"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "2"
+      },
+      {
+        "label": "ABL Total",
+        "valor": "≈ 76,5 mil m²"
+      },
+      {
+        "label": "Vacância (4T25)",
+        "valor": "≈ 4,4%",
+        "cor": "emerald"
+      },
+      {
+        "label": "WALE",
+        "valor": ">3 anos (65% acima de 36m)"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Urban Hub Mauá",
+        "Urban Hub Guarulhos"
+      ],
+      "data": [
+        59,
+        41
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Mix Mauá - Distribuição de mercadoria",
+        "setor": "Distribuição",
+        "receita": "≈ 28% receita",
+        "rating": "Contrato vigente",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Mix Mauá - Operador Logístico",
+        "setor": "Logística",
+        "receita": "≈ 26% receita",
+        "rating": "Contrato vigente",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Guarulhos - Comércio/Varejo Logístico",
+        "setor": "Varejo/Logística",
+        "receita": "≈ 21% receita",
+        "rating": "Contrato vigente",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Guarulhos - Operador Logístico",
+        "setor": "Logística",
+        "receita": "≈ 19% receita",
+        "rating": "Contrato vigente",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Mauá - Indústria",
+        "setor": "Indústria",
+        "receita": "≈ 4% receita",
+        "rating": "Contrato vigente",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoNota": "<p>Portfólio é <strong class=\"text-amber-400\">muito concentrado</strong> em apenas 2 ativos na Grande São Paulo (Guarulhos e Mauá), com aproximadamente 28 unidades/lojas locadas a múltiplos inquilinos. Os contratos são <strong class=\"text-emerald-400\">100% reajustados pelo IPCA</strong> e <strong class=\"text-emerald-400\">65,4% têm vencimento acima de 36 meses</strong>, o que dá previsibilidade. Por outro lado, o histórico mostra rotatividade alta de inquilinos (típica do segmento last mile) — a gestão precisa estar continuamente em prospecção. As localizações são, de fato, privilegiadas: acessos diretos a Rodoanel, Ayrton Senna, Pres. Dutra e Av. Jacu Pêssego.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória curta marcada por dificuldades operacionais e tentativa frustrada de crescimento",
+    "periodos": [
+      {
+        "periodo": "Dez/2021",
+        "label": "INÍCIO",
+        "cor": "blue",
+        "descricao": "Início das operações em 23/12/2021 com captação para aquisição dos galpões Urban Hub Guarulhos e Urban Hub Mauá II.",
+        "pontos": []
+      },
+      {
+        "periodo": "2022",
+        "label": "RAMP-UP",
+        "cor": "blue",
+        "descricao": "Fundo opera com 100% de ocupação no 3T22 e 4T22, distribuindo R$ 8,07/cota no ano (DY anualizado de 8,2% sobre R$ 95/cota).",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">100% ocupado em 4T22</strong>",
+          "9 inquilinos, receita ~R$ 1,1 mi/mês"
+        ]
+      },
+      {
+        "periodo": "2023",
+        "label": "TURBULÊNCIA",
+        "cor": "amber",
+        "descricao": "Ano marcado por múltiplas rescisões (GFL, Sequoia, Macan, Polarfix, Via Apia, LBGS). Ocupação caiu para 79,2% (3T23) e 84,2% (4T23). Distribuição reduzida para R$ 0,80/cota no 4T23.",
+        "pontos": [
+          "Vacância subiu para <strong class=\"text-red-400\">15-20%</strong>",
+          "<strong class=\"text-red-400\">3ª Emissão cancelada</strong> em 20/12/2023 por não atingir mínimo",
+          "Prejuízo do exercício: R$ 3,3 mi"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "REORGANIZAÇÃO",
+        "cor": "amber",
+        "descricao": "Novo locatário Mult Bev no Guarulhos. Gestão contrata consultoria Paulo Bio para acelerar locações no Mauá. Provisão para créditos de liquidação duvidosa de R$ 494 mil.",
+        "pontos": [
+          "Prejuízo do exercício 2023/24: <strong class=\"text-red-400\">R$ 4,9 mi</strong>",
+          "Captação de recursos via CRI: R$ 86,8 mi"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "RECUPERAÇÃO PARCIAL",
+        "cor": "amber",
+        "descricao": "Lucro líquido do exercício 2024/25 de R$ 5,2 mi (vs prejuízo de R$ 4,9 mi no anterior), beneficiado por reavaliação positiva de imóveis (+R$ 5,7 mi). Alteração do fundo para Responsabilidade Limitada.",
+        "pontos": [
+          "Vacância Mauá ainda em <strong class=\"text-amber-400\">8%</strong> no 3T25",
+          "Quantidade de cotas subiu para 1.085.780",
+          "PL: <strong class=\"text-amber-400\">R$ 74,6 mi</strong>"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Cotação a R$ 72,92, P/VP 0,90, DY 5,16%. Vacância contratual próxima a zero, mas alavancagem permanece o principal entrave ao crescimento da distribuição.",
+        "pontos": [
+          "Cotação: <strong class=\"text-blue-400\">R$ 72,92</strong>",
+          "P/VP: <strong class=\"text-emerald-400\">0,90</strong>",
+          "Obrigações por CRI: <strong class=\"text-red-400\">R$ 87,1 mi</strong> > PL"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">AURB11</strong> nasceu em dez/2021 com tese de last mile na Grande São Paulo, mas teve trajetória conturbada. Após um ramp-up positivo em 2022, enfrentou em 2023 uma onda de rescisões que derrubou a ocupação e a distribuição. A tentativa de crescimento via 3ª Emissão fracassou em dez/2023 e o fundo voltou a operar pequeno, com ABL de ~76 mil m² e PL de R$ 74,6 mi. A operação se reorganizou em 2024-2025 com recuperação da ocupação (~95,6%), mas a <strong class=\"text-red-400\">alavancagem via CRI (R$ 87 mi)</strong> continua a comprimir o resultado distribuível, mantendo o DY abaixo do esperado para o segmento.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota",
+        "valor": "-23%",
+        "detalhe": "R$ 95 (2ª emissão) → R$ 72,92"
+      },
+      {
+        "label": "Crescimento PL",
+        "valor": "+44%",
+        "detalhe": "R$ 51,8 mi (2022) → R$ 74,6 mi (2025)"
+      },
+      {
+        "label": "Alavancagem (CRI/PL)",
+        "valor": "117%",
+        "detalhe": "Obrigações superiores ao próprio PL"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese central do <strong class=\"text-blue-400\">AURB11</strong> é a exposição pura ao segmento de <strong class=\"text-blue-400\">last mile / logística urbana</strong> na Grande São Paulo, em raio de até 30 km do centro — um nicho com vacância historicamente baixa, demanda crescente impulsionada pelo e-commerce e localização privilegiada (acesso a Rodoanel, Ayrton Senna, Dutra e Jacu Pêssego).</p><p>O lado negativo, porém, é estrutural: o fundo é <strong class=\"text-red-400\">muito pequeno</strong> (PL de R$ 74,6 mi), <strong class=\"text-red-400\">altamente alavancado via CRI</strong> (obrigações de R$ 87 mi superam o próprio PL), com <strong class=\"text-red-400\">concentração extrema de cotistas</strong> (1 cotista com 55,65%) e <strong class=\"text-amber-400\">liquidez muito baixa</strong> (R$ 228 mil/dia). A combinação resulta em volatilidade de distribuição e DY corrente (5,16%) que não compensa, em tempos de Selic a 15% a.a., os riscos específicos.</p>",
+    "paraQuem": [
+      "<strong class=\"text-blue-400\">Investidores qualificados</strong> que entendem a dinâmica de FIIs alavancados via CRI e aceitam baixa liquidez",
+      "Quem busca <strong class=\"text-blue-400\">exposição muito específica</strong> a galpões last mile de São Paulo e quer apostar em valorização patrimonial",
+      "Investidores que apostam em <strong class=\"text-blue-400\">ciclo de queda da Selic</strong> reduzindo significativamente o custo dos CRIs e liberando resultado distribuível"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">Investidores iniciantes</strong> ou que precisam de previsibilidade de renda mensal",
+      "Quem busca <strong class=\"text-red-400\">FIIs grandes, líquidos e diversificados</strong> de logística (BTLG, HGLG, VILG, GGRC etc.)",
+      "Investidores avessos a <strong class=\"text-red-400\">alavancagem</strong> e que não toleram concentração extrema de cotistas e ativos",
+      "Quem precisa entrar/sair em volumes acima de R$ 50 mil sem impactar o preço da cota"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26",
+      "Abr/26"
+    ],
+    "chartData": [
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31,
+      0.31
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 1.0,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 8,07"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 4,31"
+      },
+      {
+        "ano": "2024",
+        "valor": "≈ R$ 2,00"
+      },
+      {
+        "ano": "2025",
+        "valor": "≈ R$ 3,30"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,28 a R$ 0,35",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (estimado)",
+        "valor": "R$ 0,31"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "≈ R$ 0,38"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "≈ R$ 0,25"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável-baixa",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,90",
+      "descricao": "<p>Cota negocia <strong class=\"text-emerald-400\">10% abaixo</strong> do valor patrimonial (R$ 82,97). Em fundos pequenos e alavancados, esse desconto é justificado pelos riscos específicos (concentração, liquidez, custo dos CRIs).</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota (jun/25)",
+          "valor": "R$ 82,97"
+        },
+        {
+          "label": "Preço atual",
+          "valor": "R$ 72,92",
+          "cor": "amber"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "5,16%",
+      "label": "Dividend Yield",
+      "cor": "amber",
+      "descricao": "<p>DY corrente de <strong class=\"text-amber-400\">5,16%</strong> está <strong class=\"text-red-400\">muito abaixo</strong> da média do segmento de logística (8-9%) e da NTN-B 10 anos (~7% real). Em ambiente de Selic 15%, o prêmio de risco é insuficiente.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 65-75",
+      "label": "Faixa de Preço Justo",
+      "cor": "amber",
+      "descricao": "<p>Estimativa por Gordon (DPS R$ 3,76; ke ~12%; g ~3,5%) indica preço justo de R$ 44; pelo P/VP histórico (0,85-0,95) sugere R$ 70-79; ajustando pelo desconto de risco (alavancagem + liquidez), faixa central de <strong class=\"text-amber-400\">R$ 65-75</strong>. Cotação atual está dentro da banda — sem margem de segurança relevante.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O AURB11 é um fundo de logística urbana (last mile) com tese setorial atraente — galpões em Guarulhos e Mauá, em raio de 30 km do centro de São Paulo, próximos a Rodoanel, Ayrton Senna e Av. Jacu Pêssego. O segmento se beneficia da expansão do e-commerce e da escassez crônica de área disponível na Grande SP. Porém, a estrutura atual do fundo (PL R$ 74,6 mi, apenas 2 ativos, 1.085.780 cotas) é pequena demais para diluir custos fixos e riscos operacionais.",
+      "Tecnicamente, a alavancagem é o ponto crítico: as obrigações por captação de recursos via CRI somam R$ 87,1 milhões em 30/06/2025 — superiores ao próprio patrimônio líquido. A despesa financeira anual (R$ 10,6 mi em 2024/25) consome boa parte do resultado das locações (R$ 12,1 mi), deixando margem estreita para distribuição. Como a Selic estava em 15% a.a. no fechamento dessa análise (com expectativa de queda), o custo da dívida ainda pressiona o resultado, mas há espaço para alívio caso o ciclo monetário evolua favoravelmente.",
+      "Olhando para frente, os catalisadores positivos seriam: (i) queda relevante da Selic reduzindo o custo dos CRIs; (ii) ocupação plena do Mauá após reforma; (iii) eventual nova emissão bem-sucedida para diluir alavancagem e ganhar escala. Já os riscos: (i) novas rescisões em portfólio tão pequeno; (ii) concentração de cotistas pode gerar pressão vendedora desordenada; (iii) baixíssima liquidez torna difícil sair em momentos de estresse. Para investidores qualificados, faz sentido apenas como alocação tática pequena."
+    ],
+    "pontosFortes": [
+      "Localização privilegiada dos 2 ativos: Guarulhos e Mauá, a 30 km de SP, com acesso direto a Rodoanel, Ayrton Senna, Dutra e Jacu Pêssego",
+      "Tese setorial sólida: last mile / logística urbana é nicho de demanda crescente, beneficiado pelo e-commerce",
+      "Contratos 100% indexados ao IPCA, com 65,4% acima de 36 meses de prazo (boa proteção inflacionária e duration)",
+      "Ocupação atual recuperada: vacância contratual praticamente zero em 4T25",
+      "P/VP de 0,90 oferece desconto patrimonial de 10%",
+      "Gestão ativa demonstrada na recolocação rápida de áreas vagas e contratação de consultoria especializada (Paulo Bio)",
+      "Reavaliação positiva dos imóveis em 2024/25 (+R$ 5,7 mi), indicando que o valor de mercado dos ativos sustenta o VP/cota"
+    ],
+    "pontosDeAtencao": [
+      "Alavancagem extrema: obrigações por captação via CRI (R$ 87,1 mi) superam o PL (R$ 74,6 mi)",
+      "Despesa financeira de R$ 10,6 mi/ano consome boa parte da geração de caixa das locações (R$ 12,1 mi)",
+      "Concentração brutal: 1 cotista detém 55,65% das cotas, top 3 reúnem >94%",
+      "Liquidez muito baixa (R$ 228 mil/dia), com vários meses sem negociação alguma em 2024",
+      "Portfólio mínimo: apenas 2 ativos, qualquer evento operacional impacta desproporcionalmente",
+      "Histórico recente turbulento: prejuízos contábeis em 2023 e 2024, distribuição volátil",
+      "DY corrente (5,16%) está muito abaixo dos pares do segmento logístico (8-9%)",
+      "3ª Emissão cancelada em dez/2023 frustrou plano de diversificação e ganho de escala",
+      "Fundo é destinado a Investidor Qualificado, o que limita base potencial de cotistas"
+    ],
+    "conclusaoFinal": "Recomendação: CAUTELA. O AURB11 negocia hoje a R$ 72,92 (P/VP 0,90, DY 5,16%) e tem fundamentos setoriais válidos — last mile em São Paulo é, de fato, um dos melhores nichos imobiliários do país. Porém, na atual estrutura (PL pequeno, alavancagem acima do patrimônio, concentração extrema de cotistas, liquidez baixíssima e DY que não compete com Selic 15%), o produto não justifica alocação para investidores comuns. Para quem já é cotista, recomenda-se monitorar de perto: (a) evolução da Selic e seu efeito sobre a despesa financeira dos CRIs; (b) execução do plano de ocupação plena do Mauá; (c) eventual nova tentativa de emissão para diluir alavancagem. Para quem ainda não é cotista, o AURB11 não oferece, hoje, relação risco-retorno superior a alternativas líquidas e diversificadas do segmento de logística (BTLG11, HGLG11, VILG11, GGRC11, LVBI11). Posição máxima sugerida em carteiras tolerantes: 1-2% do book de FIIs, exclusivamente para investidor qualificado que compreenda os riscos específicos."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 101,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. AURB11 é destinado a Investidor Qualificado conforme regulamento do fundo."
+  }
+}

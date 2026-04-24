@@ -1,0 +1,561 @@
+{
+  "meta": {
+    "ticker": "BTHF11",
+    "nome": "BTG Pactual Real Estate Hedge Fund FII",
+    "nomeExtra": "(ex-BCFF11 incorporado em out/2024)",
+    "segmento": "Híbrido (Hedge Fund Imobiliário)",
+    "badges": [
+      "Duplo desconto 15,9%",
+      "DY 12%+",
+      "Gestão ativa BTG"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 130
+  },
+  "seo": {
+    "title": "BTHF11 - Análise Completa | BTG Pactual Real Estate Hedge Fund",
+    "description": "Análise do BTHF11: DY 12,05%, P/VP 0,95, R$ 2,07 bi PL. Hedge fund imobiliário do BTG com 34% tijolo, 20% papel, 16% CRI e gestão ativa.",
+    "keywords": "BTHF11, BTG Pactual, hedge fund imobiliário, FII híbrido, IRIM11, TRXF11, dividendos, P/VP, IFIX",
+    "ogTitle": "BTHF11 - Análise Completa | BTG Pactual Real Estate Hedge Fund",
+    "ogDescription": "DY 12,05%, P/VP 0,95, PL R$ 2,07 bi. Hedge fund do BTG com duplo desconto de 15,9% e gestão ativa agressiva.",
+    "twitterTitle": "BTHF11 - Análise Completa | BTG Pactual Real Estate Hedge Fund",
+    "twitterDescription": "DY 12,05%, P/VP 0,95, PL R$ 2,07 bi. Hedge fund do BTG com duplo desconto de 15,9% e gestão ativa agressiva."
+  },
+  "indicadores": {
+    "cotacao": 9.39,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.95,
+    "pvpDesconto": "5% de desconto",
+    "dividendYield": 12.05,
+    "dividendoMensal": 1.01,
+    "dividendoAnual": 12.12,
+    "patrimonioLiquido": "R$ 2,07 Bi",
+    "vpCota": 10.09,
+    "cotistas": 320236,
+    "ocupacao": null,
+    "numImoveis": 85
+  },
+  "recomendacao": {
+    "nota": 8.0,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "<p>O <strong class=\"text-blue-400\">BTHF11</strong> se consolidou como um dos hedge funds imobiliários mais ativos e líquidos do mercado, após absorver o BCFF11 em out/2024 e expandir seu patrimônio para <strong class=\"text-emerald-400\">R$ 2,07 bilhões</strong>. O fundo combina uma carteira diversificada (34% FIIs tijolo, 20% FIIs papel, 16% CRIs, 22% caixa, 6% ativos reais, 2% ações) com gestão ativa agressiva — tendo gerado mais de <strong class=\"text-emerald-400\">R$ 50 milhões em ganho de capital</strong> em dezembro de 2025 e entregado retorno total de <strong class=\"text-emerald-400\">+31% em 2025</strong> contra 21% do IFIX.</p><p>Com cotação de <strong class=\"text-blue-400\">R$ 9,39</strong> negociando a P/VP de 0,95 e DY anualizado de <strong class=\"text-emerald-400\">12,05%</strong> — com guidance de <strong class=\"text-amber-400\">R$ 0,100 a R$ 0,105/cota</strong> para o 1S2026 —, o fundo oferece um \"duplo desconto\": 4,3% na cota própria e 15,9% considerando os FIIs investidos negociados a P/VP médio de 0,80. Esse arranjo cria assimetria favorável à medida que a Selic inicia ciclo de corte (já em 14,75% a.a.).</p><p><strong class=\"text-emerald-400\">Veredicto COMPRA.</strong> A combinação de gestora top, carrego elevado, diversificação robusta e descontos expressivos em ambiente de juros em queda torna o BTHF11 uma posição core para investidores em FIIs híbridos.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 2,07 Bi",
+      "detalhe": "VP/cota: R$ 10,09",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,01",
+      "valorSufixo": "/mês (anualizado)",
+      "detalhe": "R$ 12,12/ano | DY 12,05%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,95",
+      "detalhe": "Duplo desconto 15,9%",
+      "icone": "chart",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "320.236",
+      "detalhe": "205,8 mi cotas | ADTV R$ 4,6 mi",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Mandato flexível pode gerar volatilidade",
+      "descricao": "O fundo opera entre renda fixa e renda variável imobiliária, com parcela de até 2% em ações (ALOS3, TEND3) e operações táticas curtas. Em fev/2026 vendeu short XPML11 R$ 60 mi para arbitragem. Gera oportunidade, mas exige confiança total na execução do gestor.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Exposição a EZ Tower e Pátio Maceió",
+      "descricao": "Ativos reais (6,4% do PL) incluem <strong class=\"text-amber-400\">EZ Tower Torre B</strong> (0,6% após desinvestimento em dez/25) e <strong class=\"text-blue-400\">Pátio Maceió</strong> (5,8%), este último com operação estruturada exigindo TIR mínima de 18% a.a. para exercer opção de recompra.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "IRIM11 é 8,6% do PL — concentração relevante",
+      "descricao": "A maior posição individual é o IRIM11, fundo de CRIs que incorporou IRDM11 em nov/2025. A tese está no carrego IPCA+10% a.a. e no desconto P/VP frente aos pares de papel, mas concentração exige acompanhamento.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Retorno 12m de 31% já materializou boa parte da tese",
+      "descricao": "O fechamento do desconto patrimonial e a alta do IFIX em máxima histórica reduziram o espaço para ganho de capital adicional fácil. Daqui em diante, tese é mais dependente de cortes de Selic e da execução da gestão.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BTG Pactual Gestora de Recursos",
+    "nota": 9.2,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM FIIs listados",
+        "valor": "R$ 30+ Bi"
+      },
+      {
+        "label": "Fundos listados",
+        "valor": "10+ FIIs"
+      },
+      {
+        "label": "Início do fundo",
+        "valor": "Jan/2023"
+      },
+      {
+        "label": "Base cotistas",
+        "valor": "320 mil"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">BTG Pactual Gestora de Recursos</strong> é uma das maiores gestoras de fundos imobiliários listados do Brasil, com plataforma completa cobrindo logística (BTLG11), escritórios (BRCR11), shoppings (BPML11), crédito (BTCI11), hotelaria (BTHI11) e hedge fund (BTHF11). O time do BTHF11 demonstrou execução ativa consistente: em 2025, realizou R$ 429 milhões em desinvestimentos de FIIs, desinvestiu integralmente da EZ Tower com ganho de R$ 46 mi, executou operações táticas (SYNE3 com TIR 63% a.a.) e fusão com BCFF11 que elevou o DY patrimonial de 9% para 10,9%.</p><p>A taxa global de <strong class=\"text-emerald-400\">1,05% a.a.</strong> (reduzida em 12% em fev/2025) está em linha com peers e o alinhamento com cotistas é visível no guidance transparente de distribuições e nos relatórios detalhados mensais.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa global competitiva com liquidez relevante para FII híbrido",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa Global",
+        "valor": "1,05% a.a.",
+        "detalhe": "Sobre PL ou valor de mercado (IFIX)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há taxa de performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 4,6 Mi",
+        "detalhe": "Volume médio 2026 — IFIX",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "BTG Pactual Gestora de Recursos"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco BTG Pactual S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers"
+      },
+      {
+        "label": "Início",
+        "valor": "Janeiro/2023"
+      },
+      {
+        "label": "Emissões",
+        "valor": "3"
+      },
+      {
+        "label": "Periodicidade de rendimentos",
+        "valor": "Mensal"
+      },
+      {
+        "label": "Prazo de duração",
+        "valor": "Indeterminado"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs / FIIs / Imóveis",
+        "valor": "37 / 46 / 2"
+      },
+      {
+        "label": "PL Alocado",
+        "valor": "R$ 2,07 Bi"
+      },
+      {
+        "label": "Duration média CRIs",
+        "valor": "3,15 anos",
+        "cor": "blue"
+      },
+      {
+        "label": "Taxa média CRIs",
+        "valor": "CDI+3,6% / IPCA+10,4%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "FIIs Tijolo",
+        "Caixa",
+        "FIIs Papel",
+        "CRIs",
+        "Ativos Reais",
+        "Ações"
+      ],
+      "data": [
+        34.1,
+        21.8,
+        19.6,
+        16.5,
+        6.4,
+        1.6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#06b6d4",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "IRIM11 (Iridium CRI)",
+        "setor": "FII Papel IPCA+",
+        "receita": "8,6% do PL",
+        "rating": "DY 12,8%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "TRXF11 (TRX Real Estate)",
+        "setor": "Renda Urbana",
+        "receita": "7,0% do PL",
+        "rating": "DY 12,1%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "BTHI11 (BTG Hotéis)",
+        "setor": "Hotelaria",
+        "receita": "5,7% do PL",
+        "rating": "YoC 15,3%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Pátio Maceió (Shopping)",
+        "setor": "Ativo Real",
+        "receita": "5,8% do PL",
+        "rating": "TIR mín 18% a.a.",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "HTMX11 (Hotel Maxinvest)",
+        "setor": "Hotelaria",
+        "receita": "4,0% do PL",
+        "rating": "DY 10,3%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "BTCI11 (BTG Crédito Imob.)",
+        "setor": "FII Papel CDI+",
+        "receita": "3,7% do PL",
+        "rating": "DY 12,0%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "BPML11 (BTG Shoppings)",
+        "setor": "Shopping",
+        "receita": "2,8% do PL",
+        "rating": "DY 11,7%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Emergent Cold (CRIs I+II)",
+        "setor": "CRI Logístico",
+        "receita": "2,1% do PL",
+        "rating": "IPCA+9,4% / CDI+3,25%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Rede Duque (CRIs S1+S2)",
+        "setor": "CRI Postos",
+        "receita": "2,0% do PL",
+        "rating": "IPCA+8,2% / LTV 67%",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoNota": "<p>Portfólio <strong class=\"text-emerald-400\">altamente diversificado</strong>: 37 CRIs (com 14,5% estruturais e 2% táticos), 46 posições em FIIs, 2 imóveis via FIIs monoativos controlados, ações táticas e caixa relevante. Exposição a indexadores balanceada: <strong class=\"text-blue-400\">53,5% IPCA, 44,2% CDI, 2,3% IGP-M</strong> nos CRIs. Duração média de 3,15 anos mitiga risco de juros. Setores na carteira pulverizados: papel 29,6%, shoppings 27,1%, hotelaria 13,8%, logística 11,1%, residencial 7,5%, corporativo 7,9%, outros 23,7%.</p>"
+  },
+  "timeline": {
+    "subtitulo": "De estruturado CETIP a um dos hedge funds mais líquidos do IFIX em 3 anos",
+    "periodos": [
+      {
+        "periodo": "Jan/2023",
+        "label": "INÍCIO",
+        "cor": "blue",
+        "descricao": "Constituição em 25/11/2022 e início das atividades em 31/01/2023, negociado na CETIP com poucos cotistas.",
+        "pontos": []
+      },
+      {
+        "periodo": "Out/2024",
+        "label": "FUSÃO",
+        "cor": "amber",
+        "descricao": "Incorporação do BCFF11 pelo BTHF11 após assembleia de 27/09/2024, com cisão parcial do PL para o novo BTME11 (19,76%).",
+        "pontos": [
+          "<strong>PL sobe para R$ 588 mi</strong> e cotistas passam de 14 mil para 325 mil",
+          "DY patrimonial sai de 9% para <strong>10,9%</strong> (+21,5%)"
+        ]
+      },
+      {
+        "periodo": "Jan/2025",
+        "label": "LISTAGEM B3",
+        "cor": "blue",
+        "descricao": "Listagem em bolsa da B3, ampliando liquidez e base de investidores institucionais.",
+        "pontos": [
+          "ADTV evolui para R$ 3-5 mi/dia"
+        ]
+      },
+      {
+        "periodo": "Mai/2025",
+        "label": "IFIX",
+        "cor": "emerald",
+        "descricao": "Inclusão na carteira teórica do IFIX no rebalanceamento de maio/2025 após ADTV e governança atingirem critérios do índice.",
+        "pontos": [
+          "Entrada gera fluxo comprador adicional de ETFs"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "1 ANO LISTADO",
+        "cor": "emerald",
+        "descricao": "Retorno total de 31,8% YTD em 2025, contra 21,1% do IFIX — 10 pontos de alfa em 12 meses.",
+        "pontos": [
+          "<strong>R$ 46 mi de ganho de capital</strong> na saída do EZ Tower",
+          "<strong>FFO +15%</strong> vs ano anterior"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "PL de R$ 2,07 bi, cotação R$ 9,39, DY 12,05%, com Selic em 14,75% iniciando ciclo de cortes.",
+        "pontos": [
+          "<strong>Guidance 1S2026: R$ 0,100–0,105/cota</strong>",
+          "<strong>37 CRIs + 46 FIIs + 2 imóveis</strong>",
+          "Duplo desconto de 15,9%"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "De hedge fund CETIP a tese institucional em FIIs",
+      "texto": "<p>Em menos de 3 anos, o BTHF11 evoluiu de fundo estruturado em mercado de balcão, com menos de 15 mil cotistas, para um dos hedge funds imobiliários mais líquidos do mercado brasileiro, com <strong class=\"text-blue-400\">R$ 2,07 bilhões</strong> de PL e <strong class=\"text-blue-400\">320 mil cotistas</strong>. A fusão com o BCFF11 em out/2024, a listagem em bolsa e a entrada no IFIX em mai/2025 consolidaram o fundo como veículo institucional. A gestão ativa entregou <strong class=\"text-emerald-400\">+31% em 2025</strong>, frente a 21% do IFIX, materializando a tese de fechamento de desconto patrimonial que era apresentada em jan/2025.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota",
+        "valor": "-6%",
+        "detalhe": "R$ 10,00 emissão → R$ 9,39"
+      },
+      {
+        "label": "Retorno Total 12m",
+        "valor": "+31%",
+        "detalhe": "vs +26% IFIX"
+      },
+      {
+        "label": "Total Distribuído 2025",
+        "valor": "R$ 1,12",
+        "detalhe": "DY médio 11,6%"
+      },
+      {
+        "label": "Crescimento PL",
+        "valor": "+475%",
+        "detalhe": "R$ 360 mi → R$ 2,07 Bi"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O <strong class=\"text-blue-400\">BTHF11</strong> é um hedge fund imobiliário multiestratégia do BTG Pactual que combina três vetores: (i) <strong class=\"text-emerald-400\">carrego elevado</strong> via FIIs de papel e CRIs (yield médio 12% a.a.), (ii) <strong class=\"text-emerald-400\">gestão ativa agressiva</strong> com trades táticos e desinvestimentos oportunistas e (iii) <strong class=\"text-emerald-400\">duplo desconto</strong> de 15,9% — cota própria a 0,95 P/VP e FIIs investidos a 0,80 P/VP médio. Em ambiente de Selic iniciando corte (14,75% a.a. em mar/2026), esse arranjo tende a se beneficiar tanto do fechamento de desconto patrimonial quanto da expansão de múltiplos dos FIIs investidos.</p><p>Diferente de um FoF puro, o mandato permite transitar entre renda fixa e renda variável imobiliária, incluindo ações de empresas do setor (ALOS3, TEND3, DIRR3) e participações diretas em imóveis (Pátio Maceió, EZ Tower). O resultado recorrente médio de R$ 0,092/cota é complementado por ganhos extraordinários — R$ 50+ milhões em dez/2025 —, permitindo distribuições crescentes.</p>",
+    "paraQuem": [
+      "Investidor que busca <strong>exposição diversificada a FIIs</strong> em um único ticker, com gestão ativa profissional",
+      "Quem aceita <strong>maior rotatividade de portfólio</strong> em troca de potencial de ganho de capital além do yield",
+      "Investidor que confia na <strong>plataforma BTG Pactual</strong> e valoriza alinhamento entre gestor e originador",
+      "Perfil moderado que deseja capturar <strong>ciclo de queda da Selic</strong> via FII diversificado",
+      "Quem busca <strong>DY acima de 12%</strong> com baixa concentração em um único segmento"
+    ],
+    "naoParaQuem": [
+      "Investidor que prefere <strong>mandato puro</strong> (só tijolo, só papel, só logística)",
+      "Perfil avesso a <strong>volatilidade de cota patrimonial</strong> por marcação a mercado de FIIs e CRIs",
+      "Quem exige <strong>previsibilidade total</strong> de distribuição — o fundo tem componente extraordinário relevante",
+      "Investidor que não aceita <strong>exposição a ações</strong> (mesmo que pequena, 1,6% do PL)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.097,
+      0.097,
+      0.092,
+      0.092,
+      0.092,
+      0.092,
+      0.092,
+      0.092,
+      0.092,
+      0.092,
+      0.092,
+      0.106,
+      0.101,
+      0.101,
+      0.101
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.08,
+    "chartYMax": 0.115,
+    "totaisAnuais": [
+      {
+        "ano": "2023 (parcial)",
+        "valor": "N/D"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,09 (est.)"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,12"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,100 a R$ 0,105",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (Mar/26)",
+        "valor": "R$ 0,101"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,106"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,092"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Crescente",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,95",
+      "descricao": "<p>Cota mercado a <strong class=\"text-emerald-400\">R$ 9,39</strong> vs VP de R$ 10,09 representa <strong class=\"text-emerald-400\">5% de desconto patrimonial</strong>. Considerando que os FIIs investidos negociam a P/VP médio de 0,80, o <strong class=\"text-blue-400\">duplo desconto</strong> acumulado chega a aproximadamente 15,9% em relação ao valor patrimonial dos imóveis-alvo.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 10,09"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 9,39",
+          "cor": "emerald"
+        },
+        {
+          "label": "Duplo desconto",
+          "valor": "15,9%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,05%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY anualizado de <strong class=\"text-emerald-400\">12,05%</strong> — spread de ~485 bps sobre NTN-B 10 anos (7% real) e compatível com média de hedge funds de 12-13%. Com guidance de R$ 0,100–0,105/cota no 1S2026, o yield-on-price atual aponta distribuições acima da banda inferior da faixa.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 9,50 - R$ 10,30",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Faixa estimada via <strong class=\"text-blue-400\">Gordon Growth</strong> (DPS R$ 1,22 / (11,5% − 3%) ≈ R$ 14,35 teto; DPS / (13% − 2%) ≈ R$ 11,09 piso), ajustada por P/VP histórico (0,85–1,00) e DY target de 11–12,5% para hedge funds. Pessimista: R$ 9,50 / Base: R$ 10,09 (= VP) / Otimista: R$ 10,30. Upside médio de <strong class=\"text-emerald-400\">+5 a +10%</strong> sobre cota atual, além do DY de 12% de carrego.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O BTHF11 encerra o 1T2026 com patrimônio líquido de R$ 2,07 bilhões, 320 mil cotistas e cota negociando a R$ 9,39 (P/VP 0,95), entregando DY anualizado de 12,05% e retorno total 12 meses de 31% contra 26% do IFIX. O fundo completou em janeiro seu primeiro aniversário como listado e consolidou entrada no IFIX em maio/2025, ampliando liquidez para R$ 4,6 milhões/dia.",
+      "A carteira encerra março/2026 com 34,1% em FIIs tijolo (TRXF11, BTHI11, HTMX11, BPML11), 19,6% em FIIs papel liderados por IRIM11 (8,6%), 16,5% em CRIs majoritariamente estruturais (IPCA+10,4% médio), 6,4% em ativos reais (Pátio Maceió e participação residual em EZ Tower Torre B), 1,6% em ações táticas e 21,8% em caixa — nível elevado que reflete postura defensiva em momento de reprecificação setorial e oferece munição para novas alocações. O mandato multiestratégia foi exercido agressivamente em 2025: R$ 429 milhões em desinvestimentos, R$ 50+ milhões em ganhos de capital em dezembro, fusão com BCFF11 que elevou DY patrimonial de 9% para 10,9%, e realização bem-sucedida em ações (SYNE3 com TIR 63% a.a.).",
+      "Com Selic em 14,75% iniciando ciclo de afrouxamento, guidance de distribuição no intervalo R$ 0,100–0,105/cota para o 1S2026 e duplo desconto acumulado de 15,9%, o BTHF11 apresenta assimetria favorável. A tese central — fechamento do desconto patrimonial somado ao carrego alto — já se materializou parcialmente no retorno de 31% em 2025, mas o ambiente de corte de juros, a posição de caixa robusta e a qualidade da gestão sustentam espaço adicional para geração de valor em 12–24 meses."
+    ],
+    "pontosFortes": [
+      "Plataforma BTG Pactual com acesso privilegiado a originação de CRIs estruturais e co-investimento em FIIs controlados",
+      "Carteira altamente diversificada: 37 CRIs + 46 FIIs + 2 imóveis + ações táticas",
+      "DY anualizado de 12,05% e guidance transparente de R$ 0,100–0,105/cota no 1S2026",
+      "Duplo desconto de 15,9% (cota a 0,95 P/VP + FIIs investidos a 0,80 P/VP médio)",
+      "Retorno total de 31% em 2025 vs 21% do IFIX — 10 pontos de alfa",
+      "Liquidez de R$ 4,6 milhões/dia e inclusão no IFIX desde mai/2025",
+      "Taxa global competitiva de 1,05% a.a., sem performance",
+      "Gestão ativa comprovada — R$ 50+ milhões em ganho de capital em dez/2025 e TIR 63% a.a. em trade com SYNE3",
+      "Caixa robusto (21,8% do PL) com rentabilidade 105,7% do CDI, pronto para novas alocações"
+    ],
+    "pontosDeAtencao": [
+      "Mandato flexível permite ações e operações táticas — exige confiança total no gestor",
+      "Concentração de 8,6% em IRIM11 (maior posição individual)",
+      "Exposição a ativos reais (Pátio Maceió) via FII monoativo controlado, menos líquido",
+      "Parte do retorno histórico veio de eventos extraordinários não repetíveis (fusão BCFF11, desinvestimento EZ Tower)",
+      "Marcação a mercado de FIIs e CRIs pode gerar volatilidade na cota patrimonial",
+      "Após alta de 31% em 2025, espaço para expansão adicional de múltiplo é mais limitado",
+      "Dependência do ciclo de corte de Selic para reprecificação dos FIIs investidos",
+      "Operações táticas em ações (hoje 1,6% do PL) fogem do perfil FII tradicional"
+    ],
+    "conclusaoFinal": "<p><strong class=\"text-emerald-400\">Recomendação: COMPRA</strong> para investidores que aceitam a natureza híbrida do mandato e valorizam gestão ativa profissional. O BTHF11 oferece uma das combinações mais completas do mercado: carrego de 12% a.a., desconto patrimonial duplo de 15,9%, diversificação entre 80+ posições, plataforma BTG Pactual e histórico de execução superior ao IFIX. Com guidance transparente de R$ 0,100–0,105/cota no 1S2026 e Selic iniciando ciclo de corte, enxergamos preço justo na faixa de R$ 9,50–10,30 e espaço para valorização adicional de 5–10% no horizonte de 12 meses, acima do DY de 12% de carrego. Posição core recomendada — até 10% da carteira de FIIs — com o alerta de que o mandato multiestratégia exige tolerância a volatilidade e confiança no gestor.</p>"
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 130,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fundos imobiliários não contam com garantia do administrador, gestor, mecanismo de seguro ou FGC. Leia o regulamento antes de investir."
+  }
+}

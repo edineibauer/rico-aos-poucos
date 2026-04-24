@@ -1,0 +1,555 @@
+{
+  "meta": {
+    "ticker": "CCME11",
+    "nome": "Canuma Capital Multiestratégia FII",
+    "nomeExtra": null,
+    "segmento": "Multiestratégia (CRIs, Imóveis, FIIs, Ações)",
+    "badges": [
+      "1º Multiestratégia com alocação em todas as classes",
+      "Integra o IFIX desde Jan/2025",
+      "Retorno acumulado +58,5% desde IPO"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 172
+  },
+  "seo": {
+    "title": "CCME11 - Análise Completa | Canuma Capital Multiestratégia",
+    "description": "Análise do FII CCME11 (Canuma Capital): P/VP 0,86, DY 11,01%, portfólio diversificado em CRIs (41%), imóveis (27%) e FIIs (12%). Dividendo mensal R$ 1,10.",
+    "keywords": "CCME11, Canuma Capital, FII multiestratégia, dividend yield, CRI, Kasa Vila Olímpia, Shopping Jardim Sul, híbrido",
+    "ogTitle": "CCME11 - Canuma Capital Multiestratégia | Análise Institucional",
+    "ogDescription": "Veículo consolidador de estratégias imobiliárias com P/VP 0,86, DY 11% e performance +19,7 p.p. acima do IFIX desde o IPO.",
+    "twitterTitle": "CCME11 - Canuma Capital Multiestratégia",
+    "twitterDescription": "FII híbrido com CRIs high/mid-grade, imóveis prime e gestão ativa em FIIs. DY 11%, P/VP 0,86."
+  },
+  "indicadores": {
+    "cotacao": 9.14,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.86,
+    "pvpDesconto": "14% de desconto",
+    "dividendYield": 11.01,
+    "dividendoMensal": 0.084,
+    "dividendoAnual": 1.01,
+    "patrimonioLiquido": "R$ 719,7 Mi",
+    "vpCota": 10.6,
+    "cotistas": 9196,
+    "ocupacao": 78.0,
+    "numImoveis": 30
+  },
+  "recomendacao": {
+    "nota": 7.8,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "O <strong class=\"text-blue-400\">CCME11</strong> apresenta-se como um dos FIIs multiestratégia mais consistentes do mercado, com portfólio diversificado entre <strong class=\"text-blue-400\">CRIs high/mid-grade (41% do PL)</strong>, imóveis diretos (27%), FIIs líquidos (12%) e caixa robusto (21%). O desconto de <strong class=\"text-emerald-400\">14% frente ao VP</strong> e o dividend yield de <strong class=\"text-emerald-400\">11,01%</strong> compõem uma equação atrativa em momento de Selic em queda.<br><br>A gestão da Canuma Capital entregou <strong class=\"text-emerald-400\">+58,5% de retorno acumulado</strong> desde o IPO no portfólio líquido, superando o IFIX em <strong class=\"text-emerald-400\">19,7 p.p.</strong>, com track record comprovado de seleção de ativos. A carteira de CRIs paga CDI+ 2,9% a.a. e IPCA+ 10,5% a.a. no valor patrimonial, e quando ajustada ao desconto da cota, equivale a <strong class=\"text-emerald-400\">CDI+ 10,9% e IPCA+ 15,7%</strong> líquidos de taxas — patamar muito superior ao spread observado no mercado secundário para papéis equivalentes.<br><br>Veredicto <strong class=\"text-blue-400\">ACUMULAR</strong>: para quem busca diversificação imobiliária sob uma única cota, com renda mensal previsível (guidance R$ 0,084-0,088) e potencial de valorização via fechamento do desconto patrimonial e gestão ativa."
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 719,7 Mi",
+      "detalhe": "VP/cota: R$ 10,60",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,084",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 1,01/ano | DY 11,01%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Portfólio",
+      "valor": "41% CRIs",
+      "detalhe": "27% Imóveis | 12% FIIs | 21% Caixa",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "9.196",
+      "detalhe": "67,8 mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Ocupação moderada no Kasa Vila Olímpia",
+      "descricao": "O imóvel residencial (18% do PL) fechou Fev/26 com <strong class=\"text-amber-400\">78% de ocupação</strong>, abaixo do pico histórico de 96-97%. A gestão implementou 64 unidades em short-stay para mitigar sazonalidade, mas a geração de caixa do ativo ainda depende da retomada plena.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Complexidade do mandato multiestratégia",
+      "descricao": "Com alocações simultâneas em CRIs, imóveis, FIIs e ações, a análise do fundo exige maior esforço do investidor. A multiplicidade de classes pode diluir o foco em momentos adversos de uma estratégia específica.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Exposição a CRIs de incorporadoras residenciais",
+      "descricao": "<strong class=\"text-amber-400\">53% da carteira de CRIs</strong> está em lastro residencial (FGR, Econ, Mitre, JMD, Exto, Vectra, SPL, Pernambuco). Apesar das garantias robustas, uma desaceleração relevante no setor residencial impactaria cap rates e prazos de realização.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez diária inferior a peers do IFIX",
+      "descricao": "Volume médio diário de <strong class=\"text-amber-400\">R$ 326 mil</strong>, bem abaixo de FIIs grandes do segmento. Investidores com posições significativas podem enfrentar dificuldade para entrar/sair sem impacto de preço.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Carteira de CRIs com duration curta (2,6 anos)",
+      "descricao": "O perfil curto permite reciclagem, mas expõe o fundo a <strong class=\"text-amber-400\">risco de reinvestimento</strong> em cenário de queda dos juros. Os spreads atuais podem não ser replicáveis em novas operações.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Shopping Jardim Sul via participação indireta",
+      "descricao": "A posição de 10% no shopping se dá via FII Canuma Capital Renda Varejo, adicionando camada de veículo que, embora isente taxa de gestão duplicada, acrescenta complexidade estrutural.",
+      "severidade": "emerald"
+    }
+  ],
+  "gestora": {
+    "nome": "Canuma Capital",
+    "nota": 8.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Início CCME11",
+        "valor": "Abr/2022"
+      },
+      {
+        "label": "Emissões realizadas",
+        "valor": "4 emissões"
+      },
+      {
+        "label": "Retorno vs IFIX desde IPO",
+        "valor": "+19,7 p.p."
+      }
+    ],
+    "resumo": "A <strong class=\"text-blue-400\">Canuma Capital</strong> é gestora especializada em investimentos imobiliários, com equipe que monitora mais de 200 FIIs e ações, análise detalhada de +17 milhões de m² e cobertura de +1.500 CRIs. O time estrutura e ancora operações de crédito proprietárias, o que garante acesso a papéis com spreads diferenciados.<br><br>O track record é sólido: o portfólio líquido (FIIs e Ações) superou o IFIX em <strong class=\"text-emerald-400\">100% das janelas móveis de 36 meses</strong> desde o início, com retorno mediano de +13,1 p.p. acima do índice. Em 2025, o portfólio acumulou +31,3% contra IFIX de +21,2%. A gestora também demonstrou disciplina ao vender ações de shoppings (ALOS3, IGTI11) com lucro de R$ 2,4 mi em Nov/25 e o Imóvel Aurora com TIR de +17,4% a.a. em Mai/25.",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas alinhadas ao mercado de FIIs listados no IFIX",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração + Gestão",
+        "valor": "0,15% a.a.",
+        "detalhe": "Sobre o PL ou valor de mercado (caso no IFIX)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa adicional (pós-IFIX)",
+        "valor": "0,02% a.a.",
+        "detalhe": "Mínimo R$ 5 mil/mês (corrigido pelo IGP-M)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Sim",
+        "detalhe": "Conforme regulamento (paga em 2024: R$ 4,1 Mi)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 326 Mil",
+        "detalhe": "Volume médio (abaixo de peers do IFIX)",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Canuma Capital Ltda."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Banco BTG Pactual S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers"
+      },
+      {
+        "label": "Formador de Mercado",
+        "valor": "XP Investimentos CCTVM S.A."
+      },
+      {
+        "label": "Início",
+        "valor": "Abril/2022"
+      },
+      {
+        "label": "Entrada no IFIX",
+        "valor": "Janeiro/2025"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs",
+        "valor": "17 ativos"
+      },
+      {
+        "label": "Volume CRIs",
+        "valor": "R$ 293 Mi"
+      },
+      {
+        "label": "Taxa Média CDI",
+        "valor": "CDI+ 2,9%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Taxa Média IPCA",
+        "valor": "IPCA+ 10,5%",
+        "cor": "emerald"
+      },
+      {
+        "label": "LTV CRIs",
+        "valor": "53%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Duration CRIs",
+        "valor": "2,6 anos"
+      },
+      {
+        "label": "Imóveis Diretos",
+        "valor": "2 ativos (R$ 190 Mi)"
+      },
+      {
+        "label": "Ocupação Kasa",
+        "valor": "78%",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRIs",
+        "Imóveis Diretos",
+        "FIIs & Ações",
+        "Caixa/LCI"
+      ],
+      "data": [
+        41,
+        27,
+        12,
+        21
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI HGBS (Hedge Brasil Shopping)",
+        "setor": "Shopping Centers",
+        "receita": "17% do PL",
+        "rating": "Venc. 2033",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI FGR",
+        "setor": "Residencial Alto Padrão",
+        "receita": "5,3% do PL",
+        "rating": "Venc. 2033",
+        "ratingCor": "emerald",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Econ",
+        "setor": "Residencial MCMV",
+        "receita": "4,2% do PL",
+        "rating": "Venc. 2028",
+        "ratingCor": "emerald",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Brookfield (4 séries)",
+        "setor": "Escritórios Faria Lima",
+        "receita": "3,1% do PL",
+        "rating": "Venc. 2027",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Kasa Vila Olímpia",
+        "setor": "Residencial Locação",
+        "receita": "18% do PL",
+        "rating": "243 apartamentos",
+        "ratingCor": "amber",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Shopping Jardim Sul (10%)",
+        "setor": "Shopping",
+        "receita": "9% do PL",
+        "rating": "172 lojas | 97% ocup.",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "A diversificação é o principal atributo defensivo do fundo. <strong class=\"text-emerald-400\">56% dos CRIs têm lastro residencial</strong>, 34% em shopping centers (com alienação fiduciária de cotas avaliadas em R$ 383 Mi), 8% em escritórios AAA na Faria Lima e 2% em logística refrigerada. Os imóveis diretos concentram-se em SP (Vila Olímpia + Morumbi). O LTV médio de <strong class=\"text-emerald-400\">53%</strong> e garantias robustas (alienação fiduciária, cessão de recebíveis, aval, contas reserva) reduzem substancialmente o risco de crédito."
+  },
+  "timeline": {
+    "subtitulo": "Trajetória consistente: de IPO de R$ 250 Mi em 2022 ao IFIX em 2025",
+    "periodos": [
+      {
+        "periodo": "Abr/2022",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início da oferta da 1ª emissão. 3º maior IPO de FIIs de 2022 (ANBIMA), com R$ 250 Mi captados até setembro.",
+        "pontos": [
+          "<strong>3º maior IPO do ano</strong> em FIIs",
+          "Cota inicial: R$ 100 (pré-split)"
+        ]
+      },
+      {
+        "periodo": "Jun/2022",
+        "label": "ALOCAÇÕES",
+        "cor": "blue",
+        "descricao": "Início das alocações em FIIs & Ações, montando o portfólio líquido que se tornaria referência de performance.",
+        "pontos": []
+      },
+      {
+        "periodo": "Fev/2023",
+        "label": "IMÓVEIS",
+        "cor": "purple",
+        "descricao": "Aquisição do <strong>KASA Vila Olímpia</strong> (243 aptos.) e do Imóvel Aurora (hotel), marcando entrada em tijolo direto.",
+        "pontos": [
+          "Kasa adquirido a R$ 12,5 mil/m² (35% de desconto)",
+          "Aluguéis iniciais em R$ 90/m²"
+        ]
+      },
+      {
+        "periodo": "Jul/2023",
+        "label": "CRIs EXCLUSIVOS",
+        "cor": "emerald",
+        "descricao": "Início das alocações em CRIs de originação própria/exclusivos, consolidando a tese de crédito estruturado com spreads diferenciados.",
+        "pontos": []
+      },
+      {
+        "periodo": "Abr/2024",
+        "label": "SHOPPING",
+        "cor": "purple",
+        "descricao": "Aquisição de 10% do Shopping Jardim Sul (Morumbi/SP), via estrutura de FII subsidiário com renúncia de taxa de gestão adicional.",
+        "pontos": [
+          "R$ 140 Mi na 4ª emissão",
+          "ABL: 28.413 m²"
+        ]
+      },
+      {
+        "periodo": "Jan/2025",
+        "label": "IFIX",
+        "cor": "emerald",
+        "descricao": "<strong>Entrada no IFIX</strong> — principal índice de FIIs do Brasil, marcando reconhecimento da liquidez e tamanho do fundo.",
+        "pontos": [
+          "+88% de novos cotistas nos últimos 12 meses",
+          "Atingiu R$ 700 Mi de PL"
+        ]
+      },
+      {
+        "periodo": "Mai/2025",
+        "label": "RECICLAGEM",
+        "cor": "emerald",
+        "descricao": "Venda do Imóvel Aurora por R$ 18,5 Mi com <strong>TIR de +17,4% a.a.</strong>, 35,8% de retorno total no período, demonstrando gestão ativa.",
+        "pontos": [
+          "Saída antes do prazo projetado",
+          "Reinvestimento em novas oportunidades"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "PL de R$ 719,7 Mi, 9.196 cotistas, DY de 11,01% e P/VP de 0,86 em cenário de Selic em queda.",
+        "pontos": [
+          "<strong>+58,5% de retorno acumulado</strong> desde IPO (+19,7 p.p. vs IFIX)",
+          "Guidance R$ 0,084-0,088/cota para abril-junho"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Consolidação como consolidador",
+      "texto": "Em quatro anos, o CCME11 cumpriu sua proposta de ser um <strong class=\"text-blue-400\">consolidador de estratégias imobiliárias</strong>. Passou de um IPO a investidores profissionais para um FII acessível, integrante do IFIX, com base de cotistas crescente e performance consistentemente acima do índice. A capacidade de transitar entre classes (CRIs, tijolo, papel) e de originar operações proprietárias reforça a tese de gestão ativa."
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota vs IPO",
+        "valor": "+19,7 p.p.",
+        "detalhe": "vs IFIX no período (retorno total)"
+      },
+      {
+        "label": "Retorno Portfólio FIIs & Ações",
+        "valor": "+58,5%",
+        "detalhe": "Desde Jun/2022 (início alocações)"
+      },
+      {
+        "label": "Patrimônio Líquido",
+        "valor": "R$ 719,7 Mi",
+        "detalhe": "Crescimento de 4x desde IPO"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "O <strong class=\"text-blue-400\">CCME11</strong> é uma tese de <strong class=\"text-emerald-400\">diversificação imobiliária em um único veículo</strong>, operada por gestão ativa competente. Enquanto a maioria dos FIIs se concentra em uma única estratégia (papel, logística, shoppings, lajes), o Canuma Multiestratégia entrega simultaneamente carrego de CRIs high/mid-grade, valor justo de imóveis prime em São Paulo, gestão tática em FIIs líquidos e oportunismo em ações de companhias imobiliárias.<br><br>A combinação de <strong class=\"text-emerald-400\">P/VP 0,86, DY 11% e duração curta de CRIs (2,6 anos)</strong> protege o fundo em ciclos de alta de juros e o posiciona para capturar valorização quando o fechamento de curva acontecer. A carteira de CRIs ajustada pelo desconto da cota equivale a CDI+ 10,9% ou IPCA+ 15,7% líquidos — retorno implícito raramente disponível no mercado secundário para papéis desse perfil.",
+    "paraQuem": [
+      "Investidor que busca <strong class=\"text-emerald-400\">diversificação imobiliária</strong> em um único ticker, sem precisar montar carteira com múltiplos FIIs",
+      "Quem privilegia <strong class=\"text-emerald-400\">renda mensal previsível</strong> (guidance claro de R$ 0,084-0,088/cota) com proteção parcial contra volatilidade de classes individuais",
+      "Investidor de médio/longo prazo que aceita volatilidade por potencial de fechamento do <strong class=\"text-emerald-400\">desconto patrimonial (14%)</strong> + ganhos de gestão ativa",
+      "Perfil que valoriza <strong class=\"text-emerald-400\">gestão comprovada</strong> — Canuma entregou +19,7 p.p. acima do IFIX desde o IPO em janelas móveis consistentes"
+    ],
+    "naoParaQuem": [
+      "Investidor que prioriza <strong class=\"text-amber-400\">alta liquidez diária</strong> — volume médio de R$ 326 mil é modesto frente a FIIs de R$ 2-5 milhões/dia",
+      "Quem busca pureza de mandato — o FII <strong class=\"text-amber-400\">não é um FII de papel nem de tijolo</strong>, e avalia classes distintas com lógicas próprias",
+      "Quem se incomoda com <strong class=\"text-amber-400\">complexidade de análise</strong> — entender CCME11 exige monitorar 17 CRIs, 11 FIIs, 2 imóveis e posições em ações simultaneamente",
+      "Investidor avesso a <strong class=\"text-amber-400\">taxa de performance</strong> (R$ 4,1 Mi pagos em 2024) — mesmo justificada pelo track record, adiciona despesa sobre o resultado"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.084,
+      0.084,
+      0.086,
+      0.084,
+      0.084,
+      0.084,
+      0.084,
+      0.084,
+      0.088,
+      0.084,
+      0.084,
+      0.084
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.07,
+    "chartYMax": 0.1,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 1,05"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,00"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,02"
+      }
+    ],
+    "guidance": {
+      "periodo": "Abr-Jun/2026",
+      "faixa": "R$ 0,084 a R$ 0,088",
+      "unidade": "por cota / mês (cenário-base R$ 0,086)"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,084"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,088"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,084"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável/Alta",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,86",
+      "descricao": "O fundo negocia com <strong class=\"text-emerald-400\">14% de desconto</strong> sobre o valor patrimonial. Esse gap, aplicado à carteira de CRIs, significa que investidores compram hoje uma taxa implícita de CDI+ 10,9% a.a. ou IPCA+ 15,7% a.a. — retornos líquidos de taxas muito superiores ao que peers de papel high-grade oferecem no mercado secundário.",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 10,60"
+        },
+        {
+          "label": "Preço Atual",
+          "valor": "R$ 9,14",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "11,01%",
+      "label": "Dividend Yield (12m anualizado)",
+      "cor": "emerald",
+      "descricao": "DY competitivo frente ao Tesouro IPCA+ (~7,0% real) e alinhado aos melhores FIIs híbridos. O retorno total desde o IPO (<strong class=\"text-emerald-400\">+19,7 p.p. sobre o IFIX</strong>) combina distribuição consistente com apreciação da cota patrimonial."
+    },
+    "recomendacoes": {
+      "valor": "R$ 10,00 - R$ 11,50",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<strong>Gordon Growth:</strong> DPS anual R$ 1,01 / (custo capital 11% - crescimento 2,5%) = <strong class=\"text-blue-400\">R$ 11,88</strong>. <strong>P/VP histórico:</strong> aplicando 0,95x sobre VP/cota R$ 10,60 = R$ 10,07. <strong>DY target 9%:</strong> R$ 1,01 / 0,09 = R$ 11,22. <strong>Faixa consolidada:</strong> pessimista R$ 9,50 / base R$ 10,60 / otimista R$ 11,80."
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O CCME11 encerrou março/2026 com patrimônio líquido de <strong class=\"text-emerald-400\">R$ 719,7 milhões</strong>, distribuídos em 17 CRIs (41% do PL), dois imóveis diretos em São Paulo (27%), 11 FIIs (12%) e caixa robusto de 21% em títulos públicos. O fundo negocia a <strong class=\"text-emerald-400\">R$ 9,14</strong>, com P/VP de 0,86 e dividend yield de 11,01%, em cenário macro de Selic em trajetória de queda (15% a.a. com expectativa de início de corte) e IFIX em máxima histórica.",
+      "A tese de investimento sustenta-se em três pilares: primeiro, o <strong class=\"text-emerald-400\">carrego elevado da carteira de CRIs</strong> (CDI+ 2,9% a.a. e IPCA+ 10,5% a.a. no VP, com duration curta de 2,6 anos e LTV de 53%) que, ajustada ao desconto da cota, entrega retorno implícito muito superior a papéis equivalentes no mercado secundário. Segundo, a <strong class=\"text-emerald-400\">qualidade dos imóveis diretos</strong>: Kasa Vila Olímpia (residencial prime com prazo médio de contratos de 16 meses e reajustes médios de +25% desde 2023) e Shopping Jardim Sul (dominante no Morumbi, 97% de ocupação, NOI crescendo 9% a.a.). Terceiro, a <strong class=\"text-emerald-400\">gestão ativa comprovada</strong> da Canuma no portfólio líquido, que entregou 100% das janelas móveis de 36 meses acima do IFIX.",
+      "Os principais catalisadores para os próximos 12 meses são: (i) início do ciclo de corte da Selic, que historicamente beneficia o segmento; (ii) reinvestimento dos R$ 150 milhões em caixa em novas operações; (iii) retomada da ocupação do Kasa Vila Olímpia para patamares de 85-90%; (iv) potencial fechamento do desconto patrimonial via reconhecimento de investidores do IFIX. O guidance de rendimentos mensais foi elevado para <strong class=\"text-emerald-400\">R$ 0,084-0,088/cota</strong> no 2º trimestre/2026, com cenário-base de R$ 0,086."
+    ],
+    "pontosFortes": [
+      "<strong class=\"text-emerald-400\">Diversificação efetiva</strong> em 4 classes imobiliárias (CRIs, imóveis, FIIs, ações) em um único ticker",
+      "P/VP de 0,86 embute <strong class=\"text-emerald-400\">14% de desconto</strong>, com carteira de CRIs implícita a CDI+ 10,9% ou IPCA+ 15,7%",
+      "Dividend yield de <strong class=\"text-emerald-400\">11,01%</strong>, superior a NTN-B 10 anos + prêmio de risco adequado",
+      "Track record: portfólio líquido <strong class=\"text-emerald-400\">+58,5% vs IFIX +38,8%</strong> desde o início das alocações em 2022",
+      "<strong class=\"text-emerald-400\">Entrada no IFIX</strong> em jan/2025 amplia visibilidade, liquidez estrutural e acesso a investidores institucionais",
+      "LTV médio dos CRIs de 53% com garantias robustas (alienação fiduciária, cessão de recebíveis, aval, contas reserva)",
+      "Caixa de 21% do PL oferece <strong class=\"text-emerald-400\">munição para aproveitar oportunidades</strong> em cenário de volatilidade",
+      "Gestão disciplinada demonstrada: venda do Imóvel Aurora com TIR de 17,4% a.a. e ganhos realizados de R$ 5,35 Mi em FIIs desde 2022",
+      "Guidance claro e cumprido, com reserva acumulada de R$ 5,4 Mi (R$ 0,08/cota) como 'defesa' para safras inflacionárias adversas"
+    ],
+    "pontosDeAtencao": [
+      "Ocupação do Kasa Vila Olímpia em <strong class=\"text-amber-400\">78%</strong> (fev/26), abaixo do potencial histórico de 92-96%",
+      "Liquidez diária de <strong class=\"text-amber-400\">R$ 326 mil</strong>, inferior a peers relevantes do IFIX",
+      "Taxa de performance pode consumir parcela relevante do resultado em anos de alta performance (R$ 4,1 Mi em 2024)",
+      "Concentração de 56% dos CRIs em lastro residencial expõe a ciclos do setor de incorporação",
+      "Duration curta (2,6 anos) expõe a <strong class=\"text-amber-400\">risco de reinvestimento</strong> em ciclo de queda de juros",
+      "Complexidade do mandato exige monitoramento ativo de 30+ ativos em 4 classes distintas",
+      "Hotel Aurora já foi alienado, mas a experiência com rescisão do inquilino em Out/24 ilustra risco operacional de imóveis diretos",
+      "Parcela em ações de shopping (ALOS3, IGTI11, MULT3) adiciona <strong class=\"text-amber-400\">volatilidade de bolsa</strong> ao resultado"
+    ],
+    "conclusaoFinal": "Recomendação <strong class=\"text-blue-400\">ACUMULAR</strong> com nota <strong class=\"text-blue-400\">7,8/10</strong>. O CCME11 representa uma das melhores relações risco-retorno entre FIIs multiestratégia do IFIX: entrega renda mensal consistente de ~11% a.a. com gestão comprovadamente vencedora e portfólio diversificado em quatro classes imobiliárias. O desconto patrimonial de 14% cria assimetria favorável — se o fundo convergir para o VP, há upside de ~16% em preço além dos dividendos. A faixa de preço justo estimada é de <strong class=\"text-blue-400\">R$ 10,00 a R$ 11,50</strong>, com cenário-base em R$ 10,60. Para investidores com horizonte de 24 meses ou mais que buscam diversificação imobiliária com gestão ativa, o CCME11 merece entre 3% e 7% da carteira dedicada a FIIs, com atenção à liquidez diária modesta. O início do ciclo de corte da Selic em 2026 deve ser o principal vetor de valorização."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 172,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Os dados apresentados têm como fonte os relatórios gerenciais, informes trimestrais e demonstrações financeiras oficiais do Canuma Capital Multiestratégia FII (CCME11)."
+  }
+}

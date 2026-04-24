@@ -1,0 +1,528 @@
+{
+  "meta": {
+    "ticker": "AAZQ11",
+    "nome": "AZ Quest Sole Fiagro Imobiliário",
+    "nomeExtra": "(AZ Quest Sole FIAGRO FII)",
+    "segmento": "Fiagro - Papel (CRA/FIDC Agro)",
+    "badges": [
+      "99% alocado em agro",
+      "CDI + 2,57% líquido",
+      "31 mil cotistas"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 131
+  },
+  "seo": {
+    "title": "AAZQ11 - Análise Completa | AZ Quest Sole Fiagro",
+    "description": "AAZQ11 negocia a R$ 8,26 com P/VP de 0,96, DY de 12,6% anualizado e carteira 99% agro (CRAs e FIDCs). Carrego líquido de CDI + 2,57%.",
+    "keywords": "aazq11, az quest, fiagro, cra, agronegócio, dividend yield, fundo imobiliário, carteira de crédito agro, az quest agro",
+    "ogTitle": "AAZQ11 - Análise Completa do Fiagro da AZ Quest",
+    "ogDescription": "Dossiê do AAZQ11: carteira 99% agro, carrego CDI + 2,57% líquido e P/VP de 0,96 em abril/2026.",
+    "twitterTitle": "AAZQ11 - Análise do Fiagro AZ Quest Sole",
+    "twitterDescription": "Carteira com 45 ativos, dividendo mensal recorrente de R$ 0,1050 e carrego líquido CDI + 2,57%."
+  },
+  "indicadores": {
+    "cotacao": 8.26,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.96,
+    "pvpDesconto": "4% de desconto",
+    "dividendYield": 12.69,
+    "dividendoMensal": 1.05,
+    "dividendoAnual": 12.6,
+    "patrimonioLiquido": "R$ 207,7 Mi",
+    "vpCota": 8.64,
+    "cotistas": 31088,
+    "ocupacao": null,
+    "numImoveis": 45
+  },
+  "recomendacao": {
+    "nota": 6.8,
+    "veredicto": "ACUMULAR",
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">AAZQ11</strong> entrega o que promete: uma carteira <strong class=\"text-emerald-400\">99% alocada em ativos do agronegócio</strong> (68,6% CRAs e 26,4% Fiagros de direitos creditórios), com carrego bruto ponderado de <strong class=\"text-emerald-400\">CDI + 3,78%</strong> e líquido de <strong class=\"text-emerald-400\">CDI + 2,57%</strong> — dentro do mandato e adequado ao risco de crédito pulverizado que o fundo assume.</p><p>O ponto de atenção é o histórico recente de <strong class=\"text-amber-400\">eventos de crédito</strong>: o episódio do Fiagro Caetê/CRA Stoppe (Operação Greenwashing, junho/2024), a recuperação judicial do CRA Agrogalaxy (setembro/2024) e o pedido de recuperação judicial da lastreadora do CRA023000B5 (abril/2024) marcaram o portfólio. Apesar disso, a remarcação já foi absorvida no VP e a carteira atual foi reconstruída com estruturas mais sólidas e diversificadas.</p><p>Negociando a <strong class=\"text-emerald-400\">P/VP de 0,96</strong> com dividendo mensal estável em <strong class=\"text-emerald-400\">R$ 1,05/cota</strong> (DY de 12,7% anualizado), o fundo oferece carrego competitivo em um ambiente de Selic ainda alta mas em queda. Veredicto <strong class=\"text-blue-400\">ACUMULAR</strong> — adequado para investidores que compreendem o perfil de crédito privado agro e buscam exposição pulverizada com gestão ativa.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 207,7 Mi",
+      "detalhe": "VP/cota: R$ 8,64",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,05",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 12,60/ano · DY 12,7%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Alocação Agro",
+      "valor": "99%",
+      "detalhe": "CRAs 68,6% · Fiagros DC 26,4%",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "31.088",
+      "detalhe": "24,0 mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Exposição ao Fiagro Caetê (Operação Greenwashing)",
+      "descricao": "O Fiagro Caetê, atrelado ao CRA Stoppe (créditos de carbono), foi alvo da Operação Greenwashing da Polícia Federal em junho/2024. A gestora remarcou os ativos para 50% do PU par. Em fev/2026, a exposição somada era de cerca de 2,2% do PL, com processos de execução civil em andamento (penhora de bens deferida) e acompanhamento do processo criminal.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Recuperação Judicial do CRA Agrogalaxy",
+      "descricao": "Em setembro/2024, a Agrogalaxy pediu recuperação judicial com descumprimento de pagamento e vencimento antecipado das debêntures lastro. A exposição atual é de aproximadamente 0,18% do PL (R$ 377 mil), já remarcada para 50% do PU par.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Vencimento antecipado do CRA023000B5",
+      "descricao": "Em abril/2024, os devedores da CPR-F que lastreia o CRA023000B5 pediram recuperação judicial. O fundo mantém valor a receber de R$ 2,1 milhões em juízo, com garantia de alienação fiduciária de 1.738 hectares (valor de venda forçada superior a 138% do saldo devedor).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de administração consolidada de 1,2% a.a.",
+      "descricao": "A taxa de administração global de 1,2% a.a. sobre PL está alinhada à média de Fiagros high-yield, mas é mais alta do que fundos high-grade. Há ainda taxa de performance de 10% sobre o que exceder 100% do CDI.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Liquidez média diária baixa",
+      "descricao": "Volume financeiro médio negociado de aproximadamente R$ 445 mil/dia (referência abril/2026). Isso pode dificultar a montagem ou desmontagem rápida de posições relevantes por investidores institucionais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em crédito privado pulverizado",
+      "descricao": "Cerca de 27,9% do PL está em recebíveis pulverizados (Fiagros de direitos creditórios ligados a revendas, cooperativas e produtores rurais). Esse segmento é mais sensível à safra, ao preço das commodities e à inadimplência rural.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "AZ Quest Investimentos (AZ Quest Agro Ltda.)",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Categoria",
+        "valor": "Papel · Gestão Ativa"
+      },
+      {
+        "label": "Início do fundo",
+        "valor": "Dez/2022"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">AZ Quest</strong> é uma gestora independente brasileira com atuação consolidada em crédito privado. A <strong class=\"text-blue-400\">AZ Quest Agro Ltda.</strong>, braço dedicado ao agronegócio, assumiu a gestão do Sole em abril/2023, substituindo a gestora anterior. A equipe apresenta comunicação detalhada nos relatórios, com visitas de campo a cedentes relevantes (FIDC Baviera, Toagro, UISA, Enersugar, Caeté, entre outros) e escritório especializado contratado para recuperação de crédito em casos adversos.</p><p>O track record recente foi <strong class=\"text-amber-400\">testado por eventos de crédito pontuais</strong> (Caetê/Stoppe, Agrogalaxy e CRA023000B5), mas a resposta da gestora seguiu padrão institucional: remarcações rápidas, execução de garantias e transparência junto aos cotistas. A política de investimento é clara e bem executada.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas compatível com Fiagros high-yield, mas com piso mínimo relevante em relação ao PL",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração Global",
+        "valor": "1,2% a.a.",
+        "detalhe": "Sobre PL · mínimo R$ 15 mil/mês",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10%",
+        "detalhe": "Sobre o que exceder 100% do CDI",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 445 mil",
+        "detalhe": "Volume financeiro médio",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "XP Investimentos CCTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "AZ Quest Agro Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Oliveira Trust DTVM"
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "02/12/2022"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "44.625.826/0001-11"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Nº de ativos",
+        "valor": "45+"
+      },
+      {
+        "label": "Alocação agro",
+        "valor": "99%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Carrego bruto",
+        "valor": "CDI + 3,78%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Carrego líquido",
+        "valor": "CDI + 2,57%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Recebíveis Pulverizados",
+        "Açúcar e Etanol",
+        "Cooperativa",
+        "Fertilizantes",
+        "Fundos",
+        "Laticínios/Outros"
+      ],
+      "data": [
+        27.95,
+        24.83,
+        12.8,
+        8.34,
+        5.76,
+        20.32
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#06b6d4",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRA ACP Bio",
+        "setor": "Açúcar e Etanol (grãos)",
+        "receita": "7,3% do PL",
+        "rating": "CDI + 4,5%",
+        "ratingCor": "emerald",
+        "risco": "Médio-baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Expocacer 2",
+        "setor": "Cooperativa de café",
+        "receita": "7,0% do PL",
+        "rating": "CDI + 3,0%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FIDC Nooa Sr. 1",
+        "setor": "Insumos (defensivos)",
+        "receita": "4,7% do PL",
+        "rating": "CDI + 5,0%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA Alvoar Lácteos",
+        "setor": "Laticínios",
+        "receita": "4,3% do PL",
+        "rating": "CDI + 3,0%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Esteio Rural",
+        "setor": "Revenda de insumos",
+        "receita": "4,2% do PL",
+        "rating": "CDI + 5,5%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA Santa Fé",
+        "setor": "Açúcar e Etanol",
+        "receita": "4,0% do PL",
+        "rating": "CDI + 4,0%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA Minerva Foods",
+        "setor": "Proteína animal",
+        "receita": "2,3% do PL",
+        "rating": "AA+ S&P · CDI + 1,5%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Fiagro Caetê Sr. 1",
+        "setor": "Crédito de Carbono",
+        "receita": "2,2% do PL",
+        "rating": "Em execução judicial",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>Portfólio <strong class=\"text-emerald-400\">diversificado em mais de 45 ativos</strong>, com concentração máxima individual de 7,3% (CRA ACP Bio). A diversificação setorial abrange açúcar e etanol, cooperativas de café, laticínios, fertilizantes, proteína animal, revendas de insumos e FIDCs multi-cedente. <strong class=\"text-amber-400\">Riscos concentrados</strong> nas exposições ao Caetê/Stoppe (2,2% remarcado a 50%) e em posições menores em recuperação judicial, todas já refletidas no VP.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Três anos desde o IPO com ciclo completo: captação, estressa de crédito e estabilização",
+    "periodos": [
+      {
+        "periodo": "Dez/2022",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das atividades do fundo em 02/12/2022. Emissão de 24.037.284 cotas a R$ 10,00 (R$ 240,4 milhões de cotas subscritas).",
+        "pontos": []
+      },
+      {
+        "periodo": "Abr/2023",
+        "label": "Troca de gestora",
+        "cor": "blue",
+        "descricao": "A AZ Quest Agro Ltda. assumiu a gestão do fundo, mediante aprovação em AGC.",
+        "pontos": [
+          "Nova equipe especializada em agro",
+          "Alinhamento com demais Fiagros da casa"
+        ]
+      },
+      {
+        "periodo": "Jun/2024",
+        "label": "Operação Greenwashing",
+        "cor": "red",
+        "descricao": "Polícia Federal deflagrou operação contra o grupo Stoppe (cedente do CRA lastreado no Fiagro Caetê). Remarcação para 50% do PU.",
+        "pontos": [
+          "Exposição remarcada (−34,9% no ativo)",
+          "Execução civil e acompanhamento criminal em curso"
+        ]
+      },
+      {
+        "periodo": "Set/2024",
+        "label": "Agrogalaxy RJ",
+        "cor": "orange",
+        "descricao": "Recuperação judicial da Agrogalaxy e vencimento antecipado das debêntures lastro do CRA. Remarcação para 50% do PU.",
+        "pontos": [
+          "Impacto de R$ 0,016/cota no VP",
+          "Exposição reduzida para 0,18% do PL"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "Estabilização",
+        "cor": "emerald",
+        "descricao": "Fundo encerra 2025 com 99% de alocação, carrego líquido CDI + 1,98% e lucro líquido do exercício de R$ 31,2 milhões.",
+        "pontos": [
+          "<strong>Rendimento anual 2025 de R$ 1,33/cota</strong>",
+          "Patrimônio líquido de R$ 207,5 milhões",
+          "Reserva de R$ 0,02 por cota no lucro não distribuído"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Carrego líquido CDI + 2,57%, dividendo mensal estável em R$ 0,105. Novos investimentos em Fiagro Toagro e CRA Enersugar.",
+        "pontos": [
+          "<strong>DY anualizado de 19% em fev/2026 (sobre cota de mercado)</strong>",
+          "Diversificação de 45+ ativos",
+          "31.088 cotistas"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Desde o IPO em dezembro/2022, o AAZQ11 passou por um ciclo completo de formação de carteira, <strong class=\"text-amber-400\">estresse de crédito em 2024</strong> (Caetê, Agrogalaxy e CRA023000B5) e estabilização em 2025-2026. Os eventos adversos foram absorvidos no valor patrimonial da cota, que caiu de aproximadamente R$ 10,00 para <strong class=\"text-amber-400\">R$ 8,64</strong> no cumulativo. A gestora manteve disciplina na comunicação, reforçou estruturas e hoje opera com carrego ajustado ao perfil de risco.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação da cota",
+        "valor": "−17,4%",
+        "detalhe": "R$ 10,00 → R$ 8,26 desde IPO"
+      },
+      {
+        "label": "Dividendos 2025",
+        "valor": "R$ 1,33",
+        "detalhe": "Média R$ 0,11/mês"
+      },
+      {
+        "label": "Dividendos 2024",
+        "valor": "R$ 1,30",
+        "detalhe": "Média R$ 0,108/mês"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">AAZQ11</strong> é a de um Fiagro <strong class=\"text-emerald-400\">high-yield diversificado</strong> com mandato claro em crédito privado do agronegócio, gerido por casa com track record em crédito. A combinação de <strong class=\"text-emerald-400\">carrego líquido CDI + 2,57%</strong>, dividendo mensal estável, isenção fiscal para PF e negociação <strong class=\"text-emerald-400\">abaixo do VP (P/VP 0,96)</strong> compõe entrada atraente em um ciclo de queda esperada da Selic.</p><p>Os eventos de crédito de 2024 já foram <strong class=\"text-amber-400\">absorvidos no VP</strong> e a carteira atual foi reestruturada com novos ativos (Toagro, Enersugar, Expocacer, UISA, Caeté). O fundo é apropriado para <strong class=\"text-blue-400\">investidor que entende crédito privado</strong>, valoriza renda mensal isenta e tolera eventual volatilidade pontual em casos de inadimplência.</p>",
+    "paraQuem": [
+      "<strong>Pessoa física com base grande consolidada em FIIs de tijolo</strong> que busca diversificação para crédito privado agro",
+      "<strong>Investidor com horizonte de 3-5 anos</strong> que valoriza renda mensal isenta de IR e pode capturar o carrego CDI + 2,57%",
+      "<strong>Perfil moderado que entende risco de crédito pulverizado</strong> e aceita exposição a safra, commodities e inadimplência rural"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidor conservador</strong> que busca apenas high-grade (preferir Fiagros mais líquidos e com carteira AAA)",
+      "<strong>Quem precisa de liquidez alta</strong> — volume médio de R$ 445 mil/dia é limitado para grandes alocações",
+      "<strong>Investidor de curto prazo</strong> ou sensível a marcações a mercado em eventos de crédito pontuais"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.095,
+      0.095,
+      0.095,
+      0.135,
+      0.1,
+      0.1,
+      0.11,
+      0.12,
+      0.12,
+      0.1325,
+      0.105,
+      0.105
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.16,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 1,57"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,30"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,33"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,10 a R$ 0,12",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (fev/26)",
+        "valor": "R$ 0,105"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,1350"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,0950"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,96",
+      "descricao": "<p>Cota negocia com <strong class=\"text-emerald-400\">4% de desconto sobre o VP</strong>. Após as remarcações de 2024 (Caetê, Agrogalaxy), o VP está mais limpo e o desconto atual reflete risco percebido do crédito privado agro.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 8,64"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 8,26",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,69%",
+      "label": "FFO Yield (Fundamentus)",
+      "cor": "emerald",
+      "descricao": "<p>Yield de mercado indicado pelo Fundamentus de <strong class=\"text-emerald-400\">12,69%</strong>, com DY anualizado de 19% conforme relatórios gerenciais em fev/2026 (usando cota a R$ 8,40 e dividendo mensal de R$ 0,105). Competitivo frente à Selic em queda esperada.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 8,30 - 9,10",
+      "label": "Faixa de preço justo",
+      "cor": "blue",
+      "descricao": "<p>Faixa estimada por três metodologias: <strong>Gordon Growth</strong> (DPS R$ 1,26/a ÷ (16% − 3%) ≈ R$ 9,70), <strong>P/VP histórico</strong> (0,95-1,00 × R$ 8,64 = R$ 8,20-8,64) e <strong>DY target</strong> (14% para Fiagros médios: R$ 1,26/0,14 = R$ 9,00). Faixa central <strong class=\"text-blue-400\">R$ 8,60-9,00</strong>, dependendo da velocidade da queda da Selic.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O AAZQ11 chega a abril/2026 consolidado após um período de estresse em 2024. O fundo negocia a R$ 8,26 (P/VP 0,96), com patrimônio líquido de R$ 207,7 milhões, 31.088 cotistas e carteira 99% alocada em ativos do agronegócio — 68,6% em CRAs, 26,4% em Fiagros de direitos creditórios e o restante em caixa estratégico.",
+      "A análise fundamentalista mostra carrego ponderado bruto de CDI + 3,78% e líquido (após impostos e taxas) de CDI + 2,57%, adequado para o perfil de risco de crédito privado agro. O dividendo mensal se estabilizou em R$ 0,105/cota, gerando DY anualizado de 19% sobre a cota de mercado. O resultado contábil de 2025 foi R$ 31,2 milhões, com lucro não distribuído (reserva) de R$ 0,022/cota no ano.",
+      "Os catalisadores positivos são: (i) a queda esperada da Selic ao longo de 2026, que tende a beneficiar a cota via compressão do DY exigido; (ii) o desconto de 4% sobre o VP, que oferece margem de segurança; e (iii) a diversificação atual em 45+ ativos. Os riscos principais são os legados do Caetê/Stoppe (em execução judicial) e a sensibilidade do setor agro a preços de commodities."
+    ],
+    "pontosFortes": [
+      "Carteira <strong class=\"text-emerald-400\">99% alocada em agro</strong> e pulverizada em mais de 45 ativos",
+      "Carrego líquido competitivo de <strong class=\"text-emerald-400\">CDI + 2,57%</strong> em 2026",
+      "Dividendo mensal <strong class=\"text-emerald-400\">estável e isento de IR</strong> para pessoa física",
+      "Gestora <strong class=\"text-emerald-400\">AZ Quest</strong> com track record em crédito e visitas de campo frequentes",
+      "<strong class=\"text-emerald-400\">P/VP de 0,96</strong> oferece margem de segurança",
+      "Diversificação setorial ampla: açúcar/etanol, cooperativas, laticínios, fertilizantes, proteína animal",
+      "Transparência nos relatórios gerenciais com detalhamento de garantias e ratings por ativo"
+    ],
+    "pontosDeAtencao": [
+      "Exposição residual ao <strong class=\"text-amber-400\">Caetê/Stoppe</strong> (2,2% do PL, em execução judicial)",
+      "<strong class=\"text-amber-400\">Liquidez limitada</strong> (R$ 445 mil/dia em média)",
+      "Taxa de administração global de <strong class=\"text-amber-400\">1,2% a.a.</strong> é relativamente alta para o patamar atual de PL",
+      "Sensibilidade do agronegócio a <strong class=\"text-amber-400\">preços de commodities</strong> e à safra",
+      "Piso mínimo de administração (R$ 15 mil/mês) pode pesar se o PL cair",
+      "Cota acumula <strong class=\"text-amber-400\">−17% desde o IPO</strong> por conta dos eventos de crédito",
+      "Parte relevante em crédito privado <strong class=\"text-amber-400\">pulverizado</strong> (27,9% em recebíveis agro)"
+    ],
+    "conclusaoFinal": "<p>Para o investidor que compreende que Fiagros de papel são fundos de <strong class=\"text-blue-400\">crédito privado</strong> (não veículos high-grade), o AAZQ11 oferece hoje uma entrada razoável: P/VP 0,96, DY de 12,7%, carrego líquido CDI + 2,57% e carteira reconstruída após os eventos de 2024. A recomendação é <strong class=\"text-blue-400\">ACUMULAR</strong> com posição moderada (até 2-3% do portfólio de FIIs/Fiagros), priorizando entradas em janelas de queda. Não é recomendado para quem busca liquidez alta ou para quem não tolera volatilidade em eventos de crédito pontuais. Para quem já está posicionado, fazer sentido manter e reinvestir dividendos enquanto o ciclo de queda da Selic se desenvolve.</p>"
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 131,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fiagros não contam com garantia do FGC. Avalie seu perfil e consulte um assessor antes de investir."
+  }
+}

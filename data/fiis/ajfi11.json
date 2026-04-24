@@ -1,0 +1,495 @@
+{
+  "meta": {
+    "ticker": "AJFI11",
+    "nome": "AJ Malls Fundo de Investimento Imobiliário",
+    "nomeExtra": "(AJMALLSFII - gestão Capitânia, shoppings Almeida Junior)",
+    "segmento": "Shoppings",
+    "badges": [
+      "6 shoppings em SC",
+      "P/VP 0,75",
+      "Participações minoritárias"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 101
+  },
+  "seo": {
+    "title": "AJFI11 - Análise Completa | AJ Malls FII",
+    "description": "Análise do AJFI11: FII de shoppings da Almeida Junior em SC, P/VP 0,75, DY 7,52%, 6 shoppings e R$ 352 MM de PL. Pontos fortes e riscos.",
+    "keywords": "AJFI11, AJ Malls, Capitânia, Almeida Junior, FII shopping, shopping Santa Catarina, Continente Shopping, Balneário Shopping",
+    "ogTitle": "AJFI11 - AJ Malls: shoppings catarinenses com desconto",
+    "ogDescription": "Fundo de shoppings concentrado em Santa Catarina, com participações minoritárias em 6 ativos da Almeida Junior. P/VP 0,75 após queda.",
+    "twitterTitle": "AJFI11 - Análise AJ Malls FII",
+    "twitterDescription": "FII de shoppings catarinenses: P/VP 0,75, DY 7,52%, gestão Capitânia. Vale o desconto?"
+  },
+  "indicadores": {
+    "cotacao": 8.34,
+    "cotacaoData": "22/04/2026",
+    "pvp": 0.75,
+    "pvpDesconto": "25% de desconto sobre VP",
+    "dividendYield": 7.52,
+    "dividendoMensal": 0.05,
+    "dividendoAnual": 0.6,
+    "patrimonioLiquido": "R$ 352,4 MM",
+    "vpCota": 11.14,
+    "cotistas": 11189,
+    "ocupacao": 93.0,
+    "numImoveis": 6
+  },
+  "recomendacao": {
+    "nota": 6.0,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O AJFI11 oferece uma tese de <strong class=\"text-blue-400\">desconto patrimonial relevante</strong> (P/VP de 0,75) sobre um portfólio de seis shoppings da Almeida Junior concentrados em Santa Catarina, estado com renda e IDH acima da média nacional. O NOI cresceu dois dígitos em praticamente todos os ativos nos últimos 12 meses, e a ocupação consolidada ficou em <strong class=\"text-emerald-400\">93%</strong>, em patamar saudável para o setor.</p><p>Por outro lado, o fundo detém <strong class=\"text-amber-400\">participações minoritárias</strong> (1% a 17,85%) em todos os imóveis, tem baixa liquidez diária (R$ 184 mil) e viu os rendimentos recuarem de R$ 0,07 para <strong class=\"text-red-400\">R$ 0,05/cota</strong> com o fim da renda garantida da vendedora. Existe ainda contingência judicial ligada ao Neumarkt Shopping. Para investidores tolerantes a risco, o desconto pode compensar; para quem busca renda previsível de grande porte, há veículos mais líquidos no segmento.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 352,4 MM",
+      "detalhe": "VP/cota: R$ 11,14",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,05",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 0,60/ano | DY 7,52%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "93%",
+      "detalhe": "Vacância 7,0%",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "11.189",
+      "detalhe": "31,6 mi cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Participações minoritárias em todos os shoppings",
+      "descricao": "O fundo detém fração dos shoppings, variando de 1,00% (Balneário) a 17,85% (Continente). Isso limita poder decisório sobre capex, mix de lojas e estratégia comercial, delegados à Almeida Junior.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Queda das distribuições pós-renda garantida",
+      "descricao": "As distribuições caíram de R$ 0,07/cota (até abril/2025) para R$ 0,05/cota após o término da renda mínima garantida. O DY calculado sobre o resultado operacional puro é inferior ao observado no primeiro ano.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Liquidez reduzida",
+      "descricao": "Volume médio diário ronda R$ 184-250 mil, com apenas 11.189 cotistas. Operações relevantes podem pressionar a cotação; fundo é inadequado para grandes blocos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração geográfica em Santa Catarina",
+      "descricao": "Os seis shoppings estão em SC (Blumenau, Joinville, São José, Balneário Camboriú e Criciúma). Qualquer choque regional (climático, econômico) afeta todo o portfólio simultaneamente.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Contingência judicial Shopping Neumarkt",
+      "descricao": "Ação na Comarca de Sete Lagoas (TJMG) motivou ordem de constrição sobre valores a pagar à Almeida Junior (vendedora) na aquisição. Divulgada no Prospecto e em comunicados ao mercado desde 2023.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Inadimplência elevada no Nações Shopping",
+      "descricao": "O Nações Shopping (Criciúma, 17,96% das receitas) registra inadimplência líquida de 11,09%, bem acima da média do portfólio. Gestora sinaliza atenção para ajustes comerciais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Desvalorização dos imóveis em 2025",
+      "descricao": "As propriedades foram remarcadas com desvalorização de R$ 32,8 MM no exercício findo em jun/2025, reflexo do aumento da taxa de desconto (cap rate) no laudo JLL com juros altos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Fundo jovem e sem histórico longo",
+      "descricao": "IPO em nov/2023. Pouco histórico de ciclos econômicos, políticas de distribuição e execução sem o suporte da renda garantida.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Capitânia Capital S.A.",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Tipo",
+        "valor": "Gestora especializada"
+      },
+      {
+        "label": "Credenciamento CVM",
+        "valor": "01/10/2021"
+      }
+    ],
+    "resumo": "<p>A Capitânia Capital S.A. é a gestora do AJFI11 desde o IPO, atuando como gestora de carteiras credenciada pela CVM (Ato Declaratório 19.133/2021). A administração fiduciária é feita pela <strong class=\"text-blue-400\">XP Investimentos CTVM S.A.</strong>, com custódia pela Oliveira Trust DTVM e auditoria da Ernst &amp; Young. Os relatórios gerenciais seguem padrão detalhado, com abertura por shopping e comparativos operacionais (NOI caixa, SSS, vacância, inadimplência).</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas agregadas competitivas para FII de tijolo (0,70% a.a.)",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,10% a.a.",
+        "detalhe": "Sobre PL",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,60% a.a.",
+        "detalhe": "Capitânia Capital",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 184 mil",
+        "detalhe": "Volume médio (abr/2026)",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "XP Investimentos CTVM S.A."
+      },
+      {
+        "label": "Custódia",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Auditoria",
+        "valor": "Ernst & Young Auditores"
+      },
+      {
+        "label": "Benchmark",
+        "valor": "IFIX"
+      },
+      {
+        "label": "Início",
+        "valor": "01/11/2023"
+      },
+      {
+        "label": "ISIN",
+        "valor": "BRAJFICTF001"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Shoppings",
+        "valor": "6"
+      },
+      {
+        "label": "ABL total",
+        "valor": "221,3 mil m²"
+      },
+      {
+        "label": "ABL próprio",
+        "valor": "22,5 mil m²"
+      },
+      {
+        "label": "Vacância média",
+        "valor": "7,0%",
+        "cor": "amber"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Continente (São José)",
+        "Nações (Criciúma)",
+        "Norte (Blumenau)",
+        "Neumarkt (Blumenau)",
+        "Garten (Joinville)",
+        "Balneário (BC)"
+      ],
+      "data": [
+        40.8,
+        17.9,
+        16.6,
+        13.0,
+        7.1,
+        4.4
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ec4899",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Continente Shopping",
+        "setor": "Shopping - São José/SC",
+        "receita": "40,8% receita",
+        "rating": "Particip. 17,85%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Nações Shopping",
+        "setor": "Shopping - Criciúma/SC",
+        "receita": "17,9% receita",
+        "rating": "Particip. 17,75%",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Norte Shopping",
+        "setor": "Shopping - Blumenau/SC",
+        "receita": "16,6% receita",
+        "rating": "Particip. 14,02%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Neumarkt Shopping",
+        "setor": "Shopping - Blumenau/SC",
+        "receita": "13,0% receita",
+        "rating": "Particip. 6,20%",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Garten Shopping",
+        "setor": "Shopping - Joinville/SC",
+        "receita": "7,1% receita",
+        "rating": "Particip. 3,35%",
+        "ratingCor": "amber",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Balneário Shopping",
+        "setor": "Shopping - BC/SC",
+        "receita": "4,4% receita",
+        "rating": "Particip. 1,00%",
+        "ratingCor": "amber",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>Portfólio <strong class=\"text-blue-400\">100% concentrado em Santa Catarina</strong>, estado com 4º maior renda e IDH acima da média nacional. Os shoppings atendem aproximadamente 80% da população catarinense. Risco principal: participações minoritárias (1%-17,85%), que reduzem o controle do fundo sobre decisões operacionais. O Continente representa sozinho <strong class=\"text-amber-400\">40,8%</strong> das receitas, concentração elevada em um único ativo.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória curta: IPO em 2023 e fim da renda garantida em 2025",
+    "periodos": [
+      {
+        "periodo": "Nov/2023",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "IPO da 1ª emissão a R$ 10,00/cota, com 31.625.978 cotas emitidas (R$ 316 MM captados). Aquisição do conjunto de 6 shoppings da Almeida Junior por R$ 299 MM em três parcelas, com renda mínima garantida inicial.",
+        "pontos": []
+      },
+      {
+        "periodo": "2024",
+        "label": "PRIMEIRO ANO",
+        "cor": "emerald",
+        "descricao": "Primeiro exercício social (jul/2023 a jun/2024) encerrou com lucro líquido de R$ 100,9 MM, valorização de R$ 84,9 MM nos imóveis e distribuições de R$ 0,07/cota, sustentadas pela renda garantida.",
+        "pontos": [
+          "<strong>Valorização dos imóveis</strong>: +R$ 84,9 MM no laudo JLL",
+          "Cota de mercado caiu de R$ 10 para R$ 8,15 ao fim do exercício"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "FIM RENDA GARANTIDA",
+        "cor": "amber",
+        "descricao": "Encerramento da renda mínima garantida paga pela Almeida Junior. Distribuições passam a refletir apenas o NOI dos shoppings, com queda de R$ 0,07 para R$ 0,05/cota.",
+        "pontos": [
+          "Reavaliação negativa: -R$ 32,8 MM nos imóveis (cap rate mais alto)",
+          "Distribuição caiu ~29% com fim do colchão"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Fundo negocia a R$ 8,34 (P/VP 0,75), distribui R$ 0,05/cota mensais e mantém ocupação de 93% com NOI em crescimento de dois dígitos em LTM.",
+        "pontos": [
+          "<strong>Cota R$ 8,34</strong> vs. VP de R$ 11,14",
+          "NOI LTM <strong class=\"text-emerald-400\">R$ 25,7 MM</strong>",
+          "Vacância 7,0% e inadimplência controlada"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O AJFI11 é um fundo jovem, com apenas 2,5 anos de histórico. A trajetória da cota reflete dois movimentos: (i) desvalorização estrutural da cota desde o IPO (de R$ 10,00 para R$ 8,34), acompanhando o ciclo de alta de juros que penalizou FIIs de tijolo; e (ii) queda adicional de rendimentos pelo fim da renda garantida em meados de 2025. Operacionalmente, os shoppings da Almeida Junior mostram NOI caixa em crescimento consistente (dois dígitos em todos os ativos em LTM).</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota",
+        "valor": "-16,6%",
+        "detalhe": "R$ 10,00 (IPO) → R$ 8,34"
+      },
+      {
+        "label": "Distribuído LTM",
+        "valor": "R$ 0,65",
+        "detalhe": "Últimos 12 meses"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do AJFI11 é uma aposta em <strong class=\"text-blue-400\">desconto patrimonial</strong> sobre um portfólio de qualidade média-alta em Santa Catarina, com gestão da Capitânia e operação delegada à Almeida Junior, a maior rede de shoppings do estado. O P/VP de <strong class=\"text-emerald-400\">0,75</strong> embute margem de segurança, e o crescimento de NOI de dois dígitos nos últimos 12 meses comprova a saúde operacional dos ativos.</p><p>Por outro lado, é uma tese para <strong class=\"text-amber-400\">investidores pacientes</strong>: as participações minoritárias, a liquidez diária baixa e o fim da renda garantida tornam os dividendos de curto prazo modestos (R$ 0,05/cota) e reduzem o controle sobre os ativos.</p>",
+    "paraQuem": [
+      "<strong class=\"text-emerald-400\">Investidores pacientes</strong> que buscam exposição a shoppings regionais de SC com desconto patrimonial",
+      "<strong class=\"text-blue-400\">Perfil diversificador</strong> que aceita posição pequena em fundos com liquidez reduzida",
+      "<strong class=\"text-emerald-400\">Apostadores no ciclo</strong> de queda de juros, cenário que favorece reprecificação de FIIs de tijolo com desconto"
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">Investidores que buscam renda alta e previsível</strong>: DY de 7,52% está abaixo da NTN-B 10 anos",
+      "<strong class=\"text-red-400\">Quem precisa de liquidez</strong>: volume diário de R$ 184 mil dificulta giros rápidos",
+      "<strong class=\"text-amber-400\">Perfis conservadores</strong> que exigem histórico longo e maior controle sobre ativos"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26"
+    ],
+    "chartData": [
+      0.07,
+      0.07,
+      0.07,
+      0.06,
+      0.06,
+      0.06,
+      0.06,
+      0.03,
+      0.05,
+      0.045,
+      0.047,
+      0.05
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 0.1,
+    "totaisAnuais": [
+      {
+        "ano": "2024 (parcial)",
+        "valor": "R$ 0,50"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 0,66"
+      },
+      {
+        "ano": "2026 (parc.)",
+        "valor": "R$ 0,05"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,05 a R$ 0,06",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,050"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,070"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,030"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Recuperação",
+        "cor": "blue"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,75",
+      "descricao": "<p>Desconto de <strong class=\"text-emerald-400\">25% sobre o valor patrimonial</strong>. Reflete tanto o ciclo macro (juros altos) quanto os riscos específicos do fundo (participações minoritárias, liquidez e fim da renda garantida).</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 11,14"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 8,34",
+          "cor": "amber"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "7,52%",
+      "label": "Dividend Yield",
+      "cor": "amber",
+      "descricao": "<p>DY abaixo de peers consolidados de shopping (HGBS11, XPML11, VISC11, que pagam acima de 9%). Reflete distribuições reduzidas após fim da renda garantida. FFO Yield de 7,92% indica que resultado operacional recorrente começa a se aproximar da distribuição.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 7,50 – R$ 9,50",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Faixa estimada via Gordon Growth (DPS R$ 0,60–0,72, custo de capital 12-13%, crescimento 3-4%), cruzada com P/VP histórico de 0,70-0,85 e comparação com peers de shopping. Cenário base: <strong class=\"text-blue-400\">R$ 8,50</strong>, próximo da cotação atual.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O AJFI11 é um fundo de investimento imobiliário jovem, listado desde novembro de 2023, com portfólio de seis shoppings em Santa Catarina operados pela Almeida Junior. O patrimônio líquido de R$ 352 MM e os 31,6 milhões de cotas em circulação configuram um veículo pequeno no universo de FIIs de tijolo, com liquidez diária de cerca de R$ 184 mil em abril de 2026.",
+      "Operacionalmente, os shoppings apresentam indicadores saudáveis: ocupação de 93%, NOI caixa LTM de R$ 25,7 MM (crescimento de dois dígitos em praticamente todos os ativos) e vacância de 7%. O Continente Shopping (40,8% das receitas) e o Nações Shopping (17,9%) são os principais ativos. A inadimplência está controlada no portfólio geral, com exceção do Nações (11,09%). A reavaliação negativa de R$ 32,8 MM no último exercício reflete o aumento do cap rate nos laudos JLL, em linha com o ciclo macroeconômico.",
+      "Negociando a R$ 8,34 com P/VP de 0,75, o AJFI11 oferece desconto relevante sobre o valor patrimonial, mas a tese de médio prazo depende da queda da Selic (esperada a partir de 2026) e da capacidade da Almeida Junior de ampliar o NOI dos shoppings em maturação (Nações, Norte e Continente). Para o curto prazo, o guidance implícito é de distribuições em torno de R$ 0,05/cota, patamar menor do que os R$ 0,07 pagos durante a renda garantida."
+    ],
+    "pontosFortes": [
+      "Desconto patrimonial relevante (P/VP 0,75)",
+      "Portfólio concentrado em Santa Catarina, região de renda acima da média nacional",
+      "NOI caixa crescendo dois dígitos em praticamente todos os ativos LTM",
+      "Ocupação de 93% e vacância de 7%, em linha com boa média do setor",
+      "Gestão Capitânia experiente e administração XP com governança reconhecida",
+      "Transparência operacional com relatórios mensais detalhados",
+      "Taxa agregada competitiva (0,70% a.a.)",
+      "Almeida Junior como operadora líder em SC e com investimentos em adensamento (residencial integrado ao Continente e Balneário)"
+    ],
+    "pontosDeAtencao": [
+      "Participações minoritárias (1%-17,85%) em todos os shoppings limitam controle",
+      "Baixa liquidez diária (R$ 184 mil) restringe operações maiores",
+      "Fim da renda garantida derrubou distribuições de R$ 0,07 para R$ 0,05/cota",
+      "Concentração geográfica 100% em Santa Catarina",
+      "Contingência judicial ligada ao Shopping Neumarkt desde o IPO",
+      "Inadimplência elevada no Nações Shopping (11,09%)",
+      "Reavaliação negativa de R$ 32,8 MM nos imóveis em 2025",
+      "Histórico curto (IPO nov/2023) sem travessia de ciclos completos",
+      "DY atual (7,52%) inferior a peers consolidados e abaixo da NTN-B"
+    ],
+    "conclusaoFinal": "Para o perfil de investidor que aceita liquidez reduzida, horizonte longo e está disposto a apostar em uma reprecificação com o ciclo de queda de juros, o AJFI11 oferece uma entrada interessante com P/VP de 0,75 em shoppings operacionalmente saudáveis. Contudo, a combinação de participações minoritárias, fim da renda garantida e liquidez baixa posiciona o fundo como uma alocação satélite (não core), e não substitui FIIs de shopping mais consolidados em uma carteira principal. A recomendação é MANTER para quem já possui posição e ACUMULAR POUCO E SELETIVAMENTE para quem quer diversificar com exposição a shoppings catarinenses, sempre respeitando limite de peso dada a liquidez reduzida."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 101,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

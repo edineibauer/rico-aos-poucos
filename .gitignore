@@ -5,11 +5,20 @@ package-lock.json
 .idea/
 documentos
 
-# pipeline Fundos.NET
+# pipeline Fundos.NET — dados pesados (não versionar)
 data/fiis/.backups/
 data/fundosnet-log/
 data/fundosnet-seen.json
 data/fundosnet-orfaos.json
+data/fiis-raw/
+data/fiis-optimized/
+data/fiis-extracted/
+data/.rotacao-minerar.lock
+data/fundosnet-analise-progresso.json
+data/fundosnet-otimizacao-progresso.json
+data/fundosnet-lote-progresso.json
 scripts/spike-fundosnet/output/
 __pycache__/
 *.pyc
+*.log
+.claude/

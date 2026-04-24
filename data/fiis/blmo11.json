@@ -1,0 +1,546 @@
+{
+  "meta": {
+    "ticker": "BLMO11",
+    "nome": "VBI Office Fund II FII",
+    "nomeExtra": "(ex-Bluemacaw Office Fund II)",
+    "segmento": "Escritórios (Lajes Corporativas)",
+    "badges": [
+      "Mono-ativo CENU Torre Oeste",
+      "Prazo até dez/2027",
+      "Gestão Pátria/VBI"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 232
+  },
+  "seo": {
+    "title": "BLMO11 - Análise Completa | VBI Office Fund II",
+    "description": "BLMO11 negocia a P/VP 0,89 com DY 7,2% a.a., fundo de prazo determinado até dez/2027 com único ativo no CENU Torre Oeste e vacância de 7,7%.",
+    "keywords": "blmo11, vbi office fund ii, patria, cenu torre oeste, escritorios, laje corporativa, fii mono-ativo, faria lima, dy fii",
+    "ogTitle": "BLMO11 - Análise do VBI Office Fund II | CENU Torre Oeste",
+    "ogDescription": "Dossiê completo do BLMO11: fundo mono-ativo de escritórios com prazo até dez/2027, negociando com desconto patrimonial de 11% e DY de 7,2%.",
+    "twitterTitle": "BLMO11 - Análise completa",
+    "twitterDescription": "FII de escritórios mono-ativo com prazo determinado até dez/2027, P/VP 0,89 e WALE de 3,1 anos."
+  },
+  "indicadores": {
+    "cotacao": 87.99,
+    "cotacaoData": "17/04/2026",
+    "pvp": 0.89,
+    "pvpDesconto": "11% de desconto",
+    "dividendYield": 7.2,
+    "dividendoMensal": 0.53,
+    "dividendoAnual": 6.36,
+    "patrimonioLiquido": "R$ 98,3 Mi",
+    "vpCota": 98.84,
+    "cotistas": 287,
+    "ocupacao": 92.3,
+    "numImoveis": 1
+  },
+  "recomendacao": {
+    "nota": 4.5,
+    "veredicto": "CAUTELA",
+    "cor": "orange",
+    "resumo": "<p>O BLMO11 é um fundo de escritórios <strong class=\"text-amber-400\">mono-ativo</strong> e de <strong class=\"text-red-400\">prazo determinado</strong>, com encerramento previsto para dezembro de 2027. Toda a tese se resume a uma única laje no CENU Torre Oeste, em São Paulo, e ao preço pelo qual o gestor conseguirá vender o imóvel nos próximos ~20 meses. A cota negocia a P/VP de <strong class=\"text-blue-400\">0,89</strong>, com DY de <strong class=\"text-amber-400\">7,2% a.a.</strong> — muito abaixo de uma Selic a 15% e do CDI, mas com potencial upside caso a venda do ativo se concretize próxima ao valor patrimonial de R$ 98,84/cota.</p><p>Os pontos críticos são claros: surgimento de <strong class=\"text-red-400\">7,7% de vacância</strong> em março/26 após saída do locatário Nelson Wilians, <strong class=\"text-red-400\">reavaliação negativa de 5,8%</strong> do imóvel em dez/25, liquidez baixíssima (287 cotistas, ADTV de R$ 6 mil em média) e concentração total em um único edifício que completa quase três décadas de idade. A pouca diversificação e o prazo apertado para destravar valor tornam o ativo inadequado para investidor de renda.</p><p>Para quem busca renda passiva recorrente, há opções claramente superiores no mesmo segmento. Para investidor especulativo que acredita em venda acima do valor contábil ou extensão do prazo, existe uma tese de evento, mas com risco elevado de execução.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 98,3 Mi",
+      "detalhe": "VP/cota: R$ 98,84",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,53",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 6,36/ano | DY 7,2%",
+      "icone": "money",
+      "corIcone": "amber"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "92,3%",
+      "detalhe": "Vacância física 7,7%",
+      "icone": "building",
+      "corIcone": "amber"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "287",
+      "detalhe": "994.814 cotas",
+      "icone": "users",
+      "corIcone": "orange"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Prazo determinado encerra em dez/2027",
+      "descricao": "O fundo tem duração limitada de 8 anos contados a partir de dezembro/2019. A gestão trabalha ativamente na venda do ativo dentro desse prazo. Caso não consiga, pode haver entrega do imóvel em condomínio ou prorrogação, com impacto direto no investidor.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Portfólio 100% concentrado em um único ativo",
+      "descricao": "Todos os 7.983 m² de ABL do fundo estão em 13 conjuntos da Torre Oeste do Centro Empresarial Nações Unidas (CENU), em São Paulo. Qualquer problema no imóvel — estrutural, locatícios ou de precificação — afeta 100% do resultado.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Vacância surgiu em março/2026",
+      "descricao": "Após saída do locatário Nelson Wilians em mar/26, a vacância física passou de 0,0% para 7,7% e a vacância financeira para 9,0%. O mercado de lajes AAA em Pinheiros/Faria Lima está aquecido, mas o CENU fica em região menos premium (Berrini/Brooklin).",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Reavaliação negativa de 5,8% em dez/2025",
+      "descricao": "A Binswanger Brazil reavaliou o CENU Torre Oeste em dez/25 a R$ 94,1 milhões, queda de 5,8% frente aos R$ 99,9 milhões de nov/25. A gestão cita cenário macro desafiador e estabilidade dos preços na região.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Liquidez extremamente baixa",
+      "descricao": "ADTV de R$ 6,1 mil em mar/26 e giro anual de 156% em 2026 (mas sobre volume minúsculo). Com 287 cotistas e 994.814 cotas, executar ordens de compra/venda acima de poucos milhares de reais é difícil sem impacto no preço.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "WALE curto de 3,1 anos",
+      "descricao": "O prazo médio remanescente dos contratos é de 3,1 anos, mas com saídas mapeadas (Nelson Wilians já ocorreu). A gestão já formalizou aditivo com Cavaletti alterando indexador de IGP-M para IPCA.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Pátria Investimentos (VBI Real Estate)",
+    "nota": 8.5,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM global",
+        "valor": "R$ 289 Bi"
+      },
+      {
+        "label": "AuM RE Brasil",
+        "valor": "R$ 38 Bi"
+      },
+      {
+        "label": "FIIs geridos",
+        "valor": "+30 FIIs"
+      },
+      {
+        "label": "Atuação em alternativos",
+        "valor": "37 anos"
+      }
+    ],
+    "resumo": "<p>O <strong class=\"text-blue-400\">Pátria Investimentos</strong> é a maior gestora independente de FIIs do Brasil após a consolidação da aquisição da VBI Real Estate (2023) e da Credit Suisse Hedging-Griffo. A plataforma de Real Estate, liderada por Rodrigo Abbud, soma aproximadamente 1 milhão de cotistas e mais de R$ 38 bilhões em ativos imobiliários, com produtos referência como HGLG11, HGRU11 e PVBI11.</p><p>A gestão do BLMO11 é tecnicamente competente, com comunicação transparente e divulgação de reavaliações não recorrentes. Porém, o próprio porte do fundo (R$ 98 milhões) o torna um ativo pequeno dentro do portfólio do grupo, o que pode implicar menor prioridade estratégica face aos principais fundos da casa.</p>",
+    "link": "../../gestores/patria/"
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas dentro da média do segmento, com performance alinhada ao IMA-B",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre o patrimônio líquido",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "15%",
+        "detalhe": "Sobre o que exceder IPCA + Yield IMA-B",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 6,1 mil",
+        "detalhe": "ADTV médio mar/26",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM (Apex Group)"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Pátria - VBI Asset Management"
+      },
+      {
+        "label": "Escriturador",
+        "valor": "BRL Trust DTVM"
+      },
+      {
+        "label": "Custódia",
+        "valor": "BRL Trust DTVM"
+      },
+      {
+        "label": "Auditoria",
+        "valor": "Grant Thornton"
+      },
+      {
+        "label": "Início",
+        "valor": "Dezembro/2019"
+      },
+      {
+        "label": "Prazo de duração",
+        "valor": "Determinado - até 27/12/2027"
+      },
+      {
+        "label": "Tipo Anbima",
+        "valor": "Tijolo - Renda - Gestão Ativa - Escritórios"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "1 (13 conjuntos)"
+      },
+      {
+        "label": "ABL total",
+        "valor": "7.983 m²"
+      },
+      {
+        "label": "Vacância física",
+        "valor": "7,7%",
+        "cor": "amber"
+      },
+      {
+        "label": "WALE",
+        "valor": "3,1 anos"
+      },
+      {
+        "label": "Aluguel médio/m²",
+        "valor": "R$ 88,76"
+      },
+      {
+        "label": "Preço médio/m²",
+        "valor": "R$ 10.420"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Petlove (E-commerce)",
+        "Orizon (Saúde)",
+        "Care Plus (Saúde)",
+        "Cavaletti (Varejo)",
+        "Best Life (Saúde)",
+        "Vacância"
+      ],
+      "data": [
+        48,
+        18,
+        18,
+        9,
+        8,
+        9
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#64748b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Petlove",
+        "setor": "E-commerce",
+        "receita": "48% receita",
+        "rating": "Típico",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Orizon",
+        "setor": "Saúde",
+        "receita": "18% receita",
+        "rating": "Típico",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Care Plus",
+        "setor": "Saúde",
+        "receita": "18% receita",
+        "rating": "Típico",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Cavaletti",
+        "setor": "Varejo/Indústria",
+        "receita": "9% receita",
+        "rating": "Típico (IPCA)",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Best Life (EP&A)",
+        "setor": "Saúde",
+        "receita": "8% receita",
+        "rating": "Típico",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>O portfólio está <strong class=\"text-red-400\">100% concentrado</strong> no Edifício CENU Torre Oeste, na Av. das Nações Unidas, região Berrini em São Paulo. A base de locatários tem concentração relevante em saúde (44%) e e-commerce (48% via Petlove), com <strong class=\"text-amber-400\">91% dos contratos típicos</strong> (baixa proteção contra rescisão antecipada). A substituição do indexador IGP-M para IPCA no contrato com Cavaletti reduz volatilidade, mas também potencial de reajuste em anos de alta do IGP-M. <strong class=\"text-blue-400\">84% dos contratos são indexados ao IPCA</strong> e 16% ao IGP-M.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória de um fundo de escritórios de prazo determinado, com transição de gestão e reavaliações negativas",
+    "periodos": [
+      {
+        "periodo": "Dez/2019",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "1ª Emissão: captação de R$ 67,0 milhões. Fundo adquire 6 conjuntos da Torre Oeste/CENU (610 m² cada).",
+        "pontos": [
+          "IPO a R$ 100/cota",
+          "Duração original: 4 anos"
+        ]
+      },
+      {
+        "periodo": "2020",
+        "label": "EXPANSÃO",
+        "cor": "emerald",
+        "descricao": "2ª Emissão: R$ 67,0 milhões adicionais. Novas aquisições totalizando 4.320 m² na mesma Torre Oeste.",
+        "pontos": [
+          "Consolidação em 13 conjuntos",
+          "ABL total: 7.983 m²"
+        ]
+      },
+      {
+        "periodo": "Dez/2023",
+        "label": "REESTRUTURAÇÃO",
+        "cor": "blue",
+        "descricao": "Alteração no regulamento estende prazo de 4 para 8 anos. Desdobramento 1:262 das cotas em 22/12/23.",
+        "pontos": [
+          "Cotas passam de 3.797 para 994.814",
+          "Novo encerramento: dez/2027"
+        ]
+      },
+      {
+        "periodo": "Abr/2023",
+        "label": "MUDANÇA",
+        "cor": "amber",
+        "descricao": "VBI Real Estate assume a gestão do fundo (antes Bluemacaw). Denominação muda para VBI Office Fund II FII.",
+        "pontos": [
+          "Ticker BLMO11 mantido",
+          "Taxa adm reduzida de 1,25% para 1,00% a.a."
+        ]
+      },
+      {
+        "periodo": "Ago/2024",
+        "label": "INTEGRAÇÃO",
+        "cor": "emerald",
+        "descricao": "Pátria conclui aquisição de 100% da VBI Real Estate, consolidando a maior gestora independente de FIIs do Brasil.",
+        "pontos": [
+          "Plataforma R$ 38 bi em RE",
+          "+30 FIIs listados"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "REAVALIAÇÃO",
+        "cor": "red",
+        "descricao": "Binswanger reavalia Torre Oeste com desvalorização de 5,8%, passando de R$ 99,9 Mi para R$ 94,1 Mi.",
+        "pontos": [
+          "Impacto direto na cota patrimonial",
+          "VP/cota cai para R$ 98,62"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Fundo opera com 92,3% de ocupação após saída de locatário. Gestão busca janela para venda do ativo dentro do prazo remanescente (20 meses).",
+        "pontos": [
+          "<strong>Cotação R$ 87,99 (P/VP 0,89)</strong>",
+          "<strong>DY 7,2% a.a.</strong>",
+          "<strong>Vacância física de 7,7%</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O BLMO11 foi criado em dezembro de 2019 como um fundo de prazo determinado para aquisição de lajes corporativas, originalmente sob gestão da Bluemacaw e posteriormente transferido à VBI Real Estate (2023) e ao Pátria (2024). Após concentrar 100% do patrimônio em um único ativo (CENU Torre Oeste), o fundo passou por <strong class=\"text-amber-400\">prorrogação de prazo</strong> de 4 para 8 anos em dez/2023 e aprovou desdobramento de cotas 1:262 para melhorar liquidez. Desde o IPO, a variação da cota ajustada por rendimentos foi de <strong class=\"text-red-400\">+10,7% em termos acumulados (1,7% a.a.)</strong>, muito abaixo do IFIX (+60,1%) e do CDI bruto (+76,8%).</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota (desde IPO)",
+        "valor": "+10,7%",
+        "detalhe": "R$ 100 → R$ 87,99 (ajustada)"
+      },
+      {
+        "label": "Performance Anualizada",
+        "valor": "+1,7% a.a.",
+        "detalhe": "vs IFIX: +8,3% a.a."
+      },
+      {
+        "label": "Captação Total",
+        "valor": "R$ 134 Mi",
+        "detalhe": "2 emissões (2019/2020)"
+      },
+      {
+        "label": "Patrimônio Atual",
+        "valor": "R$ 98,3 Mi",
+        "detalhe": "Queda vs captação inicial"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O BLMO11 é uma tese de <strong class=\"text-amber-400\">evento único</strong>: a venda bem-sucedida do Edifício CENU Torre Oeste pelo gestor antes de dezembro/2027. Não é um fundo de renda recorrente — a distribuição atual de R$ 0,53/cota representa DY de 7,2% a.a., inferior à Selic de 15% e ao próprio CDI pós-tributação. O atrativo reside no desconto patrimonial de 11% e na possibilidade de alienação do ativo próxima ao valor contábil de R$ 94,1 milhões.</p><p>Para investidor que acredita na capacidade do Pátria de executar a venda em boas condições ou na recuperação do mercado de lajes corporativas em SP nos próximos 20 meses, há assimetria interessante. Porém, os riscos de execução, a concentração total em um único ativo e a vacância recém-surgida tornam a tese frágil para a grande maioria dos perfis.</p>",
+    "paraQuem": [
+      "Investidores com <strong>perfil arrojado</strong> que buscam exposição a arbitragem patrimonial em FIIs mono-ativo e aceitam prazo determinado",
+      "Quem deseja exposição específica a <strong>lajes corporativas na região Berrini/Brooklin</strong> com potencial de venda em janela de recuperação do mercado",
+      "Investidores que <strong>acreditam em extensão de prazo ou venda acima do valor contábil</strong> e têm posição relevante para suportar baixa liquidez"
+    ],
+    "naoParaQuem": [
+      "Investidores em <strong class=\"text-red-400\">busca de renda passiva recorrente e previsível</strong> — há opções claramente superiores no segmento",
+      "Perfil <strong>conservador ou iniciante</strong>, dada a concentração em único ativo e prazo determinado",
+      "Investidores que <strong>precisem de liquidez</strong> — ADTV de R$ 6,1 mil dificulta saída sem impacto relevante de preço",
+      "Quem busca <strong>diversificação geográfica ou de locatários</strong> — o fundo tem 1 imóvel e 5 locatários"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26",
+      "Abr/26"
+    ],
+    "chartData": [
+      0.58,
+      0.58,
+      0.53,
+      0.53,
+      0.53,
+      0.53,
+      0.53,
+      0.53,
+      0.4,
+      0.66,
+      0.53,
+      0.53
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 0.8,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 5,40"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 5,40"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 6,27"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,50 a R$ 0,55",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (mar/26)",
+        "valor": "R$ 0,53"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,66"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,40"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,89",
+      "descricao": "<p>Cota negocia com <strong class=\"text-blue-400\">11% de desconto</strong> frente ao valor patrimonial, em linha com a média do setor Office do IFIX (P/VP 0,75) mas levemente superior, refletindo a expectativa de venda dentro do prazo.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 98,84"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 87,99",
+          "cor": "amber"
+        },
+        {
+          "label": "Gap nominal",
+          "valor": "R$ 10,85/cota"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "7,2%",
+      "label": "Dividend Yield",
+      "cor": "amber",
+      "descricao": "<p>DY de <strong class=\"text-amber-400\">7,2% a.a.</strong> é significativamente inferior à Selic de 15% e ao CDI pós-IR (~12,75%), mostrando que a tese não é de renda. O DY médio do segmento Office é de 7-8% — BLMO11 está em linha com pares, mas sem prêmio compensatório para o risco de mono-ativo.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 85-95",
+      "label": "Faixa de Preço Justo",
+      "cor": "amber",
+      "descricao": "<p>Estimativa pela <strong class=\"text-blue-400\">abordagem de liquidação</strong> (mais adequada para fundo de prazo determinado): valor do imóvel avaliado (R$ 94,1 Mi) + caixa (R$ 1,6 Mi) - passivos (R$ 0,7 Mi) / 994.814 cotas = R$ 95,40/cota. Aplicando desconto de 5-10% por custos de venda, tempo e risco de execução, faixa justa vai de <strong>R$ 85 a R$ 95</strong>. Cotação atual já embute essa faixa, reduzindo margem de segurança.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O BLMO11 é um fundo de investimento imobiliário atípico no mercado brasileiro: mono-ativo, de prazo determinado (encerramento previsto para dez/2027), com 100% de exposição ao Edifício CENU Torre Oeste na região Berrini em São Paulo. Gerido pelo Pátria Investimentos após consolidação da VBI Real Estate, o fundo possui patrimônio líquido de R$ 98,3 milhões e opera com apenas 287 cotistas — característica que resulta em liquidez extremamente baixa no mercado secundário (ADTV médio de R$ 6,1 mil em março/2026).",
+      "A tese de investimento atual está ancorada na execução da venda do imóvel pelo gestor dentro da janela remanescente de aproximadamente 20 meses. A cota negocia a R$ 87,99 frente a um valor patrimonial de R$ 98,84 — desconto de 11% que, aparentemente atrativo, precisa ser analisado à luz de três fatores negativos recentes: a reavaliação negativa de 5,8% do imóvel em dezembro/2025, o surgimento de 7,7% de vacância física em março/2026 após saída do locatário Nelson Wilians e a deterioração do mercado de lajes corporativas fora da região Faria Lima/Pinheiros.",
+      "Olhando para frente, o cenário macro mostra sinais mistos: a queda esperada da Selic ao longo de 2026 e o IFIX em máxima histórica beneficiam FIIs de tijolo, mas lajes corporativas lideraram as perdas setoriais em março/2026 (-1,7%). A distribuição mensal de R$ 0,53/cota equivale a DY de 7,2% a.a., patamar inferior à Selic e ao CDI, o que deixa claro que o atrativo não é de fluxo de renda, mas de potencial arbitragem patrimonial no desinvestimento."
+    ],
+    "pontosFortes": [
+      "Gestão executada pelo <strong>Pátria Investimentos</strong>, maior gestora independente de FIIs do Brasil, com R$ 38 bilhões em Real Estate",
+      "Imóvel localizado no <strong>CENU Torre Oeste</strong>, conjunto empresarial consolidado e conhecido em São Paulo",
+      "Base de locatários com <strong>qualidade de crédito</strong>, incluindo Orizon, Care Plus e Best Life (segmento saúde representando 44% da receita)",
+      "Desconto patrimonial de 11% oferece <strong>margem teórica</strong> em caso de venda próxima ao valor contábil",
+      "<strong>84% dos contratos indexados ao IPCA</strong>, com proteção contra inflação mais previsível",
+      "Ausência de <strong>alavancagem</strong> ou obrigações por aquisição de ativos",
+      "Taxa de administração competitiva de <strong>1,00% a.a.</strong>"
+    ],
+    "pontosDeAtencao": [
+      "<strong>Prazo determinado</strong> com encerramento em dez/2027 — dependência total da venda do imóvel",
+      "<strong>100% do patrimônio em um único ativo</strong> (CENU Torre Oeste), sem diversificação geográfica ou tipológica",
+      "<strong>Vacância de 7,7%</strong> surgida em março/2026, com desafio para recolocação em ambiente de alta vacância em SP",
+      "<strong>Reavaliação negativa</strong> de 5,8% do ativo em dez/2025, refletindo cenário desafiador para lajes corporativas",
+      "<strong>Liquidez extremamente baixa</strong> — apenas 287 cotistas e ADTV de R$ 6,1 mil",
+      "<strong>Performance histórica abaixo do IFIX</strong> desde o IPO (+1,7% a.a. vs +8,3% a.a. do índice)",
+      "<strong>WALE de 3,1 anos</strong>, com 91% dos contratos típicos e risco de novas saídas antecipadas",
+      "<strong>Localização em Berrini/Brooklin</strong>, menos valorizada atualmente que o eixo Faria Lima/Pinheiros"
+    ],
+    "conclusaoFinal": "<p><strong class=\"text-orange-400\">Nossa recomendação é CAUTELA sobre o BLMO11.</strong> O fundo não se encaixa no perfil de investidor de renda, dado o DY de 7,2% a.a. inferior à Selic e ao CDI pós-IR. Para investidor especulativo que acredita na capacidade do Pátria de executar a venda do CENU Torre Oeste em boas condições nos próximos 20 meses, o desconto patrimonial de 11% oferece alguma margem, mas a assimetria risco/retorno é modesta frente a alternativas mais líquidas no mesmo segmento. <strong>Só consideramos posição com horizonte específico para o evento de venda e com alocação limitada, dado o risco de mono-ativo e a baixa liquidez.</strong> Para a maioria dos investidores, existem FIIs de escritórios mais diversificados, com P/VP semelhante, DY superior e sem o ônus do prazo determinado — como alternativas institucionais na própria casa Pátria (PVBI11, por exemplo). Aguardar clareza sobre a trajetória de venda do ativo antes de qualquer alocação relevante é prudente.</p>"
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 232,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

@@ -1,0 +1,516 @@
+{
+  "meta": {
+    "ticker": "BTHI11",
+    "nome": "BTG Hotéis Fundo de Investimento Imobiliário",
+    "nomeExtra": "(ex-BTG Pactual Hotéis FII)",
+    "segmento": "Hotel",
+    "badges": [
+      "Hotelaria premium em SP",
+      "P/VP 0,69 (grande desconto)",
+      "DY 10,5% com Pullman Ibirapuera"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 379
+  },
+  "seo": {
+    "title": "BTHI11 - Análise Completa | BTG Hotéis FII",
+    "description": "BTHI11 negocia a R$ 44,99 com P/VP 0,69 e DY 10,54%. FII hoteleiro da BTG Pactual com 13 hotéis e foco em São Paulo. Análise completa do fundo.",
+    "keywords": "BTHI11, BTG Pactual, FII hoteleiro, Pullman Ibirapuera, Ibis, Accor, dividendos, fundo imobiliário hotel",
+    "ogTitle": "BTHI11 - Análise Completa do FII BTG Hotéis",
+    "ogDescription": "FII hoteleiro com P/VP 0,69 e DY 10,54%. Portfólio concentrado em São Paulo com bandeiras Accor (Pullman, Ibis, Novotel).",
+    "twitterTitle": "BTHI11 - Análise Completa do FII BTG Hotéis",
+    "twitterDescription": "FII hoteleiro com P/VP 0,69 e DY 10,54%. Portfólio concentrado em São Paulo com bandeiras Accor (Pullman, Ibis, Novotel)."
+  },
+  "indicadores": {
+    "cotacao": 44.99,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.69,
+    "pvpDesconto": "31% de desconto",
+    "dividendYield": 10.54,
+    "dividendoMensal": 0.31,
+    "dividendoAnual": 4.71,
+    "patrimonioLiquido": "R$ 599,0 Mi",
+    "vpCota": 64.98,
+    "cotistas": 1741,
+    "ocupacao": 100.0,
+    "numImoveis": 13
+  },
+  "recomendacao": {
+    "nota": 5.8,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O BTHI11 é um dos poucos FIIs puramente hoteleiros da B3, administrado e gerido pelo BTG Pactual em parceria com a HotelInvest. Negocia com <strong class=\"text-emerald-400\">expressivo desconto patrimonial (P/VP 0,69)</strong> e entrega <strong class=\"text-emerald-400\">DY de 10,54%</strong>, sustentado por um portfólio de 13 hotéis com <strong class=\"text-blue-400\">76% dos quartos em São Paulo</strong> sob bandeiras multinacionais da Accor (Pullman, Ibis, Novotel).</p><p>Apesar do desconto atraente, o fundo carrega riscos relevantes: <strong class=\"text-amber-400\">base de apenas 1.741 cotistas</strong>, liquidez diária média de R$ 32,6 mil (baixíssima), concentração acentuada em dois ativos (Pullman Ibirapuera e Ibis Barra Funda somam ~78% da receita) e <strong class=\"text-red-400\">forte sazonalidade/ciclicidade da hotelaria</strong>. Em 2025, o fundo distribuiu R$ 4,71/cota (+21% vs 2024) impulsionado pela estratégia de turnaround e pelo fim do benefício PERSE.</p><p>Veredicto: tese de valor com catalisadores concretos (reforma do Pullman entregando +49% de RevPAR), mas operação pequena e dependente do ciclo corporativo paulistano. Recomenda-se <strong class=\"text-amber-400\">MANTER</strong> posição ou acumular gradualmente apenas para perfis que toleram volatilidade e baixa liquidez.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 599,0 Mi",
+      "detalhe": "VP/cota: R$ 64,98",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,31",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 4,71/ano | DY 10,54%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Portfólio",
+      "valor": "13 hotéis",
+      "detalhe": "1.032 quartos | 76% em SP",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.741",
+      "detalhe": "9,2 mi de cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Base de cotistas reduzida e liquidez muito baixa",
+      "descricao": "Apenas 1.741 cotistas e volume médio diário de R$ 32,6 mil na B3 representam risco relevante para investidores que precisam movimentar posições com agilidade. Entrada e saída podem impactar o preço.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração extrema em dois ativos",
+      "descricao": "Pullman Ibirapuera (42,6% da receita) e Ibis Barra Funda (35,4%) somam ~78% do faturamento. Qualquer evento adverso nesses hotéis tem impacto material sobre o resultado.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "P/VP 0,69 sinaliza desconfiança do mercado",
+      "descricao": "Cotação de R$ 44,99 contra VP de R$ 64,98 representa 31% de desconto patrimonial. O mercado precifica riscos de ciclicidade hoteleira, juros altos e ajuste a valor justo ocorrido em 2025 (queda de R$ 24,7 Mi nas propriedades).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Fim do benefício fiscal PERSE",
+      "descricao": "O Programa Emergencial de Retomada do Setor de Eventos foi encerrado em abril/2025. Os hotéis voltaram a recolher PIS, COFINS, IRPJ e CSLL, pressionando margens operacionais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Segmento hoteleiro altamente cíclico",
+      "descricao": "Performance depende diretamente do calendário de feiras, eventos corporativos e shows em São Paulo. Janeiro/julho (férias) e Carnaval são historicamente fracos, gerando volatilidade nas distribuições mensais (R$ 0,24 a R$ 0,62 no período recente).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de performance pode encarecer fundo",
+      "descricao": "Além da taxa de administração (0,6%-0,8% do PL), há taxa de performance de 20% sobre o que exceder IPCA+9% a.a., estrutura relativamente onerosa para um FII.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Estratégia de turnaround em execução",
+      "descricao": "O Pullman Ibirapuera está em obras relevantes (90 quartos já reformados com +49% de RevPAR vs antigos; novo restaurante Macáya inaugurado). A tese depende da entrega desse reposicionamento e da capacidade de capturar diárias maiores.",
+      "severidade": "emerald"
+    }
+  ],
+  "gestora": {
+    "nome": "BTG Pactual (com HotelInvest)",
+    "nota": 8.0,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serv. Fin."
+      },
+      {
+        "label": "Gestor",
+        "valor": "BTG + HotelInvest"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "19/04/2016"
+      },
+      {
+        "label": "Auditor",
+        "valor": "PwC"
+      }
+    ],
+    "resumo": "<p>O BTHI11 é administrado pela <strong class=\"text-blue-400\">BTG Pactual Serviços Financeiros S.A. DTVM</strong> e gerido pela dupla BTG Pactual Gestora de Recursos e HotelInvest, consultoria especializada em hotelaria. A casa é uma das maiores gestoras de FIIs do Brasil, com forte presença em logística (BTLG11), escritórios, crédito e fundo de fundos.</p><p>O histórico recente mostra gestão ativa: reciclagem do Novotel Porto Alegre Airport (desinvestimento iniciado em 2025), execução de capex no Pullman Ibirapuera (reforma de quartos com ganho comprovado de RevPAR) e renovação de contratos corporativos (Pullman teve reajuste de +50% no contrato principal em fev/2026). A auditoria independente é feita pela PwC.</p>",
+    "link": "../../gestores/btg-pactual/"
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas acima da média do setor, com performance atrelada a IPCA+9%",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,6% a 0,8% a.a.",
+        "detalhe": "Escalonada pelo faturamento",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder IPCA+9% a.a.",
+        "corBorda": "red"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 32,6 mil",
+        "detalhe": "Volume médio - muito baixo",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serv. Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "BTG Pactual Gestora + HotelInvest"
+      },
+      {
+        "label": "Custódia",
+        "valor": "Banco BTG Pactual S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers (PwC)"
+      },
+      {
+        "label": "Início",
+        "valor": "Abril/2016"
+      },
+      {
+        "label": "Taxa de adm. paga 2025",
+        "valor": "R$ 4,77 Mi (0,80% PL)"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "13 hotéis"
+      },
+      {
+        "label": "Quartos (totais)",
+        "valor": "1.032"
+      },
+      {
+        "label": "Vacância",
+        "valor": "0,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Concentração SP",
+        "valor": "76% dos quartos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Pullman Ibirapuera (SP)",
+        "Ibis Barra Funda (SP)",
+        "Novotel Curitiba Batel",
+        "Ibis Budget Paraíso (SP)",
+        "Demais hotéis (Sul)"
+      ],
+      "data": [
+        42.6,
+        35.4,
+        10.0,
+        0.0,
+        12.0
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Pullman São Paulo Ibirapuera",
+        "setor": "Hotel Upper Midscale (Accor)",
+        "receita": "42,6% receita",
+        "rating": "100% BTHI11 - 348 quartos",
+        "ratingCor": "emerald",
+        "risco": "Concentrado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Ibis São Paulo Barra Funda",
+        "setor": "Hotel Economy (Accor)",
+        "receita": "35,4% receita",
+        "rating": "100% BTHI11 - 286 quartos",
+        "ratingCor": "emerald",
+        "risco": "Concentrado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Novotel Curitiba Batel",
+        "setor": "Hotel Midscale (Accor)",
+        "receita": "10,0% receita",
+        "rating": "41% BTHI11 - 72 quartos",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Ibis Budget SP Paraíso",
+        "setor": "Hotel Economy (Accor)",
+        "receita": "via SPE",
+        "rating": "50% BTHI11 - 150 quartos",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Demais hotéis regionais",
+        "setor": "Ibis/Ibis Budget/Styles",
+        "receita": "~12% receita",
+        "rating": "PR/RS/SC - pulverizado",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>Portfólio com <strong class=\"text-blue-400\">76% dos quartos concentrados em São Paulo</strong>, praça de maior valor imobiliário e demanda corporativa do país. Todos os hotéis operam sob bandeiras multinacionais da rede Accor (Pullman, Ibis, Ibis Budget, Ibis Styles, Novotel), garantindo padrão operacional e sistemas de distribuição. A administração dos hotéis é feita pela Accor (76%) e pela Atrio (24%), com BTHI detendo participações variáveis — de 100% em três ativos principais de SP a frações pequenas em hotéis menores do Sul.</p><p>O risco maior é a concentração: Pullman + Ibis Barra Funda representam cerca de <strong class=\"text-amber-400\">78% da receita total</strong>. A vacância física não é aplicável (hotéis operam diariamente), mas a volatilidade de ocupação e diária média (ADR) afeta diretamente o resultado mensal.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Do IPO em 2016 à estratégia de turnaround em 2025/2026",
+    "periodos": [
+      {
+        "periodo": "Abr/2016",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das atividades do Fundo, com foco original em empreendimentos hoteleiros da Região Sul do Brasil.",
+        "pontos": []
+      },
+      {
+        "periodo": "2019",
+        "label": "Expansão SP",
+        "cor": "blue",
+        "descricao": "Primeiros investimentos em São Paulo, que se tornaria o principal eixo do portfólio com Pullman Ibirapuera, Ibis Barra Funda e Ibis Budget Paraíso.",
+        "pontos": []
+      },
+      {
+        "periodo": "Ago/2023",
+        "label": "Nova administração",
+        "cor": "blue",
+        "descricao": "Transferência da administração da Genial para a BTG Pactual Serviços Financeiros, unificando gestão e administração sob o grupo BTG.",
+        "pontos": []
+      },
+      {
+        "periodo": "2024",
+        "label": "Pullman reforma",
+        "cor": "emerald",
+        "descricao": "Execução de capex no Pullman Ibirapuera: 90 quartos reformados com ganho de RevPAR de +49% a/a vs quartos antigos. Receita de diárias cresceu para R$ 34,2 Mi (+21% vs 2023).",
+        "pontos": [
+          "<strong>Lucro líquido 2024: R$ 86,3 Mi</strong>",
+          "Ajuste a valor justo +R$ 28,5 Mi"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "Reciclagem",
+        "cor": "emerald",
+        "descricao": "Fim do PERSE em abril/2025 pressiona margens. Inaugurado restaurante Macáya no Pullman. Início do desinvestimento do Novotel Porto Alegre Airport (14 unidades vendidas). Distribuição anual de R$ 4,71/cota (+21% vs 2024).",
+        "pontos": [
+          "<strong>Receita diárias: R$ 47,3 Mi</strong> (+38% vs 2024)",
+          "Ajuste a valor justo negativo de R$ 24,7 Mi"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Contrato corporativo Pullman renovado com +50% de diária (52 quartos/dia por 2 anos). Cota de fechamento em R$ 44,99 (P/VP 0,69). Base cresceu para 1.741 cotistas (+37% em 12 meses).",
+        "pontos": [
+          "<strong>DY 12m: 10,54%</strong>",
+          "<strong>Distribuição mensal: R$ 0,31</strong>",
+          "Valor de mercado: R$ 414,7 Mi"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Fundo pequeno e com trajetória de 10 anos marcada por reposicionamento: partiu de um mandato regional Sul em 2016, migrou para São Paulo a partir de 2019 e atualmente executa estratégia de <strong class=\"text-blue-400\">turnaround dos ativos prime (Pullman Ibirapuera)</strong> combinada com reciclagem dos ativos menores (Novotel POA Aeroporto). A mudança de administração para o BTG em 2023 trouxe maior disciplina operacional e transparência nos relatórios. Em 12 meses (abr/2025 a abr/2026), a cota oscilou entre R$ 38,88 e R$ 45,98, com rentabilidade total de +17,9% — abaixo do IFIX (+25,3%) no mesmo período.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Distribuído 2025",
+        "valor": "R$ 4,71",
+        "detalhe": "+21% vs 2024 (R$ 3,90)"
+      },
+      {
+        "label": "Base de cotistas",
+        "valor": "+37% 12m",
+        "detalhe": "1.268 → 1.741"
+      },
+      {
+        "label": "Receita diárias",
+        "valor": "R$ 47,3 Mi",
+        "detalhe": "2025 vs R$ 34,2 Mi em 2024"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do BTHI11 combina <strong class=\"text-emerald-400\">exposição pura a hotelaria premium em São Paulo</strong> — praça que se beneficia de calendário robusto de feiras, shows internacionais e demanda corporativa — com um <strong class=\"text-emerald-400\">desconto patrimonial expressivo (P/VP 0,69)</strong>. É um dos pouquíssimos FIIs do segmento hoteleiro, oferecendo diversificação para carteiras já concentradas em logística e papel.</p><p>O catalisador principal é a <strong class=\"text-blue-400\">maturação do capex no Pullman Ibirapuera</strong>, cujos quartos reformados já entregam RevPAR 49% superior, e a renovação recente do principal contrato corporativo com reajuste de +50%. O risco é a execução em meio a ciclo ainda desafiador (Selic em queda, mas patamar elevado) e a pequena escala do fundo.</p>",
+    "paraQuem": [
+      "<strong>Investidores com tolerância a volatilidade</strong> e horizonte de longo prazo que buscam exposição diferenciada ao segmento hoteleiro",
+      "<strong>Buscadores de desconto patrimonial</strong> dispostos a aguardar convergência do P/VP em ciclo de queda de juros",
+      "<strong>Posições pequenas/complementares</strong> em carteiras já diversificadas em FIIs tradicionais (logística, shopping, papel)"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidores que priorizam liquidez</strong> — volume diário de apenas R$ 32,6 mil dificulta entrada/saída ágil",
+      "<strong>Quem busca previsibilidade mensal</strong> — dividendos oscilaram entre R$ 0,21 e R$ 0,62 em função da sazonalidade hoteleira",
+      "<strong>Perfis conservadores</strong> que valorizam pulverização de receitas — dois ativos concentram ~78% do faturamento"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.45,
+      0.29,
+      0.24,
+      0.45,
+      0.45,
+      0.45,
+      0.41,
+      0.37,
+      0.43,
+      0.45,
+      0.41,
+      0.31,
+      0.31,
+      0.31,
+      0.31
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.7,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 3,48"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 3,90"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 4,71"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,30 a R$ 0,45",
+      "unidade": "por cota / mês (estimativa baseada em sazonalidade)"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,31"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,45"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,24"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Sazonal",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,69",
+      "descricao": "<p>Cota de mercado a <strong class=\"text-red-400\">R$ 44,99</strong> vs valor patrimonial de <strong class=\"text-blue-400\">R$ 64,98</strong> representa <strong class=\"text-emerald-400\">31% de desconto patrimonial</strong>. Reflete precificação conservadora do mercado em relação ao ciclo hoteleiro e à baixa liquidez, mas também abre espaço para convergência caso a estratégia de turnaround entregue os ganhos projetados.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 64,98"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 44,99",
+          "cor": "red"
+        },
+        {
+          "label": "Desconto",
+          "valor": "-31%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "10,54%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY de <strong class=\"text-emerald-400\">10,54%</strong> (últimos 12 meses) supera significativamente o IFIX médio (~8,5%) e oferece prêmio relevante sobre a NTN-B 10 anos (IPCA+7%). Porém, a volatilidade mensal dos dividendos (R$ 0,24 a R$ 0,62) reflete a ciclicidade hoteleira.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 48-58",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Estimativa baseada em Gordon: DPS anual R$ 4,40 / (custo_capital 9% - crescimento 2%) = <strong class=\"text-blue-400\">R$ 62,8</strong>. Aplicando desconto de risco (liquidez, concentração): <strong class=\"text-blue-400\">piso R$ 48 / base R$ 53 / teto R$ 58</strong>. Ainda representa upside de 7% a 29% sobre a cotação atual, mas exige paciência para convergência do P/VP.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O BTHI11 chega a abril de 2026 como um dos poucos FIIs hoteleiros listados, negociando a R$ 44,99 com P/VP de 0,69 e DY de 10,54%. O patrimônio líquido de R$ 599 Mi está distribuído em 13 hotéis — 76% dos quartos em São Paulo, 100% operados por bandeiras multinacionais da Accor (Pullman, Ibis, Novotel). A base de apenas 1.741 cotistas e a liquidez de R$ 32,6 mil/dia classificam o fundo como pequeno e pouco líquido para os padrões do IFIX.",
+      "Os fundamentos operacionais mostram evolução consistente: receita de diárias saltou de R$ 34,2 Mi em 2024 para R$ 47,3 Mi em 2025 (+38%), e a distribuição anual cresceu 21% no mesmo período (R$ 3,90 → R$ 4,71). O capex no Pullman Ibirapuera — principal ativo, com 42,6% da receita — já entrega resultados mensuráveis: RevPAR dos quartos reformados 49% acima dos antigos, e renovação do principal contrato corporativo com reajuste de +50%. Contra isso pesam o fim do PERSE (abril/2025), o ajuste negativo de valor justo de R$ 24,7 Mi em 2025 e a forte sazonalidade que fez o dividendo oscilar entre R$ 0,24 e R$ 0,62 no último ciclo.",
+      "Em um cenário de Selic em queda (15% em abr/2026 com expectativa de cortes adicionais) e IFIX em máxima histórica, o desconto patrimonial de 31% do BTHI11 chama atenção. A tese de convergência depende da continuidade da estratégia de turnaround e da capacidade do setor corporativo paulistano em sustentar a demanda. O risco é a pequena escala do fundo — 1.741 cotistas e liquidez baixa — que pode amplificar movimentos bruscos em ambas as direções."
+    ],
+    "pontosFortes": [
+      "P/VP 0,69 representa desconto patrimonial relevante (31%)",
+      "DY 10,54% entre os mais altos do segmento",
+      "Portfólio concentrado em São Paulo, praça premium com demanda corporativa forte",
+      "Todos os hotéis sob bandeiras multinacionais Accor (Pullman, Ibis, Novotel)",
+      "Capex no Pullman Ibirapuera já entrega +49% de RevPAR nos quartos reformados",
+      "Contrato corporativo do Pullman renovado com +50% de diária (fev/2026)",
+      "Administração BTG Pactual + gestão especializada HotelInvest",
+      "Auditoria PwC e transparência nos relatórios gerenciais mensais"
+    ],
+    "pontosDeAtencao": [
+      "Base de apenas 1.741 cotistas — muito pequena para um FII",
+      "Liquidez diária de R$ 32,6 mil dificulta movimentações",
+      "Dois ativos concentram ~78% da receita (Pullman + Ibis Barra Funda)",
+      "Forte sazonalidade faz dividendos oscilarem de R$ 0,24 a R$ 0,62",
+      "Fim do PERSE pressionou margens a partir de abril/2025",
+      "Taxa de performance de 20% sobre o que exceder IPCA+9% pode encarecer",
+      "Ajuste a valor justo de -R$ 24,7 Mi em 2025 indica reavaliação dos imóveis",
+      "Setor hoteleiro é cíclico e dependente do ambiente macro",
+      "Rentabilidade 12m (17,9%) ficou abaixo do IFIX (25,3%)"
+    ],
+    "conclusaoFinal": "Para investidores que já possuem carteira diversificada em FIIs tradicionais (logística, shoppings, papel) e buscam exposição diferenciada ao segmento hoteleiro com viés de valor, o BTHI11 oferece combinação interessante de P/VP descontado e DY elevado. A recomendação é MANTER (ou acumular gradualmente em posições pequenas, limitadas a 1-2% da carteira de FIIs) apenas para perfis tolerantes à baixa liquidez e à volatilidade mensal dos dividendos. Para investidores que priorizam previsibilidade de renda, liquidez ou pulverização de receita, existem alternativas mais adequadas no mercado. O catalisador a monitorar é a evolução do turnaround do Pullman Ibirapuera e a possível convergência do P/VP em direção a 0,85-0,90 em ciclo de queda de juros — o que elevaria a cota para a faixa de R$ 55-58."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 379,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fundos de investimento imobiliário não contam com garantia do administrador, do gestor, de qualquer mecanismo de seguro ou do Fundo Garantidor de Créditos (FGC)."
+  }
+}

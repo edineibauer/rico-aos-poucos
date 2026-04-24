@@ -1,0 +1,491 @@
+{
+  "meta": {
+    "ticker": "APXM11",
+    "nome": "Apex Malls Fundo de Investimento Imobiliário",
+    "nomeExtra": "(ex-FII Apex Malls)",
+    "segmento": "Shoppings",
+    "badges": [
+      "2 shoppings",
+      "P/VP 0,75",
+      "Baixa liquidez"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 91
+  },
+  "seo": {
+    "title": "APXM11 - Análise Completa | Apex Malls FII",
+    "description": "APXM11 negocia a P/VP 0,75 com DY 5,5% e portfólio de 2 shoppings. FII de nicho com concentração elevada e prejuízo contábil em 2025. Veja a análise.",
+    "keywords": "apxm11, apex malls, btg pactual, carbyne, shopping vitoria, shopping catuai cascavel, fii shopping, dividend yield, p/vp",
+    "ogTitle": "APXM11 - Análise Completa do FII Apex Malls",
+    "ogDescription": "P/VP 0,75, DY 5,5% e carteira concentrada em 2 shoppings (Vitória/ES e Cascavel/PR). Análise objetiva com pontos fortes e riscos.",
+    "twitterTitle": "APXM11 - Análise Completa do FII Apex Malls",
+    "twitterDescription": "P/VP 0,75, DY 5,5% e carteira concentrada em 2 shoppings. Análise institucional com base em documentos CVM."
+  },
+  "indicadores": {
+    "cotacao": 78.99,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.75,
+    "pvpDesconto": "25% de desconto sobre o valor patrimonial",
+    "dividendYield": 5.48,
+    "dividendoMensal": 0.36,
+    "dividendoAnual": 4.27,
+    "patrimonioLiquido": "R$ 292,2 Mi",
+    "vpCota": 103.29,
+    "cotistas": 664,
+    "ocupacao": 100.0,
+    "numImoveis": 2
+  },
+  "recomendacao": {
+    "nota": 5.2,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">Apex Malls (APXM11)</strong> é um FII de nicho administrado pela BTG Pactual Serviços Financeiros, com gestão pela <strong class=\"text-blue-400\">BRM Carbyne</strong> e consultoria da Apex Nazca. A carteira concentra-se em apenas dois ativos: o <strong class=\"text-blue-400\">Shopping Vitória (ES)</strong>, detido integralmente, e uma participação indireta de <strong class=\"text-amber-400\">16% no Shopping Catuaí Cascavel (PR)</strong>, por meio da SPE APXM Cascavel.</p><p>Em 2025, o fundo registrou <strong class=\"text-red-400\">prejuízo contábil de R$ 43,5 milhões</strong>, em grande parte pelo ajuste negativo de R$ 58,8 milhões no valor justo da participação em Cascavel, enquanto a receita de aluguéis cresceu para R$ 14,5 milhões e o Shopping Vitória encerrou o ano com vacância zero. A cota caiu de R$ 102 em janeiro/2025 para a faixa de <strong class=\"text-amber-400\">R$ 79 em abril/2026</strong>, negociando com P/VP de 0,75.</p><p>O desconto patrimonial é relevante e o ativo principal (Vitória) mostrou melhora operacional, mas a <strong class=\"text-red-400\">baixíssima liquidez (R$ 266 mil/dia)</strong>, os apenas <strong class=\"text-red-400\">664 cotistas</strong> e a exposição indireta minoritária ao Catuaí Cascavel sustentam recomendação de <strong class=\"text-amber-400\">MANTER</strong> para quem já tem posição e cautela para novos aportes.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 292,2 Mi",
+      "detalhe": "VP/cota: R$ 103,29",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,36",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 4,27/ano | DY 5,48%",
+      "icone": "money",
+      "corIcone": "amber"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "100%",
+      "detalhe": "Shopping Vitória sem vacância",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "664",
+      "detalhe": "2.829.142 cotas emitidas",
+      "icone": "users",
+      "corIcone": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Concentração extrema em 2 ativos",
+      "descricao": "O fundo possui apenas 2 shoppings: Shopping Vitória (ES) integral e 16% do Shopping Catuaí Cascavel (PR) via SPE APXM Cascavel. Eventos idiossincráticos em qualquer um dos ativos impactam fortemente o resultado.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Prejuízo contábil de R$ 43,5 Mi em 2025",
+      "descricao": "A participação em Cascavel, avaliada em R$ 175,6 Mi no final de 2024, caiu para R$ 116,8 Mi em 31/12/2025 — ajuste negativo de R$ 58,8 Mi que virou prejuízo contábil, mesmo com receita caixa crescendo para R$ 14,5 Mi.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez muito baixa e poucos cotistas",
+      "descricao": "Volume médio diário de R$ 266 mil e apenas 664 cotistas ativos, conforme Informe Anual 2025. Movimentações relevantes podem exigir tempo e aceitar spread elevado.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Dividend Yield abaixo do setor",
+      "descricao": "Distribuição anualizada de R$ 4,27/cota (≈ R$ 0,36/mês) gera DY de 5,48%, abaixo da média de pares de shopping no IFIX (7%-9%) e inferior à NTN-B longa.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Queda acumulada de 21% em 2025",
+      "descricao": "A cota saiu de R$ 102 em janeiro/2025 para R$ 74,99 em novembro, recuperando para R$ 89,95 em dezembro e caindo novamente para R$ 78,99 em abril/2026.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Participação minoritária no Catuaí Cascavel",
+      "descricao": "A posição de 16% no Shopping Catuaí Cascavel foi adquirida por R$ 119,9 Mi em 2024 e é minoritária — o fundo não controla decisões operacionais e depende de gestão de terceiros.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca recente de gestora",
+      "descricao": "A Carbyne Gestão de Recursos foi transformada em BRM Carbyne S.A. e mudou de São Paulo para Vitória/ES no decorrer de 2025, movimento que acompanha o consultor especializado (Apex Nazca).",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "BRM Carbyne Gestão de Recursos",
+    "nota": 6.0,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Consultor especializado",
+        "valor": "Apex Nazca"
+      },
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual"
+      },
+      {
+        "label": "Início do fundo",
+        "valor": "Nov/2022"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">BRM Carbyne Gestão de Recursos</strong> (antiga Carbyne, CNPJ 38.318.963/0001-00), hoje sediada em Vitória/ES, é a gestora de recursos do fundo. A consultoria imobiliária especializada é feita pela <strong class=\"text-blue-400\">Apex Nazca Investimentos e Participações</strong>, casa que empresta o nome ao fundo. A administração fiduciária é do <strong class=\"text-blue-400\">BTG Pactual Serviços Financeiros</strong> — instituição com escala e governança consolidada no mercado de FIIs.</p><p>O diretor responsável pelo fundo no BTG é Gustavo Cotta Piersanti, sócio/MD Partner, Head de Fund Services. A auditoria independente é conduzida pela <strong class=\"text-blue-400\">PwC</strong>. Como a Apex Nazca é uma gestora boutique com track record relativamente curto e foco restrito em shoppings, o conjunto gestora+consultor tem alcance menor que players como XP, Kinea, Hedge ou Vinci no mesmo segmento.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas, porém diluídas em base patrimonial pequena",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,25% a.a.",
+        "detalhe": "0,20% PL + 0,05% B3 (mín. R$ 30 mil/mês)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há taxa de performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Consultoria Especializada",
+        "valor": "~0,40% a.a.",
+        "detalhe": "Apex Nazca: R$ 1,18 Mi em 2025",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "BRM Carbyne Gestão de Recursos S.A."
+      },
+      {
+        "label": "Consultor Especializado",
+        "valor": "Apex Nazca Investimentos"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco BTG Pactual"
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers (PwC)"
+      },
+      {
+        "label": "Início do fundo",
+        "valor": "30/11/2022"
+      },
+      {
+        "label": "Volume médio diário",
+        "valor": "R$ 266 mil"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "2"
+      },
+      {
+        "label": "ABL Vitória",
+        "valor": "87.829 m²"
+      },
+      {
+        "label": "Vacância",
+        "valor": "0,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Inadimplência (>90d)",
+        "valor": "0,0%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Shopping Vitória (ES) - integral",
+        "APXM Cascavel (16% Catuaí)",
+        "Caixa / Tesouro Selic"
+      ],
+      "data": [
+        59.8,
+        39.9,
+        1.0
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Lojas de departamento (Shopping Vitória)",
+        "setor": "Varejo - loja âncora",
+        "receita": "89% do shopping",
+        "rating": "Contratos longos (>36m)",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Demais lojistas (Shopping Vitória)",
+        "setor": "Varejo pulverizado",
+        "receita": "11% do shopping",
+        "rating": "Diversos prazos",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Shopping Catuaí Cascavel (16%)",
+        "setor": "Shopping regional - PR",
+        "receita": "Participação indireta via SPE",
+        "rating": "Gestão por terceiros",
+        "ratingCor": "amber",
+        "risco": "Médio-Alto",
+        "riscoCor": "orange"
+      }
+    ],
+    "riscoNota": "<p>O portfólio é composto por <strong class=\"text-blue-400\">Shopping Vitória</strong> (Av. Américo Buaiz, Enseada do Suá, Vitória/ES), propriedade integral de 87.829 m² de ABL, avaliado em R$ 174,8 milhões (valorização de 1,91% em 2025), e por <strong class=\"text-amber-400\">16% do Shopping Catuaí Cascavel</strong> (PR), detido via SPE APXM Cascavel Investimentos Ltda., com valor justo de R$ 116,8 Mi em 31/12/2025 (queda de 33% versus 2024, quando valia R$ 175,6 Mi). O Vitória encerrou 2025 com vacância zero e inadimplência zero, enquanto a exposição ao Cascavel é minoritária e sem controle operacional — fator que amplifica a volatilidade patrimonial do fundo.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Três anos de operação com duas fases bem distintas",
+    "periodos": [
+      {
+        "periodo": "Fev/2018",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 22/02/2018 como condomínio fechado, com aprovação da CVM em 07/03/2018.",
+        "pontos": []
+      },
+      {
+        "periodo": "Nov/2022",
+        "label": "INÍCIO DAS OPERAÇÕES",
+        "cor": "blue",
+        "descricao": "Fundo inicia efetivamente suas atividades em 30/11/2022 com aquisição do Shopping Vitória (ES).",
+        "pontos": [
+          "<strong>Aquisição do Shopping Vitória por R$ 139,1 Mi (2023)</strong>",
+          "1,76 milhão de cotas integralizadas"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "EXPANSÃO E CASCAVEL",
+        "cor": "emerald",
+        "descricao": "Ano de expansão patrimonial: 2ª emissão de cotas e aquisição da participação no Catuaí Cascavel.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">Lucro líquido de R$ 87,5 Mi</strong> (ajustes ao valor justo)",
+          "2ª Emissão: 1,47 milhão de novas cotas a R$ 96,42",
+          "<strong>Aquisição via SPE de 16% do Shopping Catuaí Cascavel por R$ 119,9 Mi</strong>",
+          "Distribuição: R$ 11,5 Mi em rendimentos"
+        ]
+      },
+      {
+        "periodo": "2025",
+        "label": "AJUSTE PATRIMONIAL",
+        "cor": "red",
+        "descricao": "Ano difícil: ajuste negativo da avaliação de Cascavel e queda relevante da cota.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Prejuízo contábil de R$ 43,5 Mi</strong>",
+          "Reavaliação negativa de R$ 58,8 Mi em Cascavel",
+          "Receita de aluguéis cresce para R$ 14,5 Mi (+8%)",
+          "Distribuição: R$ 12,1 Mi (R$ 4,27/cota)",
+          "Cota cai de R$ 102 (jan) para R$ 89,95 (dez)"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Cota negociando a R$ 78,99 com P/VP de 0,75 e 664 cotistas ativos.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">P/VP 0,75 — desconto de 25%</strong>",
+          "DY 5,48% anualizado",
+          "Shopping Vitória 100% ocupado",
+          "Liquidez muito baixa (R$ 266 mil/dia)"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Trajetória: de expansão a ajuste",
+      "texto": "<p>O Apex Malls cumpriu em 2024 a tese de crescimento via 2ª emissão (captando R$ 108,6 Mi) e alocação em uma segunda praça (Catuaí Cascavel, PR), mas a avaliação a valor justo da investida recuou fortemente em 2025, o que se refletiu em prejuízo contábil e desvalorização da cota de cerca de <strong class=\"text-red-400\">-26% no pior momento do ano</strong>. A receita operacional (caixa) seguiu crescendo — Shopping Vitória zerou vacância e manteve inadimplência controlada — mas a recuperação de preço até abril/2026 ainda é parcial.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota desde emissão primária",
+        "valor": "-18%",
+        "detalhe": "R$ 96,42 (2ª emissão) → R$ 78,99"
+      },
+      {
+        "label": "Total distribuído (2023-2025)",
+        "valor": "R$ 34,8 Mi",
+        "detalhe": "R$ 8,8 Mi + R$ 11,5 Mi + R$ 12,1 Mi"
+      },
+      {
+        "label": "Crescimento da receita de aluguel",
+        "valor": "+103%",
+        "detalhe": "R$ 7,1 Mi (2023) → R$ 14,5 Mi (2025)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">APXM11</strong> é a de um FII de nicho, pequeno, focado em shoppings regionais, em que o investidor compra à vista o Shopping Vitória (propriedade integral) e uma participação minoritária no Catuaí Cascavel com desconto patrimonial de 25%. O upside está na recuperação do valuation da investida de Cascavel, na maturação do Shopping Vitória e em eventual compressão do P/VP. O downside é uma carteira extremamente concentrada, liquidez baixa e gestora boutique ainda construindo track record.</p>",
+    "paraQuem": [
+      "<strong>Investidores de nicho</strong> dispostos a assumir concentração em 2 ativos para capturar desconto patrimonial",
+      "<strong>Posição pequena</strong> dentro de carteira diversificada de FIIs de shopping",
+      "<strong>Horizonte longo</strong> (5+ anos), com paciência para reavaliações de valor justo",
+      "<strong>Investidores que já conhecem</strong> o Shopping Vitória e o Catuaí Cascavel e querem exposição específica a essas praças"
+    ],
+    "naoParaQuem": [
+      "<strong>Quem busca renda estável e previsível</strong> — DY atual é inferior ao de pares e à NTN-B longa",
+      "<strong>Investidores que precisam de liquidez</strong> — volume diário de R$ 266 mil limita posições relevantes",
+      "<strong>Quem não tolera prejuízos contábeis</strong> decorrentes de ajustes a valor justo em ativos minoritários",
+      "<strong>Quem quer exposição diversificada a shoppings</strong> — XPML, HSML, VISC e MALL oferecem muito mais praças e locatários"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36,
+      0.36
+    ],
+    "chartCor": "#f59e0b",
+    "chartYMin": 0,
+    "chartYMax": 0.6,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 5,02"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 4,06"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 4,27"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026 (estimado)",
+      "faixa": "R$ 0,32 a R$ 0,42",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,36"
+      },
+      {
+        "label": "Média 2025",
+        "valor": "R$ 0,36"
+      },
+      {
+        "label": "DY anual",
+        "valor": "5,48%",
+        "cor": "amber"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "blue"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,75",
+      "descricao": "<p>Cota a <strong class=\"text-emerald-400\">R$ 78,99</strong> contra VP/cota de <strong class=\"text-blue-400\">R$ 103,29</strong> configura desconto patrimonial de 25%. Esse gap reflete o mercado precificando eventual nova depreciação do Catuaí Cascavel, a baixa liquidez e a baixa diversificação do portfólio.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota (31/12/2025)",
+          "valor": "R$ 103,29"
+        },
+        {
+          "label": "Preço atual",
+          "valor": "R$ 78,99",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "-25%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "5,48%",
+      "label": "Dividend Yield",
+      "cor": "amber",
+      "descricao": "<p>DY de <strong class=\"text-amber-400\">5,48%</strong> fica abaixo da média de FIIs de shopping no IFIX (7%-9%) e inferior ao yield de NTN-B longa (~7% real + IPCA). O resultado caixa acompanhou, com distribuição de R$ 4,27/cota em 2025 contra R$ 4,06 em 2024.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 72 - R$ 95",
+      "label": "Faixa de Preço Justo",
+      "cor": "blue",
+      "descricao": "<p>Faixa estimada combinando: <strong>(a)</strong> Gordon sobre DPS normalizado R$ 4,50 com k=11% e g=3% = R$ 56; <strong>(b)</strong> P/VP 0,80-0,90 sobre VPC R$ 103 = R$ 82-93; <strong>(c)</strong> DY target 7% = R$ 65. A faixa central conservadora é <strong class=\"text-blue-400\">R$ 80-90</strong>, compatível com múltiplos de peers ajustados à menor liquidez e concentração.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O Apex Malls (APXM11) é um FII relativamente novo (início efetivo em novembro/2022), com patrimônio líquido de R$ 292,2 milhões em 31/12/2025 e apenas 664 cotistas. A estratégia definida no regulamento prevê investimento em shoppings e complementares; na prática, após três anos de operação, a carteira está concentrada em dois ativos: o Shopping Vitória (ES), detido integralmente e avaliado em R$ 174,8 milhões, e a participação indireta de 16% no Shopping Catuaí Cascavel (PR), via SPE APXM Cascavel, avaliada em R$ 116,8 milhões.",
+      "O ano de 2025 teve narrativas opostas. No lado operacional, o Shopping Vitória melhorou — vacância caiu de 7,87% no 1T para zero no 4T, inadimplência zerada e receita de aluguel crescendo 8% (R$ 14,5 Mi). No lado patrimonial, no entanto, a avaliação da investida em Cascavel foi reduzida em R$ 58,8 milhões (≈33% do valor contábil), o que produziu prejuízo líquido contábil de R$ 43,5 milhões. Essa assimetria — caixa ok, patrimônio em queda — é típica de fundos com ativos minoritários que dependem de laudos externos.",
+      "Com a cota a R$ 78,99 em abril/2026, o P/VP de 0,75 sugere que o mercado já incorpora prêmio de risco para nova reavaliação negativa e para a baixa liquidez (R$ 266 mil/dia). O DY de 5,48% é modesto frente a pares de shopping (7%-9%) e à NTN-B longa. Para 2026, a expectativa base é de distribuição entre R$ 0,32 e R$ 0,42/mês, reajustes contratuais próximos ao IPCA e, eventualmente, estabilização do valor justo da participação em Cascavel — cenário que, se confirmado, justificaria a convergência do preço para a faixa de R$ 85-95."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,75 com desconto patrimonial de 25% sobre VPC R$ 103,29",
+      "Shopping Vitória com 100% de ocupação e inadimplência zero no fechamento de 2025",
+      "Receita de aluguel cresceu 103% desde 2023 (R$ 7,1 Mi → R$ 14,5 Mi)",
+      "Taxa de administração competitiva (0,25% a.a.) sem taxa de performance",
+      "Administração fiduciária pelo BTG Pactual e auditoria pela PwC",
+      "Exposição a dois shoppings regionais estabelecidos (Vitória e Cascavel)",
+      "Recebimento de R$ 3,05 Mi em dividendos da SPE APXM Cascavel em 2025"
+    ],
+    "pontosDeAtencao": [
+      "Concentração extrema: apenas 2 ativos no portfólio (1 deles minoritário)",
+      "Prejuízo contábil de R$ 43,5 Mi em 2025 decorrente de reavaliação negativa",
+      "Queda de 33% no valor justo da participação em Cascavel (R$ 175,6 Mi → R$ 116,8 Mi)",
+      "Liquidez muito baixa (R$ 266 mil/dia) e apenas 664 cotistas",
+      "DY de 5,48% abaixo da média do segmento e da NTN-B longa",
+      "Gestora boutique (BRM Carbyne) com track record relativamente curto",
+      "Participação minoritária e sem controle operacional no Catuaí Cascavel",
+      "Cota caiu 21% no pior momento de 2025, recuperação ainda parcial",
+      "Mudança recente de sede e nome da gestora (de Carbyne para BRM Carbyne)"
+    ],
+    "conclusaoFinal": "A recomendação para o APXM11 é de MANTER, com veredicto neutro com viés cauteloso. O desconto patrimonial de 25% é atrativo e os fundamentos operacionais do Shopping Vitória melhoraram, mas a concentração em dois ativos, a reavaliação negativa sofrida por Cascavel em 2025 e a liquidez muito baixa (R$ 266 mil/dia com 664 cotistas) tornam o ativo inadequado como posição relevante ou como substituto de FIIs de shopping mais líquidos e diversificados (XPML11, HSML11, VISC11, MALL11). Para quem já tem posição em níveis próximos a R$ 79, faz sentido aguardar — o preço justo estimado está na faixa de R$ 80-90 e há potencial de catch-up caso a avaliação do Catuaí Cascavel estabilize. Para novos aportes, recomenda-se, se houver, que representem no máximo 1%-2% da carteira de FIIs, exclusivamente para investidores confortáveis com concentração, baixa liquidez e volatilidade patrimonial decorrente de laudos de avaliação."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 91,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

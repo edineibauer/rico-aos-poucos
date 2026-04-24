@@ -78,8 +78,10 @@ const FIITemplate = {
         if (!root) return;
 
         let html = '';
-        html += this.renderHeader();
-        html += this.renderStickyNav();
+        // Header + StickyNav removidos: o <header id="site-header"> externo
+        // (preenchido por fii-layout.js) é o header oficial do site, com menu,
+        // e já é sticky via CSS (.article-topbar-wrap). O stickyNav interno
+        // duplicava e sobrepunha o header padrão quando scroll > 300px.
         html += this.renderHero();
         html += this.renderQuickStats();
         html += '<main class="max-w-7xl mx-auto px-4 pb-16">';
@@ -168,46 +170,145 @@ const FIITemplate = {
         // Nome extra (e.g., "(ex-GALG11)")
         const nomeExtraHtml = m.nomeExtra ? ` <span class="text-emerald-400">${m.nomeExtra}</span>` : '';
 
+        // Extrai primeira tag significativa (ex: "37 Imóveis")
+        const infoTag = m.badges && m.badges.length > 0 ? m.badges[0] : '';
+
+        // Parser inteligente: ponto como milhar apenas se houver vírgula
+        const parseNum = (v) => {
+            if (v === null || v === undefined || v === '') return null;
+            let s = String(v).trim();
+            if (s.includes(',')) s = s.replace(/\./g, '').replace(',', '.');
+            const n = parseFloat(s);
+            return (isNaN(n) || n <= 0) ? null : n;
+        };
+        // Extrai número único (média se vier faixa)
+        const parsePrecoJusto = (str) => {
+            if (!str) return null;
+            const tokens = String(str).match(/[\d][\d.,]*/g);
+            if (!tokens) return null;
+            const vals = tokens.map(parseNum).filter(v => v !== null);
+            if (!vals.length) return null;
+            return vals.reduce((a, b) => a + b, 0) / vals.length;
+        };
+
+        // Preço justo — calcula um valor único (média da faixa, se houver)
+        let precoJustoNum = null;
+        if (d.valuation && d.valuation.recomendacoes && d.valuation.recomendacoes.valor) {
+            precoJustoNum = parsePrecoJusto(d.valuation.recomendacoes.valor);
+        }
+        const fmtBR = (n) => 'R$ ' + n.toFixed(2).replace('.', ',');
+        const precoJustoFmt = precoJustoNum ? fmtBR(precoJustoNum) : '';
+
+        const cotacaoNum = parseNum(ind.cotacao);
+        let upsideHtml = '';
+        if (precoJustoNum && cotacaoNum) {
+            const up = ((precoJustoNum - cotacaoNum) / cotacaoNum) * 100;
+            const sign = up >= 0 ? '+' : '';
+            const cls = up >= 3 ? 'hm2-upside-green' : (up <= -3 ? 'hm2-upside-red' : 'hm2-upside-amber');
+            upsideHtml = `<span class="${cls}">${sign}${up.toFixed(1)}%</span>`;
+        }
+
         return `
-    <header class="hero-gradient text-white py-16 pb-32 relative z-10">
+    <!-- ═══ HERO DESKTOP (lg+) ═════════════════════════════════════════════ -->
+    <header class="hero-desktop hero-gradient text-white py-12 pb-28 lg:py-16 lg:pb-32 relative z-10 hidden lg:block">
         <div class="max-w-7xl mx-auto px-4 relative z-10">
-            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-8">
-                <div class="space-y-4">
+            <div class="flex flex-col lg:flex-row justify-between items-start lg:items-end gap-6 lg:gap-8">
+                <div class="space-y-4 w-full lg:w-auto">
                     <div class="flex items-center gap-3 flex-wrap">
                         <h1 class="text-5xl lg:text-6xl font-extrabold tracking-tight">${m.ticker}</h1>
-                        <div class="flex gap-2">
-                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-${veredictoColor}-500/20 text-${veredictoColor}-400 text-sm font-semibold border border-${veredictoColor}-500/30">
-                                ${this.icons.star}
-                                NOTA ${rec.nota}/10
-                            </span>
-                            <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-${veredictoColor}-500/90 text-white text-sm font-semibold">
-                                ${rec.veredicto}
-                            </span>
-                        </div>
+                        <span class="inline-flex items-center px-3 py-1.5 rounded-lg bg-${veredictoColor}-500/20 text-${veredictoColor}-400 text-sm font-semibold border border-${veredictoColor}-500/30" title="Nota 0-10 baseada em gestão, portfólio, precificação e perspectivas. Não é recomendação de investimento.">
+                            ${this.icons.star}
+                            NOTA ${rec.nota}/10
+                        </span>
                     </div>
-                    <p class="text-xl lg:text-2xl text-blue-200 font-light">${m.nome}${nomeExtraHtml}</p>
-                    <div class="flex flex-wrap gap-2 text-sm">
-                        ${badgesHtml}
-                    </div>
+                    <p class="text-xl lg:text-2xl text-blue-200 font-light leading-snug">${m.nome}${nomeExtraHtml}</p>
+                    <div class="flex flex-wrap gap-2 text-sm">${badgesHtml}</div>
                 </div>
-
-                <div class="text-right space-y-1">
+                <div class="w-full lg:w-auto lg:text-right space-y-1">
                     <div class="text-sm text-blue-300 uppercase tracking-wider">Cota Atual</div>
-                    <div class="text-5xl lg:text-6xl font-extrabold">R$ ${ind.cotacao}</div>
+                    <div class="text-5xl lg:text-6xl font-extrabold leading-none">R$ ${ind.cotacao}</div>
                     <div class="text-xs text-slate-400">em ${ind.cotacaoData}</div>
-                    <div class="flex items-center justify-end gap-4 mt-2">
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-emerald-400">${ind.dividendYield}%</div>
-                            <div class="text-xs text-blue-300">DY Anual</div>
+                    <div class="flex items-center gap-4 lg:justify-end mt-2">
+                        <div class="lg:text-center">
+                            <div class="text-2xl font-bold text-emerald-400 leading-none">${ind.dividendYield}%</div>
+                            <div class="text-xs text-blue-300 mt-0.5">DY Anual</div>
                         </div>
                         <div class="w-px h-10 bg-white/20"></div>
-                        <div class="text-center">
-                            <div class="text-2xl font-bold text-emerald-400">${ind.pvp}</div>
-                            <div class="text-xs text-blue-300">P/VP</div>
+                        <div class="lg:text-center">
+                            <div class="text-2xl font-bold text-emerald-400 leading-none">${ind.pvp}</div>
+                            <div class="text-xs text-blue-300 mt-0.5">P/VP</div>
                         </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </header>
+
+    <!-- ═══ HERO MOBILE (< lg) — CONCEITO "COTAÇÃO FIRST" ══════════════════ -->
+    <!-- Layout inspirado em apps de corretora/trading: cotação é o herói visual,
+         veredicto é uma barra destacada, métricas são chips inline. -->
+    <header class="hero-mobile hero-gradient text-white relative z-10 lg:hidden">
+        <div class="hm2-inner">
+
+            <!-- Cabeçalho mínimo: ticker + nota -->
+            <div class="hm2-topline">
+                <span class="hm2-ticker">${m.ticker}</span>
+                <span class="hm2-nota-chip hm2-nota-${veredictoColor}">
+                    <span class="hm2-nota-val">${rec.nota}</span>
+                    <span class="hm2-nota-max">/10</span>
+                </span>
+            </div>
+
+            <!-- Cotação — HERO VISUAL (com label e data claros) -->
+            <div class="hm2-price-label">Cota Atual</div>
+            <div class="hm2-price">
+                <span class="hm2-currency">R$</span>
+                <span class="hm2-amount">${ind.cotacao}</span>
+            </div>
+            <div class="hm2-price-caption">em ${ind.cotacaoData || '—'}</div>
+
+            <!-- Comparação: preço justo (médio) com upside/downside -->
+            ${precoJustoFmt ? `
+            <div class="hm2-fairprice">
+                <span class="hm2-fairprice-label">Preço justo estimado</span>
+                <span class="hm2-fairprice-wrap">
+                    <span class="hm2-fairprice-val">${precoJustoFmt}</span>
+                    ${upsideHtml}
+                </span>
+            </div>` : ''}
+
+            <!-- Explicação da nota -->
+            <div class="hm2-nota-explain">
+                <strong>Nota ${rec.nota}/10</strong> · avalia qualidade de gestão, portfólio,
+                precificação e perspectivas. <em>Não é recomendação de investimento.</em>
+            </div>
+
+            <!-- Métricas em tiras horizontais -->
+            <div class="hm2-metrics">
+                <div class="hm2-metric-row">
+                    <span class="hm2-metric-name">Dividend Yield</span>
+                    <span class="hm2-metric-val hm2-val-green">${ind.dividendYield}%<span class="hm2-val-unit">a.a.</span></span>
+                </div>
+                <div class="hm2-metric-row">
+                    <span class="hm2-metric-name">P/VP</span>
+                    <span class="hm2-metric-val ${ind.pvp < 1 ? 'hm2-val-green' : 'hm2-val-amber'}">${ind.pvp}<span class="hm2-val-unit">${ind.pvpDesconto || ''}</span></span>
+                </div>
+                <div class="hm2-metric-row">
+                    <span class="hm2-metric-name">Dividendo / cota</span>
+                    <span class="hm2-metric-val">R$ ${ind.dividendoMensal}<span class="hm2-val-unit">/mês</span></span>
+                </div>
+                <div class="hm2-metric-row">
+                    <span class="hm2-metric-name">Patrimônio líquido</span>
+                    <span class="hm2-metric-val">${ind.patrimonioLiquido || '—'}</span>
+                </div>
+            </div>
+
+            <!-- Rodapé de identidade -->
+            <div class="hm2-identity">
+                <div class="hm2-fund-name">${m.nome}${nomeExtraHtml}</div>
+                <div class="hm2-fund-tags">${m.segmento}${infoTag ? ' · ' + infoTag : ''}</div>
+            </div>
+
         </div>
     </header>`;
     },
@@ -238,32 +339,30 @@ const FIITemplate = {
             // Value with optional suffix
             let valorHtml = '';
             if (stat.valorSufixo) {
-                // For values with suffix, use slightly smaller text for main + suffix
-                valorHtml = `<div class="text-2xl font-bold ${valorClass}">${stat.valor}<span class="text-base text-slate-500">${stat.valorSufixo}</span></div>`;
+                valorHtml = `<div class="text-xl sm:text-2xl font-bold ${valorClass} leading-tight">${stat.valor}<span class="text-sm sm:text-base text-slate-500">${stat.valorSufixo}</span></div>`;
             } else {
-                valorHtml = `<div class="text-3xl font-bold ${valorClass}">${stat.valor}</div>`;
+                valorHtml = `<div class="text-2xl sm:text-3xl font-bold ${valorClass} leading-tight">${stat.valor}</div>`;
             }
 
             // Detail line
             let detalheHtml = '';
             if (stat.detalheHtml) {
-                detalheHtml = `<div class="text-xs text-slate-500 mt-1">${stat.detalheHtml}</div>`;
+                detalheHtml = `<div class="text-[11px] sm:text-xs text-slate-500 mt-1 leading-snug">${stat.detalheHtml}</div>`;
             } else if (stat.detalheIcone === 'arrowUp') {
-                detalheHtml = `<div class="text-xs text-emerald-400 mt-1 flex items-center gap-1">${this.icons.arrowUp} ${stat.detalhe}</div>`;
+                detalheHtml = `<div class="text-[11px] sm:text-xs text-emerald-400 mt-1 flex items-center gap-1 leading-snug">${this.icons.arrowUp} ${stat.detalhe}</div>`;
             } else if (stat.corIcone === 'emerald' && !stat.detalheHtml) {
-                // Rendimento-style detail with emerald color
-                detalheHtml = `<div class="text-xs text-emerald-400 mt-1 font-medium">${stat.detalhe}</div>`;
+                detalheHtml = `<div class="text-[11px] sm:text-xs text-emerald-400 mt-1 font-medium leading-snug">${stat.detalhe}</div>`;
             } else {
-                detalheHtml = `<div class="text-xs text-slate-500 mt-1">${stat.detalhe}</div>`;
+                detalheHtml = `<div class="text-[11px] sm:text-xs text-slate-500 mt-1 leading-snug">${stat.detalhe}</div>`;
             }
 
             cardsHtml += `
-            <div class="stat-card rounded-2xl p-6 shadow-xl">
-                <div class="flex items-center gap-3 mb-3">
-                    <div class="w-10 h-10 rounded-xl ${iconBg} flex items-center justify-center">
+            <div class="stat-card rounded-xl sm:rounded-2xl p-4 sm:p-5 lg:p-6 shadow-xl">
+                <div class="flex items-center gap-2 sm:gap-3 mb-2 sm:mb-3">
+                    <div class="w-8 h-8 sm:w-10 sm:h-10 rounded-lg sm:rounded-xl ${iconBg} flex items-center justify-center flex-shrink-0">
                         ${icon}
                     </div>
-                    <span class="text-sm text-slate-400 font-medium">${stat.label}</span>
+                    <span class="text-xs sm:text-sm text-slate-400 font-medium leading-tight">${stat.label}</span>
                 </div>
                 ${valorHtml}
                 ${detalheHtml}
@@ -271,8 +370,8 @@ const FIITemplate = {
         });
 
         return `
-    <section class="max-w-7xl mx-auto px-4 -mt-20 relative z-20 mb-12">
-        <div class="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <section class="max-w-7xl mx-auto px-4 -mt-16 sm:-mt-18 lg:-mt-20 relative z-20 mb-8 sm:mb-10 lg:mb-12">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
             ${cardsHtml}
         </div>
     </section>`;
@@ -288,21 +387,24 @@ const FIITemplate = {
         const ticker = this.data.meta.ticker;
 
         return `
-        <section class="mb-12 fade-in">
-            <div class="dark-card rounded-3xl p-8 relative overflow-hidden ${glowClass}">
-                <div class="absolute top-0 right-0 w-64 h-64 bg-gradient-to-br from-${veredictoColor}-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
+        <section class="mb-8 sm:mb-10 lg:mb-12 fade-in">
+            <div class="dark-card rounded-2xl sm:rounded-3xl p-5 sm:p-6 lg:p-8 relative overflow-hidden ${glowClass}">
+                <div class="absolute top-0 right-0 w-48 sm:w-64 h-48 sm:h-64 bg-gradient-to-br from-${veredictoColor}-500/10 to-blue-500/10 rounded-full blur-3xl"></div>
                 <div class="relative z-10">
-                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-                        <div class="space-y-4 flex-1">
-                            <div class="flex items-center gap-3">
-                                <h2 class="text-2xl font-bold text-white">Recomendação</h2>
-                                <span class="px-4 py-2 rounded-lg bg-${veredictoColor}-500 text-white font-bold text-lg">${rec.veredicto}</span>
+                    <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-4 sm:gap-5 lg:gap-6">
+                        <div class="space-y-3 sm:space-y-4 flex-1 order-2 lg:order-1">
+                            <div>
+                                <h2 class="text-xl sm:text-2xl font-bold text-white">Visão Geral</h2>
+                                <p class="text-xs text-slate-500 mt-1 italic">
+                                    Nota ${rec.nota}/10 — avaliação de gestão, portfólio, precificação e perspectivas.
+                                    Não constitui recomendação de investimento.
+                                </p>
                             </div>
-                            <p class="text-slate-300 text-lg leading-relaxed max-w-2xl">
+                            <p class="text-slate-300 text-sm sm:text-base lg:text-lg leading-relaxed max-w-2xl">
                                 ${rec.resumo}
                             </p>
                         </div>
-                        <div class="flex-shrink-0">
+                        <div class="flex-shrink-0 order-1 lg:order-2 self-center lg:self-auto">
                             ${this.renderScoreRing(rec.nota, ticker)}
                         </div>
                     </div>

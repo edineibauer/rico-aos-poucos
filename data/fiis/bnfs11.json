@@ -1,178 +1,198 @@
 {
   "meta": {
     "ticker": "BNFS11",
-    "nome": "Banrisul Novas Fronteiras FII",
-    "segmento": "Agências Bancárias",
+    "nome": "Banrisul Novas Fronteiras Fundo de Investimento Imobiliário",
+    "nomeExtra": "(Responsabilidade Limitada)",
+    "segmento": "Tijolo - Varejo (Agências Bancárias)",
     "badges": [
-      "Banrisul (RS)",
-      "18 Agências",
-      "26,9% Vacância"
+      "Monolocatário Banrisul",
+      "Vacância 26,9%",
+      "P/VP 0,77"
     ],
     "sentimento": "pessimista",
-    "dataAnalise": "16/03/2026",
-    "totalDocumentos": 376
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 321
   },
   "seo": {
     "title": "BNFS11 - Análise Completa | Banrisul Novas Fronteiras FII",
-    "description": "Análise completa do FII BNFS11 baseada em 376 documentos oficiais. Fundo de agências bancárias Banrisul no RS. 18 imóveis, 26,9% vacância, 5 agências vagas. DY 12,1% a.a. em queda, P/VP 1,07. Contratos BTS migrando para típicos com forte redução de receita.",
-    "keywords": "BNFS11, Banrisul Novas Fronteiras, FII agências bancárias, análise BNFS11, dividend yield BNFS11, Banrisul, Rio Grande do Sul, agências bancárias FII",
-    "ogTitle": "BNFS11 - Análise Completa do FII Banrisul Novas Fronteiras 2026",
-    "ogDescription": "Análise detalhada do BNFS11: 18 agências Banrisul no RS, 26,9% vacância, DY 12,1% em queda acentuada. Contratos BTS migrando para típicos com receita caindo de R$ 822 mil para R$ 556 mil.",
-    "twitterTitle": "BNFS11 - Análise Completa | FII Banrisul Novas Fronteiras",
-    "twitterDescription": "Análise do BNFS11: 18 agências Banrisul no RS, 26,9% vacância, 5 vagas. DY 12,1%, PL R$ 49 Mi. Receita em queda de 32% e mais contratos vencendo em 2026."
+    "description": "BNFS11: FII monolocatário Banrisul com 18 agências no RS, vacância de 26,9%, DY 18,5%, P/VP 0,77 e dividendos em queda estrutural após migração BTS→típico.",
+    "keywords": "BNFS11, Banrisul Novas Fronteiras, Oliveira Trust, FII agências bancárias, Banrisul, built to suit, Rio Grande do Sul, dividend yield",
+    "ogTitle": "BNFS11 - Análise Completa do FII Banrisul Novas Fronteiras",
+    "ogDescription": "Dossiê completo do BNFS11: portfólio 100% concentrado no Banrisul/RS, vacância elevada e rendimentos em trajetória de queda. Preço justo estimado entre R$ 55 e R$ 72.",
+    "twitterTitle": "BNFS11 - Análise Completa | Banrisul Novas Fronteiras",
+    "twitterDescription": "FII monolocatário Banrisul: DY alto reflete deterioração. Vacância 26,9%, dividendos caíram de R$ 1,37 para R$ 0,60 em 18 meses."
   },
   "indicadores": {
-    "cotacao": 74.49,
-    "cotacaoData": "31/12/2025",
-    "pvp": 1.07,
-    "pvpDesconto": "7% de ágio",
-    "dividendYield": 12.1,
-    "dividendoMensal": 0.75,
-    "dividendoAnual": 11.39,
-    "patrimonioLiquido": "R$ 48,9 Mi",
-    "vpCota": 69.81,
-    "cotistas": 5635,
-    "ocupacao": 72.2,
+    "cotacao": 53.98,
+    "cotacaoData": "22/04/2026",
+    "pvp": 0.77,
+    "pvpDesconto": "23% de desconto sobre VP",
+    "dividendYield": 18.52,
+    "dividendoMensal": 0.6,
+    "dividendoAnual": 8.4,
+    "patrimonioLiquido": "R$ 48,7 Mi",
+    "vpCota": 69.61,
+    "cotistas": 5414,
+    "ocupacao": 73.1,
     "numImoveis": 18
   },
   "recomendacao": {
-    "nota": 4,
-    "veredicto": "VENDA",
-    "cor": "red",
-    "resumo": "O <strong class=\"text-red-400\">BNFS11</strong> está em <strong class=\"text-red-400\">deterioração acelerada</strong>. A receita de aluguéis despencou de <strong class=\"text-amber-400\">R$ 822 mil para R$ 556 mil/mês</strong> (-32%) entre ago/25 e dez/25, e a tendência é de nova queda em 2026 com mais 4 contratos BTS vencendo. Dos 6 contratos BTS, <strong class=\"text-emerald-400\">Vila Ipiranga (R$ 23 mil/mês) e Quaraí (R$ 13.470/mês) já foram renovados</strong> como típicos, mas Belém Novo vence em <strong class=\"text-red-400\">março/2026 (iminente)</strong>, General Câmara em abril, Sapiranga em agosto e Cruz Alta em outubro. Com <strong class=\"text-red-400\">5 agências vagas (26,9%)</strong>, VP/cota caindo para R$ 69,81 e dividendo em queda de 33%, o cenário é de continuidade na erosão de receita."
+    "nota": 4.2,
+    "veredicto": "CAUTELA",
+    "cor": "orange",
+    "resumo": "<p>O <strong class=\"text-blue-400\">BNFS11</strong> é um FII de agências bancárias com portfólio 100% concentrado em um único locatário (<strong class=\"text-amber-400\">Banco Banrisul</strong>) e em um único estado (Rio Grande do Sul). Apesar de negociar a <strong class=\"text-emerald-400\">P/VP 0,77</strong> e exibir um dividend yield nominal de <strong class=\"text-emerald-400\">18,5%</strong>, os fundamentos estão em deterioração: a vacância saltou de 9,3% (jul/2025) para <strong class=\"text-red-400\">26,9%</strong> após o não-exercício de renovações de Sepé Tiaraju, Camboim, Vacaria, Campina e Padre Claret.</p><p>A migração dos contratos <strong class=\"text-amber-400\">built-to-suit</strong> (atípicos) para contratos típicos, com valores reprecificados a mercado, já impôs quedas sucessivas na receita — o rendimento mensal recuou de <strong class=\"text-red-400\">R$ 1,37 (jul/2024) para R$ 0,60 (fev/2026)</strong>, uma deterioração de 56%. Os sucessivos fatos relevantes (mar/2025, jun/2025, dez/2025, jan/2026, mar/2026) indicam reduções adicionais nas receitas de aluguel à medida que novos contratos entrem em vigor em 2026.</p><p>O elevado DY é consequência da queda acentuada da cotação (R$ 119 → R$ 53,98) e não reflete distribuições sustentáveis. Em contrapartida, o desconto patrimonial e o laudo de avaliação recente oferecem margem de segurança. Recomendação: <strong class=\"text-orange-400\">CAUTELA</strong> — ativo adequado somente para investidor ciente dos riscos de concentração e disposto a aguardar normalização do portfólio.</p>"
   },
   "quickStats": [
     {
-      "label": "Patrimônio",
-      "valor": "R$ 48,9 Mi",
-      "detalhe": "VP/cota: R$ 69,81",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 69,81</span> (queda de R$ 78 para R$ 70)",
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 48,7 Mi",
+      "detalhe": "VP/cota: R$ 69,61",
       "icone": "building",
       "corIcone": "blue"
     },
     {
       "label": "Rendimento",
-      "valor": "R$ 0,75",
+      "valor": "R$ 0,60",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 11,39/ano | DY 12,1%",
+      "detalhe": "DY atual 1,11% a.m.",
       "icone": "money",
-      "corIcone": "emerald",
-      "corValor": "red"
+      "corIcone": "amber"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "73,1%",
+      "detalhe": "Vacância física: 26,9%",
+      "icone": "building",
+      "corIcone": "red"
     },
     {
       "label": "Cotistas",
-      "valor": "5.635",
+      "valor": "5.414",
       "detalhe": "700 mil cotas emitidas",
       "icone": "users",
       "corIcone": "purple"
-    },
-    {
-      "label": "Vacância",
-      "valor": "26,9%",
-      "detalhe": "5 agências vagas de 18",
-      "icone": "chart",
-      "corIcone": "red",
-      "corValor": "red"
     }
   ],
   "pontosAtencao": [
     {
-      "titulo": "Receita Despencando (-32% em 5 meses)",
-      "descricao": "A receita de aluguéis caiu de R$ 822 mil/mês (ago/25) para R$ 556 mil/mês (dez/25), uma queda de 32% em apenas 5 meses. Isso reflete a migração dos contratos BTS das agências Cassino e Cruzeiro para contratos típicos (redução de R$ 66.504/mês) e a entrada das novas condições. A tendência é de nova queda em 2026 com mais 4 contratos migrando.",
+      "titulo": "Monolocatário Banrisul",
+      "descricao": "100% das receitas de locação vêm do Banco do Estado do Rio Grande do Sul. Qualquer mudança na estratégia de agências físicas do banco afeta diretamente o fundo. 13 agências ainda locadas, 5 vagas.",
       "severidade": "red"
     },
     {
-      "titulo": "4 Contratos BTS Vencem em 2026 (Belém Novo iminente)",
-      "descricao": "Belém Novo (mar/26), General Câmara (abr/26), Sapiranga (ago/26) e Cruz Alta (out/26) ainda vão migrar de BTS para típico. Belém Novo ainda não tem contrato formalizado e vence em dias. Cada renovação historicamente reduz ~R$ 0,05-0,095/cota/mês de receita. Sapiranga e Cruz Alta são as maiores agências (922 e 937 m²).",
+      "titulo": "Vacância física de 26,9%",
+      "descricao": "Cinco imóveis desocupados: Sepé Tiaraju (São Gabriel), Camboim (Sapucaia do Sul), Vacaria, Campina (São Leopoldo) e Padre Claret (Esteio). Juntos somam 2.754 m² de ABL ociosa.",
       "severidade": "red"
     },
     {
-      "titulo": "VP/Cota Caiu 10% em Dezembro (Reavaliação)",
-      "descricao": "O VP/cota caiu bruscamente de R$ 77,91 (nov/25) para R$ 69,81 (dez/25), uma queda de 10,4% que reflete provável reavaliação dos imóveis. Mesmo assim, a cota negocia a R$ 74,49 com ágio de 7% sobre o VP, sem margem de segurança para os riscos existentes.",
+      "titulo": "Concentração geográfica total no RS",
+      "descricao": "Todos os 18 imóveis estão no Rio Grande do Sul. As enchentes de maio/2024 já afetaram a agência Campina com infiltração superior a 1 metro de água. Risco climático e macrorregional relevante.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Migração BTS → contratos típicos com redução",
+      "descricao": "Renovações sucessivas trocaram built-to-suit por contratos típicos a valores de mercado: Taquari (-R$ 56,8 mil), Scharlau/Parobé/Arroio do Sal (-R$ 100,5 mil), Cassino/Cruzeiro (-R$ 66,5 mil). Novos contratos Vila Ipiranga e Quaraí entram em 2026 com valores inferiores aos BTS originais.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Dividendos em trajetória de queda",
+      "descricao": "O rendimento mensal caiu de R$ 1,37 (jul/24) para R$ 0,60 (fev/26) — redução de 56% em 18 meses. A tendência de contração deve persistir em 2026 à medida que novos contratos reduzidos substituem os atípicos.",
       "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez reduzida",
+      "descricao": "Volume médio diário de R$ 74 mil e giro de 49,8% em 12 meses. Pode dificultar montagem/desmontagem de posições relevantes sem impacto de preço.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Risco de novos laudos negativos",
+      "descricao": "Em dez/2025 o laudo da Consult reduziu o valor justo do portfólio em R$ 6,1 mi (-10,7% vs. 2024). Quaraí (-60,5%) e Cruz Alta (-38,8%) tiveram quedas expressivas individuais.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Passivos trabalhistas provisionados",
+      "descricao": "Dois processos trabalhistas com perda provável envolvendo responsabilidade subsidiária (valores de R$ 112 mil e R$ 158 mil) já provisionados na carteira de 31/12/2025.",
+      "severidade": "amber"
     }
   ],
   "gestora": {
     "nome": "Oliveira Trust DTVM",
-    "nota": 5,
+    "nota": 6.5,
     "notaLabel": "REGULAR",
     "stats": [
       {
-        "label": "Início do Fundo",
-        "valor": "Set/2012"
+        "label": "Função",
+        "valor": "Admin. + Gestor"
       },
       {
-        "label": "Patrimônio BNFS",
-        "valor": "R$ 48,9 Mi"
-      },
-      {
-        "label": "Vacância Atual",
-        "valor": "26,9%",
-        "cor": "red"
+        "label": "Início do fundo",
+        "valor": "06/09/2012"
       }
     ],
-    "resumo": "A <strong class=\"text-blue-400\">Oliveira Trust</strong> atua como administradora e gestora do BNFS11. O consultor imobiliário é a JeJ Imóveis e o avaliador é a Binswanger Brazil. A gestão é passiva, focada na administração dos contratos de locação com o Banrisul. O fundo possui <strong class=\"text-amber-400\">taxa de administração competitiva de 0,3% a.a.</strong> e sem taxa de performance. A gestora tem sido transparente na comunicação das renegociações, publicando fatos relevantes para cada contrato. Entretanto, não há iniciativas visíveis para ocupar as 5 agências vagas ou diversificar a base de locatários.",
-    "link": "../../gestores/oliveira-trust/"
+    "resumo": "<p>A <strong class=\"text-blue-400\">Oliveira Trust DTVM</strong> acumula as funções de administradora, gestora, controladora, custodiante, escriturador e distribuidora do BNFS11. Atua no mercado desde 1992, com forte presença em serviços fiduciários e administração de fundos estruturados.</p><p>A gestão do BNFS11 é considerada <strong class=\"text-amber-400\">passiva</strong> apesar da classificação ANBIMA de gestão ativa — não há previsão de novas aquisições nem reciclagem relevante de portfólio. A consultoria imobiliária é prestada pela JEJ Imóveis Ltda., responsável por comercializar os imóveis vagos.</p>",
+    "link": null
   },
   "taxas": {
-    "subtitulo": "Taxas muito baixas, sem performance",
+    "subtitulo": "Taxas competitivas para o segmento, apesar do piso mensal relevante frente ao PL atual",
     "glowCor": "green",
     "itens": [
       {
         "label": "Taxa de Administração",
-        "valor": "0,30% a.a.",
-        "detalhe": "Sobre o Patrimônio Líquido",
+        "valor": "0,3% a.a.",
+        "detalhe": "Sobre o PL, piso R$ 16.000/mês",
         "corBorda": "emerald"
       },
       {
         "label": "Taxa de Custódia",
-        "valor": "0,10% a.a.",
-        "detalhe": "Máxima sobre o PL",
+        "valor": "0,1% a.a.",
+        "detalhe": "Sobre o PL, piso R$ 4.000/mês",
         "corBorda": "emerald"
       },
       {
         "label": "Taxa de Performance",
-        "valor": "Não há",
-        "detalhe": "Sem cobrança adicional",
+        "valor": "N/A",
+        "detalhe": "Não há cobrança de performance",
         "corBorda": "emerald"
-      }
-    ],
-    "comparativoTitulo": "Comparativo com FIIs de Agências Bancárias",
-    "comparativo": [
-      {
-        "ticker": "BNFS11",
-        "taxa": "0,40%",
-        "perf": "Sem performance",
-        "destaque": true
       },
       {
-        "ticker": "BBPO11",
-        "taxa": "0,28%",
-        "perf": "Sem performance"
-      },
-      {
-        "ticker": "BBRC11",
-        "taxa": "0,62%",
-        "perf": "Sem performance"
-      },
-      {
-        "ticker": "SAAG11",
-        "taxa": "0,60%",
-        "perf": "Sem performance"
+        "label": "Liquidez Média Diária",
+        "valor": "R$ 74 mil",
+        "detalhe": "Volume reduzido em 12 meses",
+        "corBorda": "red"
       }
     ],
     "detalhes": [
       {
-        "label": "Administrador/Gestor",
-        "valor": "Oliveira Trust DTVM"
+        "label": "Administrador",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Oliveira Trust DTVM S.A."
       },
       {
         "label": "Consultor Imobiliário",
-        "valor": "JeJ Imóveis"
+        "valor": "JeJ Imóveis Ltda."
       },
       {
         "label": "Auditor",
-        "valor": "PwC"
+        "valor": "BDO RCS Auditores Independentes (2025) / PwC (2024)"
+      },
+      {
+        "label": "Avaliador",
+        "valor": "Consult Soluções Patrimoniais (2025)"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "06/09/2012"
+      },
+      {
+        "label": "Primeira Negociação B3",
+        "valor": "16/10/2012"
+      },
+      {
+        "label": "Cotas Emitidas",
+        "valor": "700.000"
       }
     ]
   },
@@ -184,459 +204,155 @@
       },
       {
         "label": "ABL Total",
-        "valor": "10.224 m²"
+        "valor": "10.223,65 m²"
       },
       {
-        "label": "Ocupação",
-        "valor": "72,2%",
+        "label": "Vacância física",
+        "valor": "26,9%",
         "cor": "red"
       },
       {
-        "label": "Agências Vagas",
-        "valor": "5",
-        "cor": "red"
+        "label": "Locatário único",
+        "valor": "Banrisul"
       }
     ],
     "tipologiaChart": {
       "labels": [
-        "Agências Ocupadas",
-        "Agências Vagas"
+        "Cruz Alta (937 m²)",
+        "Sapiranga (922 m²)",
+        "Taquari (788 m²)",
+        "Scharlau (568 m²)",
+        "Belém Novo (559 m²)",
+        "Demais agências"
       ],
       "data": [
-        72.2,
-        27.8
+        12.2,
+        11.6,
+        8.2,
+        7.1,
+        7.0,
+        53.9
       ],
       "cores": [
         "#3b82f6",
-        "#ef4444"
-      ]
-    },
-    "locatarioChart": {
-      "labels": [
-        "Típico IPCA (renovados, 2029-2031)",
-        "BTS renovado (vigência futura)",
-        "BTS vencendo 2026 (pendentes)",
-        "Vagas"
-      ],
-      "data": [
-        38.9,
-        11.1,
-        22.2,
-        27.8
-      ],
-      "cores": [
+        "#8b5cf6",
         "#10b981",
-        "#22d3ee",
         "#f59e0b",
-        "#ef4444"
+        "#ef4444",
+        "#64748b"
       ]
     },
     "locatarios": [
       {
-        "nome": "Banco Banrisul S.A.",
-        "setor": "Bancário (Estatal RS)",
-        "receita": "100%",
-        "rating": "Banco Público",
-        "ratingCor": "blue",
-        "risco": "Concentração Total",
+        "nome": "Banco Banrisul",
+        "setor": "Financeiro - Varejo Bancário",
+        "receita": "100% receita",
+        "rating": "Longo prazo (RS Governo)",
+        "ratingCor": "amber",
+        "risco": "Concentrado",
         "riscoCor": "red"
       }
     ],
-    "riscoResumo": [
-      {
-        "label": "Típicos IPCA (2029-2031)",
-        "valor": 7,
-        "cor": "emerald"
-      },
-      {
-        "label": "Renovados vigência futura",
-        "valor": 2,
-        "cor": "cyan"
-      },
-      {
-        "label": "BTS pendentes 2026",
-        "valor": 4,
-        "cor": "amber"
-      },
-      {
-        "label": "Vagas",
-        "valor": 5,
-        "cor": "red"
-      }
-    ],
-    "riscoNota": "Todas as 18 agências são de propriedade do fundo e estão localizadas no <strong class=\"text-blue-400\">Rio Grande do Sul</strong>. O locatário é exclusivamente o <strong class=\"text-blue-400\">Banco Banrisul</strong>. Sete agências já operam com contratos típicos IPCA (vencimento 2029-2031). Duas agências (<strong class=\"text-emerald-400\">Vila Ipiranga e Quaraí</strong>) tiveram contratos típicos formalizados mas entram em vigência em 2026. Quatro agências ainda possuem contratos BTS vencendo em 2026 (<strong class=\"text-amber-400\">Belém Novo mar/26, General Câmara abr/26, Sapiranga ago/26, Cruz Alta out/26</strong>), sendo que Belém Novo <strong class=\"text-red-400\">ainda não tem contrato formalizado</strong>. Cinco agências permanecem <strong class=\"text-red-400\">vagas sem previsão de locação</strong>. A receita total dos 9 contratos típicos conhecidos soma R$ 179.070/mês. A ABL total é de 10.224 m²."
-  },
-  "ativos": {
-    "subtitulo": "18 agências bancárias | 10.224 m² ABL | 100% Rio Grande do Sul",
-    "legendaRisco": [
-      {
-        "label": "Contrato típico IPCA (2029-2031)",
-        "cor": "emerald"
-      },
-      {
-        "label": "Renovado (vigência futura em 2026)",
-        "cor": "cyan"
-      },
-      {
-        "label": "BTS vencendo 2026 (pendente)",
-        "cor": "amber"
-      },
-      {
-        "label": "Vaga (sem receita)",
-        "cor": "red"
-      }
-    ],
-    "grupos": [
-      {
-        "nome": "Contratos Típicos IPCA - 7 agências (R$ 142.600/mês)",
-        "cor": "emerald",
-        "itens": [
-          {
-            "nome": "Arroio do Sal",
-            "cidade": "Arroio do Sal/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 422,
-            "locatario": "Banrisul",
-            "vencimento": "09/2029",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 16.130/mês"
-          },
-          {
-            "nome": "Parobé",
-            "cidade": "Parobé/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 513,
-            "locatario": "Banrisul",
-            "vencimento": "10/2029",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 17.800/mês"
-          },
-          {
-            "nome": "Scharlau",
-            "cidade": "São Leopoldo/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 568,
-            "locatario": "Banrisul",
-            "vencimento": "10/2029",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 29.900/mês"
-          },
-          {
-            "nome": "Taquari",
-            "cidade": "Taquari/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 788,
-            "locatario": "Banrisul",
-            "vencimento": "12/2029",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 26.700/mês"
-          },
-          {
-            "nome": "Tancredo Neves",
-            "cidade": "Santa Maria/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 498,
-            "locatario": "Banrisul",
-            "vencimento": "03/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 18.075/mês"
-          },
-          {
-            "nome": "Cruzeiro",
-            "cidade": "Santa Rosa/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 504,
-            "locatario": "Banrisul",
-            "vencimento": "09/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 16.495/mês"
-          },
-          {
-            "nome": "Cassino",
-            "cidade": "Rio Grande/RS",
-            "tipo": "Agência",
-            "tipoCor": "blue",
-            "abl": 403,
-            "locatario": "Banrisul",
-            "vencimento": "11/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 17.500/mês"
-          }
-        ]
-      },
-      {
-        "nome": "Renovados com vigência futura - 2 agências (R$ 36.470/mês a partir de 2026)",
-        "cor": "cyan",
-        "itens": [
-          {
-            "nome": "Vila Ipiranga",
-            "cidade": "Porto Alegre/RS",
-            "tipo": "Típico (a partir mar/26)",
-            "tipoCor": "cyan",
-            "abl": 506,
-            "locatario": "Banrisul",
-            "vencimento": "03/2031",
-            "risco": "Renovado",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 23.000/mês"
-          },
-          {
-            "nome": "Quaraí",
-            "cidade": "Quaraí/RS",
-            "tipo": "Típico (a partir mai/26)",
-            "tipoCor": "cyan",
-            "abl": 476,
-            "locatario": "Banrisul",
-            "vencimento": "05/2031",
-            "risco": "Renovado",
-            "riscoCor": "emerald",
-            "aluguel": "R$ 13.470/mês"
-          }
-        ]
-      },
-      {
-        "nome": "Contratos BTS Vencendo 2026 - 4 agências (pendentes de formalização)",
-        "cor": "amber",
-        "itens": [
-          {
-            "nome": "Belém Novo",
-            "cidade": "Porto Alegre/RS",
-            "tipo": "Agência BTS",
-            "tipoCor": "red",
-            "abl": 559,
-            "locatario": "Banrisul",
-            "vencimento": "03/2026",
-            "risco": "Iminente - sem contrato",
-            "riscoCor": "red"
-          },
-          {
-            "nome": "General Câmara",
-            "cidade": "General Câmara/RS",
-            "tipo": "Agência BTS",
-            "tipoCor": "amber",
-            "abl": 373,
-            "locatario": "Banrisul",
-            "vencimento": "04/2026",
-            "risco": "Renegociação",
-            "riscoCor": "amber"
-          },
-          {
-            "nome": "Sapiranga",
-            "cidade": "Sapiranga/RS",
-            "tipo": "Agência BTS",
-            "tipoCor": "amber",
-            "abl": 922,
-            "locatario": "Banrisul",
-            "vencimento": "08/2026",
-            "risco": "Renegociação",
-            "riscoCor": "amber"
-          },
-          {
-            "nome": "Cruz Alta",
-            "cidade": "Cruz Alta/RS",
-            "tipo": "Agência BTS",
-            "tipoCor": "amber",
-            "abl": 937,
-            "locatario": "Banrisul",
-            "vencimento": "10/2026",
-            "risco": "Renegociação",
-            "riscoCor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "Agências Vagas - 5 imóveis (sem receita)",
-        "cor": "red",
-        "itens": [
-          {
-            "nome": "Sepé Tiaraju",
-            "cidade": "São Gabriel/RS",
-            "tipo": "Vaga",
-            "tipoCor": "red",
-            "abl": 465,
-            "locatario": "-",
-            "vencimento": "Vago",
-            "risco": "Sem receita",
-            "riscoCor": "red"
-          },
-          {
-            "nome": "Camboim",
-            "cidade": "Sapucaia do Sul/RS",
-            "tipo": "Vaga",
-            "tipoCor": "red",
-            "abl": 419,
-            "locatario": "-",
-            "vencimento": "Vago",
-            "risco": "Sem receita",
-            "riscoCor": "red"
-          },
-          {
-            "nome": "Vacaria",
-            "cidade": "Vacaria/RS",
-            "tipo": "Vaga",
-            "tipoCor": "red",
-            "abl": 917,
-            "locatario": "-",
-            "vencimento": "Vago",
-            "risco": "Sem receita",
-            "riscoCor": "red"
-          },
-          {
-            "nome": "Campina",
-            "cidade": "São Leopoldo/RS",
-            "tipo": "Vaga",
-            "tipoCor": "red",
-            "abl": 478,
-            "locatario": "-",
-            "vencimento": "Vago",
-            "risco": "Sem receita",
-            "riscoCor": "red"
-          },
-          {
-            "nome": "Padre Claret",
-            "cidade": "Esteio/RS",
-            "tipo": "Vaga",
-            "tipoCor": "red",
-            "abl": 476,
-            "locatario": "-",
-            "vencimento": "Vago",
-            "risco": "Sem receita",
-            "riscoCor": "red"
-          }
-        ]
-      }
-    ]
+    "riscoNota": "<p>O portfólio tem <strong class=\"text-red-400\">risco extremo de concentração</strong>: um único locatário (Banrisul) e um único estado (RS). Dos 13 imóveis ocupados, 6 têm contratos com vencimento em 2026 (Belém Novo, Vila Ipiranga, General Câmara, Quaraí, Sapiranga, Cruz Alta). Sete imóveis já migraram para contratos típicos com valores reduzidos; os demais seguirão o mesmo processo em 2026, pressionando ainda mais a receita.</p><p>A tendência de <strong class=\"text-amber-400\">redução da malha física bancária</strong> no Brasil — com fechamento massivo de agências em todo o sistema financeiro — representa risco estrutural de longo prazo para o modelo de negócio do fundo.</p>"
   },
   "timeline": {
-    "subtitulo": "13 anos de agências Banrisul no RS",
+    "subtitulo": "Trajetória de um FII construído sob contratos atípicos BTS — e o impacto da transição para contratos típicos",
     "periodos": [
       {
         "periodo": "Set/2012",
         "label": "IPO",
         "cor": "blue",
-        "descricao": "Constituição do Banrisul Novas Fronteiras FII. Cota emitida a R$ 100,00. 700.000 cotas.",
-        "pontos": [
-          "CNPJ: 15.570.431/0001-60",
-          "18 agências bancárias no RS",
-          "Locatário único: Banrisul",
-          "Contratos built-to-suit de longo prazo"
-        ]
+        "descricao": "IPO de 700 mil cotas a R$ 100,00 cada (PL de R$ 70 mi). Carteira original de 18 agências bancárias no RS sob contratos built-to-suit de 120 meses com o Banrisul.",
+        "pontos": []
       },
       {
-        "periodo": "2012-2023",
-        "label": "OPERAÇÃO ESTÁVEL",
+        "periodo": "2020-2023",
+        "label": "AUGE",
         "cor": "emerald",
-        "descricao": "Período de contratos BTS com aluguéis atípicos. Distribuições estáveis acima de R$ 1,00/cota.",
+        "descricao": "Cotação oscila em torno de R$ 120, com dividendos mensais próximos a R$ 1,30-R$ 1,40. Fundo é referência em BTS bancário pulverizado.",
         "pontos": [
-          "100% de ocupação durante a maior parte do período",
-          "Contratos BTS com aluguéis acima do valor de mercado",
-          "Rentabilidade desde início: +167,9%",
-          "DY histórico consistente (~15% a.a.)"
+          "<strong>Distribuição superior a R$ 15/ano</strong>",
+          "P/VP próximo ou acima de 1,0"
         ]
       },
       {
-        "periodo": "2024",
-        "label": "INÍCIO DA TRANSIÇÃO",
-        "cor": "amber",
-        "descricao": "Primeiras renovações BTS para típicos. Arroio do Sal, Parobé, Scharlau e Taquari migrados com queda de R$ 0,14/cota e R$ 0,08/cota.",
+        "periodo": "Mai/2024",
+        "label": "ENCHENTES RS",
+        "cor": "orange",
+        "descricao": "Situação de calamidade pública no RS afeta diretamente a Agência Campina (São Leopoldo) com infiltração superior a 1m. Seguros acionados.",
         "pontos": [
-          "Arroio do Sal: R$ 16.130/mês (típico IPCA, set/2024-set/2029)",
-          "Parobé: R$ 17.800/mês (típico IPCA, out/2024-out/2029)",
-          "Scharlau: R$ 29.900/mês (típico IPCA, out/2024-out/2029)",
-          "Taquari: R$ 26.700/mês (típico IPCA, dez/2024-dez/2029)",
-          "<strong class=\"text-amber-400\">Redução total de R$ 157 mil/mês na receita com 4 renovações</strong>",
-          "5 agências vagas sem perspectiva de locação"
+          "<strong>Agência Campina: 3,92% do PL impactada</strong>"
+        ]
+      },
+      {
+        "periodo": "Ago/2024",
+        "label": "NÃO RENOVAÇÕES",
+        "cor": "red",
+        "descricao": "Banrisul formaliza o não-interesse em renovar Sepé Tiaraju, Camboim e Vacaria (vencimento ago/2025). Agência Campina já vaga.",
+        "pontos": [
+          "<strong>Redução esperada: -13,36% da receita</strong>"
         ]
       },
       {
         "periodo": "2025",
-        "label": "DETERIORAÇÃO ACELERADA",
+        "label": "MIGRAÇÃO BTS→TÍPICO",
         "cor": "red",
-        "descricao": "Tancredo Neves, Cassino e Cruzeiro renovados. Receita despencou 32%. Dividendos em queda de 33%. VP caiu 10%.",
+        "descricao": "Onda de renovações de Scharlau, Parobé, Arroio do Sal, Taquari, Santa Maria, Cassino e Cruzeiro — todas migrando para contratos típicos com valores de mercado, reduzindo receita em mais de R$ 200 mil/ano.",
         "pontos": [
-          "Tancredo Neves (Santa Maria): R$ 18.075/mês (típico IPCA, mar/2025-mar/2030)",
-          "Cassino: R$ 17.500/mês (típico IPCA, nov/2025-nov/2030)",
-          "Cruzeiro: R$ 16.495/mês (típico IPCA, set/2025-set/2030)",
-          "<strong class=\"text-red-400\">Receita caiu de R$ 822 mil para R$ 556 mil/mês (-32%)</strong>",
-          "<strong class=\"text-red-400\">Dividendo caiu de R$ 1,12 (jan/25) para R$ 0,75 (dez/25)</strong>",
-          "VP/cota despencou de R$ 78 para R$ 69,81 em dezembro (-10,4%)",
-          "Cotistas caíram de 5.533 para 5.635 (leve variação)"
+          "<strong>Dividendo mensal cai de R$ 1,00 (jul/25) para R$ 0,75 (dez/25)</strong>",
+          "Vacância salta para 26,9%"
         ]
       },
       {
-        "periodo": "2026",
-        "label": "NOVAS RENEGOCIAÇÕES",
-        "cor": "red",
-        "descricao": "Vila Ipiranga e Quaraí formalizados. Belém Novo, General Câmara, Sapiranga e Cruz Alta ainda pendentes.",
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "amber",
+        "descricao": "Cotação em R$ 53,98 (P/VP 0,77), dividendo mensal em R$ 0,60. Vila Ipiranga, Belém Novo, Quaraí e General Câmara formalizam novos contratos típicos com início em 2026.",
         "pontos": [
-          "<strong class=\"text-emerald-400\">Vila Ipiranga: R$ 23.000/mês (típico IPCA, mar/2026-mar/2031)</strong>",
-          "<strong class=\"text-emerald-400\">Quaraí: R$ 13.470/mês (típico IPCA, mai/2026-mai/2031)</strong>",
-          "<strong class=\"text-red-400\">Belém Novo: vence mar/2026 - sem contrato formalizado!</strong>",
-          "General Câmara: vence abr/2026 - em negociação",
-          "Sapiranga (922 m²): vence ago/2026 - em negociação",
-          "Cruz Alta (937 m²): vence out/2026 - em negociação",
-          "Cada renovação deve reduzir mais ~R$ 0,05-0,10/cota/mês"
+          "<strong>Dividendo mensal atual: R$ 0,60</strong>",
+          "Vacância física: 26,9%",
+          "Cotação em mínima histórica"
         ]
       }
     ],
     "resumoTrajetoria": {
-      "titulo": "Resumo da trajetória - EM DETERIORAÇÃO ESTRUTURAL:",
-      "texto": "O BNFS11 teve uma <strong class=\"text-emerald-400\">trajetória positiva nos primeiros 11 anos</strong>, com contratos BTS garantindo aluguéis elevados. A partir de 2024, iniciou-se a <strong class=\"text-red-400\">deterioração estrutural</strong>: das 18 agências, 7 já foram renegociadas para típicos com aluguéis de mercado muito inferiores, 2 foram recém-formalizadas (Vila Ipiranga e Quaraí), 4 estão em renegociação (vencendo em 2026) e 5 estão vagas. A receita caiu 32% em 5 meses e os dividendos recuaram 33% em 2025. O <strong class=\"text-red-400\">VP/cota caiu 10,4% em um único mês</strong> (dez/25), sinalizando ajuste nos laudos de avaliação. A tendência é de <strong class=\"text-red-400\">novas quedas</strong> conforme Sapiranga e Cruz Alta (as maiores agências, 922 e 937 m²) forem renegociadas."
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O BNFS11 <strong class=\"text-emerald-400\">entregou valor estável entre 2013 e 2023</strong>, quando os contratos built-to-suit originais estavam em pleno vigor. A deterioração começa em 2024, com os primeiros não-exercícios de renovação por parte do Banrisul, e acelera em 2025 com a migração generalizada para contratos típicos reprecificados.</p><p>A rentabilidade acumulada desde o IPO ainda é de <strong class=\"text-emerald-400\">+155% contra +157,8% do IFIX</strong>, mas os últimos 12 meses registram queda de 4,8% (vs. IFIX +25,3%) — reflexo direto dos fundamentos em deterioração e da desvalorização do portfólio em R$ 6,1 mi no laudo de dez/2025.</p>"
     },
     "crescimento": [
       {
-        "label": "Desde IPO",
-        "valor": "+167,9%",
-        "detalhe": "Rentabilidade total (set/2012)"
+        "label": "Retorno desde IPO",
+        "valor": "+155,09%",
+        "detalhe": "vs IFIX +157,89%"
       },
       {
-        "label": "Em 2025",
-        "valor": "-13,2%",
-        "detalhe": "Rentabilidade no ano"
+        "label": "Variação cota (IPO vs. hoje)",
+        "valor": "-46%",
+        "detalhe": "R$ 100,00 → R$ 53,98"
       },
       {
-        "label": "Queda Receita",
-        "valor": "-32%",
-        "detalhe": "R$ 822 mil → R$ 556 mil em 5 meses"
-      },
-      {
-        "label": "Queda VP",
-        "valor": "-10,4%",
-        "detalhe": "R$ 77,91 → R$ 69,81 (dez/25)"
+        "label": "Desvio 12 meses",
+        "valor": "-4,78%",
+        "detalhe": "Perdeu 30 p.p. do IFIX"
       }
     ]
   },
   "tese": {
-    "resumo": "O BNFS11 é um <strong class=\"text-blue-400\">FII mono-inquilino de agências Banrisul</strong> no Rio Grande do Sul, em fase de deterioração estrutural avançada. Os contratos built-to-suit vêm sendo substituídos por típicos a valores de mercado: a receita mensal já recuou de <strong class=\"text-red-400\">R$ 822 mil para R$ 556 mil (-32%)</strong> entre ago-dez/2025. Ainda restam <strong class=\"text-amber-400\">4 contratos BTS para renegociar em 2026</strong> (incluindo as maiores agências: Sapiranga 922 m² e Cruz Alta 937 m²). Com <strong class=\"text-red-400\">5 agências vagas (26,9%)</strong>, VP/cota em queda e dividendos despencando, o cenário aponta para rendimentos cada vez menores. O ponto positivo é que <strong class=\"text-emerald-400\">Vila Ipiranga e Quaraí já foram renovados</strong>, confirmando a manutenção do locatário.",
+    "resumo": "<p>O BNFS11 é um <strong class=\"text-amber-400\">caso clássico de FII em transição</strong>: migração de uma estrutura de contratos atípicos (built-to-suit com aluguéis acima de mercado e reajuste IGP-M) para uma estrutura de contratos típicos (valores de mercado com reajuste IPCA), com repasse do IPTU para o locatário. O processo deprimiu a cotação e gerou um P/VP de 0,77, mas o ajuste de receita ainda não terminou.</p><p>A <strong class=\"text-red-400\">tese contrária é forte</strong>: monolocatário público-dependente, concentração geográfica absoluta no RS, vacância física de 26,9% e tendência estrutural de redução de agências bancárias físicas no Brasil. O DY de 18,5% é <strong class=\"text-red-400\">enganoso</strong> — reflete dividendos ainda não reprecificados e uma cotação em mínima histórica.</p>",
     "paraQuem": [
-      "Investidores especulativos que acreditam na <strong class=\"text-amber-400\">venda dos imóveis vagos</strong>",
-      "Quem aceita <strong class=\"text-amber-400\">renda decrescente</strong> e tem tese de que os valores estabilizarão",
-      "Investidores com tese específica sobre <strong class=\"text-amber-400\">agências bancárias no RS</strong>"
+      "Investidores com <strong class=\"text-emerald-400\">alta tolerância a risco</strong> que enxerguem valor no desconto patrimonial (P/VP 0,77) e acreditem na estabilização do Banrisul como locatário",
+      "Apostadores em <strong class=\"text-blue-400\">normalização de receita</strong> após a conclusão da migração de contratos em 2026-2027",
+      "Carteiras que já possuem <strong class=\"text-emerald-400\">diversificação ampla</strong> em FIIs de tijolo/papel e podem alocar posição pequena (≤2%) em caso especial"
     ],
     "naoParaQuem": [
-      "Investidores que buscam <strong class=\"text-red-400\">renda estável e previsível</strong>",
-      "Quem <strong class=\"text-red-400\">não aceita concentração total</strong> em um único locatário e estado",
-      "Perfil <strong class=\"text-red-400\">conservador</strong> que busca dividendos crescentes ou estáveis",
-      "Quem <strong class=\"text-red-400\">não acompanha vencimentos de contratos</strong> de perto"
+      "Investidores <strong class=\"text-red-400\">iniciantes</strong> ou que buscam renda previsível — o dividendo caiu 56% em 18 meses",
+      "Perfis <strong class=\"text-red-400\">conservadores</strong> que não toleram risco de concentração em único locatário e único estado",
+      "Quem busca <strong class=\"text-amber-400\">crescimento de DPS</strong> — a tendência para 2026 é de novas quedas à medida que contratos antigos vencem",
+      "Investidores que confiam em <strong class=\"text-red-400\">DY headline</strong> sem analisar sustentabilidade da distribuição"
     ]
   },
   "dividendos": {
     "chartLabels": [
-      "Jan/25",
-      "Fev/25",
       "Mar/25",
       "Abr/25",
       "Mai/25",
@@ -646,144 +362,127 @@
       "Set/25",
       "Out/25",
       "Nov/25",
-      "Dez/25"
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
     ],
     "chartData": [
-      1.12,
-      0.92,
       1.07,
       0.96,
       0.92,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
       0.85,
-      0.80,
-      0.75
+      0.8,
+      0.75,
+      0.7,
+      0.6
     ],
     "chartCor": "#ef4444",
-    "chartYMin": 0.4,
-    "chartYMax": 1.3,
+    "chartYMin": 0,
+    "chartYMax": 1.5,
     "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 17,13"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 15,97"
+      },
       {
         "ano": "2025",
         "valor": "R$ 11,39"
-      },
-      {
-        "ano": "DY 12M",
-        "valor": "12,1%",
-        "cor": "emerald"
-      },
-      {
-        "ano": "DY Dez/25",
-        "valor": "1,01% a.m.",
-        "cor": "amber"
-      },
-      {
-        "ano": "Tendência",
-        "valor": "Queda forte",
-        "cor": "red"
       }
     ],
     "guidance": {
-      "periodo": "2026",
-      "faixa": "R$ 0,40 - R$ 0,65",
-      "unidade": "estimativa/mês (queda prevista com novas renegociações)"
+      "periodo": "1S2026 (estimativa)",
+      "faixa": "R$ 0,55 a R$ 0,70",
+      "unidade": "por cota / mês"
     },
     "stats": [
       {
-        "label": "Maior 2025",
-        "valor": "R$ 1,12",
-        "cor": "emerald"
-      },
-      {
-        "label": "Menor 2025",
-        "valor": "R$ 0,75"
-      },
-      {
-        "label": "Receita Dez/25",
-        "valor": "R$ 556 mil",
+        "label": "Atual (fev/26)",
+        "valor": "R$ 0,60",
         "cor": "red"
       },
       {
-        "label": "Queda Receita",
-        "valor": "-32%",
-        "cor": "red"
+        "label": "Maior 12m",
+        "valor": "R$ 1,07"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,60"
       },
       {
         "label": "Tendência",
-        "valor": "Queda forte",
+        "valor": "Queda",
         "cor": "red"
       }
     ]
   },
   "valuation": {
     "pvp": {
-      "valor": "1,07",
-      "descricao": "Cota negociada com <span class=\"text-amber-400\">ágio de 7%</span> sobre o VP, após queda brusca do VP de R$ 77,91 para R$ 69,81 em dezembro/2025 (reavaliação de imóveis)",
+      "valor": "0,77",
+      "descricao": "<p>Desconto de <strong class=\"text-emerald-400\">23%</strong> sobre o valor patrimonial. Laudo de dez/2025 (Consult) já reduziu o valor justo dos imóveis em R$ 6,1 mi (-10,7% vs. 2024). Mesmo após a reavaliação, o mercado precifica o portfólio com desconto adicional.</p>",
       "detalhes": [
         {
           "label": "VP/Cota",
-          "valor": "R$ 69,81"
+          "valor": "R$ 69,61"
         },
         {
           "label": "Preço",
-          "valor": "R$ 74,49",
-          "cor": "amber"
-        },
-        {
-          "label": "Queda VP Dez/25",
-          "valor": "-10,4%",
+          "valor": "R$ 53,98",
           "cor": "red"
         }
       ]
     },
     "spread": {
-      "valor": "12,1%",
-      "label": "DY 12 Meses",
+      "valor": "18,52%",
+      "label": "Dividend Yield (12m)",
       "cor": "amber",
-      "descricao": "DY elevado mas enganoso: baseado em dividendos passados que estão em queda acentuada. O resultado por cota de dez/25 foi R$ 0,71 (DY implícito ~11,4% a.a. anualizado). Com novas renegociações, o DY prospectivo tende a cair para 7-9% a.a.",
-      "detalhe": "Resultado dez/25: R$ 0,71/cota | Distribuição: R$ 0,75 (acima do resultado)"
+      "descricao": "<p>DY nominal elevado, porém <strong class=\"text-red-400\">não sustentável</strong>: calcula-se sobre distribuições passadas (R$ 10/ano) que já refletem contratos BTS em extinção. DY prospectivo com dividendo atual de R$ 0,60 é de <strong class=\"text-amber-400\">13,3% a.a.</strong> — ainda premium frente à NTN-B 10 anos (≈7,0% real), mas com riscos significativos de nova queda.</p>"
     },
     "recomendacoes": {
-      "valor": "0,40%",
-      "label": "Taxa Total",
-      "cor": "emerald",
-      "descricao": "Taxa de administração muito competitiva: 0,30% + 0,10% custódia, sem performance. Uma das menores do mercado.",
-      "detalhe": "O baixo custo é o principal ponto positivo do fundo"
+      "valor": "R$ 55 - R$ 72",
+      "label": "Faixa de Preço Justo",
+      "cor": "amber",
+      "descricao": "<p>Faixa estimada por três métricas: <strong class=\"text-blue-400\">(1) Gordon</strong> com DPS R$ 8,40/ano, k=13%, g=-1% a +2% → R$ 56 a R$ 76; <strong class=\"text-blue-400\">(2) VP/cota atual</strong> R$ 69,61 com desconto histórico de 5-15% → R$ 59 a R$ 66; <strong class=\"text-blue-400\">(3) DY target</strong> 12-14% sobre dividendo normalizado R$ 0,65/mês → R$ 56 a R$ 65. Cotação atual está na ponta inferior, mas a margem de segurança pode ser ilusória se o dividendo cair abaixo de R$ 0,60.</p>"
     }
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-red-400\">BNFS11</strong> atravessa seu momento mais crítico desde o IPO em 2012. A receita de aluguéis <strong class=\"text-red-400\">despencou 32% em apenas 5 meses</strong> (de R$ 822 mil em ago/25 para R$ 556 mil em dez/25), refletindo a migração acelerada dos contratos BTS para típicos. O VP/cota sofreu queda de 10,4% em dezembro (de R$ 77,91 para R$ 69,81), provavelmente por reavaliação dos imóveis a valores de mercado.",
-      "Em 2026, o cenário se agrava: <strong class=\"text-red-400\">Belém Novo vence em março sem contrato formalizado</strong>, General Câmara em abril, e as duas maiores agências (Sapiranga 922 m² e Cruz Alta 937 m²) vencem em ago e out/2026. Cada renegociação anterior reduziu entre R$ 0,05 e R$ 0,14/cota/mês. A boa notícia é que <strong class=\"text-emerald-400\">Vila Ipiranga (R$ 23.000/mês) e Quaraí (R$ 13.470/mês) já foram formalizados</strong>, confirmando que o Banrisul pretende manter as operações.",
-      "A receita estável futura (9 contratos típicos conhecidos) soma <strong class=\"text-amber-400\">R$ 179.070/mês</strong>, o que equivale a ~R$ 0,26/cota/mês apenas de aluguel. Mesmo somando os 4 contratos BTS pendentes de renegociação e a receita financeira, o dividendo sustentável tende a ficar na faixa de <strong class=\"text-red-400\">R$ 0,40-0,65/cota/mês</strong>, muito abaixo dos R$ 1,00+ de 2024."
+      "O BNFS11 negocia a R$ 53,98 (abr/2026) — cotação em mínima histórica e 46% abaixo do preço de IPO. O P/VP de 0,77 aparenta descontar demais um portfólio de 18 agências bancárias no Rio Grande do Sul com aluguéis ajustados por IGP-M/IPCA e locatário único (Banrisul). Porém, o preço reflete uma realidade operacional adversa: vacância física de 26,9%, dividendo mensal de R$ 0,60 (menor da série histórica) e sucessivas renovações contratuais a valores reprecificados.",
+      "Do lado fundamental, o processo de migração de contratos built-to-suit para contratos típicos segue em curso: entre 2024 e início de 2026 foram renovadas 8 agências (Santa Maria, Scharlau, Parobé, Arroio do Sal, Taquari, Cassino, Cruzeiro, Vila Ipiranga, Quaraí, Belém Novo, General Câmara), todas com redução de receita. Cinco imóveis seguem vagos (Sepé Tiaraju, Camboim, Vacaria, Campina e Padre Claret) e as agências Sapiranga, Cruz Alta e demais vencem em 2026, com novas renegociações pendentes.",
+      "As projeções para 2026-2027 sugerem estabilização do dividendo em patamar significativamente inferior ao histórico — provavelmente entre R$ 0,55 e R$ 0,75 mensais, dependendo da reocupação dos imóveis vagos e dos termos finais das renovações. A consultoria JEJ Imóveis e a CBRE tentam comercializar os vagos para terceiros, mas o mercado secundário para agências bancárias específicas no interior do RS é limitado. Um catalisador positivo seria a venda de imóveis vagos a valor justo, com distribuição de ganho de capital."
     ],
     "pontosFortes": [
-      "Taxa total muito baixa (0,40% a.a.), sem performance",
-      "Locatário banco público (menor risco de crédito)",
-      "Vila Ipiranga e Quaraí renovados confirmam interesse do Banrisul",
-      "9 contratos típicos IPCA com vencimentos até 2029-2031",
-      "Rentabilidade histórica acumulada de +167,9% desde IPO"
+      "P/VP de 0,77 com desconto relevante sobre laudo de valor justo recente (dez/2025)",
+      "Taxa de administração competitiva (0,3% a.a.) e sem performance",
+      "Cotistas pulverizados (5.414) e presença de 100% nos pregões",
+      "Contratos pós-migração com prazo de 60 meses e reajuste IPCA + IPTU pago pelo locatário (padrão mais saudável)",
+      "Ativos imobiliários segurados e com avaliação independente anual",
+      "DY nominal atrativo (18,5%) mesmo considerando DPS prospectivo mais baixo (~13%)",
+      "Histórico de distribuição de 95%+ do resultado caixa desde o IPO"
     ],
     "pontosDeAtencao": [
-      "Receita caiu 32% em 5 meses (R$ 822K → R$ 556K)",
-      "Dividendos em queda acentuada (-33% em 2025)",
-      "VP/cota caiu 10,4% em dezembro/2025",
-      "Belém Novo vence em março/2026 sem contrato formalizado",
-      "4 contratos BTS pendentes vencendo em 2026",
-      "5 agências vagas (26,9%) sem perspectiva de locação",
-      "100% concentrado em Banrisul e Rio Grande do Sul",
-      "P/VP de 1,07 (ágio sobre VP em queda)",
-      "Distribuição de dez/25 (R$ 0,75) acima do resultado (R$ 0,71)",
-      "Imóveis de uso específico (agência bancária) difíceis de realocar"
+      "Monolocatário Banrisul em 100% das receitas — risco de concentração extremo",
+      "Vacância física de 26,9% sem perspectiva clara de reocupação",
+      "Dividendo mensal caiu 56% em 18 meses (de R$ 1,37 para R$ 0,60)",
+      "100% do portfólio no Rio Grande do Sul — exposição a risco climático (enchentes 2024) e macrorregional",
+      "Tendência estrutural de redução de agências bancárias físicas no Brasil",
+      "Laudo dez/2025 reduziu valor justo em R$ 6,1 mi (-10,7%) vs. 2024",
+      "Liquidez diária baixa (R$ 74 mil) dificulta negociações relevantes",
+      "Passivos trabalhistas já provisionados e ainda em discussão",
+      "Fundo com gestão tipicamente passiva — sem previsão de reciclagem ativa do portfólio"
     ],
-    "conclusaoFinal": "O BNFS11 está em <strong class=\"text-red-400\">deterioração estrutural acelerada</strong>: receita despencando, VP em queda, dividendos sendo reduzidos a cada mês, e ainda restam 4 contratos BTS para renegociar em 2026 (incluindo as duas maiores agências). O dividendo sustentável prospectivo deve ficar entre R$ 0,40-0,65/cota/mês, o que resultaria em DY de 6,4-10,5% a.a. a preços atuais - insuficiente para compensar os riscos de concentração total, vacância de 26,9% e imóveis de uso específico. Recomendação de <strong class=\"text-red-400\">VENDA</strong>. A única ressalva positiva é a formalização dos contratos de Vila Ipiranga e Quaraí, que demonstra a disposição do Banrisul em permanecer como locatário."
+    "conclusaoFinal": "Para o investidor que entende os riscos envolvidos, o BNFS11 representa uma aposta de valor com assimetria clara: a dor da reprecificação já está no preço (cotação despencou 46% desde 2023), mas a previsibilidade da renda ainda depende de capítulos futuros das renegociações. Recomendação de CAUTELA com viés de MANTER apenas para investidor ciente dos riscos — não é ativo para quem busca renda recorrente previsível. Investidores sem posição atual devem aguardar sinais concretos de estabilização do DPS (idealmente após 2S2026, quando a maioria dos contratos remanescentes terá sido renegociada) ou catalisadores como venda de imóveis vagos. Quem já detém posição pode considerar manutenção pelo desconto patrimonial e pelo yield ainda competitivo, mas evitar ampliar exposição enquanto a migração contratual não concluir. O fundo é inadequado como ativo core de carteira de renda e só cabe em alocação tática pequena (≤2% do portfólio de FIIs)."
   },
   "footer": {
-    "dataAnalise": "16/03/2026",
-    "totalDocumentos": 376,
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 321,
     "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }
 }

@@ -1,561 +1,413 @@
 {
   "meta": {
     "ticker": "CXCO11",
-    "nome": "Caixa Corporativo FII",
-    "segmento": "Tijolo - Lajes Corporativas",
+    "nome": "Caixa Imóveis Corporativos Fundo de Investimento Imobiliário",
+    "nomeExtra": "(FII CEF Corp)",
+    "segmento": "Lajes Corporativas (Sale and Leaseback - Caixa Econômica Federal)",
     "badges": [
-      "Sale and Leaseback",
-      "100% Caixa Economica",
-      "10 Edificios",
-      "Revisao de Alugueis em Curso"
+      "Locatário único soberano (CEF)",
+      "Vacância 0% | 10 imóveis",
+      "P/VP 0,80 com revisional em curso"
     ],
-    "sentimento": "otimista",
-    "dataAnalise": "16/03/2026",
-    "totalDocumentos": 464
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 145
   },
   "seo": {
-    "title": "CXCO11 - Analise Completa | Caixa Corporativo FII",
-    "description": "Analise completa do FII CXCO11 baseada em 464 documentos oficiais. Fundo de lajes corporativas com 10 edificios locados para Caixa Economica Federal, DY 12,8%, P/VP 0,70. Revisao de alugueis em curso, projecao R$ 0,75/cota para 2026.",
-    "keywords": "CXCO11, Caixa Corporativo, FII lajes corporativas, analise CXCO11, dividend yield CXCO11, Caixa Economica Federal, sale leaseback, revisao alugueis",
-    "ogTitle": "CXCO11 - Analise Completa do FII Caixa Corporativo 2026",
-    "ogDescription": "Analise detalhada do CXCO11: 10 edificios corporativos da Caixa em 6 estados, DY 12,8%, P/VP 0,70 com 30% desconto. Cap rate 10,07%. Revisao de alugueis em curso com CBRE. Projecao R$ 0,75/cota 2026.",
-    "twitterTitle": "CXCO11 - Analise Completa | Caixa Corporativo FII",
-    "twitterDescription": "Analise do CXCO11: 10 edificios Caixa em 6 estados, DY 12,8%, P/VP 0,70. Patrimonio R$ 378 Mi, ABL 91.730 m2, revisao de alugueis iniciada."
+    "title": "CXCO11 - Análise Completa | FII Caixa Imóveis Corporativos",
+    "description": "Análise do CXCO11: FII monoinquilino Caixa Econômica Federal, 10 agências, DY 11,59%, P/VP 0,80, contratos atípicos até 2030 e processo revisional em andamento.",
+    "keywords": "CXCO11, Caixa Imóveis Corporativos, Patagônia Capital, Vórtx, FII lajes corporativas, sale and leaseback, Caixa Econômica Federal, dividend yield, revisional",
+    "ogTitle": "CXCO11 - FII Caixa Imóveis Corporativos | Análise Completa",
+    "ogDescription": "Dossiê do CXCO11: portfólio 100% locado à Caixa, DY 11,59%, P/VP 0,80, revisional de aluguéis em curso e obras de retrofit em fase final.",
+    "twitterTitle": "CXCO11 - Análise Completa do FII Caixa Imóveis Corporativos",
+    "twitterDescription": "FII monoinquilino Caixa, 10 agências, vacância zero, contratos até 2030 e potencial revisional de até R$ 65,51/m² vs R$ 35,32/m² atual."
   },
   "indicadores": {
-    "cotacao": 67.97,
-    "cotacaoData": "30/12/2025",
-    "pvp": 0.7,
-    "pvpDesconto": "30% de desconto",
-    "dividendYield": 12.76,
+    "cotacao": 75.98,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.8,
+    "pvpDesconto": "20% de desconto",
+    "dividendYield": 11.59,
     "dividendoMensal": 0.75,
-    "dividendoAnual": 8.67,
-    "patrimonioLiquido": "R$ 378 Mi",
-    "vpCota": 96.3,
-    "cotistas": 12242,
-    "cotistasDetalhe": "12.242 cotistas",
-    "ocupacao": 100,
-    "numImoveis": 10,
-    "ablTotal": "91.730",
-    "numEstados": 6
+    "dividendoAnual": 9.0,
+    "patrimonioLiquido": "R$ 374,4 Mi",
+    "vpCota": 95.41,
+    "cotistas": 12253,
+    "ocupacao": 100.0,
+    "numImoveis": 10
   },
   "recomendacao": {
-    "nota": 7.5,
-    "veredicto": "COMPRA",
-    "cor": "emerald",
-    "resumo": "O <strong class=\"text-amber-400\">CXCO11</strong> possui um portfolio de <strong class=\"text-emerald-400\">10 edificios corporativos</strong> locados exclusivamente para a <strong class=\"text-emerald-400\">Caixa Economica Federal</strong> em contrato sale and leaseback ate dezembro/2030. O P/VP de 0,70 oferece <strong class=\"text-emerald-400\">30% de desconto</strong> expressivo, com DY de 12,8% e cap rate medio de 10,07%. A <strong class=\"text-emerald-400\">taxa de administracao de 0,25%</strong> e uma das mais baixas do mercado. A <strong class=\"text-emerald-400\">revisao dos alugueis</strong> foi iniciada em dezembro/2025 com a CBRE e pode resultar em aumento das receitas. A projecao de R$ 0,75/cota para 2026 e a contratacao de novo laudo pela Colliers indicam gestao proativa. A valorizacao de 33,96% em 2025 confirma a tese de desconto excessivo."
+    "nota": 6.2,
+    "veredicto": null,
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">CXCO11</strong> é um FII de lajes corporativas com perfil singular: portfólio de <strong class=\"text-blue-400\">10 agências</strong> integralmente locadas à <strong class=\"text-blue-400\">Caixa Econômica Federal</strong> em modalidade Sale and Leaseback, com contratos atípicos vencendo em <strong class=\"text-amber-400\">25/12/2030</strong>. A estrutura combina risco soberano de crédito (locatário único) com vacância física de <strong class=\"text-emerald-400\">0%</strong> e cap rate médio de <strong class=\"text-emerald-400\">10,17% a.a.</strong> sobre os imóveis avaliados em R$ 367,7 milhões.</p><p>Negociado a <strong class=\"text-emerald-400\">P/VP de 0,80</strong> (R$ 75,98 vs VP R$ 95,41) e <strong class=\"text-emerald-400\">DY de 11,59% a.a.</strong>, o fundo se beneficia de dois catalisadores em curso: (i) <strong class=\"text-emerald-400\">processo revisional</strong> aberto em dez/2025 com estudo CBRE indicando aluguel potencial de R$ 65,51/m² versus R$ 35,32/m² praticado; (ii) conclusão progressiva das <strong class=\"text-amber-400\">obras de retrofit</strong> previstas em prospecto. Em 12 meses a cota se valorizou <strong class=\"text-emerald-400\">+43,94%</strong>, recuperando-se da forte queda de 2024.</p><p>Os pontos de atenção são relevantes: <strong class=\"text-amber-400\">concentração total no risco Caixa</strong>, <strong class=\"text-red-400\">contrato vencendo em 4,7 anos</strong> com opção de compra do locatário, <strong class=\"text-amber-400\">orçamento das obras 2,5x acima do prospecto</strong> consumindo caixa, baixa liquidez (<strong class=\"text-amber-400\">R$ 163 mil/dia</strong>) e histórico de cortes severos de dividendos em 2024.</p>"
   },
   "quickStats": [
     {
-      "label": "Patrimonio",
-      "valor": "R$ 378 Mi",
-      "detalhe": "VP/cota: R$ 96,30",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 96,30</span>",
+      "label": "Patrimônio",
+      "valor": "R$ 374,4 Mi",
+      "detalhe": "VP/cota: R$ 95,41",
       "icone": "building",
       "corIcone": "blue"
     },
     {
       "label": "Rendimento",
       "valor": "R$ 0,75",
-      "valorSufixo": "/mes (proj. 2026)",
-      "detalhe": "R$ 8,67/ano (2025) | DY 12,8%",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 9,00/ano | DY 11,59%",
       "icone": "money",
-      "corIcone": "emerald",
-      "corValor": "emerald"
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "100%",
+      "detalhe": "Vacância física 0% | 1 locatário",
+      "icone": "building",
+      "corIcone": "emerald"
     },
     {
       "label": "Cotistas",
-      "valor": "12.242",
-      "detalhe": "91.730 m2 ABL | 10 imoveis | 6 estados",
+      "valor": "12.253",
+      "detalhe": "3,92 mi cotas | liquidez R$ 163 mil/dia",
       "icone": "users",
-      "corIcone": "purple"
-    },
-    {
-      "label": "Cap Rate",
-      "valor": "10,07%",
-      "detalhe": "Media dos 10 edificios",
-      "detalheIcone": "arrowUp",
-      "icone": "chart",
-      "corIcone": "amber",
-      "corValor": "emerald"
+      "corIcone": "amber"
     }
   ],
   "pontosAtencao": [
     {
-      "titulo": "Concentracao 100% Caixa",
-      "descricao": "Todos os 10 edificios sao locados exclusivamente para a Caixa Economica Federal. A concentracao total em unico locatario e risco relevante, mitigado pelo fato de ser empresa publica federal com rescisao antecipada prevendo indenizacao pela Selic.",
+      "titulo": "Risco de monoinquilino (concentração total)",
+      "descricao": "100% da receita vem de um único locatário (Caixa Econômica Federal). Apesar do risco soberano, qualquer mudança estratégica do banco impactaria diretamente o fundo. Os 10 imóveis são agências/sedes administrativas exclusivas da CEF.",
       "severidade": "orange"
     },
     {
-      "titulo": "Vencimento em Dezembro/2030",
-      "descricao": "O contrato de locacao vence em dezembro/2030 (menos de 5 anos). A Caixa possui opcao de compra ao valor de mercado. Ha incerteza sobre renovacao ou devolucao dos imoveis, mas a revisao de alugueis em curso pode antecipar negociacoes.",
-      "severidade": "orange"
+      "titulo": "Vencimento contratual em dez/2030 com opção de compra",
+      "descricao": "Os contratos Sale and Leaseback vencem em <strong class='text-red-400'>25/12/2030</strong> (4,7 anos), e a Caixa possui opção de compra dos imóveis ao término. Sem renovação ou recompra, o fundo enfrenta cenário de incerteza estrutural.",
+      "severidade": "red"
     },
     {
-      "titulo": "Revisao de Alugueis - Risco Bilateral",
-      "descricao": "A revisao dos alugueis iniciada em dez/2025 pela CBRE pode resultar tanto em aumento quanto em reducao dos valores. O fato relevante de fev/2025 mostrou desvalorizacao de 6,18% no patrimonio na reavaliacao de dez/2024, indicando pressao nos valores dos imoveis.",
+      "titulo": "Obras com custo 2,5x acima do prospecto",
+      "descricao": "Orçamento original do prospecto era R$ 13,1 milhões para 7 obras. Total de contratos já assinados ultrapassa <strong class='text-amber-400'>R$ 7,1 milhões</strong> (apenas para 4 obras), consumindo parcela relevante do caixa e pressionando dividendos. Saldo remanescente próximo de R$ 461 mil em fev/2026.",
       "severidade": "amber"
     },
     {
-      "titulo": "Obras em Andamento e Pendentes",
-      "descricao": "Obras em execucao no Ed. Filial Brasilia (R$ 646 mil pendente) e Ed. Horto Florestal (R$ 196 mil pendente). Cascavel e a proxima prioridade com R$ 1,1 Mi estimados (2027-2028). Total de contratos de obras ja alcanca R$ 6,65 milhoes.",
+      "titulo": "Liquidez restrita no mercado secundário",
+      "descricao": "Volume médio diário de apenas <strong class='text-amber-400'>R$ 163 mil</strong> e giro mensal entre 0,8% e 2% do valor de mercado. Pouco mais de 12 mil cotistas. Operações de saída relevantes podem pressionar a cota.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Histórico de corte severo de dividendos em 2024",
+      "descricao": "Distribuições caíram de R$ 0,76 (jan/24) para <strong class='text-red-400'>R$ 0,49 (out/24)</strong> devido a despesas extraordinárias com obras, gerando forte desvalorização da cota (de R$ 82 para R$ 56 no ano). A nova gestão (Patagônia Capital) restabeleceu patamar de R$ 0,75 a partir de set/2025.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Reavaliação patrimonial negativa em 2024",
+      "descricao": "Laudos de 31/12/2024 reduziram valor dos imóveis em <strong class='text-red-400'>6,25%</strong> (R$ -24,7 mi, ou R$ 6,30/cota), reflexo de Selic elevada na taxa de desconto. Em 2025 nova queda de 0,95%. Edifício Filial (37% da receita) sofreu maior depreciação relativa (-4,59%).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Aluguel praticado abaixo do mercado",
+      "descricao": "Estudo CBRE de fev/2026 aponta aluguel atual médio de <strong class='text-amber-400'>R$ 35,32/m²</strong> contra potencial de mercado de <strong class='text-emerald-400'>R$ 65,51/m²</strong>. Embora seja oportunidade via revisional, evidencia que o fundo opera com receita defasada e a captura desse upside depende de negociação com a Caixa (locatário com poder relevante).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca recente de gestor e assimetria de informação anterior",
+      "descricao": "A Patagônia Capital assumiu a gestão de valores mobiliários em <strong class='text-amber-400'>agosto de 2024</strong>, substituindo a Vórtx. Reconheceu publicamente a falta histórica de relatórios gerenciais e transparência inadequada no período anterior, o que pesou sobre a cota em 2024.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Reembolso pendente de despesas com enchente em Porto Alegre",
+      "descricao": "Edifício Querência (18% da receita) sofreu danos severos nas enchentes de mai/2024. Despesas de limpeza/retrofit (R$ 1,1 mi) seguem em negociação com Caixa para reembolso via seguro patrimonial. Imóvel já está 100% operacional.",
       "severidade": "amber"
     }
   ],
   "gestora": {
-    "nome": "Patagonia Capital + Vortx",
-    "nota": 7,
-    "notaLabel": "BOM",
+    "nome": "Patagônia Capital Gestora de Recursos Ltda.",
+    "nota": 6.5,
+    "notaLabel": "REGULAR EM CONSTRUÇÃO",
     "stats": [
       {
-        "label": "Inicio do Fundo",
-        "valor": "Set/2020"
+        "label": "Início na gestão CXCO11",
+        "valor": "Ago/2024"
       },
       {
-        "label": "Patrimonio",
-        "valor": "R$ 378 Mi"
-      },
-      {
-        "label": "Valorizacao 2025",
-        "valor": "+33,96%",
-        "cor": "emerald"
+        "label": "Sede",
+        "valor": "Ribeirão Preto/SP"
       }
     ],
-    "resumo": "A <strong class=\"text-blue-400\">Patagonia Capital</strong> (gestora de VM) e a <strong class=\"text-blue-400\">Vortx</strong> (gestora imobiliaria e administradora) apresentam gestao cada vez mais proativa. Iniciaram o processo de <strong class=\"text-emerald-400\">revisao dos alugueis</strong> em dez/2025 (CBRE contratada), contrataram novo laudo de avaliacao pela Colliers, contrataram seguro de R$ 137 Mi, aprovaram visitas anuais a todos os imoveis pela Puma Engenharia e adaptaram o regulamento a RCVM 175 em jun/2025. A projecao de R$ 0,75/cota para 2026 demonstra confianca na gestao.",
-    "link": "../../gestores/patagonia-capital/"
+    "resumo": "<p>A <strong class='text-blue-400'>Patagônia Capital</strong> assumiu a gestão de valores mobiliários do CXCO11 em <strong class='text-blue-400'>agosto de 2024</strong>, substituindo a Vórtx DTVM. A gestão de valores imobiliários e a administração permaneceram com a Vórtx. A nova gestora implementou comunicação periódica via relatórios gerenciais, retomou o acompanhamento ativo das obras, contratou seguro patrimonial de R$ 137 milhões com a Generali, formalizou o processo revisional em dez/2025 (assessoria CBRE e jurídica i2a) e estabilizou a distribuição em R$ 0,75/cota a partir de set/2025.</p><p>O track record curto na gestão deste fundo limita avaliação histórica, mas a postura de <strong class='text-emerald-400'>maior transparência</strong> e o avanço operacional (entrega de duas obras, retomada de Brasília, planejamento Cascavel) representam evolução vs. período anterior. A taxa total de 0,25% a.a. é <strong class='text-emerald-400'>uma das mais baixas do mercado</strong>.</p>",
+    "link": null
   },
   "taxas": {
-    "subtitulo": "Entre as mais baixas do mercado",
+    "subtitulo": "Taxas extremamente competitivas, entre as mais baixas do segmento de FIIs",
     "glowCor": "green",
     "itens": [
       {
-        "label": "Taxa de Administracao",
-        "valor": "0,125%",
-        "detalhe": "Vortx DTVM",
+        "label": "Taxa de Administração",
+        "valor": "0,125% a.a.",
+        "detalhe": "Sobre PL ou valor de mercado",
         "corBorda": "emerald"
       },
       {
-        "label": "Taxa de Gestao",
-        "valor": "0,125%",
-        "detalhe": "Patagonia Capital",
+        "label": "Taxa de Gestão",
+        "valor": "0,125% a.a.",
+        "detalhe": "Patagônia Capital",
         "corBorda": "emerald"
       },
       {
         "label": "Taxa Total",
-        "valor": "0,25% a.a.",
-        "detalhe": "Uma das mais baixas do mercado",
+        "valor": "0,250% a.a.",
+        "detalhe": "Não há taxa de performance",
         "corBorda": "emerald"
-      }
-    ],
-    "comparativoTitulo": "Comparativo com FIIs Corporativos",
-    "comparativo": [
-      {
-        "ticker": "CXCO11",
-        "taxa": "0,25%",
-        "perf": "Sem performance",
-        "destaque": true
-      },
-      {
-        "ticker": "CXAG11",
-        "taxa": "0,58%",
-        "perf": "Sem performance"
-      },
-      {
-        "ticker": "BRCR11",
-        "taxa": "0,80%",
-        "perf": "+20% perf."
-      },
-      {
-        "ticker": "PVBI11",
-        "taxa": "0,75%",
-        "perf": "+20% perf."
       }
     ],
     "detalhes": [
       {
         "label": "Administrador",
-        "valor": "Vortx DTVM"
+        "valor": "Vórtx DTVM Ltda."
       },
       {
-        "label": "Gestor VM",
-        "valor": "Patagonia Capital"
+        "label": "Gestor de Valores Mobiliários",
+        "valor": "Patagônia Capital (desde 08/2024)"
       },
       {
-        "label": "Gestor Imob.",
-        "valor": "Vortx"
+        "label": "Gestor de Valores Imobiliários",
+        "valor": "Vórtx DTVM"
       },
       {
-        "label": "Auditor",
-        "valor": "Next Auditores"
+        "label": "Custodiante",
+        "valor": "Vórtx DTVM"
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "Next Auditores Independentes"
+      },
+      {
+        "label": "Início das Atividades",
+        "valor": "14/09/2020"
+      },
+      {
+        "label": "IPO",
+        "valor": "31/03/2021 (R$ 101,99/cota)"
       }
     ]
   },
   "portfolio": {
     "stats": [
       {
-        "label": "Edificios",
+        "label": "Imóveis",
         "valor": "10"
       },
       {
         "label": "ABL Total",
-        "valor": "91.730 m2"
+        "valor": "91.730 m²"
       },
       {
-        "label": "Ocupacao",
-        "valor": "100%",
+        "label": "Vacância Física",
+        "valor": "0%",
         "cor": "emerald"
       },
       {
-        "label": "Cap Rate",
-        "valor": "10,07%",
+        "label": "Prazo Remanescente",
+        "valor": "58 meses (dez/2030)"
+      },
+      {
+        "label": "Cap Rate Médio",
+        "valor": "10,17% a.a.",
         "cor": "emerald"
+      },
+      {
+        "label": "Aluguel Médio",
+        "valor": "R$ 35,32/m²"
       }
     ],
     "tipologiaChart": {
       "labels": [
-        "Brasilia/DF",
-        "Porto Alegre/RS",
-        "Curitiba/PR",
-        "Belo Horizonte/MG",
-        "Cuiaba/MT",
-        "Outros"
+        "Ed. Caixa Brasília",
+        "Ed. Querência (POA)",
+        "Ed. Carlos Gomes (CWB)",
+        "Ed. Sede Contorno (BH)",
+        "Demais 6 imóveis"
       ],
       "data": [
         37,
-        25,
         18,
         13,
-        5,
-        2
+        9,
+        23
       ],
       "cores": [
         "#3b82f6",
+        "#8b5cf6",
         "#10b981",
         "#f59e0b",
-        "#8b5cf6",
-        "#06b6d4",
         "#6b7280"
-      ]
-    },
-    "locatarioChart": {
-      "labels": [
-        "Caixa Economica Federal"
-      ],
-      "data": [
-        100
-      ],
-      "cores": [
-        "#3b82f6"
       ]
     },
     "locatarios": [
       {
-        "nome": "Caixa Economica Federal",
-        "setor": "Bancario/Financeiro",
-        "receita": "100%",
-        "rating": "Empresa Publica Federal",
-        "ratingCor": "emerald",
-        "risco": "Concentracao",
-        "riscoCor": "orange"
+        "nome": "Caixa Econômica Federal",
+        "setor": "Bancário público (estatal federal)",
+        "receita": "100% receita",
+        "rating": "Até 25/12/2030",
+        "ratingCor": "blue",
+        "risco": "Soberano (concentrado)",
+        "riscoCor": "amber"
       }
     ],
-    "riscoResumo": [
-      {
-        "label": "Ed. Caixa Brasilia (37%)",
-        "valor": 37,
-        "cor": "blue"
-      },
-      {
-        "label": "Ed. Querencia POA (25%)",
-        "valor": 25,
-        "cor": "emerald"
-      },
-      {
-        "label": "Ed. Carlos Gomes CWB (18%)",
-        "valor": 18,
-        "cor": "amber"
-      },
-      {
-        "label": "Demais 7 edificios (20%)",
-        "valor": 20,
-        "cor": "purple"
-      }
-    ],
-    "riscoNota": "Portfolio de 10 edificios corporativos em 6 estados com ABL total de 91.730 m2, avaliados em R$ 371,2 milhoes (laudo de avaliacao). O cap rate medio e de 10,07% a.a. O maior ativo e o Ed. Caixa em Brasilia (37% da receita, R$ 137,4 Mi), seguido pelo Ed. Querencia em Porto Alegre (25%, R$ 68,7 Mi). Todos os imoveis estao 100% locados para a Caixa com contrato IPCA ate dezembro/2030. Em abril/2025, os alugueis tiveram correcao positiva de 5,48% pelo IPCA. Em dezembro/2025, a Colliers foi contratada para elaborar novo laudo de avaliacao e a CBRE para assessorar na revisao dos alugueis."
-  },
-  "ativos": {
-    "subtitulo": "10 edificios | 91.730 m2 ABL | 6 estados | 100% Caixa",
-    "legendaRisco": [
-      {
-        "label": "Baixo - Cap Rate > 10%",
-        "cor": "emerald"
-      },
-      {
-        "label": "Moderado - Cap Rate 9-10%",
-        "cor": "blue"
-      },
-      {
-        "label": "Atencao - Cap Rate < 9%",
-        "cor": "amber"
-      }
-    ],
-    "grupos": [
-      {
-        "nome": "Edificios com Cap Rate acima de 10%",
-        "cor": "emerald",
-        "itens": [
-          {
-            "nome": "Ed. Caixa",
-            "cidade": "Brasilia/DF",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 16703,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Maior Ativo",
-            "riscoCor": "blue",
-            "capRate": "10,14%",
-            "valorMercado": "R$ 137,4 Mi"
-          },
-          {
-            "nome": "Ed. Novo Hamburgo",
-            "cidade": "Novo Hamburgo/RS",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 4782,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "capRate": "10,28%",
-            "valorMercado": "R$ 10,3 Mi"
-          },
-          {
-            "nome": "Ed. Cascavel",
-            "cidade": "Cascavel/PR",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 5106,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Prox. Obra",
-            "riscoCor": "amber",
-            "capRate": "10,26%",
-            "valorMercado": "R$ 18,6 Mi"
-          },
-          {
-            "nome": "Ed. Sede Contorno",
-            "cidade": "Belo Horizonte/MG",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 3746,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "capRate": "10,23%",
-            "valorMercado": "R$ 32,9 Mi"
-          },
-          {
-            "nome": "Ed. Sede Mato Grosso",
-            "cidade": "Cuiaba/MT",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 5570,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Obra Concluida",
-            "riscoCor": "emerald",
-            "capRate": "10,07%",
-            "valorMercado": "R$ 16,9 Mi"
-          },
-          {
-            "nome": "Ed. Blumenau",
-            "cidade": "Blumenau/SC",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 5793,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "capRate": "10,03%",
-            "valorMercado": "R$ 14,9 Mi"
-          }
-        ]
-      },
-      {
-        "nome": "Edificios com Cap Rate entre 9-10%",
-        "cor": "blue",
-        "itens": [
-          {
-            "nome": "Ed. Querencia",
-            "cidade": "Porto Alegre/RS",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 22544,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "2o Maior",
-            "riscoCor": "blue",
-            "capRate": "9,96%",
-            "valorMercado": "R$ 68,7 Mi"
-          },
-          {
-            "nome": "Ed. Carlos Gomes",
-            "cidade": "Curitiba/PR",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 15779,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Baixo",
-            "riscoCor": "emerald",
-            "capRate": "9,95%",
-            "valorMercado": "R$ 48,8 Mi"
-          },
-          {
-            "nome": "Ed. CICOB",
-            "cidade": "Caxias do Sul/RS",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 4136,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Obra Concluida",
-            "riscoCor": "emerald",
-            "capRate": "9,74%",
-            "valorMercado": "R$ 11,6 Mi"
-          },
-          {
-            "nome": "Ed. Horto Florestal",
-            "cidade": "Belo Horizonte/MG",
-            "tipo": "Corporativo",
-            "tipoCor": "purple",
-            "abl": 7572,
-            "locatario": "Caixa",
-            "vencimento": "12/2030",
-            "risco": "Em Obra",
-            "riscoCor": "amber",
-            "capRate": "9,83%",
-            "valorMercado": "R$ 11,1 Mi"
-          }
-        ]
-      }
-    ]
+    "riscoNota": "<p>O portfólio combina <strong class='text-emerald-400'>vacância zero</strong> e <strong class='text-emerald-400'>risco soberano de crédito</strong> com <strong class='text-amber-400'>concentração total em um único locatário</strong>. Distribuição geográfica em 6 estados (RS 37%, DF 18%, MG 12%, PR 24%, MT 5%, SC 4%). O Edifício Filial em Brasília concentra 37% da receita e o Edifício Querência em Porto Alegre 18%. Contratos atípicos Sale and Leaseback assinados em dez/2020, vigência de 10 anos com correção pelo IPCA, multa rescisória pelo VP a Selic do período remanescente e opção de compra pelo locatário ao término.</p>"
   },
   "timeline": {
-    "subtitulo": "Sale and leaseback de edificios corporativos da Caixa",
+    "subtitulo": "Trajetória desde IPO em 2021: tese atípica que enfrentou ciclo adverso de juros e atraso nas obras",
     "periodos": [
       {
-        "periodo": "Set/2020",
-        "label": "CONSTITUICAO",
+        "periodo": "23/12/2020",
+        "label": "INTEGRALIZAÇÃO",
         "cor": "blue",
-        "descricao": "Constituicao do FII Caixa Imoveis Corporativos. Em dezembro/2020, a Caixa integraliza 10 edificios no fundo pelo patrimonio inicial de R$ 392 Mi.",
-        "pontos": [
-          "CNPJ: 38.658.984/0001-75",
-          "10 edificios corporativos integrados",
-          "Contrato sale and leaseback de 10 anos",
-          "Correcao anual pelo IPCA"
-        ]
+        "descricao": "Caixa Econômica Federal integraliza no fundo 10 agências mediante celebração de contrato Sale and Leaseback de 10 anos.",
+        "pontos": []
       },
       {
-        "periodo": "Mar/2021",
+        "periodo": "31/03/2021",
         "label": "IPO",
+        "cor": "blue",
+        "descricao": "Oferta pública de distribuição secundária da totalidade das cotas da Caixa, a R$ 101,99/cota, totalizando R$ 403,8 milhões. ICVM 400.",
+        "pontos": []
+      },
+      {
+        "periodo": "2022",
+        "label": "PRIMEIRO ANO COMPLETO",
         "cor": "emerald",
-        "descricao": "Oferta Publica de Distribuicao Secundaria a R$ 101,99/cota via ICVM 400.",
+        "descricao": "DPS médio de R$ 0,72/mês, DY ~10% a.a. Receita anual de R$ 36,2 mi. Reavaliação patrimonial positiva de 2,79%.",
         "pontos": [
-          "Preco IPO: R$ 101,99/cota",
-          "3.924.500 cotas emitidas",
-          "Oferta via ICVM 400"
+          "<strong>Cota oscilou entre R$ 70 e R$ 81</strong>",
+          "<strong>Distribuição total: R$ 8,46/cota</strong>"
         ]
       },
       {
-        "periodo": "2021-2024",
-        "label": "OPERACAO E OBRAS",
-        "cor": "purple",
-        "descricao": "Periodo de operacao com distribuicoes regulares e execucao das obras de benfeitoria previstas em prospecto.",
-        "pontos": [
-          "Obras em CICOB (concluida), Cuiaba (concluida), Querencia (concluida)",
-          "Obras em Filial Brasilia e Horto Florestal em andamento",
-          "Reavaliacao dez/2022: +3,56% no PL",
-          "Reavaliacao dez/2024: -6,18% no PL (Compass Avaliacoes)"
-        ]
-      },
-      {
-        "periodo": "2025",
-        "label": "VALORIZACAO",
+        "periodo": "2023",
+        "label": "AUGE DA COTA",
         "cor": "emerald",
-        "descricao": "Forte valorizacao de 33,96% em 2025 com elevacao das distribuicoes e inicio da revisao dos alugueis.",
+        "descricao": "Cota atinge máxima de R$ 85,44 em jul/23. Reavaliação patrimonial positiva de R$ 9,98 mi. DPS estável em R$ 0,74.",
         "pontos": [
-          "<strong class=\"text-emerald-400\">Valorizacao de 33,96% em 2025</strong>",
-          "Elevacao distribuicao de R$ 0,66 para R$ 0,70/cota (set/25)",
-          "Correcao IPCA +5,48% nos alugueis (abril/2025)",
-          "Contratacao de seguro R$ 137 Mi",
-          "Adaptacao regulamento a RCVM 175 (jun/2025)"
+          "<strong>Receita anual de R$ 38,0 mi</strong>",
+          "<strong>Distribuição total: R$ 8,84/cota</strong>"
         ]
       },
       {
-        "periodo": "Dez/2025-2026",
-        "label": "REVISAO DE ALUGUEIS",
+        "periodo": "Mai/2024",
+        "label": "ENCHENTE EM POA",
         "cor": "amber",
-        "descricao": "Inicio do processo de revisao dos alugueis e novo laudo de avaliacao patrimonial.",
+        "descricao": "Edifício Querência (18% da receita) é severamente atingido pelas enchentes do Rio Grande do Sul. Início das obras emergenciais de limpeza e recuperação.",
+        "pontos": []
+      },
+      {
+        "periodo": "Ago/2024",
+        "label": "TROCA DE GESTÃO",
+        "cor": "amber",
+        "descricao": "Patagônia Capital assume a gestão de valores mobiliários, substituindo a Vórtx. Inicia retomada da comunicação com cotistas via relatórios gerenciais.",
         "pontos": [
-          "<strong class=\"text-emerald-400\">Revisao de alugueis iniciada em 30/12/2025</strong>",
-          "CBRE contratada para assessoria na revisao",
-          "Colliers contratada para novo laudo de avaliacao (entrega jan/2026)",
-          "Escritorio i2a contratado para assessoria juridica",
-          "Projecao de R$ 0,75/cota para 2026",
-          "Cascavel e proxima obra priorizada"
+          "<strong>Patrimônio reavaliado em -6,25% no fim do ano</strong>"
+        ]
+      },
+      {
+        "periodo": "Out-Dez/2024",
+        "label": "CRISE DE DIVIDENDOS",
+        "cor": "red",
+        "descricao": "Distribuição despenca para R$ 0,49/cota em outubro para preservar caixa frente a obras. Cota cai de R$ 70 para R$ 56 em 3 meses.",
+        "pontos": [
+          "<strong>Volume atípico de R$ 5,5 mi em nov/24</strong>",
+          "<strong>Mínima do ciclo: R$ 55,93</strong>"
+        ]
+      },
+      {
+        "periodo": "Mar-Abr/2025",
+        "label": "ENTREGA DE OBRAS",
+        "cor": "emerald",
+        "descricao": "Conclusão das obras do Edifício CICOB (Caxias do Sul) e do Edifício Cuiabá. Reajuste IPCA de 5,48% nos aluguéis em abril.",
+        "pontos": [
+          "<strong>Custo final 2,5x acima do prospecto original</strong>"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "ESTABILIZAÇÃO DPS",
+        "cor": "emerald",
+        "descricao": "Distribuição é elevada para R$ 0,70/cota e na sequência para R$ 0,75/cota, sinalizando previsibilidade ao cotista.",
+        "pontos": []
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "ABERTURA REVISIONAL",
+        "cor": "blue",
+        "descricao": "Fundo notifica formalmente a Caixa em 30/12 dando início ao processo revisional dos aluguéis (5º ano contratual). CBRE contratada para estudo de mercado.",
+        "pontos": [
+          "<strong>Distribuição extra de R$ 0,91 fechando o semestre</strong>"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ESTUDO CBRE",
+        "cor": "blue",
+        "descricao": "Estudo CBRE indica defasagem: aluguel praticado de R$ 35,32/m² vs potencial de R$ 65,51/m² no portfólio. Caixa reconhece valores abaixo de mercado.",
+        "pontos": [
+          "<strong>Cota fecha fevereiro a R$ 73,05 (+43,94% em 12 meses)</strong>"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Cota a R$ 75,98, P/VP 0,80 e DY 11,59%. Quatro obras concluídas, restando Cascavel, Carlos Gomes e finalizações em Brasília/Horto Florestal. Revisional em fase técnica.",
+        "pontos": [
+          "<strong>Reserva de caixa próxima de R$ 3 milhões</strong>",
+          "<strong>Selic em 15% a.a. iniciando ciclo de queda</strong>"
         ]
       }
     ],
     "resumoTrajetoria": {
-      "titulo": "Resumo da trajetoria - POSITIVA:",
-      "texto": "O CXCO11 apresentou <strong class=\"text-emerald-400\">valorizacao de 33,96% em 2025</strong>, com distribuicoes crescentes (de R$ 0,66 para R$ 0,70/cota). A gestao projetou R$ 0,75/cota para 2026, baseado na receita media de R$ 0,82/cota e despesas de R$ 0,07/cota. A <strong class=\"text-emerald-400\">revisao dos alugueis foi iniciada em dezembro/2025</strong> com contratacao da CBRE. Obras nos edificios CICOB e Cuiaba foram concluidas, e o Filial Brasilia esta em fase final. O novo laudo de avaliacao pela Colliers trara dados atualizados para 2026."
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Desde o IPO em mar/2021 a R$ 101,99, o CXCO11 acumula <strong class='text-red-400'>desvalorização patrimonial de cota</strong> e atravessou ciclo turbulento entre 2024-2025 marcado por: (i) corte de dividendos para custear obras, (ii) reavaliação negativa de imóveis, (iii) enchente em POA, (iv) troca de gestão. Em 12 meses (mar/25-fev/26) a cota se recuperou <strong class='text-emerald-400'>+43,94%</strong>, sustentada por melhor comunicação da nova gestora, conclusão progressiva de obras, estabilização do DPS em R$ 0,75 e expectativa do processo revisional. O patrimônio líquido se manteve relativamente estável próximo de R$ 375 milhões.</p>"
     },
     "crescimento": [
       {
-        "label": "Valorizacao 2025",
-        "valor": "+33,96%",
-        "detalhe": "Cota de mercado"
+        "label": "Variação Cota IPO→Atual",
+        "valor": "-25,5%",
+        "detalhe": "R$ 101,99 → R$ 75,98 (sem dividendos)"
       },
       {
-        "label": "DY 12M (mercado)",
-        "valor": "12,76%",
-        "detalhe": "Sobre cota de R$ 67,97"
+        "label": "Variação Cota 12 meses",
+        "valor": "+43,94%",
+        "detalhe": "Recuperação relevante em 2025-2026"
       },
       {
-        "label": "DY 12M (VP)",
-        "valor": "9,01%",
-        "detalhe": "Sobre cota patrimonial"
+        "label": "Total Distribuído (5 anos)",
+        "valor": "≈ R$ 42,80",
+        "detalhe": "Soma de DPS desde 2021"
       },
       {
-        "label": "Reserva de Caixa",
-        "valor": "R$ 2,9 Mi",
-        "detalhe": "Apos distribuicao dez/25"
+        "label": "DY médio histórico",
+        "valor": "10-13% a.a.",
+        "detalhe": "Sobre cota de mercado"
       }
     ]
   },
   "tese": {
-    "resumo": "CXCO11 e um <strong class=\"text-amber-400\">FII de lajes corporativas</strong> com 10 edificios (91.730 m2 ABL) locados para a Caixa Economica Federal em contrato sale and leaseback ate 2030. O P/VP de 0,70 oferece <strong class=\"text-emerald-400\">30% de desconto</strong>, o DY de 12,8% e atrativo e a taxa total de 0,25% e uma das mais baixas do mercado. A <strong class=\"text-emerald-400\">revisao dos alugueis em curso</strong> (CBRE) e o novo laudo de avaliacao (Colliers) sao catalisadores positivos. A projecao de R$ 0,75/cota para 2026, obras avancando e gestao proativa justificam a elevacao para COMPRA.",
+    "resumo": "<p>O CXCO11 é um <strong class='text-blue-400'>FII de tese atípica e específica</strong>: contrato Sale and Leaseback de 10 anos com a Caixa Econômica Federal sobre 10 agências bancárias, com vacância estrutural zero e pagamentos garantidos por risco soberano até dez/2030. A tese de investimento atual repousa em três pilares: (1) <strong class='text-emerald-400'>desconto patrimonial relevante (P/VP 0,80)</strong>; (2) <strong class='text-emerald-400'>processo revisional em curso</strong> que pode elevar substancialmente os aluguéis (estudo CBRE indica potencial de até 85% de upside); (3) ciclo esperado de <strong class='text-emerald-400'>queda da Selic</strong> beneficiando ativos sensíveis a juros.</p><p>O contraponto é o horizonte temporal limitado dos contratos (4,7 anos) com opção de compra do locatário, configurando um ativo com <strong class='text-amber-400'>data de validade incerta</strong> que exige avaliação contínua das negociações com a Caixa.</p>",
     "paraQuem": [
-      "Investidores que buscam <strong class=\"text-emerald-400\">renda com desconto expressivo no preco</strong>",
-      "Perfil <strong class=\"text-emerald-400\">conservador a moderado</strong> que aceita concentracao em locatario solido",
-      "Quem valoriza <strong class=\"text-emerald-400\">taxas muito baixas</strong> (0,25% a.a.)",
-      "Investidores com <strong class=\"text-emerald-400\">horizonte ate 2030</strong> e expectativa de revisao positiva dos alugueis"
+      "Investidores que aceitam <strong class='text-emerald-400'>risco soberano de monoinquilino</strong> em troca de vacância zero e fluxo previsível",
+      "Quem busca <strong class='text-emerald-400'>desconto patrimonial relevante (P/VP 0,80)</strong> com gatilho de revisional como catalisador",
+      "Investidores com horizonte de <strong class='text-emerald-400'>4-5 anos</strong> dispostos a acompanhar a evolução do contrato vincendo em 2030",
+      "Carteiras já diversificadas que comportam parcela tática em FII com tese específica"
     ],
     "naoParaQuem": [
-      "Quem <strong class=\"text-amber-400\">nao aceita concentracao total</strong> em um unico locatario",
-      "Investidores que buscam <strong class=\"text-amber-400\">contratos de muito longo prazo</strong> (vencimento em 2030)",
-      "Quem <strong class=\"text-amber-400\">teme resultado negativo na revisao dos alugueis</strong>",
-      "Perfil que busca <strong class=\"text-amber-400\">alta liquidez</strong> (volume medio R$ 3,8 Mi/mes)"
+      "Investidores que buscam <strong class='text-red-400'>diversificação por locatário</strong> ou pulverização setorial",
+      "Quem prioriza <strong class='text-red-400'>alta liquidez diária</strong> (volume médio de apenas R$ 163 mil)",
+      "Investidores com horizonte além de 2030 que exigem <strong class='text-red-400'>visibilidade contratual de longo prazo</strong>",
+      "Quem não tolera <strong class='text-red-400'>volatilidade de dividendos</strong> em períodos de obras (histórico de cortes em 2024)"
     ]
   },
   "dividendos": {
     "chartLabels": [
-      "Jan",
-      "Fev",
       "Mar",
       "Abr",
       "Mai",
@@ -565,143 +417,137 @@
       "Set",
       "Out",
       "Nov",
-      "Dez"
+      "Dez",
+      "Jan",
+      "Fev"
     ],
     "chartData": [
-      0.66,
-      0.66,
-      0.66,
-      0.66,
-      0.66,
+      0.65,
+      0.65,
+      0.65,
       1.04,
-      0.66,
-      0.66,
+      0.65,
+      0.65,
       0.7,
       0.7,
       0.7,
-      0.91
+      0.91,
+      0.75,
+      0.75
     ],
     "chartCor": "#10b981",
-    "chartYMin": 0.5,
-    "chartYMax": 1.1,
+    "chartYMin": 0,
+    "chartYMax": 1.2,
     "totaisAnuais": [
       {
         "ano": "2022",
-        "valor": "R$ 7,68"
+        "valor": "R$ 8,53"
       },
       {
         "ano": "2023",
-        "valor": "R$ 8,28"
+        "valor": "R$ 8,84"
       },
       {
         "ano": "2024",
-        "valor": "R$ 7,86"
+        "valor": "R$ 8,15"
       },
       {
         "ano": "2025",
-        "valor": "R$ 8,67",
-        "cor": "emerald"
-      },
-      {
-        "ano": "DY 12M (mercado)",
-        "valor": "12,76%",
-        "cor": "emerald"
+        "valor": "R$ 8,95"
       }
     ],
     "guidance": {
-      "periodo": "Projecao 2026",
-      "faixa": "R$ 0,75",
-      "unidade": "por cota/mes (estimativa gestao, resultado liquido medio)"
+      "periodo": "1S2026",
+      "faixa": "R$ 0,72 a R$ 0,78",
+      "unidade": "por cota / mês"
     },
     "stats": [
       {
-        "label": "Maior (Jun/25)",
-        "valor": "R$ 1,04",
-        "cor": "emerald"
+        "label": "Atual",
+        "valor": "R$ 0,75"
       },
       {
-        "label": "Menor (Jan-Mai/25)",
-        "valor": "R$ 0,66"
+        "label": "Maior 12m",
+        "valor": "R$ 1,04"
       },
       {
-        "label": "Media 2025",
-        "valor": "R$ 0,72/cota"
+        "label": "Menor 12m",
+        "valor": "R$ 0,65"
       },
       {
-        "label": "Dist. Semestral",
-        "valor": "95% resultado"
-      },
-      {
-        "label": "Tendencia",
-        "valor": "Crescente",
+        "label": "Tendência",
+        "valor": "Estável",
         "cor": "emerald"
       }
     ]
   },
   "valuation": {
     "pvp": {
-      "valor": "0,70",
-      "descricao": "Cota negociada com <span class=\"text-emerald-400\">30% de desconto</span> expressivo sobre o valor patrimonial",
+      "valor": "0,80",
+      "descricao": "<p>Cota negociada a <strong class='text-emerald-400'>20% de desconto</strong> sobre o valor patrimonial. O VP/cota foi reduzido em 2024 (-6,25%) e marginalmente em 2025 (-0,95%) por ajustes de taxa de desconto frente à Selic alta. Com queda de juros esperada e potencial revisional, há espaço para reprecificação patrimonial positiva.</p>",
       "detalhes": [
         {
           "label": "VP/Cota",
-          "valor": "R$ 96,30"
+          "valor": "R$ 95,41"
         },
         {
-          "label": "Preco",
-          "valor": "R$ 67,97",
+          "label": "Preço",
+          "valor": "R$ 75,98",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "20,4%",
           "cor": "emerald"
         }
       ]
     },
     "spread": {
-      "valor": "10,07%",
-      "label": "Cap Rate Medio",
+      "valor": "11,59%",
+      "label": "Dividend Yield (mercado)",
       "cor": "emerald",
-      "descricao": "Cap rate medio dos 10 edificios conforme laudo de avaliacao patrimonial. Novo laudo pela Colliers previsto para jan/2026.",
-      "detalhe": "Imoveis avaliados em R$ 371,2 milhoes | Aluguel R$ 3,11 Mi/mes"
+      "descricao": "<p>DY de <strong class='text-emerald-400'>11,59% a.a.</strong> sobre a cota de mercado, equivalente a <strong class='text-emerald-400'>9,43% a.a.</strong> sobre o VP. Spread relevante vs. NTN-B 2030 (~7% real), refletindo prêmio pelos riscos de monoinquilino e contrato vincendo em 2030. Yield consistente com peers de lajes corporativas com perfil similar.</p>"
     },
     "recomendacoes": {
-      "valor": "0,25%",
-      "label": "Taxa Total",
-      "cor": "emerald",
-      "descricao": "Uma das taxas mais baixas entre todos os FIIs do mercado, sem taxa de performance",
-      "detalhe": "Admin 0,125% + Gestao 0,125% | Sem performance"
+      "valor": "R$ 82,00",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Estimativa via <strong class='text-blue-400'>Gordon Growth</strong>: DPS anual R$ 9,00 / (custo de capital 12,5% - crescimento 1,5%) ≈ R$ 81,80. Premissas: NTN-B 7% real + prêmio de risco 5,5% (monoinquilino e prazo curto até 2030); crescimento conservador refletindo limite contratual. Validação via P/VP (R$ 95,41 × 0,86 ≈ R$ 82) e DY target de 11% (R$ 9,00 / 0,11 ≈ R$ 82). <strong class='text-amber-400'>Cenário com sucesso revisional</strong> elevaria preço justo para faixa de R$ 95-110, mas captura depende integralmente das negociações com a Caixa.</p>"
     }
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-amber-400\">CXCO11</strong> e um fundo de lajes corporativas com modelo operacional simples e previsivel: 10 edificios locados exclusivamente para a Caixa Economica Federal. O P/VP de 0,70 oferece <strong class=\"text-emerald-400\">desconto de 30%</strong>, o DY de 12,76% sobre a cota de mercado e atrativo, e a <strong class=\"text-emerald-400\">taxa total de 0,25%</strong> e uma das mais baixas do mercado de FIIs.",
-      "A gestao demonstrou evolucao significativa em 2025: elevou a distribuicao para R$ 0,70/cota, contratou seguro de R$ 137 milhoes, iniciou a <strong class=\"text-emerald-400\">revisao dos alugueis</strong> em dezembro/2025 com a CBRE, e contratou a Colliers para novo laudo de avaliacao. As obras nos edificios CICOB e Cuiaba foram concluidas, e o Filial Brasilia esta em fase final. Cascavel e a proxima prioridade, com estimativa de R$ 1,1 Mi (execucao prevista para 2027-2028).",
-      "A projecao de R$ 0,75/cota para 2026 e sustentada pela receita media de R$ 0,82/cota e despesas de R$ 0,07/cota observadas em 2025. O fundo conta com 12.242 cotistas e reserva de caixa de R$ 2,9 Mi. A revisao de alugueis e o principal catalisador: um resultado positivo pode destravar valor adicional, enquanto um resultado negativo limitaria o upside. O regulamento foi atualizado para RCVM 175 em junho/2025."
+      "O CXCO11 chega a abr/2026 em fase de virada operacional após período crítico de 2024. A nova gestão da Patagônia Capital restabeleceu disciplina informacional, estabilizou a distribuição em R$ 0,75/cota e avançou no programa de obras de retrofit, com 4 imóveis concluídos (CICOB, Cuiabá, parte de Brasília e Querência). O patrimônio líquido se mantém em torno de R$ 374 milhões, e a cota se recuperou +43,94% em 12 meses, embora ainda esteja 25% abaixo do preço de IPO de mar/2021.",
+      "Na ótica fundamentalista, o fundo combina dois vetores opostos: de um lado, vacância física zero, risco soberano de crédito (Caixa Econômica Federal), cap rate de 10,17% a.a., taxa de administração extremamente competitiva (0,25% a.a. total) e P/VP de 0,80; de outro, concentração total em locatário único, vencimento contratual em 4,7 anos com opção de compra, baixa liquidez (R$ 163 mil/dia, 12,2 mil cotistas) e incerteza sobre a magnitude do upside revisional, que depende inteiramente da negociação com a Caixa.",
+      "Os principais catalisadores nos próximos 12-24 meses são: (i) desfecho do processo revisional (estudo CBRE indica potencial de R$ 65,51/m² vs R$ 35,32/m² atual); (ii) ciclo esperado de queda da Selic favorecendo ativos imobiliários; (iii) conclusão das obras pendentes (Cascavel, Carlos Gomes, finalizações em BH e Brasília) liberando caixa; (iv) eventual definição da Caixa sobre renovação ou exercício da opção de compra ao final do contrato em dez/2030."
     ],
     "pontosFortes": [
-      "P/VP 0,70 com 30% de desconto",
-      "DY 12,76% sobre cota de mercado",
-      "Taxa total de apenas 0,25% a.a. (sem performance)",
-      "100% de ocupacao fisica",
-      "Locatario solido (Caixa Economica Federal - empresa publica)",
-      "Cap rate medio de 10,07%",
-      "Valorizacao de 33,96% em 2025",
-      "Projecao de R$ 0,75/cota para 2026",
-      "Revisao de alugueis em curso (CBRE) como catalisador",
-      "Contratacao de seguro R$ 137 Mi"
+      "Vacância física de <strong class='text-emerald-400'>0%</strong> com 100% dos imóveis locados",
+      "Locatário único de <strong class='text-emerald-400'>risco soberano</strong> (Caixa Econômica Federal)",
+      "Contratos atípicos Sale and Leaseback com multa rescisória pelo VP a Selic",
+      "Reajustes anuais pelo IPCA (último em abr/2025: +5,48%)",
+      "Taxa de administração extremamente baixa: <strong class='text-emerald-400'>0,25% a.a. total</strong>",
+      "P/VP de <strong class='text-emerald-400'>0,80</strong> oferecendo desconto patrimonial relevante",
+      "Processo revisional formalmente aberto com estudo CBRE indicando potencial de up de até 85% no aluguel",
+      "DY de <strong class='text-emerald-400'>11,59%</strong> sobre cota de mercado, atrativo vs NTN-B",
+      "Diversificação geográfica em 6 estados, mitigando risco regional"
     ],
     "pontosDeAtencao": [
-      "Concentracao total em unico locatario (Caixa)",
-      "Contrato vence em dezembro/2030 (menos de 5 anos)",
-      "Opcao de compra pela Caixa ao termino do contrato",
-      "Reavaliacao dez/2024 resultou em -6,18% no PL",
-      "Revisao de alugueis pode resultar em reducao dos valores",
-      "Obras em andamento (Brasilia, Horto Florestal) e pendentes (Cascavel)",
-      "Imoveis de uso especifico (edificios corporativos bancarios)",
-      "Liquidez moderada (volume medio R$ 3,8 Mi/mes)"
+      "<strong class='text-red-400'>Concentração total</strong> em um único locatário (100% da receita)",
+      "Contratos vencem em <strong class='text-red-400'>25/12/2030</strong> (4,7 anos) com opção de compra do locatário",
+      "Liquidez restrita: volume médio de apenas <strong class='text-amber-400'>R$ 163 mil/dia</strong>",
+      "Histórico recente de cortes severos de dividendos (R$ 0,49 em out/2024)",
+      "Orçamento de obras <strong class='text-amber-400'>2,5x acima</strong> do previsto no prospecto original",
+      "Reavaliação patrimonial negativa em 2024 (-6,25%) e marginal em 2025",
+      "Aluguel praticado defasado vs mercado (R$ 35,32/m² vs potencial R$ 65,51/m²)",
+      "Captura do upside revisional depende integralmente de negociação com a Caixa",
+      "Nova gestão (Patagônia) tem track record curto neste fundo (desde ago/2024)"
     ],
-    "conclusaoFinal": "Elevamos a recomendacao do CXCO11 de MANTER para <strong class=\"text-emerald-400\">COMPRA</strong>. O P/VP de 0,70, o DY de 12,76%, a taxa de 0,25% e a <strong class=\"text-emerald-400\">gestao cada vez mais proativa</strong> (revisao de alugueis, novos laudos, seguro, vistorias anuais) justificam a mudanca. A valorizacao de 33,96% em 2025 confirma que o mercado comecou a reconhecer o desconto excessivo, mas ainda ha espaco para convergencia ao VP. A revisao dos alugueis pela CBRE e o principal catalisador de curto prazo. O risco de concentracao em Caixa e o vencimento em 2030 sao os principais fatores de atencao, mas a solidez do locatario e a rescisao antecipada com indenizacao pela Selic mitigam parcialmente esses riscos."
+    "conclusaoFinal": "O CXCO11 é um caso típico de FII com tese assimétrica: combina características defensivas raras (vacância zero, risco soberano, cap rate de dois dígitos) com restrições estruturais relevantes (monoinquilino, prazo contratual definido, baixa liquidez). Os trade-offs envolvidos exigem que o investidor avalie criticamente seu horizonte temporal versus o vencimento contratual de dez/2030, sua tolerância à concentração de risco em um único pagador (ainda que soberano) e sua expectativa quanto ao desfecho do processo revisional - que pode ser tanto o principal gatilho de valorização quanto fonte de frustração caso a negociação com a Caixa não capture o potencial indicado pelo estudo CBRE. A recente estabilização operacional sob a Patagônia Capital, o desconto patrimonial e o ciclo macroeconômico em transição compõem cenário de melhor visibilidade que o vivido em 2024, mas não eliminam as questões estruturais que cercam o ativo até 2030."
   },
   "footer": {
-    "dataAnalise": "16/03/2026",
-    "totalDocumentos": 464,
-    "disclaimer": "Este material tem carater exclusivamente informativo e nao constitui recomendacao de investimento. Rentabilidade passada nao e garantia de rentabilidade futura."
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 145,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
   }
 }

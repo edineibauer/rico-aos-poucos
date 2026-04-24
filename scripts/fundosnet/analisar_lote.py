@@ -42,16 +42,21 @@ MODELO = "claude-opus-4-7[1m]"  # Opus 4.7 com 1M de contexto
 TIMEOUT = 1800  # 30 min por ticker
 MAX_ANALISE_IDADE_DIAS = 14  # re-analisa se > 14 dias
 
-# Quantidade máxima de docs por tipo para o contexto da análise
-MAX_REL_GERENCIAIS = 15        # últimos 12-15 meses
-MAX_FATOS_COMUNICADOS = 12     # últimos 12 meses
-MAX_ASSEMBLEIAS = 6
-MAX_INFORMES_ANUAIS = 2
-MAX_INFORMES_TRIM = 4
-MAX_DEMONSTRACOES = 2
+# Quantidade máxima de docs por tipo — cobertura histórica ampla
+# Calibrado para o payload total ficar entre 1-2MB (~250-500k tokens).
+# O CLI do Claude Code tem limite ~2MB para o stdin do --print.
+MAX_REL_GERENCIAIS = 60        # ~15 anos com amostragem trimestral
+MAX_FATOS_COMUNICADOS = 30
+MAX_ASSEMBLEIAS = 15
+MAX_INFORMES_ANUAIS = 8
+MAX_INFORMES_TRIM = 16
+MAX_DEMONSTRACOES = 4
 
-# Limite de bytes por documento no payload (evita estourar contexto)
+# Limite de bytes por documento no payload
 MAX_BYTES_POR_DOC = 50_000
+
+# Limite total do user_msg (safety cap)
+MAX_USER_MSG_BYTES = 1_800_000
 
 
 # ---------------------------------------------------------------------------
@@ -82,7 +87,19 @@ SYSTEM_PROMPT = """Você é um assessor de investimentos brasileiro sênior, esp
 8. **Preserve TODOS** os números, datas e fatos relevantes dos documentos.
 9. **Contexto macro (fev-abr/2026)**: Selic 15% a.a. em queda esperada, IPCA 4,26% (2025), IFIX em máxima histórica, câmbio em apreciação do real.
 
-# METODOLOGIA DE ANÁLISE
+# METODOLOGIA DE ANÁLISE — PROFUNDIDADE HISTÓRICA OBRIGATÓRIA
+
+Você recebe documentos desde o IPO do fundo (possivelmente 10-15 anos de história). Sua análise deve ser LONGITUDINAL, não apenas um snapshot.
+
+## Como analisar rigorosamente
+1. **Mapeie a trajetória desde o IPO**: data do IPO, tamanho inicial, estratégia original, evolução do portfólio ao longo do tempo.
+2. **Identifique marcos materiais**: emissões, aquisições/vendas relevantes, mudanças de gestor, crises superadas (ex: pandemia 2020), incorporações de fundos.
+3. **Análise de track record de dividendos**: evolução anual do DPS, períodos de corte/aumento, consistência vs IFIX/CDI, pagamentos extraordinários.
+4. **Track record de valuation**: P/VP histórico médio e extremos, spread vs NTN-B em diferentes ciclos de juros.
+5. **Qualidade da gestão ao longo do tempo**: decisões acertadas (aquisições que se valorizaram), erros (distratos, inadimplências), transparência.
+6. **Resposta a ciclos macro**: como o fundo se comportou em Selic alta vs baixa, crise imobiliária, pandemia.
+
+Seu output deve transmitir que você LEU e DIGERIU toda a história do fundo. Em `timeline.periodos`, registre pelo menos 5-8 marcos históricos com datas e contexto. Em `conclusao.paragrafos`, dedique um parágrafo à trajetória histórica.
 
 ## Preço justo (Gordon Growth Model) — VALOR ÚNICO
 - **Fórmula base:** Preço = (DPS anual) / (custo_capital - crescimento)
@@ -335,8 +352,55 @@ def ja_analisado_recentemente(ticker: str, max_dias: int = MAX_ANALISE_IDADE_DIA
         return False
 
 
+def _amostragem_temporal(docs: list[dict], limite: int,
+                         priorizar_recentes: int = 12) -> list[dict]:
+    """Seleciona N docs com amostragem temporal ampla.
+
+    Estratégia: mantém TODOS os docs mais recentes (priorizar_recentes) + 1 doc
+    por trimestre para períodos anteriores, cobrindo desde o IPO.
+
+    Docs já estão ordenados por data desc.
+    """
+    if len(docs) <= limite:
+        return docs
+
+    # Últimos N docs: sempre mantidos (detalhamento do presente)
+    recentes = docs[:priorizar_recentes]
+    restante = docs[priorizar_recentes:]
+
+    # Dos demais, 1 por trimestre
+    por_trimestre: dict[str, dict] = {}
+    for d in restante:
+        dt = _parse_data_br(d.get("dataEntrega"))
+        if not dt:
+            continue
+        chave = f"{dt.year}T{(dt.month - 1) // 3 + 1}"
+        if chave not in por_trimestre:
+            por_trimestre[chave] = d
+
+    historicos = sorted(
+        por_trimestre.values(),
+        key=lambda d: _parse_data_br(d.get("dataEntrega")) or datetime.min,
+        reverse=True,
+    )
+
+    # Preenche até o limite
+    total_disponivel = limite - len(recentes)
+    historicos = historicos[:max(0, total_disponivel)]
+    return recentes + historicos
+
+
 def _load_mds(ticker: str, limit_por_tipo: dict[str, int]) -> list[dict]:
-    """Seleciona os docs-chave dos últimos 12-24 meses."""
+    """Seleciona docs-chave para análise rigorosa considerando todo o histórico
+    do fundo desde o IPO.
+
+    Para tipos com amostragem temporal (rel_ger, informe_trim):
+      - Todos os últimos N (detalhe recente)
+      - + 1 por trimestre historicamente (visão longitudinal)
+
+    Para tipos completos (fato_rel, assembleia, informe_anual):
+      - Todos os disponíveis até o limite
+    """
     base = FIIS_OPTIMIZED / ticker
     index_path = FIIS_OPTIMIZED.parent / "fiis-raw" / ticker / "meta.json"
     if not index_path.exists():
@@ -344,16 +408,15 @@ def _load_mds(ticker: str, limit_por_tipo: dict[str, int]) -> list[dict]:
     raw_meta = json.loads(index_path.read_text(encoding="utf-8"))
     docs = raw_meta.get("documentos", [])
 
-    # Agrupa por categoria
     def cat(tipo: str) -> str:
         t = (tipo or "").lower()
         if "relatório gerencial" in t or "relatorio gerencial" in t: return "rel_ger"
         if "fato relevante" in t: return "fato_rel"
         if "outros comunicados" in t or "comunicado ao mercado" in t: return "comunicado"
-        if "assembleia" in t or "convocação" in t: return "assembleia"
+        if "assembleia" in t or "assembléia" in t or "convocação" in t: return "assembleia"
         if "informe anual" in t: return "informe_anual"
         if "informe trimestral" in t: return "informe_trim"
-        if "demonstrações" in t: return "demonstracoes"
+        if "demonstrações" in t or "demonstracoes" in t: return "demonstracoes"
         return "outro"
 
     grupos: dict[str, list[dict]] = {}
@@ -361,17 +424,27 @@ def _load_mds(ticker: str, limit_por_tipo: dict[str, int]) -> list[dict]:
         c = cat(d.get("tipoDocumento"))
         grupos.setdefault(c, []).append(d)
 
-    # Ordena cada grupo por data
     for c in grupos:
         grupos[c].sort(
             key=lambda d: _parse_data_br(d.get("dataEntrega")) or datetime.min,
             reverse=True,
         )
 
+    # Aplica amostragem temporal para rel_ger e informe_trim
+    if "rel_ger" in grupos:
+        grupos["rel_ger"] = _amostragem_temporal(
+            grupos["rel_ger"], limit_por_tipo.get("rel_ger", 80),
+            priorizar_recentes=15,
+        )
+    if "informe_trim" in grupos:
+        grupos["informe_trim"] = _amostragem_temporal(
+            grupos["informe_trim"], limit_por_tipo.get("informe_trim", 20),
+            priorizar_recentes=4,
+        )
+
     selecionados: list[dict] = []
     for cat_nome, limite in limit_por_tipo.items():
         for d in grupos.get(cat_nome, [])[:limite]:
-            # Lê o .md otimizado
             md_path = base / f"{d['id']}.md"
             if not md_path.exists():
                 continue
@@ -380,7 +453,7 @@ def _load_mds(ticker: str, limit_por_tipo: dict[str, int]) -> list[dict]:
             except Exception:
                 continue
             if len(conteudo) > MAX_BYTES_POR_DOC:
-                conteudo = conteudo[:MAX_BYTES_POR_DOC] + "\n\n[...truncado...]"
+                conteudo = conteudo[:MAX_BYTES_POR_DOC] + "\n\n[...truncado (doc maior que limite)...]"
             selecionados.append({
                 "id": d["id"],
                 "tipo": d.get("tipoDocumento"),
@@ -489,11 +562,29 @@ def _build_user_msg(ticker: str) -> tuple[str, dict]:
         f"Responda APENAS com o JSON, sem texto antes ou depois."
     )
 
-    return "\n".join(p for p in partes if p is not None), {
+    msg = "\n".join(p for p in partes if p is not None)
+    # Safety cap: se o payload estourar o limite, trunca preservando o começo
+    # (metadados + dividendos + instrução) e corta no meio dos docs.
+    truncado = False
+    if len(msg) > MAX_USER_MSG_BYTES:
+        # Mantém os primeiros 40% (contexto + dividendos + docs recentes) e instrução
+        metade = int(MAX_USER_MSG_BYTES * 0.9)
+        cauda = "\n\n[... contexto histórico truncado por limite de tamanho ...]\n\n"
+        instrucao = (f"\n---\n\n# INSTRUÇÃO\n"
+                     f"Produza o JSON completo de análise do {ticker} seguindo EXATAMENTE "
+                     f"o schema definido no system prompt. "
+                     f"Use a data de hoje ({datetime.now().strftime('%d/%m/%Y')}) em dataAnalise. "
+                     f"Responda APENAS com o JSON.")
+        msg = msg[:metade] + cauda + instrucao
+        truncado = True
+
+    return msg, {
         "ticker": ticker,
         "total_docs_no_contexto": len(docs),
         "total_dividendos": len(dividendos),
         "tem_liq_data": bool(liq_data),
+        "bytes_payload": len(msg),
+        "truncado": truncado,
     }
 
 
@@ -759,6 +850,8 @@ def main() -> int:
                     help="Ignora dataAnalise recente")
     ap.add_argument("--max", type=int, default=0,
                     help="Limita quantidade (0 = sem limite)")
+    ap.add_argument("--sem-publicar", action="store_true",
+                    help="Não roda publicar.py ao final (deploy manual)")
     args = ap.parse_args()
 
     # Lista tickers com dossiê otimizado
@@ -828,17 +921,35 @@ def main() -> int:
     dt = time.time() - inicio_global
     print(f"\n[analise-lote] concluído em {dt/60:.1f}min  ok={progresso['ok']}  erro={progresso['erro']}")
 
-    # Consolida data/fiis.json para a listagem da página fiis/ refletir novos
-    try:
-        cons = subprocess.run(
-            [sys.executable, str(Path(__file__).parent / "consolidar_fiis_json.py")],
-            capture_output=True, text=True, timeout=60,
-        )
-        print(cons.stdout.strip()[-500:])
-        if cons.stderr:
-            print("stderr:", cons.stderr[-300:])
-    except Exception as e:
-        print(f"[warn] falhou consolidar_fiis_json: {e}")
+    # Publicar: consolida fiis.json + atualiza sitemap + bump sw.js +
+    # commit + push + deploy Cloudflare (a não ser que --sem-publicar).
+    if args.sem_publicar:
+        print("[analise-lote] --sem-publicar: não atualizando listagem/sitemap/deploy")
+    else:
+        if progresso['ok'] == 0:
+            print("[analise-lote] nenhuma análise ok, pulando deploy")
+        else:
+            tickers_ok = [r['ticker'] for r in progresso['resultados'] if r.get('ok')]
+            resumo_tickers = ', '.join(tickers_ok[:8])
+            if len(tickers_ok) > 8:
+                resumo_tickers += f' (+{len(tickers_ok)-8})'
+            mensagem = (
+                f"auto: análise {len(tickers_ok)} FIIs — {resumo_tickers}\n\n"
+                f"Total: {progresso['ok']} OK · {progresso['erro']} erro · "
+                f"{dt/60:.1f}min · Opus 4.7 1M\n\n"
+                f"Co-Authored-By: Claude Opus 4.7 (1M context) <noreply@anthropic.com>"
+            )
+            print("\n[analise-lote] iniciando publicar.py…")
+            try:
+                pub = subprocess.run(
+                    [sys.executable, str(Path(__file__).parent / "publicar.py"),
+                     "--mensagem", mensagem],
+                    timeout=900,
+                )
+                if pub.returncode != 0:
+                    print(f"[warn] publicar.py retornou {pub.returncode}")
+            except Exception as e:
+                print(f"[warn] publicar.py falhou: {e}")
 
     return 0
 

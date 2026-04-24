@@ -1,0 +1,525 @@
+{
+  "meta": {
+    "ticker": "CPUR11",
+    "nome": "Capitânia HBC Renda Urbana FII",
+    "nomeExtra": "(ex-VBI Consumo Essencial / HBC II)",
+    "segmento": "Híbrido - Renda Urbana (Varejo, Saúde e Logística)",
+    "badges": [
+      "Portfólio atacarejo e varejo",
+      "100% contratos IPCA",
+      "WAULT 11 anos"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 253
+  },
+  "seo": {
+    "title": "CPUR11 - Análise Completa | Capitânia HBC Renda Urbana",
+    "description": "Análise do CPUR11: FII híbrido de renda urbana com 15 imóveis, DY 10,64%, P/VP 1,05, contratos longos atípicos e forte concentração em Assaí Atacadista.",
+    "keywords": "CPUR11, Capitânia HBC, Renda Urbana, FII híbrido, Assaí, Marisa, dividend yield, P/VP",
+    "ogTitle": "CPUR11 - Capitânia HBC Renda Urbana | Análise Completa",
+    "ogDescription": "FII híbrido de renda urbana da Capitânia com R$ 660 mi de PL, DY 10,64% e portfólio dominado por contratos atípicos com Assaí, Marisa, GPA e outros varejistas.",
+    "twitterTitle": "CPUR11 - Análise Capitânia HBC Renda Urbana",
+    "twitterDescription": "Dossiê completo do FII CPUR11: portfólio, dividendos, alavancagem e valuation com base em 253 documentos oficiais."
+  },
+  "indicadores": {
+    "cotacao": 10.33,
+    "cotacaoData": "23/04/2026",
+    "pvp": 1.05,
+    "pvpDesconto": "5% de prêmio sobre o valor patrimonial",
+    "dividendYield": 10.64,
+    "dividendoMensal": 0.1,
+    "dividendoAnual": 1.2,
+    "patrimonioLiquido": "R$ 660,4 Mi",
+    "vpCota": 9.73,
+    "cotistas": 1658,
+    "ocupacao": 97.0,
+    "numImoveis": 15
+  },
+  "recomendacao": {
+    "nota": 6.5,
+    "veredicto": null,
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">CPUR11</strong> é um FII híbrido de renda urbana gerido pela <strong class=\"text-blue-400\">Capitânia HBC</strong>, com portfólio de <strong class=\"text-blue-400\">15 imóveis próprios</strong> mais participação de 65,59% no FII HBCR11. A carteira mistura atacarejo (Assaí, 50,4% da receita), vestuário (Marisa e C&A), varejo alimentar (GPA), saúde (Barra Medical Center), logística e bricolagem (Sodimac), com <strong class=\"text-emerald-400\">76,2% dos contratos atípicos</strong> e WAULT de 11 anos.</p><p>A cotação atual de <strong class=\"text-blue-400\">R$ 10,33</strong> negocia com leve prêmio sobre o VP de R$ 9,73 (P/VP 1,05) e entrega DY de <strong class=\"text-emerald-400\">10,64% a.a.</strong> considerando o dividendo mensal de R$ 0,10. Pontos de atenção incluem a <strong class=\"text-amber-400\">alavancagem relevante</strong> de R$ 297,5 milhões em CRIs (~45% do PL), a <strong class=\"text-amber-400\">taxa de performance de 10% sobre IPCA+6%</strong> e a dependência de ganhos não recorrentes (venda de ativos, parcelamento de resultados acumulados) para sustentar o patamar atual de distribuição, conforme guidance da gestão para R$ 0,08 a R$ 0,10 por cota nos próximos meses.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 660,4 Mi",
+      "detalhe": "VP/cota: R$ 9,73",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,10",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 1,20/ano | DY 10,64%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "97%",
+      "detalhe": "Vacância 3% (MDX)",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.658",
+      "detalhe": "67,8 mi cotas | giro 2,3%/mês",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Alavancagem elevada em CRIs",
+      "descricao": "O fundo possui R$ 297,5 milhões em três CRIs (Bari 93S, 98S e 75S) com taxa média de IPCA+5,28%, equivalente a cerca de 45% do patrimônio líquido. Há ainda obrigações por aquisição parcelada de imóveis (seller financing) que totalizam dezenas de milhões. A despesa mensal com alavancagem ultrapassa R$ 1,1 milhão e pressiona o resultado distribuível.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em Assaí",
+      "descricao": "Seis lojas locadas para o Assaí Atacadista respondem por 50,4% da receita do fundo. Embora a rede tenha contratos atípicos de longo prazo (vencimentos entre 2035 e 2041), qualquer deterioração de crédito do locatário impactaria diretamente o DPS. A concentração setorial em atacarejo é significativa.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de performance elevada",
+      "descricao": "O fundo cobra 10% sobre o que exceder IPCA+6% a.a., taxa alta para o segmento, além de 1,00% a.a. de administração/gestão. Em períodos de forte desempenho, essa estrutura reduz significativamente o ganho do cotista.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Distribuição apoiada em resultados não recorrentes",
+      "descricao": "O resultado recorrente no trimestre encerrado em fev/2026 foi de R$ 0,06/cota, enquanto a distribuição foi de R$ 0,10. A sustentação vem de reservas acumuladas, ganhos de capital em vendas (GPAs em 2025) e distribuições do HBCR11. A própria gestão sinaliza guidance de R$ 0,07 a R$ 0,09 (central R$ 0,08).",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Vacância no Barra Medical Center",
+      "descricao": "O imóvel MDX, no Rio de Janeiro, apresenta 255 m² vagos (3% do ABL), além do vencimento do contrato com Amil em abr/2028 e Dasa em ago/2030, demandando esforço de retenção e relocação.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Prêmio sobre valor patrimonial",
+      "descricao": "Com P/VP de 1,05, o CPUR11 negocia 5% acima do valor patrimonial, o que limita margem de segurança frente a peers híbridos que operam com desconto, especialmente em ciclo de juros ainda altos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca de gestão recente",
+      "descricao": "O fundo passou por substituição de gestora (de VBI para Capitânia HBC) em 2023, com alteração de nome e ticker em nov/2024. O track record sob a nova gestão é curto, embora marcado por reposicionamento agressivo do portfólio.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Capitânia HBC",
+    "nota": 7.0,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "AuM Capitânia",
+        "valor": "R$ 15+ Bi"
+      },
+      {
+        "label": "Início do fundo",
+        "valor": "Jan/2020"
+      },
+      {
+        "label": "Taxa adm+gestão",
+        "valor": "1,00% a.a."
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Capitânia Investimentos</strong>, fundada em 2003, é uma das gestoras independentes mais tradicionais do mercado imobiliário brasileiro, com forte atuação em CRIs (CPTS11) e shoppings (CPSH11). Em 2023, assumiu a gestão do antigo VBI Consumo Essencial em conjunto com a HBC Consultoria, formando a <strong class=\"text-blue-400\">Capitânia HBC</strong>, especializada em renda urbana.</p><p>A administração fiduciária é do <strong class=\"text-blue-400\">BTG Pactual Serviços Financeiros</strong>. Sob a nova gestão, o fundo passou por reposicionamento com aquisição de lojas Marisa e C&A, venda de imóveis GPA (Tito, Santana, Granja Viana) e incorporação do HBCR11, com foco declarado em reciclagem de ativos, realização de ganhos imobiliários e redução de endividamento.</p>",
+    "link": "../../gestores/capitania/"
+  },
+  "taxas": {
+    "subtitulo": "Taxa de administração/gestão padrão do mercado, com taxa de performance acima da média",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração e Gestão",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre o patrimônio líquido",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10%",
+        "detalhe": "Sobre o que exceder IPCA + 6% a.a.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Média Diária",
+        "valor": "R$ 7,3 Mi",
+        "detalhe": "Volume médio (Fundamentus)",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Capitânia HBC Consultoria e Gestão"
+      },
+      {
+        "label": "Auditor",
+        "valor": "Grant Thornton Auditores Independentes"
+      },
+      {
+        "label": "Início",
+        "valor": "01/01/2020"
+      },
+      {
+        "label": "Classificação Anbima",
+        "valor": "FII Multiestratégia Gestão Ativa - Híbrido"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis próprios",
+        "valor": "15"
+      },
+      {
+        "label": "ABL total",
+        "valor": "175.213 m²"
+      },
+      {
+        "label": "Vacância",
+        "valor": "3,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "WAULT",
+        "valor": "11 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Atacado (Assaí)",
+        "Vestuário (Marisa/C&A)",
+        "Saúde (MDX)",
+        "Varejo Alimentar (GPA)",
+        "Logística (HBCR)",
+        "Bricolagem (Sodimac)"
+      ],
+      "data": [
+        50.4,
+        20.1,
+        11.3,
+        11.0,
+        9.1,
+        6.4
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#06b6d4"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Assaí Atacadista",
+        "setor": "Atacarejo",
+        "receita": "50,4% receita",
+        "rating": "Até 2035-2041",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Marisa",
+        "setor": "Vestuário",
+        "receita": "11,3% receita",
+        "rating": "Até 2040",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "GPA (Pão de Açúcar)",
+        "setor": "Varejo Alimentar",
+        "receita": "11,0% receita",
+        "rating": "Até 2029-2035",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Amil",
+        "setor": "Saúde (MDX)",
+        "receita": "5,7% receita",
+        "rating": "Até 2028",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Sodimac",
+        "setor": "Bricolagem",
+        "receita": "6,4% receita",
+        "rating": "Até 2045",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "C&A",
+        "setor": "Vestuário",
+        "receita": "5,2% receita",
+        "rating": "Até 2028",
+        "ratingCor": "amber",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "DASA",
+        "setor": "Diagnósticos",
+        "receita": "4,2% receita",
+        "rating": "Até 2030",
+        "ratingCor": "blue",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Decathlon",
+        "setor": "Esportes",
+        "receita": "3,6% receita",
+        "rating": "Até 2061",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>Portfólio com <strong class=\"text-emerald-400\">76,2% dos contratos atípicos</strong> e 100% indexados ao IPCA, característica estrutural que confere previsibilidade e proteção inflacionária. A distribuição geográfica contempla 8 estados (SP 32,6%, RJ 19,4%, MG 17,0%, CE 13,9%, RO 7,6%, MS 5,5%, DF 1,9%, AC 1,3%, SC 0,8%), mas há <strong class=\"text-amber-400\">concentração setorial em atacarejo</strong>. O vencimento médio dos contratos é em junho/2038, reduzindo o risco de vacância no curto prazo.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Trajetória de reestruturação sob nova gestão",
+    "periodos": [
+      {
+        "periodo": "Out/2019",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "IPO do fundo como VBI Consumo Essencial (EVBI11) a R$ 100/cota.",
+        "pontos": []
+      },
+      {
+        "periodo": "2020-2023",
+        "label": "FASE VBI",
+        "cor": "amber",
+        "descricao": "Aquisição dos primeiros ativos (Assaí, GPA, MDX, Sodimac) com taxa alavancagem IPCA+5%.",
+        "pontos": []
+      },
+      {
+        "periodo": "Jun/2023",
+        "label": "TROCA GESTÃO",
+        "cor": "amber",
+        "descricao": "Transferência de administração para BTG Pactual e gestão para Capitânia HBC, marcando início da reestruturação.",
+        "pontos": []
+      },
+      {
+        "periodo": "Fev/2024",
+        "label": "NOVA MARCA",
+        "cor": "blue",
+        "descricao": "Alteração de denominação para HBC II FII e posteriormente Capitânia HBC Renda Urbana.",
+        "pontos": []
+      },
+      {
+        "periodo": "Nov/2024",
+        "label": "CPUR11",
+        "cor": "blue",
+        "descricao": "Desdobramento de cotas (10:1) e troca de ticker de EVBI11 para CPUR11.",
+        "pontos": []
+      },
+      {
+        "periodo": "2025",
+        "label": "RECICLAGEM",
+        "cor": "emerald",
+        "descricao": "Aquisição de 5 lojas Marisa + 1 C&A, incorporação do HBCR11, venda dos três imóveis GPA (Tito, Santana, Granja Viana) e aquisição do Assaí Ipatinga por R$ 107 mi.",
+        "pontos": []
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Fundo consolidado com 15 imóveis próprios + participação relevante no HBCR11.",
+        "pontos": [
+          "<strong>PL de R$ 660 milhões</strong> (vs. R$ 241 mi em jun/2024)",
+          "<strong>67,8 milhões de cotas</strong> após múltiplas emissões",
+          "<strong>Distribuição mensal estabilizada em R$ 0,10</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O CPUR11 passou por <strong class=\"text-blue-400\">ampla reestruturação desde 2023</strong>, com troca de gestora (VBI → Capitânia HBC), mudança de ticker (EVBI11 → CPUR11) e quase triplicação do patrimônio líquido. Desde o IPO em jan/2020, a cota ajustada por proventos rendeu <strong class=\"text-emerald-400\">75,87%</strong> contra 21,30% do IFIX e 76,46% do CDI, performance em linha com o benchmark de juros.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota (ajustada)",
+        "valor": "+75,9%",
+        "detalhe": "Desde IPO em jan/2020"
+      },
+      {
+        "label": "Crescimento do PL",
+        "valor": "+174%",
+        "detalhe": "R$ 241 Mi (jun/24) → R$ 660 Mi (fev/26)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O CPUR11 é uma <strong class=\"text-blue-400\">tese de renda urbana diversificada</strong>, combinando atacarejo (maioria), varejo de vestuário, saúde, varejo alimentar e logística, com contratos predominantemente atípicos e longos. A gestão Capitânia HBC tem feito reciclagem agressiva de ativos, gerando ganhos de capital pontuais que sustentam a distribuição no patamar atual.</p><p>A tese central depende da capacidade da gestão de <strong class=\"text-amber-400\">converter o resultado recorrente</strong> (atualmente R$ 0,06/cota/mês) para o patamar de distribuição declarado (R$ 0,10), via incorporação do HBCR11, redução de endividamento e expansão dos ativos em desenvolvimento (Raposo Tavares e Ribeirão Preto).</p>",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">exposição a atacarejo de qualidade</strong> (Assaí) com contratos atípicos longos",
+      "Quem valoriza <strong class=\"text-emerald-400\">100% de indexação ao IPCA</strong> e WAULT de 11 anos",
+      "Investidores confortáveis com <strong class=\"text-emerald-400\">gestão ativa</strong> e reciclagem frequente de ativos",
+      "Quem aceita portfólio híbrido como ferramenta de diversificação dentro de uma carteira de FIIs"
+    ],
+    "naoParaQuem": [
+      "Investidores que <strong class=\"text-red-400\">não toleram alavancagem</strong> (CRIs representam ~45% do PL)",
+      "Quem busca <strong class=\"text-red-400\">taxas administrativas baixas</strong> - a taxa de performance de 10% sobre IPCA+6% é elevada",
+      "Investidores que priorizam <strong class=\"text-red-400\">DPS 100% recorrente</strong> - parte da distribuição atual depende de ganhos de capital e reservas",
+      "Quem busca <strong class=\"text-red-400\">liquidez superior a R$ 10 mi/dia</strong>"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.1,
+      0.1,
+      0.099,
+      0.061,
+      0.053,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1,
+      0.1
+    ],
+    "chartCor": "#3b82f6",
+    "chartYMin": 0,
+    "chartYMax": 0.15,
+    "totaisAnuais": [
+      {
+        "ano": "2023",
+        "valor": "R$ 8,10"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,03"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,14"
+      }
+    ],
+    "guidance": {
+      "periodo": "Mar/2026 a Fev/2027",
+      "faixa": "R$ 0,07 a R$ 0,09",
+      "unidade": "por cota / mês (central R$ 0,08)"
+    },
+    "stats": [
+      {
+        "label": "Atual (fev/26)",
+        "valor": "R$ 0,10"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,10"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,053"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Normalização",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "1,05",
+      "descricao": "<p>A cota negocia com <strong class=\"text-amber-400\">prêmio de 6% sobre o valor patrimonial</strong>, considerando o VP/cota de R$ 9,73 e cotação de R$ 10,33. Esse prêmio embute expectativa positiva com a reciclagem de ativos e ganhos não realizados do HBCR11, mas limita margem de segurança.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,73"
+        },
+        {
+          "label": "Preço atual",
+          "valor": "R$ 10,33",
+          "cor": "amber"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "10,64%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY anualizado de <strong class=\"text-emerald-400\">10,64%</strong> considerando DPS de R$ 0,10/mês. Frente a NTN-B longa em ~7% real, o spread é de cerca de 3,5 pontos. Contudo, o guidance oficial da gestão aponta para patamar mais próximo de <strong class=\"text-amber-400\">9-10% a.a.</strong> nos próximos 12 meses, à medida que estoques de resultados acumulados se normalizam.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 10,50",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Estimativa de preço justo em <strong class=\"text-blue-400\">R$ 10,50</strong> obtida por triangulação: (a) Gordon Growth conservador com DPS sustentável de R$ 1,08/ano, custo de capital 11,5% e crescimento 3%; (b) DY target de 10% sobre distribuição recorrente normalizada; (c) P/VP justo de 1,08x aplicado ao VP atual. A convergência sugere que o fundo está <strong class=\"text-amber-400\">próximo do fair value</strong>, com pouco upside de curto prazo até que o ganho recorrente alcance o patamar distribuído.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O CPUR11 encerra fev/2026 como um FII híbrido de renda urbana com R$ 660 milhões de PL, 15 imóveis próprios, 97% de ocupação e portfólio fortemente concentrado em atacarejo (50,4% da receita) e varejo (C&A, Marisa, Sodimac). Sob gestão da Capitânia HBC desde 2023, o fundo passou por reposicionamento, com troca de ticker, aquisições relevantes (pacote Marisa+C&A, Assaí Ipatinga), venda dos três ativos GPA e incorporação de 65,59% do HBCR11.",
+      "Do ponto de vista fundamental, a carteira apresenta atributos sólidos: 76,2% dos contratos são atípicos, WAULT de 11 anos, 100% indexação IPCA e vencimentos concentrados após 2035. Por outro lado, a alavancagem estruturada em três CRIs (R$ 297,5 mi, IPCA+5,28%) representa ~45% do PL, e a distribuição atual de R$ 0,10/mês depende de ganhos de capital, reservas acumuladas e distribuições do HBCR11, superando o resultado recorrente de ~R$ 0,06/cota reportado nos últimos trimestres.",
+      "O guidance oficial da própria gestão para os próximos 12 meses situa o DPS entre R$ 0,07 e R$ 0,09 por cota (central R$ 0,08), sinalizando normalização. No valuation, com P/VP de 1,05 e DY de 10,64%, o fundo negocia próximo do fair value estimado em R$ 10,50, com pouco espaço para valorização antes que o resultado recorrente convirja com o distribuído. Catalisadores positivos incluem o projeto de expansão do HBCenter Raposo Tavares e a possível incorporação do Max Retail, enquanto riscos de atenção são a taxa de performance elevada, a exposição concentrada ao Assaí e a dependência de reciclagem contínua de ativos."
+    ],
+    "pontosFortes": [
+      "Portfólio 100% indexado ao IPCA com WAULT de 11 anos",
+      "76,2% dos contratos são atípicos, reduzindo risco de saída antecipada",
+      "Ocupação elevada de 97% na carteira consolidada",
+      "Diversificação em 8 estados e 6 segmentos (atacarejo, vestuário, saúde, alimentar, logística, bricolagem)",
+      "Locatários âncora de grande porte (Assaí, GPA, Marisa, C&A, Decathlon, Dasa/Amil)",
+      "Gestão ativa comprovada em reciclagem de ativos e realização de ganhos",
+      "Projetos de expansão (Raposo Tavares) que devem triplicar a ABL do ativo",
+      "Taxa de administração competitiva (1,00% a.a.)"
+    ],
+    "pontosDeAtencao": [
+      "Alavancagem significativa de R$ 297,5 milhões em CRIs (~45% do PL)",
+      "Taxa de performance de 10% sobre IPCA+6%, elevada para o segmento",
+      "Concentração de 50,4% da receita em um único locatário (Assaí)",
+      "Distribuição atual (R$ 0,10) acima do resultado recorrente (~R$ 0,06/cota)",
+      "Guidance oficial da gestão em R$ 0,07-R$ 0,09 sinaliza redução futura",
+      "P/VP de 1,05 limita margem de segurança na entrada",
+      "Track record curto da gestora Capitânia HBC no fundo (desde 2023)",
+      "Vacância residual de 3% no Barra Medical Center e vencimentos do MDX (Amil 2028, Dasa 2030)",
+      "Liquidez média diária de R$ 7,3 milhões é moderada para o porte do fundo"
+    ],
+    "conclusaoFinal": "O CPUR11 apresenta combinação de atributos estruturais sólidos (contratos atípicos longos, portfólio diversificado, indexação IPCA) com trade-offs importantes (alavancagem elevada, taxa de performance acima da média, distribuição parcialmente sustentada por não recorrentes). O investidor precisa avaliar se a previsibilidade dos contratos e o espaço para criação de valor nos projetos de expansão compensam o prêmio sobre o patrimônio e o risco de ajuste da distribuição para o patamar recorrente sinalizado pela própria gestão. O fundo parece mais adequado a investidores que compreendem a dinâmica de FIIs híbridos ativos e aceitam volatilidade de DPS em troca de potencial de ganho de capital via reposicionamento de ativos."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 253,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

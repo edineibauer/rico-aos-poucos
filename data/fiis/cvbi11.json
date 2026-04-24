@@ -1,0 +1,614 @@
+{
+  "meta": {
+    "ticker": "CVBI11",
+    "nome": "Patria Crédito Imobiliário Índice de Preços FII",
+    "nomeExtra": "(ex-FII VBI CRI, novo ticker PCIP11 desde set/2025)",
+    "segmento": "Papel (CRI High Grade indexado ao IPCA)",
+    "badges": [
+      "107 CRIs + 4 Op. Estruturadas",
+      "P/VP 0,89 (11% desconto)",
+      "Gestão Pátria Real Estate"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 336
+  },
+  "seo": {
+    "title": "CVBI11 - Análise Completa | Pátria Crédito Imobiliário Índice de Preços",
+    "description": "Análise institucional do CVBI11 (PCIP11): P/VP 0,89, DY 14,3%, 107 CRIs IPCA+10,5% a.a., patrimônio R$ 1,59 bi sob gestão Pátria-VBI.",
+    "keywords": "cvbi11, pcip11, patria, vbi cri, fii papel, cri ipca, high grade, fundo imobiliario recebiveis, dividend yield",
+    "ogTitle": "CVBI11 - Dossiê Pátria Crédito Imobiliário Índice de Preços",
+    "ogDescription": "P/VP 0,89, DY anualizado 14,3%, carteira de 107 CRIs com rentabilidade IPCA+10,5% a.a. e spread de 2,3% a.a.",
+    "twitterTitle": "CVBI11 - Análise Completa do FII Pátria Crédito Imobiliário",
+    "twitterDescription": "Fundo de CRI indexado ao IPCA com patrimônio de R$ 1,59 bi, gestão Pátria-VBI e 112 mil cotistas."
+  },
+  "indicadores": {
+    "cotacao": 82.78,
+    "cotacaoData": "23/04/2026",
+    "pvp": 0.89,
+    "pvpDesconto": "11% de desconto",
+    "dividendYield": 14.35,
+    "dividendoMensal": 0.8,
+    "dividendoAnual": 9.6,
+    "patrimonioLiquido": "R$ 1,59 Bi",
+    "vpCota": 93.31,
+    "cotistas": 112730,
+    "ocupacao": null,
+    "numImoveis": 111
+  },
+  "recomendacao": {
+    "nota": 8.0,
+    "veredicto": null,
+    "cor": "emerald",
+    "resumo": "<p>O <strong class=\"text-blue-400\">CVBI11 (PCIP11)</strong> é um dos maiores fundos imobiliários de CRI <em>high grade</em> indexados ao IPCA do mercado brasileiro, com patrimônio líquido de <strong class=\"text-emerald-400\">R$ 1,59 bilhão</strong> e carteira diversificada em <strong class=\"text-emerald-400\">107 CRIs</strong> e 4 operações estruturadas, rodando a <strong class=\"text-emerald-400\">IPCA + 10,5% a.a.</strong> (rentabilidade nominal de 16,1% a.a.) com prazo médio de 3,4 anos e spread médio de 2,3% a.a. sobre a NTN-B. A gestão é conduzida pela <strong class=\"text-blue-400\">Pátria – VBI Securities</strong>, fruto da integração entre a VBI Real Estate (fundada em 2006) e a plataforma de Real Estate do Pátria Investimentos, com mais de R$ 38 bilhões em ativos imobiliários sob gestão.</p><p>Em fev/2026, o fundo negocia a <strong class=\"text-emerald-400\">R$ 82,78</strong> contra VP de <strong class=\"text-emerald-400\">R$ 93,31</strong> (P/VP 0,89, desconto de 11%), distribuindo <strong class=\"text-emerald-400\">R$ 0,80/cota</strong> no mês, com DY anualizado de 14,3% sobre a cota de mercado. Pontos de atenção incluem exposição a operações em watchlist (<strong class=\"text-amber-400\">CRI Cortel</strong> em reestruturação, <strong class=\"text-amber-400\">CRI Invert/Gafisa</strong> em recuperação de liquidez, <strong class=\"text-amber-400\">FII Renda Preferencial GPA</strong> monitorado pela recuperação extrajudicial do GPA) e a potencial consolidação com os fundos RBRR, RPRI e VCJR sinalizada pela gestora.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 1,59 Bi",
+      "detalhe": "VP/cota: R$ 93,31 · 17,01 mi cotas",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,80",
+      "valorSufixo": "/mês",
+      "detalhe": "DY anualizado 14,3% · reserva R$ 0,40/cota",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Carteira CRI",
+      "valor": "107 CRIs",
+      "detalhe": "+ 4 op. estruturadas · IPCA+10,5% a.a.",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "112.730",
+      "detalhe": "ADTV R$ 4,4 mi · P/VP 0,89",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Exposição a CRI Cortel em reestruturação (3,5% do PL)",
+      "descricao": "O grupo Cortel (deathcare) totaliza R$ 56,4 milhões distribuídos em 4 tranches (CRI Cortel, Cortel II Sr. A, Sub. A e Sub. B), com ratings rebaixados para CR-8/CR-9. Reestruturação prevê carência de amortização até out/2027, reforço de garantia com imóvel Memorial da Colina e elevação da taxa do CRI Cortel de IPCA+7,0% para IPCA+7,5%.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "CRI Invert (Gafisa) com restrição de liquidez",
+      "descricao": "Exposição de R$ 40,9 milhões (2,5% do PL) em três séries (B, C e D) vinculadas a empreendimento Gafisa em Campo Belo/SP. Operação foi reestruturada em jul/2025 com aporte obrigatório de equity pela devedora, mas a companhia segue com dificuldades de caixa, demandando monitoramento próximo da gestão.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Recuperação extrajudicial do GPA afeta op. estruturada",
+      "descricao": "O FII Renda Preferencial GPA (5,4% do PL) tem o Grupo Pão de Açúcar como locatário. Embora aluguéis continuem sendo pagos normalmente (obrigações operacionais não afetadas pela recuperação extrajudicial) e haja fiança bancária BTG/Itaú/Safra, o caso demanda acompanhamento contínuo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Potencial consolidação com outros fundos Pátria",
+      "descricao": "A gestora sinalizou em fev/2026 intenção de consolidar PCIP com VCJR, RBRR e RPRI (incorporados em fev/2026). Embora busque diluição de risco, ganho de escala e liquidez, o processo exige aprovação em AGE com quórum qualificado e pode gerar volatilidade até conclusão.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cota abaixo do valor patrimonial há anos",
+      "descricao": "Após ter negociado acima de R$ 100 em 2020-2022, a cota caiu para R$ 82,78 em abr/2026 (-17,2% desde IPO), refletindo ciclo de juros altos, emissões subsequentes e eventos de crédito em watchlist. Retorno total com dividendos reinvestidos foi de +93,5% no período (11,0% a.a.).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Prazo médio relativamente curto (3,4 anos)",
+      "descricao": "A duration reduzida acelera o reinvestimento da carteira e exige originação contínua. Em cenário de queda da Selic e IPCA, isso pode comprimir spreads futuros, embora ainda haja 78% da carteira vencendo após 2030.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Deflação pontual impacta distribuição",
+      "descricao": "Como 90% da carteira é indexada ao IPCA, meses de inflação negativa (como set/2025) reduzem os dividendos. A gestão mantém reserva de R$ 0,40/cota para suavizar a volatilidade, mas o investidor deve estar preparado para oscilações mensais na distribuição.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Pátria - VBI Securities",
+    "nota": 9.0,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AuM Real Estate",
+        "valor": "R$ 38 Bi"
+      },
+      {
+        "label": "AuM Pátria Global",
+        "valor": "R$ 289 Bi"
+      },
+      {
+        "label": "FIIs listados na B3",
+        "valor": "30+"
+      },
+      {
+        "label": "Experiência",
+        "valor": "37+ anos"
+      }
+    ],
+    "resumo": "<p>A gestão é conduzida pela <strong class=\"text-blue-400\">Pátria - VBI Securities Ltda.</strong>, resultante da integração iniciada em jun/2022 e concluída em 2024, quando o Pátria Investimentos adquiriu 100% da VBI Real Estate. A VBI foi fundada em 2006 com foco exclusivo no setor imobiliário brasileiro, acumulando mais de R$ 11 bilhões comprometidos em 100 investimentos em 18 estados, sob liderança dos sócios fundadores Rodrigo Abbud e Ken Wainer.</p><p>O Pátria é uma das maiores gestoras de ativos alternativos da América Latina, com atuação global em 4 continentes e <strong class=\"text-emerald-400\">R$ 289 bilhões em AuM</strong>. A plataforma de Real Estate soma <strong class=\"text-emerald-400\">R$ 38 bilhões</strong>, sendo a maior gestora independente de FIIs do Brasil com mais de 30 fundos listados. A taxa de administração total é de <strong class=\"text-emerald-400\">1,0% a.a.</strong> sobre valor de mercado (sendo 0,90% repassado ao gestor), sem taxa de performance - alinhamento competitivo com o setor.</p>",
+    "link": "../../gestores/patria-investimentos/"
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas competitiva, sem performance fee",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,0% a.a.",
+        "detalhe": "Sobre valor de mercado (0,9% gestor + 0,1% admin/escrit.)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Isenção voluntária desde 2º sem/2020",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 4,4 MI",
+        "detalhe": "Volume médio diário negociado em fev/2026",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM (Apex Group)"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Pátria - VBI Securities Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "Ernst & Young (anterior: KPMG)"
+      },
+      {
+        "label": "Início",
+        "valor": "Setembro/2019"
+      },
+      {
+        "label": "Cotas emitidas",
+        "valor": "17.011.707"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs + Op. Estruturadas",
+        "valor": "111"
+      },
+      {
+        "label": "% PL alocado",
+        "valor": "94,9%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Rentabilidade ponderada",
+        "valor": "16,1% a.a."
+      },
+      {
+        "label": "Duration",
+        "valor": "3,4 anos"
+      },
+      {
+        "label": "Spread sobre NTN-B",
+        "valor": "2,3% a.a.",
+        "cor": "emerald"
+      },
+      {
+        "label": "LTV médio",
+        "valor": "56%",
+        "cor": "emerald"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Varejo",
+        "Residencial",
+        "Logística",
+        "Shopping",
+        "Loteamento",
+        "Outros"
+      ],
+      "data": [
+        21,
+        15,
+        12,
+        11,
+        9,
+        32
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#6b7280"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "FII Renda Preferencial GPA",
+        "setor": "Varejo (alimentar)",
+        "receita": "5,4% PL",
+        "rating": "Até dez/2037",
+        "ratingCor": "emerald",
+        "risco": "Baixo-Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Airport Town (Riza)",
+        "setor": "Logística SP",
+        "receita": "4,9% PL",
+        "rating": "CR-7 · LTV 61%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Cidade Matarazzo IPCA B",
+        "setor": "Varejo SP",
+        "receita": "4,2% PL",
+        "rating": "CR-7 · LTV 50%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Cogna Venâncio",
+        "setor": "Educacional DF",
+        "receita": "3,3% PL",
+        "rating": "Até jun/2035",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI BARI IPCA Sr.",
+        "setor": "Pulverizado",
+        "receita": "3,1% PL",
+        "rating": "LTV 59%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Buriti (Loteamento)",
+        "setor": "TO/PA/BA",
+        "receita": "2,8% PL",
+        "rating": "LTV 57,1%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Cortel (deathcare)",
+        "setor": "RS",
+        "receita": "2,6% PL",
+        "rating": "Em revisão",
+        "ratingCor": "amber",
+        "risco": "Watchlist",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Yduqs RJ",
+        "setor": "Educacional RJ",
+        "receita": "2,5% PL",
+        "rating": "Rating AAA",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>A carteira apresenta boa diversificação com <strong class=\"text-emerald-400\">14 segmentos</strong> distintos, sendo as maiores exposições em varejo (21%), residencial (15%) e logística (12%). A diversificação regional concentra-se em SP (39%), seguida de MG, RS e MT. O <strong class=\"text-emerald-400\">LTV médio de 56%</strong> é conservador e 90% da carteira é indexada ao IPCA. Pontos de atenção: CRI Cortel e Invert em watchlist (~6% PL combinados) e exposição ao GPA via operação estruturada (5,4% PL), todos com garantias robustas e acompanhamento próximo da gestão.</p>"
+  },
+  "timeline": {
+    "subtitulo": "De FII VBI CRI a PCIP11: 6 anos consolidando a liderança em crédito imobiliário high grade",
+    "periodos": [
+      {
+        "periodo": "Set/2019",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Primeira emissão a R$ 100/cota, captando R$ 88 milhões. Início da trajetória como FII VBI CRI, gerido pela VBI Real Estate com foco em CRIs indexados ao IPCA.",
+        "pontos": [
+          "<strong class=\"text-blue-400\">Cota IPO: R$ 100,00</strong>",
+          "<strong>1.000 cotistas iniciais</strong>",
+          "Taxa adm: 1,0% a.a."
+        ]
+      },
+      {
+        "periodo": "2020-2021",
+        "label": "EXPANSÃO",
+        "cor": "blue",
+        "descricao": "Sucessivas emissões (2ª a 5ª) captaram mais de R$ 700 milhões, elevando o patrimônio para R$ 1 bilhão. Fundo consolida-se como um dos maiores FIIs de CRI do mercado.",
+        "pontos": [
+          "<strong class=\"text-blue-400\">PL atinge R$ 1 bi em 2021</strong>",
+          "Alocação sobe para 90%+",
+          "ADTV médio de R$ 5 mi/dia"
+        ]
+      },
+      {
+        "periodo": "Jun/2022",
+        "label": "ASSOCIAÇÃO PÁTRIA",
+        "cor": "amber",
+        "descricao": "Pátria Investimentos adquire 50% da VBI Real Estate, mantendo a equipe de gestão. 7ª emissão de cotas capta R$ 49 milhões. Renomeação do gestor para Pátria - VBI Securities em 2024.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">50% VBI adquirida pelo Pátria</strong>",
+          "Time de gestão preservado",
+          "Rodrigo Abbud e Ken Wainer permanecem"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "CICLO DE JUROS",
+        "cor": "red",
+        "descricao": "Selic sobe a 13,75%/15% a.a. pressiona preço das cotas (P/VP cai para 0,85-0,95). Rentabilidade nominal da carteira atinge 17% a.a. com spread médio de 3,8% a.a.",
+        "pontos": [
+          "Cota secundária cai para R$ 85-90",
+          "DY anualizado sobe a 13,7%",
+          "Spread histórico máximo"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "INTEGRAÇÃO PÁTRIA",
+        "cor": "blue",
+        "descricao": "Pátria conclui aquisição de 100% da VBI. Plataforma de Real Estate unificada ultrapassa R$ 38 bilhões em AuM. Taxa de administração reduzida voluntariamente para 0,9% a.a.",
+        "pontos": [
+          "<strong class=\"text-blue-400\">100% VBI integrada ao Pátria</strong>",
+          "AuM global: R$ 289 Bi",
+          "30+ FIIs na B3"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "CONSOLIDAÇÃO + NOVO NOME",
+        "cor": "emerald",
+        "descricao": "8ª emissão capta R$ 555,8 milhões para incorporar carteiras do PLCR11 e BARI11. Mudança de ticker: CVBI11 → PCIP11 (Pátria Crédito Imobiliário Índice de Preços).",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">Emissão consolidação: R$ 555,8 mi</strong>",
+          "PL sobe para R$ 1,58 bi",
+          "Novo ticker: PCIP11"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "NOVA CONSOLIDAÇÃO PROJETADA",
+        "cor": "amber",
+        "descricao": "Gestora sinaliza em relatório a intenção de consolidar PCIP com VCJR, RBRR e RPRI (estes dois últimos incorporados à plataforma em fev/2026), visando criar fundo mais robusto na categoria IPCA high grade.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">Potencial fusão com 3 FIIs</strong>",
+          "Aprovação AGE quórum qualificado",
+          "Sem datas confirmadas"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Cotação a R$ 82,78 com P/VP 0,89 e DY anualizado de 14,3%. Selic em 15% a.a. com cortes esperados em 2026, IFIX em máxima histórica e cenário favorável para FIIs de papel indexados à inflação.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">PL: R$ 1,59 Bi</strong>",
+          "<strong class=\"text-emerald-400\">112.730 cotistas</strong>",
+          "<strong>Duration 3,4 anos · IPCA+10,5%</strong>"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "6 anos de trajetória desde o IPO",
+      "texto": "<p>Desde seu IPO em set/2019 a R$ 100/cota, o fundo percorreu <strong class=\"text-blue-400\">oito emissões de cotas</strong>, passou pela integração com o Pátria Investimentos (2022-2024) e consolidou as carteiras do BARI11 e PLCR11 em 2025, multiplicando por quase 20 vezes seu patrimônio inicial. A cota no mercado secundário sofreu impacto do ciclo de juros altos (Selic 15% a.a.), caindo para R$ 82,78 em abr/2026 — um retorno total de +93,5% desde IPO considerando dividendos reinvestidos, equivalente a <strong class=\"text-emerald-400\">11,0% a.a.</strong>, bem acima do CDI acumulado no período.</p><p>A gestão demonstrou capacidade de atravessar múltiplos ciclos: pandemia de 2020 (sem inadimplência relevante), alta de juros 2021-2023 e crises pontuais de crédito (Cortel, Invert, GPA) gerenciadas com reestruturações e reforços de garantia. A reserva acumulada de R$ 0,40/cota e o colchão de spread médio de 2,3% a.a. sobre NTN-B sustentam distribuições mensais resilientes.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota (IPO→Atual)",
+        "valor": "-17,2%",
+        "detalhe": "R$ 100,00 → R$ 82,78 (B3)"
+      },
+      {
+        "label": "Retorno Total Acumulado",
+        "valor": "+93,5%",
+        "detalhe": "11,0% a.a. com reinvestimentos"
+      },
+      {
+        "label": "Patrimônio desde IPO",
+        "valor": "+1.706%",
+        "detalhe": "R$ 88 mi → R$ 1,59 Bi"
+      },
+      {
+        "label": "Cotistas",
+        "valor": "+112.620%",
+        "detalhe": "~100 → 112.730"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O CVBI11 é um <strong class=\"text-blue-400\">FII de papel high grade</strong> com carteira majoritariamente indexada ao IPCA (90%), oferecendo proteção real contra inflação com spread médio de <strong class=\"text-emerald-400\">2,3% a.a.</strong> sobre NTN-B. A gestão Pátria-VBI combina expertise imobiliária (originação, análise de crédito, execução de garantias) com a musculatura de uma das maiores plataformas de alternativos da América Latina.</p><p>Com <strong class=\"text-emerald-400\">P/VP de 0,89</strong> e DY anualizado de 14,3%, o fundo oferece retorno corrente elevado em um cenário de queda esperada da Selic. A carteira diversificada em 111 operações, LTV médio de 56% e gestão ativa de reciclagem permite absorver eventos de crédito pontuais (Cortel, Invert, GPA) sem comprometer a distribuição mensal.</p>",
+    "paraQuem": [
+      "<strong>Investidor buscando renda mensal real</strong> em cenário de inflação persistente (4-5% a.a.) e juros reais elevados (NTN-B 7%+)",
+      "<strong>Perfil moderado</strong> confortável com operações de CRI high grade (rating mínimo CR-9) e exposição diversificada a 14 segmentos imobiliários",
+      "<strong>Investidor de longo prazo</strong> que aceita volatilidade mensal da distribuição (atrelada ao IPCA) em troca de retorno composto consistente (11% a.a. histórico)",
+      "<strong>Quem busca gestão institucional</strong> com track record >6 anos, plataforma Pátria (R$ 289 Bi AuM) e equipe VBI original mantida"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidor buscando estabilidade mensal</strong> da distribuição - o DY varia conforme IPCA e pode ter meses pontuais abaixo da média (deflação, MTM)",
+      "<strong>Perfil ultra-conservador</strong> que não aceita exposição a crédito privado com eventos pontuais de reestruturação (Cortel, Invert representam ~6% PL)",
+      "<strong>Quem busca ganho de capital de curto prazo</strong> - o desconto ao VP pode persistir enquanto durar o ciclo de juros altos e incertezas sobre consolidação com outros FIIs"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      1.05,
+      1.05,
+      1.05,
+      1.05,
+      1.05,
+      1.05,
+      0.85,
+      0.9,
+      0.83,
+      0.88,
+      0.83,
+      0.8
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.7,
+    "chartYMax": 1.15,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 15,32"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 13,60"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 11,38"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 11,55"
+      },
+      {
+        "ano": "2026 (2m)",
+        "valor": "R$ 1,63"
+      }
+    ],
+    "guidance": {
+      "periodo": "Próximos 12 meses",
+      "faixa": "R$ 0,75 a R$ 1,00",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (Fev/26)",
+        "valor": "R$ 0,80"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 1,05"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,80"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      },
+      {
+        "label": "Reserva acumulada",
+        "valor": "R$ 0,40/cota",
+        "cor": "blue"
+      },
+      {
+        "label": "DY 12m (cota mercado)",
+        "valor": "~13,5%",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,89",
+      "descricao": "<p>O P/VP atual de <strong class=\"text-emerald-400\">0,89</strong> representa <strong class=\"text-emerald-400\">11% de desconto</strong> em relação ao valor patrimonial da cota (R$ 93,31). Historicamente, o fundo negociou entre 0,85 e 1,05 desde o IPO, com os maiores descontos nos momentos de estresse de juros (2022-2023 e 2025-2026). O patrimônio líquido reflete a marcação a mercado dos CRIs desde ago/2025, incorporando spreads atuais de mercado.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 93,31"
+        },
+        {
+          "label": "Preço B3",
+          "valor": "R$ 82,78",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto absoluto",
+          "valor": "R$ 10,53/cota",
+          "cor": "emerald"
+        },
+        {
+          "label": "P/VP histórico médio",
+          "valor": "~0,95"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "14,3%",
+      "label": "Dividend Yield Anualizado",
+      "cor": "emerald",
+      "descricao": "<p>O DY anualizado de <strong class=\"text-emerald-400\">14,3%</strong> (sobre cota de mercado) é atrativo frente a: (i) IFIX-CRIs médio de 12-13%; (ii) NTN-B 10 anos em 7% a.a.; (iii) CDI de ~15% a.a. Como a carteira é 90% indexada ao IPCA, o DY real (descontada a inflação de 4,26%) fica próximo a <strong class=\"text-emerald-400\">9,6% a.a.</strong>, um prêmio significativo sobre títulos públicos indexados.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 95,00",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Estimativa de preço justo em <strong class=\"text-blue-400\">R$ 95,00</strong>, calculada com base em: (i) <strong>Gordon Growth</strong>: DPS anual R$ 10,20 / (custo de capital 10,5% + prêmio risco 1,0% - crescimento real 3,0%) = R$ 93-98; (ii) <strong>P/VP histórico médio</strong> 0,95 x VP R$ 93,31 = R$ 88,65; (iii) <strong>DY target</strong> de 11% para fundos high grade: R$ 10,20 / 0,11 = R$ 92,70. A média ponderada converge para faixa de R$ 92-98, com ponto central em R$ 95,00 — o que implica potencial de valorização de ~15% sobre a cota atual, além dos dividendos mensais.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O CVBI11 (novo ticker PCIP11 desde set/2025) é um dos principais FIIs de CRI high grade indexados ao IPCA do mercado brasileiro, com patrimônio líquido de R$ 1,59 bilhão, 112.730 cotistas e carteira ativa de 107 CRIs e 4 operações estruturadas, rodando a IPCA + 10,5% a.a. com spread médio de 2,3% sobre a curva NTN-B. A gestão é conduzida pela Pátria - VBI Securities, resultante da integração entre a VBI Real Estate (gestão desde o IPO em 2019) e a plataforma de Real Estate do Pátria Investimentos (R$ 38 bi em AuM), preservando a equipe original liderada pelos sócios Rodrigo Abbud e Ken Wainer.",
+      "Em fev/2026, a cota negocia a R$ 82,78 contra VP de R$ 93,31 — P/VP de 0,89 (11% de desconto) — distribuindo R$ 0,80/cota (DY anualizado de 14,3%). A carteira apresenta diversificação em 14 segmentos, LTV médio conservador de 56% e 90% de indexação ao IPCA, com reserva acumulada de R$ 0,40/cota para suavizar volatilidades. Os principais pontos de atenção residem nas operações em watchlist (CRI Cortel em reestruturação, CRI Invert/Gafisa com restrição de liquidez, FII Renda Preferencial GPA monitorado pela recuperação extrajudicial do GPA), que somam aproximadamente 11% do PL — todos com garantias robustas e acompanhamento ativo da gestão.",
+      "Em termos de trajetória histórica, o fundo consolidou-se como um dos maiores do segmento high grade após oito emissões de cotas (incluindo a incorporação das carteiras do BARI11 e PLCR11 em set/2025). O retorno total desde IPO é de +93,5% com reinvestimentos (11,0% a.a.), apesar da queda de 17,2% da cota no secundário, impactada pelo ciclo de Selic elevada. Para os próximos 12 meses, o cenário de queda esperada da Selic (atualmente 15%), IFIX em máxima histórica e inflação controlada em 4,26% (2025) favorece a reprecificação de FIIs descontados, enquanto potencial consolidação com os fundos RBRR, RPRI e VCJR anunciada pela gestora em fev/2026 pode gerar sinergias adicionais — embora dependa de aprovação em AGE com quórum qualificado.",
+      "Sob a ótica do valuation, o preço justo estimado converge para R$ 95,00 (combinando Gordon Growth, P/VP histórico e DY target), implicando potencial de valorização de ~15% além dos rendimentos mensais. A combinação de desconto ao VP, gestão institucional sólida, carteira diversificada e exposição à inflação em cenário de normalização monetária torna o fundo uma ferramenta relevante para investidores buscando renda real consistente, respeitadas as peculiaridades de volatilidade mensal (atrelada ao IPCA) e os riscos de crédito inerentes a operações em watchlist."
+    ],
+    "pontosFortes": [
+      "Gestão Pátria-VBI com 37+ anos de experiência em alternativos e R$ 38 Bi em Real Estate sob gestão",
+      "Carteira pulverizada em 107 CRIs + 4 op. estruturadas em 14 segmentos, com LTV médio de 56%",
+      "Rentabilidade ponderada de IPCA+10,5% a.a. (nominal 16,1%) com spread de 2,3% a.a. sobre NTN-B",
+      "P/VP de 0,89 (11% desconto) em momento de pico de Selic, oferecendo margem de valorização",
+      "DY anualizado de 14,3% sobre a cota de mercado, competitivo vs IFIX-CRIs e renda fixa",
+      "Reserva de lucros acumulada de R$ 0,40/cota para suavizar volatilidade de distribuições",
+      "Liquidez diária robusta (ADTV R$ 4,4 mi) e 112.730 cotistas",
+      "Taxa de administração total de 1,0% a.a. sem performance fee - alinhamento competitivo"
+    ],
+    "pontosDeAtencao": [
+      "Exposição ao CRI Cortel (3,8% PL) em reestruturação, com ratings rebaixados para CR-8/CR-9",
+      "CRI Invert/Gafisa (2,5% PL) com restrições de liquidez do devedor, apesar de reestruturação em 2025",
+      "FII Renda Preferencial GPA (5,4% PL) exige monitoramento pela recuperação extrajudicial do Grupo Pão de Açúcar",
+      "Duration de 3,4 anos exige originação contínua - risco de compressão de spreads em queda de juros",
+      "90% exposição ao IPCA implica meses de deflação pontual reduzem distribuições (como set/2025)",
+      "Potencial consolidação com VCJR, RBRR e RPRI pode gerar volatilidade até aprovação em AGE",
+      "Cota abaixo do VP há mais de 2 anos - timing de reprecificação depende do ciclo de juros",
+      "Concentração geográfica em SP (39% da carteira de CRI)"
+    ],
+    "conclusaoFinal": "O CVBI11 (PCIP11) consolida-se como um dos veículos mais robustos do segmento de CRI high grade indexado ao IPCA no Brasil, com gestão institucional de primeira linha (Pátria-VBI), carteira diversificada em 111 operações, LTV conservador e spread atrativo sobre a curva de NTN-B. A combinação atual de P/VP 0,89, DY de 14,3% e perspectivas de queda da Selic ao longo de 2026 configura um cenário de potencial reprecificação, embora os eventos de crédito em watchlist (Cortel, Invert e GPA) e a possível consolidação com outros fundos Pátria demandem acompanhamento próximo. Para o investidor, o trade-off envolve renda real consistente e exposição a alternativos imobiliários via equipe experiente, em contrapartida à volatilidade mensal atrelada ao IPCA e aos riscos específicos de crédito privado diversificado. Como em qualquer investimento, a decisão deve ser calibrada ao perfil individual, horizonte temporal e composição global de carteira."
+  },
+  "footer": {
+    "dataAnalise": "23/04/2026",
+    "totalDocumentos": 336,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Os dados foram extraídos de documentos oficiais do fundo (relatórios gerenciais, informes anuais e trimestrais) e refletem informações disponíveis até fev/2026. O investidor deve ler o regulamento do fundo e avaliar riscos antes de investir."
+  }
+}

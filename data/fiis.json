@@ -5466,350 +5466,732 @@
       "notaGestora": 9.0
     },
     {
-      "id": "crff11",
-      "ticker": "CRFF11",
-      "nome": "Caixa Rio Bravo FoF FII",
-      "gestora": "Caixa Asset + Rio Bravo",
-      "segmento": "fundo-de-fundos",
-      "subsegmento": "Fundo de Fundos",
+      "id": "cpur11",
+      "ticker": "CPUR11",
+      "nome": "Capitânia HBC Renda Urbana FII",
+      "gestora": "Capitânia HBC",
+      "segmento": "híbrido---renda-urbana-(varejo",
+      "subsegmento": "Híbrido - Renda Urbana (Varejo, Saúde e Logística)",
       "sentimento": "neutro",
-      "dataAnalise": "16/03/2026",
+      "dataAnalise": "23/04/2026",
       "indicadores": {
-        "cotacao": 73.44,
-        "pvp": 0.85,
-        "dividendYield": 10.3,
-        "dividendoMensal": 0.63,
+        "cotacao": 10.33,
+        "pvp": 1.05,
+        "dividendYield": 10.64,
+        "dividendoMensal": 0.1,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 1198,
-        "vpCota": 86.16
+        "cotistas": 1658,
+        "vpCota": 9.73
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Acima da media para FoFs"
+        "comentarioTaxas": "Taxa de administração/gestão padrão do mercado, com taxa de performance acima da média"
       },
       "estrategia": {
-        "resumo": "CRFF11 e um Fundo de Fundos com gestao ativa da Caixa Asset e Rio Bravo, investindo em ~33 FIIs diversificados por segmento. O fundo entregou retorno de 22,1% em 2025, superando o IFIX. O P/VP de 0,85 oferece desconto de 15%, com potencial de upside de 32,3%. O guidance 1S26 foi elevado para R$ 0,59-0,67/cota, e a expectativa de corte de juros de ~275bps em 2026 favorece a carteira voltada para FIIs de tijolo. Porem, o patrimonio reduzido (R$ 59,5 Mi), baixa liquidez e taxa de 1,15% limitam a atratividade frente a pares maiores.",
-        "ocupacao": null,
+        "resumo": "O CPUR11 é uma tese de renda urbana diversificada, combinando atacarejo (maioria), varejo de vestuário, saúde, varejo alimentar e logística, com contratos predominantemente atípicos e longos. A gestão Capitânia HBC tem feito reciclagem agressiva de ativos, gerando ganhos de capital pontuais que sustentam a distribuição no patamar atual.A tese central depende da capacidade da gestão de converter o resultado recorrente (atualmente R$ 0,06/cota/mês) para o patamar de distribuição declarado (R$ 0,10), via incorporação do HBCR11, redução de endividamento e expansão dos ativos em desenvolvimento (Raposo Tavares e Ribeirão Preto).",
+        "ocupacao": 97.0,
         "focoGeografico": "",
-        "tipoAtivo": "Fundo de Fundos"
+        "tipoAtivo": "Híbrido - Renda Urbana (Varejo, Saúde e Logística)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Retorno 2025 superior ao IFIX (+22,1% vs 21,1%)",
-        "P/VP 0,85 com 15% de desconto patrimonial",
-        "Potencial de upside de 32,3% (cota vs VP potencial)",
-        "Gestao institucional Caixa + Rio Bravo com track record",
-        "Carteira diversificada em ~33 FIIs com 73,6% estrategica",
-        "Sem taxa de performance",
-        "Resultado recorrente crescente (+10,3% vs 2024)",
-        "Guidance 1S26 elevado para R$ 0,59-0,67/cota"
+        "Portfólio 100% indexado ao IPCA com WAULT de 11 anos",
+        "76,2% dos contratos são atípicos, reduzindo risco de saída antecipada",
+        "Ocupação elevada de 97% na carteira consolidada",
+        "Diversificação em 8 estados e 6 segmentos (atacarejo, vestuário, saúde, alimentar, logística, bricolagem)",
+        "Locatários âncora de grande porte (Assaí, GPA, Marisa, C&A, Decathlon, Dasa/Amil)",
+        "Gestão ativa comprovada em reciclagem de ativos e realização de ganhos",
+        "Projetos de expansão (Raposo Tavares) que devem triplicar a ABL do ativo",
+        "Taxa de administração competitiva (1,00% a.a.)"
       ],
       "conclusao": {
-        "resumo": "O CRFF11 e uma opcao valida para investidores que buscam diversificacao em FIIs via gestao profissional e que nao necessitam de alta liquidez. O desconto de 15% no P/VP, o potencial de upside de 32,3% e o guidance 1S26 elevado sao atrativos, especialmente no contexto de expectativa de corte de juros de 275bps em 2026. Porem, a baixa liquidez cronica, patrimonio em declinio e taxa elevada limitam a recomendacao a MANTER para quem ja possui. Novos investidores devem considerar FoFs maiores e mais liquidos, salvo se a posicao pretendida for pequena (abaixo de R$ 5 mil).",
-        "paraQuem": "Investidores que buscam diversificacao em FIIs com gestao profissional institucional",
-        "naoParaQuem": "Quem precisa de liquidez (volume de R$ 17,7 mil/dia, com meses abaixo de R$ 5 mil/dia)"
+        "resumo": "O CPUR11 apresenta combinação de atributos estruturais sólidos (contratos atípicos longos, portfólio diversificado, indexação IPCA) com trade-offs importantes (alavancagem elevada, taxa de performance acima da média, distribuição parcialmente sustentada por não recorrentes). O investidor precisa avaliar se a previsibilidade dos contratos e o espaço para criação de valor nos projetos de expansão compensam o prêmio sobre o patrimônio e o risco de ajuste da distribuição para o patamar recorrente sinalizado pela própria gestão. O fundo parece mais adequado a investidores que compreendem a dinâmica de FIIs híbridos ativos e aceitam volatilidade de DPS em troca de potencial de ganho de capital via reposicionamento de ativos.",
+        "paraQuem": "Investidores que buscam exposição a atacarejo de qualidade (Assaí) com contratos atípicos longos",
+        "naoParaQuem": "Investidores que não toleram alavancagem (CRIs representam ~45% do PL)"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "Out/2018 - Abr/2019",
-            "descricao": "CNPJ: 31.887.401/0001-39",
+            "ano": "Out/2019",
+            "descricao": "",
             "impacto": ""
           },
           {
             "ano": "2020-2023",
-            "descricao": "Dividendos estaveis entre R$ 0,61 e R$ 0,65/cota",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2024-2025",
-            "descricao": "Resultado recorrente +10,3% vs 2024",
+            "ano": "Jun/2023",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2026",
-            "descricao": "Guidance 1S26: R$ 0,59 a R$ 0,67/cota (banda elevada)",
+            "ano": "Fev/2024",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2024",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL de R$ 660 milhões (vs. R$ 241 mi em jun/2024)",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Gestao Ativa",
-        "Co-Gestao Rio Bravo",
-        "~33 FIIs",
-        "Caixa Asset + Rio Bravo"
+        "Portfólio atacarejo e varejo",
+        "100% contratos IPCA",
+        "WAULT 11 anos",
+        "Capitânia HBC"
       ],
       "tempoLeitura": 10,
-      "arquivo": "crff11/index.html",
-      "nota": 6,
-      "veredicto": "MANTER",
-      "notaGestora": 7
+      "arquivo": "cpur11/index.html",
+      "nota": 6.5,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.0
     },
     {
-      "id": "cxag11",
-      "ticker": "CXAG11",
-      "nome": "Caixa Agencias FII",
-      "gestora": "RB Asset Management",
-      "segmento": "tijolo---agencias-bancarias",
-      "subsegmento": "Tijolo - Agencias Bancarias",
-      "sentimento": "neutro",
-      "dataAnalise": "16/03/2026",
+      "id": "craa11",
+      "ticker": "CRAA11",
+      "nome": "Sparta Fiagro Fundo de Investimento nas Cadeias Produtivas Agroindustriais",
+      "gestora": "Sparta Administradora de Recursos",
+      "segmento": "fiagro---cra-(agronegócio)",
+      "subsegmento": "Fiagro - CRA (Agronegócio)",
+      "sentimento": "otimista",
+      "dataAnalise": "23/04/2026",
       "indicadores": {
-        "cotacao": 76.86,
-        "pvp": 0.7,
-        "dividendYield": 13.43,
-        "dividendoMensal": 0.86,
+        "cotacao": 101.78,
+        "pvp": 1.0,
+        "dividendYield": 14.74,
+        "dividendoMensal": 1.25,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 11583,
-        "vpCota": 110.52
+        "cotistas": 11057,
+        "vpCota": 101.64
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Competitivas para o segmento"
+        "comentarioTaxas": "Taxas em linha com a indústria de Fiagros high grade, com performance alinhada ao excesso sobre CDI+2%"
       },
       "estrategia": {
-        "resumo": "CXAG11 e um FII de agencias bancarias com 31 imoveis locados exclusivamente para a Caixa Economica Federal em contrato sale and leaseback ate 2031. O P/VP de 0,70 oferece desconto de 30% e o DY de 13,4% e atrativo. A venda da AG Frederico Westphalen em abr/2025 com agio de 36,4% demonstrou capacidade de gestao ativa. Porem, a revisional de outubro/2026 (7 meses) e o principal evento de risco no horizonte, junto a concentracao em locatario unico e a baixa liquidez.",
-        "ocupacao": 100,
+        "resumo": "O CRAA11 oferece exposição a uma carteira high grade e extremamente pulverizada (123 CRAs, 22 segmentos) de crédito privado do agronegócio brasileiro, com isenção de IR para pessoa física sobre os rendimentos distribuídos. A tese central é aproveitar o prêmio de instrumento dos CRAs (cerca de 80 bps acima de debêntures incentivadas de risco comparável) combinando-o com gestão ativa disciplinada — evidenciada pela entrega histórica de 122% do CDI.Com carrego de CDI+1,6% a.a. e duration de 2,4 anos, o fundo é uma alternativa de renda fixa isenta com baixo risco de crédito, apropriada para diversificação de portfólios de renda passiva em cenário de queda da Selic.",
+        "ocupacao": null,
         "focoGeografico": "",
-        "tipoAtivo": "Tijolo - Agencias Bancarias"
+        "tipoAtivo": "Fiagro - CRA (Agronegócio)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "P/VP 0,70 com 30% de desconto sobre patrimonio",
-        "DY 13,4% sobre cota de mercado",
-        "Locatario solido (Caixa Economica Federal)",
-        "100% de ocupacao garantida ate 2031",
-        "Taxa baixa de 0,58% sem performance",
-        "Venda de imovel com agio de 36,4% e TIR 16,4% a.a.",
-        "Valorizacao de 33,96% em 2025",
-        "11.583 cotistas (base crescente)"
+        "Carteira extremamente pulverizada: 123 CRAs em 22 segmentos, maior posição em 3,3% do PL",
+        "Zero inadimplência desde o IPO (jan/2023), atravessando eventos Agrogalaxy e Raízen sem exposição direta",
+        "Devedores high grade: mais de 90% faturam acima de R$ 1 bilhão/ano, com ratings AA+ (Camil), AA (S&P - SLC, CMAA, 3Tentos) e A+ (GTFoods)",
+        "Gestão ativa disciplinada: análise de R$ 33 bi em ofertas primárias em 2025 com alocação em apenas R$ 203 Mi (5 emissores)",
+        "Retorno histórico consistente: 122% do CDI acumulado desde o início, com 2,2 p.p. oriundos de gestão ativa (marcação a mercado e ganhos de negociação)",
+        "Isenção de IR para PF: rendimentos distribuídos isentos (Lei 14.130), com a MP 1.303 não tendo prosperado em 2025",
+        "Transparência: divulgação diária da cota patrimonial no site craa11.com.br, relatórios detalhados e Planilha de Fundamentos",
+        "Reserva robusta de resultados (R$ 0,39/cota), suportando guidance de R$ 1,20/cota no 1S2026"
       ],
       "conclusao": {
-        "resumo": "O CXAG11 e uma opcao para investidores que buscam renda previsivel com desconto no preco e aceitam a concentracao em um unico locatario. O desconto de 30% no P/VP, o DY de 13,4% e a venda de imovel com agio expressivo sao atrativos. Porem, a revisional de outubro/2026, agora iminente a 7 meses, e o principal fator de risco que justifica cautela. O resultado dessa revisao definira o patamar de alugueis para os proximos 5 anos e impactara diretamente a atratividade do fundo.",
-        "paraQuem": "Investidores que buscam renda mensal previsivel com locatario solido",
-        "naoParaQuem": "Quem nao aceita concentracao total em um locatario"
+        "resumo": "O CRAA11 encerra o 1T2026 como um dos Fiagros mais disciplinados e pulverizados da bolsa brasileira, com track record de três anos sem inadimplência, entrega consistente de 122% do CDI líquido e carteira composta majoritariamente por emissores top tier do agronegócio. Negocia em paridade com a cota patrimonial (P/VP 1,00), com dividend yield de 15,6% em 12 meses — retorno coerente com a meta CDI+2% considerando a isenção de IR para PF. Os trade-offs são claros: quem busca high yield encontrará carrego modesto e quem deseja valorização de capital deve procurar em outro lugar, já que o fundo distribui tudo acima da cota patrimonial de R$ 100. Por outro lado, o investidor que prioriza segurança de crédito, diversificação e renda mensal previsível tem no CRAA11 um dos veículos mais bem geridos do segmento. A análise objetiva dos dados posiciona o fundo como alternativa sólida de renda fixa isenta, com as ressalvas habituais para liquidez limitada e sensibilidade a eventos sistêmicos do agro.",
+        "paraQuem": "Investidor PF buscando renda mensal isenta de IR em crédito privado high grade",
+        "naoParaQuem": "Quem busca valorização expressiva de cota — o fundo é de renda, não de ganho de capital (cota patrimonial ancorada em R$ 100)"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Jan/2023",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "2023",
+            "descricao": "Retorno anual de 16,80% (129% do CDI)",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "PL cresceu de R$ 50 Mi para R$ 238 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "2025",
+            "descricao": "Retorno 2025: 15,84% (111% do CDI)",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2026",
+            "descricao": "Patrimônio: R$ 241 Mi",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Carteira high grade",
+        "DY 15,6% em 12m",
+        "123 CRAs / 22 segmentos",
+        "Sparta Administradora de Recursos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "craa11/index.html",
+      "nota": 8.2,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 9.0
+    },
+    {
+      "id": "crff11",
+      "ticker": "CRFF11",
+      "nome": "Caixa Rio Bravo Fundo de Fundos de Investimento Imobiliário II",
+      "gestora": "CAIXA Asset + Rio Bravo Investimentos",
+      "segmento": "fundo-de-fundos-(fof)---multic",
+      "subsegmento": "Fundo de Fundos (FOF) - Multicategoria",
+      "sentimento": "otimista",
+      "dataAnalise": "23/04/2026",
+      "indicadores": {
+        "cotacao": 76.28,
+        "pvp": 0.89,
+        "dividendYield": 10.48,
+        "dividendoMensal": 0.65,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 1160,
+        "vpCota": 85.7
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxa total de 1,15% a.a. concentra administração, gestão e custódia em estrutura única"
+      },
+      "estrategia": {
+        "resumo": "A tese central do CRFF11 é capturar o duplo desconto do mercado de FIIs: (1) o fundo negocia a P/VP 0,89 no mercado secundário e (2) os FIIs que compõem sua carteira também negociam com desconto médio de 13-15% sobre seus próprios valores patrimoniais. A gestora projeta potencial de valorização de 24,9% caso ambos retornem à paridade.O portfólio equilibra renda recorrente (CRIs e FIIs de logística/shopping) com potencial de ganho de capital (tijolo corporativo descontado). Com DY de 10,5% a.a. e cenário de flexibilização monetária (expectativa de SELIC em 12,25% até final de 2026), o FOF oferece exposição diversificada ao mercado imobiliário em um único produto, com gestão ativa pela dupla CAIXA Asset + Rio Bravo.",
+        "ocupacao": null,
+        "focoGeografico": "",
+        "tipoAtivo": "Fundo de Fundos (FOF) - Multicategoria"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Duplo desconto de 24,9% (P/VP 0,89 + FIIs com desconto)",
+        "DY elevado de 10,48% a.a. com distribuição linearizada",
+        "Gestão ativa comprovada - retorno de 22,1% em 2025 (cota patrimonial)",
+        "Diversificação em 37 FIIs de 10+ gestoras, múltiplos setores",
+        "Parceria CAIXA Asset (R$ 328 Bi AuM) + Rio Bravo (28 FIIs) - expertise consolidada",
+        "Distribuição previsível e recorrente: R$ 7,34-7,44/cota anuais desde 2023",
+        "Reserva acumulada de R$ 0,16/cota ao final do semestre (mar/2026) - conforto nas distribuições",
+        "Auditoria Big Four (PwC em 2025) e rating da CAIXA Asset \"Excelente\" pela Fitch"
+      ],
+      "conclusao": {
+        "resumo": "O CRFF11 apresenta-se como um FOF multicategoria com portfólio diversificado e gestão ativa competente, combinando renda recorrente (DY 10,48%) com potencial de ganho de capital via duplo desconto de 24,9%. O ano de 2025 foi o melhor da história do fundo, com retorno patrimonial de 22,1% superando o IFIX, e o posicionamento atual favorece a captura da retomada do ciclo de flexibilização monetária. Os pontos de atenção são estruturais: taxa de administração elevada para um FOF (1,15% a.a.), liquidez reduzida (R$ 19 mil/dia) e concentração de cotistas. O trade-off central está entre a conveniência da exposição diversificada via gestão profissional versus o custo da taxa e a perda de eficiência em relação à montagem direta do portfólio. A decisão de alocação depende do perfil do investidor, horizonte de investimento e tolerância à volatilidade inerente a FIIs no atual cenário macroeconômico.",
+        "paraQuem": "Investidor pessoa física que busca exposição diversificada em FIIs via um único produto, beneficiando-se da isenção fiscal nos dividendos",
+        "naoParaQuem": "Investidor com alta necessidade de liquidez - volume médio diário de apenas R$ 19 mil limita negociação de posições relevantes"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Abr/2019",
+            "descricao": "R$ 69 Mi captados no IPO",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2020",
+            "descricao": "Cota cai para R$ 87,00",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2021",
+            "descricao": "Cota fecha em R$ 67,73",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2022",
+            "descricao": "Distribuição anual: R$ 6,91",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2023",
+            "descricao": "Lucro de R$ 9,7 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2024",
+            "descricao": "Prejuízo de R$ 4,1 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Lucro recorde R$ 11,2 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2026",
+            "descricao": "Cota a R$ 77,97",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Duplo desconto ~25%",
+        "DY 10,5% a.a.",
+        "Gestão CAIXA + Rio Bravo",
+        "CAIXA Asset + Rio Bravo Investimentos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "crff11/index.html",
+      "nota": 7.2,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
+    },
+    {
+      "id": "cvbi11",
+      "ticker": "CVBI11",
+      "nome": "Patria Crédito Imobiliário Índice de Preços FII",
+      "gestora": "Pátria - VBI Securities",
+      "segmento": "papel-(cri-high-grade-indexado",
+      "subsegmento": "Papel (CRI High Grade indexado ao IPCA)",
+      "sentimento": "otimista",
+      "dataAnalise": "23/04/2026",
+      "indicadores": {
+        "cotacao": 82.78,
+        "pvp": 0.89,
+        "dividendYield": 14.35,
+        "dividendoMensal": 0.8,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 112730,
+        "vpCota": 93.31
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Estrutura de taxas competitiva, sem performance fee"
+      },
+      "estrategia": {
+        "resumo": "O CVBI11 é um FII de papel high grade com carteira majoritariamente indexada ao IPCA (90%), oferecendo proteção real contra inflação com spread médio de 2,3% a.a. sobre NTN-B. A gestão Pátria-VBI combina expertise imobiliária (originação, análise de crédito, execução de garantias) com a musculatura de uma das maiores plataformas de alternativos da América Latina.Com P/VP de 0,89 e DY anualizado de 14,3%, o fundo oferece retorno corrente elevado em um cenário de queda esperada da Selic. A carteira diversificada em 111 operações, LTV médio de 56% e gestão ativa de reciclagem permite absorver eventos de crédito pontuais (Cortel, Invert, GPA) sem comprometer a distribuição mensal.",
+        "ocupacao": null,
+        "focoGeografico": "",
+        "tipoAtivo": "Papel (CRI High Grade indexado ao IPCA)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Gestão Pátria-VBI com 37+ anos de experiência em alternativos e R$ 38 Bi em Real Estate sob gestão",
+        "Carteira pulverizada em 107 CRIs + 4 op. estruturadas em 14 segmentos, com LTV médio de 56%",
+        "Rentabilidade ponderada de IPCA+10,5% a.a. (nominal 16,1%) com spread de 2,3% a.a. sobre NTN-B",
+        "P/VP de 0,89 (11% desconto) em momento de pico de Selic, oferecendo margem de valorização",
+        "DY anualizado de 14,3% sobre a cota de mercado, competitivo vs IFIX-CRIs e renda fixa",
+        "Reserva de lucros acumulada de R$ 0,40/cota para suavizar volatilidade de distribuições",
+        "Liquidez diária robusta (ADTV R$ 4,4 mi) e 112.730 cotistas",
+        "Taxa de administração total de 1,0% a.a. sem performance fee - alinhamento competitivo"
+      ],
+      "conclusao": {
+        "resumo": "O CVBI11 (PCIP11) consolida-se como um dos veículos mais robustos do segmento de CRI high grade indexado ao IPCA no Brasil, com gestão institucional de primeira linha (Pátria-VBI), carteira diversificada em 111 operações, LTV conservador e spread atrativo sobre a curva de NTN-B. A combinação atual de P/VP 0,89, DY de 14,3% e perspectivas de queda da Selic ao longo de 2026 configura um cenário de potencial reprecificação, embora os eventos de crédito em watchlist (Cortel, Invert e GPA) e a possível consolidação com outros fundos Pátria demandem acompanhamento próximo. Para o investidor, o trade-off envolve renda real consistente e exposição a alternativos imobiliários via equipe experiente, em contrapartida à volatilidade mensal atrelada ao IPCA e aos riscos específicos de crédito privado diversificado. Como em qualquer investimento, a decisão deve ser calibrada ao perfil individual, horizonte temporal e composição global de carteira.",
+        "paraQuem": "Investidor buscando renda mensal real em cenário de inflação persistente (4-5% a.a.) e juros reais elevados (NTN-B 7%+)",
+        "naoParaQuem": "Investidor buscando estabilidade mensal da distribuição - o DY varia conforme IPCA e pode ter meses pontuais abaixo da média (deflação, MTM)"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Set/2019",
+            "descricao": "Cota IPO: R$ 100,00",
+            "impacto": ""
+          },
+          {
+            "ano": "2020-2021",
+            "descricao": "PL atinge R$ 1 bi em 2021",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2022",
+            "descricao": "50% VBI adquirida pelo Pátria",
+            "impacto": ""
+          },
+          {
+            "ano": "2022-2023",
+            "descricao": "Cota secundária cai para R$ 85-90",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "100% VBI integrada ao Pátria",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "Emissão consolidação: R$ 555,8 mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "Potencial fusão com 3 FIIs",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 1,59 Bi",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "107 CRIs + 4 Op. Estruturadas",
+        "P/VP 0,89 (11% desconto)",
+        "Gestão Pátria Real Estate",
+        "Pátria - VBI Securities"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "cvbi11/index.html",
+      "nota": 8.0,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 9.0
+    },
+    {
+      "id": "cxag11",
+      "ticker": "CXAG11",
+      "nome": "Fundo de Investimento Imobiliário Caixa Agências",
+      "gestora": "RB Asset Management (ex-RB Capital)",
+      "segmento": "agências-bancárias-(tijolo---r",
+      "subsegmento": "Agências Bancárias (Tijolo - Renda)",
+      "sentimento": "neutro",
+      "dataAnalise": "23/04/2026",
+      "indicadores": {
+        "cotacao": 76.11,
+        "pvp": 0.69,
+        "dividendYield": 11.84,
+        "dividendoMensal": 0.72,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 11879,
+        "vpCota": 110.57
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxa global competitiva para FII de tijolo"
+      },
+      "estrategia": {
+        "resumo": "O CXAG11 é um fundo monolocatário que transforma a Caixa Econômica Federal em fluxo de renda imobiliário via 31 agências em contrato sale-leaseback atípico de 10 anos. A tese central está no spread entre o DY elevado (11,8%) e o custo de capital, somado ao desconto patrimonial de 31%. Os riscos concentram-se no vencimento do contrato em 2031, na revisional de 2026 e na fragilidade estrutural do segmento de agências bancárias físicas.Em um cenário de Selic em queda para 12% e possível estabilização em 10%, o yield gap do CXAG11 torna-se atraente para investidores dispostos a absorver o risco binário de renovação contratual. O prazo remanescente de cerca de 5,5 anos até o vencimento do contrato é o horizonte de previsibilidade dos rendimentos.",
+        "ocupacao": 100.0,
+        "focoGeografico": "",
+        "tipoAtivo": "Agências Bancárias (Tijolo - Renda)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Dividend Yield elevado de 11,84% a.a., acima da média do IFIX",
+        "P/VP de 0,69: desconto significativo sobre valor patrimonial",
+        "100% de ocupação com locatário AAA (Caixa Econômica Federal)",
+        "Contrato atípico com indenização a valor presente pela Selic em caso de rescisão",
+        "Aluguel corrigido pelo menor entre IPCA e IGP-M (proteção inflacionária)",
+        "Portfólio pulverizado em 31 imóveis em 4 estados (RS, MG, SP, RJ)",
+        "Taxa de administração competitiva de 0,58% a.a.",
+        "Venda de Frederico Westphalen em 2025 com ágio de 36% valida liquidez dos ativos"
+      ],
+      "conclusao": {
+        "resumo": "O CXAG11 sintetiza uma equação clara: alto retorno corrente hoje contra risco binário no vencimento do contrato em outubro de 2031. O DY de 11,84% e o desconto patrimonial de 31% refletem de forma parcial tanto a solidez do locatário (Caixa) quanto as fragilidades estruturais do segmento de agências físicas. A revisional de outubro de 2026 é o próximo ponto de verificação da tese, e o início do ciclo de corte da Selic tende a beneficiar a precificação. Trata-se de um ativo cuja adequação depende fortemente do perfil de risco do investidor, do horizonte de investimento e da tolerância a eventos de cauda — o leitor deve avaliar esses trade-offs à luz de sua própria estratégia e objetivos.",
+        "paraQuem": "Investidores de renda buscando DY acima de 11% a.a. em FII de tijolo",
+        "naoParaQuem": "Investidores conservadores que buscam FIIs diversificados e multi-inquilinos"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Out/2021",
-            "descricao": "32 agencias integradas inicialmente",
+            "descricao": "32 agências totalizando 56.495 m²",
             "impacto": ""
           },
           {
             "ano": "Dez/2021",
-            "descricao": "Preco IPO: R$ 103,70/cota",
+            "descricao": "Preço de emissão: R$ 103,70",
             "impacto": ""
           },
           {
-            "ano": "Abr/2025",
-            "descricao": "Agio de 36,4% sobre laudo Colliers",
+            "ano": "Out/2022",
+            "descricao": "Reajuste IPCA: +7,17%",
+            "impacto": ""
+          },
+          {
+            "ano": "Mai/2024",
+            "descricao": "11 imóveis no RS sem dano direto",
+            "impacto": ""
+          },
+          {
+            "ano": "Mai/2025",
+            "descricao": "Venda: R$ 3,75 milhões",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Valor imóveis: R$ 223,3 mi (-4,84%)",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2025",
+            "descricao": "Quitação total de R$ 3,85 mi diferidos",
             "impacto": ""
           },
           {
             "ano": "Out/2026",
-            "descricao": "Revisao dos valores de aluguel de todas as agencias",
+            "descricao": "Risco de redução do DPS",
             "impacto": ""
           },
           {
-            "ano": "Out/2031",
-            "descricao": "Caixa pode renovar por mais 10 anos ou menos",
+            "ano": "Abr/2026",
+            "descricao": "DPS atual: R$ 0,72/mês",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Sale and Leaseback",
-        "100% Caixa Economica",
-        "31 Agencias",
-        "RB Asset Management"
+        "Monolocatário Caixa",
+        "P/VP 0,69",
+        "DY 11,8%",
+        "RB Asset Management (ex-RB Capital)"
       ],
       "tempoLeitura": 10,
       "arquivo": "cxag11/index.html",
-      "nota": 6.5,
-      "veredicto": "MANTER",
-      "notaGestora": 6.5
+      "nota": 6.0,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
     },
     {
       "id": "cxci11",
       "ticker": "CXCI11",
-      "nome": "Caixa Carteira Imobiliaria FII",
+      "nome": "FII Caixa Carteira Imobiliária",
       "gestora": "Caixa Asset",
-      "segmento": "fundo-de-fundos",
-      "subsegmento": "Fundo de Fundos",
+      "segmento": "fundo-de-fundos-(fof)---multic",
+      "subsegmento": "Fundo de Fundos (FoF) - Multicategoria",
       "sentimento": "neutro",
-      "dataAnalise": "16/03/2026",
+      "dataAnalise": "23/04/2026",
       "indicadores": {
-        "cotacao": 68.24,
-        "pvp": 0.79,
-        "dividendYield": 13.71,
-        "dividendoMensal": 0.9,
+        "cotacao": 73.62,
+        "pvp": 0.85,
+        "dividendYield": 12.55,
+        "dividendoMensal": 0.75,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
         "cotistas": 5414,
-        "vpCota": 86.84
+        "vpCota": 86.61
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Taxa competitiva com performance sobre IFIX"
+        "comentarioTaxas": "Estrutura de custos competitiva para o segmento, com atenção ao efeito cascata típico de FoFs"
       },
       "estrategia": {
-        "resumo": "CXCI11 e um Fundo de Fundos gerido pela Caixa Asset, investindo em 43 FIIs diversificados com foco em recebiveis (39,2%) e tijolo (46,6%). O DY de 13,7% e equivalente a 113% do CDI, com P/VP de 0,79 oferecendo 21% de desconto. A reserva de R$ 0,62/cota traz alguma previsibilidade, mas vem diminuindo. A taxa de 0,70% e competitiva, mas a performance de 20% sobre IFIX pode reduzir retornos em anos bons. A distribuicao em 2025 variou entre R$ 0,75 e R$ 0,90, mostrando volatilidade nos proventos.",
+        "resumo": "O CXCI11 é um Fundo de Fundos (FoF) multicategoria pensado para oferecer acesso diversificado à indústria de FIIs via estrutura administrada por instituição de primeira linha (Caixa). A tese central combina geração de renda recorrente (sustentada por 42,2% em FIIs de papel) com potencial de ganho de capital via posições táticas em tijolo descontadas em relação ao valor patrimonial.Em 22/04/2026, negocia a P/VP 0,85 (implícito) e DY 12,55%, patamares que embutem prêmio relevante em relação ao custo de oportunidade de renda fixa. O desconto agregado dos FIIs da carteira e do próprio CXCI11 sobre valores patrimoniais representa oportunidade ou reflete fragilidades não precificadas dos ativos underlying, exigindo análise crítica do investidor.",
         "ocupacao": null,
         "focoGeografico": "",
-        "tipoAtivo": "Fundo de Fundos"
+        "tipoAtivo": "Fundo de Fundos (FoF) - Multicategoria"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "P/VP 0,79 com 21% de desconto",
-        "DY 13,7% equivalente a 113% CDI",
-        "Carteira diversificada em 43 FIIs",
-        "Taxa de administracao competitiva (0,70%)",
-        "Gestao institucional Caixa Asset",
-        "Retorno total 2025 de +20,66%",
-        "Recebiveis (39,2%) geram previsibilidade de receita"
+        "Gestão institucional pela Caixa Asset, vinculada à Caixa Econômica Federal",
+        "Taxa de administração competitiva de 0,70% a.a.",
+        "Portfólio pulverizado em 43 FIIs de gestores reconhecidos (Kinea, RBR, Pátria, Rio Bravo)",
+        "Reserva acumulada de R$ 0,58/cota proporcionando previsibilidade de distribuição",
+        "P/VP de 0,85 representa desconto relevante sobre valor patrimonial",
+        "Dividend yield de 12,55%, equivalente a 120-130% do CDI líquido com gross-up",
+        "Base diversificada de 5.414 cotistas, 100% na faixa até 5% das cotas",
+        "Distribuição mensal estável em R$ 0,75/cota há 12 meses"
       ],
       "conclusao": {
-        "resumo": "O CXCI11 e uma opcao para investidores que buscam diversificacao em FIIs com gestao institucional e aceitam liquidez moderada. O desconto de 21% no P/VP e o retorno de 20,66% em 2025 sao pontos fortes. Porem, a volatilidade nos proventos (R$ 0,75 a R$ 0,90) e a queda na reserva acumulada geram incerteza sobre a estabilidade das distribuicoes. A recomendacao de MANTER reflete o equilibrio entre o bom desconto patrimonial e os riscos de sustentabilidade dos proventos, taxa de performance e liquidez limitada.",
-        "paraQuem": "Investidores que buscam diversificacao em FIIs com gestao institucional",
-        "naoParaQuem": "Quem precisa de alta liquidez diaria"
+        "resumo": "O CXCI11 apresenta-se como alternativa de FoF administrado por instituição de primeira linha (Caixa), com taxa administrativa competitiva e portfólio pulverizado em 43 FIIs de gestores reconhecidos. A trade-off central envolve a dupla camada de taxas e a baixa liquidez secundária em contraste com a diversificação automática e a previsibilidade de distribuições mensais. A cotação atual a R$ 73,62 (P/VP 0,85 e DY 12,55%) reflete o ajuste recente do setor e coloca o fundo em patamar próximo ao preço justo estimado de R$ 80,00 (upside implícito de 8,7%), mas a decisão deve considerar o perfil de longo prazo do investidor, a tolerância à volatilidade inerente a FoFs e a disposição de monitorar 43 ativos underlying simultaneamente.",
+        "paraQuem": "Investidores pessoa física que desejam exposição diversificada a FIIs sem precisar montar carteira própria",
+        "naoParaQuem": "Investidores que buscam alta liquidez, dado o volume médio de apenas R$ 76 mil/dia"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Mar/2022",
-            "descricao": "CNPJ: 42.066.916/0001-94",
+            "descricao": "Captação total: R$ 205,77 milhões",
             "impacto": ""
           },
           {
-            "ano": "2022-2024",
-            "descricao": "Diversificacao para 43+ FIIs investidos",
+            "ano": "2022",
+            "descricao": "Distribuição de R$ 7,53/cota em 9 meses de operação",
+            "impacto": ""
+          },
+          {
+            "ano": "2023",
+            "descricao": "Dividend yield de 106% do CDI líquido",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "Cota de mercado caiu de R$ 85,70 para R$ 65,83",
             "impacto": ""
           },
           {
             "ano": "2025",
-            "descricao": "Retorno 2025: +20,66%",
+            "descricao": "Distribuição total: R$ 9,30/cota",
             "impacto": ""
           },
           {
-            "ano": "2026",
-            "descricao": "Ultimo provento: R$ 0,90/cota (ref. dez/25)",
+            "ano": "Mar/2026",
+            "descricao": "PL: R$ 155,9 milhões",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "P/VP atual: 0,85",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Gestao Caixa Asset",
-        "113% CDI",
-        "43 FIIs Investidos",
+        "42,2% em FIIs de Papel",
+        "P/VP 0,85",
+        "DY 12,55%",
         "Caixa Asset"
       ],
       "tempoLeitura": 10,
       "arquivo": "cxci11/index.html",
-      "nota": 6.5,
-      "veredicto": "MANTER",
-      "notaGestora": 7
+      "nota": 6.8,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.0
     },
     {
       "id": "cxco11",
       "ticker": "CXCO11",
-      "nome": "Caixa Corporativo FII",
-      "gestora": "Patagonia Capital + Vortx",
-      "segmento": "tijolo---lajes-corporativas",
-      "subsegmento": "Tijolo - Lajes Corporativas",
-      "sentimento": "otimista",
-      "dataAnalise": "16/03/2026",
+      "nome": "Caixa Imóveis Corporativos Fundo de Investimento Imobiliário",
+      "gestora": "Patagônia Capital Gestora de Recursos Ltda.",
+      "segmento": "lajes-corporativas-(sale-and-l",
+      "subsegmento": "Lajes Corporativas (Sale and Leaseback - Caixa Econômica Federal)",
+      "sentimento": "neutro",
+      "dataAnalise": "23/04/2026",
       "indicadores": {
-        "cotacao": 67.97,
-        "pvp": 0.7,
-        "dividendYield": 12.76,
+        "cotacao": 75.98,
+        "pvp": 0.8,
+        "dividendYield": 11.59,
         "dividendoMensal": 0.75,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 12242,
-        "vpCota": 96.3
+        "cotistas": 12253,
+        "vpCota": 95.41
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Entre as mais baixas do mercado"
+        "comentarioTaxas": "Taxas extremamente competitivas, entre as mais baixas do segmento de FIIs"
       },
       "estrategia": {
-        "resumo": "CXCO11 e um FII de lajes corporativas com 10 edificios (91.730 m2 ABL) locados para a Caixa Economica Federal em contrato sale and leaseback ate 2030. O P/VP de 0,70 oferece 30% de desconto, o DY de 12,8% e atrativo e a taxa total de 0,25% e uma das mais baixas do mercado. A revisao dos alugueis em curso (CBRE) e o novo laudo de avaliacao (Colliers) sao catalisadores positivos. A projecao de R$ 0,75/cota para 2026, obras avancando e gestao proativa justificam a elevacao para COMPRA.",
-        "ocupacao": 100,
+        "resumo": "O CXCO11 é um FII de tese atípica e específica: contrato Sale and Leaseback de 10 anos com a Caixa Econômica Federal sobre 10 agências bancárias, com vacância estrutural zero e pagamentos garantidos por risco soberano até dez/2030. A tese de investimento atual repousa em três pilares: (1) desconto patrimonial relevante (P/VP 0,80); (2) processo revisional em curso que pode elevar substancialmente os aluguéis (estudo CBRE indica potencial de até 85% de upside); (3) ciclo esperado de queda da Selic beneficiando ativos sensíveis a juros.O contraponto é o horizonte temporal limitado dos contratos (4,7 anos) com opção de compra do locatário, configurando um ativo com data de validade incerta que exige avaliação contínua das negociações com a Caixa.",
+        "ocupacao": 100.0,
         "focoGeografico": "",
-        "tipoAtivo": "Tijolo - Lajes Corporativas"
+        "tipoAtivo": "Lajes Corporativas (Sale and Leaseback - Caixa Econômica Federal)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "P/VP 0,70 com 30% de desconto",
-        "DY 12,76% sobre cota de mercado",
-        "Taxa total de apenas 0,25% a.a. (sem performance)",
-        "100% de ocupacao fisica",
-        "Locatario solido (Caixa Economica Federal - empresa publica)",
-        "Cap rate medio de 10,07%",
-        "Valorizacao de 33,96% em 2025",
-        "Projecao de R$ 0,75/cota para 2026"
+        "Vacância física de 0% com 100% dos imóveis locados",
+        "Locatário único de risco soberano (Caixa Econômica Federal)",
+        "Contratos atípicos Sale and Leaseback com multa rescisória pelo VP a Selic",
+        "Reajustes anuais pelo IPCA (último em abr/2025: +5,48%)",
+        "Taxa de administração extremamente baixa: 0,25% a.a. total",
+        "P/VP de 0,80 oferecendo desconto patrimonial relevante",
+        "Processo revisional formalmente aberto com estudo CBRE indicando potencial de up de até 85% no aluguel",
+        "DY de 11,59% sobre cota de mercado, atrativo vs NTN-B"
       ],
       "conclusao": {
-        "resumo": "Elevamos a recomendacao do CXCO11 de MANTER para COMPRA. O P/VP de 0,70, o DY de 12,76%, a taxa de 0,25% e a gestao cada vez mais proativa (revisao de alugueis, novos laudos, seguro, vistorias anuais) justificam a mudanca. A valorizacao de 33,96% em 2025 confirma que o mercado comecou a reconhecer o desconto excessivo, mas ainda ha espaco para convergencia ao VP. A revisao dos alugueis pela CBRE e o principal catalisador de curto prazo. O risco de concentracao em Caixa e o vencimento em 2030 sao os principais fatores de atencao, mas a solidez do locatario e a rescisao antecipada com indenizacao pela Selic mitigam parcialmente esses riscos.",
-        "paraQuem": "Investidores que buscam renda com desconto expressivo no preco",
-        "naoParaQuem": "Quem nao aceita concentracao total em um unico locatario"
+        "resumo": "O CXCO11 é um caso típico de FII com tese assimétrica: combina características defensivas raras (vacância zero, risco soberano, cap rate de dois dígitos) com restrições estruturais relevantes (monoinquilino, prazo contratual definido, baixa liquidez). Os trade-offs envolvidos exigem que o investidor avalie criticamente seu horizonte temporal versus o vencimento contratual de dez/2030, sua tolerância à concentração de risco em um único pagador (ainda que soberano) e sua expectativa quanto ao desfecho do processo revisional - que pode ser tanto o principal gatilho de valorização quanto fonte de frustração caso a negociação com a Caixa não capture o potencial indicado pelo estudo CBRE. A recente estabilização operacional sob a Patagônia Capital, o desconto patrimonial e o ciclo macroeconômico em transição compõem cenário de melhor visibilidade que o vivido em 2024, mas não eliminam as questões estruturais que cercam o ativo até 2030.",
+        "paraQuem": "Investidores que aceitam risco soberano de monoinquilino em troca de vacância zero e fluxo previsível",
+        "naoParaQuem": "Investidores que buscam diversificação por locatário ou pulverização setorial"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "Set/2020",
-            "descricao": "CNPJ: 38.658.984/0001-75",
+            "ano": "23/12/2020",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "Mar/2021",
-            "descricao": "Preco IPO: R$ 101,99/cota",
+            "ano": "31/03/2021",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2021-2024",
-            "descricao": "Obras em CICOB (concluida), Cuiaba (concluida), Querencia (concluida)",
+            "ano": "2022",
+            "descricao": "Cota oscilou entre R$ 70 e R$ 81",
             "impacto": ""
           },
           {
-            "ano": "2025",
-            "descricao": "Valorizacao de 33,96% em 2025",
+            "ano": "2023",
+            "descricao": "Receita anual de R$ 38,0 mi",
             "impacto": ""
           },
           {
-            "ano": "Dez/2025-2026",
-            "descricao": "Revisao de alugueis iniciada em 30/12/2025",
+            "ano": "Mai/2024",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2024",
+            "descricao": "Patrimônio reavaliado em -6,25% no fim do ano",
+            "impacto": ""
+          },
+          {
+            "ano": "Out-Dez/2024",
+            "descricao": "Volume atípico de R$ 5,5 mi em nov/24",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar-Abr/2025",
+            "descricao": "Custo final 2,5x acima do prospecto original",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Distribuição extra de R$ 0,91 fechando o semestre",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "Cota fecha fevereiro a R$ 73,05 (+43,94% em 12 meses)",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "Reserva de caixa próxima de R$ 3 milhões",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Sale and Leaseback",
-        "100% Caixa Economica",
-        "10 Edificios",
-        "Revisao de Alugueis em Curso",
-        "Patagonia Capital + Vortx"
+        "Locatário único soberano (CEF)",
+        "Vacância 0% | 10 imóveis",
+        "P/VP 0,80 com revisional em curso",
+        "Patagônia Capital Gestora de Recursos Ltda."
       ],
       "tempoLeitura": 10,
       "arquivo": "cxco11/index.html",
-      "nota": 7.5,
-      "veredicto": "COMPRA",
-      "notaGestora": 7
+      "nota": 6.2,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 6.5
     },
     {
       "id": "cxri11",

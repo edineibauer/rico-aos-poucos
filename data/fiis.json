@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-04-23",
+  "ultimaAtualizacao": "2026-04-24",
   "versao": "1.0",
   "segmentos": {
     "desenvolvimento": {
@@ -6196,85 +6196,111 @@
     {
       "id": "cxri11",
       "ticker": "CXRI11",
-      "nome": "Caixa Rio Bravo Fundo de Fundos FII",
-      "gestora": "Caixa Asset + Rio Bravo",
-      "segmento": "fundo-de-fundos-(fof)",
-      "subsegmento": "Fundo de Fundos (FOF)",
+      "nome": "Caixa Rio Bravo Fundo de Fundos de Investimento Imobiliário",
+      "gestora": "Caixa Asset & Rio Bravo Investimentos",
+      "segmento": "fundo-de-fundos-(fof)---multic",
+      "subsegmento": "Fundo de Fundos (FOF) - Multicategoria",
       "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 69.3,
-        "pvp": 0.8,
-        "dividendYield": 10.4,
-        "dividendoMensal": 0.6,
+        "cotacao": 65.35,
+        "pvp": 0.75,
+        "dividendYield": 11.82,
+        "dividendoMensal": 0.63,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 1755,
-        "vpCota": 86.84
+        "cotistas": 1738,
+        "vpCota": 86.74
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Taxa única sem performance"
+        "comentarioTaxas": "Taxas em linha com FOFs concorrentes, mas há dupla camada de custos"
       },
       "estrategia": {
-        "resumo": "CXRI11 é um fundo de fundos com gestão ativa da Caixa Asset e Rio Bravo, focado em FIIs de tijolo prime. A carteira diversificada em ~31 FIIs cobre logística, escritórios, shopping, varejo e CRI. O desconto de 20% sobre o VP e performance superior ao IFIX em 2025 são atrativos, mas a baixa liquidez e o tamanho reduzido do fundo limitam a recomendação.",
+        "resumo": "A tese central do CXRI11 é oferecer exposição diversificada e pulverizada ao mercado de fundos imobiliários listados via uma estrutura FOF co-gerida por Caixa e Rio Bravo. O veículo é especialmente atrativo para quem busca delegação de seleção a gestores especializados, com 31 FIIs em carteira de gestoras top-tier (Pátria, Kinea, XP, VBI, Vinci, BTG, Fator).O ponto central da tese hoje é o \"duplo desconto\": a cota de mercado do CXRI11 negocia a P/VP de 0,75 (-25% frente ao VP de R$ 86,74), enquanto os FIIs do portfólio operam em média a -14,3% do VP. Pelos cálculos da gestão, o retorno potencial caso todos os FIIs retornem ao par é de +46,2%, somado ao DY corrente de 11,8% a.a.",
         "ocupacao": null,
         "focoGeografico": "",
-        "tipoAtivo": "Fundo de Fundos (FOF)"
+        "tipoAtivo": "Fundo de Fundos (FOF) - Multicategoria"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Performance 22,6% em 2025 (acima do IFIX)",
-        "Desconto de 20% sobre o valor patrimonial",
-        "12 anos de track record consistente",
-        "Gestão ativa com rotação lucrativa",
-        "Sem taxa de performance",
-        "Carteira diversificada em ~31 FIIs de qualidade",
-        "Guidance 1S26 elevado"
+        "P/VP de 0,75 com duplo desconto — potencial upside de 46,2% caso FIIs retornem ao par (cálculo oficial da gestão)",
+        "Portfólio diversificado em 31 FIIs de gestoras top-tier (Pátria, Kinea, XP, VBI, Vinci, BTG, Fator)",
+        "DY anualizado de 11,82%, com spread de 423 bps vs NTN-B 2035 (acima da média histórica)",
+        "Resultado contábil de R$ 26,2 milhões em 2025 (cota patrimonial +22,6%)",
+        "Co-gestão com Caixa Asset (rating Excelente da Fitch) e Rio Bravo (pioneira em FIIs)",
+        "Track record de 12 anos desde o IPO em 2013, com resultados realizados consistentes acima do IFIX em 2025",
+        "Política de linearização de dividendos com guidance transparente para o semestre",
+        "Histórico de reciclagem disciplinada (TIR de 18,2% em FCFL11 e 14,5% em LFTT11 em 2025)"
       ],
       "conclusao": {
-        "resumo": "O CXRI11 é um FOF sólido com gestão ativa comprovada e desconto expressivo sobre o VP. A recomendação é de manter para quem já possui, considerando o bom potencial de upside e a expectativa de corte de juros em 2026. Para novas posições, a baixa liquidez exige cautela na montagem gradual.",
-        "paraQuem": "Investidores que buscam exposição diversificada ao mercado de FIIs",
-        "naoParaQuem": "Quem precisa de alta liquidez para entrar e sair rapidamente"
+        "resumo": "Em síntese, o CXRI11 chega ao segundo trimestre de 2026 em posição tecnicamente descontada após dois anos de volatilidade — o prejuízo de 2024 foi revertido em um ganho de R$ 26,2 milhões em 2025 e o início do ciclo de corte da Selic em março/2026 reabre a tese de convergência ao VP. O duplo desconto (P/VP 0,75 na cota de mercado + FIIs do portfólio descontados) é o argumento numérico mais forte, enquanto a liquidez reduzida, a dupla camada de taxas e a base concentrada de cotistas são os principais trade-offs que o leitor precisa pesar. O resultado final dependerá da capacidade da gestão Caixa + Rio Bravo de capturar a recuperação do setor imobiliário listado e da trajetória da curva de juros real brasileira ao longo do ciclo de afrouxamento monetário que se inicia.",
+        "paraQuem": "Investidores de renda que buscam DY elevado (11,8% a.a.) com diversificação automática em 31 FIIs sem precisar montar carteira própria",
+        "naoParaQuem": "Investidores sensíveis a liquidez — volume médio de R$ 129 mil/dia pode inviabilizar entradas e saídas de maior porte sem impacto no preço"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Nov/2013",
-            "descricao": "CNPJ: 17.098.794/0001-70",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2014-2023",
-            "descricao": "Dividendos estáveis entre R$ 0,56 e R$ 0,59/cota",
+            "ano": "2017-2018",
+            "descricao": "R$ 100 MI de volume previsto",
             "impacto": ""
           },
           {
-            "ano": "2024-2025",
-            "descricao": "Venda FCFL11 com TIR 18,2% (IPCA+12,8%)",
+            "ano": "2020",
+            "descricao": "Split 10:1 em 2020",
             "impacto": ""
           },
           {
-            "ano": "2026",
-            "descricao": "Guidance 1S26: R$ 0,57 a R$ 0,65/cota",
+            "ano": "2021-2022",
+            "descricao": "Selic: 2% → 13,75%",
+            "impacto": ""
+          },
+          {
+            "ano": "2023",
+            "descricao": "Lucro de R$ 25,8 MI",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "Prejuízo: -R$ 12,2 MI",
+            "impacto": ""
+          },
+          {
+            "ano": "2025",
+            "descricao": "Lucro: R$ 26,2 MI",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2026",
+            "descricao": "Início do ciclo de corte de juros",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "P/VP 0,75 (25% desconto)",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Gestão Ativa",
-        "Performance 22,6% em 2025",
-        "31 FIIs na Carteira",
-        "Caixa Asset + Rio Bravo"
+        "P/VP 0,75 (duplo desconto)",
+        "DY 11,8% a.a.",
+        "31 FIIs em carteira",
+        "Caixa Asset & Rio Bravo Investimentos"
       ],
       "tempoLeitura": 10,
       "arquivo": "cxri11/index.html",
-      "nota": 6.5,
-      "veredicto": "MANTER",
-      "notaGestora": 7
+      "nota": 7.6,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.8
     },
     {
       "id": "cxtl11",
@@ -6446,351 +6472,979 @@
       "notaGestora": 7
     },
     {
-      "id": "deva11",
-      "ticker": "DEVA11",
-      "nome": "Devant Recebíveis Imobiliários FII",
-      "gestora": "Devant Asset",
-      "segmento": "papel---cri-high-yield",
-      "subsegmento": "Papel - CRI High Yield",
+      "id": "dcra11",
+      "ticker": "DCRA11",
+      "nome": "Devant FIAGRO Imobiliário de Responsabilidade Limitada",
+      "gestora": "Devant Asset Investimentos",
+      "segmento": "fiagro-—-crédito-(cra-e-cotas-",
+      "subsegmento": "Fiagro — Crédito (CRA e cotas de Fiagros)",
       "sentimento": "neutro",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 23.61,
-        "pvp": 0.24,
-        "dividendYield": 20.5,
-        "dividendoMensal": 0.4,
+        "cotacao": 7.27,
+        "pvp": 0.74,
+        "dividendYield": 14.85,
+        "dividendoMensal": 1.1,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 80230,
-        "vpCota": 98.08
+        "cotistas": 14922,
+        "vpCota": 9.84
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Alinhadas ao segmento High Yield"
+        "comentarioTaxas": "Estrutura de custos competitiva para Fiagro de crédito"
       },
       "estrategia": {
-        "resumo": "DEVA11 é um FII de CRI High Yield com taxa média de IPCA+10,66%, focado em multipropriedade (33,7%), loteamento (20,6%) e corporativo (18,8%). O DY de 20,50% é um dos mais altos do segmento, mas vem acompanhado de volatilidade nos dividendos e um P/VP de 0,24 que reflete os riscos do portfólio. A gestão ativa tem resolvido inadimplências via pré-pagamentos e execução de garantias. Para investidores que aceitam o risco, o desconto sobre o VP pode representar oportunidade de longo prazo.",
-        "ocupacao": null,
+        "resumo": "O DCRA11 oferece exposição diversificada ao crédito do agronegócio brasileiro, com foco em emissores corporativos middle-risk (cooperativas, distribuidoras de insumos, usinas e operadores logísticos) em detrimento de risco pulverizado no produtor rural PF. Com carteira de 18 ativos, 100% adimplência histórica e taxa total de 1% a.a., é um veículo para diversificar renda passiva isenta de IR acima do CDI.Com P/VP de 0,74 e DY 12M de 14,85%, o fundo precifica simultaneamente o ciclo de Selic em queda e os riscos setoriais do agro (margens pressionadas em insumos). A gestão da Devant Asset tem track record transparente, com renegociações proativas e sem defaults até o momento.",
+        "ocupacao": 100.0,
         "focoGeografico": "",
-        "tipoAtivo": "Papel - CRI High Yield"
+        "tipoAtivo": "Fiagro — Crédito (CRA e cotas de Fiagros)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "DY 20,50% - um dos maiores do segmento",
-        "Taxa média IPCA+10,66% a.a.",
-        "91% indexado ao IPCA",
-        "Proteção contra deflação: 99% da carteira",
-        "Diversificação: ~50 CRIs em 14 estados",
-        "Gestão ativa com rotação de ativos",
-        "79% vendas / 92% obras concluídas"
+        "Carteira 100% adimplente desde o IPO em jan/2022",
+        "Diversificação com 18 ativos em diferentes setores e regiões",
+        "Taxa total competitiva: 1% a.a. (0,13% adm + 0,87% gestão)",
+        "P/VP de 0,74 (desconto de 26% sobre VP)",
+        "DY 12M de 14,85% (121% do CDI, 142,5% com gross-up)",
+        "Zero exposição direta a produtor rural PF",
+        "Duration baixa (1,7 anos) reduz sensibilidade a juros",
+        "Gestão ativa e transparente com relatórios mensais detalhados"
       ],
       "conclusao": {
-        "resumo": "O DEVA11 oferece rendimentos elevados para investidores que aceitam o perfil de risco High Yield. A taxa média de IPCA+10,66% e o DY de 20,50% são atrativos, mas a volatilidade dos dividendos e o P/VP de 0,24 exigem tolerância ao risco e horizonte de longo prazo. A gestão ativa tem demonstrado capacidade de resolver inadimplências, mas o portfólio concentrado em multipropriedade e loteamento requer monitoramento constante. Recomendação: MANTER para quem já possui, com posição limitada na carteira.",
-        "paraQuem": "Investidores que buscam rendimentos elevados (DY > 20%)",
-        "naoParaQuem": "Quem não tolera volatilidade nos dividendos mensais"
+        "resumo": "O DCRA11 representa um Fiagro de crédito de perfil middle-risk, com gestão conservadora pela Devant Asset e carteira consistentemente adimplente. A combinação de DY 12M de 14,85% com P/VP de 0,74 oferece yield elevado e desconto patrimonial, em contraposição aos desafios de liquidez reduzida e concentração setorial em insumos. O investidor deve pesar se o prêmio de yield oferecido compensa os riscos específicos do segmento — incluindo exposição ao ciclo de fertilizantes, transição de administrador e volatilidade da cota — e se a tese cabe no horizonte de diversificação do seu portfólio, ciente de que Fiagros de crédito são veículos mais cíclicos do que FIIs tradicionais.",
+        "paraQuem": "Investidores buscando renda mensal isenta de IR em CRA com gestão ativa",
+        "naoParaQuem": "Investidores que buscam alta liquidez (volume médio diário de apenas R$ 80 mil)"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Jan/2022",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2022",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "2023",
+            "descricao": "DY 12M de 18,08% em dez/2023",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "Compressão de margens no setor de insumos",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Adaptação à Resolução CVM 175",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Pré-pagamento CRI TOEX",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "100% adimplente",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "DY 12M de 14,85%",
+        "P/VP 0,75 (26% de desconto)",
+        "100% adimplente",
+        "Devant Asset Investimentos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "dcra11/index.html",
+      "nota": 6.8,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
+    },
+    {
+      "id": "deva11",
+      "ticker": "DEVA11",
+      "nome": "Devant Recebíveis Imobiliários FII",
+      "gestora": "Devant Asset Investimentos",
+      "segmento": "papel-(cri)-—-multicategoria-/",
+      "subsegmento": "Papel (CRI) — Multicategoria / High Yield",
+      "sentimento": "pessimista",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 23.49,
+        "pvp": 0.24,
+        "dividendYield": 18.66,
+        "dividendoMensal": 0.3,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 79443,
+        "vpCota": 98.19
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Estrutura de taxas competitiva para o segmento high yield"
+      },
+      "estrategia": {
+        "resumo": "O DEVA11 é hoje uma tese de recuperação judicial coletiva, não de renda recorrente. A cotação de R$ 23,49 implica assumir que o mercado está correto em precificar perda de ~76% do PL, e o upside depende da eficácia da execução de garantias (alienações fiduciárias de imóveis, SPEs, avais pessoais) ao longo dos próximos 2-3 anos.Para operações como Gramado Parks, a garantia real inclui imóveis com VGV potencial de R$ 3,8 bilhões (CRI Hope). Se a execução converter parte significativa dessas garantias em caixa, há espaço teórico para recuperação patrimonial. Por outro lado, o processo é litigioso, demorado, e parte das carteiras de recebíveis subjacentes apresenta inadimplência elevada.",
+        "ocupacao": null,
+        "focoGeografico": "",
+        "tipoAtivo": "Papel (CRI) — Multicategoria / High Yield"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Taxa média ponderada elevada (IPCA + 10,66% a.a.) se a carteira performar",
+        "Diversificação por 66 CRIs, 16 estados e múltiplos segmentos",
+        "Forte proteção contra deflação (99% da carteira)",
+        "Estrutura de garantias típica com alienação fiduciária de imóveis, SPEs e fiança dos sócios",
+        "Gestão ativa e ativismo jurídico documentado contra securitizadora e devedores",
+        "Desconto patrimonial extremo (P/VP 0,24) que limita nova perda por marcação",
+        "Pré-pagamentos recentes (CEM, Thermas São Pedro) geraram R$ 17+ mi em caixa"
+      ],
+      "conclusao": {
+        "resumo": "O DEVA11 é hoje um FII em trajetória de recuperação após ciclo prolongado de estresse de crédito, com 75% da carteira de CRIs sob algum tipo de reestruturação (waivers) ou inadimplente formal. A cota patrimonial de R$ 98,19 contrasta fortemente com o preço de mercado de R$ 23,49, um P/VP de 0,24 que sinaliza percepção do mercado de perda permanente significativa. O investidor que analisar este fundo precisa entender que não se trata de uma aposta em renda recorrente, mas sim em um processo litigioso e operacional de execução de garantias, cujo desfecho pode levar 2-3 anos e é sensível à qualidade das garantias subjacentes, à capacidade da gestão de pressionar devedores e securitizadoras, e ao comportamento de segmentos voláteis como multipropriedade e loteamento. O desconto patrimonial é, simultaneamente, o principal atrativo (caso haja recuperação) e o principal sinal de alerta (refletindo riscos reais já materializados). Diante desse quadro, cabe a cada investidor avaliar se dispõe do horizonte, da tolerância a volatilidade e da disciplina necessários para uma tese dessa natureza.",
+        "paraQuem": "Investidor institucional com tese específica de recuperação de crédito estressado e horizonte de 3-5 anos",
+        "naoParaQuem": "Investidor buscando renda mensal estável e previsível — o dividendo caiu 81% em relação ao pico de 2024"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Ago/2020",
-            "descricao": "CNPJ: 37.087.810/0001-37",
+            "descricao": "Início da operação com forte aceitação no mercado de varejo",
             "impacto": ""
           },
           {
-            "ano": "2021-2022",
-            "descricao": "Múltiplas emissões de cotas",
+            "ano": "2021",
+            "descricao": "DY médio mensal 1,39% (~18% ao ano) no período",
             "impacto": ""
           },
           {
-            "ano": "2023-2024",
-            "descricao": "Pré-pagamentos de CRIs com problemas",
+            "ano": "Mar/2023",
+            "descricao": "DY cai de 1,60% (fev/23) para 1,25% (mar/23)",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "PL: R$ 1,38 Bi | 80.230 cotistas",
+            "ano": "Mai/2023",
+            "descricao": "Inadimplentes em execução: 16,1%",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2023",
+            "descricao": "Carteira adimplente cai para 78,2%",
+            "impacto": ""
+          },
+          {
+            "ano": "Jul/2023",
+            "descricao": "Censura pública da B3 por atraso das DFs",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2023",
+            "descricao": "Evento material para governança da gestora",
+            "impacto": ""
+          },
+          {
+            "ano": "2024-2025",
+            "descricao": "63% da carteira em período de carência",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2026",
+            "descricao": "Mercado precifica perda de 76% do patrimônio (P/VP 0,24)",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "High Yield",
-        "IPCA + 10,66%",
-        "~50 CRIs",
-        "Devant Asset"
+        "DY 18,66% (12m)",
+        "P/VP 0,24",
+        "75,3% da carteira em carência ou inadimplente",
+        "Devant Asset Investimentos"
       ],
       "tempoLeitura": 10,
       "arquivo": "deva11/index.html",
-      "nota": 6,
-      "veredicto": "MANTER",
-      "notaGestora": 6
+      "nota": 3.8,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 5.5
     },
     {
       "id": "dvff11",
       "ticker": "DVFF11",
-      "nome": "Devant FoF FII",
-      "gestora": "Devant Asset",
-      "segmento": "fundo-de-fundos",
-      "subsegmento": "Fundo de Fundos",
-      "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "nome": "FII Devant Fundo de Fundos Imobiliários de Responsabilidade Limitada",
+      "gestora": "Devant Asset Investimentos",
+      "segmento": "fundo-de-fundos-(fof)",
+      "subsegmento": "Fundo de Fundos (FoF)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 5.82,
+        "cotacao": 5.78,
         "pvp": 0.67,
-        "dividendYield": 13.57,
+        "dividendYield": 13.34,
         "dividendoMensal": 0.065,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 1994,
-        "vpCota": 8.73
+        "cotistas": 2046,
+        "vpCota": 8.98
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Competitivas com taxa de performance"
+        "comentarioTaxas": "Taxa total (admin + gestão) de 0,80% a.a., abaixo da média dos FoFs, mas há performance de 20% sobre IFIX"
       },
       "estrategia": {
-        "resumo": "DVFF11 é um fundo de fundos imobiliários com gestão ativa pela Devant Asset, composto por 32+ FIIs de grandes gestoras e 7 CRIs. O principal atrativo é o duplo desconto de 70% sobre o valor patrimonial dos ativos investidos, criando potencial assimétrico. O DY de 13,57% (125% CDI gross up) é competitivo para o segmento de FoFs. A carteira é diversificada em logística (35%), recebíveis (29%), lajes (15%) e shoppings (11%). A limitação principal é a baixa liquidez e base reduzida de cotistas.",
+        "resumo": "O DVFF11 oferece ao investidor pessoa física uma porta de entrada diversificada para o mercado de FIIs, com mais de 60 posições administradas por gestoras de primeira linha (Kinea, Pátria, Vinci, CSHG, VBI) e uma parcela tática de CRIs de alto carrego (IPCA + 10,7%). A tese central é o duplo desconto de 72,5%: as cotas negociam a P/VP 0,66, e os próprios FIIs investidos também estão descontados frente ao patrimonial.Em contrapartida, o cotista paga duas camadas de taxas, enfrenta liquidez muito restrita (R$ 114 mil/dia) e aceita um histórico de performance meramente em linha com o IFIX desde o IPO. O atrativo é, portanto, mais técnico (valuation) do que estrutural (alpha de gestão).",
         "ocupacao": null,
         "focoGeografico": "",
-        "tipoAtivo": "Fundo de Fundos"
+        "tipoAtivo": "Fundo de Fundos (FoF)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Duplo desconto de 70% sobre VP dos ativos",
-        "DY 13,57% (125% CDI gross up)",
-        "32+ FIIs de grandes gestoras na carteira",
-        "Desempenho em linha com IFIX desde o início",
-        "Taxa base competitiva (0,80% a.a.)",
-        "R$ 3,92/cota distribuídos desde o início",
-        "Diversificação em 6 segmentos"
+        "Duplo desconto de 72,5% em relação ao patrimonial dos ativos investidos",
+        "DY 12 meses de 13,22%, acima da média dos FoFs da indústria (~9,6%)",
+        "Carteira diversificada em 60+ FIIs de gestoras consagradas (Kinea, Pátria, Vinci, CSHG)",
+        "Taxa de administração + custódia baixa (0,15% a.a.), dentro do padrão da indústria",
+        "Parcela de CRIs diretos com taxa média IPCA + 10,7% adiciona previsibilidade",
+        "Reserva de R$ 0,057/cota para suavizar distribuições futuras",
+        "Isenção de IR para pessoa física sobre os rendimentos mensais distribuídos",
+        "Responsabilidade limitada desde jun/2025, protegendo o cotista"
       ],
       "conclusao": {
-        "resumo": "O DVFF11 é uma opção interessante para investidores de longo prazo que buscam assimetria no mercado de FIIs. O duplo desconto de 70% sobre o VP dos ativos investidos cria um potencial de valorização significativo, e o DY de 13,57% garante renda atrativa durante a espera. A carteira diversificada em 32+ FIIs de qualidade oferece exposição ampla ao mercado imobiliário. A recomendação de MANTER (em vez de COMPRA) se deve à liquidez muito baixa e ao risco de convergência lenta do desconto. Para quem já possui e aceita a baixa liquidez, manter é a estratégia recomendada.",
-        "paraQuem": "Investidores que buscam exposição diversificada a FIIs em um único ticker",
-        "naoParaQuem": "Quem precisa de alta liquidez (volume mensal ~R$ 500 mil)"
+        "resumo": "O DVFF11 oferece um case técnico interessante pelo duplo desconto de 72,5% e pelo DY acima da média dos FoFs, funcionando como porta de entrada pulverizada ao mercado de FIIs com isenção de IR. Em contrapartida, o investidor precisa aceitar a liquidez muito restrita, a dupla camada de taxas, o histórico de performance apenas em linha com o IFIX e o porte reduzido do fundo. A decisão sobre alocar DVFF11 versus FIIs diretos (ou ETFs de IFIX) depende do valor que o investidor atribui à diversificação automática versus o custo da camada adicional de gestão. Trata-se, portanto, de uma aposta em fechamento do desconto em ciclo de Selic decrescente, não de uma tese de alpha estrutural de gestão.",
+        "paraQuem": "Investidor que busca exposição diversificada ao mercado de FIIs via único ticker",
+        "naoParaQuem": "Investidor que precisa de liquidez imediata ou que opera volumes relevantes (R$ 114 mil/dia de média)"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Abr/2021",
-            "descricao": "CNPJ: 39.863.059/0001-49",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2021-2022",
-            "descricao": "Dividendos entre R$ 0,60 e R$ 0,85/cota (pré-split)",
+            "ano": "Nov/2023",
+            "descricao": "Cota passa a valer ~R$ 8, facilitando entrada de investidores pessoa física",
             "impacto": ""
           },
           {
-            "ano": "2023",
-            "descricao": "Dividendos consistentes entre R$ 0,070 e R$ 0,080/cota",
+            "ano": "2022-2024",
+            "descricao": "Distribuição reduzida de R$ 0,85 (2022) para R$ 0,70/mês",
             "impacto": ""
           },
           {
-            "ano": "2024",
-            "descricao": "Dividendos estáveis em R$ 0,07/cota durante o ano",
+            "ano": "Mai/2024",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "PL: R$ 96 Mi | 1.994 cotistas",
+            "ano": "Jun/2025",
+            "descricao": "Mudança jurídica relevante para o alinhamento com a nova regulamentação",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Sem alteração nos custos do fundo",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "Duplo desconto de 72,5% em relação ao patrimonial dos ativos investidos",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Gestão Ativa",
-        "125% CDI",
-        "32+ FIIs",
-        "Devant Asset"
+        "Duplo desconto de 72,5%",
+        "DY 13,22% (12m)",
+        "89,8% em FIIs + 8,7% em CRIs",
+        "Devant Asset Investimentos"
       ],
       "tempoLeitura": 10,
       "arquivo": "dvff11/index.html",
-      "nota": 6.5,
-      "veredicto": "MANTER",
-      "notaGestora": 6
+      "nota": 6.2,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 6.0
     },
     {
       "id": "edga11",
       "ticker": "EDGA11",
-      "nome": "Edifício Galeria FII",
-      "gestora": "BTG Pactual (Administração)",
-      "segmento": "lajes-corporativas",
-      "subsegmento": "Lajes Corporativas",
+      "nome": "FII Edifício Galeria Responsabilidade Limitada",
+      "gestora": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "segmento": "lajes-corporativas-(monoativo-",
+      "subsegmento": "Lajes Corporativas (Monoativo - Centro RJ)",
       "sentimento": "pessimista",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 14.92,
-        "pvp": 0.33,
-        "dividendYield": 3.8,
-        "dividendoMensal": 0.047,
+        "cotacao": 14.35,
+        "pvp": 0.34,
+        "dividendYield": 3.23,
+        "dividendoMensal": 0.06,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 3750,
-        "vpCota": 45.04
+        "cotistas": 3675,
+        "vpCota": 45.06
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Baixa taxa de administração, mas taxa de consultoria relevante"
+        "comentarioTaxas": "Taxas competitivas, mas onerosas em termos de eficiência dado o tamanho reduzido do fundo"
       },
       "estrategia": {
-        "resumo": "EDGA11 é um FII mono-ativo de lajes corporativas no Centro do Rio de Janeiro, região que sofre com esvaziamento corporativo há anos. Com ocupação de 77%, inadimplência ativa e 4 meses sem dividendos em 2025, o fundo apresenta alto risco operacional. O P/VP de 0,33 (67% de desconto) pode atrair especuladores apostando na revitalização do Centro do RJ, mas os fundamentos atuais não sustentam uma tese de investimento sólida.",
-        "ocupacao": 77.13,
+        "resumo": "O EDGA11 representa um caso clássico de deep value com risco elevado: negocia a P/VP de 0,34 — equivalente a comprar o Edifício Galeria por 34 centavos de cada real de patrimônio contábil (que já considera ajustes negativos recentes de R$ 19-59 milhões). A tese otimista depende de (i) reversão macro do Centro do RJ via Projeto Reviver RioCentro, (ii) resolução definitiva do caso Mauá Bank e (iii) normalização dos dividendos para o patamar histórico de R$ 0,10+/cota.A tese pessimista — mais palpável no contexto atual — ancora-se em: (i) deterioração estrutural irreversível do Centro do Rio como polo corporativo classe A, (ii) monoativo ilíquido sem capacidade de rotação, (iii) liquidez diária de apenas R$ 22 mil que dificulta saída e (iv) histórico de ajustes patrimoniais negativos recorrentes. Com Selic caindo para 15% e iniciando ciclo de corte, FIIs descontados tendem a ter espaço de valorização — mas EDGA11 tem catalisadores próprios que vão além do macro, dependendo de execução operacional bastante desafiadora.",
+        "ocupacao": 75.62,
         "focoGeografico": "",
-        "tipoAtivo": "Lajes Corporativas"
+        "tipoAtivo": "Lajes Corporativas (Monoativo - Centro RJ)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "P/VP de 0,33 (67% de desconto sobre VP)",
-        "Imóvel classe A em localização central do RJ",
-        "Ocupação em recuperação (+15 p.p. desde 2024)",
-        "Taxa de administração baixa (0,20% a.a.)",
-        "Consultor CBRE (referência global)",
-        "Vacância no Centro RJ em mínima desde 2015",
-        "Proximidade de metrô e Aeroporto Santos Dumont"
+        "P/VP de 0,34 representa um dos maiores descontos do mercado de FIIs",
+        "Localização privilegiada no Centro financeiro do Rio de Janeiro (Rua da Quitanda, 86)",
+        "Recuperação consistente da ocupação de 62% para 75,62% em 24 meses",
+        "Contratos longos: 80% da receita vinculada a contratos com vencimento >2024",
+        "Gestão ativa com histórico de sucesso em recolocação de áreas vagas",
+        "Edifício Classe A em boas condições, com ABL de 24.834 m² em 8 pavimentos",
+        "Multiplas locações firmadas em 2024-2025 mesmo em ambiente desafiador",
+        "Loja 103 retomada do Grupo Mauá Bank em março/2026"
       ],
       "conclusao": {
-        "resumo": "O EDGA11 não é recomendado para investidores que buscam renda mensal previsível ou preservação de capital. A combinação de mono-ativo, vacância elevada, inadimplência, dividendos irregulares e localização em região com esvaziamento estrutural cria um perfil de alto risco. O P/VP de 0,33 pode representar oportunidade apenas para investidores especulativos com horizonte de longo prazo apostando na revitalização do Centro do Rio de Janeiro. Monitorar: evolução da ocupação, resolução judicial da inadimplência e projetos de revitalização do Centro do RJ.",
-        "paraQuem": "Investidores especulativos que apostam na revitalização do Centro do RJ",
-        "naoParaQuem": "Quem busca renda mensal previsível (dividendos irregulares)"
+        "resumo": "O EDGA11 é um ativo que desafia análises convencionais: combina desconto patrimonial extremo com fundamentos operacionais frágeis e liquidez restrita. O investidor precisa ter clareza absoluta de que está adquirindo um monoativo concentrado no Centro do Rio, com todos os riscos idiossincráticos e macrossetoriais que isso implica. A decisão de compor posição não deve ser guiada apenas pelo P/VP descontado — esse desconto existe por motivos concretos: vacância histórica, inadimplência estrutural, ajustes patrimoniais recorrentes e liquidez mínima. Os trade-offs envolvem trocar potencial de valorização relevante (em cenário de normalização) por volatilidade alta de proventos e dificuldade de saída. Para quem estuda esse fundo, a recomendação é dimensionar cuidadosamente a exposição, entender que os retornos podem vir em horizonte de 3-5 anos e considerar a posição como aposta específica dentro de um portfólio diversificado de FIIs, nunca como alocação principal.",
+        "paraQuem": "Investidor de perfil especulativo disposto a comprar ativos em deep value com horizonte de 3-5 anos e tolerância a rendimentos irregulares",
+        "naoParaQuem": "Investidor que depende da renda mensal do FII — histórico recente de suspensões e volatilidade torna o fluxo imprevisível"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "Ago/2012",
-            "descricao": "CNPJ: 15.333.306/0001-37",
+            "ano": "Set/2012",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2013-2019",
-            "descricao": "Ocupação acima de 80%",
+            "ano": "2013-2018",
+            "descricao": "Ocupação média 85%+",
             "impacto": ""
           },
           {
-            "ano": "2020-2023",
-            "descricao": "Ocupação caiu para ~62% em 2024",
+            "ano": "2019-2020",
+            "descricao": "Ocupação cai para 62%",
             "impacto": ""
           },
           {
-            "ano": "2024-2025",
-            "descricao": "Ocupação subiu de 62% para 77% (+15 p.p.)",
+            "ano": "2021-2022",
+            "descricao": "Ajuste patrimonial negativo acumulado R$ 85 mi",
             "impacto": ""
           },
           {
-            "ano": "Dez/2025",
-            "descricao": "PL: R$ 171,7 Mi | 3.750 cotistas",
+            "ano": "2023-2024",
+            "descricao": "Ocupação +15 p.p.",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Rendimentos suspensos jul-out/2025",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2025",
+            "descricao": "Novos contratos preservam ocupação",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "P/VP 0,34 (maior desconto do IFIX)",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Mono-ativo",
-        "Centro RJ",
-        "77% Ocupação",
-        "BTG Pactual (Administração)"
+        "P/VP 0,34 — maior desconto do IFIX",
+        "Vacância 24,4% + inadimplência estrutural",
+        "Monoativo Classe A no Centro RJ",
+        "BTG Pactual Serviços Financeiros S.A. DTVM"
       ],
       "tempoLeitura": 10,
       "arquivo": "edga11/index.html",
       "nota": 3.5,
-      "veredicto": "VENDA",
-      "notaGestora": 5
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
     },
     {
-      "id": "eqir11",
-      "ticker": "EQIR11",
-      "nome": "EQI Recebíveis Imobiliários FII",
-      "gestora": "EQI Asset",
-      "segmento": "papel---cri",
-      "subsegmento": "Papel - CRI",
+      "id": "egaf11",
+      "ticker": "EGAF11",
+      "nome": "Ecoagro I Fiagro - Responsabilidade Limitada",
+      "gestora": "Eco Gestão de Ativos + Multiplica (co-gestora)",
+      "segmento": "fiagro---recebíveis-do-agroneg",
+      "subsegmento": "FIAGRO - Recebíveis do Agronegócio (CRA High Grade)",
       "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
-        "cotacao": 7.88,
-        "pvp": 0.82,
-        "dividendYield": 15.26,
-        "dividendoMensal": 0.1,
+        "cotacao": 100.08,
+        "pvp": 1.01,
+        "dividendYield": 17.03,
+        "dividendoMensal": 1.42,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
-        "cotistas": 9794,
-        "vpCota": 9.61
+        "cotistas": 12197,
+        "vpCota": 99.18
       },
       "taxas": {
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Competitivas e sem taxa de performance"
+        "comentarioTaxas": "Taxa consolidada de 1,20% + performance sobre benchmark baixo (CDI + 1%)"
       },
       "estrategia": {
-        "resumo": "EQIR11 é um FII de crédito imobiliário com gestão ativa pela EQI Asset, focado em CRIs com risco moderado e rentabilidade alvo de IPCA+8% líquido. A carteira de 28 operações com inadimplência zero e taxa média de IPCA+10,77% entrega 129% do CDI bruto. O P/VP de 0,82 oferece desconto de 18% sobre o VP, e a ausência de taxa de performance é um diferencial competitivo. O DY de 15,26% é um dos mais altos do segmento de crédito.",
-        "ocupacao": null,
+        "resumo": "A tese do EGAF11 se apoia em três pilares: (i) exposição pulverizada ao agronegócio via 39 CRAs e 2 FIDCs com foco na cadeia de insumos (setor historicamente mais resiliente do que o crédito direto ao produtor); (ii) entrega consistente de CDI + 5% com zero inadimplências relevantes reportadas desde o IPO, superando de forma ampla o CDI (104,6% contábil vs 64,9%); e (iii) gestão disciplinada via Eco Gestão + Multiplica, com tripé subordinação (20-50%), pulverização (38,9 mil clientes subjacentes) e excesso de garantia (cessão fiduciária de 100-150%).Os contrapesos são relevantes: risco de crédito intrínseco ao agro em ciclo volátil de commodities e Selic em queda, alavancagem via compromissadas (R$ 30 Mi) que adiciona risco de mercado, e transações com partes relacionadas (Ecoagro como contraparte) que demandam atenção à governança. Para perfil CDI-plus com tolerância a ciclo do agro, é uma alternativa premium.",
+        "ocupacao": 100.0,
         "focoGeografico": "",
-        "tipoAtivo": "Papel - CRI"
+        "tipoAtivo": "FIAGRO - Recebíveis do Agronegócio (CRA High Grade)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "DY 15,26% (129% CDI bruto) com isenção IR",
-        "Inadimplência zero em 28 CRIs",
-        "P/VP 0,82 (18% de desconto sobre VP)",
-        "Taxa 1,0% sem performance fee",
-        "IPCA+10,77% de taxa média (MtM)",
-        "Diversificação: 7 setores, 10 estados, 28 CRIs",
-        "Cota patrimonial em tendência de alta"
+        "Dividend yield trailing 12m de 17% a.a. — excepcional em termos absolutos e com spread de CDI + 5% consistente desde o IPO",
+        "Carteira pulverizada em 39 CRAs + 2 FIDCs, com 38.983 clientes subjacentes e 87% em cotas sênior com subordinação de 20-50%",
+        "Zero inadimplências relevantes reportadas em 4 anos, incluindo enchentes do RS/2024 e ciclo de queda de commodities",
+        "Foco na cadeia de insumos (88%) — historicamente mais resiliente que crédito direto ao produtor; mandato proíbe CPRs de produtores",
+        "Diversificação geográfica entre 16 estados (GO 28%, MS 15%, SP 12%, MG 10%, RS 8%) e culturas (soja 41%, milho 18%, café 6%)",
+        "Gestão Eco Gestão + Multiplica com disciplina de originação (CDI + spread, subordinação 20-30% mínima, investment grade interno)",
+        "Retorno acumulado desde IPO de 104,6% contábil (138,1% com gross-up) vs CDI 64,9% — alfa real entregue consistentemente",
+        "12.197 cotistas pulverizados (99,71% PF), liquidez média diária de ~R$ 1 Mi e formador de mercado XP"
       ],
       "conclusao": {
-        "resumo": "O EQIR11 é uma opção atrativa para investidores que buscam alto yield com desconto sobre o VP no segmento de crédito imobiliário. A combinação de DY de 15,26%, inadimplência zero, taxa competitiva sem performance fee e P/VP de 0,82 cria uma relação risco-retorno muito favorável. A principal limitação é a liquidez reduzida, que exige dimensionamento adequado da posição. Para horizontes de médio/longo prazo, o desconto sobre o VP e a qualidade da carteira sustentam a recomendação de compra.",
-        "paraQuem": "Investidores que buscam renda mensal acima do CDI com isenção de IR",
-        "naoParaQuem": "Quem precisa de alta liquidez diária (volume médio R$ 69 mil)"
+        "resumo": "O EGAF11 é um dos FIAGROs mais consistentes e bem geridos da indústria — entrega CDI + 5% de forma previsível, tem carteira pulverizada e de alta qualidade, governança sólida e histórico limpo. A combinação de P/VP ~1,00 e DY trailing de 17% é coerente com o momento Selic 14,75% e representa entrega justa ao cotista. É produto indicado para investidores que buscam alternativa premium a CDBs/LCAs em posição de caixa ampliado ou carteira de renda fixa diversificada. Os pontos de atenção (alavancagem, partes relacionadas, concentração nos top-6) são reais mas administráveis e típicos do segmento. Os principais limites são: (a) ciclo de queda da Selic vai reduzir o DY nominal (para faixa 14-15% provável em 2027), e (b) o upside de preço é estruturalmente pequeno — quem quer ganhar na cota deve olhar FIIs de papel ou outros segmentos. Para a tese original de renda isenta de IR com spread real, o EGAF11 cumpre bem.",
+        "paraQuem": "Investidores que buscam CDI + spread elevado (meta CDI + 3,5-4% líquido para PF) em alternativa aos fundos de renda fixa tradicionais",
+        "naoParaQuem": "Investidores que buscam potencial de valorização da cota — FIAGROs de CRA high grade negociam historicamente próximo ao VP, com pouco upside de preço"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Dez/2021",
+            "descricao": "1ª Emissão via ICVM 400, até 1,5 milhão de cotas a R$ 100",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2022",
+            "descricao": "ISIN: BREGAFCTF006",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2022",
+            "descricao": "Primeiros CRAs: Goplan, Panorama, Spaço, Supply I",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2023",
+            "descricao": "Periodicidade: passa a mensal",
+            "impacto": ""
+          },
+          {
+            "ano": "Mai/2023",
+            "descricao": "Episódio comum em FIAGROs novos",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2023",
+            "descricao": "Resultado FY23 robusto",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2023",
+            "descricao": "Rito de registro automático",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2024",
+            "descricao": "+1,24 milhão de cotas integralizadas",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2024",
+            "descricao": "Conflito de interesse formalmente aprovado",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Resultado FY25: R$ 47,2 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "P/VP ~1,01",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "FIAGRO CRA High Grade",
+        "Gestão Eco + co-gestão Multiplica",
+        "88% cadeia de insumos do agro",
+        "Eco Gestão de Ativos + Multiplica (co-gestora)"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "egaf11/index.html",
+      "nota": 7.8,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
+    },
+    {
+      "id": "eira11",
+      "ticker": "EIRA11",
+      "nome": "Aroeira Fundo de Investimento Imobiliário",
+      "gestora": "Aroeira Asset Gestão de Recursos",
+      "segmento": "papel-(cri)---híbrido-multicat",
+      "subsegmento": "Papel (CRI) - Híbrido Multicategoria",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 104.55,
+        "pvp": 1.01,
+        "dividendYield": 12.35,
+        "dividendoMensal": 1.07,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 123,
+        "vpCota": 105.87
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Estrutura de taxas típica para fundos de papel, com performance relevante"
+      },
+      "estrategia": {
+        "resumo": "O EIRA11 é um fundo de papel de pequeno porte e gestão boutique, especializado em CRIs de financiamento à produção imobiliária (loteamentos e incorporação) com garantias robustas. A tese combina carrego elevado (spread médio IPCA+12,56% e CDI+3,98%) com potencial de ganho via marcação a mercado caso a curva de juros continue fechando em 2026.A 2ª emissão em andamento (até R$ 30 mi adicionais) é o principal catalisador para reduzir concentração e diluir custos fixos, condição necessária para elevar a qualidade estrutural do veículo.",
+        "ocupacao": 100.0,
+        "focoGeografico": "",
+        "tipoAtivo": "Papel (CRI) - Híbrido Multicategoria"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Carteira 100% adimplente desde o IPO, com 3 CRIs estruturados",
+        "Spread médio elevado (IPCA + 12,56% a.a. e CDI + 3,98% a.a.)",
+        "Garantias robustas em todas as operações (CF, AF SPE, aval, fundo de reserva 2 PMTs)",
+        "Diversificação por indexador (63,95% CDI e 36,05% IPCA)",
+        "Reserva de rendimentos saudável (R$ 2,08/cota em fev/26)",
+        "Transparência elevada nos relatórios gerenciais (análise macro, curvas DI/NTN-B, DRE detalhada)",
+        "Isenção de IR sobre rendimentos para pessoa física",
+        "Retorno de 115,14% do CDI bruto em 12 meses desde o IPO"
+      ],
+      "conclusao": {
+        "resumo": "O EIRA11 apresenta-se como um FII de papel boutique, em fase inicial, com primeiro ano operacional consistente e carteira tecnicamente bem estruturada, mas com limitações estruturais relevantes — tamanho, concentração e liquidez — que restringem seu apelo para investidores que buscam escala e facilidade de negociação. O trade-off central está entre o carrego atrativo e isento de IR oferecido pelos CRIs de loteamento/incorporação vs os riscos de concentração e baixa liquidez inerentes a um fundo pequeno. A 2ª emissão em curso e a trajetória esperada de queda da Selic ao longo de 2026 são variáveis determinantes para a evolução do case. A decisão de alocação depende do alinhamento do perfil de risco do investidor com essas características específicas, sendo fundamental acompanhar o sucesso da captação adicional e a manutenção da adimplência da carteira nos próximos trimestres.",
+        "paraQuem": "Investidores pessoa física buscando DY isento de IR acima do CDI com apetite a ativos concentrados",
+        "naoParaQuem": "Investidores que priorizam liquidez — volume diário de R$ 89 mil torna difícil movimentar posições relevantes"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Fev/2025",
+            "descricao": "R$ 20 milhões captados",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar-Mai/2025",
+            "descricao": "CRI Gran Lago: R$ 9 mi a IPCA+12,50%",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "R$ 2,05/cota distribuídos",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "2ª emissão aprovada",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2025",
+            "descricao": "Novo administrador: QI Tech",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2025",
+            "descricao": "Gran Lago migra para CDI",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "R$ 9,50/cota em 2025",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "17,68% em 12 meses",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2026",
+            "descricao": "~R$ 30 mi adicionais possíveis",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "DY 12,35%",
+        "100% adimplente",
+        "FII jovem (1 ano)",
+        "Aroeira Asset Gestão de Recursos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "eira11/index.html",
+      "nota": 6.2,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 6.5
+    },
+    {
+      "id": "emet11",
+      "ticker": "EMET11",
+      "nome": "EMET Multiestratégia Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "gestora": "V2 Investimentos Ltda.",
+      "segmento": "multiestratégia-(fof-/-multica",
+      "subsegmento": "Multiestratégia (FOF / Multicategoria)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 9.35,
+        "pvp": 0.94,
+        "dividendYield": 13.12,
+        "dividendoMensal": 0.1,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 167,
+        "vpCota": 9.82
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxas competitivas para FII multiestratégia, com administração enxuta"
+      },
+      "estrategia": {
+        "resumo": "O EMET11 é um veículo multiestratégia de pequeno porte que funciona essencialmente como um FOF concentrado, combinando exposição a FIIs de tijolo (HOFC11, VCRR11), logística (TRUE11), papel (CXRI11, ALZC11) e, historicamente, ações imobiliárias. A proposta de valor é capturar descontos patrimoniais de fundos investidos com gestão ativa, mas a execução dessa tese foi comprometida por trocas sucessivas de gestora.Para o investidor, o fundo oferece hoje DY de 13,1%, P/VP de 0,94 e um portfólio redesenhado sob a V2, em troca de aceitar baixa liquidez (R$ 400 mil/dia), altíssima concentração de cotistas (dois majoritários = 77,7%) e histórico recente instável.",
+        "ocupacao": null,
+        "focoGeografico": "",
+        "tipoAtivo": "Multiestratégia (FOF / Multicategoria)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "P/VP de 0,94, oferecendo desconto de 6% sobre o valor patrimonial",
+        "DY 12m de 13,1%, acima da média de FOFs e de FIIs multiestratégia",
+        "Taxa de administração competitiva de 0,15% a.a. (BRL Trust)",
+        "Portfólio redesenhado sob a V2 com foco em 3 ativos de qualidade (HOFC11, VCRR11, TRUE11)",
+        "Base de cotistas crescendo: 102 (dez/25) → 167 (jan/26), alta de 64%",
+        "Distribuição mensal estabilizada em R$ 0,10/cota sob a nova gestora",
+        "Isenção de IR para pessoas físicas (preserva 50+ cotistas e >10% individual)",
+        "Reserva acumulada de R$ 0,01/cota como colchão para próximos meses"
+      ],
+      "conclusao": {
+        "resumo": "O EMET11 é um caso atípico no universo de FIIs multiestratégia: um fundo jovem (IPO em mar/2024), pequeno (R$ 49 Mi de PL), ilíquido e que passou por reestruturação de gestão sem paralelo no segmento. O preço atual de R$ 9,35 embute P/VP de 0,94 e DY de 13,1%, mas esses indicadores convivem com riscos estruturais relevantes — concentração de cotistas, baixa liquidez e descontinuidade estratégica. A chegada da V2 Investimentos e a estabilização da distribuição mensal em R$ 0,10 sinalizam um esforço de normalização, mas o histórico disponível ainda é curto para validar a nova fase. A análise fica, portanto, dependente de como a V2 conseguirá consolidar o portfólio, ampliar a base de cotistas e reduzir a concentração de investidores nos próximos semestres. Os trade-offs são claros: desconto patrimonial moderado e yield atrativo, contra instabilidade operacional recente e limitações de porte.",
+        "paraQuem": "Investidores que buscam exposição diversificada a múltiplos FIIs via um único veículo, aceitando dupla camada de taxas",
+        "naoParaQuem": "Investidores que priorizam previsibilidade de renda mensal — o histórico de 2024-2025 mostra alternância entre meses sem distribuição e pagamentos semestrais concentrados"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "16/01/2024",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "15/03/2024",
+            "descricao": "2,006 milhões de cotas emitidas inicialmente",
+            "impacto": ""
+          },
+          {
+            "ano": "21/08/2024",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2024",
+            "descricao": "Prejuízo acumulado: -R$ 4,0 milhões",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "26/06/2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Jul/2025",
+            "descricao": "Estratégia: ativismo, FIIs descontados, arbitragem de FOFs, desenvolvimento",
+            "impacto": ""
+          },
+          {
+            "ano": "04/11/2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2025",
+            "descricao": "",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "DPS recorrente estabilizado em R$ 0,10/cota",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "167 cotistas e PL de R$ 49,1 milhões",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "FOF Multiestratégia",
+        "PL R$ 49 Mi",
+        "Gestão recém-assumida pela V2",
+        "V2 Investimentos Ltda."
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "emet11/index.html",
+      "nota": 4.5,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 6.5
+    },
+    {
+      "id": "eqir11",
+      "ticker": "EQIR11",
+      "nome": "EQI Recebíveis Imobiliários FII",
+      "gestora": "EQI Asset (Euqueroinvestir Gestão de Recursos)",
+      "segmento": "papel-(cri)-—-multicategoria",
+      "subsegmento": "Papel (CRI) — Multicategoria",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 8.84,
+        "pvp": 0.91,
+        "dividendYield": 13.45,
+        "dividendoMensal": 1.1,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 9791,
+        "vpCota": 9.66
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxa total competitiva para o segmento de FIIs de papel middle grade"
+      },
+      "estrategia": {
+        "resumo": "A tese de investimento do EQIR11 baseia-se em uma carteira de CRIs middle grade altamente pulverizada (32 ativos, máximo 7,1% por operação) com remuneração-alvo de IPCA+8% líquido de custos. A taxa marcada a mercado de IPCA+10,60% somada ao DY de 13,45% e ao desconto de 9% sobre o valor patrimonial cria assimetria favorável em ciclos de queda de juros.O fundo apresenta governança transparente, gestão ativa em assembleias e zero eventos de default em 5 anos. A distribuição mensal de R$ 0,10/cota está sustentada pelo carrego da carteira e pela inflação esperada nos próximos 12 meses, com saldo retido como amortecedor.",
+        "ocupacao": null,
+        "focoGeografico": "",
+        "tipoAtivo": "Papel (CRI) — Multicategoria"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Carteira altamente pulverizada em 32 CRIs (máximo 7,1% por operação)",
+        "Zero defaults em 5 anos de história desde o IPO",
+        "Taxa de carteira de IPCA+10,60% (MTM), bem acima do alvo de IPCA+8%",
+        "P/VP 0,91 oferece desconto patrimonial de 9%",
+        "DY de 13,45% a.a. isento de IR (equivalente a 116% do CDI bruto)",
+        "Diversificação setorial e geográfica robusta (7 setores, 10 estados)",
+        "Taxa de administração competitiva de 1% a.a., sem performance",
+        "Comunicação transparente e detalhada via relatórios mensais"
+      ],
+      "conclusao": {
+        "resumo": "O EQIR11 reúne uma carteira pulverizada de CRIs com taxa MTM de IPCA+10,60%, distribuição estável de R$ 0,10/cota mensal e desconto patrimonial de 9%. O histórico de 5 anos sem defaults, o tamanho do fundo (R$ 105 milhões) e a transparência da gestão pela EQI Asset são elementos consistentes para o investidor avaliar. O perfil é compatível com investidor moderado-arrojado que busca renda mensal isenta indexada à inflação. As principais variáveis a monitorar nos próximos meses são a evolução do caso Casa & Vídeo, o ritmo de queda da Selic e a possível convergência da cota ao valor patrimonial.",
+        "paraQuem": "Investidor que busca renda mensal isenta de IR com proteção contra inflação (90% IPCA+)",
+        "naoParaQuem": "Investidor conservador que busca apenas CRIs high grade com devedor único listado em bolsa"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Ago/2021",
-            "descricao": "CNPJ: 41.076.380/0001-25",
+            "descricao": "",
             "impacto": ""
           },
           {
-            "ano": "2021-2022",
-            "descricao": "Dividendos entre R$ 1,03 e R$ 1,20/cota (pré-split)",
+            "ano": "2022",
+            "descricao": "DY anualizado superior a 14%",
             "impacto": ""
           },
           {
-            "ano": "2023",
-            "descricao": "12 meses consecutivos de R$ 0,11/cota",
+            "ano": "Nov/Dez 2023",
+            "descricao": "Aumento do PL para acima de R$ 100 milhões",
             "impacto": ""
           },
           {
             "ano": "2024",
-            "descricao": "Jan/24: Redução para R$ 0,10/cota",
+            "descricao": "Inclusão do CRI RCP (Centro Logístico Rio Claro) de IPCA+8,70%",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "Fev/25: Retorno a R$ 0,10/cota",
+            "ano": "2025",
+            "descricao": "Distribuição extraordinária de R$ 0,106 em julho/2025",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2026",
+            "descricao": "Único evento de crédito relevante desde o IPO",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "PL de R$ 105 milhões e 9.791 cotistas",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Gestão Ativa",
-        "IPCA+10,77%",
-        "28 CRIs",
-        "EQI Asset"
+        "DY 13,5% a.a.",
+        "P/VP 0,91",
+        "32 CRIs em 10 estados",
+        "EQI Asset (Euqueroinvestir Gestão de Recursos)"
       ],
       "tempoLeitura": 10,
       "arquivo": "eqir11/index.html",
       "nota": 7.5,
-      "veredicto": "COMPRA",
-      "notaGestora": 7
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
+    },
+    {
+      "id": "erpa11",
+      "ticker": "ERPA11",
+      "nome": "Europa 105 Fundo de Investimento Imobiliário",
+      "gestora": "Angá Administração de Recursos",
+      "segmento": "lajes-corporativas-(monoativo)",
+      "subsegmento": "Lajes Corporativas (Monoativo)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 126.97,
+        "pvp": 0.77,
+        "dividendYield": 8.78,
+        "dividendoMensal": 0.93,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 741,
+        "vpCota": 165.58
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxas competitivas, mas base pequena amplifica o peso fixo"
+      },
+      "estrategia": {
+        "resumo": "A tese do ERPA11 se sustenta em três pilares: (i) localização premium em uma das regiões corporativas mais desejadas de São Paulo (Jardim Paulista, entre Jardins e Faria Lima), com histórica resiliência de ocupação; (ii) contrato longo com locatário de primeira linha (BTG Pactual) válido até fev/2031, sem vacância e sem inadimplência; e (iii) desconto significativo sobre o VP (P/VP 0,77), oferecendo margem de segurança patrimonial.Como contrapartida, o fundo carrega risco de concentração máximo (um imóvel, um inquilino, um indexador) e liquidez extremamente baixa, sendo mais adequado a investidores de perfil conservador com horizonte longo e que não precisem de facilidade de saída.",
+        "ocupacao": 100.0,
+        "focoGeografico": "",
+        "tipoAtivo": "Lajes Corporativas (Monoativo)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Localização premium no Jardim Paulista, entre Jardins e Faria Lima — uma das regiões corporativas mais valorizadas de São Paulo",
+        "Imóvel 100% locado ao BTG Pactual (crédito de primeira linha) por contrato atípico de 120 meses até fev/2031",
+        "Vacância e inadimplência em 0% desde o fim da carência em fev/2022",
+        "P/VP de 0,77 — desconto de 23% sobre o VP avaliado pela CBRE em dez/2025",
+        "DY de 8,78% a.a., com distribuição consistente de ~99% do resultado caixa",
+        "Valorização acumulada de 43% no valor do imóvel entre 2021 e 2025, acompanhando recuperação do setor",
+        "Taxa de gestão competitiva (0,50% a.a.) após redução em 2022 — alinhamento da gestora com cotistas",
+        "Contrato com multa (3 meses) e pré-aviso (180 dias) que reduzem o impacto de eventual saída antecipada"
+      ],
+      "conclusao": {
+        "resumo": "O ERPA11 é um caso de escola de como monoativo, monoinquilino e liquidez restrita podem conviver com ativo de altíssima qualidade patrimonial e contrato robusto. A precificação atual (P/VP 0,77 e DY 8,78%) já incorpora parte desses riscos, mas a decisão final depende fortemente do perfil do investidor: quem prioriza previsibilidade de fluxo, aceita horizonte longo até 2031 e não precisa de liquidez imediata encontra aqui uma exposição diferenciada ao mercado corporativo AAA de São Paulo. Já quem busca diversificação interna, liquidez para reposicionamento tático ou acesso facilitado ao produto deve procurar alternativas no universo dos FIIs de lajes mais pulverizados e com maior volume de negociação.",
+        "paraQuem": "Investidores qualificados que buscam exposição a laje corporativa AAA em região prime de São Paulo com entrada descontada (P/VP 0,77)",
+        "naoParaQuem": "Quem precisa de liquidez diária — volume médio de apenas R$ 22 mil/dia torna a saída demorada"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Mar/2019",
+            "descricao": "1ª Emissão pela ICVM 476, até 1 milhão de cotas a R$ 100,00",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2019",
+            "descricao": "Coordenador: Ativa Investimentos",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2020",
+            "descricao": "Prazo: 10 anos (carência de 11 meses)",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2021",
+            "descricao": "Imóvel em operação",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2021",
+            "descricao": "3.190 cotas canceladas por falta de demanda",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2022",
+            "descricao": "Início efetivo da distribuição de dividendos recorrentes",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2022",
+            "descricao": "DY mensal subiu para ~R$ 0,69/cota",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2024",
+            "descricao": "Receita mensal passa a R$ 508 mil (fração do fundo)",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "VP/cota: R$ 165,58",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "Desconto de 23% sobre o VP",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Monoativo Jardim Paulista",
+        "Locatário BTG Pactual",
+        "Fundo Restrito (Qualificados)",
+        "Angá Administração de Recursos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "erpa11/index.html",
+      "nota": 5.5,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 6.5
     },
     {
       "id": "euro11",
@@ -6876,14 +7530,139 @@
       "notaGestora": 5
     },
     {
+      "id": "exes11",
+      "ticker": "EXES11",
+      "nome": "Éxes Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "gestora": "Éxes Gestora de Recursos Ltda.",
+      "segmento": "títulos-e-valores-mobiliários-",
+      "subsegmento": "Títulos e Valores Mobiliários (Papel/Híbrido)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 9.44,
+        "pvp": 0.95,
+        "dividendYield": 16.8,
+        "dividendoMensal": 0.13,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 2085,
+        "vpCota": 9.91
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxa única competitiva dentro do universo de fundos de papel middle grade"
+      },
+      "estrategia": {
+        "resumo": "A tese do EXES11 se sustenta em três pilares: (i) spreads elevados obtidos com CRIs middle grade de incorporação (taxas médias de CDI+4,7% e IPCA+10%+) com múltiplas camadas de garantia real; (ii) disciplina de distribuição, com 14 meses consecutivos de R$ 0,13/cota e reserva de R$ 0,04-0,05 mantida; e (iii) originação proprietária (85% da carteira estruturada pela Éxes), diferencial que permite acesso a ativos fora do universo competitivo dos high grade.Como contrapartida, o fundo carrega concentração cotista (um único investidor com 49% das cotas), risco de crédito middle grade (já materializado no CRI Ávida), exposição de 23% em um FIAGRO (AGRX11) pouco usual para um fundo de papel e dependência do ciclo de incorporação residencial (50% do PL em CRIs de término de obra).",
+        "ocupacao": 100.0,
+        "focoGeografico": "",
+        "tipoAtivo": "Títulos e Valores Mobiliários (Papel/Híbrido)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "DY anualizado de 16,80% e DY LTM de 17,21% — competitivo no universo de fundos de papel",
+        "14 meses consecutivos distribuindo R$ 0,13/cota com reserva de R$ 0,04-0,05 adicionais",
+        "Originação proprietária de 85% dos ativos — diferencial relevante na estrutura das operações",
+        "Carteira com 16 ativos pulverizados (maior é 24,68% - o FIAGRO) em 5 estados diferentes",
+        "Garantias robustas: AF de quotas/unidades, CF de recebíveis, avais PF/PJ, fundos de reserva 3-6 PMTs",
+        "Histórico comprovado de recuperação de crédito (CRI Ávida repactuado para IPCA+15% com +garantias)",
+        "BTG Pactual como administrador/custodiante + PwC como auditor — infraestrutura institucional",
+        "Taxa total competitiva: 1,00% gestão+administração + 0,05% escrituração, sem performance"
+      ],
+      "conclusao": {
+        "resumo": "O EXES11 é um caso interessante de fundo de papel middle grade que combina boa execução (14 meses distribuindo R$ 0,13 com reserva, caso Ávida recuperado, ganho tático em AGRX11) com riscos que precisam ser encarados com honestidade (cotista controlador com 49% das cotas, CRI ainda em RJ, exposição atípica em FIAGRO). A precificação atual (P/VP 0,95 e DY 16,80%) já reflete parte desses riscos, mas a qualidade da gestão Éxes e a estrutura com BTG/PwC dão ao fundo um padrão institucional acima da média dos middle grade. É mais adequado a investidores que buscam renda mensal consistente e aceitam risco de crédito controlado em troca de spreads elevados, não sendo indicado para quem exige somente CRIs AAA ou rejeita concentração de cotistas.",
+        "paraQuem": "Investidores de renda que buscam DY mensal próximo de 1,3-1,5% com reserva de lucro e distribuição linearizada",
+        "naoParaQuem": "Perfis que querem apenas CRIs high grade com rating AAA e devedores corporativos consolidados"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Mar/2021",
+            "descricao": "CNPJ 41.076.851/0001-03",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2021",
+            "descricao": "Gestão transferida para Éxes Gestora de Recursos",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2021",
+            "descricao": "IPO pelo rito de oferta restrita",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2022",
+            "descricao": "Auditoria PricewaterhouseCoopers (primeiro parecer)",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2023",
+            "descricao": "Primeiro (e único) default do fundo",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2024",
+            "descricao": "VP/cota: R$ 9,11",
+            "impacto": ""
+          },
+          {
+            "ano": "Jul/2024",
+            "descricao": "Primeira oferta pública ampla (CVM 160)",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2024",
+            "descricao": "Razão de garantia total de 380% do saldo",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Lucro +162% vs. ano anterior",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "Alocação passa a representar 23% do PL",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2025",
+            "descricao": "Éxes assume a própria distribuição",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "DY anualizado de 16,80%",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Fundo de Papel (CRI)",
+        "Middle Grade",
+        "BTG Pactual (Administrador)",
+        "Gestão Éxes Própria",
+        "Éxes Gestora de Recursos Ltda."
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "exes11/index.html",
+      "nota": 6.8,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.5
+    },
+    {
       "id": "faed11",
       "ticker": "FAED11",
       "nome": "Anhanguera Educacional FII",
-      "gestora": "BTG Pactual",
-      "segmento": "tijolo---educacional",
-      "subsegmento": "Tijolo - Educacional",
+      "gestora": "BTG Pactual Serviços Financeiros DTVM",
+      "segmento": "tijolo---educacional-(mono-inq",
+      "subsegmento": "Tijolo - Educacional (mono-inquilino)",
       "sentimento": "neutro",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
         "cotacao": 147.7,
         "pvp": 0.66,
@@ -6898,79 +7677,249 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Competitivas para o segmento"
+        "comentarioTaxas": "Taxa efetiva de 0,46% a.a. — competitiva para mono-inquilino"
       },
       "estrategia": {
-        "resumo": "FAED11 é um FII educacional mono-inquilino com 4 imóveis locados integralmente para a Anhanguera (Cogna) em São Paulo. O fundo oferece DY de 13,48% e negocia com 34% de desconto sobre o valor patrimonial. O principal risco é a concentração total em um único inquilino e a baixa liquidez. Os contratos típicos vencem em 2031 e o BTS em 2028.",
+        "resumo": "A tese do FAED11 é simples de entender e difícil de precificar: é um FII mono-inquilino com 16 anos de 100% de ocupação e 100% de pagamento em dia por parte da Cogna/Anhanguera, com DY de 13,48% em 12 meses e desconto de 34% sobre o VP. Para um investidor que acredita na continuidade dos contratos até 2031 e na recontratação do BTS em 2028, o fluxo é atrativo — especialmente em cenário de juros em queda, quando o P/VP deveria convergir para patamares menos descontados.O contraponto é óbvio e concreto: a revisional de 2023 (Leme + Valinhos, -6,27% na receita) mostrou que a Cogna sabe usar o poder de single tenant para negociar desconto. A revisional de 2026 (94% da área, agora incluindo Taboão) tem chance concreta de cortar mais 5-10% da distribuição, e o vencimento do BTS em fev/2028 pode resultar em devolução do Valinhos 2 (7,2% da receita). O FAED11 não é um fundo de fluxo estável; é um fundo de aposta na manutenção de um único contrato — com evidências recentes de fragilidade na negociação.",
         "ocupacao": 100,
         "focoGeografico": "",
-        "tipoAtivo": "Tijolo - Educacional"
+        "tipoAtivo": "Tijolo - Educacional (mono-inquilino)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "100% ocupação desde o início (2009)",
-        "DY atrativo de 13,48%",
-        "P/VP de 0,66 (desconto de 34%)",
-        "Taxa de administração baixa (0,46%)",
-        "Sem taxa de performance",
-        "Contratos de longo prazo até 2031",
-        "Distribuição mensal consistente há 15+ anos"
+        "100% de ocupação ininterrupta desde 2010 (16 anos de histórico sem vacância)",
+        "Dividend yield de 13,48% em 12 meses com isenção total de IR para PF",
+        "P/VP de 0,66 (desconto de 34% sobre o valor patrimonial)",
+        "Taxa efetiva de 0,46% a.a. — muito competitiva (teto regulamentar é 0,60%)",
+        "Sem taxa de performance e sem taxa de custódia adicional",
+        "Contratos típicos de longo prazo até 2031 (94% da área com reajuste IPCA)",
+        "Administração estável do BTG Pactual por 16+ anos (sem troca de gestor)",
+        "Distribuição mensal consistente há 190+ meses com isenção de IR"
       ],
       "conclusao": {
-        "resumo": "O FAED11 é uma opção para investidores que buscam alto dividend yield e aceitam o risco de concentração mono-inquilino. O desconto de 34% sobre o VP oferece margem de segurança, mas a baixa liquidez e dependência total da Cogna exigem atenção. Recomenda-se posição pequena na carteira e monitoramento da saúde financeira da Cogna e da revisional de 2026.",
-        "paraQuem": "Investidores que buscam alto DY (13,48% a.a.)",
-        "naoParaQuem": "Quem não aceita risco mono-inquilino"
+        "resumo": "O FAED11 é um fundo com um dos históricos mais sólidos do mercado brasileiro — 16 anos de distribuição mensal e 100% de ocupação com um único inquilino. O DY de 13,48% e o P/VP de 0,66 oferecem margem de segurança aparente, mas pesa estruturalmente o fato de que toda a tese orbita em torno da saúde operacional e da disposição contratual de uma única contraparte (Cogna Educação) que já mostrou, em 2023, capacidade de negociar descontos em aluguéis. A revisional de 2026 (94% da área) e o vencimento do BTS em fev/2028 são os dois eventos-pivot que definirão se o desconto atual é oportunidade ou justa precificação do risco. Nota 6,0/10 — equilibrada entre a qualidade do histórico de pagamentos e os dois eventos contratuais concretos no horizonte de 24 meses. Recomenda-se posição pequena na carteira (5-8% do book de FIIs), evitando concentração, e monitoramento trimestral dos resultados da Cogna (COGN3) e do informe mensal em busca de comunicações sobre as negociações de renovação.",
+        "paraQuem": "Investidores que buscam alto DY (13,48% em 12m) com isenção de IR para PF",
+        "naoParaQuem": "Quem não aceita risco de concentração em inquilino único"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "2009-2012",
-            "descricao": "Início do fundo em 14/12/2009",
+            "ano": "14/12/2009",
+            "descricao": "Início das operações em 14/12/2009",
             "impacto": ""
           },
           {
-            "ano": "2013-2020",
-            "descricao": "Anhanguera adquirida pela Kroton (2013), depois Cogna (2019)",
+            "ano": "2010-2012",
+            "descricao": "Primeiro dividendo pago em 2010",
             "impacto": ""
           },
           {
-            "ano": "2021-2024",
-            "descricao": "Fev/2024: Aquisição do imóvel Valinhos 2 (anexo à sede administrativa)",
+            "ano": "2013",
+            "descricao": "Kroton absorve Anhanguera (operação Kroton-Anhanguera)",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "Rendimentos estabilizados em R$ 1,66/cota (2S25)",
+            "ano": "2019",
+            "descricao": "Locatária passa a operar sob guarda-chuva Cogna Educação",
+            "impacto": ""
+          },
+          {
+            "ano": "2020-2022",
+            "descricao": "100% de pagamento mantido durante pandemia",
+            "impacto": ""
+          },
+          {
+            "ano": "Mai/2023",
+            "descricao": "Revisional de 2 de 3 contratos típicos",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2023",
+            "descricao": "Preço da 5ª emissão: R$ 144,00/cota",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2024",
+            "descricao": "Quantidade total de cotas: 642.168 → 692.377 (+7,82%)",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "Rendimento mínimo: R$ 1,57 (nov/2024)",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2025",
+            "descricao": "Regulamento CVM 175-compliant",
+            "impacto": ""
+          },
+          {
+            "ano": "2S2025",
+            "descricao": "Total distribuído 2025: R$ 20,09/cota",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 153,99 Mi",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Mono-inquilino",
-        "100% Ocupação",
-        "4 Imóveis",
-        "BTG Pactual"
+        "Mono-inquilino (Cogna)",
+        "100% ocupação desde 2010",
+        "4 imóveis em SP",
+        "Revisional 2026",
+        "BTG Pactual Serviços Financeiros DTVM"
       ],
       "tempoLeitura": 10,
       "arquivo": "faed11/index.html",
-      "nota": 6,
-      "veredicto": "MANTER",
+      "nota": 6.0,
+      "veredicto": "MANTER COM CAUTELA",
       "notaGestora": 7
+    },
+    {
+      "id": "famb11",
+      "ticker": "FAMB11",
+      "nome": "FII Edifício Almirante Barroso",
+      "gestora": "Áfira Gestão de Recursos",
+      "segmento": "lajes-corporativas-(monoativo)",
+      "subsegmento": "Lajes Corporativas (Monoativo) - em reposicionamento",
+      "sentimento": "pessimista",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 1068.94,
+        "pvp": 1.08,
+        "dividendYield": 0,
+        "dividendoMensal": 0.0,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 1951,
+        "vpCota": 991.92
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxas fixas pesadas sobre receita deteriorada"
+      },
+      "estrategia": {
+        "resumo": "A tese do FAMB11 hoje é binária e altamente especulativa. Não há mais tese de renda: o fundo não paga dividendos, tem 95% de vacância e o aluguel captado mal cobre as despesas fixas do edifício. A única narrativa que justifica posição é a de destravamento de valor via conversão para uso misto (residencial + comercial), protocolada na Prefeitura do Rio em ago/2025.Os cotistas que aceitam essa tese precisam acreditar que: (i) a Prefeitura do Rio aprovará a mudança de zoneamento; (ii) haverá CAPEX disponível/emissão nova para financiar a reforma completa; (iii) a demanda por unidades residenciais no Centro do Rio é real; e (iv) a Áfira/Actual têm capacidade técnica para entregar a reconversão. A contrapartida é o risco de que nenhuma dessas premissas se confirme, cenário em que o imóvel será provavelmente alienado com novo desconto sobre o VP atual.",
+        "ocupacao": 5.0,
+        "focoGeografico": "",
+        "tipoAtivo": "Lajes Corporativas (Monoativo) - em reposicionamento"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Imóvel em endereço historicamente premium do Centro do Rio (Av. Rio Branco, 174), com 54.144 m² de área construída e arquitetura icônica",
+        "Acordo judicial com a CEF encerrado em nov/2024 destravou R$ 163 mi de liquidez e eliminou contingência jurídica relevante",
+        "Projeto de conversão para uso misto residencial protocolado na Prefeitura do Rio (ago/2025) oferece possível caminho de reposicionamento",
+        "Cotas reduziram em 2025 a custos fixos absolutos com troca para administradora menor (Actual) — embora a taxa mínima ainda seja significativa",
+        "Nenhum endividamento financeiro: o passivo é majoritariamente operacional (R$ 50,4 mi em 'outros valores a pagar', possivelmente relacionado ao IRRF da amortização)",
+        "Base de cotistas se expandiu de ~1.800 (2016) para 1.951 (mar/2026), com pulverização relativa após a 4ª emissão"
+      ],
+      "conclusao": {
+        "resumo": "O FAMB11 saiu há muito do universo dos FIIs de renda e hoje é um caso clássico de special situation. Entre 2016 e 2025, o imóvel perdeu 79% de valor (R$ 573,9 mi → R$ 118,9 mi) e o fundo perdeu seu único locatário (CEF). O acordo de R$ 163 mi em nov/2024 foi uma recuperação pontual que não resolveu a questão central: a ocupação do edifício. Com vacância de 95%, zero distribuição, P/VP 1,08 sobre VP deteriorado e tese inteiramente dependente de um projeto de conversão residencial ainda em tramitação, o fundo não se encaixa em nenhum perfil de investidor médio. Quem compra hoje está comprando uma opção sobre a reconversão imobiliária — e opções vencem. A recomendação honesta é: investidores de renda e de longo prazo em diversificação devem ficar longe; investidores de turnaround com posição pequena e horizonte longo podem tentar, desde que entendam que o downside é significativo (novo desconto possível sobre o VP atual) e que o fundo pode passar ainda alguns anos sem distribuir um centavo. Nota 3,0/10 reflete esse diagnóstico: patrimônio ainda existe, mas tudo mais está quebrado.",
+        "paraQuem": "Investidores de turnaround / special situations dispostos a apostar na reconversão para uso misto residencial do prédio (tese binária)",
+        "naoParaQuem": "Investidores de renda que buscam distribuição mensal previsível — o fundo não paga há 1 ano"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Mar/2003",
+            "descricao": "1ª Emissão (única por 21 anos)",
+            "impacto": ""
+          },
+          {
+            "ano": "2003-2012",
+            "descricao": "Contrato com CEF: reajuste IGP-M, março",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2010",
+            "descricao": "Conflito com locatário âncora",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2020",
+            "descricao": "Perda do locatário único após 17 anos",
+            "impacto": ""
+          },
+          {
+            "ano": "2021-2023",
+            "descricao": "Prejuízo caixa acumulado jan/2021 a out/2024",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2024",
+            "descricao": "Capital adicional de R$ 3,4 mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2024",
+            "descricao": "Encerramento do litígio histórico",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2024",
+            "descricao": "99,31% do resultado financeiro distribuído",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan-Mar/2025",
+            "descricao": "Amortização de R$ 200/cota (R$ 24,5 mi)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Transferência de 22 anos de gestão",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2025",
+            "descricao": "Pedido de mudança de uso junto à Prefeitura",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Imóvel vale agora R$ 118,9 mi (vs. R$ 573,9 mi em 2016)",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "Sem dividendos em 2026",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Monoativo Centro/RJ",
+        "Vacância 95%",
+        "Sem Dividendos",
+        "Troca de Gestão 2025",
+        "Áfira Gestão de Recursos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "famb11/index.html",
+      "nota": 3.0,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 4.0
     },
     {
       "id": "fatn11",
       "ticker": "FATN11",
-      "nome": "BRC Renda Corporativa FII",
-      "gestora": "Unitas Real Estate",
-      "segmento": "lajes-corporativas",
-      "subsegmento": "Lajes Corporativas",
+      "nome": "BRC Renda Corporativa Fundo de Investimento Imobiliário",
+      "gestora": "BR-Capital DTVM + Unitas Real Estate (consultor imobiliário)",
+      "segmento": "lajes-corporativas-(plug-&-pla",
+      "subsegmento": "Lajes Corporativas (Plug & Play / Built-to-Suit)",
       "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
         "cotacao": 85.59,
         "pvp": 0.89,
-        "dividendYield": 11.2,
+        "dividendYield": 11.22,
         "dividendoMensal": 0.8,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
@@ -6981,80 +7930,117 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Uma das menores taxas do segmento corporativo"
+        "comentarioTaxas": "Taxa total de 0,8% a.a. — entre as mais competitivas do segmento de lajes corporativas"
       },
       "estrategia": {
-        "resumo": "FATN11 é um FII de lajes corporativas com modelo plug and play único no mercado. Com 122 lajes em regiões premium de São Paulo e 114 inquilinos, oferece diversificação granular excepcional. A ocupação de 98,4% e recolocação em menos de 1 mês demonstram forte demanda. O desconto de 11% no P/VP, DY de 11,2% e taxa de apenas 0,8% tornam o investimento atrativo.",
+        "resumo": "A tese do FATN11 combina três vetores positivos: (i) portfólio pulverizado de altíssima qualidade operacional — 122 lajes, 114 inquilinos, ocupação de 98,4%, WAULT 3,03 anos, prazo médio de recolocação inferior a 1 mês e contratos atípicos sem revisional; (ii) modelo plug-and-play diferenciado que cobra prêmio sobre locação convencional e garante rotatividade rápida; e (iii) gestão sólida com 7+ anos de histórico (BR-Capital + Unitas Real Estate) e taxa competitiva de apenas 0,80% a.a. sem performance.Os contrapontos exigem olhar crítico: (a) alavancagem via CRI representa 9,66% do PL com indexador IPCA e juros altos, pressionando o caixa em cenários de inflação; (b) 6ª emissão em curso cria risco temporário de diluição até que os recursos sejam alocados em novos ativos; (c) concentração 100% em São Paulo (56% apenas na Vila Olímpia); e (d) Ed. Brasílio Machado, maior ativo do fundo, ainda em maturação com ~10% da ABL contratada mas não vigente. Para o investidor que aceita FII tijolo alavancado com qualidade de portfólio e taxa baixa, o FATN11 é um dos mais consistentes do segmento de lajes corporativas.",
         "ocupacao": 98.4,
         "focoGeografico": "",
-        "tipoAtivo": "Lajes Corporativas"
+        "tipoAtivo": "Lajes Corporativas (Plug & Play / Built-to-Suit)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "Modelo plug and play único com alta demanda",
-        "98,4% de ocupação com 114 inquilinos",
-        "Recolocação média < 1 mês",
-        "Taxa 0,80% sem performance",
-        "Diversificação granular excepcional",
-        "Regiões premium de SP (Vila Olímpia, Faria Lima, Berrini)",
-        "11% de desconto sobre VP"
+        "Portfólio extremamente pulverizado: 122 lajes, 54 edifícios, 114 inquilinos diferentes — nenhum inquilino-âncora relevante",
+        "Ocupação de 98,4% mesmo com vacância de mercado de 12-15% em Berrini/Paulista — qualidade superior dos ativos",
+        "Modelo plug-and-play garante prazo médio de recolocação inferior a 1 mês e prêmio sobre locação convencional",
+        "Taxa total de 0,80% a.a. sem performance — entre as mais competitivas do segmento de lajes corporativas",
+        "Gestão consolidada: BR-Capital (desde 2018) + Unitas Real Estate (40+ anos de real estate) + auditoria RSM",
+        "WAULT de 3,03 anos com distribuição saudável de vencimentos (10% em 2026, 30% em 2028)",
+        "Diversificação setorial forte: advocacia 17%, finanças 16%, tech 9%, consultoria 7%, seguros 6%, outros 34%",
+        "5 emissões absorvidas + 6ª em curso sinaliza confiança do mercado e capacidade de expansão"
       ],
       "conclusao": {
-        "resumo": "O FATN11 é uma opção atrativa para exposição ao mercado corporativo de São Paulo com diversificação granular e taxa competitiva. O modelo plug and play com recolocação rápida mitiga o WAULT curto. O desconto de 11% e DY de 11,2% sustentam a recomendação de compra. Principal monitoramento: ciclo econômico e impacto na demanda corporativa.",
-        "paraQuem": "Investidores que buscam exposição ao mercado corporativo de São Paulo",
-        "naoParaQuem": "Quem busca diversificação geográfica (100% em SP)"
+        "resumo": "O FATN11 é um FII de lajes corporativas de qualidade superior operacional — 98,4% de ocupação com portfólio pulverizado de 122 lajes, 114 inquilinos e WAULT de 3,03 anos, em modelo plug-and-play diferenciado e com taxa competitiva de 0,80% a.a. A cota a P/VP 0,89 e DY 11,22% oferece relação risco-retorno atrativa para investidor de tijolo, mesmo com alavancagem via CRI de 9,7% do PL e concentração 100% em São Paulo. A 6ª emissão em curso (R$ 100 Mi) é o principal risco de curto prazo, mas o histórico de 5 emissões absorvidas e a capacidade operacional da Unitas/BR-Capital sugerem absorção bem-sucedida. Nota 7,5/10 — acima da média do setor de lajes. Para o investidor pessoa física isento buscando DY ~11% em FII consolidado, líquido (IFIX) e com gestão disciplinada, é uma das melhores opções do segmento.",
+        "paraQuem": "Investidores buscando FII de tijolo com alta ocupação e contratos pulverizados (sem dependência de inquilino-âncora)",
+        "naoParaQuem": "Quem quer DY máximo — há lajes com 13-14% em pares como RBRR11/HGRE11"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
             "ano": "Mai/2018",
-            "descricao": "CNPJ: 30.567.216/0001-02",
+            "descricao": "CNPJ 30.567.216/0001-02",
             "impacto": ""
           },
           {
-            "ano": "2019-2023",
-            "descricao": "Expansão de lajes em regiões premium de SP",
+            "ano": "2018-2021",
+            "descricao": "Primeiros 2.000 cotistas em 3T/2020",
             "impacto": ""
           },
           {
-            "ano": "2024-2025",
-            "descricao": "Renomeação de Athena I para BRC Renda Corporativa",
+            "ano": "Ago/2021",
+            "descricao": "Estratégia: rentabilidade mínima alvo dos ativos de 10% a.a.+IPCA",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2022",
+            "descricao": "69 parcelas remanescentes (jan/2026)",
+            "impacto": ""
+          },
+          {
+            "ano": "2023",
+            "descricao": "Lucro líquido 2023: R$ 29,1 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Mai/2024",
+            "descricao": "Lucro líquido 2024: R$ 16,2 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2024",
+            "descricao": "3.458.967 cotas em circulação à época",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2025",
+            "descricao": "Proporção: 4,48379814 cotas FATN11/cota FII-BM",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "Total de cotas após: 5,36 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2025",
+            "descricao": "Mínimo: R$ 10 Mi (100 mil cotas)",
             "impacto": ""
           },
           {
             "ano": "Dez/2025",
-            "descricao": "PL: R$ 516 Mi | 24.463 cotistas",
+            "descricao": "PL: R$ 515,8 Mi",
             "impacto": ""
           }
         ]
       },
       "tags": [
-        "Plug and Play",
-        "98,4% Ocupação",
-        "122 Lajes em SP",
-        "Unitas Real Estate"
+        "122 lajes em 54 edifícios",
+        "98,4% ocupação",
+        "6ª emissão em curso",
+        "Alavancado via CRI (9,7% PL)",
+        "BR-Capital DTVM + Unitas Real Estate (consultor imobiliário)"
       ],
       "tempoLeitura": 10,
       "arquivo": "fatn11/index.html",
       "nota": 7.5,
       "veredicto": "COMPRA",
-      "notaGestora": 8
+      "notaGestora": 7.5
     },
     {
       "id": "fcfl11",
       "ticker": "FCFL11",
-      "nome": "Campus Faria Lima FII",
-      "gestora": "BTG Pactual",
-      "segmento": "tijolo---educacional",
-      "subsegmento": "Tijolo - Educacional",
+      "nome": "FII Campus Faria Lima Responsabilidade Limitada",
+      "gestora": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "segmento": "tijolo---educacional-(laje-bts",
+      "subsegmento": "Tijolo - Educacional (Laje BTS)",
       "sentimento": "otimista",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
         "cotacao": 126.4,
         "pvp": 1.01,
         "dividendYield": 8.83,
-        "dividendoMensal": 0.93,
+        "dividendoMensal": 0.95,
         "patrimonioLiquido": 0,
         "liquidezMediaDiaria": 0,
         "cotistas": 2948,
@@ -7064,75 +8050,251 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Muito competitivas"
+        "comentarioTaxas": "Taxa total 0,30% a.a. (ou R$ 30 mil/mês mínimo corrigido por IGP-M) — entre as mais baixas do mercado"
       },
       "estrategia": {
-        "resumo": "FCFL11 é um FII educacional mono-ativo premium na Vila Olímpia/SP, locado para o Insper (99% receita) e Estapar (1%). O fundo oferece DY de 8,83%, taxa de administração de 0,30% a.a. (uma das menores do mercado), e contratos BTS até 2037. O P/VP de 1,01 indica preço justo. Principal monitoramento: risco mono-ativo e reajuste IGP-M.",
+        "resumo": "A tese do FCFL11 se apoia em três pilares estruturais: (i) inquilino de altíssima qualidade institucional — o Insper é uma das melhores instituições de ensino superior do país, com cerca de 20 anos instalada no imóvel e profundo enraizamento no campus; (ii) contratos BTS atípicos até 2037 em 86% da receita, sem direito a revisional, com previsibilidade de fluxo que poucos FIIs Tijolo oferecem; e (iii) taxa de administração de 0,30% a.a., uma das mais baixas do mercado, preservando o retorno do cotista.O contraponto é a concentração absoluta: 100% da receita depende de um único imóvel e 99% de um único inquilino. O mercado precifica isso com P/VP de 1,01 (sem desconto, mas sem prêmio significativo) e DY de 8,83%, compatível com perfis de qualidade de crédito similar. A exposição a IGP-M (99% da carteira) adiciona volatilidade em anos de deflação do índice. E a proposta de compra do Insper de 2022 ao VP — embora não concretizada — é um lembrete permanente de que o inquilino pode um dia querer virar proprietário. Para quem busca fluxo previsível de longo prazo com crédito top-tier, o FCFL11 é um dos nomes mais sólidos do segmento educacional. Para quem precisa de diversificação e liquidez alta, não é a melhor escolha.",
         "ocupacao": 100,
         "focoGeografico": "",
-        "tipoAtivo": "Tijolo - Educacional"
+        "tipoAtivo": "Tijolo - Educacional (Laje BTS)"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "100% ocupação desde 2010",
-        "Inquilino premium (Insper)",
-        "Contratos BTS até 2037 (86% da receita)",
-        "Taxa de administração de 0,30% a.a.",
-        "Sem taxa de performance",
-        "Localização premium (Vila Olímpia/SP)",
-        "Rendimentos crescentes em 2025"
+        "Inquilino de qualidade institucional superior — Insper é IES top-tier sem fins lucrativos com 20+ anos no imóvel",
+        "Ocupação 100% mantida ininterruptamente desde 2010 — 15 anos sem vacância",
+        "Contratos BTS atípicos até 2037 em 86% da receita (sem direito a revisional) — previsibilidade raríssima",
+        "Taxa de administração de 0,30% a.a. — entre as mais baixas do mercado FII (média setor: 0,60-1,00%)",
+        "Administração BTG Pactual estável desde o IPO (ininterrupto há 15 anos), auditoria PwC sem ressalvas",
+        "Rendimento crescente em 2025: +9,4% ao longo do ano (R$ 0,85 → R$ 0,946)",
+        "WAULT de ~12 anos nos contratos BTS — longevidade superior à média do segmento",
+        "Localização premium: Vila Olímpia/SP, região corporativa valorizada próxima à Av. Faria Lima"
       ],
       "conclusao": {
-        "resumo": "O FCFL11 é uma opção sólida para investidores que buscam previsibilidade de longo prazo com um inquilino de altíssima qualidade. A combinação de Insper + contratos BTS até 2037 + taxa de 0,30% cria uma relação risco-retorno atrativa para o perfil moderado. O principal monitoramento deve ser sobre a volatilidade do IGP-M e o risco mono-ativo inerente.",
-        "paraQuem": "Investidores que buscam inquilino de altíssima qualidade (Insper)",
-        "naoParaQuem": "Quem não aceita risco mono-ativo"
+        "resumo": "O FCFL11 é um FII Tijolo educacional de qualidade superior, com inquilino premium (Insper), contratos BTS até 2037, taxa baixa (0,30%) e ocupação 100% há 15 anos. A combinação é rara e justifica o P/VP de 1,01 sem desconto. O ponto crítico é estrutural: mono-ativo e mono-inquilino significam que toda a previsibilidade depende da continuidade da relação com o Insper — e a proposta de compra de 2022 mostrou que o inquilino não é passivo. Para investidor que busca fluxo estável e aceita concentração, é excelente. Para quem quer diversificação no mesmo ticket, não serve. Nota 7,2/10 — posição no alto da média do segmento educacional, refletindo tanto a qualidade operacional quanto o limite inerente à tese mono.",
+        "paraQuem": "Investidores que valorizam previsibilidade de renda de longo prazo e aceitam o trade-off da concentração",
+        "naoParaQuem": "Quem não aceita risco mono-ativo e mono-inquilino — aqui é 100% Insper em 1 imóvel"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "2010-2013",
-            "descricao": "Início do fundo em 29/06/2010",
+            "ano": "2004",
+            "descricao": "Área inicial: 10.464 m²",
             "impacto": ""
           },
           {
-            "ano": "2014-2020",
-            "descricao": "1ª Expansão do campus: 7.620 m² adicionais",
+            "ano": "Fev/2010",
+            "descricao": "1ª Expansão: 7.620 m²",
             "impacto": ""
           },
           {
-            "ano": "2021-2024",
-            "descricao": "2023: Queda de forro identificada devido a entupimento na rede hidráulica",
+            "ano": "Mai-Jun/2010",
+            "descricao": "CNPJ 11.602.654/0001-01",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "Rendimentos crescendo de R$ 0,85 para R$ 0,93/cota ao longo de 2025",
+            "ano": "Dez/2011",
+            "descricao": "360 vagas de estacionamento",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2013",
+            "descricao": "9º ao 12º andar: 2.000 m²",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2015",
+            "descricao": "Subsolo: 287 m²",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2019",
+            "descricao": "Proporção: 1:20",
+            "impacto": ""
+          },
+          {
+            "ano": "2019-2020",
+            "descricao": "Área interditada: 1.763 m² (depois 1.085 m²)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2020",
+            "descricao": "Volume: R$ 13,2 Mi (134.010 cotas a R$ 98,50)",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2020",
+            "descricao": "Locatária: NNP/Netpark (5 anos)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2022",
+            "descricao": "Proposta ao VP (sem prêmio)",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr-Mai/2022",
+            "descricao": "Redução aluguel -R$ 0,058/cota",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev-Abr/2023",
+            "descricao": "Conflito de interesse resolvido em AGE",
+            "impacto": ""
+          },
+          {
+            "ano": "2023-2024",
+            "descricao": "Problema: entupimento hidráulico + queda forro",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2025",
+            "descricao": "Classe única de cotas",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 432,8 Mi",
             "impacto": ""
           }
         ]
       },
       "tags": [
         "Mono-ativo",
-        "100% Ocupação",
-        "Insper",
-        "BTG Pactual"
+        "Mono-inquilino (Insper)",
+        "BTS atípico (86% receita)",
+        "Ocupação 100% desde 2010",
+        "BTG Pactual Serviços Financeiros S.A. DTVM"
       ],
       "tempoLeitura": 10,
       "arquivo": "fcfl11/index.html",
-      "nota": 7.5,
+      "nota": 7.2,
       "veredicto": "MANTER",
-      "notaGestora": 7
+      "notaGestora": 7.5
+    },
+    {
+      "id": "fgaa11",
+      "ticker": "FGAA11",
+      "nome": "FG/Agro Fundo de Investimento nas Cadeias Produtivas Agroindustriais",
+      "gestora": "FG/A Gestora de Recursos Ltda.",
+      "segmento": "fiagro---papel-(cras-agroindus",
+      "subsegmento": "FIAGRO - Papel (CRAs agroindustriais)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 8.65,
+        "pvp": 0.92,
+        "dividendYield": 15.95,
+        "dividendoMensal": 0.115,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 53070,
+        "vpCota": 9.45
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxas elevadas para FIAGRO de papel; performance cobrada sobre CDI"
+      },
+      "estrategia": {
+        "resumo": "A tese do FGAA11 se sustenta em quatro pilares: (i) isenção de IR sobre os rendimentos mensais para PF residente, equivalente a ~142% do CDI tributável; (ii) especialização setorial da FG/A no agro sucroenergético, com 20+ anos de track record e R$ 30 bi estruturados; (iii) P/VP 0,92, com mecanismo formal de recompra aprovado em ago/2025 que tende a fazer o preço convergir ao VP; e (iv) carteira 100% adimplente desde o IPO.Como contrapartida, o fundo carrega ressalva formal de auditoria (BDO 2024/25) por opacidade da Virgo Securitizadora, concentração setorial em sucroenergético (62%) sensível a preços de açúcar/etanol, e taxas totais elevadas (gestão 1,15% + performance 10% sobre 100% CDI) para um FIAGRO de papel.",
+        "ocupacao": 100.0,
+        "focoGeografico": "",
+        "tipoAtivo": "FIAGRO - Papel (CRAs agroindustriais)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "15 devedores corporativos com 100% de adimplência desde o IPO em 2022",
+        "Especialização setorial da FG/A em sucroenergético (20+ anos, R$ 30 bi estruturados)",
+        "DY de 15,95% ISENTO de IR para PF — equivalente a ~152% do CDI em base tributável",
+        "P/VP de 0,92 — desconto de 8,5% sobre o VP auditado",
+        "Programa de recompra de cotas aprovado em ago/2025 (pioneiro em FIAGRO) com compras sempre abaixo do VP",
+        "Liquidez diária de ~R$ 1,0 mi (razão volume/PL entre as melhores do segmento FIAGRO)",
+        "Jalles Machado (JALL3, AAA S&P) como âncora de qualidade de crédito (~8% do PL)",
+        "77% da originação da carteira é própria (não aplica em CRAs de terceiros genéricos)"
+      ],
+      "conclusao": {
+        "resumo": "O FGAA11 é um FIAGRO que oferece, ao mesmo tempo, o que há de melhor e de pior no segmento. De um lado, uma carteira de crédito corporativo agro com 15 devedores, 100% adimplente desde 2022, geridos por uma das gestoras mais especializadas do setor — com DY de 15,95% isento e descontado (P/VP 0,92). De outro, uma ressalva formal de auditoria vigente (BDO 2024/25) por opacidade da Virgo Securitizadora sobre R$ 70 mi em CRAs, concentração sucroenergética de 62% e um histórico recente de redução de dividendo. Para quem acredita no domínio técnico da FG/A e aceita o trade-off governança-rendimento no curto prazo, a tese segue de pé. Para quem exige cleanliness contábil, o momento prudente é aguardar o desfecho da ressalva (cronograma até dez/2025) antes de alocar posição relevante. Nota 5,5/10 reflete essa ambiguidade estrutural — fundamentos 7,0 menos 1,5 de governança.",
+        "paraQuem": "Investidores PF que buscam renda mensal isenta de IR com DY atrativo (~15,9%) e aceitam o prêmio de risco do crédito corporativo agro",
+        "naoParaQuem": "Quem não tolera ressalva de auditoria vigente (BDO 2024/25) nem ambiguidade sobre 5 CRAs da Virgo Securitizadora"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Jan/2022",
+            "descricao": "Registro CVM: out/2021",
+            "impacto": ""
+          },
+          {
+            "ano": "2022-2023",
+            "descricao": "Primeiras operações com Virgo Securitizadora",
+            "impacto": ""
+          },
+          {
+            "ano": "2024",
+            "descricao": "PL sai de R$ 327 mi (jun/23) para R$ 432,8 mi (jun/24)",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2024",
+            "descricao": "Apex Holding absorve a BRL Trust DTVM",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2025",
+            "descricao": "Março: R$ 0,06/cota (R$ 2,7 mi)",
+            "impacto": ""
+          },
+          {
+            "ano": "Jul-Ago/2025",
+            "descricao": "Recompra limitada a 10% das cotas em 12 meses",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2025",
+            "descricao": "Operações seguem 100% adimplentes",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "CRAs impactados: CRA022001P6, CRA022002MH, CRA022007KJ, CRA02200BQA, CRA024007EP",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Queima gradual de 56 mil cotas via recompra",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "P/VP 0,92",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "FIAGRO-Imobiliário",
+        "CRA 77% + CRI + LCA/LCI",
+        "Gestora FG/A - Ribeirão Preto",
+        "FG/A Gestora de Recursos Ltda."
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "fgaa11/index.html",
+      "nota": 5.5,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 6.0
     },
     {
       "id": "figs11",
       "ticker": "FIGS11",
       "nome": "General Shopping Ativo e Renda FII",
-      "gestora": "Hedge Investments",
+      "gestora": "Hedge Investments (Administradora e Gestora)",
       "segmento": "tijolo---shopping-centers",
       "subsegmento": "Tijolo - Shopping Centers",
       "sentimento": "neutro",
-      "dataAnalise": "24/02/2026",
+      "dataAnalise": "24/04/2026",
       "indicadores": {
         "cotacao": 47.02,
         "pvp": 0.67,
@@ -7147,66 +8309,102 @@
         "administracao": null,
         "performance": 0,
         "benchmarkPerformance": "N/A",
-        "comentarioTaxas": "Muito baixas - sem performance"
+        "comentarioTaxas": "Taxa plana de 0,50% a.a. sobre valor de mercado — uma das mais baixas do segmento de shoppings"
       },
       "estrategia": {
-        "resumo": "FIGS11 é um FII de shopping centers com 36,5% de participação em 2 shoppings em Guarulhos/SP. Oferece DY de 12,25% e P/VP de 0,67 (33% de desconto), os melhores indicadores do segmento. No entanto, a concentração em apenas 2 shoppings na mesma cidade, a participação minoritária de 36,5% e o histórico de perda de capital (-53% desde o IPO) limitam a atratividade. Os investimentos em andamento (Smart Fit, UPA, retrofit) podem catalisar uma melhoria operacional.",
+        "resumo": "A tese do FIGS11 se resume a três pilares: (i) DY 12,25% e P/VP 0,67 combinados oferecem um dos perfis de renda/desconto mais agressivos do segmento de shopping centers brasileiros; (ii) taxa de 0,50% a.a. sem performance é metade do que cobram os peers (XPML, VISC, HGBS) e favorece o retorno líquido; (iii) catalisadores concretos no Bonsucesso (Smart Fit, UPA, retrofit) devem reduzir vacância para perto de zero em 12 meses, com impacto direto no NOI e na receita imobiliária.O contraponto é estrutural: concentração absoluta em 2 shoppings na mesma cidade (Guarulhos/SP) com participação minoritária de 36,5%; amarra regulamentar com um operador único (General Shopping) cujo histórico corporativo é complicado; perda de -53% em ganho de capital desde o IPO (pior que a maioria dos peers); distribuição recente acima de 100% do resultado gerado; e reavaliação de -7,83% em dez/2025 que pode não ser a última caso o cap rate setorial continue subindo. O fundo paga bem hoje, mas há décadas de história de que preço não sobe.",
         "ocupacao": 94.6,
         "focoGeografico": "",
         "tipoAtivo": "Tijolo - Shopping Centers"
       },
       "riscosEspecificos": [],
       "pontosPositivos": [
-        "P/VP de 0,67 (33% de desconto sobre VP)",
-        "DY de 12,25% - um dos mais altos do segmento",
-        "Taxa de administração baixa (0,50% a.a.) sem performance",
-        "Gestão pela Hedge Investments (transparência)",
-        "Smart Fit inaugurada + UPA Pimentas contratada",
-        "Retrofit da praça de alimentação em andamento",
-        "Inadimplência controlada em 1,9%",
-        "Vacância em queda (6,8% para 5,4% em 12 meses)"
+        "DY 12m de 12,25% com isenção de IR — um dos maiores do segmento de shopping",
+        "P/VP de 0,67 (33% de desconto sobre VP) — dos maiores descontos entre FIIs de shopping com liquidez",
+        "Taxa plana de 0,50% a.a. sem performance — metade do cobrado por XPML, VISC, HGBS",
+        "Gestão pela Hedge Investments desde 2019, com R$ 8+ bilhões sob gestão em FIIs",
+        "Relatórios gerenciais detalhados + planilha de fundamentos pública",
+        "Catalisadores concretos em 2026: Smart Fit (jan/26), UPA Pimentas e retrofit do Bonsucesso",
+        "Inadimplência controlada em 1,9% (vs 2,3% em nov/24)",
+        "Vacância em queda (6,8% → 5,4% em 12 meses)"
       ],
       "conclusao": {
-        "resumo": "O FIGS11 é uma opção para investidores de renda que aceitam riscos de concentração. O desconto de 33% sobre o VP e o DY de 12,25% são atrativos, mas devem ser ponderados com a falta de diversificação e o histórico de perda de capital. Os investimentos em andamento (Smart Fit, UPA, retrofit) são catalisadores positivos para os próximos meses. Recomendamos manter para quem já tem posição, com monitoramento da evolução das vendas e da vacância.",
-        "paraQuem": "Investidores que buscam alto dividend yield no segmento de shoppings",
-        "naoParaQuem": "Quem busca diversificação geográfica em shoppings"
+        "resumo": "O FIGS11 é uma tese contrarian de renda em shopping center secundário: oferece DY 12,25% e P/VP 0,67 — indicadores que colocam o fundo entre os mais descontados e mais atrativos em renda corrente do segmento — mas cobra um preço estrutural alto em concentração, participação minoritária, dependência de operador único e histórico de perda patrimonial (-53% desde o IPO). A nota 5,0/10 reflete essa dualidade: renda sólida de curto prazo (para quem aceita o risco) contra uma estrutura que tem repetidamente falhado em entregar preservação de capital. Manter para quem já tem posição e quer capturar o DY, com monitoramento atento ao desfecho do ciclo Smart Fit + UPA + retrofit, ao comportamento do NOI em 2026 e a eventuais novas marcações de valor justo. Para quem busca exposição a shopping com diversificação geográfica, taxa adequada e governança independente, XPML11, MALL11 e VISC11 são alternativas mais robustas.",
+        "paraQuem": "Investidores contrarian que buscam os maiores descontos sobre VP no segmento de shopping centers",
+        "naoParaQuem": "Quem busca diversificação geográfica em shoppings (olhe XPML11, MALL11, HGBS11)"
       },
       "historico": {
         "ipoData": null,
         "eventos": [
           {
-            "ano": "2013-2015",
-            "descricao": "Junho/2013: Início das atividades com cota a R$ 100,00",
+            "ano": "Jun/2013",
+            "descricao": "Cota de emissão: R$ 100,00",
             "impacto": ""
           },
           {
-            "ano": "2016-2020",
-            "descricao": "Redução significativa das vendas e do fluxo de visitantes",
+            "ano": "Abr/2015",
+            "descricao": "Parque Maia: 200 lojas, 1.600 vagas",
             "impacto": ""
           },
           {
-            "ano": "2021-2024",
-            "descricao": "Vendas em recuperação gradual acima dos níveis pré-pandemia",
+            "ano": "Abr/2019",
+            "descricao": "Distribuição passa a depender 100% do NOI",
             "impacto": ""
           },
           {
-            "ano": "2025-2026",
-            "descricao": "Jan/2026: Inauguração Smart Fit no Bonsucesso (+1,2 mil m² ABL)",
+            "ano": "Ago/2019",
+            "descricao": "Saída: Socopa Corretora",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar-Jun/2020",
+            "descricao": "24/03/2020: shoppings fechados",
+            "impacto": ""
+          },
+          {
+            "ano": "2021-2022",
+            "descricao": "Vendas setor 2021: +23,6% nominal",
+            "impacto": ""
+          },
+          {
+            "ano": "2023-2024",
+            "descricao": "2023: receita de aluguel R$ 15,65 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Rendimento sobe de R$ 0,43 para R$ 0,48 (+11,6%)",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "VP/cota cai de R$ 75,98 para R$ 70,36",
+            "impacto": ""
+          },
+          {
+            "ano": "Jan/2026",
+            "descricao": "05/01/2026: Inauguração Smart Fit",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "Cota: R$ 47,02 | VP: R$ 70,36",
             "impacto": ""
           }
         ]
       },
       "tags": [
         "2 Shoppings em Guarulhos/SP",
-        "Gestão Hedge Investments",
-        "36,5% de participação",
-        "Hedge Investments"
+        "Participação de 36,5% em cada ativo",
+        "Operador: General Shopping Brasil",
+        "Perda de capital de 53% desde IPO",
+        "Hedge Investments (Administradora e Gestora)"
       ],
       "tempoLeitura": 10,
       "arquivo": "figs11/index.html",
-      "nota": 6,
+      "nota": 5.0,
       "veredicto": "MANTER",
-      "notaGestora": 7
+      "notaGestora": 7.0
     },
     {
       "id": "fiib11",
@@ -7289,6 +8487,125 @@
       "nota": 5.5,
       "veredicto": "VENDA",
       "notaGestora": 4
+    },
+    {
+      "id": "fiip11",
+      "ticker": "FIIP11",
+      "nome": "RB Capital Renda I Fundo de Investimento Imobiliário - FII - Responsabilidade Limitada",
+      "gestora": "RB Asset (consultora imobiliária) / Oliveira Trust (administradora)",
+      "segmento": "híbrido-(logística,-centro-de-",
+      "subsegmento": "Híbrido (Logística, Centro de Distribuição e Varejo)",
+      "sentimento": "neutro",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 135.0,
+        "pvp": 0.68,
+        "dividendYield": 12.44,
+        "dividendoMensal": 1.4,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 6443,
+        "vpCota": 199.74
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxas fixas em reais — das mais baixas do mercado de FIIs de tijolo"
+      },
+      "estrategia": {
+        "resumo": "A tese do FIIP11 se apoia em três pilares: (i) deságio expressivo de 32% sobre o VP, que já incorpora riscos como a saída da Pernambucanas e a concentração em monousuários; (ii) DY muito elevado (12,44% a.a.), compatível com emissores AAA de crédito (Danfoss, Ambev, Wabtec) e acima da NTN-B longa; e (iii) taxas baixíssimas (conjunto ~0,30% a.a.), estrutura leve sem performance e histórico de mais de 15 anos sem emissões adicionais.Como contrapartida, o fundo tem 7 inquilinos concentrados com aproximadamente 60% dos vencimentos entre 2026 e 2028, e enfrenta vacância iminente em Nova Iguaçu (a partir do 4T2026) e resíduo da falência da Leader. É uma tese adequada para quem aceita volatilidade de dividendos em troca de uma entrada descontada em ativos físicos de qualidade.",
+        "ocupacao": 100.0,
+        "focoGeografico": "",
+        "tipoAtivo": "Híbrido (Logística, Centro de Distribuição e Varejo)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Um dos FIIs mais antigos da B3 (IPO em dez/2009) com mais de 15 anos de histórico operacional",
+        "Deságio de 32% sobre o VP — R$ 135,00 vs. R$ 199,74 de valor patrimonial",
+        "DY anualizado de 12,44%, com spread de ~545 bps sobre NTN-B 10 anos",
+        "100% de ocupação histórica com inquilinos de primeira linha (Danfoss, Ambev, Wabtec)",
+        "Taxas baixíssimas: conjunto de administração e consultoria em ~0,30% a.a.",
+        "Sem taxa de performance e sem emissões adicionais desde o IPO (alinhamento de longo prazo)",
+        "Nova locação Wabtec (até jul/35) e renovação Ambev (até dez/30) — base contratual longa em 23% da receita",
+        "Carteira pulverizada em 6.443 cotistas (nenhum com mais de 5% das cotas)"
+      ],
+      "conclusao": {
+        "resumo": "O FIIP11 é um exemplar de FII de tijolo 'escola antiga' — estruturado em 2007, com IPO em 2009, portfólio físico pulverizado em 7 ativos e uma base contratual construída com inquilinos âncoras. A precificação atual (P/VP 0,68 e DY 12,44%) claramente incorpora os riscos conhecidos (rescisão Pernambucanas, vencimentos 2026-2028, falência Leader), mas também deixa margem de segurança para quem acredita na capacidade da RB Asset de reocupar Nova Iguaçu e renegociar os contratos-chave. Para investidores que priorizam renda passiva de longo prazo com ativos físicos de qualidade e taxas baixas, a tese é racional. Para quem precisa de estabilidade mensal absoluta ou foge de concentração em monousuários, há FIIs logísticos e híbridos mais pulverizados (BTLG11, VILG11, KNRI11) que fazem mais sentido. A nota 7,0 reflete o equilíbrio entre a qualidade patrimonial histórica e os riscos de curto prazo que se acumularam nos últimos 12 meses.",
+        "paraQuem": "Investidores de valor (value investing) que buscam FIIs com deságio histórico relevante sobre o VP e geração de caixa consistente",
+        "naoParaQuem": "Quem precisa de dividendos estáveis mês a mês — renovações e eventual vacância em Nova Iguaçu podem gerar oscilações relevantes"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Ago/2007",
+            "descricao": "Objeto: imóveis não residenciais em todo o Brasil",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2009",
+            "descricao": "Captação: ~R$ 132 mi",
+            "impacto": ""
+          },
+          {
+            "ano": "2009-2010",
+            "descricao": "Carteira 100% tijolo desde o início",
+            "impacto": ""
+          },
+          {
+            "ano": "2016-2019",
+            "descricao": "Renovações sucessivas (típicos e atípicos)",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2021",
+            "descricao": "Ação judicial Leader (fev/2021)",
+            "impacto": ""
+          },
+          {
+            "ano": "Out/2024",
+            "descricao": "Ticker atualizado para FIIP11",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2025",
+            "descricao": "Execução suspensa",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2025",
+            "descricao": "Adesão à CVM 175",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Wabtec: contrato longo até jul/35",
+            "impacto": ""
+          },
+          {
+            "ano": "Dez/2025",
+            "descricao": "Aviso prévio de 12 meses",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "Deságio de 32% sobre o VP",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Um dos FIIs mais antigos da B3 (2009)",
+        "7 imóveis monousuários típicos",
+        "Deságio de ~32% sobre VP",
+        "RB Asset (consultora imobiliária) / Oliveira Trust (administradora)"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "fiip11/index.html",
+      "nota": 7.0,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 7.0
     },
     {
       "id": "flcr11",
@@ -7616,6 +8933,120 @@
       "nota": 6.5,
       "veredicto": "MANTER",
       "notaGestora": 7
+    },
+    {
+      "id": "ftca11",
+      "ticker": "FTCA11",
+      "nome": "Fyto Recebíveis do Agronegócio - Fiagro Imobiliário",
+      "gestora": "Fyto Capital Administradora de Recursos",
+      "segmento": "fiagro-de-papel-(cras-e-cris-d",
+      "subsegmento": "Fiagro de Papel (CRAs e CRIs do Agro)",
+      "sentimento": "negativo",
+      "dataAnalise": "24/04/2026",
+      "indicadores": {
+        "cotacao": 9.57,
+        "pvp": 0.91,
+        "dividendYield": 15.05,
+        "dividendoMensal": 0.12,
+        "patrimonioLiquido": 0,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 7724,
+        "vpCota": 10.55
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxa total de 1,10% a.a. — aceitável, mas PL pequeno eleva peso fixo"
+      },
+      "estrategia": {
+        "resumo": "A tese do FTCA11 hoje gira em torno de três fatores: (i) DY 12m elevado (19,18%, 156% do CDI gross up) em um Fiagro de papel com isenção de IR para PF; (ii) carteira diversificada de 30 ativos em 13 segmentos e 15 estados, com 91% em CDI+4,95% e proteção de IPCA+7,80% em 9%; e (iii) postura defensiva da gestão, com 29% em caixa para atravessar o ciclo de Selic alta e spread apertado no crédito privado.O contraponto é pesado: o fundo sofre inadimplência ativa em 8,25% do PL (Castilhos + Cotribá), carrega histórico de instabilidade com três trocas de marca em quatro anos, tem PL pequeno (R$ 47 Mi) que limita escala de operação e tem cota abaixo do valor patrimonial (P/VP 0,91) refletindo a desconfiança do mercado. O FTCA11 é uma aposta em recuperação de crédito e estabilização de marca, não em fluxo recorrente previsível.",
+        "ocupacao": 70.74,
+        "focoGeografico": "",
+        "tipoAtivo": "Fiagro de Papel (CRAs e CRIs do Agro)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Dividend yield de 19,18% em 12 meses (156% do CDI gross up) com isenção de IR para PF",
+        "Carteira pulverizada em 30 ativos, 13 segmentos e 15 estados, com limite de 5% por ativo",
+        "Indexador majoritário em CDI+4,95% (91%) protege contra marcação negativa em Selic alta",
+        "Postura defensiva da gestão com 29% em caixa durante ciclo de crédito apertado",
+        "Administração estável com BTG Pactual desde o IPO (auditoria Ernst & Young)",
+        "Preço a P/VP 0,91 incorpora parte do risco das inadimplências, oferecendo margem",
+        "CRI Cotribá tem garantia robusta (4 silos R$ 150 Mi, LTV 0,28) sugerindo recuperação possível",
+        "Taxa total de 1,10% a.a. é competitiva para o segmento de Fiagros de papel"
+      ],
+      "conclusao": {
+        "resumo": "O FTCA11 é um Fiagro de papel de perfil agressivo em momento crítico: oferece DY elevado (19,18% em 12 meses) e cota descontada (P/VP 0,91), mas carrega 8,25% do PL em inadimplência ativa e histórico de três rebrandings em quatro anos. A tese funciona para investidores experientes que entendem o risco de crédito agro, aceitam volatilidade de marcação e apostam na recuperação efetiva dos créditos problemáticos (fazendas Castilhos em leilão e silos Cotribá). Para o investidor conservador, há opções mais sólidas no universo de Fiagros com gestoras de maior porte e carteiras sem inadimplência concreta. Nota 4,0/10 — abaixo da média do setor — pesa mais o risco institucional e de crédito do que o prêmio na distribuição.",
+        "paraQuem": "Investidores experientes em Fiagros de papel que entendem o risco de crédito corporativo/agro e sabem precificar inadimplência",
+        "naoParaQuem": "Quem busca fluxo de renda estável e previsível — as inadimplências vão afetar dividendos nos próximos meses"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "Ago/2021",
+            "descricao": "Condomínio fechado, prazo indeterminado",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2021",
+            "descricao": "Volume alvo inicial: R$ 350 Mi",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2022",
+            "descricao": "Novo ticker: NCRA11",
+            "impacto": ""
+          },
+          {
+            "ano": "Jun/2022",
+            "descricao": "Primeiro relatório anual entregue em set/2022",
+            "impacto": ""
+          },
+          {
+            "ano": "Ago/2023",
+            "descricao": "R$ 4,15 Mi integralizados em 2024",
+            "impacto": ""
+          },
+          {
+            "ano": "Mar/2025",
+            "descricao": "Novo ticker: FTCA11",
+            "impacto": ""
+          },
+          {
+            "ano": "Set/2025",
+            "descricao": "Classe única de cotas",
+            "impacto": ""
+          },
+          {
+            "ano": "Nov/2025",
+            "descricao": "2,57% do PL afetado",
+            "impacto": ""
+          },
+          {
+            "ano": "Fev/2026",
+            "descricao": "5,68% do PL afetado",
+            "impacto": ""
+          },
+          {
+            "ano": "Abr/2026",
+            "descricao": "PL: R$ 47,07 Mi",
+            "impacto": ""
+          }
+        ]
+      },
+      "tags": [
+        "Fiagro de CRAs",
+        "Gestão Fyto Capital",
+        "Inadimplência ativa (8,25% do PL)",
+        "Fyto Capital Administradora de Recursos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "ftca11/index.html",
+      "nota": 4.0,
+      "veredicto": "EM ANÁLISE",
+      "notaGestora": 5.5
     },
     {
       "id": "fvpq11",

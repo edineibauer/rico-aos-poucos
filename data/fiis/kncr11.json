@@ -1,0 +1,692 @@
+{
+  "meta": {
+    "ticker": "KNCR11",
+    "nome": "Kinea Rendimentos Imobiliários FII Resp. Limitada",
+    "nomeExtra": "Maior FII de papel CDI+ do Brasil — gestão Kinea/Itaú desde 2012",
+    "segmento": "FII de Papel — CRI pós-fixados (CDI+)",
+    "badges": [
+      "Blue chip de papel",
+      "PL R$ 10,96 bi",
+      "542 mil cotistas",
+      "Sem inadimplência"
+    ],
+    "sentimento": "positivo",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 390
+  },
+  "seo": {
+    "title": "KNCR11 - Análise Completa | Kinea Rendimentos Imobiliários",
+    "description": "Análise crítica do KNCR11: maior FII de papel CDI+ do Brasil (R$ 10,96 bi), gestão Kinea/Itaú, DY 12m de 13,8% (122% do CDI gross-up) e cota a R$ 106,01.",
+    "keywords": "KNCR11, Kinea Rendimentos Imobiliários, Kinea Investimentos, Itaú, FII papel, CRI, CDI+, Intrag DTVM, Brookfield, JHSF, Allos, Even, MRV",
+    "ogTitle": "KNCR11 - Kinea Rendimentos Imobiliários | Análise Crítica",
+    "ogDescription": "FII de papel referência do mercado: 88 CRIs em CDI+2,05%, carteira 100% adimplente, 542 mil cotistas e R$ 22 mi/dia de liquidez. P/VP 1,03 reflete prêmio pela gestão.",
+    "twitterTitle": "KNCR11 - Kinea Rendimentos (FII Papel CDI+)",
+    "twitterDescription": "Maior FII de papel pós-fixado do Brasil. R$ 10,96 bi de PL, 88 CRIs sem default, DY 12m 13,8%, 122% do CDI gross-up. Gestão Kinea/Itaú desde 2012."
+  },
+  "indicadores": {
+    "cotacao": 106.01,
+    "cotacaoData": "31/03/2026",
+    "pvp": 1.04,
+    "pvpDesconto": "Negocia 4% acima do VP — prêmio pela gestão Kinea",
+    "dividendYield": 13.8,
+    "dividendoMensal": 1.15,
+    "dividendoAnual": 14.7,
+    "patrimonioLiquido": "R$ 10,96 Bi",
+    "vpCota": 102.36,
+    "cotistas": 542237,
+    "ocupacao": 92.2,
+    "numImoveis": 88
+  },
+  "recomendacao": {
+    "nota": 8.3,
+    "veredicto": null,
+    "cor": "emerald",
+    "resumo": "<p>O <strong class=\"text-blue-400\">KNCR11</strong> é o <strong class=\"text-emerald-400\">maior fundo de papel CDI+ do Brasil</strong> e referência absoluta do segmento. Gerido pela <strong>Kinea Investimentos</strong> (braço do Grupo Itaú Unibanco) desde o IPO em outubro de 2012, encerrou março/2026 com PL de <strong class=\"text-emerald-400\">R$ 10,96 bilhões</strong>, 542 mil cotistas e uma carteira de <strong>88 CRIs</strong> que permanece <strong class=\"text-emerald-400\">100% adimplente</strong> mesmo no ciclo de juros mais duro da década (Selic 15%).</p><p>A taxa média da carteira é de <strong class=\"text-blue-400\">CDI+2,05%</strong> com prazo médio de 4,0 anos e duration baixa, característica que protege contra marcação negativa em Selic alta — mas que também significa <strong class=\"text-amber-400\">DY menor</strong> em comparação com pares de IPCA+. Em março/2026 distribuiu R$ 1,15/cota (109% do CDI gross-up), e a média móvel de 12 meses é R$ 14,70/cota, gerando DY de ~13,8% em 12m. Os ativos-alvo estão concentrados em <strong>escritórios AAA (45,3%), shoppings dominantes (27,3%), galpões logísticos (10,9%) e residencial (3,7%)</strong>, com devedores de primeiríssima linha (Brookfield, JHSF, Allos, Iguatemi, Even, MRV). A cota negocia a <strong class=\"text-blue-400\">R$ 106,01 (P/VP 1,04)</strong>, prêmio modesto que reflete a confiança do mercado na gestão Kinea.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 10,96 Bi",
+      "detalhe": "VP/cota: R$ 102,36 — maior FII papel CDI+",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,15",
+      "valorSufixo": "/mês",
+      "detalhe": "DY 12m: ~13,8% | 122% do CDI gross-up",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Carteira",
+      "valor": "88 CRIs",
+      "detalhe": "100% adimplente — CDI+2,05% (MTM)",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "542.237",
+      "detalhe": "R$ 22,4 Mi/dia de liquidez",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Duration baixa (4 anos) deprime DY no ciclo de queda da Selic",
+      "descricao": "A carteira de CRI pós-fixado em CDI+2,05% tem alta sensibilidade ao patamar absoluto da Selic. Com o Copom já tendo reduzido a Selic para 14,75% em março/2026 e sinalizando ciclo de afrouxamento (cenário base 12-13% até final de 2026), a tendência é de queda gradual no DY mensal — o pico recente (R$ 1,35/cota em jul-set/2025 com Selic 15%) já não se repete e o futuro depende da recomposição via novos CRIs com taxa mais alta sobre CDI menor.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cota negocia 4% acima do VP — sem margem de barganha",
+      "descricao": "A R$ 106,01 contra VP de R$ 102,36, o KNCR11 tem P/VP de 1,04 (ágio de ~3,6%). Não há desconto patrimonial para o investidor que entra hoje, e a cota média de ingresso considerada pela gestora (R$ 102,12) está abaixo do preço de mercado. Em ciclos passados (2022 com Selic alta), o fundo chegou a negociar com leve deságio — o prêmio atual reflete o flight-to-quality, mas limita upside no curto prazo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Caixa elevado (22% entre LCI+caixa) por excesso de captação",
+      "descricao": "Em fev/2026 o fundo tinha 14,3% em caixa e 10,1% em LCI (24,4% fora dos ativos-alvo). Mesmo após desembolsos de R$ 320 mi em março, ainda restam R$ 855 mi em caixa (7,8%) e R$ 1,57 bi em LCI (14,3%). Esse caixa rende ~94-100% do CDI, abaixo do CDI+2,05% da carteira de CRI — o que pressiona o DY enquanto a alocação dos R$ 3,2 bilhões captados na 12ª emissão (encerrada fev/2026) não se completa nas próximas 8-12 semanas.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração relevante em Brookfield (~14% do PL via BR12 + Sigma + Sucupira + Passeio + CD)",
+      "descricao": "Somando os 4 CRIs do Brookfield BR12 (R$ 924 mi), Edifício Sigma (R$ 302 mi), Sucupira (R$ 149 mi), Passeio Paulista (R$ 192 mi), CD Sakamoto (R$ 111 mi), CD Guarulhos (R$ 89 mi) e a cota do FII Sigma (R$ 155 mi), a exposição agregada ao grupo Brookfield é da ordem de R$ 1,9 bilhão — cerca de 17% do PL. Apesar de Brookfield ser um grupo internacional de altíssima qualidade, a concentração em um único gestor de imóveis comerciais merece monitoramento.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "FII de papel vs. tijolo — pouca proteção contra inflação real",
+      "descricao": "Apenas 0,2% da carteira é IPCA+ (CRI Magazine Luíza e Partage). 99,8% segue indexação ao CDI ou %CDI. Em cenário de inflação persistente acima da meta com Selic real comprimida, FIIs IPCA+ (KNIP, KNHY) ou de tijolo podem oferecer proteção superior. KNCR11 entrega rendimento atrelado à taxa nominal de juros, sem hedge inflacionário direto.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Reserva acumulada baixa (R$ 0,25/cota em mar/2026) reduz colchão",
+      "descricao": "Após meses de distribuição agressiva (R$ 1,30-1,35/cota durante Selic 15%), a reserva acumulada não distribuída caiu para R$ 0,25/cota em março/2026. Em comparação, fundos do mesmo gestor mantêm reservas mais robustas. Com o ciclo de queda da Selic e desembolsos pesados em curso, esse colchão pode ser exigido para suavizar dividendos futuros.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Kinea Investimentos (Grupo Itaú Unibanco)",
+    "nota": 9.5,
+    "notaLabel": "EXCELENTE",
+    "stats": [
+      {
+        "label": "AUM em FIIs de papel",
+        "valor": "R$ 27,8 bi (7 fundos)"
+      },
+      {
+        "label": "Sede",
+        "valor": "Itaim Bibi — São Paulo/SP"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Kinea Investimentos Ltda.</strong> (CNPJ 08.604.187/0001-44) é a gestora de recursos do <strong>Grupo Itaú Unibanco</strong>, fundada em 2007 e considerada uma das maiores e mais respeitadas plataformas de gestão de fundos imobiliários do Brasil. Em FIIs de papel, a Kinea soma <strong class=\"text-emerald-400\">R$ 27,8 bilhões em AUM</strong> distribuídos em 7 fundos — KNCR11 (R$ 11,0 bi), KNIP11 (R$ 7,5 bi, IPCA+), KNHY11 (R$ 3,1 bi, IPCA+ high yield), KNUQ11 (R$ 2,2 bi), KNHF11 (R$ 2,0 bi multiestratégia), KNSC11 (R$ 1,8 bi mistos) e KCRE11 (R$ 0,3 bi parceria com a Creditas).</p><p>A administração é da <strong class=\"text-blue-400\">Intrag DTVM Ltda.</strong> (CNPJ 62.418.140/0001-31, Itaú Unibanco), com custódia na própria estrutura do Itaú e auditoria pela <strong>PricewaterhouseCoopers</strong> (anteriormente Ernst & Young). Essa integração vertical Kinea + Intrag + Itaú Custódia garante <strong class=\"text-emerald-400\">acesso privilegiado a originação de CRIs</strong>, especialmente nas grandes operações de financiamento imobiliário corporativo (Brookfield BR12, JHSF Malls, Even Estoque, MRV pro-soluto). O KNCR11 atravessou pandemia, ciclo Selic 13,75% (2022-2023) e Selic 15% (2025-2026) <strong class=\"text-emerald-400\">sem registrar um único evento de default em sua carteira de CRI</strong> — track record raro no segmento.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa total de 1,00% a.a. — competitiva para o porte",
+    "glowCor": "emerald",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,00% a.a.",
+        "detalhe": "Inclui gestão Kinea + Intrag + escrituração",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Sem cobrança de performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Inclusa",
+        "detalhe": "Itaú Unibanco S.A.",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 22,4 Mi",
+        "detalhe": "Média mar/2026 — uma das maiores do mercado",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Intrag Distribuidora de Títulos e Valores Mobiliários Ltda."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Kinea Investimentos Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Itaú Unibanco S.A."
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "PricewaterhouseCoopers Auditores Independentes"
+      },
+      {
+        "label": "Taxa Total",
+        "valor": "1,00% a.a."
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há"
+      },
+      {
+        "label": "Início",
+        "valor": "15/10/2012 (IPO)"
+      },
+      {
+        "label": "CNPJ do Fundo",
+        "valor": "16.706.958/0001-32"
+      },
+      {
+        "label": "Código ISIN",
+        "valor": "BRKNCRCTF000"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidores em geral"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Ativos",
+        "valor": "88 CRIs + 1 FII + LCI"
+      },
+      {
+        "label": "Indexador",
+        "valor": "99,8% CDI / 0,2% IPCA"
+      },
+      {
+        "label": "Inadimplência",
+        "valor": "0% — carteira 100% adimplente",
+        "cor": "emerald"
+      },
+      {
+        "label": "Prazo médio",
+        "valor": "4,0 anos (CRIs CDI+)"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Escritórios",
+        "Shopping Centers",
+        "Galpões Logísticos",
+        "Residencial",
+        "Residencial Pulverizado",
+        "Hotéis e Outros"
+      ],
+      "data": [
+        45.3,
+        27.3,
+        10.9,
+        3.7,
+        7.0,
+        5.8
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#8b5cf6",
+        "#06b6d4"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "JHSF Malls II (CRI 26B4409996)",
+        "setor": "Shoppings (Cidade Jardim, Catarina Outlet)",
+        "receita": "3,9% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+2,25% — Fiança JHSF Participações",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Brookfield BR12 (4 CRIs - 22G028)",
+        "setor": "Escritórios AAA SP/RJ (10 imóveis)",
+        "receita": "8,7% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+2,15% — AF imóveis + AF cotas FII",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Extrema Business Park (CRI 24B1669805)",
+        "setor": "Logístico Fernão Dias MG (5 galpões)",
+        "receita": "2,7% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+2,10% — LTV 65% + cash sweep",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Brookfield Ed. Sigma (CRI 25A2619772)",
+        "setor": "Escritório AAA Marginal Pinheiros SP",
+        "receita": "2,7% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+1,80% — LTV 65%, ocupação >95%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Ed. EZ Tower (2 CRIs - 17I0141)",
+        "setor": "Escritório AAA SP",
+        "receita": "5,4% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+1,75% — Vence 18/11/2032",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Edifício O Parque (CRI 23H1250138)",
+        "setor": "Escritório AAA SP — investidor internacional",
+        "receita": "1,9% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+2,50% — LTV 70%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Almeida Júnior (CRI 19L0882476)",
+        "setor": "Shopping Balneário Camboriú SC",
+        "receita": "1,9% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+1,88% — LTV 60%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "JHSF Malls (CRI 19E0322333)",
+        "setor": "Shoppings (4 ativos JHSF)",
+        "receita": "3,0% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+1,86% — LTV 52%, vence mar/35",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CPOF Ed. FL Plaza (2 CRIs - 25B355275)",
+        "setor": "Escritório AAA Faria Lima",
+        "receita": "2,9% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+2,00% — LTV 55%, ocupação >95%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "JW Marriott Hotel (CRI 25H3372118)",
+        "setor": "Hotel premium SP — Av. Nações Unidas",
+        "receita": "1,5% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+1,60% — LTV 50%, cobertura 125%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Even Estoque (CRI 23J2266232)",
+        "setor": "Residencial SP — estoque incorporadora",
+        "receita": "1,4% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+2,55% — LTV 70% máximo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "MRV Pro-Soluto (6 CRIs - 153/297/344/365/429/469)",
+        "setor": "Residencial pulverizado MCMV nacional",
+        "receita": "3,3% PL",
+        "rating": "Adimplente",
+        "ratingCor": "emerald",
+        "risco": "CDI+1,90 a 3,50% — Excedente cobertura + FR",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>A carteira do <strong class=\"text-blue-400\">KNCR11</strong> tem <strong class=\"text-emerald-400\">88 CRIs ativos</strong> mais 1 FII (Brookfield Sigma, R$ 155 mi) e LCI (R$ 1,57 bi), totalizando R$ 10,98 bilhões a valor de aquisição (R$ 10,96 bi MTM). A maior posição individual é o JHSF Malls II com 3,9% do PL — pulverização exemplar para o porte. Por setor, a alocação é <strong class=\"text-blue-400\">45,3% escritórios, 27,3% shoppings, 10,9% logístico, 3,7% residencial e 7,0% residencial pulverizado</strong>, com geografia concentrada em SP/RJ/MG (regiões mais maduras do mercado imobiliário).</p><p>O portfólio é <strong class=\"text-emerald-400\">99,8% indexado ao CDI</strong> com taxa média MTM de CDI+2,05% e prazo médio de 4,0 anos. A duration próxima de zero é a marca registrada do fundo: protege contra marcação negativa em alta de juros, mas reduz sensibilidade ao alongamento. Os principais devedores são empresas e veículos de primeira linha — Brookfield Brasil (~17% do PL agregado), JHSF Malls (~7%), Iguatemi, Allos, Even, MRV, Tenda, Hilton, JW Marriott. Mesmo durante a Selic 15% e o ciclo de tensões corporativas de 2024-2026 (que afetou outros FIIs de papel), a <strong class=\"text-emerald-400\">carteira do KNCR11 permanece sem qualquer evento de default ou stop accrual</strong> — métrica que sustenta o prêmio P/VP em relação aos pares.</p>"
+  },
+  "timeline": {
+    "subtitulo": "13 anos como referência absoluta de FII de papel CDI+ — IPO em out/2012 a 12 emissões e R$ 11 bi de PL",
+    "periodos": [
+      {
+        "periodo": "Ago/2012",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 02/08/2012 sob a forma de condomínio fechado, com prazo indeterminado, administrado pela Intrag DTVM (Itaú Unibanco) e gerido pela Kinea Investimentos.",
+        "pontos": [
+          "Encerramento de exercício em 30/06",
+          "Investidores em geral (ICVM 472)",
+          "CNPJ 16.706.958/0001-32"
+        ]
+      },
+      {
+        "periodo": "Out/2012",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das operações em 23/10/2012 (registro CVM em 15/10/2012). A 1ª emissão de cotas a R$ 100,00 marcou a entrada da Kinea no mercado de FIIs de papel pós-fixado.",
+        "pontos": [
+          "Cota IPO: R$ 100,00",
+          "Ticker KNCR11 listado na B3",
+          "Custódia: Itaú Unibanco"
+        ]
+      },
+      {
+        "periodo": "2013-2017",
+        "label": "EMISSÕES INICIAIS",
+        "cor": "blue",
+        "descricao": "Sequência de emissões nos primeiros 5 anos (2ª, 3ª, 4ª e 5ª emissões) que levaram o fundo de cerca de R$ 200 milhões para mais de R$ 2 bilhões de PL, consolidando-o como o maior FII de papel CDI+ do mercado.",
+        "pontos": [
+          "Carteira diversificada de CRIs corporativos",
+          "Foco em devedores AAA",
+          "Início da relação com Brookfield, Iguatemi"
+        ]
+      },
+      {
+        "periodo": "2018-2019",
+        "label": "6ª e 7ª EMISSÕES",
+        "cor": "blue",
+        "descricao": "Continuidade do ciclo de captação aproveitando a queda da Selic (de 14,25% em 2016 para 6,50% em 2018). PL ultrapassa R$ 4 bilhões. Em out/2018 ocorre alteração relevante no regulamento.",
+        "pontos": [
+          "PL ultrapassa R$ 4 Bi",
+          "Adaptação ICVM 555 e regulamentação",
+          "Ampliação da base para 67 mil cotistas (jun/2021)"
+        ]
+      },
+      {
+        "periodo": "Mar/2020",
+        "label": "PANDEMIA",
+        "cor": "amber",
+        "descricao": "Selic em mínima histórica (2,00% em ago/2020) impactou o DY do fundo (CDI+2% em CDI 2% gera ~4% a.a. nominal). Cota chegou a deságio de até 12% sobre VP no auge da volatilidade. Carteira atravessou a pandemia sem nenhum default.",
+        "pontos": [
+          "Distribuição cai para ~R$ 0,25/cota mensal",
+          "Carteira segue 100% adimplente",
+          "Selic mínima de 2,00% pressionou DY"
+        ]
+      },
+      {
+        "periodo": "2021-2022",
+        "label": "CICLO DE ALTA SELIC",
+        "cor": "emerald",
+        "descricao": "Recuperação forte do DY com a alta da Selic (de 2% para 13,75% em 2022). Distribuição mensal sobe para R$ 1,00-1,15/cota. KNCR11 volta a negociar com prêmio sobre VP por ser uma das melhores opções para capturar a Selic alta.",
+        "pontos": [
+          "DY mensal acima de 1% recorrente",
+          "PL acima de R$ 5 Bi",
+          "Mais de 200 mil cotistas"
+        ]
+      },
+      {
+        "periodo": "Jun/2024",
+        "label": "10ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "10ª emissão entre 11/06/2024 e 28/06/2024 captou R$ 780,8 milhões. PL salta para R$ 6,55 bi (jun/2024) com 6,62 milhões de cotas e mais de 350 mil cotistas.",
+        "pontos": [
+          "Captação líquida: R$ 780,8 Mi",
+          "Cotas integralizadas: ~7,5 Mi",
+          "Volume diário sobe para R$ 14-18 Mi"
+        ]
+      },
+      {
+        "periodo": "Nov/2024 a Abr/2025",
+        "label": "11ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "11ª emissão iniciada em 04/11/2024 e encerrada em 29/04/2025, captando R$ 1.187,9 milhões. PL alcança R$ 7,79 bi em 30/06/2025. Adaptação à Resolução CVM 175/2022 também é concluída no exercício.",
+        "pontos": [
+          "Captação líquida: R$ 1,19 Bi",
+          "Adaptação à CVM 175",
+          "Lucro do exercício 2024/25: R$ 928,4 Mi"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "RESPONSABILIDADE LIMITADA",
+        "cor": "blue",
+        "descricao": "Fundo passa a denominar-se 'Kinea Rendimentos Imobiliários FII Responsabilidade Limitada' (anteriormente apenas 'FII'), sob nova classe única de cotas e regulamento adaptado à CVM 175.",
+        "pontos": [
+          "Responsabilidade limitada dos cotistas",
+          "Classe única de cotas",
+          "Continuidade do administrador (Intrag) e gestor (Kinea)"
+        ]
+      },
+      {
+        "periodo": "Out-Dez/2025",
+        "label": "PICO DE DY",
+        "cor": "emerald",
+        "descricao": "Selic em 15% gera o melhor patamar histórico de distribuição: R$ 1,33-1,35/cota mensal entre jul-set/2025 (134% do CDI gross-up em ago/2025). Carteira segue sem eventos negativos de crédito mesmo com aperto monetário.",
+        "pontos": [
+          "Distribuição máxima: R$ 1,35/cota",
+          "DY 12m em torno de 14-15%",
+          "Carteira 100% adimplente"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "12ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "12ª emissão de cotas encerrada em 02/03/2026 com captação de R$ 3.185,2 milhões (subscrição de 30,58 milhões de cotas). PL ultrapassa R$ 10,95 bi e o número de cotistas chega a 542 mil. Anúncio publicado em 02/03/2026.",
+        "pontos": [
+          "Captação líquida: R$ 3,19 Bi",
+          "PL ultrapassa R$ 10,9 Bi",
+          "R$ 2,5 Bi em diligência para alocação"
+        ]
+      },
+      {
+        "periodo": "Mar/2026",
+        "label": "INÍCIO DO CICLO DE QUEDA",
+        "cor": "amber",
+        "descricao": "Copom corta a Selic em 0,25 p.p. para 14,75% em meados de março/2026. Distribuição cai para R$ 1,15/cota (109% do CDI gross-up). Investimentos novos de R$ 320,5 Mi em CRI no mês (Brookfield Passeio Paulista, VISC BH Shopping, Huma CD Santana, Crediblue 159).",
+        "pontos": [
+          "Selic: 15,00% → 14,75%",
+          "Novos CRIs: R$ 320,5 Mi",
+          "R$ 2,2 Bi em diligência adicional"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Cota negocia a R$ 106,01 (P/VP 1,04). Carteira de 88 CRIs em CDI+2,05% MTM, 14,3% LCI e 7,8% caixa. 542 mil cotistas, R$ 22,4 Mi de liquidez diária. Reserva acumulada: R$ 0,25/cota.",
+        "pontos": [
+          "<strong>PL:</strong> R$ 10,96 Bi",
+          "<strong>DY 12m:</strong> ~13,8% (122% CDI g.u.)",
+          "<strong>Cotistas:</strong> 542.237"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">KNCR11</strong> nasceu em outubro de 2012 como um dos primeiros FIIs de papel CDI+ do Brasil, sob a gestão pioneira da <strong>Kinea Investimentos</strong>, braço de gestão de recursos do <strong>Grupo Itaú Unibanco</strong>. Em 13 anos e meio, atravessou o ciclo Selic 14,25% → 2% → 13,75% → 15% → 14,75% sem registrar um único evento de default em sua carteira de CRI — algo raro no segmento. Realizou <strong class=\"text-emerald-400\">12 emissões públicas</strong> ao longo desse período, partindo de algumas centenas de milhões para o atual <strong>R$ 10,96 bilhões de PL</strong>, mantendo-se sempre como o maior FII de papel pós-fixado do mercado.</p><p>A trajetória é marcada por consistência institucional rara: mesma gestora desde o IPO (Kinea), mesmo administrador (Intrag/Itaú), mesmo custodiante (Itaú), e taxa de administração inalterada de 1,00% a.a. — sem performance. A 12ª emissão (encerrada em fev/2026) captou R$ 3,2 bilhões, sinal claro de confiança do mercado mesmo num momento em que o ciclo de juros começa a inverter. Com o início do afrouxamento monetário em mar/2026 (Selic 15% → 14,75%), o fundo entra numa fase em que a tese mudará de captura de Selic alta para qualidade de gestão, originação proprietária e disciplina na alocação dos R$ 2,4 bilhões de caixa+LCI em estágio final de diligência.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Cotistas (jun/2021 → mar/2026)",
+        "valor": "+708%",
+        "detalhe": "67 mil → 542,2 mil"
+      },
+      {
+        "label": "PL (jun/2023 → mar/2026)",
+        "valor": "+88%",
+        "detalhe": "R$ 5,84 Bi → R$ 10,96 Bi"
+      },
+      {
+        "label": "Captação 12ª emissão",
+        "valor": "R$ 3,19 Bi",
+        "detalhe": "Encerrada em 02/03/2026 — R$ 102,12/cota"
+      },
+      {
+        "label": "Distribuído 2024/25 (fiscal)",
+        "valor": "R$ 929,5 Mi",
+        "detalhe": "100% do lucro líquido (R$ 928,4 Mi)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">KNCR11</strong> se sustenta em três pilares: (i) <strong class=\"text-emerald-400\">qualidade institucional</strong> — gestão Kinea (Itaú) há 13 anos, taxa de administração competitiva (1,00% a.a.), zero performance, custódia Itaú e auditoria PwC; (ii) <strong class=\"text-emerald-400\">carteira de elite</strong> — 88 CRIs em devedores AAA (Brookfield, JHSF, Allos, Iguatemi, Even, MRV, Hilton, JW Marriott) sem nenhum default desde o IPO de 2012, mesmo após pandemia, Selic 13,75% e Selic 15%; e (iii) <strong class=\"text-emerald-400\">liquidez excepcional</strong> — R$ 22,4 Mi de volume diário em mar/2026, o que torna o KNCR11 um dos FIIs de papel mais negociáveis do mercado.</p><p>O contraponto é a <strong class=\"text-amber-400\">duration baixa</strong>, característica intrínseca de fundos CDI+: protege contra marcação adversa em alta de juros, mas faz o DY recuar em ciclos de queda da Selic. Com o início do afrouxamento monetário em mar/2026 (Selic 15% → 14,75% e cenário base 12-13% até dez/2026), o DY mensal já caiu de R$ 1,35/cota (set/2025) para R$ 1,15/cota (mar/2026). A cota negocia em <strong class=\"text-amber-400\">leve prêmio sobre VP (P/VP 1,04)</strong>, refletindo o flight-to-quality — não há margem de barganha para o investidor que entra hoje, e a alocação dos R$ 3,2 Bi captados na 12ª emissão sobre R$ 2,4 Bi ainda em caixa/LCI determinará a recomposição do DY nos próximos trimestres.</p>",
+    "paraQuem": [
+      "Investidores <strong>conservadores</strong> que buscam exposição pós-fixada (CDI+) com <strong>baixíssimo risco de crédito</strong> e isenção de IR",
+      "Quem prefere <strong>liquidez alta</strong> (R$ 22 Mi/dia) e quer flexibilidade para entrar/sair sem grande impacto no preço",
+      "Investidores que valorizam <strong>governança institucional</strong> de classe mundial (Kinea/Itaú), com auditoria PwC e custódia integrada",
+      "Carteiras que precisam de <strong>blue chip de papel</strong> como núcleo defensivo, complementado por outros FIIs de tijolo e IPCA+"
+    ],
+    "naoParaQuem": [
+      "Quem busca <strong>DY elevado a qualquer custo</strong> — prefira KNHY11, RBRY11 ou outros high yield",
+      "Investidores que querem <strong>proteção direta contra inflação</strong> — prefira KNIP11 ou KNHF11 (IPCA+)",
+      "Perfis que entram para <strong>capturar deságio P/VP</strong> — KNCR11 negocia com prêmio (P/VP 1,04)",
+      "Quem espera o ciclo de <strong>queda da Selic</strong> trazer DY excepcional — o efeito é inverso (DY cai com o CDI)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      1.16,
+      1.20,
+      1.20,
+      1.35,
+      1.35,
+      1.35,
+      1.33,
+      1.11,
+      1.30,
+      1.20,
+      1.00,
+      1.15
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.8,
+    "chartYMax": 1.5,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 10,55/cota"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 13,42/cota"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 13,80/cota"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 14,99/cota"
+      }
+    ],
+    "guidance": {
+      "periodo": "2T2026",
+      "faixa": "R$ 1,00 a R$ 1,20",
+      "unidade": "por cota / mês (acompanha Selic em queda)"
+    },
+    "stats": [
+      {
+        "label": "Atual (mar/2026)",
+        "valor": "R$ 1,15"
+      },
+      {
+        "label": "DY 12m (mercado)",
+        "valor": "~13,8%",
+        "cor": "emerald"
+      },
+      {
+        "label": "% CDI (gross up)",
+        "valor": "122%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Queda gradual",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "1,04",
+      "descricao": "<p>A cota negocia a <strong class=\"text-amber-400\">R$ 106,01</strong> contra VP de <strong class=\"text-blue-400\">R$ 102,36</strong>, prêmio de 3,6%. Esse ágio modesto reflete: (i) a confiança histórica do mercado na gestão Kinea (zero default em 13 anos); (ii) a liquidez superior (R$ 22 Mi/dia); e (iii) o flight-to-quality em um cenário ainda volátil. Comparado a pares de menor escala, o prêmio é justificável, mas não há margem de barganha — quem entra hoje paga acima do valor patrimonial.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 102,36"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 106,01",
+          "cor": "amber"
+        },
+        {
+          "label": "Prêmio",
+          "valor": "+3,6%",
+          "cor": "amber"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "13,8%",
+      "label": "Dividend Yield (12 meses estimado)",
+      "cor": "emerald",
+      "descricao": "<p>DY 12m de aproximadamente <strong class=\"text-emerald-400\">13,8%</strong>, equivalente a <strong class=\"text-emerald-400\">122% do CDI gross-up</strong> (considerando isenção de IR para PF). Em mar/2026, o spread mensal foi de 109% do CDI gross-up, abaixo do pico de 134% (ago/2025). A taxa média da carteira é CDI+2,05% MTM, gerando spread líquido sobre o CDI antes da taxa de administração. Em <strong class=\"text-amber-400\">cota a R$ 106,00</strong> o spread cai para CDI+0,69% — sensibilidade alta ao preço de entrada.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 100,00 a R$ 105,00",
+      "label": "Faixa Justa Estimada",
+      "cor": "amber",
+      "descricao": "<p>A precificação justa do KNCR11 depende fortemente do <strong class=\"text-amber-400\">cenário Selic</strong> e da <strong>velocidade de alocação</strong> dos R$ 2,4 Bi em caixa/LCI. No cenário Selic 14,75% sustentada por mais de 6 meses, o DY mensal se mantém em R$ 1,10-1,20 e a cota justa estaria entre R$ 103-106. Em cenário de queda mais rápida (Selic 12% no fim de 2026), o DY cai para R$ 0,90-1,00/cota e a cota justa migra para R$ 98-103. A faixa de <strong class=\"text-blue-400\">R$ 100-105</strong> reflete o cenário base, ligeiramente abaixo do preço atual. Compradores devem priorizar entradas em P/VP igual ou inferior a 1,00.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O KNCR11 encerra março/2026 com PL de R$ 10,96 bilhões, 542.237 cotistas, 88 CRIs ativos (77,8% do PL em CDI+2,05% MTM), 14,3% em LCI e 7,8% em caixa (Títulos Públicos Federais). A distribuição mensal foi de R$ 1,15/cota, equivalente a 109% do CDI gross-up considerando IR de 15%. O DY 12m fica em ~13,8% (122% do CDI gross-up). A carteira é dominada por escritórios AAA (45,3%), shoppings (27,3%), galpões logísticos (10,9%), residencial (3,7%) e outros (12,8%), com geografia concentrada em SP/RJ/MG. Os principais devedores são empresas de primeiríssima linha — Brookfield (~17% do PL agregado), JHSF Malls (~7%), Iguatemi, Allos, Even, MRV, Tenda, Hilton, JW Marriott — todas em situação adimplente.",
+      "O quadro positivo é robusto e raro. Primeiro, a carteira atravessou pandemia (Selic 2%), ciclo Selic 13,75% (2022-2023) e Selic 15% (2025-2026) sem registrar um único evento de default — track record que a gestão Kinea cita explicitamente nos relatórios mensais. Segundo, a 12ª emissão (encerrada 02/03/2026) captou R$ 3,2 bilhões, demonstrando confiança contínua de investidores e novos cotistas mesmo num momento de virada do ciclo monetário. Terceiro, a estrutura de custos é competitiva: 1,00% a.a. de taxa total, sem performance, com custódia integrada Itaú. Quarto, a liquidez de R$ 22,4 Mi/dia coloca o fundo entre os mais negociáveis da bolsa, oferecendo flexibilidade real ao investidor.",
+      "Olhando para frente, o caminho do KNCR11 depende centralmente do ritmo de queda da Selic e da disciplina na alocação dos R$ 2,4 bilhões em caixa/LCI ainda fora dos ativos-alvo. O Copom já cortou a Selic para 14,75% em meados de março/2026 e o cenário base aponta Selic em 12-13% até final de 2026 — esse movimento tende a comprimir o DY mensal de R$ 1,15 (mar/26) para algo entre R$ 0,90-1,10 ao longo do ano. A cota a P/VP 1,04 não oferece desconto patrimonial, e o investidor que entra hoje precisa aceitar prêmio pela qualidade. Para a carteira correta, o KNCR11 segue sendo a referência absoluta de FII de papel pós-fixado: blue chip defensivo, sem surpresas negativas, com gestão acima da média e custos sob controle. Não é um fundo para apostar em catalisadores específicos, e sim para compor o núcleo conservador de uma carteira de FIIs."
+    ],
+    "pontosFortes": [
+      "Maior FII de papel CDI+ do Brasil (R$ 10,96 Bi de PL, 542 mil cotistas)",
+      "Carteira 100% adimplente desde IPO em out/2012 — atravessou pandemia, Selic 13,75% e Selic 15% sem defaults",
+      "Gestão Kinea Investimentos (Grupo Itaú Unibanco) — uma das mais respeitadas do mercado",
+      "Taxa total de 1,00% a.a. competitiva, sem performance, com custódia integrada Itaú",
+      "Liquidez excepcional: R$ 22,4 Mi/dia (mar/2026) — uma das maiores da bolsa entre FIIs",
+      "88 CRIs com devedores AAA (Brookfield, JHSF, Allos, Iguatemi, Even, MRV, Hilton, JW Marriott)",
+      "DY 12m de ~13,8% (122% CDI gross-up) — competitivo no segmento de papel CDI+",
+      "Duration baixa (4 anos) protege contra marcação negativa em alta de juros",
+      "Auditoria PricewaterhouseCoopers — uma das Big Four — garante padrão internacional de transparência",
+      "12ª emissão (fev/2026) captou R$ 3,2 Bi — demonstra confiança contínua do mercado"
+    ],
+    "pontosDeAtencao": [
+      "Cota a P/VP 1,04 (prêmio de 3,6% sobre VP) — sem margem de barganha para novo entrante",
+      "DY tende a cair com queda da Selic — sensibilidade direta ao CDI",
+      "Caixa+LCI elevado (22,1% do PL em mar/26) reduz DY enquanto não aloca em CRI",
+      "Apenas 0,2% da carteira em IPCA+ — pouca proteção contra inflação real",
+      "Concentração ~17% do PL no grupo Brookfield (BR12 + Sigma + Sucupira + Passeio + CDs)",
+      "Reserva acumulada de apenas R$ 0,25/cota (mar/2026) — colchão reduzido",
+      "Spread CDI+ atual da cota (1,62% para R$103,50) limita upside no preço de mercado",
+      "Pico de DY já passou (R$ 1,35/cota em jul-set/2025) — patamar não deve se repetir no curto prazo",
+      "Em ciclos de Selic mínima (como 2020), DY pode cair para níveis pouco atraentes (~5-6% a.a.)"
+    ],
+    "conclusaoFinal": "O KNCR11 é o FII de papel CDI+ de referência do mercado brasileiro: maior PL (R$ 10,96 Bi), maior base (542 mil cotistas), maior liquidez (R$ 22 Mi/dia), gestão Kinea/Itaú há 13 anos e carteira 100% adimplente desde o IPO. O custo dessa qualidade é o prêmio modesto sobre o VP (P/VP 1,04) e a sensibilidade direta ao CDI — em ciclo de queda da Selic, o DY cairá. Para investidores conservadores que buscam exposição pós-fixada com risco de crédito mínimo e liquidez alta, é a escolha óbvia. Para quem quer DY elevado, deságio patrimonial ou proteção inflacionária direta, há opções melhores no universo de FIIs de papel. Nota 8,3/10 — acima da média do segmento — pesa mais a qualidade institucional, o track record sem defaults e a escala do que o prêmio de entrada e a duration baixa em ciclo de afrouxamento."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 390,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

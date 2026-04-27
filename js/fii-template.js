@@ -3065,22 +3065,27 @@ const FIITemplate = {
                 </div>`;
         }
 
-        // Crescimento stats
+        // Crescimento stats — aceita array de {label,valor,detalhe} OU string solta
         let crescimentoHtml = '';
-        if (t.crescimento) {
+        if (Array.isArray(t.crescimento) && t.crescimento.length > 0) {
             let crescCardsHtml = '';
             t.crescimento.forEach(c => {
                 crescCardsHtml += `
                     <div class="text-center">
-                        <div class="text-xs text-slate-500 mb-1">${c.label}</div>
-                        <div class="text-2xl font-bold text-emerald-400">${c.valor}</div>
-                        <div class="text-xs text-slate-500">${c.detalhe}</div>
+                        <div class="text-xs text-slate-500 mb-1">${c.label || ''}</div>
+                        <div class="text-2xl font-bold text-emerald-400">${c.valor || ''}</div>
+                        <div class="text-xs text-slate-500">${c.detalhe || ''}</div>
                     </div>`;
             });
-
+            const cols = Math.min(t.crescimento.length, 4);
             crescimentoHtml = `
-                <div class="grid md:grid-cols-${t.crescimento.length} gap-4 mt-6">
+                <div class="grid md:grid-cols-2 lg:grid-cols-${cols} gap-4 mt-6">
                     ${crescCardsHtml}
+                </div>`;
+        } else if (typeof t.crescimento === 'string' && t.crescimento.trim()) {
+            crescimentoHtml = `
+                <div class="bg-emerald-900/10 border border-emerald-500/20 rounded-xl p-4 mt-6 text-sm text-slate-300 leading-relaxed">
+                    <span class="text-emerald-400 font-semibold">Crescimento:</span> ${t.crescimento}
                 </div>`;
         }
 
@@ -3129,11 +3134,14 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderTese() {
         const t = this.data.tese;
-        if (!t || !Array.isArray(t.paraQuem) || !Array.isArray(t.naoParaQuem)) return '';
+        if (!t) return '';
+        const paraQuemArr    = Array.isArray(t.paraQuem)    ? t.paraQuem    : (typeof t.paraQuem    === 'string' && t.paraQuem.trim()    ? [t.paraQuem]    : []);
+        const naoParaQuemArr = Array.isArray(t.naoParaQuem) ? t.naoParaQuem : (typeof t.naoParaQuem === 'string' && t.naoParaQuem.trim() ? [t.naoParaQuem] : []);
+        if (paraQuemArr.length === 0 && naoParaQuemArr.length === 0) return '';
 
         // Para quem serve
         let paraQuemHtml = '';
-        t.paraQuem.forEach(item => {
+        paraQuemArr.forEach(item => {
             paraQuemHtml += `
                                 <li class="flex items-start gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 mt-2"></span>
@@ -3143,7 +3151,7 @@ const FIITemplate = {
 
         // Para quem nao serve
         let naoParaQuemHtml = '';
-        t.naoParaQuem.forEach(item => {
+        naoParaQuemArr.forEach(item => {
             naoParaQuemHtml += `
                                 <li class="flex items-start gap-2">
                                     <span class="w-1.5 h-1.5 rounded-full bg-amber-500 mt-2"></span>
@@ -4441,26 +4449,28 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     renderConclusao() {
         const c = this.data.conclusao;
-        if (!c || !Array.isArray(c.paragrafos) || !Array.isArray(c.pontosFortes) || !Array.isArray(c.pontosDeAtencao)) return '';
+        if (!c) return '';
+        const asArr = (v) => Array.isArray(v) ? v : (typeof v === 'string' && v.trim() ? [v] : []);
+        const paragrafos     = asArr(c.paragrafos);
+        const pontosFortesArr  = asArr(c.pontosFortes);
+        const pontosAtencaoArr = asArr(c.pontosDeAtencao);
+        if (paragrafos.length === 0 && pontosFortesArr.length === 0 && pontosAtencaoArr.length === 0 && !c.conclusaoFinal) return '';
 
-        // Paragrafos
         let paragrafosHtml = '';
-        c.paragrafos.forEach(p => {
+        paragrafos.forEach(p => {
             paragrafosHtml += `
                 <p class="text-slate-300 mb-4">
                     ${p}
                 </p>`;
         });
 
-        // Pontos Fortes
         let pontosFortes = '';
-        c.pontosFortes.forEach(pf => {
+        pontosFortesArr.forEach(pf => {
             pontosFortes += `<li>- ${pf}</li>`;
         });
 
-        // Pontos de Atencao
         let pontosAtencao = '';
-        c.pontosDeAtencao.forEach(pa => {
+        pontosAtencaoArr.forEach(pa => {
             pontosAtencao += `<li>- ${pa}</li>`;
         });
 

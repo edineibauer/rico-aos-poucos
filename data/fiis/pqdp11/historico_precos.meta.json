@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/pqdp11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:PQDP11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 2594.99,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 1600.0,
+    "data": "2023-03-27"
+  },
+  "maxHistorico": {
+    "valor": 3990.0,
+    "data": "2019-12-23"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T03:02:52Z"
+}

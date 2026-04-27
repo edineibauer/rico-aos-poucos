@@ -1625,6 +1625,59 @@ Saída: relatório por regra. Divergências `severidade: alta` disparam **segund
 4. Preservar o que já existia: o worker sobrescreve `dividendos`, `valuation`, `portfolio`, `encaixe`, `meta.dataAnalise`, `meta.totalDocumentos`, `footer.dataAnalise`, `footer.totalDocumentos`. Demais chaves permanecem a menos que tenha nova info que mereça atualização.
 5. **Validar** ao final: todas as 16 chaves top-level presentes (incluindo `encaixe`), `historico.length >= número_de_meses_desde_IPO - 3`, `portfolio.stats.alocacaoPL` soma 1.0 ± 0.005, `encaixe.perfilRisco.componentes[].peso` soma 1.0.
 
+## Pipeline obrigatório de pré-publicação
+
+**Nunca publique um JSON sem rodar essa sequência.** Workers entregam JSONs quase corretos mas com pequenas variações de schema (campo array escrito como string, `percentual` em vez de `pct`, `taxas.detalhes` como HTML solto, schemas null). Sem normalização automática, o renderer quebra com `forEach is not a function`.
+
+**Após cada análise nova:**
+
+```bash
+# 1. Normalizar (corrige string→array, percentual→pct, schemas, etc.)
+cd scripts && python3 -m fundosnet.normalizar_json --ticker {TICKER} --write
+cd ..
+
+# 2. Rodar VP histórico (preciso para gráfico P/VP da aba Valuation v2)
+cd scripts && python3 -m cotacoes.extrair_vp_historico --ticker {TICKER}
+cd ..
+
+# 3. Atualizar historicoVp.csvPath no JSON, se ainda não está
+python3 -c "
+import json, os
+d = json.load(open('data/fiis/{ticker}.json'))
+csv = 'data/fiis/{ticker}/historico_vp.csv'
+if os.path.exists(csv):
+    d.setdefault('valuation', {}).setdefault('historicoVp', {})['csvPath'] = csv
+    json.dump(d, open('data/fiis/{ticker}.json','w'), ensure_ascii=False, indent=2)
+"
+
+# 4. Criar HTML
+mkdir -p fiis/{ticker} && cp fiis/blmg11/index.html fiis/{ticker}/index.html
+sed -i "s/blmg11/{ticker}/g; s/BLMG11/{TICKER}/g" fiis/{ticker}/index.html
+
+# 5. Consolidar e sitemap
+python3 scripts/fundosnet/consolidar_fiis_json.py
+python3 scripts/fundosnet/atualizar_sitemap.py
+
+# 6. Smoke test (opcional mas recomendado)
+node /tmp/test_render.js     # se o teste estiver no /tmp
+
+# 7. Commit + push individual
+git add data/fiis/{ticker}.json data/fiis/{ticker}/ fiis/{ticker}/ data/fiis.json sitemap.xml
+git commit -m "feat: análise v3 {TICKER} (...)"
+git push
+```
+
+**Regras duras pós-normalização:**
+
+- 16 chaves top-level
+- `portfolio.schema === "v2"` (alocacaoPL não-vazio implica isso)
+- `alocacaoPL` soma 1.0 ± 0.005 (campo `pct`, não `percentual`)
+- `perfilRisco.componentes` pesos somam 1.0
+- `precoJustoMercado.componentes` pesos somam 1.0
+- `tipoSobreposicao`, `garantias`, `riscos`, `paraQuem`, `paraQuemNao`, `objetivo`, `perfisExemplo`, `perfilExclusao`, `pontos`, `paragrafos`, `pontosFortes`, `pontosDeAtencao`: SEMPRE arrays (normalizador converte string→array automaticamente)
+- `taxas.detalhes` SEMPRE array de `{label, valor}` (string HTML solta vai para `taxas.observacao`)
+- `concentracao.hhi` em escala 0–1 (não 0–10000 — normalizador divide por 10000 se detectar)
+
 ## Referência canônica
 
 - Template JSON: `data/fiis/blmg11.json` (v3 piloto: Dividendos v2 + Valuation v2 + Portfolio v2 + Encaixe v1).

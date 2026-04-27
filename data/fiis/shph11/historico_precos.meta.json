@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/shph11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:SHPH11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 913.99,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 331.5357,
+    "data": "2016-05-16"
+  },
+  "maxHistorico": {
+    "valor": 1019.99,
+    "data": "2025-12-22"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T03:02:54Z"
+}

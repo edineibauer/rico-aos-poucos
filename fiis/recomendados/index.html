@@ -363,6 +363,23 @@
         .cr-cenario-piece { display: flex; flex-direction: column; gap: 1px; }
         .cr-cenario-piece-tag { font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.08em; }
         .cr-cenario-piece-val { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+        .cr-cenario-piece-val.pos { color: #6ee7b7; }
+        .cr-cenario-piece-val.neg { color: #fca5a5; }
+        .cr-cenario-real-line {
+            display: flex; align-items: baseline; justify-content: space-between;
+            gap: 8px; margin-top: 10px; padding-top: 8px;
+            border-top: 1px dashed rgba(255,255,255,0.10);
+        }
+        .cr-cenario-real-tag {
+            font-size: 0.58rem; letter-spacing: 0.08em;
+            color: var(--dim); text-transform: uppercase; font-weight: 600;
+        }
+        .cr-cenario-real-val {
+            font-size: 1rem; font-weight: 800; font-variant-numeric: tabular-nums;
+        }
+        .cr-cenario-real-val.pos { color: #6ee7b7; }
+        .cr-cenario-real-val.neg { color: #fca5a5; }
+        .cr-cenario-real-val.neu { color: var(--muted); }
         .cr-cenarios-explica {
             margin-top: 14px;
             font-size: 0.76rem;
@@ -416,10 +433,36 @@
         }
         .cr-fech-val.destaque { font-size: 2rem; color: #6ee7b7; text-shadow: 0 0 20px rgba(110,231,183,0.3); }
         .cr-fech-val.destaque-cap { color: #c4b5fd; text-shadow: 0 0 20px rgba(196,181,253,0.3); }
+        .cr-fech-val.destaque-neg { color: #fca5a5; }
         .cr-fech-sub {
             font-size: 0.7rem; color: var(--dim);
             margin-top: 1px;
         }
+
+        /* CARD DE TRANSPARÊNCIA SOBRE IA */
+        .cr-ai-card {
+            margin-top: 30px;
+            padding: 22px 24px;
+            background: linear-gradient(135deg, rgba(139,92,246,0.08), rgba(15,23,42,0.95));
+            border: 1px solid rgba(139,92,246,0.25);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+        .cr-ai-card::before {
+            content: '◆'; position: absolute; top: 14px; right: 18px;
+            font-size: 1.2rem; color: rgba(196,181,253,0.6);
+        }
+        .cr-ai-tag {
+            font-size: 0.62rem; letter-spacing: 0.18em; color: var(--accent);
+            font-weight: 700; margin-bottom: 12px;
+        }
+        .cr-ai-corpo {
+            font-size: 0.85rem; line-height: 1.6; color: rgb(203 213 225);
+        }
+        .cr-ai-corpo p { margin: 0 0 10px; }
+        .cr-ai-corpo p:last-child { margin-bottom: 0; }
+        .cr-ai-corpo strong { color: #fff; }
 
         /* DISCLAIMER */
         .cr-disclaimer {
@@ -479,6 +522,16 @@
             <!-- Carteira ativa -->
             <div id="cr-carteira"></div>
 
+            <!-- Card de transparência sobre o método -->
+            <div class="cr-ai-card">
+                <div class="cr-ai-tag">COMO ESTAS CARTEIRAS SÃO MONTADAS</div>
+                <div class="cr-ai-corpo">
+                    <p><strong>Análise gerada por IA</strong> — não é recomendação de gestor humano nem indicação personalizada.</p>
+                    <p>Modelo utilizado: <strong>Claude Opus 4.7</strong> (Anthropic) com janela de 1 milhão de tokens, alimentado pela base completa de análises profundas dos <strong id="cr-ai-total-fundos">—</strong> FIIs do site. A IA recebe, para cada fundo, indicadores atuais, sustentabilidade do dividendo, expectativa de preço C/M/L, pontos fortes e atenção, e classificação de subsegmento. A partir disso, monta as 6 carteiras com pesos diferenciados aplicando regras duras (12 ativos, soma 100%, máx. 18% por ativo, máx. 35% por subsegmento) e justifica cada inclusão.</p>
+                    <p>O processo é <strong>determinístico no schema, mas não na seleção</strong> — uma nova rodada com os mesmos dados pode retornar carteiras um pouco diferentes. Re-execute quando a base crescer significativamente.</p>
+                </div>
+            </div>
+
             <!-- Disclaimer -->
             <div class="cr-disclaimer">
                 ⚠ Estas carteiras são teóricas e didáticas. NÃO constituem recomendação personalizada de investimento.
@@ -532,6 +585,8 @@
 
         // Cache compartilhado entre carteiras (mesmo ticker pode aparecer em várias)
         const _fiiCache = new Map();
+        // Macro snapshot do JSON principal — usado no cálculo de cenários
+        let _macroSnapshot = {};
         async function _fetchFii(ticker) {
             const tk = ticker.toLowerCase();
             if (_fiiCache.has(tk)) return _fiiCache.get(tk);
@@ -561,53 +616,114 @@
             longo: { anos: 5,   label: 'Longo prazo', janela: '3-5 anos' }
         };
 
-        async function calcularCenarios(carteira) {
+        // Classifica o FII pelo segmento textual do meta — distingue tijolo (corrige
+        // inflação via aluguéis IPCA) de papel CDI+ (DY cai quando Selic cai) e
+        // papel IPCA+ (mantém yield real estável). Definindo isso, o cálculo de
+        // retorno respeita a regra de ouro: tijolo recebe um PISO de correção pela
+        // inflação esperada; papel CDI+ tem DY ajustado pela curva de Selic projetada.
+        function _classificarSegmento(segTexto) {
+            const s = (segTexto || '').toLowerCase();
+            const isPapel = /papel|cri|cra|fiagro|crédito|credito|recebíveis|receb[ií]veis/.test(s);
+            const isTijolo = /tijolo|log[íi]stica|shopping|lajes|escrit[óo]rio|hotel|hospital|residencial|ag[êe]ncia|desenvolv|renda urbana|educa[cç]|cemit[ée]rio|industrial/.test(s);
+            const isFof = /fof|fundo de fundos/.test(s);
+            const isHibrido = /h[íi]brido|multi/.test(s);
+
+            if (isPapel) {
+                // Subtipos de papel pela indexação
+                const isCdi = /cdi/.test(s);
+                const isIpca = /ipca/.test(s);
+                if (isCdi && !isIpca) return { tipo: 'papel_cdi',   corrigeInflacao: 0.0, sensibilidadeSelic: 1.0 };
+                if (isIpca) return         { tipo: 'papel_ipca',  corrigeInflacao: 0.5, sensibilidadeSelic: 0.0 };
+                return                     { tipo: 'papel_misto', corrigeInflacao: 0.25, sensibilidadeSelic: 0.5 };
+            }
+            if (isTijolo && !isHibrido) return { tipo: 'tijolo',  corrigeInflacao: 1.0, sensibilidadeSelic: 0.0 };
+            if (isFof)     return              { tipo: 'fof',     corrigeInflacao: 0.5, sensibilidadeSelic: 0.3 };
+            if (isHibrido) return              { tipo: 'hibrido', corrigeInflacao: 0.6, sensibilidadeSelic: 0.4 };
+            return                             { tipo: 'outros',  corrigeInflacao: 0.5, sensibilidadeSelic: 0.5 };
+        }
+
+        async function calcularCenarios(carteira, macro) {
+            // Macro
+            const ipcaAnual = _num((macro || {}).ipcaProjetado12m) ?? 4.0;        // % a.a.
+            const selicAtual = _num((macro || {}).selic) ?? 14.75;                  // % a.a.
+            const selicProj  = _num((macro || {}).selicProjetada12m) ?? selicAtual; // % a.a.
+
             const fundos = await Promise.all((carteira.ativos || []).map(async a => {
                 const j = await _fetchFii(a.ticker);
                 if (!j) return null;
+                const meta = j.meta || {};
                 const ind = j.indicadores || {};
                 const cot = _num(ind.cotacao);
                 const dy  = _num(ind.dividendYield);
                 const exp = (j.valuation && j.valuation.expectativa) || {};
+                const cls = _classificarSegmento(meta.segmento);
                 return {
                     ticker: a.ticker,
                     peso: (a.peso || 0) / 100,
                     cotacao: cot,
-                    dyAnual: dy,                 // % a.a.
+                    dyAnual: dy,
+                    classificacao: cls,
                     expCurto: _num((exp.curto || {}).precoEsperado),
                     expMedio: _num((exp.medio || {}).precoEsperado),
                     expLongo: _num((exp.longo || {}).precoEsperado),
                 };
             }));
 
+            // DY efetivo no horizonte: papel CDI+ acompanha curva de Selic.
+            // No curto/médio: ainda Selic alta. No longo: usa Selic projetada como proxy.
+            const dyEfetivoNoHorizonte = (f, anosHorizonte) => {
+                if (f.dyAnual == null) return null;
+                if (f.classificacao.sensibilidadeSelic <= 0) return f.dyAnual;
+                // Interpolação: t=0 mantém DY atual; t=2 já está na Selic projetada
+                const trajetoria = Math.min(1, anosHorizonte / 2);
+                const fator = 1 - f.classificacao.sensibilidadeSelic * trajetoria * (1 - selicProj / selicAtual);
+                return f.dyAnual * fator;
+            };
+
             const cenarios = {};
             for (const [hKey, hCfg] of Object.entries(HORIZONTES)) {
+                const anos = hCfg.anos;
+                const inflacaoAcum = ipcaAnual * anos; // % acumulado simples no período
                 let totVal = 0, totDiv = 0, somaPeso = 0;
                 let coberturaVal = 0, coberturaDiv = 0;
+
                 for (const f of fundos) {
                     if (!f) continue;
-                    // Dividendo acumulado: dy_anual × anos (não composto, suficiente para projeção)
-                    if (f.dyAnual != null) {
-                        totDiv += f.peso * f.dyAnual * hCfg.anos;
-                        coberturaDiv += f.peso;
-                    }
-                    // Valorização: (precoEsperado - cotação) / cotação
+                    somaPeso += f.peso;
+
+                    // === Valorização ===
                     const expKey = 'exp' + hKey.charAt(0).toUpperCase() + hKey.slice(1);
                     const exp = f[expKey];
+                    let valNominal = null;
                     if (exp != null && f.cotacao && f.cotacao > 0) {
-                        totVal += f.peso * ((exp - f.cotacao) / f.cotacao * 100);
-                        coberturaVal += f.peso;
+                        valNominal = (exp - f.cotacao) / f.cotacao * 100;
                     }
-                    somaPeso += f.peso;
+                    // PISO de correção pela inflação proporcional ao tipo do ativo:
+                    // tijolo recebe inflação cheia (aluguéis e laudo de avaliação corrigem por IPCA),
+                    // papel IPCA+ recebe metade (corrige principal mas não tem ganho real implícito),
+                    // papel CDI+ não recebe nada (yield nominal, principal estático).
+                    const pisoInflacao = inflacaoAcum * f.classificacao.corrigeInflacao;
+                    const valFinal = (valNominal != null) ? Math.max(valNominal, pisoInflacao) : pisoInflacao;
+                    totVal += f.peso * valFinal;
+                    coberturaVal += f.peso;
+
+                    // === Dividendos com DY efetivo no horizonte ===
+                    const dyEfetivo = dyEfetivoNoHorizonte(f, anos);
+                    if (dyEfetivo != null) {
+                        totDiv += f.peso * dyEfetivo * anos;
+                        coberturaDiv += f.peso;
+                    }
                 }
+
+                const totalNominal = (coberturaVal > 0 ? totVal : 0) + (coberturaDiv > 0 ? totDiv : 0);
+                const totalReal = totalNominal - inflacaoAcum;
+
                 cenarios[hKey] = {
                     valorizacao: coberturaVal > 0 ? totVal : null,
                     dividendos: coberturaDiv > 0 ? totDiv : null,
-                    total: (coberturaVal > 0 || coberturaDiv > 0)
-                        ? (coberturaVal > 0 ? totVal : 0) + (coberturaDiv > 0 ? totDiv : 0)
-                        : null,
-                    coberturaValPct: somaPeso > 0 ? coberturaVal / somaPeso : 0,
-                    coberturaDivPct: somaPeso > 0 ? coberturaDiv / somaPeso : 0,
+                    totalNominal: (coberturaVal > 0 || coberturaDiv > 0) ? totalNominal : null,
+                    totalReal:    (coberturaVal > 0 || coberturaDiv > 0) ? totalReal    : null,
+                    inflacaoAcum,
                     horizonte: hCfg
                 };
             }
@@ -624,8 +740,9 @@
             const cardHtml = (key) => {
                 const c = cenarios[key];
                 if (!c) return '';
-                const focoVal = isCapital ? c.total : c.dividendos;
-                const focoCor = corClasse(focoVal);
+                const focoVal = isCapital ? c.totalNominal : c.dividendos;
+                const focoReal = isCapital ? c.totalReal : (c.dividendos != null ? c.dividendos - c.inflacaoAcum : null);
+                const focoCor = corClasse(focoReal);
                 const focoLabel = isCapital ? 'Retorno total' : 'Renda acumulada';
                 const piece = (label, v, cor) => `
                     <div class="cr-cenario-piece">
@@ -636,28 +753,34 @@
                     <div class="cr-cenario-card ${isCapital ? 'is-foco' : ''}">
                         <div class="cr-cenario-tag">${c.horizonte.label}</div>
                         <div class="cr-cenario-horizonte">${c.horizonte.janela}</div>
-                        <div class="cr-cenario-total ${focoCor}">${focoVal == null ? '—' : fmtSign(focoVal)}</div>
-                        <div class="cr-cenario-piece-tag" style="margin-top:2px">${focoLabel} estimado</div>
+                        <div class="cr-cenario-total ${corClasse(focoVal)}">${focoVal == null ? '—' : fmtSign(focoVal)}</div>
+                        <div class="cr-cenario-piece-tag" style="margin-top:2px">${focoLabel} (nominal)</div>
+                        <div class="cr-cenario-real-line">
+                            <span class="cr-cenario-real-tag">REAL · descontada inflação</span>
+                            <span class="cr-cenario-real-val ${focoCor}">${focoReal == null ? '—' : fmtSign(focoReal)}</span>
+                        </div>
                         <div class="cr-cenario-breakdown">
                             ${piece('Valorização', c.valorizacao)}
                             ${piece('Dividendos', c.dividendos)}
-                            ${isCapital ? '' : piece('Total', c.total)}
+                            ${piece('Inflação', -c.inflacaoAcum, 'neg')}
                         </div>
                     </div>`;
             };
 
             const explicaCapital = `
-                <strong>Como ler:</strong> retorno total = (valorização da cota até o horizonte) + (dividendos acumulados no período).
-                Curto prazo = ~6 meses · Médio = 1-2 anos · Longo = 3-5 anos. Valores são MÉDIAS PONDERADAS pelos pesos da carteira,
-                derivadas das expectativas individuais de cada FII na nossa base. Estimativas — não garantia.`;
+                <strong>Como ler:</strong> <em>Nominal</em> = valorização esperada da cota + dividendos acumulados.
+                <em>Real</em> desconta a inflação acumulada — é o que você de fato ganha em poder de compra.
+                Fundos de tijolo recebem PISO de correção pela inflação (aluguéis IPCA + laudo de avaliação reajustado).
+                Fundos de papel CDI+ têm DY ajustado pela curva de Selic projetada (Focus indica queda para o longo prazo).`;
 
             const explicaRenda = `
-                <strong>Como ler:</strong> renda acumulada = soma dos dividendos no horizonte (DY anualizado × anos).
-                Foco da carteira é fluxo de caixa, mas mostramos também a valorização da cota como referência adicional.
-                Valores são MÉDIAS PONDERADAS pelos pesos da carteira. Estimativas — não garantia.`;
+                <strong>Como ler:</strong> a renda acumulada é a soma dos dividendos no horizonte (DY × anos).
+                Para fundos de papel CDI+, o DY é ajustado proporcionalmente à queda projetada de Selic — porque o yield acompanha o CDI.
+                Para tijolo, a renda inclui o reajuste implícito IPCA dos aluguéis. Em horizontes longos, o que conta é a renda <em>real</em>:
+                renda nominal − inflação acumulada. Se a renda real fica negativa, o cotista perde poder de compra.`;
 
             host.innerHTML = `
-                <div class="cr-cenarios-tag">EXPECTATIVA DE RETORNO</div>
+                <div class="cr-cenarios-tag">EXPECTATIVA DE RETORNO · NOMINAL × REAL</div>
                 <div class="cr-cenarios-titulo">${isCapital ? 'Cenários por horizonte — foco em ganho de capital' : 'Cenários por horizonte — foco em renda'}</div>
                 <div class="cr-cenarios-grid">
                     ${cardHtml('curto')}
@@ -676,14 +799,17 @@
             const cLongo = cenarios.longo || {};
 
             const valDestaque = isCapital
-                ? (cMedio.total != null ? fmtSign(cMedio.total) : '—')
+                ? (cMedio.totalNominal != null ? fmtSign(cMedio.totalNominal) : '—')
                 : (dyAnual != null ? fmtNum(dyAnual, 2) + '%' : '—');
+            const valDestaqueReal = isCapital
+                ? (cMedio.totalReal != null ? fmtSign(cMedio.totalReal) : '—')
+                : null;
             const labelDestaque = isCapital
-                ? `Retorno total esperado · ${cMedio.horizonte ? cMedio.horizonte.janela : 'médio prazo'}`
+                ? `Retorno total · ${cMedio.horizonte ? cMedio.horizonte.janela : 'médio prazo'}`
                 : 'DY anual médio ponderado';
             const subDestaque = isCapital
-                ? 'valorização + dividendos no médio prazo (1-2 anos)'
-                : 'média ponderada do dividend yield 12m de cada FII';
+                ? `nominal · real ${valDestaqueReal || '—'}`
+                : 'média ponderada do DY 12m da carteira';
 
             return `
                 <section class="cr-fechamento ${isCapital ? 'foco-capital' : ''}">
@@ -697,17 +823,17 @@
                         <div class="cr-fech-bloco">
                             <span class="cr-fech-label">DY anual ponderado</span>
                             <span class="cr-fech-val">${dyAnual != null ? fmtNum(dyAnual, 2) + '%' : '—'}</span>
-                            <span class="cr-fech-sub">renda mensal a.a.</span>
+                            <span class="cr-fech-sub">${isCapital ? 'renda atual nominal a.a.' : 'renda mensal a.a.'}</span>
                         </div>
                         <div class="cr-fech-bloco">
-                            <span class="cr-fech-label">Retorno em 5 anos</span>
-                            <span class="cr-fech-val">${cLongo.total != null ? fmtSign(cLongo.total) : '—'}</span>
-                            <span class="cr-fech-sub">valorização + dividendos longo prazo</span>
+                            <span class="cr-fech-label">5 anos · nominal</span>
+                            <span class="cr-fech-val">${cLongo.totalNominal != null ? fmtSign(cLongo.totalNominal) : '—'}</span>
+                            <span class="cr-fech-sub">valorização + dividendos no longo prazo</span>
                         </div>
                         <div class="cr-fech-bloco">
-                            <span class="cr-fech-label">P/VP ponderado</span>
-                            <span class="cr-fech-val">${fmtNum(mp.pvpMedioPonderado, 2)}</span>
-                            <span class="cr-fech-sub">média ponderada da carteira</span>
+                            <span class="cr-fech-label">5 anos · REAL</span>
+                            <span class="cr-fech-val ${cLongo.totalReal != null && cLongo.totalReal < 0 ? 'destaque-neg' : ''}">${cLongo.totalReal != null ? fmtSign(cLongo.totalReal) : '—'}</span>
+                            <span class="cr-fech-sub">descontada a inflação · poder de compra</span>
                         </div>
                     </div>
                 </section>
@@ -809,7 +935,7 @@
             `;
 
             // Cálculo assíncrono dos cenários (busca JSONs dos FIIs em paralelo)
-            calcularCenarios(c).then(cenarios => {
+            calcularCenarios(c, _macroSnapshot).then(cenarios => {
                 renderCenarios(c, cenarios, hostId);
                 const fechHost = document.getElementById(hostId + '-fechamento');
                 if (fechHost) fechHost.outerHTML = renderFechamento(c, cenarios);
@@ -829,8 +955,12 @@
                 const data = await r.json();
 
                 document.getElementById('cr-last-update').textContent = fmtDate(data.ultimaAtualizacao);
-                document.getElementById('cr-total-fundos').textContent = data.totalFundosAnalisados || '—';
-                const selic = data.macroSnapshot && data.macroSnapshot.selic;
+                const totalFundos = data.totalFundosAnalisados || '—';
+                document.getElementById('cr-total-fundos').textContent = totalFundos;
+                const elTotalAi = document.getElementById('cr-ai-total-fundos');
+                if (elTotalAi) elTotalAi.textContent = totalFundos;
+                _macroSnapshot = data.macroSnapshot || {};
+                const selic = _macroSnapshot.selic;
                 document.getElementById('cr-selic').textContent = selic != null ? Number(selic).toFixed(2).replace('.', ',') + '%' : '—';
 
                 if (data.schema !== 'v2' || !Array.isArray(data.carteiras) || data.carteiras.length === 0) {

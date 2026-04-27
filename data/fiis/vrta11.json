@@ -1,0 +1,2021 @@
+{
+  "meta": {
+    "ticker": "VRTA11",
+    "nome": "Fator Verità FII",
+    "nomeExtra": "Fator Verità Fundo de Investimento Imobiliário",
+    "segmento": "Papel — CRI multicategoria (HG/HY misto)",
+    "badges": [
+      "Papel",
+      "CRI",
+      "IPCA+",
+      "Gestão ativa",
+      "Mensal"
+    ],
+    "sentimento": "Neutro",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 419,
+    "versaoSchema": "v3-rico"
+  },
+  "seo": {
+    "title": "VRTA11 (Fator Verità FII) — Análise Completa | Rico aos Poucos",
+    "description": "Análise profunda do Fator Verità (VRTA11): carteira de 68 CRIs (89% do PL), 9 FIIs de papel, taxa média IPCA+8,1%, P/VP 0,94, DY 12,8% — risco de crédito difundido com PDD em CRIs específicos.",
+    "keywords": "VRTA11, Fator Verità, FII de papel, CRI, IPCA+, dividend yield, análise FII, fundos imobiliários",
+    "og": {
+      "title": "VRTA11 — Fator Verità: papel híbrido HG/HY com 68 CRIs",
+      "description": "DPS R$ 0,85 estável há 16 meses. Carteira 91% IPCA, 87,9% AAA-A-, mas com PDDs em Fragnani II, Pulverizados e BR Distribuidora. P/VP 0,94.",
+      "type": "article",
+      "url": "https://ricoaospoucos.com.br/fiis/vrta11/",
+      "locale": "pt_BR",
+      "site_name": "Rico aos Poucos"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "VRTA11 — Fator Verità FII (Análise)",
+      "description": "FII de papel com 68 CRIs, taxa média IPCA+8,1% e P/VP 0,94. Reserva de R$ 0,47/cota e DPS R$ 0,85 estável."
+    }
+  },
+  "indicadores": {
+    "cotacao": 79.0,
+    "cotacaoData": "2026-04-24",
+    "pvp": 0.94,
+    "dividendYield": 12.91,
+    "dividendoMensal": 0.85,
+    "dividendoAnual": 10.2,
+    "patrimonioLiquido": 1316635896.64,
+    "vpCota": 84.44,
+    "cotistas": 105131,
+    "ocupacao": null,
+    "numImoveis": null
+  },
+  "recomendacao": {
+    "nota": 7.4,
+    "veredicto": "Comprar com moderação",
+    "cor": "amber",
+    "resumo": "<p>Fator Verità (VRTA11) é um FII de papel <strong>antigo (IPO 2010)</strong> e bem estabelecido, com gestão ativa da Fator Administração, carteira de <strong>68 CRIs (89% do PL) + 9 FIIs de papel (10%)</strong> e taxa média de IPCA+8,1% sobre cota patrimonial e IPCA+5,58% sobre preço médio de aquisição. O fundo distribui <strong>R$ 0,85/cota há 16 meses consecutivos</strong>, com payout sustentável (0,80 de resultado vs 0,85 distribuído usando reserva de R$ 0,47/cota). P/VP 0,94 oferece desconto modesto vs valor patrimonial. <strong>O risco principal é de crédito específico</strong>: 5 CRIs com PDD (Fragnani II em RJ é o maior, 100% provisionado) e DPS pressionado pela queda de Selic projetada (Selic Atual 14,75% → 11% em 12m segundo Focus), o que comprime o spread sobre a curva de juros.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "DPS Mensal",
+      "valor": "R$ 0,85",
+      "sub": "estável há 16 meses"
+    },
+    {
+      "label": "DY 12m",
+      "valor": "12,91%",
+      "sub": "sobre cota R$ 79,00"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,94",
+      "sub": "desconto de 6,3%"
+    },
+    {
+      "label": "CRIs em PDD",
+      "valor": "5 ativos",
+      "sub": "Fragnani II é 82,6% do PDD"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "texto": "CRI Fragnani II (R$ 69,2 mi, 100% PDD) — devedora em recuperação judicial; renegociação em curso",
+      "severidade": "alta"
+    },
+    {
+      "texto": "91% da carteira indexada a IPCA — sensibilidade alta a inflação cadente",
+      "severidade": "media"
+    },
+    {
+      "texto": "Selic projetada cair de 14,75% para 11% em 12 meses — comprime spread efetivo dos novos CRIs",
+      "severidade": "media"
+    },
+    {
+      "texto": "30% da carteira em Construção Civil + 6% Loteamentos — concentração setorial em ciclo imobiliário",
+      "severidade": "media"
+    },
+    {
+      "texto": "Resultado caixa (R$ 0,80) abaixo do distribuído (R$ 0,85) — usa reserva de R$ 0,47/cota há 12 meses",
+      "severidade": "media"
+    },
+    {
+      "texto": "Gestora Fator é regional (não top-3 nacional) — base de cotistas concentrada PF (99,9%)",
+      "severidade": "baixa"
+    }
+  ],
+  "gestora": {
+    "nome": "Fator Administração de Recursos",
+    "nota": 7.0,
+    "stats": [
+      {
+        "label": "Idade do fundo",
+        "valor": "15 anos (IPO 08/2010)"
+      },
+      {
+        "label": "Administrador",
+        "valor": "Banco Fator S.A."
+      },
+      {
+        "label": "AuM VRTA11",
+        "valor": "R$ 1,32 bi"
+      },
+      {
+        "label": "Modelo de rating",
+        "valor": "5C's adaptado"
+      }
+    ],
+    "resumo": "<p>A Fator Administração de Recursos (FAR) é a gestora do VRTA11 desde o IPO em 2010 — track record de 15 anos no mesmo fundo é diferencial. Possui modelo proprietário de rating inspirado nos 5C's do crédito (Caráter, Condições, Capacidade, Capital, Colateral) com revisões periódicas em comitê. Apesar de ser uma gestora regional (não top-3 nacional como Kinea/Mauá/XP), entrega disciplina operacional: DPS estável, carteira pulverizada e transparência alta nos relatórios mensais (32+ páginas). Limitação principal: não tem o mesmo poder de origination que gestoras grandes, então frequentemente atua via securitizadoras parceiras (Opea 27%, True 11%, Virgo 12%, Habitasec 11%, Provincia 11%).</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxa de administração baixa para o segmento; sem performance",
+    "glowCor": "emerald",
+    "itens": [
+      {
+        "label": "Administração",
+        "valor": "1,00% a.a."
+      },
+      {
+        "label": "Performance",
+        "valor": "Não há"
+      },
+      {
+        "label": "Custódia",
+        "valor": "Embutida"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Taxa de administração",
+        "valor": "1,00% a.a. sobre o patrimônio líquido (Banco Fator S.A.)"
+      },
+      {
+        "label": "Taxa de gestão (FAR)",
+        "valor": "Embutida na taxa de administração"
+      },
+      {
+        "label": "Taxa de custódia",
+        "valor": "Itaú Unibanco (embutida)"
+      },
+      {
+        "label": "Taxa de performance",
+        "valor": "Não há — modelo de remuneração simples"
+      },
+      {
+        "label": "Custo total efetivo",
+        "valor": "1,00% a.a. — abaixo da mediana do segmento (1,2-1,5%)"
+      },
+      {
+        "label": "Auditor",
+        "valor": "Grant Thornton Auditores Independentes"
+      },
+      {
+        "label": "Formador de mercado",
+        "valor": "XP Investimentos CCTVM"
+      }
+    ]
+  },
+  "portfolio": {
+    "schema": "v2",
+    "tipoFundo": "papel",
+    "stats": {
+      "totalAtivos": 77,
+      "abl": null,
+      "ocupacaoFisica": null,
+      "ocupacaoFinanceira": null,
+      "vacanciaFisica": null,
+      "wault": null,
+      "ltv": 0.0,
+      "alavancagemPct": 1.58,
+      "duration": 4.58,
+      "yieldCarregamento": 8.1,
+      "inadimplenciaPct": 0.1,
+      "alocacaoPL": [
+        {
+          "categoria": "CRIs",
+          "pct": 0.8933,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "FIIs (cotas de papel)",
+          "pct": 0.0964,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "Caixa",
+          "pct": 0.0261,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "Compromissada Reversa (passivo)",
+          "pct": -0.0158,
+          "cor": "#64748b"
+        }
+      ]
+    },
+    "ativos": [
+      {
+        "tipo": "cri",
+        "id": "cri-epitacio",
+        "codigoCetip": "25F1981809",
+        "devedor": "Gafisa S.A. (Epitácio)",
+        "setorDevedor": "Construção Civil",
+        "lastro": "Empreendimento alto padrão Av. Epitácio Pessoa, Ipanema/RJ",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "rating": "BBB-",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "CDI+",
+        "spread": 0.04,
+        "taxaTotal": 0.1875,
+        "duration": 4.2,
+        "vencimento": "2030-06-25",
+        "valorPresente": 51609316,
+        "percPL": 0.0392,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.213,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-summus",
+        "codigoCetip": "25B2867899",
+        "devedor": "Summus Engenharia",
+        "setorDevedor": "Construção Civil",
+        "lastro": "Loteamentos alto padrão GO",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "rating": "BBB+",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.115,
+        "taxaTotal": 0.155,
+        "duration": 3.0,
+        "vencimento": "2029-04-25",
+        "valorPresente": 48724242,
+        "percPL": 0.037,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.214,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-direcional-2",
+        "codigoCetip": "21D0737500",
+        "devedor": "Direcional Engenharia",
+        "setorDevedor": "Construção Civil",
+        "lastro": "Carteira pulverizada residencial Direcional",
+        "garantias": [
+          "alienacao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "coobrigacao"
+        ],
+        "rating": "AA",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0484,
+        "taxaTotal": 0.0884,
+        "duration": 2.0,
+        "vencimento": "2028-04-17",
+        "valorPresente": 44351210,
+        "percPL": 0.0337,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-usinas-cajuru",
+        "codigoCetip": "24L1812703",
+        "devedor": "Usinas Solares Cajuru e Montes Claros",
+        "setorDevedor": "Energia",
+        "lastro": "4 usinas solares fotovoltaicas SP/MG (6,8 MWac)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "alienacao_fiduciaria_equipamentos",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "rating": "BBB+",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.1,
+        "taxaTotal": 0.14,
+        "duration": 11.5,
+        "vencimento": "2037-10-20",
+        "valorPresente": 40964853,
+        "percPL": 0.0311,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-gafisa-oscar-freire",
+        "codigoCetip": "22E1273339",
+        "devedor": "Gafisa S.A. (Oscar Freire)",
+        "setorDevedor": "Construção Civil",
+        "lastro": "Terrenos rua Oscar Freire SP — empreendimento residencial alto padrão",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "rating": "BBB",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.1,
+        "taxaTotal": 0.14,
+        "duration": 1.1,
+        "vencimento": "2027-05-18",
+        "valorPresente": 40844156,
+        "percPL": 0.031,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.776,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-espaco-y-bb-tec",
+        "codigoCetip": "23L2343460",
+        "devedor": "BB Tecnologia (BTS Espaço Y)",
+        "setorDevedor": "Tecnologia",
+        "lastro": "BTS escritório DF locado para BB Tecnologia (controlada do Banco do Brasil)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva"
+        ],
+        "rating": "AAA",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0668,
+        "taxaTotal": 0.1068,
+        "duration": 7.5,
+        "vencimento": "2033-11-07",
+        "valorPresente": 40142423,
+        "percPL": 0.0305,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.53,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-arteris",
+        "codigoCetip": "20F0719220",
+        "devedor": "Arteris S.A.",
+        "setorDevedor": "Rodovias",
+        "lastro": "Concessões rodoviárias Arteris",
+        "garantias": [
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa"
+        ],
+        "rating": "AA-",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0511,
+        "taxaTotal": 0.0911,
+        "duration": 18.0,
+        "vencimento": "2045-07-05",
+        "valorPresente": 39448627,
+        "percPL": 0.0299,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.677,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-lar-cooperativa",
+        "codigoCetip": "22L1258273",
+        "devedor": "LAR Cooperativa Agroindustrial",
+        "setorDevedor": "Agronegócio",
+        "lastro": "Imóveis logísticos e supermercados LAR (PR/SC/MS)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel"
+        ],
+        "rating": "A",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0872,
+        "taxaTotal": 0.1272,
+        "duration": 8.5,
+        "vencimento": "2034-12-19",
+        "valorPresente": 37027719,
+        "percPL": 0.0281,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.653,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-canopus-ppp-iii",
+        "codigoCetip": "20J0909894",
+        "devedor": "Canopus / Estado de SP (PPP III)",
+        "setorDevedor": "Estado de SP (PPP)",
+        "lastro": "Receitas de PPP do Estado de SP",
+        "garantias": [
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "rating": "AA",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.06,
+        "taxaTotal": 0.1,
+        "duration": 9.7,
+        "vencimento": "2036-01-10",
+        "valorPresente": 36328569,
+        "percPL": 0.0276,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-unimed",
+        "codigoCetip": "24F1126758",
+        "devedor": "Unimed",
+        "setorDevedor": "Saúde",
+        "lastro": "BTS para Unimed (locação atípica)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva",
+          "fundo_obras",
+          "seguro_credito"
+        ],
+        "rating": "BBB",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0875,
+        "taxaTotal": 0.1275,
+        "duration": 11.0,
+        "vencimento": "2037-03-10",
+        "valorPresente": 34541220,
+        "percPL": 0.0263,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-patrimonio",
+        "codigoCetip": "24L2473636",
+        "devedor": "Patrimônio Construções e Empreendimentos",
+        "setorDevedor": "Construção Civil",
+        "lastro": "Nota Comercial Patrimônio (residencial/comercial/loteamentos)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "rating": "A",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0955,
+        "taxaTotal": 0.1355,
+        "duration": 3.6,
+        "vencimento": "2029-12-17",
+        "valorPresente": 33707828,
+        "percPL": 0.0256,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.352,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-assai-barzel",
+        "codigoCetip": "22E1284935",
+        "devedor": "Sendas Distribuidora (Assaí, via Barzel)",
+        "setorDevedor": "Varejo",
+        "lastro": "17 lojas Assaí em locação atípica 25a (BTS via Barzel)",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": "AAA",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.0675,
+        "taxaTotal": 0.1075,
+        "duration": 8.1,
+        "vencimento": "2034-04-11",
+        "valorPresente": 33440717,
+        "percPL": 0.0254,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-quero-quero",
+        "codigoCetip": "20G0926014",
+        "devedor": "Quero-Quero",
+        "setorDevedor": "Varejo",
+        "lastro": "Lojas Quero-Quero (varejo construção)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva"
+        ],
+        "rating": "A-",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.057,
+        "taxaTotal": 0.097,
+        "duration": 15.2,
+        "vencimento": "2041-07-20",
+        "valorPresente": 33285293,
+        "percPL": 0.0253,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.494,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-grupo-sinal",
+        "codigoCetip": "20K0568000",
+        "devedor": "Grupo Sinal",
+        "setorDevedor": "Automotivo",
+        "lastro": "Imóveis comerciais Grupo Sinal (concessionárias)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva"
+        ],
+        "rating": "BBB",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.075,
+        "taxaTotal": 0.115,
+        "duration": 6.6,
+        "vencimento": "2032-11-16",
+        "valorPresente": 31782758,
+        "percPL": 0.0241,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.412,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-grupo-bso",
+        "codigoCetip": "21D0457416",
+        "devedor": "Grupo BSO",
+        "setorDevedor": "Construção Civil",
+        "lastro": "Empreendimentos BSO",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "rating": "BBB",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.1,
+        "taxaTotal": 0.14,
+        "duration": 3.0,
+        "vencimento": "2029-04-18",
+        "valorPresente": 30061764,
+        "percPL": 0.0228,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.084,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-fragnani-ii",
+        "codigoCetip": "22J0268287",
+        "devedor": "Indústria Cerâmica Fragnani",
+        "setorDevedor": "Indústria",
+        "lastro": "Notas Comerciais Fragnani (revestimentos cerâmicos)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa",
+          "fundo_reserva",
+          "seguro_credito"
+        ],
+        "rating": "CCC",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.1,
+        "taxaTotal": 0.14,
+        "duration": 1.5,
+        "vencimento": "2027-12-31",
+        "valorPresente": 0,
+        "percPL": 0.0,
+        "perfilRisco": "high_yield",
+        "status": "default",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541) — em recuperação judicial; PDD 100% (R$ 69,2 mi marcado a zero)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-or-loteamentos",
+        "codigoCetip": "25L3861195",
+        "devedor": "OR Loteamentos",
+        "setorDevedor": "Loteamento",
+        "lastro": "Loteamentos Reserva Sauípe e Terra Dourada (BA)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": "BBB+",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.125,
+        "taxaTotal": 0.165,
+        "duration": 11.7,
+        "vencimento": "2037-12-29",
+        "valorPresente": 20850430,
+        "percPL": 0.0158,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.697,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-guestier",
+        "codigoCetip": "25E3518733",
+        "devedor": "Guestier (loteamentos resort)",
+        "setorDevedor": "Loteamento",
+        "lastro": "Loteamentos residenciais conceito resort",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa",
+          "fundo_reserva"
+        ],
+        "rating": "BBB",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.12,
+        "taxaTotal": 0.16,
+        "duration": 9.1,
+        "vencimento": "2035-05-30",
+        "valorPresente": 16622177,
+        "percPL": 0.0126,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.475,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541) — última aquisição R$ 1,1 mi em fev/26"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-ascenty-iii",
+        "codigoCetip": "20L0710860",
+        "devedor": "Ascenty Data Centers",
+        "setorDevedor": "Tecnologia",
+        "lastro": "Data centers Ascenty",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva"
+        ],
+        "rating": "AA-",
+        "agenciaRating": "FAR (proprietário)",
+        "indexador": "IPCA+",
+        "spread": 0.057,
+        "taxaTotal": 0.097,
+        "duration": 4.0,
+        "vencimento": "2030-05-14",
+        "valorPresente": 16142402,
+        "percPL": 0.0123,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.226,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "GAME11",
+        "nome": "Guardian FII Papel",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 36240000,
+        "percPL": 0.0271,
+        "qtdCotas": 4000000,
+        "precoMedio": 10.0,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "ALZC11",
+        "nome": "Alianza FII Papel",
+        "segmentoFinal": "papel_high_yield",
+        "valorPresente": 30543137,
+        "percPL": 0.0228,
+        "qtdCotas": 3871120,
+        "precoMedio": 12.75,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "EQIR11",
+        "nome": "EQI FII Papel",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 16905812,
+        "percPL": 0.0126,
+        "qtdCotas": 1977288,
+        "precoMedio": 10.08,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "RBRR11",
+        "nome": "RBR Rendimento High Grade",
+        "segmentoFinal": "papel_high_grade",
+        "valorPresente": 13632985,
+        "percPL": 0.0102,
+        "qtdCotas": 151058,
+        "precoMedio": 99.3,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "PSEC11",
+        "nome": "Pátria FII Papel",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 11001103,
+        "percPL": 0.0082,
+        "qtdCotas": 173273,
+        "precoMedio": 84.35,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "SNME11",
+        "nome": "Suno FII Papel",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 9175133,
+        "percPL": 0.0068,
+        "qtdCotas": 953756,
+        "precoMedio": 9.75,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "VGHF11",
+        "nome": "Valora FII Papel",
+        "segmentoFinal": "papel_high_yield",
+        "valorPresente": 4620365,
+        "percPL": 0.0034,
+        "qtdCotas": 638172,
+        "precoMedio": 10.27,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "TRXF11",
+        "nome": "TRX FII",
+        "segmentoFinal": "tijolo_renda_urbana",
+        "valorPresente": 3876060,
+        "percPL": 0.0029,
+        "qtdCotas": 41696,
+        "precoMedio": 99.86,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "RBRY11",
+        "nome": "RBR Yield FII",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 3188802,
+        "percPL": 0.0024,
+        "qtdCotas": 32783,
+        "precoMedio": 101.11,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.018,
+      "interpretacaoHhi": "baixa",
+      "topN": {
+        "top1Pct": 0.0392,
+        "top3Pct": 0.1099,
+        "top5Pct": 0.172,
+        "top10Pct": 0.3181
+      },
+      "porDevedor": [
+        {
+          "nome": "Gafisa S.A. (Epitácio + Oscar Freire)",
+          "pct": 0.0756
+        },
+        {
+          "nome": "Sendas/Assaí (via Barzel — 2 tranches)",
+          "pct": 0.0382
+        },
+        {
+          "nome": "Summus Engenharia",
+          "pct": 0.037
+        },
+        {
+          "nome": "Direcional Engenharia",
+          "pct": 0.0337
+        },
+        {
+          "nome": "Usinas Cajuru/Montes Claros",
+          "pct": 0.0311
+        },
+        {
+          "nome": "BB Tecnologia (Espaço Y)",
+          "pct": 0.0305
+        },
+        {
+          "nome": "Arteris S.A.",
+          "pct": 0.0299
+        },
+        {
+          "nome": "JSL S.A. (Ribeira 261+268)",
+          "pct": 0.0319
+        },
+        {
+          "nome": "LAR Cooperativa",
+          "pct": 0.0281
+        },
+        {
+          "nome": "Canopus / Estado SP (3 PPPs)",
+          "pct": 0.05
+        }
+      ],
+      "porSetorDevedor": [
+        {
+          "setor": "Construção Civil",
+          "pct": 0.302
+        },
+        {
+          "setor": "Logística",
+          "pct": 0.121
+        },
+        {
+          "setor": "FII Papel",
+          "pct": 0.116
+        },
+        {
+          "setor": "Alimentos/Alimentício",
+          "pct": 0.109
+        },
+        {
+          "setor": "Saúde",
+          "pct": 0.064
+        },
+        {
+          "setor": "Energia Elétrica",
+          "pct": 0.06
+        },
+        {
+          "setor": "Tecnologia",
+          "pct": 0.051
+        },
+        {
+          "setor": "Estado de SP (PPP)",
+          "pct": 0.043
+        },
+        {
+          "setor": "Loteamento (pulverizado)",
+          "pct": 0.043
+        },
+        {
+          "setor": "Rodovias",
+          "pct": 0.03
+        },
+        {
+          "setor": "Automotivo",
+          "pct": 0.024
+        },
+        {
+          "setor": "Agropecuária",
+          "pct": 0.024
+        },
+        {
+          "setor": "Indústria",
+          "pct": 0.02
+        },
+        {
+          "setor": "Farmacêutico",
+          "pct": 0.02
+        },
+        {
+          "setor": "Papel e Celulose",
+          "pct": 0.011
+        },
+        {
+          "setor": "Outros",
+          "pct": 0.063
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA+",
+          "pct": 0.91
+        },
+        {
+          "indexador": "CDI+",
+          "pct": 0.079
+        },
+        {
+          "indexador": "Outros",
+          "pct": 0.011
+        }
+      ]
+    },
+    "transacoes": [],
+    "analise": {
+      "rotulo": "Carteira pulverizada de 68 CRIs com gestão ativa e PDD pontual em ativos específicos",
+      "cor": "amber",
+      "tags": [
+        "68 CRIs + 9 FIIs",
+        "HHI 0,018 (muito baixo)",
+        "91% IPCA+",
+        "Duration 4,58 anos",
+        "5 CRIs com PDD"
+      ],
+      "veredicto": "<p>Portfólio extremamente pulverizado: nenhum CRI passa de 4% do PL e o top-10 cobre apenas 32%. A taxa média de carregamento (IPCA+8,1% sobre cota patrimonial, IPCA+5,58% sobre preço de aquisição) está alinhada com o subsegmento misto. Risco principal não é concentração, mas <strong>qualidade de crédito específica</strong>: 5 CRIs com PDD totalizando ~R$ 84 mi nominais (com R$ 1,3 mi de provisão atual; o Fragnani II é o caso mais grave, R$ 69,2 mi marcado a zero). Para ser justo: o restante da carteira (87,9%) tem rating AAA-A- pela classificação proprietária da FAR, refletindo um portfólio de qualidade média-alta.</p>",
+      "pontosFortes": [
+        "Diversificação real ampla — HHI 0,018, top-10 cobre apenas 32% do PL",
+        "Duration média 4,58 anos — não é nem curto demais (sensível a remarcação) nem longo demais (default risk)",
+        "91% indexação IPCA+ — proteção inflacionária forte",
+        "9 FIIs de papel adicionam camada de pulverização indireta (10% do PL)",
+        "Carteira passa por revisão mínima anual em comitê de crédito"
+      ],
+      "pontosFracos": [
+        "Fragnani II em recuperação judicial — R$ 69,2 mi marcado a zero (5,2% do PL nominal perdido)",
+        "30% em Construção Civil + 6% em loteamentos = 36% em ciclo imobiliário sensível",
+        "Concentração em IPCA (91%) cria vulnerabilidade caso a inflação caia abaixo de 3%",
+        "Camada dupla de taxas via FIIs detidos (~10% do PL paga gestão duplicada)",
+        "Gestora regional sem o porte das top-3 (Kinea/Mauá/XP) limita poder de origination"
+      ],
+      "perfilInvestidor": "Investidor de renda mensal previsível com tolerância a marcação a mercado. NÃO é para quem busca crescimento de DPS — o fundo é maduro, com receita sustentável próxima ao DPS distribuído. Bom para diversificar uma carteira que já tem fundos de papel high grade (KNCR11/KNIP11) — VRTA11 adiciona spread vs HG sem o risco extremo de high yield puro."
+    }
+  },
+  "timeline": {
+    "subtitulo": "15 anos de gestão Fator no mesmo fundo — DPS estável historicamente, com pressão recente",
+    "periodos": [
+      {
+        "titulo": "IPO e formação inicial",
+        "cor": "blue",
+        "periodo": "ago/2010 — 2014",
+        "label": "Fundação",
+        "descricao": "<p>Fundo lançado em 05/08/2010 sob gestão da Fator Administração de Recursos. Carteira inicial composta por CRIs de varejo e construção civil com indexação IGP-M+6% (benchmark formal). Modelo de gestão ativa estabelecido desde o início.</p>",
+        "pontos": [
+          "IPO em ago/2010",
+          "Benchmark IGP-M+6% (regulamento original)",
+          "Início como FII de papel HG-misto"
+        ]
+      },
+      {
+        "titulo": "Mudança para benchmark IPCA gerencial",
+        "cor": "blue",
+        "periodo": "2019",
+        "label": "Reposicionamento",
+        "descricao": "<p>A partir de 2019, o gestor passa a considerar IPCA+6% como benchmark gerencial (formalmente o regulamento ainda mantém IGP-M+6%). Isso reflete a mudança da carteira para predominância IPCA+ que persiste até hoje (91% em fev/2026).</p>",
+        "pontos": [
+          "IPCA+6% adotado como benchmark gerencial",
+          "Crescimento para portfólio diversificado de 60+ CRIs"
+        ]
+      },
+      {
+        "titulo": "Estresse de Selic e remarcação",
+        "cor": "amber",
+        "periodo": "2022 — 2024",
+        "label": "Pressão",
+        "descricao": "<p>Ciclo de alta da Selic (de 2% para 14%) gera remarcação negativa em CRIs IPCA+ de longa duration. VP/cota cai de ~R$ 100 (2021) para ~R$ 84-86 (2024). Mesmo período em que aparecem os primeiros CRIs em PDD (Fragnani, BR Distribuidora, Pulverizados Brazilian).</p>",
+        "pontos": [
+          "Selic 14,75% pressiona MTM",
+          "PDDs aparecem em ~7-8 CRIs",
+          "DPS sustentado em R$ 0,80-0,90"
+        ]
+      },
+      {
+        "titulo": "Estabilização do DPS em R$ 0,85",
+        "cor": "emerald",
+        "periodo": "set/2024 — abr/2026",
+        "label": "Regime atual",
+        "descricao": "<p>DPS estabilizado em R$ 0,85/mês desde set/2024 (exceto jul/2024 que pagou R$ 0,90). Reserva acumulada caindo de R$ 0,76 (jun/25) para R$ 0,47 (fev/26) — sinal de queima moderada da reserva para sustentar DPS atual. Novas aquisições focadas em CRIs com taxa de IPCA+10-12% (Guestier, OR Loteamentos, Patrimonio).</p>",
+        "pontos": [
+          "DPS R$ 0,85/mês há 16 meses",
+          "Reserva R$ 0,76 → R$ 0,47/cota",
+          "CRIs novos a IPCA+10-12%"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>VRTA11 é uma <strong>carteira pulverizada de CRIs corporativos brasileiros</strong> indexada majoritariamente a IPCA+ (91%). A tese central é capturar o spread médio de IPCA+8,1% sobre a cota patrimonial via gestão ativa de crédito de uma gestora regional com 15 anos de track record no mesmo fundo. Diferente de fundos high yield puros (DEVA11, HCTR11), o VRTA11 tem mix de qualidade média-alta — 87,9% AAA-A- pela classificação proprietária — com bolsões de high yield localizados (5 CRIs em PDD). DPS estável (R$ 0,85/mês há 16 meses) e P/VP 0,94 oferecem porta de entrada conservadora para exposição a CRI com alguma proteção patrimonial.</p>",
+    "paraQuem": [
+      "Investidor de renda mensal estável que aceita oscilação de cota (sigma ~12% a.a.)",
+      "Quem quer diversificar carteira de papel com fundo de mid-grade (não HG puro, não HY puro)",
+      "Investidor PF buscando rendimento isento com DY 12-13% e proteção IPCA",
+      "Quem aceita gestora regional em troca de taxa baixa (1% a.a.) e portfólio pulverizado"
+    ],
+    "naoParaQuem": [
+      "Quem busca DPS crescente — fundo é maduro e DPS estabilizou em platô",
+      "Investidor que não tolera marcação a mercado de CRIs em ciclo de Selic",
+      "Quem quer concentração em CRIs investment grade puro (AAA-AA) — preferir KNCR11/KNIP11",
+      "Quem busca alta liquidez intradiária — volume médio R$ 1,58 mi/dia é moderado"
+    ]
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII de papel mid-grade pulverizado com proteção IPCA",
+      "subrotulo": "Renda isenta IPCA+ com risco de crédito controlado mas presente — meio-termo entre high grade e high yield",
+      "cor": "amber"
+    },
+    "perfilRisco": {
+      "nivel": "medio",
+      "score": 2.5,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 1.5,
+          "peso": 0.2,
+          "metrica": "HHI 0,018; top-10 = 32%; nenhum CRI > 4%",
+          "leitura": "Diversificação excepcional — quase impossível ser melhor neste quesito"
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 2.5,
+          "peso": 0.15,
+          "metrica": "σ12m estimado ~12-14% (cota oscilou de R$ 75,87 a R$ 89,89 em 24m)",
+          "leitura": "Volatilidade moderada — sensível à curva de IPCA+ via marcação a mercado"
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 2.0,
+          "peso": 0.2,
+          "metrica": "DPS estável em R$ 0,85 há 16m; CV24m < 5% (variou R$ 0,80-0,90)",
+          "leitura": "DPS muito estável — gestor usa reserva para suavizar oscilação de receita"
+        },
+        {
+          "nome": "Liquidez",
+          "score": 3.0,
+          "peso": 0.15,
+          "metrica": "Volume médio 21d ~R$ 1,58 mi; cotistas 105.131",
+          "leitura": "Liquidez moderada — sair de R$ 100 mil em 1 dia é viável; R$ 1 mi exige dias"
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "5 CRIs em PDD (Fragnani II 100% provisionado); 28% em BBB+ a B-; 30% em construção civil",
+          "leitura": "Risco de crédito real e materializado — o Fragnani II é a evidência concreta"
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 1.5,
+          "peso": 0.1,
+          "metrica": "Compromissada Reversa R$ 21,1 mi (1,58% do PL) com vencimento mar/26",
+          "leitura": "Alavancagem mínima e operacional — sem dívida estrutural"
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": true,
+        "racional": "DPS R$ 0,85 há 16 meses + reserva de R$ 0,47/cota suaviza próximos 6+ meses"
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": true,
+        "racional": "91% da carteira indexada a IPCA+ — uma das mais altas do segmento; proteção direta contra inflação"
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Receita 100% BRL; FII brasileiro de papel local não oferece exposição cambial"
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": "parcial",
+        "racional": "P/VP 0,94 é desconto modesto (6%); fundos como DEVA11 (P/VP 0,75) oferecem desconto mais agressivo se a tese é convergir ao VP"
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": "parcial",
+        "racional": "Queda de Selic ajuda na remarcação a mercado dos CRIs IPCA+ longos (duration 4,6 anos beneficia), mas comprime spread sobre novos CRIs"
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Alta de Selic prejudica MTM dos CRIs IPCA+ longos. Cota cairia"
+      },
+      {
+        "nome": "Exposição setorial concentrada",
+        "encaixa": false,
+        "racional": "Carteira pulverizada por design — para tese setorial pura, escolher FIIs especializados"
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": "parcial",
+        "racional": "DPS estável e isento favorece, mas volatilidade de preço e PDDs em CRIs específicos exigem peso menor (≤10% da renda fixa de carteira)"
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": true,
+        "racional": "Carteira cobre 16+ setores via 68 CRIs — adiciona diversificação real à carteira global"
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "Rendimento isento de IR para PF; com DY 12,9%, equivale a CDI bruto de ~127% no nível atual de Selic"
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "texto": "CRI Fragnani II (R$ 69,2 mi nominais, 100% PDD) — devedora em recuperação judicial. Se perda for total, é equivalente a 5,2% do PL nominal não recuperável",
+        "severidade": "alta"
+      },
+      {
+        "texto": "Compressão de spread em ciclo de Selic baixa — Focus projeta Selic 11% em 12 meses; novos CRIs originados nesse ambiente terão spread efetivo menor",
+        "severidade": "media"
+      },
+      {
+        "texto": "30% em Construção Civil + 6% Loteamentos = 36% em ciclo imobiliário; em downturn de pré-vendas, esses CRIs entram em estresse simultâneo",
+        "severidade": "media"
+      },
+      {
+        "texto": "Reserva caindo (R$ 0,76 jun/25 → R$ 0,47 fev/26) — em ritmo atual, a reserva esgota em ~9-12 meses se o resultado caixa não convergir ao DPS",
+        "severidade": "media"
+      },
+      {
+        "texto": "FIIs detidos (10% do PL) com taxa de gestão própria — gera camada dupla de custos não totalmente transparente para o cotista final",
+        "severidade": "baixa"
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 1580000,
+      "volumeMedio252d": 1750000,
+      "diasParaSair": {
+        "10mil": 1,
+        "100mil": 1,
+        "500mil": 1,
+        "1milhao": 2,
+        "10milhoes": 12
+      },
+      "fonte": "Relatório Gerencial fev/2026 (ID 1141541) — campo 'Volume médio diário 6M'",
+      "leitura": "Liquidez moderada-boa para PF: R$ 100 mil saem no dia, R$ 1 mi em 1-2 dias. Para tickets institucionais (>R$ 10 mi) já há fricção — 12 dias úteis é estimativa conservadora"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 12.5,
+        "sigma24m": 14.2,
+        "drawdownMax24m": -16.0,
+        "drawdownMaxData": "2025-08",
+        "tempoRecuperacao": "8 meses"
+      },
+      "dividendo": {
+        "cv12m": 0.0,
+        "cv24m": 4.7,
+        "minDps24m": 0.8,
+        "maxDps24m": 0.9,
+        "amplitudeRelativa": 0.118
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "papel_misto",
+      "pares": [
+        {
+          "ticker": "GAME11",
+          "sobreposicaoEstimada": 0.027,
+          "tipoSobreposicao": [
+            "fii_subjacente"
+          ],
+          "leitura": "VRTA11 detém 4 mi de cotas de GAME11 (2,7% do PL); cotista do VRTA11 já tem exposição indireta a GAME11"
+        },
+        {
+          "ticker": "EQIR11",
+          "sobreposicaoEstimada": 0.013,
+          "tipoSobreposicao": [
+            "fii_subjacente"
+          ],
+          "leitura": "VRTA11 detém 1,98 mi cotas de EQIR11 (1,3% do PL); sobreposição direta"
+        },
+        {
+          "ticker": "FTCA11",
+          "sobreposicaoEstimada": 0.05,
+          "tipoSobreposicao": [
+            "mesmo_subsegmento",
+            "cris_devedores_comuns"
+          ],
+          "leitura": "Subsegmento similar (papel misto), gestoras diferentes; provável overlap em alguns CRIs (Gafisa, Direcional)"
+        },
+        {
+          "ticker": "GCRI11",
+          "sobreposicaoEstimada": 0.05,
+          "tipoSobreposicao": [
+            "mesmo_subsegmento",
+            "cris_devedores_comuns"
+          ],
+          "leitura": "Mesmo subsegmento; alguns CRIs em comum no universo (Assaí Barzel, Gafisa)"
+        },
+        {
+          "ticker": "KNCR11",
+          "sobreposicaoEstimada": 0.1,
+          "tipoSobreposicao": [
+            "mesmo_segmento_papel"
+          ],
+          "leitura": "Subsegmento adjacente (HG); pouco overlap específico mas mesma classe de risco macro"
+        }
+      ],
+      "diversificacaoReal": "Para um cotista que já possui outros FIIs de papel (HG ou HY), VRTA11 adiciona exposição mid-grade pulverizada com indexação IPCA+ dominante — diferenciação razoável em mix-of-funds"
+    },
+    "cenarios": [
+      {
+        "cenario": "Selic cai para 11% em 12m + IPCA estável em 4%",
+        "probabilidade": "alta",
+        "impactoPreco": "+8% a +12%",
+        "impactoDpsM": "−R$ 0,05 a −R$ 0,10",
+        "racional": "Remarcação positiva nos CRIs longos compensa compressão de spread em novos CRIs; DPS pode cair gradual"
+      },
+      {
+        "cenario": "Selic estável em 14,75% + IPCA estável em 4%",
+        "probabilidade": "media",
+        "impactoPreco": "0% a +3%",
+        "impactoDpsM": "estável R$ 0,85",
+        "racional": "Cenário-base atual; DPS sustentável via reserva por 9-12 meses"
+      },
+      {
+        "cenario": "Selic sobe para 16% + IPCA acima de 6%",
+        "probabilidade": "baixa",
+        "impactoPreco": "−10% a −15%",
+        "impactoDpsM": "+R$ 0,03 a +R$ 0,05 (em 6m)",
+        "racional": "Marcação a mercado fortemente negativa; receita real sobe gradualmente via IPCA"
+      },
+      {
+        "cenario": "Default total do Fragnani II",
+        "probabilidade": "media (já 100% provisionado)",
+        "impactoPreco": "−2% a −4%",
+        "impactoDpsM": "neutro (já está em PDD)",
+        "racional": "Já marcado a zero; perda contábil materializada não impacta novamente o caixa"
+      },
+      {
+        "cenario": "2+ CRIs grandes adicionais entram em default (cenário de stress)",
+        "probabilidade": "baixa",
+        "impactoPreco": "−10% a −20%",
+        "impactoDpsM": "−R$ 0,15 a −R$ 0,25",
+        "racional": "Cenário de cauda; carteira pulverizada protege contra esse risco mas não elimina"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "renda_mensal_isenta",
+        "hedge_inflacionario",
+        "diversificacao_papel"
+      ],
+      "horizonte": "5+ anos",
+      "perfil": "moderado",
+      "carteiraTipica": "5-10% da fatia de renda variável de uma carteira diversificada; ou 15-25% do bucket de FIIs como diversificador de papel mid-grade",
+      "perfisExemplo": [
+        "Investidor PF acumulador com R$ 200k+ que já tem FIIs HG e quer adicionar prêmio de risco",
+        "Aposentado com carteira de renda fixa que aloca 10-20% em FIIs e quer DY isento maior que CDI"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Investidor conservador puro que não tolera marcação a mercado em CRIs",
+        "Quem busca DPS crescente — fundo maduro, DPS estável é o cenário-base",
+        "Trader de curto prazo — liquidez moderada não favorece movimentação intradiária pesada",
+        "Quem quer high yield puro com DY > 16% — VRTA11 está em mid-grade, não HY"
+      ]
+    }
+  },
+  "dividendos": {
+    "schema": "v2.1",
+    "historico": [
+      {
+        "data": "2024-07",
+        "dividendo": 0.9,
+        "dataPagamento": "2024-08-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial mai/2025 (ID 952273) — tabela histórica"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.8,
+        "dataPagamento": "2024-09-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial mai/2025 (ID 952273)"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.8,
+        "dataPagamento": "2024-10-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial mai/2025 (ID 952273)"
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.8,
+        "dataPagamento": "2024-11-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial out/2025 (ID 1044004)"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.8,
+        "dataPagamento": "2024-12-13",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial out/2025 (ID 1044004)"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-01-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial out/2025 (ID 1044004)"
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-02-14",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial out/2025 (ID 1044004)"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-03-14",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial out/2025 (ID 1044004)"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-04-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-05-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-06-13",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-07-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-08-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-09-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-10-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-11-14",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-12-15",
+        "cotas": 15592424,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.85,
+        "dataPagamento": "2026-01-15",
+        "cotas": 15592424,
+        "lucroCaixa": 11264565.97,
+        "distribuicao": 13253560.4,
+        "resultadoCaixa": -1988994.43,
+        "payout": 1.176,
+        "caixaLiquidoFimMes": 34000000,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541) + Informe Mensal dez/25 (ID 1083722)",
+        "docId": "1083722"
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.85,
+        "dataPagamento": "2026-02-13",
+        "cotas": 15592424,
+        "lucroCaixa": 9609945.51,
+        "distribuicao": 13253560.4,
+        "resultadoCaixa": -3643614.89,
+        "payout": 1.379,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+        "docId": "1097845"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.85,
+        "dataPagamento": "2026-03-13",
+        "cotas": 15592424,
+        "lucroCaixa": 12420725.49,
+        "distribuicao": 13253560.4,
+        "resultadoCaixa": -832834.91,
+        "payout": 1.067,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+        "docId": "1124203"
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.85,
+        "dataPagamento": "2026-04-15",
+        "cotas": 15592424,
+        "caixaLiquidoFimMes": 34900000,
+        "fonte": "Rendimentos e Amortizações (ID 1150222) + Informe Mensal mar/2026 (ID 1162387)",
+        "docId": "1150222"
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2024-2",
+        "label": "2º Sem 2024",
+        "ano": 2024,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": null,
+        "distribuicao": 76903409.2,
+        "resultadoCaixa": null,
+        "payout": null,
+        "interpretacao": "dados_insuficientes"
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": null,
+        "distribuicao": 79521362.4,
+        "resultadoCaixa": null,
+        "payout": null,
+        "interpretacao": "dados_insuficientes"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": null,
+        "distribuicao": 79521362.4,
+        "resultadoCaixa": null,
+        "payout": null,
+        "interpretacao": "dados_insuficientes"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "lucroCaixa": 33295236.97,
+        "distribuicao": 39760681.2,
+        "resultadoCaixa": -6465444.23,
+        "payout": 1.194,
+        "interpretacao": "queimou_caixa"
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_curto",
+      "dividendoLabel": "Sustentável por 9-12 meses via reserva",
+      "dividendoCor": "amber",
+      "horizonte": "Reserva de R$ 0,47/cota cobre ~6 meses no ritmo atual de queima",
+      "status": "queimando_caixa",
+      "cor": "amber",
+      "payoutMedio12m": 1.06,
+      "caixaLiquido": 34900000,
+      "caixaLiquidoData": "2026-02",
+      "caixaLiquidoComposicao": "R$ 34,9 mi em caixa (2,6% do PL) + reserva acumulada de R$ 0,47/cota = ~R$ 7,3 mi",
+      "resultadoAcumuladoRetido": null,
+      "resultadoAcumuladoNota": "Fundo distribui acima da geração: resultado/cota R$ 0,80 vs distribuído R$ 0,85 nos últimos meses, queima de ~R$ 0,05/cota/mês usando reserva acumulada anteriormente",
+      "queimaMediaMensal": 832834.91,
+      "queimaPorCota": 0.054,
+      "coberturaMeses": 9.0,
+      "tendencia": "Queima de reserva moderada e gerenciada — gestor sinaliza intervalo R$ 0,80-0,90 para 1S2026",
+      "leitura": "<p>O fundo está distribuindo um pouco acima do que gera (R$ 0,85 vs R$ 0,80 de resultado caixa). A reserva de R$ 0,47/cota cobre ~9-12 meses nesse ritmo. O gestor declarou explicitamente o intervalo R$ 0,80-0,90 para o 1S2026, o que reconhece a possibilidade de ajuste para baixo se a reserva esgotar sem novas aquisições compensatórias.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2024-12",
+        "dataExata": "2024-12-13",
+        "titulo": "Aumento de DPS para R$ 0,85",
+        "tipo": "outro",
+        "descricao": "<p>DPS subiu de R$ 0,80 para R$ 0,85 e se manteve estável até hoje (16 meses).</p>",
+        "impactoDividendo": "+R$ 0,05/cota recorrente",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial out/2025 (ID 1044004)",
+        "docId": "1044004"
+      },
+      {
+        "data": "2025-01",
+        "dataExata": "2025-01-15",
+        "titulo": "Provisionamento integral CRI Fragnani II",
+        "tipo": "evento_credito",
+        "descricao": "<p>O CRI Fragnani II (R$ 69,2 mi nominais) foi 100% provisionado após pedido de recuperação judicial da devedora. Garantia fiduciária classifica o crédito como extraconcursal, com tratativas em curso para renegociação.</p>",
+        "impactoDividendo": "−R$ 0,03/cota/mês de receita perdida",
+        "severidade": "negativo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+        "docId": "1141541"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-02-28",
+        "titulo": "Aquisição CRI Guestier",
+        "tipo": "aquisicao",
+        "descricao": "<p>Aquisição de R$ 1,1 mi do CRI Guestier a IPCA+12% por 10,1 anos. Operação de loteamentos resort com garantias robustas (alienação fiduciária, fundo de reserva).</p>",
+        "impactoDividendo": "+R$ 0,001/cota/mês (impacto marginal)",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+        "docId": "1141541"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-05",
+        "titulo": "Pipeline de R$ 40 mi em 2 CRIs",
+        "tipo": "aquisicao",
+        "descricao": "<p>Gestor sinaliza 2 operações em análise totalizando R$ 40 mi para liquidação nos próximos meses.</p>",
+        "impactoValor": 0.005,
+        "duracaoMeses": null,
+        "severidade": "positivo",
+        "certeza": "projetado",
+        "premissa": "Pipeline declarado pelo gestor; impacto modesto (~3% do PL)",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+        "docId": "1141541"
+      },
+      {
+        "data": "2026-09",
+        "titulo": "Risco de ajuste de DPS para R$ 0,80",
+        "tipo": "outro",
+        "descricao": "<p>No ritmo atual de queima da reserva (~R$ 0,05/cota/mês), a reserva se esgota em ~9-12 meses. Sem aquisições compensatórias suficientes, o gestor pode ajustar o DPS para o piso da faixa declarada (R$ 0,80).</p>",
+        "impactoValor": -0.05,
+        "duracaoMeses": null,
+        "severidade": "negativo",
+        "certeza": "possivel",
+        "premissa": "Cenário-base se a reserva esgotar e o pipeline atual for o único reforço",
+        "fonte": "Análise interna baseada em sustentabilidade",
+        "docId": null
+      },
+      {
+        "data": "2026-06",
+        "titulo": "Fim do ciclo de Selic alta",
+        "tipo": "outro",
+        "descricao": "<p>Focus do BCB projeta Selic em 11% em 12 meses. Queda de 375bps comprime spread sobre novos CRIs originados, mas favorece marcação a mercado dos existentes (duration 4,6 anos).</p>",
+        "impactoValor": 0,
+        "duracaoMeses": null,
+        "severidade": "neutro",
+        "certeza": "projetado",
+        "premissa": "Curva DI / Focus",
+        "fonte": "macro_snapshot.json",
+        "docId": null
+      }
+    ],
+    "guidance": {
+      "fonte": "gestor",
+      "periodo": "1S2026",
+      "cobreMeses": 6,
+      "faixaMin": 0.8,
+      "faixaMax": 0.9,
+      "unidade": "R$/cota/mês",
+      "validade": "2026-09-30",
+      "documento": "Relatório Gerencial fev/2026",
+      "premissas": [
+        "Referência R$ 0,85/cota declarada pelo gestor",
+        "Reserva R$ 0,47/cota usada como buffer",
+        "Pipeline de R$ 40 mi em 2 CRIs em análise"
+      ]
+    },
+    "projecaoDy": {
+      "precoReferencia": 79.0,
+      "dyAtual12m": 12.91,
+      "dyProjetado12m": 12.91,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 12.91,
+          "dividendoMes": 0.85,
+          "descricao": "DPS R$ 0,85 mantido nos próximos 12 meses (gestor confirma R$ 0,80-0,90 no 1S2026)"
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 13.67,
+          "dividendoMes": 0.9,
+          "descricao": "Aquisições do pipeline + recuperação parcial Fragnani II elevam DPS"
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 12.15,
+          "dividendoMes": 0.8,
+          "descricao": "Reserva esgota e DPS é ajustado ao piso da faixa anunciada"
+        }
+      ],
+      "premissas": [
+        "Gestor anunciou intervalo R$ 0,80-0,90 para 1S2026",
+        "Reserva atual R$ 0,47/cota cobre ~9 meses",
+        "Pipeline de aquisição existe mas é modesto (~3% do PL)"
+      ]
+    },
+    "sintese": {
+      "tendencia": "estavel_com_risco_baixista",
+      "tendenciaLabel": "Estável em R$ 0,85, com viés baixista para R$ 0,80 a partir de 4T2026",
+      "cor": "amber",
+      "direcao": "DPS estável em R$ 0,85/mês há 16 meses, sustentado por reserva caindo gradualmente. Sem novas aquisições significativas, o cenário-base é ajuste para R$ 0,80 a partir do 4T2026 ou 1T2027.",
+      "pontosPositivos": [
+        {
+          "texto": "Gestor declarou intervalo R$ 0,80-0,90 para 1S2026 — comprometimento explícito com piso",
+          "peso": "alto"
+        },
+        {
+          "texto": "Reserva de R$ 0,47/cota cobre ~9-12 meses no ritmo atual de queima",
+          "peso": "alto"
+        },
+        {
+          "texto": "Pipeline de R$ 40 mi em 2 CRIs em análise pode reforçar receita no 2T-3T2026",
+          "peso": "medio"
+        },
+        {
+          "texto": "Indexação 91% IPCA+ protege a receita real em ambiente de inflação positiva",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Resultado caixa (R$ 0,80) abaixo do distribuído (R$ 0,85) — queima moderada de reserva",
+          "peso": "alto"
+        },
+        {
+          "texto": "Selic projetada cair de 14,75% para 11% em 12m comprime spread efetivo dos novos CRIs",
+          "peso": "medio"
+        },
+        {
+          "texto": "Fragnani II em recuperação judicial — sem horizonte claro de recuperação",
+          "peso": "medio"
+        },
+        {
+          "texto": "Dependência da gestora encontrar novas oportunidades com cap rate compatível em ambiente de Selic em queda",
+          "peso": "alto"
+        }
+      ],
+      "veredicto": "<p>O DPS de R$ 0,85 é sustentável até o final de 2026 graças à reserva de R$ 0,47/cota e ao buffer entre resultado e distribuição (~R$ 0,05/mês). O ponto de inflexão é o início de 2027: se o pipeline de aquisições não reforçar a geração de caixa em ~R$ 0,03-0,05/cota/mês, o ajuste para R$ 0,80 (piso anunciado pelo gestor) é o cenário-base. Para investidor de horizonte 5+ anos, o DPS estável próximo de R$ 0,80-0,85 sobre cota R$ 79 ainda gera DY 12-13% — atrativo se a marcação a mercado dos CRIs longos se beneficiar de Selic em queda.</p>"
+    },
+    "alertas": [
+      {
+        "texto": "Reserva caindo R$ 0,76 → R$ 0,47/cota em 8 meses; cobertura ~9 meses",
+        "severidade": "amber"
+      },
+      {
+        "texto": "Fragnani II 100% PDD — perda nominal de 5,2% do PL se recovery for zero",
+        "severidade": "amber"
+      },
+      {
+        "texto": "Selic projetada 11% em 12m comprime spread efetivo de novos CRIs",
+        "severidade": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/vrta11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2016-04-25",
+      "dataFim": "2026-04-24",
+      "fonte": "yfinance:VRTA11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 79.0,
+      "minHistorico": {
+        "valor": 75.87,
+        "data": "2025-08-29"
+      },
+      "maxHistorico": {
+        "valor": 111.92,
+        "data": "2016-06-13"
+      }
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/vrta11/historico_vp.csv"
+    },
+    "eventosValuation": [
+      {
+        "data": "2025-01-15",
+        "tipo": "evento_credito",
+        "titulo": "Provisionamento integral CRI Fragnani II",
+        "descricao": "<p>R$ 69,2 mi marcados a zero após RJ da devedora. Impacto contábil único.</p>",
+        "impactoVp": -4.44,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+        "docId": "1141541"
+      },
+      {
+        "data": "2024-08-15",
+        "tipo": "outro",
+        "titulo": "Início de queda do DPS de R$ 0,90 para R$ 0,80",
+        "descricao": "<p>DPS reduzido de R$ 0,90 (jul/24) para R$ 0,80 (ago-nov/24) refletindo recalibração de receita.</p>",
+        "impactoVp": null,
+        "impactoPreco": -3.0,
+        "fonte": "Relatório Gerencial mai/2025 (ID 952273)",
+        "docId": "952273"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "papel_misto",
+      "criterioAgrupamento": "FIIs de CRI sem dominância clara HG/HY, gestão ativa, indexação variada (predominância IPCA+).",
+      "tickers": [
+        "GAME11",
+        "FTCA11",
+        "GCRI11",
+        "EQIR11",
+        "EIRA11",
+        "ARRI11",
+        "BTCI11",
+        "VGIP11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-25",
+        "pvpMediano": 0.91,
+        "pvpMin": 0.78,
+        "pvpMax": 1.02,
+        "dyMediano": 13.5,
+        "dyMin": 11.2,
+        "dyMax": 15.8,
+        "premioRiscoSegmento": 0.04
+      },
+      "posicaoFundo": {
+        "pvpRanking": "Acima da mediana (0,94 vs 0,91)",
+        "dyRanking": "Próximo da mediana (12,91% vs 13,5%)",
+        "leitura": "<p>VRTA11 está ligeiramente premiado vs pares (P/VP 0,94 vs mediana 0,91) e DY um pouco abaixo da mediana — reflete percepção de menor risco relativo (carteira mais pulverizada e mid-grade vs alguns pares com viés HY).</p>"
+      },
+      "statusClassificacao": "validado"
+    },
+    "precoJustoMercado": {
+      "valor": 80.5,
+      "faixa": [
+        76.0,
+        85.0
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 79.0,
+        "diferencaPct": 1.9,
+        "leitura": "Levemente subvalorizado (1,9%) — cota atual está dentro da faixa de preço justo, próximo ao centro"
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio",
+          "peso": 0.45,
+          "preco": 54.3,
+          "calculo": "DPS sustentável R$ 10,20/ano ÷ (14,75% Selic + 4% prêmio papel_misto) = R$ 54,30",
+          "racional": "Cenário-base de Selic atual; valoriza menos pois Selic está em pico. Tende a subir conforme Selic cair."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.3,
+          "preco": 76.84,
+          "calculo": "VP/cota R$ 84,44 × P/VP mediano dos pares (0,91) = R$ 76,84",
+          "racional": "Pares: GAME11, FTCA11, GCRI11, EQIR11, EIRA11, ARRI11, BTCI11, VGIP11"
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.25,
+          "preco": 75.56,
+          "calculo": "DPS R$ 10,20/ano ÷ DY mediano dos pares (13,5%) = R$ 75,56",
+          "racional": "DY mediano subsegmento papel_misto ajustado para snapshot atual"
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 1.04,
+        "score": 0.62,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.55,
+            "racional": "Fator é gestora regional (não top-3) mas com 15 anos no mesmo fundo — boa estabilidade"
+          },
+          {
+            "nome": "Inadimplência",
+            "peso": 0.15,
+            "score": 0.55,
+            "racional": "5 CRIs em PDD (Fragnani 100% provisionado) representam ~6% do PL nominal"
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 0.95,
+            "racional": "LTV efetivo ~0%; compromissada R$ 21,1 mi (1,58% do PL) é operacional"
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.2,
+            "score": 0.85,
+            "racional": "DPS estável em R$ 0,85 há 16m; CV24m de 4,7%"
+          },
+          {
+            "nome": "Vacância (papel)",
+            "peso": 0.0,
+            "score": 0.0,
+            "racional": "N/A para FII de papel"
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.25,
+            "score": 0.5,
+            "racional": "sustentavel_curto — reserva cobre 9-12 meses; ajuste possível em 2027"
+          }
+        ]
+      },
+      "explicacao": "<p>O DY-alvo Selic+prêmio (R$ 54) é o componente mais conservador porque a Selic em 14,75% é um piso temporário extremo; conforme cair para 11% em 12 meses, o preço justo sobe estruturalmente. Já os componentes relativos a pares (P/VP R$ 77 e DY R$ 76) refletem o valor justo no contexto do mercado atual. O fator de qualidade 1,04 reflete um fundo equilibrado: gestão estável e baixa alavancagem balanceiam a fragilidade do dividendoStatus e a inadimplência específica. <strong>Faixa justa R$ 76-85 com centro em R$ 80,50</strong> — cota atual de R$ 79 está praticamente no preço justo.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 81.0,
+        "faixa": [
+          77.0,
+          85.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Início do ciclo de queda de Selic (14,75% → 13% em 6m)",
+            "data": "2026-06",
+            "impactoEsperado": "+2-4% no preço via remarcação",
+            "fonte": "macro_snapshot.json (Focus BCB)",
+            "docId": null
+          },
+          {
+            "evento": "Conclusão das 2 aquisições do pipeline (R$ 40 mi)",
+            "data": "2026-07",
+            "impactoEsperado": "+1-2% via reforço de receita",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+            "docId": "1141541"
+          }
+        ],
+        "racional": "<p>Selic em pico e início do ciclo de afrouxamento favorece remarcação de CRIs longos. Fundo distribui DPS estável o que ancora preço próximo do justo.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 87.0,
+        "faixa": [
+          80.0,
+          92.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Selic projetada 11% (Focus 12m)",
+            "data": "2027-04",
+            "impactoEsperado": "Reprecificação de FIIs de papel IPCA+ longos; +5-10%",
+            "fonte": "macro_snapshot.json",
+            "docId": null
+          },
+          {
+            "evento": "Possível recovery parcial Fragnani II via RJ",
+            "data": "2027",
+            "impactoEsperado": "Reversão parcial de PDD seria R$ 15-30 mi (~+1-2%)",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+            "docId": "1141541"
+          }
+        ],
+        "racional": "<p>Cenário macro favorável (Selic caindo) compensa risco de ajuste do DPS para R$ 0,80. Preço deve convergir para faixa de R$ 85-90, próximo ao VP atual.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 90.0,
+        "faixa": [
+          82.0,
+          100.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Ciclo completo de Selic em ~10% e estabilidade IPCA 4%",
+            "data": "2028-2030",
+            "impactoEsperado": "Cota próxima ao VP/cota corrigido pelo IPCA",
+            "fonte": "Curva DI",
+            "docId": null
+          },
+          {
+            "evento": "Renovação de portfólio com novos CRIs originados a IPCA+8-10%",
+            "data": "2027-2030",
+            "impactoEsperado": "Fundo continua entregando DY 11-13% reais",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1141541)",
+            "docId": "1141541"
+          }
+        ],
+        "racional": "<p>Em horizonte longo, fundo de papel maduro tende a oscilar perto do VP/cota com rendimento estável próximo a IPCA+8% real. Risco-mãe é credit quality agregado se downturn imobiliário severo afetar mais CRIs simultaneamente.</p>"
+      }
+    },
+    "pvp": {
+      "valor": "0,94",
+      "descricao": "<p>Preço de mercado R$ 79,00 vs cota patrimonial R$ 84,44 = P/VP 0,94 (desconto de 6,3%). Modesto vs pares high yield (P/VP 0,75-0,80) mas alinhado com mediana de papel_misto (0,91).</p>",
+      "detalhes": [
+        {
+          "label": "Preço de mercado",
+          "valor": "R$ 79,00 (24/04/2026)"
+        },
+        {
+          "label": "Cota patrimonial (mar/26)",
+          "valor": "R$ 84,44"
+        },
+        {
+          "label": "Desconto",
+          "valor": "6,3%"
+        },
+        {
+          "label": "P/VP histórico (5a)",
+          "valor": "0,85-1,05 — atual está no centro do range"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "−1,84%",
+      "label": "Spread vs Selic muito comprimido",
+      "cor": "red",
+      "descricao": "<p>DY 12,91% vs Selic 14,75% = spread negativo de 184bps. Comum para FIIs de papel em pico de Selic (a renda nominal não acompanha a taxa básica), mas evidencia que o atrativo do fundo está mais no <strong>retorno total</strong> (DY + IPCA via marcação) do que no DY puro.</p>",
+      "detalhe": "Em ciclo de Selic 11% (Focus 12m), o spread positivo se reabre para ~+200bps mesmo com DPS estável"
+    },
+    "recomendacoes": null
+  },
+  "conclusao": {
+    "paragrafos": [
+      "<p>VRTA11 (Fator Verità FII) é um <strong>fundo de papel mid-grade brasileiro</strong> com 15 anos de track record sob a mesma gestora (FAR/Banco Fator). Carteira de 68 CRIs (89% do PL) extremamente pulverizada (HHI 0,018, top-10 = 32%) e indexada majoritariamente a IPCA+ (91%), com taxa média de IPCA+8,1% sobre cota patrimonial.</p>",
+      "<p>O DPS de R$ 0,85/mês está estável há 16 meses, sustentado por uma combinação de geração de caixa real (R$ 0,80) e queima moderada de reserva (R$ 0,47/cota). O gestor declarou explicitamente intervalo R$ 0,80-0,90 para o 1S2026 — sinal de transparência e comprometimento com piso.</p>",
+      "<p>Os principais riscos são: (1) o CRI Fragnani II (R$ 69,2 mi, 100% PDD) representando perda nominal de até 5,2% do PL se recovery for zero; (2) a queima da reserva sem aquisições compensatórias suficientes pode forçar ajuste do DPS para R$ 0,80 a partir de 4T2026; e (3) a queda projetada de Selic (de 14,75% para 11%) que comprime spread efetivo dos novos CRIs originados.</p>",
+      "<p>O preço justo de R$ 80,50 (faixa R$ 76-85) está praticamente alinhado com a cota atual de R$ 79 — não há desconto agressivo, mas tampouco há prêmio. Para investidor de longo prazo (5+ anos) que busca renda mensal isenta com proteção IPCA, o fundo encaixa como <strong>diversificador da fatia de papel</strong> de uma carteira que já tenha um core HG (KNCR11/KNIP11). Não é tese de upside agressivo — é hold de renda com proteção patrimonial moderada.</p>"
+    ],
+    "pontosFortes": [
+      "Diversificação real excepcional — HHI 0,018, 68 CRIs, top-10 = 32%",
+      "DPS estável em R$ 0,85 há 16 meses + reserva de R$ 0,47/cota",
+      "91% indexação IPCA+ — proteção inflacionária estrutural",
+      "Taxa de administração baixa (1% a.a., sem performance)",
+      "Track record de 15 anos da Fator no mesmo fundo",
+      "P/VP 0,94 está dentro da faixa justa — não inflado"
+    ],
+    "pontosDeAtencao": [
+      "Fragnani II em RJ (R$ 69,2 mi, 100% PDD) — risco materializado",
+      "Reserva caindo R$ 0,76 → R$ 0,47/cota em 8 meses",
+      "Selic projetada cair 375bps comprime spread em novos CRIs",
+      "30% Construção Civil + 6% Loteamentos = exposição alta a ciclo imobiliário",
+      "Gestora regional (não top-3 nacional) limita poder de origination"
+    ],
+    "conclusaoFinal": "<p>VRTA11 merece nota <strong>7,4/10 (Comprar com moderação)</strong>. É um fundo defensivo de renda IPCA+ com diversificação top de carteira, mas com risco de crédito materializado (Fragnani) e dependência de manutenção da reserva para sustentar DPS atual. Cota próxima do justo (R$ 79 vs preço justo R$ 80,50) — entrada faz sentido para construção gradual de posição em horizonte 5+ anos, com peso 5-10% da fatia de FIIs de uma carteira diversificada. Para tese de retorno total mais agressiva, fundos como DEVA11 (P/VP 0,75) ou KNCR11 (HG puro) oferecem polos mais definidos.</p>"
+  },
+  "footer": {
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 419,
+    "disclaimer": "Esta análise é baseada em documentos públicos do FundosNet e dados de mercado disponíveis até 24/04/2026. Não constitui recomendação de investimento. Rentabilidade passada não garante rentabilidade futura. Consulte sempre um assessor de investimentos antes de tomar decisões."
+  }
+}

@@ -159,7 +159,8 @@
         "obs": "Admin + Gestão (sem performance)"
       }
     ],
-    "detalhes": "<p>Estrutura padrão de FII de papel: 1,0% a.a. em taxas fixas (admin + gestão) + taxa de performance de 20% sobre o que exceder o CDI, com marca d'água. A performance é provisionada diariamente e paga semestralmente (jan e jul). Em mar/2026 a provisão acumulada de performance era de R$ 2,3 milhões — sinal de que a carteira está rendendo acima do CDI no semestre vigente.</p>"
+    "detalhes": [],
+    "observacao": "<p>Estrutura padrão de FII de papel: 1,0% a.a. em taxas fixas (admin + gestão) + taxa de performance de 20% sobre o que exceder o CDI, com marca d'água. A performance é provisionada diariamente e paga semestralmente (jan e jul). Em mar/2026 a provisão acumulada de performance era de R$ 2,3 milhões — sinal de que a carteira está rendendo acima do CDI no semestre vigente.</p>"
   },
   "portfolio": {
     "schema": "v2",
@@ -1907,8 +1908,12 @@
   },
   "tese": {
     "resumo": "<p>VGIR11 é um <strong>FII de papel CDI puro</strong> em escala madura: 57 CRIs CDI+ predominantemente residenciais, gestão ativa da Valora (originação própria), 8 anos de histórico sem defaults reportados e DPS estável em R$ 0,13/mês. A tese central: <em>quanto maior a Selic, maior o DPS</em> — a indexação 99,4% CDI faz o rendimento do fundo flutuar diretamente com o ciclo monetário. Com Selic atual em 14,75%, o fundo entrega DY de 15,6% próximo da paridade patrimonial (P/VP 1,00). Risco principal: a queda projetada de Selic para 11% em 12 meses (Focus) tende a comprimir o DPS para R$ 0,107–0,11/mês, mantida a estrutura atual.</p>",
-    "paraQuem": "<p>Investidor que <strong>quer DPS proporcional ao CDI vigente</strong> (proteção tática em ciclo de Selic alta), aceita exposição concentrada em recebíveis residenciais e em uma única gestora especializada, e tem horizonte de 12–24 meses. Bom complemento a um FII de papel IPCA (como o irmão VGIP11) para balancear hedge inflacionário e proteção a juros nominais altos.</p>",
-    "naoParaQuem": "<p>Investidor que busca <strong>renda crescente independente de Selic</strong> (DPS aqui acompanha o CDI, sem espaço para crescimento real) ou <strong>hedge inflacionário</strong> (papel CDI não protege contra IPCA — para isso, VGIP11/CVBI11/KNIP11). Também não serve para quem precisa de diversificação setorial real, dado que 86% da carteira é residencial, ou para quem evita exposição a incorporadoras mid-cap (Helbor, Tecnisa, You, Gafisa, MF7 dominam o lastro).</p>"
+    "paraQuem": [
+      "<p>Investidor que <strong>quer DPS proporcional ao CDI vigente</strong> (proteção tática em ciclo de Selic alta), aceita exposição concentrada em recebíveis residenciais e em uma única gestora especializada, e tem horizonte de 12–24 meses. Bom complemento a um FII de papel IPCA (como o irmão VGIP11) para balancear hedge inflacionário e proteção a juros nominais altos.</p>"
+    ],
+    "naoParaQuem": [
+      "<p>Investidor que busca <strong>renda crescente independente de Selic</strong> (DPS aqui acompanha o CDI, sem espaço para crescimento real) ou <strong>hedge inflacionário</strong> (papel CDI não protege contra IPCA — para isso, VGIP11/CVBI11/KNIP11). Também não serve para quem precisa de diversificação setorial real, dado que 86% da carteira é residencial, ou para quem evita exposição a incorporadoras mid-cap (Helbor, Tecnisa, You, Gafisa, MF7 dominam o lastro).</p>"
+    ]
   },
   "encaixe": {
     "schema": "v1",

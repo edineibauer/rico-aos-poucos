@@ -1,5 +1,5 @@
 {
-  "ultimaAtualizacao": "2026-04-26",
+  "ultimaAtualizacao": "2026-04-27",
   "versao": "1.0",
   "segmentos": {
     "desenvolvimento": {
@@ -13675,6 +13675,90 @@
       "nota": 7.5,
       "veredicto": "EM ANÁLISE",
       "notaGestora": 8.5
+    },
+    {
+      "id": "vrta11",
+      "ticker": "VRTA11",
+      "nome": "Fator Verità FII",
+      "gestora": "Fator Administração de Recursos",
+      "segmento": "papel-—-cri-multicategoria-(hg",
+      "subsegmento": "Papel — CRI multicategoria (HG/HY misto)",
+      "sentimento": "Neutro",
+      "dataAnalise": "26/04/2026",
+      "indicadores": {
+        "cotacao": 79.0,
+        "pvp": 0.94,
+        "dividendYield": 12.91,
+        "dividendoMensal": 0.85,
+        "patrimonioLiquido": 1316635896.64,
+        "liquidezMediaDiaria": 0,
+        "cotistas": 105131,
+        "vpCota": 84.44
+      },
+      "taxas": {
+        "administracao": null,
+        "performance": 0,
+        "benchmarkPerformance": "N/A",
+        "comentarioTaxas": "Taxa de administração baixa para o segmento; sem performance"
+      },
+      "estrategia": {
+        "resumo": "VRTA11 é uma carteira pulverizada de CRIs corporativos brasileiros indexada majoritariamente a IPCA+ (91%). A tese central é capturar o spread médio de IPCA+8,1% sobre a cota patrimonial via gestão ativa de crédito de uma gestora regional com 15 anos de track record no mesmo fundo. Diferente de fundos high yield puros (DEVA11, HCTR11), o VRTA11 tem mix de qualidade média-alta — 87,9% AAA-A- pela classificação proprietária — com bolsões de high yield localizados (5 CRIs em PDD). DPS estável (R$ 0,85/mês há 16 meses) e P/VP 0,94 oferecem porta de entrada conservadora para exposição a CRI com alguma proteção patrimonial.",
+        "ocupacao": null,
+        "focoGeografico": "",
+        "tipoAtivo": "Papel — CRI multicategoria (HG/HY misto)"
+      },
+      "riscosEspecificos": [],
+      "pontosPositivos": [
+        "Diversificação real excepcional — HHI 0,018, 68 CRIs, top-10 = 32%",
+        "DPS estável em R$ 0,85 há 16 meses + reserva de R$ 0,47/cota",
+        "91% indexação IPCA+ — proteção inflacionária estrutural",
+        "Taxa de administração baixa (1% a.a., sem performance)",
+        "Track record de 15 anos da Fator no mesmo fundo",
+        "P/VP 0,94 está dentro da faixa justa — não inflado"
+      ],
+      "conclusao": {
+        "resumo": "VRTA11 merece nota 7,4/10 (Comprar com moderação). É um fundo defensivo de renda IPCA+ com diversificação top de carteira, mas com risco de crédito materializado (Fragnani) e dependência de manutenção da reserva para sustentar DPS atual. Cota próxima do justo (R$ 79 vs preço justo R$ 80,50) — entrada faz sentido para construção gradual de posição em horizonte 5+ anos, com peso 5-10% da fatia de FIIs de uma carteira diversificada. Para tese de retorno total mais agressiva, fundos como DEVA11 (P/VP 0,75) ou KNCR11 (HG puro) oferecem polos mais definidos.",
+        "paraQuem": "Investidor de renda mensal estável que aceita oscilação de cota (sigma ~12% a.a.)",
+        "naoParaQuem": "Quem busca DPS crescente — fundo é maduro e DPS estabilizou em platô"
+      },
+      "historico": {
+        "ipoData": null,
+        "eventos": [
+          {
+            "ano": "ago/2010 — 2014",
+            "descricao": "IPO em ago/2010",
+            "impacto": "IPO e formação inicial"
+          },
+          {
+            "ano": "2019",
+            "descricao": "IPCA+6% adotado como benchmark gerencial",
+            "impacto": "Mudança para benchmark IPCA gerencial"
+          },
+          {
+            "ano": "2022 — 2024",
+            "descricao": "Selic 14,75% pressiona MTM",
+            "impacto": "Estresse de Selic e remarcação"
+          },
+          {
+            "ano": "set/2024 — abr/2026",
+            "descricao": "DPS R$ 0,85/mês há 16 meses",
+            "impacto": "Estabilização do DPS em R$ 0,85"
+          }
+        ]
+      },
+      "tags": [
+        "Papel",
+        "CRI",
+        "IPCA+",
+        "Gestão ativa",
+        "Mensal",
+        "Fator Administração de Recursos"
+      ],
+      "tempoLeitura": 10,
+      "arquivo": "vrta11/index.html",
+      "nota": 7.4,
+      "veredicto": "Comprar com moderação",
+      "notaGestora": 7.0
     },
     {
       "id": "vsho11",

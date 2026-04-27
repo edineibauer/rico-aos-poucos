@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/trbl11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2023-06-26",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:TRBL11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 76.22,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 53.37,
+    "data": "2025-07-28"
+  },
+  "maxHistorico": {
+    "valor": 102.99,
+    "data": "2024-05-20"
+  },
+  "totalPontos": 149,
+  "coletadoEm": "2026-04-27T03:02:50Z"
+}

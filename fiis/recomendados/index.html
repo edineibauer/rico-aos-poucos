@@ -296,6 +296,131 @@
             .cr-ativo-rac { grid-area: rac; }
         }
 
+        /* CENÁRIOS DE RETORNO C/M/L */
+        .cr-cenarios {
+            margin: 18px 0 22px;
+            padding: 22px 22px 18px;
+            border-radius: 22px;
+            background: linear-gradient(135deg,
+                rgba(59,130,246,0.10) 0%,
+                rgba(15,23,42,0.92) 50%,
+                rgba(15,23,42,0.96) 100%);
+            border: 1px solid rgba(59,130,246,0.30);
+            position: relative;
+            overflow: hidden;
+        }
+        .cr-cenarios::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(circle at 0% 0%, rgba(59,130,246,0.20) 0%, transparent 60%);
+        }
+        .cr-cenarios > * { position: relative; z-index: 1; }
+        .cr-cenarios-tag {
+            font-size: 0.62rem; letter-spacing: 0.16em; color: #93c5fd;
+            font-weight: 700; margin-bottom: 4px;
+        }
+        .cr-cenarios-titulo {
+            font-size: 1.05rem; font-weight: 700; color: #fff;
+            margin-bottom: 14px;
+        }
+        .cr-cenarios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 12px;
+        }
+        .cr-cenario-card {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 14px 16px;
+            display: flex; flex-direction: column; gap: 4px;
+            transition: all .18s ease;
+        }
+        .cr-cenario-card.is-foco {
+            background: rgba(139,92,246,0.10);
+            border-color: rgba(139,92,246,0.30);
+        }
+        .cr-cenario-tag {
+            font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted);
+            font-weight: 700; text-transform: uppercase;
+        }
+        .cr-cenario-horizonte {
+            font-size: 0.7rem; color: var(--dim); margin-bottom: 6px;
+        }
+        .cr-cenario-total {
+            font-size: 1.85rem; font-weight: 800;
+            font-variant-numeric: tabular-nums; line-height: 1.05;
+            letter-spacing: -0.015em;
+        }
+        .cr-cenario-total.pos { color: #6ee7b7; text-shadow: 0 0 24px rgba(110,231,183,0.25); }
+        .cr-cenario-total.neg { color: #fca5a5; }
+        .cr-cenario-total.neu { color: var(--muted); }
+        .cr-cenario-breakdown {
+            display: flex; gap: 14px; margin-top: 8px;
+            font-size: 0.78rem;
+            border-top: 1px dashed rgba(255,255,255,0.08);
+            padding-top: 8px;
+        }
+        .cr-cenario-piece { display: flex; flex-direction: column; gap: 1px; }
+        .cr-cenario-piece-tag { font-size: 0.6rem; color: var(--dim); text-transform: uppercase; letter-spacing: 0.08em; }
+        .cr-cenario-piece-val { color: var(--text); font-weight: 600; font-variant-numeric: tabular-nums; }
+        .cr-cenarios-explica {
+            margin-top: 14px;
+            font-size: 0.76rem;
+            color: var(--muted);
+            line-height: 1.55;
+        }
+        .cr-cenarios-loading {
+            font-size: 0.85rem;
+            color: var(--muted);
+            font-style: italic;
+            text-align: center;
+            padding: 20px;
+        }
+
+        /* CARD DE FECHAMENTO (depois da lista) */
+        .cr-fechamento {
+            margin-top: 18px;
+            padding: 22px 22px;
+            border-radius: 18px;
+            background: linear-gradient(135deg, rgba(16,185,129,0.10), rgba(15,23,42,0.95));
+            border: 1px solid rgba(16,185,129,0.30);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+        .cr-fechamento.foco-capital {
+            background: linear-gradient(135deg, rgba(139,92,246,0.12), rgba(15,23,42,0.95));
+            border-color: rgba(139,92,246,0.30);
+        }
+        .cr-fechamento-tag {
+            font-size: 0.62rem; letter-spacing: 0.16em; color: var(--muted);
+            font-weight: 700;
+        }
+        .cr-fechamento-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+            gap: 12px;
+        }
+        .cr-fech-bloco {
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .cr-fech-label {
+            font-size: 0.68rem; color: var(--muted);
+            text-transform: uppercase; letter-spacing: 0.06em;
+            font-weight: 600;
+        }
+        .cr-fech-val {
+            font-size: 1.6rem; font-weight: 800;
+            color: #fff; line-height: 1.1;
+            font-variant-numeric: tabular-nums;
+        }
+        .cr-fech-val.destaque { font-size: 2rem; color: #6ee7b7; text-shadow: 0 0 20px rgba(110,231,183,0.3); }
+        .cr-fech-val.destaque-cap { color: #c4b5fd; text-shadow: 0 0 20px rgba(196,181,253,0.3); }
+        .cr-fech-sub {
+            font-size: 0.7rem; color: var(--dim);
+            margin-top: 1px;
+        }
+
         /* DISCLAIMER */
         .cr-disclaimer {
             margin-top: 30px;
@@ -399,6 +524,196 @@
             return Number(v).toFixed(d).replace('.', ',');
         }
 
+        function fmtSign(v, d = 1) {
+            if (v == null || isNaN(v)) return '—';
+            const n = Number(v);
+            return (n >= 0 ? '+' : '') + n.toFixed(d).replace('.', ',') + '%';
+        }
+
+        // Cache compartilhado entre carteiras (mesmo ticker pode aparecer em várias)
+        const _fiiCache = new Map();
+        async function _fetchFii(ticker) {
+            const tk = ticker.toLowerCase();
+            if (_fiiCache.has(tk)) return _fiiCache.get(tk);
+            const promise = (async () => {
+                try {
+                    const r = await fetch(`../../data/fiis/${tk}.json`, { cache: 'no-cache' });
+                    if (!r.ok) return null;
+                    return await r.json();
+                } catch (e) { return null; }
+            })();
+            _fiiCache.set(tk, promise);
+            return promise;
+        }
+
+        function _num(v) {
+            if (v == null || v === '') return null;
+            if (typeof v === 'number') return v;
+            const s = String(v).replace(/[^\d,.\-]/g, '').replace(/\.(?=\d{3}(\D|$))/g, '').replace(',', '.');
+            const n = parseFloat(s);
+            return isNaN(n) ? null : n;
+        }
+
+        // Horizontes (anos) — médios da janela do schema Valuation v2
+        const HORIZONTES = {
+            curto: { anos: 0.5, label: 'Curto prazo', janela: '3-6 meses' },
+            medio: { anos: 2,   label: 'Médio prazo', janela: '1-2 anos' },
+            longo: { anos: 5,   label: 'Longo prazo', janela: '3-5 anos' }
+        };
+
+        async function calcularCenarios(carteira) {
+            const fundos = await Promise.all((carteira.ativos || []).map(async a => {
+                const j = await _fetchFii(a.ticker);
+                if (!j) return null;
+                const ind = j.indicadores || {};
+                const cot = _num(ind.cotacao);
+                const dy  = _num(ind.dividendYield);
+                const exp = (j.valuation && j.valuation.expectativa) || {};
+                return {
+                    ticker: a.ticker,
+                    peso: (a.peso || 0) / 100,
+                    cotacao: cot,
+                    dyAnual: dy,                 // % a.a.
+                    expCurto: _num((exp.curto || {}).precoEsperado),
+                    expMedio: _num((exp.medio || {}).precoEsperado),
+                    expLongo: _num((exp.longo || {}).precoEsperado),
+                };
+            }));
+
+            const cenarios = {};
+            for (const [hKey, hCfg] of Object.entries(HORIZONTES)) {
+                let totVal = 0, totDiv = 0, somaPeso = 0;
+                let coberturaVal = 0, coberturaDiv = 0;
+                for (const f of fundos) {
+                    if (!f) continue;
+                    // Dividendo acumulado: dy_anual × anos (não composto, suficiente para projeção)
+                    if (f.dyAnual != null) {
+                        totDiv += f.peso * f.dyAnual * hCfg.anos;
+                        coberturaDiv += f.peso;
+                    }
+                    // Valorização: (precoEsperado - cotação) / cotação
+                    const expKey = 'exp' + hKey.charAt(0).toUpperCase() + hKey.slice(1);
+                    const exp = f[expKey];
+                    if (exp != null && f.cotacao && f.cotacao > 0) {
+                        totVal += f.peso * ((exp - f.cotacao) / f.cotacao * 100);
+                        coberturaVal += f.peso;
+                    }
+                    somaPeso += f.peso;
+                }
+                cenarios[hKey] = {
+                    valorizacao: coberturaVal > 0 ? totVal : null,
+                    dividendos: coberturaDiv > 0 ? totDiv : null,
+                    total: (coberturaVal > 0 || coberturaDiv > 0)
+                        ? (coberturaVal > 0 ? totVal : 0) + (coberturaDiv > 0 ? totDiv : 0)
+                        : null,
+                    coberturaValPct: somaPeso > 0 ? coberturaVal / somaPeso : 0,
+                    coberturaDivPct: somaPeso > 0 ? coberturaDiv / somaPeso : 0,
+                    horizonte: hCfg
+                };
+            }
+            return cenarios;
+        }
+
+        function renderCenarios(carteira, cenarios, hostId) {
+            const host = document.getElementById(hostId);
+            if (!host) return;
+            const isCapital = carteira.objetivo === 'ganho_capital';
+
+            const corClasse = (v) => v == null ? 'neu' : (v >= 1 ? 'pos' : (v <= -1 ? 'neg' : 'neu'));
+
+            const cardHtml = (key) => {
+                const c = cenarios[key];
+                if (!c) return '';
+                const focoVal = isCapital ? c.total : c.dividendos;
+                const focoCor = corClasse(focoVal);
+                const focoLabel = isCapital ? 'Retorno total' : 'Renda acumulada';
+                const piece = (label, v, cor) => `
+                    <div class="cr-cenario-piece">
+                        <span class="cr-cenario-piece-tag">${label}</span>
+                        <span class="cr-cenario-piece-val ${cor || ''}">${v == null ? '—' : fmtSign(v)}</span>
+                    </div>`;
+                return `
+                    <div class="cr-cenario-card ${isCapital ? 'is-foco' : ''}">
+                        <div class="cr-cenario-tag">${c.horizonte.label}</div>
+                        <div class="cr-cenario-horizonte">${c.horizonte.janela}</div>
+                        <div class="cr-cenario-total ${focoCor}">${focoVal == null ? '—' : fmtSign(focoVal)}</div>
+                        <div class="cr-cenario-piece-tag" style="margin-top:2px">${focoLabel} estimado</div>
+                        <div class="cr-cenario-breakdown">
+                            ${piece('Valorização', c.valorizacao)}
+                            ${piece('Dividendos', c.dividendos)}
+                            ${isCapital ? '' : piece('Total', c.total)}
+                        </div>
+                    </div>`;
+            };
+
+            const explicaCapital = `
+                <strong>Como ler:</strong> retorno total = (valorização da cota até o horizonte) + (dividendos acumulados no período).
+                Curto prazo = ~6 meses · Médio = 1-2 anos · Longo = 3-5 anos. Valores são MÉDIAS PONDERADAS pelos pesos da carteira,
+                derivadas das expectativas individuais de cada FII na nossa base. Estimativas — não garantia.`;
+
+            const explicaRenda = `
+                <strong>Como ler:</strong> renda acumulada = soma dos dividendos no horizonte (DY anualizado × anos).
+                Foco da carteira é fluxo de caixa, mas mostramos também a valorização da cota como referência adicional.
+                Valores são MÉDIAS PONDERADAS pelos pesos da carteira. Estimativas — não garantia.`;
+
+            host.innerHTML = `
+                <div class="cr-cenarios-tag">EXPECTATIVA DE RETORNO</div>
+                <div class="cr-cenarios-titulo">${isCapital ? 'Cenários por horizonte — foco em ganho de capital' : 'Cenários por horizonte — foco em renda'}</div>
+                <div class="cr-cenarios-grid">
+                    ${cardHtml('curto')}
+                    ${cardHtml('medio')}
+                    ${cardHtml('longo')}
+                </div>
+                <div class="cr-cenarios-explica">${isCapital ? explicaCapital : explicaRenda}</div>
+            `;
+        }
+
+        function renderFechamento(carteira, cenarios) {
+            const isCapital = carteira.objetivo === 'ganho_capital';
+            const mp = carteira.metricasPonderadas || {};
+            const dyAnual = _num(mp.dyMedioPonderado);
+            const cMedio = cenarios.medio || {};
+            const cLongo = cenarios.longo || {};
+
+            const valDestaque = isCapital
+                ? (cMedio.total != null ? fmtSign(cMedio.total) : '—')
+                : (dyAnual != null ? fmtNum(dyAnual, 2) + '%' : '—');
+            const labelDestaque = isCapital
+                ? `Retorno total esperado · ${cMedio.horizonte ? cMedio.horizonte.janela : 'médio prazo'}`
+                : 'DY anual médio ponderado';
+            const subDestaque = isCapital
+                ? 'valorização + dividendos no médio prazo (1-2 anos)'
+                : 'média ponderada do dividend yield 12m de cada FII';
+
+            return `
+                <section class="cr-fechamento ${isCapital ? 'foco-capital' : ''}">
+                    <div class="cr-fechamento-tag">RESUMO DA CARTEIRA</div>
+                    <div class="cr-fechamento-grid">
+                        <div class="cr-fech-bloco">
+                            <span class="cr-fech-label">${labelDestaque}</span>
+                            <span class="cr-fech-val ${isCapital ? 'destaque-cap' : 'destaque'}">${valDestaque}</span>
+                            <span class="cr-fech-sub">${subDestaque}</span>
+                        </div>
+                        <div class="cr-fech-bloco">
+                            <span class="cr-fech-label">DY anual ponderado</span>
+                            <span class="cr-fech-val">${dyAnual != null ? fmtNum(dyAnual, 2) + '%' : '—'}</span>
+                            <span class="cr-fech-sub">renda mensal a.a.</span>
+                        </div>
+                        <div class="cr-fech-bloco">
+                            <span class="cr-fech-label">Retorno em 5 anos</span>
+                            <span class="cr-fech-val">${cLongo.total != null ? fmtSign(cLongo.total) : '—'}</span>
+                            <span class="cr-fech-sub">valorização + dividendos longo prazo</span>
+                        </div>
+                        <div class="cr-fech-bloco">
+                            <span class="cr-fech-label">P/VP ponderado</span>
+                            <span class="cr-fech-val">${fmtNum(mp.pvpMedioPonderado, 2)}</span>
+                            <span class="cr-fech-sub">média ponderada da carteira</span>
+                        </div>
+                    </div>
+                </section>
+            `;
+        }
+
         function renderMenu(carteiras) {
             const menu = document.getElementById('cr-menu');
             menu.innerHTML = '';
@@ -453,6 +768,7 @@
                 </div>`;
             }).join('');
 
+            const hostId = 'cr-cenarios-' + (c.id || 'x');
             root.innerHTML = `
                 <section class="cr-carteira-head">
                     <div class="cr-carteira-titulo">
@@ -483,8 +799,25 @@
                     </div>
                 </section>
 
+                <section class="cr-cenarios" id="${hostId}">
+                    <div class="cr-cenarios-loading">Calculando cenários de retorno…</div>
+                </section>
+
                 <div class="cr-ativos">${ativosHtml}</div>
+
+                <div id="${hostId}-fechamento"></div>
             `;
+
+            // Cálculo assíncrono dos cenários (busca JSONs dos FIIs em paralelo)
+            calcularCenarios(c).then(cenarios => {
+                renderCenarios(c, cenarios, hostId);
+                const fechHost = document.getElementById(hostId + '-fechamento');
+                if (fechHost) fechHost.outerHTML = renderFechamento(c, cenarios);
+            }).catch(err => {
+                console.error('Cenários falhou:', err);
+                const host = document.getElementById(hostId);
+                if (host) host.innerHTML = '<div class="cr-cenarios-loading">Não foi possível calcular cenários para esta carteira.</div>';
+            });
         }
 
         async function carregar() {

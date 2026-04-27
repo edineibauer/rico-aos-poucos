@@ -406,41 +406,234 @@
 }
 .deck-footer strong { color: var(--text-primary); }
 
-/* Mobile */
+/* Mobile — slides verticais full-screen otimizados para celular */
 @media (max-width: 720px) {
-  .slide { padding: 64px 20px 100px; justify-content: flex-start; padding-top: 80px; }
-  .slide h1 { font-size: 2rem; }
-  .slide h2 { font-size: 1.5rem; }
-  .slide-cols { grid-template-columns: 1fr; gap: 24px; }
-  .slide-kpis { grid-template-columns: repeat(2, 1fr); }
-  .pros-cons-grid { grid-template-columns: 1fr; }
-  .bar-line { grid-template-columns: 110px 1fr 50px; gap: 8px; font-size: 0.85rem; }
+  /* Top bar mais alta para acomodar barra de modos */
+  .deck-topbar {
+    padding: 10px 12px;
+    gap: 10px;
+    flex-wrap: nowrap;
+  }
+  .deck-topbar .back-link span { display: none; }
+  .deck-topbar .back-link {
+    width: 36px; height: 36px;
+    padding: 0;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+  .deck-progress { flex: 1; min-width: 0; }
+  .deck-counter { font-size: 0.75rem; }
+
+  /* Slide ocupa altura inteira da tela e padding controlado */
+  .slide {
+    min-height: 100vh;
+    min-height: 100dvh;
+    padding: 76px 18px 90px;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .slide-eyebrow {
+    font-size: 0.72rem;
+    margin-bottom: 14px;
+    padding: 4px 10px;
+  }
+  .slide h1 {
+    font-size: 1.65rem;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+  }
+  .slide h2 {
+    font-size: 1.35rem;
+    line-height: 1.25;
+    margin-bottom: 12px;
+  }
+  .slide p, .slide .lead {
+    font-size: 0.95rem;
+    line-height: 1.5;
+  }
+  .slide-cols {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .slide-cols .col-text,
+  .slide-cols .col-visual { max-width: 100%; }
+
+  /* KPIs em 2 colunas com espaçamento confortável */
+  .slide-kpis {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .slide-kpi { padding: 12px 10px; }
+  .slide-kpi .v { font-size: 1.15rem; }
+  .slide-kpi .l { font-size: 0.7rem; }
+
+  /* Big numbers menores */
+  .big-number {
+    font-size: clamp(2rem, 12vw, 3.5rem) !important;
+  }
+  .big-number small {
+    font-size: 0.75rem;
+    margin-top: 4px;
+  }
+
+  /* Pros/contras empilhados */
+  .pros-cons-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .pros-cons-grid .col { padding: 14px; }
+
+  /* Barras de concentração responsivas */
+  .bar-line {
+    grid-template-columns: 1fr;
+    gap: 6px;
+    font-size: 0.85rem;
+  }
+  .bar-line .lbl { font-weight: 600; }
+  .bar-line .pct { text-align: right; }
+
+  /* Img-slot menor em mobile */
+  .img-slot {
+    min-height: 200px;
+    padding: 16px;
+  }
+  .img-slot .label { font-size: 0.85rem; }
+  .img-slot .prompt { font-size: 0.78rem; }
+
+  /* Esconde hint e footer fixos para liberar tela */
   .deck-footer { display: none; }
   .deck-hint { display: none; }
+
+  /* Indicador de swipe no fundo da tela mobile */
+  .deck-track::after {
+    content: '⟵ deslize ⟶';
+    position: fixed;
+    bottom: 14px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.7rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.1em;
+    pointer-events: none;
+    z-index: 5;
+  }
 }
 
-/* View modes bar — chip de seleção exibido nos artigos */
+/* Mobile compacto (< 400px) */
+@media (max-width: 400px) {
+  .slide { padding: 70px 14px 80px; }
+  .slide h1 { font-size: 1.45rem; }
+  .slide h2 { font-size: 1.2rem; }
+  .slide-kpis { grid-template-columns: 1fr; gap: 8px; }
+  .slide-kpi { padding: 10px 12px; display: flex; align-items: baseline; justify-content: space-between; }
+  .slide-kpi .v { font-size: 1.1rem; }
+  .slide-kpi .l { font-size: 0.78rem; }
+}
+
+/* Touch swipe — melhora gestures em mobile */
+.deck-track {
+  touch-action: pan-x;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
+}
+.slide { scroll-snap-align: start; scroll-snap-stop: always; }
+
+/* ===========================================================
+   View Modes Bar — barra fixa no topo, ACIMA do título/capa
+   =========================================================== */
+.view-modes-bar {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: rgba(13, 17, 23, 0.92);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
 .view-modes {
   display: inline-flex;
-  gap: 6px;
-  background: var(--bg-card);
-  border: 1px solid var(--border-color);
+  gap: 4px;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.08);
   border-radius: 999px;
   padding: 4px;
-  margin: 12px 0 8px;
 }
-.view-modes a {
+.view-modes a, .view-modes button {
   display: inline-flex;
   align-items: center;
   gap: 6px;
-  padding: 6px 14px;
+  padding: 8px 16px;
   border-radius: 999px;
-  font-size: 0.85rem;
+  font-size: 0.88rem;
   text-decoration: none;
-  color: var(--text-secondary);
-  transition: var(--transition);
+  color: var(--text-secondary, #94a3b8);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+  font-weight: 500;
+  transition: all 0.15s;
   white-space: nowrap;
 }
-.view-modes a:hover { color: var(--text-primary); background: var(--bg-tertiary); }
-.view-modes a.active { background: var(--primary); color: #fff; }
-.view-modes a .ico { font-size: 1em; }
+.view-modes a:hover, .view-modes button:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+}
+.view-modes a.active, .view-modes button.active {
+  background: linear-gradient(135deg, #22d3ee, #6366f1);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(34,211,238,0.25);
+}
+.view-modes .ico { font-size: 1em; }
+
+/* Botão "Compartilhar no Instagram" separado — destaque secundário */
+.share-instagram-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(253, 29, 29, 0.20);
+}
+.share-instagram-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(253, 29, 29, 0.32);
+}
+.share-instagram-btn:active { transform: translateY(0); }
+
+/* Estado de loading enquanto gera PNGs */
+.share-instagram-btn.loading { opacity: 0.7; pointer-events: none; }
+.share-instagram-btn.loading::after {
+  content: '';
+  width: 12px; height: 12px;
+  border: 2px solid #fff;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+  margin-left: 4px;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+
+/* Mobile — barra mais compacta */
+@media (max-width: 600px) {
+  .view-modes-bar { padding: 8px 12px; gap: 8px; }
+  .view-modes a, .view-modes button { padding: 7px 12px; font-size: 0.8rem; }
+  .share-instagram-btn { padding: 7px 12px; font-size: 0.78rem; }
+}

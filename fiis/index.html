@@ -267,6 +267,54 @@
     .filter-chip:hover { border-color: var(--primary-light); color: var(--text-primary); }
     .filter-chip.active { background: var(--primary); border-color: var(--primary); color: white; }
 
+    /* QUICK FILTERS */
+    .quick-filters {
+      display: flex; flex-wrap: wrap; align-items: center;
+      gap: 6px; margin-top: 10px;
+      padding: 10px 12px;
+      background: rgba(255,255,255,0.02);
+      border: 1px solid var(--border-color);
+      border-radius: 10px;
+    }
+    .quick-filters-tag {
+      font-size: 0.58rem; letter-spacing: 0.16em;
+      color: var(--text-muted); font-weight: 700;
+      margin-right: 4px;
+    }
+    .quick-chip {
+      cursor: pointer;
+      padding: 5px 11px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 16px;
+      color: var(--text-secondary);
+      font-family: inherit;
+      font-size: 0.74rem;
+      font-weight: 600;
+      transition: all .15s;
+    }
+    .quick-chip:hover {
+      background: var(--bg-tertiary); color: var(--text-primary);
+      border-color: var(--primary-light);
+    }
+    .quick-chip.active {
+      background: linear-gradient(135deg, rgba(139,92,246,0.20), rgba(59,130,246,0.15));
+      border-color: rgba(139,92,246,0.50);
+      color: #fff;
+    }
+
+    .gestora-select {
+      width: 100%;
+      padding: 8px 12px;
+      background: var(--bg-card);
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      color: var(--text-primary);
+      font-family: inherit;
+      font-size: 0.85rem;
+    }
+    .gestora-select:focus { outline: none; border-color: var(--primary-light); }
+
     /* Filter labels */
     .filter-group-label {
       font-size: 0.7rem;
@@ -503,154 +551,181 @@
 
     /* FII Cards Grid */
     .fiis-grid {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+      gap: 14px;
     }
 
+    /* === CARD COMPACTO (REDESIGN) === */
     .fii-card {
-      display: flex;
-      flex-direction: column;
-      padding: 16px;
+      position: relative;
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-template-rows: auto auto auto;
+      gap: 4px 14px;
+      padding: 16px 18px 14px;
       background: var(--bg-card);
       border: 1px solid var(--border-color);
-      border-radius: 12px;
+      border-radius: 14px;
       text-decoration: none;
       color: inherit;
-      transition: all 0.3s ease;
-    }
-
-    .fii-card:hover {
-      border-color: var(--primary-light);
-      transform: translateY(-2px);
-    }
-
-    .fii-card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 12px;
-    }
-
-    .fii-ticker-section {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      flex-wrap: wrap;
-    }
-
-    .fii-ticker {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .fii-segmento {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 3px 8px;
-      background: var(--bg-tertiary);
-      border-radius: 6px;
-      font-size: 0.68rem;
-      color: var(--text-secondary);
-    }
-
-    .fii-badges {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-
-    .fii-sentimento {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      padding: 4px 10px;
-      border-radius: 20px;
-      font-size: 0.7rem;
-      font-weight: 600;
-    }
-
-    .fii-sentimento.otimista { background: rgba(63, 185, 80, 0.15); color: var(--bullish); }
-    .fii-sentimento.neutro { background: rgba(240, 193, 75, 0.15); color: var(--neutral); }
-    .fii-sentimento.pessimista { background: rgba(248, 81, 73, 0.15); color: var(--bearish); }
-
-    .fii-nota {
-      display: inline-flex;
-      align-items: center;
-      gap: 3px;
-      padding: 4px 8px;
-      border-radius: 6px;
-      font-size: 0.68rem;
-      font-weight: 700;
-    }
-
-    .fii-nota.alta { background: rgba(52, 211, 153, 0.15); color: #34d399; }
-    .fii-nota.media { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
-    .fii-nota.baixa { background: rgba(248, 81, 73, 0.15); color: #f85149; }
-
-    .fii-nome {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      margin-bottom: 12px;
-    }
-
-    .fii-indicadores {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 12px;
-      margin-bottom: 12px;
-    }
-
-    .indicador-item { text-align: center; }
-
-    .indicador-label {
-      font-size: 0.65rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-      margin-bottom: 2px;
-    }
-
-    .indicador-valor {
-      font-size: 0.95rem;
-      font-weight: 600;
-      color: var(--text-primary);
-    }
-
-    .indicador-valor.positivo { color: var(--bullish); }
-    .indicador-valor.negativo { color: var(--bearish); }
-
-    .fii-resumo {
-      font-size: 0.8rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-      display: -webkit-box;
-      -webkit-line-clamp: 2;
-      -webkit-box-orient: vertical;
+      transition: transform .15s ease, border-color .15s ease, background .15s ease;
       overflow: hidden;
     }
+    .fii-card::before {
+      content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+      width: 4px; background: var(--tipo-cor, #64748b);
+      transition: width .15s ease;
+    }
+    .fii-card:hover {
+      border-color: var(--tipo-cor, var(--primary-light));
+      background: var(--bg-tertiary);
+      transform: translateY(-2px);
+    }
+    .fii-card:hover::before { width: 6px; }
 
-    .fii-meta {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-top: 12px;
-      padding-top: 12px;
-      border-top: 1px solid var(--border-color);
+    /* Cores por tipo (label lateral) */
+    .fii-card.tipo-tijolo         { --tipo-cor: #10b981; }
+    .fii-card.tipo-papel          { --tipo-cor: #3b82f6; }
+    .fii-card.tipo-hibrido        { --tipo-cor: #f59e0b; }
+    .fii-card.tipo-fof            { --tipo-cor: #a78bfa; }
+    .fii-card.tipo-desenvolvimento{ --tipo-cor: #f97316; }
+
+    /* Linha 1: ticker + nota */
+    .fii-card-l1 {
+      grid-column: 1 / -1;
+      display: flex; align-items: baseline; gap: 10px;
+      margin-bottom: 2px;
+    }
+    .fii-ticker {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -0.01em;
+      line-height: 1;
+    }
+    .fii-nota {
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 6px;
+      letter-spacing: 0.02em;
+    }
+    .fii-nota.alta  { background: rgba(52, 211, 153, 0.15); color: #34d399; }
+    .fii-nota.media { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+    .fii-nota.baixa { background: rgba(248, 81, 73, 0.15); color: #f85149; }
+    .fii-tipo-tag {
+      margin-left: auto;
+      font-size: 0.6rem;
+      padding: 3px 8px;
+      border-radius: 5px;
+      background: rgba(255,255,255,0.04);
+      color: var(--tipo-cor, var(--text-muted));
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      border: 1px solid var(--border-color);
     }
 
-    .fii-tags { display: flex; gap: 4px; flex-wrap: wrap; }
+    /* Linha 2: nome curto */
+    .fii-card-l2 {
+      grid-column: 1 / -1;
+      font-size: 0.74rem;
+      color: var(--text-muted);
+      line-height: 1.3;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+    }
 
-    .fii-tag {
-      font-size: 0.6rem;
-      padding: 2px 6px;
-      background: var(--bg-tertiary);
-      border-radius: 4px;
+    /* Linha 3: indicadores destacados */
+    .fii-cot {
+      display: flex; flex-direction: column; gap: 1px;
+    }
+    .fii-cot-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.10em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .fii-cot-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: var(--text-primary);
+      font-variant-numeric: tabular-nums;
+      line-height: 1.05;
+    }
+    .fii-cot-val .fii-cot-cur {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-weight: 600;
+      margin-right: 2px;
+    }
+
+    .fii-dy {
+      display: flex; flex-direction: column; gap: 1px;
+      align-items: flex-end;
+      text-align: right;
+    }
+    .fii-dy-tag {
+      font-size: 0.58rem;
+      letter-spacing: 0.10em;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .fii-dy-val {
+      font-size: 1.35rem;
+      font-weight: 800;
+      font-variant-numeric: tabular-nums;
+      line-height: 1.05;
+      color: var(--text-primary);
+    }
+    .fii-dy-val.alto { color: #34d399; }
+    .fii-dy-val.baixo { color: var(--text-muted); }
+
+    /* Linha 4: P/VP + sentimento */
+    .fii-card-l4 {
+      grid-column: 1 / -1;
+      display: flex; align-items: center; gap: 10px;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border-color);
+      font-size: 0.72rem;
+    }
+    .fii-pvp {
+      display: inline-flex; align-items: baseline; gap: 4px;
       color: var(--text-muted);
     }
+    .fii-pvp-val {
+      font-weight: 700;
+      font-variant-numeric: tabular-nums;
+      color: var(--text-secondary);
+    }
+    .fii-pvp-val.descontado { color: #34d399; }
+    .fii-pvp-val.premium { color: #fbbf24; }
+    .fii-pvp-pct {
+      font-size: 0.62rem;
+      padding: 1px 5px;
+      border-radius: 4px;
+      margin-left: 4px;
+    }
+    .fii-pvp-pct.descontado { background: rgba(52,211,153,0.15); color: #34d399; }
+    .fii-pvp-pct.premium { background: rgba(251,191,36,0.15); color: #fbbf24; }
 
-    .fii-tempo { font-size: 0.7rem; color: var(--text-muted); }
+    .fii-sentimento {
+      margin-left: auto;
+      display: inline-flex; align-items: center; gap: 4px;
+      padding: 2px 8px;
+      border-radius: 20px;
+      font-size: 0.65rem;
+      font-weight: 600;
+    }
+    .fii-sentimento.otimista   { background: rgba(63, 185, 80, 0.15); color: var(--bullish); }
+    .fii-sentimento.neutro     { background: rgba(240, 193, 75, 0.15); color: var(--neutral); }
+    .fii-sentimento.pessimista { background: rgba(248, 81, 73, 0.15); color: var(--bearish); }
 
     /* Empty state */
     .empty-state { text-align: center; padding: 48px 20px; }
@@ -867,6 +942,19 @@
           </select>
         </div>
 
+        <!-- Filtros rápidos (chips de uma seleção combinada) -->
+        <div class="quick-filters" id="quickFilters">
+          <span class="quick-filters-tag">RÁPIDOS</span>
+          <button class="quick-chip" data-quick="descontados" title="P/VP &lt; 0.92 (cota negocia abaixo do patrimônio)">P/VP descontado</button>
+          <button class="quick-chip" data-quick="dy10" title="DY 12m ≥ 10%">DY ≥ 10%</button>
+          <button class="quick-chip" data-quick="dy12" title="DY 12m ≥ 12%">DY ≥ 12%</button>
+          <button class="quick-chip" data-quick="nota7" title="Nota da recomendação ≥ 7">Nota ≥ 7</button>
+          <button class="quick-chip" data-quick="compra" title="Veredicto COMPRA">Veredicto COMPRA</button>
+          <button class="quick-chip" data-quick="papel" title="Apenas FIIs de papel (CRI/CRA/Fiagro)">Só Papel</button>
+          <button class="quick-chip" data-quick="tijolo" title="Apenas FIIs de tijolo">Só Tijolo</button>
+          <button class="quick-chip" data-quick="grandes" title="PL ≥ R$ 500 milhões (alta liquidez)">PL ≥ R$ 500M</button>
+        </div>
+
         <!-- Painel de filtros -->
         <div class="advanced-panel" id="advancedPanel">
           <!-- Segmento -->
@@ -954,6 +1042,14 @@
               <input type="range" class="range-slider" id="plSlider" min="0" max="5000000000" step="100000000" value="0">
               <div class="range-ticks"><span>0</span><span>500M</span><span>1Bi</span><span>2Bi</span><span>3Bi</span><span>5Bi</span></div>
             </div>
+
+            <!-- Gestora -->
+            <div class="range-filter">
+              <div class="range-label">Gestora</div>
+              <select class="gestora-select" id="gestoraSelect">
+                <option value="todas">Todas as gestoras</option>
+              </select>
+            </div>
           </div>
 
           <button class="clear-filters" id="clearFilters">
@@ -1009,7 +1105,9 @@
       notaMin: 0,
       notaGestoraMin: 0,
       plMin: 0,
-      veredictos: []
+      veredictos: [],
+      gestora: 'todas',
+      quickActive: new Set()    // chips rápidos ativos
     };
     let ordenacaoAtual = { campo: 'ticker', ordem: 'asc' };
 
@@ -1017,9 +1115,31 @@
       desenvolvimento: '🏗️', tijolo: '🏢', papel: '📄', hibrido: '🔀', fof: '📊'
     };
 
+    const tipoLabels = {
+      tijolo: 'TIJOLO', papel: 'PAPEL', hibrido: 'HÍBRIDO',
+      fof: 'FoF', desenvolvimento: 'DEV'
+    };
+
     const sentimentoLabels = {
       otimista: 'Otimista', neutro: 'Neutro', pessimista: 'Pessimista'
     };
+
+    // Resolve tipo canônico a partir do segmento (key ou texto livre)
+    function resolverTipoFundo(fii) {
+      // 1. portfolio.tipoFundo se existir
+      if (fii.tipoFundo) return fii.tipoFundo;
+      // 2. segmento como key
+      const seg = fii.segmento || '';
+      if (segmentoIcons[seg]) return seg;
+      // 3. inferência por texto
+      const s = seg.toLowerCase();
+      if (/papel|cri|cra|fiagro|crédito|credito|recebíveis/.test(s)) return 'papel';
+      if (/fof|fundo de fundos/.test(s)) return 'fof';
+      if (/híbrido|hibrido|multi/.test(s)) return 'hibrido';
+      if (/desenvolv/.test(s)) return 'desenvolvimento';
+      if (/tijolo|log[íi]stica|shopping|laje|escrit[óo]rio|hotel|hospital|residencial|ag[êe]ncia|industrial|educa|hibr/.test(s)) return 'tijolo';
+      return 'tijolo';
+    }
 
     const veredictoMap = {
       'COMPRA': 'COMPRA',
@@ -1037,6 +1157,7 @@
         const response = await fetch('../data/fiis.json');
         if (!response.ok) throw new Error('Erro ao carregar dados');
         fiisData = await response.json();
+        popularGestoras();
         renderizarFiis();
       } catch (error) {
         document.getElementById('fiisContainer').innerHTML = `
@@ -1047,6 +1168,21 @@
           </div>
         `;
       }
+    }
+
+    function popularGestoras() {
+      const sel = document.getElementById('gestoraSelect');
+      if (!sel || !fiisData) return;
+      const gestoras = new Map(); // nome → contagem
+      fiisData.fiis.forEach(f => {
+        const g = (f.gestora || '').trim();
+        if (!g) return;
+        gestoras.set(g, (gestoras.get(g) || 0) + 1);
+      });
+      const ordenadas = Array.from(gestoras.entries())
+        .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
+      sel.innerHTML = '<option value="todas">Todas as gestoras (' + fiisData.fiis.length + ')</option>'
+        + ordenadas.map(([nome, n]) => `<option value="${nome}">${nome} (${n})</option>`).join('');
     }
 
     function filtrarFiis(fiis) {
@@ -1094,6 +1230,26 @@
         resultado = resultado.filter(f => {
           const grupo = veredictoMap[f.veredicto] || 'OUTRO';
           return filtros.veredictos.includes(grupo);
+        });
+      }
+
+      if (filtros.gestora && filtros.gestora !== 'todas') {
+        resultado = resultado.filter(f => (f.gestora || '').trim() === filtros.gestora);
+      }
+
+      // Filtros rápidos (combinam aditivamente — todos precisam passar)
+      const quick = filtros.quickActive;
+      if (quick.size > 0) {
+        resultado = resultado.filter(f => {
+          if (quick.has('descontados') && !(f.indicadores.pvp < 0.92)) return false;
+          if (quick.has('dy10') && !(f.indicadores.dividendYield >= 10)) return false;
+          if (quick.has('dy12') && !(f.indicadores.dividendYield >= 12)) return false;
+          if (quick.has('nota7') && !((f.nota || 0) >= 7)) return false;
+          if (quick.has('compra') && (veredictoMap[f.veredicto] || 'OUTRO') !== 'COMPRA') return false;
+          if (quick.has('papel')  && resolverTipoFundo(f) !== 'papel')  return false;
+          if (quick.has('tijolo') && resolverTipoFundo(f) !== 'tijolo') return false;
+          if (quick.has('grandes') && !((f.indicadores.patrimonioLiquido || 0) >= 500_000_000)) return false;
+          return true;
         });
       }
 
@@ -1169,54 +1325,57 @@
       }
 
       container.innerHTML = fiisPagina.map(fii => {
-        const segmentoIcon = segmentoIcons[fii.segmento] || '📊';
-        const segmentoNome = fiisData.segmentos[fii.segmento]?.nome || fii.segmento;
+        const tipo = resolverTipoFundo(fii);
+        const tipoLabel = tipoLabels[tipo] || tipo.toUpperCase();
         const sentimentoLabel = sentimentoLabels[fii.sentimento] || fii.sentimento;
-        const pvpClass = fii.indicadores.pvp < 1 ? 'negativo' : '';
-        const dyClass = fii.indicadores.dividendYield >= 10 ? 'positivo' : '';
         const nota = fii.nota || 0;
         const notaClass = getNotaClass(nota);
 
+        const cot = fii.indicadores.cotacao;
+        const pvp = fii.indicadores.pvp;
+        const dy  = fii.indicadores.dividendYield;
+        const dyClass = dy >= 12 ? 'alto' : (dy < 8 ? 'baixo' : '');
+        // P/VP: descontado se < 0.92, premium se > 1.05
+        let pvpClass = '', pvpPctClass = '', pvpPctTxt = '';
+        if (pvp != null) {
+          const desc = (1 - pvp) * 100;
+          if (pvp < 0.92) {
+            pvpClass = 'descontado'; pvpPctClass = 'descontado';
+            pvpPctTxt = '−' + desc.toFixed(0) + '%';
+          } else if (pvp > 1.05) {
+            pvpClass = 'premium'; pvpPctClass = 'premium';
+            pvpPctTxt = '+' + Math.abs(desc).toFixed(0) + '%';
+          }
+        }
+
         return `
-          <a href="${fii.arquivo}" class="fii-card">
-            <div class="fii-card-header">
-              <div class="fii-ticker-section">
-                <span class="fii-ticker">${fii.ticker}</span>
-                <span class="fii-segmento">${segmentoIcon} ${segmentoNome}</span>
-              </div>
-              <div class="fii-badges">
-                <span class="fii-nota ${notaClass}">${nota.toFixed(1)}</span>
-                <span class="fii-sentimento ${fii.sentimento}">${sentimentoLabel}</span>
-              </div>
+          <a href="${fii.arquivo}" class="fii-card tipo-${tipo}">
+            <div class="fii-card-l1">
+              <span class="fii-ticker">${fii.ticker}</span>
+              <span class="fii-nota ${notaClass}">${nota.toFixed(1)}</span>
+              <span class="fii-tipo-tag">${tipoLabel}</span>
             </div>
 
-            <div class="fii-nome">${fii.nome} · <span style="color:var(--text-muted);font-size:0.75rem">${fii.gestora}</span></div>
-
-            <div class="fii-indicadores">
-              <div class="indicador-item">
-                <div class="indicador-label">Cotação</div>
-                <div class="indicador-valor">R$ ${fii.indicadores.cotacao.toFixed(2)}</div>
-              </div>
-              <div class="indicador-item">
-                <div class="indicador-label">P/VP</div>
-                <div class="indicador-valor ${pvpClass}">${fii.indicadores.pvp.toFixed(2)}</div>
-              </div>
-              <div class="indicador-item">
-                <div class="indicador-label">DY</div>
-                <div class="indicador-valor ${dyClass}">${fii.indicadores.dividendYield.toFixed(1)}%</div>
-              </div>
-              <div class="indicador-item">
-                <div class="indicador-label">Dividendo</div>
-                <div class="indicador-valor">R$ ${fii.indicadores.dividendoMensal.toFixed(2)}</div>
-              </div>
+            <div class="fii-card-l2" title="${fii.nome} · ${fii.gestora}">
+              ${fii.nome}${fii.gestora ? ' · ' + fii.gestora : ''}
             </div>
 
-            <p class="fii-resumo">${fii.conclusao.resumo}</p>
+            <div class="fii-cot">
+              <span class="fii-cot-tag">Cotação</span>
+              <span class="fii-cot-val"><span class="fii-cot-cur">R$</span>${cot.toFixed(2).replace('.', ',')}</span>
+            </div>
 
-            <div class="fii-meta">
-              <div class="fii-tags">
-                ${fii.tags.slice(0, 3).map(tag => `<span class="fii-tag">${tag}</span>`).join('')}
-              </div>
+            <div class="fii-dy">
+              <span class="fii-dy-tag">DY 12m</span>
+              <span class="fii-dy-val ${dyClass}">${dy.toFixed(1).replace('.', ',')}%</span>
+            </div>
+
+            <div class="fii-card-l4">
+              <span class="fii-pvp">
+                P/VP <span class="fii-pvp-val ${pvpClass}">${pvp.toFixed(2).replace('.', ',')}</span>
+                ${pvpPctTxt ? `<span class="fii-pvp-pct ${pvpPctClass}">${pvpPctTxt}</span>` : ''}
+              </span>
+              <span class="fii-sentimento ${fii.sentimento}">${sentimentoLabel}</span>
             </div>
           </a>
         `;
@@ -1268,6 +1427,8 @@
       if (filtros.notaGestoraMin > 0) count++;
       if (filtros.plMin > 0) count++;
       if (filtros.veredictos.length > 0) count++;
+      if (filtros.gestora && filtros.gestora !== 'todas') count++;
+      count += filtros.quickActive.size;
       return count;
     }
 
@@ -1399,6 +1560,31 @@
       renderizarFiis();
     });
 
+    // Filtros rápidos (chips)
+    document.getElementById('quickFilters').addEventListener('click', (e) => {
+      const btn = e.target.closest('.quick-chip');
+      if (!btn) return;
+      const k = btn.dataset.quick;
+      if (filtros.quickActive.has(k)) {
+        filtros.quickActive.delete(k);
+        btn.classList.remove('active');
+      } else {
+        filtros.quickActive.add(k);
+        btn.classList.add('active');
+      }
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
+    // Dropdown de gestora — populado quando os dados carregam
+    document.getElementById('gestoraSelect').addEventListener('change', (e) => {
+      filtros.gestora = e.target.value;
+      paginaAtual = 1;
+      atualizarBadge();
+      renderizarFiis();
+    });
+
     // Clear filters
     document.getElementById('clearFilters').addEventListener('click', () => {
       filtros.segmento = 'todos';
@@ -1409,6 +1595,11 @@
       filtros.notaGestoraMin = 0;
       filtros.plMin = 0;
       filtros.veredictos = [];
+      filtros.gestora = 'todas';
+      filtros.quickActive.clear();
+      document.querySelectorAll('.quick-chip').forEach(c => c.classList.remove('active'));
+      const sel = document.getElementById('gestoraSelect');
+      if (sel) sel.value = 'todas';
       paginaAtual = 1;
 
       // Reset segmento chips

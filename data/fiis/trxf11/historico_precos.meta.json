@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/trxf11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2020-01-20",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:TRXF11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 91.77,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 91.46,
+    "data": "2026-03-30"
+  },
+  "maxHistorico": {
+    "valor": 115.7117,
+    "data": "2020-02-24"
+  },
+  "totalPontos": 328,
+  "coletadoEm": "2026-04-27T01:14:06Z"
+}

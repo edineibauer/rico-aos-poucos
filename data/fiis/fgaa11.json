@@ -1,0 +1,605 @@
+{
+  "meta": {
+    "ticker": "FGAA11",
+    "nome": "FG/Agro Fundo de Investimento nas Cadeias Produtivas Agroindustriais",
+    "nomeExtra": "(FIAGRO-Imobiliário de CRAs sucroenergéticos)",
+    "segmento": "FIAGRO - Papel (CRAs agroindustriais)",
+    "badges": [
+      "FIAGRO-Imobiliário",
+      "CRA 77% + CRI + LCA/LCI",
+      "Gestora FG/A - Ribeirão Preto"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 235
+  },
+  "seo": {
+    "title": "FGAA11 - Análise Completa | FG/Agro FIAGRO",
+    "description": "Análise do FGAA11: FIAGRO de CRAs sucroenergéticos, PL R$425 Mi, DY 15,9% isento, P/VP 0,92, ressalva da auditoria com Virgo Securitizadora.",
+    "keywords": "FGAA11, FG/Agro, FIAGRO, FG/A Gestora, BRL Trust, CRA, agronegócio, sucroenergético, Ribeirão Preto, Apex",
+    "ogTitle": "FGAA11 - FG/Agro FIAGRO | Análise Completa",
+    "ogDescription": "FIAGRO com 77% em CRAs de usinas sucroenergéticas, 15 devedores, DY ~15,9% isento. Ressalva da BDO sobre CRAs da Virgo Securitizadora.",
+    "twitterTitle": "FGAA11 - FG/Agro FIAGRO",
+    "twitterDescription": "FIAGRO-Imobiliário com foco em CRAs do agro sucroenergético. DY 15,9% isento, P/VP 0,92, opinião de auditoria com ressalva."
+  },
+  "indicadores": {
+    "cotacao": 8.65,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.92,
+    "pvpDesconto": "8% de desconto sobre o VP",
+    "dividendYield": 15.95,
+    "dividendoMensal": 0.115,
+    "dividendoAnual": 1.38,
+    "patrimonioLiquido": "R$ 425,6 Mi",
+    "vpCota": 9.45,
+    "cotistas": 53070,
+    "ocupacao": 100.0,
+    "numImoveis": 0
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": null,
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">FGAA11</strong> é um <strong class=\"text-amber-400\">FIAGRO-Imobiliário</strong> gerido pela FG/A Gestora de Recursos (Ribeirão Preto/SP) e administrado pela BRL Trust/Apex. A carteira de R$ 425,6 milhões (mar/2026) é composta por <strong class=\"text-blue-400\">Certificados de Recebíveis do Agronegócio (CRAs)</strong> de 15 devedores, com forte concentração no setor <strong class=\"text-amber-400\">sucroenergético (62%)</strong> — usinas como Alcoeste, WD Agroindustrial, Jalles Machado (JALL3), Lins, Batatais, Sonora, Santa Fé e UISA.</p><p>Do lado dos números, o fundo negocia com <strong class=\"text-emerald-400\">P/VP de 0,92</strong> (R$ 8,65 vs. VP R$ 9,45) e distribui <strong class=\"text-emerald-400\">R$ 0,115/cota (~15,95% a.a. isento)</strong>, o equivalente bruto a ~142% do CDI após a última redução (abr/2026). Os pontos mais críticos são a <strong class=\"text-red-400\">opinião de auditoria com ressalva</strong> emitida pela BDO RCS para o exercício de 2024/25, em razão de cinco CRAs estruturados na <strong class=\"text-red-400\">Virgo Securitizadora</strong> cujos fundos de reserva foram identificados como desenquadrados, a <strong class=\"text-amber-400\">troca de auditor</strong> (BDO assumiu em 2025) e a <strong class=\"text-amber-400\">queda recente no dividendo</strong> (R$ 0,12 → R$ 0,115 em abr/2026).</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 425,6 Mi",
+      "detalhe": "VP/cota: R$ 9,45",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,115",
+      "valorSufixo": "/mês",
+      "detalhe": "~R$ 1,38/ano | DY 15,95% isento",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Carteira",
+      "valor": "77% CRA",
+      "detalhe": "15 devedores, 100% adimplente",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "53.070",
+      "detalhe": "45.025.186 cotas emitidas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Opinião de auditoria com ressalva (BDO - exercício 2024/25)",
+      "descricao": "A BDO RCS emitiu opinião COM RESSALVAS sobre as demonstrações financeiras findas em 30/06/2025 porque a Virgo Securitizadora não concedeu acesso às informações necessárias para auditar cinco CRAs (CRA022001P6, CRA022002MH, CRA022007KJ, CRA02200BQA e CRA024007EP), além de haver alocações pontuais de recursos do fundo de reserva em desconformidade. A gestão notificou formalmente a Virgo e a CVM em 28/08/2025 e iniciou cronograma de regularização.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração setorial em sucroenergético (62% do PL)",
+      "descricao": "O portfólio tem 62,2% alocado no setor sucroenergético, com 7 usinas (Alcoeste, WD, Jalles, Lins, Batatais, Sonora, Santa Fé, UISA). Choque de preços de açúcar, etanol ou ATR afeta simultaneamente múltiplos devedores. Os dois maiores — WD (14,3%) e Alcoeste (13,7%) — juntos representam 28% do PL.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Apenas 45% da carteira com rating público",
+      "descricao": "55% dos CRAs/CRIs não têm rating público. O rating é apenas 'indicativo interno' da gestora, o que reduz transparência comparada a pares como KNCA11, RZAG11 e XPCA11. Do que tem rating: AAA 17,9%, AA 18,7%, A 7,1%, BBB 7,3%, BB 4,4% (indicativos).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Redução sucessiva no dividendo",
+      "descricao": "O dividendo caiu de R$ 0,12 (set/2024–mar/2026) para R$ 0,115 em abr/2026 (-4,2%). Em dez/2025 houve ajuste negativo pontual de -R$ 0,12 (rentabilidade mensal) por reclassificação contábil. O 2S2025 foi ancorado em política de 'dividendo base' fixo de R$ 0,12, maquiando a volatilidade real do caixa.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca de auditor independente em 2025",
+      "descricao": "O auditor das DFs 2024 (exercício findo em 30/06/2024) era outro; a BDO RCS assumiu em 2025 e, no primeiro exercício, já emitiu opinião com ressalva. Troca de auditor em paralelo a apontamentos de desenquadramento aumenta o risco de governança.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca de administrador fiduciário (Kanastra → Apex/BRL Trust)",
+      "descricao": "Em set/2024 houve troca do diretor responsável, com Marcelo Vieira Francisco assumindo pela Apex Holding (que absorveu a BRL Trust DTVM). Essa transição para o Apex Group envolveu mudanças de fornecedores e sistemas ainda em curso.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Duration curta (2,08) e pressão de reinvestimento",
+      "descricao": "Duration média da carteira é de apenas 2,08 anos. Em ciclo de queda da Selic (atualmente 15%, mas com expectativa de cortes), os CRAs que vencerem terão de ser reinvestidos com spreads menores, pressionando o resultado futuro.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de performance paga mesmo com DF ressalvada",
+      "descricao": "O fundo paga 10% do que exceder 100% do CDI como performance. No exercício 2024/25 foram pagos R$ 1,17 mi de performance (além de R$ 4,4 mi de gestão + R$ 561 mil de admin), totalizando custo-gestão de ~R$ 6 mi/ano (~1,41% do PL) — alto para um FIAGRO de papel com problemas de auditoria.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "FG/A Gestora de Recursos Ltda.",
+    "nota": 6.0,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Sede",
+        "valor": "Ribeirão Preto/SP (matriz) + São Paulo"
+      },
+      {
+        "label": "Experiência",
+        "valor": "20+ anos no agro"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">FG/A Gestora de Recursos</strong> é uma gestora independente sediada em Ribeirão Preto (SP), com escritório no Itaim Bibi (São Paulo). Possui autorização da CVM desde 2011 (Ato Declaratório nº 11.581). Nas comunicações, informa ter estruturado mais de <strong class=\"text-emerald-400\">R$ 30 bilhões no agronegócio</strong> em 20+ anos de atuação, com forte especialização em crédito corporativo sucroenergético — em que atende empresas de faturamento entre R$ 500 mi e R$ 1 bi.</p><p>A administração passou por reorganização: o fundo é administrado pela <strong class=\"text-blue-400\">BRL Trust DTVM</strong>, que foi absorvida pelo <strong class=\"text-blue-400\">Apex Group</strong>. O diretor responsável atual é Marcelo Vieira Francisco (ex-Kanastra e ex-Santander SSS), em função desde 02/09/2024. Auditor: <strong class=\"text-amber-400\">BDO RCS</strong> (substituiu o auditor anterior em 2025).</p>",
+    "link": "https://fga.com.br/fgaa11"
+  },
+  "taxas": {
+    "subtitulo": "Taxas elevadas para FIAGRO de papel; performance cobrada sobre CDI",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Gestão",
+        "valor": "1,15% a.a.",
+        "detalhe": "Sobre PL (mín. R$ 15 mil/mês IPCA)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Administração",
+        "valor": "Incluída",
+        "detalhe": "Dentro da taxa de gestão consolidada",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10% sobre 100% CDI",
+        "detalhe": "Prov. mensal, paga semestral",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "~R$ 1,0 Mi",
+        "detalhe": "Boa para FIAGRO (R$ 977 mil/dia)",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM S.A. (Apex Group)"
+      },
+      {
+        "label": "Gestor",
+        "valor": "FG/A Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "BDO RCS Auditores (desde 2025 - c/ ressalva)"
+      },
+      {
+        "label": "Coordenador Líder (IPO)",
+        "valor": "XP Investimentos"
+      },
+      {
+        "label": "Início",
+        "valor": "04/01/2022"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidores em Geral"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Nº de Papéis",
+        "valor": "30+ CRAs/CRIs + CPR/LCA"
+      },
+      {
+        "label": "Devedores",
+        "valor": "15 empresas"
+      },
+      {
+        "label": "Inadimplência",
+        "valor": "0,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Duration Carteira",
+        "valor": "2,08 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRA (Agronegócio)",
+        "CPR Financeira",
+        "CRI (Imobiliário)",
+        "Ativos de Liquidez (LCA/LCI/Caixa)"
+      ],
+      "data": [
+        75.6,
+        19.4,
+        3.5,
+        1.5
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#8b5cf6",
+        "#f59e0b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "WD Agroindustrial (João Pinheiro/MG)",
+        "setor": "Sucroenergético",
+        "receita": "14,3% do PL",
+        "rating": "CDI + 3,4% (duration 1,60)",
+        "ratingCor": "amber",
+        "risco": "Sem rating público",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Alcoeste Bioenergia (Fernandópolis/SP)",
+        "setor": "Sucroenergético",
+        "receita": "13,7% do PL",
+        "rating": "CDI + 4,2% (duration 1,94)",
+        "ratingCor": "amber",
+        "risco": "Sem rating público",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Sertran Transportes (Ribeirão Preto/SP)",
+        "setor": "Transporte do Agro",
+        "receita": "9,3% do PL",
+        "rating": "CDI + 4,0% (duration 2,18)",
+        "ratingCor": "amber",
+        "risco": "Sem rating público",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Jalles Machado (JALL3 - Goianésia/GO)",
+        "setor": "Sucroenergético",
+        "receita": "7,9% do PL",
+        "rating": "AAA (S&P) - CDI + 1,0%",
+        "ratingCor": "emerald",
+        "risco": "Baixo (capital aberto)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Zinho Alimentos (Ribeirão Preto/SP)",
+        "setor": "Alimentício",
+        "receita": "7,3% do PL",
+        "rating": "CPR CDI + 3,5% (duration 3,1)",
+        "ratingCor": "amber",
+        "risco": "Sem rating público",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Sonora Estância (Sonora/MS)",
+        "setor": "Sucroenergético",
+        "receita": "6,9% do PL",
+        "rating": "A (S&P) - CDI + 2,0%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Lins Agroindustrial (Lins/SP)",
+        "setor": "Sucroenergético",
+        "receita": "6,2% do PL",
+        "rating": "A+ (S&P) - CDI + 1,5%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Grupo ABBA (Aparecida de Goiânia/GO)",
+        "setor": "Conglomerado Agro",
+        "receita": "5,4% do PL",
+        "rating": "CDI + 4,0% (duration 1,74)",
+        "ratingCor": "amber",
+        "risco": "Sem rating público",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoNota": "<p>O portfólio do FGAA11 é composto por <strong class=\"text-blue-400\">15 devedores corporativos</strong> estruturados em cerca de 30 CRAs, 3 CRIs e 4 CPRs, além de LCA/LCI como liquidez. O setor <strong class=\"text-amber-400\">sucroenergético concentra 62,2%</strong> do PL (oito usinas: Alcoeste, WD, Jalles, Lins, Batatais, Sonora, Santa Fé, UISA). Os maiores devedores são <strong class=\"text-amber-400\">WD Agroindustrial (14,3%)</strong> e <strong class=\"text-amber-400\">Alcoeste (13,7%)</strong>, ambos sem rating público.</p><p>Do universo com classificação pública: <strong class=\"text-emerald-400\">AAA</strong> representa 17,9% (Jalles Machado); <strong class=\"text-emerald-400\">AA</strong> 18,7% (Batatais); <strong class=\"text-emerald-400\">A</strong> 7,1% (Lins e Sonora); <strong class=\"text-amber-400\">BBB</strong> 7,3% (UISA); e 45% não possui rating público, sendo classificado apenas internamente. O spread médio é de ~CDI + 3,0% a.a., com taxas variando de CDI + 1,0% (Jalles) a CDI + 6,0% (WD subordinado), concentrados na faixa 2-4% (86,9% dos ativos). A carteira está <strong class=\"text-emerald-400\">100% adimplente</strong> desde o IPO, com duration média de 2,08 anos e 77% de originação própria da FG/A.</p>"
+  },
+  "timeline": {
+    "subtitulo": "De IPO em 2022 a FIAGRO pioneiro em recompra de cotas",
+    "periodos": [
+      {
+        "periodo": "Jan/2022",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 04/01/2022 como FIAGRO-Imobiliário. Oferta primária (1ª emissão) coordenada pela XP Investimentos sob CVM 400, até R$ 350 mi a R$ 10,00/cota, com mínimo de R$ 70 mi.",
+        "pontos": [
+          "<strong>Registro CVM:</strong> out/2021",
+          "Início de funcionamento: 04/01/2022",
+          "Aplicação mínima inicial: R$ 10 mil (1.000 cotas)"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "MONTAGEM DA CARTEIRA",
+        "cor": "blue",
+        "descricao": "Alocação progressiva em CRAs do agronegócio, com foco em CRAs sucroenergéticos emitidos por Virgo, Eco Agro, Vert e Opea. Série iniciais: CRA022001P6, CRA022002MH, CRA022008CB (Jalles), CRA022007KJ (Alcoeste).",
+        "pontos": [
+          "Primeiras operações com Virgo Securitizadora",
+          "CRA Jalles Machado (AAA S&P) como âncora"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "2ª/3ª EMISSÕES",
+        "cor": "blue",
+        "descricao": "Novas emissões para capitalizar o fundo, atingindo 45.081.449 cotas. Integralização adicional de R$ 105,2 mi no exercício 2023/24 (saldo de cotas integralizadas passa a R$ 446,2 mi).",
+        "pontos": [
+          "PL sai de R$ 327 mi (jun/23) para R$ 432,8 mi (jun/24)",
+          "Coordenador: XP + Participantes"
+        ]
+      },
+      {
+        "periodo": "Set/2024",
+        "label": "TROCA DE ADMINISTRADOR",
+        "cor": "amber",
+        "descricao": "Marcelo Vieira Francisco assume como Diretor Responsável pela BRL Trust DTVM (Apex Group) em 02/09/2024, sucedendo equipe anterior vinculada à Kanastra e Santander SSS.",
+        "pontos": [
+          "Apex Holding absorve a BRL Trust DTVM",
+          "Transição operacional com fornecedores"
+        ]
+      },
+      {
+        "periodo": "Mar/2025",
+        "label": "PROGRAMA DE AMORTIZAÇÃO",
+        "cor": "amber",
+        "descricao": "Fundo inicia programa extraordinário de amortização de até R$ 32,46 mi para reduzir o desconto sobre o VP. Quatro parcelas mensais foram pagas (R$ 10,8 mi totais, equivalente a R$ 0,24/cota).",
+        "pontos": [
+          "<strong>Março:</strong> R$ 0,06/cota (R$ 2,7 mi)",
+          "Substituído pelo programa de recompra em jul/25"
+        ]
+      },
+      {
+        "periodo": "Jul-Ago/2025",
+        "label": "RECOMPRA APROVADA",
+        "cor": "emerald",
+        "descricao": "Consulta formal aprovada em 29/08/2025 por quórum qualificado (25%+) com três pautas: inclusão da recompra no regulamento (31,16%), adequação à CVM 214 (30,55% e 30,98%).",
+        "pontos": [
+          "<strong>Recompra</strong> limitada a 10% das cotas em 12 meses",
+          "Compras apenas ABAIXO do VP, com cancelamento das cotas",
+          "Ampliação para CPR Financeira e CDCA"
+        ]
+      },
+      {
+        "periodo": "Ago/2025",
+        "label": "INCIDENTE VIRGO",
+        "cor": "amber",
+        "descricao": "Gestão identifica, em agosto/2025, alocações pontuais de recursos dos fundos de reserva em desconformidade em CRAs da Virgo Securitizadora. Notificação formal enviada à securitizadora e CVM em 28/08/2025.",
+        "pontos": [
+          "Operações seguem 100% adimplentes",
+          "Recomposição solicitada formalmente",
+          "Monitoramento contínuo"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "RESSALVA DA AUDITORIA",
+        "cor": "red",
+        "descricao": "BDO RCS (novo auditor, que substituiu a auditoria anterior) emite opinião COM RESSALVAS sobre as DFs findas em 30/06/2025. Cinco CRAs da Virgo não puderam ser auditados por falta de acesso a informações.",
+        "pontos": [
+          "CRAs impactados: CRA022001P6, CRA022002MH, CRA022007KJ, CRA02200BQA, CRA024007EP",
+          "Patrimônios separados da Virgo não auditados",
+          "Resposta à B3/CVM em 04/11/2025"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "AJUSTE NEGATIVO",
+        "cor": "amber",
+        "descricao": "Rentabilidade efetiva mensal fecha em -R$ 0,12/cota em dez/2025 (reclassificação contábil). Ano fiscal muda para encerrar em 31/12 (anteriormente 30/06). Dividendo base semestral mantido em R$ 0,12.",
+        "pontos": [
+          "Queima gradual de 56 mil cotas via recompra",
+          "Cotas em circulação: 45.025.186"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "PL R$ 425,6 mi, VP R$ 9,45, 53.070 cotistas. Dividendo reduzido para R$ 0,115/cota (abr/2026, -4,2% vs R$ 0,12). Carteira 100% adimplente, 77% em CRA + 19% CPR Zinho + 3,5% CRI.",
+        "pontos": [
+          "<strong>P/VP 0,92</strong>",
+          "DY 15,95% isento",
+          "Duration: 2,08 anos"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">FGAA11</strong> nasceu em jan/2022 como um dos FIAGROs de papel pioneiros pós-regulamentação CVM 39/2021, capitalizado via XP Investimentos. A estratégia é inequívoca: crédito corporativo para <strong class=\"text-emerald-400\">empresas de médio porte do agro</strong>, com especialização histórica da FG/A em <strong class=\"text-emerald-400\">usinas sucroenergéticas de faturamento R$ 500 mi–R$ 1 bi</strong>. O fundo multiplicou patrimônio em duas emissões e chegou a R$ 446 mi integralizados.</p><p>O ano de 2025, porém, foi marcado por três eventos de governança: troca de administrador (BRL Trust → Apex), troca de auditor (BDO RCS) e, em paralelo, identificação de <strong class=\"text-red-400\">irregularidades na Virgo Securitizadora</strong> que resultaram em <strong class=\"text-red-400\">ressalva formal da auditoria</strong> sobre 5 CRAs (~R$ 70 mi). A gestão respondeu com programa de amortização (R$ 10,8 mi em 4 parcelas), posterior aprovação de <strong class=\"text-emerald-400\">recompra de cotas</strong> em ago/2025 e redução do dividendo para R$ 0,115/cota em abr/2026. A carteira segue 100% adimplente em termos de fluxo, mas o contexto regulatório exige acompanhamento próximo.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota (desde IPO)",
+        "valor": "-13,5%",
+        "detalhe": "R$ 10,00 → R$ 8,65 (ex-dividendos)"
+      },
+      {
+        "label": "PL",
+        "valor": "R$ 425,6 Mi",
+        "detalhe": "De R$ 327 mi (jun/23) para R$ 425 mi"
+      },
+      {
+        "label": "Distribuído 2024/25",
+        "valor": "R$ 59,7 Mi",
+        "detalhe": "~98% do resultado do exercício"
+      },
+      {
+        "label": "Cotistas",
+        "valor": "53.070",
+        "detalhe": "97,4% pessoas físicas"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">FGAA11</strong> se sustenta em quatro pilares: (i) <strong class=\"text-emerald-400\">isenção de IR</strong> sobre os rendimentos mensais para PF residente, equivalente a ~142% do CDI tributável; (ii) <strong class=\"text-emerald-400\">especialização setorial</strong> da FG/A no agro sucroenergético, com 20+ anos de track record e R$ 30 bi estruturados; (iii) <strong class=\"text-emerald-400\">P/VP 0,92</strong>, com mecanismo formal de recompra aprovado em ago/2025 que tende a fazer o preço convergir ao VP; e (iv) <strong class=\"text-emerald-400\">carteira 100% adimplente</strong> desde o IPO.</p><p>Como contrapartida, o fundo carrega <strong class=\"text-red-400\">ressalva formal de auditoria</strong> (BDO 2024/25) por opacidade da Virgo Securitizadora, <strong class=\"text-red-400\">concentração setorial em sucroenergético (62%)</strong> sensível a preços de açúcar/etanol, e <strong class=\"text-amber-400\">taxas totais elevadas</strong> (gestão 1,15% + performance 10% sobre 100% CDI) para um FIAGRO de papel.</p>",
+    "paraQuem": [
+      "<strong>Investidores PF</strong> que buscam renda mensal <strong>isenta de IR</strong> com DY atrativo (~15,9%) e aceitam o prêmio de risco do crédito corporativo agro",
+      "Perfis que compreendem e aceitam a <strong>concentração em sucroenergético</strong> e acreditam na resiliência estrutural do setor brasileiro de cana",
+      "Quem busca diversificação fora dos FIIs tradicionais de tijolo e papel imobiliário, com exposição direta ao <strong>agronegócio</strong>"
+    ],
+    "naoParaQuem": [
+      "Quem não tolera <strong>ressalva de auditoria</strong> vigente (BDO 2024/25) nem ambiguidade sobre 5 CRAs da Virgo Securitizadora",
+      "Perfis que exigem <strong>rating público</strong> em 100% dos ativos — aqui 55% da carteira tem apenas rating indicativo interno",
+      "Investidores focados em <strong>previsibilidade de dividendo</strong> — o fundo já teve ajuste negativo (-R$ 0,12 em dez/2025) e reduziu o mensal de R$ 0,12 para R$ 0,115 em abr/2026",
+      "Quem não aceita <strong>concentração setorial</strong> em sucroenergético (62%) nem em dois devedores WD+Alcoeste (28% combinado)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26",
+      "Abr/26"
+    ],
+    "chartData": [
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.120,
+      0.115
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.10,
+    "chartYMax": 0.13,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 0,98"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 1,18"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,30"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,39"
+      }
+    ],
+    "guidance": {
+      "periodo": "2026",
+      "faixa": "R$ 0,11 a R$ 0,12",
+      "unidade": "por cota / mês (política de dividendo base semestral da gestão)"
+    },
+    "stats": [
+      {
+        "label": "Atual (abr/26)",
+        "valor": "R$ 0,115"
+      },
+      {
+        "label": "Distribuído 2024/25",
+        "valor": "R$ 59,7 Mi"
+      },
+      {
+        "label": "% do caixa 2024/25",
+        "valor": "~98%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Em queda",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,92",
+      "descricao": "<p>Desconto moderado sobre o valor patrimonial. A cota negocia a <strong class=\"text-emerald-400\">R$ 8,65</strong> enquanto o VP é de <strong class=\"text-blue-400\">R$ 9,45</strong>, desconto de ~8,5% sobre o PL apurado. Parte do desconto reflete o prêmio de risco cobrado pelo mercado após a ressalva da auditoria BDO e a concentração setorial em sucroenergético.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,45"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 8,65",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "8,5%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "15,95%",
+      "label": "Dividend Yield (isento)",
+      "cor": "emerald",
+      "descricao": "<p>DY de <strong class=\"text-emerald-400\">15,95% isento</strong> equivale a ~22,8% tributável ou aproximadamente 152% do CDI em base mensal. Spread aproximado de <strong class=\"text-blue-400\">+100 bps</strong> sobre o CDI (hoje em ~14,9% a.a.) e <strong class=\"text-blue-400\">+700 bps</strong> sobre a NTN-B 10 anos real, coerente com o risco de crédito corporativo agro concentrado em sucroenergético.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 9,00",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Cálculo base — Gordon: DPS anualizado de R$ 1,38 dividido por (custo de capital 16% − crescimento 1%) ≈ R$ 9,20. Ajustando pelo prêmio de risco adicional por ressalva de auditoria e concentração setorial, o alvo central fica em <strong class=\"text-blue-400\">R$ 9,00</strong> (P/VP 0,95). Cruzando com o VP de R$ 9,45, a faixa de preço justo vai de R$ 8,80 a R$ 9,30. Gatilhos de reprecificação para cima: regularização da ressalva Virgo e execução efetiva do programa de recompra abaixo do VP.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O FGAA11 fechou o exercício 2024/25 com patrimônio líquido de R$ 423,5 milhões, lucro contábil de R$ 61 mi (R$ 1,35/cota) e distribuição de R$ 59,7 mi (R$ 1,32/cota), equivalente a ~98% do resultado. A carteira de crédito — 15 devedores, duration 2,08, spread médio CDI + 3% — está 100% adimplente desde o IPO em jan/2022, e a gestão FG/A demonstra domínio técnico do setor sucroenergético com forte originação própria (77%). Em 30 meses, o fundo distribuiu cerca de R$ 4,85/cota, retornando praticamente metade do capital inicial (R$ 10) em forma de rendimento isento de IR.",
+      "A nota do fundo (5,5/10) reflete o conflito central entre fundamentos operacionais sólidos e governança questionada. Do lado positivo, destacam-se: (i) especialização comprovada da FG/A em crédito sucroenergético, com estruturação própria de R$ 30 bi em 20+ anos; (ii) carteira diversificada em 15 devedores com 100% de adimplência; (iii) isenção de IR e DY de 15,95%; (iv) aprovação em ago/2025 de um programa de recompra de cotas sempre abaixo do VP, mecanismo pioneiro no segmento. Do lado negativo: (i) opinião de auditoria COM RESSALVA da BDO para o exercício 2024/25 por cinco CRAs da Virgo Securitizadora (~R$ 70 mi ou 16% do PL); (ii) concentração sucroenergética de 62%; (iii) apenas 45% da carteira com rating público; (iv) redução do dividendo de R$ 0,12 para R$ 0,115 em abr/2026.",
+      "O próximo catalisador negativo é o desfecho da ressalva Virgo (prazo final de resposta em 26/11/2025 e análise em 15/12/2025 conforme cronograma apresentado à B3). Um desfecho limpo eleva o fundo para nota 7,0; uma eventual materialização de perdas o derruba para 4,0. Em paralelo, o ciclo de Selic alta (15% em abr/26) sustenta o carrego CDI da carteira, mas um ciclo de queda nos próximos 12-18 meses pressionará o dividendo para baixo (reinvestimento a spreads menores). Para o investidor PF que busca isenção de IR e aceita o risco corporativo agro com governança ainda em normalização, a precificação atual (P/VP 0,92) traz margem de segurança modesta mas real. Investidores que exigem governança impecável devem aguardar a regularização da ressalva da BDO antes de aumentar posição."
+    ],
+    "pontosFortes": [
+      "15 devedores corporativos com 100% de adimplência desde o IPO em 2022",
+      "Especialização setorial da FG/A em sucroenergético (20+ anos, R$ 30 bi estruturados)",
+      "DY de 15,95% ISENTO de IR para PF — equivalente a ~152% do CDI em base tributável",
+      "P/VP de 0,92 — desconto de 8,5% sobre o VP auditado",
+      "Programa de recompra de cotas aprovado em ago/2025 (pioneiro em FIAGRO) com compras sempre abaixo do VP",
+      "Liquidez diária de ~R$ 1,0 mi (razão volume/PL entre as melhores do segmento FIAGRO)",
+      "Jalles Machado (JALL3, AAA S&P) como âncora de qualidade de crédito (~8% do PL)",
+      "77% da originação da carteira é própria (não aplica em CRAs de terceiros genéricos)",
+      "53.070 cotistas, 97,4% PF, com base pulverizada (nenhum acima de 5%)"
+    ],
+    "pontosDeAtencao": [
+      "Opinião de auditoria COM RESSALVA (BDO RCS, set/2025) por cinco CRAs da Virgo Securitizadora (~R$ 70 mi ou 16% do PL)",
+      "Concentração setorial de 62% em sucroenergético — choque no preço do açúcar/etanol afeta simultaneamente oito usinas devedoras",
+      "Apenas 45% da carteira com rating público; 55% tem apenas rating indicativo interno",
+      "Redução do dividendo de R$ 0,12 para R$ 0,115 em abr/2026 após eventos de governança em 2025",
+      "Duas maiores exposições (WD 14,3% + Alcoeste 13,7%) somam 28% do PL, ambas sem rating público",
+      "Ajuste negativo de -R$ 0,12/cota em dez/2025 (rentabilidade efetiva mensal), evidenciando volatilidade contábil",
+      "Troca de auditor (BDO substituindo o anterior) em 2025, ano da primeira ressalva — sinaliza rigor maior, mas também atenção em governança",
+      "Taxa de gestão 1,15% + performance 10% sobre 100% CDI totalizam ~1,41% do PL em custos (elevado para FIAGRO de papel)",
+      "Duration curta (2,08 anos) expõe à reinversão com spreads menores em ciclo de queda da Selic"
+    ],
+    "conclusaoFinal": "O FGAA11 é um FIAGRO que oferece, ao mesmo tempo, o que há de melhor e de pior no segmento. De um lado, uma carteira de crédito corporativo agro com 15 devedores, 100% adimplente desde 2022, geridos por uma das gestoras mais especializadas do setor — com DY de 15,95% isento e descontado (P/VP 0,92). De outro, uma ressalva formal de auditoria vigente (BDO 2024/25) por opacidade da Virgo Securitizadora sobre R$ 70 mi em CRAs, concentração sucroenergética de 62% e um histórico recente de redução de dividendo. Para quem acredita no domínio técnico da FG/A e aceita o trade-off governança-rendimento no curto prazo, a tese segue de pé. Para quem exige cleanliness contábil, o momento prudente é aguardar o desfecho da ressalva (cronograma até dez/2025) antes de alocar posição relevante. Nota 5,5/10 reflete essa ambiguidade estrutural — fundamentos 7,0 menos 1,5 de governança."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 235,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

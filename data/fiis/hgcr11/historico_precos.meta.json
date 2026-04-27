@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/hgcr11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:HGCR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 97.53,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 87.5,
+    "data": "2025-02-03"
+  },
+  "maxHistorico": {
+    "valor": 133.7848,
+    "data": "2019-12-23"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:14Z"
+}

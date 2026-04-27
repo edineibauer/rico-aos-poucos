@@ -1,0 +1,526 @@
+{
+  "meta": {
+    "ticker": "ERPA11",
+    "nome": "Europa 105 Fundo de Investimento Imobiliário",
+    "nomeExtra": "(Monoativo Av. Europa, 105 - Jardim Paulista, SP)",
+    "segmento": "Lajes Corporativas (Monoativo)",
+    "badges": [
+      "Monoativo Jardim Paulista",
+      "Locatário BTG Pactual",
+      "Fundo Restrito (Qualificados)"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 137
+  },
+  "seo": {
+    "title": "ERPA11 - Análise Completa | Europa 105 FII",
+    "description": "Análise do ERPA11: FII monoativo com prédio corporativo na Av. Europa 105 (Jardins/SP), 100% locado ao BTG Pactual, DY 8,78% e P/VP 0,77.",
+    "keywords": "ERPA11, Europa 105, Angá, Oliveira Trust, BTG Pactual, laje corporativa, Jardim Paulista, monoativo, FII",
+    "ogTitle": "ERPA11 - Europa 105 FII | Análise Completa",
+    "ogDescription": "Monoativo corporativo de alto padrão em Jardim Paulista, locado integralmente ao BTG Pactual até 2031. DY 8,78%, P/VP 0,77.",
+    "twitterTitle": "ERPA11 - Europa 105 FII",
+    "twitterDescription": "FII monoativo com laje corporativa AAA no Jardim Paulista, 100% locada ao BTG Pactual. DY 8,78%, P/VP 0,77."
+  },
+  "indicadores": {
+    "cotacao": 126.97,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.77,
+    "pvpDesconto": "23% de desconto sobre o VP",
+    "dividendYield": 8.78,
+    "dividendoMensal": 0.93,
+    "dividendoAnual": 11.15,
+    "patrimonioLiquido": "R$ 82,9 Mi",
+    "vpCota": 165.58,
+    "cotistas": 741,
+    "ocupacao": 100.0,
+    "numImoveis": 1
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": null,
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">ERPA11</strong> é um fundo imobiliário <strong class=\"text-amber-400\">monoativo</strong> que detém 49,82% de um prédio corporativo de alto padrão localizado na Av. Europa, 105, no Jardim Paulista (São Paulo), região nobre entre Jardins e Faria Lima. O imóvel está <strong class=\"text-emerald-400\">100% locado ao Banco BTG Pactual</strong> por contrato atípico de 120 meses iniciado em fevereiro/2021, com vencimento em fevereiro/2031, reajustado pelo IGP-M.</p><p>Do ponto de vista de precificação, o fundo negocia a <strong class=\"text-emerald-400\">P/VP de 0,77</strong> (R$ 126,97 vs. VP de R$ 165,58) e <strong class=\"text-emerald-400\">DY de 8,78%</strong>, com imóvel reavaliado em dez/2025 para R$ 81,6 milhões pela CBRE. Entre os pontos de atenção estão a <strong class=\"text-red-400\">concentração total em um único ativo e um único locatário</strong>, a <strong class=\"text-red-400\">liquidez diária muito baixa</strong> (R$ 22 mil) por se tratar de fundo restrito a investidores qualificados, e o <strong class=\"text-amber-400\">risco de renovação contratual</strong> em 2031, com vencimento único.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 82,9 Mi",
+      "detalhe": "VP/cota: R$ 165,58",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,93",
+      "valorSufixo": "/mês",
+      "detalhe": "~R$ 11,15/ano | DY 8,78%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "100%",
+      "detalhe": "Monousuário BTG Pactual",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "741",
+      "detalhe": "500.922 cotas emitidas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Monoativo e monoinquilino",
+      "descricao": "O fundo detém participação de 49,82% em um único imóvel (Av. Europa, 105) e tem 100% da receita concentrada em um único locatário (BTG Pactual). Qualquer distrato representaria perda total da receita recorrente.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez muito baixa",
+      "descricao": "Liquidez média diária de apenas R$ 22.306, típica de fundo destinado a investidores qualificados. Entrada e saída podem ser demoradas e com spread elevado.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Vencimento único do contrato em 2031",
+      "descricao": "Contrato de 120 meses iniciado em fev/2021 vence em fev/2031. A renovação ou substituição de locatário em 2031 concentra risco em uma única data, com janela de pré-aviso de 180 dias e multa de 3 meses de aluguel em caso de rescisão.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Reajuste atrelado ao IGP-M",
+      "descricao": "100% do contrato é reajustado pelo IGP-M/FGV. Em ambientes de IGP-M negativo ou muito volátil (como em 2023), o reajuste pode ficar abaixo do IPCA, afetando a atualização real dos dividendos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Público-alvo restrito a qualificados",
+      "descricao": "Fundo regido pela ICVM 476 e destinado a investidores qualificados (acima de R$ 1 milhão em aplicações), o que reduz a base potencial de compradores no mercado secundário.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Base pequena de cotistas",
+      "descricao": "Apenas 741 cotistas, com três deles detendo 21% das cotas. Base concentrada aumenta o risco de oscilações fortes de preço quando grandes posições são liquidadas.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Fração ideal de 49,82% do imóvel",
+      "descricao": "O fundo detém copropriedade de 49,82% do imóvel da Av. Europa, 105, não 100% dele. Decisões estruturais sobre o bem dependem do coproprietário.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Angá Administração de Recursos",
+    "nota": 6.5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Tipo",
+        "valor": "Gestora independente"
+      },
+      {
+        "label": "Sede",
+        "valor": "São Paulo/SP"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Angá Administração de Recursos</strong> atua como gestora do ERPA11 desde a estruturação do fundo em 2019. Em abril/2022 houve <strong class=\"text-emerald-400\">redução da taxa de gestão</strong> de 0,83% a.a. para 0,50% a.a. sobre o patrimônio, com valor mínimo mensal de R$ 10 mil, movimento positivo do ponto de vista de alinhamento com o cotista.</p><p>A administração do fundo é feita pela <strong class=\"text-blue-400\">Oliveira Trust DTVM</strong>, com custódia e controladoria também sob o mesmo grupo. A locação é administrada pela <strong class=\"text-blue-400\">CBRE</strong>, empresa de referência internacional no segmento de lajes corporativas.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas, mas base pequena amplifica o peso fixo",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,50% a.a.",
+        "detalhe": "Mínimo R$ 10 mil/mês (Angá)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,17% a.a.",
+        "detalhe": "Mínimo R$ 16 mil/mês (Oliveira Trust)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 22 mil",
+        "detalhe": "Muito baixa (investidor qualificado)",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Angá Administração de Recursos Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "BDO RCS / Audipec"
+      },
+      {
+        "label": "Administração de Locações",
+        "valor": "CBRE Consultoria do Brasil"
+      },
+      {
+        "label": "Início",
+        "valor": "15/03/2019"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidor Qualificado"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "1 (49,82% fração ideal)"
+      },
+      {
+        "label": "Área Total",
+        "valor": "3.325 m²"
+      },
+      {
+        "label": "Vacância",
+        "valor": "0,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "WALT",
+        "valor": "~4,8 anos (até fev/2031)"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Av. Europa, 105 (Jardim Paulista)"
+      ],
+      "data": [
+        100
+      ],
+      "cores": [
+        "#3b82f6"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Banco BTG Pactual S.A.",
+        "setor": "Financeiro",
+        "receita": "100% receita",
+        "rating": "Até fev/2031",
+        "ratingCor": "emerald",
+        "risco": "Baixo (crédito AAA)",
+        "riscoCor": "emerald"
+      }
+    ],
+    "riscoNota": "<p>O portfólio é composto por <strong class=\"text-amber-400\">um único ativo</strong> — fração ideal de 49,82% do imóvel na Av. Europa, 105 (Jardim Paulista, SP), laje corporativa de alto padrão com 3.325 m² de ABL, 2 andares, 2 mezaninos, 2 subsolos e 128 vagas de garagem. A locação monousuária ao <strong class=\"text-emerald-400\">Banco BTG Pactual</strong> (crédito soberano do segmento financeiro) foi firmada em out/2020, com vigência de 120 meses a partir de fev/2021 e término previsto para <strong class=\"text-amber-400\">fev/2031</strong>. Em caso de rescisão, o locatário deve notificar com 180 dias e pagar multa equivalente a 3 meses de aluguel.</p><p>O imóvel foi reavaliado pela CBRE em dez/2025 para <strong class=\"text-emerald-400\">R$ 81,6 milhões</strong> (fração do fundo), valorização de 3,87% no exercício, utilizando método de fluxo de caixa descontado com taxa de desconto de 8,25% e cap rate de 7,75%. O imóvel tem <strong class=\"text-emerald-400\">0% de vacância e 0% de inadimplência</strong> desde o fim da carência em fev/2022.</p>"
+  },
+  "timeline": {
+    "subtitulo": "De fundo de desenvolvimento a fundo de renda com inquilino âncora premium",
+    "periodos": [
+      {
+        "periodo": "Mar/2019",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 15/03/2019 com a finalidade de adquirir unidades do empreendimento Vila Europa 105 (incorporado sob regime de patrimônio de afetação).",
+        "pontos": [
+          "<strong>1ª Emissão</strong> pela ICVM 476, até 1 milhão de cotas a R$ 100,00",
+          "Destino: investidores qualificados",
+          "Previsão inicial: entrega em 2021"
+        ]
+      },
+      {
+        "periodo": "Ago/2019",
+        "label": "IPO CONCLUÍDO",
+        "cor": "blue",
+        "descricao": "Encerramento da 1ª emissão com 117.262 cotas subscritas e integralizadas (R$ 11,6 milhões de PL inicial). Negociação na B3 liberada em 11/09/2019.",
+        "pontos": [
+          "Coordenador: Ativa Investimentos",
+          "Patrimônio inicial modesto"
+        ]
+      },
+      {
+        "periodo": "Out/2020",
+        "label": "LOCAÇÃO BTG",
+        "cor": "emerald",
+        "descricao": "Contrato de locação monousuário de 120 meses firmado com o Banco BTG Pactual, assegurando demanda para o imóvel antes mesmo da entrega da obra.",
+        "pontos": [
+          "<strong>Prazo: 10 anos</strong> (carência de 11 meses)",
+          "Multa de 3 meses em caso de rescisão",
+          "Reajuste IGP-M"
+        ]
+      },
+      {
+        "periodo": "Fev/2021",
+        "label": "ENTREGA DO IMÓVEL",
+        "cor": "emerald",
+        "descricao": "Obra entregue antes do prazo; escritura assinada em 09/02/2021. Em março/2021 a taxa de gestão foi postergada para maio/2022.",
+        "pontos": [
+          "Imóvel em operação",
+          "Contratos em carência até fev/2022"
+        ]
+      },
+      {
+        "periodo": "Dez/2021",
+        "label": "2ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "Encerramento da 2ª emissão com 4.810 cotas subscritas (das 8.000 disponíveis), reforçando o capital para fechar a aquisição.",
+        "pontos": [
+          "3.190 cotas canceladas por falta de demanda"
+        ]
+      },
+      {
+        "periodo": "Fev/2022",
+        "label": "FIM DA CARÊNCIA",
+        "cor": "emerald",
+        "descricao": "Encerramento dos 11 meses de carência. Primeira parcela cheia de aluguel, reajustada pelo IGP-M em 17,79%, gera receita mensal de ~R$ 381 mil para a parcela do fundo.",
+        "pontos": [
+          "Início efetivo da distribuição de dividendos recorrentes",
+          "Receita mensal de R$ 381 mil"
+        ]
+      },
+      {
+        "periodo": "Abr/2022",
+        "label": "REDUÇÃO DE TAXAS",
+        "cor": "emerald",
+        "descricao": "Taxa de gestão reduzida de 0,83% a.a. para 0,50% a.a. a partir de maio/2022. Em ago/2022 também foi negociada redução do mínimo de administração para R$ 15 mil/mês.",
+        "pontos": [
+          "<strong>DY mensal</strong> subiu para ~R$ 0,69/cota",
+          "Alinhamento maior com cotistas"
+        ]
+      },
+      {
+        "periodo": "Abr/2024",
+        "label": "ADITIVO DE LOCAÇÃO",
+        "cor": "emerald",
+        "descricao": "2º aditivo do contrato de locação trouxe incremento recorrente nos dividendos a partir de abril/2024.",
+        "pontos": [
+          "Receita mensal passa a R$ 508 mil (fração do fundo)",
+          "Aluguel total negociado em R$ 1,52 mi/trimestre"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "REAVALIAÇÃO",
+        "cor": "emerald",
+        "descricao": "CBRE reavalia o imóvel para R$ 81,6 mi (valorização de 3,87%). Fundo distribuiu R$ 5,46 mi no exercício (DY recorrente estabilizado).",
+        "pontos": [
+          "<strong>VP/cota: R$ 165,58</strong>",
+          "Ocupação: 100%",
+          "Receita anual de R$ 6,05 mi"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Fundo negocia a R$ 126,97 (P/VP 0,77) com DY de 8,78%. Contrato do BTG tem ~4,8 anos de WALT restante.",
+        "pontos": [
+          "<strong>Desconto de 23%</strong> sobre o VP",
+          "DY 8,78% a.a.",
+          "1 inquilino, 1 ativo"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">ERPA11</strong> nasceu em 2019 como fundo de desenvolvimento imobiliário, estruturado para adquirir unidades do edifício Europa 105 durante o período de obras. A tese se transformou em <strong class=\"text-emerald-400\">fundo de renda puro</strong> quando o BTG Pactual assinou contrato de locação monousuário de 10 anos em out/2020, antes mesmo da entrega do imóvel em fev/2021.</p><p>Após o encerramento da carência em fev/2022, o fundo entrou em regime estável de distribuição recorrente. Os marcos subsequentes — <strong class=\"text-emerald-400\">redução de taxas em 2022</strong> e <strong class=\"text-emerald-400\">aditivo contratual em abr/2024</strong> — reforçaram o fluxo de caixa para os cotistas. O imóvel passou de R$ 57 mi (dez/2021) para R$ 81,6 mi (dez/2025), valorização acumulada de 43% em quatro anos, refletindo a recuperação do mercado de lajes AAA em São Paulo.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota (desde IPO)",
+        "valor": "+27%",
+        "detalhe": "R$ 100 → R$ 126,97"
+      },
+      {
+        "label": "Valorização do Imóvel (2021-2025)",
+        "valor": "+43%",
+        "detalhe": "R$ 57 mi → R$ 81,6 mi"
+      },
+      {
+        "label": "Receita Anual 2025",
+        "valor": "R$ 6,05 Mi",
+        "detalhe": "vs. R$ 5,50 mi em 2024"
+      },
+      {
+        "label": "Distribuído em 2025",
+        "valor": "R$ 5,46 Mi",
+        "detalhe": "99,49% do caixa gerado"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">ERPA11</strong> se sustenta em três pilares: (i) <strong class=\"text-emerald-400\">localização premium</strong> em uma das regiões corporativas mais desejadas de São Paulo (Jardim Paulista, entre Jardins e Faria Lima), com histórica resiliência de ocupação; (ii) <strong class=\"text-emerald-400\">contrato longo com locatário de primeira linha</strong> (BTG Pactual) válido até fev/2031, sem vacância e sem inadimplência; e (iii) <strong class=\"text-emerald-400\">desconto significativo sobre o VP</strong> (P/VP 0,77), oferecendo margem de segurança patrimonial.</p><p>Como contrapartida, o fundo carrega <strong class=\"text-red-400\">risco de concentração máximo</strong> (um imóvel, um inquilino, um indexador) e <strong class=\"text-red-400\">liquidez extremamente baixa</strong>, sendo mais adequado a investidores de perfil conservador com horizonte longo e que não precisem de facilidade de saída.</p>",
+    "paraQuem": [
+      "<strong>Investidores qualificados</strong> que buscam exposição a laje corporativa AAA em região prime de São Paulo com entrada descontada (P/VP 0,77)",
+      "Perfis que priorizam <strong>previsibilidade de fluxo de caixa</strong> com contrato longo e locatário de crédito soberano (BTG Pactual)",
+      "Investidores com <strong>horizonte de longo prazo</strong> (mínimo até 2031) que não precisem de liquidez imediata"
+    ],
+    "naoParaQuem": [
+      "Quem precisa de <strong>liquidez diária</strong> — volume médio de apenas R$ 22 mil/dia torna a saída demorada",
+      "Investidores que <strong>não são qualificados</strong> (fundo restrito pela ICVM 476)",
+      "Quem busca <strong>diversificação setorial e geográfica</strong> dentro do próprio FII",
+      "Perfis que não aceitam <strong>risco de concentração</strong> em um único ativo e um único inquilino"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan",
+      "Fev",
+      "Mar",
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez"
+    ],
+    "chartData": [
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93,
+      0.93
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 1.2,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 4,49"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 8,53"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 9,68"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 10,90"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,90 a R$ 0,95",
+      "unidade": "por cota / mês (estimativa baseada no caixa recente)"
+    },
+    "stats": [
+      {
+        "label": "Atual (est.)",
+        "valor": "R$ 0,93"
+      },
+      {
+        "label": "Distribuído 2025",
+        "valor": "R$ 5,46 Mi"
+      },
+      {
+        "label": "% do caixa 2025",
+        "valor": "99,49%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,77",
+      "descricao": "<p>Desconto relevante sobre o valor patrimonial. A cota negocia a <strong class=\"text-emerald-400\">R$ 126,97</strong> enquanto o VP é de <strong class=\"text-blue-400\">R$ 165,58</strong>, um desconto de 23% sobre o patrimônio apurado pela avaliação CBRE. Parte desse desconto reflete o prêmio de liquidez exigido pelo mercado para fundos restritos e monoativos.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 165,58"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 126,97",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "23%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "8,78%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY de <strong class=\"text-emerald-400\">8,78%</strong> é competitivo frente à NTN-B 10 anos (~7,0% real) e ao IFIX, sendo coerente com o risco assumido (monoativo + liquidez baixa). Spread aproximado de <strong class=\"text-blue-400\">175 bps</strong> sobre NTN-B longa.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 135,00",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Cálculo base — Gordon: DPS de R$ 11,15 dividido por (custo de capital 10,5% − crescimento 2,2%) ≈ R$ 134. Cruzando com P/VP histórico (≈ 0,80 do VP) e DY target (~8,3%), chega-se a faixa entre R$ 130 e R$ 140. O valor central de <strong class=\"text-blue-400\">R$ 135,00</strong> incorpora prêmio de risco adicional por monoativo, monoinquilino e liquidez restrita, já descontando parcialmente o VP da CBRE (R$ 165,58). Em ambiente de Selic em queda (15% → expectativa de 12-13% em 2027), o preço justo tende a se deslocar para cima.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O ERPA11 fechou 2025 com patrimônio líquido de R$ 82,9 milhões, ocupação de 100%, contrato vigente com o BTG Pactual até fev/2031 e distribuição de R$ 5,46 milhões no exercício (99,49% do caixa gerado). A avaliação da CBRE em dez/2025 trouxe o imóvel para R$ 81,6 milhões, valorização de 3,87% no ano — reflexo da recuperação do mercado de lajes AAA na região CBD de São Paulo, onde a vacância caiu para 20,9% e o preço médio pedido atingiu R$ 104/m² em 2024.",
+      "No campo técnico, a combinação de P/VP de 0,77 e DY de 8,78% coloca o fundo em patamar atrativo em termos isolados de precificação, especialmente comparado a peers de lajes corporativas negociados próximos do VP. O contrato atípico com reajuste IGP-M, multa de 3 meses e pré-aviso de 180 dias traz previsibilidade elevada de fluxo de caixa nos próximos anos. Contudo, o indexador IGP-M é mais volátil que o IPCA e tem apresentado leituras negativas em 2023 e oscilações fortes nos últimos 5 anos, podendo gerar variações importantes no dividendo entre janelas de reajuste.",
+      "Olhando para frente, o catalisador central é o ciclo de queda da Selic (atualmente em 15%, com expectativa de recuo nos próximos 12-18 meses), que pode reduzir o prêmio de risco exigido e estreitar o desconto para o VP. O risco estrutural permanece a renovação do contrato em 2031: o fundo tem 4,8 anos para se preparar para uma eventual saída ou renegociação com o BTG. Investidores que aceitam o trade-off liquidez-desconto e o risco de monoativo encontram aqui uma tese de renda corporativa de alto padrão com margem de segurança patrimonial."
+    ],
+    "pontosFortes": [
+      "Localização premium no Jardim Paulista, entre Jardins e Faria Lima — uma das regiões corporativas mais valorizadas de São Paulo",
+      "Imóvel 100% locado ao BTG Pactual (crédito de primeira linha) por contrato atípico de 120 meses até fev/2031",
+      "Vacância e inadimplência em 0% desde o fim da carência em fev/2022",
+      "P/VP de 0,77 — desconto de 23% sobre o VP avaliado pela CBRE em dez/2025",
+      "DY de 8,78% a.a., com distribuição consistente de ~99% do resultado caixa",
+      "Valorização acumulada de 43% no valor do imóvel entre 2021 e 2025, acompanhando recuperação do setor",
+      "Taxa de gestão competitiva (0,50% a.a.) após redução em 2022 — alinhamento da gestora com cotistas",
+      "Contrato com multa (3 meses) e pré-aviso (180 dias) que reduzem o impacto de eventual saída antecipada",
+      "CBRE administra as locações — expertise internacional no segmento"
+    ],
+    "pontosDeAtencao": [
+      "Risco de concentração extremo: 1 imóvel, 1 inquilino, 1 indexador (IGP-M), 1 vencimento contratual",
+      "Liquidez média diária de apenas R$ 22 mil, dificultando entrada/saída de posições maiores",
+      "Fundo restrito a investidores qualificados (ICVM 476), limitando base potencial de compradores",
+      "Vencimento único do contrato em fev/2031 concentra risco de renovação em uma data específica",
+      "Fração ideal de 49,82% do imóvel (não 100%) — decisões estruturais dependem de coproprietário",
+      "IGP-M como único indexador — tem apresentado volatilidade muito superior ao IPCA e leituras negativas",
+      "Base de cotistas pequena (741), com 3 investidores detendo 21% das cotas — risco de fluxo",
+      "Ausência de formador de mercado, o que agrava ainda mais o problema de liquidez",
+      "Gestora Angá tem perfil mais nichado, com escala menor frente aos grandes players do setor"
+    ],
+    "conclusaoFinal": "O ERPA11 é um caso de escola de como monoativo, monoinquilino e liquidez restrita podem conviver com ativo de altíssima qualidade patrimonial e contrato robusto. A precificação atual (P/VP 0,77 e DY 8,78%) já incorpora parte desses riscos, mas a decisão final depende fortemente do perfil do investidor: quem prioriza previsibilidade de fluxo, aceita horizonte longo até 2031 e não precisa de liquidez imediata encontra aqui uma exposição diferenciada ao mercado corporativo AAA de São Paulo. Já quem busca diversificação interna, liquidez para reposicionamento tático ou acesso facilitado ao produto deve procurar alternativas no universo dos FIIs de lajes mais pulverizados e com maior volume de negociação."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 137,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

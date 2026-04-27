@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/dpro11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2023-01-16",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:DPRO11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 5.99,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 5.7,
+    "data": "2024-12-16"
+  },
+  "maxHistorico": {
+    "valor": 10.36,
+    "data": "2023-04-03"
+  },
+  "totalPontos": 172,
+  "coletadoEm": "2026-04-27T01:13:39Z"
+}

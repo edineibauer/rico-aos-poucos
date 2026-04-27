@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/vino11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-11-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:VINO11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 5.01,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 4.4,
+    "data": "2025-02-03"
+  },
+  "maxHistorico": {
+    "valor": 14.3885,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 336,
+  "coletadoEm": "2026-04-27T02:05:50Z"
+}

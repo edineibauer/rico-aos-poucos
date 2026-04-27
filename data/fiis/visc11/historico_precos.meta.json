@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/visc11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2017-10-30",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:VISC11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 110.37,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 77.2603,
+    "data": "2020-03-16"
+  },
+  "maxHistorico": {
+    "valor": 144.0531,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 444,
+  "coletadoEm": "2026-04-27T01:13:52Z"
+}

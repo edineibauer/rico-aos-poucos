@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/jsre11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:JSRE11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 65.89,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 51.66,
+    "data": "2025-02-03"
+  },
+  "maxHistorico": {
+    "valor": 123.0,
+    "data": "2019-12-16"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:48Z"
+}

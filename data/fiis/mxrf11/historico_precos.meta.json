@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/mxrf11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:MXRF11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 9.93,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 8.3326,
+    "data": "2016-04-25"
+  },
+  "maxHistorico": {
+    "valor": 13.6772,
+    "data": "2019-12-23"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:11Z"
+}

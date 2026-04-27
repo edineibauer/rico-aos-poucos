@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/btal11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2021-02-01",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:BTAL11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 90.5,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 67.5,
+    "data": "2025-01-20"
+  },
+  "maxHistorico": {
+    "valor": 106.0,
+    "data": "2021-05-03"
+  },
+  "totalPontos": 274,
+  "coletadoEm": "2026-04-27T00:32:24Z"
+}

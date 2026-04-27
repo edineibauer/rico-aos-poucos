@@ -1,0 +1,2801 @@
+{
+  "meta": {
+    "ticker": "VINO11",
+    "nome": "Vinci Offices FII",
+    "nomeExtra": "Tijolo de escritórios da Vinci Real Estate (Vinci Compass) — 9 ativos, 75 mil m² ABL próprio",
+    "segmento": "Tijolo — Escritórios (Lajes Corporativas)",
+    "badges": [
+      "9 imóveis",
+      "76% receita SP / 24% RJ",
+      "WAULT 7,1 anos",
+      "P/VP 0,51",
+      "DY 12m 12,2%"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 402,
+    "versaoSchema": "v3-rico"
+  },
+  "seo": {
+    "title": "VINO11 - Análise Completa | Vinci Offices FII",
+    "description": "Análise profunda do VINO11 (Vinci Offices): FII de escritórios com 9 imóveis em SP/RJ, WAULT 7,1 anos, P/VP 0,51 e DY 12m de 12,2%. 75% da receita Globo+BMA. Vacância no Haddock Lobo e BBS pesa, contratos com 70% após 2030.",
+    "keywords": "VINO11, Vinci Offices, Vinci Real Estate, Vinci Compass, FII escritório, lajes corporativas, Sede Globo SP, BMA Corporate, Haddock Lobo, escritório São Paulo, escritório Rio de Janeiro, Globo locatário",
+    "ogTitle": "VINO11 - Análise Profunda | Vinci Offices FII (Abr/2026)",
+    "ogDescription": "FII de escritórios em transição pós-pandemia: P/VP 0,51 e DY 12% atraem, mas vacância >70% no Haddock Lobo e Oscar Freire pesa. Conheça os 9 imóveis e a tese real.",
+    "twitterTitle": "VINO11 - Vinci Offices | Análise dos 9 escritórios",
+    "twitterDescription": "Sede Globo SP responde por 60% da receita. Resto do portfólio é heterogêneo. P/VP 0,51, vacância em recuperação. Análise completa em 402 documentos."
+  },
+  "indicadores": {
+    "cotacao": 5.01,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.51,
+    "pvpDesconto": "49% de desconto sobre o VP",
+    "dividendYield": 12.18,
+    "dividendoMensal": 0.04,
+    "dividendoAnual": 0.48,
+    "patrimonioLiquido": "R$ 816,5 Mi",
+    "vpCota": 9.86,
+    "cotistas": 131566,
+    "cotistasDetalhe": "82,83 milhões de cotas",
+    "ocupacao": 78.0,
+    "wault": 7.1,
+    "numImoveis": 9,
+    "ablTotal": "75 mil m² próprios",
+    "numAtivos": 9
+  },
+  "recomendacao": {
+    "nota": 5.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">VINO11</strong> é o FII de <strong class=\"text-amber-400\">escritórios</strong> da gestora <strong class=\"text-blue-400\">Vinci Real Estate (Vinci Compass)</strong> com 9 ativos somando 75 mil m² de ABL próprio em SP (76%) e RJ (24%). O portfólio é <strong class=\"text-amber-400\">heterogêneo</strong>: a Sede Globo SP (atípico, 100% Globo) responde por <strong class=\"text-emerald-400\">~60% da receita</strong>, o BMA Corporate (Humaitá/RJ) por mais 9% — mas o restante carrega vacâncias relevantes (Haddock Lobo 18%, Oscar Freire 14%, BBS 44%, Vita Corá 75%) que limitam o resultado recorrente.</p><p>O DPS estabilizou em <strong class=\"text-blue-400\">R$ 0,040/cota desde fev/2026</strong> (DY 12m de 12,2%) após cair de R$ 0,05 ao longo de 2025. A cota negocia a <strong class=\"text-emerald-400\">R$ 5,01 (P/VP 0,51)</strong>, ou 49% abaixo do VP de R$ 9,86 — desconto coerente com o ciclo difícil de escritórios pós-pandemia. O fundo carrega <strong class=\"text-amber-400\">obrigações por securitização de R$ 421 Mi (Sede Globo + Haddock Lobo, IPCA+5,6/6,9%)</strong>, com 31% de alavancagem sobre os ativos imobiliários. Em set/2025 o fundo vendeu a sede C&A em Alphaville (R$ 40 Mi) e recomprou o CRI VINO mais caro (CDI+3,5%), reduzindo despesa financeira em 15%.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 816,5 Mi",
+      "detalhe": "VP/cota: R$ 9,86",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,040",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 0,48/ano | DY 12m 12,2%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "131.566",
+      "detalhe": "82,83 mi de cotas (mar/26)",
+      "icone": "users",
+      "corIcone": "blue"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,51",
+      "detalhe": "49% desconto sobre VP",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Concentração extrema na Sede Globo SP (~60% da receita)",
+      "descricao": "O imóvel Sede Globo SP, em Chucri Zaidan/SP (39.050 m², 100% participação VINO), está locado integralmente para a Globo em contrato <strong>atípico</strong>. Sozinho representa <strong class=\"text-amber-400\">cerca de 60% da receita de aluguel do Fundo</strong>. A Globo realiza investimentos relevantes no imóvel (esclarecimento conjunto de set/2024) e o contrato segue até bem além de 2030, mas qualquer evento na relação com a locatária ainda assim é um risco material.",
+      "severidade": "alta",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + Esclarecimento conjunto Vinci/Globo (ID 743720)"
+    },
+    {
+      "titulo": "Vacâncias relevantes em 4 dos 9 ativos",
+      "descricao": "Quatro imóveis estão com ocupação baixa: <strong>Haddock Lobo 347 (18%, sobe para 26% com contratos assinados Joompro+COW)</strong>, <strong>Oscar Freire 585 (14%)</strong>, <strong>BBS Brooklyn (44%)</strong>, <strong>Vita Corá (75%)</strong>. Recompor essas ocupações é a tese central de upside operacional. O gestor reportou em fev e mar/2026 a contratação de Joompro (526m²) e COW Working (3 conjuntos) no Haddock Lobo.",
+      "severidade": "alta",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1157223)"
+    },
+    {
+      "titulo": "Alavancagem de R$ 421 Mi (31% dos ativos imobiliários)",
+      "descricao": "Obrigações por securitização: CRI Sede Globo SP (R$ 354 Mi, IPCA+6,948% até jan/2037) + CRI Haddock Lobo (R$ 67 Mi, IPCA+5,575% até out/2035). Despesa financeira de R$ -2,5 Mi/mês consome boa parte do resultado bruto dos imóveis. Em set/2025 o fundo recomprou antecipadamente o CRI VINO (R$ 34,6 Mi, CDI+3,5%) com recursos da venda C&A, reduzindo a despesa financeira total em ~15%.",
+      "severidade": "alta",
+      "fonte": "Demonstrações Financeiras 2025 (ID 1149235)"
+    },
+    {
+      "titulo": "Cota cai 60% desde IPO (R$ 12,70 → R$ 5,01)",
+      "descricao": "Investidor da 4ª emissão (R$ 12,70) acumula <strong class=\"text-red-400\">prejuízo de capital de 60%</strong>. Mesmo somando dividendos (35% do preço inicial), a rentabilidade líquida está em -25,5% desde o IPO, contra +34% do IFIX e +73% do Ibovespa no mesmo período. A queda reflete a transição difícil dos escritórios pós-pandemia em SP/RJ, agravada por vacâncias específicas dos ativos do fundo.",
+      "severidade": "red",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1157223), aba Rentabilidade"
+    },
+    {
+      "titulo": "Cluster de revisionais 2026-2027 (24% da receita)",
+      "descricao": "Conforme RG fev/2026, <strong>20% da receita já tem revisional aplicado em 2026</strong>, mais 1% em 2027 e 0% em 2028. A maior parte das revisionais (60%) está em 'já possuiu' (próximo à data). O reajuste depende do índice e da negociação com locatários — em mercado de escritórios ainda em recuperação, há risco de revisional para baixo em alguns ativos.",
+      "severidade": "amber",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1130577)"
+    },
+    {
+      "titulo": "Programa de Recompra do CRI Globo no laudo Colliers",
+      "descricao": "A reavaliação anual de dez/2025 pela Colliers resultou em valor 0,97% inferior ao contábil dos imóveis, com queda de 1,37% no VP/cota — pequena mas indicativo de ajuste para baixo no ciclo. O Edifício Haddock Lobo desvalorizou R$ 10,7 Mi (-7%) e o Oscar Freire R$ 5,4 Mi (-6%) em 2025.",
+      "severidade": "amber",
+      "fonte": "Comunicado Reavaliação dez/2025 (ID 1073633) + DF 2025 (ID 1149235)"
+    },
+    {
+      "titulo": "Liquidez baixíssima (R$ 0,7 mil/dia em mar/2026)",
+      "descricao": "O Relatório Gerencial declara volume médio diário de R$ 0,7 milhões em mar/2026 (R$ 1,2 mi em fev/26). Embora o cálculo via yfinance mostre R$ 514-628 mil/dia médio, a liquidez é compatível com posições pequenas — saída de R$ 1 Mi pode levar 16+ dias úteis sem impactar preço.",
+      "severidade": "amber",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1157223)"
+    },
+    {
+      "titulo": "DPS atual de R$ 0,040 abaixo da geração recorrente histórica",
+      "descricao": "O resultado recorrente atual (~R$ 0,043/cota em mar/26) é inferior ao acumulado desde o IPO (R$ 0,055/cota média mensal). O fundo vem reduzindo o DPS gradualmente desde 2023: R$ 0,055 → R$ 0,06 → R$ 0,05 → R$ 0,045 → R$ 0,040 — refletindo pressão de vacância e custo financeiro. Recompor ocupação é o caminho para retomar o DPS histórico.",
+      "severidade": "amber",
+      "fonte": "Histórico de Rendimentos (76 meses)"
+    }
+  ],
+  "gestora": {
+    "nome": "Vinci Real Estate Gestora de Recursos (grupo Vinci Compass)",
+    "nota": 7.5,
+    "notaLabel": "BOM",
+    "stats": [
+      {
+        "label": "Grupo",
+        "valor": "Vinci Compass / Vinci Partners"
+      },
+      {
+        "label": "Sede",
+        "valor": "Av. Bartolomeu Mitre, 336 — Leblon/RJ"
+      },
+      {
+        "label": "Família de FIIs",
+        "valor": "VINO11, VILG11, VISC11, VCRI11, VICA11, VFDL, VIUR11, VORE"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Vinci Real Estate Gestora de Recursos Ltda.</strong> (CNPJ 13.838.015/0001-75) é o braço imobiliário do grupo Vinci Compass (ex-Vinci Partners), uma das maiores gestoras independentes do Brasil com mais de R$ 70 bilhões sob gestão. A casa atua em FIIs desde 2011 e mantém uma família ampla de fundos: <strong>VINO11</strong> (escritórios), <strong>VILG11</strong> (logística), <strong>VISC11</strong> (shoppings), <strong>VCRI11</strong> (CRI), <strong>VICA11</strong> (Fiagro), <strong>VFDL</strong> (desenvolvimento logístico), entre outros.</p><p>A administração é da <strong>BRL Trust DTVM</strong> (atual Apex Group Brazil) e a auditoria pela <strong>PwC</strong>. O time de gestão tem track record relevante em transações imobiliárias, mas o VINO11 vem de um <strong class=\"text-amber-400\">ciclo difícil pós-pandemia</strong>: a transição do mercado de escritórios em SP/RJ, somada a vacâncias específicas dos ativos do fundo, pesou na rentabilidade. Em 2024-2025 a gestão tomou ações relevantes: ação de despejo contra a WeWork no Oscar Freire (set/2024), venda do C&A Alphaville (set/2025) com recompra antecipada do CRI VINO mais caro, e atualmente está focada em recompor ocupação no Haddock Lobo e BBS.</p>"
+  },
+  "taxas": {
+    "subtitulo": "Taxa de administração escalonada (1,20% até R$ 500 Mi) + performance só sobre IPCA+6%",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,20% a.a.",
+        "detalhe": "Inclui gestão + administração + escrituração",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Sobre R$ 500 Mi a R$ 1 Bi",
+        "valor": "1,10% a.a.",
+        "detalhe": "Faixa intermediária",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Acima de R$ 1 Bi",
+        "valor": "1,00% a.a.",
+        "detalhe": "Faixa superior",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20% s/ IPCA+6%",
+        "detalhe": "Spread de 6% s/ valor total integralizado",
+        "corBorda": "amber"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs de Escritórios AAA",
+    "comparativo": [
+      {
+        "ticker": "VINO11",
+        "taxa": "1,20%",
+        "perf": "20% s/ IPCA+6%",
+        "destaque": true
+      },
+      {
+        "ticker": "HGRE11",
+        "taxa": "1,00%",
+        "perf": "Não há"
+      },
+      {
+        "ticker": "BROF11",
+        "taxa": "1,00%",
+        "perf": "20% s/ IPCA+6%"
+      },
+      {
+        "ticker": "GTWR11",
+        "taxa": "1,00%",
+        "perf": "Não há"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM (Apex Group Brazil)"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Vinci Real Estate Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Cogestor",
+        "valor": "Vinci Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers (PwC)"
+      },
+      {
+        "label": "Início",
+        "valor": "Nov/2019 (IPO em 25/11/2019)"
+      },
+      {
+        "label": "CNPJ do Fundo",
+        "valor": "12.516.185/0001-70"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidores em geral"
+      }
+    ]
+  },
+  "portfolio": {
+    "schema": "v2",
+    "schemaVersion": "v2.1",
+    "tipoFundo": "tijolo",
+    "dataReferencia": "2026-03-31",
+    "subtituloAnalise": "9 ativos de escritórios em SP (76%) e RJ (24%) — 60% da receita concentrada na Sede Globo SP",
+    "stats": {
+      "totalAtivos": 9,
+      "abl": 75788,
+      "ocupacaoFisica": 78.0,
+      "ocupacaoFinanceira": 91.0,
+      "vacanciaFisica": 22.0,
+      "wault": 7.1,
+      "ltv": 0.31,
+      "alavancagemPct": 31.0,
+      "alavancagemNota": "Obrigações por securitização (R$ 421 Mi) ÷ ativos imobiliários (R$ 1.162 Mi)",
+      "patrimonioLiquido": 816535746,
+      "patrimonioLiquidoData": "2026-03-31",
+      "cotasEmCirculacao": 82826295,
+      "vpCota": 9.86,
+      "alocacaoPL": [
+        {
+          "categoria": "Sede Globo SP (Chucri Zaidan/SP)",
+          "pct": 0.4564,
+          "cor": "#3b82f6",
+          "valor": 541200000
+        },
+        {
+          "categoria": "BMA Corporate (Humaitá/RJ)",
+          "pct": 0.1063,
+          "cor": "#10b981",
+          "valor": 126100000
+        },
+        {
+          "categoria": "Haddock Lobo 347 (Paulista/SP)",
+          "pct": 0.1067,
+          "cor": "#8b5cf6",
+          "valor": 126500000
+        },
+        {
+          "categoria": "BM 336 (Leblon/RJ)",
+          "pct": 0.1025,
+          "cor": "#06b6d4",
+          "valor": 121500000
+        },
+        {
+          "categoria": "Oscar Freire 585 (Jardins/SP)",
+          "pct": 0.066,
+          "cor": "#f59e0b",
+          "valor": 78200000
+        },
+        {
+          "categoria": "Vita Corá (Alto de Pinheiros/SP)",
+          "pct": 0.0435,
+          "cor": "#ec4899",
+          "valor": 51600000
+        },
+        {
+          "categoria": "BBS Brooklyn (Chucri Zaidan/SP)",
+          "pct": 0.0381,
+          "cor": "#a855f7",
+          "valor": 45200000
+        },
+        {
+          "categoria": "LAB 1404 (V. Madalena/SP)",
+          "pct": 0.0304,
+          "cor": "#84cc16",
+          "valor": 36000000
+        },
+        {
+          "categoria": "Cardeal Corporate (Pinheiros/SP)",
+          "pct": 0.0301,
+          "cor": "#22c55e",
+          "valor": 35700000
+        },
+        {
+          "categoria": "Caixa/RF (item 9)",
+          "pct": 0.02,
+          "cor": "#64748b",
+          "valor": 23725473
+        }
+      ],
+      "notaAlocacao": "Composição dos ativos brutos (imóveis + caixa). O passivo CRI de R$ 421 Mi (31% dos ativos imobiliários) reduz o PL líquido para R$ 816 Mi mas não é exibido no donut. Ver portfolio.stats.ltv."
+    },
+    "ativos": [
+      {
+        "tipo": "imovel",
+        "id": "sede-globo-sp",
+        "nome": "Sede Globo SP",
+        "endereco": "Rua Evandro Carlos de Andrade, 160 — Chucri Zaidan, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Chucri Zaidan/Berrini"
+        },
+        "abl": 39050,
+        "padrao": "AAA",
+        "tipologia": "escritorio_aaa",
+        "participacao": 1.0,
+        "valorContabil": 541200000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Globo Comunicação e Participações S.A.",
+            "setor": "Comunicação e Mídia",
+            "abl": 39050,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "atipico",
+              "indexador": "IPCA",
+              "renovacao": {
+                "probabilidade": "alta",
+                "racional": "Imóvel é sede operacional da Globo em SP, com investimentos relevantes em curso pela locatária (esclarecimento conjunto Globo+Vinci de set/2024). Contrato atípico com vigência além de 2030.",
+                "fonte": "Esclarecimento conjunto sobre Locação Sede Globo SP (ID 743720)"
+              }
+            }
+          }
+        ],
+        "riscos": [
+          "concentracao_locatario_unico",
+          "alavancagem_via_cri"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "haddock-lobo-347",
+        "nome": "Haddock Lobo 347",
+        "endereco": "Rua Haddock Lobo, 347 — Paulista, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Jardins/Paulista"
+        },
+        "abl": 6980,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 0.857,
+        "valorContabil": 126500000,
+        "ocupacao": 0.18,
+        "ocupacaoAjustada": 0.26,
+        "ocupacaoAjustadaNota": "Considerando contratos assinados (Joompro 527m² jun/2026 + COW Working 3 conjuntos abr/2026)",
+        "locatarios": [
+          {
+            "nome": "Fundação Zerbini",
+            "setor": "Saúde/Educação",
+            "contrato": {
+              "tipo": "atipico"
+            }
+          },
+          {
+            "nome": "Edo Rocha",
+            "setor": "Arquitetura",
+            "contrato": {
+              "tipo": "atipico"
+            }
+          },
+          {
+            "nome": "Papelaria 16",
+            "setor": "Varejo",
+            "contrato": {
+              "tipo": "atipico"
+            }
+          },
+          {
+            "nome": "Joompro Brazil",
+            "setor": "Tecnologia",
+            "contrato": {
+              "tipo": "tipico",
+              "inicio": "2026-06-01",
+              "vencimento": "2031-06-01",
+              "abl": 527,
+              "fonte": "RG fev/2026 (ID 1130577)"
+            }
+          },
+          {
+            "nome": "COW Working",
+            "setor": "Coworking",
+            "contrato": {
+              "tipo": "tipico",
+              "fonte": "RG mar/2026 (ID 1157223)"
+            }
+          }
+        ],
+        "riscos": [
+          "vacancia_alta",
+          "obras_em_curso",
+          "alavancagem_via_cri",
+          "vencimento_locatarios_atipicos"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "bm-336",
+        "nome": "BM 336 (Edifício Bartolomeu Mitre)",
+        "endereco": "Av. Bartolomeu Mitre, 336 — Leblon, Rio de Janeiro/RJ",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste",
+          "subregiao": "Zona Sul/Leblon"
+        },
+        "abl": 2507,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 0.51,
+        "participacaoNota": "Em abr/2024 o fundo vendeu 49% do imóvel; recebimento da 3ª e última parcela em 06/abr/2026 (após data-base mar/2026)",
+        "valorContabil": 121500000,
+        "certificacoes": [
+          "LEED Silver"
+        ],
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Vinci Partners",
+            "setor": "Financeiro (Asset Manager)",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Austral",
+            "setor": "Seguros",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "riscos": [
+          "partes_relacionadas_locatario_vinci_partners"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "bma-corporate",
+        "nome": "BMA Corporate",
+        "endereco": "Largo do Ibam, 1 — Humaitá, Rio de Janeiro/RJ",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste",
+          "subregiao": "Zona Sul/Humaitá"
+        },
+        "abl": 8264,
+        "padrao": "AA",
+        "tipologia": "escritorio_a",
+        "participacao": 1.0,
+        "valorContabil": 126100000,
+        "certificacoes": [
+          "LEED Gold"
+        ],
+        "ocupacao": 0.96,
+        "locatarios": [
+          {
+            "nome": "BMA Advogados (Barbosa Müssnich e Aragão)",
+            "setor": "Escritório de Advocacia",
+            "abl": 4960,
+            "percAbl": 0.6,
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Casa de Saúde São José (CSSJ)",
+            "setor": "Saúde",
+            "abl": 1820,
+            "percAbl": 0.22,
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Laboratório de Performance Humana (LPH)",
+            "setor": "Saúde",
+            "abl": 1075,
+            "percAbl": 0.13,
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "riscos": [],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "oscar-freire-585",
+        "nome": "Oscar Freire 585 (OF 585)",
+        "endereco": "Rua Oscar Freire, 585 — Jardins, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Jardins"
+        },
+        "abl": 4100,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 0.667,
+        "participacaoNota": "VINO11 detém 100% das lajes corporativas do empreendimento (loja de varejo Renner foi vendida em jul/2021)",
+        "valorContabil": 78200000,
+        "ocupacao": 0.14,
+        "locatarios": [
+          {
+            "nome": "ICTS",
+            "setor": "Construção e Serviços Imobiliários",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "riscos": [
+          "vacancia_alta",
+          "ex_wework_inadimplente_em_2024_despejada"
+        ],
+        "historico": "WeWork foi locatária principal até 2024. Inadimplência de jun-ago/2024 levou a ação de despejo (ID 729401), com obtenção de liminar (ID 731632). Vacância segue alta após desocupação. Em fev/2026 o fundo recebeu R$ 289 mil pela rescisão da loja Vitacon no térreo do imóvel.",
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + Comunicados WeWork (IDs 729401, 731632)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "vita-cora",
+        "nome": "Vita Corá",
+        "endereco": "Rua Cerro Corá, 2175 — Alto de Pinheiros, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Alto de Pinheiros"
+        },
+        "abl": 4347,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 0.664,
+        "valorContabil": 51600000,
+        "ocupacao": 0.75,
+        "locatarios": [
+          {
+            "nome": "Regus / IWG (marca Spaces)",
+            "setor": "Coworking",
+            "contrato": {
+              "tipo": "tipico",
+              "indexador": "Variável (% receita operacional)",
+              "fonte": "RG mar/2026 (ID 1157223)"
+            }
+          }
+        ],
+        "riscos": [
+          "componente_variavel_aluguel",
+          "atrasos_pontuais_locatario",
+          "concentracao_locatario_unico"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "bbs-brooklin",
+        "nome": "Brooklyn Business Square (BBS)",
+        "endereco": "Rua Jaceru, 154 — Vila Gertrudes, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Chucri Zaidan/Brooklin"
+        },
+        "abl": 5379,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 1.0,
+        "valorContabil": 45200000,
+        "ocupacao": 0.44,
+        "locatarios": [
+          {
+            "nome": "Eventesse",
+            "setor": "Tecnologia/Eventos",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Velotax",
+            "setor": "Tecnologia/Fintech",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "riscos": [
+          "vacancia_alta_56pct"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "lab-1404",
+        "nome": "LAB 1404",
+        "endereco": "Rua Mourato Coelho, 1404 — Vila Madalena, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Vila Madalena"
+        },
+        "abl": 2479,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 0.3826,
+        "valorContabil": 36000000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Galeria (Agência de Propaganda)",
+            "setor": "Comunicação e Mídia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "riscos": [
+          "fracao_minoritaria",
+          "concentracao_locatario_unico"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "cardeal-corporate",
+        "nome": "Edifício Cardeal Corporate",
+        "endereco": "Rua Cardeal Arcoverde, 563 — Pinheiros, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Pinheiros"
+        },
+        "abl": 2682,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": 1.0,
+        "valorContabil": 35700000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Faculdade Belavista",
+            "setor": "Educação",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "riscos": [
+          "concentracao_locatario_unico"
+        ],
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157223) + DF 2025 (ID 1149235)"
+      }
+    ],
+    "transacoes": [
+      {
+        "data": "2024-04",
+        "tipo": "venda_parcial",
+        "imovel": "BM 336",
+        "descricao": "Venda de 49% do imóvel BM336 — pré-pagamento de R$ 20,1 mi (49% da dívida) e parcelamento dos recebíveis em 3 parcelas mensais. Última parcela recebida em 06/abr/2026.",
+        "valor": null,
+        "fonte": "DF 2025 (ID 1149235)"
+      },
+      {
+        "data": "2024-08",
+        "tipo": "evento_credito",
+        "imovel": "Oscar Freire 585",
+        "descricao": "Ação de despejo contra WeWork por inadimplência de jun-ago/2024. Liminar concedida em set/2024. Locatária ocupava 3.594m² (~5% da receita do fundo).",
+        "fonte": "Comunicados (IDs 729401, 731632)"
+      },
+      {
+        "data": "2025-09",
+        "tipo": "venda_relevante",
+        "imovel": "C&A Alphaville (vendido)",
+        "descricao": "Venda do imóvel sede da C&A Modas em Alphaville/Barueri por R$ 40 milhões (R$ 5.063/m² ABL). Recursos usados para recompra antecipada integral do CRI VINO (R$ 34,6 Mi, CDI+3,5%, vencimento dez/2030), reduzindo despesa financeira total em ~15%. Impacto líquido recorrente +R$ 0,001/cota.",
+        "valor": 40000000,
+        "fonte": "Comunicado de 19/09/2025 (ID 994843)"
+      },
+      {
+        "data": "2025-12",
+        "tipo": "reavaliacao",
+        "imovel": "Portfólio inteiro",
+        "descricao": "Reavaliação anual pela Colliers International do Brasil: valor 0,97% inferior ao contábil dos imóveis, com queda de 1,37% no VP/cota. Maiores baixas: Haddock Lobo (-R$ 10,7 mi, -7%) e Oscar Freire (-R$ 5,4 mi, -6%).",
+        "fonte": "Comunicado dez/2025 (ID 1073633)"
+      },
+      {
+        "data": "2026-02",
+        "tipo": "evento_credito",
+        "imovel": "Haddock Lobo 347",
+        "descricao": "Negociação concluída sobre desocupação da Vitacon: total de R$ 485 mil em 3 parcelas mensais (fev, mar, abr/2026). Impacto não-recorrente positivo no resultado.",
+        "valor": 485000,
+        "fonte": "Fato Relevante 06/03/2026 + RGs fev-mar/2026"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.2514,
+      "interpretacaoHhi": "moderada-alta — dominada pela Sede Globo SP (45,6% sobre ativos brutos)",
+      "topN": {
+        "top1Pct": 0.4564,
+        "top3Pct": 0.6694,
+        "top5Pct": 0.8379,
+        "top10Pct": 1.0
+      },
+      "geografica": [
+        {
+          "regiao": "Sudeste — São Paulo capital",
+          "pct": 0.7345,
+          "ativos": 7
+        },
+        {
+          "regiao": "Sudeste — Rio de Janeiro capital",
+          "pct": 0.2655,
+          "ativos": 2
+        }
+      ],
+      "subregiao": [
+        {
+          "subregiao": "Chucri Zaidan / Berrini (SP)",
+          "pct": 0.5047,
+          "ativos": 2
+        },
+        {
+          "subregiao": "Zona Sul RJ (Leblon + Humaitá)",
+          "pct": 0.2655,
+          "ativos": 2
+        },
+        {
+          "subregiao": "Jardins / Paulista (SP)",
+          "pct": 0.1762,
+          "ativos": 2
+        },
+        {
+          "subregiao": "Pinheiros / V. Madalena / A. de Pinheiros (SP)",
+          "pct": 0.1061,
+          "ativos": 3
+        }
+      ],
+      "porLocatario": [
+        {
+          "nome": "Globo Comunicação (Sede Globo SP)",
+          "pct": 0.6,
+          "rating": null,
+          "fonte": "RG mar/2026 (ID 1157223)"
+        },
+        {
+          "nome": "BMA Advogados (BMA Corporate)",
+          "pct": 0.09,
+          "rating": null
+        },
+        {
+          "nome": "Vinci Compass (BM 336)",
+          "pct": 0.08,
+          "rating": null,
+          "nota": "parte relacionada (gestora)"
+        },
+        {
+          "nome": "Faculdade Belavista (Cardeal)",
+          "pct": 0.07,
+          "rating": null
+        },
+        {
+          "nome": "Galeria (LAB 1404)",
+          "pct": 0.07,
+          "rating": null
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA",
+          "pct": 0.93,
+          "fonte": "Mês de Renovação (RG mar/2026)"
+        },
+        {
+          "indexador": "IGP-M",
+          "pct": 0.07,
+          "fonte": "Mês de Renovação (RG mar/2026)"
+        }
+      ],
+      "porTipoContrato": [
+        {
+          "tipo": "Atípico",
+          "pct": 0.66,
+          "nota": "Dominado por Sede Globo SP + Haddock Lobo"
+        },
+        {
+          "tipo": "Típico",
+          "pct": 0.34
+        }
+      ],
+      "porVencimentoContrato": [
+        {
+          "faixa": "2026",
+          "pct": 0.1
+        },
+        {
+          "faixa": "2027",
+          "pct": 0.14
+        },
+        {
+          "faixa": "2028",
+          "pct": 0.08
+        },
+        {
+          "faixa": "2029",
+          "pct": 0.0
+        },
+        {
+          "faixa": "2030+",
+          "pct": 0.68
+        }
+      ]
+    },
+    "analise": {
+      "rotulo": "Portfólio AAA-âncora (Globo) + tail de ativos secundários em recuperação",
+      "cor": "amber",
+      "tags": [
+        "1 imóvel AAA atípico responde por 60% receita",
+        "WAULT 7,1 anos forte na ponta âncora",
+        "Vacância concentrada em 4 ativos (Haddock, OF585, BBS, Vita Corá)",
+        "31% alavancagem via 2 CRIs IPCA+"
+      ],
+      "veredicto": "<p>Portfólio bipolar: <strong class=\"text-emerald-400\">a Sede Globo SP é uma âncora AAA</strong> em contrato atípico com a Globo, com WAULT longo e segurança operacional alta — sozinha sustenta 60% da receita. <strong class=\"text-amber-400\">O resto do portfólio</strong> é heterogêneo, com 4 dos 9 ativos abaixo de 75% de ocupação. A tese de upside está em recompor essa cauda — Haddock Lobo (já tem dois novos contratos assinados), BBS (Eventesse + Velotax + futuras), Oscar Freire (recuperando pós-WeWork) e Vita Corá (Regus volátil).</p>",
+      "pontosFortes": [
+        "Sede Globo SP em contrato atípico com prazo longo + vigência além de 2030",
+        "WAULT ponderado de 7,1 anos — entre os mais altos do segmento",
+        "68% da receita com vencimento após 2030",
+        "Imóveis predominantemente classe A/AA em endereços relevantes (Berrini, Paulista, Leblon, Humaitá)",
+        "Diversificação de locatários (10+ inquilinos top-5 + tail) limita risco mono-inquilino fora da Globo"
+      ],
+      "pontosFracos": [
+        "60% da receita em um único imóvel/locatário (Globo)",
+        "4 ativos com vacância significativa (Haddock 18%, OF585 14%, BBS 44%, Vita Corá 75% ocupado mas com receita variável)",
+        "31% de alavancagem via CRIs Sede Globo + Haddock (despesa financeira -R$ 2,5 Mi/mês)",
+        "Concentração em Chucri Zaidan/Berrini (50% do portfólio) expõe a ciclo regional",
+        "Vita Corá com aluguel 100% variável (Regus) gera volatilidade no resultado mensal"
+      ],
+      "perfilInvestidor": "Investidor que busca tijolo de escritórios com âncora premium e aceita exposição a recuperação setorial. NÃO é para quem precisa de previsibilidade absoluta — a cauda do portfólio ainda está em recomposição."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Vinci Offices FII — De um portfólio de 4 imóveis em 2019 para 9 ativos consolidados em 2026, atravessando a pior crise pós-pandemia dos escritórios",
+    "periodos": [
+      {
+        "periodo": "Jul/2013",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 24/07/2013 como condomínio fechado. Início focado em construção de portfólio de lajes corporativas premium em SP/RJ.",
+        "pontos": [
+          "CNPJ: 12.516.185/0001-70",
+          "Administrador: BRL Trust DTVM",
+          "Gestor: Vinci Real Estate"
+        ]
+      },
+      {
+        "periodo": "Nov/2019",
+        "label": "IPO",
+        "cor": "emerald",
+        "descricao": "Distribuição pública primária da 4ª emissão (R$ 12,70/cota) e início de negociação na B3 com o ticker VINO11 em 25/11/2019. Primeiro dividendo em dez/2019 de R$ 0,36/cota.",
+        "pontos": [
+          "Início negociação: 25/11/2019",
+          "Cotas: 9,94 milhões",
+          "PL inicial: ~R$ 612 Mi"
+        ]
+      },
+      {
+        "periodo": "2020",
+        "label": "AQUISIÇÕES PANDÊMICAS",
+        "cor": "blue",
+        "descricao": "Mesmo durante a pandemia, o fundo executou aquisições estratégicas: <strong>fev/2020</strong> participação no LAB 1404, <strong>fev/2020</strong> participação na Sede C&A Alphaville, <strong>set/2020</strong> 100% Cardeal Corporate (Camicado), <strong>set/2020</strong> +30% BMA Corporate (passa a 100%), <strong>out/2020</strong> 100% Haddock Lobo 347, <strong>out/2020</strong> +30% C&A Alphaville (passa a 100%).",
+        "pontos": [
+          "6 transações em 2020",
+          "Diversificação geográfica RJ-SP",
+          "Resiliência pré-vacinas"
+        ]
+      },
+      {
+        "periodo": "Jan/2022",
+        "label": "7ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "Encerramento de oferta primária em 25/01/2022. Cotas passam de 12,67 mi para 16,57 mi (R$ 211 Mi adicionais). Ativos consolidam em 10 imóveis (incluía a sede C&A) e PL em ~R$ 910 Mi.",
+        "pontos": [
+          "+R$ 211 Mi captados",
+          "PL pico: R$ 910 Mi (mar/2022)"
+        ]
+      },
+      {
+        "periodo": "2022-2023",
+        "label": "PRESSÃO DOS ESCRITÓRIOS",
+        "cor": "amber",
+        "descricao": "Mercado de escritórios em SP e RJ sofre pressão pós-pandemia (home office persistente, vacância sistêmica, oferta nova). DPS cai de R$ 0,55 (pico nov/2021) para R$ 0,34 em 2022 e R$ 0,31 em 2023. VP/cota inicia trajetória descendente.",
+        "pontos": [
+          "Vacância sistêmica nos eixos Berrini/Faria Lima",
+          "DPS em queda gradual",
+          "Reavaliações negativas anuais"
+        ]
+      },
+      {
+        "periodo": "Ago/2023",
+        "label": "DESDOBRAMENTO 1:5",
+        "cor": "blue",
+        "descricao": "Cotas desdobradas 1:5 — passam de 16,57 mi para 82,83 mi cotas. VP/cota cai proporcionalmente de ~R$ 54 para ~R$ 10,80. DPS pós-split passa a R$ 0,06 (equivalente a R$ 0,30 pré-split). Movimento técnico para aumentar liquidez por cota a preço unitário menor.",
+        "pontos": [
+          "Cotas: 16,57 mi → 82,83 mi",
+          "VP/cota: ~R$ 54 → ~R$ 10,80",
+          "Sem impacto patrimonial"
+        ]
+      },
+      {
+        "periodo": "Apr/2024",
+        "label": "VENDA 49% BM336",
+        "cor": "blue",
+        "descricao": "Vinci Offices vende 49% do imóvel BM 336 (Leblon/RJ). Pré-pagamento de R$ 20,1 mi quita parcialmente a securitização do imóvel (concluída em dez/2025). Pagamento parcelado em 3 anos.",
+        "pontos": [
+          "Reciclagem patrimonial",
+          "Quitação parcial CRI BM336"
+        ]
+      },
+      {
+        "periodo": "Aug-Sep/2024",
+        "label": "DESPEJO WEWORK",
+        "cor": "red",
+        "descricao": "Inadimplência da WeWork no Oscar Freire 585 (junho-agosto). Em <strong>29/08/2024</strong> ajuizada Ação de Despejo. Em <strong>04/09/2024</strong> obtida liminar. Locatária ocupava 3.594m² (~5% receita do fundo) e propôs devolução amigável com renúncia de penalidades — gestão recusou e seguiu via judicial.",
+        "pontos": [
+          "Vacância sobe ao OF585",
+          "Ação judicial em curso"
+        ]
+      },
+      {
+        "periodo": "Set/2024",
+        "label": "ESCLARECIMENTO GLOBO",
+        "cor": "emerald",
+        "descricao": "Em <strong>25/09/2024</strong>, Vinci e Globo emitem nota conjunta esclarecendo que <strong>NÃO há tratativa para abreviar a vigência da locação atípica</strong> da Sede Globo SP (em curso desde 2021). Globo confirma investimentos relevantes em curso no imóvel. Esclarecimento foi crítico após boatos no mercado.",
+        "pontos": [
+          "Nota conjunta com a locatária mais relevante",
+          "Confirma compromisso longo prazo Globo"
+        ]
+      },
+      {
+        "periodo": "Sep/2025",
+        "label": "VENDA C&A + RECOMPRA CRI",
+        "cor": "emerald",
+        "descricao": "Em <strong>19/09/2025</strong> conclui venda do imóvel sede da C&A em Alphaville por <strong>R$ 40 milhões</strong> (R$ 5.063/m² ABL). Com recursos, faz <strong>recompra facultativa integral do CRI VINO</strong> (R$ 34,6 Mi, CDI+3,5%, vencia em dez/2030) — o CRI mais caro do portfólio. Reduz despesa financeira total em ~15% e gera +R$ 0,001/cota recorrente.",
+        "pontos": [
+          "Venda R$ 40 Mi",
+          "Recompra CRI mais caro",
+          "Despesa financeira -15%"
+        ]
+      },
+      {
+        "periodo": "Dec/2025",
+        "label": "REAVALIAÇÃO COLLIERS",
+        "cor": "amber",
+        "descricao": "Reavaliação anual pela Colliers International resulta em valor <strong>0,97% inferior</strong> ao contábil dos imóveis, com <strong>queda de 1,37% no VP/cota</strong>. Maiores baixas: Haddock Lobo (-R$ 10,7 mi, -7%) e Oscar Freire (-R$ 5,4 mi, -6%). VP/cota encerra 2025 em R$ 9,86 (vs R$ 10,30 dez/2024).",
+        "pontos": [
+          "VP/cota: R$ 10,30 → R$ 9,86",
+          "Reflexo de vacâncias de SP"
+        ]
+      },
+      {
+        "periodo": "Feb-Mar/2026",
+        "label": "RECOMPOSIÇÃO HADDOCK",
+        "cor": "emerald",
+        "descricao": "Gestão fecha dois novos contratos no Haddock Lobo 347: <strong>Joompro Brazil</strong> (526m², 5 anos a partir de jun/2026, modelo turn-key) e <strong>COW Working</strong> (3 conjuntos, abr/2026). Ocupação do imóvel sobe de 18% para ~26%. Impacto recorrente positivo de +R$ 0,001 (Joompro) +R$ 0,003 (COW)/cota após concessões.",
+        "pontos": [
+          "Joompro: +526m², +R$ 0,001/cota recorrente",
+          "COW Working: +R$ 0,003/cota",
+          "Vacância em queda gradual"
+        ]
+      },
+      {
+        "periodo": "Apr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Cota negocia a R$ 5,01 (P/VP 0,51), distribuição mensal estabilizada em R$ 0,040/cota desde fev/2026. DY 12m de 12,2%. Estimativa de gestão para até jun/2026: R$ 0,038-0,045/cota recorrente. Em 06/abr/2026 recebida a 3ª e última parcela da venda de 49% do BM336.",
+        "pontos": [
+          "<strong>PL:</strong> R$ 816 Mi",
+          "<strong>VP/cota:</strong> R$ 9,86",
+          "<strong>Cotistas:</strong> 131.566",
+          "<strong>DY 12m:</strong> 12,2%"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">VINO11</strong> nasceu em 2019 como uma aposta em <strong>lajes corporativas premium</strong> da Vinci. Em 2020-2022, mesmo na pandemia, executou aquisições relevantes que consolidaram um portfólio de 9-10 imóveis em SP e RJ. Mas o ciclo difícil dos escritórios pós-pandemia — vacância elevada, home office persistente, oferta nova nos eixos Berrini/Faria Lima, queda de aluguéis reais — pesou desde 2022 e <strong class=\"text-red-400\">a cota acumula -60% desde o IPO</strong> (R$ 12,70 → R$ 5,01).</p><p>De 2024 para cá, a gestão tomou ações concretas para estancar a sangria: ação de despejo da WeWork (set/2024), venda do C&A Alphaville e recompra do CRI mais caro (set/2025), e contratação de novos locatários no Haddock Lobo (fev-mar/2026). Hoje, com <strong class=\"text-emerald-400\">P/VP 0,51</strong> e <strong class=\"text-emerald-400\">DY 12m de 12,2%</strong>, a cota incorpora boa parte do prêmio de risco — mas o caminho de upside depende centralmente da recomposição de ocupação dos 4 ativos vagos e da Globo manter sua sede operacional na unidade de Chucri Zaidan.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Cotistas (IPO → hoje)",
+        "valor": "+126.621",
+        "detalhe": "~5.000 (IPO) → 131.566 (mar/2026)"
+      },
+      {
+        "label": "Imóveis (IPO → hoje)",
+        "valor": "9",
+        "detalhe": "Pico de 10 ativos pré-venda C&A"
+      },
+      {
+        "label": "Cota desde IPO",
+        "valor": "-60,4%",
+        "detalhe": "R$ 12,70 → R$ 5,01"
+      },
+      {
+        "label": "DY 12m atual",
+        "valor": "12,2%",
+        "detalhe": "vs Selic 14,75%"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O <strong class=\"text-blue-400\">VINO11</strong> é uma <strong class=\"text-amber-400\">tese de valor em escritórios pós-pandemia</strong>: o ciclo difícil já está, em boa parte, refletido no preço (P/VP 0,51, DY 12m de 12,2%). A âncora do portfólio — <strong class=\"text-emerald-400\">Sede Globo SP em contrato atípico</strong> — sustenta 60% da receita em base sólida e longa, e a gestão Vinci tem track record de execução. O upside vem de duas frentes: <strong class=\"text-blue-400\">(i) recompor ocupação</strong> dos 4 ativos vagos (Haddock, OF585, BBS, Vita Corá), já em curso; <strong class=\"text-blue-400\">(ii) reprecificação</strong> em ciclo de queda de Selic — FIIs descontados costumam capturar mais que a média.</p><p>O contraponto é o <strong class=\"text-amber-400\">risco de execução</strong>: 31% de alavancagem via dois CRIs IPCA+ de longo prazo consome boa parte do resultado bruto, vacância em 4 ativos demora a recompor em mercado de oferta excessiva, e qualquer evento adverso na relação com a Globo seria significativo. O VINO11 cabe como <strong>posição satélite</strong> em carteira de FIIs de tijolo — não é um core position dada a concentração.</p>",
+    "paraQuem": [
+      "Investidores de <strong class=\"text-emerald-400\">valor</strong> que aceitam comprar setor em ciclo de baixa precificada",
+      "Quem busca <strong class=\"text-emerald-400\">tijolo descontado</strong> com âncora AAA (Globo) em portfólio",
+      "Perfil <strong class=\"text-emerald-400\">moderado-arrojado</strong> com horizonte de 3-5 anos para reprecificação",
+      "Investidores que apostam na <strong class=\"text-emerald-400\">queda de Selic</strong> e na recuperação do segmento escritórios"
+    ],
+    "naoParaQuem": [
+      "Quem precisa de <strong class=\"text-amber-400\">DPS estável e crescente</strong> — o segmento ainda comprime",
+      "Investidores <strong class=\"text-amber-400\">conservadores</strong> que não aceitam P/VP 0,51 ainda em queda potencial",
+      "Quem já tem exposição relevante a <strong class=\"text-amber-400\">FIIs de escritórios</strong> (HGRE11, BROF11, GTWR11)",
+      "Perfil que precisa de <strong class=\"text-amber-400\">alta liquidez</strong> — VINO tem ADTV abaixo de R$ 700 mil/dia"
+    ]
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII de escritórios premium em ciclo descontado pós-pandemia",
+      "subrotulo": "Tese de valor com âncora Globo (60%) e cauda de 4 ativos vagos em recomposição — risco moderado-alto",
+      "cor": "amber"
+    },
+    "perfilRisco": {
+      "nivel": "alto",
+      "score": 3.4,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 3.5,
+          "peso": 0.2,
+          "metrica": "HHI 0,2514 / top-1 = 45,6% (Sede Globo SP) / top-3 = 66,9% / top-5 = 83,8%",
+          "leitura": "Concentração moderada-alta dominada por um único ativo (Sede Globo SP, 45,6% dos ativos brutos). Top-3 cobre 67%, mas a diversificação de 9 imóveis em 4 sub-regiões reduz o risco geográfico"
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 3.5,
+          "peso": 0.15,
+          "metrica": "σ12m anualizado = 12,9% / σ24m = 20,9% / drawdown máx 24m = -45,3% em fev/2025",
+          "leitura": "Volatilidade média-alta para FII; drawdown profundo em fev/2025 (mínima R$ 4,40). Recuperação parcial até R$ 5,50 em fev/2026, em queda novamente para R$ 5,01"
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 3.5,
+          "peso": 0.2,
+          "metrica": "CV 24m = 17,6% / DPS oscilou entre R$ 0,040 e R$ 0,085 (amplitude 113%)",
+          "leitura": "DPS oscilou pela transformação do mercado de escritórios pós-pandemia + extraordinária em jun/2025. Em queda gradual: R$ 0,055 → R$ 0,050 → R$ 0,045 → R$ 0,040"
+        },
+        {
+          "nome": "Liquidez",
+          "score": 4.0,
+          "peso": 0.15,
+          "metrica": "Volume médio diário (yfinance, 4 semanas) ≈ R$ 514 mil / Volume RG mar/2026 = R$ 0,7 mi médio diário",
+          "leitura": "Liquidez baixa-média para o tamanho do fundo. Posições > R$ 500k exigem dias para liquidar sem mover preço"
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 3.5,
+          "peso": 0.2,
+          "metrica": "Vacância 22% / WAULT 7,1 anos / 60% receita Globo (atípico) / classes A-AAA",
+          "leitura": "Bipolar: âncora AAA (Globo) com WAULT longo + cauda de 4 ativos com vacância significativa. Setor de escritórios SP/RJ ainda em recuperação pós-pandemia"
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 2.5,
+          "peso": 0.1,
+          "metrica": "LTV 31% (CRI Sede Globo + CRI Haddock Lobo, IPCA+5,6/6,9%, vencimento até 2037)",
+          "leitura": "Alavancagem moderada via 2 CRIs IPCA+ de longo prazo. Vencimentos longos (até 2037) reduzem risco refi imediato, mas IPCA+ pesa em ciclo de inflação"
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": "parcial",
+        "racional": "DPS de R$ 0,040 estabilizado em fev-mar/2026 mas em trajetória de queda há 18 meses. Não é renda crescente nem rigorosamente estável"
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": true,
+        "racional": "93% dos contratos com reajuste IPCA — inclui o atípico da Globo (60% da receita). Hedge inflacionário concreto"
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Receitas 100% em BRL — sem componente cambial"
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": true,
+        "racional": "P/VP 0,51 oferece desconto de 49%. Recompor ocupação dos ativos vagos pode reduzir o desconto via aumento de DPS"
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": true,
+        "racional": "Escritórios descontados costumam reprecificar acima da média em ciclo de queda. Selic projetada para 11% até dez/2026 favorece"
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Sem componente CDI relevante; alta de Selic comprime ainda mais o desconto e pesa nos CRIs IPCA+"
+      },
+      {
+        "nome": "Exposição setorial concentrada (escritórios)",
+        "encaixa": true,
+        "racional": "Tese pura de exposição a escritórios premium SP/RJ, com âncora Globo. Para quem quer apostar no segmento, faz sentido"
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": false,
+        "racional": "Volatilidade de DPS + queda de cota desde IPO + concentração na Globo são incompatíveis com objetivo de renda perene"
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": "parcial",
+        "racional": "Para quem não tem nenhum FII de escritório, VINO11 oferece exposição diversificada em 9 imóveis. Mas quem já tem HGRE11/BROF11 está em sobreposição relevante"
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": "parcial",
+        "racional": "Como todo FII brasileiro, dividendos isentos para PF. DY 12m de 12,2% em isenção equivale a ~14,8% gross-up — competitivo, mas não é a razão principal de entrar"
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "Concentração de 60% na Sede Globo SP",
+        "severidade": "alta",
+        "descricao": "Um único imóvel responde por ~60% da receita de aluguel. Locatária Globo confirmou compromisso (esclarecimento set/2024) e tem investimentos relevantes no imóvel, mas qualquer evento adverso (desocupação parcial, renegociação para baixo) impactaria materialmente o resultado",
+        "mitigacao": "Contrato atípico com vigência longa (>2030) e investimentos em curso da Globo no ativo. Risco mitigado mas não eliminado"
+      },
+      {
+        "titulo": "Cluster de revisionais em 2026 (60% da receita 'já possuiu')",
+        "severidade": "alta",
+        "descricao": "60% da receita está em 'já possuiu' revisional na curva do RG mar/2026 — significa proximidade de revisão de aluguel. Em mercado de escritórios ainda em recuperação, há risco de revisional para baixo nos ativos com vacância no entorno",
+        "mitigacao": "Aluguel médio do portfólio com desconto de 2,0% (mar/2026) vs mercado, sugere baixo espaço para queda. Globo é atípico, sem revisional aberta"
+      },
+      {
+        "titulo": "Alavancagem IPCA+ em 31% dos ativos imobiliários",
+        "severidade": "alta",
+        "descricao": "Dois CRIs ativos: Sede Globo (R$ 354 Mi, IPCA+6,948%) e Haddock Lobo (R$ 67 Mi, IPCA+5,575%). Em ciclo de inflação, a despesa financeira sobe (-R$ 51 Mi em 2025 vs -R$ 56 Mi em 2024 com queda da inflação). Atualização monetária consome cerca de 60% da receita financeira do CRI Sede Globo",
+        "mitigacao": "Vencimentos longos (jan/2037 e out/2035) reduzem risco refi imediato. Recompra do CRI VINO (CDI+3,5%) em set/2025 já reduziu despesa total em 15%"
+      },
+      {
+        "titulo": "Vita Corá: aluguel 100% variável (Regus)",
+        "severidade": "media",
+        "descricao": "O imóvel Vita Corá (4,4% do PL) tem locatário único (Regus/IWG) com contrato variável atrelado à receita operacional do coworking. Em mar/2026 houve impacto pontual atípico de +R$ 0,004/cota por descasamento contratual. Volatilidade mensal real",
+        "mitigacao": "Componente variável é reduzido pelo tamanho do ativo (~4% do PL). Contrato segue vigente com Regus operando como Spaces"
+      },
+      {
+        "titulo": "Histórica TIR negativa desde IPO (-25,5% líquido)",
+        "severidade": "media",
+        "descricao": "Quem comprou no IPO e mantém posição experimentou rentabilidade líquida (cota+dividendos) de -25,5% em 6,4 anos vs +34% do IFIX. A trajetória de longo prazo do gestor com este fundo é negativa",
+        "mitigacao": "Ciclo é setorial (escritórios pós-pandemia), não exclusivo do gestor — pares HGRE11, BROF11 também caíram significativamente. Recuperação setorial pode beneficiar mais este fundo descontado"
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 514000,
+      "volumeMedio252d": 628000,
+      "diasParaSair": {
+        "10mil": 0.1,
+        "100mil": 0.97,
+        "500mil": 4.86,
+        "1milhao": 9.73,
+        "10milhoes": 97.28
+      },
+      "spread": null,
+      "fonte": "calculado_csv",
+      "leitura": "Liquidez média-baixa. Posição de R$ 100k sai em ~1 dia útil sem mover preço; R$ 1M leva ~10 dias. Compatível com investidor pessoa física até R$ 200-300k, restritivo para institucional"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.129,
+        "sigma24m": 0.209,
+        "drawdownMax24m": -0.4534,
+        "drawdownMaxData": "2025-02",
+        "tempoRecuperacao": null
+      },
+      "dividendo": {
+        "cv12m": 0.225,
+        "cv24m": 0.176,
+        "minDps24m": 0.04,
+        "maxDps24m": 0.085,
+        "amplitudeRelativa": 1.125
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "tijolo_escritorios_aaa",
+      "pares": [
+        {
+          "ticker": "HGRE11",
+          "sobreposicaoEstimada": 0.65,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica",
+            "perfil_inquilinos"
+          ],
+          "leitura": "FII de escritórios AAA com forte presença em SP. Exposição setorial e geográfica próxima — quem tem HGRE11 está fortemente sobreposto a VINO11"
+        },
+        {
+          "ticker": "BROF11",
+          "sobreposicaoEstimada": 0.55,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "Foco em escritórios premium SP/RJ. Perfil parecido, com alguma diferença na qualidade e endereços específicos"
+        },
+        {
+          "ticker": "GTWR11",
+          "sobreposicaoEstimada": 0.45,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "FII de escritórios com âncora forte. Sobreposição em tipologia e região. WAULT também alto"
+        },
+        {
+          "ticker": "BMLC11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "tipologia"
+          ],
+          "leitura": "Escritórios com foco SP. Diversificação regional menor que VINO11"
+        },
+        {
+          "ticker": "PVBI11",
+          "sobreposicaoEstimada": 0.35,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "Escritórios premium SP. Pegada Faria Lima/Berrini. Sobreposição moderada"
+        },
+        {
+          "ticker": "BLCA11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "Escritórios AAA SP. Pegada Berrini/Faria Lima"
+        }
+      ],
+      "diversificacaoReal": "Para quem já tem qualquer FII de escritório AAA (HGRE, BROF, GTWR, PVBI, BMLC, BLCA), VINO11 representa <strong class=\"text-amber-400\">sobreposição setorial relevante</strong>. Para quem não tem exposição a escritórios, VINO11 entrega 9 ativos em SP/RJ com âncora Globo — única exposição direta ao contrato atípico Globo no mercado de FIIs."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Recompor ocupação Haddock + BBS + OF585",
+        "descricao": "Os contratos Joompro+COW já assinados elevam Haddock de 18% para 26%. Se gestão fechar mais 3-5 contratos em 2026-2027 nos 3 ativos vagos, ocupação consolidada pode ir de 78% para 90%+, elevando DPS para R$ 0,055-0,065 e fechando o desconto P/VP",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic em queda + IFIX em alta",
+        "descricao": "Selic projetada para 11% até dez/2026 reabre fluxo para FIIs descontados. VINO11 com P/VP 0,51 tende a reprecificar acima da média do segmento de escritórios",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Consolidação dos novos contratos Globo",
+        "descricao": "Globo realiza investimentos relevantes na Sede SP, sinalizando intenção de longo prazo. Prorrogação ou renovação antecipada do contrato atípico estabilizaria 60% da receita por mais 5-10 anos",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Globo desocupa parcialmente ou renegocia para baixo",
+        "descricao": "Único cenário verdadeiramente catastrófico. Mesmo improvável (contrato atípico, investimentos em curso), uma desocupação parcial reduziria 60% da receita e exigiria reposicionamento completo do ativo",
+        "probabilidadeRelativa": "baixa"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Vacância setorial em SP persiste por 2-3 anos",
+        "descricao": "Se home office consolidar e oferta nova continuar entrando no eixo Berrini/Faria Lima, recompor Haddock/BBS/OF585 pode levar mais que o esperado, com revisional para baixo nos contratos típicos a vencer",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Reavaliação anual negativa em dez/2026",
+        "descricao": "Se tendência de baixa nos laudos Colliers continuar (-1% em 2025), VP/cota pode cair mais 2-3% em 2026, mantendo desconto sobre VP mesmo se preço se mantiver estável",
+        "probabilidadeRelativa": "media"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "swing_desconto",
+        "hedge_inflacao",
+        "diversificacao_setorial",
+        "tax_shield"
+      ],
+      "horizonte": "medio_longo",
+      "perfil": "moderado",
+      "carteiraTipica": "Posição entre 3-7% da carteira de FIIs para investidor que aceita ciclos longos no segmento de escritórios e busca exposição a tijolo descontado com âncora premium",
+      "perfisExemplo": [
+        "Investidor que NÃO tem exposição a escritórios e quer diversificar via fundo descontado",
+        "Quem aposta no fim do ciclo de Selic alta e na recuperação dos escritórios em SP/RJ",
+        "Investidor que valoriza âncora atípica de longo prazo (Globo) como base de portfólio"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Quem já tem exposição relevante a HGRE11/BROF11/GTWR11/PVBI11 — sobreposição setorial alta",
+        "Quem busca DPS estável e crescente — VINO em trajetória de queda nos últimos 18 meses",
+        "Investidor conservador que não tolera P/VP volátil — risco de novas reavaliações negativas",
+        "Quem precisa de alta liquidez — ADTV de R$ 500-700k/dia limita posições > R$ 200k",
+        "Aposentado que precisa de fluxo previsível — segmento ainda comprime e a recomposição leva trimestres"
+      ]
+    }
+  },
+  "dividendos": {
+    "historico": [
+      {
+        "data": "2019-12",
+        "dividendo": 0.36,
+        "dataPagamento": "2020-01-15",
+        "cotas": 9942726,
+        "distribuicao": 3579381.36,
+        "fonte": "Rendimentos e Amortizações (ID 74133)",
+        "docId": "74133",
+        "caixaLiquidoFimMes": 96943311.62
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 0.37,
+        "dataPagamento": "2020-02-14",
+        "cotas": 9942726,
+        "distribuicao": 3678808.62,
+        "fonte": "Rendimentos e Amortizações (ID 79044)",
+        "docId": "79044"
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 0.37,
+        "dataPagamento": "2020-03-13",
+        "cotas": 9942726,
+        "distribuicao": 3678808.62,
+        "fonte": "Rendimentos e Amortizações (ID 83411)",
+        "docId": "83411"
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.37,
+        "dataPagamento": "2020-04-14",
+        "cotas": 9942726,
+        "distribuicao": 3678808.62,
+        "fonte": "Rendimentos e Amortizações (ID 88989)",
+        "docId": "88989",
+        "caixaLiquidoFimMes": 23912365.17
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-05-15",
+        "cotas": 9942726,
+        "distribuicao": 3479954.1,
+        "fonte": "Rendimentos e Amortizações (ID 93420)",
+        "docId": "93420"
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-06-15",
+        "cotas": 9942726,
+        "distribuicao": 3479954.1,
+        "fonte": "Rendimentos e Amortizações (ID 98410)",
+        "docId": "98410"
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 0.42,
+        "dataPagamento": "2020-07-14",
+        "cotas": 9942726,
+        "distribuicao": 4175944.92,
+        "fonte": "Rendimentos e Amortizações (ID 103906)",
+        "docId": "103906",
+        "caixaLiquidoFimMes": 21184610.02
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 0.36,
+        "dataPagamento": "2020-08-14",
+        "cotas": 9942726,
+        "distribuicao": 3579381.36,
+        "fonte": "Rendimentos e Amortizações (ID 109532)",
+        "docId": "109532"
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-09-15",
+        "cotas": 9942726,
+        "distribuicao": 3479954.1,
+        "fonte": "Rendimentos e Amortizações (ID 114601)",
+        "docId": "114601"
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-10-15",
+        "cotas": 12673868,
+        "distribuicao": 4435853.8,
+        "fonte": "Rendimentos e Amortizações (ID 119207)",
+        "docId": "119207",
+        "caixaLiquidoFimMes": 50056169.07
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-11-16",
+        "cotas": 12673868,
+        "distribuicao": 4435853.8,
+        "fonte": "Rendimentos e Amortizações (ID 124355)",
+        "docId": "124355"
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-12-14",
+        "cotas": 12673868,
+        "distribuicao": 4435853.8,
+        "fonte": "Rendimentos e Amortizações (ID 129109)",
+        "docId": "129109"
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 0.42,
+        "dataPagamento": "2021-01-15",
+        "cotas": 12673868,
+        "distribuicao": 5323024.56,
+        "fonte": "Rendimentos e Amortizações (ID 136066)",
+        "docId": "136066",
+        "caixaLiquidoFimMes": 21965798.25
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.45,
+        "dataPagamento": "2021-02-12",
+        "cotas": 12673868,
+        "distribuicao": 5703240.6,
+        "fonte": "Rendimentos e Amortizações (ID 142808)",
+        "docId": "142808"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 0.45,
+        "dataPagamento": "2021-03-12",
+        "cotas": 12673868,
+        "distribuicao": 5703240.6,
+        "fonte": "Rendimentos e Amortizações (ID 151577)",
+        "docId": "151577"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 0.45,
+        "dataPagamento": "2021-04-15",
+        "cotas": 12673868,
+        "distribuicao": 5703240.6,
+        "fonte": "Rendimentos e Amortizações (ID 159822)",
+        "docId": "159822",
+        "caixaLiquidoFimMes": 28095033.47
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 0.45,
+        "dataPagamento": "2021-05-14",
+        "cotas": 12673868,
+        "distribuicao": 5703240.6,
+        "fonte": "Rendimentos e Amortizações (ID 169338)",
+        "docId": "169338"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.45,
+        "dataPagamento": "2021-06-15",
+        "cotas": 12673868,
+        "distribuicao": 5703240.6,
+        "fonte": "Rendimentos e Amortizações (ID 180668)",
+        "docId": "180668"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 0.45,
+        "dataPagamento": "2021-07-15",
+        "cotas": 12673868,
+        "distribuicao": 5703240.6,
+        "fonte": "Rendimentos e Amortizações (ID 189996)",
+        "docId": "189996",
+        "caixaLiquidoFimMes": 26374089.41
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 0.46,
+        "dataPagamento": "2021-08-13",
+        "cotas": 12673868,
+        "distribuicao": 5829979.28,
+        "fonte": "Rendimentos e Amortizações (ID 199075)",
+        "docId": "199075"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 0.58,
+        "dataPagamento": "2021-09-15",
+        "cotas": 12673868,
+        "distribuicao": 7350843.44,
+        "fonte": "Rendimentos e Amortizações (ID 210539)",
+        "docId": "210539"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 0.65,
+        "dataPagamento": "2021-10-15",
+        "cotas": 12673868,
+        "distribuicao": 8238014.2,
+        "fonte": "Rendimentos e Amortizações (ID 219846)",
+        "docId": "219846",
+        "caixaLiquidoFimMes": 36588207.15
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 0.54,
+        "dataPagamento": "2021-11-16",
+        "cotas": 12673868,
+        "distribuicao": 6843888.72,
+        "fonte": "Rendimentos e Amortizações (ID 229835)",
+        "docId": "229835"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 0.55,
+        "dataPagamento": "2021-12-14",
+        "cotas": 12673868,
+        "distribuicao": 6970627.4,
+        "fonte": "Rendimentos e Amortizações (ID 241512)",
+        "docId": "241512"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 0.5,
+        "dataPagamento": "2022-01-14",
+        "cotas": 12673868,
+        "distribuicao": 6336934.0,
+        "fonte": "Rendimentos e Amortizações (ID 251729)",
+        "docId": "251729",
+        "caixaLiquidoFimMes": 20732715.63
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-02-14",
+        "cotas": 12673868,
+        "distribuicao": 4309115.12,
+        "fonte": "Rendimentos e Amortizações (ID 261256)",
+        "docId": "261256"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-03-15",
+        "cotas": 12673868,
+        "distribuicao": 4309115.12,
+        "fonte": "Rendimentos e Amortizações (ID 272597)",
+        "docId": "272597"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-04-14",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 283787)",
+        "docId": "283787",
+        "caixaLiquidoFimMes": 49159514.08
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-05-13",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 297002)",
+        "docId": "297002"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-06-14",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 310462)",
+        "docId": "310462"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-07-14",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 321044)",
+        "docId": "321044",
+        "caixaLiquidoFimMes": 35068154.61
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-08-12",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 331831)",
+        "docId": "331831"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-09-15",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 346360)",
+        "docId": "346360"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-10-17",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 358610)",
+        "docId": "358610",
+        "caixaLiquidoFimMes": 20209644.12
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-11-16",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 370344)",
+        "docId": "370344"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.34,
+        "dataPagamento": "2022-12-14",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 383760)",
+        "docId": "383760"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.34,
+        "dataPagamento": "2023-01-13",
+        "cotas": 16565259,
+        "distribuicao": 5632188.06,
+        "fonte": "Rendimentos e Amortizações (ID 396132)",
+        "docId": "396132",
+        "caixaLiquidoFimMes": 34065504.09
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-02-14",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 407835)",
+        "docId": "407835"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-03-14",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 422613)",
+        "docId": "422613"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-04-17",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 438134)",
+        "docId": "438134",
+        "caixaLiquidoFimMes": 26858060.27
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-05-15",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 453510)",
+        "docId": "453510"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-06-15",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 472045)",
+        "docId": "472045"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-07-14",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 485613)",
+        "docId": "485613",
+        "caixaLiquidoFimMes": 41056400.84
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.31,
+        "dataPagamento": "2023-08-14",
+        "cotas": 16565259,
+        "distribuicao": 5135230.29,
+        "fonte": "Rendimentos e Amortizações (ID 498888)",
+        "docId": "498888"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.06,
+        "dataPagamento": "2023-09-15",
+        "cotas": 82826295,
+        "distribuicao": 4969577.7,
+        "fonte": "Rendimentos e Amortizações (ID 515573)",
+        "docId": "515573"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.06,
+        "dataPagamento": "2023-10-16",
+        "cotas": 82826295,
+        "distribuicao": 4969577.7,
+        "fonte": "Rendimentos e Amortizações (ID 529527)",
+        "docId": "529527",
+        "caixaLiquidoFimMes": 26337011.31
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.06,
+        "dataPagamento": "2023-11-16",
+        "cotas": 82826295,
+        "distribuicao": 4969577.7,
+        "fonte": "Rendimentos e Amortizações (ID 544206)",
+        "docId": "544206"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.058,
+        "dataPagamento": "2023-12-14",
+        "cotas": 82826295,
+        "distribuicao": 4803925.11,
+        "fonte": "Rendimentos e Amortizações (ID 561888)",
+        "docId": "561888"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.058,
+        "dataPagamento": "2024-01-12",
+        "cotas": 82826295,
+        "distribuicao": 4803925.11,
+        "fonte": "Rendimentos e Amortizações (ID 577179)",
+        "docId": "577179",
+        "caixaLiquidoFimMes": 18464222.49
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.055,
+        "dataPagamento": "2024-02-16",
+        "cotas": 82826295,
+        "distribuicao": 4555446.22,
+        "fonte": "Rendimentos e Amortizações (ID 593359)",
+        "docId": "593359"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.055,
+        "dataPagamento": "2024-03-14",
+        "cotas": 82826295,
+        "distribuicao": 4555446.22,
+        "fonte": "Rendimentos e Amortizações (ID 612132)",
+        "docId": "612132"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.055,
+        "dataPagamento": "2024-04-12",
+        "cotas": 82826295,
+        "distribuicao": 4555446.22,
+        "fonte": "Rendimentos e Amortizações (ID 630119)",
+        "docId": "630119",
+        "caixaLiquidoFimMes": 24756889.33
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 0.07,
+        "dataPagamento": "2024-05-15",
+        "cotas": 82826295,
+        "distribuicao": 5797840.65,
+        "fonte": "Rendimentos e Amortizações (ID 650738)",
+        "docId": "650738"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.06,
+        "dataPagamento": "2024-06-14",
+        "cotas": 82826295,
+        "distribuicao": 4969577.7,
+        "fonte": "Rendimentos e Amortizações (ID 673027)",
+        "docId": "673027"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.06,
+        "dataPagamento": "2024-07-12",
+        "cotas": 82826295,
+        "distribuicao": 4969577.7,
+        "fonte": "Rendimentos e Amortizações (ID 689323)",
+        "docId": "689323",
+        "caixaLiquidoFimMes": 39923669.51
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.052,
+        "dataPagamento": "2024-08-14",
+        "cotas": 82826295,
+        "distribuicao": 4306967.34,
+        "fonte": "Rendimentos e Amortizações (ID 709034)",
+        "docId": "709034"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.05,
+        "dataPagamento": "2024-09-13",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 730164)",
+        "docId": "730164"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.05,
+        "dataPagamento": "2024-10-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 749000)",
+        "docId": "749000",
+        "caixaLiquidoFimMes": 35380340.88
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.05,
+        "dataPagamento": "2024-11-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 769438)",
+        "docId": "769438"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.05,
+        "dataPagamento": "2024-12-13",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 792035)",
+        "docId": "792035"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-01-15",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 810857)",
+        "docId": "810857",
+        "caixaLiquidoFimMes": 26038613.9
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-02-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 830079)",
+        "docId": "830079"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-03-18",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 850857)",
+        "docId": "850857"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-04-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 868854)",
+        "docId": "868854",
+        "caixaLiquidoFimMes": 19853108.92
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-05-15",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 889553)",
+        "docId": "889553"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-06-13",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 914669)",
+        "docId": "914669"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.085,
+        "dataPagamento": "2025-07-14",
+        "cotas": 82826295,
+        "distribuicao": 7040235.08,
+        "fonte": "Rendimentos e Amortizações (ID 935664)",
+        "docId": "935664",
+        "caixaLiquidoFimMes": 40705484.16,
+        "lucroCaixa": 7050000,
+        "resultadoCaixa": 9764.92,
+        "payout": 0.9986
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-08-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 957196)",
+        "docId": "957196",
+        "lucroCaixa": 4150000,
+        "resultadoCaixa": 8685.25,
+        "payout": 0.9979
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-09-12",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 980181)",
+        "docId": "980181",
+        "lucroCaixa": 4150000,
+        "resultadoCaixa": 8685.25,
+        "payout": 0.9979
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-10-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 1002413)",
+        "docId": "1002413",
+        "caixaLiquidoFimMes": 28294286.8,
+        "lucroCaixa": 4400000,
+        "resultadoCaixa": 258685.25,
+        "payout": 0.9412
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-11-14",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 1025790)",
+        "docId": "1025790",
+        "lucroCaixa": 4150000,
+        "resultadoCaixa": 8685.25,
+        "payout": 0.9979
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.05,
+        "dataPagamento": "2025-12-12",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 1050107)",
+        "docId": "1050107",
+        "lucroCaixa": 4150000,
+        "resultadoCaixa": 8685.25,
+        "payout": 0.9979
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.05,
+        "dataPagamento": "2026-01-15",
+        "cotas": 82826295,
+        "distribuicao": 4141314.75,
+        "fonte": "Rendimentos e Amortizações (ID 1073508)",
+        "docId": "1073508",
+        "caixaLiquidoFimMes": 31119759.55,
+        "lucroCaixa": 4150000,
+        "resultadoCaixa": 8685.25,
+        "payout": 0.9979
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.045,
+        "dataPagamento": "2026-02-13",
+        "cotas": 82826295,
+        "distribuicao": 3727183.27,
+        "fonte": "Rendimentos e Amortizações (ID 1098214)",
+        "docId": "1098214",
+        "lucroCaixa": 3500000,
+        "resultadoCaixa": -227183.27,
+        "payout": 1.0649
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.04,
+        "dataPagamento": "2026-03-13",
+        "cotas": 82826295,
+        "distribuicao": 3313051.8,
+        "fonte": "Rendimentos e Amortizações (ID 1124400)",
+        "docId": "1124400",
+        "lucroCaixa": 3197000,
+        "resultadoCaixa": -116051.8,
+        "payout": 1.0363
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.04,
+        "dataPagamento": "2026-04-15",
+        "cotas": 82826295,
+        "distribuicao": 3313051.8,
+        "fonte": "Rendimentos e Amortizações (ID 1150746)",
+        "docId": "1150746",
+        "caixaLiquidoFimMes": 23725472.87,
+        "lucroCaixa": 3690000,
+        "resultadoCaixa": 376948.2,
+        "payout": 0.8978
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 1,
+        "lucroCaixa": 7050000,
+        "distribuicao": 7040235.08,
+        "resultadoCaixa": 9764.92,
+        "payout": 0.9986,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 25150000,
+        "distribuicao": 24847888.5,
+        "resultadoCaixa": 302111.5,
+        "payout": 0.988,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "lucroCaixa": 10387000,
+        "distribuicao": 10353286.87,
+        "resultadoCaixa": 33713.13,
+        "payout": 0.9968,
+        "interpretacao": "fez_caixa"
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_curto",
+      "dividendoLabel": "DPS de R$ 0,040 alinhado com geração recorrente atual",
+      "dividendoCor": "amber",
+      "horizonte": "12-24 meses (depende de recompor ocupação Haddock/BBS/OF585)",
+      "status": "estavel",
+      "cor": "amber",
+      "payoutMedio12m": 0.97,
+      "payoutMedio12mNota": "Estimativa baseada em RGs recentes (mar/26: 0,89, fev/26: 1,04)",
+      "caixaLiquido": 23725473,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 12,2 Mi em Disponibilidades + R$ 11,5 Mi em Fundos de Renda Fixa (item 9 do Informe Mensal mar/2026)",
+      "resultadoAcumuladoRetido": 272936000,
+      "resultadoAcumuladoNota": "Reserva de lucros contábil de R$ 273 Mi acumulada desde IPO. Não é caixa líquido — está alocado em propriedades para investimento e ajuste a valor justo.",
+      "queimaMediaMensal": 0,
+      "queimaPorCota": 0,
+      "coberturaMeses": null,
+      "coberturaMesesNota": "Fundo equilibrado — distribuição alinhada à geração; não há queima estrutural a cobrir",
+      "tendencia": "DPS estável em R$ 0,040 desde fev/2026, após queda gradual de 12 meses (R$ 0,055 → R$ 0,040)",
+      "leitura": "<p>O DPS de <strong class=\"text-emerald-400\">R$ 0,040/cota</strong> (fev-mar/2026) está alinhado com a geração de caixa recorrente do fundo (R$ 0,043/cota recorrente em mar/2026). A reserva acumulada não distribuída é pequena (R$ 0,007/cota em mar/2026), sinalizando pouco espaço para extraordinária no curto prazo. Cenário-base: manter R$ 0,040 enquanto recomposição de ocupação não se materializar.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2024-08",
+        "dataExata": "2024-08-29",
+        "titulo": "Ação de despejo contra WeWork (OF585)",
+        "tipo": "vacancia",
+        "descricao": "Inadimplência de jun-ago/2024 da WeWork no Oscar Freire 585 (3.594 m², ~5% receita). Locatária propôs devolução amigável, gestão recusou e seguiu via judicial. Liminar concedida em set/2024.",
+        "impactoDividendo": "Redução de receita de aluguel a partir de set/2024",
+        "severidade": "negativo",
+        "fonte": "Comunicado ID 729401",
+        "docId": "729401"
+      },
+      {
+        "data": "2025-09",
+        "dataExata": "2025-09-19",
+        "titulo": "Venda Sede C&A Alphaville + Recompra CRI VINO",
+        "tipo": "venda",
+        "descricao": "Vendeu sede C&A em Alphaville por R$ 40 Mi (R$ 5.063/m²). Recursos usados para recompra antecipada integral do CRI VINO (R$ 34,6 Mi, CDI+3,5%, vencia dez/2030). Reduziu despesa financeira total em ~15% e gerou +R$ 0,001/cota recorrente.",
+        "impactoDividendo": "+R$ 0,001/cota recorrente após o evento",
+        "severidade": "positivo",
+        "fonte": "Comunicado ID 994843",
+        "docId": "994843"
+      },
+      {
+        "data": "2025-12",
+        "dataExata": "2025-12-30",
+        "titulo": "Reavaliação Colliers -1,37% no VP",
+        "tipo": "vacancia",
+        "descricao": "Reavaliação anual pela Colliers International do Brasil resultou em valor 0,97% inferior ao contábil dos imóveis. Maiores baixas: Haddock Lobo (-R$ 10,7 mi, -7%) e Oscar Freire (-R$ 5,4 mi, -6%).",
+        "impactoDividendo": "Sem impacto direto no DPS (efeito não-caixa), mas sinaliza pressão setorial",
+        "severidade": "neutro",
+        "fonte": "Comunicado ID 1073633",
+        "docId": "1073633"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-02-06",
+        "titulo": "Recebimento Vitacon (Haddock + OF585)",
+        "tipo": "outro",
+        "descricao": "R$ 451 mil recebidos em fev/2026: R$ 289 mil pela rescisão da loja Vitacon no térreo do Oscar Freire 585 + R$ 162 mil (1ª de 3 parcelas) pela desocupação da Vitacon no Haddock Lobo (total R$ 485 mil em 3 parcelas). Última parcela em abr/2026.",
+        "impactoDividendo": "+R$ 0,005/cota não-recorrente em fev/26 + R$ 0,002/cota em mar/26",
+        "severidade": "positivo",
+        "fonte": "RG fev-mar/2026",
+        "docId": "1130577"
+      },
+      {
+        "data": "2026-02",
+        "titulo": "Novo contrato Joompro Brazil no Haddock Lobo",
+        "tipo": "outro",
+        "descricao": "Joompro Brazil assinou contrato turn-key de 5 anos para 526,8 m² (12º andar Haddock Lobo). Vigência a partir de jun/2026 após obras. Eleva ocupação do imóvel de 18% para ~26%.",
+        "impactoDividendo": "+R$ 0,001/cota recorrente após concessões",
+        "severidade": "positivo",
+        "fonte": "RG fev/2026",
+        "docId": "1130577"
+      },
+      {
+        "data": "2026-03",
+        "titulo": "Novo contrato COW Working no Haddock Lobo",
+        "tipo": "outro",
+        "descricao": "COW Working (locatária prévia do BBS) negociou 3 conjuntos no Brooklyn Business Square. Após concessões, contribuição esperada de +R$ 0,003/cota no resultado recorrente.",
+        "impactoDividendo": "+R$ 0,003/cota recorrente após concessões",
+        "severidade": "positivo",
+        "fonte": "RG mar/2026",
+        "docId": "1157223"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-04",
+        "titulo": "Recebimento 3ª parcela venda 49% BM336",
+        "tipo": "outro",
+        "descricao": "Em 06/abr/2026 (após data-base mar/2026), o Fundo recebeu a terceira e última parcela referente à venda de 49% do imóvel BM 336 (Leblon). Detalhes do impacto serão apresentados no relatório de abr/2026.",
+        "impactoEstimado": "Pontual, não-recorrente",
+        "impactoValor": null,
+        "duracaoMeses": 1,
+        "certeza": "confirmado",
+        "severidade": "positivo",
+        "premissa": "Confirmado pelo gestor no RG mar/2026",
+        "fonte": "RG mar/2026",
+        "docId": "1157223"
+      },
+      {
+        "data": "2026-06",
+        "titulo": "Início do contrato Joompro Brazil (Haddock Lobo)",
+        "tipo": "outro",
+        "descricao": "Início efetivo do contrato Joompro de 526m² no 12º andar do Haddock Lobo, após conclusão das obras turn-key. Após concessões iniciais, contribuição recorrente de +R$ 0,001/cota.",
+        "impactoEstimado": "+R$ 0,001/cota mensal",
+        "impactoValor": 0.001,
+        "duracaoMeses": null,
+        "certeza": "confirmado",
+        "severidade": "positivo",
+        "premissa": "Contrato assinado, vigência confirmada",
+        "fonte": "RG fev/2026",
+        "docId": "1130577"
+      },
+      {
+        "data": "2026-09",
+        "titulo": "Possível conclusão de novas locações no Haddock/BBS/OF585",
+        "tipo": "outro",
+        "descricao": "Gestão sinaliza foco em comercialização das áreas vagas remanescentes. Cada novo contrato de 500-1000m² nos ativos com vacância pode adicionar R$ 0,002-0,005/cota recorrente.",
+        "impactoEstimado": "Variável, dependendo de tamanho/contrato",
+        "impactoValor": 0.003,
+        "duracaoMeses": null,
+        "certeza": "projetado",
+        "severidade": "positivo",
+        "premissa": "Padrão de atividade comercial demonstrado em fev-mar/2026 com Joompro+COW",
+        "fonte": "RG mar/2026",
+        "docId": "1157223"
+      },
+      {
+        "data": "2026-12",
+        "titulo": "Reavaliação anual Colliers (Dez/2026)",
+        "tipo": "outro",
+        "descricao": "Reavaliação anual obrigatória pelos laudos Colliers. Em 2025 o impacto foi -1,37% no VP. Risco de novo ajuste para baixo enquanto vacância setorial persistir em SP, mas Sede Globo SP tende a se manter (contrato atípico, investimentos em curso).",
+        "impactoEstimado": "Risco de baixa moderada no VP/cota",
+        "impactoValor": null,
+        "duracaoMeses": null,
+        "certeza": "projetado",
+        "severidade": "negativo",
+        "premissa": "Histórico de reavaliações anuais negativas no setor",
+        "fonte": "Padrão histórico Colliers + DF 2025",
+        "docId": "1149235"
+      }
+    ],
+    "guidance": {
+      "fonte": "gestor",
+      "periodo": "até jun/2026",
+      "faixaMin": 0.038,
+      "faixaMax": 0.045,
+      "unidade": "R$/cota/mês",
+      "validade": "2026-06-30",
+      "cobreMeses": 3,
+      "documento": "Relatório Gerencial mar/2026 (ID 1157223)",
+      "premissas": [
+        "Estimativa do gestor desconsidera não-recorrentes (vendas, eventos extraordinários)",
+        "DPS atual de R$ 0,040 está no limite inferior da faixa",
+        "Subida para R$ 0,045 dependeria de novas locações ou recebimentos não-recorrentes",
+        "Vacâncias remanescentes (Haddock 74%, BBS 56%, OF585 86%) limitam upside no curto prazo"
+      ],
+      "nota": "Gestor explicitamente declara faixa R$ 0,038-0,045 'desconsiderando efeitos não recorrentes'. Cenário-base é manter R$ 0,040 com upside marginal se novas locações fecharem nos próximos meses.",
+      "cronogramaAnuncio": {
+        "fonte": "heuristica",
+        "regraTexto": null,
+        "observacao": "Histórico VINO11: anúncio na última quinta-feira do mês de competência, pagamento entre o 12º e 15º dia útil do mês subsequente",
+        "dataAnuncioEstimada": "2026-05-29",
+        "dataPagamentoEstimada": "2026-06-15"
+      }
+    },
+    "sintese": {
+      "tendencia": "lateral_com_risco_baixo",
+      "tendenciaLabel": "DPS estável em R$ 0,040 com viés de subida moderada se locações concretizarem",
+      "cor": "amber",
+      "direcao": "DPS está no patamar inferior da faixa do gestor. Para subir, depende de recompor ocupação dos 4 ativos vagos. Cenário-base: lateral em R$ 0,040 ± R$ 0,005.",
+      "pontosPositivos": [
+        {
+          "texto": "Sede Globo SP em contrato atípico responde por 60% da receita com WAULT longo",
+          "peso": "alto"
+        },
+        {
+          "texto": "Joompro+COW Working recém-assinados elevam Haddock de 18% para 26%",
+          "peso": "medio"
+        },
+        {
+          "texto": "Recompra antecipada do CRI VINO em set/2025 reduziu despesa financeira em 15%",
+          "peso": "medio"
+        },
+        {
+          "texto": "Recebimentos não-recorrentes Vitacon e BM336 reforçam caixa em 2026",
+          "peso": "medio"
+        },
+        {
+          "texto": "P/VP 0,51 já incorpora boa parte do prêmio de risco setorial",
+          "peso": "alto"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Vacância em 4 dos 9 ativos limita resultado recorrente",
+          "peso": "alto"
+        },
+        {
+          "texto": "DPS caiu de R$ 0,055 para R$ 0,040 nos últimos 18 meses",
+          "peso": "alto"
+        },
+        {
+          "texto": "Despesa financeira de -R$ 2,5 Mi/mês via 2 CRIs IPCA+",
+          "peso": "medio"
+        },
+        {
+          "texto": "Reavaliação Colliers tende a continuar negativa enquanto vacância setorial persistir",
+          "peso": "medio"
+        },
+        {
+          "texto": "Cota cai 60% desde IPO, com TIR -25,5% líquida",
+          "peso": "alto"
+        }
+      ],
+      "veredicto": "<p>O DPS de <strong class=\"text-emerald-400\">R$ 0,040/cota é sustentável no curto prazo</strong>, sustentado pela receita recorrente da Sede Globo e pelo fluxo dos demais ativos parcialmente ocupados. <strong>Catalisadores positivos</strong>: novos contratos no Haddock Lobo (Joompro+COW), recebimentos não-recorrentes Vitacon/BM336. <strong class=\"text-amber-400\">Ponto de inflexão</strong>: capacidade da gestão de fechar 3-5 novos contratos em 2026-2027 nos ativos vagos. Cenário-base: lateral em R$ 0,040 com viés de subida moderada para R$ 0,043-0,045 ao longo de 12 meses.</p>"
+    },
+    "projecaoDy": {
+      "precoReferencia": 5.01,
+      "dyAtual12m": 12.18,
+      "dyProjetado12m": 11.5,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 11.5,
+          "dividendoMes": 0.04,
+          "descricao": "DPS R$ 0,040 mantido. Recomposição lenta de ocupação. Despesa financeira estável."
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 13.2,
+          "dividendoMes": 0.046,
+          "descricao": "3-5 novos contratos fechados em 2026 nos ativos vagos. Ocupação consolidada vai para 90%+. Recompra parcial de CRI por queda de Selic."
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 9.6,
+          "dividendoMes": 0.034,
+          "descricao": "Vacância setorial persiste, novos contratos não fecham, revisional para baixo em 2026, reavaliação Colliers -3% em dez/26."
+        }
+      ],
+      "retornoTotal12m": 11.5,
+      "premissas": [
+        "Cota mantida em R$ 5,01",
+        "Sem nova emissão",
+        "Selic 14,75% atual com projeção Focus de 11% em 12m",
+        "Globo mantém vigência integral do contrato atípico",
+        "Sem novos eventos de inadimplência maior"
+      ]
+    },
+    "alertas": [
+      {
+        "mensagem": "60% da receita em um único locatário (Globo)",
+        "severidade": "amber",
+        "icone": "alert-circle"
+      },
+      {
+        "mensagem": "Vacância em 4 ativos — recomposição em curso",
+        "severidade": "amber",
+        "icone": "alert-triangle"
+      },
+      {
+        "mensagem": "P/VP 0,51 — desconto de 49% sobre VP",
+        "severidade": "emerald",
+        "icone": "trending-up"
+      }
+    ],
+    "padraoSazonal": {
+      "tem": false,
+      "observacao": "DPS estabilizou em R$ 0,040 desde fev/2026 após trajetória de queda gradual. Não há padrão sazonal verdadeiro — variações pontuais (extraordinária de R$ 0,085 em jun/2025) refletiram eventos isolados (recebimentos não-recorrentes), não ciclo recorrente."
+    },
+    "chartLabels": [
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26"
+    ],
+    "chartData": [
+      0.05,
+      0.05,
+      0.085,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.05,
+      0.045,
+      0.04,
+      0.04
+    ],
+    "chartCor": "#3b82f6",
+    "chartYMin": 0,
+    "chartYMax": 0.1
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "26/04/2026",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/vino11/historico_precos.csv",
+      "frequencia": "semanal",
+      "ultimoFechamento": 5.01,
+      "ultimoFechamentoData": "2026-04-24",
+      "minHistorico": {
+        "valor": 4.4,
+        "data": "2025-02-03"
+      },
+      "maxHistorico": {
+        "valor": 14.39,
+        "data": "2019-12-30"
+      },
+      "leitura": "Cota despencou de R$ 14,39 (pico dez/2019) para mínima histórica de R$ 4,40 em fev/2025 — queda de 69%. Recuperação parcial entre fev/2025 e fev/2026 (R$ 5,50), nova queda em mar/2026 para R$ 4,98-5,14. A volatilidade reflete o ciclo difícil dos escritórios em SP/RJ pós-pandemia, agravado por eventos específicos do fundo (vacância WeWork, ajustes Colliers)."
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/vino11/historico_vp.csv",
+      "fonte": "Informes Mensais Estruturados + Relatórios Gerenciais",
+      "ultimoVpCota": 9.86,
+      "ultimoVpData": "2026-03",
+      "leitura": "VP/cota despencou de R$ 12,31 (dez/2019, pós-IPO) para R$ 9,86 (mar/2026) — queda de 20% pré-split (já normalizado para base 82,8 mi cotas). Maior parte da queda concentrou-se entre 2024 e 2025 (-R$ 0,44/cota), reflexo de reavaliações negativas anuais Colliers (-1,37% em dez/2025) e venda do C&A Alphaville (set/2025)."
+    },
+    "eventosValuation": [
+      {
+        "data": "2019-11",
+        "tipo": "emissao",
+        "titulo": "IPO 4ª emissão (R$ 12,70/cota)",
+        "descricao": "Distribuição pública primária e início de negociação na B3. Captação de R$ 12,7 mi adicionais.",
+        "impactoVp": null,
+        "fonte": "Início negociação 25/11/2019",
+        "docId": "68700"
+      },
+      {
+        "data": "2022-01",
+        "tipo": "emissao",
+        "titulo": "7ª emissão de cotas",
+        "descricao": "Encerramento de oferta primária. Cotas passam de 12,67 mi para 16,57 mi (+R$ 211 Mi). PL pico de R$ 910 Mi.",
+        "impactoVp": null,
+        "fonte": "Comunicado de encerramento",
+        "docId": "259411"
+      },
+      {
+        "data": "2023-08",
+        "tipo": "outro",
+        "titulo": "Desdobramento 1:5 das cotas",
+        "descricao": "Cotas desdobradas 1:5 — passam de 16,57 mi para 82,83 mi cotas. VP/cota cai proporcionalmente de ~R$ 54 para ~R$ 10,80. Sem impacto patrimonial — movimento técnico para liquidez por preço unitário menor.",
+        "impactoVp": null,
+        "fonte": "Relatório Gerencial",
+        "docId": "515573"
+      },
+      {
+        "data": "2024-04",
+        "tipo": "venda_relevante",
+        "titulo": "Venda 49% BM336 (Leblon/RJ)",
+        "descricao": "Venda de 49% do BM336 com pré-pagamento de R$ 20,1 Mi e parcelamento em 3 anos. Reciclagem patrimonial.",
+        "impactoVp": null,
+        "fonte": "DF 2025",
+        "docId": "1149235"
+      },
+      {
+        "data": "2024-08",
+        "tipo": "evento_credito",
+        "titulo": "Ação de despejo WeWork (OF585)",
+        "descricao": "Inadimplência da WeWork no Oscar Freire (3.594m², ~5% receita) leva a ação judicial. Vacância sobe e impacta receita.",
+        "impactoVp": null,
+        "fonte": "Comunicado",
+        "docId": "729401"
+      },
+      {
+        "data": "2024-12",
+        "tipo": "reavaliacao_negativa",
+        "titulo": "Reavaliação anual Colliers (Dez/2024)",
+        "descricao": "Maior reavaliação negativa do período: VP/cota cai de R$ 10,68 (set/24) para R$ 10,30 (dez/24). Maiores baixas: BM336 (-R$ 39,9 mi, -18%) e Haddock Lobo (-R$ 9,0 mi, -6%).",
+        "impactoVp": -0.38,
+        "fonte": "DF 2024",
+        "docId": "811104"
+      },
+      {
+        "data": "2025-09",
+        "tipo": "venda_relevante",
+        "titulo": "Venda Sede C&A Alphaville (R$ 40 Mi) + recompra CRI VINO",
+        "descricao": "Venda do imóvel C&A em Alphaville por R$ 40 Mi. Recursos usados para recompra antecipada integral do CRI VINO (R$ 34,6 Mi, CDI+3,5%). Reduz despesa financeira total em 15%.",
+        "impactoVp": null,
+        "fonte": "Comunicado",
+        "docId": "994843"
+      },
+      {
+        "data": "2025-12",
+        "tipo": "reavaliacao_negativa",
+        "titulo": "Reavaliação Colliers Dez/2025",
+        "descricao": "Reavaliação anual: valor 0,97% inferior ao contábil dos imóveis, com queda de 1,37% no VP/cota. Maiores baixas: Haddock Lobo (-R$ 10,7 mi, -7%) e Oscar Freire (-R$ 5,4 mi, -6%). VP/cota cai de R$ 10,02 para R$ 9,86.",
+        "impactoVp": -0.16,
+        "fonte": "Comunicado",
+        "docId": "1073633"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "tijolo_escritorios_aaa",
+      "statusClassificacao": "validado",
+      "criterioAgrupamento": "FIIs de escritórios premium (lajes A+/AAA) em SP/RJ com vacância <12% e endereços prime. VINO11 ligeiramente acima da vacância média do segmento devido aos ativos secundários no portfólio.",
+      "tickers": [
+        "BLCA11",
+        "HGRE11",
+        "BROF11",
+        "BMLC11",
+        "GTWR11"
+      ],
+      "premioRiscoSegmento": 0.045,
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.82,
+        "pvpMin": 0.55,
+        "pvpMax": 0.92,
+        "dyMediano": 10.53,
+        "dyMin": 6.59,
+        "dyMax": 14.5
+      },
+      "posicaoFundo": {
+        "pvp": 0.51,
+        "dy": 12.18,
+        "leitura": "<p>VINO11 negocia com <strong class=\"text-emerald-400\">desconto significativamente maior</strong> que a mediana de pares (P/VP 0,51 vs 0,82) e DY 12m <strong class=\"text-emerald-400\">acima da mediana</strong> (12,2% vs 10,5%). O desconto extra é parcialmente justificado pela <strong class=\"text-amber-400\">vacância em 4 ativos</strong> (vs <12% segmento), pela <strong>alavancagem de 31%</strong> via CRIs, e pela trajetória recente de TIR negativa. Não é apenas mispricing — reflete prêmio de risco real pela transição setorial e composição heterogênea do portfólio.</p>"
+      }
+    },
+    "pvp": {
+      "valor": "0,51",
+      "descricao": "<p>A cota negocia a <strong class=\"text-emerald-400\">R$ 5,01</strong> contra VP de <strong class=\"text-blue-400\">R$ 9,86</strong>, desconto de 49% — entre os mais altos do segmento de escritórios AAA. Reflete: (i) vacância em 4 dos 9 ativos; (ii) alavancagem de 31% via CRIs IPCA+; (iii) ciclo difícil dos escritórios pós-pandemia em SP/RJ; (iv) reavaliações negativas anuais Colliers; (v) histórico de TIR negativa desde IPO.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,86"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 5,01",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "49%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,18%",
+      "label": "Dividend Yield (12 meses)",
+      "cor": "emerald",
+      "descricao": "<p>DY 12m de <strong class=\"text-emerald-400\">12,18%</strong> compara com Selic atual de 14,75%. Como FIIs são isentos de IR para PF, o DY gross-up equivalente a um título tributado em 17,5% é de <strong class=\"text-emerald-400\">14,77%</strong> — praticamente em linha com a Selic. Em ciclo de queda projetado para 11% até dez/2026, o spread tende a se ampliar e suportar reprecificação da cota.</p>",
+      "detalhe": "DY gross-up (PF) = 12,18% / (1-0,175) = 14,77% — equivalente à Selic atual"
+    },
+    "precoJustoMercado": {
+      "valor": 4.2,
+      "faixa": {
+        "min": 3.57,
+        "max": 4.83
+      },
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 5.01,
+        "diferencaPct": 19.3,
+        "leitura": "Cota negocia 19% acima do preço justo quantitativo a Selic atual (14,75%). Em ciclo de queda de Selic para 11% (Focus), o A1 sobe ~24% e o preço justo iria para R$ 5,20 — em linha com a cotação. Cota está cara hoje, justa em 12 meses se Selic cair conforme esperado."
+      },
+      "metodologia": "Modelo híbrido com 4 componentes (A1 DY-Selic, A2 P/VP pares ajustado, A3 DY pares, A4 fator qualidade). Pesos 0,40 / 0,35 / 0,25 + ajuste A4 = 0,93.",
+      "componentes": [
+        {
+          "id": "A1",
+          "nome": "DY-Selic + Prêmio de Risco do Subsegmento",
+          "valor": 2.65,
+          "peso": 0.4,
+          "calculo": "DY justo = Selic (14,75%) + prêmio escritórios AAA (4,5%) = 19,25%. Preço = R$ 0,51 (DPS sustentável anualizado) ÷ 0,1925 = R$ 2.65",
+          "racional": "Componente conservador — Selic excepcionalmente alta (14,75%) deprime o preço justo. Em queda para 11%, A1 sobe para R$ 3,29 (+24%)."
+        },
+        {
+          "id": "A2",
+          "nome": "P/VP relativo aos pares (ajustado)",
+          "valor": 6.41,
+          "peso": 0.35,
+          "calculo": "VP atual R$ 9,86 × P/VP justo aplicado (0,65) = R$ 6.41. P/VP aplicado abaixo da mediana de pares (0,82) por ajuste de -21% pela vacância em 4 ativos e alavancagem de 31%.",
+          "racional": "VINO11 tem vacância maior e alavancagem maior que mediana do subsegmento. Ajuste discricionário capturado no P/VP aplicado."
+        },
+        {
+          "id": "A3",
+          "nome": "DY relativo aos pares",
+          "valor": 4.84,
+          "peso": 0.25,
+          "calculo": "DPS sustentável anual R$ 0,51 ÷ DY mediano pares (10,53%) = R$ 4.84",
+          "racional": "Se VINO11 negociasse no DY mediano dos pares de escritórios AAA, valeria R$ 4,84 — maior que A1 e A2 ajustado, refletindo que o DPS atual ainda é razoável para o setor."
+        },
+        {
+          "id": "A4",
+          "nome": "Fator de qualidade (multiplicador)",
+          "valor": 0.93,
+          "peso": null,
+          "calculo": "Multiplicador 0,93 = neutralidade (1,00) menos 7% por: (i) vacância em 4 ativos de 9 (-3%); (ii) alavancagem 31% (-2%); (iii) histórico TIR negativa desde IPO (-2%). Compensado parcialmente por (a) gestora Vinci de qualidade alta (+1%); (b) Sede Globo SP atípica (+1%); (c) WAULT 7,1 anos (+1%).",
+          "racional": "Score levemente abaixo da neutralidade. Gestora Vinci e portfólio com âncora premium são positivos; vacância e alavancagem são negativos."
+        }
+      ],
+      "calculoFinal": "Preço médio ponderado A1-A3 = (2.65×0,40 + 6.41×0,35 + 4.84×0,25) / 1,00 = R$ 4.51. Após A4 (×0,93) = R$ 4.2.",
+      "upside": -16.2,
+      "racional": "<p>Preço justo de <strong class=\"text-amber-400\">R$ 4,20</strong> a Selic 14,75% — cotação atual de R$ 5,01 está <strong>19% acima do justo quantitativo</strong>. Faixa de R$ 3,57 a R$ 4,83 (±15%) reflete a alta incerteza. <strong class=\"text-blue-400\">Em ciclo de queda de Selic para 11% (Focus 12m)</strong>, o componente A1 do modelo sobe ~24%, levando o preço justo para R$ 5,20 — em linha com a cotação. Veredicto: <strong class=\"text-amber-400\">cota cara hoje, justa em 12 meses se Selic cair conforme esperado</strong> e se ocupação recompor.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 5.2,
+        "faixa": {
+          "min": 4.7,
+          "max": 5.6
+        },
+        "direcao": "lateral",
+        "catalisadores": [
+          {
+            "evento": "Início efetivo do contrato Joompro no Haddock Lobo",
+            "data": "2026-06",
+            "impactoEsperado": "+R$ 0,001/cota recorrente",
+            "fonte": "RG fev/2026",
+            "docId": "1130577"
+          },
+          {
+            "evento": "Recebimento da 3ª parcela venda 49% BM336 (já recebida em abr/2026)",
+            "data": "2026-04",
+            "impactoEsperado": "Pontual, não-recorrente",
+            "fonte": "RG mar/2026",
+            "docId": "1157223"
+          },
+          {
+            "evento": "Distribuição mensal estável em R$ 0,040 ± 0,005",
+            "data": "2026-04 a 2026-09",
+            "impactoEsperado": "DY ~12% mantém atratividade vs Selic",
+            "fonte": "Histórico recente",
+            "docId": "1157223"
+          }
+        ],
+        "racional": "<p>Cenário lateral provável no curto prazo. A cota oscila na faixa R$ 4,90-5,50 desde fev/2026, sustentada pelo DPS estável e pela melhora do balanço pós-recompra do CRI VINO. Recompor ocupação leva trimestres — não é catalisador de curto prazo.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 6.3,
+        "faixa": {
+          "min": 5.2,
+          "max": 7.4
+        },
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Queda da Selic conforme Focus do BCB para 11% em 12 meses",
+            "data": "2026-12 a 2027-04",
+            "impactoEsperado": "Componente A1 do preço justo sobe ~24%, abrindo espaço para reprecificação",
+            "fonte": "Focus BCB 26/04/2026",
+            "docId": null
+          },
+          {
+            "evento": "Conclusão de 3-5 novas locações nos ativos vagos",
+            "data": "2026-09 a 2027-12",
+            "impactoEsperado": "Ocupação consolidada vai de 78% para 90%+, DPS sobe para R$ 0,045-0,055",
+            "fonte": "Padrão demonstrado em fev-mar/2026",
+            "docId": "1157223"
+          },
+          {
+            "evento": "Recompra antecipada do CRI Haddock Lobo (R$ 67 Mi, IPCA+5,575%)",
+            "data": "2026-12 a 2027-12",
+            "impactoEsperado": "Se gestão capitalizar venda BM336 ou similar, redução adicional de despesa financeira",
+            "fonte": "Hipótese gestão",
+            "docId": null
+          }
+        ],
+        "racional": "<p>Cenário moderadamente positivo no médio prazo. A combinação de <strong class=\"text-emerald-400\">queda da Selic</strong> (Focus 11%) + <strong class=\"text-emerald-400\">recompor ocupação</strong> nos 4 ativos vagos pode elevar a cota para R$ 6,00-7,00. Risco: persistência de home office e revisional para baixo em 2026-2027 limita o upside.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 7.8,
+        "faixa": {
+          "min": 6.0,
+          "max": 9.5
+        },
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Ciclo de Selic completo + recuperação setor escritórios",
+            "data": "2027-2030",
+            "impactoEsperado": "Reprecificação ampla do setor com VINO11 capturando upside acima da média",
+            "fonte": "Macroeconômico",
+            "docId": null
+          },
+          {
+            "evento": "Renovação ou prorrogação do contrato atípico Globo",
+            "data": "2028-2030",
+            "impactoEsperado": "Estabiliza 60% da receita por mais 5-10 anos, removendo risco principal",
+            "fonte": "Esclarecimento Globo set/2024",
+            "docId": "743720"
+          },
+          {
+            "evento": "Vencimento dos CRIs Sede Globo (2037) e Haddock Lobo (2035)",
+            "data": "2035-2037",
+            "impactoEsperado": "Eventual desalavancagem ao fim dos CRIs libera receita financeira plena",
+            "fonte": "DF 2025",
+            "docId": "1149235"
+          }
+        ],
+        "racional": "<p>Cenário positivo no longo prazo se: (i) ciclo de escritórios voltar a expansionista; (ii) Globo prorrogar atípico; (iii) recompor ocupação nos secundários. Risco macro/setorial é dominante.</p>"
+      }
+    },
+    "recomendacoes": null
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O <strong class=\"text-blue-400\">VINO11</strong> encerra mar/2026 com PL de R$ 816,5 milhões, 131.566 cotistas, 9 imóveis somando 75 mil m² de ABL próprio em SP (76%) e RJ (24%). A distribuição mensal estabilizou em <strong class=\"text-blue-400\">R$ 0,040/cota</strong> desde fev/2026 (DY 12m de 12,2%), após queda gradual de R$ 0,055 ao longo de 2024-2025. A cota negocia a <strong class=\"text-emerald-400\">R$ 5,01 (P/VP 0,51)</strong> — desconto de 49% sobre VP, entre os mais altos do segmento de escritórios.",
+      "O portfólio é bipolar: <strong class=\"text-emerald-400\">a Sede Globo SP</strong> (Chucri Zaidan/SP, 39 mil m², 100% Globo, contrato atípico) é uma âncora AAA que sozinha responde por ~60% da receita e sustenta WAULT de 7,1 anos. Em set/2024, Vinci e Globo emitiram esclarecimento conjunto reafirmando a vigência integral do contrato e os investimentos em curso da locatária no imóvel. Os outros 8 ativos compõem uma cauda heterogênea: BMA Corporate (96% ocupado, BMA Advogados+CSSJ+LPH), BM 336 (Vinci Partners+Austral, 100% ocupado), Cardeal Corporate (100% Faculdade Belavista), LAB 1404 (100% Galeria) — esses estão ok. Mas <strong class=\"text-amber-400\">Haddock Lobo (18%, sobe para 26% com Joompro+COW), Oscar Freire 585 (14%, ex-WeWork despejada), BBS Brooklyn (44%) e Vita Corá (75%, aluguel variável Regus)</strong> carregam vacância significativa.",
+      "Em set/2025 a gestão fez movimento crítico: vendeu o C&A Alphaville (R$ 40 Mi) e usou os recursos para recomprar antecipadamente o CRI VINO (R$ 34,6 Mi a CDI+3,5%, mais caro do portfólio). A ação reduziu despesa financeira total em ~15% e gerou +R$ 0,001/cota recorrente. Sobram dois CRIs ativos: <strong>Sede Globo (R$ 354 Mi, IPCA+6,948% até jan/2037)</strong> e <strong>Haddock Lobo (R$ 67 Mi, IPCA+5,575% até out/2035)</strong>, que somam 31% dos ativos imobiliários e geram despesa financeira de -R$ 2,5 Mi/mês. Em fev-mar/2026 a gestão fechou novos contratos no Haddock Lobo (Joompro Brazil para 526m² e COW Working para 3 conjuntos), elevando a ocupação do imóvel de 18% para ~26% — primeiro sinal palpável de recomposição.",
+      "Olhando para frente, a tese do VINO11 depende centralmente de <strong>(i) recompor ocupação dos 4 ativos vagos</strong> (Haddock, OF585, BBS, Vita Corá) — cada novo contrato de 500-1000m² adiciona R$ 0,002-0,005/cota recorrente; <strong>(ii) ciclo de queda de Selic</strong> (Focus 11% em 12 meses) que tende a beneficiar FIIs descontados acima da média; <strong>(iii) manutenção do contrato Globo</strong>, que segue confirmado mas é o ponto de fragilidade isolada do portfólio. O preço justo calculado pelo modelo híbrido é de <strong class=\"text-blue-400\">R$ 4,20</strong> a Selic 14,75% (19% abaixo da cotação atual), mas sobe para <strong class=\"text-emerald-400\">~R$ 5,20</strong> em cenário de Selic 11% — sinalizando que <strong>a cota está cara hoje porém justa em 12 meses</strong> se a queda de juros se materializar conforme Focus."
+    ],
+    "pontosFortes": [
+      "Sede Globo SP em contrato atípico responde por 60% da receita com WAULT longo (>2030)",
+      "WAULT ponderado de 7,1 anos — entre os mais altos do segmento de escritórios",
+      "Recompra antecipada do CRI VINO em set/2025 reduziu despesa financeira em 15%",
+      "Vinci Real Estate é gestora de qualidade dentro do grupo Vinci Compass (BoND, R$ 70 bi+ AuM)",
+      "Diversificação de 9 ativos em 4 sub-regiões (Berrini, Zona Sul RJ, Jardins, Pinheiros)",
+      "P/VP 0,51 — desconto de 49% incorpora boa parte do prêmio de risco setorial",
+      "Joompro+COW Working assinados em fev-mar/2026 sinalizam recomposição em curso",
+      "68% da receita com contratos vencendo após 2030",
+      "93% dos contratos com reajuste IPCA — hedge inflacionário concreto",
+      "DY 12m gross-up (PF) de ~14,8% em linha com Selic atual"
+    ],
+    "pontosDeAtencao": [
+      "60% da receita concentrada em um único locatário (Globo) — risco de mono-inquilino na ponta âncora",
+      "Vacância significativa em 4 dos 9 ativos (Haddock 74%, OF585 86%, BBS 56%, Vita Corá receita variável)",
+      "31% de alavancagem via 2 CRIs IPCA+ — despesa financeira de R$ -2,5 Mi/mês",
+      "DPS caiu de R$ 0,055 para R$ 0,040 nos últimos 18 meses — trajetória de queda",
+      "Cota cai 60% desde IPO — TIR líquida de -25,5% vs +34% do IFIX",
+      "Mínima histórica de R$ 4,40 em fev/2025 — drawdown profundo recente",
+      "Ciclo difícil dos escritórios pós-pandemia em SP/RJ ainda não terminou",
+      "Reavaliações Colliers anuais negativas (-1,37% em dez/2025) tendem a continuar enquanto vacância setorial persistir",
+      "Liquidez baixa-média (R$ 500-700 mil/dia) limita posições > R$ 200k",
+      "Vita Corá com aluguel 100% variável (Regus) gera volatilidade no resultado mensal"
+    ],
+    "conclusaoFinal": "O <strong class=\"text-blue-400\">VINO11</strong> hoje é uma <strong class=\"text-amber-400\">tese de valor com risco moderado-alto</strong>: P/VP 0,51 e DY 12m de 12,2% atraem, e a âncora Globo (60% da receita, contrato atípico) sustenta a base. O caminho de upside passa por recompor ocupação dos 4 ativos vagos — já em curso com Joompro+COW assinados — e pela queda de Selic projetada para 11% em 12 meses. Nota <strong class=\"text-amber-400\">5,5/10</strong> — equilibrada entre os elementos positivos (âncora premium, WAULT 7,1 anos, gestora qualidade, desconto P/VP) e negativos (vacância setorial, alavancagem, histórico TIR negativa). Veredicto <strong class=\"text-amber-400\">MANTER</strong>: para quem já é cotista, faz sentido aguardar a recomposição de ocupação e o ciclo de queda de Selic; para quem não tem exposição a escritórios, VINO11 é uma porta de entrada descontada com âncora AAA. Para quem já tem HGRE11/BROF11/GTWR11, há sobreposição setorial relevante — avaliar se vale duplicar exposição ou diversificar para outros segmentos."
+  },
+  "footer": {
+    "fonteDados": "Dados extraídos de 402 documentos oficiais do FundosNet/CVM entre 2017-2026 (Demonstrações Financeiras auditadas pela PwC, Relatórios Gerenciais, Informes Mensais Estruturados, Informes Trimestrais Estruturados, Fatos Relevantes, Comunicados ao Mercado, Prospectos das emissões).",
+    "atualizacao": "26/04/2026",
+    "disclaimer": "Esta análise tem caráter exclusivamente informativo e educacional. Não constitui recomendação de investimento, oferta de compra/venda de valores mobiliários ou consultoria financeira individualizada. Performance passada não garante performance futura. Consulte um assessor de investimentos certificado antes de tomar decisões.",
+    "metodologia": "Análise baseada em modelo híbrido de valuation v2 com 4 componentes (DY-Selic, P/VP pares, DY pares, fator qualidade). Cenários macro consideram projeções Focus do BCB. Histórico de preços via Yahoo Finance (VINO11.SA, frequência semanal) e VP via Informes Mensais CVM. Análise gerada com Claude Opus 4.7 1M context.",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 402
+  }
+}

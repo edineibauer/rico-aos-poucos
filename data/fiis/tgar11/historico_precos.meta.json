@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/tgar11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2018-10-01",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:TGAR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 70.0,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 70.0,
+    "data": "2026-04-20"
+  },
+  "maxHistorico": {
+    "valor": 144.03,
+    "data": "2021-01-25"
+  },
+  "totalPontos": 396,
+  "coletadoEm": "2026-04-27T01:14:02Z"
+}

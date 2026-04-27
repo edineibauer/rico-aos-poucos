@@ -1,42 +1,2180 @@
 {
   "meta": {
     "ticker": "KISU11",
-    "nome": "Kinea Suno Income FII",
-    "segmento": "Papel/Hibrido",
-    "badges": [],
+    "nome": "Kilima Fundo de Investimento em Cotas de Fundos Imobiliários Suno 30",
+    "nomeExtra": "FoF passivo-ativo replicando o Índice Suno 30 FII",
+    "segmento": "Fundo de Fundos (FoF) — Híbrido diversificado",
+    "badges": [
+      "FoF",
+      "Índice Suno 30",
+      "Diversificado",
+      "Pulverizado"
+    ],
     "sentimento": "neutro",
-    "dataAnalise": null,
-    "totalDocumentos": 0
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 219,
+    "versaoSchema": "v3-rico"
   },
   "seo": {
-    "title": "KISU11 — Análise em construção | Rico aos Poucos",
-    "description": "Análise do FII KISU11 (Kinea Suno Income FII). Dados sendo consolidados automaticamente a partir de publicações oficiais CVM/B3.",
-    "keywords": "KISU11, Kinea Suno Income FII, FII, análise KISU11",
+    "title": "KISU11 — Análise Kilima FoF Suno 30 | P/VP 0,86 e DY 12% | Rico aos Poucos",
+    "description": "Análise profunda do KISU11 (Kilima FIC FII Suno 30): FoF passivo-ativo de 36 FIIs do Índice Suno 30, com P/VP 0,86, DY 12,1% e duplo desconto. Riscos, portfólio look-through e cenários.",
+    "keywords": "KISU11, Kilima Suno 30, FoF, fundo de fundos, FII de FII, índice Suno 30, Monte Bravo Asset, análise KISU11, dividend yield 12%, P/VP descontado",
     "canonical": "https://ricoaospoucos.com.br/fiis/kisu11/",
-    "ogTitle": "KISU11 — Análise Kinea Suno Income FII",
-    "ogDescription": "Análise em construção do FII KISU11.",
-    "twitterTitle": "KISU11 — Kinea Suno Income FII",
-    "twitterDescription": "Análise do FII KISU11."
+    "ogTitle": "KISU11 — Kilima FoF Suno 30 | Análise completa",
+    "ogDescription": "FoF que replica o Índice Suno 30 com gestão ativa. 36 FIIs, P/VP 0,86, DY 12% e duplo desconto. Análise das 16 abas.",
+    "ogType": "article",
+    "ogUrl": "https://ricoaospoucos.com.br/fiis/kisu11/",
+    "ogLocale": "pt_BR",
+    "ogSiteName": "Rico aos Poucos",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "KISU11 — Análise FoF Kilima Suno 30",
+    "twitterDescription": "FoF passivo-ativo de 36 FIIs do Índice Suno 30. P/VP 0,86, DY 12,1%, duplo desconto. Veja a análise completa."
   },
-  "indicadores": {},
+  "indicadores": {
+    "cotacao": 7.11,
+    "cotacaoData": "2026-04-24",
+    "pvp": 0.86,
+    "dividendYield": 0.1149,
+    "dividendoMensal": 0.07,
+    "dividendoAnual": 0.84,
+    "patrimonioLiquido": 366211557.89,
+    "patrimonioLiquidoData": "2026-03-31",
+    "vpCota": 8.28607,
+    "cotistas": 104309,
+    "cotistasData": "2026-03-31",
+    "numFiis": 36,
+    "ativosFII": 358303471.1,
+    "caixaLiquidez": 12343971.81,
+    "ocupacao": null,
+    "numImoveis": null,
+    "fonte": "Informe Mensal Estruturado 03/2026 (ID 1161018) + Relatório Gerencial fev/2026 (ID 1145911)"
+  },
   "recomendacao": {
-    "nota": null,
-    "veredicto": "EM ANÁLISE",
-    "cor": "slate",
-    "resumo": "Análise sendo construída a partir de publicações oficiais CVM/B3."
+    "nota": 6.5,
+    "veredicto": "NEUTRO COM VIÉS POSITIVO",
+    "cor": "amber",
+    "resumo": "<p>FoF disciplinado que replica o <strong>Índice Suno 30 FII</strong> com gestão ativa marginal, hoje negociando a <strong>P/VP 0,86x</strong> e DY anualizado de <strong>11,5%</strong>. O atrativo central é o <strong>duplo desconto</strong>: a cota está 14% abaixo do VP, e o VP por sua vez já reflete carteira marcada a mercado de FIIs com P/VP médio ponderado 0,92x. Para o investidor que aceita um custo adicional para diversificação one-click em 36 FIIs do índice (logística, lajes, recebíveis, shoppings, renda urbana e híbridos), o veículo entrega o que promete. Pontos de atenção: <strong>taxa de 0,60% a.a.</strong> sobre carteira já taxada nos FIIs investidos (camada dupla), <strong>liquidez modesta</strong> (R$ 405 mil/dia em fev/2026, R$ 542 mil/dia média 252d), exposição a 2 fundos detratores (HCTR11 e DEVA11 marcados a 0,21x e 0,26x do VP, com restrição de saída) e <strong>3ª emissão recém-encerrada (abr/2026)</strong> com captação parcial de R$ 123,5 mi via KISU13 ainda não fungível.</p>"
   },
-  "quickStats": [],
-  "pontosAtencao": [],
-  "gestora": null,
-  "taxas": null,
-  "portfolio": null,
-  "timeline": null,
-  "tese": null,
-  "dividendos": null,
-  "ativosDetalhados": null,
-  "valuation": null,
-  "conclusao": null,
+  "quickStats": [
+    {
+      "label": "P/VP",
+      "valor": "0,86x",
+      "subtexto": "VP R$ 8,29 vs cota R$ 7,11",
+      "cor": "emerald"
+    },
+    {
+      "label": "DY 12m anualizado",
+      "valor": "11,5%",
+      "subtexto": "DPS R$ 0,07 mensal há 16 meses",
+      "cor": "emerald"
+    },
+    {
+      "label": "Diversificação",
+      "valor": "36 FIIs",
+      "subtexto": "Top-10 = 33% PL, HHI baixo (~340)",
+      "cor": "blue"
+    },
+    {
+      "label": "Liquidez média",
+      "valor": "R$ 405 mil/dia",
+      "subtexto": "Fev/26 — modesta para o porte",
+      "cor": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Camada dupla de taxas (0,60% a.a. + taxas dos FIIs investidos)",
+      "severidade": "alta",
+      "descricao": "<p>O cotista paga taxa de administração de 0,60% a.a. ao KISU11 <em>sobre o PL</em> (R$ 1,8 mi em 2025) <strong>além</strong> das taxas embutidas nos 36 FIIs investidos (média de 1,0–1,2% a.a. nos fundos). Em ciclos sem ganho de capital — como o atual — o resultado fica próximo de R$ 0,07/cota porque essa estrutura come retorno. Comparado a montar a carteira diretamente, o investidor paga adicional estimado de 0,55–0,75% a.a. pelo conforto.</p>",
+      "fonte": "Informe Anual 2025 (ID 1144132) + Relatório Gerencial fev/2026"
+    },
+    {
+      "titulo": "HCTR11 e DEVA11 com perdas relevantes não recuperadas",
+      "severidade": "alta",
+      "descricao": "<p>O fundo carrega 0,68% em <strong>HCTR11</strong> (P/VP 0,21x) e 0,54% em <strong>DEVA11</strong> (P/VP 0,26x), papéis em situação de stress crítico (high yield com inadimplência sucessiva). Posições somam ~1,2% do PL, mas geram drag conhecido — saída forçada provavelmente exigirá realizar perda adicional. Marcação a mercado já reflete os ativos a -79% e -74% do VP respectivamente, mas a recuperação depende de evento de crédito raro.</p>",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1145911) e Informe Anual 12/2025 (ID 1144132)"
+    },
+    {
+      "titulo": "3ª emissão (KISU13) encerrou parcial em abr/2026 — diluição parcial e overhang",
+      "severidade": "media",
+      "descricao": "<p>Em 14/04/2026 foi divulgado o encerramento da Oferta primária com captação parcial de <strong>R$ 123,5 milhões</strong> (15,3 mi cotas KISU13). Cotas ficarão segregadas até fungibilização, gerando overhang técnico no preço durante a janela de bloqueio. Investidores que condicionaram subscrição serão restituídos em 17/04/2026.</p>",
+      "fonte": "Comunicado ao Mercado 14/04/2026 (ID 1161852)"
+    },
+    {
+      "titulo": "Liquidez modesta para o porte (R$ 405 mil/dia em fev/2026)",
+      "severidade": "media",
+      "descricao": "<p>Volume médio diário em fevereiro de 2026 ficou em R$ 405 mil — abaixo do volume histórico (R$ 1,01 mi médio desde início) e suficiente apenas para tickets de retalho. Para uma posição de R$ 50 mil sair sem mover muito o book, leva ~2-3 pregões; R$ 200 mil leva ~10 pregões. Cotistas institucionais ou com posição grande têm risco de saída.</p>",
+      "fonte": "CSV histórico de preços + Relatório Gerencial fev/2026"
+    },
+    {
+      "titulo": "Lucro contábil de 2024 foi prejuízo de R$ 25,4 mi (regime contábil)",
+      "severidade": "media",
+      "descricao": "<p>O exercício 2024 fechou com <strong>prejuízo contábil de R$ 25,42 milhões</strong> — reflexo da queda do IFIX (-5,89% no ano) e marcação a mercado dos FIIs investidos. Em 2025 o resultado contábil reverteu para lucro de R$ 84,68 mi (recuperação do IFIX +21%). Mostra a alta sensibilidade do FoF a ciclos de IFIX, sem o amortecedor de aluguéis de tijolo direto.</p>",
+      "fonte": "Informe Anual 2024 (ID 868902) e 2025 (ID 1144132)"
+    },
+    {
+      "titulo": "Mudança de gestora — Kilima virou Monte Bravo Asset Management",
+      "severidade": "media",
+      "descricao": "<p>O Comunicado de 14/04/2026 e o cabeçalho do Relatório de fev/2026 já apontam <strong>MONTE BRAVO ASSET MANAGEMENT LTDA.</strong> como gestora (mesmo CNPJ 34.877.615/0001-12 da antiga Kilima Gestão de Recursos). A troca de marca cria descontinuidade reputacional, embora os dados internos (nome do fundo, contrato com Suno) permaneçam. Material aparece com URL antiga (kilima.com.br) e nova (montebravoasset.com.br) misturadas.</p>",
+      "fonte": "Comunicado ao Mercado 14/04/2026 (ID 1161852) + Relatório Gerencial fev/2026 (ID 1145911)"
+    }
+  ],
+  "gestora": {
+    "nome": "Monte Bravo Asset Management Ltda. (ex-Kilima Gestão de Recursos)",
+    "cnpj": "34.877.615/0001-12",
+    "nota": 6.5,
+    "stats": [
+      {
+        "label": "AuM total estimado",
+        "valor": "R$ 1+ bi",
+        "subtexto": "Casa boutique, KISU11 é fundo flagship"
+      },
+      {
+        "label": "Foco",
+        "valor": "FoFs imobiliários",
+        "subtexto": "Estratégia rule-based + ativa"
+      },
+      {
+        "label": "Contrato Suno",
+        "valor": "10 anos",
+        "subtexto": "Renovável; uso exclusivo Índice Suno 30 FII"
+      },
+      {
+        "label": "Track record FoF",
+        "valor": "Desde 2020",
+        "subtexto": "Survivor das quedas de IFIX 2022 e 2024"
+      }
+    ],
+    "resumo": "<p>Casa especializada em FoFs imobiliários, fundada em 2020 e operacionalizada inicialmente sob a marca <strong>Kilima Gestão de Recursos</strong>, em parceria com a <strong>Suno Research</strong> para uso exclusivo do Índice Suno 30 FII. Em 2026 a gestão passou a operar comercialmente como <strong>Monte Bravo Asset Management</strong> (mesmo CNPJ). O modelo é rule-based: aplicar ≥80% do PL em FIIs do Índice Suno 30, com gestão ativa para gerar alfa via realização tática de ganhos de capital quando há descolamento dos componentes em relação ao VP.</p><p>O administrador fiduciário é a <strong>BRL Trust DTVM</strong> (Apex Group), com auditoria PWC desde 2025 (antes KPMG). Custodiante: BRL Trust. O time mantém comunicação consistente via relatório gerencial mensal com tabela de DRE detalhada — boa transparência operacional.</p>",
+    "link": "https://www.montebravoasset.com.br/"
+  },
+  "taxas": {
+    "subtitulo": "Taxa de 0,60% a.a. (gestão+administração+escrituração) — sem performance",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de administração total",
+        "valor": "0,60% a.a.",
+        "destaque": true,
+        "comentario": "Após redução em 28/11/2024 (era 0,18% só para administrador, hoje fica em 0,18% admin + 0,42% gestão+escrituração ≈ 0,60% total)"
+      },
+      {
+        "label": "Taxa de performance",
+        "valor": "Não há",
+        "destaque": false,
+        "comentario": "Modelo passive-active com remuneração fixa"
+      },
+      {
+        "label": "Taxa custódia",
+        "valor": "Incluída no total",
+        "destaque": false,
+        "comentario": "BRL Trust acumula admin/custódia/escrituração"
+      },
+      {
+        "label": "Pagamento mínimo",
+        "valor": "R$ 20 mil/mês",
+        "destaque": false,
+        "comentario": "Corrigido por IPCA — protege o administrador em fundo pequeno"
+      },
+      {
+        "label": "Camada efetiva paga em 2025",
+        "valor": "R$ 1,8 mi (0,49% PL contábil)",
+        "destaque": true,
+        "comentario": "Inclui pagamento mínimo; sobre PL a mercado: 0,56%"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Gestor",
+        "valor": "Monte Bravo Asset Management Ltda. (ex-Kilima Gestão de Recursos)"
+      }
+    ],
+    "observacao": "<p>Diferentemente de FoFs concorrentes que cobram entre 0,80–1,30% a.a., a estrutura do KISU11 é enxuta. Mas é importante entender que <strong>o cotista paga sobre uma carteira já taxada</strong>: ao olhar look-through, a taxa total efetiva (KISU11 + média ponderada das taxas dos 36 FIIs) fica em torno de 1,5–1,7% a.a., porcentagem alta para um produto que essencialmente replica um índice público.</p><p>A redução de novembro/2024 (Resolução CVM 175 mandou reduzir taxas mínimas de fundos pequenos) baixou a taxa de administração específica do administrador. Ainda assim, o pagamento mínimo de R$ 20 mil/mês corrigido por IPCA é um teto efetivo enquanto o PL fica abaixo de R$ 130 mi (já não é o caso, PL atual é R$ 366 mi).</p>"
+  },
+  "portfolio": {
+    "tipoFundo": "fof",
+    "tipoFundoLabel": "Fundo de Fundos (FoF) — predominante FIIs do Índice Suno 30",
+    "subtitulo": "36 FIIs distribuídos entre 7 segmentos com gestão tática marginal",
+    "stats": {
+      "alocacaoPL": [
+        {
+          "categoria": "Recebíveis Imobiliários (CRI)",
+          "cor": "amber",
+          "valor": 94842894.5,
+          "pct": 0.259
+        },
+        {
+          "categoria": "Galpões Logísticos",
+          "cor": "blue",
+          "valor": 83716762.94,
+          "pct": 0.2286
+        },
+        {
+          "categoria": "Lajes Comerciais",
+          "cor": "indigo",
+          "valor": 62732261.06,
+          "pct": 0.1713
+        },
+        {
+          "categoria": "Shopping Centers / Varejo",
+          "cor": "rose",
+          "valor": 49724929.56,
+          "pct": 0.1358
+        },
+        {
+          "categoria": "Híbrido (multiestratégia)",
+          "cor": "purple",
+          "valor": 31268467.04,
+          "pct": 0.0854
+        },
+        {
+          "categoria": "Renda Urbana",
+          "cor": "emerald",
+          "valor": 15161159.1,
+          "pct": 0.0414
+        },
+        {
+          "categoria": "Agências Bancárias",
+          "cor": "slate",
+          "valor": 11938497.49,
+          "pct": 0.0326
+        },
+        {
+          "categoria": "Caixa (RF)",
+          "cor": "gray",
+          "valor": 12343971.81,
+          "pct": 0.0459
+        }
+      ],
+      "totalAtivos": 36,
+      "totalCategoria": 7
+    },
+    "ativos": [
+      {
+        "tipo": "fii",
+        "ticker": "KNHY11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 1.01,
+        "dyInvestido": 0.1481,
+        "perfilRisco": "papel HY",
+        "comentario": "Kinea High Yield — CRIs alta rentabilidade",
+        "percPL": 0.0339,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Kinea High Yield"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "MXRF11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 1.05,
+        "dyInvestido": 0.1294,
+        "perfilRisco": "papel HY",
+        "comentario": "Maxi Renda — CRIs pulverizados",
+        "percPL": 0.0342,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Maxi Renda"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "KNCR11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 1.05,
+        "dyInvestido": 0.1472,
+        "perfilRisco": "papel CDI",
+        "comentario": "Kinea Rendimentos — CRIs CDI+",
+        "percPL": 0.0268,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Kinea Rendimentos"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HGCR11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 0.98,
+        "dyInvestido": 0.1371,
+        "perfilRisco": "papel diversificado",
+        "comentario": "CSHG Recebíveis — CRIs HY/MY mix",
+        "percPL": 0.0331,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "CSHG Recebíveis"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "KNIP11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 0.98,
+        "dyInvestido": 0.1148,
+        "perfilRisco": "papel IPCA+",
+        "comentario": "Kinea Índices de Preços — CRIs IPCA+",
+        "percPL": 0.0315,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Kinea Índices de Preços"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "RECR11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 0.92,
+        "dyInvestido": 0.1379,
+        "perfilRisco": "papel HY",
+        "comentario": "UBS BR Recebíveis",
+        "percPL": 0.0272,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "UBS BR Recebíveis"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "MCCI11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 1.0,
+        "dyInvestido": 0.1212,
+        "perfilRisco": "papel diversificado",
+        "comentario": "Mauá Capital Recebíveis",
+        "percPL": 0.0264,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Mauá Capital Recebíveis"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "IRIM11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 0.77,
+        "dyInvestido": 0.1518,
+        "perfilRisco": "papel HY",
+        "comentario": "Iridium Recebíveis",
+        "percPL": 0.0195,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Iridium Recebíveis"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "VCJR11",
+        "categoria": "Recebíveis",
+        "pvpInvestido": 0.86,
+        "dyInvestido": 0.1525,
+        "perfilRisco": "papel HY",
+        "comentario": "Vectis Juros Real",
+        "percPL": 0.0141,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Vectis Juros Real"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HCTR11",
+        "categoria": "Recebíveis (stress)",
+        "pvpInvestido": 0.21,
+        "dyInvestido": 0.1713,
+        "perfilRisco": "papel CRITICO",
+        "comentario": "Hectare CE — em situação de stress de crédito desde 2022",
+        "percPL": 0.0068,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Hectare CE"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "DEVA11",
+        "categoria": "Recebíveis (stress)",
+        "pvpInvestido": 0.26,
+        "dyInvestido": 0.188,
+        "perfilRisco": "papel CRITICO",
+        "comentario": "Devant Recebíveis — em stress, dividendo intermitente",
+        "percPL": 0.0054,
+        "segmentoFinal": "papel_high_yield",
+        "nome": "Devant Recebíveis"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "BTLG11",
+        "categoria": "Logística",
+        "pvpInvestido": 1.01,
+        "dyInvestido": 0.0916,
+        "perfilRisco": "tijolo logística",
+        "comentario": "BTG Logística — galpões últimos 5 anos",
+        "percPL": 0.0369,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "BTG Logística"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "BRCO11",
+        "categoria": "Logística",
+        "pvpInvestido": 1.06,
+        "dyInvestido": 0.0938,
+        "perfilRisco": "tijolo logística",
+        "comentario": "Bresco Logística",
+        "percPL": 0.0283,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "Bresco Logística"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "LVBI11",
+        "categoria": "Logística",
+        "pvpInvestido": 0.93,
+        "dyInvestido": 0.0889,
+        "perfilRisco": "tijolo logística",
+        "comentario": "VBI Logística",
+        "percPL": 0.0338,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "VBI Logística"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "XPLG11",
+        "categoria": "Logística",
+        "pvpInvestido": 0.97,
+        "dyInvestido": 0.1042,
+        "perfilRisco": "tijolo logística",
+        "comentario": "XP Log",
+        "percPL": 0.0335,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "XP Log"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HGLG11",
+        "categoria": "Logística",
+        "pvpInvestido": 0.96,
+        "dyInvestido": 0.0906,
+        "perfilRisco": "tijolo logística",
+        "comentario": "CSHG Logística — flagship segmento",
+        "percPL": 0.0315,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "CSHG Logística"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "VILG11",
+        "categoria": "Logística",
+        "pvpInvestido": 0.91,
+        "dyInvestido": 0.0913,
+        "perfilRisco": "tijolo logística",
+        "comentario": "Vinci Logística",
+        "percPL": 0.0313,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "Vinci Logística"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HSLG11",
+        "categoria": "Logística",
+        "pvpInvestido": 0.88,
+        "dyInvestido": 0.0925,
+        "perfilRisco": "tijolo logística",
+        "comentario": "HSI Logística",
+        "percPL": 0.0205,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "HSI Logística"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "DPRO11",
+        "categoria": "Logística (stress menor)",
+        "pvpInvestido": 0.64,
+        "dyInvestido": 0.1179,
+        "perfilRisco": "tijolo logística desconto alto",
+        "comentario": "Devant Property — desconto elevado a P/VP 0,64x",
+        "percPL": 0.0128,
+        "segmentoFinal": "logistica_industrial",
+        "nome": "Devant Property"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "KNRI11",
+        "categoria": "Lajes",
+        "pvpInvestido": 1.03,
+        "dyInvestido": 0.079,
+        "perfilRisco": "tijolo lajes",
+        "comentario": "Kinea Renda — lajes AAA",
+        "percPL": 0.0363,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "Kinea Renda"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HGRE11",
+        "categoria": "Lajes",
+        "pvpInvestido": 0.89,
+        "dyInvestido": 0.1029,
+        "perfilRisco": "tijolo lajes",
+        "comentario": "CSHG Real Estate — lajes premium",
+        "percPL": 0.0293,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "CSHG Real Estate"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "PVBI11",
+        "categoria": "Lajes",
+        "pvpInvestido": 0.73,
+        "dyInvestido": 0.0788,
+        "perfilRisco": "tijolo lajes desconto",
+        "comentario": "VBI Prime — lajes Faria Lima/JK",
+        "percPL": 0.0264,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "VBI Prime"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "GTWR11",
+        "categoria": "Lajes",
+        "pvpInvestido": 0.85,
+        "dyInvestido": 0.1344,
+        "perfilRisco": "tijolo lajes",
+        "comentario": "Green Towers Brasília",
+        "percPL": 0.0281,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "Green Towers Brasília"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "JSRE11",
+        "categoria": "Lajes",
+        "pvpInvestido": 0.65,
+        "dyInvestido": 0.0938,
+        "perfilRisco": "tijolo lajes desconto alto",
+        "comentario": "JS Real Estate — desconto histórico",
+        "percPL": 0.0255,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "JS Real Estate"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "BRCR11",
+        "categoria": "Lajes",
+        "pvpInvestido": 0.56,
+        "dyInvestido": 0.1049,
+        "perfilRisco": "tijolo lajes desconto extremo",
+        "comentario": "BTG Pactual Corporate — recuperação lenta",
+        "percPL": 0.0249,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "BTG Pactual Corporate"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "CNES11",
+        "categoria": "Lajes (stress)",
+        "pvpInvestido": 0.26,
+        "dyInvestido": 0.0447,
+        "perfilRisco": "tijolo CRITICO",
+        "comentario": "CENESP — vacância elevada, em recuperação",
+        "percPL": 0.0008,
+        "segmentoFinal": "escritorios_aaa",
+        "nome": "CENESP"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "VISC11",
+        "categoria": "Shoppings",
+        "pvpInvestido": 0.96,
+        "dyInvestido": 0.0939,
+        "perfilRisco": "tijolo shopping",
+        "comentario": "Vinci Shopping Centers",
+        "percPL": 0.0346,
+        "segmentoFinal": "shoppings_premium",
+        "nome": "Vinci Shopping Centers"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HGBS11",
+        "categoria": "Shoppings",
+        "pvpInvestido": 0.99,
+        "dyInvestido": 0.0995,
+        "perfilRisco": "tijolo shopping",
+        "comentario": "Hedge Brasil Shopping",
+        "percPL": 0.0335,
+        "segmentoFinal": "shoppings_premium",
+        "nome": "Hedge Brasil Shopping"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HSML11",
+        "categoria": "Shoppings",
+        "pvpInvestido": 0.91,
+        "dyInvestido": 0.0932,
+        "perfilRisco": "tijolo shopping",
+        "comentario": "HSI Mall",
+        "percPL": 0.0344,
+        "segmentoFinal": "shoppings_premium",
+        "nome": "HSI Mall"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "XPML11",
+        "categoria": "Shoppings",
+        "pvpInvestido": 1.02,
+        "dyInvestido": 0.0996,
+        "perfilRisco": "tijolo shopping",
+        "comentario": "XP Malls",
+        "percPL": 0.0333,
+        "segmentoFinal": "shoppings_premium",
+        "nome": "XP Malls"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "CPTS11",
+        "categoria": "Híbrido",
+        "pvpInvestido": 0.88,
+        "dyInvestido": 0.1304,
+        "perfilRisco": "híbrido",
+        "comentario": "Capitânia Securities — multi-CRI",
+        "percPL": 0.034,
+        "segmentoFinal": "hibrido",
+        "nome": "Capitânia Securities"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "TGAR11",
+        "categoria": "Híbrido",
+        "pvpInvestido": 0.73,
+        "dyInvestido": 0.1566,
+        "perfilRisco": "híbrido agro",
+        "comentario": "TG Ativo Real — pulverizado em recebíveis e desenvolvimento",
+        "percPL": 0.0199,
+        "segmentoFinal": "hibrido",
+        "nome": "TG Ativo Real"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "SNEL11",
+        "categoria": "Híbrido (energia)",
+        "pvpInvestido": 1.04,
+        "dyInvestido": 0.1417,
+        "perfilRisco": "híbrido energia",
+        "comentario": "Suno Energias Limpas — adquirido em dez/2025 via oferta primária",
+        "percPL": 0.0315,
+        "segmentoFinal": "hibrido",
+        "nome": "Suno Energias Limpas"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "HGRU11",
+        "categoria": "Renda Urbana",
+        "pvpInvestido": 1.02,
+        "dyInvestido": 0.1018,
+        "perfilRisco": "tijolo renda urbana",
+        "comentario": "CSHG Renda Urbana — supermercados, varejo",
+        "percPL": 0.0278,
+        "segmentoFinal": "renda_urbana",
+        "nome": "CSHG Renda Urbana"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "TRXF11",
+        "categoria": "Renda Urbana",
+        "pvpInvestido": 0.92,
+        "dyInvestido": 0.1384,
+        "perfilRisco": "tijolo renda urbana",
+        "comentario": "TRX Real Estate — varejo de longo prazo",
+        "percPL": 0.0136,
+        "segmentoFinal": "renda_urbana",
+        "nome": "TRX Real Estate"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "TVRI11",
+        "categoria": "Agências",
+        "pvpInvestido": 0.97,
+        "dyInvestido": 0.1356,
+        "perfilRisco": "tijolo monoinquilino",
+        "comentario": "Tivio Renda Imobiliária — agências bancárias",
+        "percPL": 0.0326,
+        "segmentoFinal": "agências",
+        "nome": "Tivio Renda Imobiliária"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.0343,
+      "hhiInterpretacao": "Concentração baixa — HHI ~340 indica diversificação saudável (HHI < 1.500 = baixa concentração; > 2.500 = alta)",
+      "top5": [
+        {
+          "ticker": "BTLG11",
+          "percentual": 0.0369,
+          "categoria": "Logística"
+        },
+        {
+          "ticker": "KNRI11",
+          "percentual": 0.0363,
+          "categoria": "Lajes"
+        },
+        {
+          "ticker": "VISC11",
+          "percentual": 0.0346,
+          "categoria": "Shoppings"
+        },
+        {
+          "ticker": "HSML11",
+          "percentual": 0.0344,
+          "categoria": "Shoppings"
+        },
+        {
+          "ticker": "MXRF11",
+          "percentual": 0.0342,
+          "categoria": "Recebíveis"
+        }
+      ],
+      "top5Total": 0.1764,
+      "top10Total": 0.334,
+      "porSegmento": {
+        "Recebíveis": 0.259,
+        "Logística": 0.2286,
+        "Lajes": 0.1713,
+        "Shoppings": 0.1358,
+        "Híbrido": 0.0854,
+        "Renda Urbana": 0.0414,
+        "Agências": 0.0326,
+        "Caixa": 0.046
+      },
+      "porGestora": {
+        "Kinea": 0.122,
+        "CSHG": 0.103,
+        "VBI/Vinci": 0.103,
+        "BTG": 0.062,
+        "XP": 0.067,
+        "HSI": 0.055,
+        "Outros": 0.488
+      },
+      "papelVsTijolo": {
+        "papel": 0.3,
+        "tijolo": 0.62,
+        "hibrido": 0.085,
+        "caixa": 0.046,
+        "comentario": "Mix balanceado, com leve viés para tijolo (~62%) coerente com a composição do Índice Suno 30 que prioriza FIIs líquidos do IFIX"
+      },
+      "geografia": "Indireta — segue exposição dos FIIs investidos. Predominante São Paulo e Rio de Janeiro (lajes), com galpões espalhados pelo eixo SP-RJ-MG-PR, shoppings em capitais, agências (TVRI11) com pulverização nacional."
+    },
+    "transacoes": [
+      {
+        "data": "2026-04-14",
+        "titulo": "Encerramento parcial da 3ª Emissão (KISU13)",
+        "tipo": "emissao",
+        "descricao": "Captação parcial de R$ 123,55 milhões via 15.348.114 cotas KISU13 (3ª emissão). Investidores que condicionaram subscrição foram restituídos em 17/04/2026. Cotas KISU13 (ISIN BRKISUR04M11) recebem rendimento proporcional de R$ 0,05870968 em 20/04/2026 e ficam segregadas até fungibilização.",
+        "fonte": "Comunicado ao Mercado 14/04/2026",
+        "docId": "1161852"
+      },
+      {
+        "data": "2025-12-15",
+        "titulo": "Aquisição de SNEL11 (Suno Energias Limpas) na oferta primária",
+        "tipo": "aquisicao",
+        "descricao": "KISU11 alocou R$ 12 milhões (~3,3% do PL) em 1.395.349 cotas de SNEL11 a R$ 8,60/cota. Aquisição via oferta primária encerrada em dezembro/2025. Posição entrou na carteira reportada a partir do relatório de janeiro/2026 (após desbloqueio da B3 ao final de janeiro/2026).",
+        "fonte": "Relatório Gerencial dez/2025",
+        "docId": "1091469"
+      },
+      {
+        "data": "2025-XX",
+        "titulo": "Aquisição de IRIM11 no exercício 2025",
+        "tipo": "aquisicao",
+        "descricao": "Conforme Informe Anual 2025, foram realizados R$ 7,72 milhões em compra de IRIM11. Outras aquisições no ano (BTLG12, MXRF12, XPLG12, XPML12) sem desembolso (zero) referem-se a recebimentos de bonificações de cotas das ofertas dos respectivos fundos.",
+        "fonte": "Informe Anual 12/2025",
+        "docId": "1144132"
+      },
+      {
+        "data": "2024-11-28",
+        "titulo": "Redução da Taxa de Administração (Resolução CVM 175)",
+        "tipo": "reducao_taxa",
+        "descricao": "Por instrumento particular, BRL Trust DTVM reduziu a taxa de administração específica para 0,18% a.a. com mínimo mensal de R$ 20.000 corrigido por IPCA. Redução decorrente da Resolução CVM 175 (Art. 97). A taxa total combinada (admin + gestão + escrituração) ficou em ~0,60% a.a.",
+        "fonte": "Instrumento Particular de Alteração do Regulamento 28/11/2024",
+        "docId": "807315"
+      },
+      {
+        "data": "2024-XX",
+        "titulo": "Aquisições do exercício 2024 — CNES11 e PVBI11",
+        "tipo": "aquisicao",
+        "descricao": "Conforme Informe Anual 2024: R$ 1,49 mi em CNES11 (FII de lajes em recuperação) e R$ 12,94 mi em PVBI11 (lajes Faria Lima/JK). Reflete o reequilíbrio do índice Suno 30.",
+        "fonte": "Informe Anual 12/2024",
+        "docId": "868902"
+      },
+      {
+        "data": "2023-05-30",
+        "titulo": "Atualização de endereço da Administradora",
+        "tipo": "outro",
+        "descricao": "Alteração administrativa: BRL Trust DTVM mudou sede para Rua Alves Guimarães 1212, Pinheiros, refletida em Instrumento Particular de Alteração do Regulamento.",
+        "fonte": "Instrumento Particular 30/05/2023",
+        "docId": "472512"
+      },
+      {
+        "data": "2021-05-06",
+        "titulo": "2ª Emissão de Cotas — captação primária",
+        "tipo": "emissao",
+        "descricao": "Distribuição primária via Instrução CVM 400, com volume mínimo R$ 50 mi e máximo R$ 300 mi a R$ 98,46/cota (preço de emissão) + taxa distribuição R$ 3,56. Cota patrimonial do fundo na época: R$ 95 (3,82% acima do VP). Coordenador líder: XP Investimentos.",
+        "fonte": "Prospecto Definitivo 2ª Emissão 06/05/2021",
+        "docId": "170893"
+      },
+      {
+        "data": "2021-01-15",
+        "titulo": "Início de negociação em bolsa",
+        "tipo": "outro",
+        "descricao": "KISU11 começou a ser negociado na B3 em 15/01/2021 com 54 cotistas iniciais e PL de R$ 76,3 milhões (PL emitido em outubro de 2020).",
+        "fonte": "Relatório Gerencial fev/2026",
+        "docId": "1145911"
+      },
+      {
+        "data": "2020-10-08",
+        "titulo": "Constituição e funcionamento do Fundo",
+        "tipo": "outro",
+        "descricao": "KILIMA FIC FII Suno 30 inicia funcionamento sob administração da BRL Trust DTVM (anteriormente Vortx). 1ª emissão captou R$ 76,3 milhões.",
+        "fonte": "Informe Anual 12/2020 (ID 158205)",
+        "docId": "158205"
+      }
+    ],
+    "schema": "v2",
+    "analise": {
+      "rotulo": "Diversificação ampla com peso em logística HG e papel high yield",
+      "cor": "amber",
+      "tags": [
+        "36 FIIs subjacentes",
+        "HHI 0,034 (muito diversificado)",
+        "Replica Índice Suno 30",
+        "Camada dupla de taxas"
+      ],
+      "veredicto": "<p>Portfólio <strong>amplamente diversificado</strong> em 36 FIIs líquidos da B3, com viés para <strong>logística HG</strong> (HGLG11, KNRI11, BTLG11) e <strong>papel high yield</strong> (KNHY11, MXRF11, KNCR11). HHI de 0,034 está entre os mais baixos do mercado — nenhuma posição passa de 4% do PL. Mandato regulamentar exige ≥80% em FIIs do Índice Suno 30, o que limita a discricionariedade do gestor para fugir de ativos problemáticos. Há exposição residual a <strong class=\"text-red-400\">CRIs estressados (HCTR11, DEVA11)</strong> marcados a 21–26% do VP — pequeno em volume (1,2% do PL), mas representa drag potencial em qualquer reciclagem forçada.</p><p>O custo total efetivo do cotista é <strong class=\"text-amber-400\">1,5–1,7% a.a.</strong> (taxa de KISU11 + média ponderada das taxas dos FIIs subjacentes), bem acima do 0,60% declarado isoladamente. O DPS de R$ 0,07/cota tem margem de apenas 3–5% sobre o lucro caixa — qualquer corte de dividendo nos FIIs investidos força corte espelhado.</p>",
+      "pontosFortes": [
+        "Diversificação real ampla — HHI 0,034, top-10 cobre apenas 32% do PL",
+        "Liquidez razoável (R$ 436 mil/dia médio em 21d)",
+        "Volatilidade do dividendo baixa (CV24m 3,2%) — DPS estável em R$ 0,07/cota",
+        "Volatilidade do preço relativamente contida (σ12m 8,7%) para FoF de FIIs HY+HG",
+        "Replica índice Suno 30 — composição auditada e padronizada"
+      ],
+      "pontosFracos": [
+        "Custo total efetivo 1,5–1,7% a.a. (camada dupla, não apenas 0,60%)",
+        "Mandato passivo-ativo limita reposicionamento ágil em crises setoriais",
+        "Drag silencioso de HCTR11+DEVA11 marcados a forte desconto do VP",
+        "DPS R$ 0,07 é teto efetivo, não piso — margem de 3–5% sobre lucro caixa",
+        "Overhang da 3ª emissão (R$ 123,5 mi captados em abr/2026) até fungibilização KISU13→KISU11"
+      ],
+      "perfilInvestidor": "Investidor que quer exposição diversificada ao mercado de FIIs em uma única cota, aceita custo total efetivo de 1,5–1,7% a.a. em troca de auditoria de composição e rebalanceamento sistemático, e tem horizonte longo (3+ anos). NÃO é para quem busca DPS crescente, baixíssimo custo, ou quem pode escolher 5–10 FIIs diretamente."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Cronologia dos principais marcos do KISU11 desde 2020",
+    "periodos": [
+      {
+        "epoca": "Constituição e IPO (2020)",
+        "data": "08/10/2020 a 31/12/2020",
+        "descricao": "Fundo constituído como KILIMA FIC FII Suno 30 (CNPJ 36.669.660/0001-07) sob a administração inicial da Vortx (depois transferida para BRL Trust). 1ª emissão captou R$ 76,3 milhões. Negociação em bolsa começa em 15/01/2021 com 54 cotistas. PL aproximado de R$ 76,3 mi.",
+        "tipo": "marco"
+      },
+      {
+        "epoca": "Crescimento via 2ª emissão (2021)",
+        "data": "Maio/2021",
+        "descricao": "2ª Emissão sob CVM 400 — coordenada por XP Investimentos, captou montante adicional para escalar a estratégia. Preço de emissão R$ 98,46 + taxa de distribuição R$ 3,56. PL passa rapidamente de ~R$ 76 mi para ordens de grandeza maiores. DPS começa em R$ 0,06–0,08/cota mensal.",
+        "tipo": "marco"
+      },
+      {
+        "epoca": "Era estável de DPS R$ 0,07 (2022 a 2024)",
+        "data": "2022 a 2024",
+        "descricao": "Período de operação madura: DPS estabiliza em R$ 0,065–0,090/cota com extras pontuais (R$ 0,10 em jun/2022 e R$ 0,09 em dez/2022 — distribuições semestrais). Em 2024, IFIX cai 5,89% e o fundo apura prejuízo contábil de R$ 25,4 mi. Cotistas crescem de 60 mil em 2022 para 100 mil+ em 2024.",
+        "tipo": "estavel"
+      },
+      {
+        "epoca": "Redução de taxas e ajuste de DPS (2024)",
+        "data": "Nov/2024",
+        "descricao": "Em 28/11/2024, BRL Trust reduz taxa de administração específica para 0,18% a.a. (Resolução CVM 175). Taxa total fica em 0,60% a.a. DPS é reduzido marginalmente para R$ 0,067/cota em final de 2024 (vs R$ 0,075 média 2024) acompanhando queda de receita de FIIs investidos.",
+        "tipo": "reducao_taxa"
+      },
+      {
+        "epoca": "Recuperação 2025 e DPS R$ 0,07 estável",
+        "data": "2025",
+        "descricao": "IFIX se recupera +21% no ano. KISU11 estabiliza DPS em R$ 0,07/cota mensal (16 meses consecutivos até abr/2026). Lucro contábil 2025: R$ 84,68 mi. Auditor muda de KPMG para PWC. Em dez/2025, alocação tática de R$ 12 mi em SNEL11 via oferta primária. PL fecha o ano em R$ 359,6 mi.",
+        "tipo": "recuperacao"
+      },
+      {
+        "epoca": "3ª emissão e mudança de marca (2026)",
+        "data": "Q1/Q2 2026",
+        "descricao": "Gestora opera comercialmente sob nova marca MONTE BRAVO ASSET MANAGEMENT (mesmo CNPJ da Kilima). 3ª Emissão (KISU13) encerra em 14/04/2026 com captação parcial de R$ 123,55 mi (15,3 mi cotas). DPS mantido em R$ 0,07 mensal. PL atinge R$ 366 mi (cota patrimonial R$ 8,29).",
+        "tipo": "marco"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O KISU11 é um <strong>FoF rule-based</strong> que entrega ao cotista exposição diversificada e líquida ao Índice Suno 30 FII, hoje composto por 36 FIIs distribuídos em 7 segmentos. A tese central é o <strong>duplo desconto</strong>: a cota negocia a P/VP 0,86, e o VP por sua vez já é calculado sobre uma carteira de FIIs marcados a P/VP médio ponderado 0,92x. Em tese, qualquer reaproximação dessas razões a 1,0 (mean reversion histórico) gera ganho relevante via ambas as alavancas.</p><p>O modelo cobra 0,60% a.a. de taxa, que precisa ser comparado ao custo de oportunidade de o investidor montar a mesma carteira diretamente. Para investidores com patrimônio < R$ 200 mil em FIIs, a economia logística e a otimização de horas de gestão tendem a justificar; acima desse patamar, o investidor sofisticado pode replicar com economia. A camada de risco principal é a presença de detratores (HCTR11, DEVA11, CNES11) cujas posições são pequenas mas geram drag, e a liquidez modesta para tickets de varejo qualificado.</p>",
+    "paraQuem": [
+      {
+        "perfil": "Investidor iniciante em FIIs que quer diversificação one-click",
+        "razao": "36 FIIs em um único papel, balanceamento automático trimestral pelo índice"
+      },
+      {
+        "perfil": "Quem busca duplo desconto em ciclos de IFIX deprimido",
+        "razao": "Dupla alavanca: P/VP 0,86 do KISU11 + P/VP 0,92 médio dos FIIs subjacentes"
+      },
+      {
+        "perfil": "Quem prefere DPS estável a alpha de gestão",
+        "razao": "DPS R$ 0,07 mensal há 16 meses consecutivos — previsibilidade com DY 11,5%"
+      },
+      {
+        "perfil": "Quem quer exposição balanceada papel/tijolo sem decidir alocação",
+        "razao": "Mix automático: 30% papel, 62% tijolo, 8,5% híbrido — segue o índice"
+      }
+    ],
+    "naoParaQuem": [
+      {
+        "perfil": "Investidor que quer evitar duplo layer de taxas",
+        "razao": "Carga total efetiva 1,5–1,7% a.a. quando combinada com taxas dos FIIs investidos"
+      },
+      {
+        "perfil": "Quem busca ganho via stock-picking ativo",
+        "razao": "Fundo é majoritariamente passivo — replica índice, não bate o IFIX consistentemente"
+      },
+      {
+        "perfil": "Investidor sofisticado com R$ 200k+ em FIIs",
+        "razao": "Pode montar carteira similar diretamente com economia de 0,55–0,75% a.a."
+      },
+      {
+        "perfil": "Quem precisa de liquidez alta para sair rápido",
+        "razao": "Volume médio R$ 405 mil/dia em fev/2026 — modesto para tickets > R$ 100 mil"
+      }
+    ]
+  },
+  "encaixe": {
+    "identidade": {
+      "rotulo": "FoF Diversificado Defensivo com Duplo Desconto",
+      "subrotulo": "Veículo de exposição balanceada ao IFIX-extended via Índice Suno 30 com gestão tática marginal",
+      "cor": "blue"
+    },
+    "perfilRisco": {
+      "score": 2.8,
+      "nivel": "Moderado-Baixo",
+      "componentes": [
+        {
+          "nome": "Risco de crédito (papéis investidos)",
+          "peso": 0.2,
+          "score": 3.0,
+          "descricao": "Exposição indireta a CRIs HY via KNHY11/RECR11/IRIM11 e detratores (HCTR11, DEVA11) somam ~26% papel"
+        },
+        {
+          "nome": "Risco de liquidez (saída)",
+          "peso": 0.2,
+          "score": 3.0,
+          "descricao": "Volume R$ 405 mil/dia em fev/2026; suficiente para varejo, restritivo para tickets >R$ 200k"
+        },
+        {
+          "nome": "Risco de mercado (β IFIX)",
+          "peso": 0.2,
+          "score": 3.5,
+          "descricao": "Como FoF, replica volatilidade do IFIX +10–15% pela alavancagem dos detratores. σ12m anual 8,7%, σ24m 13,5%"
+        },
+        {
+          "nome": "Risco de gestão",
+          "peso": 0.1,
+          "score": 2.5,
+          "descricao": "Modelo rule-based reduz risco discricionário. Mudança Kilima → Monte Bravo tem efeito reputacional médio"
+        },
+        {
+          "nome": "Risco de concentração",
+          "peso": 0.15,
+          "score": 1.5,
+          "descricao": "HHI 343 — concentração baixíssima. Top-5 = 17,6%, top-10 = 33,4%"
+        },
+        {
+          "nome": "Risco de evento (3ª emissão, fungibilidade KISU13)",
+          "peso": 0.15,
+          "score": 3.0,
+          "descricao": "Overhang de 15 mi cotas KISU13 até fungibilização. Diluição já parcialmente refletida"
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Comprar e segurar (DPS recorrente)",
+        "encaixa": true,
+        "score": 4,
+        "comentario": "DPS R$ 0,07 estável há 16 meses, DY 11,5% — ideal para passivo de longo prazo"
+      },
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": true,
+        "score": 4,
+        "comentario": "Pagamento mensal, valor estável, isenção PF — checa todos os requisitos"
+      },
+      {
+        "nome": "Ganho de capital via mean reversion P/VP",
+        "encaixa": true,
+        "score": 3,
+        "comentario": "Duplo desconto reverteu em 2025 (+21% IFIX) e pode repetir; histórico mostra alvo P/VP 0,95-1,00x"
+      },
+      {
+        "nome": "Diversificação one-click em FIIs",
+        "encaixa": true,
+        "score": 5,
+        "comentario": "Núcleo de tese — 36 FIIs em 7 segmentos é a melhor diversificação single-name disponível"
+      },
+      {
+        "nome": "Hedge contra inflação",
+        "encaixa": false,
+        "score": 2,
+        "comentario": "Exposição IPCA+ via KNIP11 representa só 3,15% — baixa para hedge robusto"
+      },
+      {
+        "nome": "Hedge contra recessão",
+        "encaixa": false,
+        "score": 2,
+        "comentario": "Tijolo (62%) e shoppings (13,6%) sofrem em recessão; pouca exposição defensiva pura"
+      },
+      {
+        "nome": "Apostas em ciclo de juros (queda Selic)",
+        "encaixa": true,
+        "score": 3,
+        "comentario": "FIIs em geral beneficiam de queda Selic — KISU11 captura indiretamente, mas com lag e custo de taxa"
+      },
+      {
+        "nome": "Trading de curto prazo",
+        "encaixa": false,
+        "score": 1,
+        "comentario": "Liquidez modesta + spread bid-ask amplo — não recomendado para day/swing trade"
+      },
+      {
+        "nome": "Apostas em segmentos específicos (logística, papel)",
+        "encaixa": false,
+        "score": 1,
+        "comentario": "FoF é ferramenta errada — quem quer logística pura compra HGLG11/BTLG11 direto"
+      },
+      {
+        "nome": "Acumulação automatizada via aporte regular",
+        "encaixa": true,
+        "score": 4,
+        "comentario": "Cota acessível (R$ 7), liquidez adequada para aportes mensais de R$ 500–5.000"
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "nome": "Drag silencioso de HCTR11 e DEVA11",
+        "descricao": "Posições somam 1,2% do PL marcadas a 21–26% do VP. Saída forçada (saída do índice Suno 30) provavelmente realizará perda adicional. Overhang invisível ao investidor que não lê detalhe da composição.",
+        "severidade": "alta"
+      },
+      {
+        "nome": "Custo total efetivo é 1,5–1,7% a.a., não 0,60% a.a.",
+        "descricao": "Taxa do KISU11 de 0,60% incide SOBRE o PL que já paga taxas dos FIIs subjacentes. Look-through: cotista paga ~1,5–1,7% a.a. ao final, comparável ou pior do que muitos FIIs ativos com custo embutido.",
+        "severidade": "alta"
+      },
+      {
+        "nome": "DPS R$ 0,07 é um patamar conservador, não um teto sustentável",
+        "descricao": "O gestor distribui R$ 0,07/cota mas o lucro líquido caixa médio em 2025 foi R$ 3,2 mi/mês (R$ 0,072/cota). Margem de segurança de apenas 3–5%. Qualquer queda de 5% nos rendimentos recebidos dos FIIs pode forçar redução para R$ 0,065 ou abaixo.",
+        "severidade": "media"
+      },
+      {
+        "nome": "Mudança de marca Kilima → Monte Bravo sem comunicação clara",
+        "descricao": "Em abr/2026 o Comunicado já cita Monte Bravo Asset; relatório fev/2026 mistura URLs (kilima.com.br + montebravoasset.com.br). Sem fato relevante explicando rebrand, o que cria descontinuidade reputacional.",
+        "severidade": "media"
+      },
+      {
+        "nome": "Detentor passivo do Índice Suno 30 — dependência de provedor",
+        "descricao": "O contrato com Suno Research é exclusivo por 10 anos (vence ~2030). Se descontinuado, o regulamento exige assembleia para substituição ou alteração da política. Risco de gap operacional ou mudança forçada de mandato.",
+        "severidade": "media"
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 436383,
+      "volumeMedio252d": 541914,
+      "diasParaSair": {
+        "100k": 1.1,
+        "500k": 5.7,
+        "1M": 11.5,
+        "comentario": "Calculado como X / (volumeMedio252d × 0,20). Para R$ 200 mil, ~2,3 dias; R$ 1 mi, ~11,5 dias"
+      },
+      "fonte": "data/fiis/kisu11/historico_precos.csv (277 pontos semanais 2021-01-11 a 2026-04-24)"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12mAnualizada": 0.0867,
+        "sigma24mAnualizada": 0.1351,
+        "interpretacao": "Volatilidade moderada. σ12m de 8,7% reflete mercado IFIX em estabilização pós-recuperação 2025; σ24m de 13,5% inclui o stress de 2024."
+      },
+      "dividendo": {
+        "cv12m": 0.0,
+        "cv24m": 0.0316,
+        "minDps24m": 0.066,
+        "maxDps24m": 0.075,
+        "amplitudeRelativa": 0.128,
+        "interpretacao": "DPS extremamente estável: 16 meses consecutivos em R$ 0,07. CV24m de apenas 3,2% confirma o regime de DPS-anchor adotado pelo gestor."
+      }
+    },
+    "sobreposicaoPares": {
+      "comentario": "Por ser FoF, KISU11 tem sobreposição direta com qualquer outro fundo que detenha os mesmos 36 FIIs do índice Suno 30. Investidor que tem exposição própria a HGLG11, KNRI11, MXRF11, KNCR11, etc. já tem overlap proporcional dentro do KISU11.",
+      "pares": [
+        {
+          "ticker": "BCFF11",
+          "tipoSobreposicao": [
+            "FoF concorrente IFIX-tracking"
+          ],
+          "sobreposicaoEstimada": 0.5,
+          "comentario": "Top FIIs em comum (KNRI11, HGLG11, BTLG11, KNCR11, MXRF11)"
+        },
+        {
+          "ticker": "RBRF11",
+          "tipoSobreposicao": [
+            "FoF passive-active"
+          ],
+          "sobreposicaoEstimada": 0.4,
+          "comentario": "Estratégia parecida em FIIs blue-chip"
+        },
+        {
+          "ticker": "HFOF11",
+          "tipoSobreposicao": [
+            "FoF principal mercado"
+          ],
+          "sobreposicaoEstimada": 0.55,
+          "comentario": "Maior FoF do mercado; sobreposição alta nos top names"
+        },
+        {
+          "ticker": "HGLG11",
+          "tipoSobreposicao": [
+            "Direta (3,15% via lookthrough)"
+          ],
+          "sobreposicaoEstimada": 0.0315,
+          "comentario": "Quem tem HGLG11 direto soma exposição via KISU11"
+        },
+        {
+          "ticker": "KNRI11",
+          "tipoSobreposicao": [
+            "Direta (3,63% via lookthrough)"
+          ],
+          "sobreposicaoEstimada": 0.0363,
+          "comentario": "Maior posição individual do KISU11"
+        },
+        {
+          "ticker": "MXRF11",
+          "tipoSobreposicao": [
+            "Direta (3,42% via lookthrough)"
+          ],
+          "sobreposicaoEstimada": 0.0342,
+          "comentario": "Cuidado com double-counting em carteiras com MXRF11"
+        }
+      ]
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic entra em ciclo de cortes consistente em 2026-2027",
+        "probabilidadeRelativa": 0.4,
+        "impactoEstimado": "+15% a +25% em 12-18 meses",
+        "descricao": "Cenário-base do gestor. Cortes de 200-300bps na Selic destravariam o duplo desconto: VP recupera (FIIs subjacentes saem do drawdown) e P/VP do KISU11 reaproxima 1,0. DPS sustentável crescente para R$ 0,075-0,080."
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Captação 3ª emissão (KISU13) usada para aquisições oportunistas",
+        "probabilidadeRelativa": 0.3,
+        "impactoEstimado": "+3% a +6% no DPS sustentável em 6-12 meses",
+        "descricao": "Os R$ 123,55 mi captados ampliam o PL em ~33%, e podem ser alocados em FIIs com P/VP < 0,85 e DY > 12% (oportunidades existem em lajes e papel HY de qualidade). Ganho de pró-rata via cap rate atrativo."
+      },
+      {
+        "tipo": "neutro",
+        "titulo": "IFIX lateral em 2026, DPS preservado em R$ 0,07",
+        "probabilidadeRelativa": 0.15,
+        "impactoEstimado": "Total return ~12% (DY puro)",
+        "descricao": "Cenário de juros oscilando em 12-13% sem cortes. KISU11 entrega DY puro sem ganho de capital. P/VP segue em 0,86-0,90."
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Inflação acelera + Selic sobe para 14%+",
+        "probabilidadeRelativa": 0.1,
+        "impactoEstimado": "-15% a -25% em 6-12 meses",
+        "descricao": "IFIX volta ao stress de 2024. P/VP cai para 0,75. DPS forçadamente reduzido para R$ 0,06 ou abaixo. HCTR11/DEVA11 escalam stress."
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Evento de crédito generalizado em CRIs HY",
+        "probabilidadeRelativa": 0.05,
+        "impactoEstimado": "-5% a -10% via marcação dos papéis",
+        "descricao": "Onda de inadimplência em CRIs HY (vide ciclo HCTR11/DEVA11 expandindo) marca a mercado os 26% em papel. Gestor precisa rebalancear vendendo na baixa."
+      }
+    ],
+    "paraQuem": [
+      "Investidor que quer diversificação one-click em FIIs sem stock-picking",
+      "Acumulador via aporte mensal de R$ 500-5.000 com cota acessível",
+      "Buscador de DPS estável e previsível (R$ 0,07/cota há 16 meses)",
+      "Quem aposta em mean reversion do duplo desconto P/VP"
+    ],
+    "paraQuemNao": [
+      "Investidor com R$ 200k+ em FIIs (replicar carteira sai mais barato)",
+      "Quem busca alpha via gestão ativa diferenciada",
+      "Quem precisa girar posição rápido (liquidez modesta)",
+      "Quem quer evitar duplo layer de taxa (1,5-1,7% efetivo total)"
+    ]
+  },
+  "dividendos": {
+    "historico": [
+      {
+        "data": "2020-12",
+        "dividendo": 0.246299,
+        "dataPagamento": "2020-12-14",
+        "cotas": 1031499,
+        "fonte": "Rendimentos ID 130685",
+        "docId": "130685"
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.72,
+        "dataPagamento": "2021-02-12",
+        "cotas": 1500000,
+        "fonte": "Rendimentos ID 144614",
+        "docId": "144614"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 0.65,
+        "dataPagamento": "2021-03-12",
+        "cotas": 1500000,
+        "fonte": "Rendimentos ID 151359",
+        "docId": "151359"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 0.81,
+        "dataPagamento": "2021-04-15",
+        "cotas": 1500000,
+        "fonte": "Rendimentos ID 159452",
+        "docId": "159452"
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 0.81,
+        "dataPagamento": "2021-05-14",
+        "cotas": 1500000,
+        "fonte": "Rendimentos ID 169197",
+        "docId": "169197"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.6583,
+        "dataPagamento": "2021-06-15",
+        "cotas": 1500000,
+        "fonte": "Rendimentos ID 180569 + 180785 (R$ 0,64 + R$ 0,0183)",
+        "docId": "180569"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 1.123,
+        "dataPagamento": "2021-07-15",
+        "cotas": 1500000,
+        "fonte": "Rendimentos ID 189909+189912+189919 (R$ 0,70 + 0,17 + 0,25 — possível extraordinário/desdobramento)",
+        "docId": "189909"
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 0.06,
+        "dataPagamento": "2021-08-13",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 198896 — após desdobramento",
+        "docId": "198896"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 0.06,
+        "dataPagamento": "2021-09-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 210506",
+        "docId": "210506"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 0.06,
+        "dataPagamento": "2021-10-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 219651",
+        "docId": "219651"
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 0.06,
+        "dataPagamento": "2021-11-16",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 229646",
+        "docId": "229646"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 0.06,
+        "dataPagamento": "2021-12-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 241536",
+        "docId": "241536"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 0.07,
+        "dataPagamento": "2022-01-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 251665",
+        "docId": "251665"
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 0.065,
+        "dataPagamento": "2022-02-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 261214",
+        "docId": "261214"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 0.065,
+        "dataPagamento": "2022-03-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 272523",
+        "docId": "272523"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 0.065,
+        "dataPagamento": "2022-04-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 283738",
+        "docId": "283738"
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 0.065,
+        "dataPagamento": "2022-05-13",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 296382",
+        "docId": "296382"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 0.075,
+        "dataPagamento": "2022-06-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 310500",
+        "docId": "310500"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 0.1,
+        "dataPagamento": "2022-07-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 320946 (extraordinário semestral)",
+        "docId": "320946"
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 0.07,
+        "dataPagamento": "2022-08-12",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 331891",
+        "docId": "331891"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.07,
+        "dataPagamento": "2022-09-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 346483",
+        "docId": "346483"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.075,
+        "dataPagamento": "2022-10-17",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 358683",
+        "docId": "358683"
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.075,
+        "dataPagamento": "2022-11-16",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 370392",
+        "docId": "370392"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.075,
+        "dataPagamento": "2022-12-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 383862",
+        "docId": "383862"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.09,
+        "dataPagamento": "2023-01-13",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 396174 (extraordinário semestral)",
+        "docId": "396174"
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.075,
+        "dataPagamento": "2023-02-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 408023",
+        "docId": "408023"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.075,
+        "dataPagamento": "2023-03-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 422591",
+        "docId": "422591"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 0.07,
+        "dataPagamento": "2023-04-17",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 438177",
+        "docId": "438177"
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 0.07,
+        "dataPagamento": "2023-05-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 453387",
+        "docId": "453387"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 0.07,
+        "dataPagamento": "2023-06-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 472152",
+        "docId": "472152"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.08,
+        "dataPagamento": "2023-07-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 485584 (extraordinário semestral)",
+        "docId": "485584"
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.07,
+        "dataPagamento": "2023-08-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 498991",
+        "docId": "498991"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.07,
+        "dataPagamento": "2023-09-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 515824",
+        "docId": "515824"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.075,
+        "dataPagamento": "2023-10-16",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 529572",
+        "docId": "529572"
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.075,
+        "dataPagamento": "2023-11-16",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 544238",
+        "docId": "544238"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.075,
+        "dataPagamento": "2023-12-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 562061",
+        "docId": "562061"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.08,
+        "dataPagamento": "2024-01-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 577339 (extraordinário semestral)",
+        "docId": "577339"
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.075,
+        "dataPagamento": "2024-02-16",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 593529",
+        "docId": "593529"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.075,
+        "dataPagamento": "2024-03-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 612262",
+        "docId": "612262"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.075,
+        "dataPagamento": "2024-04-12",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 630262",
+        "docId": "630262"
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 0.075,
+        "dataPagamento": "2024-05-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 651211",
+        "docId": "651211"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.075,
+        "dataPagamento": "2024-06-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 673094",
+        "docId": "673094"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.075,
+        "dataPagamento": "2024-07-12",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 689523",
+        "docId": "689523"
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.07,
+        "dataPagamento": "2024-08-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 709281",
+        "docId": "709281"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.07,
+        "dataPagamento": "2024-09-13",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 730481",
+        "docId": "730481"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.068,
+        "dataPagamento": "2024-10-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 749259",
+        "docId": "749259"
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.066,
+        "dataPagamento": "2024-11-14",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 769702",
+        "docId": "769702"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.067,
+        "dataPagamento": "2024-12-13",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 792288",
+        "docId": "792288"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.067,
+        "dataPagamento": "2025-01-15",
+        "cotas": 25000000,
+        "fonte": "Rendimentos ID 810822",
+        "docId": "810822"
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-02-14",
+        "cotas": 44196050,
+        "lucroCaixa": 3370800,
+        "distribuicao": 3093300,
+        "resultadoCaixa": 277500,
+        "payout": 0.918,
+        "fonte": "Rendimentos ID 830021 + Relatório Gerencial ago/2025",
+        "docId": "830021"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-03-18",
+        "cotas": 44196050,
+        "lucroCaixa": 3084600,
+        "distribuicao": 3093700,
+        "resultadoCaixa": -9100,
+        "payout": 1.003,
+        "fonte": "Rendimentos ID 850981 + Relatório Gerencial ago/2025",
+        "docId": "850981"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-04-14",
+        "cotas": 44196050,
+        "lucroCaixa": 3074700,
+        "distribuicao": 3093700,
+        "resultadoCaixa": -19000,
+        "payout": 1.006,
+        "fonte": "Rendimentos ID 869109 + Relatório Gerencial ago/2025",
+        "docId": "869109"
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-05-15",
+        "cotas": 44196050,
+        "lucroCaixa": 3065400,
+        "distribuicao": 3093700,
+        "resultadoCaixa": -28300,
+        "payout": 1.009,
+        "fonte": "Rendimentos ID 890197 + Relatório Gerencial ago/2025",
+        "docId": "890197"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-06-13",
+        "cotas": 44196050,
+        "lucroCaixa": 3270100,
+        "distribuicao": 3093700,
+        "resultadoCaixa": 176400,
+        "payout": 0.946,
+        "fonte": "Rendimentos ID 915327 + Relatório Gerencial ago/2025",
+        "docId": "915327"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-07-14",
+        "cotas": 44196050,
+        "lucroCaixa": 3170500,
+        "distribuicao": 3093700,
+        "resultadoCaixa": 76800,
+        "payout": 0.976,
+        "fonte": "Rendimentos ID 935542 + Relatório Gerencial ago/2025",
+        "docId": "935542"
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-08-14",
+        "cotas": 44196050,
+        "lucroCaixa": 3466100,
+        "distribuicao": 3093700,
+        "resultadoCaixa": 372400,
+        "payout": 0.892,
+        "fonte": "Rendimentos ID 956917 + Relatório Gerencial ago/2025",
+        "docId": "956917"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-09-12",
+        "cotas": 44196050,
+        "lucroCaixa": 3170600,
+        "distribuicao": 3093700,
+        "resultadoCaixa": 76900,
+        "payout": 0.976,
+        "fonte": "Rendimentos ID 980529 + Relatório Gerencial ago/2025",
+        "docId": "980529"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-10-14",
+        "cotas": 44196050,
+        "lucroCaixa": 3140600,
+        "distribuicao": 3187600,
+        "resultadoCaixa": -47000,
+        "payout": 1.015,
+        "fonte": "Rendimentos ID 1002732 + Relatório Gerencial dez/2025",
+        "docId": "1002732"
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-11-14",
+        "cotas": 44196050,
+        "lucroCaixa": 3117100,
+        "distribuicao": 3140500,
+        "resultadoCaixa": -23400,
+        "payout": 1.008,
+        "fonte": "Rendimentos ID 1025076 + Relatório Gerencial dez/2025",
+        "docId": "1025076"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.07,
+        "dataPagamento": "2025-12-15",
+        "cotas": 44196050,
+        "lucroCaixa": 3197600,
+        "distribuicao": 3301500,
+        "resultadoCaixa": -103900,
+        "payout": 1.032,
+        "fonte": "Rendimentos ID 1049881 + Relatório Gerencial dez/2025",
+        "docId": "1049881"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.07,
+        "dataPagamento": "2026-01-15",
+        "cotas": 44196050,
+        "lucroCaixa": 3264100,
+        "distribuicao": 3434400,
+        "resultadoCaixa": -170300,
+        "payout": 1.052,
+        "fonte": "Rendimentos ID 1072549 + Relatório Gerencial dez/2025",
+        "docId": "1072549"
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.07,
+        "dataPagamento": "2026-02-18",
+        "cotas": 44196050,
+        "lucroCaixa": 3074700,
+        "distribuicao": 3093700,
+        "resultadoCaixa": -19100,
+        "payout": 1.006,
+        "fonte": "Rendimentos ID 1097611 + Relatório Gerencial fev/2026",
+        "docId": "1097611"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.07,
+        "dataPagamento": "2026-03-16",
+        "cotas": 44196050,
+        "lucroCaixa": 3084600,
+        "distribuicao": 3093700,
+        "resultadoCaixa": -9100,
+        "payout": 1.003,
+        "fonte": "Rendimentos ID 1124146 + Relatório Gerencial fev/2026",
+        "docId": "1124146"
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.07,
+        "dataPagamento": "2026-04-15",
+        "cotas": 44196050,
+        "lucroCaixa": 3093723,
+        "distribuicao": 3093723,
+        "resultadoCaixa": 0,
+        "payout": 1.0,
+        "caixaLiquidoFimMes": 12343972,
+        "fonte": "Rendimentos ID 1150541 + Informe Mensal Estruturado 03/2026",
+        "docId": "1150541"
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2021-1",
+        "label": "1º Sem 2021",
+        "ano": 2021,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": null,
+        "distribuicao": null,
+        "resultadoCaixa": null,
+        "payout": null,
+        "interpretacao": "indisponivel"
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 19034400,
+        "distribuicao": 18564800,
+        "resultadoCaixa": 469600,
+        "payout": 0.975,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 19526200,
+        "distribuicao": 19251700,
+        "resultadoCaixa": 274500,
+        "payout": 0.986,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "lucroCaixa": 9253023,
+        "distribuicao": 9281123,
+        "resultadoCaixa": -28100,
+        "payout": 1.003,
+        "interpretacao": "queimou_caixa"
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_longo",
+      "dividendoLabel": "Sustentável no patamar atual de R$ 0,07",
+      "dividendoCor": "emerald",
+      "horizonte": "12-18 meses sem inflexão visível",
+      "status": "estavel",
+      "cor": "emerald",
+      "payoutMedio12m": 0.998,
+      "caixaLiquido": 12343972,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 12,34 mi em Fundos de Renda Fixa + R$ 100 em disponibilidades (item 9 do Informe Mensal 03/2026)",
+      "queimaMediaMensal": 9367,
+      "queimaPorCota": 0.0002,
+      "coberturaMeses": 1318,
+      "tendencia": "Geração de caixa acompanha a distribuição. Média 12m do payout em 99,8% mostra equilíbrio.",
+      "leitura": "<p>O DPS R$ 0,07/cota é o número que o gestor escolheu como âncora. Em 2025, o lucro caixa anual foi R$ 38,4 mi vs R$ 37,8 mi distribuídos — payout de 98,5%. Equilíbrio quase perfeito. Sem ganho de capital adicional, qualquer queda de 5% nos rendimentos recebidos dos FIIs investidos pode forçar redução marginal. Mas o caixa de liquidez de R$ 12,3 mi cobre meses de eventuais déficits.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2025-12",
+        "dataExata": "2025-12-15",
+        "titulo": "Aquisição SNEL11 com R$ 12 mi do caixa",
+        "tipo": "aquisicao",
+        "descricao": "Alocação tática diversificadora em Suno Energias Limpas (1,4 mi cotas a R$ 8,60), totalmente refletida em jan/2026 após desbloqueio.",
+        "impactoDividendo": "Sem impacto direto no DPS (mesmo ritmo de R$ 0,07)",
+        "severidade": "neutro",
+        "fonte": "Relatório Gerencial dez/2025",
+        "docId": "1091469"
+      },
+      {
+        "data": "2024-11",
+        "dataExata": "2024-11-28",
+        "titulo": "Redução da Taxa de Administração",
+        "tipo": "reducao_taxa",
+        "descricao": "Taxa específica do administrador caiu para 0,18% a.a. (Resolução CVM 175). Total combinado 0,60% a.a. Economia esperada: ~R$ 200-400 mil/ano na taxa.",
+        "impactoDividendo": "Pequeno positivo via redução de despesa anual",
+        "severidade": "positivo",
+        "fonte": "Instrumento Particular 28/11/2024",
+        "docId": "807315"
+      },
+      {
+        "data": "2024-10",
+        "dataExata": "2024-10",
+        "titulo": "Ajuste de DPS para R$ 0,066-0,067 (Q4/2024)",
+        "tipo": "outro",
+        "descricao": "DPS reduzido de R$ 0,075 para faixa R$ 0,066-0,067 acompanhando queda dos rendimentos recebidos dos FIIs investidos durante o stress IFIX 2024.",
+        "impactoDividendo": "-R$ 0,008 a -0,009/cota mensal (~12% de queda)",
+        "severidade": "negativo",
+        "fonte": "Rendimentos ID 769702",
+        "docId": "769702"
+      },
+      {
+        "data": "2023-12",
+        "dataExata": "2023-12-28",
+        "titulo": "Distribuição extraordinária semestral R$ 0,08",
+        "tipo": "outro",
+        "descricao": "Padrão histórico de extras em junho e dezembro nos exercícios de 2022 e 2023 (R$ 0,10 jun22, R$ 0,09 dez22, R$ 0,08 jun23, R$ 0,08 dez23). Padrão descontinuado a partir de 2024.",
+        "impactoDividendo": "+R$ 0,005-0,015/cota nos meses de extra",
+        "severidade": "positivo",
+        "fonte": "Rendimentos ID 577339",
+        "docId": "577339"
+      },
+      {
+        "data": "2021-07",
+        "dataExata": "2021-07",
+        "titulo": "Ajuste de cotas pós-2ª emissão e estabilização do DPS em R$ 0,06",
+        "tipo": "emissao",
+        "descricao": "Após 2ª Emissão (mai/2021) que captou volume relevante, DPS ajustou para R$ 0,06/cota mensal, refletindo a nova base de cotas (~25 mi). Em meses anteriores DPS era de R$ 0,65-0,81 com base de 1,5 mi cotas.",
+        "impactoDividendo": "DPS unitário menor, mas distribuição absoluta maior",
+        "severidade": "neutro",
+        "fonte": "Rendimentos ID 198896",
+        "docId": "198896"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-Q3",
+        "titulo": "Fungibilização das cotas KISU13 com KISU11",
+        "tipo": "outro",
+        "descricao": "Após cumprir prazo de carência regulamentar (tipicamente 3-6 meses pós encerramento da oferta), KISU13 deve fungibilizar com KISU11. Aumenta liquidez do papel principal e remove overhang.",
+        "certeza": "projetado",
+        "premissa": "Histórico de fungibilização de outros FIIs após CVM 160 cumpre prazo de 3-6 meses",
+        "impactoValor": 0.0,
+        "duracaoMeses": null,
+        "severidade": "positivo"
+      },
+      {
+        "data": "2026-2027",
+        "titulo": "Alocação dos R$ 123 mi captados na 3ª Emissão",
+        "tipo": "outro",
+        "descricao": "Gestor declarou intenção de usar caixa para aquisições oportunistas. Se aplicado em FIIs com cap rate 12-13% e P/VP < 0,9, o impacto no DPS sustentável pode ser de +R$ 0,003-0,005/cota.",
+        "certeza": "projetado",
+        "premissa": "Histórico de alocação tática (SNEL11 em dez/2025 foi rápida)",
+        "impactoValor": 0.003,
+        "duracaoMeses": null,
+        "severidade": "positivo"
+      },
+      {
+        "data": "2026-Q3",
+        "titulo": "Possível início de ciclo de cortes da Selic",
+        "tipo": "outro",
+        "descricao": "Cenário-base do gestor (relatório fev/2026): ciclo relativamente longo de cortes apesar do choque de petróleo. Ajuda no P/VP e nas distribuições dos FIIs investidos.",
+        "certeza": "possivel",
+        "premissa": "Comentário do gestor + consenso macro",
+        "impactoValor": 0.005,
+        "duracaoMeses": null,
+        "severidade": "positivo"
+      },
+      {
+        "data": "2026-Q4",
+        "titulo": "Rebalanceamento trimestral do Índice Suno 30",
+        "tipo": "outro",
+        "descricao": "Rebalanceamento periódico pode incluir/excluir FIIs. Saídas forçadas de HCTR11/DEVA11/CNES11 (se ocorrerem) realizariam perdas ainda não materializadas.",
+        "certeza": "projetado",
+        "premissa": "Rebalanceamento ocorre trimestralmente conforme Regulamento item 5.2.10",
+        "impactoValor": -0.002,
+        "duracaoMeses": 1,
+        "severidade": "negativo"
+      },
+      {
+        "data": "2026-09",
+        "titulo": "Eleições 2026 — risco político no preço dos FIIs",
+        "tipo": "outro",
+        "descricao": "Cenário eleitoral polarizado (Lula vs Flávio Bolsonaro segundo gestor). Histórico mostra que ciclos eleitorais costumam comprimir P/VP de FIIs em 5-10% temporariamente.",
+        "certeza": "possivel",
+        "premissa": "Histórico eleitoral 2018, 2022 — sempre teve correção 5-10% em FIIs no Q3-Q4",
+        "impactoValor": -0.005,
+        "duracaoMeses": 3,
+        "severidade": "negativo"
+      }
+    ],
+    "guidance": {
+      "fonte": "estimativa",
+      "periodo": "próximos 12 meses (mai/2026 a abr/2027)",
+      "faixaMin": 0.067,
+      "faixaMax": 0.075,
+      "unidade": "R$/cota/mês",
+      "premissas": [
+        "DPS atual mantido em R$ 0,07/cota há 16 meses",
+        "Gestor declara R$ 0,07 como número-âncora 'mais próximo do resultado sem ganho de capital'",
+        "Lucro caixa 12m atinge R$ 3,2 mi/mês ≈ R$ 0,072/cota",
+        "Caixa liquidez R$ 12,3 mi suporta meses esporádicos de payout > 100%",
+        "Faixa min reflete cenário de stress IFIX similar a 2024 (DPS pode cair para R$ 0,067)",
+        "Faixa max reflete realização de ganho de capital pontual (alvo razoável R$ 0,075 com extra)"
+      ]
+    },
+    "projecaoDy": {
+      "12m": 0.118,
+      "24m": 0.122,
+      "premissa": "DPS médio R$ 0,07-0,072 com cota R$ 7,11 (12m); cenário base de leve recuperação P/VP (24m)"
+    },
+    "sintese": "<p><strong>O DPS de R$ 0,07/cota é o regime estabelecido</strong>: 16 meses consecutivos. O lucro caixa médio mensal em 2025 foi R$ 3,2 mi (R$ 0,072/cota), praticamente igual à distribuição. O fundo está em equilíbrio fino: <em>não está queimando reserva</em>, mas também não tem folga ampla. O caixa de R$ 12,3 mi (~3,3% do PL) é suficiente para suavizar 4-6 meses de stress, mas não para sustentar ajuste estrutural. Para o investidor, isso se traduz em DY 11,5% ao mês corrente, com expectativa razoável de manutenção.</p>",
+    "alertas": [
+      {
+        "tipo": "info",
+        "mensagem": "DPS R$ 0,07 mantido por 16 meses. Estabilidade alta mas sem folga relevante."
+      },
+      {
+        "tipo": "atencao",
+        "mensagem": "Payout 12m em 99,8% — qualquer queda nos rendimentos recebidos pode forçar ajuste de DPS."
+      },
+      {
+        "tipo": "atencao",
+        "mensagem": "3ª emissão (KISU13) ainda não fungibilizada — overhang técnico até Q3/2026."
+      }
+    ]
+  },
+  "valuation": {
+    "historicoPrecos": {
+      "csvPath": "data/fiis/kisu11/historico_precos.csv",
+      "frequencia": "semanal",
+      "primeiroPonto": "2021-01-11",
+      "ultimoPonto": "2026-04-24",
+      "totalPontos": 277,
+      "ultimoPreco": 7.11,
+      "precoMaximo": 11.4,
+      "precoMaximoData": "2021-03-08",
+      "precoMinimo": 5.66,
+      "precoMinimoData": "2024-XX",
+      "comentario": "Preço caiu 38% do pico de R$ 11,40 (mar/2021, pós-2ª emissão a R$ 98+ pré-desdobramento) para piso de R$ 5,66 em 2024. Recuperou ~26% até R$ 7,11 atual."
+    },
+    "eventosValuation": [
+      {
+        "data": "2024-11",
+        "evento": "Stress IFIX leva cota para piso histórico R$ 5,66",
+        "tipo": "stress",
+        "descricao": "Selic 12,25%, prejuízo contábil 2024 de R$ 25 mi marcado a mercado, IFIX -5,89%",
+        "impactoPVP": "P/VP atinge 0,69x — patamar de stress histórico"
+      },
+      {
+        "data": "2025-Q3",
+        "evento": "Recuperação IFIX +21% no ano",
+        "tipo": "recuperacao",
+        "descricao": "P/VP retoma para 0,86x, lucro contábil 2025 R$ 84,7 mi",
+        "impactoPVP": "Cota R$ 7,11 ainda 14% abaixo do VP — espaço para mean reversion"
+      },
+      {
+        "data": "2026-04",
+        "evento": "Encerramento parcial 3ª Emissão (R$ 123,5 mi captados)",
+        "tipo": "emissao",
+        "descricao": "Diluição parcial; cotas KISU13 a R$ 8,05 captadas (próximo ao VP)",
+        "impactoPVP": "Sem impacto material — preço de emissão alinhado ao VP"
+      }
+    ],
+    "paresComparaveis": [
+      {
+        "ticker": "BCFF11",
+        "subsegmento": "FoF IFIX-tracking",
+        "pvp": 0.81,
+        "dy": 0.114,
+        "comentario": "FoF concorrente com gestão BTG",
+        "statusClassificacao": "proposto"
+      },
+      {
+        "ticker": "HFOF11",
+        "subsegmento": "FoF principal mercado",
+        "pvp": 0.89,
+        "dy": 0.118,
+        "comentario": "Maior FoF do mercado, gestão Hedge Investments",
+        "statusClassificacao": "proposto"
+      },
+      {
+        "ticker": "RBRF11",
+        "subsegmento": "FoF passive-active",
+        "pvp": 0.83,
+        "dy": 0.121,
+        "comentario": "FoF com viés de gestão tática",
+        "statusClassificacao": "proposto"
+      },
+      {
+        "ticker": "KFOF11",
+        "subsegmento": "FoF gestão Kinea",
+        "pvp": 0.88,
+        "dy": 0.116,
+        "comentario": "FoF de blue-chip com taxa elevada",
+        "statusClassificacao": "proposto"
+      }
+    ],
+    "precoJustoMercado": {
+      "valor": 7.69,
+      "metodo": "Composição ponderada de 4 abordagens (média ponderada das componentes)",
+      "componentes": [
+        {
+          "abordagem": "A1 - VP atual com desconto-alvo P/VP 0,95x",
+          "peso": 0.35,
+          "valor": 7.87,
+          "racional": "VP R$ 8,29 × 0,95 (P/VP histórico mediano de FoFs em ciclo neutro)"
+        },
+        {
+          "abordagem": "A2 - DDM com DPS R$ 0,07 e taxa de desconto 12,5%",
+          "peso": 0.25,
+          "valor": 6.72,
+          "racional": "Modelo simples DPS 0,07 × 12 / 0,125 = R$ 6,72 (DY-target 12,5%)"
+        },
+        {
+          "abordagem": "A3 - Look-through P/VP carteira a 0,98x",
+          "peso": 0.25,
+          "valor": 8.81,
+          "racional": "Carteira de FIIs a P/VP médio 0,92 reverte para 0,98 → cota teórica R$ 8,81"
+        },
+        {
+          "abordagem": "A4 - Múltiplos comparáveis FoFs (P/VP médio pares 0,85x)",
+          "peso": 0.15,
+          "valor": 7.05,
+          "racional": "Pares operam em P/VP 0,81-0,89x → KISU11 deveria estar em torno de 0,85x × VP R$ 8,29 = R$ 7,05"
+        }
+      ],
+      "rangeIntervalo": {
+        "min": 7.3,
+        "max": 8.8
+      },
+      "premissasGerais": [
+        "Sem novo evento de stress IFIX (Selic não passa de 14%)",
+        "DPS sustentável em R$ 0,07 mantém por 12-18 meses",
+        "Mean reversion parcial do duplo desconto"
+      ]
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "alvo": 7.4,
+        "racional": "Reversão técnica do overhang da 3ª emissão + manutenção do DPS R$ 0,07. Faixa esperada R$ 7,00-7,50",
+        "catalisadores": [
+          "Fungibilização KISU13",
+          "Manutenção DPS",
+          "Estabilização Selic"
+        ]
+      },
+      "medio": {
+        "horizonte": "6-12 meses",
+        "alvo": 7.8,
+        "racional": "Início de ciclo de cortes da Selic ajuda P/VP. Alocação dos R$ 123 mi em FIIs com cap rate 12%+",
+        "catalisadores": [
+          "Cortes Selic",
+          "Alocação 3ª emissão",
+          "DPS Q4/26 com extra possível"
+        ]
+      },
+      "longo": {
+        "horizonte": "12-24 meses",
+        "alvo": 8.5,
+        "racional": "Mean reversion completa do duplo desconto se cenário macro confirmar. Cota a P/VP 1,00x = R$ 8,29 + extras",
+        "catalisadores": [
+          "Selic em ciclo de cortes consolidado",
+          "Recuperação IFIX +15% adicional",
+          "DPS 2027 ajustado para R$ 0,075"
+        ]
+      }
+    },
+    "pvp": {
+      "atual": 0.86,
+      "media12m": 0.83,
+      "media24m": 0.78,
+      "minimo24m": 0.69,
+      "maximo24m": 0.92,
+      "interpretacao": "P/VP atual 0,86 está acima da média 24m (0,78) mas próximo da média 12m (0,83). Indica recuperação parcial do stress 2024."
+    },
+    "spread": {
+      "vsIfix": "+0,5pp DY (KISU11 11,5% vs IFIX 11,0% médio)",
+      "vsCdi": "-1,5pp (KISU11 11,5% vs CDI 13% atual)",
+      "interpretacao": "DY do KISU11 está abaixo do CDI nominal, mas é isento de IR para PF — DY líquido equivalente a CDI ~14,4% bruto, atrativo."
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "<p>O <strong>KISU11</strong> é um produto que cumpre o que promete: exposição diversificada e barata a 36 FIIs do Índice Suno 30, com DPS estável em R$ 0,07 mensal há 16 meses e duplo desconto evidente (P/VP 0,86 e carteira subjacente a P/VP 0,92). Para investidor inicial ou intermediário em FIIs, é um veículo sólido para começar a acumular posição.</p>",
+      "<p>Mas é importante entender as armadilhas: (1) <strong>camada dupla de taxas</strong> faz a carga total efetiva chegar a 1,5-1,7% a.a.; (2) <strong>posição de 1,2% em HCTR11+DEVA11</strong> é drag silencioso; (3) <strong>liquidez modesta</strong> de R$ 405 mil/dia limita tickets institucionais; (4) <strong>3ª emissão recém-encerrada</strong> ainda gera overhang até fungibilização do KISU13.</p>",
+      "<p>Não é um produto para quem busca alpha. É produto para quem aceita rentabilidade <em>de mercado</em> com simplicidade operacional. A nota 6,5 reflete essa avaliação: produto bem entregue, sem grandes fragilidades estruturais, mas com custo total que não justifica para investidores sofisticados que podem replicar a carteira diretamente.</p>"
+    ],
+    "pontosFortes": [
+      "Diversificação one-click em 36 FIIs do Índice Suno 30 (HHI 343 — concentração baixíssima)",
+      "DPS R$ 0,07 mensal estável há 16 meses consecutivos — previsibilidade rara em FoFs",
+      "Duplo desconto: cota a P/VP 0,86 + carteira subjacente a P/VP médio 0,92",
+      "Taxa de administração competitiva (0,60% a.a.) frente a peers",
+      "Modelo rule-based reduz risco de alpha negativo do gestor",
+      "Estrutura tributária favorável (isento PF), DY líquido ~11,5%",
+      "Tamanho atingiu R$ 366 mi PL — escala suficiente para liquidez razoável",
+      "Track record de 5+ anos com sobrevivência aos ciclos 2022 e 2024"
+    ],
+    "pontosDeAtencao": [
+      "Carga total efetiva (KISU11 + FIIs investidos) chega a 1,5-1,7% a.a.",
+      "1,2% do PL em HCTR11+DEVA11 é drag silencioso, recuperação incerta",
+      "Liquidez R$ 405 mil/dia limita saída para tickets > R$ 200 mil",
+      "Mudança de marca Kilima → Monte Bravo Asset sem comunicação clara",
+      "Overhang KISU13 (15 mi cotas) até fungibilização Q3/2026",
+      "Margem entre lucro caixa e distribuição é fina (payout 12m em 99,8%)",
+      "Performance 5y abaixo do IFIX em alguns períodos — gestão ativa não bate o índice consistentemente",
+      "Dependência do contrato com Suno Research (vence ~2030)"
+    ],
+    "conclusaoFinal": "<p><strong>KISU11 é uma compra defensiva e operacional</strong> para quem quer FIIs diversificados sem o overhead de selecionar e rebalancear individualmente. Faz sentido na carteira de quem está começando ou em portfólios pequenos (até R$ 200 mil em FIIs). Investidores avançados encontram melhor relação custo-benefício replicando os top-10 papéis diretamente. <strong>Nota: 6,5/10. Veredicto: NEUTRO COM VIÉS POSITIVO.</strong> Catalisadores positivos no horizonte (cortes Selic, alocação 3ª emissão, mean reversion P/VP), mas nada estrutural que mude a tese de fundo.</p>"
+  },
   "footer": {
-    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Dados automatizados a partir de publicações oficiais."
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 219,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Análise baseada em 219 documentos oficiais CVM/B3 obtidos via FundosNET. Dados podem ter variações conforme atualizações da Administradora. Consulte sempre prospecto, regulamento e seu assessor antes de decidir."
   }
 }

@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/hgru11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2018-07-23",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:HGRU11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 132.16,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 100.0,
+    "data": "2018-10-08"
+  },
+  "maxHistorico": {
+    "valor": 141.4,
+    "data": "2023-09-11"
+  },
+  "totalPontos": 406,
+  "coletadoEm": "2026-04-27T01:14:05Z"
+}

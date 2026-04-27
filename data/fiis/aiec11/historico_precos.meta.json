@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/aiec11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2022-03-14",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:AIEC11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 61.78,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 42.37,
+    "data": "2024-11-11"
+  },
+  "maxHistorico": {
+    "valor": 83.57,
+    "data": "2022-04-11"
+  },
+  "totalPontos": 216,
+  "coletadoEm": "2026-04-27T00:32:26Z"
+}

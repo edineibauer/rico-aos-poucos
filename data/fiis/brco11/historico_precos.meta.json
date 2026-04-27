@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/brco11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-12-02",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:BRCO11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 117.0,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 84.01,
+    "data": "2021-11-22"
+  },
+  "maxHistorico": {
+    "valor": 138.0,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 335,
+  "coletadoEm": "2026-04-27T01:13:30Z"
+}

@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/deva11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2020-11-23",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:DEVA11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 23.2,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 23.2,
+    "data": "2026-04-20"
+  },
+  "maxHistorico": {
+    "valor": 147.0,
+    "data": "2020-11-23"
+  },
+  "totalPontos": 284,
+  "coletadoEm": "2026-04-27T01:13:27Z"
+}

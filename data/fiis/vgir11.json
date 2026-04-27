@@ -1,0 +1,3696 @@
+{
+  "meta": {
+    "ticker": "VGIR11",
+    "nome": "Valora CRI CDI",
+    "nomeCompleto": "Valora CRI CDI Fundo de Investimento Imobiliário – FII Responsabilidade Limitada",
+    "nomeExtra": "Valora RE III (denominação anterior, até jun/2025)",
+    "segmento": "Recebíveis Imobiliários (Papel CRI — gestão ativa, indexação CDI predominante)",
+    "badges": [
+      "Papel CRI",
+      "CDI+",
+      "Gestão Ativa Valora",
+      "Multicategoria"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "2026-04-26",
+    "totalDocumentos": 354
+  },
+  "seo": {
+    "title": "VGIR11 (Valora CRI CDI): vale a pena? Análise completa do FII de papel | Rico aos Poucos",
+    "description": "Análise profunda do FII VGIR11 (Valora CRI CDI): 57 CRIs CDI+, DY 15,6%, P/VP 1,00. Carteira, taxas, riscos, expectativa para 2026. Atualizado em 26/04/2026.",
+    "keywords": "VGIR11, Valora CRI CDI, FII papel, FII CDI, fundo imobiliário CRI, análise VGIR11, dividend yield VGIR11, Valora Investimentos, FII de recebíveis",
+    "canonical": "https://ricoaospoucos.com.br/fiis/vgir11/",
+    "og": {
+      "title": "VGIR11 — Valora CRI CDI: análise profunda do FII de papel",
+      "description": "57 CRIs CDI+ predominantemente residenciais, gestão ativa Valora. DY 15,6%, P/VP 1,00 em abr/2026. Veja a análise completa.",
+      "type": "website",
+      "url": "https://ricoaospoucos.com.br/fiis/vgir11/",
+      "locale": "pt_BR",
+      "site_name": "Rico aos Poucos",
+      "image": "https://ricoaospoucos.com.br/imagens/og-vgir11.png"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "VGIR11 — Valora CRI CDI",
+      "description": "FII de papel 99,4% CDI+, DPS R$ 0,13/mês estável, DY 15,6%. Análise completa."
+    }
+  },
+  "indicadores": {
+    "cotacao": 9.79,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.999,
+    "pvpDesconto": "Próximo da paridade",
+    "dividendYield": 15.63,
+    "dividendoMensal": 0.13,
+    "dividendoAnual": 1.53,
+    "patrimonioLiquido": "R$ 1,43 Bi",
+    "vpCota": 9.8,
+    "cotistas": 264154,
+    "ocupacao": null,
+    "numImoveis": null,
+    "fonteData": "Informe Mensal Estruturado mar/2026 (ID 1161949) + Cotação semanal yfinance 24/04/2026"
+  },
+  "recomendacao": {
+    "nota": 7.8,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "<p>VGIR11 é um <strong>FII de papel CDI maduro</strong> (IPO 2018) com gestão ativa Valora, 57 CRIs predominantemente residenciais e indexação 99,4% CDI+. DPS estável em R$ 0,13/mês há mais de um ano (DY 15,6% sobre cotação atual de R$ 9,79), próximo da paridade patrimonial (P/VP 1,00). É <strong>ferramenta tática de proteção a Selic alta</strong> — DPS sobe quando o CDI sobe — porém com <em>drag estrutural na queda projetada de Selic</em> (Focus aponta 11% em 12m, o que comprime o DY proporcionalmente). Concentração relevante em Helbor (29% do PL), residencial (86%) e CRIs sem rating internacional (89,5%) — risco real, mas mitigado por garantia em alienação fiduciária na maioria.</p>"
+  },
+  "quickStats": [
+    {
+      "icone": "fa-percent",
+      "label": "DY 12m",
+      "valor": "15.6%",
+      "cor": "emerald"
+    },
+    {
+      "icone": "fa-coins",
+      "label": "DPS atual",
+      "valor": "R$ 0.13",
+      "cor": "blue"
+    },
+    {
+      "icone": "fa-balance-scale",
+      "label": "P/VP",
+      "valor": "1.00",
+      "cor": "amber"
+    },
+    {
+      "icone": "fa-file-invoice-dollar",
+      "label": "CRIs",
+      "valor": "57",
+      "cor": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Concentração em Helbor (29% do PL)",
+      "descricao": "<p>Sete CRIs de SPEs detidas pela Helbor S.A. (B3:HBOR3) somam ~29% do PL. Risco de crédito da incorporadora (mid-cap residencial) afeta a totalidade do bloco. Mitigado por alienação fiduciária de cotas das SPEs em todos os contratos e por relações de garantia médias entre 108% e 262%.</p>",
+      "severidade": "media",
+      "cor": "amber"
+    },
+    {
+      "titulo": "86% em recebíveis residenciais",
+      "descricao": "<p>O setor residencial concentra a quase totalidade do lastro. Em ciclo imobiliário deteriorado (queda de vendas, distratos), o risco do bloco se materializa simultaneamente. Compensado parcialmente por dispersão entre 15+ incorporadoras de portes diferentes.</p>",
+      "severidade": "media",
+      "cor": "amber"
+    },
+    {
+      "titulo": "89,5% sem rating internacional",
+      "descricao": "<p>Apenas 10,5% da carteira tem classificação A- ou superior (Tecnisa 11E e Tecnisa 397S, S&P). O restante são operações estruturadas pela própria Valora (ICVM 476/160) sem rating de agência — risco analisado internamente, sem visão independente externa.</p>",
+      "severidade": "media",
+      "cor": "amber"
+    },
+    {
+      "titulo": "Sensibilidade negativa a queda de Selic",
+      "descricao": "<p>Carteira 99,4% CDI+. Quando o CDI cai, o DPS cai proporcionalmente (mantido o spread). Focus do BCB projeta Selic em 11% em 12 meses (vs 14,75% atual) — DPS pode recuar para R$ 0,107–0,11/mês mantida a estrutura atual.</p>",
+      "severidade": "media",
+      "cor": "amber"
+    },
+    {
+      "titulo": "38% da carteira com LTV >80%",
+      "descricao": "<p>Quase 4 em cada 10 reais alocados em CRIs estão em operações com LTV (loan-to-value) acima de 80% — margem de segurança patrimonial baixa em caso de default + execução. Dado oficial do Relatório Gerencial fev/2026.</p>",
+      "severidade": "alta",
+      "cor": "red"
+    }
+  ],
+  "gestora": {
+    "nome": "Valora Gestão de Investimentos",
+    "nota": 8.0,
+    "stats": [
+      {
+        "label": "Anos no mercado",
+        "valor": "18+"
+      },
+      {
+        "label": "Foco",
+        "valor": "Crédito imobiliário e CRI"
+      },
+      {
+        "label": "Modelo",
+        "valor": "Operações exclusivas estruturadas"
+      }
+    ],
+    "resumo": "<p>Gestora independente especializada em crédito imobiliário, atuando desde 2007 (CVM nº 9.620). Estratégia diferencial: estrutura as próprias operações via ICVM 476/160 (esforços restritos), o que permite controle do desenho do CRI desde a originação — diferente de gestores que apenas compram CRIs estruturados por terceiros. Gere também o irmão VGIP11 (papel IPCA), reforçando especialização no segmento. Track record consistente em VGIR11: nenhum default reportado em 8 anos de história, DPS estável e 264 mil cotistas.</p>",
+    "link": "https://www.valorainvest.com.br"
+  },
+  "taxas": {
+    "subtitulo": "Taxas alinhadas ao mercado de papel",
+    "glowCor": "emerald",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,20% a.a.",
+        "obs": "Mín. mensal R$ 25 mil"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,80% a.a.",
+        "obs": "Sobre o PL"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20% sobre CDI",
+        "obs": "Marca d'água, paga em jan/jul"
+      },
+      {
+        "label": "Custo total efetivo",
+        "valor": "~1,0% a.a.",
+        "obs": "Admin + Gestão (sem performance)"
+      }
+    ],
+    "detalhes": "<p>Estrutura padrão de FII de papel: 1,0% a.a. em taxas fixas (admin + gestão) + taxa de performance de 20% sobre o que exceder o CDI, com marca d'água. A performance é provisionada diariamente e paga semestralmente (jan e jul). Em mar/2026 a provisão acumulada de performance era de R$ 2,3 milhões — sinal de que a carteira está rendendo acima do CDI no semestre vigente.</p>"
+  },
+  "portfolio": {
+    "schema": "v2",
+    "tipoFundo": "papel",
+    "stats": {
+      "totalAtivos": 57,
+      "abl": null,
+      "ocupacaoFisica": null,
+      "ocupacaoFinanceira": null,
+      "vacanciaFisica": null,
+      "wault": null,
+      "ltv": 0.0,
+      "alavancagemPct": 0.0,
+      "duration": 1.9,
+      "yieldCarregamento": 4.78,
+      "inadimplenciaPct": 0.0,
+      "alocacaoPL": [
+        {
+          "categoria": "CRIs (Carteira de Recebíveis)",
+          "pct": 0.955,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "Caixa Líquido (Fundos RF)",
+          "pct": 0.061,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "Provisões e Outros",
+          "pct": -0.016,
+          "cor": "#64748b"
+        }
+      ]
+    },
+    "ativos": [
+      {
+        "tipo": "cri",
+        "id": "tecnisa-573e",
+        "codigo": "CRI Tecnisa 573E",
+        "devedor": "Tecnisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0658,
+        "taxaTotal": 0.2133,
+        "duration": 3.4,
+        "vencimento": "2031-12-30",
+        "valorPresente": 92986920.84,
+        "percPL": 0.0658,
+        "perfilRisco": "high_yield",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-137e",
+        "codigo": "CRI Helbor 137E",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0655,
+        "taxaTotal": 0.213,
+        "duration": 2.8,
+        "vencimento": "2030-11-28",
+        "valorPresente": 92451779.7,
+        "percPL": 0.0655,
+        "perfilRisco": "high_yield",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "tecnisa-11e-1s",
+        "codigo": "CRI Tecnisa 11E 1S",
+        "devedor": "Tecnisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — True Sec",
+        "garantias": [
+          "fianca_corporativa"
+        ],
+        "rating": "A",
+        "agenciaRating": "S&P",
+        "indexador": "CDI",
+        "spread": 0.0608,
+        "taxaTotal": 0.2083,
+        "duration": 1.4,
+        "vencimento": "2028-04-28",
+        "valorPresente": 85862999.66,
+        "percPL": 0.0608,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-79e-1s",
+        "codigo": "CRI Helbor 79E 1S",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0592,
+        "taxaTotal": 0.2067,
+        "duration": 2.2,
+        "vencimento": "2029-12-27",
+        "valorPresente": 83599046.44,
+        "percPL": 0.0592,
+        "perfilRisco": "high_yield",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "hbr-34e",
+        "codigo": "CRI HBR 34E",
+        "devedor": "HBR Estac.",
+        "setorDevedor": "Escritórios",
+        "lastro": "Recebíveis escritório — Habitasec",
+        "garantias": [
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_imovel",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0476,
+        "taxaTotal": 0.1951,
+        "duration": 2.9,
+        "vencimento": "2031-10-30",
+        "valorPresente": 67281950.2,
+        "percPL": 0.0476,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-40e",
+        "codigo": "CRI Helbor 40E",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0439,
+        "taxaTotal": 0.1914,
+        "duration": 1.2,
+        "vencimento": "2028-11-29",
+        "valorPresente": 62025902.51,
+        "percPL": 0.0439,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "tecnisa-397s",
+        "codigo": "CRI Tecnisa 397S",
+        "devedor": "Tecnisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — True Sec",
+        "garantias": [
+          "fianca_corporativa"
+        ],
+        "rating": "A",
+        "agenciaRating": "S&P",
+        "indexador": "CDI",
+        "spread": 0.0399,
+        "taxaTotal": 0.1874,
+        "duration": 1.8,
+        "vencimento": "2028-06-29",
+        "valorPresente": 56363872.32,
+        "percPL": 0.0399,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "rv-ipiranga-2",
+        "codigo": "CRI RV Ipiranga 2",
+        "devedor": "ROVIC",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0396,
+        "taxaTotal": 0.1871,
+        "duration": 0.3,
+        "vencimento": "2026-06-05",
+        "valorPresente": 55958831.24,
+        "percPL": 0.0396,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-7e1s",
+        "codigo": "CRI Helbor 7E1S",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0395,
+        "taxaTotal": 0.187,
+        "duration": 1.2,
+        "vencimento": "2027-06-07",
+        "valorPresente": 55824465.93,
+        "percPL": 0.0395,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "oscar-freire-50s",
+        "codigo": "CRI Oscar Freire 50S",
+        "devedor": "RNI/Diversos",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0388,
+        "taxaTotal": 0.1863,
+        "duration": 0.7,
+        "vencimento": "2026-11-27",
+        "valorPresente": 54737090.1,
+        "percPL": 0.0388,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "matarazzo-340e",
+        "codigo": "CRI Matarazzo 340E",
+        "devedor": "FIP Matarazzo",
+        "setorDevedor": "Shoppings",
+        "lastro": "Recebíveis shopping — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0329,
+        "taxaTotal": 0.1804,
+        "duration": 2.1,
+        "vencimento": "2029-10-31",
+        "valorPresente": 46410999.82,
+        "percPL": 0.0329,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "matarazzo-gfsa",
+        "codigo": "CRI Matarazzo GFSA",
+        "devedor": "Gafisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0284,
+        "taxaTotal": 0.1759,
+        "duration": 1.6,
+        "vencimento": "2029-12-05",
+        "valorPresente": 40164099.07,
+        "percPL": 0.0284,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-22e",
+        "codigo": "CRI Helbor 22E",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0263,
+        "taxaTotal": 0.1738,
+        "duration": 1.5,
+        "vencimento": "2026-11-27",
+        "valorPresente": 37093787.37,
+        "percPL": 0.0263,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "hm-engenharia-365s",
+        "codigo": "CRI HM Engenharia 365S",
+        "devedor": "HM Engenharia",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0243,
+        "taxaTotal": 0.1718,
+        "duration": 2.1,
+        "vencimento": "2031-06-27",
+        "valorPresente": 34327020.2,
+        "percPL": 0.0243,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "gafisa-fe-1s",
+        "codigo": "CRI Gafisa FE 1S",
+        "devedor": "Gafisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0236,
+        "taxaTotal": 0.1711,
+        "duration": 0.3,
+        "vencimento": "2026-06-05",
+        "valorPresente": 33303678.03,
+        "percPL": 0.0236,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "you-73e-2s",
+        "codigo": "CRI You 73E 2S",
+        "devedor": "You Inc",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Vert Sec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0231,
+        "taxaTotal": 0.1706,
+        "duration": 1.2,
+        "vencimento": "2027-04-26",
+        "valorPresente": 32643909.38,
+        "percPL": 0.0231,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "hm-engenharia-366s",
+        "codigo": "CRI HM Engenharia 366S",
+        "devedor": "HM Engenharia",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0231,
+        "taxaTotal": 0.1706,
+        "duration": 2.1,
+        "vencimento": "2031-06-27",
+        "valorPresente": 32610669.19,
+        "percPL": 0.0231,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "hm-engenharia-97e",
+        "codigo": "CRI HM Engenharia 97E",
+        "devedor": "HM Engenharia",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0183,
+        "taxaTotal": 0.1658,
+        "duration": 1.4,
+        "vencimento": "2026-11-27",
+        "valorPresente": 25897831.84,
+        "percPL": 0.0183,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "são-benedito",
+        "codigo": "CRI São Benedito",
+        "devedor": "São Benedito",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0142,
+        "taxaTotal": 0.1617,
+        "duration": 3.0,
+        "vencimento": "2031-07-15",
+        "valorPresente": 20095426.46,
+        "percPL": 0.0142,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "oscar-freire-59s",
+        "codigo": "CRI Oscar Freire 59S",
+        "devedor": "Diversos",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0141,
+        "taxaTotal": 0.1616,
+        "duration": 0.8,
+        "vencimento": "2026-12-30",
+        "valorPresente": 19964181.66,
+        "percPL": 0.0141,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-440s",
+        "codigo": "CRI Helbor 440S",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Virgo",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0134,
+        "taxaTotal": 0.1609,
+        "duration": 1.1,
+        "vencimento": "2026-01-29",
+        "valorPresente": 18994518.36,
+        "percPL": 0.0134,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "viewco",
+        "codigo": "CRI Viewco",
+        "devedor": "Viewco/RBR/RB",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0128,
+        "taxaTotal": 0.1603,
+        "duration": 0.6,
+        "vencimento": "2026-10-06",
+        "valorPresente": 18126268.64,
+        "percPL": 0.0128,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-86e",
+        "codigo": "CRI Helbor 86E",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0121,
+        "taxaTotal": 0.1596,
+        "duration": 2.3,
+        "vencimento": "2030-02-27",
+        "valorPresente": 17157500.73,
+        "percPL": 0.0121,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "via-sul",
+        "codigo": "CRI Via Sul",
+        "devedor": "Via Sul",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis pulverizado — True Sec",
+        "garantias": [
+          "aval_pessoa_fisica",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0118,
+        "taxaTotal": 0.1593,
+        "duration": 1.2,
+        "vencimento": "2027-06-15",
+        "valorPresente": 16654223.83,
+        "percPL": 0.0118,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "tutoia",
+        "codigo": "CRI Tutoia",
+        "devedor": "Setin",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0114,
+        "taxaTotal": 0.1589,
+        "duration": 2.9,
+        "vencimento": "2030-03-29",
+        "valorPresente": 16037077.98,
+        "percPL": 0.0114,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "golf-residence",
+        "codigo": "CRI Golf Residence",
+        "devedor": "Construtora JL",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0113,
+        "taxaTotal": 0.1588,
+        "duration": 2.5,
+        "vencimento": "2030-12-30",
+        "valorPresente": 16017000.02,
+        "percPL": 0.0113,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "cantu-pneus",
+        "codigo": "CRI Cantu Pneus",
+        "devedor": "Cantu Store / Azurra",
+        "setorDevedor": "Logística",
+        "lastro": "Recebíveis bts — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0108,
+        "taxaTotal": 0.1583,
+        "duration": 3.8,
+        "vencimento": "2040-09-24",
+        "valorPresente": 15314604.8,
+        "percPL": 0.0108,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "francisco-morato",
+        "codigo": "CRI Francisco Morato",
+        "devedor": "Mundo Apto/Setin/Capital",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0107,
+        "taxaTotal": 0.1582,
+        "duration": 3.1,
+        "vencimento": "2030-08-30",
+        "valorPresente": 15149198.86,
+        "percPL": 0.0107,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "haus-moema",
+        "codigo": "CRI Haus Moema",
+        "devedor": "Mitre",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0099,
+        "taxaTotal": 0.1574,
+        "duration": 2.9,
+        "vencimento": "2030-02-27",
+        "valorPresente": 14049388.24,
+        "percPL": 0.0099,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "you-73e-1s",
+        "codigo": "CRI You 73E 1S",
+        "devedor": "You Inc",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Vert Sec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0097,
+        "taxaTotal": 0.1572,
+        "duration": 0.8,
+        "vencimento": "2026-04-27",
+        "valorPresente": 13735533.5,
+        "percPL": 0.0097,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "pagano",
+        "codigo": "CRI Pagano",
+        "devedor": "Construtora Pagano",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0093,
+        "taxaTotal": 0.1568,
+        "duration": 1.7,
+        "vencimento": "2028-02-04",
+        "valorPresente": 13088290.49,
+        "percPL": 0.0093,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-111e",
+        "codigo": "CRI Helbor 111E",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0092,
+        "taxaTotal": 0.1567,
+        "duration": 2.5,
+        "vencimento": "2030-06-27",
+        "valorPresente": 13050488.94,
+        "percPL": 0.0092,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "helbor-51e",
+        "codigo": "CRI Helbor 51E",
+        "devedor": "Helbor S.A.",
+        "setorDevedor": "Escritórios",
+        "lastro": "Recebíveis escritório — Bari Sec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0092,
+        "taxaTotal": 0.1567,
+        "duration": 3.6,
+        "vencimento": "2035-09-06",
+        "valorPresente": 13004217.91,
+        "percPL": 0.0092,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "hub-pinheiros-2s",
+        "codigo": "CRI Hub Pinheiros 2S",
+        "devedor": "GIP",
+        "setorDevedor": "Escritórios",
+        "lastro": "Recebíveis escritório — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0071,
+        "taxaTotal": 0.1546,
+        "duration": 1.0,
+        "vencimento": "2027-05-06",
+        "valorPresente": 10078244.74,
+        "percPL": 0.0071,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "said-aiach",
+        "codigo": "CRI Said Aiach",
+        "devedor": "Galli",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0071,
+        "taxaTotal": 0.1546,
+        "duration": 3.1,
+        "vencimento": "2030-08-30",
+        "valorPresente": 9981610.03,
+        "percPL": 0.0071,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "splendido",
+        "codigo": "CRI Splendido",
+        "devedor": "MF7 Construtora",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0067,
+        "taxaTotal": 0.1542,
+        "duration": 1.7,
+        "vencimento": "2028-02-04",
+        "valorPresente": 9488651.39,
+        "percPL": 0.0067,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "mf7",
+        "codigo": "CRI MF7",
+        "devedor": "MF7",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0059,
+        "taxaTotal": 0.1534,
+        "duration": 1.4,
+        "vencimento": "2027-10-28",
+        "valorPresente": 8317604.61,
+        "percPL": 0.0059,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "flow",
+        "codigo": "CRI Flow",
+        "devedor": "MF7",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0055,
+        "taxaTotal": 0.153,
+        "duration": 0.9,
+        "vencimento": "2028-01-05",
+        "valorPresente": 7806336.92,
+        "percPL": 0.0055,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "longitude-44e-2s",
+        "codigo": "CRI Longitude 44E 2S",
+        "devedor": "Longitude",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Habitasec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0053,
+        "taxaTotal": 0.1528,
+        "duration": 2.2,
+        "vencimento": "2028-12-28",
+        "valorPresente": 7472010.13,
+        "percPL": 0.0053,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "são-gonçalo-179e",
+        "codigo": "CRI São Gonçalo 179E",
+        "devedor": "GSR Shopping",
+        "setorDevedor": "Shoppings",
+        "lastro": "Recebíveis shopping — Virgo",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "coobrigacao",
+          "fianca_corporativa"
+        ],
+        "rating": "IPCA",
+        "agenciaRating": null,
+        "indexador": "IPCA",
+        "spread": 0.0053,
+        "taxaTotal": 0.0452,
+        "duration": 4.1,
+        "vencimento": "2039-07-25",
+        "valorPresente": 7461742.6,
+        "percPL": 0.0053,
+        "perfilRisco": "high_yield",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "ditolvo-choice-3s",
+        "codigo": "CRI Ditolvo Choice 3S",
+        "devedor": "Ditolvo",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0053,
+        "taxaTotal": 0.1528,
+        "duration": 0.3,
+        "vencimento": "2026-06-03",
+        "valorPresente": 7440485.44,
+        "percPL": 0.0053,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "mf7-28e-2s",
+        "codigo": "CRI MF7 28E 2s",
+        "devedor": "MF7",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0052,
+        "taxaTotal": 0.1527,
+        "duration": 1.1,
+        "vencimento": "2027-05-05",
+        "valorPresente": 7336503.99,
+        "percPL": 0.0052,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "gafisa-fe-2s",
+        "codigo": "CRI Gafisa FE 2s",
+        "devedor": "Gafisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0049,
+        "taxaTotal": 0.1524,
+        "duration": 1.6,
+        "vencimento": "2029-06-06",
+        "valorPresente": 6919618.6,
+        "percPL": 0.0049,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "caminhos-da-lapa",
+        "codigo": "CRI Caminhos da Lapa",
+        "devedor": "Toledo Ferrari",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0042,
+        "taxaTotal": 0.1517,
+        "duration": 2.9,
+        "vencimento": "2028-05-15",
+        "valorPresente": 5996802.29,
+        "percPL": 0.0042,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "choice-2s",
+        "codigo": "CRI Choice 2S",
+        "devedor": "Ditolvo",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0038,
+        "taxaTotal": 0.1513,
+        "duration": 0.4,
+        "vencimento": "2027-05-05",
+        "valorPresente": 5314632.46,
+        "percPL": 0.0038,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "inter-464s",
+        "codigo": "CRI Inter 464S",
+        "devedor": "Inter",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis pulverizado — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0027,
+        "taxaTotal": 0.1502,
+        "duration": 0.5,
+        "vencimento": "2027-02-04",
+        "valorPresente": 3804489.46,
+        "percPL": 0.0027,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "rv-ipiranga-3s",
+        "codigo": "CRI RV Ipiranga 3S",
+        "devedor": "ROVIC",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0022,
+        "taxaTotal": 0.1497,
+        "duration": 0.5,
+        "vencimento": "2026-08-05",
+        "valorPresente": 3088644.48,
+        "percPL": 0.0022,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "boulevard-vila-romana",
+        "codigo": "CRI Boulevard Vila Romana",
+        "devedor": "Costa Hirota",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0019,
+        "taxaTotal": 0.1494,
+        "duration": 2.0,
+        "vencimento": "2028-08-03",
+        "valorPresente": 2726326.52,
+        "percPL": 0.0019,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "amf-saúde-2",
+        "codigo": "CRI AMF Saúde 2",
+        "devedor": "You Inc",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0018,
+        "taxaTotal": 0.1493,
+        "duration": 0.4,
+        "vencimento": "2026-03-05",
+        "valorPresente": 2552439.99,
+        "percPL": 0.0018,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "rv-ipiranga-18e",
+        "codigo": "CRI RV Ipiranga 18E",
+        "devedor": "ROVIC",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0017,
+        "taxaTotal": 0.1492,
+        "duration": 0.4,
+        "vencimento": "2026-08-05",
+        "valorPresente": 2407044.5,
+        "percPL": 0.0017,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 160",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "enplan-2s",
+        "codigo": "CRI Enplan 2S",
+        "devedor": "Cayne/Enplan",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0016,
+        "taxaTotal": 0.1491,
+        "duration": 1.6,
+        "vencimento": "2027-10-28",
+        "valorPresente": 2246446.82,
+        "percPL": 0.0016,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "rni-27s",
+        "codigo": "CRI RNI 27S",
+        "devedor": "RNI/Rodobens",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Nova Sec",
+        "garantias": [
+          "fianca_corporativa",
+          "cessao_fiduciaria_recebiveis"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0015,
+        "taxaTotal": 0.149,
+        "duration": 1.6,
+        "vencimento": "2028-04-17",
+        "valorPresente": 2066176.09,
+        "percPL": 0.0015,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "porte-1s14e",
+        "codigo": "CRI Porte 1S14E",
+        "devedor": "Porte Engenharia",
+        "setorDevedor": "Escritórios",
+        "lastro": "Recebíveis escritório — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0014,
+        "taxaTotal": 0.1489,
+        "duration": 1.8,
+        "vencimento": "2028-04-27",
+        "valorPresente": 2013728.44,
+        "percPL": 0.0014,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "são-benedito-15e",
+        "codigo": "CRI São Benedito 15E",
+        "devedor": "São Benedito",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Bari Sec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0014,
+        "taxaTotal": 0.1489,
+        "duration": 2.4,
+        "vencimento": "2030-01-15",
+        "valorPresente": 1930362.06,
+        "percPL": 0.0014,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "rni-31s",
+        "codigo": "CRI RNI 31S",
+        "devedor": "RNI/Rodobens",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Nova Sec",
+        "garantias": [
+          "fianca_corporativa",
+          "cessao_fiduciaria_recebiveis"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0011,
+        "taxaTotal": 0.1486,
+        "duration": 1.7,
+        "vencimento": "2029-02-15",
+        "valorPresente": 1499097.67,
+        "percPL": 0.0011,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "alto-paraíso",
+        "codigo": "CRI Alto Paraíso",
+        "devedor": "You Inc",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Opea Sec",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0007,
+        "taxaTotal": 0.1482,
+        "duration": 0.2,
+        "vencimento": "2026-05-28",
+        "valorPresente": 1055240.49,
+        "percPL": 0.0007,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      },
+      {
+        "tipo": "cri",
+        "id": "augusta-1s",
+        "codigo": "CRI Augusta 1S",
+        "devedor": "Gafisa S.A.",
+        "setorDevedor": "Residencial",
+        "lastro": "Recebíveis residencial — Província",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "alienacao_fiduciaria_cotas",
+          "fianca_corporativa"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI",
+        "spread": 0.0002,
+        "taxaTotal": 0.1477,
+        "duration": 1.3,
+        "vencimento": "2027-08-26",
+        "valorPresente": 218313.66,
+        "percPL": 0.0002,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "tipoOferta": "ICVM 476",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "1151534"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.037,
+      "interpretacaoHhi": "baixa",
+      "topN": {
+        "top1Pct": 0.0689,
+        "top3Pct": 0.2011,
+        "top5Pct": 0.3129,
+        "top10Pct": 0.5241
+      },
+      "porDevedor": [
+        {
+          "nome": "Helbor S.A.",
+          "pct": 0.2914
+        },
+        {
+          "nome": "Tecnisa S.A.",
+          "pct": 0.1743
+        },
+        {
+          "nome": "HM Engenharia",
+          "pct": 0.0688
+        },
+        {
+          "nome": "Gafisa S.A.",
+          "pct": 0.0597
+        },
+        {
+          "nome": "HBR Estac.",
+          "pct": 0.0499
+        },
+        {
+          "nome": "ROVIC",
+          "pct": 0.0455
+        },
+        {
+          "nome": "RNI / Rodobens",
+          "pct": 0.0432
+        },
+        {
+          "nome": "You Inc",
+          "pct": 0.037
+        },
+        {
+          "nome": "FIP Matarazzo",
+          "pct": 0.0344
+        },
+        {
+          "nome": "MF7 Construtora",
+          "pct": 0.0244
+        }
+      ],
+      "porSetorDevedor": [
+        {
+          "setor": "Residencial",
+          "pct": 0.8803
+        },
+        {
+          "setor": "Escritórios",
+          "pct": 0.0685
+        },
+        {
+          "setor": "Shoppings",
+          "pct": 0.0399
+        },
+        {
+          "setor": "Logística",
+          "pct": 0.0114
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "CDI",
+          "pct": 0.9945
+        },
+        {
+          "indexador": "IPCA",
+          "pct": 0.0055
+        }
+      ]
+    },
+    "analise": {
+      "rotulo": "Carteira CDI+ predominantemente residencial, gestão ativa Valora",
+      "cor": "amber",
+      "tags": [
+        "57 CRIs ativos",
+        "99,4% CDI+",
+        "86,5% Residencial",
+        "HHI 0.037 (baixa concentração por ativo)",
+        "Top devedor 29% (Helbor)",
+        "10,5% rating internacional",
+        "Duration 1,9 anos"
+      ],
+      "veredicto": "<p>Portfólio de papel CDI+ <strong>maduro</strong> e granular: 57 CRIs ativos, duration média curta (1,9 anos) e indexação quase totalmente ao CDI (apenas o CRI São Gonçalo Shopping é IPCA+10,5%). A concentração medida pelo HHI é baixa (0,037), mas há <strong>concentração relevante por devedor</strong> (Helbor 29%, Tecnisa 17%) e por setor (Residencial 87%). Mais da metade da carteira (89,5%) é unrated — Valora compensa com estrutura interna de monitoramento e operações em sua maioria estruturadas pela própria gestora (76% via ICVM 476/160). 38% do PL está em CRIs com LTV acima de 80%, o que é o ponto de pressão real do portfólio caso haja deterioração no ciclo residencial.</p>",
+      "pontosFortes": [
+        "57 CRIs ativos espalhados por 15+ incorporadoras (HHI 0,037, top-1 6,5%)",
+        "Duration curta (1,9 anos) — exposta a refinanciamento mas com flexibilidade de reciclagem",
+        "Operações estruturadas pela própria Valora (controle do desenho desde a originação)",
+        "Yield bruto de carregamento de CDI+4,78% — premium consistente sobre o benchmark",
+        "Zero default reportado pela gestora em 8 anos de história"
+      ],
+      "pontosFracos": [
+        "29% do PL em apenas um devedor (Helbor) — risco específico relevante",
+        "86,5% em recebíveis residenciais — risco setorial concentrado",
+        "89,5% sem rating internacional — qualidade de crédito sob ótica interna apenas",
+        "38% do PL com LTV >80% — margem patrimonial baixa em caso de default + execução",
+        "Indexação 99,4% CDI: DPS proporcional ao CDI, sem hedge contra IPCA"
+      ],
+      "perfilInvestidor": "Investidor que aceita exposição concentrada em residencial mid-cap em troca de DPS proporcional ao CDI vigente (proteção em alta de Selic). NÃO é fundo para diversificar lastro setorial nem para hedge inflacionário."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Trajetória de 8 anos: de Valora RE III ao Valora CRI CDI",
+    "periodos": [
+      {
+        "periodo": "Jul/2018",
+        "titulo": "IPO — 1ª Emissão",
+        "descricao": "Constituição como Valora RE III FII com R$ 40 milhões captados em 1ª emissão (cotas a R$ 100,00). Início de pregão em 03/08/2018 (B3:VGIR11). Foco original: CRIs com indexação CDI+.",
+        "cor": "blue"
+      },
+      {
+        "periodo": "Mar/2019 – Dez/2019",
+        "titulo": "Crescimento acelerado: 2ª, 3ª e 4ª Emissões",
+        "descricao": "Sequência de captações expande PL para R$ 437 mi e cotistas para 18,8 mil. Carteira ganha escala em CRIs CDI+ residenciais.",
+        "cor": "emerald"
+      },
+      {
+        "periodo": "Mar/2020 – Dez/2021",
+        "titulo": "Travessia da pandemia",
+        "descricao": "PL estável em ~R$ 437 mi durante 2 anos (sem novas emissões). Cotação chegou a R$ 7,36 em mar/2020 (mín. histórico equivalente). Carteira de CRIs sustentou DPS sem inadimplência relevante.",
+        "cor": "amber"
+      },
+      {
+        "periodo": "Mar/2022 – Jul/2022",
+        "titulo": "Retomada: 5ª e 6ª Emissões",
+        "descricao": "PL salta para R$ 731 mi com captação adicional de ~R$ 290 mi. Selic em alta (13,75%) puxa DPS junto com o CDI.",
+        "cor": "emerald"
+      },
+      {
+        "periodo": "09/Set/2022",
+        "titulo": "Desdobramento 1:10 das cotas",
+        "descricao": "Cada cota antiga vira 10 cotas novas, melhorando liquidez e acessibilidade. Cotação ajustada de ~R$ 100 para ~R$ 10. Marco operacional (não impacta valor patrimonial).",
+        "cor": "blue"
+      },
+      {
+        "periodo": "Out/2022 – Mar/2024",
+        "titulo": "Consolidação em escala bilionária",
+        "descricao": "PL ultrapassa R$ 1 bi em dez/2022; cotistas saltam de 58 mil para 243 mil em 18 meses. DPS estável em R$ 0,11–0,13/mês com Selic em ciclo alto (13,75%).",
+        "cor": "emerald"
+      },
+      {
+        "periodo": "Mai/2024 – Set/2024",
+        "titulo": "7ª e 8ª Emissões",
+        "descricao": "Captações de ~R$ 109 mi (7ª, distribuição parcial) e ~R$ 320 mi (8ª) levam PL a R$ 1,42 bi. Carteira passa de ~50 para 56+ CRIs.",
+        "cor": "emerald"
+      },
+      {
+        "periodo": "Out/2024",
+        "titulo": "9ª Emissão cancelada",
+        "descricao": "Oferta de R$ 400 mi (41,5 mi de cotas) registrada em 11/10/2024 é revogada em 29/10/2024 por 'alteração imprevisível das condições de mercado' — Selic subindo de volta, IFIX em queda. Sinal de disciplina do gestor.",
+        "cor": "amber",
+        "fonte": "Comunicado ao Mercado (ID 767369)"
+      },
+      {
+        "periodo": "Jun/2025",
+        "titulo": "Adaptação à Resolução CVM 175",
+        "descricao": "Fundo passa a ser 'Valora CRI CDI FII Responsabilidade Limitada' (antes Valora RE III), Classe Única de Cotas, com responsabilidade limitada dos cotistas. Mudança regulatória sem impacto na política de investimentos.",
+        "cor": "blue",
+        "fonte": "Instrumento Particular de Alteração (ID 922713)"
+      },
+      {
+        "periodo": "Mar/2026",
+        "titulo": "Estado atual",
+        "descricao": "PL R$ 1,43 bi, 264 mil cotistas, 57 CRIs CDI+, DPS R$ 0,13/mês há 13 meses (DY 15,6%), P/VP 1,00. Sem default reportado em 8 anos.",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>VGIR11 é um <strong>FII de papel CDI puro</strong> em escala madura: 57 CRIs CDI+ predominantemente residenciais, gestão ativa da Valora (originação própria), 8 anos de histórico sem defaults reportados e DPS estável em R$ 0,13/mês. A tese central: <em>quanto maior a Selic, maior o DPS</em> — a indexação 99,4% CDI faz o rendimento do fundo flutuar diretamente com o ciclo monetário. Com Selic atual em 14,75%, o fundo entrega DY de 15,6% próximo da paridade patrimonial (P/VP 1,00). Risco principal: a queda projetada de Selic para 11% em 12 meses (Focus) tende a comprimir o DPS para R$ 0,107–0,11/mês, mantida a estrutura atual.</p>",
+    "paraQuem": "<p>Investidor que <strong>quer DPS proporcional ao CDI vigente</strong> (proteção tática em ciclo de Selic alta), aceita exposição concentrada em recebíveis residenciais e em uma única gestora especializada, e tem horizonte de 12–24 meses. Bom complemento a um FII de papel IPCA (como o irmão VGIP11) para balancear hedge inflacionário e proteção a juros nominais altos.</p>",
+    "naoParaQuem": "<p>Investidor que busca <strong>renda crescente independente de Selic</strong> (DPS aqui acompanha o CDI, sem espaço para crescimento real) ou <strong>hedge inflacionário</strong> (papel CDI não protege contra IPCA — para isso, VGIP11/CVBI11/KNIP11). Também não serve para quem precisa de diversificação setorial real, dado que 86% da carteira é residencial, ou para quem evita exposição a incorporadoras mid-cap (Helbor, Tecnisa, You, Gafisa, MF7 dominam o lastro).</p>"
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII de papel CDI puro com lastro residencial",
+      "subrotulo": "Ferramenta tática para capturar Selic alta — DPS proporcional ao CDI vigente, com risco específico Helbor/Tecnisa concentrado",
+      "cor": "amber"
+    },
+    "perfilRisco": {
+      "nivel": "medio",
+      "score": 2.6,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 2.0,
+          "peso": 0.2,
+          "metrica": "HHI 0,037 (carteira); por devedor consolidado: Helbor 29%, Tecnisa 17%",
+          "leitura": "Granular por ativo (57 CRIs), porém com concentração relevante por devedor — Helbor e Tecnisa juntos respondem por 47% do PL."
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 1.5,
+          "peso": 0.15,
+          "metrica": "σ12m anualizado 8,8% | σ24m 11,3% | drawdown 24m -16% (dez/2024)",
+          "leitura": "Volatilidade típica de papel CDI — baixa em janelas curtas, com episódios pontuais quando há estresse no IFIX."
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 1.5,
+          "peso": 0.2,
+          "metrica": "CV12m 4,9% | CV24m 10,1% | DPS oscilou R$ 0,10–0,14 em 24m",
+          "leitura": "DPS muito estável nos últimos 12 meses (R$ 0,12–0,14). A oscilação mais ampla em 24m reflete principalmente a queda de Selic em 2024 e a alta posterior."
+        },
+        {
+          "nome": "Liquidez",
+          "score": 1.0,
+          "peso": 0.15,
+          "metrica": "Volume médio diário R$ 4,1–6,5 mi (21d–252d) | 264 mil cotistas | participa do IFIX",
+          "leitura": "Liquidez alta — uma das melhores entre FIIs de papel CDI. Posição de R$ 1 mi sai em <1 dia útil mantendo até 20% do volume diário."
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "Inadimplência reportada 0% | 89,5% sem rating internacional | 38% com LTV >80%",
+          "leitura": "A gestão classifica os CRIs como 'saudáveis', mas 89,5% são unrated — visão de crédito sob ótica interna apenas. 38% do PL com LTV alto é o ponto de pressão real."
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 1.0,
+          "peso": 0.1,
+          "metrica": "LTV 0% | sem dívida | sem securitização passiva",
+          "leitura": "Fundo sem alavancagem própria. O risco está no LTV dos CRIs subjacentes, não no fundo em si."
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": true,
+        "racional": "DPS estável em R$ 0,13/mês há 13 meses, gestão de 8 anos sem defaults reportados — entrega previsibilidade enquanto Selic estiver elevada."
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": false,
+        "racional": "Apenas 0,6% da carteira indexada a IPCA. Para hedge inflacionário usar VGIP11 (irmão IPCA da mesma gestora) ou KNIP11/CVBI11."
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Papel CRI 100% denominado em reais — sem proteção cambial."
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": false,
+        "racional": "P/VP 1,00 — não há desconto a capturar. Trade de convergência ao VP não se aplica."
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": false,
+        "racional": "Sensibilidade INVERSA: queda de Selic comprime DPS proporcionalmente (CDI cai → DPS cai). Para essa tese, escolher tijolo logística HG ou papel IPCA+."
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": true,
+        "racional": "Tese central do fundo: DPS sobe quando o CDI sobe. Em ciclo de Selic em alta, é dos melhores instrumentos para capturar o movimento."
+      },
+      {
+        "nome": "Exposição setorial concentrada (residencial)",
+        "encaixa": "parcial",
+        "racional": "86% do PL em recebíveis residenciais — exposição setorial real. Mas via crédito (recebível), não equity — comportamento diferente de FIIs de tijolo residenciais."
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": "parcial",
+        "racional": "DPS estável e gestão experiente são pontos a favor; mas DPS amarrado ao CDI significa que em queda de Selic a renda cai. Aposentado precisa balancear com IPCA+."
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": false,
+        "racional": "Concentração em residencial + Helbor (29%) + Tecnisa (17%) é o oposto de diversificação."
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "FII isento de IR para PF (Lei 11.033/2004) — vale para todo o universo. Razão complementar."
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "Compressão de DPS pela queda de Selic projetada",
+        "severidade": "alta",
+        "descricao": "Focus do BCB projeta Selic em 11% em 12 meses (vs 14,75% atual). Mantida a estrutura atual da carteira (CDI+2,16% ao ano sobre cota patrimonial), o DPS recua para R$ 0,107–0,11/mês — queda de ~15-18% na renda. Esse é o risco número 1 da tese.",
+        "mitigacao": "Gestão pode reciclar para CRIs com spread maior (cupom marketing 4-6%) à medida que o CDI cai, parcialmente compensando. Hoje a taxa média ponderada de aquisição é CDI+3,98% — há margem."
+      },
+      {
+        "titulo": "Concentração efetiva em poucas incorporadoras",
+        "severidade": "alta",
+        "descricao": "Helbor (29%), Tecnisa (17%), HM Engenharia (7%), Gafisa (6%) e ROVIC (5%) somam 64% do PL. Crise específica em qualquer uma dessas (caso recorrente em ciclos imobiliários — distratos, recuperação judicial) afeta material a carteira mesmo com 57 CRIs.",
+        "mitigacao": "Garantias estruturadas (alienação fiduciária + cessão de recebíveis + aval) com relações de garantia médias entre 109% e 326% nos contratos analisados."
+      },
+      {
+        "titulo": "38% do PL com LTV acima de 80%",
+        "severidade": "alta",
+        "descricao": "Loan-to-value alto significa que, em caso de execução de garantia, a margem patrimonial entre o saldo devedor do CRI e o valor do imóvel é estreita. Em mercado imobiliário pressionado, parte dessa margem evapora — risco de prejuízo na recuperação.",
+        "mitigacao": "Gestor reporta os CRIs como 'saudáveis' atualmente, sem inadimplência. Mas é o vetor de prejuízo mais provável caso o ciclo deteriore."
+      },
+      {
+        "titulo": "76% da carteira via ICVM 476/160 estruturada pela própria Valora",
+        "severidade": "media",
+        "descricao": "Operações estruturadas internamente reduzem custos e aceleram originação, mas concentram em uma única visão de risco — o time da Valora. Ausência de rating externo independente em 89,5% da carteira amplifica esse ponto.",
+        "mitigacao": "Track record de 8 anos sem default reportado é o único contrapeso documental. Investidor compra a tese 'a Valora sabe avaliar crédito imobiliário'."
+      },
+      {
+        "titulo": "Provisão de performance acumulada (R$ 2,3 mi em mar/26)",
+        "severidade": "baixa",
+        "descricao": "Em mar/2026 havia R$ 2,3 mi de taxa de performance a pagar — sinal de que o fundo está rendendo acima do CDI no semestre. Em julho será descontada, reduzindo temporariamente o caixa disponível. Sem impacto estrutural no DPS, mas afeta o DPS pontual de jul/2026.",
+        "mitigacao": "Já é prática conhecida (paga em jan e jul); investidor experiente já sabe e desconta no cálculo."
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 4091108,
+      "volumeMedio252d": 5035635,
+      "diasParaSair": {
+        "10mil": 0.01,
+        "100mil": 0.12,
+        "500mil": 0.61,
+        "1milhao": 1.22,
+        "10milhoes": 12.22
+      },
+      "spread": null,
+      "leitura": "Liquidez excelente para o segmento. Volume diário próximo de R$ 4–6 mi. Posição de R$ 1 mi sai em ~1,2 dia útil mantendo até 20% do volume — liquidez maior que a maioria dos FIIs de papel high yield. Integra o IFIX desde 2025.",
+      "fonte": "Cálculo sobre historico_precos.csv (yfinance) + Relatório Gerencial fev/2026 (R$ 6,5 mi/dia em fev)"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.088,
+        "sigma24m": 0.113,
+        "drawdownMax24m": -0.16,
+        "drawdownMaxData": "2024-12",
+        "tempoRecuperacao": 6
+      },
+      "dividendo": {
+        "cv12m": 0.049,
+        "cv24m": 0.101,
+        "minDps24m": 0.1,
+        "maxDps24m": 0.14,
+        "amplitudeRelativa": 0.4
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "papel_misto",
+      "pares": [
+        {
+          "ticker": "VGIP11",
+          "sobreposicaoEstimada": 0.55,
+          "tipoSobreposicao": [
+            "gestora",
+            "perfil_inquilinos",
+            "setor_devedor"
+          ],
+          "leitura": "Mesma gestora (Valora), mesmo time, perfil semelhante de incorporadoras (Helbor, Tecnisa, Gafisa). Diferença: VGIP11 é IPCA+ (hedge inflacionário), VGIR11 é CDI+ (hedge Selic alta). Quem tem VGIP11 ganha pouca diversificação adicional comprando VGIR11."
+        },
+        {
+          "ticker": "KNCR11",
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "indexador",
+            "setor_devedor"
+          ],
+          "leitura": "Ambos CDI+, mas KNCR11 é high grade institucional puro (rating AAA dominante) — VGIR11 é mid/high yield com 89,5% unrated. Sobreposição via indexador, mas perfil de risco distinto."
+        },
+        {
+          "ticker": "BTCR11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "indexador",
+            "setor_devedor"
+          ],
+          "leitura": "Ambos CDI+ pulverizados. BTCR11 do BTG, gestão diferente. Sobreposição maior em residencial e perfil mid-cap, menor em concentração específica de devedores."
+        },
+        {
+          "ticker": "FTCA11",
+          "sobreposicaoEstimada": 0.45,
+          "tipoSobreposicao": [
+            "indexador",
+            "setor_devedor",
+            "perfil_inquilinos"
+          ],
+          "leitura": "Subsegmento papel_misto, mistura CDI/IPCA com lastro residencial. Sobreposição relevante de tipologia de devedor (incorporadoras mid-cap)."
+        },
+        {
+          "ticker": "GCRI11",
+          "sobreposicaoEstimada": 0.35,
+          "tipoSobreposicao": [
+            "indexador",
+            "setor_devedor"
+          ],
+          "leitura": "Papel misto pulverizado (Genial). Compartilha exposição a residencial e indexação variada — sobreposição moderada."
+        },
+        {
+          "ticker": "HGCR11",
+          "sobreposicaoEstimada": 0.25,
+          "tipoSobreposicao": [
+            "indexador"
+          ],
+          "leitura": "Papel high grade (CSHG), majoritariamente CDI+. Sobreposição via indexador, mas qualidade de rating muito diferente."
+        }
+      ],
+      "diversificacaoReal": "Para investidor com posição em VGIP11 (irmão IPCA da mesma gestora), VGIR11 oferece <strong>pouca diversificação real</strong> — mesmo time, mesmas incorporadoras lastreadoras, apenas indexador diferente. Quem busca complementaridade real deve combinar VGIR11 com KNIP11 (papel IPCA AAA institucional) ou KNCR11 (papel CDI+ AAA), buscando mix indexador + qualidade de rating."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic permanece em 14,75% por 12+ meses",
+        "probabilidadeRelativa": "media",
+        "descricao": "Inflação resistente força BCB a manter juros — DPS atual de R$ 0,13/mês se sustenta, DY de 15,6% continua atrativo vs alternativas de renda fixa."
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Reciclagem da carteira para spreads maiores",
+        "probabilidadeRelativa": "alta",
+        "descricao": "Gestão tem track record de aproveitar amortizações para originar CRIs com cupom maior — em 2025/2026, novas operações estão saindo com cupom 4–6% (vs taxa média atual 3,98%). Em 24 meses, spread agregado pode subir de CDI+2,16% para CDI+2,5–3%."
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Default zero mantido",
+        "probabilidadeRelativa": "media",
+        "descricao": "Gestor entrega 8º ano consecutivo sem default reportado — premium de risco se mantém alto e justificável, P/VP pode flertar com 1,02–1,05."
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Selic cai para 11% em 12m (cenário Focus)",
+        "probabilidadeRelativa": "alta",
+        "descricao": "Compressão de DPS para R$ 0,107–0,11/mês — queda de 15–18% na renda. DY ainda fica em ~13–14% mas P/VP pode recuar para 0,92–0,95 acompanhando reprecificação setorial."
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Default em CRI Helbor",
+        "probabilidadeRelativa": "baixa",
+        "descricao": "Crise específica na Helbor (29% do PL em sete CRIs) força execução de garantias. Mesmo com alienação fiduciária e cobertura de 109–262%, processo pode levar 12–24 meses e gerar volatilidade no DPS e no VP."
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Distratos massivos no residencial mid-cap",
+        "probabilidadeRelativa": "baixa",
+        "descricao": "Recessão imobiliária com queda de vendas e onda de distratos pode estressar o LTV de 38% da carteira em CRIs com LTV >80% — risco de prejuízo na recuperação de garantias."
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "renda_mensal",
+        "tax_shield"
+      ],
+      "horizonte": "curto_medio",
+      "perfil": "moderado",
+      "carteiraTipica": "Posição até 8% da carteira de FIIs como ferramenta tática para capturar Selic alta. Funciona em complementaridade com FII de papel IPCA (VGIP11/KNIP11) e tijolo HG (HGLG11/KNRI11) para balancear sensibilidade a juros nominais e reais.",
+      "perfisExemplo": [
+        "Investidor que monta carteira de papel buscando DPS proporcional ao CDI vigente",
+        "Quem quer complementar exposição IPCA (já tem VGIP11/KNIP11) com peça CDI+",
+        "Investidor moderado que aceita concentração em residencial e Helbor/Tecnisa em troca de DY 15%+ líquido isento de IR"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Quem busca DPS crescente independente do CDI — papel CDI cai junto com Selic",
+        "Quem precisa de hedge inflacionário (IPCA) — VGIR11 não protege contra inflação",
+        "Quem evita exposição a incorporadoras mid-cap (Helbor 29%, Tecnisa 17%, Gafisa 6%) — concentração relevante",
+        "Quem já tem VGIP11 da mesma gestora — sobreposição grande em devedores e estrutura",
+        "Investidor conservador que exige rating AAA institucional — 89,5% da carteira é unrated"
+      ]
+    }
+  },
+  "dividendos": {
+    "schema": "v2",
+    "subtitulo": "DPS estável em R$ 0,13/mês há 13 meses (DY 15,6%)",
+    "historico": [
+      {
+        "data": "2018-08",
+        "dividendo": 0.06,
+        "dataPagamento": "2018-09-20",
+        "docId": "32144",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2018-09",
+        "dividendo": 0.06,
+        "dataPagamento": "2018-10-18",
+        "docId": "33631",
+        "cotas": 401618,
+        "caixaLiquidoFimMes": 3971010.03,
+        "vpCota": 97.7333,
+        "patrimonioLiquido": 39251459.66,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 24097.08
+      },
+      {
+        "data": "2018-10",
+        "dividendo": 0.06954,
+        "dataPagamento": "2018-11-22",
+        "docId": "35430",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2018-11",
+        "dividendo": 0.072,
+        "dataPagamento": "2018-12-19",
+        "docId": "37145",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2018-12",
+        "dividendo": 0.086043,
+        "dataPagamento": "2019-01-18",
+        "docId": "39123",
+        "cotas": 401618,
+        "caixaLiquidoFimMes": 3017429.61,
+        "vpCota": 97.4334,
+        "patrimonioLiquido": 39131017.8,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 34556.42
+      },
+      {
+        "data": "2019-01",
+        "dividendo": 0.2,
+        "dataPagamento": "2019-02-19",
+        "docId": "41190",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-02",
+        "dividendo": 0.106756,
+        "dataPagamento": "2019-03-21",
+        "docId": "43528",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-03",
+        "dividendo": 0.072,
+        "dataPagamento": "2019-04-17",
+        "docId": "46038",
+        "cotas": 1120948,
+        "caixaLiquidoFimMes": 36001758.63,
+        "vpCota": 96.8856,
+        "patrimonioLiquido": 108603708.84,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 80708.26
+      },
+      {
+        "data": "2019-04",
+        "dividendo": 0.079,
+        "dataPagamento": "2019-05-20",
+        "docId": "48542",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-05",
+        "dividendo": 0.08,
+        "dataPagamento": "2019-06-19",
+        "docId": "51241",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-06",
+        "dividendo": 0.07409,
+        "dataPagamento": "2019-07-18",
+        "docId": "53538",
+        "cotas": 1120948,
+        "caixaLiquidoFimMes": 5992813.39,
+        "vpCota": 96.6402,
+        "patrimonioLiquido": 108328591.49,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 83051.04
+      },
+      {
+        "data": "2019-07",
+        "dividendo": 0.085,
+        "dataPagamento": "2019-08-19",
+        "docId": "55868",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-08",
+        "dividendo": 0.075173,
+        "dataPagamento": "2019-09-18",
+        "docId": "58793",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-09",
+        "dividendo": 0.067,
+        "dataPagamento": "2019-10-17",
+        "docId": "61457",
+        "cotas": 2962568,
+        "caixaLiquidoFimMes": 96049797.71,
+        "vpCota": 96.9401,
+        "patrimonioLiquido": 287191561.71,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 198492.06
+      },
+      {
+        "data": "2019-10",
+        "dividendo": 0.069,
+        "dataPagamento": "2019-11-21",
+        "docId": "66094",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-11",
+        "dividendo": 0.06,
+        "dataPagamento": "2019-12-18",
+        "docId": "70801",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2019-12",
+        "dividendo": 0.157238,
+        "dataPagamento": "2020-01-20",
+        "docId": "75761",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 27209024.15,
+        "vpCota": 97.071,
+        "patrimonioLiquido": 437442280.09,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 708579.52
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 0.06,
+        "dataPagamento": "2020-02-19",
+        "docId": "80444",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 0.055,
+        "dataPagamento": "2020-03-18",
+        "docId": "85162",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.053,
+        "dataPagamento": "2020-04-20",
+        "docId": "90412",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 43593749.59,
+        "vpCota": 96.8984,
+        "patrimonioLiquido": 436664164.24,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 238839.94
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 0.05,
+        "dataPagamento": "2020-05-20",
+        "docId": "95243",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 0.047,
+        "dataPagamento": "2020-06-18",
+        "docId": "99965",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 0.048402,
+        "dataPagamento": "2020-07-17",
+        "docId": "105697",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 19604505.53,
+        "vpCota": 96.878,
+        "patrimonioLiquido": 436572564.64,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 218119.45
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 0.045,
+        "dataPagamento": "2020-08-19",
+        "docId": "111020",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 0.041,
+        "dataPagamento": "2020-09-18",
+        "docId": "115955",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 0.045,
+        "dataPagamento": "2020-10-20",
+        "docId": "121124",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 23657660.71,
+        "vpCota": 96.8253,
+        "patrimonioLiquido": 436334709.45,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 202788.63
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 0.041,
+        "dataPagamento": "2020-11-19",
+        "docId": "125799",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 0.039,
+        "dataPagamento": "2020-12-17",
+        "docId": "131467",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 0.050125,
+        "dataPagamento": "2021-01-20",
+        "docId": "138850",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 6171173.08,
+        "vpCota": 97.0662,
+        "patrimonioLiquido": 437420608.61,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 225884.0
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.045,
+        "dataPagamento": "2021-02-19",
+        "docId": "145881",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 0.045,
+        "dataPagamento": "2021-03-17",
+        "docId": "154008",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 0.05,
+        "dataPagamento": "2021-04-20",
+        "docId": "163225",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 22469798.72,
+        "vpCota": 96.6928,
+        "patrimonioLiquido": 435738002.39,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 225320.7
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 0.05,
+        "dataPagamento": "2021-05-19",
+        "docId": "173406",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.05,
+        "dataPagamento": "2021-06-18",
+        "docId": "184203",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 0.065,
+        "dataPagamento": "2021-07-20",
+        "docId": "193273",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 4622089.64,
+        "vpCota": 97.1121,
+        "patrimonioLiquido": 437627487.94,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 292916.91
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 0.065,
+        "dataPagamento": "2021-08-13",
+        "docId": "200981",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 0.065,
+        "dataPagamento": "2021-09-20",
+        "docId": "213514",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 0.065,
+        "dataPagamento": "2021-10-20",
+        "docId": "223838",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 19840833.74,
+        "vpCota": 96.9827,
+        "patrimonioLiquido": 437044080.45,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 292916.91
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 0.068,
+        "dataPagamento": "2021-11-19",
+        "docId": "233887",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 0.08,
+        "dataPagamento": "2021-12-17",
+        "docId": "244760",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 0.092,
+        "dataPagamento": "2022-01-19",
+        "docId": "255156",
+        "cotas": 4506414,
+        "caixaLiquidoFimMes": 9663965.41,
+        "vpCota": 97.9001,
+        "patrimonioLiquido": 441178250.99,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 414590.09
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 0.11,
+        "dataPagamento": "2022-02-14",
+        "docId": "263176",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 0.12,
+        "dataPagamento": "2022-03-18",
+        "docId": "276100",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 0.12,
+        "dataPagamento": "2022-04-20",
+        "docId": "288415",
+        "cotas": 5520769,
+        "caixaLiquidoFimMes": 111776496.17,
+        "vpCota": 97.0371,
+        "patrimonioLiquido": 535719360.76,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 662492.28
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 0.197353,
+        "dataPagamento": "2022-05-18",
+        "docId": "301619",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 0.13,
+        "dataPagamento": "2022-06-20",
+        "docId": "313825",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 0.119,
+        "dataPagamento": "2022-07-19",
+        "docId": "324994",
+        "cotas": 7570766,
+        "caixaLiquidoFimMes": 13417899.16,
+        "vpCota": 96.5275,
+        "patrimonioLiquido": 730786906.98,
+        "nota": "normalizado_split_1_10",
+        "distribuicao": 900921.15
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 0.13,
+        "dataPagamento": "2022-08-17",
+        "docId": "336051",
+        "nota": "normalizado_split_1_10"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.13,
+        "dataPagamento": "2022-09-20",
+        "docId": "350850"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.13,
+        "dataPagamento": "2022-10-20",
+        "docId": "363985",
+        "cotas": 75707660,
+        "caixaLiquidoFimMes": 22202288.78,
+        "vpCota": 9.6442,
+        "patrimonioLiquido": 730139166.53,
+        "distribuicao": 9841995.8
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.13,
+        "dataPagamento": "2022-11-21",
+        "docId": "376159"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.13,
+        "dataPagamento": "2022-12-19",
+        "docId": "388012"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.11,
+        "dataPagamento": "2023-01-18",
+        "docId": "400284",
+        "cotas": 103220707,
+        "caixaLiquidoFimMes": 80632842.31,
+        "vpCota": 9.6394,
+        "patrimonioLiquido": 994983513.26,
+        "distribuicao": 11354277.77
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.13,
+        "dataPagamento": "2023-02-17",
+        "docId": "413716"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-03-17",
+        "docId": "427953"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-04-20",
+        "docId": "444874",
+        "cotas": 103220707,
+        "caixaLiquidoFimMes": 66816952.5,
+        "vpCota": 9.6286,
+        "patrimonioLiquido": 993872454.27,
+        "distribuicao": 12386484.84
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-05-18",
+        "docId": "460635"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-06-20",
+        "docId": "477459"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.13,
+        "dataPagamento": "2023-07-19",
+        "docId": "490319",
+        "cotas": 103220707,
+        "caixaLiquidoFimMes": 15595958.72,
+        "vpCota": 9.6475,
+        "patrimonioLiquido": 995817375.7,
+        "distribuicao": 13418691.91
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-08-17",
+        "docId": "504847"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.13,
+        "dataPagamento": "2023-09-20",
+        "docId": "520311"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-10-19",
+        "docId": "535022",
+        "cotas": 103220707,
+        "caixaLiquidoFimMes": 78975046.07,
+        "vpCota": 9.6373,
+        "patrimonioLiquido": 994767385.73,
+        "distribuicao": 12386484.84
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.12,
+        "dataPagamento": "2023-11-21",
+        "docId": "551521"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.11,
+        "dataPagamento": "2023-12-19",
+        "docId": "568430"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-01-18",
+        "docId": "582925",
+        "cotas": 103220707,
+        "caixaLiquidoFimMes": 21767639.65,
+        "vpCota": 9.6421,
+        "patrimonioLiquido": 995264979.41,
+        "distribuicao": 11354277.77
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-02-21",
+        "docId": "602741"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-03-19",
+        "docId": "618567"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-04-17",
+        "docId": "637358",
+        "cotas": 103220707,
+        "caixaLiquidoFimMes": 27736177.24,
+        "vpCota": 9.7377,
+        "patrimonioLiquido": 1005135243.63,
+        "distribuicao": 10322070.7
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-05-20",
+        "docId": "658796"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-06-19",
+        "docId": "678224"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-07-17",
+        "docId": "695510",
+        "cotas": 114516482,
+        "caixaLiquidoFimMes": 109188443.09,
+        "vpCota": 9.6222,
+        "patrimonioLiquido": 1101899964.99,
+        "distribuicao": 11451648.2
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-08-19",
+        "docId": "715558"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-09-18",
+        "docId": "736324"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-10-17",
+        "docId": "755832",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 229371308.28,
+        "vpCota": 9.7279,
+        "patrimonioLiquido": 1421265250.77,
+        "distribuicao": 14610128.7
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-11-21",
+        "docId": "777150"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.11,
+        "dataPagamento": "2024-12-18",
+        "docId": "798827"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.109584,
+        "dataPagamento": "2025-01-20",
+        "docId": "818450",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 18533688.61,
+        "vpCota": 9.6142,
+        "patrimonioLiquido": 1404648272.5,
+        "distribuicao": 16010363.43
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.11,
+        "dataPagamento": "2025-02-19",
+        "docId": "837270"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.11,
+        "dataPagamento": "2025-03-21",
+        "docId": "858457"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.12,
+        "dataPagamento": "2025-04-17",
+        "docId": "877726",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 52817748.14,
+        "vpCota": 9.7461,
+        "patrimonioLiquido": 1423918121.46,
+        "distribuicao": 17532154.44
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.12,
+        "dataPagamento": "2025-05-20",
+        "docId": "900501"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.12,
+        "dataPagamento": "2025-06-18",
+        "docId": "922166"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.12,
+        "dataPagamento": "2025-07-17",
+        "docId": "943537",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 23871532.6,
+        "vpCota": 9.7637,
+        "patrimonioLiquido": 1426486204.1,
+        "distribuicao": 17532154.44
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.14,
+        "dataPagamento": "2025-08-19",
+        "docId": "966228"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.13,
+        "dataPagamento": "2025-09-17",
+        "docId": "987876"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.13,
+        "dataPagamento": "2025-10-17",
+        "docId": "1010748",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 101871725.72,
+        "vpCota": 9.779,
+        "patrimonioLiquido": 1428717468.19,
+        "distribuicao": 18993167.31
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.13,
+        "dataPagamento": "2025-11-19",
+        "docId": "1035123"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.13,
+        "dataPagamento": "2025-12-17",
+        "docId": "1058154"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.13,
+        "dataPagamento": "2026-01-20",
+        "docId": "1081156",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 12919548.55,
+        "vpCota": 9.8174,
+        "patrimonioLiquido": 1434329594.84,
+        "distribuicao": 18993167.31
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.13,
+        "dataPagamento": "2026-02-20",
+        "docId": "1108690"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.12,
+        "dataPagamento": "2026-03-18",
+        "docId": "1133327"
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.13,
+        "dataPagamento": "2026-04-20",
+        "docId": "1160301",
+        "cotas": 146101287,
+        "caixaLiquidoFimMes": 86964138.79,
+        "vpCota": 9.8023,
+        "patrimonioLiquido": 1432131432.7,
+        "distribuicao": 18993167.31
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2018-2",
+        "label": "2º Sem 2018",
+        "ano": 2018,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 5,
+        "distribuicaoMediaMes": 0.0695,
+        "distribuicaoTotalSemestre": 0.3476,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2019-1",
+        "label": "1º Sem 2019",
+        "ano": 2019,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.102,
+        "distribuicaoTotalSemestre": 0.6118,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2019-2",
+        "label": "2º Sem 2019",
+        "ano": 2019,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.0856,
+        "distribuicaoTotalSemestre": 0.5134,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2020-1",
+        "label": "1º Sem 2020",
+        "ano": 2020,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.0522,
+        "distribuicaoTotalSemestre": 0.3134,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2020-2",
+        "label": "2º Sem 2020",
+        "ano": 2020,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.0435,
+        "distribuicaoTotalSemestre": 0.2611,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2021-1",
+        "label": "1º Sem 2021",
+        "ano": 2021,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.0508,
+        "distribuicaoTotalSemestre": 0.305,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2021-2",
+        "label": "2º Sem 2021",
+        "ano": 2021,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.0725,
+        "distribuicaoTotalSemestre": 0.435,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2022-1",
+        "label": "1º Sem 2022",
+        "ano": 2022,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1327,
+        "distribuicaoTotalSemestre": 0.7964,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2022-2",
+        "label": "2º Sem 2022",
+        "ano": 2022,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1267,
+        "distribuicaoTotalSemestre": 0.76,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2023-1",
+        "label": "1º Sem 2023",
+        "ano": 2023,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1233,
+        "distribuicaoTotalSemestre": 0.74,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2023-2",
+        "label": "2º Sem 2023",
+        "ano": 2023,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1183,
+        "distribuicaoTotalSemestre": 0.71,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2024-1",
+        "label": "1º Sem 2024",
+        "ano": 2024,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1067,
+        "distribuicaoTotalSemestre": 0.64,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2024-2",
+        "label": "2º Sem 2024",
+        "ano": 2024,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1049,
+        "distribuicaoTotalSemestre": 0.6296,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1167,
+        "distribuicaoTotalSemestre": 0.7,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicaoMediaMes": 0.1317,
+        "distribuicaoTotalSemestre": 0.79,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "distribuicaoMediaMes": 0.1267,
+        "distribuicaoTotalSemestre": 0.38,
+        "observacao": "Sem lucroCaixa extraível mensalmente — Informe Mensal do VGIR11 reporta resultado do período apenas trimestralmente em formato consolidado."
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_ate_horizonte",
+      "dividendoLabel": "Sustentável enquanto Selic ≥ 13,5%",
+      "dividendoCor": "amber",
+      "horizonte": "12-18 meses (até Selic projetada cair para 11%, conforme Focus do BCB)",
+      "status": "estavel",
+      "cor": "emerald",
+      "payoutMedio12m": null,
+      "caixaLiquido": 86964139,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 86,96 mi em Fundos de Renda Fixa (item 9 do Informe Mensal mar/2026, ID 1161949). Sem títulos públicos diretos nem disponibilidades — caixa 100% em RF.",
+      "resultadoAcumuladoRetido": null,
+      "resultadoAcumuladoNota": "Fundo distribui ~100% do resultado do semestre — não há acumulação contábil relevante além do caixa líquido para necessidades de liquidez.",
+      "queimaMediaMensal": 0,
+      "queimaPorCota": 0,
+      "coberturaMeses": null,
+      "tendencia": "DPS plano em R$ 0,13/mês desde mar/2025 (13 meses). Linearidade típica de papel CDI+ em Selic estável.",
+      "leitura": "<p>O DPS atual é <strong>sustentável enquanto Selic permanecer elevada</strong>. A gestão demonstra disciplina: distribui o que gera (relatório fev/26 mostra distribuição = resultado do período em todos os meses recentes), reservando taxa de performance pra pagar em jul. <strong>Ponto de atenção</strong>: a queda projetada de Selic para 11% em 12m (Focus) deve comprimir o DPS proporcionalmente para R$ 0,107–0,11 — <em>não é insustentabilidade financeira, é matemática do CDI</em>. O DPS futuro depende do CDI futuro, e a carteira tem duration curta (1,9 anos) para reciclagem em CRIs com spread maior conforme o ciclo se inverte.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2022-09",
+        "dataExata": "2022-09-09",
+        "titulo": "Desdobramento 1:10 das cotas",
+        "tipo": "outro",
+        "descricao": "<p>Cada cota antiga foi convertida em 10 cotas novas. Cotação ajustada de ~R$ 100 para ~R$ 10. Sem impacto patrimonial — apenas operacional (melhora liquidez/granularidade).</p>",
+        "impactoDividendo": "DPS dividido por 10 a partir de ago/2022 (R$ 1,30 → R$ 0,13)",
+        "severidade": "neutro",
+        "fonte": "Histórico de cotas — confirmado no Relatório Gerencial fev/2026",
+        "docId": "1151534"
+      },
+      {
+        "data": "2024-05",
+        "dataExata": "2024-05-29",
+        "titulo": "7ª Emissão de cotas (R$ 109 mi, distribuição parcial)",
+        "tipo": "emissao",
+        "descricao": "<p>Captação de R$ 108,9 mi (11,3 mi de novas cotas a R$ 9,64) em distribuição parcial — montante mínimo atingido, abaixo dos R$ 300 mi inicialmente ofertados. Recursos destinados à expansão da carteira de CRIs.</p>",
+        "impactoDividendo": "Diluição temporária ~3% até alocação plena dos recursos",
+        "severidade": "neutro",
+        "fonte": "Comunicado de Resultado de Alocação (ID 672237)",
+        "docId": "672237"
+      },
+      {
+        "data": "2024-10",
+        "dataExata": "2024-10-29",
+        "titulo": "9ª Emissão revogada por condições de mercado",
+        "tipo": "outro",
+        "descricao": "<p>Oferta de R$ 400 mi (41,5 mi de novas cotas) registrada em 11/10/2024 foi cancelada em 29/10/2024 — gestor cita 'alteração imprevisível das condições de mercado' (Selic em ciclo de alta, IFIX em queda). Sinal de disciplina.</p>",
+        "impactoDividendo": "Sem diluição esperada — manteve carteira atual",
+        "severidade": "positivo",
+        "fonte": "Comunicado de Cancelamento (ID 767369)",
+        "docId": "767369"
+      },
+      {
+        "data": "2025-06",
+        "dataExata": "2025-06-11",
+        "titulo": "Adaptação à Resolução CVM 175 (Responsabilidade Limitada)",
+        "tipo": "outro",
+        "descricao": "<p>Fundo passa a ter responsabilidade limitada dos cotistas (proteção contra patrimônio líquido negativo). Mudança regulatória sem impacto na política de investimentos. Renomeado de 'Valora RE III' para 'Valora CRI CDI'.</p>",
+        "impactoDividendo": "Nenhum",
+        "severidade": "neutro",
+        "fonte": "Instrumento Particular de Alteração (ID 922713)",
+        "docId": "922713"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-07",
+        "titulo": "Pagamento de taxa de performance semestral",
+        "tipo": "outro",
+        "descricao": "<p>Provisão de R$ 2,3 mi em mar/2026 (referente a desempenho acima do CDI no semestre) será paga em jul/2026 — afeta o DPS desse mês marginalmente.</p>",
+        "impactoEsperado": "DPS jul/2026 pode ficar R$ 0,01–0,02 abaixo da média (~R$ 0,11–0,12)",
+        "impactoValor": -0.015,
+        "duracaoMeses": 1,
+        "severidade": "negativo",
+        "certeza": "confirmado",
+        "premissa": "Provisão acumulada na linha 14 do Informe Mensal mar/2026 (R$ 2.300.583,07). Política de fundo: paga performance em jan e jul.",
+        "fonte": "Informe Mensal Estruturado mar/2026 (ID 1161949)",
+        "docId": "1161949"
+      },
+      {
+        "data": "2026-09",
+        "titulo": "Início da queda de Selic projetada",
+        "tipo": "outro",
+        "descricao": "<p>Cenário base do Focus: Selic em 11% em 12 meses. Queda gradual a partir de set/2026 deve começar a comprimir o DPS proporcionalmente — DPS pode cair de R$ 0,13 para R$ 0,11–0,12 até abr/2027.</p>",
+        "impactoEsperado": "Compressão progressiva de R$ 0,13 → R$ 0,11/mês",
+        "impactoValor": -0.02,
+        "duracaoMeses": null,
+        "severidade": "negativo",
+        "certeza": "projetado",
+        "premissa": "Mediana do Focus do BCB para Selic em 12 meses (11%); estrutura atual da carteira mantida em CDI+2,16% sobre cota patrimonial.",
+        "fonte": "BCB Focus (consenso de mercado abr/2026)",
+        "docId": null
+      },
+      {
+        "data": "2027-01",
+        "titulo": "Pagamento de taxa de performance semestral (jan/27)",
+        "tipo": "outro",
+        "descricao": "<p>Próximo evento de pagamento de performance — só ocorre se carteira render acima do CDI no 2S2026.</p>",
+        "impactoEsperado": "Possível DPS marginalmente menor em jan/27 caso provisionada",
+        "impactoValor": -0.01,
+        "duracaoMeses": 1,
+        "severidade": "negativo",
+        "certeza": "possivel",
+        "premissa": "Histórico do fundo: paga performance em jan e jul quando excede CDI, com marca d'água.",
+        "fonte": "Regulamento (ID 922713) e Relatório Gerencial fev/2026 (ID 1151534)",
+        "docId": "922713"
+      }
+    ],
+    "guidance": {
+      "fonte": "estimativa",
+      "periodo": "próximos 6 meses",
+      "faixaMin": 0.115,
+      "faixaMax": 0.135,
+      "unidade": "R$/cota/mês",
+      "premissas": [
+        "DPS atual mantido em R$ 0,13/mês enquanto Selic ≥ 14,75%",
+        "Compressão para R$ 0,115–0,12/mês caso Selic comece a recuar conforme Focus",
+        "Pagamento de performance em jul/2026 (~R$ 2,3 mi provisionados) reduz pontualmente o DPS de jul",
+        "Sem nova emissão prevista no curto prazo (gestão recuou em out/2024)",
+        "Carteira estável (sem default reportado em 8 anos)"
+      ],
+      "cronogramaAnuncio": {
+        "fonte": "gestor",
+        "regraTexto": "Anúncio: 8º dia útil | Data ex: 9º dia útil | Pagamento: 13º dia útil",
+        "dataAnuncioEstimada": "2026-05-13",
+        "dataPagamentoEstimada": "2026-05-21",
+        "fonteDoc": "Relatório Gerencial fev/2026 (ID 1151534, página 1)"
+      },
+      "padraoSazonal": {
+        "tem": true,
+        "ajusteRelativoPorMes": {
+          "7": -0.1,
+          "1": -0.05
+        },
+        "observacao": "Pagamento de taxa de performance em jul (relevante) e jan (eventual) reduz marginalmente o DPS desses meses. Padrão observado consistentemente desde 2019."
+      }
+    },
+    "projecaoDy": {
+      "precoReferencia": 9.79,
+      "dyAtual12m": 15.63,
+      "dyProjetado12m": 14.5,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 14.5,
+          "dividendoMes": 0.118,
+          "descricao": "Selic recua gradualmente para 11% em 12m conforme Focus. DPS médio de R$ 0,118/mês (R$ 1,42 anual), DY de 14,5%."
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 16.0,
+          "dividendoMes": 0.13,
+          "descricao": "Selic permanece em 14,75%+ por inflação resistente; gestão recicla carteira para spreads maiores. DPS mantém R$ 0,13/mês, DY de 16%."
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 12.5,
+          "dividendoMes": 0.102,
+          "descricao": "Queda mais rápida de Selic (cenário Focus + pressão por estímulo) leva a Selic 9,5% em 12m. DPS comprime para R$ 0,102/mês (~CDI+2% sobre VP), DY 12,5%."
+        }
+      ],
+      "retornoTotal12m": 14.5,
+      "premissas": [
+        "Cotação de referência: R$ 9,79 (24/04/2026)",
+        "Carteira mantém estrutura atual (sem default e com reciclagem normal)",
+        "Spread médio sobre CDI ~2,16% (cota patrimonial) ou 4,78% (yield bruto carregamento)",
+        "Sem nova emissão diluidora no horizonte"
+      ]
+    },
+    "alertas": [
+      {
+        "texto": "DPS proporcional ao CDI: queda de Selic comprime renda",
+        "sev": "amber"
+      },
+      {
+        "texto": "Concentração em Helbor (29%) é o risco específico nº 1",
+        "sev": "amber"
+      },
+      {
+        "texto": "P/VP 1,00 — sem desconto patrimonial a capturar",
+        "sev": "blue"
+      }
+    ],
+    "sintese": {
+      "tendencia": "lateral_com_risco",
+      "tendenciaLabel": "Estável agora, queda projetada após início do ciclo de corte de Selic (2S2026)",
+      "cor": "amber",
+      "direcao": "DPS atual de R$ 0,13/mês se sustenta enquanto Selic estiver em 14,75%. Com o ciclo de cortes projetado para iniciar no 2S2026, a tendência é compressão gradual para R$ 0,11–0,12/mês ao longo de 12 meses.",
+      "pontosPositivos": [
+        {
+          "texto": "DPS estável em R$ 0,13 há 13 meses consecutivos",
+          "peso": "alto"
+        },
+        {
+          "texto": "Gestão entrega 8 anos sem default reportado",
+          "peso": "alto"
+        },
+        {
+          "texto": "Yield bruto de carregamento CDI+4,78% deixa margem para reciclagem em queda de Selic",
+          "peso": "medio"
+        },
+        {
+          "texto": "P/VP 1,00 indica precificação de mercado sem prêmio nem desconto excessivos",
+          "peso": "medio"
+        },
+        {
+          "texto": "Liquidez alta (R$ 4-6 mi/dia) facilita entrada/saída",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Queda projetada de Selic para 11% comprime DPS proporcionalmente",
+          "peso": "alto"
+        },
+        {
+          "texto": "29% do PL em Helbor (concentração específica)",
+          "peso": "alto"
+        },
+        {
+          "texto": "38% da carteira com LTV >80% — margem patrimonial estreita em caso de execução",
+          "peso": "alto"
+        },
+        {
+          "texto": "89,5% sem rating internacional — qualidade de crédito sob ótica interna apenas",
+          "peso": "medio"
+        },
+        {
+          "texto": "Performance paga em jul comprime DPS desse mês",
+          "peso": "baixo"
+        }
+      ],
+      "veredicto": "<p>O DPS de R$ 0,13/mês é sustentável <strong>enquanto Selic estiver em 14,75%</strong>. O ponto de inflexão é o <strong>2º semestre de 2026</strong>, quando o Focus aponta o início do ciclo de cortes — mantida a estrutura de carteira, o DPS deve comprimir gradualmente para R$ 0,11–0,12/mês em 12 meses (queda de 15-18% na renda). A tese para quem entra agora é capturar 6-9 meses de DY ~15,6% antes da compressão começar, com risco específico relevante em Helbor (29% do PL).</p>"
+    }
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/vgir11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2018-07-30",
+      "dataFim": "2026-04-24",
+      "fonte": "yfinance:VGIR11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 9.79,
+      "minHistorico": {
+        "valor": 7.36,
+        "data": "2020-03-30"
+      },
+      "maxHistorico": {
+        "valor": 12.72,
+        "data": "2019-12-30"
+      },
+      "observacao": "Histórico ajustado pelo desdobramento 1:10 de 09/09/2022 (yfinance retorna série já normalizada para escala atual)."
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/vgir11/historico_vp.csv",
+      "fonte": "Informes Mensais Estruturados (32 pontos trimestrais 2018-2026)",
+      "ultimoVpCota": 9.8,
+      "ultimoVpData": "2026-03",
+      "observacao": "VP/cota historicamente estável entre R$ 9,60 e R$ 9,82 desde a normalização pós-split — característica de fundo de papel CDI maduro com gestão disciplinada."
+    },
+    "eventosValuation": [
+      {
+        "data": "2022-09-09",
+        "tipo": "outro",
+        "titulo": "Desdobramento 1:10 das cotas",
+        "descricao": "<p>Cada cota antiga vira 10 novas. Cotação ajustada de ~R$ 100 para ~R$ 10. Sem impacto patrimonial.</p>",
+        "impactoVp": -88.2,
+        "impactoPreco": null,
+        "fonte": "Histórico operacional confirmado em Relatório Gerencial fev/2026",
+        "docId": "1151534"
+      },
+      {
+        "data": "2024-05-29",
+        "tipo": "emissao",
+        "titulo": "7ª Emissão (R$ 109 mi a R$ 9,64/cota)",
+        "descricao": "<p>Distribuição parcial — ~36% do montante inicial. Sem diluição patrimonial relevante (preço de emissão próximo do VP).</p>",
+        "impactoVp": -0.05,
+        "impactoPreco": -0.02,
+        "fonte": "Comunicado de Resultado de Alocação (ID 672237)",
+        "docId": "672237"
+      },
+      {
+        "data": "2024-09-15",
+        "tipo": "emissao",
+        "titulo": "8ª Emissão (R$ 320 mi)",
+        "descricao": "<p>Captação aprovada e executada — leva PL para R$ 1,42 bi. Sem diluição (preço próximo de VP).</p>",
+        "impactoVp": -0.03,
+        "impactoPreco": -0.01,
+        "fonte": "Inferido de Informe Mensal set/2024 (cotas saltam de 114,5 mi para 146,1 mi)",
+        "docId": "758723"
+      },
+      {
+        "data": "2024-10-29",
+        "tipo": "outro",
+        "titulo": "9ª Emissão revogada",
+        "descricao": "<p>Cancelamento da oferta de R$ 400 mi por 'condições de mercado'. Sinaliza disciplina de capital — reduz percepção de diluição imediata, mas trava expansão de portfólio.</p>",
+        "impactoVp": 0,
+        "impactoPreco": 0.02,
+        "fonte": "Comunicado de Cancelamento (ID 767369)",
+        "docId": "767369"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "papel_misto",
+      "criterioAgrupamento": "FIIs de papel com indexação predominantemente CDI+ (>90%), gestão ativa, mistura HG/HY (10–30% rating internacional), exposição residencial relevante.",
+      "tickers": [
+        "VGIR11",
+        "VGIP11",
+        "BTCR11",
+        "FTCA11",
+        "GCRI11",
+        "EQIR11",
+        "ARRI11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.91,
+        "pvpMin": 0.73,
+        "pvpMax": 1.02,
+        "dyMediano": 13.45,
+        "dyMin": 11.72,
+        "dyMax": 15.77,
+        "premioRiscoSegmento": 0.04
+      },
+      "posicaoFundo": {
+        "pvpRanking": "1°-2° de 7 — P/VP 1,00 acima da mediana 0,91 (prêmio de ~10%)",
+        "dyRanking": "2° de 7 — DY 15,6% acima da mediana 13,45% (prêmio de 215 bps)",
+        "leitura": "<p>VGIR11 negocia com <strong>prêmio modesto vs pares</strong> em P/VP, justificado pela maior maturidade do fundo (8 anos sem default), liquidez superior, e pelo fato do mercado já ter precificado a normalização da percepção de risco em papel CDI mid-grade. O DY acima da mediana reflete a maior taxa atual do CDI em momento histórico de Selic em 14,75%.</p>"
+      },
+      "statusClassificacao": "proposto",
+      "notaProposto": "Subsegmento ainda não validado em data/pares_subsegmento.json — VGIR11 não consta na lista atual. Sugestão: adicionar a 'papel_misto' como 8º ticker do grupo."
+    },
+    "pvp": {
+      "valor": "1,00",
+      "descricao": "<p>P/VP de 1,00 (R$ 9,79 sobre VP/cota R$ 9,80) — fundo precificado <strong>em paridade patrimonial</strong>. Cenário típico de papel CDI maduro em Selic alta.</p>",
+      "detalhes": [
+        {
+          "label": "Cotação",
+          "valor": "R$ 9,79"
+        },
+        {
+          "label": "VP/cota (mar/26)",
+          "valor": "R$ 9,80"
+        },
+        {
+          "label": "P/VP médio 5 anos",
+          "valor": "0,98"
+        },
+        {
+          "label": "Mediana pares papel_misto",
+          "valor": "0,91"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "0,87%",
+      "label": "Spread sobre Selic",
+      "cor": "blue",
+      "descricao": "<p>DY de 15,62% vs Selic 14,75% = spread de 0,87 ponto. <strong>Spread baixo</strong>, característico de papel CDI HG/mid-grade — investidor remunerado mais pelo carry do CDI alto que por prêmio adicional.</p>",
+      "detalhe": "Spread relativo ao próprio CDI é de CDI+2,16% líquido (gestor declarado, base cota patrimonial). Yield bruto de carregamento (taxa média ponderada) é CDI+4,78% — diferença para o spread líquido reflete taxas (1% a.a.) e provisões."
+    },
+    "precoJustoMercado": {
+      "valor": 10.23,
+      "faixa": [
+        9.72,
+        10.74
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 9.79,
+        "diferencaPct": 4.5,
+        "leitura": "Cotação atual ~4,5% abaixo do preço justo central — leve subvalorização."
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio",
+          "peso": 0.5,
+          "preco": 8.16,
+          "calculo": "DPS sustentável R$ 1,53/ano ÷ (14,75% Selic + 4,0% prêmio papel misto) = R$ 8,16",
+          "racional": "Componente macro — assume DPS 12m projetado igual ao histórico recente (R$ 0,127/mês × 12). Prêmio de 4% reflete subsegmento papel_misto (mid-grade)."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.22,
+          "preco": 8.92,
+          "calculo": "VP/cota R$ 9,80 × P/VP mediano dos pares (0,91) = R$ 8,92",
+          "racional": "Pares: VGIP11, BTCR11, FTCA11, GCRI11, EQIR11, ARRI11 (papel_misto)."
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.28,
+          "preco": 11.38,
+          "calculo": "DPS R$ 1,53/ano ÷ DY mediano pares (13,45%) = R$ 11,38",
+          "racional": "Componente relativo — assume convergência de DY ao mediano dos pares."
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 1.11,
+        "score": 0.866,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.31,
+            "score": 0.75,
+            "racional": "Valora — gestora top-5 em FIIs de papel, especializada e independente, mas porte menor que BTG/CSHG."
+          },
+          {
+            "nome": "Inadimplência",
+            "peso": 0.19,
+            "score": 0.85,
+            "racional": "0% reportada em 8 anos. Penalizada para 0,85 pelo fato de 89,5% da carteira ser unrated (visão interna apenas)."
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.19,
+            "score": 1.0,
+            "racional": "Fundo sem dívida (LTV 0%)."
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.19,
+            "score": 0.85,
+            "racional": "CV12m 4,9% (ótimo); CV24m 10,1% (oscilação refletindo ciclo de Selic)."
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.12,
+            "score": 0.85,
+            "racional": "sustentavel_ate_horizonte (12-18m) — limite na queda projetada de Selic, não na geração de caixa."
+          }
+        ],
+        "obs": "Vacância omitida (não aplicável a papel) — pesos redistribuídos sobre denominador 0,80."
+      },
+      "explicacao": "<p>O preço justo central de R$ 10,23 (faixa R$ 9,72–10,74) está <strong>4,5% acima da cotação atual</strong> (R$ 9,79). A âncora macro (A1, peso 0,50) puxa o preço para baixo (R$ 8,16, refletindo Selic alta exigindo DY igualmente alto), enquanto o componente DY pares (A3, peso 0,28) puxa para cima (R$ 11,38, dado que pares pagam DY mais baixo em média). O fator qualidade de 1,11 (score 0,87) reflete a maturidade da gestão e a estabilidade do DPS, parcialmente neutralizada pela ausência de rating institucional na maioria da carteira. <strong>Leitura prática:</strong> mercado precifica VGIR11 corretamente em paridade patrimonial; a leve subvalorização vs preço justo é margem de segurança para o investidor que entra agora capturar 6-9 meses de DY 15%+ antes do início projetado da queda de Selic.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 9.85,
+        "faixa": [
+          9.6,
+          10.1
+        ],
+        "direcao": "lateral",
+        "catalisadores": [
+          {
+            "evento": "Selic mantida em 14,75% até 2S2026 (cenário Focus)",
+            "data": "2026-09",
+            "impactoEsperado": "DPS estável em R$ 0,13, mantém DY 15,6% — cotação de lado",
+            "fonte": "BCB Focus mediana abr/2026 (Selic fim 2026: 12,75%; 12 meses: 11,0%)",
+            "docId": null
+          },
+          {
+            "evento": "Pagamento de performance jul/2026",
+            "data": "2026-07",
+            "impactoEsperado": "DPS pontual em jul comprimido em R$ 0,01-0,02 (ruído pré-anunciado)",
+            "fonte": "Informe Mensal Estruturado mar/2026 (ID 1161949)",
+            "docId": "1161949"
+          }
+        ],
+        "racional": "<p>No horizonte curto, dominado pela manutenção da Selic alta. DPS R$ 0,13/mês se mantém, DY 15,6% segue atrativo vs alternativas de renda fixa para PF (CDB líquido isento). Pequena oscilação esperada em jul/2026 pelo pagamento de performance. Cenário-base: cotação lateral entre R$ 9,60 e R$ 10,10.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 9.4,
+        "faixa": [
+          8.8,
+          10.0
+        ],
+        "direcao": "lateral_baixa",
+        "catalisadores": [
+          {
+            "evento": "Início do ciclo de corte de Selic (Focus: 11% em 12m)",
+            "data": "2026-09",
+            "impactoEsperado": "Compressão gradual de DPS para R$ 0,107–0,11/mês — queda de 15-18% na renda",
+            "fonte": "BCB Focus (mediana 12 meses)",
+            "docId": null
+          },
+          {
+            "evento": "Reciclagem ativa da carteira em CRIs com cupom maior",
+            "data": "2027-06",
+            "impactoEsperado": "Compensação parcial: spread médio sobre CDI sobe de 2,16% para 2,5–3% em 18 meses (taxa atual de aquisição já é 4-6%)",
+            "fonte": "Inferência sobre Relatório Gerencial fev/2026 — cupom médio de aquisições recentes",
+            "docId": "1151534"
+          }
+        ],
+        "racional": "<p>No médio prazo, o ciclo de Selic dita a tendência. A queda projetada para 11% comprime o DPS proporcionalmente, mas a duration curta da carteira (1,9 anos) permite reciclagem para spreads maiores — compensação parcial. Cenário-base: cotação acompanha reprecificação setorial, com viés levemente baixista (P/VP pode recuar de 1,00 para 0,95–0,97).</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 9.8,
+        "faixa": [
+          8.5,
+          11.0
+        ],
+        "direcao": "lateral",
+        "catalisadores": [
+          {
+            "evento": "Ciclo completo de Selic — alta + queda + estabilização",
+            "data": "2029-12",
+            "impactoEsperado": "DPS reflete CDI vigente; em Selic neutra (~9%) DPS fica em ~R$ 0,09/mês, DY ~12% ainda atrativo vs renda fixa",
+            "fonte": "Cenário macro estrutural Brasil (PIB Boletim Macroeconômico, BCB)",
+            "docId": null
+          },
+          {
+            "evento": "Maturação da carteira e potencial nova emissão",
+            "data": "2028-06",
+            "impactoEsperado": "Sem diluição se preço de emissão = VP; potencial expansão em 2027/2028 quando ciclo de capital melhorar",
+            "fonte": "Histórico do fundo (8 emissões em 8 anos)",
+            "docId": null
+          }
+        ],
+        "racional": "<p>No longo prazo, o fundo é uma <strong>posição estrutural sensível ao CDI brasileiro</strong>. P/VP tende à paridade (1,00) por ser papel maduro; DPS oscila com o CDI vigente. Em cenário macro estrutural (Selic neutra ~9%, IPCA ~4%), DPS em ~R$ 0,09/mês, DY ~11-12% sobre cotação atual — ainda competitivo para renda isenta de IR.</p>"
+      }
+    },
+    "recomendacoes": null
+  },
+  "conclusao": {
+    "paragrafos": [
+      "<p>VGIR11 é um <strong>FII de papel CDI maduro</strong> que entrega exatamente o que se espera de um fundo desse perfil em ciclo de Selic alta: DPS estável em R$ 0,13/mês há 13 meses consecutivos, DY de 15,6% sobre cotação de R$ 9,79, gestão experiente da Valora (8 anos sem default reportado) e P/VP em paridade (1,00). É uma <strong>ferramenta tática, não estrutural</strong> — funciona enquanto Selic estiver alta, e sofre compressão quando o CDI cai.</p>",
+      "<p>A <strong>tese de entrada</strong> é capturar a janela de Selic em 14,75% por mais 6-9 meses antes do início projetado do ciclo de cortes (Focus aponta Selic em 11% em 12 meses). O preço justo modelado de R$ 10,23 (faixa R$ 9,72-10,74) sugere leve subvalorização — coerente com pequeno espaço para upside antes da reprecificação setorial começar.</p>",
+      "<p>Os <strong>riscos</strong> são bem documentados e dimensionáveis: 29% do PL em Helbor (concentração específica), 86% em recebíveis residenciais (concentração setorial), 38% com LTV >80% (margem patrimonial estreita) e a sensibilidade inversa à queda de Selic. A gestão demonstra disciplina (cancelou a 9ª emissão em out/2024 por condições de mercado, paga performance só quando excede CDI) e a granularidade da carteira (57 CRIs) atenua o impacto de defaults pontuais.</p>",
+      "<p>Para investidor que quer <strong>complemento CDI+ ao núcleo IPCA+</strong> de uma carteira de FIIs de papel (ex.: KNIP11/CVBI11), VGIR11 cumpre o papel — preferencialmente combinado a um par de qualidade superior em rating institucional (KNCR11) para diluir o risco específico Helbor/Tecnisa.</p>"
+    ],
+    "pontosFortes": [
+      "DPS estável em R$ 0,13/mês há 13 meses consecutivos",
+      "8 anos sem default reportado (gestão Valora desde 2018)",
+      "Liquidez alta (R$ 4-6 mi/dia, 264 mil cotistas, integra IFIX)",
+      "P/VP em paridade (1,00) — sem prêmio nem desconto exagerado",
+      "Yield bruto de carregamento de CDI+4,78% deixa margem para reciclagem em ciclo de queda de Selic"
+    ],
+    "pontosDeAtencao": [
+      "Sensibilidade INVERSA à Selic: queda de Selic comprime DPS proporcionalmente (Focus aponta 11% em 12m)",
+      "29% do PL em Helbor — risco específico relevante",
+      "86,5% em recebíveis residenciais — concentração setorial",
+      "38% da carteira com LTV >80% — margem patrimonial estreita em caso de default + execução",
+      "89,5% sem rating internacional — qualidade de crédito sob ótica interna apenas",
+      "Sobreposição grande com VGIP11 (mesma gestora, mesmas incorporadoras lastreadoras)"
+    ],
+    "conclusaoFinal": "<p><strong>COMPRA tática (nota 7,8) com ressalva</strong>: VGIR11 é uma boa peça de carteira de papel para capturar Selic alta em 2026, com 6-9 meses de janela antes do início projetado de cortes. Fora desse horizonte, o DPS deve comprimir progressivamente — investidor precisa estar preparado. Para tese estrutural (5+ anos), preferir mix com papel IPCA+ AAA (KNIP11/CVBI11) para reduzir sensibilidade a CDI. Não é fundo para core de carteira de aposentado nem para hedge inflacionário.</p>"
+  },
+  "footer": {
+    "dataAnalise": "2026-04-26",
+    "totalDocumentos": 354,
+    "disclaimer": "Análise baseada exclusivamente em documentos oficiais do FII (Fundos.NET) e dados macro de fontes públicas (BCB Focus, yfinance). Não constitui recomendação personalizada de investimento. Consulte sempre seu assessor antes de decidir."
+  }
+}

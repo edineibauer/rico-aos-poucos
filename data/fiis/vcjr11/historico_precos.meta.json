@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/vcjr11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2020-01-27",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:VCJR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 81.19,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 67.33,
+    "data": "2024-12-16"
+  },
+  "maxHistorico": {
+    "valor": 114.99,
+    "data": "2020-10-12"
+  },
+  "totalPontos": 327,
+  "coletadoEm": "2026-04-27T01:13:21Z"
+}

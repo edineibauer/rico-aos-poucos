@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/knhy11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2018-08-06",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:KNHY11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 101.16,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 92.5,
+    "data": "2025-02-03"
+  },
+  "maxHistorico": {
+    "valor": 135.0,
+    "data": "2019-06-24"
+  },
+  "totalPontos": 404,
+  "coletadoEm": "2026-04-27T01:13:10Z"
+}

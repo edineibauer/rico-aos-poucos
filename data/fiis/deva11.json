@@ -2,419 +2,490 @@
   "meta": {
     "ticker": "DEVA11",
     "nome": "Devant Recebíveis Imobiliários FII",
-    "segmento": "Papel - CRI High Yield",
+    "nomeExtra": null,
+    "segmento": "Papel (CRI) — Multicategoria / High Yield",
     "badges": [
-      "High Yield",
-      "IPCA + 10,66%",
-      "~50 CRIs"
+      "DY 18,66% (12m)",
+      "P/VP 0,24",
+      "75,3% da carteira em carência ou inadimplente"
     ],
-    "sentimento": "neutro",
-    "dataAnalise": "24/02/2026",
-    "totalDocumentos": 370
+    "sentimento": "pessimista",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 264
   },
   "seo": {
-    "title": "DEVA11 - Análise Completa | Devant Recebíveis Imobiliários FII",
-    "description": "Análise completa do FII DEVA11 baseada em 370 documentos oficiais. Fundo de CRI High Yield com DY 20,50%, taxa média IPCA+10,66%, ~50 CRIs diversificados. Riscos, portfólio e projeções 2026.",
-    "keywords": "DEVA11, Devant Recebíveis, FII papel, CRI High Yield, análise DEVA11, dividend yield DEVA11, FII crédito, Devant Asset, Vortx",
-    "ogTitle": "DEVA11 - Análise Completa do FII Devant Recebíveis Imobiliários 2026",
-    "ogDescription": "Análise detalhada do DEVA11: FII de CRI High Yield com DY 20,50%, taxa média IPCA+10,66%, ~50 CRIs. Portfólio focado em multipropriedade, loteamento e corporativo.",
-    "twitterTitle": "DEVA11 - Análise Completa | FII Devant Recebíveis Imobiliários",
-    "twitterDescription": "Análise do DEVA11: CRI High Yield, DY 20,50%, IPCA+10,66%. R$ 1,38 Bi de patrimônio, 80 mil cotistas. Riscos e projeções 2026."
+    "title": "DEVA11 - Análise Completa | Devant Recebíveis Imobiliários",
+    "description": "Análise profunda do DEVA11 (Devant Asset): DY 18,66%, P/VP 0,24, carteira de 66 CRIs high yield com 12,1% inadimplente e 63,2% em carência. Trajetória e riscos.",
+    "keywords": "DEVA11, Devant Asset, CRI, fundo imobiliário papel, high yield, Gramado Parks, Chemin, WAM, Hope, Circuito de Compras, multipropriedade, loteamento",
+    "ogTitle": "DEVA11 - Devant Recebíveis: anatomia de um FII high yield sob estresse",
+    "ogDescription": "Cotação R$ 23,49 · P/VP 0,24 · DY 18,66% · 66 CRIs em 16 estados, com 12% da carteira inadimplente. Análise institucional.",
+    "twitterTitle": "DEVA11 - Análise do Devant Recebíveis Imobiliários",
+    "twitterDescription": "FII de CRI high yield com desconto patrimonial de 76% e 75% da carteira em carência ou inadimplência. Entenda o que isso significa."
   },
   "indicadores": {
-    "cotacao": 23.61,
-    "cotacaoData": "24/02/2026",
+    "cotacao": 23.49,
+    "cotacaoData": "24/04/2026",
     "pvp": 0.24,
-    "pvpDesconto": "76% de desconto",
-    "dividendYield": 20.5,
-    "dividendoMensal": 0.4,
-    "dividendoAnual": 4.84,
+    "pvpDesconto": "76% de desconto sobre o valor patrimonial",
+    "dividendYield": 18.66,
+    "dividendoMensal": 0.3,
+    "dividendoAnual": 3.6,
     "patrimonioLiquido": "R$ 1,38 Bi",
-    "vpCota": 98.08,
-    "cotistas": 80230
+    "vpCota": 98.19,
+    "cotistas": 79443,
+    "ocupacao": null,
+    "numImoveis": 66
   },
   "recomendacao": {
-    "nota": 6,
-    "veredicto": "MANTER",
-    "cor": "amber",
-    "resumo": "O <strong class=\"text-amber-400\">DEVA11</strong> é um FII de CRI High Yield com <strong class=\"text-emerald-400\">taxa média atrativa de IPCA+10,66%</strong> e DY de 20,50% nos últimos 12 meses. O fundo possui ~50 CRIs diversificados em multipropriedade, loteamento e corporativo. Apesar do <strong class=\"text-amber-400\">P/VP extremamente descontado (0,24)</strong>, os dividendos são voláteis (de R$ 0,32 a R$ 0,46 nos últimos meses) e o fundo opera com <strong class=\"text-amber-400\">exposição relevante a segmentos de maior risco</strong> como multipropriedade (33,7%) e loteamento (20,6%). A gestão ativa da Devant tem realizado pré-pagamentos e rotação de ativos."
+    "nota": 3.8,
+    "veredicto": null,
+    "cor": "orange",
+    "resumo": "<p>O <strong class=\"text-blue-400\">DEVA11</strong>, gerido pela Devant Asset, é um FII de papel <strong class=\"text-amber-400\">high yield</strong> com patrimônio de <strong class=\"text-blue-400\">R$ 1,38 bilhão</strong> distribuído em 66 CRIs pulverizados (multipropriedade, loteamento, incorporação vertical, shopping de atacado e corporativo). A taxa média ponderada da carteira é de <strong class=\"text-emerald-400\">IPCA + 10,66% a.a.</strong> com duration de 3,2 anos, características de uma carteira agressiva desenhada para capturar prêmio de crédito em setores de nicho.</p><p>O fundo atravessa, contudo, um ciclo prolongado de <strong class=\"text-red-400\">estresse de crédito</strong>: no encerramento de janeiro/2026, apenas <strong class=\"text-red-400\">24,8%</strong> da carteira de CRIs estava com pagamentos em dia, <strong class=\"text-amber-400\">63,2%</strong> em período de carência (waivers concedidos via AGT) e <strong class=\"text-red-400\">12,1%</strong> formalmente inadimplente. As operações do Grupo Gramado Parks (GPK, Brasil Parques, Aquan Prime, GVI), HOPE (hotéis Wish/Prodigy), Chemin, Pride, LR Loteamentos e CRI RR Solaris concentram os principais focos de problema, refletindo um ambiente de incorporações não-tradicionais e securitizadora (Fortesec) sob questionamento judicial pela própria gestão desde 2023.</p><p>O preço de mercado reflete esse diagnóstico: a cota é negociada a <strong class=\"text-red-400\">R$ 23,49</strong> contra VP de <strong class=\"text-blue-400\">R$ 98,19</strong>, um P/VP de <strong class=\"text-red-400\">0,24</strong> — o mercado precifica perda superior a 70% do patrimônio. O DY de <strong class=\"text-emerald-400\">18,66%</strong> nos últimos 12 meses é um efeito matemático do preço deprimido e tende a convergir à medida que os fluxos das operações em carência se estabilizam em patamar menor.</p>"
   },
   "quickStats": [
     {
-      "label": "Patrimônio",
+      "label": "Patrimônio Líquido",
       "valor": "R$ 1,38 Bi",
-      "detalhe": "VP/cota: R$ 98,08",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 98,08</span>",
+      "detalhe": "VP/cota: R$ 98,19",
       "icone": "building",
       "corIcone": "blue"
     },
     {
       "label": "Rendimento",
-      "valor": "R$ 0,40",
+      "valor": "R$ 0,30",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 4,84/ano | DY 20,50%",
+      "detalhe": "R$ 3,60/ano | DY 18,66%",
       "icone": "money",
-      "corIcone": "emerald",
-      "corValor": "emerald"
+      "corIcone": "amber"
+    },
+    {
+      "label": "Adimplência CRIs",
+      "valor": "24,8%",
+      "detalhe": "63,2% carência · 12,1% default",
+      "icone": "building",
+      "corIcone": "red"
     },
     {
       "label": "Cotistas",
-      "valor": "80.230",
-      "detalhe": "14 milhões de cotas",
+      "valor": "79.443",
+      "detalhe": "14,04 mi cotas · -15% em 12m",
       "icone": "users",
       "corIcone": "purple"
-    },
-    {
-      "label": "Taxa Média",
-      "valor": "IPCA+10,66%",
-      "detalhe": "177% CDI (nov/25)",
-      "detalheIcone": "arrowUp",
-      "icone": "chart",
-      "corIcone": "amber",
-      "corValor": "emerald"
     }
   ],
   "pontosAtencao": [
     {
-      "titulo": "P/VP Extremamente Descontado (0,24)",
-      "descricao": "A cota negocia a R$ 23,61 contra VP de R$ 98,08 — um desconto de 76%. Isso reflete o sentimento de mercado sobre os riscos da carteira High Yield, com exposição a multipropriedade e loteamentos. O desconto pode ser oportunidade ou sinal de risco estrutural.",
+      "titulo": "Apenas 24,8% da carteira de CRIs em dia",
+      "descricao": "No encerramento de jan/2026, 63,2% dos CRIs estão sob waiver (carência de juros e/ou amortização concedida em AGT) e 12,1% estão formalmente inadimplentes. O fluxo recorrente do fundo depende fortemente da recuperação dessas operações.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração no ecossistema Gramado Parks",
+      "descricao": "Os CRIs GPK A+B (2,89%+2,96%), Brasil Parques A+B (2,28%+3,14%), Aquan Prime (3,58%+1,30%), GVI (2,57%+1,22%), Golden Laghetto, Hope, Gramado BV e outros relacionados à holding somam aproximadamente 25% do PL. A dependência de um único grupo econômico amplifica o risco sistêmico.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Litígio com a securitizadora Fortesec",
+      "descricao": "Desde agosto/2023 a Devant Asset mantém ações judiciais contra a Fortesec por falta de transparência em operações e irregularidades em AGTs. Em dez/2023, três administradores da Devant foram destituídos em meio à crise, gerando comunicado oficial de ciência pela Vórtx.",
       "severidade": "orange"
     },
     {
-      "titulo": "Exposição a Multipropriedade (33,7%)",
-      "descricao": "O segmento de multipropriedade representa a maior parcela da carteira, seguido por loteamento (20,6%). Esses segmentos são mais sensíveis a ciclos econômicos e possuem maior risco de inadimplência e atrasos na execução de obras.",
+      "titulo": "Abstenção de opinião nas DFs de 2022 e ressalvas em 2024",
+      "descricao": "O auditor independente emitiu abstenção de opinião nas demonstrações financeiras do exercício 2022 devido a incertezas sobre recuperabilidade de CRIs. As DFs foram reprovadas por 91,3% dos votos dos cotistas. Em 2025, comunicado divulgou ajustes a serem reapresentados nas DFs de 2024.",
       "severidade": "orange"
     },
     {
-      "titulo": "Dividendos Voláteis",
-      "descricao": "Os dividendos oscilaram entre R$ 0,32 e R$ 0,46 nos últimos 7 meses, refletindo a variação das receitas de CRIs e correção monetária. A previsibilidade é menor que em fundos de papel com carteira mais conservadora.",
+      "titulo": "Redução contínua da base de cotistas",
+      "descricao": "A quantidade de cotistas caiu de 94.023 (jan/2025) para 79.443 (jan/2026), queda de ~15% em 12 meses, evidenciando saída consistente de investidores mesmo com o P/VP extremamente descontado.",
       "severidade": "amber"
+    },
+    {
+      "titulo": "Rendimento em tendência decrescente",
+      "descricao": "O dividendo mensal caiu de R$ 1,40-1,60/cota em 2024 para R$ 0,30 em jan/2026. Mesmo com a distribuição atual aparentando alto DY sobre cota deprimida, o fluxo de caixa recorrente foi drasticamente reduzido pelas carências concedidas.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Exposição a setores voláteis",
+      "descricao": "A carteira é dominada por multipropriedade (37% via resorts e hotéis em Gramado, Caldas Novas, Porto Seguro, Foz), loteamentos (37%) e incorporação vertical, segmentos com histórico de inadimplência superior a setores tradicionais e alta sensibilidade ao ciclo econômico.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Desconto patrimonial pode refletir perda permanente",
+      "descricao": "P/VP de 0,24 implica expectativa de perda superior a 70% do VP. Parte pode ser recuperada via execução de garantias (alienações fiduciárias, fiança dos sócios, fundos de reserva), mas o processo tende a ser longo e consumir receitas.",
+      "severidade": "orange"
     }
   ],
   "gestora": {
-    "nome": "Devant Asset",
-    "nota": 6,
+    "nome": "Devant Asset Investimentos",
+    "nota": 5.5,
     "notaLabel": "REGULAR",
     "stats": [
       {
-        "label": "No mercado",
-        "valor": "~5 anos"
+        "label": "Fundação",
+        "valor": "2017"
       },
       {
-        "label": "Patrimônio DEVA",
-        "valor": "R$ 1,38 Bi"
+        "label": "CNPJ",
+        "valor": "28.363.263/0001-84"
       },
       {
-        "label": "Taxa Média Carteira",
-        "valor": "IPCA+10,66%",
-        "cor": "emerald"
+        "label": "Gestores sob mandato",
+        "valor": "DEVA11, DPRO11, DVFF11"
+      },
+      {
+        "label": "Foco",
+        "valor": "Crédito estruturado / CRI high yield"
       }
     ],
-    "resumo": "A <strong class=\"text-blue-400\">Devant Asset</strong> é gestora especializada em crédito imobiliário estruturado, com foco em operações High Yield. A gestão tem realizado rotação ativa de portfólio com pré-pagamentos (Thermas São Pedro, Grupo CEM em dez/2025) e monitoramento das garantias. O histórico inclui operações com inadimplência pontual, resolvidas via pré-pagamento ou execução de garantias.",
-    "link": "../../gestores/devant-asset/"
+    "resumo": "<p>A <strong class=\"text-blue-400\">Devant Asset Investimentos</strong> é uma gestora independente especializada em crédito estruturado, com expertise histórica em operações de CRI com lastro pulverizado (loteamento, multipropriedade, incorporação). A casa também administra o DPRO11 (logístico) e o DVFF11 (fundo de fundos/recebíveis).</p><p>A trajetória no DEVA11 é marcada por <strong class=\"text-emerald-400\">construção diligente de carteira</strong> nos primeiros 18 meses (agosto/2020 a dezembro/2021), com diversificação por segmento, região e subordinação, e por <strong class=\"text-red-400\">forte ativismo</strong> diante dos problemas que emergiram em 2023. A gestora liderou ações judiciais contra a securitizadora Fortesec por falta de transparência e conduziu processos de execução de garantias.</p><p>Pontos de atenção: em dezembro/2023 houve <strong class=\"text-amber-400\">destituição de três administradores da Devant Asset</strong> em meio à crise, com comunicado oficial de ciência pela Vórtx. A gestão posterior manteve o acompanhamento ativo das operações, mas o histórico de inadimplências elevadas pesa na avaliação de track record.</p>",
+    "link": null
   },
   "taxas": {
-    "subtitulo": "Alinhadas ao segmento High Yield",
-    "glowCor": "yellow",
+    "subtitulo": "Estrutura de taxas competitiva para o segmento high yield",
+    "glowCor": "green",
     "itens": [
       {
         "label": "Taxa de Administração",
-        "valor": "0,05% a.a.",
-        "detalhe": "Sobre o PL (Vortx DTVM)",
+        "valor": "0,20% a.a.",
+        "detalhe": "Sobre valor de mercado (Vórtx DTVM)",
         "corBorda": "emerald"
       },
       {
         "label": "Taxa de Gestão",
         "valor": "1,00% a.a.",
-        "detalhe": "Sobre o PL (Devant Asset)",
+        "detalhe": "Sobre valor de mercado (Devant Asset)",
         "corBorda": "amber"
       },
       {
         "label": "Taxa de Performance",
-        "valor": "20%",
-        "detalhe": "Sobre o que exceder IPCA + 6% a.a.",
+        "valor": "10%",
+        "detalhe": "Sobre o que exceder 100% do CDI",
         "corBorda": "amber"
-      }
-    ],
-    "comparativoTitulo": "Comparativo com FIIs de CRI High Yield",
-    "comparativo": [
-      {
-        "ticker": "DEVA11",
-        "taxa": "1,05%",
-        "perf": "+20% perf. s/ IPCA+6%",
-        "destaque": true
-      },
-      {
-        "ticker": "HABT11",
-        "taxa": "1,26%",
-        "perf": "+20% perf. s/ 100% CDI"
-      },
-      {
-        "ticker": "KNHF11",
-        "taxa": "1,20%",
-        "perf": "+20% perf. s/ CDI+2%"
-      },
-      {
-        "ticker": "HGCR11",
-        "taxa": "1,00%",
-        "perf": "+20% perf. s/ CDI+2%"
       }
     ],
     "detalhes": [
       {
         "label": "Administrador",
-        "valor": "Vortx DTVM Ltda."
+        "valor": "Vórtx DTVM"
       },
       {
-        "label": "Gestora",
-        "valor": "Devant Asset"
+        "label": "Gestor",
+        "valor": "Devant Asset Investimentos"
       },
       {
-        "label": "Início",
+        "label": "Custodiante",
+        "valor": "Vórtx DTVM"
+      },
+      {
+        "label": "Auditor (2025)",
+        "valor": "Grant Thornton Auditores"
+      },
+      {
+        "label": "Início do Fundo",
         "valor": "Agosto/2020"
+      },
+      {
+        "label": "Código ISIN",
+        "valor": "BRDEVACTF000"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "37.087.810/0001-37"
       }
     ]
   },
   "portfolio": {
     "stats": [
       {
-        "label": "CRIs",
-        "valor": "96,5%"
+        "label": "CRIs na carteira",
+        "valor": "66",
+        "cor": "blue"
       },
       {
-        "label": "FIIs",
-        "valor": "2,5%"
+        "label": "Estados cobertos",
+        "valor": "16",
+        "cor": "blue"
       },
       {
-        "label": "Caixa",
-        "valor": "1,0%"
+        "label": "Duration média",
+        "valor": "3,2 anos",
+        "cor": "blue"
       },
       {
-        "label": "Taxa Média",
-        "valor": "IPCA+10,66%",
+        "label": "Taxa ponderada",
+        "valor": "IPCA + 10,66%",
         "cor": "emerald"
+      },
+      {
+        "label": "Carteira inadimplente",
+        "valor": "12,1%",
+        "cor": "red"
+      },
+      {
+        "label": "Em carência (waiver)",
+        "valor": "63,2%",
+        "cor": "amber"
       }
     ],
     "tipologiaChart": {
       "labels": [
-        "Corporativo",
-        "Multipropriedade",
         "Loteamento",
-        "Incorporação",
+        "Multipropriedade",
+        "Corporativo",
+        "Incorporação Vertical",
         "Shopping",
-        "Outros"
+        "Outros (Energia/Pulverizado)"
       ],
       "data": [
-        33.7,
-        20.6,
-        18.8,
-        15.1,
-        5.5,
-        6.3
+        37.3,
+        35.9,
+        21.0,
+        15.4,
+        5.4,
+        2.2
       ],
       "cores": [
         "#3b82f6",
-        "#f59e0b",
-        "#10b981",
         "#8b5cf6",
-        "#ec4899",
-        "#6b7280"
-      ]
-    },
-    "locatarioChart": {
-      "labels": [
-        "IPCA+ (10,7% a.a.)",
-        "IGP-M+ (10,1% a.a.)",
-        "PRÉ (10,0%)",
-        "CDI+ (7,0%)",
-        "INPC+ (8,0%)"
-      ],
-      "data": [
-        91.1,
-        4,
-        4.9,
-        0.1,
-        0.2
-      ],
-      "cores": [
-        "#3b82f6",
         "#10b981",
         "#f59e0b",
-        "#8b5cf6",
+        "#ef4444",
         "#6b7280"
       ]
     },
     "locatarios": [
       {
         "nome": "CRI Chemin (I e II)",
-        "setor": "Incorporação Vertical",
-        "receita": "12,18%",
-        "rating": "IPCA+11,2%",
-        "ratingCor": "blue",
-        "risco": "Moderado",
-        "riscoCor": "blue"
+        "setor": "Incorporação Vertical - Araraquara/Franca SP",
+        "receita": "12,28% do PL",
+        "rating": "IPCA+11,2% · dur 2,75a",
+        "ratingCor": "red",
+        "risco": "Inadimplente - waiver 12m",
+        "riscoCor": "red"
       },
       {
-        "nome": "CRI Hope (SR + SUB)",
-        "setor": "Corporativo",
-        "receita": "10,57%",
-        "rating": "IPCA+10,0/13,3%",
-        "ratingCor": "blue",
-        "risco": "Moderado",
-        "riscoCor": "blue"
-      },
-      {
-        "nome": "CRI WAM Holding (A + B)",
-        "setor": "Corporativo (Multipropriedade)",
-        "receita": "7,59%",
-        "rating": "IPCA+9,1/13,1%",
-        "ratingCor": "blue",
-        "risco": "Alto",
+        "nome": "CRI Hope (SR+SUB)",
+        "setor": "Corporativo - rede Wish/Prodigy/Linx Hotéis",
+        "receita": "10,84% do PL",
+        "rating": "IPCA+10% · VGV R$ 3,8 bi",
+        "ratingCor": "amber",
+        "risco": "Em carência",
         "riscoCor": "amber"
       },
       {
         "nome": "CRI Circuito de Compras",
-        "setor": "Shopping",
-        "receita": "5,48%",
-        "rating": "IPCA+8,0/16,0%",
-        "ratingCor": "blue",
-        "risco": "Moderado",
-        "riscoCor": "blue"
-      },
-      {
-        "nome": "Outros (~40 CRIs)",
-        "setor": "Diversificado",
-        "receita": "64,18%",
-        "rating": "Misto",
-        "ratingCor": "slate",
-        "risco": "Variado",
+        "setor": "Shopping Atacado - São Paulo SP",
+        "receita": "5,38% do PL",
+        "rating": "IPCA+8%/16%",
+        "ratingCor": "emerald",
+        "risco": "Em carência",
         "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI WAM Holding A+B",
+        "setor": "Corporativo - Goiânia GO",
+        "receita": "7,58% do PL",
+        "rating": "IPCA+9,1%/13,1%",
+        "ratingCor": "amber",
+        "risco": "Em carência",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Grupo Gramado Parks (GPK A+B, Brasil Parques, Golden, GVI, Aquan)",
+        "setor": "Multipropriedade / Corporativo - RS/PR",
+        "receita": "~25% do PL",
+        "rating": "IPCA+8,5% a 15,5%",
+        "ratingCor": "red",
+        "risco": "Crítico - litígio Fortesec",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "CRI Loteamento Goiás",
+        "setor": "Loteamento - GO Interior",
+        "receita": "2,23% do PL",
+        "rating": "PRÉ 10% · dur 5,76a",
+        "ratingCor": "emerald",
+        "risco": "Adimplente",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Pride (SR+SUB)",
+        "setor": "Incorporação Vertical - Curitiba PR",
+        "receita": "4,19% do PL",
+        "rating": "IPCA+10%/13,8%",
+        "ratingCor": "amber",
+        "risco": "Juros pendentes",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "CRI LR Loteamentos",
+        "setor": "Loteamento - Patos PB",
+        "receita": "0,27% do PL",
+        "rating": "IGPM+9%/14%",
+        "ratingCor": "red",
+        "risco": "Recompra total exigida (AGT jan/26)",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "CRI OP Resort (SR+SUB)",
+        "setor": "Multipropriedade - Porto Seguro BA",
+        "receita": "3,44% do PL",
+        "rating": "IPCA+9%/15,7%",
+        "ratingCor": "emerald",
+        "risco": "Em dia (carência parcial)",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Coteminas",
+        "setor": "Corporativo têxtil - Natal RN",
+        "receita": "1,58% do PL",
+        "rating": "IPCA+9,25% · AF imóveis 2,1x",
+        "ratingCor": "emerald",
+        "risco": "Em dia",
+        "riscoCor": "emerald"
       }
     ],
-    "riscoResumo": [
-      {
-        "label": "Sênior",
-        "valor": 37,
-        "cor": "emerald"
-      },
-      {
-        "label": "Única",
-        "valor": 34,
-        "cor": "blue"
-      },
-      {
-        "label": "Subordinada",
-        "valor": 19,
-        "cor": "amber"
-      },
-      {
-        "label": "Mezanino",
-        "valor": 6,
-        "cor": "orange"
-      }
-    ],
-    "riscoNota": "Carteira com 91,1% indexada ao IPCA e taxa média de 10,66% a.a. A diversificação por subordinação mostra 37% em séries sêniores, 34% em séries únicas, 19% em subordinadas e 6% em mezanino. A média geral da carteira é de <strong class=\"text-emerald-400\">79% em vendas e 92% de obras concluídas</strong>. A proteção contra deflação cobre 99% da carteira. Diversificação geográfica relevante: RS (20,7%), SP (19,2%), GO (16,7%), PR (10,2%)."
+    "riscoNota": "<p>A carteira é composta por <strong class=\"text-blue-400\">66 CRIs</strong> pulverizados em <strong class=\"text-blue-400\">16 estados</strong>, com forte concentração em Rio Grande do Sul (20,6%), São Paulo (18%), Goiás (17,2%) e Paraná (10,2%). Os setores dominantes são loteamento (37,3%) e multipropriedade (35,9%), categorias com histórico de inadimplência estrutural superior a CRIs corporativos de primeira linha.</p><p>Do ponto de vista de <strong class=\"text-amber-400\">subordinação</strong>, 37,3% das posições são sênior, 10,4% mezanino, 15,4% subordinada e 34,3% série única. As garantias típicas incluem cessão fiduciária de recebíveis (100%), alienação fiduciária das cotas SPE, fiança dos sócios pessoas físicas e fundos de reserva/obras. Cerca de <strong class=\"text-emerald-400\">99% da carteira tem proteção contra deflação</strong>.</p><p>O ponto crítico é a <strong class=\"text-red-400\">qualidade dos devedores</strong>: a exposição a um único grupo econômico (Gramado Parks e suas afiliadas) via múltiplos CRIs criou risco sistêmico que se materializou em 2023-2025. Operações como CRI LR Loteamentos tiveram exigência de recompra total aprovada em AGT de jan/2026 por inadimplência de devedora e fiadores — caso emblemático que ilustra o perfil da carteira.</p>"
   },
   "timeline": {
-    "subtitulo": "De IPO em 2020 a líder em High Yield",
+    "subtitulo": "IPO em agosto/2020, crescimento acelerado até 2022 e ciclo de estresse a partir de 2023",
     "periodos": [
       {
         "periodo": "Ago/2020",
         "label": "IPO",
         "cor": "blue",
-        "descricao": "Constituição e início das operações do Devant Recebíveis Imobiliários FII. Foco em CRIs High Yield.",
+        "descricao": "Constituição do DEVA11 com 1ª emissão de 1.031.554 cotas a R$ 100 (R$ 103,15 milhões). Mandato: CRIs high yield pulverizados, com taxa média projetada IPCA + 11,5% a.a.",
         "pontos": [
-          "CNPJ: 37.087.810/0001-37",
-          "Gestora: Devant Asset",
-          "Administrador: Vortx DTVM",
-          "Foco: CRIs de multipropriedade, loteamento e corporativo"
+          "<strong>Início da operação com forte aceitação no mercado de varejo</strong>",
+          "Estreia na B3 em 25/11/2020 com valorização de 40% no primeiro dia"
         ]
       },
       {
-        "periodo": "2021-2022",
-        "label": "CRESCIMENTO",
+        "periodo": "2021",
+        "label": "EXPANSÃO",
         "cor": "emerald",
-        "descricao": "Expansão rápida da carteira com captações sucessivas. Patrimônio cresceu para mais de R$ 1 bilhão.",
+        "descricao": "Série de emissões (2ª, 3ª, 4ª, 5ª, 6ª, 7ª) levou o PL a R$ 1,3 bilhão ao fim de 2021, com base de cotistas crescendo de 570 para 67.692. Carteira alcançou 48 operações em 16 estados.",
         "pontos": [
-          "Múltiplas emissões de cotas",
-          "Diversificação da carteira de CRIs",
-          "Base de cotistas em expansão",
-          "Dividendos elevados (DY > 15%)"
+          "<strong>DY médio mensal 1,39%</strong> (~18% ao ano) no período",
+          "Compra do IFIX em 4º mês de negociação",
+          "Inclusão em mais de 8 listas de recomendação"
         ]
       },
       {
-        "periodo": "2023-2024",
-        "label": "CONSOLIDAÇÃO",
+        "periodo": "Mar/2023",
+        "label": "INÍCIO DA CRISE",
         "cor": "amber",
-        "descricao": "Período de ajustes na carteira. Gestão ativa com pré-pagamentos e rotação de ativos.",
+        "descricao": "Primeiras tratativas com securitizadora Fortesec sobre waivers para operações do Grupo Gramado Parks. Deterioração progressiva do cenário de inadimplência.",
         "pontos": [
-          "Pré-pagamentos de CRIs com problemas",
-          "Rotação de ativos para melhorar qualidade",
-          "Manutenção de dividendos elevados",
-          "P/VP caiu significativamente refletindo riscos High Yield"
+          "<strong>DY cai de 1,60% (fev/23) para 1,25% (mar/23)</strong>",
+          "Prêmios de mercado começam a exigir riscos maiores"
         ]
       },
       {
-        "periodo": "2025-2026",
-        "label": "ATUAL",
-        "cor": "emerald",
-        "descricao": "Fundo consolidado com ~50 CRIs, taxa média IPCA+10,66% e gestão ativa na resolução de inadimplências.",
+        "periodo": "Mai/2023",
+        "label": "EXECUÇÃO GRAMADO",
+        "cor": "red",
+        "descricao": "Aprovada em AGT o vencimento antecipado dos CRIs Gramado Parks (16,1% do PL) e ajuizamento de ação de execução. Contratação do escritório Sérgio Bermudes.",
         "pontos": [
-          "<strong class=\"text-emerald-400\">PL: R$ 1,38 Bi | 80.230 cotistas</strong>",
-          "<strong class=\"text-emerald-400\">DY 20,50% | 177% CDI (nov/25)</strong>",
-          "Nov/25: Pré-pagamento Thermas São Pedro",
-          "Dez/25: Pré-pagamento CRI Grupo CEM",
-          "Taxa média: IPCA + 10,66% a.a.",
-          "Proteção contra deflação: 99% da carteira"
+          "<strong>Inadimplentes em execução: 16,1%</strong>",
+          "Rendimento mensal cai para R$ 0,65/cota"
+        ]
+      },
+      {
+        "periodo": "Ago/2023",
+        "label": "LITÍGIO FORTESEC",
+        "cor": "red",
+        "descricao": "Devant notifica extrajudicialmente a Fortesec por falta de transparência em múltiplas operações. Passos seguintes envolvem medidas judiciais para acesso a documentação.",
+        "pontos": [
+          "<strong>Carteira adimplente cai para 78,2%</strong>",
+          "Sócios da Devant custeiam assessores jurídicos com recursos próprios"
+        ]
+      },
+      {
+        "periodo": "Jul/2023",
+        "label": "DFs SEM OPINIÃO",
+        "cor": "red",
+        "descricao": "Auditor RSM Brasil emite abstenção de opinião nas demonstrações financeiras de 2022, fundamentada nas incertezas sobre recuperabilidade dos CRIs problemáticos. 91,3% dos votantes reprovam as DFs.",
+        "pontos": [
+          "<strong>Censura pública da B3</strong> por atraso das DFs",
+          "Destituição de administradores Oliveira Trust em assembleias"
+        ]
+      },
+      {
+        "periodo": "Dez/2023",
+        "label": "DESTITUIÇÃO",
+        "cor": "red",
+        "descricao": "Três administradores da Devant Asset são destituídos em meio à crise, conforme comunicado oficial da Vórtx. Gestão passa por reestruturação.",
+        "pontos": [
+          "<strong>Evento material para governança da gestora</strong>",
+          "Ano fecha com DY 17,67% (efeito da cota deprimida)"
+        ]
+      },
+      {
+        "periodo": "2024-2025",
+        "label": "RESTRUTURAÇÕES",
+        "cor": "amber",
+        "descricao": "Sucessivas AGTs para reestruturar CRIs Pride, Hope, WAM, Chemin, Brasil Parques, GPK I e II, OP Resort, Eco Resort, Aquan Prime, Portal das Pedras, Resort do Lago IV. Concessão de carências amplas (waivers) até 2026.",
+        "pontos": [
+          "<strong>63% da carteira em período de carência</strong>",
+          "Pré-pagamento integral do CRI Grupo CEM (0,08% do PL) e Thermas São Pedro (prêmio de R$ 201 mil)"
+        ]
+      },
+      {
+        "periodo": "Jan/2026",
+        "label": "ATUAL",
+        "cor": "orange",
+        "descricao": "Dividendo mensal de R$ 0,30/cota (DY 12m 18,47%). Carteira com 24,8% em dia, 63,2% em carência, 12,1% inadimplente. PL de R$ 1,379 bi, cota patrimonial R$ 98,19.",
+        "pontos": [
+          "<strong>Mercado precifica perda de 76% do patrimônio</strong> (P/VP 0,24)",
+          "79.443 cotistas — queda de ~15% em 12 meses",
+          "<strong>R$ 16,7 mi em caixa</strong> do pré-pagamento CEM (dez/25)"
         ]
       }
     ],
     "resumoTrajetoria": {
-      "titulo": "Resumo da trajetória - MODERADA:",
-      "texto": "O DEVA11 se consolidou como um dos principais FIIs de CRI High Yield do mercado, com <strong class=\"text-emerald-400\">patrimônio de R$ 1,38 bilhão</strong> e carteira diversificada de ~50 CRIs. A taxa média de <strong class=\"text-emerald-400\">IPCA+10,66%</strong> entrega rendimentos elevados, porém voláteis. O P/VP de 0,24 reflete os riscos inerentes ao segmento High Yield. A gestão tem atuado na resolução de inadimplências e rotação de ativos."
+      "titulo": "Resumo da trajetória — do entusiasmo ao estresse estrutural",
+      "texto": "<p>Lançado em agosto/2020 em meio ao ambiente de juros baixos pós-pandemia, o DEVA11 capturou alta demanda por FIIs de crédito high yield. A gestora Devant Asset construiu com relativa rapidez uma carteira diversificada de 66 CRIs pulverizados, especializando-se em segmentos menos comuns como multipropriedade, loteamento e timesharing — nichos com spreads elevados mas historicamente sensíveis a ciclos econômicos.</p><p>A inflexão ocorreu em <strong class=\"text-amber-400\">março/2023</strong>, quando a combinação de Selic a 13,75%, retração econômica pós-pandemia no setor de hotelaria e multipropriedade, e problemas operacionais em devedores concentrados no ecossistema Gramado Parks produziu uma cascata de inadimplências. O conflito da gestão com a securitizadora Fortesec — envolvendo <strong class=\"text-red-400\">ações judiciais, notificações extrajudiciais e questionamento de AGTs</strong> — gerou ruído institucional adicional.</p><p>O fundo hoje opera em modo de recuperação: rendimentos deprimidos pelas carências concedidas, cotação em desconto extremo, base de cotistas em queda. A magnitude das recuperações via execução de garantias nos próximos 24-36 meses definirá se o P/VP de 0,24 se converterá em ganho real para quem comprou nesse patamar ou se consolidará perdas. O caminho adiante é longo e incerto.</p>"
     },
     "crescimento": [
       {
-        "label": "Patrimônio Atual",
-        "valor": "R$ 1,38 Bi",
-        "detalhe": "14 milhões de cotas"
+        "label": "Variação Cota",
+        "valor": "-76,5%",
+        "detalhe": "R$ 100,00 → R$ 23,49"
       },
       {
-        "label": "CRIs na Carteira",
-        "valor": "~50",
-        "detalhe": "Diversificação ampla"
+        "label": "Total Distribuído",
+        "valor": "~R$ 65,00",
+        "detalhe": "Desde IPO (estimativa)"
       },
       {
-        "label": "DY 12 Meses",
-        "valor": "20,50%",
-        "detalhe": "R$ 4,84/cota distribuídos"
+        "label": "Retorno total (inclusive div)",
+        "valor": "-11,5%",
+        "detalhe": "5,7 anos aprox."
       },
       {
         "label": "Cotistas",
-        "valor": "80.230",
-        "detalhe": "99,9% pessoa física"
+        "valor": "139×",
+        "detalhe": "570 (dez/20) → 79.443 (jan/26)"
       }
     ]
   },
   "tese": {
-    "resumo": "DEVA11 é um <strong class=\"text-amber-400\">FII de CRI High Yield</strong> com taxa média de IPCA+10,66%, focado em multipropriedade (33,7%), loteamento (20,6%) e corporativo (18,8%). O <strong class=\"text-emerald-400\">DY de 20,50%</strong> é um dos mais altos do segmento, mas vem acompanhado de volatilidade nos dividendos e um P/VP de 0,24 que reflete os riscos do portfólio. A gestão ativa tem resolvido inadimplências via pré-pagamentos e execução de garantias. Para investidores que aceitam o risco, o desconto sobre o VP pode representar oportunidade de longo prazo.",
+    "resumo": "<p>O DEVA11 é hoje uma <strong class=\"text-amber-400\">tese de recuperação judicial coletiva</strong>, não de renda recorrente. A cotação de R$ 23,49 implica assumir que o mercado está correto em precificar perda de ~76% do PL, e o upside depende da eficácia da execução de garantias (alienações fiduciárias de imóveis, SPEs, avais pessoais) ao longo dos próximos 2-3 anos.</p><p>Para operações como Gramado Parks, a garantia real inclui imóveis com VGV potencial de R$ 3,8 bilhões (CRI Hope). Se a execução converter parte significativa dessas garantias em caixa, há espaço teórico para recuperação patrimonial. Por outro lado, o processo é litigioso, demorado, e parte das carteiras de recebíveis subjacentes apresenta inadimplência elevada.</p>",
     "paraQuem": [
-      "Investidores que buscam <strong class=\"text-emerald-400\">rendimentos elevados</strong> (DY > 20%)",
-      "Perfil <strong class=\"text-emerald-400\">arrojado</strong> que aceita volatilidade nos dividendos",
-      "Quem busca <strong class=\"text-emerald-400\">proteção inflacionária</strong> (91% IPCA+)",
-      "Investidores que entendem <strong class=\"text-emerald-400\">crédito estruturado High Yield</strong>"
+      "<strong>Investidor institucional com tese específica de recuperação de crédito estressado</strong> e horizonte de 3-5 anos",
+      "<strong>Alocador tático com mandato para FII distressed</strong> e disciplina para não mediar posição",
+      "<strong>Investidor experiente em fundos de papel high yield</strong> que entenda o perfil de execução de garantias e litígios societários"
     ],
     "naoParaQuem": [
-      "Quem <strong class=\"text-amber-400\">não tolera volatilidade</strong> nos dividendos mensais",
-      "Investidores que buscam <strong class=\"text-amber-400\">segurança e previsibilidade</strong>",
-      "Perfil <strong class=\"text-amber-400\">conservador</strong> que prefere fundos High Grade",
-      "Quem não acompanha <strong class=\"text-amber-400\">evolução de garantias e obras</strong> dos CRIs"
+      "<strong>Investidor buscando renda mensal estável e previsível</strong> — o dividendo caiu 81% em relação ao pico de 2024",
+      "<strong>Investidor conservador ou iniciante em FIIs</strong> — o fundo exige compreensão profunda de estruturas de CRI, AGTs e execução judicial",
+      "<strong>Investidor sem capacidade de aguentar marca a mercado volátil</strong> — possíveis novos ajustes de PDD podem comprimir ainda mais a cota patrimonial",
+      "<strong>Quem não tolera risco de perda permanente</strong> — o P/VP 0,24 já é sinal de que o mercado espera default significativo"
     ]
   },
   "dividendos": {
     "chartLabels": [
-      "Dez/24",
-      "Jan/25",
       "Fev/25",
       "Mar/25",
       "Abr/25",
@@ -424,600 +495,142 @@
       "Ago/25",
       "Set/25",
       "Out/25",
-      "Nov/25"
+      "Nov/25",
+      "Dez/25",
+      "Jan/26"
     ],
     "chartData": [
-      0.46,
-      0.44,
       0.43,
       0.41,
+      0.46,
+      0.45,
+      0.46,
       0.34,
       0.32,
       0.35,
       0.33,
       0.44,
-      0.46,
-      0.45,
-      0.4
+      0.4,
+      0.3
     ],
     "chartCor": "#f59e0b",
-    "chartYMin": 0.25,
-    "chartYMax": 0.55,
+    "chartYMin": 0,
+    "chartYMax": 0.6,
     "totaisAnuais": [
       {
-        "ano": "Média 12M",
-        "valor": "R$ 0,40"
+        "ano": "2022",
+        "valor": "R$ 14,93"
       },
       {
-        "ano": "DY 12M",
-        "valor": "20,50%",
-        "cor": "emerald"
+        "ano": "2023",
+        "valor": "R$ 8,73"
       },
       {
-        "ano": "Gross-up anual",
-        "valor": "24,12% a.a."
+        "ano": "2024",
+        "valor": "R$ 6,14"
       },
       {
-        "ano": "% CDI (nov/25)",
-        "valor": "177%",
-        "cor": "emerald"
-      },
-      {
-        "ano": "Total 12M",
-        "valor": "R$ 4,84/cota"
+        "ano": "2025",
+        "valor": "R$ 4,69"
       }
     ],
     "guidance": {
-      "periodo": "Último dividendo (dez/25)",
-      "faixa": "R$ 0,40/cota",
-      "unidade": "DY 1,86% no mês (nov/25)"
+      "periodo": "1S2026",
+      "faixa": "R$ 0,25 a R$ 0,40",
+      "unidade": "por cota / mês"
     },
     "stats": [
       {
-        "label": "Maior (Jun/25)",
+        "label": "Atual (jan/26)",
+        "valor": "R$ 0,30",
+        "cor": "amber"
+      },
+      {
+        "label": "Maior 12m",
         "valor": "R$ 0,46",
         "cor": "emerald"
       },
       {
-        "label": "Menor (Mai/25)",
-        "valor": "R$ 0,32"
-      },
-      {
-        "label": "Primeiro Dividendo",
-        "valor": "2020"
-      },
-      {
-        "label": "Total 12 Meses",
-        "valor": "R$ 4,84",
-        "cor": "emerald"
+        "label": "Menor 12m",
+        "valor": "R$ 0,30",
+        "cor": "red"
       },
       {
         "label": "Tendência",
-        "valor": "Volátil",
-        "cor": "amber"
+        "valor": "Queda",
+        "cor": "red"
       }
     ]
-  },
-  "ativosDetalhados": {
-    "subtitulo": "Análise dos principais CRIs em carteira (Nov/2025)",
-    "itens": [
-      {
-        "nome": "CRI Chemin (I e II)",
-        "tipo": "CRI — Incorporação Vertical",
-        "icone": "🏗️",
-        "corIcone": "blue",
-        "corBorda": "blue",
-        "participacao": "12,18%",
-        "participacaoCor": "blue",
-        "descricao": "Maior posição do fundo, composta por duas séries únicas indexadas a IPCA+11,2% a.a. com duration de 2,75 anos. Lastro em incorporação vertical da construtora Chemin, com empreendimentos em Franca e Araraquara (SP). A obra está 91% executada e 50,4% da carteira vendida. LTV de 159,1%. As duas séries somam 12,18% do PL do fundo (Chemin I com 9,14% e Chemin II com 3,04%).",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Maior posição do fundo",
-        "contrato": {
-          "tipo": "CRI Série Única — IPCA+11,2% a.a.",
-          "reajuste": "Correção pelo IPCA + spread de 11,2%"
-        },
-        "pontos": [
-          {
-            "texto": "Maior posição do fundo (12,18% do PL) com taxa atrativa de IPCA+11,2%",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Obra 91% executada — risco de construção residual baixo",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Apenas 50,4% da carteira vendida — risco de velocidade de vendas",
-            "cor": "amber"
-          },
-          {
-            "texto": "LTV de 159,1% — acima de 100%, indicando que o saldo devedor supera o valor das garantias",
-            "cor": "orange"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Hope (SR + SUB)",
-        "tipo": "CRI — Corporativo",
-        "icone": "🏢",
-        "corIcone": "blue",
-        "corBorda": "blue",
-        "participacao": "10,57%",
-        "participacaoCor": "blue",
-        "descricao": "Segunda maior posição do fundo, dividida em série sênior (IPCA+10,0%, 7,27% do PL, duration 4,50 anos) e série subordinada (IPCA+13,3%, 3,30% do PL, duration 4,30 anos). Operação corporativa sem dados de obra/vendas disponíveis. A série subordinada oferece taxa mais elevada em troca de maior risco de crédito, absorvendo primeiras perdas antes da sênior.",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Segunda maior posição do fundo",
-        "contrato": {
-          "tipo": "CRI SR (IPCA+10,0%) + SUB (IPCA+13,3%)",
-          "reajuste": "Correção pelo IPCA + spread de 10,0% a 13,3%"
-        },
-        "pontos": [
-          {
-            "texto": "Taxas atrativas: IPCA+10,0% (SR) e IPCA+13,3% (SUB) — prêmio de 3,3% pela subordinação",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Duration longa de 4,3 a 4,5 anos — maior exposição a risco de crédito no tempo",
-            "cor": "amber"
-          },
-          {
-            "texto": "Série subordinada (3,30% do PL) absorve primeiras perdas — risco elevado nessa tranche",
-            "cor": "amber"
-          },
-          {
-            "texto": "Operação corporativa com informações limitadas sobre garantias disponíveis",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI WAM Holding (A + B)",
-        "tipo": "CRI — Corporativo (Multipropriedade)",
-        "icone": "🏨",
-        "corIcone": "amber",
-        "corBorda": "amber",
-        "participacao": "7,59%",
-        "participacaoCor": "amber",
-        "descricao": "Terceira maior posição do fundo, composta por duas séries únicas: WAM Holding A (IPCA+9,1%, 3,95% do PL, duration 1,14 anos) e WAM Holding B (IPCA+13,1%, 3,64% do PL, duration 1,95 anos). A WAM é um dos maiores grupos de multipropriedade e hotelaria do Brasil. Duration curta (1,1 a 2,0 anos) reduz exposição temporal ao risco de crédito.",
-        "risco": "Alto",
-        "qualidade": "Regular",
-        "relevancia": "Maior exposição corporativa a multipropriedade",
-        "contrato": {
-          "tipo": "CRI Série Única — IPCA+9,1% (A) e IPCA+13,1% (B)",
-          "reajuste": "Correção pelo IPCA + spread de 9,1% a 13,1%"
-        },
-        "pontos": [
-          {
-            "texto": "Duration curta (1,1 a 2,0 anos) — risco temporal limitado, liquidez próxima",
-            "cor": "emerald"
-          },
-          {
-            "texto": "WAM é líder do segmento de multipropriedade no Brasil — escala operacional relevante",
-            "cor": "blue"
-          },
-          {
-            "texto": "Setor de multipropriedade é sensível a ciclos econômicos e depende de vendas de alta persuasão",
-            "cor": "amber"
-          },
-          {
-            "texto": "Exposição corporativa — risco concentrado na capacidade de pagamento do grupo WAM",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Circuito de Compras (SR + MEZ)",
-        "tipo": "CRI — Shopping Center",
-        "icone": "🛍️",
-        "corIcone": "purple",
-        "corBorda": "purple",
-        "participacao": "5,48%",
-        "participacaoCor": "purple",
-        "descricao": "Posição em shopping center dividida em série sênior (IPCA+8,0%, 4,90% do PL, duration 8,93 anos) e série mezanino (IPCA+16,0%, 0,58% do PL, duration 6,04 anos). Carteira 73,5% vendida e obra 100% concluída. A série sênior possui a maior duration da carteira (8,93 anos), o que representa alta exposição temporal. A série mezanino oferece taxa elevada de IPCA+16,0% pelo risco intermediário.",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Principal exposição a shopping centers",
-        "contrato": {
-          "tipo": "CRI SR (IPCA+8,0%) + MEZ (IPCA+16,0%)",
-          "reajuste": "Correção pelo IPCA + spread de 8,0% a 16,0%"
-        },
-        "pontos": [
-          {
-            "texto": "Obra 100% concluída e 73,5% da carteira vendida/locada — lastro operacional real",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Série mezanino com IPCA+16,0% — uma das maiores taxas da carteira",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Duration da série SR de 8,93 anos — a mais longa de toda a carteira do fundo",
-            "cor": "orange"
-          },
-          {
-            "texto": "Concentração em um único shopping — risco específico do ativo",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Aquan Prime (SR + SUB)",
-        "tipo": "CRI — Multipropriedade",
-        "icone": "🏖️",
-        "corIcone": "amber",
-        "corBorda": "amber",
-        "participacao": "4,88%",
-        "participacaoCor": "amber",
-        "descricao": "Posição em multipropriedade dividida em série sênior (IPCA+7,0%, 3,58% do PL, duration 2,08 anos) e série subordinada (IPCA+13,7%, 1,30% do PL, duration 1,89 anos). Obra apenas 18,1% executada e carteira 32,7% vendida — estágio inicial do empreendimento com risco de construção e comercialização significativo. Duration curta de aproximadamente 2 anos.",
-        "risco": "Alto",
-        "qualidade": "Regular",
-        "relevancia": "Empreendimento em estágio inicial",
-        "contrato": {
-          "tipo": "CRI SR (IPCA+7,0%) + SUB (IPCA+13,7%)",
-          "reajuste": "Correção pelo IPCA + spread de 7,0% a 13,7%"
-        },
-        "pontos": [
-          {
-            "texto": "Duration curta (~2 anos) limita exposição temporal ao risco",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Prêmio de risco expressivo na subordinada: IPCA+13,7% vs 7,0% da sênior",
-            "cor": "blue"
-          },
-          {
-            "texto": "Apenas 18,1% da obra executada — risco de construção muito elevado",
-            "cor": "orange"
-          },
-          {
-            "texto": "Apenas 32,7% da carteira vendida — risco de comercialização significativo",
-            "cor": "orange"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Brasil Parques (A + B)",
-        "tipo": "CRI — Corporativo",
-        "icone": "🎢",
-        "corIcone": "blue",
-        "corBorda": "blue",
-        "participacao": "5,39%",
-        "participacaoCor": "blue",
-        "descricao": "Posição corporativa dividida em duas séries únicas: Brasil Parques A (IPCA+9,3%, 2,27% do PL, duration 2,51 anos) e Brasil Parques B (IPCA+10,5%, 3,12% do PL, duration 2,50 anos). Operação corporativa sem dados de obra/vendas disponíveis. Duration média de 2,5 anos. O grupo Brasil Parques atua no segmento de parques temáticos e entretenimento.",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Exposição ao setor de entretenimento",
-        "contrato": {
-          "tipo": "CRI Série Única — IPCA+9,3% (A) e IPCA+10,5% (B)",
-          "reajuste": "Correção pelo IPCA + spread de 9,3% a 10,5%"
-        },
-        "pontos": [
-          {
-            "texto": "Taxas atrativas de IPCA+9,3% e IPCA+10,5% com duration moderada de 2,5 anos",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Séries únicas — sem subordinação, risco de crédito integral para o fundo",
-            "cor": "amber"
-          },
-          {
-            "texto": "Exposição corporativa ao setor de entretenimento — sensível a ciclos econômicos",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI GPK (A + B + II)",
-        "tipo": "CRI — Corporativo",
-        "icone": "🏢",
-        "corIcone": "blue",
-        "corBorda": "blue",
-        "participacao": "7,98%",
-        "participacaoCor": "blue",
-        "descricao": "Posição corporativa composta por três séries únicas: GPK A (IPCA+8,5%, 2,89% do PL, duration 2,67 anos), GPK B (IPCA+11,5%, 2,96% do PL, duration 2,61 anos) e GPK II (IPCA+10,0%, 2,13% do PL, duration 2,63 anos). Todas com duration próxima de 2,6 anos. A taxa média ponderada fica em torno de IPCA+10,0%. Operação corporativa sem dados de obra/vendas disponíveis.",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Posição corporativa relevante (7,98% do PL)",
-        "contrato": {
-          "tipo": "CRI Série Única — IPCA+8,5% a 11,5%",
-          "reajuste": "Correção pelo IPCA + spread de 8,5% a 11,5%"
-        },
-        "pontos": [
-          {
-            "texto": "Taxa média atrativa de ~IPCA+10,0% com três séries diversificadas",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Duration homogênea (~2,6 anos) facilita gestão de fluxo de caixa",
-            "cor": "blue"
-          },
-          {
-            "texto": "Três séries únicas no mesmo devedor — concentração de risco de crédito no grupo GPK",
-            "cor": "amber"
-          },
-          {
-            "texto": "Operação corporativa sem informações detalhadas de garantias reais publicadas",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Pride (SR + SUB)",
-        "tipo": "CRI — Incorporação Vertical",
-        "icone": "🏗️",
-        "corIcone": "purple",
-        "corBorda": "purple",
-        "participacao": "4,16%",
-        "participacaoCor": "purple",
-        "descricao": "Posição em incorporação vertical dividida em série subordinada (IPCA+13,8%, 2,87% do PL, duration 3,56 anos) e série sênior (IPCA+10,0%, 1,29% do PL, duration 3,76 anos). A maior exposição está na série subordinada, que oferece prêmio de risco expressivo. Sem dados de obra e vendas divulgados individualmente.",
-        "risco": "Moderado-Alto",
-        "qualidade": "Regular",
-        "relevancia": "Exposição a incorporação vertical com subordinação",
-        "contrato": {
-          "tipo": "CRI SUB (IPCA+13,8%) + SR (IPCA+10,0%)",
-          "reajuste": "Correção pelo IPCA + spread de 10,0% a 13,8%"
-        },
-        "pontos": [
-          {
-            "texto": "Taxa elevada na subordinada: IPCA+13,8% — prêmio de 3,8% sobre a sênior",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Maior exposição na série subordinada (2,87%) vs sênior (1,29%) — perfil mais agressivo",
-            "cor": "amber"
-          },
-          {
-            "texto": "Duration de 3,5 a 3,8 anos — exposição temporal moderada a longa",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Gran Viver (SR + SUB)",
-        "tipo": "CRI — Loteamento",
-        "icone": "🏘️",
-        "corIcone": "emerald",
-        "corBorda": "emerald",
-        "participacao": "3,64%",
-        "participacaoCor": "emerald",
-        "descricao": "Posição em loteamento dividida em série sênior (IPCA+11,0%, 2,64% do PL, duration 3,28 anos) e série subordinada (IPCA+15,2%, 1,00% do PL, duration 3,02 anos). Sem dados de obra/vendas divulgados individualmente para esta operação. A série subordinada oferece IPCA+15,2%, uma das taxas mais elevadas da carteira.",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Exposição a loteamento com taxa elevada",
-        "contrato": {
-          "tipo": "CRI SR (IPCA+11,0%) + SUB (IPCA+15,2%)",
-          "reajuste": "Correção pelo IPCA + spread de 11,0% a 15,2%"
-        },
-        "pontos": [
-          {
-            "texto": "Taxa elevada na subordinada: IPCA+15,2% — entre as maiores taxas da carteira",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Série sênior com IPCA+11,0% — acima da média do fundo de 10,66%",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Segmento de loteamento depende de ritmo de vendas e condições macroeconômicas",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Resorts (OP Resort + Eco Resort + Resort do Lago IV + Golden Laghetto + GVI + Gramado BV + Búzios B)",
-        "tipo": "CRI — Multipropriedade (Resorts)",
-        "icone": "🏖️",
-        "corIcone": "amber",
-        "corBorda": "amber",
-        "participacao": "14,99%",
-        "participacaoCor": "amber",
-        "descricao": "Conjunto de CRIs lastreados em empreendimentos de multipropriedade/resorts, somando 14,99% do PL em múltiplas séries (SR e SUB). Inclui: OP Resort (SR IPCA+9,0% + SUB IPCA+15,7%, 3,42% do PL), Eco Resort (SR IPCA+9,5% + SUB IPCA+14,5%, 2,64%), Resort do Lago IV (SR IPCA+10,2% + SUB IPCA+14,0%, 2,51%), Golden Laghetto (SR IPCA+10,0% + SUB IPCA+13,3%, 2,92%), GVI (SR IPCA+7,0% + SUB IPCA+12,0%, 3,79%), Gramado BV (SR IPCA+8,0%, 0,09%) e Búzios B (Única IPCA+14,5%, 0,24%). Média de 89% de obras concluídas e 79% de vendas nos empreendimentos com dados disponíveis.",
-        "risco": "Alto",
-        "qualidade": "Regular",
-        "relevancia": "Principal bloco de exposição a multipropriedade",
-        "contrato": {
-          "tipo": "CRIs SR e SUB — IPCA+7,0% a IPCA+15,7%",
-          "reajuste": "Correção pelo IPCA + spreads variados"
-        },
-        "pontos": [
-          {
-            "texto": "Média de 89% de obras concluídas nos empreendimentos — risco de construção residual baixo",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Taxas elevadas nas subordinadas (IPCA+12,0% a 15,7%) compensam o risco do segmento",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Diversificação em 7 empreendimentos distintos de multipropriedade reduz risco específico",
-            "cor": "blue"
-          },
-          {
-            "texto": "Segmento de multipropriedade é o de maior risco da carteira — inadimplência historicamente mais alta",
-            "cor": "orange"
-          },
-          {
-            "texto": "15% do PL concentrado em um único segmento de alto risco — atenção à exposição",
-            "cor": "amber"
-          },
-          {
-            "texto": "Dependência de vendas de alta persuasão e turismo — sensibilidade a ciclos econômicos",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "CRI Loteamentos (Lot. Goiás + NG30 + Portal das Pedras + Servic + outros)",
-        "tipo": "CRI — Loteamento (Diversificado)",
-        "icone": "🗺️",
-        "corIcone": "emerald",
-        "corBorda": "emerald",
-        "participacao": "10,27%",
-        "participacaoCor": "emerald",
-        "descricao": "Bloco diversificado de CRIs de loteamento (excluindo Gran Viver e Grupo CEM listados separadamente), somando ~10,27% do PL. Inclui: Loteamento Goiás (SR PRÉ 10,0% + MEZ PRÉ 10,0%, 2,26% do PL, obra 95,6% concluída, 100% vendido), Loteamento NG30 (SR IPCA+10,5% + SUB IPCA+15,5%, 1,65%), Portal das Pedras (SR IPCA+10,0% + SUB IPCA+15,9%, 1,12%, 96,9% vendido), Servic (Única IPCA+10,0%, 0,44%, 90,9% vendido), Eldorado Minas (SR + SUB, 0,14%), Belle Ville (SR, 0,07%), Fix Laguna (SR + SUB, 0,20%), LR Loteamentos (SR IGP-M+9,0% + SUB IGP-M+14,0%, 0,27%), União do Lago (SR + SUB, 0,41%), Araguaína Park (SR, 0,18%), Quatto (SR INPC+8,0%, 0,13%), Urbanes Santa Maria (SR + SUB, 0,04%).",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Bloco diversificado com alto grau de execução",
-        "contrato": {
-          "tipo": "CRIs diversos — IPCA+7,5% a 15,9%, PRÉ 10,0%, IGP-M+9,0% a 14,0%",
-          "reajuste": "Indexadores variados (IPCA, IGP-M, PRÉ, INPC)"
-        },
-        "pontos": [
-          {
-            "texto": "Loteamento Goiás com 100% vendido e 95,6% de obra concluída — risco residual muito baixo",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Ampla diversificação com 12+ operações distintas diluindo risco de inadimplência individual",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Maioria dos empreendimentos com obras 90-100% concluídas e vendas acima de 80%",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Algumas operações com LTV elevado (NG30 SUB 114,2%) — saldo devedor supera garantias",
-            "cor": "orange"
-          },
-          {
-            "texto": "Exposição residual a IGP-M (LR Loteamentos) e INPC (Quatto) — descasamento de índices",
-            "cor": "amber"
-          }
-        ]
-      },
-      {
-        "nome": "Outros CRIs (Haus Garten + Coteminas + Colmeia + GS Souto + Reiter Log + Carvalho Hosken + Pulv. Ourinvest + Pulv. Blue V + RR Solaris + Itaperapuã)",
-        "tipo": "CRI — Posições Menores Diversificadas",
-        "icone": "📋",
-        "corIcone": "slate",
-        "corBorda": "slate",
-        "participacao": "7,15%",
-        "participacaoCor": "slate",
-        "descricao": "Conjunto de CRIs com participação individual inferior a 2% do PL, somando 7,15%. Inclui: Haus Garten (MEZ IPCA+14,2%, 1,12%, incorporação vertical com 50,5% de obra e 74% vendido), Coteminas (Única IPCA+9,3%, 1,56%, corporativo), Colmeia Vision (Única IPCA+12,0%, 0,70%, incorporação 92,1% concluída), Colmeia Living Garden (Única IPCA+12,0%, 0,03%), GS Souto (Única IPCA+12,0%, 0,63%, energia), Reiter Log (SR IPCA+9,0%, 0,47%, corporativo/logístico), Carvalho Hosken (Única CDI+7,0%, 0,18%, corporativo), Pulverizado Ourinvest (MEZ + SUB, 0,29%, incorporação), Pulverizado Blue V (SR IPCA+10,0%, 0,12%), RR Solaris (SR IGP-M+10,2%, 0,32%, incorporação 97,5% concluída), Itaperapuã (SR + SUB, 0,13%, multipropriedade).",
-        "risco": "Variado",
-        "qualidade": "Regular",
-        "relevancia": "Posições menores que complementam a diversificação",
-        "contrato": {
-          "tipo": "CRIs diversos — IPCA+9,0% a 20,0%, CDI+7,0%, IGP-M+10,2%",
-          "reajuste": "Indexadores variados"
-        },
-        "pontos": [
-          {
-            "texto": "Alta diversificação com 10+ operações em segmentos distintos (corporativo, energia, logístico, incorporação)",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Haus Garten (MEZ IPCA+14,2%) — mezanino com obra apenas 50,5% executada, risco elevado",
-            "cor": "orange"
-          },
-          {
-            "texto": "Participações individuais baixas (0,03% a 1,56%) limitam impacto de inadimplência individual",
-            "cor": "blue"
-          },
-          {
-            "texto": "Pulverizado Ourinvest com série SUB a IPCA+17,0% e LTV de 125,7% — risco alto mas residual (0,10%)",
-            "cor": "amber"
-          },
-          {
-            "texto": "Única posição em CDI (Carvalho Hosken, 0,18%) — praticamente toda carteira indexada à inflação",
-            "cor": "blue"
-          }
-        ]
-      },
-      {
-        "nome": "Cotas de FIIs",
-        "tipo": "Cotas de Fundos Imobiliários",
-        "icone": "📊",
-        "corIcone": "blue",
-        "corBorda": "blue",
-        "participacao": "2,5%",
-        "participacaoCor": "blue",
-        "descricao": "Posição de R$ 55,8 milhões em cotas de FIIs, representando 2,5% do patrimônio líquido. Complementa a carteira de CRIs com receita de dividendos de FIIs (R$ 478 mil/mês). Detalhamento das posições individuais não divulgado no relatório gerencial.",
-        "risco": "Moderado",
-        "qualidade": "Boa",
-        "relevancia": "Complemento de renda recorrente",
-        "contrato": {
-          "tipo": "Cotas de FII (sem vencimento)",
-          "reajuste": "Variação de mercado + dividendos"
-        },
-        "pontos": [
-          {
-            "texto": "Gera receita recorrente de ~R$ 478 mil/mês em dividendos de FIIs",
-            "cor": "emerald"
-          },
-          {
-            "texto": "Posição pequena (2,5%) — impacto limitado no resultado total do fundo",
-            "cor": "blue"
-          },
-          {
-            "texto": "Composição detalhada das posições de FIIs não divulgada — falta de transparência",
-            "cor": "amber"
-          }
-        ]
-      }
-    ],
-    "resumo": "A carteira do DEVA11 é composta por ~50 CRIs High Yield (96,5% do PL) com taxa média de IPCA+10,66%, complementada por cotas de FIIs (2,5%) e caixa (1,0%). As maiores posições são CRI Chemin I e II (12,18%, incorporação vertical), CRI Hope SR+SUB (10,57%, corporativo), bloco de resorts/multipropriedade (14,99%) e CRI GPK (7,98%, corporativo). A carteira apresenta 91,1% indexada ao IPCA, 37% em séries sêniores, 34% em séries únicas, 19% em subordinadas e 6% em mezanino. A média geral dos empreendimentos lastro é de 79% em vendas e 92% de obras concluídas, com proteção contra deflação de 99%. Diversificação geográfica em 14 estados (RS 20,7%, SP 19,2%, GO 16,7%). Os principais riscos são a concentração em multipropriedade (33,7% incluindo WAM e resorts), LTVs elevados em algumas operações e a presença de 25% em séries subordinadas e mezanino."
   },
   "valuation": {
     "pvp": {
       "valor": "0,24",
-      "descricao": "Cota negociada com <span class=\"text-emerald-400\">76% de desconto</span> sobre o valor patrimonial",
+      "descricao": "<p>O <strong class=\"text-red-400\">P/VP de 0,24</strong> é um dos mais baixos do segmento de papel high yield e reflete a precificação pelo mercado de perda patrimonial significativa. VP de R$ 98,19 versus cotação de R$ 23,49 implica desconto de <strong class=\"text-red-400\">76%</strong>. Historicamente, o fundo negociou com ágio de até 56% sobre o VP em 2022, evidenciando a inversão total do sentimento.</p>",
       "detalhes": [
         {
-          "label": "VP/Cota",
-          "valor": "R$ 98,08"
+          "label": "VP/Cota (jan/26)",
+          "valor": "R$ 98,19"
         },
         {
-          "label": "Preço",
-          "valor": "R$ 23,61",
-          "cor": "emerald"
+          "label": "Preço (abr/26)",
+          "valor": "R$ 23,49",
+          "cor": "red"
+        },
+        {
+          "label": "Desconto",
+          "valor": "76%",
+          "cor": "red"
+        },
+        {
+          "label": "Média histórica P/VP",
+          "valor": "~0,70"
         }
       ]
     },
     "spread": {
-      "valor": "177%",
-      "label": "% CDI (gross up)",
-      "cor": "emerald",
-      "descricao": "Rendimento equivalente a 177% do CDI bruto no mês de novembro/2025 (com gross-up)",
-      "detalhe": "DY DEVA11 (20,50%) com isenção de IR para PF"
+      "valor": "18,66%",
+      "label": "Dividend Yield 12m",
+      "cor": "amber",
+      "descricao": "<p>O <strong class=\"text-amber-400\">DY de 18,66%</strong> é inflado pela cota deprimida. Calculado sobre o VP, o yield efetivo é de ~4,8%, muito abaixo da NTN-B 2035 (~7% real). O spread vs CDI de 15% gira em torno de <strong class=\"text-blue-400\">125% do CDI</strong> gross-up, sugerindo que parte relevante do retorno embutido é de recuperação de principal, não de juros correntes sustentáveis.</p>"
     },
     "recomendacoes": {
-      "valor": "IPCA+10,66%",
-      "label": "Taxa Média Carteira",
-      "cor": "emerald",
-      "descricao": "Taxa média ponderada da carteira de CRIs com proteção contra deflação de 99%",
-      "detalhe": "Acima da média dos fundos High Yield"
+      "valor": "R$ 30,00",
+      "label": "Preço Estimado (Gordon ajustado por risco)",
+      "cor": "blue",
+      "descricao": "<p>Estimativa de preço justo por Gordon Growth com <strong class=\"text-blue-400\">custo de capital de 13,5%</strong> (NTN-B 7% + prêmio de risco de crédito 6,5% pelo perfil high yield distressed) e crescimento zero a -1% (assume estabilização sem recuperação agressiva): <strong class=\"text-blue-400\">DPS R$ 4,00 / (0,135 - 0) = R$ 29,60</strong>. Cenários: se o fluxo se estabilizar em R$ 0,30-0,35/mês (anual R$ 3,60-4,20), o preço Gordon fica entre R$ 27-31. Se houver recuperação relevante via execução de garantias Gramado Parks e o fluxo voltar a R$ 0,50/mês, o preço justo sobe para R$ 44-46. Dada a forte incerteza, a cotação atual de R$ 23,49 pode estar descontada, mas ainda dentro da faixa justificável pelos riscos.</p>"
     }
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-amber-400\">DEVA11</strong> é um dos FIIs de CRI High Yield mais relevantes do mercado, com <strong class=\"text-blue-400\">patrimônio de R$ 1,38 bilhão</strong> e carteira diversificada de ~50 CRIs com taxa média de <strong class=\"text-emerald-400\">IPCA+10,66%</strong>. O fundo entregou DY de 20,50% nos últimos 12 meses (R$ 4,84/cota), equivalente a 177% do CDI em novembro/2025.",
-      "A carteira é concentrada em três segmentos principais: <strong class=\"text-blue-400\">corporativo (33,7%)</strong>, <strong class=\"text-amber-400\">multipropriedade (20,6%)</strong> e <strong class=\"text-emerald-400\">loteamento (18,8%)</strong>. A média de vendas de 79% e obras concluídas de 92% nos empreendimentos lastro é positiva. A proteção contra deflação de 99% e a diversificação geográfica (14 estados) são pontos favoráveis.",
-      "O P/VP de 0,24 é o principal ponto de atenção: embora represente desconto expressivo, reflete a percepção de risco do mercado sobre a carteira High Yield. A gestão ativa tem resolvido inadimplências — em novembro/2025, o pré-pagamento integral do CRI Thermas São Pedro com prêmio de R$ 201 mil, e em dezembro/2025, a liquidação total do CRI Grupo CEM."
+      "O DEVA11 encerra janeiro/2026 em situação que combina <strong class=\"text-red-400\">estresse patrimonial acentuado</strong> com <strong class=\"text-amber-400\">desconto de mercado extremo</strong>. A cotação de R$ 23,49 (P/VP 0,24) reflete expectativa do mercado de que mais de 70% do valor patrimonial será perdido, em linha com a composição da carteira: apenas 24,8% dos CRIs em dia, 63,2% em carência e 12,1% inadimplentes. O PL de R$ 1,379 bilhão está distribuído em 66 operações, mas a concentração no ecossistema Gramado Parks (~25% do PL) amplifica o risco sistêmico de uma única linha de recuperação.",
+      "Do ponto de vista técnico, a carteira tem taxa média de IPCA + 10,66% e duration de 3,2 anos, com 99% de proteção contra deflação. As garantias são robustas em tese (cessão fiduciária de recebíveis, AF de imóveis, SPEs, fiança dos sócios), mas a efetividade depende de processos de execução em curso e da qualidade operacional dos empreendimentos subjacentes — multipropriedade, loteamento, incorporação e hotelaria em setores voláteis. A trajetória histórica é marcada por emissões rápidas entre 2020-2022, inflexão brusca em 2023 com o litígio contra a securitizadora Fortesec, e fase atual de estabilização via waivers e restruturações.",
+      "As projeções para o próximo ciclo dependem de três vetores: (i) desfecho das execuções de garantias das operações Gramado Parks e afins, com potencial de recuperação significativa dado o VGV potencial dos imóveis adjacentes; (ii) normalização dos fluxos das operações em carência após término dos waivers (a maioria até 2026); (iii) eventuais amortizações extraordinárias e prepagamentos como o do Grupo CEM (R$ 16,7 mi em dez/25) e Thermas São Pedro. O dividendo atual de R$ 0,30/cota é piso provável para 2026; um retorno a patamar de R$ 0,50-0,60/mês exigiria recuperação substancial da adimplência, o que é condicional e com prazo incerto."
     ],
     "pontosFortes": [
-      "DY 20,50% - um dos maiores do segmento",
-      "Taxa média IPCA+10,66% a.a.",
-      "91% indexado ao IPCA",
-      "Proteção contra deflação: 99% da carteira",
-      "Diversificação: ~50 CRIs em 14 estados",
-      "Gestão ativa com rotação de ativos",
-      "79% vendas / 92% obras concluídas"
+      "Taxa média ponderada elevada (IPCA + 10,66% a.a.) se a carteira performar",
+      "Diversificação por 66 CRIs, 16 estados e múltiplos segmentos",
+      "Forte proteção contra deflação (99% da carteira)",
+      "Estrutura de garantias típica com alienação fiduciária de imóveis, SPEs e fiança dos sócios",
+      "Gestão ativa e ativismo jurídico documentado contra securitizadora e devedores",
+      "Desconto patrimonial extremo (P/VP 0,24) que limita nova perda por marcação",
+      "Pré-pagamentos recentes (CEM, Thermas São Pedro) geraram R$ 17+ mi em caixa"
     ],
     "pontosDeAtencao": [
-      "P/VP de 0,24 (76% de desconto — risco ou oportunidade?)",
-      "Dividendos voláteis (R$ 0,32 a R$ 0,46)",
-      "Exposição a multipropriedade (33,7%) e loteamento (20,6%)",
-      "19% em séries subordinadas + 6% mezanino",
-      "Fundo jovem sem ciclo completo de crédito",
-      "Risco de inadimplência em CRIs High Yield"
+      "Apenas 24,8% da carteira de CRIs em dia — 75% sob waiver ou inadimplente",
+      "Concentração de ~25% do PL em operações do ecossistema Gramado Parks",
+      "Litígio histórico com a securitizadora Fortesec e questionamento de AGTs",
+      "Abstenção de opinião do auditor nas DFs de 2022 e ajustes nas DFs de 2024",
+      "Destituição de três administradores da gestora Devant Asset em dez/2023",
+      "Dividendo mensal caiu 81% (de R$ 1,60 em mai/22 para R$ 0,30 em jan/26)",
+      "Redução contínua da base de cotistas (94k → 79k em 12 meses)",
+      "Setores de multipropriedade e loteamento com inadimplência estrutural elevada (ex: CRI LR Loteamentos com exigência de recompra total em jan/26)",
+      "Duration de 3,2 anos sem clareza sobre quando os fluxos normalizarão"
     ],
-    "conclusaoFinal": "O DEVA11 oferece <strong class=\"text-emerald-400\">rendimentos elevados</strong> para investidores que aceitam o perfil de risco High Yield. A taxa média de IPCA+10,66% e o DY de 20,50% são atrativos, mas a volatilidade dos dividendos e o P/VP de 0,24 exigem <strong class=\"text-amber-400\">tolerância ao risco e horizonte de longo prazo</strong>. A gestão ativa tem demonstrado capacidade de resolver inadimplências, mas o portfólio concentrado em multipropriedade e loteamento requer monitoramento constante. Recomendação: <strong class=\"text-amber-400\">MANTER</strong> para quem já possui, com posição limitada na carteira."
+    "conclusaoFinal": "O DEVA11 é hoje um FII em trajetória de recuperação após ciclo prolongado de estresse de crédito, com 75% da carteira de CRIs sob algum tipo de reestruturação (waivers) ou inadimplente formal. A cota patrimonial de R$ 98,19 contrasta fortemente com o preço de mercado de R$ 23,49, um P/VP de 0,24 que sinaliza percepção do mercado de perda permanente significativa. O investidor que analisar este fundo precisa entender que não se trata de uma aposta em renda recorrente, mas sim em um processo litigioso e operacional de execução de garantias, cujo desfecho pode levar 2-3 anos e é sensível à qualidade das garantias subjacentes, à capacidade da gestão de pressionar devedores e securitizadoras, e ao comportamento de segmentos voláteis como multipropriedade e loteamento. O desconto patrimonial é, simultaneamente, o principal atrativo (caso haja recuperação) e o principal sinal de alerta (refletindo riscos reais já materializados). Diante desse quadro, cabe a cada investidor avaliar se dispõe do horizonte, da tolerância a volatilidade e da disciplina necessários para uma tese dessa natureza."
   },
   "footer": {
-    "dataAnalise": "24/02/2026",
-    "totalDocumentos": 370,
-    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 264,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Fundos Imobiliários envolvem riscos, inclusive de perda de principal. O investidor deve ler cuidadosamente o regulamento, os relatórios gerenciais e os fatos relevantes do fundo antes de tomar qualquer decisão."
   }
 }

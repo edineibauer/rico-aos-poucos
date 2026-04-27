@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/pvbi11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2020-07-27",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:PVBI11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 79.0,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 69.79,
+    "data": "2025-01-20"
+  },
+  "maxHistorico": {
+    "valor": 108.97,
+    "data": "2023-09-11"
+  },
+  "totalPontos": 301,
+  "coletadoEm": "2026-04-27T01:13:45Z"
+}

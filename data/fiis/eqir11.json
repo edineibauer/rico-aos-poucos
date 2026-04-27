@@ -2,49 +2,51 @@
   "meta": {
     "ticker": "EQIR11",
     "nome": "EQI Recebíveis Imobiliários FII",
-    "segmento": "Papel - CRI",
+    "nomeExtra": null,
+    "segmento": "Papel (CRI) — Multicategoria",
     "badges": [
-      "Gestão Ativa",
-      "IPCA+10,77%",
-      "28 CRIs"
+      "DY 13,5% a.a.",
+      "P/VP 0,91",
+      "32 CRIs em 10 estados"
     ],
-    "sentimento": "otimista",
-    "dataAnalise": "24/02/2026",
-    "totalDocumentos": 254
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 196
   },
   "seo": {
     "title": "EQIR11 - Análise Completa | EQI Recebíveis Imobiliários FII",
-    "description": "Análise completa do FII EQIR11 baseada em 254 documentos oficiais. Fundo de crédito imobiliário com DY 15,26%, IPCA+10,77%, inadimplência zero e 28 CRIs diversificados. Taxa 1,0% sem performance.",
-    "keywords": "EQIR11, EQI Recebíveis Imobiliários, FII crédito, CRI, análise EQIR11, dividend yield EQIR11, FII papel, EQI Asset, BTG Pactual",
-    "ogTitle": "EQIR11 - Análise Completa do FII EQI Recebíveis Imobiliários 2026",
-    "ogDescription": "Análise detalhada do EQIR11: FII de crédito com IPCA+10,77%, DY 15,26%, inadimplência zero. Carteira de 28 CRIs, taxa 1,0% sem performance.",
-    "twitterTitle": "EQIR11 - Análise Completa | FII EQI Recebíveis Imobiliários",
-    "twitterDescription": "Análise do EQIR11: IPCA+10,77%, DY 15,26%, inadimplência zero. 28 CRIs, R$ 105 Mi de patrimônio, taxa 1,0% sem performance."
+    "description": "Análise EQIR11: FII de CRI gerido pela EQI Asset, P/VP 0,91, DY 13,45%, carteira pulverizada IPCA+ e CDI+ com 32 operações em 10 estados.",
+    "keywords": "EQIR11, EQI Asset, FII de papel, CRI, fundo imobiliário recebíveis, dividend yield, P/VP, IPCA+",
+    "ogTitle": "EQIR11 - FII de CRI da EQI Asset com DY de 13,5% e desconto patrimonial",
+    "ogDescription": "Dossiê completo do EQIR11: portfólio de 32 CRIs (IPCA+10,60% e CDI+4,28%), cota a R$ 8,84 com P/VP 0,91 e dividendo de R$ 0,10/mês.",
+    "twitterTitle": "EQIR11 - Análise Completa do FII de Recebíveis Imobiliários EQI Asset",
+    "twitterDescription": "EQIR11: 32 CRIs pulverizados, DY 13,5%, P/VP 0,91, taxa de carteira IPCA+10,6%. Dossiê institucional."
   },
   "indicadores": {
-    "cotacao": 7.88,
-    "cotacaoData": "21/02/2026",
-    "pvp": 0.82,
-    "pvpDesconto": "18% de desconto",
-    "dividendYield": 15.26,
-    "dividendoMensal": 0.1,
+    "cotacao": 8.84,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.91,
+    "pvpDesconto": "9% de desconto",
+    "dividendYield": 13.45,
+    "dividendoMensal": 1.1,
     "dividendoAnual": 1.2,
-    "patrimonioLiquido": "R$ 105 Mi",
-    "vpCota": 9.61,
-    "cotistas": 9794
+    "patrimonioLiquido": "R$ 105,5 Mi",
+    "vpCota": 9.66,
+    "cotistas": 9791,
+    "ocupacao": null,
+    "numImoveis": 32
   },
   "recomendacao": {
     "nota": 7.5,
-    "veredicto": "COMPRA",
-    "cor": "emerald",
-    "resumo": "O <strong class=\"text-emerald-400\">EQIR11</strong> é um FII de crédito imobiliário com carteira diversificada de <strong class=\"text-emerald-400\">28 CRIs</strong>, entregando taxa média de <strong class=\"text-emerald-400\">IPCA+10,77%</strong> com <strong class=\"text-emerald-400\">inadimplência zero</strong>. O DY de 15,26% é excepcional, impulsionado pelo desconto de 18% sobre o VP. A gestão ativa da EQI Asset mantém dividendos estáveis de R$ 0,10/cota, equivalente a <strong class=\"text-emerald-400\">129% do CDI bruto</strong>. A combinação de <strong class=\"text-emerald-400\">taxa competitiva (1,0% sem performance)</strong>, boa diversificação setorial e P/VP atrativo torna o fundo uma oportunidade interessante."
+    "veredicto": null,
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">EQIR11</strong> é um FII de papel <strong class=\"text-blue-400\">middle grade</strong> gerido pela EQI Asset, com carteira pulverizada em 32 CRIs distribuídos por 7 setores e 10 estados. A taxa ponderada de aquisição é de <strong class=\"text-blue-400\">IPCA + 9,14%</strong> e a marcação a mercado eleva o carrego para <strong class=\"text-emerald-400\">IPCA + 10,60%</strong>, com duration curta de 3,0 anos.</p><p>O fundo negocia a <strong class=\"text-emerald-400\">P/VP 0,91</strong> (R$ 8,84 vs cota patrimonial de R$ 9,66), oferecendo dividend yield de <strong class=\"text-emerald-400\">13,45% a.a.</strong> com distribuição estável em R$ 0,10/cota desde abril/2025. Entre os pontos de atenção destacam-se a recente proteção judicial da Casa & Vídeo (1,2% do PL), a baixa liquidez diária (R$ 88,9 mil) e a exposição relevante a CRIs de financiamento de obra (segmento residencial e loteamentos representam ~31% da carteira).</p>"
   },
   "quickStats": [
     {
-      "label": "Patrimônio",
-      "valor": "R$ 105 Mi",
-      "detalhe": "VP/cota: R$ 9,61",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 9,61</span>",
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 105,5 Mi",
+      "detalhe": "VP/cota: R$ 9,66",
       "icone": "building",
       "corIcone": "blue"
     },
@@ -52,142 +54,150 @@
       "label": "Rendimento",
       "valor": "R$ 0,10",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 1,20/ano | DY 15,26%",
+      "detalhe": "R$ 1,20/ano | DY 13,45%",
       "icone": "money",
-      "corIcone": "emerald",
-      "corValor": "emerald"
+      "corIcone": "emerald"
     },
     {
-      "label": "Cotistas",
-      "valor": "9.794",
-      "detalhe": "Liquidez: R$ 69 mil/dia",
-      "icone": "users",
+      "label": "Carteira de CRIs",
+      "valor": "32 ativos",
+      "detalhe": "10 estados | 7 setores",
+      "icone": "building",
       "corIcone": "purple"
     },
     {
-      "label": "Performance",
-      "valor": "129% CDI",
-      "detalhe": "Inadimplência: 0%",
-      "detalheIcone": "arrowUp",
-      "icone": "chart",
-      "corIcone": "amber",
-      "corValor": "emerald"
+      "label": "Cotistas",
+      "valor": "9.791",
+      "detalhe": "10,9 mi cotas",
+      "icone": "users",
+      "corIcone": "blue"
     }
   ],
   "pontosAtencao": [
     {
-      "titulo": "Liquidez Reduzida",
-      "descricao": "Com mediana de liquidez diária de R$ 69 mil, o EQIR11 possui volume de negociação baixo. Investidores que precisam de liquidez imediata devem considerar este fator ao dimensionar a posição.",
-      "severidade": "orange"
-    },
-    {
-      "titulo": "P/VP de 0,82 (Desconto Excessivo)",
-      "descricao": "O desconto de 18% sobre o VP pode indicar percepção de risco pelo mercado ou simplesmente baixa cobertura de analistas. A cota patrimonial vem subindo, o que sugere que o desconto é oportunidade e não risco.",
+      "titulo": "Casa & Vídeo em proteção judicial",
+      "descricao": "Em janeiro/2026, a varejista solicitou proteção judicial de 60 dias para renegociar dívidas. O CRI Casa & Vídeo representa cerca de <strong class=\"text-amber-400\">1,2% do PL</strong>. Gestora informou que o evento não deve impactar distribuições no curto prazo, mas a operação demanda monitoramento ativo.",
       "severidade": "amber"
     },
     {
-      "titulo": "Fundo Relativamente Pequeno",
-      "descricao": "Com PL de R$ 105 milhões e 9.794 cotistas, o EQIR11 é um fundo de menor porte no segmento de crédito. Menor escala pode limitar diversificação e negociação, mas a gestão tem mostrado competência na alocação.",
+      "titulo": "Liquidez diária reduzida",
+      "descricao": "Volume médio diário de apenas <strong class=\"text-amber-400\">R$ 88,9 mil</strong>, abaixo do patamar de R$ 200-300 mil observado entre 2023-2024. Investidores com posições maiores podem enfrentar dificuldade na entrada/saída sem afetar o preço.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em desenvolvimento residencial e loteamentos",
+      "descricao": "Aproximadamente <strong class=\"text-amber-400\">31% da carteira</strong> está alocada em CRIs vinculados a obras residenciais ou loteamentos em fases distintas de desenvolvimento (Caprem, PHV, MS Incorporadora, Lotus II, DUE III, Lote5, Urba, Teriva, GT Urbanismo). Risco de execução é mitigado por garantias robustas (alienação fiduciária, aval, fundos de reserva), mas exige acompanhamento.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Tamanho ainda modesto",
+      "descricao": "Patrimônio líquido de <strong class=\"text-amber-400\">R$ 105 milhões</strong> coloca o EQIR11 entre os FIIs de papel de menor porte do mercado. Limita escala, ganho de eficiência operacional e capacidade de competir por emissões maiores e mais qualificadas.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Cota patrimonial abaixo do IPO",
+      "descricao": "Após mais de 4 anos de operação, a cota patrimonial está em <strong class=\"text-amber-400\">R$ 9,66</strong> contra IPO de R$ 10,00. Considerando reinvestimento integral dos dividendos, o retorno acumulado de 81,55% (152% do CDI) é positivo, mas a cota não recompôs o valor inicial.",
       "severidade": "amber"
     }
   ],
   "gestora": {
-    "nome": "EQI Asset",
-    "nota": 7,
+    "nome": "EQI Asset (Euqueroinvestir Gestão de Recursos)",
+    "nota": 7.5,
     "notaLabel": "BOA",
     "stats": [
       {
-        "label": "Início do Fundo",
-        "valor": "Ago/2021"
+        "label": "Início do fundo",
+        "valor": "Agosto/2021"
       },
       {
-        "label": "Patrimônio EQIR",
-        "valor": "R$ 105 Mi"
+        "label": "Tempo de gestão EQIR",
+        "valor": "~5 anos"
       },
       {
-        "label": "DY 12M",
-        "valor": "15,26%",
-        "cor": "emerald"
+        "label": "Taxa de administração",
+        "valor": "1% a.a."
+      },
+      {
+        "label": "Default histórico na carteira",
+        "valor": "Nenhum"
       }
     ],
-    "resumo": "A <strong class=\"text-emerald-400\">EQI Asset</strong> é a gestora do grupo EQI Investimentos, uma das maiores plataformas de assessoria do Brasil. O EQIR11 é gerido com foco em CRIs de risco moderado, buscando rentabilidade alvo de <strong class=\"text-emerald-400\">IPCA+8% ao ano</strong> líquido de custos. A gestão ativa inclui rotação de ativos e compressão de spreads, com <strong class=\"text-emerald-400\">inadimplência zero</strong> desde o início do fundo.",
-    "link": "../../gestores/eqi-asset/"
+    "resumo": "<p>A <strong class=\"text-blue-400\">EQI Asset</strong>, braço de gestão de recursos do grupo EuQueroInvestir (EQI), é a gestora do EQIR11 desde o IPO em agosto/2021. A casa publica relatórios gerenciais mensais detalhados, com transparência sobre alocação, marcação a mercado, eventos de assembleia e estratégia.</p><p>O <strong class=\"text-emerald-400\">track record</strong> da gestão se destaca por: (i) zero eventos de default desde o início do fundo, (ii) atuação proativa em assembleias, (iii) ganhos de capital recorrentes em destravamentos de correção monetária e pré-pagamentos, e (iv) construção de carteira pulverizada (média 5% por ativo). A administração é feita pelo Banco Genial S.A. (anteriormente BTG Pactual).</p>",
+    "link": null
   },
   "taxas": {
-    "subtitulo": "Competitivas e sem taxa de performance",
+    "subtitulo": "Taxa total competitiva para o segmento de FIIs de papel middle grade",
     "glowCor": "green",
     "itens": [
       {
         "label": "Taxa de Administração",
-        "valor": "1,00% a.a.",
-        "detalhe": "Inclui administração, gestão e custódia",
+        "valor": "1,0% a.a.",
+        "detalhe": "Sobre o Patrimônio Líquido",
         "corBorda": "emerald"
       },
       {
         "label": "Taxa de Performance",
         "valor": "Não há",
-        "detalhe": "Diferencial competitivo importante",
+        "detalhe": "Sem cobrança",
         "corBorda": "emerald"
       },
       {
-        "label": "Administrador",
-        "valor": "BTG Pactual",
-        "detalhe": "BTG Pactual Serviços Financeiros S.A. DTVM",
-        "corBorda": "slate"
-      }
-    ],
-    "comparativoTitulo": "Comparativo com FIIs de Crédito",
-    "comparativo": [
-      {
-        "ticker": "EQIR11",
-        "taxa": "1,00%",
-        "perf": "Sem performance",
-        "destaque": true
-      },
-      {
-        "ticker": "KNSC11",
-        "taxa": "1,05%",
-        "perf": "+20% perf. s/ CDI+1%"
-      },
-      {
-        "ticker": "MCCI11",
-        "taxa": "0,80%",
-        "perf": "+20% perf. s/ IPCA+3%"
-      },
-      {
-        "ticker": "RBRR11",
-        "taxa": "1,00%",
-        "perf": "+20% perf. s/ CDI+2%"
+        "label": "Liquidez Diária",
+        "valor": "R$ 88,9 mil",
+        "detalhe": "Volume médio (mediana fev/26)",
+        "corBorda": "amber"
       }
     ],
     "detalhes": [
       {
         "label": "Administrador",
-        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+        "valor": "Banco Genial S.A. (anteriormente BTG Pactual Serviços Financeiros)"
       },
       {
-        "label": "Gestora",
-        "valor": "EQI Asset"
+        "label": "Gestor",
+        "valor": "EQI Asset (Euqueroinvestir Gestão de Recursos)"
       },
       {
-        "label": "Início",
+        "label": "Início do Fundo",
         "valor": "Agosto/2021"
+      },
+      {
+        "label": "Número de Cotas Emitidas",
+        "valor": "10.909.315"
+      },
+      {
+        "label": "Tipo de Investidor",
+        "valor": "Geral"
+      },
+      {
+        "label": "Tributação",
+        "valor": "Rendimentos isentos de IR para PF (limite 10% das cotas)"
       }
     ]
   },
   "portfolio": {
     "stats": [
       {
-        "label": "CRIs",
-        "valor": "81,5%"
+        "label": "Total de CRIs",
+        "valor": "32"
       },
       {
-        "label": "FIIs",
-        "valor": "3,3%"
+        "label": "Estados",
+        "valor": "10"
       },
       {
-        "label": "Caixa",
-        "valor": "15,2%"
+        "label": "Setores",
+        "valor": "7"
+      },
+      {
+        "label": "Duration média",
+        "valor": "3,0 anos",
+        "cor": "emerald"
+      },
+      {
+        "label": "LTV ponderado",
+        "valor": "48%",
+        "cor": "emerald"
       },
       {
         "label": "Inadimplência",
@@ -199,242 +209,243 @@
       "labels": [
         "Galpões Logísticos",
         "Residencial",
-        "Corporativo",
-        "Energia",
         "Loteamento",
+        "Energia",
+        "Corporativo",
         "Varejo",
         "Home Equity"
       ],
       "data": [
-        28,
-        25,
-        18,
+        24,
+        17,
+        14,
         12,
-        8,
+        12,
         5,
         4
       ],
       "cores": [
-        "#10b981",
         "#3b82f6",
         "#8b5cf6",
-        "#f97316",
-        "#ec4899",
-        "#ef4444",
-        "#06b6d4"
-      ]
-    },
-    "locatarioChart": {
-      "labels": [
-        "IPCA+ (10,77% a.a.)",
-        "CDI+ (4,30% a.a.)",
-        "Pré-fixado (16,51%)",
-        "FII + Caixa"
-      ],
-      "data": [
-        58.4,
-        20.7,
-        2.5,
-        18.5
-      ],
-      "cores": [
-        "#3b82f6",
         "#10b981",
         "#f59e0b",
-        "#6b7280"
+        "#06b6d4",
+        "#ef4444",
+        "#ec4899"
       ]
     },
     "locatarios": [
       {
-        "nome": "Lotus Kasa & Vert",
-        "setor": "Residencial",
-        "receita": "7,4%",
-        "rating": "CDI+4,0%",
+        "nome": "Caprem (Vitrius Residence)",
+        "setor": "Residencial - Rio Claro/SP",
+        "receita": "7,1% PL",
+        "rating": "IPCA+11,70% / Vencto Ago/27",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Habitat Construtora",
+        "setor": "Corporativo - MT/GO/MG",
+        "receita": "8,0% PL",
+        "rating": "IPCA+9,85% / Vencto Jun/33",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Lotus (Kasa & Vert + Lotus II)",
+        "setor": "Residencial/Corporativo - DF",
+        "receita": "8,6% PL",
+        "rating": "CDI+4,00% e Pré 18,78%",
+        "ratingCor": "blue",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Brasol (3 usinas solares)",
+        "setor": "Energia - Cuiabá/MT",
+        "receita": "6,3% PL",
+        "rating": "IPCA+9,54% / Vencto Jul/33",
         "ratingCor": "emerald",
-        "risco": "Moderado",
-        "riscoCor": "blue"
-      },
-      {
-        "nome": "Habitat",
-        "setor": "Corporativo",
-        "receita": "8,1%",
-        "rating": "IPCA+11,79%",
-        "ratingCor": "blue",
-        "risco": "Moderado",
-        "riscoCor": "blue"
-      },
-      {
-        "nome": "CitLog Varginha",
-        "setor": "Galpões Logísticos",
-        "receita": "6,7%",
-        "rating": "IPCA+10,0%",
-        "ratingCor": "blue",
         "risco": "Baixo",
         "riscoCor": "emerald"
       },
       {
-        "nome": "Brasol (Energia Solar)",
-        "setor": "Energia",
-        "receita": "6,3%",
-        "rating": "IPCA+9,67%",
-        "ratingCor": "blue",
-        "risco": "Moderado",
-        "riscoCor": "blue"
-      },
-      {
-        "nome": "Outros (~24 CRIs)",
-        "setor": "Diversificado",
-        "receita": "71,5%",
-        "rating": "Misto",
-        "ratingCor": "slate",
+        "nome": "Hedge Logística (Citlog Varginha + Viracopos)",
+        "setor": "Galpões Logísticos - MG/SP",
+        "receita": "11,1% PL",
+        "rating": "IPCA+8,25% e IPCA+7,50%",
+        "ratingCor": "emerald",
         "risco": "Baixo",
         "riscoCor": "emerald"
-      }
-    ],
-    "riscoResumo": [
-      {
-        "label": "CRIs com Garantia Real",
-        "valor": 85,
-        "cor": "emerald"
       },
       {
-        "label": "CRIs Corporativos",
-        "valor": 15,
-        "cor": "amber"
+        "nome": "RCP (Centro Logístico Rio Claro)",
+        "setor": "Galpões Logísticos AAA - SP",
+        "receita": "4,0% PL",
+        "rating": "IPCA+8,70% / 100% locado",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Opy Health (Hospital BH)",
+        "setor": "Concessão Saúde PPP - MG",
+        "receita": "≈4,0% PL (vendido em parte)",
+        "rating": "IPCA+7,68% / Vencto Ago/31",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Casa & Vídeo",
+        "setor": "Varejo - RJ/ES/SP/MG",
+        "receita": "1,2% PL",
+        "rating": "IPCA+7,36% / Em proteção judicial",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
       }
     ],
-    "riscoNota": "Carteira com 28 CRIs pulverizados em 7 setores e 10 estados. Taxa média IPCA+10,77% (Duration: 3,5 anos) para a parcela IPCA+ e CDI+4,30% (Duration: 2,4 anos) para a parcela CDI+. A maioria dos CRIs possui garantias reais (alienação fiduciária de imóveis), cessão fiduciária de recebíveis e fundos de reserva. <strong class=\"text-emerald-400\">Inadimplência zero</strong> desde o início do fundo em agosto/2021."
+    "riscoNota": "<p>O portfólio é <strong class=\"text-emerald-400\">altamente pulverizado</strong>, com 32 CRIs em 27 operações distintas, nenhuma representando mais de 7,1% do PL. A exposição setorial é equilibrada entre logístico (24%), residencial (17%), loteamento (14%), energia (12%) e corporativo (12%).</p><p>O <strong class=\"text-blue-400\">LTV ponderado de 48%</strong> indica boa cobertura de garantias reais, com predominância de alienação fiduciária de cotas, imóveis, recebíveis e fundos de reserva. O único evento crítico recente é a proteção judicial da Casa & Vídeo (1,2% do PL), com a gestora informando que não deve impactar distribuições.</p>"
   },
   "timeline": {
-    "subtitulo": "Do IPO à consolidação como FII de crédito com gestão ativa",
+    "subtitulo": "Trajetória de 5 anos: do IPO à carteira diversificada de R$ 105 milhões",
     "periodos": [
       {
         "periodo": "Ago/2021",
-        "label": "IPO E INÍCIO",
+        "label": "IPO",
         "cor": "blue",
-        "descricao": "Constituição e início das operações do EQI Recebíveis Imobiliários FII.",
+        "descricao": "IPO a R$ 10,00/cota com EQI Asset como gestora e BTG Pactual como administrador. Mandato: investir em CRIs middle grade com remuneração-alvo de IPCA+8% líquido de custos.",
+        "pontos": []
+      },
+      {
+        "periodo": "2022",
+        "label": "1º ANO",
+        "cor": "blue",
+        "descricao": "Fundo concluiu alocação inicial e atingiu 17 CRIs em carteira. Distribuição mensal cresceu de R$ 1,05 para R$ 1,20/cota (cotas pré-split).",
         "pontos": [
-          "CNPJ: 41.076.380/0001-25",
-          "Gestora: EQI Asset | Administrador: BTG Pactual",
-          "Foco em CRIs com risco moderado",
-          "Rentabilidade alvo: IPCA+8% a.a. líquido"
+          "<strong class=\"text-emerald-400\">DY anualizado superior a 14%</strong>",
+          "Portfólio diversificado em 8 estados",
+          "Início de exposição a operações de varejo e energia"
         ]
       },
       {
-        "periodo": "2021-2022",
-        "label": "CRESCIMENTO",
-        "cor": "emerald",
-        "descricao": "Período de maiores dividendos, com distribuições superiores a R$ 0,10/cota antes do desdobramento.",
+        "periodo": "Nov/Dez 2023",
+        "label": "2ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "Realizada 2ª emissão pública de cotas, dobrando o tamanho do fundo. Número de cotas saiu de ~5 milhões para 10,9 milhões e o número de cotistas ultrapassou 10 mil. Split de cotas (1:10) ampliou acessibilidade.",
         "pontos": [
-          "Dividendos entre R$ 1,03 e R$ 1,20/cota (pré-split)",
-          "Set/2022: Desdobramento de cotas 10:1",
-          "Pós-split: dividendos estabilizam em R$ 0,11/cota",
-          "Construção progressiva da carteira de CRIs"
-        ]
-      },
-      {
-        "periodo": "2023",
-        "label": "ESTABILIDADE",
-        "cor": "purple",
-        "descricao": "Período de dividendos estáveis em R$ 0,11/cota/mês durante todo o ano.",
-        "pontos": [
-          "12 meses consecutivos de R$ 0,11/cota",
-          "Manutenção da inadimplência zero",
-          "Diversificação ampliada para ~25 CRIs",
-          "Consolidação da estratégia de gestão ativa"
+          "Aumento do PL para acima de <strong class=\"text-emerald-400\">R$ 100 milhões</strong>",
+          "Captação de R$ 60+ milhões para alocação em novas operações",
+          "Maior pulverização e liquidez de mercado"
         ]
       },
       {
         "periodo": "2024",
-        "label": "AJUSTE",
-        "cor": "amber",
-        "descricao": "Redução temporária dos dividendos para R$ 0,095/cota durante boa parte do ano.",
+        "label": "EXPANSÃO DA CARTEIRA",
+        "cor": "blue",
+        "descricao": "Carteira expandida para 30+ CRIs em 8-10 estados. Aquisições de CRIs em segmentos novos como home equity (Wimo, Pontte, Creditas), shopping (Jardim Sul) e escritórios (Thera Corporate). Distribuição estabilizada em R$ 0,095/cota.",
         "pontos": [
-          "Jan/24: Redução para R$ 0,10/cota",
-          "Fev/24: Ajuste para R$ 0,075/cota (mínimo)",
-          "Mar-Dez/24: Estabilização entre R$ 0,080 e R$ 0,095/cota",
-          "Rotação de carteira e reposicionamento estratégico"
+          "Inclusão do CRI <strong class=\"text-blue-400\">RCP (Centro Logístico Rio Claro)</strong> de IPCA+8,70%",
+          "Diversificação setorial relevante com FII VRTM11 em carteira",
+          "Ganho de capital em pré-pagamentos (Oba, Yazaki)"
         ]
       },
       {
-        "periodo": "2025-2026",
-        "label": "RECUPERAÇÃO",
-        "cor": "emerald",
-        "descricao": "Retorno aos dividendos de R$ 0,10/cota e melhora nas taxas de alocação.",
+        "periodo": "2025",
+        "label": "AUMENTO DO CARREGO",
+        "cor": "blue",
+        "descricao": "Gestora elevou guidance de R$ 0,095 para R$ 0,10/cota mensal a partir de janeiro/2025, refletindo cenário de juros e inflação mais altos. Aquisição de novos CRIs com taxas mais atrativas, incluindo CRI prefixado Lotus II a 18,78%.",
         "pontos": [
-          "<strong class=\"text-emerald-400\">Fev/25: Retorno a R$ 0,10/cota</strong>",
-          "<strong class=\"text-emerald-400\">PL: R$ 105 Mi | 9.794 cotistas</strong>",
-          "<strong class=\"text-emerald-400\">DY 12M: 15,26% | 129% CDI bruto</strong>",
-          "28 CRIs em 7 setores e 10 estados",
-          "P/VP de 0,82 com potencial de valorização"
+          "Distribuição extraordinária de <strong class=\"text-emerald-400\">R$ 0,106</strong> em julho/2025",
+          "Carteira atinge <strong class=\"text-emerald-400\">IPCA+10,75% a.a.</strong> (taxa MTM)",
+          "Saída do CRI Opy Health com ganho de capital"
+        ]
+      },
+      {
+        "periodo": "Jan/2026",
+        "label": "PROTEÇÃO JUDICIAL CASA & VÍDEO",
+        "cor": "amber",
+        "descricao": "Casa & Vídeo solicitou proteção judicial de 60 dias para renegociar endividamento. Posição representa 1,2% do PL e gestora informou que não deve impactar próximas distribuições.",
+        "pontos": [
+          "Único evento de crédito relevante desde o IPO",
+          "Garantia: cessão fiduciária de recebíveis de cartões"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Carteira pulverizada em 32 CRIs, 7 setores e 10 estados. Taxa MTM de IPCA+10,60% (IPCA portion). Cota mercado a R$ 8,84 com P/VP 0,91 e DY 13,45%.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">PL de R$ 105 milhões</strong> e 9.791 cotistas",
+          "Saldo a distribuir de R$ 373 mil retido para próximos meses",
+          "Taxa de carteira: <strong class=\"text-emerald-400\">IPCA+10,60% / CDI+4,28% / Pré 17,09%</strong>"
         ]
       }
     ],
     "resumoTrajetoria": {
-      "titulo": "Resumo da trajetória - POSITIVA:",
-      "texto": "O EQIR11 passou por um ciclo completo de ajustes desde o IPO em 2021, reduzindo dividendos em 2024 para reposicionar a carteira e retornando a <strong class=\"text-emerald-400\">R$ 0,10/cota em 2025</strong>. A carteira de 28 CRIs com taxa média de IPCA+10,77% e <strong class=\"text-emerald-400\">inadimplência zero</strong> demonstra a qualidade da gestão. O P/VP de 0,82 oferece <strong class=\"text-emerald-400\">18% de desconto</strong> sobre o valor patrimonial."
+      "titulo": "Resumo da Trajetória",
+      "texto": "<p>O EQIR11 percorreu uma trajetória consistente desde o IPO em agosto/2021. A gestão construiu uma carteira pulverizada em 32 CRIs sem registrar default em mais de 4 anos. A 2ª emissão em 2023 marcou o salto de escala, dobrando o patrimônio.</p><p>Considerando reinvestimento dos dividendos, o retorno acumulado desde o IPO chega a <strong class=\"text-emerald-400\">81,55%</strong>, equivalente a <strong class=\"text-emerald-400\">152% do CDI</strong> no período. A cota patrimonial encontra-se em R$ 9,66 (vs R$ 10,00 no IPO), enquanto o cotista que reinvestiu rendimentos teve retorno superior a indicadores tradicionais.</p>"
     },
     "crescimento": [
       {
-        "label": "CRIs na Carteira",
-        "valor": "28",
-        "detalhe": "7 setores, 10 estados"
+        "label": "Variação Cota Mercado",
+        "valor": "-11,6%",
+        "detalhe": "R$ 10,00 → R$ 8,84"
       },
       {
-        "label": "Taxa Média IPCA+",
-        "valor": "10,77%",
-        "detalhe": "MTM da parcela IPCA+"
+        "label": "Total Distribuído",
+        "valor": "R$ 5,35",
+        "detalhe": "Desde IPO (acumulado)"
       },
       {
-        "label": "DY 12 Meses",
-        "valor": "15,26%",
-        "detalhe": "129% CDI bruto"
-      },
-      {
-        "label": "Inadimplência",
-        "valor": "0%",
-        "detalhe": "Zero desde o IPO"
+        "label": "Retorno c/ Reinvestimento",
+        "valor": "+81,55%",
+        "detalhe": "Equivalente a 152% do CDI"
       }
     ]
   },
   "tese": {
-    "resumo": "EQIR11 é um <strong class=\"text-emerald-400\">FII de crédito imobiliário com gestão ativa</strong> pela EQI Asset, focado em CRIs com risco moderado e rentabilidade alvo de IPCA+8% líquido. A carteira de 28 operações com <strong class=\"text-emerald-400\">inadimplência zero</strong> e taxa média de IPCA+10,77% entrega <strong class=\"text-emerald-400\">129% do CDI bruto</strong>. O P/VP de 0,82 oferece desconto de 18% sobre o VP, e a ausência de taxa de performance é um diferencial competitivo. O DY de 15,26% é um dos mais altos do segmento de crédito.",
+    "resumo": "<p>A tese de investimento do EQIR11 baseia-se em uma <strong class=\"text-blue-400\">carteira de CRIs middle grade altamente pulverizada</strong> (32 ativos, máximo 7,1% por operação) com remuneração-alvo de IPCA+8% líquido de custos. A taxa marcada a mercado de IPCA+10,60% somada ao DY de 13,45% e ao desconto de 9% sobre o valor patrimonial cria assimetria favorável em ciclos de queda de juros.</p><p>O fundo apresenta governança transparente, gestão ativa em assembleias e zero eventos de default em 5 anos. A distribuição mensal de R$ 0,10/cota está sustentada pelo carrego da carteira e pela inflação esperada nos próximos 12 meses, com saldo retido como amortecedor.</p>",
     "paraQuem": [
-      "Investidores que buscam <strong class=\"text-emerald-400\">renda mensal acima do CDI</strong> com isenção de IR",
-      "Perfil <strong class=\"text-emerald-400\">moderado a arrojado</strong> que aceita menor liquidez",
-      "Quem busca <strong class=\"text-emerald-400\">proteção inflacionária</strong> (72% IPCA+)",
-      "Investidores que valorizam <strong class=\"text-emerald-400\">desconto sobre o VP</strong> (P/VP 0,82)"
+      "Investidor que busca <strong class=\"text-emerald-400\">renda mensal isenta de IR</strong> com proteção contra inflação (90% IPCA+)",
+      "Perfil moderado-arrojado que aceita exposição a CRIs middle grade em troca de spread atrativo",
+      "Quem busca <strong class=\"text-blue-400\">diversificação setorial</strong> em recebíveis imobiliários (logística, residencial, energia, varejo)",
+      "Investidor que prioriza <strong class=\"text-emerald-400\">pulverização extrema</strong> da carteira (nenhum CRI > 8% do PL)"
     ],
     "naoParaQuem": [
-      "Quem <strong class=\"text-amber-400\">precisa de alta liquidez</strong> diária (volume médio R$ 69 mil)",
-      "Investidores que buscam <strong class=\"text-amber-400\">fundos de grande porte</strong> (PL de R$ 105 Mi)",
-      "Perfil <strong class=\"text-amber-400\">ultra-conservador</strong> que prefere somente Tesouro Direto",
-      "Quem busca <strong class=\"text-amber-400\">fundo de tijolo</strong> com imóveis físicos e aluguéis"
+      "Investidor conservador que busca apenas CRIs high grade com devedor único listado em bolsa",
+      "Quem precisa de <strong class=\"text-amber-400\">alta liquidez diária</strong> (volume médio de R$ 88,9 mil pode dificultar grandes ordens)",
+      "Investidor que rejeita exposição a operações de financiamento de obra ou loteamento (~31% da carteira)",
+      "Perfil que requer fundos de grande porte (PL > R$ 1 bilhão) para reduzir risco de gestão"
     ]
   },
   "dividendos": {
     "chartLabels": [
-      "Jan",
-      "Fev",
-      "Mar",
-      "Abr",
-      "Mai",
-      "Jun",
-      "Jul",
-      "Ago",
-      "Set",
-      "Out",
-      "Nov",
-      "Dez"
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
     ],
     "chartData": [
-      0.095,
-      0.1,
       0.1,
       0.1,
       0.1,
       0.1,
       0.106,
+      0.1,
+      0.1,
       0.1,
       0.1,
       0.1,
@@ -446,54 +457,42 @@
     "chartYMax": 0.12,
     "totaisAnuais": [
       {
-        "ano": "Média 2025",
-        "valor": "R$ 0,100"
+        "ano": "2022",
+        "valor": "R$ 1,32 (cotas pré-split)"
       },
       {
-        "ano": "DY 12M",
-        "valor": "15,26%",
-        "cor": "emerald"
+        "ano": "2023",
+        "valor": "R$ 1,28 (cotas pré-split)"
       },
       {
-        "ano": "Gross-up anual",
-        "valor": "17,95% a.a."
+        "ano": "2024",
+        "valor": "R$ 1,11"
       },
       {
-        "ano": "% CDI (gross up)",
-        "valor": "129%",
-        "cor": "emerald"
-      },
-      {
-        "ano": "Saldo a Distribuir",
-        "valor": "R$ 376.690"
+        "ano": "2025",
+        "valor": "R$ 1,21"
       }
     ],
     "guidance": {
-      "periodo": "Projeção 2026",
-      "faixa": "R$ 0,10 - R$ 0,11",
-      "unidade": "por cota/mês"
+      "periodo": "1S2026",
+      "faixa": "R$ 0,10 (estável)",
+      "unidade": "por cota / mês"
     },
     "stats": [
       {
-        "label": "Maior (Jul/25)",
-        "valor": "R$ 0,106",
-        "cor": "emerald"
+        "label": "Atual (Fev/26)",
+        "valor": "R$ 0,10"
       },
       {
-        "label": "Menor (Fev/24)",
-        "valor": "R$ 0,075"
+        "label": "Maior 12m",
+        "valor": "R$ 0,106"
       },
       {
-        "label": "Primeiro Dividendo",
-        "valor": "Set/21"
+        "label": "Menor 12m",
+        "valor": "R$ 0,10"
       },
       {
-        "label": "Total 2025",
-        "valor": "R$ 1,201",
-        "cor": "emerald"
-      },
-      {
-        "label": "Tendência 2025",
+        "label": "Tendência",
         "valor": "Estável",
         "cor": "emerald"
       }
@@ -501,63 +500,70 @@
   },
   "valuation": {
     "pvp": {
-      "valor": "0,82",
-      "descricao": "Cota negociada com <span class=\"text-emerald-400\">18% de desconto</span> sobre o valor patrimonial",
+      "valor": "0,91",
+      "descricao": "<p>O EQIR11 negocia com <strong class=\"text-emerald-400\">9% de desconto sobre o valor patrimonial</strong>. A cota patrimonial de R$ 9,66 reflete a marcação a mercado dos CRIs com curva de juros de fevereiro/2026. Em ciclo de queda da Selic, o desconto tende a ser revertido.</p>",
       "detalhes": [
         {
           "label": "VP/Cota",
-          "valor": "R$ 9,61"
+          "valor": "R$ 9,66"
         },
         {
-          "label": "Preço",
-          "valor": "R$ 7,88",
+          "label": "Preço Mercado",
+          "valor": "R$ 8,84",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "9% (P/VP 0,91)",
           "cor": "emerald"
         }
       ]
     },
     "spread": {
-      "valor": "129%",
-      "label": "% CDI (gross up)",
+      "valor": "13,45%",
+      "label": "Dividend Yield",
       "cor": "emerald",
-      "descricao": "Rendimento equivalente a 129% do CDI bruto, com isenção de IR para pessoa física",
-      "detalhe": "DY EQIR11 (15,26%) com isenção de IR para PF"
+      "descricao": "<p>DY de <strong class=\"text-emerald-400\">13,45% a.a.</strong> equivale a aproximadamente <strong class=\"text-emerald-400\">99% do CDI</strong> e <strong class=\"text-emerald-400\">116% do CDI bruto</strong> (gross-up 15%). Considerando IPCA esperado de 4,5%, o yield real fica acima de 8,5% a.a., líquido de IR para PF.</p>"
     },
     "recomendacoes": {
-      "valor": "1,00%",
-      "label": "Taxa Total",
-      "cor": "emerald",
-      "descricao": "Sem taxa de performance. Taxa única de 1,0% a.a.",
-      "detalhe": "Competitiva para o segmento de crédito"
+      "valor": "R$ 9,55",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Preço justo calculado com base em: (i) modelo Gordon: DPS R$ 1,20 / (custo capital 12,5% - crescimento 0%) = R$ 9,60; (ii) convergência ao valor patrimonial (R$ 9,66); (iii) DY target de 12,5% para o segmento middle grade ⇒ R$ 9,60. A faixa converge para próximo do <strong class=\"text-blue-400\">valor patrimonial</strong>, indicando potencial de ~8% de valorização da cota além dos dividendos correntes.</p>"
     }
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-emerald-400\">EQIR11</strong> é um FII de crédito imobiliário que entrega <strong class=\"text-emerald-400\">DY de 15,26%</strong> (129% CDI bruto) com carteira de 28 CRIs e <strong class=\"text-emerald-400\">inadimplência zero</strong> desde o IPO em agosto/2021. A taxa média de IPCA+10,77% na parcela indexada à inflação oferece excelente proteção inflacionária, enquanto a parcela CDI+ (20,7% do PL) captura o cenário de SELIC elevada.",
-      "O P/VP de 0,82 é um dos principais atrativos: <strong class=\"text-emerald-400\">18% de desconto</strong> sobre o valor patrimonial, que vem crescendo mês a mês. A cota patrimonial subiu de R$ 9,56 para R$ 9,61 em novembro/2025, indicando geração de valor pela carteira. A taxa média implícita no preço de mercado é de IPCA+17,13%, extraordinariamente alta para o segmento.",
-      "A diversificação em <strong class=\"text-emerald-400\">7 setores e 10 estados</strong> com 28 operações mitiga riscos de concentração. A gestão ativa da EQI Asset realiza rotações estratégicas, como a venda de posições em Opy e Creditas para alocar em operações com melhor relação risco-retorno. A ausência de taxa de performance e a taxa total de 1,0% são competitivas."
+      "O EQIR11 chega a abril/2026 como um FII de papel middle grade pulverizado, com patrimônio de R$ 105 milhões distribuído em 32 CRIs em 7 setores e 10 estados. A taxa de aquisição ponderada da carteira está em IPCA+9,14% (IPCA portion) com marcação a mercado em IPCA+10,60%, refletindo o cenário de juros reais elevados de 2025-2026. A gestão da EQI Asset acumula 5 anos de operação sem registrar nenhum evento de default, único registro material sendo a recente proteção judicial da Casa & Vídeo (1,2% do PL).",
+      "Tecnicamente, o fundo combina P/VP 0,91 (9% de desconto patrimonial) com DY de 13,45% a.a. (99% do CDI líquido para PF). A distribuição mensal de R$ 0,10/cota está estável desde abril/2025 e está sustentada pelo carrego da carteira (74% IPCA+, 24% CDI+, 2% Pré). O saldo retido de R$ 373 mil funciona como amortecedor para meses de menor inflação. Duration média de 3,0 anos limita a volatilidade da cota patrimonial em movimentos de curva de juros.",
+      "Para os próximos 12 meses, a expectativa é de manutenção da distribuição em R$ 0,10/cota, com possível upside em meses de IPCA mais alto. O cenário macro favorece o segmento: Selic em 15% com expectativa de queda, IPCA controlado em 4,3%, IFIX em máxima histórica e demanda crescente por papéis de renda fixa imobiliária. Catalisadores: convergência da cota ao valor patrimonial, eventual queda da Selic ampliando o spread vs renda fixa, e oxigenação da carteira com pré-pagamentos. Riscos: deterioração de operações de financiamento de obra e novos eventos de crédito como o da Casa & Vídeo."
     ],
     "pontosFortes": [
-      "DY 15,26% (129% CDI bruto) com isenção IR",
-      "Inadimplência zero em 28 CRIs",
-      "P/VP 0,82 (18% de desconto sobre VP)",
-      "Taxa 1,0% sem performance fee",
-      "IPCA+10,77% de taxa média (MtM)",
-      "Diversificação: 7 setores, 10 estados, 28 CRIs",
-      "Cota patrimonial em tendência de alta"
+      "Carteira <strong class=\"text-emerald-400\">altamente pulverizada</strong> em 32 CRIs (máximo 7,1% por operação)",
+      "<strong class=\"text-emerald-400\">Zero defaults</strong> em 5 anos de história desde o IPO",
+      "Taxa de carteira de <strong class=\"text-emerald-400\">IPCA+10,60% (MTM)</strong>, bem acima do alvo de IPCA+8%",
+      "P/VP 0,91 oferece <strong class=\"text-emerald-400\">desconto patrimonial de 9%</strong>",
+      "DY de <strong class=\"text-emerald-400\">13,45% a.a.</strong> isento de IR (equivalente a 116% do CDI bruto)",
+      "Diversificação setorial e geográfica robusta (7 setores, 10 estados)",
+      "Taxa de administração competitiva de <strong class=\"text-emerald-400\">1% a.a.</strong>, sem performance",
+      "Comunicação <strong class=\"text-emerald-400\">transparente e detalhada</strong> via relatórios mensais",
+      "Gestão ativa com ganhos de capital frequentes em pré-pagamentos e destravamentos"
     ],
     "pontosDeAtencao": [
-      "Liquidez reduzida (R$ 69 mil/dia de mediana)",
-      "Fundo de menor porte (PL R$ 105 Mi)",
-      "9.794 cotistas (base menor que peers)",
-      "15,2% em caixa (pode reduzir rendimento)",
-      "Fundo com ~4 anos de histórico (desde ago/2021)",
-      "Sensível a cenários de deflação (72% IPCA+)"
+      "<strong class=\"text-amber-400\">Casa & Vídeo</strong> em proteção judicial (1,2% do PL) — primeiro evento de crédito relevante",
+      "Liquidez diária reduzida de <strong class=\"text-amber-400\">R$ 88,9 mil</strong>, abaixo de FIIs comparáveis",
+      "<strong class=\"text-amber-400\">31% da carteira</strong> em CRIs de financiamento de obra (residencial e loteamentos)",
+      "Patrimônio de <strong class=\"text-amber-400\">R$ 105 milhões</strong> ainda modesto frente a peers (Kinea, Capitânia, etc.)",
+      "Cota patrimonial de R$ 9,66 ainda <strong class=\"text-amber-400\">abaixo do IPO de R$ 10,00</strong>",
+      "Exposição relevante a 2 operações da <strong class=\"text-amber-400\">Lotus</strong> (Kasa & Vert + Lotus II = 8,6% do PL)",
+      "Perfil middle grade exige acompanhamento ativo de garantias e covenants",
+      "Sensibilidade ao IPCA: meses de inflação baixa pressionam o resultado"
     ],
-    "conclusaoFinal": "O EQIR11 é uma opção atrativa para investidores que buscam <strong class=\"text-emerald-400\">alto yield com desconto sobre o VP</strong> no segmento de crédito imobiliário. A combinação de DY de 15,26%, inadimplência zero, taxa competitiva sem performance fee e P/VP de 0,82 cria uma relação risco-retorno muito favorável. A principal limitação é a <strong class=\"text-amber-400\">liquidez reduzida</strong>, que exige dimensionamento adequado da posição. Para horizontes de médio/longo prazo, o desconto sobre o VP e a qualidade da carteira sustentam a recomendação de compra."
+    "conclusaoFinal": "O EQIR11 reúne uma carteira pulverizada de CRIs com taxa MTM de IPCA+10,60%, distribuição estável de R$ 0,10/cota mensal e desconto patrimonial de 9%. O histórico de 5 anos sem defaults, o tamanho do fundo (R$ 105 milhões) e a transparência da gestão pela EQI Asset são elementos consistentes para o investidor avaliar. O perfil é compatível com investidor moderado-arrojado que busca renda mensal isenta indexada à inflação. As principais variáveis a monitorar nos próximos meses são a evolução do caso Casa & Vídeo, o ritmo de queda da Selic e a possível convergência da cota ao valor patrimonial."
   },
   "footer": {
-    "dataAnalise": "24/02/2026",
-    "totalDocumentos": 254,
-    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 196,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Os investimentos em fundos imobiliários envolvem riscos de mercado, crédito e liquidez."
   }
 }

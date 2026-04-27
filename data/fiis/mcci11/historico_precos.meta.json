@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/mcci11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-12-09",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:MCCI11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 96.35,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 73.68,
+    "data": "2025-01-20"
+  },
+  "maxHistorico": {
+    "valor": 112.1008,
+    "data": "2020-01-06"
+  },
+  "totalPontos": 334,
+  "coletadoEm": "2026-04-27T01:13:19Z"
+}

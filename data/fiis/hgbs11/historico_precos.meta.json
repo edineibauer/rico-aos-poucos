@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/hgbs11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:HGBS11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 20.87,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 15.5407,
+    "data": "2021-11-29"
+  },
+  "maxHistorico": {
+    "valor": 30.121,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:54Z"
+}

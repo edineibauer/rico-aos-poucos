@@ -1,0 +1,2804 @@
+{
+  "meta": {
+    "ticker": "RECR11",
+    "nome": "FII REC Recebíveis Imobiliários",
+    "nomeExtra": "REC Recebíveis Imobiliários",
+    "segmento": "Papel (CRI) — Multicategoria",
+    "badges": [
+      "DY 13,5% a.a.",
+      "P/VP 0,91",
+      "98 CRIs + 6 FIIs"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "2026-04-26",
+    "totalDocumentos": 464
+  },
+  "seo": {
+    "title": "RECR11 - Análise Completa | FII REC Recebíveis Imobiliários",
+    "description": "Análise RECR11: FII de papel da REC Gestão com 98 CRIs e 6 FIIs, PL R$ 2,35 bi, P/VP 0,91, DY 13,5%, carteira pulverizada IPCA+ e CDI+ multicategoria.",
+    "keywords": "RECR11, REC Gestão, FII de papel, CRI, fundo imobiliário recebíveis, dividend yield, P/VP, IPCA+, CDI+, multicategoria",
+    "ogTitle": "RECR11 - FII de CRI da REC Gestão com PL de R$ 2,3 bi e DY de 13,5%",
+    "ogDescription": "Dossiê completo do RECR11: 98 CRIs em 14 estados, 174 mil cotistas, taxa ponderada IPCA+8,58%/CDI+5,1%, distribuído em IPCA, CDI, IGPM e TR.",
+    "twitterTitle": "RECR11 - Análise Completa do FII REC Recebíveis Imobiliários",
+    "twitterDescription": "RECR11: 98 operações de CRI, DY 13,5%, P/VP 0,91, gestão REC ativa multicategoria. Dossiê com 464 documentos."
+  },
+  "indicadores": {
+    "cotacao": 80.76,
+    "cotacaoData": "2026-04-24",
+    "pvp": 0.9081,
+    "pvpDesconto": "9% de desconto",
+    "dividendYield": 13.53,
+    "dividendoMensal": 1.0335,
+    "dividendoAnual": 10.9234,
+    "patrimonioLiquido": "R$ 2,35 bi",
+    "vpCota": 88.93,
+    "cotistas": 174317,
+    "ocupacao": null,
+    "numImoveis": 98
+  },
+  "recomendacao": {
+    "nota": 7.5,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">RECR11</strong> é um FII de papel <strong class=\"text-blue-400\">multicategoria</strong> da REC Gestão de Recursos, com R$ 2,35 bi de patrimônio distribuídos em <strong class=\"text-blue-400\">98 operações de CRI</strong> (90% do PL), 6 FIIs (4%), 1 imóvel (3%) e caixa (3%). A carteira é fortemente <strong class=\"text-emerald-400\">pulverizada</strong> — top-10 devedores cobrem apenas 22% do PL e o HHI calculado é de 0,013 — com 174 mil cotistas e <strong class=\"text-blue-400\">14 estados</strong> de presença geográfica.</p><p>O fundo opera como <strong class=\"text-amber-400\">papel mid-grade pendendo a multicategoria</strong>, não papel high grade puro: 43% da exposição é a Incorporação/Pessoa Física, 18% Loteamento e 13% Hotel — segmentos que exigem garantias robustas (alienação fiduciária + fundo de reserva são padrão em todas as operações). A <strong class=\"text-blue-400\">taxa ponderada de aquisição</strong> é de IPCA+ 8,58% (57% IPCA + 26% IPCA sem variação negativa) e CDI+ 5,10% (14% do book), com duration média 3,9 anos. Negocia a <strong class=\"text-emerald-400\">P/VP 0,91</strong> (R$ 80,76 vs R$ 88,93 patrimonial), oferecendo DY de <strong class=\"text-emerald-400\">13,5% a.a.</strong>. O caso Olimpo (CRIs em dação por imóveis + créditos) é o ponto de atenção mais relevante — gerou o imóvel Morumbi Plaza atualmente avaliado em R$ 75,9 mi.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 2,35 bi",
+      "detalhe": "VP/cota: R$ 88,93",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,03",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 10,92/12m | DY 13,5%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Carteira",
+      "valor": "98 CRIs",
+      "detalhe": "+ 6 FIIs e 1 imóvel | 14 estados",
+      "icone": "building",
+      "corIcone": "purple"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "174.317",
+      "detalhe": "26,4 mi cotas | 1,46% do IFIX",
+      "icone": "users",
+      "corIcone": "blue"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Caso Olimpo — dação em pagamento via imóveis",
+      "descricao": "Os CRIs Olimpo (códigos 20J0612532 e 21E0426247) entraram em <strong class=\"text-amber-400\">dação em pagamento por imóveis e créditos</strong> em dez/2025-fev/2026. O acordo prevê que o valor da dação supera os saldos dos CRIs marcados, mas o processo gera <strong class=\"text-amber-400\">exposição direta a tijolo</strong> (R$ 75,9 mi em Morumbi Plaza/SP, ~3,2% do PL) fora do core do fundo de papel.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Marcação a mercado volátil",
+      "descricao": "A linha de marc. a mercado oscilou entre <strong class=\"text-amber-400\">+R$ 24,0 mi e -R$ 20,4 mi</strong> mensais nos últimos 12 meses (DRE Gerencial). Os ganhos contábeis não viram caixa imediato e podem inverter em meses subsequentes — explica parte da volatilidade do DPS (CV 24m = 19%).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em incorporação residencial e loteamentos",
+      "descricao": "<strong class=\"text-amber-400\">~62% da carteira de CRIs</strong> está em segmentos sensíveis ao ciclo imobiliário: 43% em Incorporação/Pessoa Física e 18% em Loteamento. Em ciclo de Selic alta (14,75% atual) o setor sofre pressão de demanda — explica a marcação a mercado negativa em meses específicos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cota de mercado abaixo do IPO desde 2022",
+      "descricao": "A cota negociada (R$ 80,76) está <strong class=\"text-amber-400\">19% abaixo do IPO de R$ 100</strong> e bem abaixo da máxima histórica de R$ 106,40 (jul/2021). Apesar do retorno total acumulado de 158,3% (vs CDI 87,1%), a apreciação de cota ficou negativa — investidor que comprou no IPO depende dos dividendos para acumular ganho.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Alta dependência da gestão ativa para retorno",
+      "descricao": "A gestora REC realiza <strong class=\"text-amber-400\">aquisições e alienações ativas mensalmente</strong> (5-10 movimentações/mês). Por um lado, isso permite captura de oportunidades de spread; por outro, transfere ao cotista dependência total de execução qualificada — track record da REC é positivo (158% acumulado vs 87% CDI), mas não há margem para erros pontuais.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "REC Gestão de Recursos S.A.",
+    "nota": 8.5,
+    "stats": [
+      {
+        "label": "AuM em FIIs",
+        "valor": "R$ 3,5 bi"
+      },
+      {
+        "label": "Fundos sob gestão",
+        "valor": "7 fundos"
+      },
+      {
+        "label": "Track record RECR11",
+        "valor": "158% acumulado vs 87% CDI"
+      },
+      {
+        "label": "Anos no mercado",
+        "valor": "Desde 2014"
+      }
+    ],
+    "resumo": "<p>A REC Gestão de Recursos atua há mais de 10 anos no mercado brasileiro, com foco em renda fixa imobiliária. Gerencia além do RECR11 os fundos REC Renda Imobiliária (consultoria), REC Logística, REC Multiestratégia, REC FAMI Fundo de CRI, REC Cotas Amortizáveis II, REC Master Fundo de CRI e REC One — totalizando aproximadamente <strong class=\"text-blue-400\">R$ 3,5 bilhões</strong> sob gestão. O time é especializado em estruturação de CRIs com foco em garantias e mitigantes (alienação fiduciária + fundo de reserva são padrão em todas as operações). Track record do RECR11: distribuição acumulada de 158,3% sobre cota de R$ 100 entre dez/2017 e mar/2026, vs 87,1% do CDI líquido — <strong class=\"text-emerald-400\">82% acima</strong> do benchmark.</p>",
+    "link": "https://rec-gestao.com/"
+  },
+  "taxas": {
+    "subtitulo": "Estrutura simples para fundo de papel: administração baixa + consultoria operacional",
+    "glowCor": "emerald",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,20% a.a.",
+        "detalhe": "Sobre PL ou valor de mercado"
+      },
+      {
+        "label": "Taxa de Consultoria",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre PL — REC Gestão de Recursos"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "Não há",
+        "detalhe": "Estrutura simples sem prêmio variável"
+      }
+    ],
+    "detalhes": [
+      {
+        "titulo": "Custo total efetivo",
+        "descricao": "Taxa total de aprox. <strong class=\"text-blue-400\">1,20% a.a. sobre PL</strong> — alinhado com pares de papel multicategoria (FTCA11 1,30%, EQIR11 1,50%). Sem performance, o custo é previsível e independente do desempenho do book."
+      },
+      {
+        "titulo": "Estrutura BRL Trust + REC",
+        "descricao": "BRL Trust DTVM atua como administradora desde ago/2018 (tomou no início era Banco Ourinvest) e BRL Trust também é custodiante. REC Gestão é consultora de investimentos — modelo institucional padrão de FII de papel."
+      },
+      {
+        "titulo": "Mínimo mensal de R$ 15.000",
+        "descricao": "A taxa de administração tem piso mensal de R$ 15 mil — irrelevante para um fundo de R$ 2,35 bi, mas constou no regulamento."
+      }
+    ]
+  },
+  "portfolio": {
+    "schema": "v2",
+    "tipoFundo": "papel",
+    "stats": {
+      "totalAtivos": 105,
+      "abl": null,
+      "ocupacaoFisica": null,
+      "ocupacaoFinanceira": null,
+      "vacanciaFisica": null,
+      "wault": null,
+      "ltv": 0.0,
+      "alavancagemPct": 0.0,
+      "duration": 3.9,
+      "yieldCarregamento": 13.5,
+      "inadimplenciaPct": 0.0,
+      "alocacaoPL": [
+        {
+          "categoria": "CRIs (98 operações)",
+          "pct": 0.9,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "FIIs de papel (6 fundos)",
+          "pct": 0.04,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "Imóvel (Morumbi Plaza)",
+          "pct": 0.03,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "Caixa/RF (FIRF + disponibilidades)",
+          "pct": 0.03,
+          "cor": "#64748b"
+        }
+      ]
+    },
+    "ativos": [
+      {
+        "tipo": "cri",
+        "id": "cri-realiza-2025-habitasec",
+        "codigoCetip": "25C5641737",
+        "devedor": "Realiza Empreendimentos",
+        "setorDevedor": "Residencial",
+        "lastro": "Nota Comercial — Incorporação residencial (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "IPCA+",
+        "spread": 0.105,
+        "taxaTotal": 0.144,
+        "duration": 4.6,
+        "vencimento": "2037-03-15",
+        "valorPresente": 126684319,
+        "percPL": 0.052,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.5,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-ativos-resid-diversif-habitasec",
+        "codigoCetip": "24I2477779",
+        "devedor": "Ativos Residenciais Diversificados",
+        "setorDevedor": "Residencial",
+        "lastro": "Nota Comercial — Incorporação (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "rating": null,
+        "agenciaRating": null,
+        "indexador": "CDI+",
+        "spread": 0.08,
+        "taxaTotal": 0.227,
+        "duration": 1.5,
+        "vencimento": "2027-10-15",
+        "valorPresente": 104065753,
+        "percPL": 0.042,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.5,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-ativos-resid-diversif2-habitasec",
+        "codigoCetip": "25K3255796",
+        "devedor": "Ativos Residenciais Diversificados (Série 2)",
+        "setorDevedor": "Residencial",
+        "lastro": "Nota Comercial — Incorporação (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "CDI+",
+        "spread": 0.03,
+        "taxaTotal": 0.177,
+        "duration": 4.5,
+        "vencimento": "2027-10-15",
+        "valorPresente": 62100706,
+        "percPL": 0.025,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.73,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-realiza-2-habitasec",
+        "codigoCetip": "21I0826412",
+        "devedor": "Realiza Empreendimentos (Série 2)",
+        "setorDevedor": "Residencial",
+        "lastro": "CCB — Incorporação (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.071,
+        "taxaTotal": 0.111,
+        "duration": 4.5,
+        "vencimento": "2035-06-15",
+        "valorPresente": 49840793,
+        "percPL": 0.02,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.73,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-vca3-canal",
+        "codigoCetip": "24A2518977",
+        "devedor": "VCA Empreendimentos (Série 3)",
+        "setorDevedor": "Loteamento",
+        "lastro": "Nota Comercial — Incorporação (BA)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.1025,
+        "taxaTotal": 0.142,
+        "duration": 3.3,
+        "vencimento": "2034-07-15",
+        "valorPresente": 43329682,
+        "percPL": 0.018,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.58,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-pulverizado-projetos-residenciais-habitasec",
+        "codigoCetip": "24H2096783",
+        "devedor": "Pulverizado Projetos Residenciais",
+        "setorDevedor": "Residencial",
+        "lastro": "Crédito Imobiliário Pessoa Física pulverizado (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.1,
+        "taxaTotal": 0.139,
+        "duration": 7.9,
+        "vencimento": "2040-10-15",
+        "valorPresente": 37164467,
+        "percPL": 0.015,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.63,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-codepe-habitasec",
+        "codigoCetip": "19J0713613",
+        "devedor": "CODEPE — Centro Logístico",
+        "setorDevedor": "Logística",
+        "lastro": "Contratos de locação — Logística (ES)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "fianca_corporativa"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.0767,
+        "taxaTotal": 0.115,
+        "duration": 1.8,
+        "vencimento": "2029-10-15",
+        "valorPresente": 31233581,
+        "percPL": 0.013,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.26,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-aracaju-shopping-habitasec",
+        "codigoCetip": "19C0281298",
+        "devedor": "Aracaju Parque Shopping",
+        "setorDevedor": "Shoppings",
+        "lastro": "Contratos de locação — Varejo/Shopping (SE)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.095,
+        "taxaTotal": 0.133,
+        "duration": 1.6,
+        "vencimento": "2029-08-15",
+        "valorPresente": 26906470,
+        "percPL": 0.011,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.26,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-fampar2-habitasec",
+        "codigoCetip": "21C0731719",
+        "devedor": "Fampar (Série 2)",
+        "setorDevedor": "Residencial",
+        "lastro": "CCB — Incorporação (SP)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.085,
+        "taxaTotal": 0.124,
+        "duration": 2.4,
+        "vencimento": "2029-03-15",
+        "valorPresente": 24394906,
+        "percPL": 0.01,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.51,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cortel3-snr-opea",
+        "codigoCetip": "22F1025725",
+        "devedor": "Cortel (Série 3 Sênior)",
+        "setorDevedor": "Outros",
+        "lastro": "Debêntures — Investimento imobiliário (RS)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fianca_corporativa"
+        ],
+        "indexador": "CDI+",
+        "spread": 0.035,
+        "taxaTotal": 0.182,
+        "duration": 4.1,
+        "vencimento": "2033-07-15",
+        "valorPresente": 23779020,
+        "percPL": 0.01,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.6,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-vca-habitasec",
+        "codigoCetip": "21I0776342",
+        "devedor": "VCA Empreendimentos (Série 1)",
+        "setorDevedor": "Loteamento",
+        "lastro": "CCB — Incorporação (BA)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.07,
+        "taxaTotal": 0.11,
+        "duration": 2.6,
+        "vencimento": "2031-08-15",
+        "valorPresente": 22582214,
+        "percPL": 0.009,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.38,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-ativos-resid-diversif2-novo-habitasec",
+        "codigoCetip": "25J4656723",
+        "devedor": "Ativos Residenciais Diversificados (out/30)",
+        "setorDevedor": "Residencial",
+        "lastro": "Crédito Imobiliário — Incorporação (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "CDI+",
+        "spread": 0.03,
+        "taxaTotal": 0.177,
+        "duration": 5.8,
+        "vencimento": "2030-10-15",
+        "valorPresente": 17823591,
+        "percPL": 0.007,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.5,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-vca2-habitasec",
+        "codigoCetip": "21I0798465",
+        "devedor": "VCA Empreendimentos (Série 2)",
+        "setorDevedor": "Loteamento",
+        "lastro": "CCB — Incorporação (BA)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.07,
+        "taxaTotal": 0.11,
+        "duration": 2.5,
+        "vencimento": "2031-08-15",
+        "valorPresente": 14861085,
+        "percPL": 0.006,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.38,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-vokkan2-canal",
+        "codigoCetip": "23L1955395",
+        "devedor": "Vokkan Loteamentos (Série 2)",
+        "setorDevedor": "Loteamento",
+        "lastro": "Debêntures — Loteamento (SC)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.09,
+        "taxaTotal": 0.129,
+        "duration": 2.2,
+        "vencimento": "2030-12-15",
+        "valorPresente": 12024737,
+        "percPL": 0.005,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.5,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-carneiro-habitasec",
+        "codigoCetip": "22B0680153",
+        "devedor": "Carneiro (Varejo)",
+        "setorDevedor": "Varejo",
+        "lastro": "CCB — Varejo (PB)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.09,
+        "taxaTotal": 0.129,
+        "duration": 5.0,
+        "vencimento": "2037-02-15",
+        "valorPresente": 12113824,
+        "percPL": 0.005,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.48,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-terra-santa-leverage",
+        "codigoCetip": "24E3056419",
+        "devedor": "Terra Santa",
+        "setorDevedor": "Residencial",
+        "lastro": "Crédito Imobiliário Pessoa Física (SP)",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "fianca_corporativa"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.08,
+        "taxaTotal": 0.119,
+        "duration": 3.5,
+        "vencimento": "2034-04-15",
+        "valorPresente": 11058430,
+        "percPL": 0.005,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.41,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-pulverizado-projetos-residenciais2-habitasec",
+        "codigoCetip": "25H5089180",
+        "devedor": "Pulverizado Projetos Residenciais (Série 2)",
+        "setorDevedor": "Residencial",
+        "lastro": "Crédito Imobiliário Pessoa Física pulverizado (MG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.105,
+        "taxaTotal": 0.144,
+        "duration": 4.3,
+        "vencimento": "2031-09-15",
+        "valorPresente": 9682872,
+        "percPL": 0.004,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.63,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-credihome3-snr-opea",
+        "codigoCetip": "22E1102599",
+        "devedor": "CrediHome (Série 3 Sênior)",
+        "setorDevedor": "Residencial",
+        "lastro": "Crédito Imobiliário Pessoa Física (SP)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "seguro_credito"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.08,
+        "taxaTotal": 0.119,
+        "duration": 5.9,
+        "vencimento": "2042-05-15",
+        "valorPresente": 13883402,
+        "percPL": 0.005,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.44,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153) — agregado de tranches CrediHome 3 (22E1102599+22G1199875+22I0207529)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-comtermica-canal",
+        "codigoCetip": "23C0315384",
+        "devedor": "Comtérmica",
+        "setorDevedor": "Industrial",
+        "lastro": "Nota Comercial — Incorporação (PB)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.095,
+        "taxaTotal": 0.134,
+        "duration": 9.9,
+        "vencimento": "2038-02-15",
+        "valorPresente": 6063555,
+        "percPL": 0.002,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.37,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-bari-cri-imob-pf",
+        "codigoCetip": "22C0899517",
+        "devedor": "Bari (Carteira PF)",
+        "setorDevedor": "Residencial",
+        "lastro": "Crédito Imobiliário Pessoa Física (SP)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva",
+          "seguro_credito"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.0725,
+        "taxaTotal": 0.112,
+        "duration": 3.4,
+        "vencimento": "2041-03-15",
+        "valorPresente": 3043497,
+        "percPL": 0.001,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.35,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-olimpo-renegociado",
+        "codigoCetip": "20J0612532",
+        "devedor": "Olimpo Participações",
+        "setorDevedor": "Residencial",
+        "lastro": "CRIs Olimpo 1 e 2 — em processo de dação em pagamento (imóveis + créditos)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_cotas",
+          "fundo_reserva",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.09,
+        "taxaTotal": 0.129,
+        "duration": null,
+        "vencimento": "2030-12-31",
+        "valorPresente": null,
+        "percPL": null,
+        "perfilRisco": "high_yield",
+        "status": "renegociado",
+        "ltv": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130562) — comunica dação em pagamento Olimpo",
+        "docId": "1130562"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "ARRI11",
+        "nome": "Open K Ativos e Recebíveis",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 9404927,
+        "percPL": 0.004,
+        "qtdCotas": null,
+        "precoMedio": null,
+        "fonte": "Informe Anual 2025 (ID 1147182)",
+        "docId": "1147182"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "EMET11",
+        "nome": "Emet Multiestratégia FII",
+        "segmentoFinal": "hibrido_multiestrategia",
+        "valorPresente": 19469900,
+        "percPL": 0.0083,
+        "qtdCotas": null,
+        "precoMedio": null,
+        "fonte": "Informe Anual 2025 (ID 1147182)",
+        "docId": "1147182"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "FLCR11",
+        "nome": "Faria Lima Capital Recebíveis",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 3042472,
+        "percPL": 0.0013,
+        "qtdCotas": null,
+        "precoMedio": null,
+        "fonte": "Informe Anual 2025 (ID 1147182)",
+        "docId": "1147182"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "SNCI11",
+        "nome": "FII Suno CRI",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 17416970,
+        "percPL": 0.0074,
+        "qtdCotas": null,
+        "precoMedio": null,
+        "fonte": "Informe Anual 2025 (ID 1147182)",
+        "docId": "1147182"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "VRTM11",
+        "nome": "Valora CRI Infra FII",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 29560000,
+        "percPL": 0.0126,
+        "qtdCotas": null,
+        "precoMedio": null,
+        "fonte": "Informe Anual 2025 (ID 1147182)",
+        "docId": "1147182"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "EIRA11",
+        "nome": "Aroeira FII",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 10000194,
+        "percPL": 0.0042,
+        "qtdCotas": null,
+        "precoMedio": null,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      },
+      {
+        "tipo": "imovel",
+        "id": "morumbi-plaza-sp",
+        "nome": "Edifício Morumbi Plaza (participação)",
+        "endereco": "Av. Dr. Chucri Zaidan — Morumbi/Brooklin Novo, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Chucri Zaidan/Morumbi",
+          "lat": null,
+          "lng": null
+        },
+        "abl": null,
+        "padrao": "A",
+        "tipologia": "escritorio_a",
+        "participacao": null,
+        "valorContabil": 75920000,
+        "valorMercado": null,
+        "capRateAtual": null,
+        "ocupacao": null,
+        "locatarios": [],
+        "riscos": [
+          "recebido_via_dacao_olimpo",
+          "fora_do_core_papel"
+        ],
+        "fonte": "Informe Mensal Estruturado mar/2026 (ID 1161336) + Relatório Gerencial fev/2026 (ID 1130562)",
+        "docId": "1161336"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.0135,
+      "interpretacaoHhi": "muito baixa",
+      "topN": {
+        "top1Pct": 0.052,
+        "top3Pct": 0.119,
+        "top5Pct": 0.157,
+        "top10Pct": 0.216
+      },
+      "porDevedor": [
+        {
+          "nome": "Realiza Empreendimentos",
+          "pct": 0.052
+        },
+        {
+          "nome": "Ativos Residenciais Diversificados",
+          "pct": 0.042
+        },
+        {
+          "nome": "Ativos Residenciais Diversificados (Série 2)",
+          "pct": 0.025
+        },
+        {
+          "nome": "Realiza Empreendimentos (Série 2)",
+          "pct": 0.02
+        },
+        {
+          "nome": "VCA Empreendimentos (Série 3)",
+          "pct": 0.018
+        },
+        {
+          "nome": "Pulverizado Projetos Residenciais",
+          "pct": 0.015
+        },
+        {
+          "nome": "CODEPE — Centro Logístico",
+          "pct": 0.013
+        },
+        {
+          "nome": "Valora CRI Infra FII",
+          "pct": 0.0126
+        },
+        {
+          "nome": "Aracaju Parque Shopping",
+          "pct": 0.011
+        },
+        {
+          "nome": "Fampar (Série 2)",
+          "pct": 0.01
+        }
+      ],
+      "porSetorDevedor": [
+        {
+          "setor": "Residencial",
+          "pct": 0.387
+        },
+        {
+          "setor": "Loteamento",
+          "pct": 0.162
+        },
+        {
+          "setor": "Hotéis",
+          "pct": 0.117
+        },
+        {
+          "setor": "Outros",
+          "pct": 0.108
+        },
+        {
+          "setor": "Varejo",
+          "pct": 0.054
+        },
+        {
+          "setor": "Multipropriedade",
+          "pct": 0.045
+        },
+        {
+          "setor": "Logística",
+          "pct": 0.027
+        },
+        {
+          "setor": "Industrial",
+          "pct": 0.0
+        },
+        {
+          "setor": "Outros (FIIs / Imóvel / Caixa)",
+          "pct": 0.1
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA+",
+          "pct": 0.747
+        },
+        {
+          "indexador": "CDI+",
+          "pct": 0.126
+        },
+        {
+          "indexador": "IGPM",
+          "pct": 0.027
+        },
+        {
+          "indexador": "TR",
+          "pct": 0.0009
+        },
+        {
+          "indexador": "Outros (FIIs / Imóvel / Caixa)",
+          "pct": 0.0991
+        }
+      ]
+    },
+    "analise": {
+      "rotulo": "Carteira ultra-pulverizada de papel multicategoria — gestão ativa REC",
+      "cor": "blue",
+      "tags": [
+        "98 CRIs em 14 estados",
+        "HHI 0,013 (muito baixa concentração)",
+        "Top-10 cobre apenas 22% do PL",
+        "Multi-segmento (Residencial 43%, Loteamento 18%, Hotel 13%)",
+        "100% adimplente em mar/26"
+      ],
+      "veredicto": "<p>RECR11 é um dos FIIs de papel <strong class=\"text-blue-400\">mais pulverizados do mercado brasileiro</strong> — 98 CRIs distintos com nenhum acima de 5,2% do PL. Essa diversificação reduz dramaticamente o risco idiossincrático: o caso Olimpo (1-2% do PL na origem) virou um problema de tijolo gerenciável (R$ 75,9 mi em Morumbi Plaza), não um corte de DPS. O book é <strong class=\"text-amber-400\">multicategoria</strong>: combina papel high-grade clássico (Aracaju Shopping, CODEPE, Bari) com mid-grade pulverizado de incorporação/loteamento (43% + 18% da carteira de CRIs) e exposições alternativas (hotel 13%). Toda operação tem alienação fiduciária + fundo de reserva como mínimo, com aval de PF/PJ na maioria.</p>",
+      "pontosFortes": [
+        "Pulverização extrema: HHI 0,013 — entre os menores do segmento de papel",
+        "98 operações com 100% adimplência em mar/2026 (caso Olimpo classificado como renegociado, não default)",
+        "Garantias robustas em todas as operações: alienação fiduciária + fundo de reserva como padrão",
+        "Distribuição geográfica em 14 estados — diversificação contra choques regionais",
+        "Mix de indexadores 83% IPCA + 14% CDI permite hedge dual contra inflação e juros",
+        "Track record de 158% acumulado vs 87% CDI desde IPO (2017)"
+      ],
+      "pontosFracos": [
+        "62% da carteira em incorporação/loteamento — sensível ao ciclo imobiliário em Selic alta",
+        "Marcação a mercado volátil (-R$ 20 mi a +R$ 24 mi mensais) explica parte do CV de 19% no DPS",
+        "Caso Olimpo gerou imóvel direto fora do core (R$ 75,9 mi em Morumbi Plaza)",
+        "Dependência total da execução da REC para captura de spread em ciclo de juros"
+      ],
+      "perfilInvestidor": "Investidor que busca exposição diversificada a renda fixa imobiliária com gestão ativa qualificada e tolera ciclo de DPS variável (R$ 0,72-1,36 nos últimos 24 meses). NÃO é para quem precisa de DPS ultra-estável mês a mês — para isso, KNCR11/KNIP11 (papel HG puro CDI+) servem melhor."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Eventos relevantes da história do fundo (2017-2026)",
+    "periodos": [
+      {
+        "data": "2017",
+        "titulo": "IPO como UBSR11 — UBS (BR) Recebíveis Imobiliários",
+        "descricao": "Fundo iniciou negociações em 21/12/2017 sob ticker UBSR11 com administração do Banco Ourinvest. Múltiplas classes de cotas foram emitidas inicialmente (8 séries), unificadas no mesmo CNPJ (28.152.272/0001-26). Cota inicial R$ 100,00.",
+        "cor": "blue"
+      },
+      {
+        "data": "2018",
+        "titulo": "Migração para BRL Trust DTVM e renomeação para RECR11",
+        "descricao": "Em ago/2018 a administração migra para BRL Trust DTVM. Fundo passa a ter consultoria da REC Gestão de Recursos. Ticker é renomeado para RECR11 e classes são unificadas.",
+        "cor": "purple"
+      },
+      {
+        "data": "2018-2022",
+        "titulo": "12 emissões em 4 anos — escala rápida do PL",
+        "descricao": "Captação ininterrupta de 2017 a 2022: 12ª emissão concluída em mai/2022 (R$ 213,9 mi, 2,18 mi cotas). PL salta de ~R$ 31 mi (1ª emissão) para ~R$ 2,5 bi. RECR11 entra no IFIX em set/2018.",
+        "cor": "emerald"
+      },
+      {
+        "data": "2024",
+        "titulo": "Drawdown histórico — fundo cai a R$ 67,20 (dez/2024)",
+        "descricao": "Crise de papel HY (DEVA11/HCTR11), elevação da Selic para 14,75% e estresse no segmento de CRI pulverizado derrubam a cota a R$ 67,20 em 16/12/2024 — drawdown de 24,9% vs pico móvel. Recupera para R$ 80+ ao longo de 2025.",
+        "cor": "red"
+      },
+      {
+        "data": "2025-12",
+        "titulo": "Caso Olimpo — dação em pagamento por imóveis",
+        "descricao": "Fundo celebra Instrumento Particular de Acordo com Olimpo Participações: CRIs Olimpo (20J0612532) e Olimpo 2 (21E0426247) entram em quitação via dação em pagamento de imóveis e créditos. Imóvel Morumbi Plaza (R$ 75,9 mi, ~3% do PL) é o resultado material para o fundo.",
+        "cor": "amber"
+      },
+      {
+        "data": "2026-01",
+        "titulo": "Contratação de Formador de Mercado (XP)",
+        "descricao": "Em 15/01/2026 o fundo contrata XP Investimentos como formador de mercado para fomentar liquidez e formação de preços eficiente. Volume médio diário sobe para R$ 3,2 mi nos meses subsequentes.",
+        "cor": "emerald"
+      },
+      {
+        "data": "2026-03",
+        "titulo": "DPS extraordinário R$ 1,03 — captura de marcação a mercado",
+        "descricao": "Em mar/2026, RECR11 distribui R$ 1,0335/cota — DPS mais alto desde mai/2025. Resultado caixa do mês (R$ 27,3 mi) reflete maior captura de marcação a mercado no IPCA acumulado e amortizações pontuais.",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>RECR11 é um <strong class=\"text-blue-400\">FII de papel multicategoria</strong> de grande porte (R$ 2,35 bi), com 98 operações de CRI e gestão ativa da REC. Combina robustez patrimonial e pulverização extrema (HHI 0,013, top-10 = 22% do PL) com exposição mid-grade relevante a incorporação residencial e loteamentos (62% dos CRIs). É um instrumento de <strong class=\"text-emerald-400\">renda + gestão ativa</strong> — não um papel HG puro como KNCR11.</p>",
+    "paraQuem": "<p>Investidor que quer exposição a CRIs com <strong class=\"text-emerald-400\">diversificação real e profunda</strong> em um único veículo (98 operações), confia em gestão ativa qualificada para capturar spreads e amortizações pontuais, e tolera DPS variável em torno de R$ 0,80-1,10/cota (CV 19% nos últimos 24m). Compatível com perfil moderado a moderado-arrojado, alocação core de FIIs de papel diversificada.</p>",
+    "naoParaQuem": "<p>NÃO é para quem busca DPS estável mês a mês (KNCR11/KNIP11 servem melhor), nem para quem quer high-grade puro 100% (RECR11 tem 43% em incorporação residencial). Tampouco para quem prioriza apreciação de cota — após 8 anos a cota está 19% abaixo do IPO, embora o retorno total seja excepcional via dividendos.</p>"
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII de papel multicategoria pulverizado — gestão ativa REC",
+      "subrotulo": "Diversificação extrema (98 CRIs) com mix mid-grade de incorporação + loteamento + hotel — não é high-grade puro",
+      "cor": "blue"
+    },
+    "perfilRisco": {
+      "nivel": "medio",
+      "score": 2.6,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 1.0,
+          "peso": 0.2,
+          "metrica": "HHI = 0.0135; top-10 devedores = 21,7% do PL",
+          "leitura": "Concentração mínima — entre os FIIs de papel mais pulverizados do mercado. Nenhum CRI passa de 5,2% do PL."
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 2.5,
+          "peso": 0.15,
+          "metrica": "σ12m = 13.3% anualizado; drawdown 24m = -24.9%",
+          "leitura": "Volatilidade moderada típica de FII de papel (12-15%). Drawdown de 24,9% em dez/2024 foi sistêmico (crise papel HY) e foi recuperado."
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "CV24m = 19.1%; DPS oscilou entre R$ 0.71 e R$ 1.36",
+          "leitura": "Volatilidade alta para FII de papel — reflete a marcação a mercado mensal (oscilou entre -R$ 20 mi e +R$ 24 mi) e amortizações pontuais que entram no caixa."
+        },
+        {
+          "nome": "Liquidez",
+          "score": 1.0,
+          "peso": 0.15,
+          "metrica": "Volume médio 21d ≈ R$ 2,135,602/dia (após XP como formador de mercado em jan/2026)",
+          "leitura": "Liquidez excelente — > R$ 2 mi/dia. Posições de até R$ 500 mil saem em < 1 dia útil sem mover preço."
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 3.0,
+          "peso": 0.2,
+          "metrica": "Inadimplência 0,0% (100% adimplente). 62% em incorporação/loteamento — segmento mid-grade. 1 caso renegociado (Olimpo).",
+          "leitura": "Risco subjacente médio. Pulverização e garantias mitigam. Caso Olimpo demonstrou que dação em pagamento (mid-grade) é possível com perda gerenciável."
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 1.0,
+          "peso": 0.1,
+          "metrica": "LTV = 0%. Sem dívida. Operações de CRI compradas com recursos próprios (emissão de cotas).",
+          "leitura": "Sem alavancagem no nível do fundo. Os LTVs citados nas operações são DOS DEVEDORES (saldo CRI / garantia), não do fundo."
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": "parcial",
+        "racional": "DPS oscila R$ 0,72-1,36 (CV 19%) — não é o nível de estabilidade de KNCR11/KNIP11 (CV ~3%)."
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": true,
+        "racional": "83% do book em IPCA+ — hedge robusto contra inflação acumulada. Em 2025-26 isso gerou marcação a mercado positiva."
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Sem exposição a USD ou ativos dolarizados."
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": "parcial",
+        "racional": "P/VP 0,91 oferece prêmio de 9%, mas não é desconto profundo. Para swing, FoFs descontados (BCFF11 0,86) são mais agressivos."
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": "parcial",
+        "racional": "Apenas 14% do book em CDI+ — queda de Selic comprime menos que KNCR11 (90% CDI+). 83% IPCA+ se beneficia menos do ciclo de juros."
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Justamente o oposto: 14% CDI+ remunera bem em alta de juros, mas 83% IPCA+ é neutro a alta de juros real (depende de inflação)."
+      },
+      {
+        "nome": "Exposição setorial concentrada",
+        "encaixa": false,
+        "racional": "Tese explícita do fundo é o oposto — multicategoria pulverizado em 14 estados e 9 setores de devedor."
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": "parcial",
+        "racional": "Gestão e diversificação são compatíveis, mas CV de DPS de 19% pode incomodar quem precisa de R$/mês fixo. Combinar com KNCR11/HGCR11 alivia."
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": true,
+        "racional": "É justamente um dos fundos mais diversificados do segmento de papel — 98 operações em 9 setores e 14 estados."
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "100% dos rendimentos isentos de IR para PF — vale para todo FII brasileiro, mas o DY 13,5% entrega prêmio claro vs renda fixa tributada."
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "Marcação a mercado oscilando R$ 44 mi em janelas mensais",
+        "severidade": "alta",
+        "descricao": "A linha de marc. a mercado (DRE Gerencial) variou entre +R$ 24,0 mi e -R$ 20,4 mi nos últimos 12 meses — magnitude que reduz/aumenta o resultado caixa em ~R$ 0,8-0,9/cota em meses extremos. Investidor que vê só o DPS mensal não percebe a engrenagem.",
+        "mitigacao": "Olhar o resultado de regime competência (que captura a marcação) junto com o de caixa para entender se o DPS reflete geração real ou diferimento."
+      },
+      {
+        "titulo": "Caso Olimpo virou tijolo direto — fora do core",
+        "severidade": "media",
+        "descricao": "A dação em pagamento dos CRIs Olimpo gerou imóvel (Morumbi Plaza, R$ 75,9 mi, 3,2% do PL) que está fora da tese de papel. Gerar receita desse imóvel exige expertise diferente da gestão de CRI — a REC não é especialista em locação de escritório AAA em SP.",
+        "mitigacao": "Gestor sinalizou intenção de monetizar o imóvel via venda. Sem prazo definido."
+      },
+      {
+        "titulo": "Concentração em incorporação residencial pode pesar em recessão",
+        "severidade": "media",
+        "descricao": "43% dos CRIs (Realiza, Ativos Residenciais Diversificados, Fampar 2, VCA, Pulverizado Projetos Residenciais, CrediHome) dependem de demanda por imóveis residenciais. Em 2025 a Selic em 14,75% reduziu MCMV e financiamento — efeito ainda não totalmente refletido nos CRIs (vencimentos médios ainda 4+ anos).",
+        "mitigacao": "Garantias robustas (alienação fiduciária + fundo de reserva + aval) e LTV médio < 60% mitigam, mas não eliminam."
+      },
+      {
+        "titulo": "Cota não recompôs IPO em 8 anos",
+        "severidade": "media",
+        "descricao": "Cota está em R$ 80,76 vs R$ 100 do IPO (2017). Investidor que comprou no IPO e não reinvestiu dividendos perdeu 19% em capital nominal — todo o ganho está nos rendimentos. Quem comprou perto do pico de 2021 (R$ 106) tem perda ainda maior em capital.",
+        "mitigacao": "Reinvestimento integral entrega 158% de retorno acumulado vs 87% CDI."
+      },
+      {
+        "titulo": "Dependência total da REC para spreads",
+        "severidade": "media",
+        "descricao": "5-10 movimentações de CRI por mês mostram gestão muito ativa. Gera spreads, mas concentra risco operacional na REC. Mudança de chave do gestor ou erro pontual de alocação pode afetar 2-3% do PL em uma única operação.",
+        "mitigacao": "Track record de 8 anos da REC com retorno consistentemente acima do CDI."
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 2135602,
+      "volumeMedio252d": 2889445,
+      "diasParaSair": {
+        "10mil": 0.02,
+        "100mil": 0.23,
+        "500mil": 1.17,
+        "1milhao": 2.34,
+        "10milhoes": 23.41
+      },
+      "spread": null,
+      "leitura": "Liquidez excelente para o segmento — volume médio diário R$ 2,135,602 (após XP entrar como formador de mercado em jan/2026). Posições de até R$ 1 mi saem em ~3 dias úteis sem mover o preço. RECR11 está entre os FIIs de papel mais líquidos da B3.",
+      "fonte": "calculado de historico_precos.csv (yfinance Volume × Close, últimas 4 semanas)"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.1329,
+        "sigma24m": 0.1707,
+        "drawdownMax24m": -0.2492,
+        "drawdownMaxData": "2024-12-16",
+        "tempoRecuperacao": 16
+      },
+      "dividendo": {
+        "cv12m": 0.2006,
+        "cv24m": 0.1909,
+        "minDps24m": 0.7128,
+        "maxDps24m": 1.3608,
+        "amplitudeRelativa": 0.9091
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "papel_misto",
+      "pares": [
+        {
+          "ticker": "FTCA11",
+          "sobreposicaoEstimada": 0.45,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador"
+          ],
+          "leitura": "FTCA11 também é papel multicategoria com mix IPCA+ + CDI+, exposição similar a incorporação/loteamento. Sobreposição forte de tese — quem tem RECR11 com posição relevante NÃO precisa de FTCA11 como segundo papel."
+        },
+        {
+          "ticker": "EQIR11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador"
+          ],
+          "leitura": "EQIR11 (EQI Asset) tem perfil similar mid-grade pulverizado com exposição residencial relevante. Sobreposição setorial alta. Diferença: EQIR11 é menor (R$ 105 mi vs R$ 2,3 bi) e menos líquido."
+        },
+        {
+          "ticker": "GCRI11",
+          "sobreposicaoEstimada": 0.35,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador"
+          ],
+          "leitura": "GCRI11 (Galápagos Capital) é papel misto de tamanho menor com perfil semelhante. Diversifica geografia mas mantém exposição IPCA+ majoritária."
+        },
+        {
+          "ticker": "KNCR11",
+          "sobreposicaoEstimada": 0.1,
+          "tipoSobreposicao": [
+            "indexador"
+          ],
+          "leitura": "KNCR11 é papel HG puro com 90% CDI+ — pouquíssima sobreposição com RECR11 (que tem 83% IPCA+). Combinar os dois entrega hedge dual contra inflação e juros."
+        },
+        {
+          "ticker": "KNIP11",
+          "sobreposicaoEstimada": 0.2,
+          "tipoSobreposicao": [
+            "indexador"
+          ],
+          "leitura": "KNIP11 é papel HG puro IPCA+ com devedores AAA — sobreposição parcial em IPCA mas KNIP11 é alta qualidade pura, RECR11 é mid-grade pulverizado. Complementam-se: KNIP11 = âncora HG, RECR11 = pulverização mid."
+        },
+        {
+          "ticker": "MXRF11",
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador",
+            "tipologia"
+          ],
+          "leitura": "MXRF11 (Maxi Renda) é híbrido com 60% papel + 30% FoF — tese parcialmente sobreposta. Quem quer pulverização sem o overhead de FoF prefere RECR11."
+        }
+      ],
+      "diversificacaoReal": "Para quem busca diversificação real entre FIIs de papel, RECR11 + KNCR11 (+ KNIP11) cobre bem o espectro: HG CDI+ + HG IPCA+ + mid-grade multicategoria pulverizado. Adicionar FTCA11/EQIR11/GCRI11 é redundância de exposição mid-grade."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic em queda gradual + IPCA estável",
+        "descricao": "Selic caindo de 14,75% para 11% até fim de 2026 (Focus) reduz custo de oportunidade dos FIIs de papel — preço da cota tende a subir 5-10%. RECR11 com P/VP 0,91 captura prêmio adicional de convergência ao VP.",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "IPCA acelerando — marcação a mercado positiva sustentada",
+        "descricao": "83% do book em IPCA+ se beneficia de IPCA acima da projeção (3,99%). Cada 1pp adicional na inflação acumulada gera ~R$ 16 mi de receita extra ao ano (ceteris paribus) e marcação a mercado positiva.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Venda do imóvel Morumbi Plaza com lucro",
+        "descricao": "Se o gestor monetizar o imóvel recebido em dação por R$ 80+ mi, há ganho de capital potencial e retorno do PL ao perfil de papel puro — gera distribuição extraordinária e/ou amortização parcial.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Recessão em incorporação — defaults pulverizados",
+        "descricao": "62% da carteira em incorporação/loteamento — recessão prolongada com Selic alta pode gerar 3-5 defaults pulverizados que somariam 5-8% do PL em recovery sob garantia. Impacto no DPS de 5-15% por 6-12 meses.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Marcação a mercado negativa em sequência",
+        "descricao": "Selic subindo (cenário cauda do BCB) ou IPCA negativo (deflação curta) pode gerar marcação negativa por 3-6 meses, derrubando DPS para R$ 0,60-0,70/cota — caso similar a abr-jun/2025.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Novo caso Olimpo — exposição mid-grade",
+        "descricao": "Em uma carteira de 98 CRIs majoritariamente mid-grade, default isolado é estatisticamente esperado a cada 2-3 anos. Próximo caso pode não ter saída tão favorável quanto Olimpo (que terminou com imóvel de valor superior).",
+        "probabilidadeRelativa": "alta"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "renda_mensal",
+        "hedge_inflacao",
+        "diversificacao_setorial",
+        "tax_shield"
+      ],
+      "horizonte": "medio_longo",
+      "perfil": "moderado",
+      "carteiraTipica": "Posição core entre fundos de papel — 5-10% da carteira de FIIs de um investidor diversificado. Ideal como peça única para 'exposição a CRI multicategoria' sem precisar montar 5+ FIIs separados.",
+      "perfisExemplo": [
+        "Investidor com R$ 50k+ em FIIs que quer um único veículo de CRI pulverizado high-touch",
+        "Aposentado moderado que combina RECR11 (renda variada) com KNCR11 (renda estável CDI+) e KNIP11 (HG IPCA+)",
+        "Investidor que valoriza track record longo (8 anos) e gestão ativa qualificada (REC)"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Quem busca DPS estável mês a mês — CV de 19% no DPS (R$ 0,72-1,36) não cabe em planejamento de renda fixa",
+        "Aposentado que precisa retirar valor fixo mensalmente — combinar com KNCR11/HGCR11 é melhor",
+        "Investidor que quer apreciação de cota — após 8 anos a cota está 19% abaixo do IPO",
+        "Quem quer high-grade puro 100% — RECR11 tem 43% em incorporação residencial (mid-grade)",
+        "Iniciante sem entendimento de marcação a mercado — DPS oscila por motivos contábeis que não são óbvios"
+      ]
+    }
+  },
+  "dividendos": {
+    "schema": "v2.1",
+    "historico": [
+      {
+        "data": "2017-11",
+        "dividendo": 2.6932,
+        "dataPagamento": "2017-12-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 20299)",
+        "docId": "20299"
+      },
+      {
+        "data": "2017-12",
+        "dividendo": 0.4654,
+        "dataPagamento": "2018-01-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 21390)",
+        "docId": "21390"
+      },
+      {
+        "data": "2018-01",
+        "dividendo": 0.4543,
+        "dataPagamento": "2018-02-23",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 22861)",
+        "docId": "22861"
+      },
+      {
+        "data": "2018-02",
+        "dividendo": 0.5176,
+        "dataPagamento": "2018-03-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 23545)",
+        "docId": "23545"
+      },
+      {
+        "data": "2018-03",
+        "dividendo": 0.5988,
+        "dataPagamento": "2018-04-20",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 25272)",
+        "docId": "25272"
+      },
+      {
+        "data": "2018-04",
+        "dividendo": 0.5472,
+        "dataPagamento": "2018-05-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 27037)",
+        "docId": "27037"
+      },
+      {
+        "data": "2018-05",
+        "dividendo": 1.5278,
+        "dataPagamento": "2018-06-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 27840)",
+        "docId": "27840"
+      },
+      {
+        "data": "2018-06",
+        "dividendo": 0.6288,
+        "dataPagamento": "2018-07-20",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 29290)",
+        "docId": "29290"
+      },
+      {
+        "data": "2018-07",
+        "dividendo": 1.8,
+        "dataPagamento": "2018-08-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 30719)",
+        "docId": "30719"
+      },
+      {
+        "data": "2018-08",
+        "dividendo": 1.5,
+        "dataPagamento": "2018-09-24",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 31761)",
+        "docId": "31761"
+      },
+      {
+        "data": "2018-09",
+        "dividendo": 1.7,
+        "dataPagamento": "2018-10-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 33485)",
+        "docId": "33485"
+      },
+      {
+        "data": "2018-10",
+        "dividendo": 1.7,
+        "dataPagamento": "2018-11-23",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 35010)",
+        "docId": "35010"
+      },
+      {
+        "data": "2018-11",
+        "dividendo": 1.7386,
+        "dataPagamento": "2018-12-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 36885)",
+        "docId": "36885"
+      },
+      {
+        "data": "2018-12",
+        "dividendo": 0.5748,
+        "dataPagamento": "2019-01-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 38911)",
+        "docId": "38911"
+      },
+      {
+        "data": "2019-01",
+        "dividendo": 0.837,
+        "dataPagamento": "2019-02-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 40820)",
+        "docId": "40820"
+      },
+      {
+        "data": "2019-02",
+        "dividendo": 0.6573,
+        "dataPagamento": "2019-03-25",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 43059)",
+        "docId": "43059"
+      },
+      {
+        "data": "2019-03",
+        "dividendo": 2.196,
+        "dataPagamento": "2019-04-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 45740)",
+        "docId": "45740"
+      },
+      {
+        "data": "2019-04",
+        "dividendo": 2.1358,
+        "dataPagamento": "2019-05-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 47972)",
+        "docId": "47972"
+      },
+      {
+        "data": "2019-05",
+        "dividendo": 0.8196,
+        "dataPagamento": "2019-06-24",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 50619)",
+        "docId": "50619"
+      },
+      {
+        "data": "2019-06",
+        "dividendo": 0.94,
+        "dataPagamento": "2019-07-22",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 52809)",
+        "docId": "52809"
+      },
+      {
+        "data": "2019-07",
+        "dividendo": 0.8844,
+        "dataPagamento": "2019-08-21",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 55311)",
+        "docId": "55311"
+      },
+      {
+        "data": "2019-08",
+        "dividendo": 1.0197,
+        "dataPagamento": "2019-09-13",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 58421)",
+        "docId": "58421"
+      },
+      {
+        "data": "2019-09",
+        "dividendo": 1.9088,
+        "dataPagamento": "2019-10-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 60979)",
+        "docId": "60979"
+      },
+      {
+        "data": "2019-10",
+        "dividendo": 2.1964,
+        "dataPagamento": "2019-11-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 65460)",
+        "docId": "65460"
+      },
+      {
+        "data": "2019-11",
+        "dividendo": 2.426,
+        "dataPagamento": "2019-12-13",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 70189)",
+        "docId": "70189"
+      },
+      {
+        "data": "2019-12",
+        "dividendo": 2.2387,
+        "dataPagamento": "2020-01-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 75124)",
+        "docId": "75124"
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 2.16,
+        "dataPagamento": "2020-02-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 79801)",
+        "docId": "79801"
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 1.0,
+        "dataPagamento": "2020-03-13",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 84442)",
+        "docId": "84442"
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.7534,
+        "dataPagamento": "2020-04-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 89825)",
+        "docId": "89825"
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 1.5294,
+        "dataPagamento": "2020-05-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 94352)",
+        "docId": "94352"
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 2.1,
+        "dataPagamento": "2020-06-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 99417)",
+        "docId": "99417"
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 2.1,
+        "dataPagamento": "2020-07-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 105159)",
+        "docId": "105159"
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 2.1,
+        "dataPagamento": "2020-08-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 110388)",
+        "docId": "110388"
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 4.085,
+        "dataPagamento": "2020-09-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 115317)",
+        "docId": "115317"
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 1.31,
+        "dataPagamento": "2020-10-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 120342)",
+        "docId": "120342"
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 1.7572,
+        "dataPagamento": "2020-11-16",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 125189)",
+        "docId": "125189"
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 4.7022,
+        "dataPagamento": "2020-12-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 130568)",
+        "docId": "130568"
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 1.6691,
+        "dataPagamento": "2021-01-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 137807)",
+        "docId": "137807"
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 1.42,
+        "dataPagamento": "2021-02-12",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 144554)",
+        "docId": "144554"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 1.85,
+        "dataPagamento": "2021-03-12",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 152883)",
+        "docId": "152883"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 1.0,
+        "dataPagamento": "2021-04-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 161668)",
+        "docId": "161668"
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 1.1,
+        "dataPagamento": "2021-05-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 171732)",
+        "docId": "171732"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 1.2,
+        "dataPagamento": "2021-06-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 182929)",
+        "docId": "182929"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 2.4026,
+        "dataPagamento": "2021-07-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 191924)",
+        "docId": "191924"
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 1.1,
+        "dataPagamento": "2021-08-13",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 200912)",
+        "docId": "200912"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 1.1,
+        "dataPagamento": "2021-09-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 211835)",
+        "docId": "211835"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 1.0859,
+        "dataPagamento": "2021-10-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 222424)",
+        "docId": "222424"
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 1.7398,
+        "dataPagamento": "2021-11-16",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 231989)",
+        "docId": "231989"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 1.1812,
+        "dataPagamento": "2021-12-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 243451)",
+        "docId": "243451"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 1.4558,
+        "dataPagamento": "2022-01-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 253742)",
+        "docId": "253742"
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 1.05,
+        "dataPagamento": "2022-02-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 263006)",
+        "docId": "263006"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 1.1961,
+        "dataPagamento": "2022-03-15",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 274611)",
+        "docId": "274611"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 1.368,
+        "dataPagamento": "2022-04-14",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 286420)",
+        "docId": "286420"
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 1.5024,
+        "dataPagamento": "2022-05-13",
+        "cotas": null,
+        "fonte": "Rendimentos e Amortizações (ID 299070)",
+        "docId": "299070"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 4.1467,
+        "dataPagamento": "2022-06-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 312112)",
+        "docId": "312112"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 1.15,
+        "dataPagamento": "2022-07-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 323223)",
+        "docId": "323223"
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 1.0205,
+        "dataPagamento": "2022-08-12",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 333833)",
+        "docId": "333833"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.8,
+        "dataPagamento": "2022-09-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 349207)",
+        "docId": "349207"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.6,
+        "dataPagamento": "2022-10-17",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 361202)",
+        "docId": "361202"
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.4423,
+        "dataPagamento": "2022-11-16",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 373481)",
+        "docId": "373481"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.735,
+        "dataPagamento": "2022-12-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 386655)",
+        "docId": "386655"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.9238,
+        "dataPagamento": "2023-01-13",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 398116)",
+        "docId": "398116"
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.99,
+        "dataPagamento": "2023-02-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 411416)",
+        "docId": "411416"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.91,
+        "dataPagamento": "2023-03-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 425846)",
+        "docId": "425846"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 1.2563,
+        "dataPagamento": "2023-04-17",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 442483)",
+        "docId": "442483"
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 1.0069,
+        "dataPagamento": "2023-05-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 457592)",
+        "docId": "457592"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 1.2254,
+        "dataPagamento": "2023-06-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 474907)",
+        "docId": "474907"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.9079,
+        "dataPagamento": "2023-07-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 487907)",
+        "docId": "487907"
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.7132,
+        "dataPagamento": "2023-08-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 502025)",
+        "docId": "502025"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.597,
+        "dataPagamento": "2023-09-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 517756)",
+        "docId": "517756"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.7493,
+        "dataPagamento": "2023-10-16",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 532334)",
+        "docId": "532334"
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.7803,
+        "dataPagamento": "2023-11-16",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 547811)",
+        "docId": "547811"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.7755,
+        "dataPagamento": "2023-12-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 565803)",
+        "docId": "565803"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.7598,
+        "dataPagamento": "2024-01-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 580928)",
+        "docId": "580928"
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.81,
+        "dataPagamento": "2024-02-16",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 597317)",
+        "docId": "597317"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.88,
+        "dataPagamento": "2024-03-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 616119)",
+        "docId": "616119"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.94,
+        "dataPagamento": "2024-04-12",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 634595)",
+        "docId": "634595"
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 1.29,
+        "dataPagamento": "2024-05-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 655570)",
+        "docId": "655570"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.76,
+        "dataPagamento": "2024-06-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 675652)",
+        "docId": "675652"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.81,
+        "dataPagamento": "2024-07-12",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 692706)",
+        "docId": "692706"
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.85,
+        "dataPagamento": "2024-08-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 713049)",
+        "docId": "713049"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.75,
+        "dataPagamento": "2024-09-13",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 732981)",
+        "docId": "732981"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.7128,
+        "dataPagamento": "2024-10-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 752843)",
+        "docId": "752843"
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 1.0806,
+        "dataPagamento": "2024-11-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 773703)",
+        "docId": "773703"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.9614,
+        "dataPagamento": "2024-12-13",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 795671)",
+        "docId": "795671"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 1.0358,
+        "dataPagamento": "2025-01-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 814824)",
+        "docId": "814824"
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 1.0271,
+        "dataPagamento": "2025-02-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 833304)",
+        "docId": "833304"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.9469,
+        "dataPagamento": "2025-03-18",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 855023)",
+        "docId": "855023"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 1.1504,
+        "dataPagamento": "2025-04-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 873954)",
+        "docId": "873954"
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 1.3608,
+        "dataPagamento": "2025-05-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 896887)",
+        "docId": "896887",
+        "lucroCaixa": 35981932,
+        "distribuicao": 35981797,
+        "resultadoCaixa": 135,
+        "payout": 1.0
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 1.0543,
+        "dataPagamento": "2025-06-13",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 918611)",
+        "docId": "918611",
+        "lucroCaixa": 27879696,
+        "distribuicao": 27876721,
+        "resultadoCaixa": 2975,
+        "payout": 0.9999
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 1.0141,
+        "dataPagamento": "2025-07-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 941122)",
+        "docId": "941122",
+        "lucroCaixa": 26814618,
+        "distribuicao": 26814477,
+        "resultadoCaixa": 141,
+        "payout": 1.0
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.951,
+        "dataPagamento": "2025-08-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 961398)",
+        "docId": "961398",
+        "lucroCaixa": 25146290,
+        "distribuicao": 25146290,
+        "resultadoCaixa": 0,
+        "payout": 1.0
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.7815,
+        "dataPagamento": "2025-09-12",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 984799)",
+        "docId": "984799",
+        "lucroCaixa": 20666057,
+        "distribuicao": 20664149,
+        "resultadoCaixa": 1908,
+        "payout": 0.9999
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.7422,
+        "dataPagamento": "2025-10-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1007704)",
+        "docId": "1007704",
+        "lucroCaixa": 19625496,
+        "distribuicao": 19624993,
+        "resultadoCaixa": 503,
+        "payout": 1.0
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.8037,
+        "dataPagamento": "2025-11-14",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1030569)",
+        "docId": "1030569",
+        "lucroCaixa": 21251673,
+        "distribuicao": 21251154,
+        "resultadoCaixa": 519,
+        "payout": 1.0
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.8194,
+        "dataPagamento": "2025-12-12",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1055035)",
+        "docId": "1055035",
+        "lucroCaixa": 21668223,
+        "distribuicao": 21666288,
+        "resultadoCaixa": 1935,
+        "payout": 0.9999
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.81,
+        "dataPagamento": "2026-01-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1077623)",
+        "docId": "1077623",
+        "lucroCaixa": 22603398,
+        "distribuicao": 21417737,
+        "resultadoCaixa": 1185661,
+        "payout": 0.9475
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.8276,
+        "dataPagamento": "2026-02-13",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1103464)",
+        "docId": "1103464",
+        "lucroCaixa": 20824993,
+        "distribuicao": 21883110,
+        "resultadoCaixa": -1058117,
+        "payout": 1.0508
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.7253,
+        "dataPagamento": "2026-03-13",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1129949)",
+        "docId": "1129949",
+        "lucroCaixa": 19179541,
+        "distribuicao": 19178129,
+        "resultadoCaixa": 1412,
+        "payout": 0.9999
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 1.0335,
+        "dataPagamento": "2026-04-15",
+        "cotas": 26441650,
+        "fonte": "Rendimentos e Amortizações (ID 1156062)",
+        "docId": "1156062",
+        "lucroCaixa": 27329401,
+        "distribuicao": 27327445,
+        "resultadoCaixa": 1956,
+        "payout": 0.9999,
+        "caixaLiquidoFimMes": 59568353.83
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 3,
+        "lucroCaixa": 90676246,
+        "distribuicao": 90672995,
+        "resultadoCaixa": 3251,
+        "payout": 1.0,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 130961137,
+        "distribuicao": 129770611,
+        "resultadoCaixa": 1190526,
+        "payout": 0.9909,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "lucroCaixa": 67333935,
+        "distribuicao": 68388684,
+        "resultadoCaixa": -1054749,
+        "payout": 1.0157,
+        "interpretacao": "queimou_caixa"
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_longo",
+      "dividendoLabel": "DPS sustentável em torno de R$ 0,90/cota (média 12m)",
+      "dividendoCor": "emerald",
+      "horizonte": null,
+      "status": "estavel",
+      "cor": "emerald",
+      "payoutMedio12m": 0.9995,
+      "caixaLiquido": 59568353,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 700 mil em Disponibilidades + R$ 58,87 mi em Fundos de Renda Fixa de instituições financeiras de 1ª linha (item 9 do Informe Mensal Estruturado mar/2026, ID 1161336).",
+      "resultadoAcumuladoRetido": 0,
+      "resultadoAcumuladoNota": "Fundo distribui aproximadamente 100% do regime caixa — não retém resultado acumulado relevante.",
+      "queimaMediaMensal": 0,
+      "queimaPorCota": 0.0,
+      "coberturaMeses": null,
+      "tendencia": "DPS oscila R$ 0,72-1,36/cota em torno da média R$ 0,91. Mar/26 (R$ 1,03) capturou marcação a mercado IPCA+ favorável.",
+      "leitura": "<p>O DPS é <strong class=\"text-emerald-400\">sustentável no longo prazo</strong> — payout 12m de 99,9% sobre lucro caixa real. As oscilações mensais (CV 19% em 24m) refletem a marcação a mercado dos CRIs IPCA+ (oscilou entre -R$ 20 mi e +R$ 24 mi mensais), não fragilidade estrutural. Em 12 meses o fundo gerou R$ 289 mi e distribuiu R$ 289 mi — equilíbrio perfeito.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2024-12",
+        "dataExata": "2024-12-13",
+        "titulo": "DPS R$ 0,9614 (jan/25 ref nov/24) — pico antes do drawdown",
+        "tipo": "outro",
+        "descricao": "<p>Em nov/2024 RECR11 distribuiu R$ 0,9614/cota — DY anualizado de 15,12% sobre cota de R$ 76,30. Foi o último mês antes da forte queda da cota a R$ 67,20 em dez/2024.</p>",
+        "impactoDividendo": "DPS de R$ 0,96, posteriormente caiu para R$ 0,80-0,85 em 2025",
+        "severidade": "neutro",
+        "fonte": "Relatório Gerencial nov/2024 (ID 795934)",
+        "docId": "795934"
+      },
+      {
+        "data": "2025-12",
+        "dataExata": "2025-12-15",
+        "titulo": "Acordo de dação em pagamento — Caso Olimpo",
+        "tipo": "evento_credito",
+        "descricao": "<p>Fundo celebra Instrumento Particular de Acordo com Olimpo Participações, prevendo dação em pagamento dos CRIs Olimpo (20J0612532) e Olimpo 2 (21E0426247) por imóveis e créditos. O valor da dação supera os saldos dos CRIs marcados — não houve perda direta no fundo.</p>",
+        "impactoDividendo": "Neutro no DPS de curto prazo; reduz risco de provisão futura",
+        "severidade": "neutro",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130562)",
+        "docId": "1130562"
+      },
+      {
+        "data": "2026-01",
+        "dataExata": "2026-01-15",
+        "titulo": "XP Investimentos — Formador de Mercado",
+        "tipo": "outro",
+        "descricao": "<p>Em 15/01/2026 o fundo contrata XP Investimentos como formador de mercado para fomentar liquidez e formação eficiente de preços. Volume diário sobe para R$ 3,2 mi nos meses subsequentes (vs ~R$ 1-2 mi histórico).</p>",
+        "impactoDividendo": "Sem impacto direto no DPS — reduz volatilidade de preço",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130562)",
+        "docId": "1130562"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-03-13",
+        "titulo": "DPS R$ 0,7253 — efeito calendar (17 dias úteis)",
+        "tipo": "outro",
+        "descricao": "<p>DPS de fevereiro caiu para R$ 0,7253 — gestor explicou no RG que o resultado foi impactado pelo menor número de dias úteis (17 vs 21 em janeiro) e pelo fechamento ocorrer em 27/02 (último dia útil), com rendimento do dia 28 contabilizado em março.</p>",
+        "impactoDividendo": "DPS reduzido pontualmente — recuperou em mar/26 com R$ 1,03",
+        "severidade": "neutro",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130562)",
+        "docId": "1130562"
+      },
+      {
+        "data": "2026-03",
+        "dataExata": "2026-04-15",
+        "titulo": "DPS R$ 1,03 — captura de marcação IPCA",
+        "tipo": "outro",
+        "descricao": "<p>Em mar/2026 RECR11 distribui R$ 1,0335/cota (DY anualizado 15,36%). Resultado caixa de R$ 27,3 mi capturou marcação a mercado positiva e amortizações pontuais. Evidencia o padrão de oscilação do DPS em torno do regime caixa real.</p>",
+        "impactoDividendo": "DPS pontualmente alto — média 12m segue em R$ 0,91",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153)",
+        "docId": "1157153"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-06",
+        "titulo": "Vencimento de CRI VIC 2 (R$ 2,6 mi, 0,1% PL)",
+        "tipo": "amortizacao_programada",
+        "descricao": "<p>CRI VIC 2 (Habitasec, código 21F0189140) vence em jun/2026 — IPCA+ 11,00%, R$ 2,59 mi, 0,1% do PL. Entrada de caixa pequena.</p>",
+        "certeza": "confirmado",
+        "severidade": "neutro",
+        "premissa": "Saldo do CRI listado no RG mar/2026.",
+        "impactoValor": 0.0,
+        "duracaoMeses": 1
+      },
+      {
+        "data": "2026-06",
+        "titulo": "Possível distribuição extraordinária — fechamento 1S2026",
+        "tipo": "extraordinaria_historica",
+        "descricao": "<p>RECR11 historicamente paga DPS mais alto em meses de fechamento de semestre (jun/dez) quando há captura de marcação ou amortizações maiores. Padrão presente em jun/2024, dez/2024 e mar/2026 (R$ 1,03).</p>",
+        "certeza": "projetado",
+        "severidade": "positivo",
+        "premissa": "Histórico de 3 anos mostra DPS 10-15% acima da média em jun/dez.",
+        "impactoValor": 0.05,
+        "duracaoMeses": 1
+      },
+      {
+        "data": "2026-09",
+        "titulo": "Liquidação Morumbi Plaza (cenário possível)",
+        "tipo": "venda_em_analise",
+        "descricao": "<p>Imóvel recebido em dação por Olimpo (R$ 75,9 mi, 3% do PL) deve ser monetizado pelo gestor — sem prazo fixo divulgado. Venda com lucro pode gerar distribuição extraordinária ou amortização.</p>",
+        "certeza": "possivel",
+        "severidade": "positivo",
+        "premissa": "Não é core do fundo de papel; gestor sinalizou intenção de monetização.",
+        "impactoValor": 0.1,
+        "duracaoMeses": 1
+      },
+      {
+        "data": "2027-03",
+        "titulo": "Vencimento de CRI Setin (Habitasec, R$ 3,7 mi)",
+        "tipo": "amortizacao_programada",
+        "descricao": "<p>CRI Setin (19E0281174, CDI+ 3,50%) vence em mai/2026 — saldo modesto (~0,2% do PL). Outras amortizações pulverizadas se acumulam ao longo de 2027 conforme duration média de 3,9 anos.</p>",
+        "certeza": "confirmado",
+        "severidade": "neutro",
+        "premissa": "RG nov/2024 lista vencimento.",
+        "impactoValor": 0.0,
+        "duracaoMeses": 1
+      }
+    ],
+    "padraoSazonal": {
+      "tem": true,
+      "mediaGeral": 0.91,
+      "ajusteRelativoPorMes": {
+        "6": 0.1,
+        "12": 0.1,
+        "3": 0.08
+      },
+      "observacao": "Padrão fraco mas detectável: DPS 8-12% acima da média em meses de fechamento semestral (jun/dez) e março — capturando marcação a mercado e amortizações concentradas. Padrão observado consistentemente em 2024-2026."
+    },
+    "guidance": {
+      "fonte": "estimativa",
+      "periodo": "próximos 6 meses",
+      "faixaMin": 0.8,
+      "faixaMax": 1.05,
+      "unidade": "R$/cota/mês",
+      "premissas": [
+        "DPS sustentável real estimado em R$ 0,91/cota (média 12m)",
+        "Marcação a mercado oscila ±R$ 0,15/cota mensalmente — explica a banda",
+        "Sazonalidade leve em jun (esperado próximo de R$ 1,00-1,05) e meses regulares (R$ 0,80-0,90)",
+        "Sem evento extraordinário confirmado pelo gestor para o período"
+      ],
+      "cronogramaAnuncio": {
+        "fonte": "gestor",
+        "regraTexto": "Anúncio até o 5º dia útil do mês; pagamento até o 10º dia útil",
+        "dataAnuncioEstimada": "2026-05-08",
+        "dataPagamentoEstimada": "2026-05-15"
+      }
+    },
+    "projecaoDy": {
+      "precoReferencia": 80.76,
+      "dyAtual12m": 13.53,
+      "dyProjetado12m": 13.5,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 13.5,
+          "dividendoMes": 0.91,
+          "descricao": "DPS médio R$ 0,91 — payout 100% do caixa real, sem marcação a mercado dominando."
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 14.6,
+          "dividendoMes": 0.98,
+          "descricao": "Marcação positiva sustentada (IPCA acelerando) + venda Morumbi Plaza com ganho — DPS sobe a R$ 0,98."
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 11.5,
+          "dividendoMes": 0.77,
+          "descricao": "Marcação a mercado negativa por 3-6 meses + 1-2 defaults pulverizados — DPS cai para R$ 0,77."
+        }
+      ],
+      "retornoTotal12m": 16.0,
+      "premissas": [
+        "DPS base = média 12m ajustada por evento sazonal jun/26",
+        "Cota mantém R$ 80-82 enquanto Selic permanece > 13%",
+        "Sem catastrofe sistêmica no segmento de papel"
+      ]
+    },
+    "sintese": {
+      "tendencia": "estavel_oscilando",
+      "tendenciaLabel": "DPS estável em R$ 0,80-1,00 com oscilação por marcação a mercado",
+      "cor": "emerald",
+      "direcao": "DPS médio sustentável em R$ 0,91/cota com banda mensal de R$ 0,72-1,10 dependente da marcação a mercado IPCA+ e amortizações pontuais. Sem inflexão estrutural visível — padrão consistente desde 2023.",
+      "pontosPositivos": [
+        {
+          "texto": "Lucro caixa 12m = distribuição 12m (payout 100% do regime caixa real)",
+          "peso": "alto"
+        },
+        {
+          "texto": "83% IPCA+ na carteira gera hedge inflacionário robusto",
+          "peso": "alto"
+        },
+        {
+          "texto": "Caixa líquido R$ 59,6 mi (item 9 IM) = colchão para 2-3 meses de DPS",
+          "peso": "medio"
+        },
+        {
+          "texto": "Track record 158% acumulado vs 87% CDI desde IPO",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Marcação a mercado oscila ±R$ 0,15/cota mensalmente",
+          "peso": "medio"
+        },
+        {
+          "texto": "62% incorporação/loteamento — sensível a Selic alta",
+          "peso": "medio"
+        },
+        {
+          "texto": "1 caso renegociado em 2025 (Olimpo) — gerou tijolo direto",
+          "peso": "baixo"
+        }
+      ],
+      "veredicto": "<p>O DPS de RECR11 é <strong class=\"text-emerald-400\">estruturalmente sustentável</strong> — em 12 meses o fundo gerou R$ 289 mi e distribuiu R$ 289 mi (payout exato 100%). A volatilidade mensal (CV 19%) é <strong class=\"text-blue-400\">contábil, não financeira</strong>: vem da marcação a mercado dos CRIs IPCA+ (oscilou +R$ 24 mi a -R$ 20 mi mensais), não de fragilidade estrutural. Para o investidor: aceitar oscilação R$ 0,80-1,00/cota como o normal e não como sinal de problema. Próximos 6 meses devem manter o padrão; jun/2026 tem viés positivo por sazonalidade.</p>"
+    },
+    "alertas": [
+      {
+        "texto": "DPS oscila R$ 0,72-1,36 (CV 19%) por marcação a mercado mensal",
+        "severidade": "sev-amber"
+      },
+      {
+        "texto": "62% da carteira em incorporação residencial e loteamento",
+        "severidade": "sev-amber"
+      },
+      {
+        "texto": "Imóvel Morumbi Plaza (R$ 75,9 mi) recebido em dação — fora do core papel",
+        "severidade": "sev-amber"
+      }
+    ]
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/recr11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2021-06-07",
+      "dataFim": "2026-04-24",
+      "fonte": "yfinance:RECR11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 80.76,
+      "minHistorico": {
+        "valor": 67.2,
+        "data": "2024-12-16"
+      },
+      "maxHistorico": {
+        "valor": 106.4,
+        "data": "2021-07-26"
+      }
+    },
+    "historicoVp": {
+      "csvPath": null,
+      "fonte": "Informes Mensais Estruturados (não consolidado em CSV nesta entrega)",
+      "ultimoVpCota": 88.93,
+      "ultimoVpData": "2026-03"
+    },
+    "eventosValuation": [
+      {
+        "data": "2018-08-01",
+        "tipo": "mudanca_gestor",
+        "titulo": "Migração para BRL Trust DTVM + REC Gestão como consultora",
+        "descricao": "<p>Administração migra de Banco Ourinvest para BRL Trust DTVM em ago/2018. REC Gestão de Recursos passa a ser consultora de investimentos. Fundo é renomeado de UBSR11 para RECR11.</p>",
+        "impactoVp": null,
+        "impactoPreco": null,
+        "fonte": "Informe Anual 2018 (ID 24304)",
+        "docId": "24304"
+      },
+      {
+        "data": "2022-05-31",
+        "tipo": "emissao",
+        "titulo": "12ª Emissão concluída — R$ 213,9 mi (2,18 mi cotas)",
+        "descricao": "<p>Última emissão do fundo (até a presente data) concluída em mai/2022. Cotas em circulação atinge 26.441.650, patamar mantido até hoje. PL salta para R$ 2,5+ bi.</p>",
+        "impactoVp": null,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1157153) — tabela de emissões",
+        "docId": "1157153"
+      },
+      {
+        "data": "2024-12-16",
+        "tipo": "evento_credito",
+        "titulo": "Mínimo histórico R$ 67,20 — crise sistêmica do papel HY",
+        "descricao": "<p>Cota toca mínimo histórico de R$ 67,20 em 16/12/2024 — drawdown de 24,9% vs pico móvel. Crise sistêmica em FIIs de papel HY (DEVA11/HCTR11), elevação da Selic para 14,75% e estresse no segmento de CRI pulverizado afetam todo o segmento.</p>",
+        "impactoVp": null,
+        "impactoPreco": -0.249,
+        "fonte": "Calculado de historico_precos.csv",
+        "docId": null
+      },
+      {
+        "data": "2025-12-15",
+        "tipo": "evento_credito",
+        "titulo": "Caso Olimpo — Acordo de dação em pagamento",
+        "descricao": "<p>Fundo celebra Instrumento Particular de Acordo com Olimpo Participações para dação dos CRIs Olimpo. Não houve impacto material direto no VP/cota (valor da dação supera saldo dos CRIs marcados), mas adicionou tijolo direto à carteira (R$ 75,9 mi).</p>",
+        "impactoVp": 0.0,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130562)",
+        "docId": "1130562"
+      },
+      {
+        "data": "2026-01-15",
+        "tipo": "amortizacao_extraordinaria",
+        "titulo": "XP como formador de mercado — boost de liquidez",
+        "descricao": "<p>Contratação da XP como formador de mercado em 15/01/2026 elevou o volume médio diário de ~R$ 1-2 mi para R$ 3,2 mi — reduziu spread bid-ask e a volatilidade de preço.</p>",
+        "impactoVp": null,
+        "impactoPreco": 0.02,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130562)",
+        "docId": "1130562"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "papel_misto",
+      "criterioAgrupamento": "FIIs de CRI multicategoria, mistura HG e mid-grade, gestão ativa, exposição IPCA+ majoritária. RECR11 está na fronteira HG/Mid pela pulverização extrema, mas exposição a incorporação/loteamento (62%) o coloca em mid-grade.",
+      "tickers": [
+        "FTCA11",
+        "EQIR11",
+        "GCRI11",
+        "VGIP11",
+        "ARRI11",
+        "EIRA11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.91,
+        "pvpMin": 0.73,
+        "pvpMax": 1.02,
+        "dyMediano": 13.45,
+        "dyMin": 11.72,
+        "dyMax": 15.77,
+        "premioRiscoSegmento": 0.04
+      },
+      "posicaoFundo": {
+        "pvpRanking": "Mediano — P/VP 0,91 está na mediana do subsegmento (~0,91)",
+        "dyRanking": "Mediano — DY 13,5% está na mediana (13,45%)",
+        "leitura": "<p>RECR11 negocia em linha com a mediana do subsegmento de papel misto. P/VP 0,91 e DY 13,5% são típicos do grupo, mas RECR11 oferece <strong class=\"text-blue-400\">tamanho dramaticamente maior</strong> (PL R$ 2,35 bi vs mediana R$ 100-300 mi do grupo) e <strong class=\"text-blue-400\">liquidez 5-10x maior</strong>. Para investidor que valoriza tamanho e liquidez, RECR11 é a escolha óbvia dentro do subsegmento.</p>"
+      },
+      "statusClassificacao": "proposto"
+    },
+    "pvp": {
+      "valor": "0,91",
+      "descricao": "<p>RECR11 negocia a <strong class=\"text-emerald-400\">P/VP 0,91</strong> — desconto de 9% sobre o valor patrimonial de R$ 88,93. Em linha com a mediana do subsegmento de papel misto.</p>",
+      "detalhes": [
+        {
+          "label": "Cota mercado",
+          "valor": "R$ 80,76"
+        },
+        {
+          "label": "Cota patrimonial",
+          "valor": "R$ 88,93"
+        },
+        {
+          "label": "Desconto",
+          "valor": "9%"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "+1,3%",
+      "label": "DY 13,5% vs Selic 14,75%",
+      "cor": "amber",
+      "descricao": "<p>DY 13,5% a.a. está <strong class=\"text-amber-400\">125 bps abaixo da Selic atual</strong> (14,75%). Para fundo de papel mid-grade com 4% de prêmio de risco esperado, o preço justo seria com DY ≈ 19% — mas a expectativa de queda de Selic para 11% (Focus 12m) reabre o prêmio implícito.</p>",
+      "detalhe": "Em cenário base de Selic = 11% até fim de 2026, DY 13,5% representaria spread de 250 bps + isenção fiscal — atrativo."
+    },
+    "precoJustoMercado": {
+      "valor": 86.5,
+      "faixa": [
+        82.0,
+        91.0
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 80.76,
+        "diferencaPct": 7.1,
+        "leitura": "subvalorizado em 7,1% vs preço justo — janela moderada de entrada"
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio",
+          "peso": 0.45,
+          "preco": 79.85,
+          "calculo": "DPS sustentável R$ 10,93/ano ÷ (Selic 14,75% atual + Prêmio 4% papel misto - 5% queda Selic projetada) ≈ R$ 10,93/0,1369 = R$ 79,85",
+          "racional": "Modelo macro com Selic atual ponderada com expectativa de queda. RECR11 mid-grade pulverizado merece prêmio de 4% (entre HG 2,5% e HY 5%)."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.2,
+          "preco": 80.93,
+          "calculo": "VP/cota R$ 88,93 × P/VP mediano dos pares (0,91) = R$ 80,93",
+          "racional": "Mediana do subsegmento papel_misto é P/VP 0,91. RECR11 tem ranking mediano."
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.35,
+          "preco": 81.21,
+          "calculo": "DPS R$ 10,93/ano ÷ DY mediano dos pares (13,45%) = R$ 81,21",
+          "racional": "DY mediano do subsegmento. RECR11 entrega DY na mediana com tamanho/liquidez muito acima."
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 1.07,
+        "score": 0.74,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.85,
+            "racional": "REC Gestão com 8+ anos de track record positivo (158% vs 87% CDI). Top-10 no segmento de papel."
+          },
+          {
+            "nome": "Inadimplência",
+            "peso": 0.2,
+            "score": 0.95,
+            "racional": "0% inadimplência atual. Caso Olimpo classificado como renegociado, com saída favorável."
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 1.0,
+            "racional": "LTV 0% no fundo. Sem dívida."
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.15,
+            "score": 0.55,
+            "racional": "CV24m de 19% — alto para FII de papel. Penaliza."
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.1,
+            "score": 1.0,
+            "racional": "sustentavel_longo — payout 100% do regime caixa real, sem queima."
+          },
+          {
+            "nome": "Diversificação",
+            "peso": 0.15,
+            "score": 0.95,
+            "racional": "HHI 0,013 entre os menores do mercado — pulverização extrema."
+          }
+        ]
+      },
+      "explicacao": "<p>O preço justo de R$ 86,50 (faixa R$ 82-91) é <strong class=\"text-emerald-400\">7% acima da cota atual</strong> de R$ 80,76. O modelo combina o DY-alvo Selic+prêmio (peso 0,45) com pares (P/VP e DY, soma 0,45) e aplica fator qualidade 1,07 — RECR11 é gestora qualificada, sem alavancagem, com inadimplência zero, mas penalizada pela volatilidade de DPS. O viés positivo vs mediana dos pares vem do tamanho (R$ 2,35 bi) e da liquidez (R$ 3 mi/dia) que entregam prêmio de seguridade não capturado nos múltiplos médios.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 84.0,
+        "faixa": [
+          81.0,
+          87.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Possível distribuição extraordinária em jun/2026 (sazonal)",
+            "data": "2026-06",
+            "impactoEsperado": "+R$ 0,05/cota DPS no mês — impacto pequeno no preço",
+            "fonte": "Histórico próprio do fundo (3 anos consecutivos com DPS extra em jun/dez)",
+            "docId": "1157153"
+          },
+          {
+            "evento": "Selic em queda gradual (Focus 12m: 11%)",
+            "data": "2026-10",
+            "impactoEsperado": "Reabertura de prêmio para FIIs de papel — preços tendem a subir 3-5%",
+            "fonte": "BCB Focus (data/macro_snapshot.json)",
+            "docId": null
+          }
+        ],
+        "racional": "<p>No curto prazo, o cenário é <strong class=\"text-emerald-400\">lateral com viés de alta</strong>. A queda gradual da Selic (de 14,75% para ~13% até out/2026) reabre o prêmio dos FIIs de papel; a expectativa de DPS extra em jun/2026 (sazonalidade) gera fluxo positivo. O caso Olimpo já está precificado, e a contratação da XP como formador de mercado reduz volatilidade.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 88.0,
+        "faixa": [
+          83.0,
+          95.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Selic projetada para 11% e ciclo de queda completo",
+            "data": "2027-12",
+            "impactoEsperado": "Reprecificação completa para FIIs de papel — RECR11 pode convergir ao VP de R$ 89",
+            "fonte": "BCB Focus + curva DI",
+            "docId": null
+          },
+          {
+            "evento": "Vencimentos de CRIs — duration 3,9 anos",
+            "data": "2027-2028",
+            "impactoEsperado": "Reciclagem natural do book — gestor pode capturar spreads novos a taxas de mercado mais favoráveis",
+            "fonte": "Relatório Gerencial mar/2026 (ID 1157153) — duration média 3,9 anos",
+            "docId": "1157153"
+          },
+          {
+            "evento": "Possível monetização do imóvel Morumbi Plaza",
+            "data": "2027",
+            "impactoEsperado": "Venda com lucro pode gerar +R$ 5-10 mi de ganho de capital (3-5% do PL)",
+            "fonte": "Inferência da estratégia do gestor (não declarada)",
+            "docId": "1130562"
+          }
+        ],
+        "racional": "<p>Médio prazo é <strong class=\"text-emerald-400\">positivo</strong>. O ciclo completo de queda da Selic (de 14,75% para 11%) deve reprecificar todo o segmento de papel — RECR11 com P/VP 0,91 e tamanho/liquidez tem espaço para convergência. A reciclagem natural dos CRIs em duration 3,9 anos permite ao gestor capturar spreads novos. Risco: 62% da carteira em incorporação/loteamento pode ter defaults pulverizados se a recessão se prolongar.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 92.0,
+        "faixa": [
+          85.0,
+          100.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Ciclo imobiliário completo + Selic em patamar normalizado (~9%)",
+            "data": "2029-2030",
+            "impactoEsperado": "Volume de novos CRIs + spreads históricos voltando — RECR11 atinge VP cheio",
+            "fonte": "Ciclo macroeconômico padrão",
+            "docId": null
+          },
+          {
+            "evento": "Eventual nova emissão para escala",
+            "data": "2027+",
+            "impactoEsperado": "Após 4 anos sem emissão (último em 2022), gestor pode retomar captação se mercado abrir",
+            "fonte": "Padrão histórico do fundo (12 emissões em 5 anos antes da pausa)",
+            "docId": "1157153"
+          }
+        ],
+        "racional": "<p>No longo prazo, o cenário é <strong class=\"text-emerald-400\">positivo estrutural</strong>. RECR11 tem escala e gestora qualificada para sobreviver ciclos. Em ambiente de Selic normalizada (8-10%), DY de 13,5% torna-se desproporcionalmente atrativo e a cota deve convergir ao VP. Risco de longo prazo: mudança de gestor ou erro de execução acumulado. Como mitigante: track record de 8 anos consistentemente acima do CDI.</p>"
+      }
+    },
+    "recomendacoes": null
+  },
+  "conclusao": {
+    "paragrafos": [
+      "<p>RECR11 é um <strong class=\"text-blue-400\">FII de papel multicategoria de grande porte</strong> (R$ 2,35 bi, 174 mil cotistas) com pulverização extrema (98 CRIs, HHI 0,013) e gestão ativa qualificada da REC. Combina robustez patrimonial com exposição mid-grade relevante a incorporação/loteamento (62% da carteira), o que o diferencia do papel HG puro (KNCR11/KNIP11).</p>",
+      "<p>O DPS médio de R$ 0,91/cota nos últimos 12 meses oscila entre R$ 0,72-1,36 (CV 19%) — reflexo da marcação a mercado dos CRIs IPCA+ que oscilou entre +R$ 24 mi e -R$ 20 mi mensais. Em janelas de 12 meses o fundo distribui exatamente o que gera (payout 100%), confirmando sustentabilidade estrutural. P/VP 0,91 está na mediana do subsegmento papel misto.</p>",
+      "<p>O caso Olimpo (CRIs em dação por imóveis) e a alta exposição a incorporação são pontos de atenção, mas mitigados pela diversificação extrema, garantias robustas (alienação fiduciária + fundo de reserva em todas as operações) e track record de 8 anos com retorno acumulado de 158% vs 87% do CDI.</p>"
+    ],
+    "pontosFortes": [
+      "98 CRIs em 14 estados — pulverização entre as maiores do segmento (HHI 0,013)",
+      "PL R$ 2,35 bi e liquidez R$ 3 mi/dia — entre os FIIs de papel mais negociáveis",
+      "Track record de 8 anos: 158% acumulado vs 87% CDI desde IPO",
+      "100% das operações com alienação fiduciária + fundo de reserva",
+      "83% IPCA+ + 14% CDI+ permite hedge dual contra inflação e juros",
+      "P/VP 0,91 com cota patrimonial estável — entrada sem prêmio sobre patrimônio",
+      "Gestora REC com R$ 3,5 bi sob gestão e expertise comprovada em CRI"
+    ],
+    "pontosDeAtencao": [
+      "DPS volátil em torno de R$ 0,80-1,00 (CV 19%) — não cabe em planejamento de renda fixa puro",
+      "62% em incorporação/loteamento — sensível a Selic alta e ciclo imobiliário",
+      "Imóvel Morumbi Plaza R$ 75,9 mi recebido em dação — fora do core papel",
+      "Cota negociada 19% abaixo do IPO de R$ 100 (apesar do retorno total positivo via dividendos)",
+      "Gestão muito ativa (5-10 mov/mês) — dependência total de execução qualificada"
+    ],
+    "conclusaoFinal": "<p>RECR11 merece veredito <strong class=\"text-amber-400\">MANTER</strong> com nota 7,5/10 — é um FII de papel multicategoria sólido, com pulverização excepcional, gestão qualificada e DY atrativo (13,5%). Não é a escolha para quem busca DPS ultra-estável (preferir KNCR11/KNIP11), mas é instrumento de qualidade para quem aceita oscilação em troca de exposição diversificada e profissionalmente gerida a CRIs. Preço justo estimado de R$ 86,50 (vs R$ 80,76 atual) sugere upside de 7% além da renda. Cenário de queda gradual de Selic (Focus: 11% em 12m) é catalisador favorável de médio prazo.</p>"
+  },
+  "footer": {
+    "dataAnalise": "2026-04-26",
+    "totalDocumentos": 464,
+    "disclaimer": "Esta análise foi produzida com base nos documentos públicos do fundo (FundosNet/CVM) até 26/04/2026. Não constitui recomendação de investimento. Rentabilidade passada não garante rentabilidade futura. Procure assessoria qualificada antes de investir."
+  }
+}

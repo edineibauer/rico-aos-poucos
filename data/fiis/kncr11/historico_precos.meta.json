@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/kncr11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:KNCR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 107.15,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 85.5,
+    "data": "2020-03-16"
+  },
+  "maxHistorico": {
+    "valor": 117.0,
+    "data": "2016-11-28"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:13Z"
+}

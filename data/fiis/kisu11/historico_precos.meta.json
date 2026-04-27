@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/kisu11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2021-01-11",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:KISU11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 7.11,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 6.54,
+    "data": "2025-01-27"
+  },
+  "maxHistorico": {
+    "valor": 14.95,
+    "data": "2021-04-26"
+  },
+  "totalPontos": 277,
+  "coletadoEm": "2026-04-27T00:32:27Z"
+}

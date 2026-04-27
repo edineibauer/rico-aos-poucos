@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/mfii11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:MFII11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 71.73,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 68.55,
+    "data": "2026-04-06"
+  },
+  "maxHistorico": {
+    "valor": 157.0114,
+    "data": "2018-01-22"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T00:32:20Z"
+}

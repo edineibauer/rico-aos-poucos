@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/snel11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2023-12-11",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:SNEL11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 8.54,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 7.8333,
+    "data": "2023-12-18"
+  },
+  "maxHistorico": {
+    "valor": 9.7333,
+    "data": "2024-03-11"
+  },
+  "totalPontos": 125,
+  "coletadoEm": "2026-04-27T01:14:03Z"
+}

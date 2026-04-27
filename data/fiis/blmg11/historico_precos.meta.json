@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/blmg11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2021-02-08",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:BLMG11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 32.65,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 25.48,
+    "data": "2024-12-16"
+  },
+  "maxHistorico": {
+    "valor": 109.99,
+    "data": "2021-03-01"
+  },
+  "totalPontos": 273,
+  "coletadoEm": "2026-04-26T22:39:12Z"
+}

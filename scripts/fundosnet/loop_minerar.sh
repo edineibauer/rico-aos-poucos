@@ -105,6 +105,11 @@ while true; do
     python3 -u minerar.py --ticker "$ticker" --dias "$DIAS" --max-docs "$MAX_DOCS" 2>&1 | tee -a "$LOG"
     rc=${PIPESTATUS[0]}
 
+    # Espelha estado no MySQL e enfileira reanalise se houver docs novos
+    if [ "$rc" -eq 0 ]; then
+        (cd "$ROOT/scripts" && python3 -m tracker sync --ticker "$ticker" --quiet) 2>&1 | tee -a "$LOG" || true
+    fi
+
     echo "[minerar-loop w$WORKER_ID] #$iter rc=$rc — dormindo ${INTERVAL}s" | tee -a "$LOG"
     sleep "$INTERVAL"
 done

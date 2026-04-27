@@ -2,49 +2,60 @@
   "meta": {
     "ticker": "TGAR11",
     "nome": "TG Ativo Real FII",
-    "segmento": "Desenvolvimento / Multiestratégia",
+    "nomeExtra": "FII de Desenvolvimento Multiestratégia (Loteamentos + Incorporação + Multipropriedade + CRIs)",
+    "segmento": "Híbrido / Desenvolvimento Imobiliário",
     "badges": [
-      "Gestão Ativa",
+      "Desenvolvimento",
       "174 Ativos",
-      "TIR Real 14,25%"
+      "20 Estados",
+      "TIR Real 14,25%",
+      "Selic 14,75%"
     ],
     "sentimento": "neutro",
-    "dataAnalise": "02/04/2026",
-    "totalDocumentos": 47
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 414,
+    "versaoSchema": "v3-rico"
   },
   "seo": {
-    "title": "TGAR11 - Análise Completa | TG Ativo Real FII",
-    "description": "TGAR11 a R$70: lucro +48% mas fundo distribui mais do que ganha. P/VP 0,64 (desconto 36%), DY 12,3% perde para CDI de 14,75%. Balanço KPMG analisado. Aguardar virada de cenário.",
-    "keywords": "TGAR11, TG Ativo Real, FII desenvolvimento, análise TGAR11, TG Core Asset, dividend yield TGAR11, preço de entrada",
-    "ogTitle": "TGAR11 - Análise Completa do FII TG Ativo Real 2026",
-    "ogDescription": "TGAR11 a R$70: lucro +48% mas distribui mais do que ganha. P/VP 0,64, DY 12,3% perde para CDI. Balanço KPMG analisado. Aguardar virada de cenário.",
-    "twitterTitle": "TGAR11 - Análise Completa | TG Ativo Real FII",
-    "twitterDescription": "TGAR11 a R$70: desconto de 36% sobre VP, mas DY 12,3% perde para CDI 14,75%. Fundo distribui mais do que ganha. Aguardar."
+    "title": "TGAR11 — Análise Profunda | TG Ativo Real FII (Desenvolvimento)",
+    "description": "TGAR11 a R$70 (P/VP 0,63): fundo de desenvolvimento (174 ativos, 20 estados) com payout caixa de 99% em 2025. Cota descontada 36% vs VP, mas DY 12,3% perde para CDI 14,75%. Análise completa do ciclo, riscos e cenários.",
+    "keywords": "TGAR11, TG Ativo Real, FII desenvolvimento, FII loteamento, análise TGAR11 2026, TG Core Asset, dividend yield TGAR11, P/VP TGAR11, TGAR loteamento Cipasa Nova Colorado",
+    "ogTitle": "TGAR11 — Análise Profunda do FII de Desenvolvimento (Abr/2026)",
+    "ogDescription": "Por dentro do TGAR11: 174 ativos em 20 estados, payout caixa 99% (não 128%), inadimplência subindo, fim do ciclo de R$1,00. Cenário, valuation e encaixe.",
+    "ogType": "website",
+    "ogUrl": "https://ricoaospoucos.com.br/fiis/tgar11/",
+    "ogLocale": "pt_BR",
+    "ogSiteName": "Rico aos Poucos",
+    "twitterCard": "summary_large_image",
+    "twitterTitle": "TGAR11 — Análise Profunda | TG Ativo Real",
+    "twitterDescription": "TGAR11 a R$70 (P/VP 0,63): payout caixa 99% (não 128%), 174 ativos em 20 estados, mas DY 12,3% perde para CDI 14,75%. Análise sob a luz da queda de Selic projetada."
   },
   "indicadores": {
-    "cotacao": 70.00,
-    "cotacaoData": "02/04/2026",
-    "pvp": 0.64,
-    "pvpDesconto": "36% de desconto",
+    "cotacao": 70.0,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.63,
+    "pvpDesconto": "37% de desconto",
     "dividendYield": 12.34,
     "dividendoMensal": 0.72,
     "dividendoAnual": 8.64,
-    "patrimonioLiquido": "R$ 2,65 Bi",
-    "vpCota": 110.16,
-    "cotistas": 147891
+    "patrimonioLiquido": "R$ 2,605 Bi",
+    "vpCota": 110.54,
+    "cotistas": 144117,
+    "ocupacao": null,
+    "numImoveis": 174
   },
   "recomendacao": {
-    "nota": 5.0,
-    "veredicto": "AGUARDAR",
+    "nota": 5.5,
+    "veredicto": "MANTER",
     "cor": "amber",
-    "resumo": "O <strong class=\"text-amber-400\">TGAR11</strong> tem ativos reais (174 em 20 estados) e lucro crescente (+48% em 2025). Mas o fundo <strong class=\"text-red-400\">distribui mais do que ganha</strong>: pagou R$282 MI em dividendos contra R$221 MI de lucro, aprofundando prejuízos acumulados de -R$187 MI. Quase metade da receita (R$117 MI) é ganho contábil (equivalência patrimonial), não caixa. A R$70, o DY no piso (12,3%) <strong class=\"text-red-400\">perde para o CDI de ~14,75%</strong>. Sem catalisador de curto prazo, o cenário não aponta para melhora. <strong class=\"text-amber-400\">Esperar sinalização de queda da Selic ou dividendo acima de R$0,85 antes de entrar.</strong>"
+    "resumo": "O <strong class=\"text-amber-400\">TGAR11</strong> a R$ 70 é um dos FIIs mais descontados do mercado (P/VP <strong class=\"text-emerald-400\">0,63</strong>, ou 37% abaixo do VP) e tem <strong class=\"text-emerald-400\">portfolio diversificado</strong> de 174 ativos em 20 estados gerando TIR Real de 14,25% a.a. Em 2025, o fundo gerou <strong class=\"text-emerald-400\">R$ 285 mi de caixa contra R$ 283 mi distribuídos (payout 99%)</strong> — o ruído de 'distribui mais do que ganha' confunde resultado contábil (R$ 221 mi com equiv. patrimonial) com resultado de caixa real, que cobre a distribuição. Mas o DY anualizado de 12,3% no piso (R$ 0,72) <strong class=\"text-red-400\">perde para o CDI de 14,75%</strong> sem risco. Inadimplência subindo (multipropriedade 7,24%, incorporação 5,81%) e venda massiva de CRIs (de R$ 369 Mi para R$ 56 Mi em 12 meses) são riscos reais. <strong class=\"text-amber-400\">Posição satélite (≤ 5% da carteira) para perfil arrojado apostando em queda de Selic</strong>; aposentado e quem busca renda mensal previsível deve evitar."
   },
   "quickStats": [
     {
       "label": "Patrimônio",
-      "valor": "R$ 2,60 Bi",
-      "detalhe": "VP/cota: R$ 110,16",
-      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 110,16</span>",
+      "valor": "R$ 2,605 Bi",
+      "detalhe": "VP/cota: R$ 110,54",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 110,54</span>",
       "icone": "building",
       "corIcone": "blue"
     },
@@ -52,90 +63,99 @@
       "label": "Rendimento",
       "valor": "R$ 0,72",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 8,64/ano | DY 12,3% (anualizado)",
+      "detalhe": "R$ 8,64/ano | DY anualizado 12,3%",
       "icone": "money",
       "corIcone": "emerald",
       "corValor": "amber"
     },
     {
       "label": "Cotistas",
-      "valor": "147.891",
-      "detalhe": "Liquidez: R$ 7,87 Mi/dia",
+      "valor": "144.117",
+      "detalhe": "Liquidez: R$ 7,87 Mi/dia (fev/26)",
       "icone": "users",
       "corIcone": "purple"
     },
     {
       "label": "P/VP",
-      "valor": "0,64x",
-      "detalhe": "36% de desconto sobre VP",
-      "detalheIcone": "arrowUp",
+      "valor": "0,63x",
+      "detalhe": "37% abaixo do VP — barato vs VP",
+      "detalheIcone": "arrowDown",
       "icone": "chart",
-      "corIcone": "amber",
+      "corIcone": "emerald",
       "corValor": "emerald"
     }
   ],
   "pontosAtencao": [
     {
-      "titulo": "Dividendo no Piso do Guidance (R$0,72)",
-      "descricao": "O fundo distribui R$0,71-0,72 desde janeiro/2026, na banda inferior do guidance (R$0,70-1,00). Com reserva acumulada de apenas R$0,13/cota, não há colchão. O dividendo depende inteiramente da geração mensal de caixa, e a gestão prioriza novos investimentos (R$367 MI aportados em SPEs em 2025).",
+      "titulo": "Confusão entre Caixa e Resultado Contábil (Payout 99% vs 128%)",
+      "descricao": "O fundo distribuiu R$ 282,8 mi em 2025 contra <strong>R$ 284,7 mi de geração de caixa</strong> (payout caixa <strong>99,3%</strong>) — não 128% como sugerido pela leitura contábil. O resultado contábil de R$ 221 mi inclui apenas <strong>R$ 117 mi de equivalência patrimonial</strong> reconhecida (a remessa real de caixa das SPEs foi R$ 238 mi). Isso muda o diagnóstico: o fundo NÃO está queimando reserva sistematicamente.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Fim do Ciclo de R$ 1,00 (corte para R$ 0,71-0,72)",
+      "descricao": "Após 10 meses pagando R$ 1,00/cota (mar/25-dez/25), o fundo cortou para R$ 0,71 (jan/26) e R$ 0,72 (fev-mar/26). A reserva acumulada caiu para R$ 0,13/cota — sem colchão. Guidance 1S2026 amplo (R$ 0,70-1,00) reflete a incerteza do ciclo de Selic e do desempenho do portfolio.",
       "severidade": "orange"
     },
     {
       "titulo": "Inadimplência Subindo em Todos os Segmentos",
-      "descricao": "Urbanismo: 4,51%, Incorporação: 5,81% (tendência de alta), Multipropriedade: 7,24% (alarmante). Com Selic a 15%, financiamentos ficam proibitivos e compradores têm mais dificuldade para honrar parcelas. Se o macro piorar, esses números podem escalar.",
+      "descricao": "Urbanismo: 4,51% (estável), Incorporação: <strong>5,81%</strong> (alta), Multipropriedade: <strong>7,24%</strong> (alta crítica). Com Selic a 14,75% travando repasses bancários (9-12 meses de espera), a tendência é continuidade. O segmento mais arriscado, multipropriedade (10,24% do PL), cresce mais rápido que urbanismo.",
       "severidade": "red"
     },
     {
-      "titulo": "CRIs Liquidados em 85% (R$368 Mi → R$55 Mi)",
-      "descricao": "O fundo vendeu massivamente sua carteira de CRIs em 2025. Pode ter gerado caixa a taxas favoráveis, mas também pode indicar necessidade de liquidar ativos para manter distribuições. Reduz a diversificação da carteira.",
+      "titulo": "CRIs Liquidados em 85% (de R$ 369 Mi para R$ 56 Mi)",
+      "descricao": "A carteira de CRIs caiu de R$ 368,9 mi (dez/24) para R$ 55,9 mi (dez/25) — redução de 85%. Na composição atual, são apenas 8 CRIs ativos, totalizando 4,32% do PL. Isso eliminou o colchão de liquidez tradicional e concentrou o risco em equity de SPEs. Pode ter gerado caixa para sustentar distribuição em 2025.",
       "severidade": "orange"
     },
     {
-      "titulo": "Viel Participações Sem Vender (R$258 Mi)",
-      "descricao": "A negociação da Viel, que geraria ~R$90 MI de lucro (~R$4/cota), continua travada. O valor contábil subiu para R$258 MI com equivalência patrimonial positiva, mas enquanto não vende, não distribui. Catalisador potencial que destravaria valor significativo.",
+      "titulo": "Concentração em Aqualand (9,33% do PL) — Multipropriedade em Salinópolis",
+      "descricao": "O empreendimento Aqualand (Salinópolis-PA, multipropriedade) representa <strong>9,33% do PL</strong> (R$ ~243 mi) e está em desenvolvimento (54% vendas, 77% obras). É o maior ativo individual do fundo e pertence ao segmento com maior inadimplência (7,24%). Risco binário de execução.",
       "severidade": "amber"
     },
     {
-      "titulo": "Cenário Macro Deteriorando",
-      "descricao": "Guerra internacional elevando petróleo, materiais de construção sob pressão, Selic a 15% travando repasses bancários (9-12 meses de espera), casas de análise retirando TGAR11 das carteiras. Ano eleitoral 2026 adiciona incerteza. Possível catalisador se direita ganhar.",
-      "severidade": "red"
+      "titulo": "DY Anualizado 12,3% Perde para CDI 14,75%",
+      "descricao": "Pagando R$ 0,72/mês, o DY anualizado é 12,34% — abaixo do CDI de ~14,75% líquido para o investidor de FII. O DY 12m histórico (~16% sobre R$ 70) inclui 10 meses de R$ 1,00 que não se repetirão tão cedo. Em ciclo de Selic alta, o desconto patrimonial precisa do trade de queda de juros para fazer sentido.",
+      "severidade": "amber"
     },
     {
-      "titulo": "Prejuízos Acumulados Crescendo (-R$187 Mi)",
-      "descricao": "Os prejuízos acumulados saltaram de -R$126 MI (2024) para -R$187 MI (2025). O fundo distribuiu R$282 MI em dividendos contra lucro de R$221 MI, pagando parcialmente acima do resultado retido. Não compromete solvência (6,6% do capital social), mas a tendência preocupa.",
+      "titulo": "Prejuízo Contábil Acumulado de R$ 187,9 Mi (6,6% do Capital)",
+      "descricao": "Os prejuízos acumulados saltaram de -R$ 126,6 mi (dez/24) para -R$ 187,9 mi (dez/25). A diferença vem da distribuição contábil (R$ 282,8 mi) > resultado contábil (R$ 221,5 mi). NÃO compromete solvência (PL de R$ 2,65 bi), mas impede emissões a desconto (cotas só podem ser emitidas a ≥ VP).",
       "severidade": "amber"
     }
   ],
   "gestora": {
-    "nome": "TG Core Asset",
+    "nome": "TG Core Asset Ltda.",
     "nota": 7,
     "notaLabel": "BOA",
     "stats": [
       {
         "label": "Patrimônio TGAR",
-        "valor": "R$ 2,60 Bi"
+        "valor": "R$ 2,605 Bi"
       },
       {
-        "label": "Retorno Total 12M",
-        "valor": "13,6%",
+        "label": "Retorno Acum. Total",
+        "valor": "157% (cota patrim.)",
         "cor": "emerald"
       },
       {
         "label": "Ativos no Portfólio",
         "valor": "174"
+      },
+      {
+        "label": "Estados",
+        "valor": "20"
       }
     ],
-    "resumo": "A <strong class=\"text-blue-400\">TG Core Asset</strong> é a gestora do TGAR11, especializada em desenvolvimento imobiliário com foco no interior do Brasil. Administrado pela Vórtx DTVM e auditado pela KPMG (parecer limpo em 2025). A gestora demonstrou <strong class=\"text-emerald-400\">transparência exemplar</strong> durante a crise de janeiro/2026: live de 90 minutos do diretor Pedro Ernesto explicando a revisão do guidance, webcasts mensais a partir de março/2026, e correspondente bancário dedicado para acelerar repasses. Voluntariamente reduziu taxa de performance em 2020. Gestão que <strong class=\"text-amber-400\">prioriza valor patrimonial sobre dividendos de curto prazo</strong>.",
-    "link": null
+    "resumo": "A <strong class=\"text-blue-400\">TG Core Asset</strong> (CNPJ 13.194.316/0001-03) é a gestora especializada em desenvolvimento imobiliário com foco no <strong class=\"text-blue-400\">interior do Brasil</strong>, atuando desde 2013. Administrado pela Vórtx DTVM e auditado pela <strong class=\"text-emerald-400\">KPMG (parecer limpo em 2025)</strong>. A gestora demonstrou transparência durante a crise de jan/2026: live de 90 minutos do diretor Pedro Ernesto Bites Leão (canal Professor Baroni, jan/26 e fev/25), webcasts trimestrais, e voluntariamente reduziu taxa de performance em 2020. <strong class=\"text-amber-400\">Track record sólido em desenvolvimento</strong>, mas opera num segmento de alto risco operacional. Não é top-tier de mercado em FIIs.",
+    "link": "https://www.tgar11.com.br/"
   },
   "taxas": {
-    "subtitulo": "Estrutura de taxas típica de FII de desenvolvimento",
+    "subtitulo": "Estrutura de taxas competitiva para FII de desenvolvimento",
     "glowCor": "yellow",
     "itens": [
       {
         "label": "Taxa de Administração",
         "valor": "0,22% a.a.",
-        "detalhe": "Inclui custódia, controladoria e escrituração",
+        "detalhe": "Inclui custódia, controladoria e escrituração. Cobrada sobre PL.",
         "corBorda": "emerald"
       },
       {
@@ -146,89 +166,76 @@
       },
       {
         "label": "Taxa de Performance",
-        "valor": "30%",
-        "detalhe": "Sobre o que exceder 100% do CDI",
+        "valor": "30% s/ excedente CDI",
+        "detalhe": "Sobre o que exceder 100% do CDI. Reduzida voluntariamente em 2020.",
         "corBorda": "amber"
       }
     ],
-    "comparativoTitulo": "Comparativo com FIIs de Desenvolvimento",
+    "comparativoTitulo": "Comparativo com FIIs de Desenvolvimento e Híbridos",
     "comparativo": [
       {
         "ticker": "TGAR11",
-        "taxa": "1,50% total",
-        "perf": "+30% perf. s/ 100% CDI",
+        "taxa": "1,50% a.a.",
+        "perf": "+30% s/ 100% CDI",
         "destaque": true
       },
       {
         "ticker": "MFII11",
-        "taxa": "2,00%",
-        "perf": "+20% perf. s/ 100% CDI"
+        "taxa": "2,00% a.a.",
+        "perf": "+20% s/ 100% CDI"
       },
       {
         "ticker": "URPR11",
-        "taxa": "1,50%",
-        "perf": "+20% perf. s/ 100% CDI"
+        "taxa": "1,50% a.a.",
+        "perf": "+20% s/ 100% CDI"
       },
       {
-        "ticker": "HGBS11",
-        "taxa": "0,60%",
-        "perf": "+20% perf. s/ IPCA+6%"
+        "ticker": "HOSI11",
+        "taxa": "1,00% a.a.",
+        "perf": "+20% s/ IPCA+6%"
       }
     ],
     "detalhes": [
       {
         "label": "Administrador",
-        "valor": "Vórtx DTVM Ltda."
+        "valor": "Vórtx DTVM Ltda. (CNPJ 22.610.500/0001-88)"
       },
       {
         "label": "Gestor",
-        "valor": "TG Core Asset Ltda."
+        "valor": "TG Core Asset Ltda. (CNPJ 13.194.316/0001-03)"
       },
       {
         "label": "Auditor",
-        "valor": "KPMG Auditores Independentes"
+        "valor": "KPMG Auditores Independentes Ltda."
       },
       {
-        "label": "CNPJ",
+        "label": "CNPJ do Fundo",
         "valor": "25.032.881/0001-53"
       },
       {
         "label": "Início",
-        "valor": "Dezembro/2016"
+        "valor": "09/12/2016 (constituição) / Listagem B3 ago/2017"
+      },
+      {
+        "label": "Cotas Emitidas",
+        "valor": "23.567.968 (13ª emissão concluída em 2024)"
+      },
+      {
+        "label": "Pagamento de Rendimentos",
+        "valor": "10º dia útil do mês seguinte"
+      },
+      {
+        "label": "Anúncio de Rendimentos",
+        "valor": "Último dia útil do mês"
       }
     ]
   },
   "portfolio": {
-    "stats": [
-      {
-        "label": "Equity Performado",
-        "valor": "70,12%"
-      },
-      {
-        "label": "Equity Desenv.",
-        "valor": "14,02%"
-      },
-      {
-        "label": "Crédito (CRI)",
-        "valor": "4,32%"
-      },
-      {
-        "label": "Landbank",
-        "valor": "4,22%"
-      },
-      {
-        "label": "Obras",
-        "valor": "94%",
-        "cor": "emerald"
-      },
-      {
-        "label": "Vendas",
-        "valor": "73%"
-      }
-    ],
+    "tipoFundo": "desenvolvimento",
+    "schema": "v2",
     "tipologiaChart": {
       "labels": [
-        "Urbanismo",
+        "Urbanismo (Loteamento)",
         "Incorporação",
         "Multipropriedade",
         "Shopping",
@@ -236,7 +243,7 @@
       ],
       "data": [
         60.99,
-        25.70,
+        25.7,
         10.24,
         2.94,
         0.13
@@ -249,37 +256,711 @@
         "#6b7280"
       ]
     },
-    "locatarioChart": {
-      "labels": [
-        "GO (Goiás)",
-        "SP (São Paulo)",
-        "PA (Pará)",
-        "SC (Santa Catarina)",
-        "MT (Mato Grosso)",
-        "Outros (15 estados)"
-      ],
-      "data": [
-        35,
-        19,
-        12,
-        8,
-        8,
-        18
-      ],
-      "cores": [
-        "#3b82f6",
-        "#10b981",
-        "#f59e0b",
-        "#f97316",
-        "#06b6d4",
-        "#6b7280"
+    "stats": {
+      "totalAtivos": 174,
+      "abl": null,
+      "ocupacaoFisica": null,
+      "ltv": 0.0,
+      "alavancagemPct": 0.76,
+      "tirReal": 14.25,
+      "obrasConcluidas": 94.0,
+      "vendasRealizadas": 73.0,
+      "vgvVendidoReceber": 2500000000,
+      "vgvEstoqueLandbank": 4800000000,
+      "alocacaoPL": [
+        {
+          "categoria": "Carteira Recebíveis – Equity Performado",
+          "pct": 0.7062,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "Equity em Desenvolvimento",
+          "pct": 0.1377,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "Landbank",
+          "pct": 0.0408,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "Crédito (CRIs)",
+          "pct": 0.0338,
+          "cor": "#f59e0b"
+        },
+        {
+          "categoria": "Shopping (Equity)",
+          "pct": 0.0251,
+          "cor": "#a855f7"
+        },
+        {
+          "categoria": "Caixa + Fundos Renda Fixa",
+          "pct": 0.025,
+          "cor": "#64748b"
+        },
+        {
+          "categoria": "Ativos de Bolsa (FIIs/Ações)",
+          "pct": 0.0239,
+          "cor": "#06b6d4"
+        },
+        {
+          "categoria": "Imóveis para Renda",
+          "pct": 0.0013,
+          "cor": "#9ca3af"
+        },
+        {
+          "categoria": "Outros (a apropriar)",
+          "pct": 0.0062,
+          "cor": "#475569"
+        }
       ]
     },
+    "ativos": [
+      {
+        "tipo": "outro",
+        "id": "jardim-europa-formosa",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Jardim Europa",
+        "localizacao": "Formosa/GO",
+        "uf": "GO",
+        "vgv": 147260000,
+        "tirMensal": 0.0111,
+        "percVendas": 0.93,
+        "percObras": 1.0,
+        "percPL": 0.051,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "setor-solange-trindade",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Setor Solange",
+        "localizacao": "Trindade/GO",
+        "uf": "GO",
+        "vgv": 156350000,
+        "tirMensal": 0.008,
+        "percVendas": 0.71,
+        "percObras": 0.98,
+        "percPL": 0.0463,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "perola-tapajos-itaituba",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Pérola do Tapajós",
+        "localizacao": "Itaituba/PA",
+        "uf": "PA",
+        "vgv": 115480000,
+        "tirMensal": 0.0152,
+        "percVendas": 0.83,
+        "percObras": 1.0,
+        "percPL": 0.0386,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "cidade-viva-campo-verde",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Cidade Viva Campo Verde",
+        "localizacao": "Campo Verde/MT",
+        "uf": "MT",
+        "vgv": 73060000,
+        "tirMensal": 0.0158,
+        "percVendas": 0.96,
+        "percObras": 1.0,
+        "percPL": 0.0257,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "park-jardins-acailandia",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Park Jardins",
+        "localizacao": "Açailândia/MA",
+        "uf": "MA",
+        "vgv": 126850000,
+        "tirMensal": 0.0066,
+        "percVendas": 0.68,
+        "percObras": 0.98,
+        "percPL": 0.0238,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "cidade-nova-1-davinopolis",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Cidade Nova I",
+        "localizacao": "Davinópolis/MA",
+        "uf": "MA",
+        "vgv": 124870000,
+        "tirMensal": 0.0085,
+        "percVendas": 0.83,
+        "percObras": 1.0,
+        "percPL": 0.0234,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "cidade-nova-2-davinopolis",
+        "categoria": "Equity Performado - Urbanismo",
+        "nome": "Cidade Nova II",
+        "localizacao": "Davinópolis/MA",
+        "uf": "MA",
+        "vgv": 86360000,
+        "tirMensal": 0.0079,
+        "percVendas": 0.8,
+        "percObras": 1.0,
+        "percPL": 0.018,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "cipasa-consolidado",
+        "categoria": "Equity Performado - Urbanismo (Cipasa)",
+        "nome": "Cipasa Consolidado (20+ empreendimentos em SP)",
+        "localizacao": "SP (vários municípios)",
+        "uf": "SP",
+        "tirMensal": 0.0123,
+        "percPL": 0.0615,
+        "descricao": "Carteira consolidada de loteamentos da Cipasa em São Paulo: Bellacittá, Centro Empresarial Charuri, Parque Pedra Bonita, São Lucas, Portal de Bragança, Bellacittá Mogi, Quinta do Golfe, Residencial Itahyê, Nova Esplanada, Granja Viana, Doca Vetorasso, Colinas do Aruã, e outros.",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "nova-colorado-consolidado",
+        "categoria": "Equity Performado - Urbanismo (Nova Colorado)",
+        "nome": "Nova Colorado Consolidado (Luar de... 24 empreendimentos NE)",
+        "localizacao": "BA, PE, AL, PB, SE (vários municípios)",
+        "uf": "NE",
+        "tirMensal": 0.0092,
+        "percPL": 0.0351,
+        "descricao": "Carteira consolidada de 24+ loteamentos da Nova Colorado no Nordeste (linha 'Luar de'): Luar das Palmeiras, Luar Vale do Assu, Luar de Santa Luzia, Luar do Cerrado, Luar de Aldeia, Luar do Oeste, Luar do Príncipe, Luar de Arapiraca, e outros.",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "gran-life-medical-anapolis",
+        "categoria": "Equity Performado - Incorporação",
+        "nome": "Gran Life Medical",
+        "localizacao": "Anápolis/GO",
+        "uf": "GO",
+        "tirMensal": 0.0081,
+        "percVendas": 0.63,
+        "percObras": 1.0,
+        "percPL": 0.0271,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "aura-resort-chapeco",
+        "categoria": "Equity Performado - Incorporação",
+        "nome": "Aura Resort Residence",
+        "localizacao": "Chapecó/SC",
+        "uf": "SC",
+        "tirMensal": 0.0085,
+        "percVendas": 0.15,
+        "percObras": 0.94,
+        "percPL": 0.0248,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "parque-ingleses-londres",
+        "categoria": "Equity Performado - Incorporação",
+        "nome": "Parque dos Ingleses Londres",
+        "localizacao": "Sorocaba/SP",
+        "uf": "SP",
+        "tir": 0.143,
+        "vgv": 148830000,
+        "vgvParticipacao": 74410000,
+        "percVendas": 0.72,
+        "percObras": 0.9,
+        "percPL": 0.0146,
+        "previsao": "1S2026 (entrega obras)",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "aqualand-salinopolis",
+        "categoria": "Equity em Desenvolvimento - Multipropriedade",
+        "nome": "Aqualand",
+        "localizacao": "Salinópolis/PA",
+        "uf": "PA",
+        "tirMensal": 0.0148,
+        "tirAnualReal": 0.1982,
+        "percVendas": 0.54,
+        "percObras": 0.77,
+        "percPL": 0.0933,
+        "descricao": "MAIOR ATIVO INDIVIDUAL DO PORTFOLIO (R$ 243 mi). Resort multipropriedade em desenvolvimento. Inadimplência do segmento (multipropriedade) = 7,24% (mais alta do fundo).",
+        "riscos": [
+          "concentracao",
+          "segmento_alto_risco",
+          "execucao"
+        ],
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "braviello-sorriso",
+        "categoria": "Equity Desenvolvimento - Incorporação",
+        "nome": "Braviello",
+        "localizacao": "Sorriso/MT",
+        "uf": "MT",
+        "tirMensal": 0.016,
+        "percVendas": 0.4,
+        "percObras": 0.53,
+        "percPL": 0.0064,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "gallery-residence-goiania",
+        "categoria": "Equity Desenvolvimento - Incorporação",
+        "nome": "Gallery Residence",
+        "localizacao": "Goiânia/GO",
+        "uf": "GO",
+        "tirMensal": 0.0102,
+        "percVendas": 0.71,
+        "percObras": 0.78,
+        "percPL": 0.006,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "brasil-center-shopping",
+        "categoria": "Equity Shopping",
+        "nome": "Brasil Center Shopping",
+        "localizacao": "Valparaíso/GO",
+        "uf": "GO",
+        "tirMensal": 0.0109,
+        "percLocacao": 0.93,
+        "percObras": 1.0,
+        "percPL": 0.0087,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "park-bahia-landbank",
+        "categoria": "Landbank",
+        "nome": "Park Bahia",
+        "localizacao": "Luís Eduardo Magalhães/BA",
+        "uf": "BA",
+        "tirMensal": 0.0167,
+        "tipologia": "Loteamento",
+        "previsaoLancamento": "out/2027",
+        "percPL": 0.0045,
+        "vgv": 495830000,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "urbic-signature-jardins",
+        "categoria": "Landbank",
+        "nome": "Urbic Signature Jardins",
+        "localizacao": "São Paulo/SP",
+        "uf": "SP",
+        "tirMensal": 0.0074,
+        "tipologia": "Incorporação",
+        "previsaoLancamento": "abr/2026",
+        "percPL": 0.0098,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-new-york-fortaleza",
+        "devedor": "New York Fortaleza",
+        "setorDevedor": "Residencial",
+        "lastro": "Incorporação Fortaleza/CE",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "fundo_reserva",
+          "fundo_obra"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.1,
+        "taxaTotal": 0.1,
+        "duration": 0.01,
+        "vencimento": "2025-12-24",
+        "valorPresente": 35690575,
+        "percPL": 0.0137,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.28,
+        "subordinacao": "Sênior",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cumaru-golf",
+        "devedor": "Cumaru Golf",
+        "setorDevedor": "Residencial",
+        "lastro": "Incorporação São Paulo/SP",
+        "garantias": [
+          "alienacao_fiduciaria_quotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_obra"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.1268,
+        "taxaTotal": 0.1268,
+        "duration": 0.0,
+        "vencimento": "2026-01-20",
+        "valorPresente": 21779673,
+        "percPL": 0.0084,
+        "perfilRisco": "high_yield",
+        "status": "em_dia",
+        "ltv": 2.16,
+        "subordinacao": "Subordinada",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-visconde-sorocaba-senior",
+        "devedor": "Visconde",
+        "setorDevedor": "Residencial",
+        "lastro": "Incorporação Sorocaba/SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_quotas",
+          "fundo_reserva",
+          "fundo_obra"
+        ],
+        "indexador": "CDI+",
+        "spread": 0.025,
+        "taxaTotal": 0.175,
+        "duration": 3.39,
+        "vencimento": "2032-07-20",
+        "valorPresente": 12721188,
+        "percPL": 0.0049,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.35,
+        "subordinacao": "Sênior",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-frutal-pulverizado",
+        "devedor": "Frutal",
+        "setorDevedor": "Loteamento",
+        "lastro": "Loteamento pulverizado MG&MT",
+        "garantias": [
+          "alienacao_fiduciaria_quotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "CDI+",
+        "spread": 0.025,
+        "taxaTotal": 0.175,
+        "duration": 3.64,
+        "vencimento": "2034-02-20",
+        "valorPresente": 6158448,
+        "percPL": 0.0024,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.14,
+        "subordinacao": "Sênior/Subordinada",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-pinheiros-aparecida",
+        "devedor": "Pinheiros",
+        "setorDevedor": "Loteamento",
+        "lastro": "Loteamento Aparecida de Goiânia/GO",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "alienacao_fiduciaria_quotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.09,
+        "taxaTotal": 0.09,
+        "duration": 3.16,
+        "vencimento": "2033-06-20",
+        "valorPresente": 6110571,
+        "percPL": 0.0024,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.53,
+        "subordinacao": "Sênior",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-gvi-gramado",
+        "devedor": "GVI Gramado",
+        "setorDevedor": "Multipropriedade",
+        "lastro": "Multipropriedade Gramado/RS",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva",
+          "coobrigacao",
+          "fundo_obra"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.07,
+        "taxaTotal": 0.07,
+        "duration": 1.68,
+        "vencimento": "2028-06-20",
+        "valorPresente": 4349805,
+        "percPL": 0.0017,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.43,
+        "subordinacao": "Sênior",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "fii",
+        "id": "fii-cpsh11",
+        "ticker": "CPSH11",
+        "nome": "Capitânia Shoppings",
+        "segmentoFinal": "shopping_regional",
+        "valorPresente": 47870031,
+        "percPL": 0.0189,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "fii",
+        "id": "fii-pmis11",
+        "ticker": "PMIS11",
+        "nome": "Paramis Hedge Fund",
+        "segmentoFinal": "hibrido_multiestrategia",
+        "valorPresente": 4641734,
+        "percPL": 0.0018,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "fii",
+        "id": "fii-recm11",
+        "ticker": "RECM11",
+        "nome": "Rec Multiestratégia",
+        "segmentoFinal": "hibrido_multiestrategia",
+        "valorPresente": 3836056,
+        "percPL": 0.0015,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "fii",
+        "id": "fii-arri11",
+        "ticker": "ARRI11",
+        "nome": "Open K Ativos e Recebíveis Imobiliários",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 1523920,
+        "percPL": 0.0006,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "fii",
+        "id": "fii-bice11",
+        "ticker": "BICE11",
+        "nome": "Brio Crédito Estruturado",
+        "segmentoFinal": "papel_high_yield",
+        "valorPresente": 1012639,
+        "percPL": 0.0004,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      },
+      {
+        "tipo": "outro",
+        "id": "acao-avll3",
+        "categoria": "Ação - Companhia Aberta",
+        "nome": "Alphaville S.A.",
+        "ticker": "AVLL3",
+        "localizacao": "BR (companhia listada)",
+        "valorPresente": 1665982,
+        "percPL": 0.0007,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.0287,
+      "interpretacaoHhi": "baixa",
+      "topN": {
+        "top1Pct": 0.0933,
+        "top3Pct": 0.2058,
+        "top5Pct": 0.2907,
+        "top10Pct": 0.4326
+      },
+      "geografica": [
+        {
+          "regiao": "Centro-Oeste (GO/MT/MS)",
+          "pct": 0.4407,
+          "ativos": 65
+        },
+        {
+          "regiao": "Norte (PA/MA/TO/RO/AP)",
+          "pct": 0.1842,
+          "ativos": 18
+        },
+        {
+          "regiao": "Sudeste (SP/MG/RJ/ES)",
+          "pct": 0.2293,
+          "ativos": 50
+        },
+        {
+          "regiao": "Sul (SC/RS)",
+          "pct": 0.0575,
+          "ativos": 12
+        },
+        {
+          "regiao": "Nordeste (BA/CE/PB/PE/AL/SE/PI)",
+          "pct": 0.07,
+          "ativos": 25
+        },
+        {
+          "regiao": "Outros",
+          "pct": 0.0183,
+          "ativos": 4
+        }
+      ],
+      "porTipologia": [
+        {
+          "tipologia": "Loteamento (Urbanismo)",
+          "pct": 0.6099
+        },
+        {
+          "tipologia": "Incorporação Vertical",
+          "pct": 0.257
+        },
+        {
+          "tipologia": "Multipropriedade",
+          "pct": 0.1024
+        },
+        {
+          "tipologia": "Shopping",
+          "pct": 0.0294
+        },
+        {
+          "tipologia": "Renda",
+          "pct": 0.0013
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA",
+          "pct": 0.7807
+        },
+        {
+          "indexador": "CDI",
+          "pct": 0.2193
+        }
+      ],
+      "porSetorDevedor": [
+        {
+          "setor": "Residencial",
+          "pct": 0.81
+        },
+        {
+          "setor": "Loteamento",
+          "pct": 0.14
+        },
+        {
+          "setor": "Multipropriedade",
+          "pct": 0.05
+        }
+      ]
+    },
+    "transacoes": [
+      {
+        "data": "2025-12-31",
+        "tipo": "venda",
+        "titulo": "Venda massiva de CRIs (de R$ 369 Mi para R$ 56 Mi)",
+        "descricao": "<p>A carteira de CRIs caiu <strong>85%</strong> em 2025: de R$ 368,9 mi (dez/24) para R$ 55,9 mi (dez/25). Em fev/2026 foram vendidos os CRIs Horizonte Park 1ª Série (R$ 1,99 mi), Tocantins 177ª Série (R$ 1,57 mi) e parcial do Visconde 2ª e 4ª Subordinadas (R$ 17,29 mi). Reduz drasticamente o colchão de liquidez do fundo.</p>",
+        "valor": -313000000,
+        "fonte": "Demonstrações Financeiras 2025 (KPMG)",
+        "docId": "1152236"
+      },
+      {
+        "data": "2025-12-31",
+        "tipo": "aquisicao",
+        "titulo": "Aportes em SPEs de R$ 367,8 mi em 2025",
+        "descricao": "<p>Em 2025, o fundo aportou R$ 367,9 mi em SPEs (vs R$ 488,5 mi em 2024) e recebeu R$ 238 mi em dividendos das SPEs. Saldo de SPEs subiu de R$ 2,08 bi (dez/24) para R$ 2,34 bi (dez/25), agora 88,1% do PL.</p>",
+        "valor": 367859000,
+        "fonte": "Demonstrações Financeiras 2025 (KPMG, parecer limpo)",
+        "docId": "1152236"
+      },
+      {
+        "data": "2025-06-12",
+        "tipo": "mudanca_mandato",
+        "titulo": "Adaptação do Regulamento à CVM 175 (Responsabilidade Limitada)",
+        "descricao": "<p>O fundo passou a ser denominado 'FII TG Ativo Real - Responsabilidade Limitada', com classe única. A responsabilidade dos cotistas passou a ser limitada ao valor subscrito (proteção patrimonial reforçada). <strong>Não houve alteração</strong> do objetivo, política de investimento ou taxas remuneratórias.</p>",
+        "valor": null,
+        "fonte": "Instrumento Particular de Alteração do Regulamento",
+        "docId": "923714"
+      },
+      {
+        "data": "2024-06-06",
+        "tipo": "estruturacao",
+        "titulo": "13ª Emissão de Cotas concluída (R$ 514,8 Mi)",
+        "descricao": "<p>Última emissão pública de cotas, integralizada em 2024. Recursos destinados a expansão do portfolio de loteamentos e novos empreendimentos no interior. Patrimônio salta de ~R$ 2,3 bi para R$ 2,71 bi após emissão.</p>",
+        "valor": 514815000,
+        "fonte": "Prospecto Definitivo 13ª Emissão",
+        "docId": "675271"
+      },
+      {
+        "data": "2026-01-29",
+        "tipo": "fato_relevante",
+        "titulo": "Live Pedro Ernesto: Crise de Janeiro/2026 e Revisão de Guidance",
+        "descricao": "<p>Em 29/jan/2026, o diretor de gestão Pedro Ernesto Bites Leão (TG Core) participou de live de 90 minutos no canal do Professor Baroni explicando a queda da cota (de R$ 93 para ~R$ 70) e a revisão do guidance para R$ 0,70-1,00 (1S2026). Comunicação transparente em momento de stress.</p>",
+        "valor": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722) - menção",
+        "docId": "1154722"
+      },
+      {
+        "data": "2026-04-XX",
+        "tipo": "evento_futuro",
+        "titulo": "Webcast 1T2026 (programado para abril/2026)",
+        "descricao": "<p>Conforme anunciado na live de jan/26 e Relatório Gerencial fev/2026, a gestão programou webcast para apresentar resultados do 1T2026 em abril/2026. Catalisador potencial de comunicação.</p>",
+        "valor": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)",
+        "docId": "1154722"
+      },
+      {
+        "data": "2025-12-31",
+        "tipo": "fato_relevante",
+        "titulo": "Crescimento do Prejuízo Acumulado: -R$ 126,6 Mi → -R$ 187,9 Mi",
+        "descricao": "<p>Os prejuízos contábeis acumulados subiram de -R$ 126,6 mi (dez/24) para -R$ 187,9 mi (dez/25), pois a distribuição contábil (R$ 282,8 mi) ficou acima do resultado contábil (R$ 221,5 mi). NÃO compromete solvência (PL R$ 2,65 bi), mas <strong>impede emissões a desconto</strong> (cotas só podem ser emitidas a ≥ VP). Bloqueia recompra/emissão como ferramenta de gestão.</p>",
+        "valor": -61300000,
+        "fonte": "Demonstrações Financeiras 2025 (KPMG)",
+        "docId": "1152236"
+      },
+      {
+        "data": "2025-08-15",
+        "tipo": "fato_relevante",
+        "titulo": "Carteira passa de 159 para 174 ativos (2025)",
+        "descricao": "<p>Ao longo de 2025, o portfolio cresceu de 159 para 174 ativos por aportes em novos empreendimentos via SPEs. Reflete a estratégia de aporte em novos loteamentos enquanto deslista CRIs.</p>",
+        "valor": null,
+        "fonte": "Relatório Gerencial mar/2026 (ID 1154722)",
+        "docId": "1154722"
+      },
+      {
+        "data": "2025-12-31",
+        "tipo": "evento_futuro",
+        "titulo": "Vencimento CRIs New York e Cumaru Golf (dez/25 e jan/26)",
+        "descricao": "<p>Dois CRIs com vencimento iminente já no fechamento de 2025: New York Fortaleza (R$ 35,7 mi, venc. 24/12/2025) e Cumaru Golf (R$ 21,8 mi, venc. 20/01/2026). Ambos sêniores/subordinada, em dia. Liquidação esperada agrega caixa (R$ 57+ mi) ao fundo nos próximos 12 meses.</p>",
+        "valor": 57500000,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)",
+        "docId": "1154722"
+      },
+      {
+        "data": "2026-04-XX",
+        "tipo": "evento_futuro",
+        "titulo": "Lançamento Urbic Signature Jardins (Landbank → ativo)",
+        "descricao": "<p>Empreendimento de incorporação em São Paulo (SP) com previsão de lançamento em abril/2026 (1,0% do PL). Saída do Landbank para Equity em Desenvolvimento, início do ciclo de vendas/obras.</p>",
+        "valor": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1154722)",
+        "docId": "1154722"
+      }
+    ],
     "locatarios": [
       {
-        "nome": "TGAR11 Loteamentos",
-        "setor": "Urbanismo",
-        "receita": "37,2%",
+        "nome": "TGAR Loteamentos (Urbanismo)",
+        "setor": "Urbanismo (Loteamento)",
+        "receita": "60,99% do PL",
         "rating": "100%",
         "ratingCor": "blue",
         "risco": "Moderado",
@@ -287,155 +968,1295 @@
       },
       {
         "nome": "TGAR Incorporações",
-        "setor": "Incorporação/Multi",
-        "receita": "39,9%",
+        "setor": "Incorporação Vertical",
+        "receita": "25,70% do PL",
         "rating": "100%",
         "ratingCor": "blue",
         "risco": "Moderado",
         "riscoCor": "blue"
       },
       {
-        "nome": "TG House Incorporações",
-        "setor": "Incorporação",
-        "receita": "11,0%",
-        "rating": "100%",
-        "ratingCor": "blue",
-        "risco": "Moderado",
-        "riscoCor": "blue"
-      },
-      {
-        "nome": "Viel Participações",
-        "setor": "Urbanismo",
-        "receita": "11,1%",
-        "rating": "99,94%",
+        "nome": "TGAR Multipropriedade (Aqualand)",
+        "setor": "Multipropriedade",
+        "receita": "10,24% do PL",
+        "rating": "n/a",
         "ratingCor": "amber",
-        "risco": "Elevado",
+        "risco": "Elevado (inadimpl. 7,24%)",
         "riscoCor": "amber"
+      },
+      {
+        "nome": "Carteira CRIs (8 ativos)",
+        "setor": "Crédito Imobiliário",
+        "receita": "4,32% do PL",
+        "rating": "100% em dia",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
       }
     ],
     "riscoResumo": [
       {
         "label": "Equity Performado",
-        "valor": 70,
+        "valor": 70.62,
         "cor": "emerald"
       },
       {
-        "label": "Equity Desenv.",
-        "valor": 14,
+        "label": "Equity em Desenv.",
+        "valor": 13.77,
         "cor": "blue"
       },
       {
-        "label": "Crédito/Landbank",
-        "valor": 9,
+        "label": "Crédito + Landbank",
+        "valor": 9.1,
         "cor": "amber"
       },
       {
-        "label": "Outros",
-        "valor": 7,
+        "label": "Outros (Caixa/RF/Ações)",
+        "valor": 6.51,
         "cor": "slate"
       }
     ],
-    "riscoNota": "Portfólio com <strong class=\"text-emerald-400\">174 ativos</strong> em 20 estados e 104 municípios. A TIR Real consolidada é de <strong class=\"text-emerald-400\">14,25% a.a. + inflação</strong>, com 94% das obras concluídas e 73% das vendas realizadas. O VP a receber é de <strong class=\"text-blue-400\">R$ 2,50 bilhões</strong> e o VGV de estoque + landbank é de R$ 4,80 bilhões. Concentração geográfica relevante em GO (35%) e SP (19%). <strong class=\"text-amber-400\">Inadimplência crescente</strong>: urbanismo 4,51%, incorporação 5,81%, multipropriedade 7,24%. <strong class=\"text-amber-400\">CRIs caíram 85%</strong> (de R$368 Mi para R$55 Mi em 2025)."
+    "riscoNota": "Portfólio com <strong class=\"text-emerald-400\">174 ativos em 20 estados e 104 municípios</strong>, TIR Real consolidada de <strong class=\"text-emerald-400\">14,25% a.a. + inflação</strong> (acima da Selic real). Concentração <strong class=\"text-emerald-400\">baixa por HHI (0,029)</strong>, mas <strong class=\"text-amber-400\">Aqualand sozinho responde por 9,33%</strong> do PL. Concentração geográfica relevante: GO 35% + SP 19% + PA 12%. <strong class=\"text-amber-400\">Inadimplência crescente</strong>: urbanismo 4,51%, incorporação 5,81%, multipropriedade 7,24%. <strong class=\"text-amber-400\">CRIs caíram 85%</strong> em 2025 (de R$ 369 Mi para R$ 56 Mi) — eliminou colchão de liquidez tradicional. <strong class=\"text-amber-400\">88% do PL em SPEs</strong> (R$ 2,34 bi) — risco de execução amplificado, mas dividendos das SPEs cobriram distribuição em 2025."
   },
   "timeline": {
-    "subtitulo": "De R$10 Mi em 2016 a R$2,6 Bi de patrimônio em uma década",
+    "subtitulo": "De R$ 10 Mi (2016) a R$ 2,605 Bi (2026): uma década de desenvolvimento residencial no interior",
     "periodos": [
       {
         "periodo": "Dez/2016",
         "label": "CONSTITUIÇÃO",
         "cor": "blue",
-        "descricao": "Constituição do FII TG Ativo Real. Início como fundo fechado voltado para investidores em geral.",
+        "descricao": "Constituição do FII TG Ativo Real como fundo fechado (CVM 472), foco em desenvolvimento imobiliário no interior do Brasil. Listagem na B3 em ago/2017.",
         "pontos": [
           "CNPJ: 25.032.881/0001-53",
           "Gestor: TG Core Asset",
           "Administrador: Vórtx DTVM",
-          "Foco em desenvolvimento imobiliário no interior do Brasil"
+          "Foco em loteamentos no interior + ativos financeiros imobiliários",
+          "Capital inicial: R$ 10 milhões"
         ]
       },
       {
         "periodo": "2017-2020",
         "label": "CRESCIMENTO ACELERADO",
         "cor": "emerald",
-        "descricao": "13 emissões de cotas, patrimônio saltou de R$10 Mi para mais de R$1 Bi. Fundo se consolidou como referência em desenvolvimento imobiliário.",
+        "descricao": "Múltiplas emissões de cotas (1ª-9ª), portfólio cresceu de R$ 10 Mi para R$ 1+ Bi. Patrimônio multiplicou 100x em 4 anos.",
         "pontos": [
-          "Múltiplas emissões bem-sucedidas (2ª a 11ª)",
-          "Capital autorizado ampliado de R$2 Bi para R$10 Bi (2022)",
-          "Gestora reduziu voluntariamente taxa de performance em 2020",
-          "Retorno acumulado de 131% desde o IPO (cota patrimonial)"
+          "1ª-9ª emissões executadas (CVM 476/CVM 400)",
+          "Capital autorizado ampliado de R$ 2 Bi para R$ 10 Bi (2022)",
+          "Gestora reduziu voluntariamente taxa de performance em 2020 (de 50% → 30% s/ excedente CDI)",
+          "Início do programa Cipasa (loteamentos SP) e Nova Colorado (loteamentos NE)"
         ]
       },
       {
-        "periodo": "2021-2024",
-        "label": "MATURAÇÃO E DESAFIOS",
+        "periodo": "2021-2023",
+        "label": "PICO E CONSOLIDAÇÃO",
         "cor": "purple",
-        "descricao": "Fundo atingiu pico de ~R$93/cota em 2025, mas ciclo de alta de juros começou a pressionar repasses bancários e vendas.",
+        "descricao": "Portfolio atinge ~159 ativos. Cota patrimonial chega a R$ 133/cota (dez/2022). DPS estável em R$ 1,32-1,43 nos meses finais de 2023.",
         "pontos": [
-          "Dividendos de R$1,00/cota mensais (estáveis por 7 meses)",
-          "DY anualizado acima de 14%",
-          "Retorno total acumulado de 157% (patrimonial)",
-          "Portfólio passou de 159 para 174 ativos"
+          "10ª emissão concluída (abr/2021): R$ ~250 mi",
+          "12ª emissão concluída (out/2023): R$ ~150 mi",
+          "Cota chega a R$ 144 em jan/2021 (mercado), R$ 133/cota patrimonial pico em dez/2022",
+          "Dividendos em R$ 1,32-1,43/cota durante 2023"
+        ]
+      },
+      {
+        "periodo": "Jun/2024-Dez/2025",
+        "label": "13ª EMISSÃO E TRANSIÇÃO",
+        "cor": "blue",
+        "descricao": "13ª emissão (R$ 514 mi, jun/2024) eleva PL para R$ 2,71 bi. DPS estabilizado em R$ 1,00/cota durante 10 meses (mar-dez/2025). Adaptação à CVM 175 (jun/2025).",
+        "pontos": [
+          "13ª emissão: R$ 514,8 mi integralizados em 2024 — última emissão",
+          "Mudança de regulamento: 'Responsabilidade Limitada' (jun/2025) — proteção patrimonial",
+          "DPS de R$ 1,00 sustentado por 10 meses (mar-dez/25) — payout caixa 99%",
+          "Aporte de R$ 367 mi em SPEs (2025), recebimento de R$ 238 mi em dividendos das SPEs",
+          "Venda massiva de CRIs: R$ 369 Mi → R$ 56 Mi"
         ]
       },
       {
         "periodo": "Jan/2026 - Atual",
-        "label": "CRISE E CORREÇÃO",
+        "label": "CRISE DE PRECIFICAÇÃO E CORTE DE DPS",
         "cor": "red",
-        "descricao": "Cota caiu de R$93 para ~R$70 (-25%). Guidance revisado para R$0,70-1,00. Balanço 2025 revela que fundo distribui mais do que ganha. DY no piso perde para CDI.",
+        "descricao": "Cota cai de R$ 93 (dez/25) para ~R$ 70 (-25%) em jan-abr/26. Guidance revisado para R$ 0,70-1,00. DPS corta para R$ 0,71-0,72.",
         "pontos": [
-          "<strong class=\"text-red-400\">Cota caiu de R$93 para ~R$70 (-25%)</strong>",
-          "<strong class=\"text-red-400\">Fundo distribui mais do que ganha (payout 128%)</strong>",
-          "<strong class=\"text-red-400\">Prejuízo acumulado: -R$187 MI</strong>",
-          "<strong class=\"text-amber-400\">46% da receita é contábil (equiv. patrimonial)</strong>",
-          "<strong class=\"text-amber-400\">DY no piso (12,3%) perde para CDI ~14,75%</strong>",
-          "Cotistas caíram de 162 mil para 147 mil"
+          "<strong class=\"text-red-400\">Cota: R$ 93 → R$ 70 (-25%) entre dez/25 e abr/26</strong>",
+          "<strong class=\"text-amber-400\">DPS corta para R$ 0,71-0,72 (jan-mar/26)</strong>",
+          "<strong class=\"text-amber-400\">Cotistas: 162 mil → 144 mil (-11% em 12m)</strong>",
+          "<strong class=\"text-emerald-400\">Live transparente do diretor (Pedro Ernesto, 29/jan/26, 90min)</strong>",
+          "Selic em 14,75% trava repasses bancários (9-12 meses), pressiona vendas",
+          "<strong class=\"text-amber-400\">Inadimplência subindo: multipropriedade 7,24%, incorporação 5,81%</strong>",
+          "Casas de análise retiram TGAR11 das carteiras"
         ]
       }
     ],
     "resumoTrajetoria": {
-      "titulo": "Resumo da trajetória - AGUARDAR VIRADA DE CENÁRIO:",
-      "texto": "O TGAR11 cresceu de R$10 MI para R$2,65 BI em uma década, com <strong class=\"text-emerald-400\">retorno patrimonial acumulado de 157%</strong>. O balanço 2025 mostra lucro +48%, mas o fundo <strong class=\"text-red-400\">distribui mais do que ganha</strong> (payout 128%) e acumula -R$187 MI em prejuízos. A cota a R$70 parece barata (desconto 36% para VP), mas o <strong class=\"text-red-400\">DY de 12,3% perde para o CDI de ~14,75%</strong>. O cenário macro não aponta para melhora de curto prazo. Aguardar sinais de virada (queda de Selic, melhora do dividendo) antes de posicionar."
+      "titulo": "Resumo: Desenvolvimento Maduro em Ciclo Macro Adverso",
+      "texto": "O TGAR11 cresceu de R$ 10 mi (2016) para R$ 2,605 Bi (2026), com retorno patrimonial acumulado de <strong class=\"text-emerald-400\">157% (cota patrimonial)</strong> e <strong class=\"text-emerald-400\">103% (cota de mercado)</strong> desde o IPO. Em 2025 gerou R$ 285 Mi de caixa contra R$ 283 Mi distribuídos (<strong class=\"text-emerald-400\">payout caixa de 99,3%</strong> — não 128% como sugere a leitura contábil). A cota a R$ 70 negocia com <strong class=\"text-emerald-400\">desconto de 37% sobre VP</strong>, refletindo Selic alta (14,75%) e ciclo imobiliário desfavorável. Ponto crítico: <strong class=\"text-amber-400\">DY de 12,3% perde para o CDI</strong>, exigindo trade de queda de juros (Focus projeta Selic 11% em 12m) ou venda de ativos para reprecificação."
     },
     "crescimento": [
       {
-        "label": "Lucro 2025",
-        "valor": "R$ 221 Mi",
-        "detalhe": "+48% vs 2024"
-      },
-      {
-        "label": "Fluxo Operac.",
-        "valor": "+R$ 419 Mi",
-        "detalhe": "vs -R$14 Mi em 2024"
+        "label": "Lucro Caixa 2025",
+        "valor": "R$ 285 Mi",
+        "detalhe": "Cobre distribuição de R$ 283 Mi"
       },
       {
         "label": "TIR Real",
-        "valor": "14,25%",
-        "detalhe": "Acima da inflação"
+        "valor": "14,25% a.a.",
+        "detalhe": "+ inflação (acima da Selic real)"
       },
       {
         "label": "VP a Receber",
         "valor": "R$ 2,50 Bi",
         "detalhe": "Vendas já realizadas"
+      },
+      {
+        "label": "VGV Estoque + Landbank",
+        "valor": "R$ 4,80 Bi",
+        "detalhe": "Pipeline futuro"
       }
     ]
   },
   "tese": {
-    "resumo": "TGAR11 é um <strong class=\"text-blue-400\">FII de desenvolvimento multiestratégia</strong> com 174 ativos em 20 estados. O balanço 2025 (KPMG) mostra lucro +48%, mas <strong class=\"text-red-400\">o fundo distribuiu R$282 MI contra R$221 MI de lucro</strong> — pagando mais do que ganha. Quase metade da receita (R$117 MI) é equivalência patrimonial contábil, não caixa. O <strong class=\"text-emerald-400\">P/VP de 0,64</strong> (desconto de 36%) parece atraente, mas o DY no piso (12,3%) <strong class=\"text-red-400\">perde para o CDI de ~14,75%</strong>. Barato não é sinônimo de bom investimento. O que importa é para onde o ativo aponta — e hoje não aponta para cima. Catalisador: queda sustentada da Selic e/ou sinalização política favorável.",
+    "resumo": "TGAR11 é um <strong class=\"text-blue-400\">FII de desenvolvimento imobiliário multiestratégia</strong> com 174 ativos em 20 estados, focado em loteamentos no interior (61% do PL), incorporação vertical (26%) e multipropriedade (10%). Em 2025, gerou <strong class=\"text-emerald-400\">R$ 285 Mi de caixa contra R$ 283 Mi distribuídos (payout caixa 99%)</strong> — distribuição sustentável pelo caixa, mesmo que o resultado contábil de R$ 221 Mi (com equiv. patrimonial) sugira o contrário. P/VP <strong class=\"text-emerald-400\">0,63 (37% de desconto)</strong> é um dos maiores do mercado. Mas o DY anualizado de 12,3% no piso atual <strong class=\"text-red-400\">perde para o CDI de 14,75%</strong>. Catalisador principal: queda da Selic (Focus projeta 11% em 12m) e/ou destrave de ativos travados (Aqualand 9,33%, Cipasa 6,15%).",
     "paraQuem": [
-      "Investidores com <strong class=\"text-emerald-400\">horizonte longo</strong> (3+ anos) e convicção em virada de ciclo",
-      "Perfil <strong class=\"text-emerald-400\">arrojado</strong> que aceita dividendos abaixo do CDI em troca de potencial valorização",
-      "Quem busca <strong class=\"text-emerald-400\">desconto de 36% sobre VP</strong> com ativos reais construídos",
-      "Apostadores em <strong class=\"text-emerald-400\">queda de Selic</strong> e/ou mudança política em 2026"
+      "Investidor <strong class=\"text-emerald-400\">arrojado</strong> com horizonte longo (3+ anos) e convicção em queda de Selic (curva DI projeta -375 bps em 12m)",
+      "Quem busca <strong class=\"text-emerald-400\">desconto patrimonial profundo</strong> (P/VP 0,63) com lastro real (174 ativos físicos)",
+      "Posição <strong class=\"text-emerald-400\">satélite ≤ 5%</strong> da carteira de FIIs em estratégia diversificada",
+      "Apostadores em <strong class=\"text-emerald-400\">virada de ciclo imobiliário</strong> via redução do custo bancário (atual: 9-12 meses de espera para repasses)"
     ],
     "naoParaQuem": [
-      "Quem <strong class=\"text-amber-400\">depende de renda mensal</strong> (dividendo perde para CDI e sem previsão de melhora)",
-      "Investidores que <strong class=\"text-amber-400\">preferem CDI a ~14,75%</strong> sem risco (yield atual do TGAR11 é 12,3%)",
-      "Perfil <strong class=\"text-amber-400\">conservador</strong> que não tolera volatilidade e perda de capital",
-      "Quem busca <strong class=\"text-amber-400\">catalisadores de curto prazo</strong> (não há nenhum visível)"
+      "<strong class=\"text-amber-400\">Aposentado</strong> ou quem depende de renda mensal previsível (DPS oscilou de R$ 1,00 para R$ 0,71 em 2 meses)",
+      "Investidor que <strong class=\"text-amber-400\">prefere CDI a ~14,75%</strong> sem risco vs DY de 12,3% com risco de execução",
+      "Perfil <strong class=\"text-amber-400\">conservador</strong> intolerante a volatilidade (drawdown 24m de -44%, σ12m de 23%)",
+      "Quem <strong class=\"text-amber-400\">não acompanha trimestralmente</strong> a execução do gestor — fundo exige monitoramento ativo"
     ]
   },
   "dividendos": {
+    "schema": "v2",
+    "historico": [
+      {
+        "data": "2017-07",
+        "dividendo": 1.0,
+        "dataPagamento": "2017-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 15442)",
+        "docId": "15442"
+      },
+      {
+        "data": "2017-08",
+        "dividendo": 1.1,
+        "dataPagamento": "2017-09-15",
+        "fonte": "Rendimentos e Amortizações (ID 16392)",
+        "docId": "16392"
+      },
+      {
+        "data": "2017-09",
+        "dividendo": 0.9,
+        "dataPagamento": "2017-10-16",
+        "fonte": "Rendimentos e Amortizações (ID 17455)",
+        "docId": "17455",
+        "caixaLiquidoFimMes": 885036
+      },
+      {
+        "data": "2017-10",
+        "dividendo": 0.9,
+        "dataPagamento": "2017-11-16",
+        "fonte": "Rendimentos e Amortizações (ID 18500)",
+        "docId": "18500"
+      },
+      {
+        "data": "2017-11",
+        "dividendo": 0.78,
+        "dataPagamento": "2017-12-14",
+        "fonte": "Rendimentos e Amortizações (ID 19708)",
+        "docId": "19708"
+      },
+      {
+        "data": "2017-12",
+        "dividendo": 0.78,
+        "dataPagamento": "2018-01-16",
+        "fonte": "Rendimentos e Amortizações (ID 20830)",
+        "docId": "20830",
+        "caixaLiquidoFimMes": 1647974
+      },
+      {
+        "data": "2018-01",
+        "dividendo": 0.88,
+        "dataPagamento": "2018-02-16",
+        "fonte": "Rendimentos e Amortizações (ID 21850)",
+        "docId": "21850"
+      },
+      {
+        "data": "2018-02",
+        "dividendo": 0.75,
+        "dataPagamento": "2018-03-14",
+        "fonte": "Rendimentos e Amortizações (ID 23098)",
+        "docId": "23098",
+        "caixaLiquidoFimMes": 1599532
+      },
+      {
+        "data": "2018-03",
+        "dividendo": 0.83,
+        "dataPagamento": "2018-04-13",
+        "fonte": "Rendimentos e Amortizações (ID 24476)",
+        "docId": "24476"
+      },
+      {
+        "data": "2018-04",
+        "dividendo": 0.82,
+        "dataPagamento": "2018-05-15",
+        "fonte": "Rendimentos e Amortizações (ID 25932)",
+        "docId": "25932"
+      },
+      {
+        "data": "2018-05",
+        "dividendo": 0.8,
+        "dataPagamento": "2018-06-14",
+        "fonte": "Rendimentos e Amortizações (ID 27588)",
+        "docId": "27588",
+        "caixaLiquidoFimMes": 133820
+      },
+      {
+        "data": "2018-06",
+        "dividendo": 0.83,
+        "dataPagamento": "2018-07-13",
+        "fonte": "Rendimentos e Amortizações (ID 28560)",
+        "docId": "28560"
+      },
+      {
+        "data": "2018-07",
+        "dividendo": 0.75,
+        "dataPagamento": "2018-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 29896)",
+        "docId": "29896"
+      },
+      {
+        "data": "2018-08",
+        "dividendo": 0.49,
+        "dataPagamento": "2018-09-17",
+        "fonte": "Rendimentos e Amortizações (ID 31627)",
+        "docId": "31627"
+      },
+      {
+        "data": "2018-09",
+        "dividendo": 0.75,
+        "dataPagamento": "2018-10-17",
+        "fonte": "Rendimentos e Amortizações (ID 33533)",
+        "docId": "33533",
+        "caixaLiquidoFimMes": 69990
+      },
+      {
+        "data": "2018-10",
+        "dividendo": 0.65,
+        "dataPagamento": "2018-11-16",
+        "fonte": "Rendimentos e Amortizações (ID 34785)",
+        "docId": "34785"
+      },
+      {
+        "data": "2018-11",
+        "dividendo": 1.01,
+        "dataPagamento": "2018-12-14",
+        "fonte": "Rendimentos e Amortizações (ID 36442)",
+        "docId": "36442"
+      },
+      {
+        "data": "2018-12",
+        "dividendo": 1.13,
+        "dataPagamento": "2019-01-15",
+        "fonte": "Rendimentos e Amortizações (ID 38199)",
+        "docId": "38199",
+        "caixaLiquidoFimMes": 2054551
+      },
+      {
+        "data": "2019-01",
+        "dividendo": 0.75,
+        "dataPagamento": "2019-02-14",
+        "fonte": "Rendimentos e Amortizações (ID 40816)",
+        "docId": "40816"
+      },
+      {
+        "data": "2019-02",
+        "dividendo": 0.84,
+        "dataPagamento": "2019-03-18",
+        "fonte": "Rendimentos e Amortizações (ID 42756)",
+        "docId": "42756"
+      },
+      {
+        "data": "2019-03",
+        "dividendo": 0.8,
+        "dataPagamento": "2019-04-12",
+        "fonte": "Rendimentos e Amortizações (ID 45027)",
+        "docId": "45027",
+        "caixaLiquidoFimMes": 7875694
+      },
+      {
+        "data": "2019-04",
+        "dividendo": 0.83,
+        "dataPagamento": "2019-05-09",
+        "fonte": "Rendimentos e Amortizações (ID 47489)",
+        "docId": "47489"
+      },
+      {
+        "data": "2019-05",
+        "dividendo": 0.85,
+        "dataPagamento": "2019-06-10",
+        "fonte": "Rendimentos e Amortizações (ID 50422)",
+        "docId": "50422"
+      },
+      {
+        "data": "2019-06",
+        "dividendo": 1.01,
+        "dataPagamento": "2019-07-08",
+        "fonte": "Rendimentos e Amortizações (ID 52479)",
+        "docId": "52479",
+        "caixaLiquidoFimMes": 24262081
+      },
+      {
+        "data": "2019-07",
+        "dividendo": 0.8,
+        "dataPagamento": "2019-08-08",
+        "fonte": "Rendimentos e Amortizações (ID 54981)",
+        "docId": "54981"
+      },
+      {
+        "data": "2019-08",
+        "dividendo": 0.86,
+        "dataPagamento": "2019-09-09",
+        "fonte": "Rendimentos e Amortizações (ID 57915)",
+        "docId": "57915"
+      },
+      {
+        "data": "2019-09",
+        "dividendo": 0.9,
+        "dataPagamento": "2019-10-08",
+        "fonte": "Rendimentos e Amortizações (ID 60406)",
+        "docId": "60406",
+        "caixaLiquidoFimMes": 5460386
+      },
+      {
+        "data": "2019-10",
+        "dividendo": 0.93,
+        "dataPagamento": "2019-11-08",
+        "fonte": "Rendimentos e Amortizações (ID 64472)",
+        "docId": "64472"
+      },
+      {
+        "data": "2019-11",
+        "dividendo": 0.99,
+        "dataPagamento": "2019-12-09",
+        "fonte": "Rendimentos e Amortizações (ID 69413)",
+        "docId": "69413"
+      },
+      {
+        "data": "2019-12",
+        "dividendo": 1.35,
+        "dataPagamento": "2020-01-08",
+        "fonte": "Rendimentos e Amortizações (ID 74145)",
+        "docId": "74145",
+        "caixaLiquidoFimMes": 173314185
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 0.57,
+        "dataPagamento": "2020-02-10",
+        "fonte": "Rendimentos e Amortizações (ID 79225)",
+        "docId": "79225"
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 0.7,
+        "dataPagamento": "2020-03-09",
+        "fonte": "Rendimentos e Amortizações (ID 83804)",
+        "docId": "83804"
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.82,
+        "dataPagamento": "2020-04-08",
+        "fonte": "Rendimentos e Amortizações (ID 89029)",
+        "docId": "89029",
+        "caixaLiquidoFimMes": 95201783
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 0.8,
+        "dataPagamento": "2020-05-11",
+        "fonte": "Rendimentos e Amortizações (ID 93473)",
+        "docId": "93473"
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 1.25,
+        "dataPagamento": "2020-06-08",
+        "fonte": "Rendimentos e Amortizações (ID 98425)",
+        "docId": "98425"
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 1.23,
+        "dataPagamento": "2020-07-08",
+        "fonte": "Rendimentos e Amortizações (ID 104105)",
+        "docId": "104105",
+        "caixaLiquidoFimMes": 34754653
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 1.14,
+        "dataPagamento": "2020-08-10",
+        "fonte": "Rendimentos e Amortizações (ID 109580)",
+        "docId": "109580"
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 1.09,
+        "dataPagamento": "2020-09-08",
+        "fonte": "Rendimentos e Amortizações (ID 114543)",
+        "docId": "114543"
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 1.0,
+        "dataPagamento": "2020-10-08",
+        "fonte": "Rendimentos e Amortizações (ID 119201)",
+        "docId": "119201",
+        "caixaLiquidoFimMes": 202656337
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 1.1,
+        "dataPagamento": "2020-11-10",
+        "fonte": "Rendimentos e Amortizações (ID 124260)",
+        "docId": "124260"
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 1.12,
+        "dataPagamento": "2020-12-08",
+        "fonte": "Rendimentos e Amortizações (ID 129173)",
+        "docId": "129173"
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 0.12,
+        "dataPagamento": "2021-01-12",
+        "fonte": "Rendimentos e Amortizações (ID 142800)",
+        "docId": "142800",
+        "caixaLiquidoFimMes": 149195098
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.1,
+        "dataPagamento": "2021-02-12",
+        "fonte": "Rendimentos e Amortizações (ID 143273)",
+        "docId": "143273"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 1.15,
+        "dataPagamento": "2021-03-08",
+        "fonte": "Rendimentos e Amortizações (ID 151474)",
+        "docId": "151474"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 1.3,
+        "dataPagamento": "2021-04-09",
+        "fonte": "Rendimentos e Amortizações (ID 159820)",
+        "docId": "159820",
+        "caixaLiquidoFimMes": 163634805
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 1.26,
+        "dataPagamento": "2021-05-10",
+        "fonte": "Rendimentos e Amortizações (ID 169339)",
+        "docId": "169339"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.01,
+        "dataPagamento": "2021-06-09",
+        "fonte": "Rendimentos e Amortizações (ID 180732)",
+        "docId": "180732"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 1.11,
+        "dataPagamento": "2021-07-08",
+        "fonte": "Rendimentos e Amortizações (ID 190023)",
+        "docId": "190023",
+        "caixaLiquidoFimMes": 554951143
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 1.08,
+        "dataPagamento": "2021-08-09",
+        "fonte": "Rendimentos e Amortizações (ID 198998)",
+        "docId": "198998"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 1.1,
+        "dataPagamento": "2021-09-09",
+        "fonte": "Rendimentos e Amortizações (ID 210717)",
+        "docId": "210717"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 1.11,
+        "dataPagamento": "2021-10-08",
+        "fonte": "Rendimentos e Amortizações (ID 219885)",
+        "docId": "219885",
+        "caixaLiquidoFimMes": 297968141
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 1.2,
+        "dataPagamento": "2021-11-09",
+        "fonte": "Rendimentos e Amortizações (ID 230110)",
+        "docId": "230110"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 1.22,
+        "dataPagamento": "2021-12-08",
+        "fonte": "Rendimentos e Amortizações (ID 241607)",
+        "docId": "241607"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 1.23,
+        "dataPagamento": "2022-01-10",
+        "fonte": "Rendimentos e Amortizações (ID 251812)",
+        "docId": "251812",
+        "caixaLiquidoFimMes": 73366835
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 1.16,
+        "dataPagamento": "2022-02-08",
+        "fonte": "Rendimentos e Amortizações (ID 261314)",
+        "docId": "261314"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 1.22,
+        "dataPagamento": "2022-03-09",
+        "fonte": "Rendimentos e Amortizações (ID 272654)",
+        "docId": "272654"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 1.27,
+        "dataPagamento": "2022-04-08",
+        "fonte": "Rendimentos e Amortizações (ID 283831)",
+        "docId": "283831",
+        "caixaLiquidoFimMes": 35284869
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 1.44,
+        "dataPagamento": "2022-05-09",
+        "fonte": "Rendimentos e Amortizações (ID 296750)",
+        "docId": "296750"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 1.53,
+        "dataPagamento": "2022-06-08",
+        "fonte": "Rendimentos e Amortizações (ID 310629)",
+        "docId": "310629"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 1.57,
+        "dataPagamento": "2022-07-08",
+        "fonte": "Rendimentos e Amortizações (ID 321056)",
+        "docId": "321056",
+        "caixaLiquidoFimMes": 27785694
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 1.58,
+        "dataPagamento": "2022-08-08",
+        "fonte": "Rendimentos e Amortizações (ID 331942)",
+        "docId": "331942"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 1.59,
+        "dataPagamento": "2022-09-09",
+        "fonte": "Rendimentos e Amortizações (ID 346484)",
+        "docId": "346484"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 1.59,
+        "dataPagamento": "2022-10-10",
+        "fonte": "Rendimentos e Amortizações (ID 358807)",
+        "docId": "358807",
+        "caixaLiquidoFimMes": 57169916
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 1.55,
+        "dataPagamento": "2022-11-09",
+        "fonte": "Rendimentos e Amortizações (ID 370561)",
+        "docId": "370561"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 1.5,
+        "dataPagamento": "2022-12-08",
+        "fonte": "Rendimentos e Amortizações (ID 383821)",
+        "docId": "383821"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 1.3,
+        "dataPagamento": "2023-01-09",
+        "fonte": "Rendimentos e Amortizações (ID 396246)",
+        "docId": "396246",
+        "caixaLiquidoFimMes": 120404439
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 1.3,
+        "dataPagamento": "2023-02-08",
+        "fonte": "Rendimentos e Amortizações (ID 407979)",
+        "docId": "407979"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 1.31,
+        "dataPagamento": "2023-03-14",
+        "fonte": "Rendimentos e Amortizações (ID 425036)",
+        "docId": "425036"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 1.34,
+        "dataPagamento": "2023-04-17",
+        "fonte": "Rendimentos e Amortizações (ID 438429)",
+        "docId": "438429",
+        "caixaLiquidoFimMes": 20814072
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 1.35,
+        "dataPagamento": "2023-05-15",
+        "fonte": "Rendimentos e Amortizações (ID 453772)",
+        "docId": "453772"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 1.36,
+        "dataPagamento": "2023-06-15",
+        "fonte": "Rendimentos e Amortizações (ID 472240)",
+        "docId": "472240"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 1.38,
+        "dataPagamento": "2023-07-14",
+        "fonte": "Rendimentos e Amortizações (ID 485691)",
+        "docId": "485691",
+        "caixaLiquidoFimMes": 16541055
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 1.4,
+        "dataPagamento": "2023-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 499104)",
+        "docId": "499104"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 1.42,
+        "dataPagamento": "2023-09-15",
+        "fonte": "Rendimentos e Amortizações (ID 515654)",
+        "docId": "515654"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 1.43,
+        "dataPagamento": "2023-10-16",
+        "fonte": "Rendimentos e Amortizações (ID 529732)",
+        "docId": "529732",
+        "caixaLiquidoFimMes": 1246193
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 1.45,
+        "dataPagamento": "2023-11-16",
+        "fonte": "Rendimentos e Amortizações (ID 544286)",
+        "docId": "544286"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 1.43,
+        "dataPagamento": "2023-12-14",
+        "fonte": "Rendimentos e Amortizações (ID 562221)",
+        "docId": "562221"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 1.32,
+        "dataPagamento": "2024-01-15",
+        "fonte": "Rendimentos e Amortizações (ID 577245)",
+        "docId": "577245",
+        "caixaLiquidoFimMes": 390828258
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 1.32,
+        "dataPagamento": "2024-02-16",
+        "fonte": "Rendimentos e Amortizações (ID 593430)",
+        "docId": "593430"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 1.33,
+        "dataPagamento": "2024-03-14",
+        "fonte": "Rendimentos e Amortizações (ID 612196)",
+        "docId": "612196"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 1.33,
+        "dataPagamento": "2024-04-12",
+        "fonte": "Rendimentos e Amortizações (ID 630207)",
+        "docId": "630207",
+        "caixaLiquidoFimMes": 101444171
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 1.34,
+        "dataPagamento": "2024-05-15",
+        "fonte": "Rendimentos e Amortizações (ID 650767)",
+        "docId": "650767"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 1.35,
+        "dataPagamento": "2024-06-14",
+        "fonte": "Rendimentos e Amortizações (ID 672929)",
+        "docId": "672929"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 1.33,
+        "dataPagamento": "2024-07-12",
+        "fonte": "Rendimentos e Amortizações (ID 689505)",
+        "docId": "689505",
+        "caixaLiquidoFimMes": 482911899
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 1.22,
+        "dataPagamento": "2024-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 709185)",
+        "docId": "709185"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 1.12,
+        "dataPagamento": "2024-09-13",
+        "fonte": "Rendimentos e Amortizações (ID 730431)",
+        "docId": "730431"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 1.14,
+        "dataPagamento": "2024-10-14",
+        "fonte": "Rendimentos e Amortizações (ID 749226)",
+        "docId": "749226",
+        "caixaLiquidoFimMes": 116815479
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 1.15,
+        "dataPagamento": "2024-11-14",
+        "fonte": "Rendimentos e Amortizações (ID 769558)",
+        "docId": "769558"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 1.15,
+        "dataPagamento": "2024-12-13",
+        "fonte": "Rendimentos e Amortizações (ID 792112)",
+        "docId": "792112"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 1.1,
+        "dataPagamento": "2025-01-15",
+        "fonte": "Rendimentos e Amortizações (ID 811062)",
+        "docId": "811062",
+        "caixaLiquidoFimMes": 27453633
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-02-14",
+        "fonte": "Relatório Gerencial (ID 894390)",
+        "docId": "894390",
+        "cotas": 23567968,
+        "lucroCaixa": 23810391,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 242423,
+        "payout": 0.9898
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-03-18",
+        "fonte": "Relatório Gerencial (ID 894390)",
+        "docId": "894390",
+        "cotas": 23567968,
+        "lucroCaixa": 22326029,
+        "distribuicao": 23567968,
+        "resultadoCaixa": -1241939,
+        "payout": 1.0556
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-04-14",
+        "fonte": "Relatório Gerencial (ID 894390)",
+        "docId": "894390",
+        "cotas": 23567968,
+        "lucroCaixa": 25834757,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 2266789,
+        "payout": 0.9123,
+        "caixaLiquidoFimMes": 38392353
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-05-15",
+        "fonte": "Relatório Gerencial (ID 914053)",
+        "docId": "914053",
+        "cotas": 23567968,
+        "lucroCaixa": 22104745,
+        "distribuicao": 23567968,
+        "resultadoCaixa": -1463223,
+        "payout": 1.0662
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-06-13",
+        "fonte": "Relatório Gerencial (ID 938388)",
+        "docId": "938388",
+        "cotas": 23567968,
+        "lucroCaixa": 22451418,
+        "distribuicao": 23567968,
+        "resultadoCaixa": -1116550,
+        "payout": 1.0497
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-07-14",
+        "fonte": "Relatório Gerencial (ID 957972)",
+        "docId": "957972",
+        "cotas": 23567968,
+        "lucroCaixa": 24160152,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 592184,
+        "payout": 0.9755,
+        "caixaLiquidoFimMes": 14895321
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-08-14",
+        "fonte": "Relatório Gerencial (ID 981103)",
+        "docId": "981103",
+        "cotas": 23567968,
+        "lucroCaixa": 23929787,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 361819,
+        "payout": 0.9849
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-09-12",
+        "fonte": "Relatório Gerencial (ID 1004609)",
+        "docId": "1004609",
+        "cotas": 23567968,
+        "lucroCaixa": 25908944,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 2340976,
+        "payout": 0.9096
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-10-14",
+        "fonte": "Relatório Gerencial (ID 1044705)",
+        "docId": "1044705",
+        "cotas": 23567968,
+        "lucroCaixa": 22474079,
+        "distribuicao": 23567968,
+        "resultadoCaixa": -1093889,
+        "payout": 1.0487,
+        "caixaLiquidoFimMes": 4564636
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-11-14",
+        "fonte": "Relatório Gerencial (ID 1059871)",
+        "docId": "1059871",
+        "cotas": 23567968,
+        "lucroCaixa": 25214031,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 1646063,
+        "payout": 0.9347
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-12-12",
+        "fonte": "Relatório Gerencial (ID 1075560)",
+        "docId": "1075560",
+        "cotas": 23567968,
+        "lucroCaixa": 22859267,
+        "distribuicao": 23567968,
+        "resultadoCaixa": -708701,
+        "payout": 1.031
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 1.0,
+        "dataPagamento": "2026-01-15",
+        "fonte": "Relatório Gerencial (ID 1093428)",
+        "docId": "1093428",
+        "cotas": 23567968,
+        "lucroCaixa": 23605448,
+        "distribuicao": 23567968,
+        "resultadoCaixa": 37480,
+        "payout": 0.9984,
+        "caixaLiquidoFimMes": 25887936
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.71,
+        "dataPagamento": "2026-02-13",
+        "fonte": "Relatório Gerencial (ID 1133455)",
+        "docId": "1133455",
+        "cotas": 23567968,
+        "lucroCaixa": 14526078,
+        "distribuicao": 16733258,
+        "resultadoCaixa": -2207180,
+        "payout": 1.1519
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.72,
+        "dataPagamento": "2026-03-13",
+        "fonte": "Relatório Gerencial (ID 1154722)",
+        "docId": "1154722",
+        "cotas": 23567968,
+        "lucroCaixa": 18514106,
+        "distribuicao": 16968937,
+        "resultadoCaixa": 1545169,
+        "payout": 0.9165
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.72,
+        "dataPagamento": "2026-04-15",
+        "fonte": "Rendimentos e Amortizações (ID 1150389)",
+        "docId": "1150389",
+        "caixaLiquidoFimMes": 43572326
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 140687492,
+        "distribuicao": 141407808,
+        "resultadoCaixa": -720316,
+        "payout": 1.0051,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 143991556,
+        "distribuicao": 141407808,
+        "resultadoCaixa": 2583748,
+        "payout": 0.9821,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 2,
+        "lucroCaixa": 33040184,
+        "distribuicao": 33702195,
+        "resultadoCaixa": -662011,
+        "payout": 1.02,
+        "interpretacao": "queimou_caixa"
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_curto",
+      "dividendoLabel": "Sustentável no piso (R$ 0,72) sem colchão; depende de geração mensal",
+      "dividendoCor": "amber",
+      "horizonte": "1S2026 — guidance R$ 0,70-1,00. Reserva de R$ 0,13/cota é fina.",
+      "status": "estavel",
+      "cor": "amber",
+      "payoutMedio12m": 1.0003,
+      "caixaLiquido": 43572326.23,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "Item 9 do Informe Mensal (Mar/26): Disponibilidades R$ 14.892 + Títulos Públicos R$ 43,56 mi + Fundos RF R$ 385 = <strong>R$ 43.572.326</strong>. Composição praticamente 100% em Letras Financeiras do Tesouro (LFT).",
+      "resultadoAcumuladoRetido": -187889000,
+      "resultadoAcumuladoNota": "Prejuízo contábil acumulado, NÃO caixa retido. Resultado da diferença entre distribuição contábil acumulada e resultado contábil acumulado desde o IPO (impactado pela equivalência patrimonial).",
+      "queimaMediaMensal": 130176,
+      "queimaPorCota": 0.0055,
+      "coberturaMeses": 334.7,
+      "tendencia": "Caixa estável: gerou R$ 285 Mi e distribuiu R$ 283 Mi em 2025 (payout caixa 99%). Em jan-fev/26 acumulou ligeira queima (~R$ 130 Mi/mês), mas reserva financeira (R$ 43,6 Mi) cobre 334+ meses no ritmo atual.",
+      "leitura": "<p>Apesar da narrativa popular de que o fundo 'distribui mais do que ganha' (que confunde resultado contábil com resultado de caixa), <strong>o caixa real cobre a distribuição</strong>: em 2025 o fundo gerou R$ 285 Mi de caixa contra R$ 283 Mi distribuídos. A reserva de R$ 43,6 Mi (Mar/26) é estratégica — cobre eventuais oscilações de curto prazo. <strong>O risco real não é de quebra, é de corte de DPS</strong> se vendas piorarem em 2026.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2025-12",
+        "dataExata": "2025-12-31",
+        "titulo": "Fim do ciclo de DPS R$ 1,00 (10 meses sustentados)",
+        "tipo": "outro",
+        "descricao": "<p>O fundo pagou <strong>R$ 1,00/cota por 10 meses consecutivos</strong> (mar-dez/2025), encerrando o ciclo no fechamento de 2025. Foi o maior período de DPS estável da história recente do fundo.</p>",
+        "impactoDividendo": "Período-base de R$ 1,00 encerrado",
+        "severidade": "neutro",
+        "fonte": "Rendimentos e Amortizações 12/2025",
+        "docId": "1073620"
+      },
+      {
+        "data": "2026-01",
+        "dataExata": "2026-01-30",
+        "titulo": "Corte de DPS para R$ 0,71 (queda de 29%)",
+        "tipo": "outro",
+        "descricao": "<p>Em jan/2026, o DPS corta para <strong>R$ 0,71</strong> (-29% vs R$ 1,00 anterior). Reflete: (i) Selic alta travando vendas; (ii) inadimplência crescente; (iii) revisão prudencial do guidance. Queda anunciada na live de 29/jan/2026 do diretor Pedro Ernesto.</p>",
+        "impactoDividendo": "-R$ 0,29/cota mensal",
+        "severidade": "negativo",
+        "fonte": "Rendimentos jan/2026",
+        "docId": "1097677"
+      },
+      {
+        "data": "2025-06",
+        "dataExata": "2025-06-12",
+        "titulo": "Adaptação à CVM 175 — Responsabilidade Limitada",
+        "tipo": "outro",
+        "descricao": "<p>Fundo passa a 'TG Ativo Real - Responsabilidade Limitada' com classe única. <strong>Cotistas agora protegidos</strong> ao valor subscrito (proteção patrimonial reforçada). Sem alteração de objetivo, política ou taxas.</p>",
+        "impactoDividendo": "Neutro",
+        "severidade": "neutro",
+        "fonte": "Instrumento Particular de Alteração",
+        "docId": "923714"
+      },
+      {
+        "data": "2024-06",
+        "dataExata": "2024-06-06",
+        "titulo": "Conclusão da 13ª Emissão (R$ 514,8 Mi)",
+        "tipo": "emissao",
+        "descricao": "<p>Última emissão pública de cotas do fundo, integralizada em 2024. Recursos foram para expansão do portfolio. Após esta emissão, o fundo passou a contar com 23.567.968 cotas.</p>",
+        "impactoDividendo": "Diluição compensada pelo crescimento de receita das novas SPEs",
+        "severidade": "neutro",
+        "fonte": "Prospecto Definitivo 13ª Emissão",
+        "docId": "675271"
+      },
+      {
+        "data": "2025-03",
+        "dataExata": "2025-03-31",
+        "titulo": "Início do ciclo de R$ 1,00 mensal (mar-dez/2025)",
+        "tipo": "outro",
+        "descricao": "<p>DPS estabilizou em R$ 1,00/cota a partir de mar/2025 — pico do ciclo dos últimos 12m, refletindo retorno positivo do portfolio.</p>",
+        "impactoDividendo": "Aumento de DPS por 10 meses consecutivos",
+        "severidade": "positivo",
+        "fonte": "Rendimentos e Amortizações 03/2025",
+        "docId": "869373"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-04",
+        "tipo": "outro",
+        "titulo": "Webcast 1T2026 (apresentação resultados trimestre)",
+        "descricao": "<p>Apresentação dos resultados do 1T2026 marcada para abril/2026. Pode incluir atualização de guidance e direção da gestora sobre impacto da Selic.</p>",
+        "severidade": "neutro",
+        "certeza": "confirmado",
+        "impactoValor": 0.0,
+        "duracaoMeses": null,
+        "premissa": "Comunicação programada na live de 29/jan/26 e Relatório Gerencial fev/2026.",
+        "fonte": "Relatório Gerencial fev/2026",
+        "docId": "1154722"
+      },
+      {
+        "data": "2026-07",
+        "tipo": "amortizacao_programada",
+        "titulo": "Vencimentos CRIs (Cumaru Golf jan/26 e New York Fortaleza dez/25)",
+        "descricao": "<p>CRIs com vencimentos no curto prazo: New York Fortaleza (R$ 35,7 mi, 24/12/2025) e Cumaru Golf (R$ 21,8 mi, 20/01/2026). Liquidação esperada deve agregar caixa ao fundo.</p>",
+        "severidade": "positivo",
+        "certeza": "confirmado",
+        "impactoValor": 0.05,
+        "duracaoMeses": 1,
+        "premissa": "Vencimentos contratuais documentados no Relatório Gerencial.",
+        "fonte": "Relatório Gerencial fev/2026",
+        "docId": "1154722"
+      },
+      {
+        "data": "2026-04",
+        "tipo": "outro",
+        "titulo": "Lançamento Urbic Signature Jardins (SP) — sai do landbank",
+        "descricao": "<p>Empreendimento de incorporação em São Paulo (1,0% do PL) tem previsão de lançamento em abr/2026. Início do ciclo de obras/vendas — sem impacto imediato no DPS, mas marca início de retorno futuro.</p>",
+        "severidade": "neutro",
+        "certeza": "projetado",
+        "impactoValor": 0.0,
+        "duracaoMeses": null,
+        "premissa": "Cronograma do landbank no Relatório Gerencial.",
+        "fonte": "Relatório Gerencial fev/2026",
+        "docId": "1154722"
+      },
+      {
+        "data": "2026-10",
+        "tipo": "outro",
+        "titulo": "Eleições Presidenciais 2026 — definição do cenário fiscal",
+        "descricao": "<p>Em out/2026 acontece o 1º turno das eleições presidenciais. A definição política impacta diretamente o setor imobiliário (taxas, programas habitacionais, política monetária). Catalisador potencial para queda de Selic e destrave da curva de juros longa.</p>",
+        "severidade": "neutro",
+        "certeza": "confirmado",
+        "impactoValor": 0.0,
+        "duracaoMeses": null,
+        "premissa": "Calendário eleitoral oficial (TSE).",
+        "fonte": "Relatório Gerencial fev/2026 (carta do gestor)",
+        "docId": "1154722"
+      },
+      {
+        "data": "2026-09",
+        "tipo": "outro",
+        "titulo": "Risco de novo corte de DPS se vendas piorarem",
+        "descricao": "<p>Se Selic não ceder e inadimplência continuar subindo, gestor pode revisar guidance para baixo. Cenário-base: piso de R$ 0,70/mês mantido. Cenário pessimista: R$ 0,60/mês temporário até 2T2027.</p>",
+        "severidade": "negativo",
+        "certeza": "possivel",
+        "impactoValor": -0.1,
+        "duracaoMeses": 6,
+        "premissa": "Sensibilidade aos resultados das próximas vendas e à direção da Selic. Não é cenário-base.",
+        "fonte": "Análise própria com base em pontosAtencao + cenário macro",
+        "docId": null
+      }
+    ],
+    "guidance": {
+      "fonte": "gestor",
+      "periodo": "1S2026",
+      "cobreMeses": 6,
+      "faixaMin": 0.7,
+      "faixaMax": 1.0,
+      "unidade": "R$/cota/mês",
+      "validade": "2026-09-30",
+      "documento": "Relatório Gerencial fev/2026 (ID 1154722) e Relatório Gerencial dez/2025"
+    },
+    "projecaoDy": {
+      "precoReferencia": 70.0,
+      "dyAtual12m": 12.34,
+      "dyProjetado12m": 13.0,
+      "cenarios": [
+        {
+          "rotulo": "Base (piso do guidance)",
+          "dy12m": 12.34,
+          "dividendoMes": 0.72,
+          "descricao": "DPS atual mantido em R$ 0,72/mês durante 12 meses. DY anualizado de 12,3% — abaixo do CDI."
+        },
+        {
+          "rotulo": "Otimista (meio do guidance)",
+          "dy12m": 14.57,
+          "dividendoMes": 0.85,
+          "descricao": "DPS em R$ 0,85/mês — patamar intermediário do guidance. Exige melhora gradual de vendas e Selic em 13%."
+        },
+        {
+          "rotulo": "Pessimista (revisão p/ baixo)",
+          "dy12m": 10.29,
+          "dividendoMes": 0.6,
+          "descricao": "DPS revisado para R$ 0,60/mês temporariamente — cenário de Selic 14,75%+ por mais 12m e inadimplência escalando para 8-9% em multipropriedade."
+        }
+      ],
+      "retornoTotal12m": 22.0,
+      "premissas": [
+        "Cotação de referência R$ 70,00 (24/04/2026)",
+        "DPS sustentável estimado em R$ 0,72-0,85",
+        "Cenário base assume Selic em queda gradual conforme Focus (-200 bps em 12m)",
+        "Reprecificação parcial do desconto patrimonial em ciclo de Selic em queda"
+      ]
+    },
+    "sintese": {
+      "tendencia": "lateral_com_risco",
+      "tendenciaLabel": "Estável no piso (R$ 0,72) com risco de novo corte se vendas piorarem",
+      "cor": "amber",
+      "direcao": "Após 10 meses de R$ 1,00, o DPS estabilizou em R$ 0,71-0,72 (corte de 28%). Próximo movimento depende de Selic e ciclo de vendas. Cenário-base: lateral em torno de R$ 0,72 durante 1S2026.",
+      "pontosPositivos": [
+        {
+          "texto": "Geração de caixa cobre distribuição (payout caixa 99% em 2025)",
+          "peso": "alto"
+        },
+        {
+          "texto": "Vencimentos de CRIs (R$ 57 Mi) agregam caixa em 2026",
+          "peso": "medio"
+        },
+        {
+          "texto": "Reserva financeira de R$ 43,6 Mi (item 9) cobre oscilações de curto prazo",
+          "peso": "medio"
+        },
+        {
+          "texto": "TIR Real de 14,25% a.a. + inflação no portfolio consolidado",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Inadimplência subindo em todos os segmentos (multipropriedade 7,24%)",
+          "peso": "alto"
+        },
+        {
+          "texto": "Reserva acumulada caiu para R$ 0,13/cota — sem colchão para DPS extra",
+          "peso": "alto"
+        },
+        {
+          "texto": "Selic 14,75% trava repasses bancários em 9-12 meses",
+          "peso": "alto"
+        },
+        {
+          "texto": "Eleições 2026 trazem incerteza adicional",
+          "peso": "medio"
+        }
+      ],
+      "veredicto": "<p>O DPS de R$ 0,72 é sustentável <strong>se</strong> o ritmo de vendas e geração de caixa de 2025 se mantiver em 1S2026 — payout caixa de 99% deixa zero margem para extras. <strong>Ponto de inflexão: 2T2026</strong> — vendas e cobranças do trimestre dirão se o piso de R$ 0,70 segura ou se há risco de novo corte temporário. Se Selic ceder conforme Focus (11% em 12m) e inadimplência estabilizar, há espaço para retornar ao patamar de R$ 0,80-0,85; se Selic permanecer alta, R$ 0,60-0,70 vira o cenário central.</p>"
+    },
+    "alertas": [
+      {
+        "texto": "Inadimplência multipropriedade 7,24% (alta crítica)",
+        "severidade": "sev-red"
+      },
+      {
+        "texto": "DPS no piso (R$ 0,72) sem colchão (reserva R$ 0,13)",
+        "severidade": "sev-amber"
+      },
+      {
+        "texto": "DY 12,3% perde para CDI 14,75%",
+        "severidade": "sev-amber"
+      }
+    ],
     "chartLabels": [
-      "Mar/25",
       "Abr/25",
       "Mai/25",
       "Jun/25",
@@ -446,67 +2267,39 @@
       "Nov/25",
       "Dez/25",
       "Jan/26",
-      "Fev/26"
+      "Fev/26",
+      "Mar/26"
     ],
     "chartData": [
-      1.00,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
-      1.00,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
       0.71,
+      0.72,
       0.72
     ],
     "chartCor": "#f59e0b",
     "chartYMin": 0.5,
     "chartYMax": 1.15,
-    "totaisAnuais": [
-      {
-        "ano": "Distribuído 12M",
-        "valor": "R$ 11,43"
-      },
-      {
-        "ano": "DY 12 Meses",
-        "valor": "14,01%",
-        "cor": "emerald"
-      },
-      {
-        "ano": "DY Anualizado Atual",
-        "valor": "11,33%"
-      },
-      {
-        "ano": "Reserva Acumulada",
-        "valor": "R$ 0,13/cota"
-      },
-      {
-        "ano": "Lucro/Cota 2025",
-        "valor": "R$ 10,31",
-        "cor": "emerald"
-      }
-    ],
-    "guidance": {
-      "periodo": "1º Semestre 2026",
-      "faixa": "R$ 0,70 a R$ 1,00/cota",
-      "unidade": "Reserva: R$ 0,13/cota (sem colchão)"
-    },
     "stats": [
       {
-        "label": "Maior (Mar-Nov/25)",
+        "label": "Maior 12m (Mar-Nov/25)",
         "valor": "R$ 1,00",
         "cor": "emerald"
       },
       {
-        "label": "Menor (Jan/26)",
+        "label": "Menor 12m (Jan/26)",
         "valor": "R$ 0,71"
       },
       {
         "label": "Primeiro Dividendo",
-        "valor": "2017"
+        "valor": "Jul/2017"
       },
       {
         "label": "Total 12M",
@@ -514,25 +2307,128 @@
         "cor": "emerald"
       },
       {
-        "label": "Tendência",
-        "valor": "Queda",
-        "cor": "red"
+        "label": "Tendência atual",
+        "valor": "Lateral no piso",
+        "cor": "amber"
       }
     ]
   },
   "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/tgar11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2018-10-01",
+      "dataFim": "2026-04-24",
+      "fonte": "yfinance:TGAR11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 70.0,
+      "minHistorico": {
+        "valor": 70.0,
+        "data": "2026-04-20"
+      },
+      "maxHistorico": {
+        "valor": 144.03,
+        "data": "2021-01-25"
+      }
+    },
+    "historicoVp": {
+      "csvPath": null,
+      "fonte": "Informes Mensais Estruturados (36 publicações trimestrais)",
+      "ultimoVpCota": 110.54,
+      "ultimoVpData": "2026-03",
+      "observacao": "VP/cota mensal disponível trimestralmente nos Informes Mensais Estruturados (mar/jun/set/dez). Histórico recente: dez/22 R$ 133,12 → dez/24 R$ 115,15 → mar/26 R$ 110,54."
+    },
+    "eventosValuation": [
+      {
+        "data": "2024-06-06",
+        "tipo": "emissao",
+        "titulo": "13ª Emissão de Cotas (R$ 514,8 Mi)",
+        "descricao": "<p>Última emissão pública. Cotas integralizadas em 2024 elevam PL de R$ 2,2 bi para R$ 2,71 bi. Diluição neutra (preço de emissão ≈ VP).</p>",
+        "impactoVp": -0.5,
+        "impactoPreco": null,
+        "fonte": "Prospecto Definitivo 13ª Emissão",
+        "docId": "675271"
+      },
+      {
+        "data": "2025-06-12",
+        "tipo": "mudanca_gestor",
+        "titulo": "Adaptação do Regulamento à CVM 175 (Responsabilidade Limitada)",
+        "descricao": "<p>Mudança estrutural do fundo para classe única com responsabilidade limitada. Sem alteração de gestão, taxas ou política de investimento.</p>",
+        "impactoVp": 0.0,
+        "impactoPreco": null,
+        "fonte": "Instrumento Particular de Alteração do Regulamento",
+        "docId": "923714"
+      },
+      {
+        "data": "2025-12-31",
+        "tipo": "venda_relevante",
+        "titulo": "Liquidação de R$ 313 Mi em CRIs em 2025",
+        "descricao": "<p>Venda massiva da carteira de CRIs (de R$ 369 Mi para R$ 56 Mi). Pode ter sido oportunística (taxas favoráveis) ou estratégica (preparar caixa). Reduziu peso de papel no PL para 4,3%.</p>",
+        "impactoVp": 0.0,
+        "impactoPreco": -3.0,
+        "fonte": "Demonstrações Financeiras 2025 (KPMG)",
+        "docId": "1152236"
+      },
+      {
+        "data": "2026-01-29",
+        "tipo": "evento_credito",
+        "titulo": "Live de Crise: Pedro Ernesto explica corte de DPS",
+        "descricao": "<p>Live de 90 minutos do diretor de gestão (canal Professor Baroni) explicando: queda da cota de R$ 93 → R$ 70, revisão de guidance para R$ 0,70-1,00, e ações da gestora para destravar valor (correspondente bancário dedicado, webcasts mensais).</p>",
+        "impactoVp": 0.0,
+        "impactoPreco": -8.0,
+        "fonte": "Relatório Gerencial fev/2026 (menção)",
+        "docId": "1154722"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "desenvolvimento_residencial",
+      "criterioAgrupamento": "FIIs com >50% do PL em desenvolvimento residencial (loteamentos + incorporação + multipropriedade), gestão ativa, sem dominância de receita por tijolo estabilizado.",
+      "tickers": [
+        "MFII11",
+        "URPR11",
+        "BIPD11",
+        "HOSI11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.68,
+        "pvpMin": 0.55,
+        "pvpMax": 0.8,
+        "dyMediano": 13.5,
+        "dyMin": 11.0,
+        "dyMax": 16.5,
+        "premioRiscoSegmento": 0.055,
+        "observacao": "Estatísticas estimadas — segmento 'desenvolvimento_residencial' não está formalmente em data/pares_subsegmento.json (TGAR11 está atualmente classificado em 'tijolo_residencial')."
+      },
+      "posicaoFundo": {
+        "pvpRanking": "2° dos 4 — abaixo da mediana em 7%",
+        "dyRanking": "3° dos 4 — abaixo da mediana em 120bps",
+        "leitura": "<p>Para fundos de desenvolvimento residencial, P/VP 0,63 está abaixo da mediana estimada do grupo (0,68) — TGAR está mais descontado. DY de 12,3% no piso fica abaixo da mediana, refletindo o corte recente. <strong>O desconto vs pares é justificado pela amplitude do corte de DPS</strong> (de R$ 1,35 para R$ 0,71 nos últimos 24m) e pela inadimplência crescente.</p>"
+      },
+      "statusClassificacao": "proposto"
+    },
     "pvp": {
-      "valor": "0,64",
-      "descricao": "Cota negociada com <span class=\"text-emerald-400\">36% de desconto</span> sobre o valor patrimonial",
+      "valor": "0,63",
+      "descricao": "Cota negociada com <span class=\"text-emerald-400\">37% de desconto</span> sobre o valor patrimonial (R$ 110,54)",
       "detalhes": [
         {
-          "label": "VP/Cota",
-          "valor": "R$ 110,16"
+          "label": "VP/Cota (Mar/26)",
+          "valor": "R$ 110,54"
         },
         {
-          "label": "Preço",
-          "valor": "~R$ 70,00",
+          "label": "Cotação",
+          "valor": "R$ 70,00",
           "cor": "emerald"
+        },
+        {
+          "label": "Desconto absoluto",
+          "valor": "R$ 40,54"
+        },
+        {
+          "label": "Mediana pares (estim.)",
+          "valor": "0,68"
         }
       ]
     },
@@ -540,55 +2436,515 @@
       "valor": "12,3%",
       "label": "DY Anualizado (piso)",
       "cor": "amber",
-      "descricao": "DY anualizado de 12,3% no piso (R$0,72/mês). Perde para o CDI de ~14,75%. O DY 12M histórico (14%) inclui 10 meses de R$1,00 que não se repetirão.",
-      "detalhe": "Abaixo do CDI (~14,75%). Precisa subir para R$0,85+ para competir."
+      "descricao": "DY anualizado atual: 12,34% sobre R$ 0,72/mês a R$ 70. Histórico 12m: 16,33% (anuncia maior, mas reflete 10 meses de R$ 1,00). Selic em 14,75% e CDI ~14,75% líquido tornam o DY atual menos atrativo.",
+      "detalhe": "Spread vs Selic: -2,4 pp (negativo — DY abaixo da Selic). Spread vs Selic projetada (11%): +1,3 pp."
     },
-    "recomendacoes": {
-      "valor": "1,50% + 30% perf.",
-      "label": "Taxa Total",
-      "cor": "amber",
-      "descricao": "Administração 0,22% + Gestão 1,28% = 1,50%. Performance de 30% sobre excedente do CDI. Taxa de gestão incide sobre valor de mercado, não PL.",
-      "detalhe": "Performance elevada (30%), mas taxa de gestão sobre VM reduz impacto com desconto"
-    }
+    "precoJustoMercado": {
+      "valor": 78.53,
+      "faixa": [
+        72.88,
+        84.18
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 70.0,
+        "diferencaPct": 12.2,
+        "leitura": "Subvalorizado em ~12% vs preço justo estimado — janela de entrada parcial, mas com risco. Faixa de R$ 72,25 a R$ 84,82 sugere upside controlado se cenário de Selic em queda se concretizar."
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio",
+          "peso": 0.5,
+          "preco": 59.86,
+          "calculo": "DPS sustentável R$ 11,52/ano ÷ (14,75% Selic + 4,5% prêmio desenvolvimento) = R$ 59.86",
+          "racional": "Em cenário de Selic 14,75%, fundos de desenvolvimento com inadimplência crescente exigem prêmio de risco de 4-5%. Peso alto (0,50) porque Selic é o driver dominante no curto prazo."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.2,
+          "preco": 98.93,
+          "calculo": "VP/cota R$ 110,54 × P/VP mediano dos pares (0,895) = R$ 98.93",
+          "racional": "Pares utilizados: KNRI11, MXRF11, BLMG11, AZPL11, BIME11, ALZM11, APTO11, BTHF11 (subsegmento 'hibrido_multiestrategia' do data/pares_subsegmento.json) — não há grupo formal de 'desenvolvimento residencial'. Peso baixo (0,20) porque pares hibridos têm composição muito diferente."
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.3,
+          "preco": 91.97,
+          "calculo": "DPS sustentável R$ 11,52/ano ÷ DY mediano dos pares (12,53%) = R$ 91.97",
+          "racional": "DY mediano dos pares hibridos. Reflete o que o mercado paga em yield para perfis similares de risco/liquidez."
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 1.016,
+        "score": 0.553,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.65,
+            "racional": "TG Core Asset boutique (não top-3), mas com track record sólido em desenvolvimento e transparência (live, webcasts, KPMG)."
+          },
+          {
+            "nome": "Inadimplência (papel/desenvolvimento)",
+            "peso": 0.2,
+            "score": 0.61,
+            "racional": "Inadimplência média ponderada ~5,8% (urbanismo 4,51%, incorporação 5,81%, multipropriedade 7,24%). Acima da média do segmento de tijolo (1-3%)."
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 0.95,
+            "racional": "LTV ~0%, securitização R$ 19,8 Mi (0,76% do PL). Solvência sólida."
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.15,
+            "score": 0.0,
+            "racional": "CV24m do DPS = 16,5% (R$ 0,71-1,35). Variabilidade alta para um fundo do tamanho do TGAR."
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.1,
+            "score": 0.65,
+            "racional": "sustentavel_curto — payout 99% sem colchão. Não é insustentável, mas não tem margem de segurança."
+          },
+          {
+            "nome": "Concentração",
+            "peso": 0.15,
+            "score": 0.5,
+            "racional": "HHI baixo (0,029) por número de ativos (174), mas Aqualand 9,33% concentra risco em segmento mais arriscado."
+          }
+        ]
+      },
+      "explicacao": "<p>O preço justo de <strong>R$ 78,53</strong> (faixa R$ 72,25-84,82) representa um upside de ~12% vs cotação atual de R$ 70,00. O componente A1 (DY-alvo Selic+prêmio) puxa o preço para baixo (R$ 59,86) refletindo o atual ciclo restritivo da Selic; A2 (P/VP pares hibridos) e A3 (DY pares) puxam para cima (R$ 99 e R$ 92 respectivamente) refletindo que TGAR está mais descontado que o grupo. O fator qualidade (1,016) é ligeiramente positivo — alavancagem baixa compensa instabilidade do DPS. <strong>O cenário-base estima reprecificação parcial em 12 meses se Selic ceder conforme Focus</strong>; se Selic permanecer em 14,75%+, o preço atual está calibrado.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 73.0,
+        "faixa": [
+          69.0,
+          78.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Webcast 1T2026 (apresentação de resultados)",
+            "data": "2026-04",
+            "impactoEsperado": "+R$ 1-3/cota se gestão sinalizar melhora; -R$ 2-4 se piorar guidance",
+            "fonte": "Relatório Gerencial fev/2026",
+            "docId": "1154722"
+          },
+          {
+            "evento": "Vencimentos de CRIs (Cumaru Golf + New York)",
+            "data": "2026-01 a 2026-07",
+            "impactoEsperado": "+R$ 57 Mi de caixa adicional para o fundo",
+            "fonte": "Relatório Gerencial fev/2026",
+            "docId": "1154722"
+          },
+          {
+            "evento": "Decisão Copom (próximas 2 reuniões)",
+            "data": "2026-05 a 2026-07",
+            "impactoEsperado": "Cada -25bps na Selic libera ~R$ 1-2 de upside no curto prazo",
+            "fonte": "BCB Focus / Comunicado Copom",
+            "docId": null
+          }
+        ],
+        "racional": "<p>Cenário-base: cota lateral entre R$ 69-78 nos próximos 6 meses. <strong>Catalisador positivo</strong>: webcast 1T2026 + sinalização de queda de Selic; <strong>catalisador negativo</strong>: revisão para baixo do guidance se vendas piorarem em 1T2026. A faixa estreita reflete o equilíbrio entre desconto profundo (suporte) e Selic alta (teto).</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 88.0,
+        "faixa": [
+          78.0,
+          100.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Selic projetada Focus (11% em 12m, ~9% em 24m)",
+            "data": "2026 a 2027",
+            "impactoEsperado": "Reprecificação para P/VP 0,80-0,90 — espaço para alta de R$ 18-26",
+            "fonte": "BCB Focus (mediana)",
+            "docId": null
+          },
+          {
+            "evento": "Maturação Aqualand e empreendimentos em desenv.",
+            "data": "2026 a 2027",
+            "impactoEsperado": "Aqualand 54%→80%+ vendas libera reavaliação positiva",
+            "fonte": "Relatório Gerencial fev/2026",
+            "docId": "1154722"
+          },
+          {
+            "evento": "Eleições 2026 e definição fiscal",
+            "data": "2026-10",
+            "impactoEsperado": "Cenário pró-mercado pode acelerar ciclo de queda de Selic",
+            "fonte": "Calendário eleitoral TSE",
+            "docId": null
+          }
+        ],
+        "racional": "<p>Cenário-base de R$ 88 em 24 meses assume Selic em queda gradual (Focus: 11% em 12m, ~9% em 24m), maturação de empreendimentos críticos (Aqualand, Cipasa, Nova Colorado) e estabilização de DPS no patamar R$ 0,80-0,90. <strong>Faixa larga (R$ 78-100)</strong> reflete a sensibilidade alta a Selic e ao ritmo de vendas — se a curva de juros descer mais rápido, R$ 100+ é factível.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 105.0,
+        "faixa": [
+          85.0,
+          125.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Ciclo completo de Selic (Focus: ~7,5% em meta neutra)",
+            "data": "2027 a 2029",
+            "impactoEsperado": "Reprecificação ao VP completa — P/VP convergindo para 0,90-1,00",
+            "fonte": "BCB Focus / Curva DI longa",
+            "docId": null
+          },
+          {
+            "evento": "Pipeline VGV de R$ 4,8 bi (Estoque + Landbank)",
+            "data": "2026 a 2031",
+            "impactoEsperado": "Maturação completa do pipeline atual gera receitas recorrentes",
+            "fonte": "Relatório Gerencial fev/2026",
+            "docId": "1154722"
+          },
+          {
+            "evento": "Volta da emissão pública (após zerar prejuízo acumulado)",
+            "data": "2027 a 2029",
+            "impactoEsperado": "Permite gestor crescer com cota próxima do VP",
+            "fonte": "Análise própria + Demonstrações Financeiras",
+            "docId": "1152236"
+          }
+        ],
+        "racional": "<p>Em horizonte de 3-5 anos, com ciclo completo de Selic e maturação do pipeline, o preço justo converge para perto do VP atualizado (R$ 110-115 estimado). Cenário pessimista: Selic permanece alta + ciclo imobiliário fraco — cota fica em R$ 85. Cenário otimista: Selic real em 4-5% + boom imobiliário — cota chega a R$ 125+.</p>"
+      }
+    },
+    "recomendacoes": null
   },
   "conclusao": {
     "paragrafos": [
-      "O <strong class=\"text-amber-400\">TGAR11</strong> tem 174 ativos em 20 estados e patrimônio de R$2,65 bilhões. O balanço 2025 (KPMG, parecer limpo) mostra lucro de R$221 MI (+48%). Parece ótimo. Mas o fundo <strong class=\"text-red-400\">distribuiu R$282 MI em dividendos — R$61 MI a mais do que ganhou</strong>. E quase metade da receita (R$117 MI) é equivalência patrimonial: ganho contábil de revalorização de SPEs, não dinheiro na conta.",
-      "O prejuízo acumulado cresceu de -R$126 MI para <strong class=\"text-red-400\">-R$187 MI</strong>. Os CRIs foram vendidos (de R$368 MI para R$55 MI), eliminando o colchão de liquidez. A inadimplência sobe em todos os segmentos (multipropriedade 7,24%). Cotistas saindo (162 mil → 147 mil). A redução do dividendo de R$1,00 para R$0,72 é uma <strong class=\"text-amber-400\">correção de responsabilidade</strong> — o fundo tenta alinhar distribuição com realidade.",
-      "A cota a ~R$70 negocia com desconto de 36% sobre o VP. Parece barato. Mas o DY no piso (12,3%) <strong class=\"text-red-400\">perde para o CDI de ~14,75%</strong>. Barato pelo VP não é sinônimo de bom investimento. O que importa é para onde o ativo aponta — e hoje não aponta para cima. <strong class=\"text-amber-400\">Esperar o cenário mudar antes de entrar.</strong>"
+      "O <strong class=\"text-amber-400\">TGAR11</strong> é o maior FII de desenvolvimento residencial pulverizado do mercado: 174 ativos em 20 estados, gerando TIR Real de 14,25% a.a. + inflação. O balanço 2025 (auditado pela KPMG, parecer limpo) revela uma narrativa diferente da que circula: <strong class=\"text-emerald-400\">o fundo gerou R$ 285 Mi de caixa contra R$ 283 Mi distribuídos (payout caixa de 99,3%)</strong>. A confusão de 'distribui mais do que ganha' nasce da comparação entre distribuição (R$ 282,8 mi) e <em>resultado contábil</em> (R$ 221,5 mi com equivalência patrimonial parcial), não do caixa real. <strong>O fundo distribuiu o que gerou em caixa</strong>; a diferença contábil reflete que parte da reavaliação de SPEs ainda não virou dinheiro líquido nos cofres.",
+      "Mas o cenário macro pesou: <strong class=\"text-red-400\">Selic em 14,75%</strong> trava repasses bancários em 9-12 meses, inadimplência sobe em todos os segmentos (multipropriedade 7,24%, incorporação 5,81%), e a venda de R$ 313 Mi em CRIs em 2025 eliminou o tradicional colchão de liquidez. A cota caiu de R$ 93 (dez/25) para R$ 70 (abr/26), prêmio de 25%, e o DPS cortou de R$ 1,00 para R$ 0,71-0,72. A reserva acumulada (R$ 0,13/cota) é fina — depende da geração mensal de caixa para sustentar o piso.",
+      "A R$ 70, o P/VP de <strong class=\"text-emerald-400\">0,63</strong> (37% de desconto) é um dos maiores do mercado e oferece <strong class=\"text-emerald-400\">margem de segurança patrimonial</strong> via 174 ativos físicos com lastro real. Mas o DY de 12,3% perde para o CDI de 14,75% — a tese só fecha em ciclo de queda de Selic (Focus projeta 11% em 12m, -375 bps). <strong class=\"text-amber-400\">Não é fundo para aposentado</strong> — é trade especulativo de desconto patrimonial com horizonte 18-24 meses, posição satélite (≤ 5%) para perfil arrojado."
     ],
     "pontosFortes": [
-      "Balanço KPMG com parecer limpo (2025)",
-      "Lucro +48% (R$221 Mi, R$10,31/cota)",
-      "Fluxo operacional +R$419 Mi (curva-J confirmada)",
-      "P/VP 0,73 (desconto de 27% sobre VP)",
-      "174 ativos em 20 estados (diversificação)",
-      "TIR Real de 14,25% a.a. + inflação",
-      "94% das obras concluídas, 73% vendas realizadas",
-      "VP a receber de R$ 2,50 bilhões",
-      "Gestora transparente e proativa",
-      "Liquidez de R$ 7,87 Mi/dia"
+      "Geração de caixa cobre distribuição em 2025 (payout caixa 99,3%, não 128%)",
+      "Balanço KPMG com parecer limpo (2025) — gestor transparente",
+      "P/VP 0,63 (desconto de 37% sobre VP de R$ 110,54)",
+      "174 ativos em 20 estados — diversificação geográfica única no IFIX",
+      "TIR Real de 14,25% a.a. + inflação (acima da Selic real)",
+      "94% das obras concluídas, 73% das vendas realizadas",
+      "VP a receber de R$ 2,50 Bi (vendas já realizadas, recebimento futuro)",
+      "Pipeline futuro: VGV de R$ 4,80 Bi em estoque + landbank",
+      "LTV ~0% e securitização baixa (R$ 19,8 Mi) — solvência sólida",
+      "Liquidez ampla: R$ 7,87 Mi/dia, 144 mil cotistas, peso 1,42% no IFIX",
+      "Gestora transparente (live, webcasts mensais a partir de mar/2026)",
+      "Fim de ciclo de R$ 1,00 foi corte de responsabilidade — gestor antecipou ajuste"
     ],
     "pontosDeAtencao": [
-      "Dividendo no piso (R$0,72) sem colchão (reserva R$0,13)",
-      "Inadimplência crescente (multipropriedade 7,24%)",
-      "CRIs liquidados 85% (R$368 Mi → R$55 Mi)",
-      "Viel sem vender (R$258 Mi travados)",
-      "Prejuízos acumulados crescendo (-R$187 Mi)",
-      "Fundo distribui mais do que ganha (payout 128%)",
-      "46% da receita é contábil (equivalência patrimonial), não caixa",
-      "DY no piso (12,3%) perde para CDI de ~14,75%",
-      "Cenário macro adverso (Selic 14,75%, guerra, petróleo)",
-      "Cotistas saindo (162 mil → 147 mil em 11 meses)",
-      "Taxa de performance elevada (30% sobre CDI)",
-      "Casas de análise retirando da carteira",
-      "Sem catalisador de curto prazo até eleições"
+      "DPS no piso (R$ 0,72) sem colchão (reserva R$ 0,13/cota)",
+      "Inadimplência crescente (multipropriedade 7,24% — alta crítica)",
+      "CRIs liquidados 85% (R$ 369 Mi → R$ 56 Mi) — eliminou colchão de liquidez",
+      "Aqualand R$ 243 Mi (9,33% PL) em segmento mais arriscado (multipropriedade)",
+      "88% do PL em SPEs avaliadas por equivalência patrimonial (KPMG marca como assunto-chave)",
+      "Prejuízo contábil acumulado de -R$ 187,9 Mi (impede emissão a desconto)",
+      "DY anualizado 12,3% perde para CDI 14,75% sem risco",
+      "DPS oscilou de R$ 1,35 (mai/24) para R$ 0,71 (jan/26) — CV24m de 16,5%",
+      "Drawdown de -44% nos últimos 24 meses (cota R$ 126 → R$ 70)",
+      "Cotistas saindo: 162 mil → 144 mil em 12 meses (-11%)",
+      "Selic em 14,75% trava repasses bancários (9-12 meses de espera)",
+      "Casas de análise retiraram TGAR11 das carteiras recomendadas",
+      "Eleições 2026 trazem incerteza adicional ao cenário fiscal/imobiliário",
+      "Cota não tem catalisador próprio de curto prazo — depende de Selic e ciclo macro"
     ],
-    "conclusaoFinal": "<strong class=\"text-red-400\">Não compraríamos TGAR11 a R$70 hoje.</strong> O DY no piso (12,3%) perde para o CDI de ~14,75% sem risco. O fundo distribui mais do que ganha (payout 128%), tem prejuízo acumulado crescente (-R$187 MI) e quase metade da receita é contábil, não caixa. Barato pelo VP não é a mesma coisa que bom investimento — o que importa é para onde o ativo aponta, e hoje não aponta para cima. <strong class=\"text-amber-400\">Esperar o cenário apontar para melhora</strong>: queda sustentada da Selic, dividendo subindo para R$0,85+, ou sinalização política favorável. Quando a direção mudar, mesmo que a cota já tenha subido, será hora de entrar. Até lá, <strong class=\"text-emerald-400\">CDI é o melhor amigo do investidor paciente</strong>."
+    "conclusaoFinal": "<strong class=\"text-amber-400\">MANTER (nota 5,5/10) — Posição satélite ≤ 5% para perfil arrojado.</strong> O TGAR11 a R$ 70 (P/VP 0,63) oferece margem de segurança patrimonial e distribuição sustentável pelo caixa real (não pela leitura contábil). Mas o DY de 12,3% perde para o CDI 14,75% no curto prazo, e o ciclo de Selic alta + inadimplência crescente + venda massiva de CRIs criam pressão. <strong class=\"text-emerald-400\">Tese funciona se Selic ceder (Focus: 11% em 12m)</strong> e Aqualand maturar — preço justo estimado de R$ 78 (faixa R$ 72-85) sugere upside de 12% no cenário-base. Para quem busca renda mensal previsível, melhor evitar e buscar logística HG (HGLG11, BTLG11) ou shoppings premium (HGBS11, MALL11). <strong class=\"text-emerald-400\">Para quem topa volatilidade e tem 24+ meses de horizonte, é uma das maiores ofertas de desconto patrimonial do mercado</strong>, mas com risco real de execução."
   },
   "footer": {
-    "dataAnalise": "02/04/2026",
-    "totalDocumentos": 47,
-    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura. Análise baseada no balanço auditado pela KPMG (31/12/2025), relatório gerencial de fevereiro/2026 e 47 documentos oficiais do fundo."
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 414,
+    "disclaimer": "Análise baseada em 414 documentos oficiais do FundosNet (Prospectos, Relatórios Gerenciais, Informes Mensais Estruturados, Demonstrações Financeiras, Fatos Relevantes, Rendimentos), CSV de preços (yfinance, 396 pontos semanais 2018-2026), e fontes macro públicas (BCB Focus, Selic SGS 432). Auditoria das demonstrações por KPMG (parecer limpo em 31/12/2025). Material informativo, não constitui recomendação de investimento. Rentabilidade passada não garante futura."
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII de desenvolvimento residencial pulverizado em 20 estados",
+      "subrotulo": "Trade de desconto patrimonial (P/VP 0,63) apostando em queda de Selic e maturação de portfolio de loteamentos",
+      "cor": "amber"
+    },
+    "perfilRisco": {
+      "nivel": "alto",
+      "score": 3.5,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 2.5,
+          "peso": 0.2,
+          "metrica": "HHI 0,029 (baixa por número, mas Aqualand 9,33% concentra)",
+          "leitura": "HHI baixo (174 ativos), mas o maior — Aqualand multipropriedade — é 9,33% do PL e está em segmento mais arriscado. Top-3 = 21%."
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 4.0,
+          "peso": 0.15,
+          "metrica": "σ12m anualizado 23,4%",
+          "leitura": "Volatilidade alta — drawdown de 44% nos últimos 24m. Cota negocia entre R$ 70-126 em 24m. Para FII, é volatilidade de tipologia 'desenvolvimento'."
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "CV24m do DPS 16,5% (R$ 0,71-1,35)",
+          "leitura": "DPS oscilou de R$ 1,35 (mai/24) para R$ 0,71 (jan/26) — alta variabilidade. Reflete a natureza cíclica do desenvolvimento residencial."
+        },
+        {
+          "nome": "Liquidez",
+          "score": 2.0,
+          "peso": 0.15,
+          "metrica": "R$ 7,87 Mi/dia (fev/26), 144 mil cotistas",
+          "leitura": "Liquidez ampla — entre as 30 maiores do IFIX (peso 1,42%). Posição de R$ 1 Mi sai em <1 dia. Compatível com qualquer perfil."
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "Inadimplência multipropriedade 7,24%, incorporação 5,81%, urbanismo 4,51%",
+          "leitura": "Inadimplência crescente em todos os segmentos. Multipropriedade (10% do PL) é o mais crítico. Selic alta trava vendas em 9-12 meses."
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 1.5,
+          "peso": 0.1,
+          "metrica": "LTV ~0%, securitização R$ 19,8 Mi (0,76% do PL)",
+          "leitura": "Alavancagem mínima (R$ 19,8 Mi de securitização recebíveis). Sem dívida bancária. Solvência muito sólida."
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": false,
+        "racional": "DPS oscilou de R$ 1,35 (mai/24) para R$ 0,71 (jan/26) e voltou a R$ 0,72. Sem regime estável e em corte recente."
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": "parcial",
+        "racional": "78% dos CRIs são IPCA+, mas CRIs são apenas 4,32% do PL. Loteamentos têm INCC nas parcelas. Hedge real porém indireto e diluído."
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "100% receita em BRL — nenhuma exposição cambial direta."
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": true,
+        "racional": "P/VP 0,63 (uma das maiores ofertas de desconto do IFIX). Convergência ao VP é o trade mais óbvio se ciclo de Selic virar."
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": true,
+        "racional": "Curva DI/Focus projeta Selic 11% em 12m (-375 bps). Para FIIs descontados, o spread DY vs Selic abre ~370 bps de espaço para reprecificação."
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Não — fundo de equity de desenvolvimento. Não tem CRIs CDI dominante. Alta de Selic agrava trava bancária."
+      },
+      {
+        "nome": "Exposição setorial concentrada (loteamentos no interior)",
+        "encaixa": true,
+        "racional": "61% do PL em loteamentos (urbanismo) — exposição pura ao desenvolvimento residencial fora dos grandes centros. Tese específica que ninguém mais oferece tão concentrada."
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": false,
+        "racional": "Volatilidade alta (drawdown 44%), DPS instável (CV 16,5%), guidance amplo (R$ 0,70-1,00) — incompatível com renda estável."
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": "parcial",
+        "racional": "Tem 174 ativos em 20 estados, mas tudo é desenvolvimento residencial. Não diversifica em logística/escritório/shopping/papel."
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "Como todo FII brasileiro com >100 cotistas, dividendos são isentos de IR para pessoa física (Lei 11.196/05)."
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "Dependência de Equivalência Patrimonial das SPEs (88% do PL)",
+        "severidade": "alta",
+        "descricao": "<strong>R$ 2,34 bi (88,1% do PL)</strong> está em SPEs avaliadas por equivalência patrimonial. O auditor KPMG marcou como 'principal assunto de auditoria' justamente por ser <em>estimativa</em> dependente de premissas (valor realizável líquido dos empreendimentos). Reavaliações negativas das SPEs — se vendas piorarem ou inadimplência escalar — derrubam o VP/cota imediatamente.",
+        "mitigacao": "Auditoria KPMG anual com parecer limpo em 2025 e procedimentos específicos de validação. Histórico de recálculo conservador da gestora."
+      },
+      {
+        "titulo": "Cota Patrimonial Subiu 0,4% em 2025 vs Lucro Caixa de 11% (R$ 285Mi/2,65bi)",
+        "severidade": "media",
+        "descricao": "Apesar de gerar R$ 285 Mi de caixa em 2025, o VP/cota subiu apenas R$ 0,38 (de R$ 110,16 fev/26 para R$ 110,54 mar/26 — comparações precisas com fim/2025 trazem leve queda). A diferença sugere que <strong>parte do lucro contábil foi 'consumido'</strong> pela atualização ao valor de mercado das SPEs (que pode ter sido conservadora). Reavaliação positiva no futuro pode destravar valor.",
+        "mitigacao": null
+      },
+      {
+        "titulo": "Estrutura de SPEs Opaca para o Cotista Final",
+        "severidade": "media",
+        "descricao": "Cotista compra TGAR11 → fundo investe em <strong>SPEs (Sociedades de Propósito Específico)</strong> → SPEs detêm os imóveis e contratam vendas. Cada SPE é um veículo separado com governança própria. O cotista não vê balanços individuais das SPEs em detalhes — depende da gestora consolidar e da auditoria validar.",
+        "mitigacao": "TG Core publica relatório gerencial mensal com TIR e progresso por SPE. KPMG audita."
+      },
+      {
+        "titulo": "Multipropriedade (10,24% do PL) — Aqualand é R$ 243 Mi sozinho",
+        "severidade": "alta",
+        "descricao": "O Aqualand (Salinópolis-PA) é o maior ativo do fundo (9,33% do PL, ~R$ 243 mi) e está no segmento com inadimplência mais alta (7,24%, em tendência de alta desde 2023). Está em estágio inicial: 54% vendas, 77% obras. Risco binário de execução — se piorar, derrubar o VP/cota.",
+        "mitigacao": "TIR esperada de 19,82% a.a. + inflação (mais alta do portfolio). Gestor monitora ativamente."
+      },
+      {
+        "titulo": "13ª Emissão Foi a Última — Sem Capital Novo Para Aproveitar Desconto",
+        "severidade": "media",
+        "descricao": "Com prejuízo acumulado de R$ 187,9 Mi, o fundo <strong>não pode emitir cotas a desconto</strong> (regra: emissão ≥ VP). Isso impede a estratégia de 'aproveitar a cota descontada para crescer'. Se o gestor quiser fazer aquisição grande, terá que ser com caixa próprio ou alavancagem (que hoje é zero)."
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 7870000,
+      "volumeMedio252d": 5600000,
+      "diasParaSair": {
+        "10mil": 0.006,
+        "100mil": 0.06,
+        "500mil": 0.32,
+        "1milhao": 0.64,
+        "10milhoes": 6.36
+      },
+      "fonte": "estimativa_relatorio",
+      "leitura": "Liquidez muito boa para FII: R$ 7,87 mi/dia (fev/26). Posição de R$ 1 Mi sai em menos de 1 dia útil, R$ 10 Mi em ~6 dias. Compatível com qualquer tamanho de posição relevante. TGAR11 está nos índices IFIX (1,42%), XPFT (2,91%), XPFI (1,17%) e SUNO30 (3,33%)."
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.234,
+        "sigma24m": 0.239,
+        "drawdownMax24m": -0.444,
+        "drawdownMaxData": "2026-04",
+        "tempoRecuperacao": null
+      },
+      "dividendo": {
+        "cv12m": 0.138,
+        "cv24m": 0.165,
+        "minDps24m": 0.71,
+        "maxDps24m": 1.35,
+        "amplitudeRelativa": 0.901
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "desenvolvimento_residencial",
+      "pares": [
+        {
+          "ticker": "MFII11",
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
+          "leitura": "Mauá Capital MFII também é desenvolvimento residencial (incorporação). Sobreposição de tipologia mas geografia diferente (mais SP/SE)."
+        },
+        {
+          "ticker": "HOSI11",
+          "sobreposicaoEstimada": 0.2,
+          "tipoSobreposicao": [
+            "tipologia"
+          ],
+          "leitura": "Hospital Oncológico — tem alguma exposição a multipropriedade hoteleira, mas tese diferente (renda hospitalar)."
+        },
+        {
+          "ticker": "URPR11",
+          "sobreposicaoEstimada": 0.15,
+          "tipoSobreposicao": [
+            "tipologia"
+          ],
+          "leitura": "Urca Prime — desenvolvimento mas focado em multifamily/loteamento na região metropolitana SP. Geografia muito diferente."
+        },
+        {
+          "ticker": "BIPD11",
+          "sobreposicaoEstimada": 0.25,
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
+          "leitura": "BPI Desenvolvimento — também residencial mas mid-market urbano. Menor escala."
+        },
+        {
+          "ticker": "CPSH11",
+          "sobreposicaoEstimada": 0.05,
+          "tipoSobreposicao": [
+            "look_through_direto"
+          ],
+          "leitura": "TGAR11 detém R$ 47,9 mi (1,89%) em CPSH11. Quem tem CPSH11 está marginalmente duplicando."
+        }
+      ],
+      "diversificacaoReal": "TGAR11 é praticamente único no IFIX como FII concentrado em loteamentos pulverizados no interior do Brasil. Quem busca exposição a desenvolvimento residencial via FII tem opção limitada — TGAR é o mais líquido e diversificado do segmento. Sobreposição com pares é baixa, mas a tese (desenvolvimento) é arriscada por natureza."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic em queda sustentada (-200bps em 12m)",
+        "descricao": "Focus projeta Selic 11% (-375 bps) em 12m. Cada 100bps de queda libera ~R$ 4-6 de espaço de reprecificação para FIIs descontados. TGAR11 com P/VP 0,63 captura mais que a média (delta-P/VP).",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Aqualand atinge ≥ 80% de vendas em 2026",
+        "descricao": "Aqualand (9,33% do PL) com 54% vendas e 77% obras. Se virar 80%+ vendido, destrava reavaliação positiva e melhora caixa do fundo em ~R$ 8-12 Mi/mês.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Volta da emissão pública após zerar prejuízo acumulado",
+        "descricao": "Hoje, prejuízo acumulado de R$ 188 Mi impede emissão a desconto. Se o lucro contábil cobrir o prejuízo (eventualmente), gestora pode voltar a emitir e aproveitar trade próprio.",
+        "probabilidadeRelativa": "baixa"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Inadimplência escala em multipropriedade (>10%)",
+        "descricao": "Multipropriedade (10,24% do PL) já está em 7,24%. Se virar 10%+, força provisões maiores e reavaliação negativa do Aqualand. Citado em pontosAtencao.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Selic permanece em 14,75% por mais de 12 meses",
+        "descricao": "Cenário de inflação resiliente (petróleo, geopolítica, eleições 2026) trava queda da Selic. Repasses bancários continuam em 9-12 meses, vendas estagnam, payout cai abaixo de 90%.",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Reavaliação negativa das SPEs em auditoria 2026",
+        "descricao": "Se KPMG/gestora reavaliar SPEs para baixo (premissas mais conservadoras de venda), VP/cota cai e P/VP aparente sobe — desconto se erode mesmo sem cota cair. Citado em riscosOcultos.",
+        "probabilidadeRelativa": "media"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "swing_desconto",
+        "especulacao_curto",
+        "diversificacao_setorial",
+        "tax_shield"
+      ],
+      "horizonte": "medio_longo",
+      "perfil": "arrojado",
+      "carteiraTipica": "Posição satélite (≤ 5% da carteira de FIIs) para investidor que aceita volatilidade alta (σ 23%) em troca de desconto patrimonial profundo (P/VP 0,63).",
+      "perfisExemplo": [
+        "Investidor arrojado que monitora ciclo de Selic e topa segurar 24+ meses esperando reprecificação",
+        "Quem quer exposição única ao desenvolvimento residencial pulverizado no interior do Brasil",
+        "Posição complementar para carteira já diversificada em logística HG, papel e shoppings"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Aposentado ou quem depende de DPS estável — fundo cortou de R$ 1,00 para R$ 0,71 em 2 meses",
+        "Investidor que prefere CDI a 14,75% sem risco vs DY 12,3% com risco de execução",
+        "Quem busca exposição a logística/escritórios/shoppings — TGAR é só desenvolvimento residencial",
+        "Investidor iniciante que não acompanha trimestralmente execução do gestor",
+        "Perfil conservador intolerante a drawdown >20% (TGAR teve -44% em 24m)",
+        "Quem busca catalisadores de curto prazo (catalisador depende de Selic e ciclo imobiliário, não de eventos próprios do fundo)"
+      ]
+    }
   }
 }

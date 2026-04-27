@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/vilg11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-03-18",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:VILG11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 101.29,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 70.88,
+    "data": "2025-01-20"
+  },
+  "maxHistorico": {
+    "valor": 147.0,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 372,
+  "coletadoEm": "2026-04-27T02:05:49Z"
+}

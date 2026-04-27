@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/hglg11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:HGLG11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 158.01,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 100.1664,
+    "data": "2016-04-25"
+  },
+  "maxHistorico": {
+    "valor": 217.1647,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:35Z"
+}

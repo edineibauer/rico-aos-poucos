@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/xpml11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2020-06-01",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:XPML11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 111.0,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 1.0641,
+    "data": "2026-01-12"
+  },
+  "maxHistorico": {
+    "valor": 118.68,
+    "data": "2024-02-12"
+  },
+  "totalPontos": 309,
+  "coletadoEm": "2026-04-27T01:13:56Z"
+}

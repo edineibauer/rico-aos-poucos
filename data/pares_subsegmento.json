@@ -1,0 +1,874 @@
+{
+  "schema": "v1",
+  "atualizadoEm": "2026-04-26",
+  "descricao": "Tabela mestre de subsegmentos canônicos para comparação entre pares no cálculo de Preço Justo de Mercado (Valuation v2). Cada FII analisado é classificado em UM subsegmento canônico. Quando um ticker não está mapeado, o LLM da análise propõe classificação e marca paresComparaveis.statusClassificacao='proposto' até validação manual.",
+  "subsegmentos": {
+    "papel_high_grade": {
+      "nome": "Papel — CRI High Grade",
+      "descricao": "FIIs de CRI predominantemente investment grade (rating AA-/AAA), indexação CDI+ ou IPCA+, baixa inadimplência. Prêmio de risco baixo.",
+      "premioRiscoSegmento": 0.025,
+      "criterios": [
+        "≥70% em CRIs com rating ≥ AA-",
+        "inadimplência histórica <2%",
+        "alavancagem <10%"
+      ],
+      "tickers": [
+        "KNCR11",
+        "KNIP11",
+        "AFHI11",
+        "HGCR11",
+        "CLIN11",
+        "CVBI11",
+        "BTCR11"
+      ],
+      "estatisticas": {
+        "n": 7,
+        "nComPvp": 7,
+        "nComDy": 7,
+        "pvp": {
+          "n": 7,
+          "mediano": 0.98,
+          "min": 0.89,
+          "max": 1.04
+        },
+        "dy": {
+          "n": 7,
+          "mediano": 12.67,
+          "min": 8.8,
+          "max": 14.35
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "papel_high_yield": {
+      "nome": "Papel — CRI High Yield",
+      "descricao": "FIIs de CRI com exposição relevante a high yield (BB+ ou inferior), CRIs pulverizados, recebíveis estressados. Prêmio de risco alto.",
+      "premioRiscoSegmento": 0.05,
+      "criterios": [
+        "≥30% em CRIs HY ou unrated",
+        "DY 12m frequentemente >14%"
+      ],
+      "tickers": [
+        "DEVA11",
+        "HCTR11",
+        "HABT11",
+        "BCRI11",
+        "ALZC11",
+        "BARI11",
+        "OUJP11",
+        "CACR11",
+        "CYCR11"
+      ],
+      "estatisticas": {
+        "n": 9,
+        "nComPvp": 9,
+        "nComDy": 9,
+        "pvp": {
+          "n": 9,
+          "mediano": 0.75,
+          "min": 0.2,
+          "max": 0.94
+        },
+        "dy": {
+          "n": 9,
+          "mediano": 15.7,
+          "min": 12.9,
+          "max": 19.18
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "papel_misto": {
+      "nome": "Papel — CRI Multicategoria/Misto",
+      "descricao": "FIIs de CRI sem dominância clara HG/HY, gestão ativa, indexação variada.",
+      "premioRiscoSegmento": 0.04,
+      "criterios": [
+        "mistura HG e HY sem dominância",
+        "gestão ativa de portfólio"
+      ],
+      "tickers": [
+        "VGIP11",
+        "GAME11",
+        "BTCI11",
+        "ARRI11",
+        "ARXD11",
+        "EQIR11",
+        "FTCA11",
+        "GCRI11",
+        "EIRA11",
+        "FLCR11",
+        "HCHG11"
+      ],
+      "estatisticas": {
+        "n": 11,
+        "nComPvp": 11,
+        "nComDy": 11,
+        "pvp": {
+          "n": 11,
+          "mediano": 0.91,
+          "min": 0.73,
+          "max": 1.02
+        },
+        "dy": {
+          "n": 11,
+          "mediano": 13.45,
+          "min": 11.72,
+          "max": 15.77
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_logistica_aaa": {
+      "nome": "Tijolo — Logística AAA",
+      "descricao": "Galpões logísticos premium (AAA/A+), inquilinos investment-grade, contratos atípicos longos, baixa vacância.",
+      "premioRiscoSegmento": 0.035,
+      "criterios": [
+        "galpões classe A+/AAA",
+        "inquilinos top-tier",
+        "vacância <5%",
+        "WAULT >5 anos"
+      ],
+      "tickers": [
+        "HGLG11",
+        "BTLG11",
+        "BRCO11",
+        "VILG11",
+        "LVBI11",
+        "XPLG11"
+      ],
+      "estatisticas": {
+        "n": 6,
+        "nComPvp": 5,
+        "nComDy": 5,
+        "pvp": {
+          "n": 5,
+          "mediano": 0.96,
+          "min": 0.93,
+          "max": 1.01
+        },
+        "dy": {
+          "n": 5,
+          "mediano": 9.04,
+          "min": 8.1,
+          "max": 9.78
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_logistica_b": {
+      "nome": "Tijolo — Logística B",
+      "descricao": "Galpões logísticos secundários, last mile, industriais menores.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "galpões classe B ou last mile",
+        "inquilinos diversificados não-IG"
+      ],
+      "tickers": [
+        "GGRC11",
+        "FIIB11",
+        "GLOG11",
+        "HLOG11",
+        "AURB11",
+        "CXTL11",
+        "EURO11"
+      ],
+      "estatisticas": {
+        "n": 7,
+        "nComPvp": 7,
+        "nComDy": 7,
+        "pvp": {
+          "n": 7,
+          "mediano": 0.77,
+          "min": 0.6,
+          "max": 0.9
+        },
+        "dy": {
+          "n": 7,
+          "mediano": 7.77,
+          "min": 4.81,
+          "max": 12.12
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_shoppings_premium": {
+      "nome": "Tijolo — Shoppings Premium",
+      "descricao": "Shoppings de alto padrão (faturamento por m²/mês > R$ 3 mil), localização AAA, mix de marcas premium.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "NABRZS premium",
+        "vacância <8%",
+        "ABL >40 mil m² ou monoativo de prestígio"
+      ],
+      "tickers": [
+        "HGBS11",
+        "VISC11",
+        "MALL11",
+        "HSML11",
+        "JSRE11"
+      ],
+      "estatisticas": {
+        "n": 5,
+        "nComPvp": 4,
+        "nComDy": 4,
+        "pvp": {
+          "n": 4,
+          "mediano": 0.93,
+          "min": 0.91,
+          "max": 0.96
+        },
+        "dy": {
+          "n": 4,
+          "mediano": 9.18,
+          "min": 8.8,
+          "max": 11.0
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_shoppings_regional": {
+      "nome": "Tijolo — Shoppings Regional",
+      "descricao": "Shoppings regionais ou community, fluxo médio, exposição a varejo de massa.",
+      "premioRiscoSegmento": 0.055,
+      "criterios": [
+        "shoppings regional/community",
+        "fluxo médio"
+      ],
+      "tickers": [
+        "BPML11",
+        "AJFI11",
+        "APXM11",
+        "FIGS11",
+        "VSHO11",
+        "ABCP11",
+        "BBIG11",
+        "FVPQ11",
+        "FLRP11",
+        "CPSH11"
+      ],
+      "estatisticas": {
+        "n": 10,
+        "nComPvp": 10,
+        "nComDy": 10,
+        "pvp": {
+          "n": 10,
+          "mediano": 0.75,
+          "min": 0.67,
+          "max": 1.02
+        },
+        "dy": {
+          "n": 10,
+          "mediano": 10.115,
+          "min": 5.48,
+          "max": 13.34
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_escritorios_aaa": {
+      "nome": "Tijolo — Escritórios AAA",
+      "descricao": "Lajes corporativas premium (Faria Lima, Berrini, Vila Olímpia, Centro RJ), inquilinos top-tier.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "lajes A+/AAA",
+        "endereço prime SP/RJ",
+        "vacância <12%"
+      ],
+      "tickers": [
+        "BLCA11",
+        "HGRE11",
+        "BROF11",
+        "BMLC11",
+        "GTWR11"
+      ],
+      "estatisticas": {
+        "n": 5,
+        "nComPvp": 5,
+        "nComDy": 5,
+        "pvp": {
+          "n": 5,
+          "mediano": 0.82,
+          "min": 0.55,
+          "max": 0.92
+        },
+        "dy": {
+          "n": 5,
+          "mediano": 10.53,
+          "min": 6.59,
+          "max": 14.5
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_escritorios_b": {
+      "nome": "Tijolo — Escritórios B/C",
+      "descricao": "Lajes corporativas secundárias, monoativos com risco de vacância, mono-inquilino.",
+      "premioRiscoSegmento": 0.065,
+      "criterios": [
+        "lajes B/C",
+        "monoativo com risco",
+        "mono-inquilino"
+      ],
+      "tickers": [
+        "AIEC11",
+        "BLMO11",
+        "BRCR11",
+        "CJCT11",
+        "CNES11",
+        "ALMI11",
+        "EDGA11",
+        "FAMB11",
+        "FATN11",
+        "FPAB11",
+        "ERPA11",
+        "CPOF11",
+        "CBOP11",
+        "CEOC11",
+        "HOFC11",
+        "CXCO11",
+        "HGPO11"
+      ],
+      "estatisticas": {
+        "n": 17,
+        "nComPvp": 17,
+        "nComDy": 14,
+        "pvp": {
+          "n": 17,
+          "mediano": 0.77,
+          "min": 0.24,
+          "max": 1.08
+        },
+        "dy": {
+          "n": 14,
+          "mediano": 7.99,
+          "min": 3.23,
+          "max": 18.1
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_renda_urbana": {
+      "nome": "Tijolo — Renda Urbana",
+      "descricao": "Varejo, agências bancárias, BTS, sale-and-leaseback de single-tenant.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "varejo + agências + BTS"
+      ],
+      "tickers": [
+        "BBRC11",
+        "BNFS11",
+        "CPUR11",
+        "ALZR11",
+        "GARE11",
+        "HGRU11",
+        "CXAG11"
+      ],
+      "estatisticas": {
+        "n": 7,
+        "nComPvp": 7,
+        "nComDy": 7,
+        "pvp": {
+          "n": 7,
+          "mediano": 0.97,
+          "min": 0.69,
+          "max": 1.05
+        },
+        "dy": {
+          "n": 7,
+          "mediano": 11.84,
+          "min": 9.42,
+          "max": 18.52
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_residencial": {
+      "nome": "Tijolo — Residencial / Desenvolvimento",
+      "descricao": "Desenvolvimento residencial, permutas, loteamentos. Resultado depende da execução.",
+      "premioRiscoSegmento": 0.07,
+      "criterios": [
+        "desenvolvimento residencial",
+        "permutas",
+        "alta dependência da entrega"
+      ],
+      "tickers": [
+        "BIPD11",
+        "MFII11",
+        "HOSI11",
+        "TGAR11"
+      ],
+      "estatisticas": {
+        "n": 4,
+        "nComPvp": 4,
+        "nComDy": 4,
+        "pvp": {
+          "n": 4,
+          "mediano": 0.81,
+          "min": 0.64,
+          "max": 1.04
+        },
+        "dy": {
+          "n": 4,
+          "mediano": 10.62,
+          "min": 6.67,
+          "max": 16.1
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_educacional": {
+      "nome": "Tijolo — Educacional",
+      "descricao": "Lajes ou complexos educacionais, geralmente BTS com mono-inquilino (Anhanguera, Estácio, etc.).",
+      "premioRiscoSegmento": 0.05,
+      "criterios": [
+        "mono-inquilino educacional",
+        "contrato atípico longo"
+      ],
+      "tickers": [
+        "FAED11",
+        "FCFL11"
+      ],
+      "estatisticas": {
+        "n": 2,
+        "nComPvp": 2,
+        "nComDy": 2,
+        "pvp": {
+          "n": 2,
+          "mediano": 0.835,
+          "min": 0.66,
+          "max": 1.01
+        },
+        "dy": {
+          "n": 2,
+          "mediano": 11.155,
+          "min": 8.83,
+          "max": 13.48
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_hospital": {
+      "nome": "Tijolo — Hospital",
+      "descricao": "Hospitais e complexos médicos. Contratos longos, mono-inquilino.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "hospital",
+        "mono-inquilino saúde"
+      ],
+      "tickers": [
+        "HCRI11"
+      ],
+      "estatisticas": {
+        "n": 1,
+        "nComPvp": 1,
+        "nComDy": 1,
+        "pvp": {
+          "n": 1,
+          "mediano": 1.01,
+          "min": 1.01,
+          "max": 1.01
+        },
+        "dy": {
+          "n": 1,
+          "mediano": 11.7,
+          "min": 11.7,
+          "max": 11.7
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_hotel": {
+      "nome": "Tijolo — Hotel",
+      "descricao": "Hotéis. Receita variável por sazonalidade e ciclo econômico.",
+      "premioRiscoSegmento": 0.065,
+      "criterios": [
+        "hotel"
+      ],
+      "tickers": [
+        "BTHI11"
+      ],
+      "estatisticas": {
+        "n": 1,
+        "nComPvp": 1,
+        "nComDy": 1,
+        "pvp": {
+          "n": 1,
+          "mediano": 0.69,
+          "min": 0.69,
+          "max": 0.69
+        },
+        "dy": {
+          "n": 1,
+          "mediano": 10.54,
+          "min": 10.54,
+          "max": 10.54
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "tijolo_outros": {
+      "nome": "Tijolo — Outros (Cemitérios, Indústria especial, etc.)",
+      "descricao": "Subsegmentos com baixa amostragem para virar grupo próprio. Tratar caso a caso.",
+      "premioRiscoSegmento": 0.06,
+      "criterios": [
+        "sem grupo dedicado"
+      ],
+      "tickers": [
+        "CARE11",
+        "HBRH11"
+      ],
+      "estatisticas": {
+        "n": 2,
+        "nComPvp": 2,
+        "nComDy": 1,
+        "pvp": {
+          "n": 2,
+          "mediano": 0.58,
+          "min": 0.2,
+          "max": 0.96
+        },
+        "dy": {
+          "n": 1,
+          "mediano": 2.82,
+          "min": 2.82,
+          "max": 2.82
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "fof": {
+      "nome": "Fundo de Fundos (FoF)",
+      "descricao": "FIIs cuja carteira é predominantemente cotas de outros FIIs. Performance segue o mercado de FIIs.",
+      "premioRiscoSegmento": 0.035,
+      "criterios": [
+        "≥70% em cotas de FIIs"
+      ],
+      "tickers": [
+        "BCFF11",
+        "BLMR11",
+        "BPFF11",
+        "CPFF11",
+        "HGFF11",
+        "KFOF11",
+        "DVFF11",
+        "HFOF11",
+        "CRFF11",
+        "CXRI11",
+        "CXCI11",
+        "BCIA11",
+        "BBFO11",
+        "GCFF11"
+      ],
+      "estatisticas": {
+        "n": 14,
+        "nComPvp": 12,
+        "nComDy": 11,
+        "pvp": {
+          "n": 12,
+          "mediano": 0.86,
+          "min": 0.67,
+          "max": 0.97
+        },
+        "dy": {
+          "n": 11,
+          "mediano": 11.72,
+          "min": 8.81,
+          "max": 16.54
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "hibrido_multiestrategia": {
+      "nome": "Híbrido / Multiestratégia",
+      "descricao": "Tese mista (CRIs + tijolo + FoF), gestão ativa, sem categoria dominante. Avaliação caso a caso.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "sem dominância (>50%) de uma classe"
+      ],
+      "tickers": [
+        "KNRI11",
+        "MXRF11",
+        "BLMG11",
+        "AZPL11",
+        "BIME11",
+        "ALZM11",
+        "APTO11",
+        "BTHF11",
+        "CCME11",
+        "CPLG11",
+        "CPTS11",
+        "FLMA11",
+        "FIIP11",
+        "EXES11",
+        "AFHF11",
+        "EMET11"
+      ],
+      "estatisticas": {
+        "n": 16,
+        "nComPvp": 16,
+        "nComDy": 16,
+        "pvp": {
+          "n": 16,
+          "mediano": 0.895,
+          "min": 0.64,
+          "max": 1.09
+        },
+        "dy": {
+          "n": 16,
+          "mediano": 12.53,
+          "min": 7.34,
+          "max": 16.8
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "fiagro_credito": {
+      "nome": "Fiagro — Crédito (CRAs)",
+      "descricao": "Fiagros com >70% em CRAs e títulos do agro. Comparáveis a papel HG/HY mas com risco-agronegócio específico.",
+      "premioRiscoSegmento": 0.045,
+      "criterios": [
+        "≥70% em CRAs / FIDC agro"
+      ],
+      "tickers": [
+        "AAZQ11",
+        "AGRX11",
+        "BBGO11",
+        "BTAL11",
+        "CPTR11",
+        "DCRA11",
+        "EGAF11",
+        "FGAA11",
+        "CRAA11"
+      ],
+      "estatisticas": {
+        "n": 9,
+        "nComPvp": 9,
+        "nComDy": 9,
+        "pvp": {
+          "n": 9,
+          "mediano": 0.84,
+          "min": 0.74,
+          "max": 1.01
+        },
+        "dy": {
+          "n": 9,
+          "mediano": 14.74,
+          "min": 12.69,
+          "max": 17.03
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "fiagro_terras": {
+      "nome": "Fiagro — Terras Agrícolas",
+      "descricao": "Fiagros com terras produtivas próprias. Receita variável por safra.",
+      "premioRiscoSegmento": 0.055,
+      "criterios": [
+        "terras agrícolas próprias"
+      ],
+      "tickers": [
+        "BTRA11"
+      ],
+      "estatisticas": {
+        "n": 1,
+        "nComPvp": 1,
+        "nComDy": 1,
+        "pvp": {
+          "n": 1,
+          "mediano": 0.6,
+          "min": 0.6,
+          "max": 0.6
+        },
+        "dy": {
+          "n": 1,
+          "mediano": 15.42,
+          "min": 15.42,
+          "max": 15.42
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    },
+    "desconhecido_baixa_liquidez": {
+      "nome": "Desconhecido / Baixa Liquidez",
+      "descricao": "FIIs com dados insuficientes para classificação confiável ou liquidez muito baixa. Não usar como par.",
+      "premioRiscoSegmento": 0.06,
+      "criterios": [
+        "dados incompletos",
+        "DY=0 ou cotação ausente"
+      ],
+      "tickers": [
+        "KISU11",
+        "BBHI11",
+        "BTHM11"
+      ],
+      "estatisticas": {
+        "n": 3,
+        "nComPvp": 0,
+        "nComDy": 0,
+        "pvp": {
+          "n": 0,
+          "mediano": null,
+          "min": null,
+          "max": null
+        },
+        "dy": {
+          "n": 0,
+          "mediano": null,
+          "min": null,
+          "max": null
+        },
+        "atualizadoEm": "2026-04-26"
+      }
+    }
+  },
+  "indiceTicker": {
+    "_comentario": "Índice reverso ticker → subsegmento. Gerado por scripts/cotacoes/atualizar_pares_indice.py.",
+    "AAZQ11": "fiagro_credito",
+    "ABCP11": "tijolo_shoppings_regional",
+    "AFHF11": "hibrido_multiestrategia",
+    "AFHI11": "papel_high_grade",
+    "AGRX11": "fiagro_credito",
+    "AIEC11": "tijolo_escritorios_b",
+    "AJFI11": "tijolo_shoppings_regional",
+    "ALMI11": "tijolo_escritorios_b",
+    "ALZC11": "papel_high_yield",
+    "ALZM11": "hibrido_multiestrategia",
+    "ALZR11": "tijolo_renda_urbana",
+    "APTO11": "hibrido_multiestrategia",
+    "APXM11": "tijolo_shoppings_regional",
+    "ARRI11": "papel_misto",
+    "ARXD11": "papel_misto",
+    "AURB11": "tijolo_logistica_b",
+    "AZPL11": "hibrido_multiestrategia",
+    "BARI11": "papel_high_yield",
+    "BBFO11": "fof",
+    "BBGO11": "fiagro_credito",
+    "BBHI11": "desconhecido_baixa_liquidez",
+    "BBIG11": "tijolo_shoppings_regional",
+    "BBRC11": "tijolo_renda_urbana",
+    "BCFF11": "fof",
+    "BCIA11": "fof",
+    "BCRI11": "papel_high_yield",
+    "BIME11": "hibrido_multiestrategia",
+    "BIPD11": "tijolo_residencial",
+    "BLCA11": "tijolo_escritorios_aaa",
+    "BLMG11": "hibrido_multiestrategia",
+    "BLMO11": "tijolo_escritorios_b",
+    "BLMR11": "fof",
+    "BMLC11": "tijolo_escritorios_aaa",
+    "BNFS11": "tijolo_renda_urbana",
+    "BPFF11": "fof",
+    "BPML11": "tijolo_shoppings_regional",
+    "BRCO11": "tijolo_logistica_aaa",
+    "BRCR11": "tijolo_escritorios_b",
+    "BROF11": "tijolo_escritorios_aaa",
+    "BTAL11": "fiagro_credito",
+    "BTCI11": "papel_misto",
+    "BTCR11": "papel_high_grade",
+    "BTHF11": "hibrido_multiestrategia",
+    "BTHI11": "tijolo_hotel",
+    "BTHM11": "desconhecido_baixa_liquidez",
+    "BTLG11": "tijolo_logistica_aaa",
+    "BTRA11": "fiagro_terras",
+    "CACR11": "papel_high_yield",
+    "CARE11": "tijolo_outros",
+    "CBOP11": "tijolo_escritorios_b",
+    "CCME11": "hibrido_multiestrategia",
+    "CEOC11": "tijolo_escritorios_b",
+    "CJCT11": "tijolo_escritorios_b",
+    "CLIN11": "papel_high_grade",
+    "CNES11": "tijolo_escritorios_b",
+    "CPFF11": "fof",
+    "CPLG11": "hibrido_multiestrategia",
+    "CPOF11": "tijolo_escritorios_b",
+    "CPSH11": "tijolo_shoppings_regional",
+    "CPTR11": "fiagro_credito",
+    "CPTS11": "hibrido_multiestrategia",
+    "CPUR11": "tijolo_renda_urbana",
+    "CRAA11": "fiagro_credito",
+    "CRFF11": "fof",
+    "CVBI11": "papel_high_grade",
+    "CXAG11": "tijolo_renda_urbana",
+    "CXCI11": "fof",
+    "CXCO11": "tijolo_escritorios_b",
+    "CXRI11": "fof",
+    "CXTL11": "tijolo_logistica_b",
+    "CYCR11": "papel_high_yield",
+    "DCRA11": "fiagro_credito",
+    "DEVA11": "papel_high_yield",
+    "DVFF11": "fof",
+    "EDGA11": "tijolo_escritorios_b",
+    "EGAF11": "fiagro_credito",
+    "EIRA11": "papel_misto",
+    "EMET11": "hibrido_multiestrategia",
+    "EQIR11": "papel_misto",
+    "ERPA11": "tijolo_escritorios_b",
+    "EURO11": "tijolo_logistica_b",
+    "EXES11": "hibrido_multiestrategia",
+    "FAED11": "tijolo_educacional",
+    "FAMB11": "tijolo_escritorios_b",
+    "FATN11": "tijolo_escritorios_b",
+    "FCFL11": "tijolo_educacional",
+    "FGAA11": "fiagro_credito",
+    "FIGS11": "tijolo_shoppings_regional",
+    "FIIB11": "tijolo_logistica_b",
+    "FIIP11": "hibrido_multiestrategia",
+    "FLCR11": "papel_misto",
+    "FLMA11": "hibrido_multiestrategia",
+    "FLRP11": "tijolo_shoppings_regional",
+    "FPAB11": "tijolo_escritorios_b",
+    "FTCA11": "papel_misto",
+    "FVPQ11": "tijolo_shoppings_regional",
+    "GAME11": "papel_misto",
+    "GARE11": "tijolo_renda_urbana",
+    "GCFF11": "fof",
+    "GCRI11": "papel_misto",
+    "GGRC11": "tijolo_logistica_b",
+    "GLOG11": "tijolo_logistica_b",
+    "GTWR11": "tijolo_escritorios_aaa",
+    "HABT11": "papel_high_yield",
+    "HBRH11": "tijolo_outros",
+    "HCHG11": "papel_misto",
+    "HCRI11": "tijolo_hospital",
+    "HCTR11": "papel_high_yield",
+    "HFOF11": "fof",
+    "HGBS11": "tijolo_shoppings_premium",
+    "HGCR11": "papel_high_grade",
+    "HGFF11": "fof",
+    "HGLG11": "tijolo_logistica_aaa",
+    "HGPO11": "tijolo_escritorios_b",
+    "HGRE11": "tijolo_escritorios_aaa",
+    "HGRU11": "tijolo_renda_urbana",
+    "HLOG11": "tijolo_logistica_b",
+    "HOFC11": "tijolo_escritorios_b",
+    "HOSI11": "tijolo_residencial",
+    "HSML11": "tijolo_shoppings_premium",
+    "JSRE11": "tijolo_shoppings_premium",
+    "KFOF11": "fof",
+    "KISU11": "desconhecido_baixa_liquidez",
+    "KNCR11": "papel_high_grade",
+    "KNIP11": "papel_high_grade",
+    "KNRI11": "hibrido_multiestrategia",
+    "LVBI11": "tijolo_logistica_aaa",
+    "MALL11": "tijolo_shoppings_premium",
+    "MFII11": "tijolo_residencial",
+    "MXRF11": "hibrido_multiestrategia",
+    "OUJP11": "papel_high_yield",
+    "TGAR11": "tijolo_residencial",
+    "VGIP11": "papel_misto",
+    "VILG11": "tijolo_logistica_aaa",
+    "VISC11": "tijolo_shoppings_premium",
+    "VSHO11": "tijolo_shoppings_regional",
+    "XPLG11": "tijolo_logistica_aaa"
+  },
+  "metaPesos": {
+    "_comentario": "Pesos default dos componentes A1-A4 do precoJustoMercado. O LLM pode ajustar com justificativa.",
+    "A1_DY_Selic": 0.4,
+    "A2_PVP_pares": 0.25,
+    "A3_DY_pares": 0.2,
+    "A4_qualidade_min": 0.85,
+    "A4_qualidade_max": 1.15,
+    "faixa_min_pct": 0.03,
+    "faixa_max_pct": 0.15
+  }
+}

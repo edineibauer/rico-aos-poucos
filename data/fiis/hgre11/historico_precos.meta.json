@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/hgre11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:HGRE11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 125.55,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 95.16,
+    "data": "2025-02-10"
+  },
+  "maxHistorico": {
+    "valor": 209.25,
+    "data": "2020-01-06"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:44Z"
+}

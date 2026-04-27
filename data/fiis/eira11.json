@@ -1,0 +1,519 @@
+{
+  "meta": {
+    "ticker": "EIRA11",
+    "nome": "Aroeira Fundo de Investimento Imobiliário",
+    "nomeExtra": null,
+    "segmento": "Papel (CRI) - Híbrido Multicategoria",
+    "badges": [
+      "DY 12,35%",
+      "100% adimplente",
+      "FII jovem (1 ano)"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 42
+  },
+  "seo": {
+    "title": "EIRA11 - Análise Completa | Aroeira FII",
+    "description": "EIRA11: FII de crédito imobiliário da Aroeira Asset com DY 12,35%, P/VP 1,01, 3 CRIs estruturados e PL de R$ 21 mi. Análise completa do fundo.",
+    "keywords": "EIRA11, Aroeira Asset, FII papel, CRI, fundo imobiliário, crédito imobiliário, dividend yield, loteamento, incorporação",
+    "ogTitle": "EIRA11 - Análise Completa do Aroeira FII",
+    "ogDescription": "Análise do EIRA11: fundo de papel da Aroeira com 3 CRIs, DY 12,35%, spread IPCA+12,56% e carteira 100% adimplente.",
+    "twitterTitle": "EIRA11 - Aroeira FII",
+    "twitterDescription": "FII de crédito imobiliário com DY 12,35%, P/VP 1,01 e carteira em loteamentos e incorporação em GO e SP."
+  },
+  "indicadores": {
+    "cotacao": 104.55,
+    "cotacaoData": "24/04/2026",
+    "pvp": 1.01,
+    "pvpDesconto": "1% de prêmio",
+    "dividendYield": 12.35,
+    "dividendoMensal": 1.07,
+    "dividendoAnual": 13.1,
+    "patrimonioLiquido": "R$ 20,95 Mi",
+    "vpCota": 105.87,
+    "cotistas": 123,
+    "ocupacao": 100.0,
+    "numImoveis": 3
+  },
+  "recomendacao": {
+    "nota": 6.2,
+    "veredicto": null,
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">EIRA11</strong> é um fundo de papel recém-listado (IPO em <strong class=\"text-blue-400\">10/02/2025</strong>) gerido pela Aroeira Asset, com patrimônio líquido de <strong class=\"text-blue-400\">R$ 20,95 milhões</strong> distribuídos em <strong class=\"text-emerald-400\">3 CRIs estruturados</strong> voltados ao financiamento da produção imobiliária, concentrados em loteamentos em Goiás e incorporação em São Paulo. A carteira opera com spread médio ponderado de <strong class=\"text-emerald-400\">IPCA + 12,56% a.a.</strong> e <strong class=\"text-emerald-400\">CDI + 3,98% a.a.</strong>, com <strong class=\"text-emerald-400\">100% de adimplência</strong> e garantias robustas (cessão fiduciária, alienação de SPE, aval e fundo de reserva).</p><p>No primeiro ano de operação, o fundo entregou retorno acumulado de <strong class=\"text-emerald-400\">17,68%</strong> na cota patrimonial + dividendos (equivalente a 115,14% do CDI) e vem distribuindo rendimentos mensais entre R$ 1,07 e R$ 2,05, com DY anualizado próximo de <strong class=\"text-amber-400\">13% a.a.</strong>. Pontos de atenção incluem <strong class=\"text-amber-400\">alta concentração</strong> (3 ativos), <strong class=\"text-red-400\">baixíssima liquidez</strong> (R$ 89 mil/dia) e <strong class=\"text-amber-400\">tamanho reduzido do PL</strong>, que limita diversificação e acessibilidade institucional.</p><p>A 2ª emissão em curso (299.510 novas cotas remanescentes, ~R$ 30 mi) tende a ampliar a escala e potencialmente reduzir concentração, sendo catalisador relevante para avaliação prospectiva.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 20,95 Mi",
+      "detalhe": "VP/cota: R$ 105,87",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,07",
+      "valorSufixo": "/mês",
+      "detalhe": "DY 12,35% a.a.",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Adimplência",
+      "valor": "100%",
+      "detalhe": "3 CRIs adimplentes",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "123",
+      "detalhe": "200.490 cotas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Concentração extrema em 3 ativos",
+      "descricao": "A carteira possui apenas 3 CRIs: Gran Lago (39,5%), Aparecida Garden (34,2%) e Botânica (21,2%). Qualquer evento de inadimplência em uma operação impacta severamente o resultado do fundo.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Liquidez muito baixa",
+      "descricao": "Volume médio diário de R$ 89,7 mil e apenas 123 cotistas. Grandes posições são difíceis de montar/desmontar sem impacto relevante de preço.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Patrimônio reduzido",
+      "descricao": "PL de R$ 20,95 milhões é pequeno para padrões de FIIs de papel. Despesas fixas (taxa mínima R$ 18 mil/mês de adm + R$ 20-45 mil/mês de gestão) pesam proporcionalmente mais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Exposição a loteamento/incorporação",
+      "descricao": "73,7% da carteira em CRIs de loteamento residencial (Gran Lago e Aparecida Garden em Goiás) e 21,2% em incorporação (Botânica em SP). Setores sensíveis a ciclo de juros e funding.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Track record curto",
+      "descricao": "Fundo iniciou em 10/02/2025, com apenas 12 meses de histórico operacional. Não foi testado em ciclos completos de juros ou estresse de crédito.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Distribuição acima do resultado recorrente",
+      "descricao": "Em jan/26 distribuiu R$ 1,24/cota contra resultado líquido de R$ 1,13/cota; em fev/26 distribuiu R$ 1,07 com resultado de R$ 1,18. Uso pontual de reserva para manter fluxo.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Taxa de performance onerosa",
+      "descricao": "20% sobre excedente de IPCA + 7% a.a. Com retorno de 17,68% no primeiro ano, houve pagamento de R$ 121 mil em performance em out/25, impactando resultado mensal.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cotação próxima ao VP",
+      "descricao": "P/VP de 1,01 indica prêmio de ~1% sobre patrimônio, sem margem de segurança significativa vs peers de papel que negociam com desconto.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Aroeira Asset Gestão de Recursos",
+    "nota": 6.5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "Autorização CVM",
+        "valor": "Dez/2023"
+      },
+      {
+        "label": "FIIs listados",
+        "valor": "1 (EIRA11)"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Aroeira Asset</strong> é uma gestora independente sediada em São Paulo (Av. Juscelino Kubitschek, Itaim Bibi), autorizada pela CVM em dezembro de 2023 (Ato Declaratório nº 21.529). O EIRA11 é seu primeiro veículo listado em bolsa, com track record de gestão iniciado em fev/2025.</p><p>A administração fiduciária é exercida pela <strong class=\"text-blue-400\">QI Tech (QI Corretora de Títulos e Valores Mobiliários)</strong>, que substituiu a Singulare CTVM no fim de 2025. Os relatórios gerenciais apresentam análise detalhada de cenário macro e curvas de juros, indicando equipe técnica capacitada, porém o histórico curto e a ausência de outros fundos na casa limitam avaliação mais robusta da qualidade do gestor.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de taxas típica para fundos de papel, com performance relevante",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,225% a.a.",
+        "detalhe": "Sobre PL (mínimo R$ 18 mil/mês)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "1,00% a.a.",
+        "detalhe": "Escalonada; mín. R$ 20-45 mil/mês",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Excedente de IPCA + 7% a.a.",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 89,7 mil",
+        "detalhe": "Volume médio negociado",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "QI Corretora de Títulos e Valores Mobiliários S.A."
+      },
+      {
+        "label": "Gestora",
+        "valor": "Aroeira Asset Gestão de Recursos Ltda."
+      },
+      {
+        "label": "Custódia",
+        "valor": "QI Tech (0,025% a.a., mín. R$ 2 mil/mês)"
+      },
+      {
+        "label": "Auditor",
+        "valor": "PricewaterhouseCoopers"
+      },
+      {
+        "label": "Início",
+        "valor": "10/02/2025"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "59.202.651/0001-07"
+      },
+      {
+        "label": "Benchmark",
+        "valor": "IPCA + 7% a.a."
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "CRIs em carteira",
+        "valor": "3"
+      },
+      {
+        "label": "Saldo MTM total",
+        "valor": "R$ 21,51 Mi"
+      },
+      {
+        "label": "Adimplência",
+        "valor": "100%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Duration médio",
+        "valor": "~3,5 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRI Gran Lago (GO)",
+        "CRI Aparecida Garden (GO)",
+        "CRI Botânica (SP)",
+        "Caixa"
+      ],
+      "data": [
+        39.5,
+        34.2,
+        21.2,
+        5.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRI Gran Lago",
+        "setor": "Loteamento (Goiânia/GO)",
+        "receita": "39,5% carteira",
+        "rating": "Vcto 20/01/2035",
+        "ratingCor": "blue",
+        "risco": "CDI + 4,85% · Duration 4,5 anos",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Aparecida Garden",
+        "setor": "Loteamento (Aparecida de Goiânia/GO)",
+        "receita": "34,2% carteira",
+        "rating": "Vcto 25/05/2035",
+        "ratingCor": "blue",
+        "risco": "IPCA + 12,50% · Duration 3,0 anos",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Botânica",
+        "setor": "Incorporação (SP)",
+        "receita": "21,2% carteira",
+        "rating": "Vcto 20/12/2029",
+        "ratingCor": "blue",
+        "risco": "CDI + 4,00% · Duration 2,5 anos",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoNota": "<p>Carteira <strong class=\"text-amber-400\">altamente concentrada</strong> em 3 operações, todas originadas pela securitizadora Leverage. Garantias robustas em todas: <strong class=\"text-emerald-400\">cessão fiduciária de recebíveis, alienação de cotas da SPE, aval dos controladores (PF/PJ) e fundo de reserva de 2 PMTs</strong>. Exposição geográfica concentrada em Goiás (2 ativos) e São Paulo (1). Indexação mista: <strong class=\"text-blue-400\">63,95% CDI e 36,05% IPCA</strong>, oferecendo equilíbrio entre carrego em juros nominais e proteção inflacionária.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Do IPO em fev/2025 ao fim do 1º ciclo anual",
+    "periodos": [
+      {
+        "periodo": "Fev/2025",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "1ª emissão de 200.000 cotas a R$ 100,00, totalizando R$ 20 mi. Administrador inicial: Singulare CTVM. Público: Investidores Qualificados.",
+        "pontos": [
+          "<strong>R$ 20 milhões captados</strong>",
+          "Regulamento via CVM 175"
+        ]
+      },
+      {
+        "periodo": "Mar-Mai/2025",
+        "label": "Alocação",
+        "cor": "blue",
+        "descricao": "Aquisição dos 3 CRIs estruturantes: Gran Lago (mar), Botânica (mai) e Aparecida Garden (jun). Fundo ainda sem distribuição de rendimentos nesse período.",
+        "pontos": [
+          "CRI Gran Lago: R$ 9 mi a IPCA+12,50%",
+          "CRI Botânica: R$ 5 mi a CDI+4,00%"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "1ª distribuição",
+        "cor": "emerald",
+        "descricao": "Primeiro pagamento de rendimentos: R$ 2,05/cota (extraordinário, acumulando resultado do 1º semestre). DY anualizado de 26,20%.",
+        "pontos": [
+          "<strong>R$ 2,05/cota distribuídos</strong>",
+          "Resultado acumulado desde IPO"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "Nova emissão",
+        "cor": "blue",
+        "descricao": "Registro da 2ª emissão na CVM (SRE/AUT/FII/PRI/2025/283) para captar até R$ 30,3 mi (299.510 cotas remanescentes após preferência).",
+        "pontos": [
+          "2ª emissão aprovada",
+          "Público-alvo ampliado para Investidores Gerais"
+        ]
+      },
+      {
+        "periodo": "Out/2025",
+        "label": "Troca administrador",
+        "cor": "amber",
+        "descricao": "Singulare CTVM é substituída pela QI Corretora de Títulos e Valores Mobiliários como administradora fiduciária. Pagamento pontual de taxa de performance (R$ 121 mil) acumulada do 1º semestre.",
+        "pontos": [
+          "Novo administrador: QI Tech",
+          "Taxa de performance 1S25 paga"
+        ]
+      },
+      {
+        "periodo": "Nov/2025",
+        "label": "Gran Lago reindex",
+        "cor": "blue",
+        "descricao": "Ajuste do CRI Gran Lago de IPCA+12,50% para CDI+4,85%, alinhando mercado e distribuição para o investidor. Venda tática de parte do CRI Gran Lago no secundário, recomposta em dezembro.",
+        "pontos": [
+          "Gran Lago migra para CDI",
+          "R$ 1,10/cota distribuído"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "Fim do 1º ano fiscal",
+        "cor": "emerald",
+        "descricao": "Encerramento do primeiro exercício social. Resultado líquido de R$ 2,32 mi, distribuição total de R$ 9,50/cota no ano, equivalente a 129,91% do CDI Líquido.",
+        "pontos": [
+          "<strong>R$ 9,50/cota em 2025</strong>",
+          "129,91% do CDI Líquido"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "1º aniversário",
+        "cor": "emerald",
+        "descricao": "Retorno acumulado de 17,68% na cota patrimonial + dividendos (115,14% do CDI) e 16,31% na cota mercado + dividendos (106,23% do CDI).",
+        "pontos": [
+          "<strong>17,68% em 12 meses</strong>",
+          "115,14% do CDI bruto"
+        ]
+      },
+      {
+        "periodo": "Mar/2026",
+        "label": "2ª emissão em curso",
+        "cor": "blue",
+        "descricao": "Comunicados de modificação da oferta (rearranjo de custos e inclusão de integralização em bens). Desistência estendida até 17/03/2026. Potencial de triplicar o PL.",
+        "pontos": [
+          "~R$ 30 mi adicionais possíveis",
+          "Integralização em bens permitida"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O EIRA11 completou seu primeiro ano com <strong class=\"text-emerald-400\">entrega consistente de rendimentos acima do CDI</strong> (média ponderada de ~115% do CDI bruto em 2025) e desempenho da cota patrimonial superior ao IFIX. A trajetória de alocação foi rápida (portfólio fechado em jun/2025) e a carteira manteve-se 100% adimplente. Destaques: troca de administrador (Singulare → QI Tech), lançamento da 2ª emissão e reindexação do CRI Gran Lago.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota PL + Div.",
+        "valor": "+17,68%",
+        "detalhe": "R$ 100 → R$ 105,87 + div."
+      },
+      {
+        "label": "Total Distribuído",
+        "valor": "R$ 11,81",
+        "detalhe": "Jun/25 a Fev/26"
+      },
+      {
+        "label": "% do CDI bruto",
+        "valor": "115,14%",
+        "detalhe": "Desde IPO"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O <strong class=\"text-blue-400\">EIRA11</strong> é um fundo de papel de <strong class=\"text-amber-400\">pequeno porte e gestão boutique</strong>, especializado em CRIs de financiamento à produção imobiliária (loteamentos e incorporação) com garantias robustas. A tese combina carrego elevado (spread médio IPCA+12,56% e CDI+3,98%) com potencial de ganho via marcação a mercado caso a curva de juros continue fechando em 2026.</p><p>A 2ª emissão em andamento (até R$ 30 mi adicionais) é o principal catalisador para <strong class=\"text-emerald-400\">reduzir concentração e diluir custos fixos</strong>, condição necessária para elevar a qualidade estrutural do veículo.</p>",
+    "paraQuem": [
+      "<strong>Investidores pessoa física</strong> buscando DY isento de IR acima do CDI com apetite a ativos concentrados",
+      "<strong>Especialistas em crédito imobiliário</strong> que conhecem os riscos de loteamento/incorporação e confiam em due diligence caso a caso",
+      "<strong>Investidores com visão de longo prazo</strong> dispostos a acompanhar o crescimento de um FII em fase inicial (pós-2ª emissão)"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidores que priorizam liquidez</strong> — volume diário de R$ 89 mil torna difícil movimentar posições relevantes",
+      "<strong>Quem busca diversificação intrínseca</strong> — 3 ativos é baixo mesmo para padrões de FIIs de papel pequenos",
+      "<strong>Perfis avessos a risco de crédito estruturado</strong> ligado a incorporação residencial e loteamento em GO"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      2.05,
+      1.27,
+      1.21,
+      1.25,
+      1.34,
+      1.1,
+      1.28,
+      1.24,
+      1.07
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 2.5,
+    "totaisAnuais": [
+      {
+        "ano": "2025 (jun-dez)",
+        "valor": "R$ 9,50"
+      },
+      {
+        "ano": "2026 (jan-fev)",
+        "valor": "R$ 2,31"
+      }
+    ],
+    "guidance": {
+      "periodo": "2026 (indicativo)",
+      "faixa": "R$ 1,05 a R$ 1,25",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (Fev/26)",
+        "valor": "R$ 1,07"
+      },
+      {
+        "label": "Maior no período",
+        "valor": "R$ 2,05"
+      },
+      {
+        "label": "Menor recorrente",
+        "valor": "R$ 1,07"
+      },
+      {
+        "label": "Reserva/cota",
+        "valor": "R$ 2,08",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "1,01",
+      "descricao": "<p>Cota negociada a <strong class=\"text-amber-400\">leve prêmio de 1%</strong> sobre o valor patrimonial. Sem desconto relevante em relação ao VP, o que limita margem de segurança típica de alocações em fundos de papel.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota (fev/26)",
+          "valor": "R$ 105,87"
+        },
+        {
+          "label": "Preço atual",
+          "valor": "R$ 104,55",
+          "cor": "blue"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,35%",
+      "label": "Dividend Yield anual",
+      "cor": "emerald",
+      "descricao": "<p>DY de 12,35% a.a. vs CDI de ~15% (cenário atual) e NTN-B 10 anos em ~7% real. Spread sobre NTN-B de ~5,3 p.p. reais, <strong class=\"text-blue-400\">compatível com peers de papel de crédito estruturado</strong>, com a vantagem de isenção de IR para PF.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 107,00",
+      "label": "Preço justo estimado",
+      "cor": "blue",
+      "descricao": "<p>Estimativa via <strong class=\"text-blue-400\">Gordon</strong>: DPS anual projetado de R$ 13,20 / (custo de capital 12,5% - crescimento 3%) = R$ 138,94 teórico. Aplicando desconto por baixa liquidez, concentração e tamanho reduzido do PL (~23%), chega-se a <strong class=\"text-blue-400\">R$ 107,00</strong>, próximo ao VP patrimonial e levemente acima da cotação atual (R$ 104,55). Premissas: spread médio da carteira mantido, reserva de rendimentos preservada, sucesso parcial da 2ª emissão.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O EIRA11 encerra seu primeiro ano de vida com um <strong class=\"text-emerald-400\">track record inicial positivo</strong>: carteira 100% adimplente, spread médio elevado (IPCA+12,56% e CDI+3,98%), retorno de 17,68% em 12 meses na cota PL + dividendos e distribuição consistente acima de 100% do CDI em todos os meses desde junho/2025. A estrutura de garantias dos 3 CRIs (cessão fiduciária, alienação de SPE, aval PF/PJ e fundo de reserva) está alinhada às melhores práticas do segmento de crédito estruturado para financiamento à produção.",
+      "Em contrapartida, os pontos de atenção são materiais e devem ser ponderados com rigor: <strong class=\"text-amber-400\">PL de apenas R$ 20,95 milhões</strong>, <strong class=\"text-red-400\">apenas 3 ativos em carteira</strong>, <strong class=\"text-red-400\">liquidez média diária de R$ 89 mil</strong> e apenas 123 cotistas. A cotação a P/VP 1,01 não oferece desconto patrimonial relevante, e a taxa de performance (20% acima de IPCA+7%) é onerosa quando o ciclo de retorno é favorável como o observado em 2025.",
+      "O principal catalisador em aberto é a <strong class=\"text-blue-400\">2ª emissão em andamento</strong> (até 299.510 novas cotas, potencial de R$ 30 mi adicionais), que pode quase triplicar o patrimônio e permitir a entrada de novos CRIs, reduzindo concentração. Em paralelo, a expectativa de <strong class=\"text-blue-400\">início do ciclo de queda da Selic</strong> ao longo de 2026 tende a favorecer marcação a mercado dos ativos, ainda que reduza o carrego em CDI. O cenário macro (Selic 15%, IPCA em 4,26%, juros futuros fechando) é moderadamente construtivo para o segmento."
+    ],
+    "pontosFortes": [
+      "Carteira 100% adimplente desde o IPO, com 3 CRIs estruturados",
+      "Spread médio elevado (IPCA + 12,56% a.a. e CDI + 3,98% a.a.)",
+      "Garantias robustas em todas as operações (CF, AF SPE, aval, fundo de reserva 2 PMTs)",
+      "Diversificação por indexador (63,95% CDI e 36,05% IPCA)",
+      "Reserva de rendimentos saudável (R$ 2,08/cota em fev/26)",
+      "Transparência elevada nos relatórios gerenciais (análise macro, curvas DI/NTN-B, DRE detalhada)",
+      "Isenção de IR sobre rendimentos para pessoa física",
+      "Retorno de 115,14% do CDI bruto em 12 meses desde o IPO"
+    ],
+    "pontosDeAtencao": [
+      "Patrimônio líquido reduzido (R$ 20,95 mi) diluindo custos fixos de forma ineficiente",
+      "Altíssima concentração: apenas 3 ativos representam 95% da carteira",
+      "Liquidez secundária baixa (volume médio diário de R$ 89 mil)",
+      "Base de cotistas restrita (123) com 1 cotista detendo 73,8% das cotas",
+      "Track record de apenas 12 meses, sem teste em ciclo completo de crédito",
+      "Exposição concentrada em loteamento residencial (73,7% do portfólio)",
+      "Taxa de performance de 20% acima de IPCA+7% reduz líquido em ciclos favoráveis",
+      "Troca de administrador recente (Singulare → QI Tech) exige acompanhamento operacional",
+      "P/VP 1,01 sem desconto patrimonial vs peers de papel"
+    ],
+    "conclusaoFinal": "O EIRA11 apresenta-se como um FII de papel boutique, em fase inicial, com primeiro ano operacional consistente e carteira tecnicamente bem estruturada, mas com limitações estruturais relevantes — tamanho, concentração e liquidez — que restringem seu apelo para investidores que buscam escala e facilidade de negociação. O trade-off central está entre o carrego atrativo e isento de IR oferecido pelos CRIs de loteamento/incorporação vs os riscos de concentração e baixa liquidez inerentes a um fundo pequeno. A 2ª emissão em curso e a trajetória esperada de queda da Selic ao longo de 2026 são variáveis determinantes para a evolução do case. A decisão de alocação depende do alinhamento do perfil de risco do investidor com essas características específicas, sendo fundamental acompanhar o sucesso da captação adicional e a manutenção da adimplência da carteira nos próximos trimestres."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 42,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

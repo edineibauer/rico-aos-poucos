@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/vgir11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2018-07-30",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:VGIR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 9.79,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 7.3557,
+    "data": "2020-03-30"
+  },
+  "maxHistorico": {
+    "valor": 12.7234,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 405,
+  "coletadoEm": "2026-04-27T02:05:52Z"
+}

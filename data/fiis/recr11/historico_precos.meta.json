@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/recr11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2021-06-07",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:RECR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 82.76,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 67.2,
+    "data": "2024-12-16"
+  },
+  "maxHistorico": {
+    "valor": 106.3961,
+    "data": "2021-07-26"
+  },
+  "totalPontos": 256,
+  "coletadoEm": "2026-04-27T02:05:47Z"
+}

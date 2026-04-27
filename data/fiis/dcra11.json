@@ -1,0 +1,577 @@
+{
+  "meta": {
+    "ticker": "DCRA11",
+    "nome": "Devant FIAGRO Imobiliário de Responsabilidade Limitada",
+    "nomeExtra": "(Devant FIAGRO – anteriormente Devant Fundo de Investimento nas Cadeias Produtivas Agroindustriais)",
+    "segmento": "Fiagro — Crédito (CRA e cotas de Fiagros)",
+    "badges": [
+      "DY 12M de 14,85%",
+      "P/VP 0,75 (26% de desconto)",
+      "100% adimplente"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 157
+  },
+  "seo": {
+    "title": "DCRA11 - Análise Completa | Devant FIAGRO",
+    "description": "Análise completa do Devant FIAGRO (DCRA11): carteira 100% adimplente, DY 12M de 14,85%, P/VP 0,75, cota R$ 7,27 e 14.922 cotistas em abr/2026.",
+    "keywords": "DCRA11, Devant FIAGRO, CRA, Fiagro, agronegócio, dividend yield, Devant Asset, Daycoval, QORE DTVM",
+    "ogTitle": "DCRA11 - Devant FIAGRO | Análise Completa",
+    "ogDescription": "Fiagro de crédito com 18 ativos, DY 12M de 14,85% e 100% adimplência. Analisamos gestão, carteira, valuation e perspectivas.",
+    "twitterTitle": "DCRA11 - Devant FIAGRO",
+    "twitterDescription": "DY 12M de 14,85%, P/VP 0,75 e carteira 100% adimplente. Veja a análise completa do Fiagro de crédito da Devant Asset."
+  },
+  "indicadores": {
+    "cotacao": 7.27,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.74,
+    "pvpDesconto": "26% de desconto",
+    "dividendYield": 14.85,
+    "dividendoMensal": 1.1,
+    "dividendoAnual": 1.1,
+    "patrimonioLiquido": "R$ 66,3 Mi",
+    "vpCota": 9.84,
+    "cotistas": 14922,
+    "ocupacao": 100.0,
+    "numImoveis": 18
+  },
+  "recomendacao": {
+    "nota": 6.8,
+    "veredicto": null,
+    "cor": "blue",
+    "resumo": "<p>O <strong class=\"text-blue-400\">DCRA11</strong> é um Fiagro de crédito gerido pela <strong>Devant Asset</strong> (boutique especializada) com carteira diversificada em <strong>18 ativos</strong>, predominantemente CRAs corporativos e cotas de Fiagros de terceiros (AAZQ11, RURA11, RZAG11). A carteira está <strong class=\"text-emerald-400\">100% adimplente</strong>, com remuneração ponderada de <strong class=\"text-emerald-400\">CDI + 3,99%</strong> (45,6% do portfólio) e <strong class=\"text-emerald-400\">IPCA + 8,33%</strong> (18,6%).</p><p>Negociando com <strong class=\"text-amber-400\">P/VP de 0,74</strong> e DY 12M de <strong class=\"text-emerald-400\">14,85%</strong>, o fundo oferece yield elevado em contexto de Selic a 15% em queda. Pontos de atenção: concentração em distribuidoras/revendas de insumos (setor sob pressão em 2024-25 com a queda dos preços dos fertilizantes), renegociação recente do CRA Agrofito (waiver fee) e transferência da administração do Banco Daycoval para a QORE DTVM anunciada em dez/2025 (sem alteração de custos).</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 66,3 Mi",
+      "detalhe": "VP/cota: R$ 9,84",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,09",
+      "valorSufixo": "/mês",
+      "detalhe": "DY 12M: 14,85%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Adimplência",
+      "valor": "100%",
+      "detalhe": "18 ativos em dia",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "14.922",
+      "detalhe": "6,74 mi cotas emitidas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Liquidez reduzida",
+      "descricao": "Volume médio diário de apenas R$ 80,9 mil e giro mensal ~4% do PL. A base de cotistas tem recuado desde 2024 (de 19,9 mil para 14,9 mil), dificultando a movimentação de posições relevantes.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em insumos/revenda",
+      "descricao": "Aproximadamente 33% da carteira está em revendas e distribuidoras de insumos (Agrofito, Fiagril, Toagro, Agrodinâmica, Panorama, Agrofarm, Hinove). O setor sofreu compressão de margens em 2024-25 com a queda dos preços dos fertilizantes, resultando em waiver fees e renegociações pontuais.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Troca de administrador",
+      "descricao": "O Banco Daycoval transferirá a administração para a QORE DTVM, sem alteração nos custos. A transição é operacional, mas merece acompanhamento.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Repactuação do CRA Agrofito",
+      "descricao": "Em dez/2025, credores aprovaram carência de juros e alongamento de vencimento para 30/12/2026, com pagamento de <strong class=\"text-amber-400\">waiver fee de 0,5%</strong>. O CRA representa 6,9% do PL e segue adimplente no novo cronograma.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Carteira corporativa middle-risk",
+      "descricao": "O fundo não expõe diretamente ao produtor rural pessoa física e evita setor sucroalcooleiro cíclico em maior volume, porém concentra-se em distribuidoras regionais que podem apresentar volatilidade de margem em ciclos adversos.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Cota abaixo do valor patrimonial",
+      "descricao": "Cotação de R$ 7,27 versus VP de R$ 9,84 implica desconto de 26%. O desconto pode ser oportunidade, mas também reflete aversão a risco do mercado para Fiagros de crédito.",
+      "severidade": "emerald"
+    }
+  ],
+  "gestora": {
+    "nome": "Devant Asset Investimentos",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Fundos sob gestão",
+        "valor": "8+ fundos"
+      },
+      {
+        "label": "Início do DCRA11",
+        "valor": "Janeiro/2022"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Devant Asset</strong> é uma gestora independente especializada em crédito estruturado, com fundos de CRI (DEVA11), FIIs (DPRO11), Fiagros (DCRA11) e fundos de renda fixa crédito privado. No DCRA11, a gestão adota postura <strong>ativa</strong> e <strong>transparente</strong>, divulgando relatórios mensais detalhados com DRE, composição e monitoramento dos devedores.</p><p>A gestora tem histórico de <strong class=\"text-emerald-400\">zero inadimplência</strong> no DCRA11 desde o IPO em janeiro de 2022, com gestão proativa de eventos (como a renegociação do CRA Agrofito com cobrança de waiver fee). Mantém linearidade dos rendimentos via reserva de lucros e busca diversificação geográfica, setorial e por indexador.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de custos competitiva para Fiagro de crédito",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração + Custódia",
+        "valor": "0,13% a.a.",
+        "detalhe": "Sobre o PL",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "0,87% a.a.",
+        "detalhe": "Sobre o PL",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa Total",
+        "valor": "1,00% a.a.",
+        "detalhe": "Adm + Gestão (competitivo)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "10%",
+        "detalhe": "Sobre o que exceder 100% do CDI",
+        "corBorda": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Banco Daycoval S.A. (transferência para QORE DTVM anunciada em dez/2025)"
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco Daycoval S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Devant Asset Investimentos Ltda"
+      },
+      {
+        "label": "Início",
+        "valor": "Janeiro/2022"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "42.888.360/0001-11"
+      },
+      {
+        "label": "Categoria ANBIMA",
+        "valor": "Gestão Ativa | Títulos e Valores Mobiliários"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Ativos de crédito",
+        "valor": "18"
+      },
+      {
+        "label": "Alocado em crédito agro",
+        "valor": "72,6%"
+      },
+      {
+        "label": "Adimplência",
+        "valor": "100%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Duration",
+        "valor": "1,7 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Sucroalcooleiro",
+        "Revenda/Insumos",
+        "Armazenagem/Fiagros",
+        "Etanol",
+        "Alimentício",
+        "Logística"
+      ],
+      "data": [
+        17.0,
+        14.7,
+        10.7,
+        10.1,
+        9.2,
+        4.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#06b6d4"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "CRA Armac",
+        "setor": "Locação de equipamentos",
+        "receita": "7,8% PL",
+        "rating": "IPCA+8,44%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Bevap",
+        "setor": "Sucroalcooleiro",
+        "receita": "7,6% PL",
+        "rating": "CDI+3,00%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA Agrofito",
+        "setor": "Revenda de insumos",
+        "receita": "6,9% PL",
+        "rating": "CDI+5,60%",
+        "ratingCor": "amber",
+        "risco": "Médio-alto",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA FS Bio",
+        "setor": "Etanol de milho",
+        "receita": "6,3% PL",
+        "rating": "IPCA+8,25%",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRA CMAA",
+        "setor": "Sucroalcooleiro",
+        "receita": "4,8% PL",
+        "rating": "CDI+1,60%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FIAGRO RURA11 (Itaú)",
+        "setor": "Fiagros cotas",
+        "receita": "4,7% PL",
+        "rating": "Diversificado",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Minerva",
+        "setor": "Alimentício",
+        "receita": "4,6% PL",
+        "rating": "104,5% CDI",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRA Marfrig",
+        "setor": "Alimentício",
+        "receita": "4,5% PL",
+        "rating": "IPCA+8,25%",
+        "ratingCor": "emerald",
+        "risco": "Baixo",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "FIAGRO RZAG11 (Riza)",
+        "setor": "Fiagros cotas",
+        "receita": "3,1% PL",
+        "rating": "Diversificado",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "FIAGRO AAZQ11 (AZ Quest)",
+        "setor": "Fiagros cotas",
+        "receita": "2,9% PL",
+        "rating": "Diversificado",
+        "ratingCor": "emerald",
+        "risco": "Médio",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoNota": "<p>Carteira <strong class=\"text-emerald-400\">100% adimplente</strong> e diversificada em 18 ativos, com <strong>spread ponderado de CDI+3,99%</strong> e <strong>IPCA+8,33%</strong>. Composição por subordinação: 54,1% cotas únicas, 16,7% subordinadas, 18,6% seniores. Diversificação geográfica abrange MG (15%), SP (17%), MT (13%), MS (6%), PR (5%), RS (3%), entre outros. O fundo <strong class=\"text-emerald-400\">evita exposição direta ao produtor rural PF</strong> e a <strong>usinas sucroalcooleiras de maior risco</strong>, focando em emissores corporativos e cooperativas.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Quatro anos de operação: da alocação inicial à maturidade da carteira",
+    "periodos": [
+      {
+        "periodo": "Jan/2022",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Captação inicial de R$ 67 milhões via oferta ICVM 400, com adesão de 2.405 investidores e integralização de 6,74 milhões de cotas. Taxa total de 1% a.a. (0,13% adm + 0,87% gestão).",
+        "pontos": []
+      },
+      {
+        "periodo": "Set/2022",
+        "label": "2ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "Tentativa de segunda emissão de R$ 75 milhões, modificada e depois adiada para jan/2023 em razão das condições de mercado. A oferta acabou não sendo consolidada.",
+        "pontos": []
+      },
+      {
+        "periodo": "2023",
+        "label": "DIVERSIFICAÇÃO",
+        "cor": "blue",
+        "descricao": "Carteira amplia para 13+ ativos, incluindo CRA Reiter (logística), Grupo Sim (combustíveis), Primato (cooperativa), Fiagril, Belagrícola, FS Bio, Agrofito, Spaço, Nutrimaq, Coagril, Toagro, Agrodinâmica e Agrofarm. DY 12M fecha em 18,08%.",
+        "pontos": [
+          "<strong>DY 12M de 18,08%</strong> em dez/2023",
+          "Base de 19.189 cotistas"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "CICLO AGRO DIFÍCIL",
+        "cor": "amber",
+        "descricao": "Setor de fertilizantes sofre forte queda de preços após pico de 2022, comprimindo margens de revendedoras. O fundo mantém 100% de adimplência, mas passa por waiver fees em CRAs Agrofarm, Coagril, Toagro e Spaço.",
+        "pontos": [
+          "<strong class=\"text-amber-400\">Compressão de margens</strong> no setor de insumos",
+          "Waiver fees cobrados dos emissores"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "RESP. LIMITADA",
+        "cor": "blue",
+        "descricao": "Regulamento atualizado à Resolução CVM 175/22 e fundo adota responsabilidade limitada aos cotistas. No mesmo ano, ampliam-se as posições em Fiagros listados (RURA11, RZAG11, AAZQ11) como forma de diluição.",
+        "pontos": [
+          "Adaptação à Resolução CVM 175",
+          "<strong>Responsabilidade limitada</strong> aos cotistas"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "NOVA ADM",
+        "cor": "amber",
+        "descricao": "Banco Daycoval comunica transferência da administração para QORE DTVM, sem alteração de custos ou de prestadores. Pré-pagamento total do CRI TOEX (anteriormente 15% do PL) gera R$ 28,7 mil extraordinário.",
+        "pontos": [
+          "Pré-pagamento CRI TOEX",
+          "Transição para <strong>QORE DTVM</strong>"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "emerald",
+        "descricao": "Carteira atual com 18 CRAs/Fiagros, PL de R$ 66,3 Mi, 14.922 cotistas e 100% de adimplência. DY 12M de 14,85% em ciclo de Selic ainda alta (15%), com perspectiva de queda.",
+        "pontos": [
+          "<strong class=\"text-emerald-400\">100% adimplente</strong>",
+          "<strong class=\"text-emerald-400\">DY 12M 14,85%</strong>",
+          "P/VP 0,75"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Desde o IPO em janeiro de 2022, o DCRA11 passou por diferentes ciclos macroeconômicos: do boom inflacionário de 2022-23 (com destaque dos CRAs indexados ao IPCA), ao aperto monetário da Selic em 13,75%-15%, até a atual expectativa de afrouxamento em 2026. A gestão manteve a tese conservadora de <strong>evitar exposição direta ao produtor rural PF</strong> e focar em emissores corporativos/cooperativas, atravessando o ciclo adverso de insumos em 2024-25 sem registrar inadimplência. A base de cotistas atingiu pico de 19,9 mil em fev/2024 e vem desde então em leve recuo até 14,9 mil, reflexo do cenário desafiador para Fiagros em geral.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Cotação vs IPO",
+        "valor": "-27%",
+        "detalhe": "R$ 10,00 → R$ 7,27 (queda de mercado)"
+      },
+      {
+        "label": "Rendimentos distribuídos",
+        "valor": "R$ ~5,20",
+        "detalhe": "Acumulado desde IPO (fev/22)"
+      },
+      {
+        "label": "Patrimônio Líquido",
+        "valor": "R$ 66,3 Mi",
+        "detalhe": "Estável em relação ao IPO (~R$ 65 Mi)"
+      },
+      {
+        "label": "Retorno total com DY",
+        "valor": "+25%",
+        "detalhe": "Capital+DY desde o IPO (estimado)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O <strong class=\"text-blue-400\">DCRA11</strong> oferece exposição diversificada ao crédito do agronegócio brasileiro, com foco em <strong>emissores corporativos middle-risk</strong> (cooperativas, distribuidoras de insumos, usinas e operadores logísticos) em detrimento de risco pulverizado no produtor rural PF. Com carteira de 18 ativos, 100% adimplência histórica e taxa total de 1% a.a., é um veículo para diversificar renda passiva isenta de IR acima do CDI.</p><p>Com P/VP de 0,74 e DY 12M de 14,85%, o fundo precifica simultaneamente o ciclo de Selic em queda e os riscos setoriais do agro (margens pressionadas em insumos). A gestão da Devant Asset tem <strong>track record transparente</strong>, com renegociações proativas e sem defaults até o momento.</p>",
+    "paraQuem": [
+      "Investidores buscando <strong>renda mensal isenta de IR</strong> em CRA com gestão ativa",
+      "Quem deseja <strong>diversificação no agronegócio</strong> sem exposição direta a produtor rural PF ou safras específicas",
+      "Perfis moderados que aceitam <strong>volatilidade de cota</strong> em troca de DY atrativo (14-15% a.a.)"
+    ],
+    "naoParaQuem": [
+      "Investidores que buscam <strong>alta liquidez</strong> (volume médio diário de apenas R$ 80 mil)",
+      "Quem prioriza <strong>ganho de capital</strong> sobre renda passiva",
+      "Perfis conservadores que não toleram ciclos adversos no setor agro (como 2024-25 em fertilizantes)"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "mar/25",
+      "abr/25",
+      "mai/25",
+      "jun/25",
+      "jul/25",
+      "ago/25",
+      "set/25",
+      "out/25",
+      "nov/25",
+      "dez/25",
+      "jan/26",
+      "fev/26"
+    ],
+    "chartData": [
+      0.095,
+      0.09,
+      0.09,
+      0.088,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.09,
+      0.11,
+      0.09,
+      0.09
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.0,
+    "chartYMax": 0.15,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 1,27"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 1,27"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,27"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,14"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,085 a R$ 0,100",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (fev/26)",
+        "valor": "R$ 0,09"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,11"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,088"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,74",
+      "descricao": "<p>Cotação de <strong>R$ 7,27</strong> versus VP de <strong>R$ 9,84</strong> representa desconto de <strong class=\"text-emerald-400\">26%</strong>. O desconto reflete tanto o cenário de aversão a risco em Fiagros de crédito quanto a precificação do mercado secundário em ciclo de juros altos. Historicamente, o fundo já chegou a negociar próximo ao VP em 2022-23.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota (fev/26)",
+          "valor": "R$ 9,84"
+        },
+        {
+          "label": "Preço de mercado",
+          "valor": "R$ 7,27",
+          "cor": "amber"
+        },
+        {
+          "label": "Mínima 2025",
+          "valor": "R$ 7,02"
+        },
+        {
+          "label": "Máxima 2025",
+          "valor": "R$ 7,77"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "14,85%",
+      "label": "Dividend Yield 12M",
+      "cor": "emerald",
+      "descricao": "<p>Yield anualizado sobre a cota de mercado é expressivo, <strong class=\"text-emerald-400\">121% do CDI</strong> (142,5% com gross-up de IR). Spread de <strong>CDI + 3,99%</strong> a.a. na parte pós-fixada e <strong>IPCA + 8,33%</strong> a.a. na indexada à inflação, consistente com Fiagros de crédito middle-risk.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 8,80",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Estimativa considerando modelo Gordon simplificado: DPS anualizado R$ 1,08 / (custo de capital 12,25% - crescimento 3%) = <strong>R$ 11,70</strong>. Aplicando teto de P/VP igual a 1,0 (limite do valor patrimonial) e DY target de 12,5% para o segmento, a faixa razoável fica entre <strong>R$ 8,00 e R$ 9,50</strong>. Valor central: <strong>R$ 8,80</strong>, acima da cotação atual de R$ 7,27, sinalizando potencial upside de ~21% se a carteira mantiver a adimplência e o ciclo de Selic seguir cadente.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O Devant FIAGRO (DCRA11) encerra fevereiro de 2026 como um Fiagro de crédito maduro, com quatro anos de histórico, carteira 100% adimplente e taxa total competitiva (1% a.a.). A cotação de R$ 7,27 implica P/VP de 0,74 e DY 12M de 14,85%, patamar elevado que reflete tanto o cenário de Selic em 15% quanto a percepção de risco setorial do agronegócio após o ciclo adverso de insumos em 2024-25.",
+      "A gestão da Devant Asset tem track record de transparência e proatividade, com renegociações pontuais (waiver fees em CRAs Agrofito, Toagro, Agrofarm, Coagril e Spaço) sem default. O portfólio de 18 ativos é diversificado por setor, região e indexador, com 72,6% alocado em crédito agro corporativo e cerca de 10,7% em cotas de outros Fiagros (RURA11, RZAG11, AAZQ11) para diluição adicional. Duration baixa de 1,7 anos reduz risco de marcação a mercado em eventuais choques de taxa.",
+      "Os trade-offs a considerar: liquidez limitada (volume médio diário de apenas R$ 80 mil), base de cotistas em leve recuo desde 2024, exposição de 33% a distribuidoras/revendas de insumos (setor sensível ao ciclo de fertilizantes) e transição administrativa Daycoval → QORE DTVM em curso. Para compensar, o desconto patrimonial de 26% e o DY elevado oferecem margem de segurança para quem aceita os riscos específicos do segmento Fiagro de crédito."
+    ],
+    "pontosFortes": [
+      "Carteira <strong class=\"text-emerald-400\">100% adimplente</strong> desde o IPO em jan/2022",
+      "Diversificação com <strong>18 ativos</strong> em diferentes setores e regiões",
+      "Taxa total competitiva: <strong>1% a.a.</strong> (0,13% adm + 0,87% gestão)",
+      "<strong>P/VP de 0,74</strong> (desconto de 26% sobre VP)",
+      "<strong>DY 12M de 14,85%</strong> (121% do CDI, 142,5% com gross-up)",
+      "Zero exposição direta a produtor rural PF",
+      "Duration baixa (1,7 anos) reduz sensibilidade a juros",
+      "Gestão ativa e <strong>transparente</strong> com relatórios mensais detalhados",
+      "Diversificação adicional via cotas de outros Fiagros (10,7% da carteira)"
+    ],
+    "pontosDeAtencao": [
+      "<strong class=\"text-amber-400\">Liquidez reduzida</strong> (volume médio diário de R$ 80 mil)",
+      "Base de cotistas em <strong>leve recuo</strong> desde 2024 (-25%)",
+      "Concentração de ~33% em revendas e distribuidoras de insumos",
+      "Renegociações (waiver fees) em 5 CRAs em 2024-25",
+      "Transição administrativa Daycoval → <strong>QORE DTVM</strong> em andamento",
+      "Cotação -27% abaixo do IPO (R$ 10,00 → R$ 7,27)",
+      "PL relativamente pequeno (R$ 66 Mi) pode limitar diversificação futura",
+      "Exposição a ciclo de insumos e fertilizantes (setor sensível)",
+      "Não é ideal para quem busca valorização patrimonial agressiva"
+    ],
+    "conclusaoFinal": "O DCRA11 representa um Fiagro de crédito de perfil middle-risk, com gestão conservadora pela Devant Asset e carteira consistentemente adimplente. A combinação de DY 12M de 14,85% com P/VP de 0,74 oferece yield elevado e desconto patrimonial, em contraposição aos desafios de liquidez reduzida e concentração setorial em insumos. O investidor deve pesar se o prêmio de yield oferecido compensa os riscos específicos do segmento — incluindo exposição ao ciclo de fertilizantes, transição de administrador e volatilidade da cota — e se a tese cabe no horizonte de diversificação do seu portfólio, ciente de que Fiagros de crédito são veículos mais cíclicos do que FIIs tradicionais."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 157,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

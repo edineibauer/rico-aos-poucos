@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/brcr11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:BRCR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 47.58,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 39.17,
+    "data": "2025-01-20"
+  },
+  "maxHistorico": {
+    "valor": 118.865,
+    "data": "2019-12-30"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T01:13:49Z"
+}

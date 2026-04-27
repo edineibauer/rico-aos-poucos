@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/gtwr11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-06-24",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:GTWR11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 85.18,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 66.72,
+    "data": "2025-02-03"
+  },
+  "maxHistorico": {
+    "valor": 122.25,
+    "data": "2020-01-13"
+  },
+  "totalPontos": 358,
+  "coletadoEm": "2026-04-27T01:13:46Z"
+}

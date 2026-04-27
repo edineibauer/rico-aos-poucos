@@ -1,0 +1,585 @@
+{
+  "meta": {
+    "ticker": "FAMB11",
+    "nome": "FII Edifício Almirante Barroso",
+    "nomeExtra": "(Monoativo Av. Rio Branco, 174 - Centro, Rio de Janeiro)",
+    "segmento": "Lajes Corporativas (Monoativo) - em reposicionamento",
+    "badges": [
+      "Monoativo Centro/RJ",
+      "Vacância 95%",
+      "Sem Dividendos",
+      "Troca de Gestão 2025"
+    ],
+    "sentimento": "pessimista",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 635
+  },
+  "seo": {
+    "title": "FAMB11 - Análise Crítica | Edifício Almirante Barroso",
+    "description": "FAMB11: FII monoativo no Centro do Rio com 95% de vacância, sem dividendos, projeto de conversão residencial. P/VP 1,08 (sobre VP deteriorado) e riscos altos.",
+    "keywords": "FAMB11, Edifício Almirante Barroso, Actual DTVM, Áfira Gestão, Caixa Econômica Federal, CEF, Centro Rio, laje corporativa, monoativo, vacância, FII",
+    "ogTitle": "FAMB11 - Edifício Almirante Barroso | Análise Crítica",
+    "ogDescription": "Monoativo com 95% de vacância após saída da CEF, sem dividendos desde 2025 e projeto de conversão para uso misto residencial. Tese binária e altamente arriscada.",
+    "twitterTitle": "FAMB11 - Análise Crítica",
+    "twitterDescription": "Monoativo no Centro do Rio, 95% vago, zero distribuição, em reposicionamento estrutural. Caso clássico de FII em crise profunda."
+  },
+  "indicadores": {
+    "cotacao": 1068.94,
+    "cotacaoData": "30/12/2025",
+    "pvp": 1.08,
+    "pvpDesconto": "Preço ~8% acima do VP já deteriorado",
+    "dividendYield": 0.0,
+    "dividendoMensal": 0.0,
+    "dividendoAnual": 0.0,
+    "patrimonioLiquido": "R$ 121,5 Mi",
+    "vpCota": 991.92,
+    "cotistas": 1951,
+    "ocupacao": 5.0,
+    "numImoveis": 1
+  },
+  "recomendacao": {
+    "nota": 3.0,
+    "veredicto": null,
+    "cor": "red",
+    "resumo": "<p>O <strong class=\"text-blue-400\">FAMB11</strong> é um dos casos mais dramáticos do universo de FIIs brasileiros. Trata-se de um fundo <strong class=\"text-amber-400\">monoativo</strong> que detém 100% do Edifício Almirante Barroso, prédio corporativo histórico na Av. Rio Branco, 174 (Centro do Rio de Janeiro), com 54.144 m² de ABL. Entre 2003 e 2020, o fundo funcionou como renda estável locada integralmente à Caixa Econômica Federal (CEF). Em 2020 a CEF consignou as chaves em juízo e saiu, e o imóvel opera desde então com <strong class=\"text-red-400\">vacância entre 95% e 98%</strong>.</p><p>Em nov/2024 o fundo recebeu <strong class=\"text-emerald-400\">R$ 163 milhões de acordo judicial com a CEF</strong>, que viraram um rendimento extraordinário de R$ 1.001,60/cota em dez/2024 e uma amortização de R$ 200/cota em abril/2025. A partir de 2025 o ativo foi reavaliado pela Cushman & Wakefield de R$ 223 Mi para <strong class=\"text-red-400\">R$ 118,9 Mi</strong> (queda de 46% no ano), a administração passou do BTG Pactual para a <strong class=\"text-amber-400\">Actual DTVM</strong> e a gestão virou a <strong class=\"text-amber-400\">Áfira</strong>. Em ago/2025 foi protocolado projeto de conversão para uso misto (residencial + comercial) na Prefeitura do Rio — é esse o veredicto final da tese. Hoje o fundo <strong class=\"text-red-400\">não paga dividendos</strong>, a taxa de administração segue em R$ 35 mil/mês mesmo com receita mínima, e a cota negocia acima do VP. A tese é binária: ou a conversão é aprovada e destrava valor, ou o ativo continua sangrando caixa indefinidamente.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 121,5 Mi",
+      "detalhe": "VP/cota: R$ 991,92 (caiu 52% em 2025)",
+      "icone": "building",
+      "corIcone": "red"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,00",
+      "valorSufixo": "/mês",
+      "detalhe": "Sem distribuição desde abr/2025",
+      "icone": "money",
+      "corIcone": "red"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "5%",
+      "detalhe": "Vacância 95% (ênfase do auditor)",
+      "icone": "building",
+      "corIcone": "red"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "1.951",
+      "detalhe": "122.538 cotas | 69,6% com top 20",
+      "icone": "users",
+      "corIcone": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Vacância de 95% com ênfase do auditor",
+      "descricao": "O relatório da BGM Auditores em 31/12/2025 traz parágrafo de ênfase sobre a vacância de 95%. Em 2024 a vacância era de 98,01% (praticamente integral). Com apenas 5% do imóvel alugado, a receita de aluguel mal cobre as despesas fixas (IPTU, manutenção, condomínio, seguros).",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Sem distribuição de dividendos",
+      "descricao": "Desde a amortização de R$ 200/cota em abr/2025, o fundo não declarou rendimentos. O resultado financeiro é negativo e o prejuízo caixa acumulado de jan/2021 a out/2024 já foi compensado via amortização. DY 0% em 2026 até aqui.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Monoativo e monoinquilino em crise",
+      "descricao": "O Ed. Almirante Barroso é o único ativo. Após a saída da CEF em 2020 (consignação de chaves em juízo), não há locatário âncora. Os contratos atuais somam apenas 10,58% da receita potencial e todos vencem em até 3 meses — praticamente locação de curto prazo/balcão.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Desvalorização de 46% do imóvel em 2025",
+      "descricao": "A Cushman & Wakefield reavaliou o imóvel em jan/2026 para R$ 118,9 mi, queda de R$ 104,05 mi frente aos R$ 223 mi de 2024 (-46%). Premissas: taxa de desconto 11,5% a.a., cap rate 10% a.a., período de análise 11 anos. Em 2016 o mesmo imóvel valia R$ 573,9 mi.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Dependência do projeto de conversão para uso misto",
+      "descricao": "Em 28/08/2025 foi protocolado na Prefeitura do Rio um projeto para converter o imóvel em uso misto (residencial + comercial). A classificação do fundo já mudou para 'Tijolo Híbrido Residencial'. A aprovação depende de consulta formal aos cotistas, licença municipal, CAPEX de reforma e demanda residencial na região central do Rio (historicamente fraca). Tese binária.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "P/VP maior que 1,0 sobre VP deteriorado",
+      "descricao": "A cota fechou dez/2025 a R$ 1.068,94 enquanto o VP caiu para R$ 991,92 — P/VP de 1,08. Pagar prêmio sobre patrimônio já reavaliado para baixo assume implicitamente que o projeto de conversão destravará valor adicional. Se não destravar, existe nova rodada de desvalorização.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Inadimplência de 11,82% sobre receita",
+      "descricao": "Do pouco que é locado, quase 12% está em atraso superior a 90 dias (informe trimestral 4T25). Base de locatários atual é frágil e pulverizada, sem garantias robustas.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração extrema da base de cotistas",
+      "descricao": "20 cotistas detêm 69,64% do total de cotas (informe anual 2025). Apenas 15,38% estão pulverizados até 5%. Base altamente concentrada amplifica oscilações de preço e reduz liquidez efetiva.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Troca múltipla de prestadores de serviço",
+      "descricao": "Em 2025 houve substituição do administrador (BTG Pactual → Actual DTVM em 20/06/2025), do gestor (passou a Áfira Gestão), do auditor (Ernst & Young → BGM Auditores), do custodiante (BTG Pactual → Banco Daycoval). Descontinuidade institucional em momento de crise operacional.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Taxa de administração pesa muito sobre receita mínima",
+      "descricao": "Mínimo de R$ 35 mil/mês da Actual + R$ 7 mil/mês da Áfira. Com receita bruta trimestral de ~R$ 2,35 mi (4T25), as taxas consomem fatia relevante. Em 2024 a taxa de administração foi de R$ 4,81 mi (1,90% do PL), absurdamente alta para um FII em crise.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Risco jurídico histórico e residual",
+      "descricao": "Histórico extenso de litígios (ação revisional de 2010, ação de consignação de chaves 2020, execução de aluguel de dez/2020, etc.). O acordo com a CEF fechou grande parte em out/2024 (R$ 163 mi), mas ações trabalhistas e indenizatórias menores seguem ativas.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Áfira Gestão de Recursos",
+    "nota": 4.0,
+    "notaLabel": "SEM HISTÓRICO RELEVANTE",
+    "stats": [
+      {
+        "label": "Tipo",
+        "valor": "Gestora independente"
+      },
+      {
+        "label": "Sede",
+        "valor": "Rio de Janeiro/RJ (Ipanema)"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Áfira Gestão de Recursos</strong> (CNPJ 21.143.1.8/5500-00, Rua Visconde de Pirajá, 414, Ipanema) assumiu a gestão do FAMB11 em 2025, junto com a mudança do administrador para a <strong class=\"text-blue-400\">Actual DTVM</strong> (Belo Horizonte/MG). É uma gestora pequena sem histórico significativo de FIIs listados, o que é um fator de incerteza em um momento em que o fundo precisa executar um projeto complexo de reconversão imobiliária.</p><p>A administração do BTG Pactual durou <strong class=\"text-amber-400\">22 anos</strong> (desde 2003) até ser destituída em assembleia de fev/2025. A saída do BTG ocorreu em meio à crise de vacância e frustração dos cotistas com o desempenho pós-CEF. A <strong class=\"text-amber-400\">Actual DTVM</strong> é autorizada pela CVM desde dez/2023 (ato declaratório 21.509), também é uma administradora nova, sem larga escala em FIIs de tijolo.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas fixas pesadas sobre receita deteriorada",
+    "glowCor": "red",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "2,5% a.a.",
+        "detalhe": "Mín. R$ 35 mil/mês (Actual) + correção IGP-M",
+        "corBorda": "red"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "R$ 7 mil/mês",
+        "detalhe": "Áfira Gestão (valor fixo + IGP-M)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Custo 2024 (BTG)",
+        "valor": "R$ 4,81 Mi",
+        "detalhe": "1,90% do PL — muito alto",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Actual Distribuidora de Títulos e Valores Mobiliários S.A."
+      },
+      {
+        "label": "Gestor",
+        "valor": "Áfira Gestão de Recursos Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "Banco Daycoval S.A."
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "BGM Auditores Independentes SS Ltda."
+      },
+      {
+        "label": "Administradora anterior (até 20/06/2025)",
+        "valor": "BTG Pactual Serviços Financeiros DTVM"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "17/03/2003"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidores em Geral"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "1 (100% do prédio)"
+      },
+      {
+        "label": "Área Construída",
+        "valor": "54.144 m² (35 unidades)"
+      },
+      {
+        "label": "Vacância",
+        "valor": "95,0%",
+        "cor": "red"
+      },
+      {
+        "label": "WALT",
+        "valor": "< 3 meses (curtíssimo)"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Ed. Almirante Barroso (Av. Rio Branco, 174 - Centro/RJ)"
+      ],
+      "data": [
+        100
+      ],
+      "cores": [
+        "#ef4444"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Locatários pulverizados (sem âncora)",
+        "setor": "Diversos - contratos curtos",
+        "receita": "10,58% da receita potencial",
+        "rating": "Sem contrato longo",
+        "ratingCor": "red",
+        "risco": "Inadimplência 11,82%",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>O portfólio é composto por <strong class=\"text-red-400\">um único ativo</strong>: o Edifício Almirante Barroso, prédio corporativo histórico na Av. Rio Branco, 174 (Centro do Rio de Janeiro), registrado sob as matrículas 37.241 a 37.252 do 7º Oficial de Registro de Imóveis do RJ. São 54.144 m² de área construída total: 3 subsolos, auditório, 126 vagas de garagem, 22 elevadores, 4 escadas rolantes, térreo com lojas e espaço cultural (teatro, 2 salas de cinema, 2 salas de exposição, galeria e atelier), sobreloja, pavimentos tipo do 3º ao 29º, pavimentos 30º e 31º, e cobertura.</p><p>De 2003 a 2020, o imóvel foi <strong class=\"text-amber-400\">100% locado à Caixa Econômica Federal</strong> (CEF), que mantinha escritórios administrativos e 2 agências. O contrato venceu em nov/2012 e foi prorrogado por prazo indeterminado com ação revisional do aluguel (judicializada em 2010 com pedido de elevação para R$ 3,6 mi/mês). Em fev/2020 a CEF protocolou ação de consignação de chaves, entregando o imóvel e zerando a ocupação.</p><p>Após anos de litígio, em <strong class=\"text-emerald-400\">22/10/2024</strong> o fundo assinou transação judicial com a CEF e <strong class=\"text-emerald-400\">recebeu R$ 163 milhões</strong> em 25/11/2024, encerrando 8 processos. Esse valor virou rendimento extraordinário de R$ 1.001,60/cota em dez/2024 + amortização de R$ 200/cota em abr/2025 (R$ 24,5 mi), com IRRF incidente sobre o ganho de capital.</p><p>Hoje a ocupação é de <strong class=\"text-red-400\">apenas 5%</strong>, com locatários pulverizados em contratos de até 3 meses, inadimplência de 11,82%, e receita trimestral de ~R$ 2,35 mi no 4T25 — insuficiente para cobrir as despesas fixas do edifício (IPTU, condomínio, energia, seguros, manutenção). Em ago/2025 foi protocolado projeto de conversão para <strong class=\"text-amber-400\">uso misto residencial + comercial</strong>, que redefiniria integralmente a tese do fundo.</p>"
+  },
+  "timeline": {
+    "subtitulo": "De renda estável com CEF (2003-2020) a crise profunda com reconversão em curso (2020-2026)",
+    "periodos": [
+      {
+        "periodo": "Mar/2003",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 10/03/2003, início das atividades em 17/03/2003. Captação inicial de 104.800 cotas a R$ 1 cada nominal para aquisição do Ed. Almirante Barroso. Administradora: BTG Pactual Serviços Financeiros DTVM.",
+        "pontos": [
+          "<strong>1ª Emissão</strong> (única por 21 anos)",
+          "Distribuidor: Caixa Econômica Federal",
+          "Locatário único: CEF"
+        ]
+      },
+      {
+        "periodo": "2003-2012",
+        "label": "FASE DE RENDA",
+        "cor": "emerald",
+        "descricao": "Durante os primeiros 9 anos o fundo opera como renda corporativa pura, com contrato de locação vigente com a CEF. O imóvel foi avaliado em R$ 573,9 mi em dez/2016. Cota chegou a R$ 5.480 de VP e R$ 5.300 de cotação no final de 2016. DY 2016 ≈ 7,47%.",
+        "pontos": [
+          "<strong>Contrato com CEF:</strong> reajuste IGP-M, março",
+          "Contrato vencido em nov/2012, prorrogado por prazo indeterminado",
+          "Distribuição ~R$ 33-42/cota/mês"
+        ]
+      },
+      {
+        "periodo": "Dez/2010",
+        "label": "AÇÃO REVISIONAL",
+        "cor": "amber",
+        "descricao": "Fundo ajuiza ação revisional de aluguel contra a CEF (processo 0023109-25.2010.4.02.5101) pedindo elevação para R$ 3,63 mi/mês. Em 2016 sentença fixou aluguel em R$ 4,28 mi retroativo a out/2010. Início de um ciclo judicial de 14 anos.",
+        "pontos": [
+          "Conflito com locatário âncora",
+          "Demanda de ~R$ 21,8 mi em valores iniciais"
+        ]
+      },
+      {
+        "periodo": "Fev/2020",
+        "label": "CEF CONSIGNA CHAVES",
+        "cor": "red",
+        "descricao": "Ação de consignação de chaves (proc. 5086173-69.2020.4.02.5101) pela CEF, que entrega o imóvel em juízo declarando rescisão. Em 21/01/2021 a CEF move execução de título extrajudicial pelo aluguel de dez/2020. Vacância vai a 100%.",
+        "pontos": [
+          "Perda do locatário único após 17 anos",
+          "Início do ciclo de vacância estrutural",
+          "Múltiplas ações em curso"
+        ]
+      },
+      {
+        "periodo": "2021-2023",
+        "label": "SANGRIA DE CAIXA",
+        "cor": "red",
+        "descricao": "Fundo opera com vacância ~100%, acumulando prejuízo de caixa. Em 2023 PL era R$ 262,9 mi, imóvel avaliado em R$ 261,4 mi. Despesas operacionais (IPTU, condomínio, manutenção) continuam correndo sem receita de aluguel. Cotistas frustrados.",
+        "pontos": [
+          "Prejuízo caixa acumulado jan/2021 a out/2024",
+          "Ações judiciais contra e a favor da CEF",
+          "Imóvel desvaloriza gradualmente"
+        ]
+      },
+      {
+        "periodo": "Abr/2024",
+        "label": "4ª EMISSÃO",
+        "cor": "blue",
+        "descricao": "Oferta pública da 4ª emissão (CVM 160) com subscrição de sobras, encerrada em 10/04/2024. Preço da emissão: R$ 642,79 + taxa distribuição R$ 16,21 = R$ 659,00/cota. Total de 5.231 novas cotas alocadas. Base passou de ~117 mil para 122.538 cotas.",
+        "pontos": [
+          "<strong>Capital adicional de R$ 3,4 mi</strong>",
+          "Ritmo limitado, destinado a investidores profissionais",
+          "Excesso de demanda no montante adicional"
+        ]
+      },
+      {
+        "periodo": "Out/2024",
+        "label": "ACORDO CEF",
+        "cor": "emerald",
+        "descricao": "Em 22/10/2024 o fundo assina transação judicial com a CEF encerrando 8 processos. Em 25/11/2024 recebe R$ 163 milhões de forma integral. Evento extraordinário reconhecido como outras receitas operacionais. Resultado líquido 2024 vai a +R$ 111,6 mi.",
+        "pontos": [
+          "<strong>Encerramento do litígio histórico</strong>",
+          "R$ 163 mi viram rendimento extraordinário",
+          "Acordo evita anos adicionais de disputa"
+        ]
+      },
+      {
+        "periodo": "Dez/2024",
+        "label": "DIVIDENDO EXTRA",
+        "cor": "emerald",
+        "descricao": "Fundo declara R$ 1.001,61/cota de rendimento extraordinário (data-base 30/12/2024, pagamento 08/01/2025), totalizando R$ 128,3 mi distribuídos. Cota sobe; é o maior provento da história do fundo.",
+        "pontos": [
+          "<strong>99,31%</strong> do resultado financeiro distribuído",
+          "Evento único decorrente do acordo CEF"
+        ]
+      },
+      {
+        "periodo": "Jan-Mar/2025",
+        "label": "AMORTIZAÇÃO E TROCAS",
+        "cor": "amber",
+        "descricao": "Em 17/01/2025 aprovada amortização parcial para compensar prejuízo caixa dez/2024. Em 24/01 e 12/03/2025 aprovada segunda amortização para cobrir prejuízo caixa jan/2021-out/2024. Em 24/02/2025 aprovada destituição do BTG e eleição da Actual DTVM. Em 24/03/2025 amortização de R$ 200/cota paga em 30/04/2025 (R$ 24,5 mi).",
+        "pontos": [
+          "Amortização de R$ 200/cota (<strong>R$ 24,5 mi</strong>)",
+          "Troca do administrador aprovada",
+          "IRRF sobre ganho de capital"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "ACTUAL ASSUME",
+        "cor": "amber",
+        "descricao": "Em 20/06/2025 a Actual DTVM assume a administração do fundo em substituição ao BTG Pactual (que ficou na função por 22 anos). Áfira Gestão assume gestão, BGM substitui Ernst & Young como auditora, Banco Daycoval assume custódia. Cota cai para R$ 741 em julho.",
+        "pontos": [
+          "Transferência de 22 anos de gestão",
+          "Novo ecossistema institucional",
+          "Cotação em mínima de R$ 741 (jul/2025)"
+        ]
+      },
+      {
+        "periodo": "Ago/2025",
+        "label": "PROJETO CONVERSÃO",
+        "cor": "amber",
+        "descricao": "Em 26/08/2025 protocolado na Prefeitura do Rio projeto para conversão do imóvel para uso misto (residencial + comercial). Em 28/08/2025 anunciado ao mercado. Classificação de autorregulação do fundo muda para 'Tijolo Híbrido Residencial'. Tese do fundo passa a depender desse reposicionamento.",
+        "pontos": [
+          "<strong>Pedido de mudança de uso</strong> junto à Prefeitura",
+          "Consulta aos cotistas sobre política de investimentos",
+          "Tese binária: aprovação ou prejuízo continuado"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "REAVALIAÇÃO -46%",
+        "cor": "red",
+        "descricao": "Cushman & Wakefield reavalia o imóvel para R$ 118,9 mi em jan/2026 (data-base dez/2025), queda de 46% sobre os R$ 223 mi de dez/2024. PL cai para R$ 121,5 mi, VP/cota passa de R$ 2.065,66 (dez/2024) para R$ 991,92 (dez/2025). Auditor BGM emite parágrafo de ênfase sobre vacância de 95%.",
+        "pontos": [
+          "<strong>Imóvel vale agora R$ 118,9 mi</strong> (vs. R$ 573,9 mi em 2016)",
+          "Taxa de desconto: 11,5% | cap rate: 10%",
+          "Ênfase do auditor sobre vacância"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "red",
+        "descricao": "Cotação em dez/2025: R$ 1.068,94 (P/VP 1,08 sobre VP já deteriorado). Sem distribuição de dividendos em 2026. 1.951 cotistas (março/2026). Caixa e equivalentes: R$ 6,8 mi. Receita mensal ~R$ 780 mil com vacância 95%. Todas as cartas estão em cima da mesa: sucesso da conversão ou maior desvalorização.",
+        "pontos": [
+          "<strong>Sem dividendos</strong> em 2026",
+          "Tese dependente de conversão imobiliária",
+          "Caixa finito para ajustes estruturais"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">FAMB11</strong> tem uma história em três atos. De <strong class=\"text-emerald-400\">2003 a 2020</strong> foi um dos primeiros FIIs monoativos do Brasil, funcionando como renda corporativa estável locada 100% à Caixa Econômica Federal na Av. Rio Branco, 174 (um dos endereços mais nobres do Centro do Rio). Nesse período distribuiu consistentemente ~R$ 30-42/cota/mês e o imóvel chegou a ser avaliado em R$ 573,9 mi (dez/2016).</p><p>De <strong class=\"text-red-400\">2020 a 2024</strong> veio o desastre: a CEF consignou as chaves em juízo, zerou a ocupação e o fundo entrou em espiral de vacância estrutural, queimando caixa por 4 anos. Em nov/2024 o acordo judicial de R$ 163 mi destravou liquidez e virou dividendo extraordinário, mas não resolveu o problema central: um prédio de 54 mil m² no Centro do Rio sem demanda corporativa.</p><p>De <strong class=\"text-amber-400\">2025 em diante</strong> começa o terceiro ato — a tentativa de reinvenção. Administradora, gestor, auditor, custodiante, todos trocados. Projeto de conversão para uso misto residencial protocolado. Reavaliação agressiva do imóvel para R$ 118,9 mi. Sem dividendos. <strong class=\"text-red-400\">A tese hoje é binária</strong>: ou a reconversão destrava valor e o fundo renasce, ou o ativo continua sangrando caixa até a eventual alienação com novo desconto.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação do Imóvel 2016→2025",
+        "valor": "-79%",
+        "detalhe": "R$ 573,9 Mi → R$ 118,9 Mi"
+      },
+      {
+        "label": "VP/cota 2024→2025",
+        "valor": "-52%",
+        "detalhe": "R$ 2.065,66 → R$ 991,92"
+      },
+      {
+        "label": "Acordo CEF (nov/2024)",
+        "valor": "R$ 163,0 Mi",
+        "detalhe": "Dividendo extraordinário + amortização"
+      },
+      {
+        "label": "Ocupação 2016→2025",
+        "valor": "100% → 5%",
+        "detalhe": "Pós-saída da CEF em 2020"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">FAMB11</strong> hoje é <strong class=\"text-red-400\">binária e altamente especulativa</strong>. Não há mais tese de renda: o fundo não paga dividendos, tem 95% de vacância e o aluguel captado mal cobre as despesas fixas do edifício. A única narrativa que justifica posição é a de <strong class=\"text-amber-400\">destravamento de valor via conversão para uso misto</strong> (residencial + comercial), protocolada na Prefeitura do Rio em ago/2025.</p><p>Os cotistas que aceitam essa tese precisam acreditar que: (i) a Prefeitura do Rio aprovará a mudança de zoneamento; (ii) haverá CAPEX disponível/emissão nova para financiar a reforma completa; (iii) a demanda por unidades residenciais no Centro do Rio é real; e (iv) a Áfira/Actual têm capacidade técnica para entregar a reconversão. A contrapartida é o risco de que nenhuma dessas premissas se confirme, cenário em que o imóvel será provavelmente alienado com novo desconto sobre o VP atual.</p>",
+    "paraQuem": [
+      "<strong>Investidores de turnaround / special situations</strong> dispostos a apostar na reconversão para uso misto residencial do prédio (tese binária)",
+      "Perfis que aceitam <strong>zero distribuição de dividendos por anos</strong> em troca de potencial ganho de capital no valor da cota",
+      "Investidores com <strong>tolerância a altíssima volatilidade</strong> (cota oscilou entre R$ 741 e R$ 1.119 em 6 meses de 2025)",
+      "Pequenas posições táticas <strong>sem relevância no portfólio total</strong>"
+    ],
+    "naoParaQuem": [
+      "<strong>Investidores de renda</strong> que buscam distribuição mensal previsível — o fundo não paga há 1 ano",
+      "Perfis conservadores ou que priorizam <strong>preservação de capital</strong>",
+      "Quem monta posição de longo prazo em FIIs com base em <strong>DY e P/VP</strong> — ambos os indicadores estão poluídos aqui",
+      "Investidores que não aceitam <strong>risco de execução imobiliária</strong> (obras, licenças, demanda residencial no Centro/RJ)",
+      "Iniciantes no mercado de FIIs — é um caso de escola de armadilha de valor"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jan/25",
+      "Fev/25",
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25"
+    ],
+    "chartData": [
+      45.43,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "chartCor": "#ef4444",
+    "chartYMin": 0,
+    "chartYMax": 60,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "Não apurado"
+      },
+      {
+        "ano": "2023",
+        "valor": "Não apurado"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1.001,61 (extra)"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 45,43 + R$ 200 amort."
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,00",
+      "unidade": "Sem distribuição prevista (resultado financeiro negativo)"
+    },
+    "stats": [
+      {
+        "label": "Atual (est.)",
+        "valor": "R$ 0,00"
+      },
+      {
+        "label": "Distribuído 2025",
+        "valor": "R$ 45,43"
+      },
+      {
+        "label": "Amortização 2025",
+        "valor": "R$ 200,00"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Zero",
+        "cor": "red"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "1,08",
+      "descricao": "<p><strong class=\"text-red-400\">Cota negocia ACIMA do VP.</strong> A cotação de R$ 1.068,94 (dez/2025) está ~8% acima do VP de R$ 991,92, o qual já foi deteriorado em 52% em 2025 por causa da reavaliação agressiva do imóvel (R$ 223 mi → R$ 118,9 mi). Pagar prêmio sobre VP deteriorado assume implicitamente sucesso total do projeto de reconversão residencial.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota (dez/2025)",
+          "valor": "R$ 991,92"
+        },
+        {
+          "label": "Preço (dez/2025)",
+          "valor": "R$ 1.068,94",
+          "cor": "red"
+        },
+        {
+          "label": "Prêmio sobre VP",
+          "valor": "+8%",
+          "cor": "red"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "0,00%",
+      "label": "Dividend Yield",
+      "cor": "red",
+      "descricao": "<p>DY de <strong class=\"text-red-400\">0%</strong> nos últimos 12 meses (excluindo dividendo extraordinário de R$ 1.001,61 em dez/2024 e R$ 45,43 em jan/2025, ambos decorrentes do acordo CEF e não recorrentes). Spread negativo vs. NTN-B longa de ~700 bps. Sem renda atual, o fundo se torna uma aposta pura em valorização do ativo.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 850,00",
+      "label": "Preço Justo Estimado",
+      "cor": "red",
+      "descricao": "<p>Cálculo base — cenário conservador de liquidação com desconto adicional: se o imóvel fosse vendido hoje em situação de vacância severa, um comprador institucional exigiria provavelmente <strong class=\"text-red-400\">20-30% de desconto</strong> sobre o VP de R$ 991,92, chegando a algo entre R$ 700 e R$ 800/cota. Um cenário neutro (mantém como está) sugere R$ 900-950. Cenário otimista (conversão aprovada e ocupação subindo em 3-4 anos) pode justificar R$ 1.200+. Valor central de <strong class=\"text-red-400\">R$ 850</strong> reflete o peso maior dos cenários negativos e a necessidade de um desconto adicional sobre o VP já deteriorado — a cota hoje negocia <strong>ACIMA</strong> desse valor, o que sugere sobrevalorização para o cenário base.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O FAMB11 é um dos casos mais instrutivos do mercado brasileiro de FIIs sobre o que acontece quando um fundo monoativo perde seu locatário âncora. Durante 17 anos (2003-2020), foi uma das teses de renda corporativa mais previsíveis da bolsa, com a CEF pagando aluguel ajustado pelo IGP-M em um prédio icônico do Centro do Rio. Entre 2016 e 2025, porém, o imóvel perdeu ~79% de valor de mercado (R$ 573,9 mi → R$ 118,9 mi) e a ocupação desabou de 100% para 5%. O acordo judicial de R$ 163 mi com a CEF em nov/2024 foi uma tábua de salvação pontual, mas não estrutural: o caixa recebido foi quase integralmente distribuído aos cotistas via rendimento extraordinário (R$ 1.001,61 em dez/2024) e amortização (R$ 200 em abr/2025).",
+      "O diagnóstico atual é severo: imóvel com 95% de vacância (enfatizado no relatório do auditor BGM), contratos remanescentes todos com vencimento em até 3 meses, inadimplência de 11,82%, receita mensal insuficiente para cobrir IPTU+condomínio+manutenção+seguros, taxa de administração de R$ 35 mil/mês que pesa fortemente sobre a receita, e zero distribuição de dividendos em 2026. A reavaliação da Cushman & Wakefield em jan/2026 usou premissas agressivas (taxa de desconto 11,5%, cap rate 10%, 11 anos de fluxo), o que já incorpora expectativa realista do avaliador de longo período até o imóvel retomar geração de caixa.",
+      "A única tese que justifica posição hoje é a aposta binária na conversão para uso misto (residencial + comercial) protocolada na Prefeitura do Rio em 26/08/2025. Essa conversão exigiria: (i) aprovação regulatória; (ii) CAPEX elevado de reforma (provavelmente nova emissão); (iii) demanda por unidades residenciais no Centro do Rio, historicamente fraca; e (iv) execução técnica por gestora pequena sem histórico. Como a cota negocia a P/VP 1,08 sobre VP já deteriorado, o mercado está precificando sucesso moderado dessa reconversão — cenários adversos implicariam nova rodada de perdas. Para investidores de renda, o FAMB11 saiu do radar há anos. Para investidores de special situations, é uma opção de alto risco com upside assimétrico se o projeto de conversão vingar, mas com probabilidade razoável de armadilha de valor adicional."
+    ],
+    "pontosFortes": [
+      "Imóvel em endereço historicamente premium do Centro do Rio (Av. Rio Branco, 174), com 54.144 m² de área construída e arquitetura icônica",
+      "Acordo judicial com a CEF encerrado em nov/2024 destravou R$ 163 mi de liquidez e eliminou contingência jurídica relevante",
+      "Projeto de conversão para uso misto residencial protocolado na Prefeitura do Rio (ago/2025) oferece possível caminho de reposicionamento",
+      "Cotas reduziram em 2025 a custos fixos absolutos com troca para administradora menor (Actual) — embora a taxa mínima ainda seja significativa",
+      "Nenhum endividamento financeiro: o passivo é majoritariamente operacional (R$ 50,4 mi em 'outros valores a pagar', possivelmente relacionado ao IRRF da amortização)",
+      "Base de cotistas se expandiu de ~1.800 (2016) para 1.951 (mar/2026), com pulverização relativa após a 4ª emissão"
+    ],
+    "pontosDeAtencao": [
+      "Vacância de 95% com ênfase explícita do auditor independente — receita atual é insuficiente para cobrir despesas operacionais do prédio",
+      "Cotação de R$ 1.068,94 acima do VP de R$ 991,92 (P/VP 1,08) após VP já ter caído 52% em 2025 — prêmio sobre ativo deteriorado",
+      "Zero distribuição de dividendos em 2026 e sem perspectiva de voltar a distribuir antes de resolver a vacância ou alienar o ativo",
+      "Contratos de locação todos com vencimento em até 3 meses (curtíssimo prazo) — receita sem previsibilidade",
+      "Inadimplência de 11,82% sobre a receita locatícia, com base de locatários frágil e sem garantias robustas",
+      "Troca simultânea de administrador, gestor, auditor e custodiante em 2025 aumenta risco de execução em momento de crise",
+      "Gestora Áfira e administradora Actual são instituições pequenas, sem histórico relevante de condução de FIIs em reposicionamento",
+      "Projeto de conversão para uso misto depende de aprovação municipal, CAPEX (provável nova emissão) e demanda residencial no Centro/RJ — historicamente fraca",
+      "20 cotistas detêm 69,64% das cotas — base extremamente concentrada, risco de grande pressão vendedora",
+      "Reavaliação da Cushman & Wakefield usou premissas severas (taxa desconto 11,5%, cap rate 10%, 11 anos) — baixa margem para nova desvalorização mas expectativa de recuperação lenta"
+    ],
+    "conclusaoFinal": "O FAMB11 saiu há muito do universo dos FIIs de renda e hoje é um caso clássico de special situation. Entre 2016 e 2025, o imóvel perdeu 79% de valor (R$ 573,9 mi → R$ 118,9 mi) e o fundo perdeu seu único locatário (CEF). O acordo de R$ 163 mi em nov/2024 foi uma recuperação pontual que não resolveu a questão central: a ocupação do edifício. Com vacância de 95%, zero distribuição, P/VP 1,08 sobre VP deteriorado e tese inteiramente dependente de um projeto de conversão residencial ainda em tramitação, o fundo não se encaixa em nenhum perfil de investidor médio. Quem compra hoje está comprando uma opção sobre a reconversão imobiliária — e opções vencem. A recomendação honesta é: investidores de renda e de longo prazo em diversificação devem ficar longe; investidores de turnaround com posição pequena e horizonte longo podem tentar, desde que entendam que o downside é significativo (novo desconto possível sobre o VP atual) e que o fundo pode passar ainda alguns anos sem distribuir um centavo. Nota 3,0/10 reflete esse diagnóstico: patrimônio ainda existe, mas tudo mais está quebrado."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 635,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

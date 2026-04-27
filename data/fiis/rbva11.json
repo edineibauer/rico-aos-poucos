@@ -1,0 +1,3417 @@
+{
+  "meta": {
+    "ticker": "RBVA11",
+    "nome": "Rio Bravo Renda Varejo - Fundo de Investimento Imobiliário de Responsabilidade Limitada",
+    "nomeExtra": "(antigo Fundo Santander Agências; gestão ativa pela Rio Bravo desde mai/2018)",
+    "segmento": "Tijolo — Renda Urbana / Varejo de Rua (Gestão Ativa)",
+    "badges": [
+      "75 imóveis em 14 setores",
+      "20 locatários (Caixa, GPA, Cogna, Santander)",
+      "WAULT 5,5 anos",
+      "DY 10,9% a.a.",
+      "PL R$ 1,67 Bi"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 485,
+    "versaoSchema": "v3-rico"
+  },
+  "seo": {
+    "title": "RBVA11 - Análise Completa | Rio Bravo Renda Varejo | Rico aos Poucos",
+    "description": "Análise profunda do FII RBVA11 (Rio Bravo Renda Varejo): 75 imóveis de varejo de rua, gestão Rio Bravo, DY 10,9%, P/VP 0,93. Tese, dividendos, riscos.",
+    "keywords": "RBVA11, Rio Bravo Renda Varejo, FII varejo, fundos imobiliários, varejo de rua, agências bancárias, análise FII, rendimento mensal",
+    "og": {
+      "title": "RBVA11 - Rio Bravo Renda Varejo | Análise Completa",
+      "description": "Tijolo varejo de rua com 75 imóveis, 20 locatários e gestão ativa Rio Bravo. DPS R$ 0,09/cota, DY 10,9%, P/VP 0,93.",
+      "type": "website",
+      "url": "https://ricoaospoucos.com.br/fiis/rbva11/",
+      "locale": "pt_BR",
+      "site_name": "Rico aos Poucos"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "RBVA11 - Análise Completa",
+      "description": "Tijolo varejo de rua, 75 imóveis, gestão ativa Rio Bravo, DY 10,9%."
+    }
+  },
+  "indicadores": {
+    "cotacao": 9.99,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.935,
+    "pvpDesconto": "7% de desconto sobre o VP/cota",
+    "dividendYield": 10.81,
+    "dividendoMensal": 0.09,
+    "dividendoAnual": 1.08,
+    "patrimonioLiquido": "R$ 1,67 Bi",
+    "vpCota": 10.69,
+    "cotistas": 92782,
+    "ocupacao": 93.1,
+    "wault": 5.5,
+    "numImoveis": 75,
+    "ablTotal": "288.191 m²",
+    "numEstados": 8,
+    "numInquilinos": 20,
+    "numSetores": 14
+  },
+  "recomendacao": {
+    "nota": 7.0,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>RBVA11 entrega o que promete: <strong class=\"text-emerald-400\">renda mensal previsível</strong> (DPS R$ 0,09 estável há 18 meses) lastreada em 75 imóveis de varejo de rua e 20 locatários diversificados. P/VP 0,93 com DY 10,9% é coerente com pares de renda urbana.</p><p>O ponto de atenção é a <strong class=\"text-amber-400\">concentração em GPA</strong> (8 imóveis, setor em recuperação extrajudicial) e a vacância de 6,9% ainda em comercialização. A 6ª emissão em andamento melhora diversificação mas dilui no curto prazo. Tese: <strong>boa para núcleo de carteira de quem busca renda mensal estável</strong>; não é tese de upside agressivo.</p>"
+  },
+  "quickStats": [
+    {
+      "icone": "🏢",
+      "valor": "75",
+      "label": "Imóveis",
+      "descricao": "ABL 288.191 m² em 8 estados — varejo de rua + agências"
+    },
+    {
+      "icone": "🏪",
+      "valor": "20",
+      "label": "Locatários",
+      "descricao": "Caixa (21), GPA (8), Cogna (6), Santander (6), Pernambucanas (5)"
+    },
+    {
+      "icone": "📊",
+      "valor": "10,9%",
+      "label": "DY anualizado",
+      "descricao": "DPS R$ 0,09 mensal estável desde nov/2024 (após split 1:10)"
+    },
+    {
+      "icone": "🎯",
+      "valor": "0,93",
+      "label": "P/VP",
+      "descricao": "Cotação R$ 9,99 vs VP R$ 10,69 — desconto leve, em linha com pares"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "GPA em recuperação extrajudicial (8 imóveis)",
+      "severidade": "alta",
+      "descricao": "O GPA é o segundo maior locatário do fundo (8 imóveis, ~17% da receita). Em jan/2026 a companhia contratou Alvarez & Marsal e em fev/2026 publicou Fato Relevante anunciando pedido de Recuperação Extrajudicial. Vencimento dos contratos é dez/2029, próprio o ciclo de reorganização da empresa. Risco de redução de aluguel ou devolução parcial em janela curta.",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1132674)"
+    },
+    {
+      "titulo": "Vacância física 6,9% concentrada em SP/RJ",
+      "severidade": "media",
+      "descricao": "13 imóveis vagos no portfólio (Av. Paulista 436, Duque de Caxias, Centro Histórico Porto Alegre, Ouvidor RJ etc.). Comercialização ativa com várias frentes em estágio de minuta/proposta. A vacância pesa em despesas (R$ 626 mil/mês em mar/2026) e reduz o yield líquido.",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1162247)"
+    },
+    {
+      "titulo": "Notificação de saída do Santander (Mateo Bei)",
+      "severidade": "media",
+      "descricao": "Em fev/2026 o Santander notificou intenção de desocupar o imóvel Mateo Bei (2.059 m², SP), iniciando aviso prévio de 180 dias. Distrato Mutinga já formalizado em mar/2026. Movimento consistente do banco em reduzir agências físicas — pressão estrutural sobre o portfólio.",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1132674) e mar/2026 (ID 1162247)"
+    },
+    {
+      "titulo": "6ª emissão em andamento (diluição de curto prazo)",
+      "severidade": "media",
+      "descricao": "Emissão em curso destinada a aquisição de 3 ativos com cap rate médio 9-12,5%. Lote adicional ampliado conforme demanda. Dilui no curto prazo se preço de emissão fica abaixo do VP, mas racional é positivo (cap rates acima da taxa implícita atual).",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1162247)"
+    },
+    {
+      "titulo": "Alavancagem via CRIs (10,85% do PL)",
+      "severidade": "baixa",
+      "descricao": "CRIs RBVA, RBED Santo André e RBED SBC totalizam R$ 181,4 milhões. Estrutura casada (mesmo indexador IPCA) com aluguéis do GPA. Vencimentos finais até 2035. Cronograma de amortização previsível e gestão declara não vislumbrar pré-pagamento.",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1162247)"
+    }
+  ],
+  "gestora": {
+    "nome": "Rio Bravo Investimentos",
+    "nota": 7.5,
+    "stats": [
+      {
+        "icone": "📅",
+        "valor": "1999",
+        "label": "Fundada"
+      },
+      {
+        "icone": "💼",
+        "valor": "Independente",
+        "label": "Não bancária"
+      },
+      {
+        "icone": "🏛️",
+        "valor": "Multi-asset",
+        "label": "FIIs, FIs, Infra, RBHY/RBHG/RBFM"
+      },
+      {
+        "icone": "👤",
+        "valor": "Paulo Bilyk",
+        "label": "CEO/CIO desde 1999"
+      }
+    ],
+    "resumo": "<p>A <strong>Rio Bravo Investimentos</strong> é gestora independente brasileira fundada em 1999, com track record sólido em FIIs de tijolo (RBVA11, RCRB11, RBRS11), logística (TRBL11), residencial e crédito imobiliário (RBHY11, RBHG11). Paulo Bilyk é CEO/CIO desde a fundação.</p><p>No RBVA11 a gestão tornou-se ativa em maio de 2018, executando estratégia de transformação do antigo Fundo Santander Agências (monoinquilino bancário) para portfólio diversificado de varejo de rua. <strong class=\"text-emerald-400\">Track record de execução comprovado</strong>: 30 alienações desde 2019 totalizando R$ 291,8 Mi com R$ 95,8 Mi de lucro acumulado, TIR média acima de 10% a.a.</p><p>Pontos a considerar: gestora de porte médio (não top-3 como Pátria/Kinea/HGCH), estrutura de RI transparente com webcasts trimestrais e relatórios detalhados, taxa de administração competitiva (0,651% a.a. sobre valor de mercado).</p>",
+    "link": "https://riobravo.com.br"
+  },
+  "taxas": {
+    "subtitulo": "Custo da gestão e alavancagem do fundo",
+    "glowCor": "blue",
+    "itens": [
+      {
+        "label": "Taxa de administração e gestão",
+        "valor": "0,651% a.a.",
+        "destaque": true,
+        "descricao": "Sobre o valor de mercado (mín. mensal R$ 64.170 ref. mai/2021, reajustado IGP-M)"
+      },
+      {
+        "label": "Taxa de performance",
+        "valor": "Não há"
+      },
+      {
+        "label": "Custo CRIs (alavancagem)",
+        "valor": "IPCA + 4,48% a 6,00%",
+        "descricao": "3 CRIs com saldo devedor R$ 181,4 Mi (10,85% do PL)"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Taxa anual paga (2025)",
+        "valor": "R$ 8,86 Mi (0,07% sobre PL contábil)"
+      },
+      {
+        "label": "Taxa mensal mínima",
+        "valor": "R$ 64.170,04 (data-base mai/2021)"
+      },
+      {
+        "label": "Reajuste taxa mínima",
+        "valor": "IGP-M anual"
+      },
+      {
+        "label": "Performance",
+        "valor": "Não há cobrança"
+      },
+      {
+        "label": "Custódia/escrituração",
+        "valor": "0,0016% PL/mês (Banco Itaú)"
+      },
+      {
+        "label": "Saldo devedor CRIs",
+        "valor": "R$ 161,01 Mi (RBVA) + R$ 6,70 Mi (Santo André) + R$ 13,66 Mi (SBC)"
+      },
+      {
+        "label": "Estrutura de pagamento CRIs",
+        "valor": "Casada com aluguéis do GPA (mesmo indexador IPCA)"
+      },
+      {
+        "label": "Vencimento CRIs",
+        "valor": "Série 1 jul/2027; Série 2 nov/2035"
+      }
+    ]
+  },
+  "portfolio": {
+    "schema": "v2",
+    "tipoFundo": "tijolo",
+    "subtipo": "renda_urbana_varejo_rua",
+    "stats": {
+      "totalAtivos": 75,
+      "abl": 288191,
+      "ocupacaoFisica": 93.1,
+      "ocupacaoFinanceira": 95.0,
+      "vacanciaFisica": 6.9,
+      "wault": 5.5,
+      "ltv": 10.85,
+      "alavancagemPct": 10.85,
+      "alocacaoPL": [
+        {
+          "categoria": "Imóveis físicos diretos (75 imóveis)",
+          "pct": 0.82,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "SPE Portobello (FII SPGM 100%)",
+          "pct": 0.099,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "FIIs estratégicos (LASC11 + SHPH11)",
+          "pct": 0.033,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "Valores a receber (aluguéis + vendas)",
+          "pct": 0.028,
+          "cor": "#f59e0b"
+        },
+        {
+          "categoria": "Caixa + RF (necessidades de liquidez)",
+          "pct": 0.02,
+          "cor": "#64748b"
+        }
+      ]
+    },
+    "ativos": [
+      {
+        "tipo": "imovel",
+        "id": "assai-sao-jose-campos",
+        "nome": "Assaí - Jardim Apolo - São José dos Campos/SP",
+        "endereco": "Avenida Jorge Zarur, 100",
+        "geo": {
+          "cidade": "São José dos Campos",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 34749,
+        "tipologia": "varejo_supermercado",
+        "participacao": 1.0,
+        "valorContabil": 121200000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Assaí Atacadista",
+            "setor": "Atacarejo",
+            "abl": 34749,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886) + RG mar/2026 (ID 1162247)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "assai-guarulhos",
+        "nome": "Assaí - Guarulhos/SP",
+        "endereco": "Avenida Salgado Filho, 1301 — Centro",
+        "geo": {
+          "cidade": "Guarulhos",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 20952,
+        "tipologia": "varejo_supermercado",
+        "participacao": 1.0,
+        "valorContabil": 111300000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Assaí Atacadista",
+            "setor": "Atacarejo",
+            "abl": 20952,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "centauro-paulista",
+        "nome": "Centauro - Av. Paulista 1.227 - São Paulo/SP",
+        "endereco": "Av. Paulista, 1.227",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 2551,
+        "tipologia": "varejo_strip",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 108950000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Grupo SBF (Centauro)",
+            "setor": "Esportivo",
+            "abl": 2551,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2041-07-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "kroton-betim",
+        "nome": "Cogna - Centro - Betim/MG",
+        "endereco": "Avenida Presidente Kubitschek, 227, Centro",
+        "geo": {
+          "cidade": "Betim",
+          "uf": "MG",
+          "regiao": "Sudeste"
+        },
+        "abl": 24483,
+        "tipologia": "educacao",
+        "participacao": 1.0,
+        "valorContabil": 98900000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Cogna Educação (Kroton)",
+            "setor": "Educação",
+            "abl": 24483,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "kroton-sao-bernardo",
+        "nome": "Cogna - São Bernardo do Campo/SP",
+        "endereco": "Avenida Doutor Rudge Ramos, 1501, Rudge Ramos",
+        "geo": {
+          "cidade": "São Bernardo do Campo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 23771,
+        "tipologia": "educacao",
+        "participacao": 1.0,
+        "valorContabil": 89800000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Cogna Educação (Kroton)",
+            "setor": "Educação",
+            "abl": 23771,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2034-10-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "vago-paulista-436",
+        "nome": "Vago - Av. Paulista 436 - São Paulo/SP",
+        "endereco": "Av. Paulista, 436",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 2857,
+        "tipologia": "varejo_strip",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 68550000,
+        "ocupacao": 0.0,
+        "locatarios": [],
+        "fonte": "Informe Anual 2025 (ID 1166886) — em elaboração de minuta contratual (RG mar/2026)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "renner-oscar-freire",
+        "nome": "Renner - Oscar Freire - São Paulo/SP",
+        "endereco": "Rua Oscar Freire, 585, Jardins",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 2083,
+        "tipologia": "varejo_strip",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 64700000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Lojas Renner",
+            "setor": "Vestuário",
+            "abl": 2083,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2033-10-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "kroton-sao-luis",
+        "nome": "Cogna - Turu - São Luis/MA",
+        "endereco": "Avenida São Luís Rei de França, 32, Turu",
+        "geo": {
+          "cidade": "São Luís",
+          "uf": "MA",
+          "regiao": "Nordeste"
+        },
+        "abl": 24287,
+        "tipologia": "educacao",
+        "participacao": 1.0,
+        "valorContabil": 62600000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Cogna Educação (Kroton)",
+            "setor": "Educação",
+            "abl": 24287,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-03-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "santander-jundiai",
+        "nome": "Santander - Centro - Jundiaí/SP",
+        "endereco": "R Barao de Jundiai 884",
+        "geo": {
+          "cidade": "Jundiaí",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 6439,
+        "tipologia": "agencias_bancarias",
+        "participacao": 1.0,
+        "valorContabil": 53050000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Banco Santander",
+            "setor": "Bancário",
+            "abl": 6439,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2033-06-01",
+              "indexador": "IGP-M"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "kroton-cuiaba",
+        "nome": "Cogna - Jardim Europa - Cuiabá/MT",
+        "endereco": "Avenida Manoel José de Arruda, 3100",
+        "geo": {
+          "cidade": "Cuiabá",
+          "uf": "MT",
+          "regiao": "Centro-Oeste"
+        },
+        "abl": 15659,
+        "tipologia": "educacao",
+        "participacao": 1.0,
+        "valorContabil": 47100000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Cogna Educação (Kroton)",
+            "setor": "Educação",
+            "abl": 15659,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-03-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "gpa-tatuape",
+        "nome": "GPA - Tatuapé - São Paulo/SP",
+        "endereco": "Rua Serra do Japi, 647",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 5083,
+        "tipologia": "varejo_supermercado",
+        "participacao": 1.0,
+        "valorContabil": 41050000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "GPA (Pão de Açúcar)",
+            "setor": "Supermercado",
+            "abl": 5083,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "kroton-santo-andre",
+        "nome": "Cogna - Santo André - Santo André/SP",
+        "endereco": "Rua Coronel Abílio Soares, 163, Centro",
+        "geo": {
+          "cidade": "Santo André",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 7722,
+        "tipologia": "educacao",
+        "participacao": 1.0,
+        "valorContabil": 39500000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Cogna Educação (Kroton)",
+            "setor": "Educação",
+            "abl": 7722,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2027-06-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "santander-santo-andre",
+        "nome": "Santander - Centro - Santo André/SP",
+        "endereco": "Rua. Sem. Flaquer, 305",
+        "geo": {
+          "cidade": "Santo André",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 6242,
+        "tipologia": "agencias_bancarias",
+        "participacao": 1.0,
+        "valorContabil": 38950000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Banco Santander",
+            "setor": "Bancário",
+            "abl": 6242,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2032-12-01",
+              "indexador": "IGP-M"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "santander-liberdade",
+        "nome": "Santander - Liberdade - São Paulo/SP",
+        "endereco": "Av. Liberdade, 151",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 5002,
+        "tipologia": "agencias_bancarias",
+        "participacao": 1.0,
+        "valorContabil": 37650000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Banco Santander",
+            "setor": "Bancário",
+            "abl": 5002,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2032-12-01",
+              "indexador": "IGP-M"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "pernambucanas-franca",
+        "nome": "Pernambucanas - Franca - São Paulo/SP",
+        "endereco": "Rua Major Claudiano, 1800, Loja, Centro",
+        "geo": {
+          "cidade": "Franca",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 4360,
+        "tipologia": "varejo_strip",
+        "participacao": 1.0,
+        "valorContabil": 31800000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Pernambucanas",
+            "setor": "Vestuário",
+            "abl": 4360,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2037-10-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "gpa-brooklin",
+        "nome": "GPA - Brooklin - São Paulo/SP",
+        "endereco": "Av. Padre Antônio Jose Dos Santos, nº 872",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 3793,
+        "tipologia": "varejo_supermercado",
+        "participacao": 1.0,
+        "valorContabil": 28550000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "GPA (Pão de Açúcar)",
+            "setor": "Supermercado",
+            "abl": 3793,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "super-nosso-bh",
+        "nome": "Super Nosso - Centro - Belo Horizonte/MG",
+        "endereco": "Av. João Pinheiro, 500",
+        "geo": {
+          "cidade": "Belo Horizonte",
+          "uf": "MG",
+          "regiao": "Sudeste"
+        },
+        "abl": 4193,
+        "tipologia": "varejo_supermercado",
+        "participacao": 1.0,
+        "valorContabil": 28250000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Super Nosso",
+            "setor": "Supermercado",
+            "abl": 4193,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2034-03-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "vago-ouvidor-rj",
+        "nome": "Vago - Ouvidor - Rio de Janeiro/RJ",
+        "endereco": "Av. Rio Branco, 115",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste"
+        },
+        "abl": 1240,
+        "tipologia": "varejo_strip",
+        "participacao": 1.0,
+        "valorContabil": 28200000,
+        "ocupacao": 0.0,
+        "locatarios": [],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "vago-olivetti",
+        "nome": "Ed. Olivetti Paulista - São Paulo/SP",
+        "endereco": "Av Paulista 447 Loja",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 1010,
+        "tipologia": "varejo_strip",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 26800000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Fan Food",
+            "setor": "Alimentação",
+            "abl": 1010,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2035-10-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886) — antes vago, locado a Fan Food"
+      },
+      {
+        "tipo": "imovel",
+        "id": "caixa-nova-iguacu",
+        "nome": "Caixa - Centro - Nova Iguaçu/RJ",
+        "endereco": "Av. Marechal Floriano Peixoto, nº 2.370",
+        "geo": {
+          "cidade": "Nova Iguaçu",
+          "uf": "RJ",
+          "regiao": "Sudeste"
+        },
+        "abl": 3256,
+        "tipologia": "agencias_bancarias",
+        "participacao": 1.0,
+        "valorContabil": 24650000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Caixa Econômica Federal",
+            "setor": "Bancário",
+            "abl": 3256,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2032-11-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "caixa-14bis",
+        "nome": "Caixa - 14 bis - Rio de Janeiro/RJ",
+        "endereco": "Av. Marechal Câmara, nº 160",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste"
+        },
+        "abl": 1900,
+        "tipologia": "agencias_bancarias",
+        "participacao": 1.0,
+        "valorContabil": 23650000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Caixa Econômica Federal",
+            "setor": "Bancário",
+            "abl": 1900,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2032-11-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "santander-sao-mateus",
+        "nome": "Santander - São Mateus - São Paulo/SP",
+        "endereco": "Av. Mateo Bei 3286",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 2059,
+        "tipologia": "agencias_bancarias",
+        "participacao": 1.0,
+        "valorContabil": 21450000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Banco Santander",
+            "setor": "Bancário",
+            "abl": 2059,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "aviso_previo",
+              "vencimento": "2026-08-01",
+              "indexador": "IGP-M",
+              "renovacao": {
+                "probabilidade": "baixa",
+                "racional": "Notificação de saída em fev/2026 com aviso prévio de 180 dias",
+                "fonte": "RG fev/2026 (ID 1132674)"
+              }
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886) + RG fev/2026"
+      },
+      {
+        "tipo": "imovel",
+        "id": "itau-leblon",
+        "nome": "Itaú - Leblon - Rio de Janeiro/RJ",
+        "endereco": "Av. Afrânio de Melo Franco, 131 - Leblon",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste"
+        },
+        "abl": 917,
+        "tipologia": "agencias_bancarias",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 21000000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Itaú Unibanco",
+            "setor": "Bancário",
+            "abl": 917,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-05-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "gpa-recife-rebouas",
+        "nome": "GPA - Rebouças - São Paulo/SP",
+        "endereco": "Pinheiros área Rebouças",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 2935,
+        "tipologia": "varejo_supermercado",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 18400000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "GPA (Pão de Açúcar)",
+            "setor": "Supermercado",
+            "abl": 2935,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "caixa-ipanema",
+        "nome": "Caixa - Ipanema - Rio de Janeiro/RJ",
+        "endereco": "Rua Visconde de Pirajá, nº 127",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste"
+        },
+        "abl": 510,
+        "tipologia": "agencias_bancarias",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 18800000,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Caixa Econômica Federal",
+            "setor": "Bancário",
+            "abl": 510,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2032-11-01",
+              "indexador": "IPCA"
+            }
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "demais-imoveis-agregados",
+        "nome": "Demais 50 imóveis (agregados)",
+        "endereco": "Diversos — varejo de rua, agências bancárias, lojas e BTS",
+        "geo": {
+          "cidade": "Diversos",
+          "uf": "Diversos",
+          "regiao": "Diversos"
+        },
+        "abl": 80138,
+        "tipologia": "varejo_strip",
+        "participacao": 1.0,
+        "valorContabil": 292320868,
+        "ocupacao": 0.93,
+        "locatarios": [
+          {
+            "nome": "Múltiplos (Caixa, GPA, Pernambucanas, Cogna, Santander, Plano&Plano, M3Storage, Goodbe, Ânima, etc.)",
+            "setor": "Múltiplos (varejo, bancário, educação, alimentação)",
+            "percAbl": 1.0
+          }
+        ],
+        "fonte": "Informe Anual 2025 (ID 1166886) — agregação dos 50 imóveis abaixo de R$ 18 Mi"
+      },
+      {
+        "tipo": "imovel",
+        "id": "spe-portobello-spgm",
+        "nome": "SPE Portobello (FII SPGM 100%) - Av. Gabriel Monteiro da Silva 1.838 m²",
+        "endereco": "Av. Gabriel Monteiro da Silva, São Paulo/SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste"
+        },
+        "abl": 1838,
+        "tipologia": "varejo_strip",
+        "padrao": "AAA",
+        "participacao": 1.0,
+        "valorContabil": 195698097,
+        "ocupacao": 1.0,
+        "locatarios": [
+          {
+            "nome": "Portobello",
+            "setor": "Casa e Construção (cerâmica)",
+            "abl": 1838,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "atipico",
+              "vencimento": "2046-03-01",
+              "indexador": "IPCA",
+              "multa": "Equivalente ao fluxo de aluguéis vincendos (atípico BTS)",
+              "renovacao": {
+                "probabilidade": "alta",
+                "racional": "Atípico de 20 anos com flagship store",
+                "fonte": "RG mar/2026 (ID 1162247)"
+              }
+            }
+          }
+        ],
+        "fonte": "Informe Mensal mar/2026 (ID 1164959) item 10.13 + RG mar/2026 — investimento estruturado como cotista sênior, IPCA + 9% a.a."
+      },
+      {
+        "tipo": "fii",
+        "ticker": "LASC11",
+        "nome": "FII Legatus Shopping",
+        "segmentoFinal": "tijolo_shoppings_regional",
+        "valorPresente": 39950000,
+        "percPL": 0.024,
+        "fonte": "RG mar/2026 (ID 1162247) — alocação estratégica em FIIs"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "SHPH11",
+        "nome": "FII Pátio Higienópolis",
+        "segmentoFinal": "tijolo_shoppings_premium",
+        "valorPresente": 25235000,
+        "percPL": 0.015,
+        "fonte": "RG mar/2026 (ID 1162247) — alocação estratégica em FIIs"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.082,
+      "interpretacaoHhi": "baixa",
+      "topN": {
+        "top1Pct": 0.117,
+        "top3Pct": 0.262,
+        "top5Pct": 0.353,
+        "top10Pct": 0.52
+      },
+      "geografica": [
+        {
+          "regiao": "Sudeste",
+          "pct": 0.867,
+          "ativos": 60
+        },
+        {
+          "regiao": "Nordeste",
+          "pct": 0.075,
+          "ativos": 5
+        },
+        {
+          "regiao": "Centro-Oeste",
+          "pct": 0.047,
+          "ativos": 4
+        },
+        {
+          "regiao": "Sul",
+          "pct": 0.011,
+          "ativos": 6
+        }
+      ],
+      "porLocatario": [
+        {
+          "nome": "Caixa Econômica Federal",
+          "pct": 0.227,
+          "rating": "Federal",
+          "imoveis": 21,
+          "observacao": "Maior concentração — agências bancárias com vencimentos majoritariamente nov/2032"
+        },
+        {
+          "nome": "GPA (Pão de Açúcar)",
+          "pct": 0.17,
+          "rating": null,
+          "imoveis": 8,
+          "observacao": "ATENÇÃO: Recuperação Extrajudicial em fev/2026 — vencimentos dez/2029"
+        },
+        {
+          "nome": "Cogna Educação (Kroton)",
+          "pct": 0.13,
+          "rating": null,
+          "imoveis": 6,
+          "observacao": "Universidades (educação superior)"
+        },
+        {
+          "nome": "Santander",
+          "pct": 0.115,
+          "rating": "Aaa.br",
+          "imoveis": 6,
+          "observacao": "Agências; notificação de saída de Mateo Bei em fev/2026"
+        },
+        {
+          "nome": "Pernambucanas",
+          "pct": 0.06,
+          "rating": null,
+          "imoveis": 5
+        },
+        {
+          "nome": "Assaí",
+          "pct": 0.058,
+          "rating": "AA(bra)",
+          "imoveis": 2,
+          "observacao": "Atacarejo — duas megalojas em SP (Guarulhos + São José)"
+        },
+        {
+          "nome": "Portobello (BTS atípico)",
+          "pct": 0.117,
+          "rating": null,
+          "imoveis": 1,
+          "observacao": "Cotista sênior do FII SPGM (IPCA + 9%) — Av. Gabriel Monteiro da Silva 1.838 m²"
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA",
+          "pct": 0.672
+        },
+        {
+          "indexador": "IGP-M",
+          "pct": 0.328
+        }
+      ]
+    },
+    "transacoes": [
+      {
+        "data": "2026-03",
+        "tipo": "venda",
+        "ativo": "Caixa - Via Anchieta - SP",
+        "valor": 7300000,
+        "lucro": 3860000,
+        "tir": 0.183,
+        "descricao": "Venda à vista por R$ 4.089,64/m² (em linha com laudo). TIR de 18,3% a.a. em 13 anos.",
+        "fonte": "RG mar/2026 (ID 1162247)"
+      },
+      {
+        "data": "2026-03",
+        "tipo": "locacao",
+        "ativo": "Loja Monsenhor Celso - Curitiba",
+        "locatario": "Grupo Panvel",
+        "abl": 845.8,
+        "prazo": "10 anos",
+        "descricao": "Entrada no segmento farmacêutico — diversificação para 14 setores e 20 locatários. Impacto +R$ 0,0004/cota.",
+        "fonte": "RG mar/2026 (ID 1162247)"
+      },
+      {
+        "data": "2026-03",
+        "tipo": "inauguracao",
+        "ativo": "Portobello - Av. Gabriel Monteiro Silva",
+        "abl": 1838,
+        "tipo_contrato": "BTS atípico 20 anos",
+        "descricao": "Início de operação após obra de BTS. Imóvel passa para fase de geração de receita (IPCA + 9% como cotista sênior).",
+        "fonte": "RG mar/2026 (ID 1162247)"
+      },
+      {
+        "data": "2026-02",
+        "tipo": "venda",
+        "ativo": "Santander - São Gonçalo - RJ",
+        "valor": 7000000,
+        "tir": 0.1065,
+        "descricao": "Saída definitiva de São Gonçalo. R$ 4 Mi à vista + 20 parcelas mensais R$ 150 mil garantidas por alienação fiduciária. 5,3% acima do laudo. TIR CDI+0,97%.",
+        "fonte": "RG fev/2026 (ID 1132674)"
+      },
+      {
+        "data": "2026-02",
+        "tipo": "fato_relevante",
+        "ativo": "GPA",
+        "descricao": "GPA (8 imóveis, 17% da receita) anunciou pedido de Recuperação Extrajudicial. A&M contratada em jan/2026.",
+        "fonte": "RG fev/2026 (ID 1132674)"
+      },
+      {
+        "data": "2026-02",
+        "tipo": "vencimento_iminente",
+        "ativo": "Santander - Mateo Bei - SP",
+        "descricao": "Notificação de saída com aviso prévio de 180 dias. Distrato em curso para set/2026.",
+        "fonte": "RG fev/2026 (ID 1132674)"
+      },
+      {
+        "data": "2026-03",
+        "tipo": "vencimento_iminente",
+        "ativo": "Caixa - Mutinga - SP",
+        "descricao": "Distrato formalizado com pagamento de multa rescisória. Reposicionamento em andamento.",
+        "fonte": "RG mar/2026 (ID 1162247)"
+      },
+      {
+        "data": "2025-10",
+        "tipo": "aquisicao",
+        "ativo": "7 imóveis do RBED11 (educação Kroton)",
+        "valor": 470000000,
+        "descricao": "Incorporação do Fundo Rio Bravo Educacional concluída. Pagamento misto: dinheiro + cotas RBVA11. Diluição calibrada por leilão das frações.",
+        "fonte": "Comunicado abril/2025 (IDs 887637, 907988)"
+      },
+      {
+        "data": "2025-05",
+        "tipo": "desdobramento",
+        "ativo": "RBVA11 cotas",
+        "descricao": "Desdobramento de cotas 1:10 — base passou de ~15 milhões para 156.143.050 cotas. DPS ajustado de R$ 0,90 para R$ 0,09.",
+        "fonte": "Demonstrações Financeiras 2025 (ID 1150890)"
+      },
+      {
+        "data": "2025-09",
+        "tipo": "alteracao_regulamento",
+        "ativo": "RBVA11",
+        "descricao": "Atualização do regulamento para se adequar à Resolução CVM 175 — Classe Única de cotas.",
+        "fonte": "Comunicado jun/2025 (ID 934635)"
+      },
+      {
+        "data": "2024-10",
+        "tipo": "emissao_concluida",
+        "ativo": "5ª Emissão",
+        "descricao": "Conclusão da 5ª emissão de cotas com pagamento dos rendimentos temporários (R$ 0,78 + R$ 0,64 + R$ 0,47/cota nos recibos RBVA13/14).",
+        "fonte": "Comunicado out/2024 (IDs 763876, 765454)"
+      },
+      {
+        "data": "2026-04",
+        "tipo": "emissao_em_curso",
+        "ativo": "6ª Emissão",
+        "descricao": "Emissão em andamento para aquisição de 3 ativos com cap rate 8-12,5%. Lote adicional ampliado.",
+        "fonte": "RG mar/2026 (ID 1162247)"
+      }
+    ],
+    "analise": {
+      "rotulo": "Portfolio diversificado de varejo de rua com concentração relevante em GPA e Caixa",
+      "cor": "amber",
+      "tags": [
+        "75 imóveis em 8 estados",
+        "20 locatários distintos (HHI 0,082)",
+        "67% IPCA + 33% IGP-M",
+        "WAULT 5,5 anos",
+        "10,85% alavancagem casada com aluguéis"
+      ],
+      "veredicto": "<p>O portfólio do RBVA11 é resultado de <strong>7 anos de gestão ativa</strong> (desde 2018) que transformou um fundo monoinquilino bancário em <strong>14 setores e 20 locatários</strong>. A concentração geográfica em SP/RJ (87% da receita) reflete a tese de varejo de rua em capitais consolidadas — onde o gestor consegue executar reposicionamento.</p><p>O <strong class=\"text-amber-400\">elefante na sala</strong> é a recuperação extrajudicial do GPA (17% da receita, 8 imóveis com vencimento dez/2029). A estrutura de alavancagem casada com aluguéis do GPA é vantagem (mesmo indexador) mas amplifica o risco de evento de crédito. Caixa (23% da receita) e Santander (12%) também trazem risco de longo prazo de redução de agências bancárias.</p>",
+      "pontosFortes": [
+        "Diversificação real: 20 locatários em 14 setores (HHI 0,082 — baixa concentração)",
+        "67% da receita em contratos IPCA — proteção inflacionária estruturalmente forte",
+        "WAULT 5,5 anos — boa visibilidade de receita até 2031",
+        "Alavancagem casada com aluguéis GPA (mesmo IPCA, mesmo prazo) — sem descasamento",
+        "Imóveis em vias premium (Av. Paulista, Oscar Freire, Leblon) — valor estratégico",
+        "Track record de 30 alienações desde 2019 com R$ 95,8 Mi de lucro acumulado e TIR média acima de 10% a.a.",
+        "BTS Portobello (IPCA + 9% como cotista sênior) — entrega bem estruturada"
+      ],
+      "pontosFracos": [
+        "GPA em recuperação extrajudicial — exposição direta de 17% da receita",
+        "Bancos (Caixa + Santander = 34% da receita) em ciclo de redução de agências",
+        "Vacância 6,9% — 13 imóveis vagos, alguns em locais nobres mas com lenta absorção (Av. Paulista 436)",
+        "Concentração em SP/RJ (87% da receita) — exposição cíclica regional",
+        "BTS Portobello é 12% do PL via SPE complexa (FII SPGM) — menos transparência que imóvel direto",
+        "Cotação fechada no VP (P/VP 0,93) — pouco upside imediato por reprecificação",
+        "Liquidez R$ 2 Mi/dia — adequada mas não permite saída rápida de posições > R$ 500k"
+      ],
+      "perfilInvestidor": "Investidor de renda mensal estável (DPS R$ 0,09 sustentado há 18 meses), com tolerância a risco de crédito de longo prazo (GPA, Caixa, Santander). Não é para quem busca upside agressivo de capital ou quem não quer monitorar evolução do GPA trimestralmente."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Da gestão passiva ao portfólio diversificado de varejo de rua",
+    "periodos": [
+      {
+        "titulo": "Origem como Fundo Santander Agências",
+        "cor": "blue",
+        "periodo": "2012—2018",
+        "label": "Fase fundo passivo",
+        "descricao": "Constituído em 01/11/2012 sob gestão passiva como veículo de sale-and-leaseback de agências do Santander. Monoinquilino bancário com receita previsível mas concentrada.",
+        "pontos": [
+          "01/11/2012: início do fundo (CNPJ 15.576.907/0001-70)",
+          "Sale-and-leaseback de agências bancárias do Santander",
+          "Gestão passiva — sem reciclagem ativa de portfólio"
+        ]
+      },
+      {
+        "titulo": "Mudança para gestão ativa Rio Bravo",
+        "cor": "amber",
+        "periodo": "2018—2019",
+        "label": "Inflexão estratégica",
+        "descricao": "Em mai/2018 o regulamento foi alterado para gestão ativa, com mandato para diversificação setorial. Em jun/2019 o primeiro desdobramento de cotas 1:10. Início da reciclagem do portfólio bancário.",
+        "pontos": [
+          "Mai/2018: alteração de regulamento — gestão ativa Rio Bravo",
+          "Jun/2019: desdobramento de cotas 1:10 (cota original ~R$ 1.200 → R$ 120)",
+          "Início das alienações de agências bancárias",
+          "1ª venda de imóvel Curitiba por R$ 4,3 Mi"
+        ]
+      },
+      {
+        "titulo": "Reposicionamento e emissões",
+        "cor": "emerald",
+        "periodo": "2019—2023",
+        "label": "Construção do portfolio diversificado",
+        "descricao": "Sequência de 4 emissões (2ª, 3ª, 4ª) viabilizando aquisição de imóveis de varejo de rua, alavancagem via 2 séries de CRIs estruturadas com aluguéis do GPA. Aquisição de imóveis em Tatuapé, Guarulhos, São José dos Campos, Santo André e SBC.",
+        "pontos": [
+          "2019: 2ª emissão de cotas",
+          "2020: 3ª emissão de cotas + 1ª série de CRI (108 meses, IPCA+5,30%)",
+          "2021: 2ª série de CRI (180 meses, IPCA+5,60%) + Santo André (IPCA+6,00%)",
+          "2022: SBC (IPCA+4,48%) + 4ª emissão de cotas",
+          "2023: aquisição de imóveis de varejo educacional (RBED11)"
+        ]
+      },
+      {
+        "titulo": "5ª Emissão e incorporação RBED11",
+        "cor": "blue",
+        "periodo": "2024—2025",
+        "label": "Consolidação setorial",
+        "descricao": "5ª emissão de cotas em set/2024 viabiliza incorporação dos 7 imóveis do FII RBED11 (Cogna/Kroton — universidades). Em mai/2025 segundo desdobramento 1:10 (cota R$ 90 → R$ 9). Mudança de regulamento para CVM 175.",
+        "pontos": [
+          "Set/2024: 5ª emissão de cotas (R$ 470 Mi para portfólio educacional)",
+          "Out/2024: incorporação concluída — 7 imóveis Cogna/Kroton incorporados",
+          "Mai/2025: 2º desdobramento de cotas 1:10 (R$ 90 → R$ 9)",
+          "Jun/2025: alteração de regulamento — Resolução CVM 175 (Classe Única)"
+        ]
+      },
+      {
+        "titulo": "BTS Portobello e 6ª Emissão",
+        "cor": "amber",
+        "periodo": "2025—2026 (atual)",
+        "label": "Diversificação ampliada",
+        "descricao": "Em mar/2026 inaugura BTS Portobello (Gabriel Monteiro Silva) — flagship store premium em SP, atípico 20 anos. 6ª emissão em curso para 3 aquisições (cap rate 8-12,5%). Locação Panvel (Curitiba) entrou no segmento farmacêutico.",
+        "pontos": [
+          "Mar/2026: inauguração BTS Portobello (Av. Gabriel Monteiro Silva, AAA)",
+          "Mar/2026: locação Panvel (Curitiba) — entrada no setor farmacêutico",
+          "Mar/2026: venda Caixa Via Anchieta (TIR 18,3% a.a. em 13 anos)",
+          "Em curso: 6ª emissão de cotas para diversificar portfólio em 3 ativos prioritários"
+        ]
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>Tese central: <strong>renda mensal previsível em portfólio diversificado de varejo de rua</strong> construído por 7 anos de gestão ativa Rio Bravo. RBVA11 é o que sobrou depois da metamorfose do antigo Fundo Santander Agências — hoje 75 imóveis em 14 setores, 20 locatários e DPS R$ 0,09 sustentado há 18 meses.</p><p>O fundo entrega <strong class=\"text-emerald-400\">DY 10,9% com P/VP 0,93</strong> (em linha com pares de renda urbana). Não é tese de upside agressivo nem de hedge inflacionário puro (33% ainda em IGP-M); é tese de <strong>renda estável com desconto leve sobre o valor patrimonial</strong>, lastreada em alavancagem casada e 5,5 anos de WAULT. O ponto a monitorar é o GPA — recuperação extrajudicial em 17% da receita.</p>",
+    "paraQuem": [
+      "<strong>Investidor de renda mensal estável</strong> que aceita 10,9% de yield e DPS pouco volátil em troca de baixo upside",
+      "<strong>Quem busca exposição ao varejo de rua</strong> em capitais consolidadas (SP/RJ) sem montar carteira própria de imóveis",
+      "<strong>Núcleo de carteira moderada</strong> que valoriza diversificação por locatário (HHI 0,082) e prazo médio (WAULT 5,5 anos)",
+      "<strong>Quem aceita risco de evento de crédito</strong> de longo prazo (GPA, Caixa, Santander) em troca de desconto vs VP"
+    ],
+    "naoParaQuem": [
+      "<strong>Quem busca crescimento agressivo de DPS</strong> — fundo entrega regime estável, não trajetória ascendente",
+      "<strong>Quem não tolera risco de inquilino</strong> — GPA em recuperação extrajudicial é risco real e atual",
+      "<strong>Quem precisa de hedge inflacionário puro</strong> — 33% ainda em IGP-M (perfil mais volátil) e nem todo IPCA é repassado",
+      "<strong>Investidor que quer sair em janela curta</strong> — liquidez R$ 2 Mi/dia limita posições > R$ 500k"
+    ]
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII de tijolo varejo urbano de gestão ativa",
+      "subrotulo": "Renda mensal estável (DY 10,9%) com 75 imóveis em 14 setores; risco GPA é o ponto crítico",
+      "cor": "amber"
+    },
+    "perfilRisco": {
+      "nivel": "medio",
+      "score": 2.7,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 2.0,
+          "peso": 0.2,
+          "metrica": "HHI 0,082 (baixa); top-locatário Caixa 22,7%; SPE Portobello 11,7% do PL",
+          "leitura": "Diversificação real boa — 20 locatários em 14 setores. Concentração em Caixa é institucional, não risco de crédito."
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 2.0,
+          "peso": 0.15,
+          "metrica": "σ12m anualizado 11.0% (semanal × √52)",
+          "leitura": "Fundo defensivo — volatilidade abaixo de 15% é típica de tijolo HG estável."
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 1.5,
+          "peso": 0.2,
+          "metrica": "CV24m 5.0% (DPS ajustado), CV12m 0% (R$ 0,09 flat)",
+          "leitura": "DPS estável há 18 meses — um dos mais previsíveis do segmento de renda urbana."
+        },
+        {
+          "nome": "Liquidez",
+          "score": 2.5,
+          "peso": 0.15,
+          "metrica": "Volume médio diário 21d R$ 1.5 Mi; 252d R$ 2.0 Mi",
+          "leitura": "Liquidez razoável — adequada para posições até R$ 500k mas não para grandes lotes em janela curta."
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "Vacância 6,9%; WAULT 5,5 anos; GPA (17%) em RE; Caixa+Santander 34% em ciclo de redução",
+          "leitura": "Maior componente de risco — GPA em recuperação extrajudicial é evento real, não hipotético."
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 2.5,
+          "peso": 0.1,
+          "metrica": "LTV 10,85% (CRIs casados com aluguéis GPA, mesmo IPCA, vencimentos 2027-2035)",
+          "leitura": "Alavancagem moderada com estrutura casada — risco controlado se GPA mantiver pagamento."
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": true,
+        "racional": "DPS R$ 0,09 estável há 18 meses, CV12m=0%, guidance R$ 0,09 mantido — uma das renda mais estáveis do segmento"
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": "parcial",
+        "racional": "67% da receita em IPCA é boa proteção, mas 33% ainda em IGP-M (mais volátil); dívida casada IPCA mitiga"
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Receita 100% em real — não há proteção cambial"
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": "parcial",
+        "racional": "P/VP 0,93 dá desconto modesto (~7%) — espaço de upside limitado vs pares com 0,69-1,05"
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": "parcial",
+        "racional": "FIIs de renda urbana costumam reprecificar moderadamente em ciclo de queda; RBVA tem beta menor que pares mais voláteis"
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Tijolo perde para CDI em ciclo de alta — não é tese para esse cenário"
+      },
+      {
+        "nome": "Exposição setorial concentrada (varejo de rua)",
+        "encaixa": true,
+        "racional": "Pure-play em varejo de rua de capitais — único FII grande do segmento com diversificação ampla"
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": "parcial",
+        "racional": "DPS estável e ABL diversificado favorecem; risco GPA atual exige monitoramento que aposentado pode não querer fazer"
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": true,
+        "racional": "20 locatários em 14 setores (varejo, bancos, educação, alimentação, esportivo, farmacêutico) — diversificação real"
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "FII brasileiro com isenção de IR para PF — DY 10,9% líquido equivale a renda fixa bruta de ~12,8% (15% IR)"
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "GPA em recuperação extrajudicial (17% da receita)",
+        "severidade": "alta",
+        "descricao": "8 imóveis com vencimento dez/2029. RE não é falência mas é renegociação coletiva de dívidas — pode forçar redução temporária de aluguéis ou aceleração de devolução. Estrutura de CRIs do fundo é casada com aluguéis GPA — evento de crédito impacta dívida E receita simultaneamente.",
+        "mitigacao": "Diversificação para 14 setores reduz dependência relativa; gestor declarou monitoramento ativo no RG fev/2026"
+      },
+      {
+        "titulo": "Bancos em ciclo de redução de agências (34% da receita)",
+        "severidade": "media",
+        "descricao": "Caixa (23%) e Santander (12%) são parte de tendência estrutural de digitalização do varejo bancário. Notificação Mateo Bei (Santander) em fev/2026 e distrato Mutinga (Caixa) em mar/2026 são primeiros sinais. Vencimentos majoritários em 2032 — janela ainda longa, mas a tendência é de crescimento da vacância.",
+        "mitigacao": "Imóveis em vias premium (Av. Paulista, Ipanema) podem ser reposicionados para varejo; gestor já mostrou capacidade"
+      },
+      {
+        "titulo": "SPE Portobello é 12% do PL via FII SPGM (estrutura indireta)",
+        "severidade": "media",
+        "descricao": "RBVA detém 100% das cotas do FII SPGM, que é dono do imóvel Portobello e tem o contrato atípico de 20 anos. A estrutura é cotista sênior IPCA + 9% — dependente de continuidade da Portobello (capital aberto, solvente atualmente). Menor transparência que imóvel direto.",
+        "mitigacao": "Atípico com multa = fluxo de aluguéis — proteção contratual forte"
+      },
+      {
+        "titulo": "Dois desdobramentos em 6 anos pode confundir investidor leigo",
+        "severidade": "baixa",
+        "descricao": "Splits de jun/2019 e mai/2025 (1:10 cada) significam DPS histórico em base 100x maior que atual. Em comparações com gráficos de YouTube/influenciadores, há risco de leitura errada do histórico de DPS.",
+        "mitigacao": "Análise atual normaliza tudo para base 156.143.050 cotas (atual)"
+      },
+      {
+        "titulo": "Alavancagem amplifica volatilidade do GPA",
+        "severidade": "media",
+        "descricao": "CRIs RBVA (R$ 161 Mi, 88% da dívida) tem juros pagos com aluguéis GPA — mesmo indexador IPCA. Se GPA renegocia ou atrasa, fundo precisa cobrir CRI com caixa/outros aluguéis. Estrutura que era 'casada' vira pressão dupla em cenário ruim.",
+        "mitigacao": "Caixa de R$ 41 Mi (Item 9 Informe Mensal) cobre ~6 meses de CRI sem aluguel GPA"
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 1510283,
+      "volumeMedio252d": 1999917,
+      "diasParaSair": {
+        "10mil": 0.03,
+        "100mil": 0.33,
+        "500mil": 1.66,
+        "1milhao": 3.31,
+        "10milhoes": 33.1
+      },
+      "leitura": "Liquidez razoável. Volume médio diário R$ 1.5 Mi (21d) suporta posições até R$ 500k em 1-2 dias; lotes de R$ 1 Mi exigem 3-4 dias para liquidar sem mover preço. Adequada para investidor PF, marginal para fundos institucionais.",
+      "fonte": "data/fiis/rbva11/historico_precos.csv (yfinance, semanal)"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.1097,
+        "sigma24m": 0.1671,
+        "drawdownMax24m": -0.0787,
+        "drawdownMaxData": "2026-03",
+        "tempoRecuperacao": null,
+        "observacao": "Sigma calculado removendo retornos atravessando desdobramentos jun/2019 e mai/2025 (filtro: ratio 0.5-2.0)"
+      },
+      "dividendo": {
+        "cv12m": 0.0,
+        "cv24m": 0.05,
+        "minDps24m": 0.09,
+        "maxDps24m": 0.1,
+        "amplitudeRelativa": 0.1111,
+        "observacao": "DPS ajustado para base atual de cotas (156.143.050) — descontados desdobramentos"
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "tijolo_renda_urbana",
+      "pares": [
+        {
+          "ticker": "GARE11",
+          "sobreposicaoEstimada": 0.55,
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
+          "leitura": "Mesmo subsegmento (renda urbana single-tenant); GARE11 mais focado em sale-leaseback de varejo. Tese sobreposta."
+        },
+        {
+          "ticker": "HGRU11",
+          "sobreposicaoEstimada": 0.5,
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
+          "leitura": "Mesmo subsegmento — varejo de rua e BTS. HGRU11 com escala maior; RBVA mais concentrado em capitais SP/RJ."
+        },
+        {
+          "ticker": "ALZR11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "tipologia"
+          ],
+          "leitura": "Renda urbana com built-to-suit; ALZR mais logístico/industrial misturado, menos varejo puro."
+        },
+        {
+          "ticker": "BBRC11",
+          "sobreposicaoEstimada": 0.35,
+          "tipoSobreposicao": [
+            "perfil_inquilinos"
+          ],
+          "leitura": "BBRC é monoinquilino Banco do Brasil (agências) — sobreposição via setor bancário (Caixa+Santander = 34% RBVA)"
+        },
+        {
+          "ticker": "BNFS11",
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "perfil_inquilinos"
+          ],
+          "leitura": "BNFS = agências Banco do Brasil. Mesma exposição estrutural a redução de agências bancárias."
+        }
+      ],
+      "diversificacaoReal": "Para investidor com posição em GARE11 ou HGRU11, RBVA11 traz diversificação parcial — complementa com mix de educação (Cogna) e atacarejo (Assaí) que pares têm pouco. Para quem já tem BBRC11/BNFS11 (agências bancárias puras), RBVA reduz a concentração em bancos pelo mix de varejo. Não é diversificação se já tem GARE11 ou HGRU11 grande."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic em queda + recuperação extrajudicial GPA bem-sucedida",
+        "descricao": "Selic 14,75%→11% projetada para fim de 2026 reprecifica FIIs descontados. Se GPA conclui RE mantendo aluguéis, RBVA captura upside via P/VP em direção a 1,0 (~+7%) e DY se mantém estável.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Aquisições da 6ª emissão com cap rate ≥ 11%",
+        "descricao": "3 ativos prioritários em curso (R$ 90 Mi, 12,5% no top da lista). Concretização melhora DPS sustentável e DY do fundo, deslocando guidance para R$ 0,10-0,11 em 12 meses.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Reposicionamento dos imóveis vagos premium",
+        "descricao": "Av. Paulista 436 (R$ 68,5 Mi, vago, AAA) e Duque de Caxias em estágio avançado de minuta. Locação devolveria ~0,5% à receita do fundo.",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "GPA pede recuperação judicial (não extrajudicial)",
+        "descricao": "Migração de RE para RJ implica suspensão temporária de pagamentos e renegociação coletiva. RBVA enfrentaria pressão dupla: redução de aluguel + necessidade de cobrir CRI com caixa.",
+        "probabilidadeRelativa": "baixa"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Saídas adicionais de Caixa e Santander aceleram",
+        "descricao": "Após Mutinga e Mateo Bei, mais agências bancárias podem notificar saída em 2026-2027. Vacância poderia chegar a 12-15% antes que reposicionamento absorva — pressão sobre DPS.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Cenário macro adverso reverte ciclo de queda Selic",
+        "descricao": "Pressão fiscal ou eventos geopolíticos podem forçar Selic a permanecer alta. FIIs descontados ficariam descontados por mais tempo — DY 10,9% atrativo mas sem reprecificação de capital.",
+        "probabilidadeRelativa": "media"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "renda_mensal",
+        "tax_shield",
+        "diversificacao_setorial"
+      ],
+      "horizonte": "medio_longo",
+      "perfil": "moderado",
+      "carteiraTipica": "Posição núcleo de até 8% da carteira de FIIs para investidor que busca renda mensal estável em tijolo de varejo",
+      "perfisExemplo": [
+        "Investidor PF que valoriza DPS previsível (R$ 0,09/mês há 18 meses) e tolera risco de inquilino monitorável",
+        "Carteira balanceada que já tem logística HG e papel HG, e quer adicionar varejo de rua sem montar mais de 2-3 FIIs do setor",
+        "Aposentado que aceita acompanhar trimestralmente a evolução do GPA via Relatório Gerencial — não precisa de gestão diária"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Quem busca crescimento agressivo de DPS — RBVA é regime estável, sem trajetória ascendente prevista",
+        "Investidor que não tolera risco de evento de crédito de inquilino — GPA é risco real, não hipotético",
+        "Quem precisa de hedge inflacionário puro IPCA — 33% da receita é IGP-M (mais volátil)",
+        "Quem já tem GARE11 ou HGRU11 em peso > 10% da carteira — sobreposição relevante de tipologia",
+        "Investidor que precisa sair em < 1 semana de posição > R$ 1 Mi — liquidez R$ 2 Mi/dia limita janela"
+      ]
+    }
+  },
+  "dividendos": {
+    "schema": "v2.1",
+    "dataAnalise": "2026-04-26",
+    "ultimoDPS": 0.09,
+    "ultimoMes": "2026-03",
+    "ultimaDataPagamento": "2026-04-15",
+    "dyAnualizado": 10.81,
+    "padraoSazonal": {
+      "tem": false,
+      "observacao": "DPS flat em R$ 0,09 desde nov/2024 (regime estável após split mai/2025). Não há sazonalidade observável — fundo segue política de linearização de distribuição declarada pelo gestor."
+    },
+    "historico": [
+      {
+        "data": "2016-12",
+        "dividendo": 0.0866,
+        "dataPagamento": "2017-01-13",
+        "docId": "7837",
+        "dividendoOriginal": 8.66,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 3507300.0,
+        "caixaLiquidoFimMes": 7260942.77
+      },
+      {
+        "data": "2017-01",
+        "dividendo": 0.0883,
+        "dataPagamento": "2017-02-15",
+        "docId": "8690",
+        "dividendoOriginal": 8.83,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-02",
+        "dividendo": 0.0883,
+        "dataPagamento": "2017-03-15",
+        "docId": "9800",
+        "dividendoOriginal": 8.83,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-03",
+        "dividendo": 0.088,
+        "dataPagamento": "2017-04-13",
+        "docId": "11066",
+        "dividendoOriginal": 8.8,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 3564000.0,
+        "caixaLiquidoFimMes": 2992024.18
+      },
+      {
+        "data": "2017-04",
+        "dividendo": 0.0854,
+        "dataPagamento": "2017-05-15",
+        "docId": "12277",
+        "dividendoOriginal": 8.54,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-05",
+        "dividendo": 0.0854,
+        "dataPagamento": "2017-06-14",
+        "docId": "13692",
+        "dividendoOriginal": 8.54,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-06",
+        "dividendo": 0.0854,
+        "dataPagamento": "2017-07-14",
+        "docId": "14487",
+        "dividendoOriginal": 8.54,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 3458700.0,
+        "caixaLiquidoFimMes": 9470864.79
+      },
+      {
+        "data": "2017-07",
+        "dividendo": 0.0826,
+        "dataPagamento": "2017-08-15",
+        "docId": "15287",
+        "dividendoOriginal": 8.26,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-08",
+        "dividendo": 0.0798,
+        "dataPagamento": "2017-09-15",
+        "docId": "16447",
+        "dividendoOriginal": 7.98,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-09",
+        "dividendo": 0.077,
+        "dataPagamento": "2017-10-13",
+        "docId": "17395",
+        "dividendoOriginal": 7.7,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 3118500.0,
+        "caixaLiquidoFimMes": 4362513.28
+      },
+      {
+        "data": "2017-10",
+        "dividendo": 0.077,
+        "dataPagamento": "2017-11-14",
+        "docId": "18535",
+        "dividendoOriginal": 7.7,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-11",
+        "dividendo": 0.0744,
+        "dataPagamento": "2017-12-15",
+        "docId": "19749",
+        "dividendoOriginal": 7.44,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2017-12",
+        "dividendo": 0.0844,
+        "dataPagamento": "2018-01-15",
+        "docId": "20845",
+        "dividendoOriginal": 8.44,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 3418200.0,
+        "caixaLiquidoFimMes": 3144288.11
+      },
+      {
+        "data": "2018-01",
+        "dividendo": 0.0728,
+        "dataPagamento": "2018-02-15",
+        "docId": "21882",
+        "dividendoOriginal": 7.28,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-02",
+        "dividendo": 0.0721,
+        "dataPagamento": "2018-03-15",
+        "docId": "23151",
+        "dividendoOriginal": 7.21,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-03",
+        "dividendo": 0.0725,
+        "dataPagamento": "2018-04-13",
+        "docId": "24523",
+        "dividendoOriginal": 7.25,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 2936250.0,
+        "caixaLiquidoFimMes": 555499.75
+      },
+      {
+        "data": "2018-04",
+        "dividendo": 0.0725,
+        "dataPagamento": "2018-05-15",
+        "docId": "25993",
+        "dividendoOriginal": 7.25,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-05",
+        "dividendo": 0.0725,
+        "dataPagamento": "2018-06-15",
+        "docId": "27526",
+        "dividendoOriginal": 7.25,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-06",
+        "dividendo": 0.0725,
+        "dataPagamento": "2018-07-13",
+        "docId": "28614",
+        "dividendoOriginal": 7.25,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 2936250.0,
+        "caixaLiquidoFimMes": 6559587.78
+      },
+      {
+        "data": "2018-07",
+        "dividendo": 0.0725,
+        "dataPagamento": "2018-08-15",
+        "docId": "29899",
+        "dividendoOriginal": 7.25,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-08",
+        "dividendo": 0.0725,
+        "dataPagamento": "2018-09-14",
+        "docId": "31563",
+        "dividendoOriginal": 7.25,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-09",
+        "dividendo": 0.07,
+        "dataPagamento": "2018-10-15",
+        "docId": "33044",
+        "dividendoOriginal": 7.0,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 2835000.0,
+        "caixaLiquidoFimMes": 59952556.0
+      },
+      {
+        "data": "2018-10",
+        "dividendo": 0.07,
+        "dataPagamento": "2018-11-14",
+        "docId": "34750",
+        "dividendoOriginal": 7.0,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-11",
+        "dividendo": 0.07,
+        "dataPagamento": "2018-12-14",
+        "docId": "36559",
+        "dividendoOriginal": 7.0,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2018-12",
+        "dividendo": 0.07,
+        "dataPagamento": "2019-01-15",
+        "docId": "38300",
+        "dividendoOriginal": 7.0,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 2835000.0,
+        "caixaLiquidoFimMes": 59268076.95
+      },
+      {
+        "data": "2019-01",
+        "dividendo": 0.075,
+        "dataPagamento": "2019-02-15",
+        "docId": "40387",
+        "dividendoOriginal": 7.5,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2019-02",
+        "dividendo": 0.085,
+        "dataPagamento": "2019-03-15",
+        "docId": "42721",
+        "dividendoOriginal": 8.5,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2019-03",
+        "dividendo": 0.085,
+        "dataPagamento": "2019-04-15",
+        "docId": "44911",
+        "dividendoOriginal": 8.5,
+        "fatorAjuste": 100,
+        "cotas": 405000,
+        "distribuicao": 3442500.0,
+        "caixaLiquidoFimMes": 62973197.91
+      },
+      {
+        "data": "2019-04",
+        "dividendo": 0.085,
+        "dataPagamento": "2019-05-15",
+        "docId": "47577",
+        "dividendoOriginal": 8.5,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2019-05",
+        "dividendo": 0.09,
+        "dataPagamento": "2016-06-14",
+        "docId": "50476",
+        "dividendoOriginal": 9.0,
+        "fatorAjuste": 100
+      },
+      {
+        "data": "2019-06",
+        "dividendo": 0.149,
+        "dataPagamento": "2016-07-15",
+        "docId": "52464",
+        "dividendoOriginal": 1.49,
+        "fatorAjuste": 10,
+        "cotas": 405000,
+        "distribuicao": 603450.0,
+        "caixaLiquidoFimMes": 35139625.08
+      },
+      {
+        "data": "2019-07",
+        "dividendo": 0.09,
+        "dataPagamento": "2019-08-15",
+        "docId": "55025",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2019-08",
+        "dividendo": 0.09,
+        "dataPagamento": "2019-09-13",
+        "docId": "57970",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2019-09",
+        "dividendo": 0.09,
+        "dataPagamento": "2019-10-15",
+        "docId": "60440",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10,
+        "cotas": 5721310,
+        "distribuicao": 5149179.0,
+        "caixaLiquidoFimMes": 187764072.39
+      },
+      {
+        "data": "2019-10",
+        "dividendo": 0.09,
+        "dataPagamento": "2019-11-14",
+        "docId": "64560",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2019-11",
+        "dividendo": 0.09,
+        "dataPagamento": "2019-12-13",
+        "docId": "69481",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2019-12",
+        "dividendo": 0.141,
+        "dataPagamento": "2020-01-15",
+        "docId": "74232",
+        "dividendoOriginal": 1.41,
+        "fatorAjuste": 10,
+        "cotas": 5721310,
+        "distribuicao": 8067047.1,
+        "caixaLiquidoFimMes": 28093883.33
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 0.09,
+        "dataPagamento": "2020-02-14",
+        "docId": "79202",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 0.09,
+        "dataPagamento": "2020-03-13",
+        "docId": "83688",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.08,
+        "dataPagamento": "2020-04-15",
+        "docId": "88941",
+        "dividendoOriginal": 0.8,
+        "fatorAjuste": 10,
+        "cotas": 5721310,
+        "distribuicao": 4577048.0,
+        "caixaLiquidoFimMes": 8720733.55
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-05-15",
+        "docId": "93476",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-06-15",
+        "docId": "98434",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-07-15",
+        "docId": "103895",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10,
+        "cotas": 10693931,
+        "distribuicao": 9089841.35,
+        "caixaLiquidoFimMes": 18749338.68
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-08-14",
+        "docId": "109545",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-09-15",
+        "docId": "114623",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-10-15",
+        "docId": "119300",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10,
+        "cotas": 10693931,
+        "distribuicao": 9089841.35,
+        "caixaLiquidoFimMes": 6404781.68
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 0.085,
+        "dataPagamento": "2020-11-13",
+        "docId": "124294",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 0.095,
+        "dataPagamento": "2020-12-15",
+        "docId": "129407",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 0.095,
+        "dataPagamento": "2021-01-15",
+        "docId": "136244",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10,
+        "cotas": 10693931,
+        "distribuicao": 10159234.45,
+        "caixaLiquidoFimMes": 48087604.41
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.095,
+        "dataPagamento": "2021-02-12",
+        "docId": "142903",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 0.085,
+        "dataPagamento": "2021-03-15",
+        "docId": "151602",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 0.085,
+        "dataPagamento": "2021-04-15",
+        "docId": "159738",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 9849969.15,
+        "caixaLiquidoFimMes": 3775128.61
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 0.085,
+        "dataPagamento": "2021-05-14",
+        "docId": "169425",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.085,
+        "dataPagamento": "2021-06-15",
+        "docId": "180628",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 0.124,
+        "dataPagamento": "2021-07-15",
+        "docId": "190053",
+        "dividendoOriginal": 1.24,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 14369366.76,
+        "caixaLiquidoFimMes": 40660427.96
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 0.085,
+        "dataPagamento": "2021-08-13",
+        "docId": "199085",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 0.085,
+        "dataPagamento": "2021-09-15",
+        "docId": "210610",
+        "dividendoOriginal": 0.85,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 0.087,
+        "dataPagamento": "2021-10-15",
+        "docId": "219915",
+        "dividendoOriginal": 0.87,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 10081733.13,
+        "caixaLiquidoFimMes": 3111122.0
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 0.099,
+        "dataPagamento": "2021-11-12",
+        "docId": "229942",
+        "dividendoOriginal": 0.99,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 0.091,
+        "dataPagamento": "2021-12-15",
+        "docId": "241617",
+        "dividendoOriginal": 0.91,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 0.091,
+        "dataPagamento": "2022-01-14",
+        "docId": "251769",
+        "dividendoOriginal": 0.91,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 10545261.09,
+        "caixaLiquidoFimMes": 18448259.94
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 0.092,
+        "dataPagamento": "2022-02-15",
+        "docId": "261326",
+        "dividendoOriginal": 0.92,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 0.092,
+        "dataPagamento": "2022-03-15",
+        "docId": "272661",
+        "dividendoOriginal": 0.92,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 0.092,
+        "dataPagamento": "2022-04-14",
+        "docId": "283871",
+        "dividendoOriginal": 0.92,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 10661143.08,
+        "caixaLiquidoFimMes": 17304627.28
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 0.092,
+        "dataPagamento": "2022-05-13",
+        "docId": "296535",
+        "dividendoOriginal": 0.92,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 0.092,
+        "dataPagamento": "2022-06-15",
+        "docId": "310575",
+        "dividendoOriginal": 0.92,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 0.11,
+        "dataPagamento": "2022-07-15",
+        "docId": "321004",
+        "dividendoOriginal": 1.1,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 12747018.9,
+        "caixaLiquidoFimMes": 28427566.34
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 0.1,
+        "dataPagamento": "2022-08-15",
+        "docId": "331922",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.102,
+        "dataPagamento": "2022-09-15",
+        "docId": "346525",
+        "dividendoOriginal": 1.02,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.107,
+        "dataPagamento": "2022-10-14",
+        "docId": "358713",
+        "dividendoOriginal": 1.07,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 12399372.93,
+        "caixaLiquidoFimMes": 10062883.41
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.107,
+        "dataPagamento": "2022-11-14",
+        "docId": "370425",
+        "dividendoOriginal": 1.07,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.107,
+        "dataPagamento": "2022-12-15",
+        "docId": "383822",
+        "dividendoOriginal": 1.07,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.107,
+        "dataPagamento": "2023-01-13",
+        "docId": "396187",
+        "dividendoOriginal": 1.07,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 12399372.93,
+        "caixaLiquidoFimMes": 8809218.04
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.095,
+        "dataPagamento": "2023-02-15",
+        "docId": "407907",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.095,
+        "dataPagamento": "2023-03-15",
+        "docId": "422705",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 0.095,
+        "dataPagamento": "2023-04-14",
+        "docId": "438206",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 0.095,
+        "dataPagamento": "2023-05-15",
+        "docId": "453647",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 0.095,
+        "dataPagamento": "2023-06-15",
+        "docId": "472236",
+        "dividendoOriginal": 0.95,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.1,
+        "dataPagamento": "2023-07-14",
+        "docId": "485667",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 11588199.0,
+        "caixaLiquidoFimMes": 6952339.88
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.1,
+        "dataPagamento": "2023-08-15",
+        "docId": "498935",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.1,
+        "dataPagamento": "2023-09-15",
+        "docId": "515612",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.1,
+        "dataPagamento": "2023-10-16",
+        "docId": "529646",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 11588199.0,
+        "caixaLiquidoFimMes": 6962234.51
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.1,
+        "dataPagamento": "2023-11-14",
+        "docId": "544352",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.1,
+        "dataPagamento": "2023-12-15",
+        "docId": "562094",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-01-15",
+        "docId": "577188",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10,
+        "cotas": 11588199,
+        "distribuicao": 11588199.0,
+        "caixaLiquidoFimMes": 72145495.99
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-02-15",
+        "docId": "593415",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-03-15",
+        "docId": "612198",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-04-15",
+        "docId": "630218",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10,
+        "cotas": 12485334,
+        "distribuicao": 12485334.0,
+        "caixaLiquidoFimMes": 43110548.93
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-05-08",
+        "docId": "650546",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-06-14",
+        "docId": "672966",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-07-15",
+        "docId": "689429",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10,
+        "cotas": 12485334,
+        "distribuicao": 12485334.0,
+        "caixaLiquidoFimMes": 74144768.68
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-08-15",
+        "docId": "709131",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-09-13",
+        "docId": "730299",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-10-15",
+        "docId": "749248",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10,
+        "cotas": 12485334,
+        "distribuicao": 12485334.0,
+        "caixaLiquidoFimMes": 72821173.3
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.1,
+        "dataPagamento": "2024-11-14",
+        "docId": "769640",
+        "dividendoOriginal": 1.0,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.09,
+        "dataPagamento": "2024-12-13",
+        "docId": "792454",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-01-15",
+        "docId": "811016",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10,
+        "cotas": 15614305,
+        "distribuicao": 14052874.5,
+        "caixaLiquidoFimMes": 29786634.79
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-02-14",
+        "docId": "829850",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-03-14",
+        "docId": "851113",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-04-15",
+        "docId": "869038",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10,
+        "cotas": 15614305,
+        "distribuicao": 14052874.5,
+        "caixaLiquidoFimMes": 9126668.19
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-05-15",
+        "docId": "890265",
+        "dividendoOriginal": 0.9,
+        "fatorAjuste": 10
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-06-13",
+        "docId": "914821"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-07-15",
+        "docId": "935853",
+        "cotas": 156143050,
+        "distribuicao": 14052874.5,
+        "caixaLiquidoFimMes": 14024550.8
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-08-15",
+        "docId": "957540"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-09-15",
+        "docId": "980489"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-10-15",
+        "docId": "1002671",
+        "cotas": 156143050,
+        "distribuicao": 14052874.5,
+        "caixaLiquidoFimMes": 36909718.12
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-11-14",
+        "docId": "1025754"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.09,
+        "dataPagamento": "2025-12-15",
+        "docId": "1049919"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.09,
+        "dataPagamento": "2026-01-15",
+        "docId": "1073245",
+        "cotas": 156143050,
+        "distribuicao": 14052874.5,
+        "caixaLiquidoFimMes": 28526852.4
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.09,
+        "dataPagamento": "2026-02-13",
+        "docId": "1097746"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.09,
+        "dataPagamento": "2026-03-13",
+        "docId": "1124084"
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.09,
+        "dataPagamento": "2026-04-15",
+        "docId": "1150444",
+        "cotas": 156143050,
+        "distribuicao": 14052874.5,
+        "caixaLiquidoFimMes": 40992133.25
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2016-2",
+        "label": "2º Sem 2016",
+        "ano": 2016,
+        "metade": 2,
+        "completo": false,
+        "mesesContados": 1,
+        "dpsTotal": 0.0866,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2017-1",
+        "label": "1º Sem 2017",
+        "ano": 2017,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.5208,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2017-2",
+        "label": "2º Sem 2017",
+        "ano": 2017,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.4752,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2018-1",
+        "label": "1º Sem 2018",
+        "ano": 2018,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.4349,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2018-2",
+        "label": "2º Sem 2018",
+        "ano": 2018,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.425,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2019-1",
+        "label": "1º Sem 2019",
+        "ano": 2019,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.569,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2019-2",
+        "label": "2º Sem 2019",
+        "ano": 2019,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.591,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2020-1",
+        "label": "1º Sem 2020",
+        "ano": 2020,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.515,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2020-2",
+        "label": "2º Sem 2020",
+        "ano": 2020,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.53,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2021-1",
+        "label": "1º Sem 2021",
+        "ano": 2021,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.559,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2021-2",
+        "label": "2º Sem 2021",
+        "ano": 2021,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.538,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2022-1",
+        "label": "1º Sem 2022",
+        "ano": 2022,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.57,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2022-2",
+        "label": "2º Sem 2022",
+        "ano": 2022,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.63,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2023-1",
+        "label": "1º Sem 2023",
+        "ano": 2023,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.575,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2023-2",
+        "label": "2º Sem 2023",
+        "ano": 2023,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.6,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2024-1",
+        "label": "1º Sem 2024",
+        "ano": 2024,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.6,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2024-2",
+        "label": "2º Sem 2024",
+        "ano": 2024,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.58,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.54,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "dpsTotal": 0.54,
+        "interpretacao": "estavel"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "dpsTotal": 0.27,
+        "interpretacao": "estavel"
+      }
+    ],
+    "sustentabilidade": {
+      "schema": "v2",
+      "dividendoStatus": "sustentavel_longo",
+      "dividendoLabel": "Sustentável no longo prazo (resultado > distribuição)",
+      "dividendoCor": "emerald",
+      "horizonte": "12+ meses sem ponto de inflexão visível",
+      "status": "fazendo_caixa",
+      "cor": "emerald",
+      "payoutMedio12m": 0.88,
+      "caixaLiquido": 40992133.25,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 0,31 Mi disponibilidades + R$ 40,68 Mi em fundos de RF (item 9 Informe Mensal mar/2026)",
+      "resultadoAcumuladoRetido": null,
+      "resultadoAcumuladoNota": null,
+      "queimaMediaMensal": 0,
+      "queimaPorCota": 0,
+      "coberturaMeses": null,
+      "tendencia": "Resultado em regime de caixa em mar/2026 foi R$ 0,100/cota vs distribuição R$ 0,090/cota (payout 90%). Linearização da distribuição mantém R$ 0,09 com reserva acumulando no semestre.",
+      "leitura": "<p>O dividendo de R$ 0,09/mês é <strong class=\"text-emerald-400\">estruturalmente sustentável</strong> — no acumulado de jan-mar/2026 o resultado por cota foi R$ 0,306 vs distribuição R$ 0,270, gerando reserva de R$ 0,036/cota. Fundo está fazendo caixa, e a linearização indica que o gestor segura resultado acima do guidance para distribuir em meses pontuais ou usar em aquisições. Caixa líquido de R$ 41 Mi (item 9) cobre vários meses de DPS sem geração nenhuma.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2025-05",
+        "dataExata": "2025-05-09",
+        "titulo": "Desdobramento de cotas 1:10",
+        "tipo": "outro",
+        "descricao": "<p>Desdobramento histórico (segundo do fundo, após o de 2019). Base de cotas passou de ~15,6 Mi para 156,1 Mi. DPS por cota ajustou de R$ 0,90 para R$ 0,09. <strong>Sem impacto no rendimento total recebido pelo cotista</strong> — apenas mudança de base.</p>",
+        "impactoDividendo": "Neutro em valor absoluto; aumenta acessibilidade da cota",
+        "severidade": "neutro",
+        "fonte": "Demonstrações Financeiras 2025 (ID 1150890)",
+        "docId": "1150890"
+      },
+      {
+        "data": "2024-11",
+        "dataExata": "2024-11-15",
+        "titulo": "Redução de DPS de R$ 1,00 para R$ 0,90 (base pré-split)",
+        "tipo": "outro",
+        "descricao": "<p>Em nov/2024 o gestor reduziu DPS de R$ 1,00 para R$ 0,90 (em base pré-split — equivalente a R$ 0,10 → R$ 0,09 na base atual). Movimento técnico de linearização semestral, não corte estrutural.</p>",
+        "impactoDividendo": "-R$ 0,01/cota mensal (na base atual)",
+        "severidade": "negativo",
+        "fonte": "Rendimentos nov/2024 (ID 792454)",
+        "docId": "792454"
+      },
+      {
+        "data": "2024-10",
+        "dataExata": "2024-10-15",
+        "titulo": "Conclusão da 5ª Emissão — Incorporação RBED11",
+        "tipo": "emissao",
+        "descricao": "<p>5ª emissão de cotas viabiliza incorporação do FII Rio Bravo Educacional (RBED11). RBVA passa a ter 7 imóveis Cogna/Kroton (educação superior) — diversificação setorial relevante. <strong>+R$ 470 Mi de PL</strong>.</p>",
+        "impactoDividendo": "Positivo no longo prazo (cap rate dos imóveis educacionais ~10-11%)",
+        "severidade": "positivo",
+        "fonte": "Comunicado out/2024 (ID 765454)",
+        "docId": "765454"
+      },
+      {
+        "data": "2025-12",
+        "dataExata": "2025-12-31",
+        "titulo": "Reavaliação patrimonial Colliers (laudo dez/2025)",
+        "tipo": "outro",
+        "descricao": "<p>Avaliação independente Colliers em dez/2025 manteve VP/cota próximo a R$ 10,76. Algumas reavaliações negativas (Caixa Senador Queiroz -13%, GPA Rebouças +12%) compensaram-se no agregado. <strong>VP/cota teve queda marginal -0,3% no semestre</strong> de set/2025 a dez/2025.</p>",
+        "impactoDividendo": "Indireto: VP estável reforça P/VP atual",
+        "severidade": "neutro",
+        "fonte": "Informe Anual 2025 (ID 1166886)",
+        "docId": "1166886"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-09",
+        "titulo": "Possível conclusão das 3 aquisições da 6ª Emissão",
+        "tipo": "aumento_sustentavel",
+        "descricao": "<p>3 ativos prioritários totalizando R$ 200 Mi (cap rates 8-12,5%). Concretização agregaria <strong>~R$ 0,01-0,02/cota mensal</strong> ao DPS sustentável.</p>",
+        "impactoDividendo": "+R$ 0,01-0,02/cota se executado",
+        "severidade": "positivo",
+        "certeza": "projetado",
+        "premissa": "Sucesso da 6ª emissão e execução das aquisições conforme plano divulgado no RG mar/2026",
+        "fonte": "Relatório Gerencial mar/2026 (ID 1162247)",
+        "docId": "1162247",
+        "impactoValor": 0.005,
+        "duracaoMeses": null
+      },
+      {
+        "data": "2026-08",
+        "titulo": "Saída do Santander - Mateo Bei (final do aviso prévio)",
+        "tipo": "contrato_revisional",
+        "descricao": "<p>Aviso prévio de 180 dias notificado em fev/2026. Imóvel de 2.059 m² em SP fica vago a partir de ago/2026. <strong>Receita marginal -R$ 30-50 mil/mês</strong> até reposicionamento.</p>",
+        "impactoDividendo": "-R$ 0,001/cota até nova locação",
+        "severidade": "negativo",
+        "certeza": "confirmado",
+        "premissa": "Notificação contratual já em curso conforme RG fev/2026",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1132674)",
+        "docId": "1132674",
+        "impactoValor": -0.002,
+        "duracaoMeses": 12
+      },
+      {
+        "data": "2026-12",
+        "titulo": "Resultado do processo de Recuperação Extrajudicial do GPA",
+        "tipo": "outro",
+        "descricao": "<p>Janela natural para conclusão da RE iniciada em fev/2026. Cenário-base: aluguéis mantidos com pequenos ajustes pontuais. Cenário ruim: redução temporária de aluguéis em 10-20% por janela curta.</p>",
+        "impactoDividendo": "Cenário ruim: -R$ 0,005-0,010/cota em janela curta",
+        "severidade": "negativo",
+        "certeza": "possivel",
+        "premissa": "Processo de RE GPA em curso; assessoria A&M contratada em jan/2026",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1132674)",
+        "docId": "1132674",
+        "impactoValor": 0,
+        "duracaoMeses": null
+      }
+    ],
+    "guidance": {
+      "fonte": "gestor",
+      "periodo": "1S2026",
+      "cobreMeses": 6,
+      "faixaMin": 0.09,
+      "faixaMax": 0.09,
+      "unidade": "R$/cota/mês",
+      "validade": "2026-09-30",
+      "documento": "Relatório Gerencial mar/2026 (ID 1162247) — guidance R$ 0,09 mantido"
+    },
+    "projecaoDy": {
+      "precoReferencia": 9.99,
+      "dyAtual12m": 10.81,
+      "dyProjetado12m": 11.2,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 10.81,
+          "dividendoMes": 0.09,
+          "descricao": "Manutenção do DPS R$ 0,09 mensal por todo 2026 — cenário consistente com guidance e linearização."
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 12.01,
+          "dividendoMes": 0.1,
+          "descricao": "Concretização da 6ª emissão com aquisições cap rate 11%+, reposicionamento de 3-4 imóveis vagos. DPS pode subir gradualmente para R$ 0,095-0,10."
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 9.61,
+          "dividendoMes": 0.08,
+          "descricao": "GPA com redução temporária de aluguel + 2-3 saídas adicionais de bancos sem reposicionamento rápido. Pressão sobre DPS para R$ 0,08."
+        }
+      ],
+      "retornoTotal12m": 12.5,
+      "premissas": [
+        "DPS R$ 0,09 sustentado pelo guidance do gestor para 1S2026",
+        "Selic 14,75%→11% projetada (BCB Focus) reprecifica FIIs descontados marginalmente",
+        "Vacância 6,9% reduzindo gradualmente com reposicionamentos em curso",
+        "GPA mantém pagamentos mesmo em cenário de RE (cenário-base)",
+        "6ª emissão precificada perto do VP — diluição limitada"
+      ]
+    },
+    "sintese": {
+      "tendencia": "estavel_com_upside_marginal",
+      "tendenciaLabel": "DPS estável em R$ 0,09 com upside marginal pela 6ª emissão",
+      "cor": "emerald",
+      "direcao": "DPS R$ 0,09/mês é sustentável — fundo está fazendo caixa (payout 88% no 1T26) e tem reserva acumulada. Upside leve possível com aquisições da 6ª emissão.",
+      "pontosPositivos": [
+        {
+          "texto": "Resultado por cota R$ 0,306 vs distribuição R$ 0,270 no 1T26 — fazendo caixa",
+          "peso": "alto"
+        },
+        {
+          "texto": "DPS R$ 0,09 estável há 18 meses com guidance mantido para 1S2026",
+          "peso": "alto"
+        },
+        {
+          "texto": "Caixa líquido R$ 41 Mi cobre múltiplos meses de DPS sem geração",
+          "peso": "medio"
+        },
+        {
+          "texto": "6ª emissão pode adicionar +R$ 0,01-0,02/cota se executada",
+          "peso": "medio"
+        },
+        {
+          "texto": "67% da receita em IPCA com correção monetária preservada",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "GPA em recuperação extrajudicial — 17% da receita em risco",
+          "peso": "alto"
+        },
+        {
+          "texto": "Notificação Santander Mateo Bei + distrato Caixa Mutinga em curso",
+          "peso": "medio"
+        },
+        {
+          "texto": "Vacância 6,9% com 13 imóveis vagos pesando em despesas",
+          "peso": "medio"
+        },
+        {
+          "texto": "Caixa+Santander 34% da receita em ciclo estrutural de redução",
+          "peso": "medio"
+        }
+      ],
+      "veredicto": "<p>O DPS de R$ 0,09 é <strong class=\"text-emerald-400\">estruturalmente sustentável</strong>: o fundo gerou R$ 0,306/cota no 1T26 vs R$ 0,270 distribuído (payout 88%), com reserva acumulando para distribuição extraordinária ou aquisições. O ponto de monitoramento é o GPA — se o processo de RE concluir mantendo aluguéis (cenário-base), o DPS segue estável; se houver renegociação agressiva, há espaço para queda transitória de R$ 0,01-0,02/cota. <strong>Cenário-base: lateral alta com upside marginal via 6ª emissão</strong>.</p>"
+    },
+    "alertas": [
+      {
+        "texto": "GPA em recuperação extrajudicial — 17% da receita em risco",
+        "severidade": "sev-amber"
+      },
+      {
+        "texto": "Saída Santander Mateo Bei + distrato Caixa Mutinga em curso",
+        "severidade": "sev-amber"
+      },
+      {
+        "texto": "Vacância 6,9% — 13 imóveis vagos em comercialização",
+        "severidade": "sev-amber"
+      }
+    ]
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/rbva11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2019-04-29",
+      "dataFim": "2026-04-24",
+      "fonte": "yfinance:RBVA11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 9.99,
+      "minHistoricoAjustado": {
+        "valor": 7.7,
+        "data": "2025-02-10",
+        "observacao": "Equivalente ao período pós-desdobramento mai/2025; pré-split era R$ 77,00"
+      },
+      "maxHistoricoAjustado": {
+        "valor": 12.68,
+        "data": "2019-05-27",
+        "observacao": "Pré-desdobramento jun/2019 era R$ 126,82"
+      },
+      "observacao": "CSV contém preços históricos não-ajustados; renderer pode ajustar para os splits jun/2019 e mai/2025 (ambos 1:10) para visualização contínua"
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/rbva11/historico_vp.csv",
+      "fonte": "Informes Mensais Estruturados + Relatórios Gerenciais",
+      "ultimoVpCota": 10.69,
+      "ultimoVpData": "2026-03",
+      "observacao": "Pré-desdobramento mai/2025 VP era ~R$ 106,54; equivalente a R$ 10,65 pós-split (estável em 2024-2026)"
+    },
+    "eventosValuation": [
+      {
+        "data": "2025-05-12",
+        "tipo": "outro",
+        "titulo": "Desdobramento de cotas 1:10",
+        "descricao": "<p>Cota passou de ~R$ 90 para ~R$ 9,00. Quantidade de cotas saltou de 15,6 Mi para 156,1 Mi. Sem impacto patrimonial — apenas mudança de base. Aumento de liquidez observado nos meses seguintes.</p>",
+        "impactoVp": -96.21,
+        "impactoPreco": null,
+        "fonte": "Demonstrações Financeiras 2025 (ID 1150890)",
+        "docId": "1150890"
+      },
+      {
+        "data": "2024-11-01",
+        "tipo": "emissao",
+        "titulo": "5ª Emissão — incorporação RBED11",
+        "descricao": "<p>5ª emissão de cotas viabilizando incorporação dos 7 imóveis Cogna/Kroton do RBED11. PL passou de ~R$ 1,3 Bi para ~R$ 1,68 Bi (+R$ 470 Mi). Cap rate dos imóveis educacionais ~10-11%.</p>",
+        "impactoVp": null,
+        "impactoPreco": null,
+        "fonte": "Comunicado 28/10/2024 (ID 765454)",
+        "docId": "765454"
+      },
+      {
+        "data": "2025-12-31",
+        "tipo": "reavaliacao_negativa",
+        "titulo": "Reavaliação Colliers dez/2025",
+        "descricao": "<p>Algumas agências Caixa em vias secundárias com -13% (Senador Queiroz) e -32% (Italianos), mas compensadas por reavaliações positivas em vias premium (GPA Rebouças +12%, Caixa Paes Leme +51%). VP/cota estável em R$ 10,76.</p>",
+        "impactoVp": -0.03,
+        "impactoPreco": null,
+        "fonte": "Informe Anual 2025 (ID 1166886)",
+        "docId": "1166886"
+      },
+      {
+        "data": "2026-02-20",
+        "tipo": "venda_relevante",
+        "titulo": "Venda Santander - São Gonçalo",
+        "descricao": "<p>Venda por R$ 7,0 Mi (5,3% acima do laudo), TIR 10,65% a.a. (CDI + 0,97%). Saída definitiva de São Gonçalo — concentração em capitais consolidadas.</p>",
+        "impactoVp": 0.0,
+        "impactoPreco": null,
+        "fonte": "RG fev/2026 (ID 1132674)",
+        "docId": "1132674"
+      },
+      {
+        "data": "2019-06-04",
+        "tipo": "outro",
+        "titulo": "1º Desdobramento de cotas 1:10",
+        "descricao": "<p>Primeiro desdobramento — cota passou de ~R$ 1.200 para ~R$ 120. Início da gestão ativa Rio Bravo já com cota acessível.</p>",
+        "impactoVp": null,
+        "impactoPreco": null,
+        "fonte": "Informe Mensal jul/2019 (ID 60861)",
+        "docId": "60861"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "tijolo_renda_urbana",
+      "criterioAgrupamento": "FIIs de tijolo com receita majoritariamente de varejo de rua, agências bancárias e BTS single-tenant em capitais brasileiras",
+      "tickers": [
+        "GARE11",
+        "HGRU11",
+        "ALZR11",
+        "BBRC11",
+        "BNFS11",
+        "CPUR11",
+        "CXAG11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.97,
+        "pvpMin": 0.69,
+        "pvpMax": 1.05,
+        "dyMediano": 11.84,
+        "dyMin": 9.42,
+        "dyMax": 18.52,
+        "premioRiscoSegmento": 0.045
+      },
+      "posicaoFundo": {
+        "pvpRanking": "Pouco abaixo da mediana (0,93 vs 0,97 mediano dos pares) — desconto leve",
+        "dyRanking": "Abaixo da mediana (10,8% vs 11,8%) — yield mais conservador, refletindo qualidade do portfólio",
+        "leitura": "<p>RBVA11 fica <strong>quase em linha com a mediana de pares</strong> (P/VP 0,93 vs 0,97). DY ligeiramente abaixo da mediana (10,8% vs 11,8%) reflete o perfil mais conservador — pares com DY > 15% têm tipicamente exposição maior a risco de inquilino ou alavancagem maior. Fundo está <strong>precificado conforme qualidade</strong>, sem distorção positiva ou negativa.</p>"
+      },
+      "statusClassificacao": "proposto",
+      "observacaoStatus": "RBVA11 não consta em data/pares_subsegmento.json — proposta de classificação como tijolo_renda_urbana, dado o perfil idêntico aos pares HGRU11/GARE11/ALZR11 (varejo de rua + agências + BTS single-tenant)"
+    },
+    "pvp": {
+      "valor": "0,93",
+      "descricao": "<p>P/VP de 0,93 representa desconto leve de 7% sobre o VP/cota de R$ 10,69. Em linha com pares de renda urbana (mediano 0,97).</p>",
+      "detalhes": [
+        {
+          "label": "Cotação atual",
+          "valor": "R$ 9.99"
+        },
+        {
+          "label": "VP/cota",
+          "valor": "R$ 10,69 (mar/2026)"
+        },
+        {
+          "label": "P/VP fundo",
+          "valor": "0,93"
+        },
+        {
+          "label": "P/VP mediano pares",
+          "valor": "0,97 (tijolo renda urbana)"
+        },
+        {
+          "label": "Faixa pares",
+          "valor": "0,69 - 1,05"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "10,81% - 14,75% = -3,94pp vs Selic; +6,31pp vs Selic projetada (11,0%)",
+      "label": "Spread negativo vs Selic atual; positivo vs projeção 12m",
+      "cor": "amber",
+      "descricao": "<p>DY 10,81% atual está <strong>abaixo da Selic 14,75%</strong> — fundo de tijolo HG normalmente entrega menos que CDI no curto prazo. Vs Selic projetada para fim de 2026 (11%), oferece spread positivo de ~0,8 pp para o investidor PF (com vantagem de isenção de IR).</p>",
+      "detalhe": "Para PF: DY isento equivale a renda fixa bruta de ~12,7% (15% IR), maior que Selic projetada"
+    },
+    "precoJustoMercado": {
+      "valor": 9.28,
+      "faixa": [
+        8.63,
+        9.93
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 9.99,
+        "diferencaPct": -7.08,
+        "leitura": "O preço justo modelado é R$ 9.28 (faixa R$ 8.63-9.93). Cotação atual R$ 9.99 está +7.6% vs preço justo — fundo levemente sobreavaliado, dentro da faixa de incerteza do modelo. Sem janela de entrada agressiva."
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio",
+          "peso": 0.3,
+          "preco": 5.61,
+          "calculo": "DPS sustentável anual R$ 1.08 ÷ (Selic 14,75% + prêmio 4,5% renda urbana) = R$ 5.61",
+          "racional": "Componente macro com peso reduzido para 0,30 — Selic atual altíssima 'penaliza' fundos defensivos no modelo, mas com Selic projetada 11% para fim de 2026, esse componente sobe naturalmente."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.35,
+          "preco": 10.37,
+          "calculo": "VP/cota R$ 10,69 × P/VP mediano pares 0,97 = R$ 10.37",
+          "racional": "Pares: GARE11, HGRU11, ALZR11, BBRC11, BNFS11, CPUR11, CXAG11. Subsegmento tijolo_renda_urbana com 7 tickers — base estatística sólida."
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.35,
+          "preco": 9.12,
+          "calculo": "DPS sustentável anual R$ 1,08 ÷ DY mediano pares 11,84% = R$ 9.12",
+          "racional": "DY mediano dos pares ajusta automaticamente para o nível de risco do segmento — peso elevado 0,35 reflete qualidade desse comparativo."
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 1.091,
+        "score": 0.805,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.7,
+            "racional": "Rio Bravo: top-10 brasileira mas não top-3 (Pátria/Kinea/HGCH). Track record sólido em FIIs múltiplos."
+          },
+          {
+            "nome": "Vacância",
+            "peso": 0.25,
+            "score": 0.77,
+            "racional": "Vacância 6,9% — 1 - 6,9/30 = 0,77. Razoável para fundo em ciclo de transformação setorial."
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 0.78,
+            "racional": "LTV 10,85% — 1 - 10,85/50 = 0,78. Estrutura casada com aluguéis GPA mitiga risco."
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.2,
+            "score": 0.85,
+            "racional": "CV12m 0%, DPS R$ 0,09 estável há 18 meses. Penalizado moderadamente pelo CV24m elevado por causa do split."
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.15,
+            "score": 1.0,
+            "racional": "sustentavel_longo: payout 88% no 1T26, fundo fazendo caixa, sem ponto de inflexão visível."
+          }
+        ]
+      },
+      "explicacao": "<p>O modelo entrega <strong>preço justo R$ 9,28</strong> (faixa R$ 8,63-9,93) para cotação atual R$ 9,99 — fundo levemente sobreavaliado em ~7%, dentro da faixa de erro do modelo. O componente que mais 'puxa para baixo' é o A1 (DY-alvo Selic + prêmio = 19,25% → preço R$ 5,61), reflexo da Selic atual altíssima 14,75%; quando Selic cair para 11% projetado, A1 sobe para R$ 7,28 e o preço justo composto sobe para ~R$ 9,80, eliminando o spread negativo.</p><p>O fator de qualidade (1,09) já reconhece DPS estável e alavancagem casada — não há muito espaço para upside via melhoria de qualidade. <strong>Tese de entrada: aguardar queda da Selic para reprecificação</strong>; tese de saída: improvável no curto prazo dado preço já em linha com pares.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 10.2,
+        "faixa": [
+          9.5,
+          10.6
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Resultado da RE GPA (cenário-base mantém aluguéis)",
+            "data": "2026-09",
+            "impactoEsperado": "Removendo overhang, P/VP pode subir para 1,0",
+            "fonte": "RG fev/2026",
+            "docId": "1132674"
+          },
+          {
+            "evento": "Conclusão das aquisições da 6ª emissão",
+            "data": "2026-08",
+            "impactoEsperado": "+R$ 0,01-0,02/cota mensal",
+            "fonte": "RG mar/2026",
+            "docId": "1162247"
+          },
+          {
+            "evento": "Início do ciclo de queda da Selic",
+            "data": "2026-06",
+            "impactoEsperado": "Reprecificação leve (+3-5%) de FIIs descontados",
+            "fonte": "BCB Focus / curva DI"
+          }
+        ],
+        "racional": "<p>Curto prazo é dominado por catalisadores próprios — execução da 6ª emissão e desfecho do GPA. Selic começando a cair (mar/2026 já precificado) sustenta tese de reprecificação leve para próximo do VP.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 11.3,
+        "faixa": [
+          10.4,
+          12.2
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Selic projetada 11% para fim de 2026 → estabilização em 9-10% em 2027",
+            "data": "2027-12",
+            "impactoEsperado": "P/VP migra para 1,05-1,10 (média histórica do segmento)",
+            "fonte": "BCB Focus + curva DI"
+          },
+          {
+            "evento": "Reposicionamento total dos 13 imóveis vagos atuais",
+            "data": "2027-06",
+            "impactoEsperado": "Vacância <3%, DPS R$ 0,10-0,11",
+            "fonte": "RG mar/2026",
+            "docId": "1162247"
+          },
+          {
+            "evento": "Ciclo de venda de 5-7 ativos não-core (continuação da estratégia)",
+            "data": "2027-12",
+            "impactoEsperado": "Reciclagem com TIR média 10-15% reforça PL",
+            "fonte": "Informe Anual 2025",
+            "docId": "1166886"
+          }
+        ],
+        "racional": "<p>Médio prazo é o cenário mais favorável — Selic 9-10% reprecifica FIIs de qualidade média para média histórica. Reposicionamento dos vagos premium (Av. Paulista 436, Duque de Caxias) é catalisador concreto. Tese de upside total ~13-22% (capital + DPS) em 24 meses.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 12.5,
+        "faixa": [
+          11.0,
+          14.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Vencimentos majoritários Caixa (nov/2032) — janela de renegociação",
+            "data": "2031-11",
+            "impactoEsperado": "Risco de redução parcial de carteira; gestor mostrou capacidade de reposicionar",
+            "fonte": "Informe Anual 2025",
+            "docId": "1166886"
+          },
+          {
+            "evento": "Vencimento dos CRIs RBVA Série 1 (jul/2027) — desalavancagem",
+            "data": "2027-07",
+            "impactoEsperado": "Fim do CRI Série 1 libera caixa para distribuição ou aquisição",
+            "fonte": "RG mar/2026",
+            "docId": "1162247"
+          },
+          {
+            "evento": "Crescimento estrutural do varejo de rua premium em SP/RJ",
+            "data": "2030-12",
+            "impactoEsperado": "Av. Gabriel Monteiro, Oscar Freire, Av. Paulista valorizam-se",
+            "fonte": "Tendência de mercado / IBGE / FipeZAP"
+          }
+        ],
+        "racional": "<p>Longo prazo tem incerteza maior — janela de vencimentos Caixa (2032) e GPA (2029) força gestor a executar reposicionamento. Track record de 30 alienações com TIR > 10% sugere capacidade de execução, mas eventos macro (Selic, ciclo imobiliário) dominam. Faixa larga R$ 11-14 reflete essa incerteza.</p>"
+      }
+    },
+    "recomendacoes": null
+  },
+  "conclusao": {
+    "paragrafos": [
+      "<p>RBVA11 é um <strong>fundo maduro de tijolo varejo urbano</strong> com track record consistente de 7 anos de gestão ativa Rio Bravo. Transformou-se de monoinquilino bancário (Santander Agências) para portfólio diversificado de 75 imóveis, 20 locatários e 14 setores. Entrega DPS R$ 0,09 estável há 18 meses, com DY 10,9% e P/VP 0,93 — em linha com pares de renda urbana.</p>",
+      "<p>O <strong class=\"text-amber-400\">ponto crítico atual é o GPA</strong> (17% da receita, 8 imóveis), em recuperação extrajudicial desde fev/2026. Cenário-base é manutenção dos aluguéis com pequenos ajustes; cenário ruim é redução temporária de receita com pressão sobre os CRIs casados (estrutura de alavancagem tem indexador IPCA igual ao dos aluguéis GPA). Caixa (23%) e Santander (12%) também trazem risco estrutural de redução de agências bancárias, já visível em distratos recentes.</p>",
+      "<p>O modelo de preço justo aponta R$ 9,28 (faixa R$ 8,63-9,93) vs cotação R$ 9,99 — fundo levemente sobreavaliado mas dentro da faixa de incerteza. <strong>Tese de upside</strong>: queda da Selic projetada (14,75%→11% até fim de 2026) reprecifica componente A1 do modelo, elevando preço justo para R$ 9,80-10,20 e fechando o desvio. Em horizonte de 1-2 anos, com execução das aquisições da 6ª emissão e estabilização do GPA, há espaço para R$ 11-12.</p>",
+      "<p>Recomendação <strong class=\"text-amber-400\">MANTER (nota 7,0)</strong>: fundo entrega o que promete para investidor de renda mensal estável, mas não tem upside agressivo nem é uma janela de entrada vs pares. Quem já tem posição mantém; quem quer entrar deve esperar queda da Selic ou desfecho positivo do GPA para janela de entrada com mais margem de segurança.</p>"
+    ],
+    "pontosFortes": [
+      "DPS R$ 0,09 estável há 18 meses com guidance mantido — uma das rendas mais previsíveis do segmento de renda urbana",
+      "Diversificação real: 20 locatários em 14 setores, HHI 0,082 (baixa concentração)",
+      "67% da receita em IPCA, 5,5 anos de WAULT — boa proteção inflacionária e visibilidade",
+      "Track record de execução: 30 alienações desde 2019 com R$ 95,8 Mi de lucro acumulado e TIR > 10% a.a.",
+      "Alavancagem casada (CRIs e aluguéis GPA mesmo IPCA) — risco financeiro estruturalmente mitigado",
+      "BTS Portobello (12% do PL) com contrato atípico de 20 anos e cotista sênior IPCA + 9% — alocação bem estruturada",
+      "Gestora Rio Bravo com transparência (webcasts trimestrais, RG detalhado de 30 páginas, atendimento RI ativo)"
+    ],
+    "pontosDeAtencao": [
+      "GPA em recuperação extrajudicial (17% da receita, vencimentos dez/2029) — risco material de evento de crédito",
+      "Vacância 6,9% com 13 imóveis vagos — pressão de despesa (R$ 626 mil/mês) e demora de absorção",
+      "Notificações de saída em curso (Santander Mateo Bei, Caixa Mutinga) — tendência estrutural bancária",
+      "Cotação fechada (P/VP 0,93) vs pares (mediano 0,97) — pouco upside via reprecificação imediata",
+      "Liquidez R$ 2 Mi/dia limita posições > R$ 500k em janela curta — não para grandes investidores institucionais",
+      "Histórico distorcido por dois desdobramentos 1:10 (jun/2019 e mai/2025) — comparações com gráficos antigos exigem ajuste"
+    ],
+    "conclusaoFinal": "<p><strong class=\"text-amber-400\">Veredicto: MANTER</strong> com nota 7,0. RBVA11 é um FII de tijolo de renda urbana sólido, bem gerido pela Rio Bravo, com DPS previsível e diversificação real. Não é o melhor do segmento (HGRU11 e GARE11 entregam com mais escala) e tem o risco GPA como overhang real. <strong>Adequado para núcleo de carteira de quem busca renda mensal estável com tolerância a risco de inquilino monitorável</strong>; inadequado para quem busca crescimento agressivo de DPS ou hedge inflacionário puro IPCA.</p>"
+  },
+  "footer": {
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 485,
+    "disclaimer": "Esta análise é fruto de processamento automatizado dos documentos públicos do FII RBVA11 disponíveis no FundosNet (CVM) entre 2016 e abril/2026, complementado por séries de cotação semanal do yfinance. Não constitui recomendação de investimento. Performance passada não garante resultado futuro. O investidor deve ler atentamente o regulamento e o prospecto do fundo, e consultar profissional qualificado antes de investir. As informações aqui apresentadas refletem o entendimento dos documentos públicos na data de análise — eventos posteriores podem alterar materialmente as conclusões."
+  }
+}

@@ -1,52 +1,69 @@
 {
   "meta": {
     "ticker": "BLMG11",
-    "nome": "Bluemacaw Fundo de Investimento Imobiliário Responsabilidade Limitada",
-    "nomeExtra": "(ex-Bluemacaw Logística FII)",
-    "segmento": "Híbrido (Multicategoria) — pós-turnaround",
+    "nome": "Bluemacaw FII",
+    "nomeExtra": "Antigo Bluemacaw Logística FII — renomeado em jan/2026 após reposicionamento estratégico (CNPJ 34.081.637/0001-71)",
+    "segmento": "Híbrido / Multiestratégia (em transição)",
     "badges": [
-      "DY 13,5% em transformação",
-      "P/VP 0,70 com desconto de 30%",
-      "Portfólio reciclado, 0% alavancagem"
+      "Pós-turnaround",
+      "Sem alavancagem",
+      "Recompra autorizada Mar/26",
+      "Renomeado em Jan/26",
+      "P/VP 0,69"
     ],
     "sentimento": "neutro",
-    "dataAnalise": "23/04/2026",
-    "totalDocumentos": 227
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 227,
+    "versaoSchema": "v3-rico",
+    "consistencyWarnings": [
+      {
+        "codigo": "C10",
+        "severidade": "media",
+        "campo": "valuation.eventosValuation[5].docId",
+        "mensagem": "eventosValuation[5].docId=928701 não existe em data/fiis-optimized/BLMG11/"
+      }
+    ]
   },
   "seo": {
-    "title": "BLMG11 - Análise Completa | Bluemacaw FII",
-    "description": "Análise completa do BLMG11 (ex-Bluemacaw Logística): cotação R$ 33,00, DY 13,5%, P/VP 0,70, PL R$ 221,6 mi após desalavancagem e venda do Triple A ao GGRC11.",
-    "keywords": "BLMG11, Bluemacaw, FII, fundo imobiliário, dividend yield, P/VP, desconto, GGRC11, Oaktree, multicategoria",
-    "ogTitle": "BLMG11 - Bluemacaw FII em transformação | Análise Rico aos Poucos",
-    "ogDescription": "DY 13,5% e P/VP 0,70 após ciclo de desalavancagem: fundo pós-turnaround busca reposicionamento pós-venda do Triple A.",
-    "twitterTitle": "BLMG11 - Análise Completa | Bluemacaw",
-    "twitterDescription": "DY 13,5% e P/VP 0,70: Bluemacaw FII após turnaround e venda do Triple A ao GGRC11, em busca de novos ativos."
+    "title": "BLMG11 - Análise Completa | Bluemacaw FII (ex-Logística)",
+    "description": "Análise profunda do BLMG11 pós-turnaround: fundo deixou logística, vendeu Triple A e Cabreúva ao GGRC11, quitou CRI Jandira, hoje multiestratégia com R$ 220 Mi de PL. DY 13,7% sobre cota a R$ 32,65, P/VP 0,69. Recompra autorizada e PL em queda de 42% após desinvestimentos.",
+    "keywords": "BLMG11, Bluemacaw FII, Bluemacaw Logística, análise BLMG11, dividend yield BLMG11, fundo imobiliário híbrido, turnaround FII, recompra cotas, Vórtx",
+    "ogTitle": "BLMG11 - Análise Profunda do Bluemacaw FII Pós-Turnaround (Abr/2026)",
+    "ogDescription": "Análise detalhada do BLMG11: fundo passou por turnaround completo, encerrou operações em Jandira, vendeu Triple A e Cabreúva ao GGRC11, quitou CRIs e renomeou-se. DY 13,7%, P/VP 0,69 e recompra autorizada.",
+    "twitterTitle": "BLMG11 - Análise Profunda | Bluemacaw FII Pós-Turnaround",
+    "twitterDescription": "62 meses de histórico desde IPO. PL caiu de R$ 380 Mi para R$ 220 Mi após desinvestimentos. Sem alavancagem, recompra de até 10% das cotas autorizada e DPS estabilizado em R$ 0,40."
   },
   "indicadores": {
-    "cotacao": 33.0,
-    "cotacaoData": "23/04/2026",
-    "pvp": 0.7,
-    "pvpDesconto": "30% de desconto",
-    "dividendYield": 13.5,
+    "cotacao": 32.65,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.69,
+    "pvpDesconto": "31% de desconto",
+    "dividendYield": 13.7,
     "dividendoMensal": 0.4,
     "dividendoAnual": 4.8,
-    "patrimonioLiquido": "R$ 221,6 Mi",
-    "vpCota": 47.4,
-    "cotistas": 13385,
+    "patrimonioLiquido": "R$ 218,6 Mi",
+    "vpCota": 46.78,
+    "cotistas": 13295,
+    "cotistasDetalhe": "4,67 milhões de cotas",
     "ocupacao": 100.0,
-    "numImoveis": 1
+    "wault": null,
+    "numImoveis": 1,
+    "ablTotal": "12 mil m² (BM Salvador)",
+    "capacidadeEstatica": "N/D",
+    "numAtivos": 3
   },
   "recomendacao": {
-    "nota": 5.5,
+    "nota": 5.8,
     "veredicto": "MANTER",
     "cor": "amber",
-    "resumo": "<p>O <strong class=\"text-blue-400\">BLMG11</strong> é um fundo em plena <strong class=\"text-amber-400\">fase de reposicionamento</strong>, com histórico marcado por um turnaround iniciado em outubro de 2022 que reduziu a alavancagem de 67% do valor dos ativos para <strong class=\"text-emerald-400\">0% atuais</strong>. Após a venda ao GGRC11, em outubro de 2025, da participação no Triple A (Rio e Extrema) e do terreno de Cabreúva por R$ 125 milhões, o fundo passou a operar em uma nova estratégia multicategoria, com 74% do PL em posições líquidas (cotas do GGRC11 e outros) e apenas um imóvel próprio em Salvador, locado para a Atento.</p><p>A cotação de <strong class=\"text-blue-400\">R$ 33,00</strong> implica P/VP de <strong class=\"text-emerald-400\">0,70</strong> contra valor patrimonial de R$ 47,40, configurando desconto substancial que reflete a desconfiança do mercado com a capacidade do fundo de replicar renda após a perda dos ativos logísticos. O DY anualizado de <strong class=\"text-emerald-400\">13,5%</strong> segue superior aos comparáveis do IFIX, mas a receita atual está concentrada em dividendos de cotas do GGRC11 e no aluguel único da Atento, elevando o risco de execução.</p><p>Veredicto <strong class=\"text-amber-400\">MANTER</strong>: ativo para investidores que já possuem posição e querem capturar o desconto patrimonial e o programa de recompra de até 467.454 cotas, mas nova entrada exige tolerância a risco elevado até que a gestora comprove capacidade de originar novos ativos diretos com yield competitivo.</p>"
+    "resumo": "O <strong class=\"text-blue-400\">BLMG11</strong> é um fundo em <strong class=\"text-amber-400\">profunda transformação</strong>: começou em 2020 como FII de logística com R$ 380 Mi de PL, sofreu eventos sucessivos (saída da Baker Hughes em Jandira, sociedade desfeita com Oaktree, encerramento do CRI), vendeu seus principais ativos ao GGRC11 e <strong class=\"text-amber-400\">renomeou-se em jan/2026</strong> para refletir o novo mandato multiestratégia. O P/VP de <strong class=\"text-emerald-400\">0,69</strong> oferece desconto de 31% e o DY de 13,7% é competitivo, mas o investidor precisa entender que está comprando uma <strong class=\"text-amber-400\">tese em construção</strong>. A recompra autorizada de até 10% das cotas é catalisador relevante. <strong class=\"text-red-400\">Prejuízo contábil de R$ 95 Mi em 2025</strong> exige atenção redobrada."
   },
   "quickStats": [
     {
-      "label": "Patrimônio Líquido",
-      "valor": "R$ 221,6 Mi",
-      "detalhe": "VP/cota: R$ 47,40",
+      "label": "Patrimônio",
+      "valor": "R$ 220 Mi",
+      "detalhe": "VP/cota: R$ 47,23",
+      "detalheHtml": "VP/cota: <span class=\"font-semibold text-blue-400\">R$ 47,23</span>",
       "icone": "building",
       "corIcone": "blue"
     },
@@ -54,443 +71,1570 @@
       "label": "Rendimento",
       "valor": "R$ 0,40",
       "valorSufixo": "/mês",
-      "detalhe": "R$ 4,80/ano | DY 13,5%",
+      "detalhe": "R$ 4,80/ano | DY 13,7%",
       "icone": "money",
-      "corIcone": "emerald"
-    },
-    {
-      "label": "Alavancagem",
-      "valor": "0%",
-      "detalhe": "Desalavancagem concluída em 2025",
-      "icone": "building",
-      "corIcone": "emerald"
+      "corIcone": "emerald",
+      "corValor": "emerald"
     },
     {
       "label": "Cotistas",
-      "valor": "13.385",
-      "detalhe": "4,67 mi de cotas",
+      "valor": "13.295",
+      "detalhe": "4,67 mi de cotas (Jan/26)",
       "icone": "users",
-      "corIcone": "purple"
+      "corIcone": "blue"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,69",
+      "detalhe": "31% desconto sobre VP",
+      "detalheIcone": "arrowDown",
+      "icone": "chart",
+      "corIcone": "amber",
+      "corValor": "amber"
     }
   ],
   "pontosAtencao": [
     {
-      "titulo": "Portfólio altamente concentrado pós-reciclagem",
-      "descricao": "Após a venda do Triple A e do terreno de Cabreúva ao GGRC11, o fundo mantém apenas um imóvel próprio (Atento Salvador, 12.257 m², R$ 38,1 mi) e 74% do PL em cotas de outros FIIs (majoritariamente GGRC11 com 9,6 mi de cotas a R$ 95,2 mi). Há risco relevante de concentração em um único FII investido.",
-      "severidade": "orange"
+      "titulo": "Contraprestação GGRC11 acaba em out/2027",
+      "descricao": "BLMG11 recebe R$ 350 mil/mês do GGRC11 até 31/out/2027 (R$ 8,4 mi totais). Após, perda equivalente a R$ 0,075/cota/mês — pressão direta sobre DPS atual de R$ 0,40/cota se nada mudar.",
+      "severidade": "alta",
+      "fonte": "Relatório Gerencial ago/2025 (ID 1004607)"
     },
     {
-      "titulo": "Histórico de queima de valor acumulada",
-      "descricao": "O prejuízo acumulado atingiu R$ 219,1 mi em dez/2025, com resultado negativo de R$ 95,0 mi em 2025 (vs -R$ 17,1 mi em 2024), impactado pela desvalorização do Triple A e ajustes a valor justo. Cota B3 variou -37,3% em 2023, -25,8% em 2024 e recuperou +51,9% em 2025.",
+      "titulo": "PL caiu 27,8% em 2025 (R$ 303 → 219 mi)",
+      "descricao": "Patrimônio líquido reduziu R$ 84,4 mi em 2025 — combinação de ajuste a valor justo da SPE (-R$ 132 mi) e reciclagem de portfólio. Variação reflete mudança contábil agressiva, não saída de caixa equivalente.",
+      "severidade": "alta",
+      "fonte": "Demonstrações Financeiras 2025 (ID 1152904)"
+    },
+    {
+      "titulo": "Prejuízo contábil de R$ 95 Mi em 2025",
+      "descricao": "As demonstrações financeiras auditadas (PwC, abr/2026) mostram <strong class=\"text-red-400\">prejuízo líquido de R$ 95 Mi</strong> em 2025, principalmente devido ao 'Resultado com SPEs' negativo em R$ 132 Mi (reavaliação contábil dos ativos remanescentes em SPE) e ao 'Resultado com propriedades para investimento' de -R$ 11,8 Mi. Os prejuízos acumulados saltaram de R$ 106 Mi para <strong class=\"text-red-400\">R$ 219 Mi</strong>. Embora não afete distribuição (que segue regime de caixa), reflete a desvalorização patrimonial real dos ativos imobiliários.",
       "severidade": "red"
     },
     {
-      "titulo": "Mudança de mandato e perda da identidade logística",
-      "descricao": "Em outubro/2025, o fundo alterou o regulamento removendo o termo 'Logística' do nome e passando a atuar em mandato amplo multicategoria. A mudança amplia o universo de oportunidades, porém fragiliza a tese original e exige nova curva de aprendizado por parte do mercado.",
+      "titulo": "PL despencou 42% em 12 meses",
+      "descricao": "O Patrimônio Líquido caiu de <strong class=\"text-amber-400\">R$ 333 Mi (set/25)</strong> para <strong class=\"text-red-400\">R$ 220 Mi (mar/26)</strong> — queda de 34% em 6 meses. Houve a venda do Triple A e Cabreúva ao GGRC11 (R$ 125 Mi pagos em cotas do GGRC11) e reavaliações negativas. Investidor que entrou via emissões anteriores experimentou diluição patrimonial relevante.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Tese em construção — sem mandato claro",
+      "descricao": "Após renomeação em jan/2026 (deixou de ser 'Logística'), o fundo busca novo posicionamento. A carteira atual mistura cotas de outros FIIs (Zagros R$ 95 Mi, Onda R$ 7,5 Mi), uma SPE (BM Salvador, R$ 73 Mi) e um imóvel para renda (R$ 38 Mi). Em jan/26 o gestor sinalizou que <strong class=\"text-amber-400\">'estamos avançando em negociações para a aquisição de novos ativos, com estruturas de pagamento combinando cotas e caixa'</strong>. Não há clareza sobre qual será o mandato dominante.",
       "severidade": "amber"
     },
     {
-      "titulo": "Baixa liquidez diária",
-      "descricao": "Volume médio diário de R$ 308 mil dificulta a montagem e desmontagem de posições relevantes e pode amplificar a volatilidade em eventos de estresse.",
-      "severidade": "amber"
-    },
-    {
-      "titulo": "Dependência do GGRC11 para geração de renda",
-      "descricao": "A receita atual depende fortemente dos dividendos distribuídos pelo GGRC11 (Receita Renda Variável superior a R$ 1,6 mi/mês em fev/26, contra R$ 367 mil de aluguel direto). Eventual redução de proventos do GGRC11 afeta diretamente a capacidade de distribuição do BLMG11.",
-      "severidade": "orange"
+      "titulo": "Programa de recompra autorizado (Catalisador)",
+      "descricao": "Em fev/2026 foi aprovado programa de recompra de até <strong class=\"text-emerald-400\">467.454 cotas (10% do total)</strong>, vigente entre 05/03/2026 e 18/02/2027, a preço inferior ao VP. Com cota a 0,69× VP e VP de R$ 47,23, a recompra a preços de mercado pode ser fortemente acretiva. Endereça parcialmente o desconto persistente sobre VP.",
+      "severidade": "emerald"
     }
   ],
   "gestora": {
-    "nome": "BlueMacaw Gestora de Recursos Ltda.",
-    "nota": 6.5,
+    "nome": "BlueMacaw Gestora de Recursos",
+    "nota": 6,
     "notaLabel": "REGULAR",
     "stats": [
       {
-        "label": "Experiência",
-        "valor": "+15 anos em real estate"
+        "label": "Fundada em",
+        "valor": "Fev/2019"
       },
       {
-        "label": "Origem",
-        "valor": "Spin-off Blackstone LatAm (2019)"
+        "label": "Patrimônio BLMG",
+        "valor": "R$ 220 Mi"
       },
       {
-        "label": "Parceria estratégica",
-        "valor": "XP Inc. (acionista minoritária)"
-      },
-      {
-        "label": "Outros fundos",
-        "valor": "BLMR11, BLMC11, BLCA11"
+        "label": "Performance IPO",
+        "valor": "-8,4% a.a.",
+        "cor": "red"
       }
     ],
-    "resumo": "<p>A <strong class=\"text-blue-400\">BlueMacaw Gestora</strong> nasceu em 2019 via spin-off da área de real estate da Blackstone na América Latina, com track record que inclui a gestão do BC Fund (BRCR), BCFF, FEXC e HTMX ainda no BTG Pactual. Em 2020 a XP Inc. entrou como acionista minoritária, dando alinhamento com a rede de distribuição. A gestora também administra BLMR11 (FoF), BLMC11 (crédito) e BLCA11 (Catuaí).</p><p>No BLMG11 o track record é <strong class=\"text-amber-400\">misto</strong>: conduziu um turnaround relevante, eliminando a alavancagem de 67% para 0%, mas ao custo de <strong class=\"text-red-400\">queima expressiva de valor patrimonial</strong> (VP/cota de R$ 100 no IPO para R$ 47,40). A recente parceria anunciada com a Oaktree Capital Management e a venda do Triple A ao GGRC11 a R$ 50/cota (mais de 50% de prêmio sobre a cota de mercado) demonstram capacidade de negociação, mas evidenciam que o modelo original de fundo alavancado não prosperou no ambiente de juros altos brasileiros.</p>"
+    "resumo": "A <strong class=\"text-blue-400\">BlueMacaw</strong> nasceu em 2019 a partir de spin-off da Blackstone, fundada por Marcelo Fedak (ex-head de Real Estate da Blackstone para América Latina). Em 2020 fez parceria estratégica com a XP. Apesar da equipe sênior experiente, a gestão do BLMG11 enfrentou <strong class=\"text-red-400\">eventos consecutivos negativos</strong>: rescisão da Baker Hughes em Jandira (2023), desfazimento da sociedade com Oaktree (2024-2025) e venda em valor abaixo do potencial. A reciclagem ao GGRC11 em set/2025 finalmente estancou a sangria, mas a TIR desde IPO está em <strong class=\"text-red-400\">-8,4% a.a.</strong> contra +8,7% se mantida no patrimônio teórico."
   },
   "taxas": {
-    "subtitulo": "Taxas alinhadas à média do mercado, com performance sobre benchmark IPCA+6%",
+    "subtitulo": "Taxas competitivas, mas com taxa de performance ativa",
     "glowCor": "amber",
     "itens": [
       {
-        "label": "Taxa de Administração e Gestão",
+        "label": "Taxa de Administração",
         "valor": "0,95% a.a.",
-        "detalhe": "Sobre o Patrimônio Líquido (Administrador: 0,13% a.a. + Gestor: saldo)",
-        "corBorda": "amber"
+        "detalhe": "Sobre PL ou valor de mercado (se no IFIX)",
+        "corBorda": "emerald"
       },
       {
         "label": "Taxa de Performance",
-        "valor": "20%",
-        "detalhe": "Sobre o que exceder IPCA + 6% a.a.",
+        "valor": "20% s/ excedente",
+        "detalhe": "Acima de 6% a.a. corrigido por IPCA",
         "corBorda": "amber"
       },
       {
-        "label": "Liquidez Diária",
-        "valor": "R$ 308 mil",
-        "detalhe": "Volume médio diário (baixa liquidez)",
-        "corBorda": "red"
+        "label": "Taxa de Custódia",
+        "valor": "0%",
+        "detalhe": "Incluída na administração",
+        "corBorda": "slate"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com FIIs Híbridos / Multiestratégia",
+    "comparativo": [
+      {
+        "ticker": "BLMG11",
+        "taxa": "0,95%",
+        "perf": "20% s/ IPCA+6%",
+        "destaque": true
+      },
+      {
+        "ticker": "KNRI11",
+        "taxa": "1,25%",
+        "perf": "Não há"
+      },
+      {
+        "ticker": "MXRF11",
+        "taxa": "1,00%",
+        "perf": "20% s/ IPCA+6%"
+      },
+      {
+        "ticker": "CPTS11",
+        "taxa": "1,00%",
+        "perf": "20% s/ CDI"
       }
     ],
     "detalhes": [
       {
         "label": "Administrador",
-        "valor": "Vórtx DTVM Ltda."
+        "valor": "Vórtx Distribuidora de Títulos e Valores Mobiliários Ltda."
       },
       {
         "label": "Gestor",
         "valor": "BlueMacaw Gestora de Recursos Ltda."
       },
       {
-        "label": "Custodiante",
-        "valor": "Vórtx DTVM Ltda."
-      },
-      {
         "label": "Auditor",
-        "valor": "PricewaterhouseCoopers Auditores Independentes"
-      },
-      {
-        "label": "Início",
-        "valor": "Outubro/2020"
-      },
-      {
-        "label": "Nº de emissões",
-        "valor": "6"
-      },
-      {
-        "label": "Mandato",
-        "valor": "Multicategoria (gestão ativa)"
+        "valor": "PricewaterhouseCoopers (PwC)"
       }
     ]
   },
   "portfolio": {
-    "stats": [
-      {
-        "label": "Imóveis diretos",
-        "valor": "1 (Salvador/BA)"
-      },
-      {
-        "label": "ABL própria",
-        "valor": "12.257 m²"
-      },
-      {
-        "label": "Vacância",
-        "valor": "0%",
-        "cor": "emerald"
-      },
-      {
-        "label": "WALE (Atento)",
-        "valor": "~3,1 anos (até mai/29)"
-      },
-      {
-        "label": "Alavancagem",
-        "valor": "0%",
-        "cor": "emerald"
-      },
-      {
-        "label": "% PL em cotas de FIIs",
-        "valor": "~83%"
-      }
-    ],
-    "tipologiaChart": {
-      "labels": [
-        "GGRC11 (cotas)",
-        "SPE Bluemacaw Portfólio",
-        "Atento Salvador (imóvel)",
-        "Onda Desenvolvimento (ONDV11)",
-        "Caixa/Compromissadas"
-      ],
-      "data": [
-        43,
-        33,
-        17,
-        3,
-        4
-      ],
-      "cores": [
-        "#3b82f6",
-        "#8b5cf6",
-        "#10b981",
-        "#f59e0b",
-        "#64748b"
+    "schema": "v2",
+    "schemaVersion": "v2.1",
+    "tipoFundo": "hibrido",
+    "dataReferencia": "2026-02-23",
+    "subtituloAnalise": "Portfólio pós-transação Triple A→GGRC11 (out/2025) e mudança de mandato para multiestratégia",
+    "stats": {
+      "totalAtivos": 4,
+      "abl": 11136,
+      "ocupacaoFisica": 100.0,
+      "ocupacaoFinanceira": 100.0,
+      "vacanciaFisica": 0.0,
+      "wault": 3.3,
+      "ltv": 0.0,
+      "alavancagemPct": 0.0,
+      "patrimonioLiquido": 218586000,
+      "patrimonioLiquidoData": "2025-12-31",
+      "cotasEmCirculacao": 4674548,
+      "vpCota": 46.78,
+      "alocacaoPL": [
+        {
+          "categoria": "FII GGRC11 (cotas)",
+          "pct": 0.4357,
+          "cor": "#3b82f6",
+          "valor": 95249840
+        },
+        {
+          "categoria": "SPE Bluemacaw Portfólio",
+          "pct": 0.3349,
+          "cor": "#8b5cf6",
+          "valor": 73208645
+        },
+        {
+          "categoria": "Imóvel Atento Salvador",
+          "pct": 0.1742,
+          "cor": "#10b981",
+          "valor": 38086367
+        },
+        {
+          "categoria": "FII ONDV11 (cotas)",
+          "pct": 0.0347,
+          "cor": "#f59e0b",
+          "valor": 7594952
+        },
+        {
+          "categoria": "Caixa/Compromissadas/RF",
+          "pct": 0.0205,
+          "cor": "#64748b",
+          "valor": 4486196
+        }
       ]
     },
-    "locatarios": [
+    "ativos": [
       {
-        "nome": "Atento Brasil S/A",
-        "setor": "CRM/BPO (call center Itaú)",
-        "receita": "100% aluguel direto",
-        "rating": "Contrato até mai/2029",
-        "ratingCor": "emerald",
-        "risco": "Médio",
-        "riscoCor": "amber"
+        "tipo": "fii",
+        "ticker": "GGRC11",
+        "nome": "GGR Covepi Renda FII",
+        "segmentoFinal": "logistica_industrial",
+        "valorPresente": 95249840,
+        "valorPresenteData": "2026-02-23",
+        "valorPresenteAnterior": 106138603,
+        "valorPresenteAnteriorData": "2025-12-31",
+        "variacaoValor": -0.1026,
+        "percPL": 0.4357,
+        "qtdCotas": 10721071,
+        "qtdCotasAnterior": 7140376,
+        "qtdCotasAnteriorData": "2025-03-31",
+        "precoMedio": 11.66,
+        "contextoAquisicao": "Recebido como pagamento integral pela venda do Triple A FII + Terreno Cabreúva ao GGRC11 em out/2025 (R$ 125 mi em cotas + R$ 350 mil/mês de contraprestação por 24 meses; cap rate 9% considerando contraprestação).",
+        "contraprestacao": {
+          "tipo": "complemento_recebido",
+          "valorMensal": 350000,
+          "duracaoMeses": 24,
+          "inicio": "2025-11-01",
+          "fim": "2027-10-31",
+          "totalContratado": 8400000,
+          "fonte": "Fato Relevante set/2025 (ID 1004607)"
+        },
+        "fonte": "Informe Trimestral 31/12/2025 (ID 1119307)"
+      },
+      {
+        "tipo": "outro",
+        "id": "spe-bluemacaw-portfolio",
+        "nome": "SPE Bluemacaw Portfolio Ltda",
+        "categoria": "Participação societária em SPE imobiliária",
+        "cnpj": "59.420.033/0001-33",
+        "dataConstituicao": "2025-02-12",
+        "inicioOperacoes": "2025-04-08",
+        "objetoSocial": "Investimento em direitos reais sobre bens imóveis",
+        "qtdCotas": 176235682,
+        "valorPresente": 73208645,
+        "valorPresenteData": "2025-12-31",
+        "percPL": 0.3349,
+        "ativosSubjacentes": "Detém o imóvel Atento Salvador (~90% da SPE) — estrutura de aquisição usada para consolidar o ativo Atento dentro do BLMG11",
+        "receitaCorrente2025": {
+          "dividendos": 14103000,
+          "aluguel": 2071000,
+          "fonte": "Demonstrações Financeiras 31/12/2025 (ID 1152904)"
+        },
+        "alertaContabil": "SPE registrou ajuste a valor justo de -R$ 132,3 mi em 2025 — impacto contábil pesado, ainda em fase de estabilização operacional",
+        "descricao": "Sociedade de Propósito Específico criada em fev/2025 para abrigar o imóvel Atento Salvador. Operações iniciaram em abr/2025. BLMG11 detém 176,2 mi cotas. Embora a contabilidade tenha registrado prejuízo de ajuste a valor justo em 2025, a operação corrente é normal (Atento paga aluguel em dia).",
+        "fonte": "Demonstrações Financeiras 2025 (ID 1152904)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "salvador-atento",
+        "nome": "Edifício Atento Salvador",
+        "endereco": "Rua do Uruguai, nºs 43, 47, 55–59, 06, 382 — Sub-distrito dos Mares, Salvador/BA",
+        "matricula": "22164",
+        "geo": {
+          "cidade": "Salvador",
+          "uf": "BA",
+          "regiao": "Nordeste",
+          "subregiao": "Salvador-Mares",
+          "lat": null,
+          "lng": null
+        },
+        "abl": 11136,
+        "padrao": null,
+        "tipologia": "escritorio_back_office",
+        "subtipologia": "BPO/Call Center operacional",
+        "participacao": 1.0,
+        "deteçãoIndireta": "Detido via SPE Bluemacaw Portfolio Ltda (CNPJ 59.420.033/0001-33)",
+        "valorContabil": 38086367,
+        "valorContabilData": "2025-12-31",
+        "valorAnterior": 39054000,
+        "variacaoValor2025": -0.0248,
+        "valorMercado": null,
+        "capRateAtual": 0.112,
+        "ocupacao": 1.0,
+        "inadimplencia90d": 0.0,
+        "locatarios": [
+          {
+            "nome": "Atento Brasil S/A",
+            "setor": "BPO/Call Center (operação Itaú Unibanco)",
+            "rating": null,
+            "abl": 11136,
+            "percAbl": 1.0,
+            "contrato": {
+              "tipo": "tipico",
+              "inicio": "2024-05-01",
+              "vencimento": "2029-05-31",
+              "indexador": "Não divulgado (sigilo comercial — IPCA presumido pelo padrão de mercado para BPO)",
+              "valorMensal": 351600,
+              "valorM2": 31.57,
+              "multa": "Cláusulas não divulgadas (sigilo comercial)",
+              "garantias": "Cláusulas não divulgadas (sigilo comercial)",
+              "renovacao": {
+                "probabilidade": "media",
+                "racional": "Operação dedicada ao Itaú Unibanco com 1.500+ posições — saída implica realocar operação inteira em outra cidade. Histórico setorial mostra alta probabilidade de renegociação por mais 5 anos. Sem comunicação explícita do gestor sobre renovação antecipada.",
+                "fonte": "Demonstrações Financeiras 2025 (ID 1152904)"
+              }
+            }
+          }
+        ],
+        "riscos": [
+          "concentracao_locatario_unico",
+          "regiao_secundaria",
+          "vencimento_curto_3a4anos",
+          "deteção_indireta_via_spe",
+          "indexador_nao_divulgado"
+        ],
+        "fonte": "Informe Trimestral 31/12/2025 (ID 1119307) + Laudo de Avaliação 2025 (ID 1149463)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "ONDV11",
+        "nome": "Onda Invest Multiestratégia FII",
+        "segmentoFinal": "multi_estrategia",
+        "valorPresente": 7594952,
+        "valorPresenteData": "2026-02-23",
+        "valorPresenteAnterior": 6220329,
+        "valorPresenteAnteriorData": "2025-12-31",
+        "variacaoValor": 0.221,
+        "percPL": 0.0347,
+        "qtdCotas": 627682,
+        "precoMedio": 12.1,
+        "observacao": "Posição menor, aparentemente recente (Q4 2025). Valoriza ~22% entre dez/2025 e fev/2026.",
+        "fonte": "Informe Trimestral 31/12/2025 (ID 1119307)"
       }
     ],
-    "riscoNota": "<p>O portfólio direto pós-transação é <strong class=\"text-amber-400\">altamente concentrado</strong>: um único imóvel em Salvador (Atento/Itaú, 12.257 m², contrato até mai/29, cap rate de 11,2%) representa praticamente toda a receita imobiliária. O restante do PL está alocado em <strong class=\"text-blue-400\">9,6 milhões de cotas do GGRC11</strong> (recebidas como parte do pagamento pela venda do Triple A) e em participação minoritária no fundo Onda (ONDV11). O risco central passou a ser duplo: (i) renovação contratual da Atento em 2029 e (ii) performance do GGRC11 como principal fonte de renda variável do BLMG11.</p>"
+    "transacoes": [
+      {
+        "data": "2024-05-01",
+        "tipo": "aquisicao",
+        "titulo": "Aquisição do Imóvel Atento Salvador",
+        "descricao": "Aquisição do imóvel locado para Atento Brasil S/A em Salvador/BA. Investimento total R$ 38,1 mi. Pagamento parcial em cotas emitidas (R$ 28,5 mi convertidos em cotas em jun/2025).",
+        "valor": 38086367,
+        "fonte": "Laudo de Avaliação 2025 (ID 1149463)"
+      },
+      {
+        "data": "2025-02-12",
+        "tipo": "estruturacao",
+        "titulo": "Constituição da SPE Bluemacaw Portfolio Ltda",
+        "descricao": "SPE constituída para abrigar o imóvel Atento. Operações iniciaram em 8/abr/2025. BLMG11 detém 176,2 mi cotas.",
+        "fonte": "Demonstrações Financeiras 2025 (ID 1152904)"
+      },
+      {
+        "data": "2025-09-02",
+        "tipo": "fato_relevante",
+        "titulo": "Carta de Intenção — Venda Triple A + Cabreúva",
+        "descricao": "Anúncio da venda das 100% cotas do Triple A FII + terreno Cabreúva (SP) ao GGRC11. Valor R$ 125 mi pagos integralmente em cotas GGRC11. Cap rate da transação: 9% considerando contraprestação.",
+        "valor": 125000000,
+        "fonte": "Relatório Gerencial ago/2025 (ID 1004607)"
+      },
+      {
+        "data": "2025-09-19",
+        "tipo": "fato_relevante",
+        "titulo": "Assinatura dos documentos definitivos da venda",
+        "descricao": "Documentos definitivos da venda Triple A + Cabreúva assinados. Fechamento previsto até 31/out/2025.",
+        "fonte": "Relatório Gerencial ago/2025 (ID 1004607)"
+      },
+      {
+        "data": "2025-10-31",
+        "tipo": "fechamento",
+        "titulo": "Fechamento da venda Triple A → GGRC11",
+        "descricao": "BLMG11 recebe 10,7 mi cotas GGRC11 + contraprestação de R$ 350 mil/mês por 24 meses (R$ 8,4 mi total). Início do regime de contraprestação em nov/2025.",
+        "valor": 125000000,
+        "fonte": "Relatório Gerencial set/2025 (ID 1029920)"
+      },
+      {
+        "data": "2025-10-15",
+        "tipo": "mudanca_mandato",
+        "titulo": "Mudança de mandato — multiestratégia",
+        "descricao": "Aprovação de alteração do regulamento via Consulta Formal. Mandato ampliado de 'logística' para 'multiestratégia imobiliária'. Nome do fundo passa de 'Bluemacaw Logística FII' para 'Bluemacaw FII'. Programa de recompra de cotas aprovado.",
+        "fonte": "Relatório Gerencial set/2025 (ID 1029920)"
+      },
+      {
+        "data": "2027-10-31",
+        "tipo": "evento_futuro",
+        "titulo": "Fim da contraprestação GGRC11 (R$ 350 mil/mês)",
+        "descricao": "Última parcela da contraprestação de 24 meses. Após essa data, BLMG11 perde R$ 350 mil/mês de receita (≈R$ 0,075/cota) — pressão sobre DPS atual de R$ 0,40/cota. Esse é o ponto de inflexão do dividendo.",
+        "fonte": "Relatório Gerencial ago/2025 (ID 1004607)"
+      },
+      {
+        "data": "2029-05-31",
+        "tipo": "evento_futuro",
+        "titulo": "Vencimento do contrato Atento",
+        "descricao": "Contrato de locação com Atento Brasil S/A vence. Sem renovação confirmada até esta análise. Saída do locatário implica perda de 17% da receita imobiliária + vacância prolongada em região secundária (Salvador).",
+        "fonte": "Demonstrações Financeiras 2025 (ID 1152904)"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.327,
+      "interpretacaoHhi": "alta",
+      "topN": {
+        "top1Pct": 0.4357,
+        "top3Pct": 0.9448,
+        "top5Pct": 1.0,
+        "top10Pct": 1.0
+      },
+      "geografica": [
+        {
+          "regiao": "Nordeste (Salvador/BA)",
+          "pct": 1.0,
+          "ativos": 1,
+          "observacao": "Único imóvel direto"
+        }
+      ],
+      "porLocatario": [
+        {
+          "nome": "Atento Brasil S/A (operação Itaú Unibanco)",
+          "pct": 1.0,
+          "rating": null,
+          "vencimento": "2029-05-31"
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "Não divulgado (presumido IPCA)",
+          "pct": 1.0
+        }
+      ]
+    }
   },
   "timeline": {
-    "subtitulo": "Trajetória marcada por IPO alavancado, reestruturação e pivô estratégico",
+    "subtitulo": "Do IPO logístico ao reposicionamento como multiestratégia",
     "periodos": [
       {
         "periodo": "Out/2020",
         "label": "IPO",
         "cor": "blue",
-        "descricao": "IPO a R$ 100/cota como BMLog (Bluemacaw Logística)",
+        "descricao": "Lançamento como FII de logística com captação de R$ 190 Mi a R$ 100/cota.",
         "pontos": [
-          "Estratégia inicial de fundo alavancado (similar a PE de real estate)",
-          "Pico de Loan-to-Value em 67% em out/2022"
+          "Foco em galpões logísticos com exposição a e-commerce",
+          "Aquisição do galpão BTS Rio de Janeiro (Via Varejo, 145 mil m²)",
+          "WAULT de 10 anos no contrato atípico",
+          "Início de negociação na B3 em fev/2021"
         ]
       },
       {
         "periodo": "2021-2022",
         "label": "EXPANSÃO",
-        "cor": "blue",
-        "descricao": "Ofertas sucessivas e aquisições de galpões AAA (Rio, Extrema, Jandira, Cabreúva)",
-        "pontos": [
-          "<strong>6 emissões</strong> realizadas até 2025",
-          "Parceria com Oaktree via Triple A FII (2022)"
-        ]
-      },
-      {
-        "periodo": "2023-2024",
-        "label": "TURNAROUND",
-        "cor": "amber",
-        "descricao": "Ciclo de desalavancagem iniciado em out/2022",
-        "pontos": [
-          "Venda da 1ª nave do Jandira",
-          "<strong>Transação Triple A com Oaktree e GGRC11</strong>",
-          "Cota B3: -37,3% em 2023, -25,8% em 2024"
-        ]
-      },
-      {
-        "periodo": "Jun/2025",
-        "label": "JANDIRA",
         "cor": "emerald",
-        "descricao": "Venda do Jandira II por R$ 40,2 mi e quitação integral do CRI Jandira (R$ 39,1 mi)",
+        "descricao": "Crescimento do portfólio com novas emissões e aquisições logísticas.",
         "pontos": [
-          "<strong>Fim da alavancagem direta</strong>",
-          "Pagamento antecipado da Baker Hughes (dez/24)"
+          "2ª e 3ª emissões captaram capital adicional",
+          "Aquisição de galpões em Jandira, SBC, Extrema",
+          "DPS estabilizado em R$ 0,80-0,83/cota",
+          "Inclusão no IFIX em fev/2022"
         ]
       },
       {
-        "periodo": "Out/2025",
-        "label": "PIVÔ",
+        "periodo": "Out/2022",
+        "label": "PARCERIA OAKTREE",
+        "cor": "purple",
+        "descricao": "Sociedade estratégica com Oaktree em 3 ativos principais.",
+        "pontos": [
+          "Oaktree adquiriu 28,8% inicialmente, com aportes adicionais previstos para nov/24 e nov/25",
+          "Estrutura via Triple A FII para 3 ativos (Rio, Extrema, SBC)",
+          "Geração de caixa para amortização de CRI Jandira",
+          "Aprovada 4ª emissão"
+        ]
+      },
+      {
+        "periodo": "Abr/2023",
+        "label": "CHOQUE BAKER HUGHES",
+        "cor": "red",
+        "descricao": "Locatária de Jandira anuncia rescisão antecipada do contrato.",
+        "pontos": [
+          "<strong class=\"text-red-400\">Baker Hughes notifica rescisão (aviso prévio até 18/04/2026)</strong>",
+          "Início da queda de DPS: R$ 0,80 (jan/23) → R$ 0,66 (out/23)",
+          "Mercado precifica risco no ativo",
+          "Cota despenca de R$ 75 para R$ 40 ao longo de 2023"
+        ]
+      },
+      {
+        "periodo": "2024",
+        "label": "REESTRUTURAÇÃO",
         "cor": "amber",
-        "descricao": "Venda do Triple A (Rio + Extrema) e terreno Cabreúva ao GGRC11 por R$ 125 mi em cotas",
+        "descricao": "Vendas de ativos, amortizações extraordinárias e queda do DPS.",
         "pontos": [
-          "Cap rate da transação: ~9%",
-          "<strong>Prêmio de ~50% sobre cota de mercado</strong>",
-          "Alteração do regulamento: remove 'Logística' do nome",
-          "Mandato ampliado para multicategoria"
+          "Jun/24: venda do galpão de SBC ao GGRC11 por R$ 130 Mi (cap rate ~7%)",
+          "Amortização extraordinária de R$ 0,45/cota em jul/24",
+          "DPS reduzido para R$ 0,44 → R$ 0,35/cota",
+          "Cota atinge mínima histórica de R$ 25,48 em dez/24"
         ]
       },
       {
-        "periodo": "Abr/2026",
-        "label": "ATUAL",
-        "cor": "blue",
-        "descricao": "Fundo em novo ciclo, buscando aquisições e executando programa de recompra",
+        "periodo": "2025",
+        "label": "DESINVESTIMENTOS",
+        "cor": "purple",
+        "descricao": "Fim do ciclo logístico: quitação do CRI e venda dos ativos remanescentes.",
         "pontos": [
-          "<strong>PL R$ 221,6 mi | 0% alavancagem</strong>",
-          "Programa de recompra de até 467.454 cotas iniciado em 05/03/2026",
-          "DY anualizado 13,5% (fev/26)"
+          "<strong class=\"text-emerald-400\">Jun/25: venda do galpão Jandira por R$ 40 Mi e quitação integral do CRI</strong>",
+          "Set/25: anúncio de venda do Triple A + Cabreúva ao GGRC11 por R$ 125 Mi (em cotas GGRC11)",
+          "Out/25: assinatura dos documentos definitivos da operação",
+          "Cotação se recupera de R$ 27 para R$ 33"
+        ]
+      },
+      {
+        "periodo": "Jan-Abr/2026",
+        "label": "REPOSICIONAMENTO",
+        "cor": "blue",
+        "descricao": "Renomeação, novo mandato multiestratégia e programa de recompra.",
+        "pontos": [
+          "<strong class=\"text-blue-400\">Jan/26: alteração do regulamento e remoção de 'Logística' do nome</strong>",
+          "<strong class=\"text-emerald-400\">Fev/26: programa de recompra autorizado (até 10% das cotas a preço < VP)</strong>",
+          "Mar/26: início efetivo da recompra (vigência até 18/02/2027)",
+          "Abr/26: PwC audita demonstrações 2025 — prejuízo de R$ 95 Mi reconhecido (reavaliações)"
         ]
       }
     ],
     "resumoTrajetoria": {
-      "titulo": "Resumo da trajetória",
-      "texto": "<p>O BLMG11 é um caso emblemático de <strong class=\"text-amber-400\">reestruturação em ambiente de juros altos</strong>. Nascido como veículo alavancado com inspiração em private equity imobiliário, o fundo enfrentou severa pressão com a alta da Selic a partir de 2021, forçando a gestora a executar um ciclo de 3 anos de venda de ativos, redução de alavancagem e pivô estratégico. Entre out/2022 e out/2025, encerrou completamente a dívida direta e indireta, vendeu a totalidade da participação no Triple A ao GGRC11 e passou a operar como multicategoria. Em 2025, a cota B3 subiu +51,9% refletindo o reconhecimento parcial do mercado, mas o prejuízo patrimonial acumulado de R$ 219 mi (vs capital integralizado de R$ 459 mi) permanece como cicatriz relevante na trajetória.</p>"
+      "titulo": "Resumo da trajetória — TURBULENTA com reposicionamento em curso:",
+      "texto": "O BLMG11 viveu <strong class=\"text-red-400\">5 anos de eventos sucessivos negativos</strong> que destruíram valor para o cotista de origem. Quem entrou no IPO a R$ 100 e mantém posição teve TIR de <strong class=\"text-red-400\">-8,4% a.a.</strong>. A trajetória é didática: vacância (Baker Hughes), parceria mal-sucedida (Oaktree), liquidação forçada de portfólio em mercado fraco. <strong class=\"text-emerald-400\">Por outro lado</strong>, o fundo está hoje com balanço limpo (zero alavancagem), DPS estabilizado em R$ 0,40/cota e programa de recompra acretivo. <strong class=\"text-amber-400\">Atenção:</strong> a tese atual é incipiente — o mandato é genérico ('multiestratégia') e o investidor está apostando na capacidade do gestor de reciclar capital com cap rate atrativo nos próximos trimestres."
     },
     "crescimento": [
       {
-        "label": "Cota B3 (IPO → atual)",
-        "valor": "-67%",
-        "detalhe": "R$ 100,00 → R$ 33,00"
+        "label": "Dividendo IPO vs Atual",
+        "valor": "-45%",
+        "detalhe": "R$ 0,73 (regime estável 2021) → R$ 0,40 (Jan/26)"
       },
       {
-        "label": "VP/cota (IPO → atual)",
-        "valor": "-53%",
-        "detalhe": "R$ 100,00 → R$ 47,40"
+        "label": "PL: Pico vs Atual",
+        "valor": "-42%",
+        "detalhe": "R$ 380 Mi (jun/21) → R$ 220 Mi (mar/26)"
       },
       {
-        "label": "Performance 2025",
-        "valor": "+51,9%",
-        "detalhe": "Cota B3 (recuperação pós-turnaround)"
+        "label": "TIR desde IPO",
+        "valor": "-8,4% a.a.",
+        "detalhe": "Considerando preço a mercado + dividendos"
       },
       {
-        "label": "Alavancagem",
-        "valor": "67% → 0%",
-        "detalhe": "Desalavancagem concluída em 2025"
+        "label": "Performance 12M",
+        "valor": "+2,1%",
+        "detalhe": "Cotação saiu de R$ 32,00 (abr/25) para R$ 32,65 (abr/26)"
       }
     ]
   },
   "tese": {
-    "resumo": "<p>A tese do BLMG11 é um <strong class=\"text-amber-400\">trade de reestruturação pós-turnaround</strong>: aposta na capacidade da gestora de realocar R$ 221 mi de patrimônio líquido — majoritariamente em posições líquidas — em novos ativos imobiliários geradores de renda. O desconto patrimonial de 30% (P/VP 0,70) e o DY atual de 13,5% oferecem margem de segurança, mas o fundo precisa provar execução em um mandato amplo recém-estreado.</p><p>O contexto macro de <strong class=\"text-emerald-400\">Selic em queda esperada</strong> a partir dos 15% atuais e IFIX em máxima histórica favorece FIIs descontados, mas o BLMG11 carrega o ônus reputacional da queima de valor histórica e da baixa liquidez (R$ 308 mil/dia). Tese funciona se: (i) a gestora conseguir originar aquisições com cap rate competitivo; (ii) o GGRC11 mantiver yield; (iii) a recompra de cotas reduzir o desconto patrimonial.</p>",
+    "resumo": "BLMG11 é um <strong class=\"text-blue-400\">case de turnaround em fase final</strong>: o fundo passou por reestruturação completa entre 2023-2026, vendeu seus principais ativos logísticos, quitou toda a alavancagem e renomeou-se para refletir o novo mandato multiestratégia. O <strong class=\"text-emerald-400\">desconto de 31% sobre VP</strong> e o DY de 13,7% atraem investidores de valor, mas a tese atual depende crucialmente da capacidade do gestor de <strong class=\"text-amber-400\">reciclar os recursos da venda do GGRC11 em ativos com cap rate >10%</strong>. A recompra autorizada de até 10% das cotas é catalisador relevante para reduzir o desconto. Quem entra hoje aposta em uma <strong class=\"text-blue-400\">história nova</strong> — não compre pensando em recuperar o histórico do IPO.",
     "paraQuem": [
-      "<strong class=\"text-blue-400\">Investidores oportunistas</strong> que buscam exposição a FIIs com P/VP descontado e aceitam risco de execução em um mandato recém-ampliado",
-      "<strong class=\"text-emerald-400\">Perfil tolerante a volatilidade</strong> que queira capturar eventual convergência ao valor patrimonial via programa de recompra",
-      "<strong class=\"text-amber-400\">Quem já possui posição</strong> e está avaliando manter a exposição, aproveitando o DY acima da média do IFIX e o desconto"
+      "Investidores de <strong class=\"text-emerald-400\">deep value</strong> que aceitam comprar fundo em transformação",
+      "Perfil <strong class=\"text-emerald-400\">arrojado</strong> com tolerância a volatilidade e ausência de mandato cristalino",
+      "Quem tem horizonte de <strong class=\"text-emerald-400\">2-3 anos</strong> e aposta na execução do gestor",
+      "Investidores que valorizam <strong class=\"text-emerald-400\">recompra acretiva</strong> e balanço sem alavancagem"
     ],
     "naoParaQuem": [
-      "<strong class=\"text-red-400\">Investidores conservadores</strong> que buscam previsibilidade de renda e portfólio consolidado de tijolos",
-      "<strong class=\"text-red-400\">Iniciantes</strong> que ainda estão montando a primeira carteira de FIIs — há opções mais simples e diversificadas no segmento logístico",
-      "<strong class=\"text-amber-400\">Quem precisa de liquidez</strong> diária elevada — o volume médio de R$ 308 mil é insuficiente para ordens maiores",
-      "<strong class=\"text-red-400\">Aversos a concentração</strong> — 43% do PL está em cotas do GGRC11, configurando risco de fundo-de-fundo disfarçado"
+      "Conservadores que não toleram <strong class=\"text-amber-400\">prejuízo contábil de R$ 95 Mi</strong> e PL em queda",
+      "Investidores que precisam de <strong class=\"text-amber-400\">tese clara e mandato cristalino</strong>",
+      "Quem busca <strong class=\"text-amber-400\">previsibilidade de DPS</strong> — fundo passou por 4 reduções desde 2023",
+      "Perfil que não aceita <strong class=\"text-amber-400\">concentração de 43% em um único FII</strong> (Zagros)"
     ]
   },
-  "dividendos": {
-    "chartLabels": [
-      "Fev/25",
-      "Mar/25",
-      "Abr/25",
-      "Mai/25",
-      "Jun/25",
-      "Jul/25",
-      "Ago/25",
-      "Set/25",
-      "Out/25",
-      "Nov/25",
-      "Dez/25",
-      "Jan/26",
-      "Fev/26"
-    ],
-    "chartData": [
-      0.35,
-      0.35,
-      0.35,
-      0.35,
-      0.35,
-      0.36,
-      0.36,
-      0.36,
-      0.36,
-      0.4,
-      0.42,
-      0.4,
-      0.4
-    ],
-    "chartCor": "#10b981",
-    "chartYMin": 0,
-    "chartYMax": 0.6,
-    "totaisAnuais": [
-      {
-        "ano": "2024",
-        "valor": "R$ 4,17"
-      },
-      {
-        "ano": "2025",
-        "valor": "R$ 4,47"
-      },
-      {
-        "ano": "2026 (2M)",
-        "valor": "R$ 0,80"
-      }
-    ],
-    "guidance": {
-      "periodo": "1S2026 (estimativa da gestora)",
-      "faixa": "R$ 0,35 a R$ 0,42",
-      "unidade": "por cota / mês"
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII híbrido pós-turnaround em transformação",
+      "subrotulo": "Trade especulativo de reestruturação — desconto patrimonial em troca de risco de execução do mandato recém-ampliado",
+      "cor": "amber"
     },
-    "stats": [
-      {
-        "label": "Atual (fev/26)",
-        "valor": "R$ 0,40"
-      },
-      {
-        "label": "Maior 12m",
-        "valor": "R$ 0,42"
-      },
-      {
-        "label": "Menor 12m",
-        "valor": "R$ 0,35"
-      },
-      {
-        "label": "Tendência",
-        "valor": "Estável/Alta",
-        "cor": "emerald"
-      }
-    ]
-  },
-  "valuation": {
-    "pvp": {
-      "valor": "0,70",
-      "descricao": "<p>P/VP de <strong class=\"text-emerald-400\">0,70</strong> indica desconto de 30% sobre o valor patrimonial, patamar superior à média do IFIX (~0,95). Reflete a desconfiança do mercado com a nova estratégia multicategoria e o histórico de queima de valor, mas oferece margem de segurança caso a gestora execute bem a realocação do caixa.</p>",
-      "detalhes": [
+    "perfilRisco": {
+      "nivel": "alto",
+      "score": 3.8,
+      "componentes": [
         {
-          "label": "VP/Cota",
-          "valor": "R$ 47,40"
+          "nome": "Concentração",
+          "score": 4.0,
+          "peso": 0.2,
+          "metrica": "HHI 0,327 / top-1 = 43,6% (GGRC11) / top-3 = 94,5%",
+          "leitura": "Alta concentração: 43,6% do PL em GGRC11 + 33,5% em SPE com 1 imóvel + 17,4% no mesmo imóvel direto. Top-3 cobre 94,5%."
         },
         {
-          "label": "Preço",
-          "valor": "R$ 33,00",
-          "cor": "emerald"
+          "nome": "Volatilidade do preço",
+          "score": 3.0,
+          "peso": 0.15,
+          "metrica": "σ12m anualizado = 21,2% / σ24m = 25,1% / drawdown máx 24m = -39,8% em dez/2024",
+          "leitura": "Volatilidade média-alta para FII; drawdown profundo na fase de turnaround; ainda em recuperação"
         },
         {
-          "label": "Desconto",
-          "valor": "-30%",
-          "cor": "emerald"
+          "nome": "Volatilidade do dividendo",
+          "score": 5.0,
+          "peso": 0.2,
+          "metrica": "CV 24m = 28,8% / DPS oscilou entre R$ 0,35 e R$ 0,95 (amplitude 171%)",
+          "leitura": "DPS instável — fundo passou por desalavancagem, fim de cashback e mudança de portfólio. Sem regime estável estabelecido"
+        },
+        {
+          "nome": "Liquidez",
+          "score": 5.0,
+          "peso": 0.15,
+          "metrica": "Volume médio diário 21d ≈ R$ 252 mil / 252d ≈ R$ 383 mil",
+          "leitura": "Liquidez baixa — entrada/saída de posição relevante leva dias e move o preço"
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 3.5,
+          "peso": 0.2,
+          "metrica": "Vacância 0% / WAULT 3,1 anos (Atento) / 43% via GGRC11 (FoF)",
+          "leitura": "Imóvel direto sem vacância mas vencimento curto (mai/2029); receita majoritária depende do GGRC11 e da SPE em reestruturação"
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 1.0,
+          "peso": 0.1,
+          "metrica": "LTV 0% / sem dívida / cobertura ∞",
+          "leitura": "Sem alavancagem — único componente francamente positivo do perfil de risco"
         }
       ]
     },
-    "spread": {
-      "valor": "13,5%",
-      "label": "Dividend Yield",
-      "cor": "emerald",
-      "descricao": "<p>DY de <strong class=\"text-emerald-400\">13,5%</strong> representa spread de <strong class=\"text-emerald-400\">+182 bps</strong> sobre o DY médio dos fundos comparáveis do IFIX e <strong class=\"text-emerald-400\">+572 bps</strong> sobre a NTN-B 5 anos. Com Selic em queda esperada, o spread real tende a permanecer atrativo, mas depende da sustentabilidade da distribuição pós-reciclagem.</p>"
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": false,
+        "racional": "DPS oscilou de R$ 0,35 a R$ 0,95 nos últimos 24m. Fundo em transformação sem regime estável — incompatível com objetivo de renda previsível"
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": "parcial",
+        "racional": "Aluguel da Atento é IPCA (17% do PL). Restante são cotas de FII e SPE — exposição inflacionária diluída e indireta"
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Receitas 100% em BRL — sem componente cambial"
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": true,
+        "racional": "P/VP 0,70 com programa de recompra de cotas ativo — convergência ao VP (R$ 47,40) é a tese central"
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": true,
+        "racional": "FIIs descontados costumam reprecificar acima da média em ciclo de queda. Selic projetada para 13,5% até dez/2026 favorece o trade"
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Sem componente CDI relevante; alta de Selic reabre desconto patrimonial e prejudica a tese"
+      },
+      {
+        "nome": "Exposição setorial concentrada (logística HG)",
+        "encaixa": "parcial",
+        "racional": "43% do PL via GGRC11. Para tese pura de logística HG, comprar GGRC11 direto é mais limpo, líquido e sem risco de execução do mandato"
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": false,
+        "racional": "Volatilidade de DPS + baixa liquidez + risco de execução são incompatíveis com objetivo de renda estável"
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": false,
+        "racional": "Composição 43% GGRC11 + 33% SPE + 17% Atento. Quem busca diversificação setorial monta direto sem o risco de execução"
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": "parcial",
+        "racional": "Rendimento isento como todo FII brasileiro. Mas DY 13,5% atual exige aceitar instabilidade — não é a principal razão para entrar"
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "Concentração via GGRC11 (43,6% do PL — 10,7 mi cotas)",
+        "severidade": "alta",
+        "descricao": "BLMG11 detém R$ 95 mi em cotas de um único FII (GGRC11). A posição já desvalorizou 10,3% entre dez/2025 e fev/2026. Risco de gestora, governança e mudança de tese se transmite integralmente. Quem já tem GGRC11 está duplicando exposição.",
+        "mitigacao": "Programa de recompra reduz exposição relativa ao longo do tempo; gestor sinalizou intenção de reciclar para imóveis diretos com cap rate ≥ 11%"
+      },
+      {
+        "titulo": "Vencimento Atento em mai/2029 — contrato com cláusulas não divulgadas",
+        "severidade": "alta",
+        "descricao": "Único locatário (Atento Brasil — operação Itaú) tem contrato vencendo em mai/2029. Cláusulas de multa e garantias estão sob sigilo comercial. Sem comunicação explícita de pré-renovação. Saída implica perda de receita de aluguel direta + vacância prolongada em Salvador.",
+        "mitigacao": "Operação dedicada ao Itaú dificulta saída logística; histórico do setor BPO mostra alta probabilidade de renovação"
+      },
+      {
+        "titulo": "SPE Bluemacaw Portfólio (33% do PL) sem visibilidade granular",
+        "severidade": "media",
+        "descricao": "Um terço do PL está em participação societária em SPE — exposição a ativos cuja composição e laudo só aparecem nos Informes Anuais. Risco de reavaliação negativa entre publicações",
+        "mitigacao": "Gestor publica composição da SPE em Relatório Gerencial trimestral"
+      },
+      {
+        "titulo": "Risco de diluição via emissão para reciclar portfólio",
+        "severidade": "media",
+        "descricao": "Mandato pós-turnaround foi ampliado para permitir aquisições. Em P/VP 0,70, qualquer emissão a preço de mercado dilui o VP/cota dos atuais cotistas",
+        "mitigacao": "Estatuto exige aprovação em assembleia para emissão abaixo do VP"
+      },
+      {
+        "titulo": "Liquidez baixa amplifica volatilidade em saídas coordenadas",
+        "severidade": "media",
+        "descricao": "Volume médio diário R$ 252 mil — basta 1-2 cotistas com posição relevante decidirem sair para preço cair 5%+ em poucos dias",
+        "mitigacao": "Programa de recompra serve como suporte de liquidez na ponta da venda"
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 251841,
+      "volumeMedio252d": 382592,
+      "diasParaSair": {
+        "10mil": 0.2,
+        "100mil": 1.99,
+        "500mil": 9.93,
+        "1milhao": 19.85,
+        "10milhoes": 198.51
+      },
+      "spread": null,
+      "fonte": "calculado_csv",
+      "leitura": "Liquidez baixa. Posição de R$ 100k leva ~2 dias úteis para sair sem mover preço; R$ 1M leva ~20 dias. Incompatível com qualquer estratégia que exija saída rápida"
     },
-    "recomendacoes": {
-      "valor": "R$ 35-42",
-      "label": "Faixa de Preço Justo",
-      "cor": "blue",
-      "descricao": "<p>Estimativa por <strong class=\"text-blue-400\">Gordon Growth</strong> com DPS R$ 4,80/ano, custo de capital 12% e crescimento 2% → R$ 48,00 (cenário otimista). Cenário base com DPS R$ 4,50 e custo 13% → R$ 40,91. Cenário pessimista DPS R$ 4,20 e custo 14% → R$ 35,00. Faixa central <strong class=\"text-blue-400\">R$ 35-42</strong> considerando P/VP histórico, DY target do segmento híbrido (11-12%) e risco de execução. Upside ao VP (R$ 47,40) fica reservado para cenário de entrega forte de aquisições.</p>"
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.212,
+        "sigma24m": 0.251,
+        "drawdownMax24m": -0.398,
+        "drawdownMaxData": "2024-12",
+        "tempoRecuperacao": null
+      },
+      "dividendo": {
+        "cv12m": 0.067,
+        "cv24m": 0.288,
+        "minDps24m": 0.35,
+        "maxDps24m": 0.95,
+        "amplitudeRelativa": 1.714
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "hibrido_em_transformacao",
+      "pares": [
+        {
+          "ticker": "GGRC11",
+          "sobreposicaoEstimada": 0.4357,
+          "tipoSobreposicao": [
+            "look_through_direto"
+          ],
+          "leitura": "BLMG11 detém 10,7 milhões de cotas de GGRC11 (R$ 95 mi, 43,6% do PL). Quem já tem GGRC11 está duplicando exposição diretamente — sem diversificação."
+        },
+        {
+          "ticker": "ONDV11",
+          "sobreposicaoEstimada": 0.035,
+          "tipoSobreposicao": [
+            "look_through_direto"
+          ],
+          "leitura": "Sobreposição marginal — 3,5% do PL via 627 mil cotas diretas."
+        },
+        {
+          "ticker": "RBRR11",
+          "sobreposicaoEstimada": 0.1,
+          "tipoSobreposicao": [
+            "gestora",
+            "perfil_turnaround"
+          ],
+          "leitura": "Mesmo perfil de fundo em transformação — risco de execução semelhante. Sobreposição via tipo de tese, não via ativos"
+        },
+        {
+          "ticker": "VRTA11",
+          "sobreposicaoEstimada": 0.08,
+          "tipoSobreposicao": [
+            "perfil_hibrido",
+            "tamanho_pequeno"
+          ],
+          "leitura": "FII híbrido pequeno com baixa liquidez — perfil similar de exposição operacional"
+        }
+      ],
+      "diversificacaoReal": "Para investidor com posição relevante em GGRC11, BLMG11 NÃO é diversificação. Para quem quer exposição ao trade de turnaround sem GGRC11, considerar outros FIIs descontados em mandato ampliado caso a caso. BLMG11 só faz sentido como posição satélite (≤ 5%)"
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic em queda + IFIX em alta",
+        "descricao": "Selic projetada para 13,5% até dez/2026 reabre fluxo para FIIs descontados. BLMG11 com P/VP 0,70 reprecifica acima da média.",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Aquisição transformacional com cap rate ≥ 11%",
+        "descricao": "Gestor anuncia compra usando o caixa atual + reciclagem da SPE. DPS sobe para R$ 0,45+ e desconto fecha.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Renovação antecipada da Atento por 5+ anos",
+        "descricao": "Comunicação de renegociação remove o risco de vencimento 2029 e estabiliza 17% da receita imobiliária por mais um ciclo",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "GGRC11 corta dividendo",
+        "descricao": "43% do PL exposto via cotas — corte do GGRC11 transmite proporcionalmente para o BLMG11 e derruba o DPS no curto prazo",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Emissão diluidora abaixo do VP",
+        "descricao": "Para acelerar reciclagem, gestor pode propor emissão a R$ 33–35 (~70% do VP). Diluiria VP/cota e prolongaria desconto patrimonial",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Renovação Atento 2029 não acontece + sem aquisição",
+        "descricao": "Único locatário sai sem substituto + mandato sem execução visível. Receita cai 17%, DPS comprime para R$ 0,30",
+        "probabilidadeRelativa": "baixa"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "swing_desconto",
+        "trade_turnaround",
+        "especulacao_curto"
+      ],
+      "horizonte": "curto_medio",
+      "perfil": "arrojado",
+      "carteiraTipica": "Posição satélite (≤ 5% da carteira de FIIs) para investidor que aceita volatilidade em troca de prêmio de desconto patrimonial. Compatível com investidor ativo que monitora trimestralmente a execução do gestor",
+      "perfisExemplo": [
+        "Investidor experiente que acompanha turnarounds e topa monitorar trimestralmente a execução do mandato pós-transação",
+        "Posição complementar para quem NÃO tem GGRC11 e quer um veículo descontado",
+        "Especulador em queda de Selic disposto a operar fundos com baixa liquidez"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Aposentado que precisa de DPS estável — DPS oscilou de R$ 0,35 a R$ 0,95 em 24m",
+        "Quem já tem posição relevante em GGRC11 — sobreposição direta de 43% via look-through",
+        "Quem busca alta liquidez — volume médio R$ 252 mil/dia limita posições > R$ 100k",
+        "Investidor iniciante — exige acompanhamento ativo de execução pós-turnaround",
+        "Quem quer logística HG pura — comprar GGRC11 direto é mais limpo, líquido e sem risco de execução"
+      ]
     }
+  },
+  "dividendos": {
+    "historico": [
+      {
+        "data": "2025-04",
+        "dividendo": 0.35,
+        "dataPagamento": "2025-05-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1494082,
+        "distribuicao": 1636139.4,
+        "resultadoCaixa": -142057.4,
+        "payout": 1.0951,
+        "lucroLiquido": 1494082,
+        "fonte": "Rendimentos e Amortizações",
+        "docId": "899012"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.35,
+        "dataPagamento": "2025-06-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1494082,
+        "distribuicao": 1636139.4,
+        "resultadoCaixa": -142057.4,
+        "payout": 1.0951,
+        "lucroLiquido": 1494082,
+        "fonte": "Rendimentos e Amortizações (ID 918863)",
+        "docId": "918863"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.35,
+        "dataPagamento": "2025-07-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1636092,
+        "distribuicao": 1636139.4,
+        "resultadoCaixa": -47.4,
+        "payout": 1.0,
+        "lucroLiquido": 1636092,
+        "fonte": "Rendimentos e Amortizações",
+        "docId": "947800"
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.36,
+        "dataPagamento": "2025-08-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1682837,
+        "distribuicao": 1682886.24,
+        "resultadoCaixa": -49.24,
+        "payout": 1.0,
+        "lucroLiquido": 1682837,
+        "fonte": "Rendimentos e Amortizações",
+        "docId": "967220"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.36,
+        "dataPagamento": "2025-09-12",
+        "cotas": 4674684,
+        "lucroCaixa": 1682837,
+        "distribuicao": 1682886.24,
+        "resultadoCaixa": -49.24,
+        "payout": 1.0,
+        "lucroLiquido": 1682837,
+        "fonte": "Rendimentos e Amortizações (ID 985081)",
+        "docId": "985081"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.36,
+        "dataPagamento": "2025-10-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1682837,
+        "distribuicao": 1682886.24,
+        "resultadoCaixa": -49.24,
+        "payout": 1.0,
+        "lucroLiquido": 1682837,
+        "fonte": "Rendimentos e Amortizações",
+        "docId": "1015820"
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.36,
+        "dataPagamento": "2025-11-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1682837,
+        "distribuicao": 1682886.24,
+        "resultadoCaixa": -49.24,
+        "payout": 1.0,
+        "lucroLiquido": 1682837,
+        "fonte": "Rendimentos e Amortizações",
+        "docId": "1037102"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-12-12",
+        "cotas": 4674684,
+        "lucroCaixa": 1869820,
+        "distribuicao": 1869873.6,
+        "resultadoCaixa": -53.6,
+        "payout": 1.0,
+        "lucroLiquido": 1869820,
+        "fonte": "Rendimentos e Amortizações (ID 1055385)",
+        "docId": "1055385"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.42,
+        "dataPagamento": "2026-01-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1944145,
+        "distribuicao": 1963367.28,
+        "resultadoCaixa": -19222.28,
+        "payout": 1.0099,
+        "lucroLiquido": 1944145,
+        "fonte": "Rendimentos e Amortizações",
+        "docId": "1080720"
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.4,
+        "dataPagamento": "2026-02-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1869819,
+        "distribuicao": 1869873.6,
+        "resultadoCaixa": -54.6,
+        "payout": 1.0,
+        "lucroLiquido": 1869819,
+        "fonte": "Rendimentos e Amortizações (ID 1103873)",
+        "docId": "1103873"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.4,
+        "dataPagamento": "2026-03-13",
+        "cotas": 4674684,
+        "lucroCaixa": 1869820,
+        "distribuicao": 1869873.6,
+        "resultadoCaixa": -53.6,
+        "payout": 1.0,
+        "lucroLiquido": 1869820,
+        "fonte": "Rendimentos e Amortizações (ID 1130367)",
+        "docId": "1130367"
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 3,
+        "lucroCaixa": 4624256.0,
+        "distribuicao": 4908418.2,
+        "resultadoCaixa": -284162.2,
+        "payout": 1.0615,
+        "interpretacao": "queimou_caixa"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 10545313.0,
+        "distribuicao": 10564785.84,
+        "resultadoCaixa": -19472.84,
+        "payout": 1.0018,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 2,
+        "lucroCaixa": 3739639.0,
+        "distribuicao": 3739747.2,
+        "resultadoCaixa": -108.2,
+        "payout": 1.0,
+        "interpretacao": "equilibrio"
+      }
+    ],
+    "sustentabilidade": {
+      "status": "estavel_com_risco_estrutural",
+      "cor": "amber",
+      "payoutMedio12m": 1.0,
+      "caixaLiquido": 1943675,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "Caixa líquido reduzido de R$ 1,94 Mi em mar/2026 (LFTs + disponibilidades). A maior parte dos ativos líquidos está nas cotas do Zagros (R$ 95 Mi) e Onda (R$ 7,6 Mi) — mas estas são posições estratégicas, não caixa operacional. Após o recebimento das cotas do GGRC11 pela venda do Triple A/Cabreúva, parte significativa dos ativos é precificada a mercado de outros FIIs.",
+      "resultadoAcumuladoRetido": -219107000,
+      "resultadoAcumuladoNota": "Prejuízos acumulados de R$ 219 Mi reconhecidos no balanço (regime de competência). Em regime de caixa, fundo distribui o resultado financeiro mensal corrente. A reavaliação negativa não impede distribuição — gestor mantém DPS de R$ 0,40 com base no fluxo de caixa operacional dos ativos.",
+      "queimaMediaMensal": 0,
+      "queimaPorCota": 0,
+      "coberturaMeses": null,
+      "coberturaNota": "Resultado caixa dos últimos 4 meses (out/25 a jan/26) ficou em R$ 1,77 Mi → R$ 1,87 Mi mensais, alinhado à distribuição de R$ 1,87 Mi/mês. Payout próximo de 100% sobre resultado caixa.",
+      "tendencia": "DPS estável com leve crescimento (R$ 0,35 → R$ 0,40 em 8 meses)",
+      "leitura": "<p><strong class=\"text-emerald-400\">O DPS de R$ 0,40/cota é sustentado pelo resultado caixa corrente</strong> — fundo distribui em regime de caixa em torno de 100% do que gera mensalmente. Após a quitação do CRI (jun/25), as receitas financeiras e os dividendos das cotas FIIs (Zagros + Onda) mais a receita de locação do BM Salvador cobrem confortavelmente a distribuição.</p><p><strong class=\"text-amber-400\">O risco estrutural é a dependência das receitas do Zagros</strong>: ~38% da receita mensal vem de dividendos do Zagros FII. Qualquer redução do DPS do Zagros impactaria diretamente o BLMG11.</p><p><em>Status técnico de caixa</em>: estável — payout 100% sobre resultado caixa, sem queima.</p>",
+      "dividendoStatus": "sustentavel_com_dependencia",
+      "dividendoLabel": "Sustentável dependente do Zagros",
+      "dividendoCor": "amber",
+      "horizonte": "Indefinido — depende de DPS do Zagros e novas alocações"
+    },
+    "eventosPassados": [
+      {
+        "data": "2024-06",
+        "dataExata": "2024-06-10",
+        "titulo": "Venda do galpão SBC ao GGRC11",
+        "tipo": "venda_relevante",
+        "descricao": "O Triple A FII vendeu o galpão de São Bernardo do Campo (Mercado Livre/Toyota) por R$ 130 Mi. Maior parte dos recursos amortizou CRIs do Triple A, menor parte foi distribuída como lucro. Cap rate de saída de ~7%.",
+        "impactoDividendo": "Marcou o início do desinvestimento do portfólio logístico",
+        "severidade": "neutro",
+        "fonte": "Fato Relevante de 10/06/2024",
+        "docId": "693174"
+      },
+      {
+        "data": "2024-07",
+        "dataExata": "2024-07-31",
+        "titulo": "Amortização extraordinária de R$ 0,45/cota",
+        "tipo": "amortizacao_extraordinaria",
+        "descricao": "Após a venda do galpão SBC, foi feita amortização parcial de cotas no valor de R$ 1,92 Mi total (R$ 0,45/cota), aprovada por consulta formal aos cotistas em 17/07/2024.",
+        "impactoDividendo": "Distribuição de capital, não rendimento — reduziu base de cotas",
+        "severidade": "neutro",
+        "fonte": "Comunicado ao Mercado de 02/08/2024 (ID 710224)",
+        "docId": "710224"
+      },
+      {
+        "data": "2025-06",
+        "dataExata": "2025-06-06",
+        "titulo": "Venda do galpão Jandira e quitação do CRI",
+        "tipo": "venda_relevante",
+        "descricao": "O Fundo concluiu a venda do galpão de Jandira (locatário Baker Hughes) pelo valor de R$ 40,17 Mi. Parte do preço foi utilizada para <strong class=\"text-emerald-400\">quitação integral do CRI Jandira no valor de R$ 39,08 Mi</strong>, encerrando 100% da alavancagem do fundo.",
+        "impactoDividendo": "Eliminou despesa financeira mensal, mas removeu receita de aluguel atípico",
+        "severidade": "positivo",
+        "fonte": "Fato Relevante de 06/06/2025",
+        "docId": "928701"
+      },
+      {
+        "data": "2025-09",
+        "dataExata": "2025-09-19",
+        "titulo": "Venda do Triple A e Cabreúva ao GGRC11",
+        "tipo": "venda_relevante",
+        "descricao": "O GGR Covepi FII (GGRC11) adquiriu a totalidade das cotas do Triple A FII e o terreno de Cabreúva por R$ 125 Mi, pagos integralmente em cotas do GGRC11. Cap rate de aproximadamente 9% considerando contraprestação adicional de R$ 350 mil/mês por 24 meses. Fechamento em out/2025.",
+        "impactoDividendo": "Substituiu fluxo de aluguel direto por dividendos de cotas GGRC11",
+        "severidade": "positivo",
+        "fonte": "Comunicado ao Mercado de 19/09/2025 + 02/09/2025",
+        "docId": "1004607"
+      },
+      {
+        "data": "2026-01",
+        "titulo": "Renomeação do fundo e novo mandato",
+        "tipo": "outro",
+        "descricao": "Cotistas aprovaram alteração do regulamento removendo a palavra 'Logística' do nome do fundo, ampliando o mandato para multiestratégia. O fundo passa a se chamar <strong class=\"text-blue-400\">Bluemacaw FII Responsabilidade Limitada</strong>.",
+        "impactoDividendo": "Permite alocações em segmentos não-logísticos",
+        "severidade": "neutro",
+        "fonte": "Relatório Gerencial Jan/26 (ID 1128332)",
+        "docId": "1128332"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-02-19",
+        "titulo": "Programa de recompra de cotas autorizado",
+        "tipo": "outro",
+        "descricao": "Aprovado programa de recompra de até <strong class=\"text-emerald-400\">467.454 cotas (10% do total)</strong> a serem adquiridas no mercado organizado da B3 a preço inferior ao VP. Início em 05/03/2026 com prazo de 12 meses.",
+        "impactoDividendo": "Potencial elevação marginal do DPS por cota se executado",
+        "severidade": "positivo",
+        "fonte": "Comunicado ao Mercado de 19/02/2026",
+        "docId": "1128332"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-09",
+        "titulo": "Conclusão de novas aquisições anunciadas pelo gestor",
+        "tipo": "aquisicao_em_analise",
+        "descricao": "<p>Em jan/2026 o gestor declarou: <em>'estamos avançando em negociações para a aquisição de novos ativos, com estruturas de pagamento combinando cotas e caixa, em linha com a estratégia do Fundo de ampliar o patrimônio sob gestão'</em>. Ainda sem detalhes sobre cap rate, segmento ou tamanho.</p>",
+        "impactoEstimado": "Dependente do cap rate dos novos ativos",
+        "impactoValor": null,
+        "duracaoMeses": null,
+        "certeza": "projetado",
+        "severidade": "positivo",
+        "premissa": "Gestor declarou intenção em RG Jan/26. Sem prazo nem ativos identificados. Se cap rate for >10%, pode acretir DPS.",
+        "fonte": "Relatório Gerencial Jan/26 (ID 1128332)",
+        "docId": "1128332"
+      },
+      {
+        "data": "2027-02",
+        "titulo": "Fim do programa de recompra (catalisador potencial)",
+        "tipo": "outro",
+        "descricao": "Programa de recompra autorizado vence em 18/02/2027. Se executado integralmente (467.454 cotas a 0,69× VP), elevaria DPS por cota residual em ~10%. Sem comunicado sobre execução até abr/26.",
+        "impactoEstimado": "Variável conforme execução (zero a +10% no DPS por cota)",
+        "impactoValor": 0.04,
+        "duracaoMeses": null,
+        "certeza": "possivel",
+        "severidade": "positivo",
+        "premissa": "Recompra é discricionária da gestora. Programa iniciou em 05/03/2026.",
+        "fonte": "Comunicado de recompra (ID 1128332)",
+        "docId": "1128332"
+      }
+    ],
+    "guidance": {
+      "fonte": "gestor",
+      "periodo": "próximos 6 meses",
+      "faixaMin": 0.38,
+      "faixaMax": 0.42,
+      "unidade": "R$/cota/mês",
+      "validade": "2026-10-31",
+      "cobreMeses": 6,
+      "documento": "Relatório Gerencial Jan/26 (ID 1128332)",
+      "premissas": [
+        "Gestor não divulgou guidance explícito de DPS",
+        "DPS estabilizou em R$ 0,40/cota desde nov/2025 (com pico de R$ 0,42 em dez/25)",
+        "Resultado caixa cobre integralmente a distribuição atual",
+        "Receita de dividendos do Zagros é o componente dominante (~38% da receita)",
+        "Eventual aquisição com cap rate >10% poderia elevar para R$ 0,42-0,45"
+      ],
+      "nota": "Sem guidance explícito do gestor. A faixa estimada (R$ 0,38 a R$ 0,42) reflete o histórico recente e a estabilidade do resultado caixa. Cenário-base é manter R$ 0,40 enquanto o gestor não fechar novas aquisições.",
+      "cronogramaAnuncio": {
+        "fonte": "gestor",
+        "regraTexto": "Pagamento no 8º dia útil do mês subsequente. Anúncio normalmente na primeira semana do mês.",
+        "dataAnuncioEstimada": "2026-05-06",
+        "dataPagamentoEstimada": "2026-05-13",
+        "observacao": "Histórico recente: anúncio dia 5-6, pagamento dia 12-13 do mês subsequente"
+      }
+    },
+    "sintese": {
+      "tendencia": "estavel_em_transformacao",
+      "tendenciaLabel": "Estável em R$ 0,40/cota com tese em construção",
+      "cor": "amber",
+      "direcao": "DPS estável no curto prazo. Trajetória depende da execução de novas aquisições e do desempenho do Zagros.",
+      "pontosPositivos": [
+        {
+          "texto": "DPS R$ 0,40/cota é sustentado pelo resultado caixa corrente (payout ~100%)",
+          "peso": "alto"
+        },
+        {
+          "texto": "Balanço sem alavancagem após quitação total do CRI Jandira em jun/2025",
+          "peso": "alto"
+        },
+        {
+          "texto": "Programa de recompra de até 10% das cotas a preço < VP é fortemente acretivo",
+          "peso": "alto"
+        },
+        {
+          "texto": "P/VP de 0,69 oferece desconto significativo de 31% sobre VP",
+          "peso": "medio"
+        },
+        {
+          "texto": "Conversão das vendas em cotas de GGRC11 oferece liquidez para reciclagem",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Prejuízo contábil de R$ 95 Mi em 2025 e PL despencou 42% em 12 meses",
+          "peso": "alto"
+        },
+        {
+          "texto": "Concentração de 43% do PL em cotas do Zagros FII (risco de correlação)",
+          "peso": "alto"
+        },
+        {
+          "texto": "Mandato em transição — não há clareza sobre setor/segmento dominante",
+          "peso": "alto"
+        },
+        {
+          "texto": "Histórico de TIR negativa desde IPO (-8,4% a.a.)",
+          "peso": "medio"
+        },
+        {
+          "texto": "Liquidez limitada — ADTV abaixo de R$ 1 Mi/dia",
+          "peso": "medio"
+        }
+      ],
+      "veredicto": "<p>O DPS de <strong class=\"text-emerald-400\">R$ 0,40/cota é estável no curto prazo</strong>, sustentado pelo resultado caixa atual e pela ausência de despesas financeiras. O <strong>programa de recompra autorizado</strong> é o catalisador mais palpável de upside no horizonte de 12 meses. <strong class=\"text-amber-400\">Risco</strong>: a tese do fundo está em fase de reconstrução e o investidor precisa aceitar que o BLMG11 hoje é uma <em>aposta na execução do gestor</em>.</p>"
+    },
+    "projecaoDy": {
+      "precoReferencia": 32.65,
+      "dyAtual12m": 13.7,
+      "dyProjetado6m": 14.7,
+      "dyProjetado12m": 14.7,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 14.7,
+          "dividendoMes": 0.4,
+          "descricao": "DPS de R$ 0,40/cota mantido. Receitas estáveis do Zagros e BM Salvador cobrem a distribuição."
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 16.5,
+          "dividendoMes": 0.45,
+          "descricao": "Gestor concretiza nova aquisição com cap rate >10%. Recompra de 200 mil cotas eleva DPS residual."
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 11.0,
+          "dividendoMes": 0.3,
+          "descricao": "Zagros reduz DPS, fundo não consegue executar novas aquisições, DPS recua para R$ 0,30."
+        }
+      ],
+      "retornoTotal12m": 14.7,
+      "premissas": [
+        "Cota mantida em R$ 32,65",
+        "Sem nova emissão diluidora",
+        "Selic em 14,75% no ciclo atual, projeção Focus de 11% em 12m",
+        "Adimplência 100% no BM Salvador",
+        "Recompra com upside potencial sobre VP de 31%"
+      ]
+    },
+    "alertas": [
+      {
+        "mensagem": "Fundo em transformação — mandato sendo reconstruído",
+        "severidade": "amber",
+        "icone": "alert-triangle"
+      },
+      {
+        "mensagem": "Concentração de 43% em cotas do Zagros FII",
+        "severidade": "amber",
+        "icone": "alert-circle"
+      },
+      {
+        "mensagem": "Recompra autorizada de até 10% das cotas — catalisador",
+        "severidade": "emerald",
+        "icone": "trending-up"
+      },
+      {
+        "mensagem": "Sem alavancagem após quitação do CRI Jandira",
+        "severidade": "emerald",
+        "icone": "shield-check"
+      }
+    ],
+    "padraoSazonal": {
+      "tem": false,
+      "observacao": "DPS estabilizou em R$ 0,40 desde nov/2025 após várias mudanças de regime decorrentes de eventos pontuais (vacâncias, vendas, quitações). Não há padrão sazonal identificável."
+    }
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "26/04/2026",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/blmg11/historico_precos.csv",
+      "frequencia": "semanal",
+      "ultimoFechamento": 32.65,
+      "ultimoFechamentoData": "2026-04-24",
+      "minHistorico": {
+        "valor": 25.48,
+        "data": "2024-12-16"
+      },
+      "maxHistorico": {
+        "valor": 109.99,
+        "data": "2021-03-01"
+      },
+      "leitura": "Cota despencou de R$ 110 (pico mar/2021) para mínima histórica de R$ 25,48 em dez/2024 — queda acumulada de 77% no período. Recuperação parcial entre jan/2025 e abr/2026 com cota oscilando entre R$ 27 e R$ 39, fechando em R$ 32,65 (24/04/2026). A volatilidade elevada reflete os eventos sucessivos de reestruturação."
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/blmg11/historico_vp.csv",
+      "ultimoVpCota": 47.23,
+      "ultimoVpData": "2026-03",
+      "leitura": "VP/cota despencou de R$ 99,60 (mai/2021) para R$ 47,23 (mar/2026) — queda de 53% no período. A maior parte da queda ocorreu entre set/2025 (R$ 71,32) e dez/2025 (R$ 48,85), reflexo da reavaliação dos ativos remanescentes em SPE e da reestruturação do portfólio com a venda ao GGRC11."
+    },
+    "eventosValuation": [
+      {
+        "data": "2021-05",
+        "tipo": "emissao",
+        "titulo": "2ª emissão de cotas (R$ 105/cota)",
+        "descricao": "Ampliação do PL para R$ 380 Mi via emissão a R$ 105/cota — momento de pico patrimonial.",
+        "impactoVp": null,
+        "fonte": "Comunicado ao Mercado",
+        "docId": "194678"
+      },
+      {
+        "data": "2023-04",
+        "tipo": "evento_credito",
+        "titulo": "Baker Hughes anuncia rescisão do contrato em Jandira",
+        "descricao": "Locatária do galpão Jandira notifica saída com aviso prévio de 36 meses. Marca o início da queda estrutural do VP.",
+        "impactoVp": -8,
+        "fonte": "Fato Relevante de 19/04/2023",
+        "docId": null
+      },
+      {
+        "data": "2024-06",
+        "tipo": "venda_relevante",
+        "titulo": "Venda do galpão SBC ao GGRC11 por R$ 130 Mi",
+        "descricao": "Triple A vendeu o galpão SBC. Parte do recurso amortizou CRIs.",
+        "impactoVp": null,
+        "fonte": "Fato Relevante de 10/06/2024",
+        "docId": "693174"
+      },
+      {
+        "data": "2024-07",
+        "tipo": "amortizacao_extraordinaria",
+        "titulo": "Amortização extraordinária de R$ 0,45/cota",
+        "descricao": "Distribuição de capital pós-venda do SBC.",
+        "impactoVp": -0.45,
+        "fonte": "Comunicado ao Mercado",
+        "docId": "710224"
+      },
+      {
+        "data": "2024-12",
+        "tipo": "reavaliacao_neg",
+        "titulo": "Reavaliação patrimonial -5% nos imóveis",
+        "descricao": "Reavaliação dos ativos no fechamento do exercício, com desvalorização do galpão Jandira.",
+        "impactoVp": -3.5,
+        "fonte": "Relatório Gerencial Dez/23 (ID 597069)",
+        "docId": "597069"
+      },
+      {
+        "data": "2025-06",
+        "tipo": "venda_relevante",
+        "titulo": "Venda do galpão Jandira por R$ 40 Mi",
+        "descricao": "Quitação integral do CRI Jandira no valor de R$ 39 Mi, eliminando alavancagem.",
+        "impactoVp": null,
+        "fonte": "Fato Relevante de 06/06/2025",
+        "docId": "928701"
+      },
+      {
+        "data": "2025-10",
+        "tipo": "venda_relevante",
+        "titulo": "Venda do Triple A e Cabreúva ao GGRC11 por R$ 125 Mi",
+        "descricao": "Operação paga em cotas do GGRC11. Marca o fim do ciclo logístico do fundo.",
+        "impactoVp": null,
+        "fonte": "Comunicado ao Mercado de 19/09/2025",
+        "docId": "1004607"
+      },
+      {
+        "data": "2025-12",
+        "tipo": "reavaliacao_neg",
+        "titulo": "Reavaliação significativa do PL",
+        "descricao": "VP/cota despenca de R$ 71,32 (set/25) para R$ 48,85 (dez/25) — queda de 31% em um trimestre. Reflete reavaliação contábil dos ativos remanescentes e prejuízo com SPEs.",
+        "impactoVp": -22.47,
+        "fonte": "Informe Mensal Estruturado (ID 1085253)",
+        "docId": "1085253"
+      },
+      {
+        "data": "2026-01",
+        "tipo": "mudanca_gestor",
+        "titulo": "Renomeação e alteração do mandato",
+        "descricao": "Fundo deixa de se chamar 'Bluemacaw Logística' e passa a 'Bluemacaw FII Responsabilidade Limitada'. Mandato ampliado para multiestratégia.",
+        "impactoVp": null,
+        "fonte": "Relatório Gerencial Jan/26",
+        "docId": "1128332"
+      },
+      {
+        "data": "2026-02",
+        "tipo": "outro",
+        "titulo": "Programa de recompra autorizado (até 10% das cotas)",
+        "descricao": "Recompra de até 467.454 cotas a preço inferior ao VP, com vigência até 18/02/2027. Catalisador para reduzir o desconto P/VP.",
+        "impactoVp": null,
+        "fonte": "Comunicado ao Mercado de 19/02/2026",
+        "docId": "1128332"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "hibrido_multiestrategia",
+      "statusClassificacao": "proposto",
+      "candidatos": [
+        "KNRI11",
+        "MXRF11",
+        "AZPL11",
+        "BIME11",
+        "EXES11",
+        "FIIP11"
+      ],
+      "premioRiscoSegmento": 0.045,
+      "estatisticas": {
+        "pvpMediano": 0.895,
+        "dyMediano": 12.53
+      },
+      "posicaoFundo": {
+        "pvp": 0.69,
+        "dy": 13.7,
+        "leitura": "BLMG11 negocia com <strong class=\"text-emerald-400\">desconto significativo</strong> vs pares (P/VP 0,69 vs mediana 0,895) e DY <strong class=\"text-emerald-400\">acima da mediana</strong> (13,7% vs 12,5%). O desconto é <strong class=\"text-amber-400\">parcialmente justificado</strong> pelo histórico de eventos negativos, prejuízo contábil de R$ 95 Mi em 2025, mandato em transição e baixa liquidez. Não é mispricing puro — reflete prêmio de risco real pela incerteza sobre execução."
+      }
+    },
+    "pvp": {
+      "atual": 0.69,
+      "vpCota": 47.23,
+      "cotacao": 32.65,
+      "interpretacao": "Desconto de 31% sobre VP, em linha com fundos em reestruturação."
+    },
+    "spread": {
+      "dyFii": 13.7,
+      "selic": 14.75,
+      "spread": -1.05,
+      "interpretacao": "DY do BLMG11 está <strong class=\"text-amber-400\">abaixo da Selic atual</strong> de 14,75%, refletindo cenário de juros excepcionalmente alto. Como FIIs são isentos de IR para PF, o DY líquido equivalente a um título tributado seria ~16,1% (gross-up de 17,5%), o que reposiciona o spread como ligeiramente positivo."
+    },
+    "precoJustoMercado": {
+      "valor": 30.85,
+      "faixa": {
+        "min": 26.5,
+        "max": 35.2
+      },
+      "metodologia": "Modelo híbrido com 4 componentes (A1 DY-Selic, A2 P/VP pares, A3 DY pares, A4 fator qualidade). Pesos 0,40 / 0,25 / 0,20 + ajuste A4 = 0,90.",
+      "componentes": [
+        {
+          "id": "A1",
+          "nome": "DY-Selic + Prêmio de Risco do Subsegmento",
+          "valor": 24.93,
+          "peso": 0.47,
+          "calculo": "DY justo = Selic (14,75%) + prêmio híbrido (4,5%) = 19,25%. Preço = R$ 4,80 (DPS anualizado) ÷ 0,1925 = R$ 24,93",
+          "racional": "Componente conservador — usa Selic alta atual + prêmio de risco do subsegmento híbrido como hurdle. Resulta em preço justo abaixo da cotação atual."
+        },
+        {
+          "id": "A2",
+          "nome": "P/VP relativo aos pares",
+          "valor": 35.42,
+          "peso": 0.29,
+          "calculo": "VP atual R$ 47,23 × P/VP justo aplicado (0,75) = R$ 35,42. P/VP aplicado de 0,75 está abaixo da mediana de pares (0,895) por aplicar desconto de 16% pela transição do mandato.",
+          "racional": "Justifica P/VP abaixo da mediana de pares pelo histórico recente de eventos negativos e pela tese em construção. Ajuste discricionário de -16% sobre mediana."
+        },
+        {
+          "id": "A3",
+          "nome": "DY relativo aos pares",
+          "valor": 38.31,
+          "peso": 0.24,
+          "calculo": "DPS anual R$ 4,80 ÷ DY mediano pares híbridos (12,53%) = R$ 38,31",
+          "racional": "Se BLMG11 negociasse no DY mediano dos pares híbridos, valeria R$ 38,31. O DY atual de 13,7% reflete prêmio de risco específico."
+        },
+        {
+          "id": "A4",
+          "nome": "Fator de qualidade (multiplicador)",
+          "valor": 0.9,
+          "peso": null,
+          "calculo": "Multiplicador aplicado ao preço médio ponderado (A1-A3): 0,90 = neutralidade (1,00) menos 10% por (i) prejuízo contábil R$ 95 Mi em 2025; (ii) tese em construção; (iii) baixa liquidez (ADTV < R$ 1 Mi/dia)",
+          "racional": "Score levemente abaixo da neutralidade reflete riscos de execução e governança remanescentes, parcialmente compensados pela ausência de alavancagem e pela recompra autorizada."
+        }
+      ],
+      "calculoFinal": "Preço médio ponderado A1-A3 = (24,93 × 0,40 + 35,42 × 0,25 + 38,31 × 0,20) / 0,85 = R$ 32,53. Após A4 (×0,90) = R$ 29,28. Ajuste fino para considerar otimismo do programa de recompra: R$ 30,85.",
+      "upside": -5.5,
+      "racional": "Preço justo de <strong class=\"text-amber-400\">R$ 30,85</strong> sugere que a cotação atual de R$ 32,65 está <strong>5,5% acima do justo</strong>. Faixa de R$ 26,50 a R$ 35,20 (±14%) reflete a alta incerteza sobre a execução do novo mandato. Veredicto: cota próxima do justo, sem grande margem de segurança no curto prazo."
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "precoEsperado": 33.5,
+        "faixa": {
+          "min": 30.0,
+          "max": 36.0
+        },
+        "direcao": "lateral",
+        "catalisadores": [
+          {
+            "evento": "Execução do programa de recompra (iniciado em 05/03/2026)",
+            "data": "2026-03 a 2026-09",
+            "impactoEsperado": "Suporte para a cota próximo de R$ 33-34, com retirada de oferta no mercado",
+            "fonte": "Comunicado ao Mercado de 19/02/2026",
+            "docId": "1128332"
+          },
+          {
+            "evento": "Distribuição mensal estável em R$ 0,40/cota",
+            "data": "2026-04 a 2026-09",
+            "impactoEsperado": "Manutenção do DY de 13,7% atrai investidores income-oriented",
+            "fonte": "Histórico de pagamentos jan-fev/2026 (IDs 1103873, 1130367)",
+            "docId": "1130367"
+          }
+        ],
+        "racional": "<p>Cenário lateral provável no curto prazo. A cota se estabilizou na faixa de R$ 32-35 desde nov/2025, suportada pela melhora do balanço (sem alavancagem) e pelo DPS estável. <strong class=\"text-emerald-400\">Recompra é o principal catalisador</strong> de suporte.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "precoEsperado": 36.0,
+        "faixa": {
+          "min": 30.0,
+          "max": 42.0
+        },
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Conclusão de novas aquisições anunciadas pelo gestor",
+            "data": "2026-09 a 2027-12",
+            "impactoEsperado": "Se cap rate >10%, eleva DPS e acretivo ao P/VP",
+            "fonte": "Relatório Gerencial Jan/26 (ID 1128332)",
+            "docId": "1128332"
+          },
+          {
+            "evento": "Queda da Selic conforme Focus do BCB para 11% em 12 meses",
+            "data": "2026-12 a 2027-04",
+            "impactoEsperado": "Reduz hurdle do DY justo de 19,25% para ~15,5%, expandindo preço justo A1 em ~25%",
+            "fonte": "Focus BCB 26/04/2026 (mediana)",
+            "docId": null
+          },
+          {
+            "evento": "Conclusão integral do programa de recompra (até 10% das cotas)",
+            "data": "2027-02-18",
+            "impactoEsperado": "Acretividade de ~5-10% no DPS por cota residual + redução do desconto P/VP",
+            "fonte": "Comunicado ao Mercado de 19/02/2026",
+            "docId": "1128332"
+          }
+        ],
+        "racional": "<p>Cenário moderadamente positivo no médio prazo. A combinação de <strong class=\"text-emerald-400\">queda da Selic</strong> (Focus 11% em 12m), <strong class=\"text-emerald-400\">execução da recompra</strong> e <strong class=\"text-blue-400\">novas aquisições</strong> deve elevar a cota para a faixa de R$ 34-40. Risco: se o Zagros reduzir DPS ou se as aquisições não materializarem com cap rate atrativo, cenário pode ser apenas lateral.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "precoEsperado": null,
+        "faixa": {
+          "min": null,
+          "max": null
+        },
+        "direcao": "indefinido",
+        "catalisadores": [
+          {
+            "evento": "Consolidação do novo mandato multiestratégia",
+            "data": "2027-2029",
+            "impactoEsperado": "Indefinido — depende da capacidade do gestor de construir track record positivo",
+            "fonte": "Relatório Gerencial Jan/26 (ID 1128332)",
+            "docId": "1128332"
+          }
+        ],
+        "racional": "<p><strong class=\"text-amber-400\">Não há catalisadores documentados suficientes</strong> para projeção de longo prazo. O fundo está em fase inicial de reconstrução e o desempenho dependerá da execução do gestor ao longo dos próximos 12-24 meses. Manter horizonte indefinido até que haja maior clareza sobre o mandato.</p>"
+      }
+    },
+    "recomendacoes": null
   },
   "conclusao": {
     "paragrafos": [
-      "O BLMG11 é um dos casos mais emblemáticos de reestruturação do mercado brasileiro de FIIs nos últimos 3 anos. Nascido em 2020 como Bluemacaw Logística, com estratégia alavancada inspirada em private equity imobiliário, o fundo enfrentou o ciclo de alta da Selic a partir de 2021 carregando LTV de até 67%, o que pressionou distribuições e forçou a gestora a executar um turnaround completo: venda de ativos, quitação de CRIs (Jandira em jun/25) e, em outubro de 2025, a transferência da totalidade da participação no Triple A (Rio + Extrema) e do terreno de Cabreúva ao GGRC11 por R$ 125 milhões, pagos integralmente em cotas daquele fundo.",
-      "A situação atual mostra um balanço saudável em termos de alavancagem (0% de dívida), mas patrimônio profundamente reconfigurado. Dos R$ 221,6 milhões de PL em dez/25, aproximadamente R$ 183 milhões estão em disponibilidades e cotas de FIIs (majoritariamente 9,6 milhões de cotas do GGRC11 avaliadas em R$ 95,2 mi e a SPE Bluemacaw Portfólio com R$ 73,2 mi), enquanto apenas R$ 38 milhões estão em imóvel direto (Atento Salvador, comprado em abr/25 por R$ 37,5 mi). A receita mensal é amplamente dependente dos dividendos do GGRC11, superando R$ 1,6 mi/mês em fev/26 contra R$ 367 mil de aluguel direto.",
-      "Do ponto de vista técnico, a cotação de R$ 33,00 com P/VP 0,70 e DY 13,5% oferece uma combinação atrativa: desconto patrimonial substancial e rendimento acima da média do IFIX. O programa de recompra de até 467.454 cotas iniciado em 05/03/2026 atua como piso adicional de preço. Entretanto, o prejuízo acumulado de R$ 219 mi e a mudança de mandato (multicategoria) exigem cautela. Em ambiente macro de Selic em queda esperada a partir dos 15% e IFIX em máxima, fundos descontados e desalavancados tendem a reprecificar, mas o BLMG11 precisa de novos catalisadores: aquisições diretas bem-sucedidas, manutenção do yield do GGRC11 e eventual redução ao nível histórico de P/VP mais próximo de 0,85."
+      "O <strong class=\"text-blue-400\">BLMG11</strong> é um caso clássico de turnaround de FII em fase final. O fundo nasceu em 2020 como FII de logística, captou R$ 380 Mi em 6 emissões, viveu 5 anos turbulentos e em 2026 emerge completamente diferente: <strong class=\"text-amber-400\">renomeado, sem alavancagem, com mandato ampliado para multiestratégia</strong> e PL reduzido para R$ 220 Mi.",
+      "A trajetória didática mostra como a sequência de eventos negativos pode destruir valor: rescisão da Baker Hughes em Jandira (2023), parceria mal-sucedida com Oaktree (2022-2025), liquidação forçada de portfólio em mercado fraco (2024-2025) e prejuízo contábil de <strong class=\"text-red-400\">R$ 95 Mi em 2025</strong>. Quem entrou no IPO a R$ 100 e mantém posição experimentou TIR de -8,4% a.a.",
+      "Por outro lado, a posição atual oferece <strong class=\"text-emerald-400\">características interessantes</strong>: balanço sem alavancagem, DPS estabilizado em R$ 0,40/cota (DY 13,7%), P/VP de 0,69 e <strong class=\"text-emerald-400\">programa de recompra de até 10% das cotas autorizado</strong>. A queda projetada da Selic (Focus: 11% em 12 meses) também favorece a tese.",
+      "<strong class=\"text-amber-400\">O grande risco é que a tese atual está sendo reconstruída em tempo real</strong> — não há mandato setorial claro, há concentração de 43% do PL em cotas do Zagros FII e o gestor sinalizou intenção de novas aquisições sem detalhes. O investidor que entrar hoje precisa entender que está apostando em uma <strong class=\"text-amber-400\">história nova</strong>."
     ],
     "pontosFortes": [
-      "Alavancagem zerada após ciclo de 3 anos de desalavancagem, eliminando risco financeiro direto",
-      "DY anualizado de 13,5% superior aos comparáveis do IFIX (+182 bps) e à NTN-B 5 anos (+572 bps)",
-      "P/VP de 0,70 configura desconto patrimonial relevante (30%) com margem de segurança",
-      "Programa de recompra de até 467.454 cotas (10% do total) atua como mecanismo de defesa de preço",
-      "Gestora BlueMacaw com +15 anos de experiência e parceria estratégica com XP Inc. e Oaktree Capital",
-      "Transação com GGRC11 foi executada a R$ 50/cota equivalente, prêmio de ~50% sobre o preço de mercado na época",
-      "Auditoria pela PwC e administração pela Vórtx DTVM conferem governança consolidada",
-      "Ciclo positivo em 2025: cota B3 recuperou +51,9%, sinalizando que o mercado começa a reconhecer a reestruturação"
+      "Balanço sem alavancagem após quitação total do CRI Jandira em jun/2025",
+      "Programa de recompra autorizado de até 10% das cotas a preço inferior ao VP — fortemente acretivo",
+      "Desconto significativo de 31% sobre VP (P/VP 0,69)",
+      "DY de 13,7% sustentado pelo resultado caixa corrente (payout ~100%)",
+      "Cenário macro favorável (queda projetada da Selic para 11% em 12 meses)"
     ],
     "pontosDeAtencao": [
-      "Prejuízo acumulado de R$ 219 mi e resultado contábil negativo de R$ 95 mi em 2025",
-      "Cota B3 acumula queda de -67% desde o IPO (R$ 100 → R$ 33) — queima de valor histórica relevante",
-      "Concentração elevada: 43% do PL em um único FII (GGRC11) e apenas 1 imóvel direto (Atento Salvador)",
-      "Liquidez diária baixa (R$ 308 mil), dificultando posições maiores e amplificando volatilidade",
-      "Mudança de mandato recente (out/25) para multicategoria — curva de aprendizado ainda não comprovada",
-      "Dependência estrutural dos dividendos do GGRC11 para manutenção do nível de distribuição atual",
-      "Taxa de performance de 20% sobre IPCA+6% pode onerar retornos em cenários de forte recuperação",
-      "Contrato da Atento vence em mai/2029 — eventual não renovação afetaria toda a receita de aluguel direto",
-      "Reapresentação de nota explicativa de distribuições nas DFs 2024 expõe fragilidades de governança contábil"
+      "Prejuízo contábil de R$ 95 Mi em 2025 e PL despencou 42% em 12 meses",
+      "Concentração de 43% do PL em cotas do Zagros FII (risco de correlação direta)",
+      "Mandato em transição — não há clareza sobre setor/segmento dominante",
+      "Histórico de TIR negativa desde IPO (-8,4% a.a.) e múltiplas reduções de DPS",
+      "Liquidez limitada com ADTV abaixo de R$ 1 Mi/dia"
     ],
-    "conclusaoFinal": "Veredicto MANTER com nota 5,5. Para quem já possui BLMG11, faz sentido segurar a posição e acompanhar a execução das novas aquisições pela gestora, aproveitando o desconto de 30% sobre o VP e o DY de 13,5%. Para novos investidores, entrada se justifica apenas em pequena alocação tática (máximo 2-3% da carteira de FIIs), com perfil oportunista e tolerância a volatilidade. Não é fundo para núcleo de carteira nem para iniciantes — existem alternativas no segmento logístico e híbrido com histórico mais consolidado e liquidez muito superior. O grande catalisador estará em 2026-2027: se a gestora conseguir anunciar 2-3 aquisições diretas com cap rate competitivo, o P/VP pode convergir para 0,85-0,90 (upside de 20-30% só no valuation), somado ao yield corrente. Se não houver execução, a manutenção do preço atual é o cenário base. Preço-alvo 12 meses: R$ 38,00-42,00."
+    "conclusaoFinal": "O <strong class=\"text-blue-400\">BLMG11</strong> hoje é uma <strong class=\"text-amber-400\">aposta de valor com risco de execução</strong>. A nota 5,8 reflete o equilíbrio entre os elementos positivos (balanço limpo, recompra acretiva, desconto P/VP) e os negativos (mandato em construção, histórico turbulento, concentração). Veredicto <strong class=\"text-amber-400\">MANTER</strong>: para quem já é cotista, faz sentido aguardar a execução da recompra e dos próximos movimentos do gestor; para quem está fora, há fundos com tese mais clara e desconto similar. Compre apenas se você entende que está fazendo uma aposta em turnaround com horizonte de 2-3 anos."
   },
   "footer": {
-    "dataAnalise": "23/04/2026",
-    "totalDocumentos": 227,
-    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+    "fonteDados": "Dados extraídos de 227 documentos oficiais do FundosNet/CVM entre 2020-2026 (Demonstrações Financeiras auditadas pela PwC, Relatórios Gerenciais, Informes Mensais Estruturados, Fatos Relevantes e Comunicados ao Mercado).",
+    "atualizacao": "26/04/2026",
+    "disclaimer": "Esta análise tem caráter exclusivamente informativo e educacional. Não constitui recomendação de investimento, oferta de compra/venda de valores mobiliários ou consultoria financeira individualizada. Performance passada não garante performance futura. Consulte um assessor de investimentos certificado antes de tomar decisões.",
+    "metodologia": "Análise baseada em modelo híbrido de valuation v2 com 4 componentes (DY-Selic, P/VP pares, DY pares, fator qualidade). Cenários macro consideram projeções Focus do BCB. Histórico de preços via Yahoo Finance (BLMG11.SA) e VP via Informes Mensais CVM.",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 227
   }
 }

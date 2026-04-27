@@ -1,0 +1,623 @@
+{
+  "meta": {
+    "ticker": "FIIP11",
+    "nome": "RB Capital Renda I Fundo de Investimento Imobiliário - FII - Responsabilidade Limitada",
+    "nomeExtra": "(Híbrido Tijolo Logística/Varejo - 7 imóveis em 7 estados)",
+    "segmento": "Híbrido (Logística, Centro de Distribuição e Varejo)",
+    "badges": [
+      "Um dos FIIs mais antigos da B3 (2009)",
+      "7 imóveis monousuários típicos",
+      "Deságio de ~32% sobre VP"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 352
+  },
+  "seo": {
+    "title": "FIIP11 - Análise Completa | RB Capital Renda I FII",
+    "description": "Análise do FIIP11 (RB Capital Renda I): FII híbrido com 7 imóveis logística e varejo (Danfoss, Ambev, Wabtec). DY 12,44%, P/VP 0,68, deságio 32%.",
+    "keywords": "FIIP11, RB Capital Renda I, RB Asset, Oliveira Trust, Danfoss, Ambev, Wabtec, Pernambucanas, logística, híbrido, FII, Grant Thornton",
+    "ogTitle": "FIIP11 - RB Capital Renda I | Análise Completa",
+    "ogDescription": "FII híbrido com 7 imóveis logística/varejo em 7 estados, contratos típicos e deságio de 32% sobre o VP. DY 12,44%, P/VP 0,68.",
+    "twitterTitle": "FIIP11 - RB Capital Renda I FII",
+    "twitterDescription": "Um dos FIIs mais antigos da B3 (2009). Carteira híbrida com Danfoss, Ambev e Wabtec. DY 12,44%, P/VP 0,68."
+  },
+  "indicadores": {
+    "cotacao": 135.00,
+    "cotacaoData": "31/03/2026",
+    "pvp": 0.68,
+    "pvpDesconto": "32% de desconto sobre o VP",
+    "dividendYield": 12.44,
+    "dividendoMensal": 1.40,
+    "dividendoAnual": 16.80,
+    "patrimonioLiquido": "R$ 185,2 Mi",
+    "vpCota": 199.74,
+    "cotistas": 6443,
+    "ocupacao": 100.0,
+    "numImoveis": 7
+  },
+  "recomendacao": {
+    "nota": 7.0,
+    "veredicto": null,
+    "cor": "emerald",
+    "resumo": "<p>O <strong class=\"text-blue-400\">FIIP11</strong> é um dos fundos imobiliários <strong class=\"text-emerald-400\">mais antigos e consolidados da B3</strong>, com IPO em dezembro de 2009 e captação inicial de cerca de R$ 132 milhões. É um fundo <strong class=\"text-amber-400\">híbrido de tijolo</strong> com 7 imóveis monousuários (centros de distribuição, galpões logísticos e lojas de varejo) distribuídos em 7 estados (SP, PR, MG, RJ, BA) e locados para inquilinos como <strong class=\"text-emerald-400\">Danfoss, Ambev, Astuti, C&A, Barry Callebaut, Wabtec</strong> e Pernambucanas. Gestão/consultoria da <strong class=\"text-blue-400\">RB Asset</strong> e administração da <strong class=\"text-blue-400\">Oliveira Trust</strong>, com taxas baixíssimas (conjunto ~0,30% a.a.) e sem performance.</p><p>Do ponto de vista de precificação, o FIIP11 negocia a <strong class=\"text-emerald-400\">R$ 135,00 com P/VP de 0,68</strong> (deságio de 32% sobre o VP de R$ 199,74) e <strong class=\"text-emerald-400\">DY de 12,44% a.a.</strong> (R$ 1,40/cota). O portfólio está 100% ocupado, com 0% de inadimplência, e há catalisadores recentes positivos: <strong class=\"text-emerald-400\">nova locação Wabtec em Contagem/MG (contrato até jul/35) e aditivo com Ambev estendendo contrato até dez/30</strong>. Os principais pontos de atenção são a <strong class=\"text-red-400\">comunicação de rescisão pela Pernambucanas</strong> (dez/2025, com aviso prévio de 12 meses) e a <strong class=\"text-red-400\">falência da Leader (abr/2025)</strong>, antiga inquilina de Nova Iguaçu, que deixou crédito quirografário de R$ 783 mil em discussão.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 185,2 Mi",
+      "detalhe": "VP/cota: R$ 199,74",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 1,40",
+      "valorSufixo": "/mês",
+      "detalhe": "R$ 16,80/ano | DY 12,44%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ocupação",
+      "valor": "100%",
+      "detalhe": "7 imóveis monousuários",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "6.443",
+      "detalhe": "927.162 cotas (pulverizado)",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Rescisão da Pernambucanas em Nova Iguaçu",
+      "descricao": "Em 19/12/2025 a Pernambucanas comunicou formalmente a intenção de rescindir o contrato de locação do imóvel em Nova Iguaçu/RJ, com aviso prévio contratual de 12 meses. O ativo representa 14,8% da receita do fundo. A vacância é um risco real para o segundo semestre de 2026 caso não haja substituição de locatário.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Falência da Leader e crédito não recuperado",
+      "descricao": "A antiga locatária de Nova Iguaçu (Lojas Leader) teve a recuperação judicial convolada em falência em abril/2025. O fundo figura como credor quirografário de R$ 783.108,63 referente a despesas com obras de adequação. A discussão judicial segue suspensa e a probabilidade de recuperação integral é baixa.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Concentração em 7 inquilinos (monousuários)",
+      "descricao": "100% da receita vem de 7 contratos típicos com inquilinos únicos. Danfoss (21,4%) e Astuti (18,5%) juntos respondem por quase 40% da receita. Qualquer rescisão ou inadimplência afeta diretamente a distribuição.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Concentração de vencimentos em 2027-2028",
+      "descricao": "Vencimentos contratuais concentrados: Barry (nov/26), Astuti (jan/27), C&A (ago/27) e Danfoss (dez/28) somam mais de 60% da receita. Renegociações em ambiente macro desafiador podem pressionar valores de aluguel.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Carteira com idade média alta dos contratos",
+      "descricao": "Os imóveis foram adquiridos em 2009-2010 e muitos contratos passaram por múltiplos aditamentos (até 6 no caso do C&A). A depreciação física e a competitividade comercial dos ativos em ciclo de renovação são pontos de atenção.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Segmento híbrido sem foco claro",
+      "descricao": "O fundo mistura galpões logísticos (Danfoss, Ambev, Astuti, Barry, Wabtec) com lojas de varejo/megalojas (C&A no Shopping Tatuapé, Pernambucanas). Classificação B3 oscilou entre Logística e Híbrido ao longo do tempo, o que dificulta o enquadramento em teses setoriais puras.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Fundo sem gestor formal (só consultor imobiliário)",
+      "descricao": "A estrutura não possui gestor de carteira dedicado. A administração fiduciária é da Oliveira Trust e a RB Asset atua como 'consultora imobiliária'. A decisão sobre aquisições, vendas ou novas emissões depende de aprovação em AGE, reduzindo a velocidade de reciclagem do portfólio.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Imóvel C&A é direito de uso (não propriedade)",
+      "descricao": "O ativo no Shopping Metrô Tatuapé é um direito real de uso por 50 anos, com vencimento em out/47. Não é propriedade plena, o que reduz a flexibilidade de saída e o valor de liquidação.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "RB Asset (consultora imobiliária) / Oliveira Trust (administradora)",
+    "nota": 7.0,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Consultora",
+        "valor": "RB Asset (ex-RB Capital)"
+      },
+      {
+        "label": "Administrador",
+        "valor": "Oliveira Trust DTVM"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">RB Asset Management</strong> (anteriormente parte do grupo RB Capital, tradicional gestora de produtos imobiliários com sede em São Paulo) atua como <strong class=\"text-blue-400\">consultora imobiliária</strong> do FIIP11 desde a estruturação em 2007-2009. A administração fiduciária é da <strong class=\"text-blue-400\">Oliveira Trust DTVM</strong>, com José Alexandre Costa de Freitas como diretor responsável desde 2014. O fundo <strong class=\"text-amber-400\">não possui gestor de carteira formal</strong> — as decisões de aquisição, venda ou reciclagem dependem de aprovação em Assembleia Geral de Cotistas.</p><p>Operacionalmente, a atuação tem sido <strong class=\"text-emerald-400\">muito satisfatória</strong> nos últimos anos: 100% de ocupação mantida mesmo após a falência da Leader (2021), substituição bem-sucedida da Telhanorte pela Wabtec em Contagem/MG com contrato até 2035, e renegociação da Ambev estendendo o contrato até dez/2030 em dezembro/2025. O auditor independente é a <strong class=\"text-blue-400\">BDO RCS</strong> (demonstrações 2024/25), com Grant Thornton indicado em 2026 nos relatórios mais recentes. O escriturador é o Bradesco e o formador de mercado é a XP.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas fixas em reais — das mais baixas do mercado de FIIs de tijolo",
+    "glowCor": "emerald",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "~0,17% a.a.",
+        "detalhe": "R$ 26.377,60/mês (Oliveira Trust)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Consultoria",
+        "valor": "~0,13% a.a.",
+        "detalhe": "R$ 20.787,79/mês (RB Asset)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 691 mil",
+        "detalhe": "Boa (mar/26), já chegou a R$ 743 mil",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "Oliveira Trust DTVM S.A."
+      },
+      {
+        "label": "Consultora Imobiliária",
+        "valor": "RB Asset Operações e Investimentos Imobiliários Ltda."
+      },
+      {
+        "label": "Escriturador",
+        "valor": "Bradesco"
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "BDO RCS (ex-PricewaterhouseCoopers) / Grant Thornton"
+      },
+      {
+        "label": "Formador de Mercado",
+        "valor": "XP Investimentos CCTVM S/A"
+      },
+      {
+        "label": "Data de Funcionamento",
+        "valor": "30/11/2009 (IPO dez/2009)"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidores em Geral"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Imóveis",
+        "valor": "7 imóveis em 7 cidades"
+      },
+      {
+        "label": "Área Total (ABL)",
+        "valor": "68,4 mil m²"
+      },
+      {
+        "label": "Vacância",
+        "valor": "0,0%",
+        "cor": "emerald"
+      },
+      {
+        "label": "WALT médio",
+        "valor": "~3,3 anos"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "Danfoss - Osasco/SP",
+        "Ambev - SJ Pinhais/PR",
+        "Astuti - Ibiporã/PR",
+        "Pernambucanas - Nova Iguaçu/RJ",
+        "Wabtec - Contagem/MG",
+        "C&A - São Paulo/SP",
+        "Barry - Ilhéus/BA"
+      ],
+      "data": [
+        22.2,
+        15.5,
+        15.0,
+        14.8,
+        13.7,
+        8.5,
+        7.1
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#8b5cf6",
+        "#ec4899",
+        "#14b8a6"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "Danfoss (Osasco/SP - 10,8 mil m²)",
+        "setor": "Engenharia e serviços",
+        "receita": "21,4% receita",
+        "rating": "Contrato até dez/28 (típico)",
+        "ratingCor": "emerald",
+        "risco": "Baixo (multinacional)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Ambev (São José dos Pinhais/PR - 9,7 mil m²)",
+        "setor": "Varejo de Bebidas",
+        "receita": "14,2% receita",
+        "rating": "Contrato renovado até dez/30",
+        "ratingCor": "emerald",
+        "risco": "Baixo (AmBev)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "Astuti (Ibiporã/PR - 22,5 mil m²)",
+        "setor": "Agrícola",
+        "receita": "18,5% receita",
+        "rating": "Contrato até jan/27 (típico)",
+        "ratingCor": "amber",
+        "risco": "Médio (vencimento próximo)",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Pernambucanas (Nova Iguaçu/RJ - 2,9 mil m²)",
+        "setor": "Varejo",
+        "receita": "14,8% receita",
+        "rating": "Rescisão anunciada dez/25",
+        "ratingCor": "red",
+        "risco": "Alto (saída em 2026)",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Wabtec (Contagem/MG - 8,4 mil m²)",
+        "setor": "Varejo e Atacado (Engenharia)",
+        "receita": "9,0% receita",
+        "rating": "Contrato até jul/35 (típico)",
+        "ratingCor": "emerald",
+        "risco": "Baixo (contrato novo e longo)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "C&A (Shopping Metrô Tatuapé/SP - 4,1 mil m²)",
+        "setor": "Varejo",
+        "receita": "12,0% receita",
+        "rating": "Contrato até ago/27 (típico)",
+        "ratingCor": "amber",
+        "risco": "Médio (direito real de uso)",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "Barry Callebaut (Ilhéus/BA - 9,9 mil m²)",
+        "setor": "Alimentos",
+        "receita": "7,3% receita",
+        "rating": "Contrato até nov/26 (típico)",
+        "ratingCor": "amber",
+        "risco": "Médio (vencimento próximo)",
+        "riscoCor": "amber"
+      }
+    ],
+    "riscoNota": "<p>O portfólio do FIIP11 está 100% ocupado e soma <strong class=\"text-emerald-400\">68,4 mil m² de ABL</strong> distribuídos em 7 imóveis monousuários em 5 estados (SP, PR, MG, RJ, BA). Todos os contratos são <strong class=\"text-blue-400\">típicos</strong>, com 78,3% reajustados pelo IPCA e 21,7% pelo IGP-M. A inadimplência atual é de 0% e o fundo apresenta <strong class=\"text-emerald-400\">R$ 2,57 milhões de caixa líquido</strong> frente às suas obrigações.</p><p>O risco principal é o <strong class=\"text-red-400\">vencimento concentrado de contratos em 2026-2028</strong> (Barry em nov/26, Astuti em jan/27, C&A em ago/27 e Danfoss em dez/28), com mais de 60% da receita exposta a renegociações. A <strong class=\"text-red-400\">comunicação de rescisão pela Pernambucanas (dez/2025)</strong> já abre janela de vacância potencial de 14,8% da receita a partir do 4T2026, ponto sensível para a distribuição futura. Em contrapartida, a locação nova da Wabtec (contrato até jul/35) e o aditivo da Ambev (até dez/30) são catalisadores positivos.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Um dos FIIs mais antigos do Brasil, atravessando 4 ciclos econômicos",
+    "periodos": [
+      {
+        "periodo": "Ago/2007",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído por Instrumento Particular em 01/08/2007, sob forma de condomínio fechado e prazo indeterminado. Nome original: RB Capital Renda I FII.",
+        "pontos": [
+          "Objeto: imóveis não residenciais em todo o Brasil",
+          "Consultor Imobiliário: RB Capital Realty",
+          "Administrador: Oliveira Trust"
+        ]
+      },
+      {
+        "periodo": "Dez/2009",
+        "label": "IPO E CAPTAÇÃO",
+        "cor": "emerald",
+        "descricao": "Encerramento da 1ª oferta primária com captação de aproximadamente R$ 132 milhões e 927.162 cotas emitidas ao preço de emissão em torno de R$ 142/cota. Início de negociação secundária na B3 sob o ticker FIIP11B.",
+        "pontos": [
+          "<strong>Captação: ~R$ 132 mi</strong>",
+          "927.162 cotas emitidas",
+          "ISIN: BRFIIPCTF001"
+        ]
+      },
+      {
+        "periodo": "2009-2010",
+        "label": "AQUISIÇÕES INICIAIS",
+        "cor": "blue",
+        "descricao": "Aquisição dos 7 imóveis originais da carteira: Danfoss (Osasco), Ambev (SJ Pinhais), Magazine Luiza/Astuti (Ibiporã), Telha Norte (Contagem), C&A (Shopping Tatuapé), Barry Callebaut (Ilhéus) e Leader (Nova Iguaçu). Todos em modelo built-to-suit com contratos atípicos.",
+        "pontos": [
+          "Carteira 100% tijolo desde o início",
+          "Contratos BTS de longa duração",
+          "7 imóveis em 5 estados"
+        ]
+      },
+      {
+        "periodo": "2016-2019",
+        "label": "RODADA DE ADITAMENTOS",
+        "cor": "blue",
+        "descricao": "Diversos aditivos contratuais (Barry, Danfoss, C&A, Ambev) foram firmados para estender a vigência dos contratos originais após os primeiros vencimentos. A Magazine Luiza foi substituída pela Astuti em Ibiporã (2020-2021).",
+        "pontos": [
+          "Renovações sucessivas (típicos e atípicos)",
+          "Astuti entra em Ibiporã (ex-Magalu)",
+          "Novo ciclo de IPCA como indexador"
+        ]
+      },
+      {
+        "periodo": "Fev/2021",
+        "label": "CRISE LEADER",
+        "cor": "red",
+        "descricao": "Lojas Leader ajuíza ação buscando rescisão do contrato de Nova Iguaçu/RJ. Início de disputa judicial relevante que se estenderia por 4 anos e terminaria em falência da locatária. Pernambucanas assume o imóvel no lugar.",
+        "pontos": [
+          "Ação judicial Leader (fev/2021)",
+          "Pernambucanas assume Nova Iguaçu",
+          "Crédito quirografário de R$ 783 mil"
+        ]
+      },
+      {
+        "periodo": "Out/2024",
+        "label": "MIGRAÇÃO FIIP11B→FIIP11",
+        "cor": "blue",
+        "descricao": "Ato do administrador (15/10/2024) adequou o regulamento às regras da B3 para fundos listados. O ticker passou de FIIP11B (mercado de balcão) para FIIP11 (bolsa), com migração automática do mercado de negociação.",
+        "pontos": [
+          "Ticker atualizado para FIIP11",
+          "Negociação passa a ser exclusiva em bolsa",
+          "Melhoria de liquidez"
+        ]
+      },
+      {
+        "periodo": "Abr/2025",
+        "label": "FALÊNCIA DA LEADER",
+        "cor": "red",
+        "descricao": "Recuperação judicial do Grupo Leader é convolada em falência. O fundo passa a figurar como credor quirografário de R$ 783 mil. Processos de execução permanecem suspensos pela lei de insolvência.",
+        "pontos": [
+          "Execução suspensa",
+          "Recurso concede 45 dias de suspensão provisória",
+          "Chance de recuperação baixa"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "NOVA RESPONSABILIDADE LIMITADA",
+        "cor": "emerald",
+        "descricao": "Instrumento de Alteração (17/06/2025) adapta o regulamento à Resolução CVM 175/22. Denominação passa a 'RB Capital Renda I FII - Responsabilidade Limitada' com limitação da responsabilidade dos cotistas ao valor de suas cotas.",
+        "pontos": [
+          "Adesão à CVM 175",
+          "Responsabilidade limitada dos cotistas",
+          "Estrutura de classe única"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "WABTEC E AMBEV",
+        "cor": "emerald",
+        "descricao": "Contrato de locação com a Wabtec inicia em Contagem/MG (ex-Telhanorte) com vencimento em jul/35. Em paralelo, o contrato com a Ambev é renegociado e estendido até dez/2030, preservando o fluxo de caixa.",
+        "pontos": [
+          "<strong>Wabtec: contrato longo até jul/35</strong>",
+          "Ambev renovada até dez/30",
+          "Catalisadores positivos"
+        ]
+      },
+      {
+        "periodo": "Dez/2025",
+        "label": "PERNAMBUCANAS SAI",
+        "cor": "red",
+        "descricao": "Fato Relevante de 19/12/2025 comunica intenção da Pernambucanas de rescindir contrato em Nova Iguaçu/RJ, com aviso prévio de 12 meses. Vacância potencial de 14,8% da receita a partir do 4T2026.",
+        "pontos": [
+          "Aviso prévio de 12 meses",
+          "Risco real de vacância em 2026",
+          "Prospecção de novos inquilinos"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Fundo negocia a R$ 135,00 (P/VP 0,68) com DY anualizado de 12,44%. Distribuição estável de R$ 1,40/cota/mês. Caixa líquido de R$ 2,57 mi. Portfólio 100% ocupado, com 6.443 cotistas.",
+        "pontos": [
+          "<strong>Deságio de 32%</strong> sobre o VP",
+          "DY 12,44% a.a.",
+          "Liquidez média R$ 691 mil/dia"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">FIIP11</strong> nasceu em 2007-2009 como um dos pioneiros do mercado brasileiro de FIIs de tijolo, captando R$ 132 milhões em IPO e adquirindo um portfólio de 7 imóveis built-to-suit. Ao longo de mais de 15 anos, o fundo <strong class=\"text-emerald-400\">atravessou múltiplos ciclos econômicos</strong> sem emissões adicionais de cotas, mantendo as mesmas 927.162 cotas emitidas desde a oferta inicial — uma marca de disciplina de gestão e de alinhamento com cotistas.</p><p>O histórico combina <strong class=\"text-emerald-400\">resiliência operacional</strong> (ocupação de 100% pela maior parte do tempo, mesmo em crises como 2015-2016 e 2020-2021) com <strong class=\"text-red-400\">episódios críticos</strong> como a ação judicial e falência da Lojas Leader (2021-2025) e, mais recentemente, a rescisão anunciada pela Pernambucanas (dez/2025). A trajetória recente traz sinais mistos: enquanto a nova locação Wabtec (até 2035) e a renovação da Ambev (até 2030) reforçam a base de receitas, a saída da Pernambucanas abre uma janela de vacância de 14,8% da receita a partir do 4T2026.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Cota (desde IPO até abr/26)",
+        "valor": "-5%",
+        "detalhe": "~R$ 142 (dez/09) → R$ 135,00"
+      },
+      {
+        "label": "PL desde IPO",
+        "valor": "+40%",
+        "detalhe": "~R$ 132 mi → R$ 185,2 mi"
+      },
+      {
+        "label": "Receita Locação 2024/25",
+        "valor": "R$ 16,0 Mi",
+        "detalhe": "vs. R$ 18,2 Mi em 2023/24"
+      },
+      {
+        "label": "Distribuído 2024/25 (jul-jun)",
+        "valor": "R$ 15,69 Mi",
+        "detalhe": "~R$ 16,92/cota (DY 8,42% s/ VP)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">FIIP11</strong> se apoia em três pilares: (i) <strong class=\"text-emerald-400\">deságio expressivo de 32% sobre o VP</strong>, que já incorpora riscos como a saída da Pernambucanas e a concentração em monousuários; (ii) <strong class=\"text-emerald-400\">DY muito elevado (12,44% a.a.)</strong>, compatível com emissores AAA de crédito (Danfoss, Ambev, Wabtec) e acima da NTN-B longa; e (iii) <strong class=\"text-emerald-400\">taxas baixíssimas</strong> (conjunto ~0,30% a.a.), estrutura leve sem performance e histórico de mais de 15 anos sem emissões adicionais.</p><p>Como contrapartida, o fundo tem <strong class=\"text-red-400\">7 inquilinos concentrados</strong> com aproximadamente 60% dos vencimentos entre 2026 e 2028, e enfrenta <strong class=\"text-red-400\">vacância iminente em Nova Iguaçu</strong> (a partir do 4T2026) e resíduo da <strong class=\"text-red-400\">falência da Leader</strong>. É uma tese adequada para quem aceita volatilidade de dividendos em troca de uma entrada descontada em ativos físicos de qualidade.</p>",
+    "paraQuem": [
+      "<strong>Investidores de valor (value investing)</strong> que buscam FIIs com deságio histórico relevante sobre o VP e geração de caixa consistente",
+      "Perfis que priorizam <strong>renda passiva de longo prazo</strong>, com DY acima da NTN-B+5% e capacidade de tolerar oscilações mensais no rendimento",
+      "Investidores com <strong>horizonte de 5+ anos</strong> que acompanhem ciclo de renovações contratuais 2026-2028 como catalisador ou risco"
+    ],
+    "naoParaQuem": [
+      "Quem precisa de <strong>dividendos estáveis mês a mês</strong> — renovações e eventual vacância em Nova Iguaçu podem gerar oscilações relevantes",
+      "Investidores que <strong>buscam diversificação máxima</strong> — o fundo tem 7 imóveis com forte concentração em 2 inquilinos (Danfoss + Astuti = 40%)",
+      "Perfis que não aceitam <strong>risco de renegociação</strong> contratual no curto prazo (2026-2028)",
+      "Quem busca <strong>fundos de papel ou CRIs</strong> — FIIP11 é 100% tijolo com receita de aluguel"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Abr",
+      "Mai",
+      "Jun",
+      "Jul",
+      "Ago",
+      "Set",
+      "Out",
+      "Nov",
+      "Dez",
+      "Jan",
+      "Fev",
+      "Mar"
+    ],
+    "chartData": [
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40,
+      1.40
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 1.8,
+    "totaisAnuais": [
+      {
+        "ano": "2022/23",
+        "valor": "R$ 15,84"
+      },
+      {
+        "ano": "2023/24",
+        "valor": "R$ 17,28"
+      },
+      {
+        "ano": "2024/25",
+        "valor": "R$ 16,92"
+      },
+      {
+        "ano": "12M abr/26",
+        "valor": "R$ 16,80"
+      }
+    ],
+    "guidance": {
+      "periodo": "2S2026",
+      "faixa": "R$ 1,30 a R$ 1,40",
+      "unidade": "por cota/mês (sujeita a vacância Nova Iguaçu no 4T)"
+    },
+    "stats": [
+      {
+        "label": "Atual (mar/26)",
+        "valor": "R$ 1,40"
+      },
+      {
+        "label": "Distribuído 2024/25",
+        "valor": "R$ 15,69 Mi"
+      },
+      {
+        "label": "% do caixa 12M",
+        "valor": "98,4%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Atenção em 2S26",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,68",
+      "descricao": "<p>Deságio expressivo sobre o valor patrimonial. A cota negocia a <strong class=\"text-emerald-400\">R$ 135,00</strong> enquanto o VP é de <strong class=\"text-blue-400\">R$ 199,74</strong>, um deságio de 32% sobre o patrimônio avaliado. Parte desse desconto reflete o risco de vacância anunciada em Nova Iguaçu e a concentração de vencimentos contratuais.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 199,74"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 135,00",
+          "cor": "emerald"
+        },
+        {
+          "label": "Deságio",
+          "valor": "32%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "12,44%",
+      "label": "Dividend Yield",
+      "cor": "emerald",
+      "descricao": "<p>DY anualizado de <strong class=\"text-emerald-400\">12,44%</strong> é extremamente competitivo frente à NTN-B 10 anos (~7,0% real) e ao IFIX. Spread aproximado de <strong class=\"text-blue-400\">545 bps</strong> sobre NTN-B longa, compatível com o risco concentrado em monousuários e a iminência de vacância em Nova Iguaçu.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 160,00",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Cálculo base — Gordon: DPS normalizado de R$ 15,00 (já considerando 7 meses de vacância parcial em 2026-2027) dividido por (custo de capital 10,5% − crescimento 1,0%) ≈ R$ 158. Cruzando com P/VP de peers híbridos (0,80 a 0,85) e DY target (~9,5%), chega-se a faixa entre <strong class=\"text-emerald-400\">R$ 155 e R$ 170</strong>. O valor central de <strong class=\"text-blue-400\">R$ 160,00</strong> incorpora desconto residual por concentração e ciclo de renovação contratual. Em cenário de Selic em 12% até final de 2027 e reocupação de Nova Iguaçu, o preço justo pode se deslocar para R$ 180+.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O FIIP11 fechou o 1T2026 com patrimônio líquido de R$ 185,2 milhões, ocupação de 100%, caixa líquido de R$ 2,57 milhões e distribuição de R$ 1,40/cota/mês (DY anualizado de 12,44% sobre o preço de mercado de R$ 135,00). A carteira é composta por 7 imóveis monousuários em 7 cidades, com ABL total de 68,4 mil m² e receita imobiliária de ~R$ 18,1 milhões em 12 meses.",
+      "O ponto técnico mais forte da tese é o deságio de 32% sobre o VP combinado com DY acima de 12% — patamar raro no universo de FIIs de tijolo com inquilinos de qualidade AAA (Danfoss, Ambev, Wabtec). As taxas são baixas (conjunto ~0,30% a.a.), não há performance, o fundo é pulverizado (6.443 cotistas, todos abaixo de 5%) e o histórico de quase 16 anos sem novas emissões transmite disciplina. A liquidez também melhorou significativamente: o volume médio diário passou de R$ 67 mil (2016) para R$ 691 mil em mar/2026.",
+      "Olhando para frente, os riscos concretos se concentram em dois pontos: (i) a rescisão anunciada pela Pernambucanas em Nova Iguaçu, que tira 14,8% da receita a partir do 4T2026 se não houver substituição de locatário; e (ii) os vencimentos contratuais concentrados de Barry (nov/26), Astuti (jan/27), C&A (ago/27) e Danfoss (dez/28), que juntos respondem por mais de 60% da receita. Em contrapartida, a nova locação da Wabtec (até 2035) e o aditivo da Ambev (até 2030) dão base contratual longa em ~23% da receita. O FIIP11 é uma tese de valor para quem aceita a volatilidade do ciclo de renovações em troca de uma entrada muito descontada."
+    ],
+    "pontosFortes": [
+      "Um dos FIIs mais antigos da B3 (IPO em dez/2009) com mais de 15 anos de histórico operacional",
+      "Deságio de 32% sobre o VP — R$ 135,00 vs. R$ 199,74 de valor patrimonial",
+      "DY anualizado de 12,44%, com spread de ~545 bps sobre NTN-B 10 anos",
+      "100% de ocupação histórica com inquilinos de primeira linha (Danfoss, Ambev, Wabtec)",
+      "Taxas baixíssimas: conjunto de administração e consultoria em ~0,30% a.a.",
+      "Sem taxa de performance e sem emissões adicionais desde o IPO (alinhamento de longo prazo)",
+      "Nova locação Wabtec (até jul/35) e renovação Ambev (até dez/30) — base contratual longa em 23% da receita",
+      "Carteira pulverizada em 6.443 cotistas (nenhum com mais de 5% das cotas)",
+      "Liquidez média diária de R$ 691 mil em mar/26, nível saudável para o segmento",
+      "Portfólio distribuído em 7 estados reduzindo risco regional"
+    ],
+    "pontosDeAtencao": [
+      "Rescisão anunciada da Pernambucanas em Nova Iguaçu (14,8% da receita) — vacância iminente no 4T2026",
+      "Vencimentos concentrados em 2026-2028: Barry, Astuti, C&A e Danfoss somam mais de 60% da receita",
+      "Falência da Leader (abr/2025) — crédito quirografário de R$ 783 mil com baixa chance de recuperação",
+      "Concentração em 2 inquilinos principais (Danfoss 21,4% + Astuti 18,5% = 40% da receita)",
+      "Imóveis adquiridos em 2009-2010 — idade dos ativos pode pressionar renegociações",
+      "Classificação setorial híbrida (logística + varejo) dificulta enquadramento em teses puras",
+      "Não há gestor de carteira formal — apenas consultor imobiliário (RB Asset), com AGE necessária para reciclagem",
+      "Imóvel C&A é direito real de uso (até out/47), não propriedade plena",
+      "Cerca de 22% da receita ainda reajustada pelo IGP-M, mais volátil que o IPCA",
+      "Auditor independente trocou de PwC para BDO e agora Grant Thornton em sucessivos exercícios"
+    ],
+    "conclusaoFinal": "O FIIP11 é um exemplar de FII de tijolo 'escola antiga' — estruturado em 2007, com IPO em 2009, portfólio físico pulverizado em 7 ativos e uma base contratual construída com inquilinos âncoras. A precificação atual (P/VP 0,68 e DY 12,44%) claramente incorpora os riscos conhecidos (rescisão Pernambucanas, vencimentos 2026-2028, falência Leader), mas também deixa margem de segurança para quem acredita na capacidade da RB Asset de reocupar Nova Iguaçu e renegociar os contratos-chave. Para investidores que priorizam renda passiva de longo prazo com ativos físicos de qualidade e taxas baixas, a tese é racional. Para quem precisa de estabilidade mensal absoluta ou foge de concentração em monousuários, há FIIs logísticos e híbridos mais pulverizados (BTLG11, VILG11, KNRI11) que fazem mais sentido. A nota 7,0 reflete o equilíbrio entre a qualidade patrimonial histórica e os riscos de curto prazo que se acumularam nos últimos 12 meses."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 352,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

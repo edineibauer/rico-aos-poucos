@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/rbva11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-04-29",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:RBVA11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 9.99,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 7.7,
+    "data": "2025-02-10"
+  },
+  "maxHistorico": {
+    "valor": 126.8176,
+    "data": "2019-05-27"
+  },
+  "totalPontos": 366,
+  "coletadoEm": "2026-04-27T02:05:46Z"
+}

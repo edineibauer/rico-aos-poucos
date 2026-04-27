@@ -1,0 +1,662 @@
+{
+  "meta": {
+    "ticker": "EXES11",
+    "nome": "Éxes Fundo de Investimento Imobiliário Responsabilidade Limitada",
+    "nomeExtra": "(Fundo de Papel middle grade, CRIs de incorporação + FIAGRO)",
+    "segmento": "Títulos e Valores Mobiliários (Papel/Híbrido)",
+    "badges": [
+      "Fundo de Papel (CRI)",
+      "Middle Grade",
+      "BTG Pactual (Administrador)",
+      "Gestão Éxes Própria"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 411
+  },
+  "seo": {
+    "title": "EXES11 - Análise Completa | Éxes FII de Papel",
+    "description": "Análise do EXES11: FII de papel middle grade com 17 CRIs, taxas CDI+5% e IPCA+10%, DY LTM 17,21% e P/VP 0,95 sob gestão independente da Éxes.",
+    "keywords": "EXES11, Éxes, Éxes Gestora, BTG Pactual DTVM, fundo de papel, CRI, middle grade, FII CRI, AGRX11, incorporação",
+    "ogTitle": "EXES11 - Éxes FII de Papel | Análise Completa",
+    "ogDescription": "Fundo de papel middle grade com 16 CRIs ativos, DY LTM 17,21%, 14 meses consecutivos distribuindo R$ 0,13 e P/VP 0,95.",
+    "twitterTitle": "EXES11 - Éxes FII de Papel",
+    "twitterDescription": "Fundo de CRI middle grade gerido pela Éxes. DY LTM 17,21%, 14 meses com R$ 0,13/cota, P/VP 0,95 e reserva de R$ 0,04/cota."
+  },
+  "indicadores": {
+    "cotacao": 9.44,
+    "cotacaoData": "27/02/2026",
+    "pvp": 0.95,
+    "pvpDesconto": "5% de desconto sobre o VP (R$ 9,91)",
+    "dividendYield": 16.80,
+    "dividendoMensal": 0.13,
+    "dividendoAnual": 1.56,
+    "patrimonioLiquido": "R$ 139,7 Mi",
+    "vpCota": 9.91,
+    "cotistas": 2085,
+    "ocupacao": 100.0,
+    "numImoveis": 16
+  },
+  "recomendacao": {
+    "nota": 6.8,
+    "veredicto": null,
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">EXES11</strong> é um fundo de papel <strong class=\"text-amber-400\">middle grade</strong> gerido pela <strong class=\"text-blue-400\">Éxes Gestora de Recursos</strong> e administrado pelo BTG Pactual DTVM. A carteira combina 16 CRIs de incorporação imobiliária (69% do PL) com uma participação expressiva em FIAGRO (23% em AGRX11) e caixa (8%), buscando spread em CDI+4% a CDI+15% e IPCA+8,6% a IPCA+15%. Originação proprietária responde por <strong class=\"text-emerald-400\">85% dos ativos</strong>, diferencial relevante frente à média dos fundos de papel.</p><p>Como destaques, o EXES11 <strong class=\"text-emerald-400\">distribui R$ 0,13/cota há 14 meses consecutivos</strong> (DY LTM 17,21% / DY anualizado 16,80%) e ainda mantém reserva de R$ 0,04-0,05 por cota, sinal de política linear em um segmento que historicamente corta dividendos sob estresse macro. Entre os pontos de atenção, destacam-se a <strong class=\"text-red-400\">concentração de cotistas</strong> (um único investidor detém 49,34% das cotas conforme informe anual), o <strong class=\"text-red-400\">CRI Ávida em recuperação judicial</strong> (repactuado para IPCA+15% em dez/2024) e o <strong class=\"text-amber-400\">perfil middle grade</strong> dos CRIs — operações com taxas elevadas mas maior risco de crédito do que os high grade de referência do mercado.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio",
+      "valor": "R$ 139,7 Mi",
+      "detalhe": "VP/cota: R$ 9,91",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,13",
+      "valorSufixo": "/mês",
+      "detalhe": "~R$ 1,56/ano | DY 16,80%",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Ativos Alvo",
+      "valor": "16",
+      "detalhe": "15 CRIs + 1 FIAGRO (AGRX11)",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "2.085",
+      "detalhe": "14,1 mi de cotas emitidas",
+      "icone": "users",
+      "corIcone": "purple"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Concentração extrema de cotistas",
+      "descricao": "Um único cotista (pessoa jurídica) detém 49,34% das cotas do fundo, conforme Informe Anual de jun/2025. Outros dois cotistas somam mais 27%. Concentração dessa magnitude gera risco relevante de fluxo e liquidez caso o maior cotista decida liquidar posição.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "CRI Ávida em recuperação judicial",
+      "descricao": "O CRI Ávida (Ávida Construtora) teve vencimento antecipado declarado em fev/2023 e a construtora está em recuperação judicial. A operação foi repactuada em dez/2024, elevando a taxa para IPCA + 15% a.a., com garantias adicionais. Representa 2,57% do PL em fev/2026 e está com fluxo em dia, mas a decisão judicial definitiva da repactuação ainda aguarda trânsito em julgado.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Perfil middle grade dos ativos",
+      "descricao": "A Éxes se autodenomina 'middle grade'. Em tradução prática, são CRIs de incorporação residencial/loteamento com taxas elevadas (CDI+4% a CDI+7%; IPCA+8,6% a IPCA+15%) em troca de maior risco de crédito frente aos CRIs high grade de tickers de referência. O fundo é mais sensível a ciclos do setor de construção civil.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "23% do PL em um FIAGRO (AGRX11)",
+      "descricao": "O fundo comprou cotas do FIAGRO AGRX11 em set/2025 (preço médio R$ 7,94) e a posição atual representa 23% do PL (R$ 32 mi). Apesar da valorização de 16,2% já capturada, representa concentração atípica para um 'FII de papel' e exposição indireta ao risco agro.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Concentração em CRIs de incorporação",
+      "descricao": "Cerca de 50% do PL está em CRIs cuja finalidade é financiar término de obras de empreendimentos verticais. Essa concentração faz o fundo depender da velocidade de vendas e da execução das obras dos incorporadores parceiros (Persa, Bcanton, Acoi, Maxi, NMC, Azinunes, FGR etc.).",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Base pequena de cotistas diluída",
+      "descricao": "2.085 cotistas no total (mar/2026), com apenas 1 investidor não residente, 6 pessoas jurídicas não financeiras, 5 FIIs e 3 outros fundos. O restante é pessoa física. A base é pequena para um fundo de R$ 140 milhões e aumenta a volatilidade no secundário.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Sem formador de mercado",
+      "descricao": "O fundo não possui formador de mercado contratado (informe anual jun/2025, campo 1.4 em branco). A ausência agrava a liquidez em momentos de estresse, podendo levar a spreads elevados e movimentos bruscos de preço.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "Éxes Gestora de Recursos Ltda.",
+    "nota": 7.5,
+    "notaLabel": "BOA",
+    "stats": [
+      {
+        "label": "Tipo",
+        "valor": "Gestora independente"
+      },
+      {
+        "label": "Sede",
+        "valor": "São Paulo/SP (Itaim Bibi)"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">Éxes Gestora de Recursos</strong> (CNPJ 31.960.567/0001-33) é uma casa independente autorizada pela CVM desde jun/2019 (Ato Declaratório 17.218). Atua como gestora desde a constituição do fundo (originalmente 'BRICK 64' em 01/03/2021) e desde ago/2021 com a marca Éxes. O time tem como <strong class=\"text-emerald-400\">diferencial competitivo a originação proprietária</strong>: 85% dos ativos da carteira são estruturados pela própria equipe, desde a diligência até a formalização das garantias.</p><p>A administração fiduciária é da <strong class=\"text-blue-400\">BTG Pactual Serviços Financeiros S.A. DTVM</strong>, que também atua como custodiante e escriturador. A auditoria independente é da <strong class=\"text-blue-400\">PricewaterhouseCoopers</strong>. A combinação Éxes (originação) + BTG (back-office institucional) confere credibilidade à estrutura. O histórico recente mostra disciplina na gestão de crédito (recuperação do CRI Ávida com repactuação para IPCA+15% e aumento de garantias) e consistência nas distribuições (14 meses com R$ 0,13/cota).</p>",
+    "link": "https://www.exes.com.br"
+  },
+  "taxas": {
+    "subtitulo": "Taxa única competitiva dentro do universo de fundos de papel middle grade",
+    "glowCor": "emerald",
+    "itens": [
+      {
+        "label": "Taxa Administração + Gestão",
+        "valor": "1,00% a.a.",
+        "detalhe": "Sobre PL (mínimo R$ 22 mil/mês)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Escrituração",
+        "valor": "0,05% a.a.",
+        "detalhe": "Mínimo R$ 5 mil/mês (BTG)",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "N/A",
+        "detalhe": "Não há performance",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "PwC",
+        "detalhe": "PricewaterhouseCoopers",
+        "corBorda": "emerald"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "Éxes Gestora de Recursos Ltda."
+      },
+      {
+        "label": "Custodiante",
+        "valor": "BTG Pactual Serviços Financeiros S.A. DTVM"
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "PricewaterhouseCoopers Auditores Independentes"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "41.076.851/0001-03"
+      },
+      {
+        "label": "Início",
+        "valor": "02/09/2021"
+      },
+      {
+        "label": "Público-alvo",
+        "valor": "Investidores em geral"
+      },
+      {
+        "label": "Classificação ANBIMA",
+        "valor": "FII Títulos e Valores Mobiliários Gestão Ativa"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Ativos Alvo",
+        "valor": "16 (15 CRIs + 1 FIAGRO)"
+      },
+      {
+        "label": "Alocação CDI/IPCA",
+        "valor": "64% CDI+ / 36% IPCA+"
+      },
+      {
+        "label": "Caixa (BTG Yield)",
+        "valor": "8,02% do PL",
+        "cor": "amber"
+      },
+      {
+        "label": "Originação Própria",
+        "valor": "85% (vs. 15% terceiros)"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "CRIs de Incorporação",
+        "FIAGRO AGRX11",
+        "Renda Fixa / Caixa",
+        "CRI Varejo Essencial",
+        "CRI Energia Solar",
+        "CRI Loteamento",
+        "Outros"
+      ],
+      "data": [
+        50.47,
+        22.70,
+        8.02,
+        5.83,
+        4.76,
+        2.57,
+        5.65
+      ],
+      "cores": [
+        "#3b82f6",
+        "#10b981",
+        "#f59e0b",
+        "#8b5cf6",
+        "#ef4444",
+        "#ec4899",
+        "#64748b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "FIAGRO Araguaia (AGRX11)",
+        "setor": "FIAGRO FII",
+        "receita": "22,70% do PL",
+        "rating": "Classe Única",
+        "ratingCor": "emerald",
+        "risco": "Baixo (valorização +16,2%)",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Acoi - Ilhas Gregas",
+        "setor": "Incorporação Vertical (SP)",
+        "receita": "8,54% do PL",
+        "rating": "CDI + 4,00% (60 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra 30%",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Maxi - Tramonto",
+        "setor": "Incorporação Vertical (MG)",
+        "receita": "7,80% do PL",
+        "rating": "CDI + 3,75% (48 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra 18%",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI Azinunes - Mont Blanc",
+        "setor": "Incorporação Vertical (BA)",
+        "receita": "7,51% do PL",
+        "rating": "CDI + 5,00% (36 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra 26%",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CRI NMC - Primus Park",
+        "setor": "Incorporação Vertical (GO)",
+        "receita": "7,01% do PL",
+        "rating": "CDI + 4,00% (36 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra 62%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI São Vicente",
+        "setor": "Varejo Essencial (SP)",
+        "receita": "5,36% do PL",
+        "rating": "IPCA + 8,61% (120 meses)",
+        "ratingCor": "emerald",
+        "risco": "Supermercado 21 lojas",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI FGR - Jardins Marselha",
+        "setor": "Residencial Pulverizado (GO)",
+        "receita": "5,09% do PL",
+        "rating": "IPCA + 9,50% (120 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra concluída",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Persa - Spot Smart (MG)",
+        "setor": "Incorporação Vertical",
+        "receita": "5,08% do PL",
+        "rating": "CDI + 5,00% (36 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra 64%",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI EBM (Cyrela)",
+        "setor": "Venda de Terreno (SP)",
+        "receita": "4,76% do PL",
+        "rating": "IPCA + 11,00% (60 meses)",
+        "ratingCor": "emerald",
+        "risco": "Fiança Cyrela",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Celeste Energy (MT)",
+        "setor": "Energia Solar",
+        "receita": "4,76% do PL",
+        "rating": "IPCA + 11,70% (155 meses)",
+        "ratingCor": "emerald",
+        "risco": "Obra concluída",
+        "riscoCor": "emerald"
+      },
+      {
+        "nome": "CRI Ávida",
+        "setor": "Loteamento (MT)",
+        "receita": "2,57% do PL",
+        "rating": "IPCA + 15,00% (120 meses)",
+        "ratingCor": "red",
+        "risco": "Recuperação Judicial (2023)",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>A carteira é composta por <strong class=\"text-emerald-400\">16 ativos alvo pulverizados</strong>: 15 CRIs e 1 cota de FIAGRO (AGRX11). Em fev/2026, o maior ativo individual representa <strong class=\"text-amber-400\">24,68%</strong> do portfólio (FIAGRO Araguaia), seguido pelo CRI Acoi-Ilhas Gregas (9,29%) e CRI Maxi-Tramonto (8,48%). A distribuição geográfica mostra <strong class=\"text-emerald-400\">38,18% em SP</strong>, 22,93% em MG, 17,47% em GO, 10,84% na BA e 10,58% no MT.</p><p>Os CRIs de incorporação (50,47% do PL) são a espinha dorsal da tese, com <strong class=\"text-emerald-400\">múltiplas camadas de garantia</strong>: alienação fiduciária (AF) de quotas da SPE e das unidades imobiliárias, cessão fiduciária (CF) de 100% dos recebíveis, avais dos sócios e fundos de reserva de 3 a 6 PMTs. Em média, as razões de garantia superam 140-200% do saldo devedor. O ponto sensível é o <strong class=\"text-red-400\">CRI Ávida</strong>, em RJ e com repactuação ainda aguardando trânsito em julgado — apesar do fluxo estar em dia e razão de garantia total de 380%, é o único ativo com histórico de default formal.</p>"
+  },
+  "timeline": {
+    "subtitulo": "De fundo restrito a fundo pulverizado — dobra de patrimônio em 12 meses via 4ª e 5ª emissões",
+    "periodos": [
+      {
+        "periodo": "Mar/2021",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído em 01/03/2021 sob a denominação original 'BRICK 64 Fundo de Investimento Imobiliário' pelo administrador BTG Pactual DTVM.",
+        "pontos": [
+          "CNPJ 41.076.851/0001-03",
+          "Condomínio fechado, prazo indeterminado"
+        ]
+      },
+      {
+        "periodo": "Ago/2021",
+        "label": "RENOMEAÇÃO E REGULAMENTO",
+        "cor": "blue",
+        "descricao": "Em 02/08/2021 o fundo é renomeado para 'Exes Fundo de Investimento Imobiliário' e, em 18/08/2021, é aprovada a versão do regulamento que regeria a primeira oferta.",
+        "pontos": [
+          "Gestão transferida para Éxes Gestora de Recursos",
+          "Estratégia definida: CRIs middle grade"
+        ]
+      },
+      {
+        "periodo": "Set/2021",
+        "label": "INÍCIO DAS ATIVIDADES (1ª EMISSÃO)",
+        "cor": "emerald",
+        "descricao": "Início efetivo das atividades em 02/09/2021 com 83.600 cotas emitidas na 1ª emissão (ICVM 476), PL inicial de R$ 8,3 milhões. Primeiro dividendo de R$ 0,81/cota em outubro/2021.",
+        "pontos": [
+          "<strong>IPO pelo rito de oferta restrita</strong>",
+          "Selic em 6,25% e subindo",
+          "Estratégia: CRIs com spread sobre IPCA/CDI"
+        ]
+      },
+      {
+        "periodo": "Jun/2022",
+        "label": "1º BALANÇO ANUAL",
+        "cor": "blue",
+        "descricao": "Primeiro exercício social fechado com PL em expansão. A carteira incluía CRIs como Ávida, São Vicente e Celeste em construção/estruturação.",
+        "pontos": [
+          "Auditoria PricewaterhouseCoopers (primeiro parecer)",
+          "Política de distribuição linearizada começa a se formar"
+        ]
+      },
+      {
+        "periodo": "Fev/2023",
+        "label": "DEFAULT CRI ÁVIDA",
+        "cor": "red",
+        "descricao": "Em 03/02/2023 é declarado o vencimento antecipado do CRI Ávida após a construtora Ávida entrar em processo de recuperação judicial. Operação de ~R$ 5 mi passa a ser gerida para recuperação.",
+        "pontos": [
+          "Primeiro (e único) default do fundo",
+          "Garantias robustas permitem continuidade do fluxo"
+        ]
+      },
+      {
+        "periodo": "Jun/2024",
+        "label": "EXERCÍCIO 2023-2024",
+        "cor": "blue",
+        "descricao": "PL fecha em R$ 53,5 milhões, com 5,87 milhões de cotas. Lucro líquido do exercício: R$ 5,0 milhões (R$ 0,85/cota). Rendimentos declarados: R$ 5,4 milhões.",
+        "pontos": [
+          "VP/cota: R$ 9,11",
+          "PL dobra desde o IPO"
+        ]
+      },
+      {
+        "periodo": "Jul/2024",
+        "label": "4ª EMISSÃO",
+        "cor": "emerald",
+        "descricao": "Registro da 4ª emissão na CVM em 15/07/2024: 20,8 milhões de cotas a R$ 9,23 (R$ 9,59 com taxa de distribuição), montante inicial de R$ 200 milhões. Coordenador líder: BLOXS Capital Partners.",
+        "pontos": [
+          "Primeira oferta pública ampla (CVM 160)",
+          "Taxa de distribuição primária: 3,75%",
+          "Investidor mínimo de R$ 1 mi para institucional"
+        ]
+      },
+      {
+        "periodo": "Dez/2024",
+        "label": "REPACTUAÇÃO ÁVIDA",
+        "cor": "amber",
+        "descricao": "Em 04/12/2024, assembleia do CRI aprova repactuação: taxa sobe de IPCA+11% para <strong>IPCA+15%</strong>, novas garantias adicionadas, gestão dos recebíveis transferida para servicer. Saldo consolidado acrescido de multas.",
+        "pontos": [
+          "Razão de garantia total de 380% do saldo",
+          "Trânsito em julgado ainda aguardado"
+        ]
+      },
+      {
+        "periodo": "Jun/2025",
+        "label": "EXERCÍCIO 2024-2025",
+        "cor": "emerald",
+        "descricao": "PL fecha em R$ 68,0 milhões, 7,1 milhões de cotas. Lucro líquido do exercício salta para R$ 13,1 milhões (R$ 1,85/cota). Rendimentos declarados: R$ 10 milhões. VP/cota: R$ 9,57.",
+        "pontos": [
+          "<strong>Lucro +162% vs. ano anterior</strong>",
+          "CRIs passam a representar 65,88% do PL"
+        ]
+      },
+      {
+        "periodo": "Set/2025",
+        "label": "AQUISIÇÃO AGRX11",
+        "cor": "emerald",
+        "descricao": "Fundo adquire cotas do FIAGRO AGRX11 a preço médio de R$ 7,94 (DY mensal de 1,51%). Decisão táctica que provou ser acertada: AGRX11 encerra fev/2026 a R$ 9,23 (+16,2%), gerando 20,4% a.a. considerando rendimentos.",
+        "pontos": [
+          "Alocação passa a representar 23% do PL",
+          "Marcação adiciona R$ 5 mi ao PL"
+        ]
+      },
+      {
+        "periodo": "Ago/2025",
+        "label": "5ª EMISSÃO",
+        "cor": "emerald",
+        "descricao": "Registro da 5ª emissão em 15/08/2025: 10,1 milhões de cotas a R$ 9,62 (R$ 9,93 com taxa), montante inicial R$ 100 milhões + lote adicional de 25%. Coordenador líder: Éxes Serviços Financeiros.",
+        "pontos": [
+          "Éxes assume a própria distribuição",
+          "Taxa de distribuição primária: 3,09%"
+        ]
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Fundo negocia a R$ 9,44 com DY LTM de 17,21%. 14 meses consecutivos distribuindo R$ 0,13/cota + reserva de R$ 0,04. 2.085 cotistas, 14,1 milhões de cotas emitidas, PL de R$ 140 milhões.",
+        "pontos": [
+          "<strong>DY anualizado de 16,80%</strong>",
+          "P/VP de 0,95 (desconto de 5%)",
+          "16 ativos alvo diversificados"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>O <strong class=\"text-blue-400\">EXES11</strong> nasceu em 2021 como fundo pequeno (PL inicial de R$ 8,3 mi) com o nome original de <em>BRICK 64</em>, sendo renomeado para <strong class=\"text-emerald-400\">Éxes</strong> ainda em agosto/2021 para refletir a gestão assumida pela Éxes Gestora de Recursos. Entre 2021 e 2024, o fundo operou em regime discreto com estratégia de CRIs middle grade e distribuiu dividendos crescentes, consolidando um histórico antes de buscar escala.</p><p>O ponto de inflexão foi 2024-2025: em <strong class=\"text-emerald-400\">julho/2024</strong> o fundo fez sua <strong>4ª emissão pública</strong> (ICVM 160), quase dobrando o PL; em <strong class=\"text-emerald-400\">agosto/2025</strong> veio a <strong>5ª emissão</strong> que dobrou o número de cotas de 7,1 para 14,1 milhões. A aquisição tática de AGRX11 em set/2025 adicionou R$ 5 mi de marcação ao PL. Em paralelo, o fundo <strong class=\"text-emerald-400\">renegociou o CRI Ávida</strong> (único default) para IPCA+15% com garantias reforçadas, demonstrando capacidade de recuperação de crédito. Resultado: 14 meses distribuindo R$ 0,13/cota com reserva, em um ciclo de Selic alta.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "PL desde IPO (set/2021 a fev/2026)",
+        "valor": "+1.595%",
+        "detalhe": "R$ 8,3 mi → R$ 140 mi"
+      },
+      {
+        "label": "Cotas Emitidas (jun/25 a fev/26)",
+        "valor": "+98%",
+        "detalhe": "7,1 mi → 14,1 mi"
+      },
+      {
+        "label": "Lucro Líquido 2024-2025",
+        "valor": "R$ 13,1 Mi",
+        "detalhe": "vs. R$ 5,0 mi em 2023-2024 (+162%)"
+      },
+      {
+        "label": "Distribuído LTM",
+        "valor": "17,21%",
+        "detalhe": "14 meses com R$ 0,13/cota"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>A tese do <strong class=\"text-blue-400\">EXES11</strong> se sustenta em três pilares: (i) <strong class=\"text-emerald-400\">spreads elevados</strong> obtidos com CRIs middle grade de incorporação (taxas médias de CDI+4,7% e IPCA+10%+) com múltiplas camadas de garantia real; (ii) <strong class=\"text-emerald-400\">disciplina de distribuição</strong>, com 14 meses consecutivos de R$ 0,13/cota e reserva de R$ 0,04-0,05 mantida; e (iii) <strong class=\"text-emerald-400\">originação proprietária</strong> (85% da carteira estruturada pela Éxes), diferencial que permite acesso a ativos fora do universo competitivo dos high grade.</p><p>Como contrapartida, o fundo carrega <strong class=\"text-red-400\">concentração cotista</strong> (um único investidor com 49% das cotas), <strong class=\"text-red-400\">risco de crédito middle grade</strong> (já materializado no CRI Ávida), <strong class=\"text-amber-400\">exposição de 23% em um FIAGRO</strong> (AGRX11) pouco usual para um fundo de papel e <strong class=\"text-amber-400\">dependência do ciclo de incorporação residencial</strong> (50% do PL em CRIs de término de obra).</p>",
+    "paraQuem": [
+      "<strong>Investidores de renda</strong> que buscam DY mensal próximo de 1,3-1,5% com reserva de lucro e distribuição linearizada",
+      "Perfis que aceitam <strong>risco de crédito middle grade</strong> em troca de taxas CDI+4% a CDI+7% e IPCA+9% a IPCA+15%",
+      "Quem valoriza <strong>originação proprietária</strong> e gestão com histórico de recuperação de crédito (caso Ávida)",
+      "Investidores que procuram <strong>fundos de papel em expansão</strong>, ainda com P/VP abaixo de 1,00 e espaço para ganho de marcação"
+    ],
+    "naoParaQuem": [
+      "Perfis que querem apenas <strong>CRIs high grade</strong> com rating AAA e devedores corporativos consolidados",
+      "Quem <strong>não aceita concentração de cotistas</strong> — o maior investidor detém quase metade do fundo",
+      "Investidores que rejeitam <strong>FIIs com exposição a outros FIIs/FIAGROs</strong> — 23% do PL está em AGRX11",
+      "Quem não tolera <strong>CRIs em recuperação judicial</strong>, mesmo repactuados — o CRI Ávida permanece na carteira"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Mar/25",
+      "Abr/25",
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26"
+    ],
+    "chartData": [
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13,
+      0.13
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.18,
+    "totaisAnuais": [
+      {
+        "ano": "2022",
+        "valor": "R$ 0,92"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 1,28"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 1,48"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 1,56"
+      }
+    ],
+    "guidance": {
+      "periodo": "1S2026",
+      "faixa": "R$ 0,13",
+      "unidade": "por cota / mês (mantido pelo 14º mês consecutivo + reserva R$ 0,04)"
+    },
+    "stats": [
+      {
+        "label": "Atual",
+        "valor": "R$ 0,13"
+      },
+      {
+        "label": "DY LTM",
+        "valor": "17,21%"
+      },
+      {
+        "label": "DY Anualizado",
+        "valor": "16,80%"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estável",
+        "cor": "emerald"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,95",
+      "descricao": "<p>Desconto de apenas 5% sobre o valor patrimonial. A cota negocia a <strong class=\"text-emerald-400\">R$ 9,44</strong> enquanto o VP é de <strong class=\"text-blue-400\">R$ 9,91</strong> (fev/2026). Parte do desconto histórico foi reduzida pela valorização de 16,2% do AGRX11 após a aquisição em set/2025, que subiu a cota patrimonial. Em janela de 12 meses, o P/VP oscilou entre 0,95 e 0,99.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,91"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 9,44",
+          "cor": "emerald"
+        },
+        {
+          "label": "Desconto",
+          "valor": "5%",
+          "cor": "emerald"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "16,80%",
+      "label": "Dividend Yield Anualizado",
+      "cor": "emerald",
+      "descricao": "<p>DY anualizado de <strong class=\"text-emerald-400\">16,80%</strong> (DY LTM 17,21%) é altamente competitivo no universo de fundos de papel, refletindo taxa média ponderada da carteira em CDI+4,6% e IPCA+10,8%. Com Selic em ~15%, o fundo entrega um spread relevante sobre CDI, compensando o risco middle grade.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 9,80",
+      "label": "Preço Justo Estimado",
+      "cor": "blue",
+      "descricao": "<p>Cálculo base — Gordon: DPS de R$ 1,56 dividido por (custo de capital 17,0% − crescimento 1,0%) ≈ R$ 9,75. Cruzando com P/VP alvo de 0,98-1,00 sobre VP de R$ 9,91, chega-se a faixa entre R$ 9,70 e R$ 9,90. O valor central de <strong class=\"text-blue-400\">R$ 9,80</strong> incorpora pequeno prêmio sobre a cota atual por: (i) eventual redução da Selic, (ii) amortização do CRI Ávida e (iii) continuidade do ciclo de originação proprietária. O upside maior está atrelado à queda da Selic nos próximos 12-18 meses — se o ciclo se concretizar, o mesmo DY de 16,80% pode passar a valer um P/VP maior, levando a cota na direção de R$ 10,20-10,50.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O EXES11 fechou fevereiro/2026 com patrimônio líquido de R$ 140,7 milhões, distribuídos em 16 ativos alvo (15 CRIs + AGRX11), com alocação de 64% em CDI+ e 36% em IPCA+, retorno médio dos ativos em CDI+4,6% e IPCA+10,8%. O fundo completou 14 meses consecutivos distribuindo R$ 0,13 por cota, com reserva adicional de R$ 0,04 por cota, resultando em DY LTM de 17,21% e DY anualizado de 16,80%. A cota negocia a R$ 9,44 contra VP de R$ 9,91, P/VP de 0,95. Com 2.085 cotistas e 14,1 milhões de cotas emitidas após a 4ª (jul/2024) e a 5ª (ago/2025) emissões, o fundo quase triplicou de tamanho em 18 meses.",
+      "No campo técnico, o diferencial do EXES11 está na originação proprietária (85% da carteira) e na disciplina de gestão de crédito. O caso emblemático é o CRI Ávida, que entrou em vencimento antecipado em fev/2023 após a construtora ingressar em recuperação judicial, e foi repactuado em dez/2024 para IPCA+15% (antes IPCA+11%) com garantias reforçadas — o fluxo está em dia e a razão de garantia total passou a 380% do saldo devedor. É um teste de estresse aprovado, embora ainda aguarde trânsito em julgado da repactuação. A decisão de comprar AGRX11 em set/2025 também provou-se acertada: ganho de 16,2% em ~5 meses, adicionando R$ 5 mi ao PL.",
+      "Olhando para frente, os catalisadores principais são: (i) ciclo de queda da Selic, que pode aumentar o P/VP e reduzir o spread exigido; (ii) pipeline robusto — quatro CRIs em diligência e outros em negociação totalizando ~R$ 200 milhões; e (iii) consolidação da base de cotistas com nova emissão. Os riscos estruturais permanecem: concentração cotista (um investidor com 49%), perfil middle grade dos CRIs de incorporação dependente do ciclo imobiliário e exposição de 23% em um único FIAGRO. Para quem aceita esse perfil e busca renda linear com spread elevado, a tese segue atraente — para quem prefere CRIs high grade ou fundos sem concentração em cotistas, há opções menos agressivas no mercado."
+    ],
+    "pontosFortes": [
+      "DY anualizado de 16,80% e DY LTM de 17,21% — competitivo no universo de fundos de papel",
+      "14 meses consecutivos distribuindo R$ 0,13/cota com reserva de R$ 0,04-0,05 adicionais",
+      "Originação proprietária de 85% dos ativos — diferencial relevante na estrutura das operações",
+      "Carteira com 16 ativos pulverizados (maior é 24,68% - o FIAGRO) em 5 estados diferentes",
+      "Garantias robustas: AF de quotas/unidades, CF de recebíveis, avais PF/PJ, fundos de reserva 3-6 PMTs",
+      "Histórico comprovado de recuperação de crédito (CRI Ávida repactuado para IPCA+15% com +garantias)",
+      "BTG Pactual como administrador/custodiante + PwC como auditor — infraestrutura institucional",
+      "Taxa total competitiva: 1,00% gestão+administração + 0,05% escrituração, sem performance",
+      "Ganho tático com AGRX11 (+16,2% em 5 meses) adicionou R$ 5 mi ao PL",
+      "Fundo em expansão: PL cresceu 15x desde IPO (R$ 8,3 mi → R$ 140 mi) em 4,5 anos"
+    ],
+    "pontosDeAtencao": [
+      "Concentração extrema de cotistas: um único investidor detém 49,34% das cotas (informe anual jun/2025)",
+      "CRI Ávida em recuperação judicial — repactuação de dez/2024 aguarda trânsito em julgado",
+      "Perfil middle grade: maior risco de crédito que high grade de referência do mercado",
+      "23% do PL em um FIAGRO (AGRX11) — exposição indireta e pouco usual para um 'FII de papel'",
+      "50% do PL em CRIs de incorporação — dependência do ciclo de obras e vendas das construtoras parceiras",
+      "Sem formador de mercado — liquidez pode se deteriorar em momentos de estresse",
+      "Base de cotistas pequena (2.085) para um fundo de R$ 140 mi — aumenta volatilidade secundária",
+      "Gestora Éxes é relativamente pequena (autorizada na CVM apenas em jun/2019) — menos escala que grandes players",
+      "Taxa administrativa tem piso alto (R$ 22 mil/mês) — pesa proporcionalmente se o PL encolher",
+      "Retrospecto curto de 4 anos e meio desde o início — ainda sem ciclos longos de crise testados (2008, 2015)"
+    ],
+    "conclusaoFinal": "O EXES11 é um caso interessante de fundo de papel middle grade que combina boa execução (14 meses distribuindo R$ 0,13 com reserva, caso Ávida recuperado, ganho tático em AGRX11) com riscos que precisam ser encarados com honestidade (cotista controlador com 49% das cotas, CRI ainda em RJ, exposição atípica em FIAGRO). A precificação atual (P/VP 0,95 e DY 16,80%) já reflete parte desses riscos, mas a qualidade da gestão Éxes e a estrutura com BTG/PwC dão ao fundo um padrão institucional acima da média dos middle grade. É mais adequado a investidores que buscam renda mensal consistente e aceitam risco de crédito controlado em troca de spreads elevados, não sendo indicado para quem exige somente CRIs AAA ou rejeita concentração de cotistas."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 411,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

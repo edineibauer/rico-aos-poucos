@@ -1,0 +1,583 @@
+{
+  "meta": {
+    "ticker": "EMET11",
+    "nome": "EMET Multiestratégia Fundo de Investimento Imobiliário Responsabilidade Limitada",
+    "nomeExtra": "(ex-EMET/More Invest, sob gestão V2 Investimentos desde fev/2026)",
+    "segmento": "Multiestratégia (FOF / Multicategoria)",
+    "badges": [
+      "FOF Multiestratégia",
+      "PL R$ 49 Mi",
+      "Gestão recém-assumida pela V2"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 55
+  },
+  "seo": {
+    "title": "EMET11 - Análise Completa | EMET Multiestratégia FII",
+    "description": "Análise do EMET11: FII multiestratégia de R$ 46,7 mi, DY 13,1%, P/VP 0,94, portfólio de FIIs após troca de gestora para V2 Investimentos.",
+    "keywords": "emet11, emet multiestratégia, v2 investimentos, rec gestão, more invest, fof, multiestratégia, fundo de fundos, dy, p/vp, análise fii",
+    "ogTitle": "EMET11 - Análise Completa | EMET Multiestratégia",
+    "ogDescription": "FII multiestratégia de pequeno porte (R$ 47 mi) com três trocas de gestor em 2 anos, portfólio concentrado em FIIs de tijolo e papel.",
+    "twitterTitle": "EMET11 - Análise Completa",
+    "twitterDescription": "FII multiestratégia com DY 13,1%, P/VP 0,94 e histórico recente de instabilidade na gestão. Portfólio concentrado em HOFC11, VCRR11 e TRUE11."
+  },
+  "indicadores": {
+    "cotacao": 9.35,
+    "cotacaoData": "24/04/2026",
+    "pvp": 0.94,
+    "pvpDesconto": "6% de desconto sobre o VP",
+    "dividendYield": 13.12,
+    "dividendoMensal": 0.1,
+    "dividendoAnual": 1.22,
+    "patrimonioLiquido": "R$ 49,1 Mi",
+    "vpCota": 9.82,
+    "cotistas": 167,
+    "ocupacao": null,
+    "numImoveis": 8
+  },
+  "recomendacao": {
+    "nota": 4.5,
+    "veredicto": null,
+    "cor": "amber",
+    "resumo": "<p>O <strong class=\"text-blue-400\">EMET11</strong> é um FII multiestratégia de pequeno porte (PL de <strong class=\"text-amber-400\">R$ 49 milhões</strong> e apenas <strong class=\"text-amber-400\">167 cotistas</strong>) cujo portfólio hoje é composto quase integralmente por cotas de outros FIIs (FOF), com destaque para <strong class=\"text-blue-400\">HOFC11 (32,8%)</strong>, <strong class=\"text-blue-400\">VCRR11 (30,0%)</strong> e <strong class=\"text-blue-400\">TRUE11 (16,9%)</strong>, além de posições menores em CXRI11, ALZC11 e SCAR3.</p><p>O fundo atravessou um período de <strong class=\"text-red-400\">forte instabilidade na gestão</strong>: iniciou em mar/2024 sob More Invest, migrou para REC Gestão em meados de 2025, que renunciou à gestão em nov/2025, e desde fev/2026 está sob gestão da V2 Investimentos. Em paralelo, houve transferência de administração da BTG Pactual para a BRL Trust em jun/2025. Essa rotatividade pesa sobre a previsibilidade e governança.</p><p>A cotação atual de <strong class=\"text-emerald-400\">R$ 9,35</strong> implica P/VP de <strong class=\"text-emerald-400\">0,94</strong> e DY 12m de <strong class=\"text-emerald-400\">13,1%</strong>, mas o DPS recorrente dos últimos meses caiu para <strong class=\"text-amber-400\">R$ 0,10/cota</strong>, indicando yield forward ao redor de 12,8%. Os pontos positivos são o desconto patrimonial, a diversificação do portfólio de FIIs investidos e uma reserva acumulada de R$ 0,01/cota; os pontos de atenção incluem liquidez baixa (R$ 400 mil/dia), altíssima concentração (2 cotistas detêm 77,7% das cotas) e risco de continuidade da estratégia sob a nova gestora.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "Patrimônio Líquido",
+      "valor": "R$ 49,1 Mi",
+      "detalhe": "VP/cota: R$ 9,82",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Rendimento",
+      "valor": "R$ 0,10",
+      "valorSufixo": "/mês",
+      "detalhe": "DY 12m: 13,1% | R$ 1,22/ano estimado",
+      "icone": "money",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Composição",
+      "valor": "98,6%",
+      "detalhe": "em cotas de FIIs (FOF)",
+      "icone": "building",
+      "corIcone": "blue"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "167",
+      "detalhe": "5 milhões de cotas",
+      "icone": "users",
+      "corIcone": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Troca sucessiva de gestoras em 24 meses",
+      "descricao": "O fundo passou por três gestoras desde o IPO (mar/2024): More Invest (2024-jun/2025), REC Gestão (jul-nov/2025) e V2 Investimentos (desde fev/2026). Em 04/11/2025 a REC protocolou renúncia formal à gestão. Mudanças frequentes criam descontinuidade estratégica e dificultam avaliação de track record.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Porte reduzido e baixa liquidez",
+      "descricao": "Patrimônio de apenas R$ 49 milhões e volume financeiro diário médio de R$ 400 mil em abr/2026 limitam fortemente entrada/saída de investidores e elevam o risco de iliquidez em momentos de estresse.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Concentração extrema de cotistas",
+      "descricao": "Dois cotistas detêm 77,7% das cotas (um com 43,2% e outro com 34,5%), segundo o informe anual 2025. Eventual saída de qualquer um dos majoritários pode gerar pressão significativa sobre a cotação.",
+      "severidade": "red"
+    },
+    {
+      "titulo": "Histórico de prejuízos contábeis",
+      "descricao": "Em 2024 o fundo encerrou com prejuízo acumulado de R$ 3,3 milhões (-8,76% do PL) e não distribuiu rendimentos no 2º semestre. Em 2025 houve recuperação para lucro contábil de R$ 7,9 milhões, mas a volatilidade do resultado é elevada.",
+      "severidade": "amber"
+    },
+    {
+      "titulo": "Ressalva de ênfase nos auditores",
+      "descricao": "A RSM ACAL destacou em 19/03/2026 que, no exercício 2025, o fundo distribuiu abaixo do mínimo de 95% do resultado financeiro exigido pela Lei 8.668/93, sem deliberação formal em assembleia aprovando tal prática.",
+      "severidade": "orange"
+    },
+    {
+      "titulo": "Reestruturação de portfólio em andamento",
+      "descricao": "Sob a V2, o fundo zerou posição em vários FIIs e ações (SCAR3, RBIR11, OULG11, RELG11) e concentrou alocação em HOFC11, VCRR11 e TRUE11. Impactos positivos e negativos da nova estratégia ainda precisam ser validados ao longo de 2026.",
+      "severidade": "amber"
+    }
+  ],
+  "gestora": {
+    "nome": "V2 Investimentos Ltda.",
+    "nota": 6.5,
+    "notaLabel": "REGULAR",
+    "stats": [
+      {
+        "label": "FIIs listados sob gestão",
+        "valor": "5"
+      },
+      {
+        "label": "Fundos sob gestão",
+        "valor": "10"
+      },
+      {
+        "label": "Investidores (FIIs listados)",
+        "valor": "+50 mil"
+      },
+      {
+        "label": "Data de início no EMET11",
+        "valor": "Fev/2026"
+      }
+    ],
+    "resumo": "<p>A <strong class=\"text-blue-400\">V2 Investimentos</strong> é gestora independente sediada em São Paulo, com 5 FIIs listados (VVMR11, VVCO11, VVRI11, VPPR11 e agora EMET11) e cerca de 10 fundos sob gestão, totalizando aproximadamente <strong class=\"text-blue-400\">R$ 835 milhões</strong> distribuídos entre os fundos listados.</p><p>Assumiu a gestão do EMET11 em fev/2026, em substituição à REC Gestão (que havia renunciado em nov/2025) e, antes dela, à More Invest (gestora original desde o IPO em mar/2024). Em seu primeiro relatório à frente do fundo (jan/2026), a V2 destacou aumento de 64% na base de cotistas (de 102 para 167) e redefinição de portfólio com foco em HOFC11, VCRR11 e TRUE11.</p><p>A <strong class=\"text-amber-400\">brevidade do histórico</strong> da V2 à frente do EMET11 impede avaliação definitiva da qualidade da gestão, mas seu track record em FIIs corporativos e híbridos é consistente com o mandato multiestratégia do fundo.</p>",
+    "link": null
+  },
+  "taxas": {
+    "subtitulo": "Taxas competitivas para FII multiestratégia, com administração enxuta",
+    "glowCor": "green",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "0,15% a.a.",
+        "detalhe": "Mínimo R$ 10 mil/mês | BRL Trust DTVM",
+        "corBorda": "emerald"
+      },
+      {
+        "label": "Taxa de Gestão",
+        "valor": "1,05% a.a.",
+        "detalhe": "Sobre PL (ou valor de mercado se no IFIX)",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "Sobre o que exceder o IFIX",
+        "corBorda": "amber"
+      },
+      {
+        "label": "Liquidez Diária",
+        "valor": "R$ 400 mil",
+        "detalhe": "Volume médio abr/2026 (baixo)",
+        "corBorda": "red"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Administrador",
+        "valor": "BRL Trust DTVM S.A. (desde 27/06/2025)"
+      },
+      {
+        "label": "Administrador anterior",
+        "valor": "BTG Pactual Serviços Financeiros (até 26/06/2025)"
+      },
+      {
+        "label": "Gestor",
+        "valor": "V2 Investimentos Ltda. (desde fev/2026)"
+      },
+      {
+        "label": "Gestores anteriores",
+        "valor": "REC Gestão (jul-nov/2025) e More Invest (mar/2024-jun/2025)"
+      },
+      {
+        "label": "Custodiante/Escriturador",
+        "valor": "BRL Trust DTVM S.A."
+      },
+      {
+        "label": "Auditor Independente",
+        "valor": "RSM ACAL Auditores Independentes"
+      },
+      {
+        "label": "CNPJ",
+        "valor": "53.523.736/0001-00"
+      },
+      {
+        "label": "Início das atividades",
+        "valor": "15/03/2024"
+      },
+      {
+        "label": "Início de negociação em bolsa",
+        "valor": "21/08/2024"
+      }
+    ]
+  },
+  "portfolio": {
+    "stats": [
+      {
+        "label": "Ativos em carteira",
+        "valor": "8 FIIs + renda fixa"
+      },
+      {
+        "label": "Alocação em FIIs",
+        "valor": "98,6%",
+        "cor": "blue"
+      },
+      {
+        "label": "Alocação em caixa",
+        "valor": "1,4%",
+        "cor": "emerald"
+      },
+      {
+        "label": "Patrimônio Líquido",
+        "valor": "R$ 49,1 Mi"
+      }
+    ],
+    "tipologiaChart": {
+      "labels": [
+        "HOFC11",
+        "VCRR11",
+        "TRUE11 (OULG11)",
+        "CXRI11",
+        "ALZC11",
+        "SCAR3",
+        "Outros"
+      ],
+      "data": [
+        32.8,
+        30.0,
+        16.9,
+        10.1,
+        7.4,
+        2.2,
+        0.6
+      ],
+      "cores": [
+        "#3b82f6",
+        "#8b5cf6",
+        "#10b981",
+        "#f59e0b",
+        "#ef4444",
+        "#6b7280",
+        "#64748b"
+      ]
+    },
+    "locatarios": [
+      {
+        "nome": "HOFC11 (RB Capital Office Income)",
+        "setor": "Lajes Corporativas",
+        "receita": "32,8% PL",
+        "rating": "Tijolo",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "VCRR11 (Pátria Renda Residencial)",
+        "setor": "Residencial",
+        "receita": "30,0% PL",
+        "rating": "Tijolo",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "TRUE11 / OULG11 (TrueMul CI)",
+        "setor": "Híbrido/Logística",
+        "receita": "16,9% PL",
+        "rating": "Híbrido",
+        "ratingCor": "blue",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "CXRI11 (Caixa Rio Bravo FOF)",
+        "setor": "FOF",
+        "receita": "10,1% PL",
+        "rating": "Papel/FOF",
+        "ratingCor": "amber",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "ALZC11 (Alianza Crédito)",
+        "setor": "Papel (CRI)",
+        "receita": "7,4% PL",
+        "rating": "Papel",
+        "ratingCor": "amber",
+        "risco": "Moderado",
+        "riscoCor": "amber"
+      },
+      {
+        "nome": "SCAR3 (São Carlos)",
+        "setor": "Imóveis corporativos (ação)",
+        "receita": "2,2% PL",
+        "rating": "Ação",
+        "ratingCor": "amber",
+        "risco": "Alto",
+        "riscoCor": "red"
+      },
+      {
+        "nome": "Rio das Pedras I FII",
+        "setor": "Não listado",
+        "receita": "0,6% PL",
+        "rating": "Não listado",
+        "ratingCor": "red",
+        "risco": "Alto",
+        "riscoCor": "red"
+      }
+    ],
+    "riscoNota": "<p>O portfólio atual é concentrado em <strong class=\"text-blue-400\">3 FIIs que respondem por ~79,7% do PL</strong> (HOFC11, VCRR11 e TRUE11), o que amplifica o risco idiossincrático desses ativos. A exposição a FIIs de tijolo (lajes, residencial, híbrido) é dominante e o fundo está sujeito à dupla camada de taxas (administração/gestão do EMET11 + taxas dos FIIs investidos). A presença residual de <strong class=\"text-amber-400\">Rio das Pedras I FII</strong> (não listado) introduz risco adicional de liquidez e precificação.</p>"
+  },
+  "timeline": {
+    "subtitulo": "Fundo jovem (IPO em 2024) com histórico marcado por três trocas de gestora em 24 meses",
+    "periodos": [
+      {
+        "periodo": "16/01/2024",
+        "label": "CONSTITUIÇÃO",
+        "cor": "blue",
+        "descricao": "Fundo constituído sob condomínio fechado, prazo indeterminado.",
+        "pontos": []
+      },
+      {
+        "periodo": "15/03/2024",
+        "label": "IPO",
+        "cor": "blue",
+        "descricao": "Início das atividades com PL inicial de R$ 20 milhões, gestão da More Invest e administração do BTG Pactual. Estratégia inicial: arbitragem entre FOFs com duplo desconto.",
+        "pontos": [
+          "<strong>2,006 milhões</strong> de cotas emitidas inicialmente",
+          "Objetivo: aplicar em FIIs, CRIs, ações e outros ativos imobiliários"
+        ]
+      },
+      {
+        "periodo": "21/08/2024",
+        "label": "LISTAGEM B3",
+        "cor": "blue",
+        "descricao": "Início da negociação das cotas na B3 a R$ 10,45 (fechamento ago/2024).",
+        "pontos": []
+      },
+      {
+        "periodo": "Dez/2024",
+        "label": "PREJUÍZO",
+        "cor": "red",
+        "descricao": "Fundo encerra 2024 com prejuízo contábil de R$ 3,3 milhões e rotaciona portfólio para FOFs (BTHF, JSAF, ITRI, CXCI). Não houve distribuição no 2º semestre de 2024.",
+        "pontos": [
+          "Prejuízo acumulado: <strong>-R$ 4,0 milhões</strong>",
+          "Cota patrimonial: R$ 9,17 | Cotação: R$ 9,98"
+        ]
+      },
+      {
+        "periodo": "Jan/2025",
+        "label": "ALFA POSITIVO",
+        "cor": "emerald",
+        "descricao": "EMET11 entrega retorno de +2,89% enquanto IFIX cai -3,08% (alfa de 5,97%), beneficiado por ativismo construtivista e arbitragem de FOFs.",
+        "pontos": []
+      },
+      {
+        "periodo": "26/06/2025",
+        "label": "TROCA DE ADM",
+        "cor": "amber",
+        "descricao": "Assembleia aprova transferência da administração do BTG Pactual para a BRL Trust DTVM. Ticker é mantido (EMET11).",
+        "pontos": []
+      },
+      {
+        "periodo": "Jul/2025",
+        "label": "NOVA GESTORA",
+        "cor": "amber",
+        "descricao": "REC Gestão assume gestão do fundo (anteriormente More Invest). Reciclagem intensa de portfólio com lucro realizado de ~R$ 1,4 milhão no mês.",
+        "pontos": [
+          "Estratégia: ativismo, FIIs descontados, arbitragem de FOFs, desenvolvimento"
+        ]
+      },
+      {
+        "periodo": "04/11/2025",
+        "label": "RENÚNCIA",
+        "cor": "red",
+        "descricao": "REC Gestão formaliza renúncia à gestão do EMET11, solicitando convocação de AGE para eleição de novo gestor ou liquidação em até 180 dias.",
+        "pontos": []
+      },
+      {
+        "periodo": "Nov/2025",
+        "label": "DIREITO PREF RMBS",
+        "cor": "blue",
+        "descricao": "REC cede gratuitamente aos cotistas do EMET11 o direito de preferência (ticker EMET12) para subscrever cotas da 2ª emissão do REC Master (RMBS11), com fator 0,5:1.",
+        "pontos": []
+      },
+      {
+        "periodo": "Fev/2026",
+        "label": "V2 ASSUME",
+        "cor": "blue",
+        "descricao": "V2 Investimentos passa a gerir o fundo. Base de cotistas salta de 102 (dez/25) para 167 (jan/26), alta de 64%. Portfólio redesenhado: HOFC11 32,8%, VCRR11 30,0%, TRUE11 16,9%.",
+        "pontos": [
+          "DPS recorrente estabilizado em <strong>R$ 0,10/cota</strong>",
+          "Yield mensal ~1,10% com reserva de R$ 0,01/cota"
+        ]
+      },
+      {
+        "periodo": "Abr/2026",
+        "label": "ATUAL",
+        "cor": "blue",
+        "descricao": "Cotação de R$ 9,35, P/VP 0,94, DY 13,1%. Fundo estabilizado sob nova gestora, mas ainda com porte reduzido e liquidez limitada.",
+        "pontos": [
+          "<strong>167 cotistas</strong> e PL de R$ 49,1 milhões",
+          "Liquidez diária média: R$ 400 mil"
+        ]
+      }
+    ],
+    "resumoTrajetoria": {
+      "titulo": "Resumo da trajetória",
+      "texto": "<p>Em apenas 2 anos de existência, o EMET11 viveu três mandatos de gestão distintos (More Invest, REC e V2) e uma troca de administrador (BTG→BRL Trust). O fundo nasceu com tese de arbitragem em FOFs descontados, passou por reestruturação ativista sob a REC, e agora opera sob a V2 com foco em FIIs de tijolo e papel selecionados. A <strong class=\"text-amber-400\">volatilidade operacional</strong> tem sido a marca registrada, contrastando com um histórico de distribuições que caiu de R$ 0,34 em dez/2025 (semestral) para R$ 0,10 mensais regulares em 2026.</p>"
+    },
+    "crescimento": [
+      {
+        "label": "Variação Cota",
+        "valor": "-6,5%",
+        "detalhe": "R$ 10,00 (IPO) → R$ 9,35"
+      },
+      {
+        "label": "Distribuído em 2025",
+        "valor": "R$ 0,94/cota",
+        "detalhe": "Acumulado do ano completo"
+      },
+      {
+        "label": "Distribuído em 2024",
+        "valor": "R$ 0,30/cota",
+        "detalhe": "Apenas 1º semestre (zero no 2S24)"
+      },
+      {
+        "label": "Cotistas",
+        "valor": "+234%",
+        "detalhe": "de ~50 (mar/24) para 167 (jan/26)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O <strong class=\"text-blue-400\">EMET11</strong> é um veículo multiestratégia de pequeno porte que funciona essencialmente como um <strong class=\"text-blue-400\">FOF concentrado</strong>, combinando exposição a FIIs de tijolo (HOFC11, VCRR11), logística (TRUE11), papel (CXRI11, ALZC11) e, historicamente, ações imobiliárias. A proposta de valor é capturar descontos patrimoniais de fundos investidos com gestão ativa, mas a execução dessa tese foi comprometida por trocas sucessivas de gestora.</p><p>Para o investidor, o fundo oferece hoje DY de 13,1%, P/VP de 0,94 e um portfólio redesenhado sob a V2, em troca de aceitar baixa liquidez (R$ 400 mil/dia), altíssima concentração de cotistas (dois majoritários = 77,7%) e histórico recente instável.</p>",
+    "paraQuem": [
+      "Investidores que buscam <strong class=\"text-emerald-400\">exposição diversificada</strong> a múltiplos FIIs via um único veículo, aceitando dupla camada de taxas",
+      "Perfis com tolerância a <strong class=\"text-amber-400\">baixa liquidez</strong> e que acompanham ativamente o desempenho de gestoras em reestruturação",
+      "Investidores dispostos a apostar na capacidade da <strong class=\"text-blue-400\">V2 Investimentos</strong> em dar continuidade estratégica ao fundo"
+    ],
+    "naoParaQuem": [
+      "Investidores que priorizam <strong class=\"text-red-400\">previsibilidade de renda mensal</strong> — o histórico de 2024-2025 mostra alternância entre meses sem distribuição e pagamentos semestrais concentrados",
+      "Quem <strong class=\"text-red-400\">precisa de liquidez</strong> para movimentar posições relevantes (acima de R$ 100 mil) de forma ágil",
+      "Perfis avessos a <strong class=\"text-red-400\">risco de governança</strong>, dada a recente renúncia da gestora anterior e a concentração em 2 cotistas majoritários",
+      "Investidores que preferem FOFs maiores e consolidados (BCFF11, HFOF11, RBRF11), com histórico mais longo e liquidez superior"
+    ]
+  },
+  "dividendos": {
+    "chartLabels": [
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26"
+    ],
+    "chartData": [
+      0.1,
+      0.11,
+      0.12,
+      0.13,
+      0.14,
+      0.34,
+      0.1
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0,
+    "chartYMax": 0.4,
+    "totaisAnuais": [
+      {
+        "ano": "2024",
+        "valor": "R$ 0,30"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 0,94"
+      },
+      {
+        "ano": "2026 (projetado)",
+        "valor": "R$ 1,20"
+      }
+    ],
+    "guidance": {
+      "periodo": "2026",
+      "faixa": "R$ 0,10 a R$ 0,13",
+      "unidade": "por cota / mês"
+    },
+    "stats": [
+      {
+        "label": "Atual (jan/26)",
+        "valor": "R$ 0,10"
+      },
+      {
+        "label": "Maior 12m",
+        "valor": "R$ 0,34"
+      },
+      {
+        "label": "Menor 12m",
+        "valor": "R$ 0,10"
+      },
+      {
+        "label": "Tendência",
+        "valor": "Estabilizando",
+        "cor": "amber"
+      }
+    ]
+  },
+  "valuation": {
+    "pvp": {
+      "valor": "0,94",
+      "descricao": "<p>O P/VP atual de <strong class=\"text-emerald-400\">0,94</strong> indica desconto de 6% sobre o valor patrimonial de R$ 9,82/cota. No entanto, esse indicador deve ser lido com cautela: o VP do EMET11 já reflete a marcação a mercado dos FIIs investidos, e <strong class=\"text-amber-400\">alguns deles também negociam com desconto em bolsa</strong>, configurando um duplo desconto potencial — mas também duplo risco de remarcação.</p>",
+      "detalhes": [
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 9,82"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 9,35",
+          "cor": "emerald"
+        },
+        {
+          "label": "P/VP histórico",
+          "valor": "0,91 - 1,15"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "13,1%",
+      "label": "Dividend Yield 12m",
+      "cor": "emerald",
+      "descricao": "<p>O DY de <strong class=\"text-emerald-400\">13,1%</strong> está acima da média de FOFs (10-11%) e reflete principalmente a distribuição extraordinária de R$ 0,34 em dez/2025. Considerando o DPS recorrente de R$ 0,10 mensais sob a V2, o <strong class=\"text-amber-400\">yield forward implícito seria de ~12,8%</strong>, ainda acima da Selic (15%) bruta, mas atrativo no líquido isento.</p>"
+    },
+    "recomendacoes": {
+      "valor": "R$ 9,40",
+      "label": "Preço Justo (Gordon)",
+      "cor": "blue",
+      "descricao": "<p>Aplicando Gordon Growth Model com DPS anualizado de <strong class=\"text-blue-400\">R$ 1,20</strong> (R$ 0,10/mês), custo de capital de 12,8% (NTN-B 7% + prêmio 5,8% para FOF pequeno) e crescimento nominal de 0% (difícil projetar sob nova gestão), chega-se a <strong class=\"text-blue-400\">R$ 9,40/cota</strong>. O resultado é coerente com a média do P/VP histórico (0,96) aplicada ao VP atual (R$ 9,82 × 0,96 = R$ 9,43) e com DY target de 12,5-13% para o segmento. Valor muito próximo da cotação atual, sugerindo precificação <strong class=\"text-amber-400\">neutra</strong> pelo mercado.</p>"
+    }
+  },
+  "conclusao": {
+    "paragrafos": [
+      "O EMET11 encerrou abr/2026 cotado a R$ 9,35, com P/VP de 0,94, DY 12m de 13,1% e patrimônio líquido de R$ 49,1 milhões distribuído em essencialmente 8 FIIs (HOFC11, VCRR11, TRUE11/OULG11, CXRI11, ALZC11, SCAR3 e Rio das Pedras I). A V2 Investimentos, que assumiu a gestão em fev/2026, estabilizou a distribuição mensal em R$ 0,10/cota e elevou a base de cotistas em 64% no mês de sua entrada, sinalizando uma tentativa de revitalizar a tese do fundo.",
+      "A trajetória histórica do fundo é marcada por volatilidade operacional elevada: três gestoras em 24 meses (More Invest, REC, V2), uma troca de administrador (BTG→BRL Trust em jun/2025), ausência de distribuição no 2º semestre de 2024 por conta de prejuízos contábeis e uma ressalva de ênfase da auditoria sobre distribuição abaixo do mínimo de 95% em 2025. Esses elementos impactam a previsibilidade e dificultam a construção de um track record confiável.",
+      "O portfólio atual concentra 79,7% do PL em apenas três FIIs, o que amplifica tanto potencial de upside (se os investidos se valorizarem e destravarem dividendos) quanto o risco idiossincrático. A baixa liquidez (R$ 400 mil/dia) e a concentração acentuada de cotistas (77,7% em apenas 2 detentores) são fatores estruturais que não se resolvem no curto prazo e limitam o apelo para investidores institucionais ou com volume expressivo."
+    ],
+    "pontosFortes": [
+      "P/VP de 0,94, oferecendo desconto de 6% sobre o valor patrimonial",
+      "DY 12m de 13,1%, acima da média de FOFs e de FIIs multiestratégia",
+      "Taxa de administração competitiva de 0,15% a.a. (BRL Trust)",
+      "Portfólio redesenhado sob a V2 com foco em 3 ativos de qualidade (HOFC11, VCRR11, TRUE11)",
+      "Base de cotistas crescendo: 102 (dez/25) → 167 (jan/26), alta de 64%",
+      "Distribuição mensal estabilizada em R$ 0,10/cota sob a nova gestora",
+      "Isenção de IR para pessoas físicas (preserva 50+ cotistas e >10% individual)",
+      "Reserva acumulada de R$ 0,01/cota como colchão para próximos meses"
+    ],
+    "pontosDeAtencao": [
+      "Três gestoras em 24 meses: descontinuidade estratégica severa",
+      "Renúncia formal da REC Gestão em 04/11/2025, com risco de liquidação se novo gestor não tivesse sido contratado em 180 dias",
+      "Patrimônio pequeno (R$ 49 Mi) limita diversificação e economias de escala",
+      "Liquidez média diária de apenas R$ 400 mil dificulta entrada/saída de posições relevantes",
+      "Concentração de cotistas extrema: dois detentores somam 77,7% das cotas",
+      "Ressalva de ênfase da auditoria (RSM ACAL) sobre distribuição abaixo do mínimo legal em 2025 sem aprovação em assembleia",
+      "Prejuízo contábil de R$ 3,3 Mi em 2024 e ausência de distribuição no 2S24",
+      "Dupla camada de taxas (EMET11 + FIIs investidos) pressiona retorno líquido",
+      "Taxa de performance de 20% sobre IFIX pode consumir ganhos em cenários positivos",
+      "Rotatividade relevante no portfólio (várias vendas/compras mensais) eleva custos de transação e imposto de ganho de capital"
+    ],
+    "conclusaoFinal": "O EMET11 é um caso atípico no universo de FIIs multiestratégia: um fundo jovem (IPO em mar/2024), pequeno (R$ 49 Mi de PL), ilíquido e que passou por reestruturação de gestão sem paralelo no segmento. O preço atual de R$ 9,35 embute P/VP de 0,94 e DY de 13,1%, mas esses indicadores convivem com riscos estruturais relevantes — concentração de cotistas, baixa liquidez e descontinuidade estratégica. A chegada da V2 Investimentos e a estabilização da distribuição mensal em R$ 0,10 sinalizam um esforço de normalização, mas o histórico disponível ainda é curto para validar a nova fase. A análise fica, portanto, dependente de como a V2 conseguirá consolidar o portfólio, ampliar a base de cotistas e reduzir a concentração de investidores nos próximos semestres. Os trade-offs são claros: desconto patrimonial moderado e yield atrativo, contra instabilidade operacional recente e limitações de porte."
+  },
+  "footer": {
+    "dataAnalise": "24/04/2026",
+    "totalDocumentos": 55,
+    "disclaimer": "Este material tem caráter exclusivamente informativo e não constitui recomendação de investimento. Rentabilidade passada não é garantia de rentabilidade futura."
+  }
+}

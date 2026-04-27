@@ -1,0 +1,130 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d1117"/>
+      <stop offset="100%" style="stop-color:#1a1426"/>
+    </linearGradient>
+    <linearGradient id="windowOn" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#fbbf24"/>
+      <stop offset="100%" style="stop-color:#d29922"/>
+    </linearGradient>
+    <linearGradient id="windowOff" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#1f2937"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="url(#bgGrad)"/>
+
+  <!-- Skyline editorial: 4 torres de escritório, cada uma com janelas. ~47% das janelas apagadas (representa contratos vencendo). -->
+  <g filter="url(#shadow)">
+    <!-- Torre 1 -->
+    <rect x="120" y="220" width="120" height="320" fill="#1f2937" stroke="#30363d" stroke-width="1"/>
+    <!-- Torre 2 (mais alta) -->
+    <rect x="280" y="160" width="140" height="380" fill="#1f2937" stroke="#30363d" stroke-width="1"/>
+    <!-- Torre 3 -->
+    <rect x="460" y="200" width="130" height="340" fill="#1f2937" stroke="#30363d" stroke-width="1"/>
+    <!-- Torre 4 (alta) -->
+    <rect x="630" y="140" width="150" height="400" fill="#1f2937" stroke="#30363d" stroke-width="1"/>
+    <!-- Torre 5 (média) -->
+    <rect x="820" y="240" width="120" height="300" fill="#1f2937" stroke="#30363d" stroke-width="1"/>
+    <!-- Torre 6 -->
+    <rect x="980" y="190" width="120" height="350" fill="#1f2937" stroke="#30363d" stroke-width="1"/>
+  </g>
+
+  <!-- Janelas: 47% apagadas (cinza-escuro), 53% acesas (âmbar) — distribuídas para gerar densidade visual realista -->
+  <g>
+    <!-- Torre 1 (4 col x 8 row) -->
+    <g transform="translate(135,235)">
+      <!-- linha 0 -->
+      <rect x="0" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="0" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="32" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="64" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="96" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="128" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="160" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="160" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="192" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="224" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="224" width="20" height="22" fill="url(#windowOff)"/>
+    </g>
+    <!-- Torre 2 -->
+    <g transform="translate(295,175)">
+      <rect x="0" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="0" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="112" y="32" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="64" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="96" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="112" y="128" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="160" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="160" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="192" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="224" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="224" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="256" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="256" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="256" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="256" width="20" height="22" fill="url(#windowOn)"/><rect x="112" y="256" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="288" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="288" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="288" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="288" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="288" width="20" height="22" fill="url(#windowOff)"/>
+    </g>
+    <!-- Torre 3, 4, 5, 6 — densidade similar -->
+    <g transform="translate(475,215)" opacity="0.9">
+      <rect x="0" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="0" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="32" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="64" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="96" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="128" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="160" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="192" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="224" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="224" width="20" height="22" fill="url(#windowOff)"/>
+    </g>
+    <g transform="translate(645,155)" opacity="0.9">
+      <rect x="0" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="0" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="32" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="64" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="112" y="96" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="128" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="160" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="160" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="192" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="224" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="224" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="256" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="256" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="256" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="256" width="20" height="22" fill="url(#windowOn)"/><rect x="112" y="256" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="288" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="288" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="288" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="288" width="20" height="22" fill="url(#windowOff)"/><rect x="112" y="288" width="20" height="22" fill="url(#windowOff)"/>
+    </g>
+    <g transform="translate(835,255)" opacity="0.9">
+      <rect x="0" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="0" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="32" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="64" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="96" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="128" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="128" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="160" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="160" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="192" width="20" height="22" fill="url(#windowOff)"/>
+    </g>
+    <g transform="translate(995,205)" opacity="0.9">
+      <rect x="0" y="0" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="0" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="0" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="32" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="32" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="32" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="64" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="64" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="64" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="96" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="96" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="96" width="20" height="22" fill="url(#windowOn)"/>
+      <rect x="0" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="128" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="128" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="160" width="20" height="22" fill="url(#windowOn)"/><rect x="28" y="160" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="160" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="160" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="192" width="20" height="22" fill="url(#windowOn)"/><rect x="56" y="192" width="20" height="22" fill="url(#windowOff)"/><rect x="84" y="192" width="20" height="22" fill="url(#windowOff)"/>
+      <rect x="0" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="28" y="224" width="20" height="22" fill="url(#windowOff)"/><rect x="56" y="224" width="20" height="22" fill="url(#windowOn)"/><rect x="84" y="224" width="20" height="22" fill="url(#windowOff)"/>
+    </g>
+  </g>
+
+  <!-- Header tag -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-weight="800">
+    <rect x="80" y="50" width="220" height="36" rx="18" fill="rgba(245,158,11,0.20)" stroke="#f59e0b" stroke-width="1.5"/>
+    <text x="190" y="74" font-size="14" letter-spacing="2" fill="#fbbf24" text-anchor="middle">CLUSTER DE VENCIMENTOS</text>
+  </g>
+
+  <!-- Big stat -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" font-weight="800">
+    <text x="600" y="565" font-size="38" fill="#fff" text-anchor="middle">
+      <tspan fill="#fbbf24">47%</tspan>
+      <tspan> dos contratos do JSRE11</tspan>
+    </text>
+    <text x="600" y="600" font-size="17" fill="#94a3b8" text-anchor="middle" font-weight="500">
+      vencem em 24 meses — em SP CBD com 12% de vacância
+    </text>
+  </g>
+
+  <!-- Selo -->
+  <g font-family="ui-sans-serif, system-ui, sans-serif" opacity="0.7">
+    <text x="1120" y="74" font-size="13" letter-spacing="1.5" fill="#94a3b8" text-anchor="end" font-weight="600">RICO AOS POUCOS</text>
+  </g>
+</svg>

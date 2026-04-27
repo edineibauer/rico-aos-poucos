@@ -1,52 +1,144 @@
 /* ===========================================================
-   Home — Overrides de container e header (compactar)
+   Home — Tokens da marca (extraídos da logo)
+   Logo Rico aos Poucos:
+     - Azul institucional: #203A57 (R do logo)
+     - Amarelo gráfico:    #D6A42D (gráfico de subida)
+   Verde/vermelho/âmbar permanecem APENAS para semântica financeira
+   (bullish/bearish/neutral em dados), NÃO mais como acento de marca.
+   =========================================================== */
+body.home-page {
+  --brand-blue: #203A57;
+  --brand-blue-light: #3a5d8a;
+  --brand-blue-bright: #4d7ab5;
+  --brand-yellow: #D6A42D;
+  --brand-yellow-light: #ECC25A;
+  --brand-yellow-deep: #a8801f;
+  --brand-bg-tint: rgba(32, 58, 87, 0.06);
+  --brand-border: rgba(32, 58, 87, 0.25);
+  --brand-glow: rgba(214, 164, 45, 0.18);
+}
+
+/* ===========================================================
+   Parallax background — paleta da marca (azul + amarelo)
+   Sobrescreve as manchas verde/vermelho originais.
+   =========================================================== */
+body.home-page .parallax-layer.layer-1 {
+  background:
+    radial-gradient(ellipse 700px 700px at 10% 15%, rgba(32, 58, 87, 0.55) 0%, transparent 65%),
+    radial-gradient(ellipse 500px 500px at 90% 85%, rgba(58, 93, 138, 0.32) 0%, transparent 65%);
+}
+
+body.home-page .parallax-layer.layer-2 {
+  background:
+    radial-gradient(ellipse 320px 320px at 80% 30%, rgba(214, 164, 45, 0.16) 0%, transparent 70%),
+    radial-gradient(ellipse 380px 380px at 20% 70%, rgba(32, 58, 87, 0.28) 0%, transparent 70%);
+}
+
+body.home-page .parallax-layer.layer-3 {
+  background:
+    radial-gradient(ellipse 240px 240px at 50% 50%, rgba(214, 164, 45, 0.10) 0%, transparent 70%);
+}
+
+/* ===========================================================
+   Home — Container: header/footer FULL-WIDTH, conteúdo central 1200px
    =========================================================== */
 
-/* Container da home: mais largo que o resto do site (que tem max-width: 600px) */
+/* Container externo volta a ser 100% — não corta header/footer */
 body.home-page .app-container {
-  max-width: 1200px;
-  padding-left: 16px;
-  padding-right: 16px;
-  gap: 8px;
-}
-
-body.home-page .app-content {
+  max-width: none;
   padding: 0;
-  gap: 12px;
+  gap: 0;
 }
 
-/* Header da home: comprimir altura */
+/* Header full-width com conteúdo centralizado */
 body.home-page .app-header {
-  padding: 8px 0 6px;
+  width: 100%;
+  padding: 10px 16px;
+  background: linear-gradient(180deg, rgba(13, 17, 23, 0.85) 0%, rgba(13, 17, 23, 0.55) 100%);
+  border-bottom: 1px solid rgba(32, 58, 87, 0.18);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
 }
 
+body.home-page .app-header > * {
+  /* Centraliza conteúdo do header */
+}
+
+body.home-page .app-header .header-left,
+body.home-page .app-header .desktop-nav,
+body.home-page .app-header .header-actions {
+  /* Filhos diretos seguem fluxo normal */
+}
+
+/* Para centralizar o conteúdo do header dentro de uma faixa de 1200px,
+   uso wrapper interno via flex + max-width no próprio header */
+body.home-page .app-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body.home-page .app-header::before {
+  /* hack para centralizar: na verdade já é flex, então esse pseudo não é necessário */
+  content: none;
+}
+
+/* Como header já é flex, restrinjo seus filhos via wrapper */
+
+/* Logo proporcional ao header reduzido */
 body.home-page .app-header .app-logo {
-  width: 32px;
-  height: 32px;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+body.home-page .app-header .app-logo svg {
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 body.home-page .app-header .app-name {
   font-size: 1.15rem;
+  background: linear-gradient(135deg, #f0f6fc 0%, var(--brand-yellow-light) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 body.home-page .app-header .app-tagline {
   display: none;
 }
 
+/* Conteúdo da home centraliza em 1200px com padding lateral */
+body.home-page .app-content {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 16px 32px;
+  gap: 12px;
+}
+
+/* Footer também full-width — não restringir */
+body.home-page #footer-container {
+  width: 100%;
+}
+
 @media (min-width: 768px) {
-  body.home-page .app-container {
-    padding-left: 24px;
-    padding-right: 24px;
+  body.home-page .app-content {
+    padding: 20px 24px 40px;
+  }
+  body.home-page .app-header {
+    padding: 12px 24px;
   }
 }
 
 @media (min-width: 1024px) {
-  body.home-page .app-header {
-    padding: 12px 0 10px;
-  }
   body.home-page .app-header .app-tagline {
     display: block;
     font-size: 0.7rem;
+    color: var(--brand-yellow-light);
+    opacity: 0.85;
   }
 }
 
@@ -60,7 +152,8 @@ body.home-page .app-header .app-tagline {
    =========================================================== */
 
 .articles-hero {
-  margin: 0 0 32px;
+  margin: 0 0 16px;
+  padding: 20px 0;   /* override da regra global section { padding: 60px 0 } */
 }
 
 .articles-hero-header {
@@ -68,7 +161,7 @@ body.home-page .app-header .app-tagline {
   align-items: baseline;
   justify-content: space-between;
   gap: 16px;
-  margin: 0 0 18px;
+  margin: 0 0 12px;
   flex-wrap: wrap;
 }
 
@@ -88,14 +181,14 @@ body.home-page .app-header .app-tagline {
   display: inline-block;
   width: 4px;
   height: 22px;
-  background: linear-gradient(180deg, #3fb950 0%, #2ea043 100%);
+  background: linear-gradient(180deg, var(--brand-yellow) 0%, var(--brand-yellow-deep) 100%);
   border-radius: 2px;
 }
 
 .articles-hero-eyebrow {
   font-size: 0.7rem;
   font-weight: 700;
-  color: #3fb950;
+  color: var(--brand-yellow);
   text-transform: uppercase;
   letter-spacing: 0.12em;
   margin-bottom: 4px;
@@ -160,8 +253,8 @@ body.home-page .app-header .app-tagline {
 
 .article-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(63, 185, 80, 0.4);
-  box-shadow: 0 12px 32px -12px rgba(63, 185, 80, 0.25);
+  border-color: var(--brand-border);
+  box-shadow: 0 12px 32px -12px rgba(32, 58, 87, 0.45);
 }
 
 .article-card-image {
@@ -284,7 +377,7 @@ body.home-page .app-header .app-tagline {
   padding-top: 4px;
   font-size: 0.78rem;
   font-weight: 600;
-  color: #3fb950;
+  color: var(--brand-yellow);
   display: inline-flex;
   align-items: center;
   gap: 5px;
@@ -413,7 +506,7 @@ body.home-page .app-header .app-tagline {
   width: 18px;
   height: 18px;
   border: 2px solid rgba(255, 255, 255, 0.1);
-  border-top-color: #3fb950;
+  border-top-color: var(--brand-yellow);
   border-radius: 50%;
   animation: heroSpin 0.7s linear infinite;
   margin-right: 10px;
@@ -556,10 +649,10 @@ body.home-page .app-header .app-tagline {
   text-decoration: none;
   color: var(--text-primary);
   background:
-    radial-gradient(120% 90% at 100% 0%, rgba(63, 185, 80, 0.18) 0%, rgba(63, 185, 80, 0) 55%),
-    radial-gradient(80% 60% at 0% 100%, rgba(46, 138, 110, 0.14) 0%, rgba(46, 138, 110, 0) 60%),
-    linear-gradient(150deg, #11261c 0%, #0d1117 70%);
-  border: 1px solid rgba(63, 185, 80, 0.22);
+    radial-gradient(120% 90% at 100% 0%, rgba(214, 164, 45, 0.16) 0%, rgba(214, 164, 45, 0) 55%),
+    radial-gradient(80% 60% at 0% 100%, rgba(32, 58, 87, 0.55) 0%, rgba(32, 58, 87, 0) 60%),
+    linear-gradient(150deg, #16243a 0%, #0d1117 70%);
+  border: 1px solid rgba(32, 58, 87, 0.5);
   overflow: hidden;
   transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
 }
@@ -568,15 +661,15 @@ body.home-page .app-header .app-tagline {
   content: "";
   position: absolute;
   inset: 0;
-  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M0 39L40 39M39 0L39 40' stroke='rgba(63,185,80,0.05)' stroke-width='1'/></svg>");
+  background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='40' height='40'><path d='M0 39L40 39M39 0L39 40' stroke='rgba(214,164,45,0.07)' stroke-width='1'/></svg>");
   pointer-events: none;
   opacity: 0.6;
 }
 
 .fiis-mega-card:hover {
   transform: translateY(-2px);
-  border-color: rgba(63, 185, 80, 0.45);
-  box-shadow: 0 18px 40px -16px rgba(63, 185, 80, 0.4);
+  border-color: var(--brand-yellow);
+  box-shadow: 0 18px 40px -16px rgba(214, 164, 45, 0.35);
 }
 
 .fiis-mega-head {
@@ -590,7 +683,7 @@ body.home-page .app-header .app-tagline {
 .fiis-mega-eyebrow {
   font-size: 0.68rem;
   font-weight: 700;
-  color: #3fb950;
+  color: var(--brand-yellow);
   text-transform: uppercase;
   letter-spacing: 0.14em;
   margin-bottom: 6px;
@@ -611,22 +704,22 @@ body.home-page .app-header .app-tagline {
   justify-content: center;
   width: 64px;
   height: 64px;
-  background: linear-gradient(135deg, #3fb950 0%, #2ea043 100%);
+  background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-yellow-deep) 100%);
   border-radius: 16px;
   flex-shrink: 0;
-  box-shadow: 0 8px 24px -8px rgba(63, 185, 80, 0.55);
+  box-shadow: 0 8px 24px -8px rgba(214, 164, 45, 0.55);
 }
 
 .fiis-mega-count strong {
   font-size: 1.4rem;
   font-weight: 800;
-  color: #0a1612;
+  color: #1a1306;
   line-height: 1;
 }
 
 .fiis-mega-count span {
   font-size: 0.6rem;
-  color: rgba(10, 22, 18, 0.7);
+  color: rgba(26, 19, 6, 0.75);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -647,8 +740,8 @@ body.home-page .app-header .app-tagline {
   grid-template-columns: repeat(3, 1fr);
   gap: 10px;
   padding: 12px 0;
-  border-top: 1px solid rgba(63, 185, 80, 0.12);
-  border-bottom: 1px solid rgba(63, 185, 80, 0.12);
+  border-top: 1px solid rgba(214, 164, 45, 0.18);
+  border-bottom: 1px solid rgba(214, 164, 45, 0.18);
 }
 
 .fiis-mega-stat {
@@ -680,9 +773,9 @@ body.home-page .app-header .app-tagline {
   display: inline-flex;
   align-items: center;
   padding: 4px 10px;
-  background: rgba(63, 185, 80, 0.1);
-  border: 1px solid rgba(63, 185, 80, 0.22);
-  color: #3fb950;
+  background: rgba(32, 58, 87, 0.45);
+  border: 1px solid rgba(214, 164, 45, 0.35);
+  color: var(--brand-yellow-light);
   border-radius: 999px;
   font-size: 0.72rem;
   font-weight: 700;
@@ -703,8 +796,8 @@ body.home-page .app-header .app-tagline {
   justify-content: space-between;
   gap: 8px;
   padding: 12px 16px;
-  background: linear-gradient(135deg, #3fb950 0%, #2ea043 100%);
-  color: #0a1612;
+  background: linear-gradient(135deg, var(--brand-yellow) 0%, var(--brand-yellow-deep) 100%);
+  color: #1a1306;
   font-weight: 700;
   font-size: 0.9rem;
   border-radius: 12px;
@@ -839,16 +932,16 @@ body.home-page .app-header .app-tagline {
 }
 
 .tools-card-header-icon {
-  width: 38px;
-  height: 38px;
+  width: 30px;
+  height: 30px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, rgba(240, 193, 75, 0.2), rgba(210, 153, 34, 0.1));
-  border: 1px solid rgba(240, 193, 75, 0.25);
-  border-radius: 12px;
-  font-size: 1.1rem;
+  background: transparent;
+  border: 0;
+  font-size: 1.4rem;
   flex-shrink: 0;
+  line-height: 1;
 }
 
 .tools-card-header h2 {

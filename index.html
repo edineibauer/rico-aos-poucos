@@ -263,135 +263,109 @@
       <!-- Sidebar de Expectativas + FIIs (mantida abaixo do hero de artigos) -->
       <div class="home-content-grid home-content-grid--secondary">
 
-        <!-- Sidebar direita: Expectativas + FIIs -->
+        <!-- Sidebar direita: FIIs (mega-card) + Expectativas (compacto) -->
         <div class="home-sidebar">
 
-          <!-- Expectativas de Mercado — Donut Chart -->
-          <div class="summary-card card-featured card-expectativas">
-            <a href="setores/" class="card-header">
-              <div class="card-icon-box">
-                <span>🎯</span>
+          <!-- Mega-card: Catálogo de Análises de FIIs -->
+          <a href="fiis/" class="fiis-mega-card" aria-label="Ver todos os FIIs analisados">
+            <div class="fiis-mega-head">
+              <div>
+                <div class="fiis-mega-eyebrow">Catálogo de FIIs</div>
+                <h3 class="fiis-mega-title">Dossiês profundos de mais de 140 fundos imobiliários</h3>
               </div>
-              <div class="card-title-group">
-                <h2>Expectativas de Mercado</h2>
-                <span class="card-subtitle">Alocação e sentimento por setor</span>
-                <div class="card-badge">Médio Prazo</div>
-              </div>
-            </a>
-            <div class="card-body">
-              <div class="exp-chart-area">
-                <div class="donut-chart">
-                  <div class="donut-hole">
-                    <span class="donut-number">10</span>
-                    <span class="donut-label">setores</span>
-                  </div>
-                </div>
-                <div class="exp-legend">
-                  <a href="setores/" class="exp-legend-group">
-                    <span class="exp-dot bullish"></span>
-                    <div class="exp-legend-info">
-                      <span class="exp-legend-title">Otimistas</span>
-                      <span class="exp-legend-sectors">FIIs · Dólar · Imóveis · Caixa</span>
-                    </div>
-                    <span class="exp-legend-pct bullish">70%</span>
-                  </a>
-                  <a href="setores/" class="exp-legend-group">
-                    <span class="exp-dot neutral"></span>
-                    <div class="exp-legend-info">
-                      <span class="exp-legend-title">Neutros</span>
-                      <span class="exp-legend-sectors">TLT · IPCA+ · Ouro</span>
-                    </div>
-                    <span class="exp-legend-pct neutral">20%</span>
-                  </a>
-                  <a href="setores/" class="exp-legend-group">
-                    <span class="exp-dot bearish"></span>
-                    <div class="exp-legend-info">
-                      <span class="exp-legend-title">Pessimistas</span>
-                      <span class="exp-legend-sectors">IBOV · S&P500 · Bitcoin</span>
-                    </div>
-                    <span class="exp-legend-pct bearish">10%</span>
-                  </a>
-                </div>
+              <div class="fiis-mega-count">
+                <strong>143</strong>
+                <span>FIIs</span>
               </div>
             </div>
-            <div class="card-footer">
-              <a href="setores/" class="btn btn-primary">
-                <span>Ver análise completa</span>
-                <svg class="arrow-icon" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <!-- Análise de FIIs -->
-          <a href="fiis/" class="card-fiis-featured card-fiis-sidebar">
-            <div class="fiis-visual">
-              <span class="fiis-icon-main">🏢</span>
-              <div class="fiis-floating">
-                <span>📊</span>
-                <span>💰</span>
-                <span>📈</span>
+            <p class="fiis-mega-desc">Indicadores, valuation, dividendos histórico, encaixe na carteira, riscos ocultos e veredicto explícito. Atualizados continuamente.</p>
+            <div class="fiis-mega-stats">
+              <div class="fiis-mega-stat">
+                <span class="fiis-mega-stat-value">143</span>
+                <span class="fiis-mega-stat-label">analisados</span>
+              </div>
+              <div class="fiis-mega-stat">
+                <span class="fiis-mega-stat-value">v3</span>
+                <span class="fiis-mega-stat-label">schema premium</span>
+              </div>
+              <div class="fiis-mega-stat">
+                <span class="fiis-mega-stat-value">Opus 4.7</span>
+                <span class="fiis-mega-stat-label">profundidade IA</span>
               </div>
             </div>
-            <div class="fiis-content">
-              <div class="fiis-badge">Novo</div>
-              <h3>Análise de FIIs</h3>
-              <p>Dossiês completos com indicadores, riscos e opinião.</p>
-              <span class="fiis-cta">
-                Ver análises
-                <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-              </span>
+            <div class="fiis-mega-tickers">
+              <span class="fiis-mega-ticker">TRXF11</span>
+              <span class="fiis-mega-ticker">JSRE11</span>
+              <span class="fiis-mega-ticker">XPML11</span>
+              <span class="fiis-mega-ticker">RECR11</span>
+              <span class="fiis-mega-ticker">VGIR11</span>
+              <span class="fiis-mega-ticker">RCRB11</span>
+              <span class="fiis-mega-ticker">VRTA11</span>
+              <span class="fiis-mega-ticker fiis-mega-ticker--more">+ 135</span>
             </div>
+            <span class="fiis-mega-cta">
+              <span>Explorar todos os dossiês</span>
+              <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </span>
           </a>
 
         </div>
 
       </div>
 
-      <!-- Ferramentas e Calculadoras (seção secundária) -->
-      <header class="tools-section-header">
-        <h2>Ferramentas e calculadoras</h2>
-        <a href="ferramentas-financeiras/" class="articles-hero-all">
-          <span>Todas as ferramentas</span>
-          <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-        </a>
-      </header>
-      <div class="tools-bento">
-        <a href="ferramentas-financeiras/#financiamento" class="bento-card bento-hero bento-blue">
-          <div class="bento-tag">Simulador</div>
-          <div class="bento-emoji">🏠</div>
-          <h3>Pagar imóvel à vista é erro de quem não faz conta. Financiar é mais lucrativo</h3>
-          <p>Quem financia e investe a diferença sai na frente. Simule e veja por quê.</p>
-          <span class="bento-cta">Simular meu cenário <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="ferramentas-financeiras/#calculadora" class="bento-card bento-orange">
-          <div class="bento-tag">Calculadora</div>
-          <div class="bento-emoji">🏖️</div>
-          <h3>Aposente-se com R$5.000/mês fazendo aportes de apenas R$500/mês</h3>
-          <p>Se você tem 25 anos ou menos, são 35 anos até a aposentadoria — o tempo joga a seu favor. Já considerando a inflação.</p>
-          <span class="bento-cta">Simular aposentadoria <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="ferramentas-financeiras/#construcao" class="bento-card bento-green">
-          <div class="bento-tag">Calculadora</div>
-          <div class="bento-emoji">🏗️</div>
-          <h3>Um imóvel pronto de R$400 mil custa R$240 mil para construir. A diferença paga o terreno</h3>
-          <p>Simule o custo real da sua obra por m², método construtivo e nível de acabamento.</p>
-          <span class="bento-cta">Simular custo da obra <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="ferramentas-financeiras/#historico" class="bento-card bento-gold">
-          <div class="bento-tag">Comparador</div>
-          <div class="bento-emoji">📊</div>
-          <h3>Imóvel para aluguel bateu Bolsa, FIIs e Tesouro nos últimos 20 anos</h3>
-          <p>Os números não mentem. Compare e descubra quanto você deixou na mesa.</p>
-          <span class="bento-cta">Comparar investimentos <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-        <a href="ferramentas-financeiras/#carteira" class="bento-card bento-purple">
-          <div class="bento-tag">Simulador</div>
-          <div class="bento-emoji">💼</div>
-          <h3>Apostar tudo em um ativo achando que vai subir não é investir. É fazer bet com o seu patrimônio</h3>
-          <p>Quem já perdeu dinheiro assim sabe a dor. Diversificar é o que separa investidor de apostador.</p>
-          <span class="bento-cta">Montar minha carteira <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
-        </a>
-      </div>
+      <!-- Card unificado: Ferramentas e calculadoras -->
+      <section class="tools-card" aria-labelledby="toolsCardTitle">
+        <header class="tools-card-header">
+          <div class="tools-card-header-info">
+            <div class="tools-card-header-icon">🛠️</div>
+            <div>
+              <h2 id="toolsCardTitle">Ferramentas e calculadoras</h2>
+              <p>Simule cenários reais antes de tomar a decisão</p>
+            </div>
+          </div>
+          <a href="ferramentas-financeiras/" class="tools-card-cta">
+            <span>Todas as ferramentas</span>
+            <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+        </header>
+        <div class="tools-bento">
+          <a href="ferramentas-financeiras/#financiamento" class="bento-card bento-hero bento-blue">
+            <div class="bento-tag">Simulador</div>
+            <div class="bento-emoji">🏠</div>
+            <h3>Pagar imóvel à vista é erro de quem não faz conta. Financiar é mais lucrativo</h3>
+            <p>Quem financia e investe a diferença sai na frente. Simule e veja por quê.</p>
+            <span class="bento-cta">Simular meu cenário <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="ferramentas-financeiras/#calculadora" class="bento-card bento-orange">
+            <div class="bento-tag">Calculadora</div>
+            <div class="bento-emoji">🏖️</div>
+            <h3>Aposente-se com R$5.000/mês fazendo aportes de apenas R$500/mês</h3>
+            <p>Se você tem 25 anos ou menos, são 35 anos até a aposentadoria — o tempo joga a seu favor. Já considerando a inflação.</p>
+            <span class="bento-cta">Simular aposentadoria <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="ferramentas-financeiras/#construcao" class="bento-card bento-green">
+            <div class="bento-tag">Calculadora</div>
+            <div class="bento-emoji">🏗️</div>
+            <h3>Um imóvel pronto de R$400 mil custa R$240 mil para construir. A diferença paga o terreno</h3>
+            <p>Simule o custo real da sua obra por m², método construtivo e nível de acabamento.</p>
+            <span class="bento-cta">Simular custo da obra <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="ferramentas-financeiras/#historico" class="bento-card bento-gold">
+            <div class="bento-tag">Comparador</div>
+            <div class="bento-emoji">📊</div>
+            <h3>Imóvel para aluguel bateu Bolsa, FIIs e Tesouro nos últimos 20 anos</h3>
+            <p>Os números não mentem. Compare e descubra quanto você deixou na mesa.</p>
+            <span class="bento-cta">Comparar investimentos <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+          <a href="ferramentas-financeiras/#carteira" class="bento-card bento-purple">
+            <div class="bento-tag">Simulador</div>
+            <div class="bento-emoji">💼</div>
+            <h3>Apostar tudo em um ativo achando que vai subir não é investir. É fazer bet com o seu patrimônio</h3>
+            <p>Quem já perdeu dinheiro assim sabe a dor. Diversificar é o que separa investidor de apostador.</p>
+            <span class="bento-cta">Montar minha carteira <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg></span>
+          </a>
+        </div>
+      </section>
 
     </section>
 

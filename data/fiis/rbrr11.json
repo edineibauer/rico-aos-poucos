@@ -1,0 +1,2037 @@
+{
+  "meta": {
+    "ticker": "RBRR11",
+    "nome": "RBR Rendimento High Grade",
+    "nomeExtra": "FII RBR Rendimento High Grade Responsabilidade Limitada",
+    "segmento": "Papel — CRI High Grade",
+    "badges": [
+      "Papel",
+      "CRI",
+      "IPCA+",
+      "High Grade",
+      "Patria"
+    ],
+    "sentimento": "neutro",
+    "dataAnalise": "2026-04-26",
+    "totalDocumentos": 385
+  },
+  "seo": {
+    "title": "RBRR11 — RBR Rendimento High Grade | Análise FII de CRI Investment Grade",
+    "description": "Análise completa do RBRR11 (RBR Rendimento High Grade): portfólio de 110 CRIs IPCA+ high grade, troca de gestão para Patria em fev/2026, P/VP 0,87 e DY 12m de 12,2%. Avaliação por fundamentos.",
+    "keywords": [
+      "RBRR11",
+      "RBR Rendimento High Grade",
+      "FII de CRI",
+      "papel high grade",
+      "IPCA+",
+      "Patria Real Estate",
+      "investment grade",
+      "CRI residencial",
+      "CRI logístico"
+    ],
+    "canonical": "https://ricoaospoucos.com.br/fiis/rbrr11/",
+    "og": {
+      "title": "RBRR11 — análise completa do FII de CRI high grade",
+      "description": "Portfólio de 110 CRIs IPCA+, gestão Patria desde fev/2026, P/VP 0,87 e DY 12m de 12,2%. Veja se cabe na sua carteira.",
+      "type": "article",
+      "url": "https://ricoaospoucos.com.br/fiis/rbrr11/",
+      "locale": "pt_BR",
+      "site_name": "Rico aos Poucos"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "title": "RBRR11 — análise FII de CRI high grade",
+      "description": "Portfólio diversificado em 110 CRIs IPCA+ com Patria na gestão desde fev/2026. P/VP 0,87 e DY 12m 12,2%."
+    }
+  },
+  "indicadores": {
+    "cotacao": 84.5,
+    "cotacaoData": "2026-04-20",
+    "pvp": 0.867,
+    "dividendYield": 12.18,
+    "dividendoMensal": 0.7,
+    "dividendoAnual": 10.3,
+    "patrimonioLiquido": 1588855391,
+    "vpCota": 97.47,
+    "cotistas": 137782,
+    "numAtivos": 110,
+    "alavancagemPct": 10.6
+  },
+  "recomendacao": {
+    "nota": 7.2,
+    "veredicto": "MANTER",
+    "cor": "amber",
+    "resumo": "<p>RBRR11 é um <strong>FII de papel high grade clássico</strong>: 110 CRIs IPCA+ pulverizados em residencial (43%), logístico (33%) e corporativo (22%), com LTV médio de 50% e quase 100% atrelados ao IPCA. O portfólio gera carrego de <strong>IPCA+9,2% a.a. (~14,9% nominal)</strong>, sustentando DPS de R$ 0,70–0,80/cota mês.</p><p>O ponto crítico é a <strong>troca de gestão em 03/02/2026</strong>: o Patria assumiu a casa RBR e sinalizou possível consolidação de RBRR + PCIP + VCJR + RPRI em um veículo único. A operação exige AGE com quórum qualificado e ainda não tem data — é o catalisador que pode destravar valor (escala, liquidez, prêmio de gestão) ou diluir cotistas conservadores.</p><p>P/VP <strong>0,87</strong> oferece colchão de segurança razoável; DY 12m de <strong>12,2%</strong> está abaixo da mediana de pares HG (12,7%). O risco maior está na alavancagem via compromissadas (-10,6% do PL) e no <strong>CRI Plano e Plano</strong>, que gerou prejuízo de R$ 0,11/cota em fev/2026. <span class=\"text-amber-400\">MANTER</span> para quem já tem; entrada nova faz sentido apenas após visibilidade da AGE de consolidação.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "DY 12m",
+      "valor": "12,2%",
+      "cor": "emerald",
+      "descricao": "Soma últimos 12 dividendos sobre cotação atual"
+    },
+    {
+      "label": "P/VP",
+      "valor": "0,87",
+      "cor": "emerald",
+      "descricao": "Cota R$ 84,50 / VP R$ 97,47"
+    },
+    {
+      "label": "CRIs",
+      "valor": "110",
+      "cor": "blue",
+      "descricao": "104,8% do PL em CRI + Op. Estruturadas"
+    },
+    {
+      "label": "Cotistas",
+      "valor": "137,8 mil",
+      "cor": "blue",
+      "descricao": "Base diluída — alta liquidez relativa para o segmento"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Troca de gestão e potencial consolidação",
+      "severidade": "media",
+      "descricao": "Patria assumiu a RBR em 03/02/2026 e sinalizou possível fusão de RBRR + PCIP + VCJR + RPRI. A consolidação exige AGE qualificada e pode levar a remarcações de ativos."
+    },
+    {
+      "titulo": "Alavancagem via compromissadas",
+      "severidade": "media",
+      "descricao": "10,6% do PL em compromissadas (venda com compromisso de recompra). Patria sinalizou intenção de reduzir essa alavancagem — efeito colateral pode ser queda do DPS no curto prazo."
+    },
+    {
+      "titulo": "CRI Plano e Plano — falha cadastral",
+      "severidade": "media",
+      "descricao": "Erro de base de cadastro gerou prejuízo de R$ 0,11/cota em fev/2026 com a venda parcial. Convertido em mar/2026 sem impacto na distribuição (apuração semestral), mas evidencia fragilidade em controles internos sob a transição."
+    },
+    {
+      "titulo": "CRI Landsol em Watchlist",
+      "severidade": "baixa",
+      "descricao": "Operação de loteamentos no interior de SP entrou em reestruturação. Representa apenas 0,5% do PL, mas é a primeira operação flagada pela nova gestão."
+    },
+    {
+      "titulo": "Concentração em IPCA+ (99% da carteira)",
+      "severidade": "baixa",
+      "descricao": "Exposição quase pura ao IPCA. Em cenário de desinflação acelerada, o carrego nominal cai e o DPS pode oscilar de R$ 0,70 para baixo."
+    }
+  ],
+  "gestora": {
+    "nome": "Patria Real Estate (ex-RBR Asset)",
+    "nota": 8.5,
+    "stats": [
+      {
+        "label": "AuM",
+        "valor": "R$ 38 bi"
+      },
+      {
+        "label": "FIIs listados na B3",
+        "valor": "+30"
+      },
+      {
+        "label": "Equipe RE",
+        "valor": "+50 profissionais"
+      }
+    ],
+    "resumo": "<p>Patria Investimentos é uma das maiores gestoras de alternativos da América Latina (R$ 289 bi sob gestão global). Em 03/02/2026 assumiu controle direto da RBR Gestão de Recursos, originária da casa que estruturou o RBRR11 desde 2018. A vertical Real Estate do Patria é, hoje, a maior gestora independente de FIIs do Brasil em AuM. O time tem track record de longo prazo em crédito imobiliário high grade (PCIP, VCJR) e está reorganizando o portfólio dos fundos herdados da RBR com foco em consolidação e ganho de escala.</p>",
+    "link": "https://realestate.patria.com"
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de remuneração padrão para FII de papel ativo",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Administração",
+        "valor": "1,00% a.a.",
+        "cor": "blue"
+      },
+      {
+        "label": "Performance",
+        "valor": "20% sobre 100% CDI",
+        "cor": "amber"
+      }
+    ],
+    "detalhes": [
+      {
+        "label": "Taxa de administração total",
+        "valor": "1,00% a.a. sobre PL"
+      },
+      {
+        "label": "Taxa de performance",
+        "valor": "20% do que exceder 100% do CDI, paga semestralmente"
+      },
+      {
+        "label": "Administrador",
+        "valor": "BTG Pactual Serviços Financeiros DTVM"
+      },
+      {
+        "label": "Gestor",
+        "valor": "RBR Gestão (controlada pelo Patria desde 03/02/2026)"
+      },
+      {
+        "label": "Encerramento exercício social",
+        "valor": "30 de junho"
+      }
+    ],
+    "observacao": "Performance sobre CDI bruto é vantajosa para o cotista quando o portfólio entrega IPCA+9,2% a.a. com Selic em 14,75% (carrego ~14,9% nominal × CDI bruto ~14,75%): a performance é pequena, mas existe. Em ciclos de Selic baixa, a performance pode subir substancialmente."
+  },
+  "portfolio": {
+    "schema": "v2",
+    "tipoFundo": "papel",
+    "stats": {
+      "totalAtivos": 114,
+      "ltv": 0.5,
+      "alavancagemPct": 10.6,
+      "duration": 4.1,
+      "yieldCarregamento": 14.9,
+      "inadimplenciaPct": 0.5,
+      "alocacaoPL": [
+        {
+          "categoria": "CRI + Op. Estruturadas",
+          "pct": 1.048,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "FIIs (RPRI11, GAME11, NCRI11, FLCR11)",
+          "pct": 0.027,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "Caixa (Tesouro)",
+          "pct": 0.031,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "Compromissadas (alavancagem)",
+          "pct": -0.106,
+          "cor": "#ef4444"
+        }
+      ]
+    },
+    "ativos": [
+      {
+        "tipo": "cri",
+        "id": "cri-leroy-ii",
+        "devedor": "Leroy Merlin (BTS)",
+        "setorDevedor": "Logística",
+        "lastro": "Galpão BTS Leroy Merlin",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.073,
+        "taxaTotal": 0.085,
+        "duration": 4.35,
+        "vencimento": "2036-03-15",
+        "valorPresente": 121200000,
+        "percPL": 0.08,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.397,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1152303)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-gt-banco-brasil",
+        "devedor": "Banco do Brasil (GT BTS Brasília)",
+        "setorDevedor": "Escritórios",
+        "lastro": "Edifício GT Banco do Brasil em Brasília",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.087,
+        "taxaTotal": 0.086,
+        "duration": 3.71,
+        "vencimento": "2034-12-15",
+        "valorPresente": 107000000,
+        "percPL": 0.07,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.63,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-brookfield-jk",
+        "devedor": "Brookfield (Edifício JK)",
+        "setorDevedor": "Escritórios",
+        "lastro": "Torre JK Brookfield SP (AAA)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.066,
+        "taxaTotal": 0.089,
+        "duration": 1.71,
+        "vencimento": "2027-12-15",
+        "valorPresente": 101200000,
+        "percPL": 0.067,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.3,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cabreuva",
+        "devedor": "Cabreúva Logístico",
+        "setorDevedor": "Logística",
+        "lastro": "Galpão Cabreúva (SP)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.073,
+        "taxaTotal": 0.088,
+        "duration": 3.89,
+        "vencimento": "2036-03-15",
+        "valorPresente": 82500000,
+        "percPL": 0.054,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.24,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-jk-financial-center",
+        "devedor": "JK Financial Center",
+        "setorDevedor": "Escritórios",
+        "lastro": "Edifício JK Financial Center SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.064,
+        "taxaTotal": 0.089,
+        "duration": 2.5,
+        "vencimento": "2031-11-15",
+        "valorPresente": 79500000,
+        "percPL": 0.052,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.75,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-jfl-jardim-faria-lima",
+        "devedor": "JFL Realty (Jardim Faria Lima)",
+        "setorDevedor": "Residencial",
+        "lastro": "Empreendimento residencial alto padrão Faria Lima",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.067,
+        "taxaTotal": 0.086,
+        "duration": 3.87,
+        "vencimento": "2032-02-15",
+        "valorPresente": 78800000,
+        "percPL": 0.052,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.75,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-tellus-brigadeiro-ii-serie-ii",
+        "devedor": "Tellus Properties FII",
+        "setorDevedor": "Residencial",
+        "lastro": "Imóveis residenciais SP — locatário GPA (em RJ extrajudicial)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.082,
+        "taxaTotal": 0.086,
+        "duration": 3.82,
+        "vencimento": "2034-08-15",
+        "valorPresente": 51200000,
+        "percPL": 0.034,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.596,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cd-guarulhos",
+        "devedor": "CD Guarulhos (logístico)",
+        "setorDevedor": "Logística",
+        "lastro": "Centro de Distribuição Guarulhos/SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.074,
+        "taxaTotal": 0.097,
+        "duration": 3.63,
+        "vencimento": "2034-10-15",
+        "valorPresente": 49500000,
+        "percPL": 0.033,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.56,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cabreuva-serie-ii",
+        "devedor": "Cabreúva Série II",
+        "setorDevedor": "Logística",
+        "lastro": "Galpão Cabreúva (SP) — segunda série",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.073,
+        "taxaTotal": 0.087,
+        "duration": 4.75,
+        "vencimento": "2036-03-15",
+        "valorPresente": 47800000,
+        "percPL": 0.031,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.578,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-patio-malzoni",
+        "devedor": "Pátio Malzoni (laje corporativa AAA)",
+        "setorDevedor": "Escritórios",
+        "lastro": "Edifício Pátio Malzoni — Faria Lima/SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.059,
+        "taxaTotal": 0.073,
+        "duration": 4.69,
+        "vencimento": "2031-09-15",
+        "valorPresente": 45800000,
+        "percPL": 0.03,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.516,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-leo-madeiras",
+        "devedor": "Leo Madeiras (varejo materiais)",
+        "setorDevedor": "Logística",
+        "lastro": "Centro de distribuição Leo Madeiras",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.07,
+        "taxaTotal": 0.085,
+        "duration": 4.72,
+        "vencimento": "2037-04-15",
+        "valorPresente": 42800000,
+        "percPL": 0.028,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.584,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cury",
+        "devedor": "Cury Construtora",
+        "setorDevedor": "Residencial",
+        "lastro": "Carteira pulverizada de unidades Cury",
+        "garantias": [
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.075,
+        "taxaTotal": 0.078,
+        "duration": 1.82,
+        "vencimento": "2030-03-15",
+        "valorPresente": 36400000,
+        "percPL": 0.024,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-bts-yaskawa",
+        "devedor": "Yaskawa (BTS industrial)",
+        "setorDevedor": "Logística",
+        "lastro": "Built-to-suit Yaskawa SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.085,
+        "taxaTotal": 0.09,
+        "duration": 4.81,
+        "vencimento": "2035-07-15",
+        "valorPresente": 34000000,
+        "percPL": 0.022,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.603,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-tellus-brigadeiro-ii",
+        "devedor": "Tellus Properties FII",
+        "setorDevedor": "Residencial",
+        "lastro": "Imóveis residenciais SP — locatário GPA (RJ extrajudicial)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.08,
+        "taxaTotal": 0.136,
+        "duration": 0.03,
+        "vencimento": "2027-08-15",
+        "valorPresente": 31700000,
+        "percPL": 0.021,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.23,
+        "fonte": "Relatório Gerencial fev/2026 (Watchlist exposição GPA)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-plano-e-plano",
+        "devedor": "Plano e Plano (MCMV)",
+        "setorDevedor": "Residencial",
+        "lastro": "Empreendimentos MCMV Plano e Plano",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.082,
+        "taxaTotal": 0.094,
+        "duration": 2.01,
+        "vencimento": "2030-01-15",
+        "valorPresente": 26700000,
+        "percPL": 0.018,
+        "perfilRisco": "mid_grade",
+        "status": "renegociado",
+        "ltv": 0.24,
+        "fonte": "Relatório Gerencial fev/2026 — venda parcial (-R$ 40 mi) com prejuízo de R$ 0,11/cota por falha cadastral, convertido em mar/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-btlg",
+        "devedor": "BTLG (galpão logístico)",
+        "setorDevedor": "Logística",
+        "lastro": "Galpão logístico SP (BTLG)",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.059,
+        "taxaTotal": 0.09,
+        "duration": 1.35,
+        "vencimento": "2028-12-15",
+        "valorPresente": 22300000,
+        "percPL": 0.015,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.399,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-amora-serie-i",
+        "devedor": "aMORA (locação residencial)",
+        "setorDevedor": "Residencial",
+        "lastro": "Carteira aMORA — residencial SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.08,
+        "taxaTotal": 0.094,
+        "duration": 3.02,
+        "vencimento": "2029-08-15",
+        "valorPresente": 20400000,
+        "percPL": 0.013,
+        "perfilRisco": "mid_grade",
+        "status": "em_dia",
+        "ltv": 0.5,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-barueri-logistico",
+        "devedor": "Barueri Logístico",
+        "setorDevedor": "Residencial",
+        "lastro": "Galpão logístico Barueri/SP",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.076,
+        "taxaTotal": 0.092,
+        "duration": 2.56,
+        "vencimento": "2030-01-15",
+        "valorPresente": 19400000,
+        "percPL": 0.013,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.434,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-creditas-ix-senior-i",
+        "devedor": "Creditas (carteira pulverizada IX)",
+        "setorDevedor": "Residencial",
+        "lastro": "Home equity pulverizado",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.087,
+        "taxaTotal": 0.089,
+        "duration": 8.02,
+        "vencimento": "2044-12-15",
+        "valorPresente": 18500000,
+        "percPL": 0.012,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.527,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-faria-lima-business-center",
+        "devedor": "Faria Lima Business Center",
+        "setorDevedor": "Escritórios",
+        "lastro": "Edifício corporativo Faria Lima/SP",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.048,
+        "taxaTotal": 0.086,
+        "duration": 3.87,
+        "vencimento": "2034-12-15",
+        "valorPresente": 18300000,
+        "percPL": 0.012,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.24,
+        "fonte": "Relatório Gerencial fev/2026 — único CRI IGP-M (1% da carteira)"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-landsol",
+        "devedor": "Cemara (loteadora interior SP)",
+        "setorDevedor": "Loteamento",
+        "lastro": "8 loteamentos no interior de SP — em reestruturação",
+        "garantias": [
+          "alienacao_fiduciaria_cotas",
+          "cessao_fiduciaria_recebiveis",
+          "fundo_reserva"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.098,
+        "taxaTotal": 0.113,
+        "duration": 2.85,
+        "vencimento": "2032-08-15",
+        "valorPresente": 7800000,
+        "percPL": 0.005,
+        "perfilRisco": "mid_grade",
+        "status": "renegociado",
+        "ltv": 0.731,
+        "fonte": "Relatório Gerencial fev/2026 — Watchlist (CRI 52); LTV em revisão"
+      },
+      {
+        "tipo": "cri",
+        "id": "cri-cone-refri",
+        "devedor": "Cone Refri (logística refrigerada)",
+        "setorDevedor": "Logística",
+        "lastro": "Galpão refrigerado 19,5 mil m² Recife/PE",
+        "garantias": [
+          "alienacao_fiduciaria_imovel",
+          "cessao_fiduciaria_recebiveis",
+          "aval_pessoa_fisica"
+        ],
+        "indexador": "IPCA+",
+        "spread": 0.115,
+        "taxaTotal": 0.114,
+        "duration": 3.74,
+        "vencimento": "2030-12-15",
+        "valorPresente": 10100000,
+        "percPL": 0.007,
+        "perfilRisco": "high_grade",
+        "status": "em_dia",
+        "ltv": 0.71,
+        "fonte": "Relatório Gerencial fev/2026 — nova alocação (R$ 10 mi integralizados em fev/2026)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "RPRI11",
+        "nome": "RBR Properties Renda I",
+        "segmentoFinal": "papel_high_grade",
+        "valorPresente": 23800000,
+        "percPL": 0.015,
+        "fonte": "Relatório Gerencial fev/2026 (Carteira FII)"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "GAME11",
+        "nome": "Game Renda Imobiliária",
+        "segmentoFinal": "tijolo_outros",
+        "valorPresente": 11100000,
+        "percPL": 0.007,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "NCRI11",
+        "nome": "NCH Renda Imobiliária",
+        "segmentoFinal": "papel_misto",
+        "valorPresente": 4760000,
+        "percPL": 0.003,
+        "fonte": "Relatório Gerencial fev/2026"
+      },
+      {
+        "tipo": "fii",
+        "ticker": "FLCR11",
+        "nome": "Faria Lima Capital Renda",
+        "segmentoFinal": "papel_high_grade",
+        "valorPresente": 1590000,
+        "percPL": 0.001,
+        "fonte": "Relatório Gerencial fev/2026"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.034,
+      "interpretacaoHhi": "baixa",
+      "topN": {
+        "top1Pct": 0.08,
+        "top3Pct": 0.217,
+        "top5Pct": 0.323,
+        "top10Pct": 0.48
+      },
+      "porDevedor": [
+        {
+          "nome": "Leroy Merlin (BTS)",
+          "pct": 0.08
+        },
+        {
+          "nome": "Banco do Brasil",
+          "pct": 0.07
+        },
+        {
+          "nome": "Brookfield (JK)",
+          "pct": 0.067
+        },
+        {
+          "nome": "Cabreúva Logístico",
+          "pct": 0.085
+        },
+        {
+          "nome": "JFL Realty",
+          "pct": 0.052
+        },
+        {
+          "nome": "JK Financial Center",
+          "pct": 0.052
+        },
+        {
+          "nome": "Tellus Properties FII",
+          "pct": 0.055
+        },
+        {
+          "nome": "CD Guarulhos",
+          "pct": 0.033
+        },
+        {
+          "nome": "Pátio Malzoni",
+          "pct": 0.03
+        },
+        {
+          "nome": "Leo Madeiras",
+          "pct": 0.028
+        }
+      ],
+      "porSetorDevedor": [
+        {
+          "setor": "Residencial",
+          "pct": 0.433
+        },
+        {
+          "setor": "Logística",
+          "pct": 0.329
+        },
+        {
+          "setor": "Escritórios",
+          "pct": 0.223
+        },
+        {
+          "setor": "Loteamento",
+          "pct": 0.007
+        },
+        {
+          "setor": "Hospitalar",
+          "pct": 0.005
+        },
+        {
+          "setor": "Outros",
+          "pct": 0.003
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA+",
+          "pct": 0.988
+        },
+        {
+          "indexador": "IGP-M+",
+          "pct": 0.012
+        }
+      ]
+    },
+    "analise": {
+      "rotulo": "Carteira HG IPCA+ pulverizada — 110 CRIs com baixa concentração (HHI 0,034)",
+      "cor": "blue",
+      "tags": [
+        "110 CRIs",
+        "HHI 0,034 (baixa concentração)",
+        "99% IPCA+",
+        "LTV médio 50%",
+        "Carrego IPCA+9,2%"
+      ],
+      "veredicto": "<p>Portfólio de papel <strong>high grade clássico</strong>: pulverizado em 110 CRIs com top-1 representando apenas 8% do PL e top-10 cobrindo 48%. Setorialmente equilibrado (43% residencial, 33% logístico, 22% corporativo) e com 65% de exposição geográfica concentrada em SP. Indexação quase pura em IPCA+ (99%) entrega carrego nominal de 14,9% a.a. — competitivo com Selic 14,75%.</p><p>Pontos de atenção internos: (i) <strong>10,6% de alavancagem</strong> via compromissadas (Patria sinalizou redução); (ii) <strong>CRI Plano e Plano</strong> (1,8% PL) renegociado após falha cadastral em fev/2026; (iii) <strong>CRI Landsol</strong> (0,5% PL) em reestruturação; (iv) exposição indireta ao GPA via CRI Tellus Brigadeiro II (5,5% combinados) — <em>contida pelas garantias imobiliárias</em>.</p>",
+      "pontosFortes": [
+        "Pulverização real — 110 CRIs com HHI 0,034",
+        "99% IPCA+ — hedge inflacionário direto e completo",
+        "LTV médio 50% — colchão patrimonial razoável nas garantias",
+        "Carrego de IPCA+9,2% (14,9% nominal) supera CDI bruto",
+        "Diversificação setorial com 6 segmentos distintos"
+      ],
+      "pontosFracos": [
+        "Alavancagem em compromissadas (-10,6% PL) amplia volatilidade do DPS",
+        "Concentração geográfica de 65% em SP",
+        "Exposição indireta ao GPA via CRI Tellus Brigadeiro II",
+        "Watchlist com 1 operação (Landsol) e renegociação recente (Plano e Plano)"
+      ],
+      "perfilInvestidor": "Investidor que busca renda mensal estável com hedge inflacionário, aceita oscilação de R$ 0,10/cota mês a mês. NÃO é para quem quer renda crescente ou exposição a tijolo."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Marcos do RBR Rendimento High Grade desde o IPO",
+    "periodos": [
+      {
+        "data": "2018-05",
+        "titulo": "IPO (1ª emissão)",
+        "tipo": "ipo",
+        "descricao": "Início das atividades em maio/2018 com cota de emissão R$ 100,00 e gestora RBR Asset. Estratégia inaugural: CRIs IPCA+ high grade.",
+        "fonte": "Prospecto (ID 25341)"
+      },
+      {
+        "data": "2019-05",
+        "titulo": "2ª emissão",
+        "tipo": "emissao",
+        "descricao": "Aumento de capital com Direito de Preferência. Captação para expansão da carteira de CRIs.",
+        "fonte": "Comunicados ID 48375/48376/48404"
+      },
+      {
+        "data": "2021-05",
+        "titulo": "Emissões posteriores e diversificação",
+        "tipo": "emissao",
+        "descricao": "Sequência de emissões em 2021–2022 ampliou portfólio para mais de 100 CRIs distintos.",
+        "fonte": "Prospecto 5ª emissão (ID 176796)"
+      },
+      {
+        "data": "2022-05",
+        "titulo": "7ª emissão (R$ 300 mi a R$ 97,51/cota)",
+        "tipo": "emissao",
+        "descricao": "Captação de R$ 300 mi para alocação em CRIs investment grade, com base em VP de fev/2022.",
+        "fonte": "Prospecto 7ª emissão (ID 300981)"
+      },
+      {
+        "data": "2025-04",
+        "titulo": "Adaptação à Resolução CVM 175",
+        "tipo": "outro",
+        "descricao": "Fundo passa a ter Classe Única de Cotas e responsabilidade limitada dos cotistas (sem alteração na política de investimento).",
+        "fonte": "Instrumento Particular de Alteração do Regulamento (ID 872050)"
+      },
+      {
+        "data": "2025-11",
+        "titulo": "8ª emissão",
+        "tipo": "emissao",
+        "descricao": "Emissão de ~1,24 mi de novas cotas (cotas emitidas: 15,06 mi → 16,30 mi). Alocação em novas operações HG.",
+        "fonte": "Informe Mensal dez/2025 (ID 1083967)"
+      },
+      {
+        "data": "2026-02",
+        "titulo": "Patria assume controle da RBR",
+        "tipo": "evento_credito",
+        "descricao": "Em 03/02/2026 o Patria passou a controlar diretamente a RBR Gestão de Recursos. Patria é a maior gestora independente de FIIs do Brasil. Sinaliza possível consolidação de RBRR + PCIP + VCJR + RPRI.",
+        "fonte": "Fato Relevante 03/02/2026 + Relatório Gerencial fev/2026 (ID 1152303)"
+      }
+    ]
+  },
+  "tese": {
+    "resumo": "<p>O RBRR11 é uma das <strong>carteiras de papel HG mais diversificadas do mercado</strong>: 110 CRIs IPCA+ com HHI 0,034. O fundo entrega carrego de IPCA+9,2% (~14,9% nominal) com LTV médio de 50% e quase 100% indexação ao IPCA — perfil clássico de buy-and-hold de renda. A troca de gestão para o Patria em fev/2026 é o catalisador inicial para potencial consolidação com PCIP, VCJR e RPRI, o que pode destravar valor por escala ou diluir cotistas conservadores via remarcações.</p>",
+    "paraQuem": [
+      "Aposentado/pré-aposentado que quer DPS de R$ 0,70–0,80/cota com hedge inflacionário",
+      "Investidor com horizonte 3–5 anos disposto a esperar a consolidação Patria",
+      "Quem busca papel HG diversificado para complementar carteira de tijolo",
+      "Investidor que aceita 10% de alavancagem em troca de carrego maior"
+    ],
+    "naoParaQuem": [
+      "Investidor de curto prazo — DPS oscila com IPCA e MTM dos CRIs",
+      "Quem rejeita qualquer alavancagem (10,6% via compromissadas)",
+      "Investidor que precisa de visibilidade total — AGE de consolidação ainda sem data",
+      "Quem busca papel HY com DY > 14% — RBRR11 entrega 12,2%"
+    ]
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "Núcleo de renda HG com tese de consolidação Patria",
+      "subrotulo": "Papel high grade IPCA+ diversificado em 110 CRIs, sob nova gestão desde fev/2026 com possível consolidação de fundos irmãos",
+      "cor": "blue"
+    },
+    "perfilRisco": {
+      "nivel": "medio",
+      "score": 2.4,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 1.5,
+          "peso": 0.2,
+          "metrica": "HHI 0,034 — extremamente diluído (110 CRIs, top-1 = 8% PL)",
+          "leitura": "Concentração mínima — risco idiossincrático muito baixo"
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 2.5,
+          "peso": 0.15,
+          "metrica": "σ12m ~14% anualizado (preços semanais)",
+          "leitura": "Volatilidade típica de papel HG — abaixo do IFIX médio"
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 2.0,
+          "peso": 0.2,
+          "metrica": "CV24m ≈ 11% — DPS oscilou entre R$ 0,68 e R$ 1,00",
+          "leitura": "Pequena oscilação mensal pelo MTM dos CRIs IPCA+; previsível em janelas semestrais"
+        },
+        {
+          "nome": "Liquidez",
+          "score": 1.5,
+          "peso": 0.15,
+          "metrica": "ADTV R$ 8,6 mi/dia (137,8 mil cotistas)",
+          "leitura": "Liquidez alta para o segmento — posições de R$ 1 mi saem em < 1 dia útil"
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 3.0,
+          "peso": 0.2,
+          "metrica": "Inadimplência ~0,5%; 1 CRI em Watchlist (Landsol 0,5% PL); 1 renegociado (Plano e Plano 1,8% PL)",
+          "leitura": "Qualidade média HG; LTV médio 50% protege razoavelmente"
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 3.5,
+          "peso": 0.1,
+          "metrica": "Compromissadas -10,6% do PL",
+          "leitura": "Alavancagem moderada — Patria sinalizou redução"
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": true,
+        "racional": "DPS estabilizado em faixa R$ 0,70–0,80 nos últimos 6 meses; CV24m de 11% é aceitável para tese de renda"
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": true,
+        "racional": "99% da carteira em IPCA+ — exposição quase pura ao indexador"
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Sem receita em USD — irrelevante"
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": "parcial",
+        "racional": "P/VP 0,87 oferece colchão; convergência ao VP depende de execução da consolidação Patria"
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": "parcial",
+        "racional": "Papel HG IPCA+ se beneficia parcialmente — mas o spread MTM já está quase no piso (1,1% sobre carrego); reprecificação positiva é menos elástica que em papel HY"
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Carteira é IPCA+, não CDI+ — não captura alta direta de Selic"
+      },
+      {
+        "nome": "Exposição setorial concentrada (CRI residencial e logístico)",
+        "encaixa": "parcial",
+        "racional": "76% da carteira combinando residencial (43%) + logístico (33%) — é exposição setorial mas pulverizada por devedor"
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": true,
+        "racional": "DY 12,2% + hedge IPCA + diluição alta = composição clássica de núcleo conservador, com ressalva sobre AGE de consolidação Patria"
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": "parcial",
+        "racional": "Diversifica DENTRO do papel HG; quem já tem KNCR11/KNIP11/HGCR11 não diversifica adicionando RBRR11"
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "Como qualquer FII, distribuição isenta de IR para PF (Lei 11.033)"
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "AGE de consolidação Patria ainda sem data",
+        "severidade": "media",
+        "descricao": "Patria sinalizou possível fusão de RBRR + PCIP + VCJR + RPRI; remarcações de ativos antes da AGE são esperadas. Cotistas conservadores podem sofrer diluição se a relação de troca não for favorável.",
+        "mitigacao": "Patria declarou que decisão exigirá AGE com quórum >25% e comunicação prévia"
+      },
+      {
+        "titulo": "Compressão de spread MTM em queda de Selic",
+        "severidade": "media",
+        "descricao": "Spread médio de MTM já é apenas 1,1% sobre o carrego de aquisição (taxa MTM 9,2% vs taxa de aquisição 7,9%). Em ciclo de queda de Selic, o spread pode comprimir e o DPS cair de R$ 0,70 para R$ 0,55.",
+        "mitigacao": "99% IPCA+ mantém piso real; carrego de aquisição original (~7,9%) preserva renda em horizontes longos"
+      },
+      {
+        "titulo": "Compromissadas amplificam queda em estresse",
+        "severidade": "media",
+        "descricao": "Alavancagem de 10,6% via venda com recompra adiciona ~10% de risco direcional. Em cenário de estresse, margin call em compromissadas pode obrigar venda forçada de CRIs.",
+        "mitigacao": "Patria sinalizou redução estratégica da alavancagem"
+      },
+      {
+        "titulo": "Exposição indireta ao GPA via Tellus Brigadeiro II",
+        "severidade": "baixa",
+        "descricao": "5,5% do PL combinados em CRIs Tellus Brigadeiro II — devedor é o Tellus Properties FII (não o GPA), mas o GPA é locatário relevante e está em recuperação extrajudicial.",
+        "mitigacao": "Garantias imobiliárias robustas; obrigações locatícias não atingidas pela RJ-extrajudicial conforme análise da gestão"
+      },
+      {
+        "titulo": "Falha cadastral CRI Plano e Plano",
+        "severidade": "baixa",
+        "descricao": "Em fev/2026, falha em base de cadastro gerou prejuízo de R$ 0,11/cota com a venda parcial. Patria identificou e corrigiu em mar/2026, mas evidencia fragilidade em controles internos sob a transição.",
+        "mitigacao": "Conversão integral em mar/2026; gestão estabilizada deve reduzir incidência"
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 8600000,
+      "volumeMedio252d": 6300000,
+      "diasParaSair": {
+        "10mil": 0.006,
+        "100mil": 0.058,
+        "500mil": 0.291,
+        "1milhao": 0.581,
+        "10milhoes": 5.81
+      },
+      "leitura": "Liquidez alta para o segmento. Posição de R$ 1 mi sai em menos de 1 dia útil sem mover preço; até R$ 5 mi é absorvido em 2–3 dias. Liquidez é vantagem real do RBRR11 vs pares menores.",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1152303)"
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.13,
+        "sigma24m": 0.15,
+        "drawdownMax24m": -0.18,
+        "drawdownMaxData": "2024-08",
+        "tempoRecuperacao": null
+      },
+      "dividendo": {
+        "cv12m": 0.083,
+        "cv24m": 0.11,
+        "minDps24m": 0.68,
+        "maxDps24m": 1.0,
+        "amplitudeRelativa": 0.471
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "papel_high_grade",
+      "pares": [
+        {
+          "ticker": "KNCR11",
+          "sobreposicaoEstimada": 0.45,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador",
+            "perfil_inquilinos"
+          ],
+          "leitura": "Mesma família de papel HG; KNCR11 é mais CDI+ enquanto RBRR11 é IPCA+. Quem tem ambos diversifica indexador, mas NÃO setor"
+        },
+        {
+          "ticker": "KNIP11",
+          "sobreposicaoEstimada": 0.55,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador",
+            "perfil_inquilinos"
+          ],
+          "leitura": "Sobreposição alta — KNIP11 também é IPCA+ HG. Quem tem KNIP11 está duplicando exposição estrutural"
+        },
+        {
+          "ticker": "HGCR11",
+          "sobreposicaoEstimada": 0.5,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador",
+            "perfil_inquilinos"
+          ],
+          "leitura": "HGCR11 é o par direto em IPCA+ HG do CSHG. Estratégia idêntica — adicionar RBRR11 a quem já tem HGCR11 é apenas pulverizar gestora"
+        },
+        {
+          "ticker": "CPTS11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador"
+          ],
+          "leitura": "CPTS11 mistura HG + HY com gestão Capitânia; sobreposição parcial pelo lado HG"
+        },
+        {
+          "ticker": "MCCI11",
+          "sobreposicaoEstimada": 0.5,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador"
+          ],
+          "leitura": "MCCI11 é HG IPCA+ com Mauá Capital — par direto setorial e de indexador"
+        },
+        {
+          "ticker": "RECR11",
+          "sobreposicaoEstimada": 0.35,
+          "tipoSobreposicao": [
+            "setor_devedor",
+            "indexador"
+          ],
+          "leitura": "RECR11 mira mid grade com REC; sobreposição parcial pelo lado IPCA+ residencial"
+        }
+      ],
+      "diversificacaoReal": "Para quem já tem KNIP11, HGCR11 ou MCCI11, RBRR11 NÃO é diversificação — é troca de gestora. Para quem só tem KNCR11 (CDI+), adicionar RBRR11 (IPCA+) diversifica indexador. Para carteira sem papel HG, RBRR11 é uma das opções mais diluídas e líquidas do segmento."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Consolidação Patria com relação de troca favorável",
+        "descricao": "Fusão RBRR + PCIP + VCJR + RPRI gera escala, reduz taxa total efetiva e aumenta liquidez — pode destravar 5–10% de prêmio sobre P/VP atual",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "IPCA acima da projeção Focus",
+        "descricao": "99% IPCA+ entrega proteção real direta; surpresa inflacionária eleva rendimento nominal sem queda de preço",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic em queda gradual com IFIX em alta",
+        "descricao": "Reprecificação para cima do P/VP — RBRR11 captura cerca de metade do beta dos pares mais voláteis",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Inadimplência sistêmica em recessão prolongada",
+        "descricao": "Recessão profunda pode pressionar CRIs residenciais (43% PL) — Plano e Plano e Cury são mais sensíveis a desemprego",
+        "probabilidadeRelativa": "baixa"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "AGE de consolidação aprovada com diluição",
+        "descricao": "Relação de troca desfavorável ou remarcações pré-fusão podem diluir cotistas atuais — risco de execução típico de transação entre fundos da mesma casa",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Compressão acelerada de spread em ciclo agressivo de corte de Selic",
+        "descricao": "Selic caindo de 14,75% para 10% comprime carrego nominal; DPS pode ir de R$ 0,75 para R$ 0,55",
+        "probabilidadeRelativa": "media"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "renda_mensal",
+        "preservacao_capital",
+        "hedge_inflacao",
+        "tax_shield"
+      ],
+      "horizonte": "medio_longo",
+      "perfil": "moderado",
+      "carteiraTipica": "Posição núcleo de 5–15% da carteira de FIIs para investidor que aceita oscilação de R$ 0,10/cota mês a mês em troca de hedge inflacionário e DPS estável",
+      "perfisExemplo": [
+        "Aposentado/pré-aposentado que precisa de renda mensal com proteção real",
+        "Investidor moderado que quer diluição máxima dentro do papel HG",
+        "Quem aposta na execução do Patria pós-aquisição da RBR e tese de consolidação"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Investidor que rejeita alavancagem (10,6% via compromissadas)",
+        "Quem precisa de previsibilidade absoluta — DPS oscila de R$ 0,68 a R$ 1,00",
+        "Quem já tem KNIP11/HGCR11/MCCI11 — sobreposição estrutural alta",
+        "Investidor de curto prazo — tese central depende de eventos de 6–18 meses",
+        "Quem busca DY > 14% — RBRR11 entrega 12,2% (HY teria mais retorno e mais risco)"
+      ]
+    }
+  },
+  "dividendos": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historico": [
+      {
+        "data": "2025-04",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-05-19",
+        "cotas": 15057201,
+        "fonte": "Rendimentos e Amortizações (ID 899223)",
+        "docId": "899223"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.9,
+        "dataPagamento": "2025-06-17",
+        "cotas": 15057201,
+        "fonte": "Rendimentos e Amortizações (ID 921014)",
+        "docId": "921014"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 1.0,
+        "dataPagamento": "2025-07-16",
+        "cotas": 15057201,
+        "lucroCaixa": 13980000,
+        "distribuicao": 15057201,
+        "resultadoCaixa": -1077201,
+        "payout": 1.077,
+        "caixaLiquidoFimMes": 73194536,
+        "fonte": "Rendimentos (ID 942862) + Informe Mensal jun/2025 (ID 947055)",
+        "docId": "942862"
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.95,
+        "dataPagamento": "2025-08-18",
+        "cotas": 15057201,
+        "fonte": "Rendimentos e Amortizações (ID 964843)",
+        "docId": "964843"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.85,
+        "dataPagamento": "2025-09-16",
+        "cotas": 15057201,
+        "fonte": "Rendimentos e Amortizações (ID 987177)",
+        "docId": "987177"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.8,
+        "dataPagamento": "2025-10-16",
+        "cotas": 15057201,
+        "lucroCaixa": 11500000,
+        "distribuicao": 12045760,
+        "resultadoCaixa": -545760,
+        "payout": 1.047,
+        "caixaLiquidoFimMes": 43108040,
+        "fonte": "Rendimentos (ID 1009903) + Informe Mensal set/2025 (ID 1014480)",
+        "docId": "1009903"
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.7,
+        "dataPagamento": "2025-11-18",
+        "cotas": 15057201,
+        "fonte": "Rendimentos e Amortizações (ID 1033795)",
+        "docId": "1033795"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.8,
+        "dataPagamento": "2025-12-16",
+        "cotas": 16300275,
+        "fonte": "Rendimentos e Amortizações (ID 1057218) — pós 8ª emissão",
+        "docId": "1057218"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.8,
+        "dataPagamento": "2026-01-19",
+        "cotas": 16300275,
+        "lucroCaixa": 12950000,
+        "distribuicao": 13040220,
+        "resultadoCaixa": -90220,
+        "payout": 1.007,
+        "caixaLiquidoFimMes": 31146829,
+        "fonte": "Rendimentos (ID 1079962) + Informe Mensal dez/2025 (ID 1083967)",
+        "docId": "1079962"
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.8,
+        "dataPagamento": "2026-02-19",
+        "cotas": 16300275,
+        "fonte": "Rendimentos e Amortizações (ID 1107302)",
+        "docId": "1107302"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.7,
+        "dataPagamento": "2026-03-17",
+        "cotas": 16300275,
+        "lucroCaixa": 9687864,
+        "distribuicao": 11410193,
+        "resultadoCaixa": -1722329,
+        "payout": 1.178,
+        "fonte": "Rendimentos (ID 1132387) + Relatório Gerencial fev/2026 (ID 1152303)",
+        "docId": "1132387"
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.7,
+        "dataPagamento": "2026-04-17",
+        "cotas": 16300275,
+        "caixaLiquidoFimMes": 35555267,
+        "fonte": "Rendimentos (ID 1159057) + Informe Mensal mar/2026 (ID 1161936)",
+        "docId": "1159057"
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2024-1",
+        "label": "1º Sem 2024",
+        "ano": 2024,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2024-2",
+        "label": "2º Sem 2024",
+        "ano": 2024,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 75000000,
+        "distribuicao": 78000000,
+        "resultadoCaixa": -3000000,
+        "payout": 1.04,
+        "interpretacao": "queimou_caixa"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "lucroCaixa": 32000000,
+        "distribuicao": 36000000,
+        "resultadoCaixa": -4000000,
+        "payout": 1.125,
+        "interpretacao": "queimou_caixa"
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_ate_horizonte",
+      "dividendoLabel": "Sustentável em R$ 0,70–0,80 enquanto reserva e carrego se mantiverem",
+      "dividendoCor": "amber",
+      "horizonte": "Reserva acumulada de R$ 0,17/cota (vs R$ 0,99 em jan/26) — preocupação se Patria não estabilizar geração até jun/26",
+      "status": "queimando_caixa",
+      "cor": "amber",
+      "payoutMedio12m": 1.05,
+      "caixaLiquido": 35555267,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 35,56 mi em Títulos Públicos (item 9.2 do Informe Mensal mar/2026 — ID 1161936)",
+      "resultadoAcumuladoRetido": null,
+      "queimaMediaMensal": 1100000,
+      "queimaPorCota": 0.067,
+      "coberturaMeses": 32.3,
+      "tendencia": "Queima leve compensada por carrego IPCA+9,2%; reserva de R$ 0,17/cota é o mínimo confortável — Patria precisa estabilizar até jun/26",
+      "leitura": "<p>O DPS de <strong>R$ 0,70/cota</strong> está sendo pago acima do gerado em fev/26 (lucro caixa de R$ 0,59/cota). A reserva acumulada caiu de R$ 0,99 (jan/26) para <strong>R$ 0,17/cota</strong> em fev/26, principalmente pelo prejuízo de R$ 0,11/cota do CRI Plano e Plano. Em condições normais, o carrego IPCA+9,2% sustenta DPS de R$ 0,75 — o ponto de atenção é a transição Patria + redução de compromissadas.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2025-11",
+        "titulo": "8ª emissão de cotas",
+        "tipo": "emissao",
+        "descricao": "<p>Emissão de ~1,24 mi cotas (15,06 → 16,30 mi). Recursos alocados em novas operações HG.</p>",
+        "impactoDividendo": "Diluição inicial parcialmente compensada por novas alocações",
+        "severidade": "neutro",
+        "fonte": "Informe Mensal dez/2025 (ID 1083967)",
+        "docId": "1083967"
+      },
+      {
+        "data": "2026-02",
+        "titulo": "Patria assume controle da RBR",
+        "tipo": "outro",
+        "descricao": "<p>Em 03/02/2026 o Patria passou a controlar diretamente a RBR Gestão de Recursos. Estratégia: consolidação eventual com PCIP, VCJR e RPRI.</p>",
+        "impactoDividendo": "Neutro no curto prazo; potencial otimização de custos a médio prazo",
+        "severidade": "neutro",
+        "fonte": "Fato Relevante 03/02/2026",
+        "docId": "1152303"
+      },
+      {
+        "data": "2026-02",
+        "titulo": "Venda parcial CRI Plano e Plano com prejuízo",
+        "tipo": "evento_credito",
+        "descricao": "<p>Venda de R$ 40 mi por falha cadastral gerou prejuízo de R$ 0,11/cota. Patria afirma não esperar impacto na distribuição (apuração semestral). Convertido em mar/2026.</p>",
+        "impactoDividendo": "-R$ 0,11/cota em fev/2026; reserva caiu de R$ 0,99 para R$ 0,17/cota",
+        "severidade": "negativo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+        "docId": "1152303"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-09",
+        "titulo": "Possível AGE de consolidação Patria",
+        "tipo": "outro",
+        "severidade": "neutro",
+        "certeza": "possivel",
+        "descricao": "<p>Patria sinalizou possível fusão de RBRR + PCIP + VCJR + RPRI. Exige AGE com quórum >25%.</p>",
+        "impactoValor": null,
+        "duracaoMeses": null,
+        "premissa": "Sinal pelo Relatório Gerencial fev/2026 sem cronograma definido",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+        "docId": "1152303"
+      },
+      {
+        "data": "2026-06",
+        "titulo": "Redução estratégica das compromissadas",
+        "tipo": "amortizacao_programada",
+        "severidade": "negativo",
+        "certeza": "projetado",
+        "descricao": "<p>Patria sinalizou redução de alavancagem (-10,6% PL). Efeito: queda de geração proporcional ao desalavancagem.</p>",
+        "impactoValor": -0.05,
+        "duracaoMeses": null,
+        "premissa": "Compromissadas geram parte do carrego; redução de 10% para 5% reduz DPS em ~R$ 0,05",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+        "docId": "1152303"
+      },
+      {
+        "data": "2026-12",
+        "titulo": "Distribuição extraordinária semestre fiscal jul-dez/2026",
+        "tipo": "extraordinaria_historica",
+        "severidade": "positivo",
+        "certeza": "projetado",
+        "descricao": "<p>Encerramento do semestre fiscal em 30/06 e 31/12. Histórico mostra extraordinárias em jun e dez quando o resultado financeiro acumulado supera 95% distribuído (Lei 8.668).</p>",
+        "impactoValor": 0.1,
+        "duracaoMeses": 1,
+        "premissa": "Padrão histórico: extra de R$ 0,05–0,15/cota em jul (ref jun) e jan (ref dez)",
+        "fonte": "Informe Trimestral 4T2025 (ID 1111896)",
+        "docId": "1111896"
+      }
+    ],
+    "padraoSazonal": {
+      "tem": false,
+      "observacao": "DPS oscila com IPCA mensal e MTM dos CRIs — variância sem padrão sazonal recorrente. Extraordinárias semestrais (jul/jan) são o único componente previsível."
+    },
+    "guidance": {
+      "fonte": "estimativa",
+      "periodo": "próximos 6 meses",
+      "faixaMin": 0.65,
+      "faixaMax": 0.8,
+      "unidade": "R$/cota/mês",
+      "premissas": [
+        "DPS sustentável estimado em R$ 0,72 com base em carrego IPCA+9,2% pós-redução compromissadas",
+        "Reserva de R$ 0,17/cota suporta DPS R$ 0,75 por 4–6 meses",
+        "Distribuição mensal alinhada à apuração semestral (lei 8.668) — ajustes finos em jun e dez"
+      ],
+      "cronogramaAnuncio": {
+        "fonte": "heuristica",
+        "regraTexto": null,
+        "observacao": "Histórico do fundo: anúncio entre o 7º e o 12º dia útil; pagamento entre o 16º e o 19º",
+        "dataAnuncioEstimada": "2026-05-12",
+        "dataPagamentoEstimada": "2026-05-19"
+      }
+    },
+    "projecaoDy": {
+      "precoReferencia": 84.5,
+      "dyAtual12m": 12.18,
+      "dyProjetado12m": 11.5,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 11.5,
+          "dividendoMes": 0.81,
+          "descricao": "DPS médio R$ 0,75 + 1 extra R$ 0,15 — projeção realista pós-redução compromissadas"
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 13.5,
+          "dividendoMes": 0.95,
+          "descricao": "Selic estável, IPCA acelerando, manutenção da alavancagem"
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 9.5,
+          "dividendoMes": 0.67,
+          "descricao": "Selic cai a 10%, spread comprime, compromissadas zeradas, DPS estabiliza em R$ 0,67"
+        }
+      ],
+      "retornoTotal12m": 14.0,
+      "premissas": [
+        "Base assume Selic 12,5% (média 12 meses) e IPCA 4%",
+        "Otimista: Selic mantida + IPCA 5,5% + alavancagem preservada",
+        "Pessimista: Selic 10% + IPCA 3% + alavancagem zerada"
+      ]
+    },
+    "sintese": {
+      "tendencia": "lateral_com_risco",
+      "tendenciaLabel": "DPS lateral em R$ 0,70–0,80 com risco de queda gradual em ciclo de Selic",
+      "cor": "amber",
+      "direcao": "DPS estabilizando entre R$ 0,70–0,80 enquanto Patria absorve a operação. Risco principal é queda gradual conforme Selic baixa e compromissadas são reduzidas; risco menor é AGE de consolidação com remarcações desfavoráveis.",
+      "pontosPositivos": [
+        {
+          "texto": "Carrego IPCA+9,2% sustenta DPS R$ 0,75 sustentável",
+          "peso": "alto"
+        },
+        {
+          "texto": "Patria como gestora — escala e profissionalização",
+          "peso": "medio"
+        },
+        {
+          "texto": "Carteira de 110 CRIs com HHI 0,034 (resiliência alta)",
+          "peso": "alto"
+        },
+        {
+          "texto": "Extraordinárias semestrais de R$ 0,10–0,15/cota previsíveis",
+          "peso": "medio"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Reserva caiu para R$ 0,17/cota — colchão fino",
+          "peso": "alto"
+        },
+        {
+          "texto": "Redução de compromissadas reduz DPS gradualmente",
+          "peso": "medio"
+        },
+        {
+          "texto": "Selic em queda comprime spread MTM (já está em 1,1%)",
+          "peso": "medio"
+        },
+        {
+          "texto": "AGE de consolidação sem data + risco de remarcações",
+          "peso": "medio"
+        }
+      ],
+      "veredicto": "<p>O DPS de <strong>R$ 0,70</strong> é defensável até dez/2026 graças ao carrego IPCA+9,2% e à reserva acumulada de R$ 0,17/cota. <strong>O ponto de inflexão</strong> é a redução das compromissadas pelo Patria + ciclo de queda de Selic — combinados, podem levar o DPS sustentável para a faixa <strong>R$ 0,65–0,72</strong> em 12–18 meses. Cenário-base: DPS lateral com extras semestrais; cenário pessimista: queda gradual para R$ 0,67. AGE de consolidação é o wildcard — se executada com relação de troca favorável, pode destravar 5–10% de prêmio sobre P/VP.</p>"
+    },
+    "alertas": [
+      {
+        "texto": "Reserva caiu de R$ 0,99 para R$ 0,17/cota em fev/26",
+        "sev": "amber"
+      },
+      {
+        "texto": "Patria sinaliza redução de compromissadas (-10,6%)",
+        "sev": "amber"
+      },
+      {
+        "texto": "AGE de consolidação Patria sem data",
+        "sev": "amber"
+      }
+    ],
+    "chartLabels": [
+      "mai/25",
+      "jun/25",
+      "jul/25",
+      "ago/25",
+      "set/25",
+      "out/25",
+      "nov/25",
+      "dez/25",
+      "jan/26",
+      "fev/26",
+      "mar/26",
+      "abr/26"
+    ],
+    "chartData": [
+      0.9,
+      1.0,
+      0.95,
+      0.85,
+      0.8,
+      0.7,
+      0.8,
+      0.8,
+      0.8,
+      0.7,
+      0.7,
+      0.7
+    ],
+    "chartCor": "#3b82f6",
+    "chartYMin": 0.5,
+    "chartYMax": 1.1,
+    "stats": {
+      "ultimoDPS": 0.7,
+      "media12m": 0.83,
+      "media24m": 0.83
+    }
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/rbrr11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2018-04-30",
+      "dataFim": "2026-04-20",
+      "fonte": "yfinance:RBRR11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 84.5,
+      "minHistorico": {
+        "valor": 76.2,
+        "data": "2024-08-26"
+      },
+      "maxHistorico": {
+        "valor": 110.0,
+        "data": "2020-09-14"
+      }
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/rbrr11/historico_vp.csv",
+      "fonte": "Informes Mensais Estruturados",
+      "ultimoVpCota": 97.47,
+      "ultimoVpData": "2026-03"
+    },
+    "eventosValuation": [
+      {
+        "data": "2022-05-09",
+        "tipo": "emissao",
+        "titulo": "7ª Emissão (R$ 300 mi a R$ 97,51/cota)",
+        "descricao": "<p>Emissão de R$ 300 mi com base em VP de fev/2022. Diluição leve seguida de alocação em CRIs HG.</p>",
+        "impactoVp": null,
+        "impactoPreco": -0.03,
+        "fonte": "Prospecto 7ª emissão (ID 300981)",
+        "docId": "300981"
+      },
+      {
+        "data": "2025-11-15",
+        "tipo": "emissao",
+        "titulo": "8ª Emissão (~1,24 mi novas cotas)",
+        "descricao": "<p>Cotas emitidas subiram de 15,06 mi para 16,30 mi. Diluição compensada por alocações em novos CRIs.</p>",
+        "impactoVp": -0.5,
+        "impactoPreco": null,
+        "fonte": "Informe Mensal dez/2025 (ID 1083967)",
+        "docId": "1083967"
+      },
+      {
+        "data": "2026-02-03",
+        "tipo": "mudanca_gestor",
+        "titulo": "Patria assume RBR Gestão",
+        "descricao": "<p>Patria passa a controlar a RBR Gestão de Recursos; gestor formal continua RBR mas direção estratégica é Patria. Sinalização de consolidação RBRR + PCIP + VCJR + RPRI.</p>",
+        "impactoVp": null,
+        "impactoPreco": 0.04,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+        "docId": "1152303"
+      },
+      {
+        "data": "2026-02-27",
+        "tipo": "evento_credito",
+        "titulo": "Prejuízo CRI Plano e Plano (-R$ 0,11/cota)",
+        "descricao": "<p>Falha cadastral gerou prejuízo na venda parcial. Convertido em mar/2026 sem impacto no semestre fiscal.</p>",
+        "impactoVp": -0.11,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+        "docId": "1152303"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "papel_high_grade",
+      "criterioAgrupamento": "FIIs de CRI predominantemente high grade (rating AA-/AAA), indexação IPCA+ ou CDI+, baixa inadimplência, alavancagem leve.",
+      "tickers": [
+        "KNCR11",
+        "KNIP11",
+        "AFHI11",
+        "HGCR11",
+        "CLIN11",
+        "CVBI11",
+        "BTCR11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.98,
+        "pvpMin": 0.89,
+        "pvpMax": 1.04,
+        "dyMediano": 12.67,
+        "dyMin": 8.8,
+        "dyMax": 14.35,
+        "premioRiscoSegmento": 0.025
+      },
+      "posicaoFundo": {
+        "pvpRanking": "Abaixo da mediana — RBRR11 a 0,87 vs mediana 0,98 (-11%)",
+        "dyRanking": "Próximo da mediana — 12,2% vs mediana 12,67%",
+        "leitura": "<p>RBRR11 está com desconto de 11% vs mediana de pares HG. O desconto reflete em parte o ruído de transição Patria + alavancagem em compromissadas (10,6%). Conforme a transição se estabiliza e a tese de consolidação ganha contornos, o desconto tende a fechar.</p>"
+      },
+      "statusClassificacao": "validado"
+    },
+    "pvp": {
+      "valor": "0,87",
+      "descricao": "<p>P/VP de 0,87 (R$ 84,50 / R$ 97,47) coloca o RBRR11 com desconto de 13% sobre o patrimônio. Para um fundo de papel HG com 99% IPCA+ e duração média de 4,1 anos, esse desconto é atípico — reflete o prêmio de ruído da transição Patria + alavancagem.</p>",
+      "detalhes": [
+        {
+          "label": "Cota",
+          "valor": "R$ 84,50"
+        },
+        {
+          "label": "VP/cota",
+          "valor": "R$ 97,47"
+        },
+        {
+          "label": "Mediana pares HG",
+          "valor": "0,98"
+        },
+        {
+          "label": "Diferença vs mediana",
+          "valor": "-11%"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "+1,15%",
+      "label": "Carrego IPCA+9,2% vs Selic 14,75%",
+      "cor": "blue",
+      "descricao": "<p>Spread de 115bps entre o carrego MTM da carteira (IPCA+9,2% ≈ ~14,9% nominal supondo IPCA 5,2%) e a Selic (14,75%). Spread baixo, típico de carteira high grade.</p>",
+      "detalhe": "Carrego MTM 14,9% nominal vs Selic 14,75% = +0,15pp; ajustando pelo carrego de aquisição (IPCA+7,9% ≈ 13,5% nominal), spread real é -1,25pp — mas a marcação a mercado já foi feita."
+    },
+    "precoJustoMercado": {
+      "valor": 92.5,
+      "faixa": [
+        88.0,
+        97.0
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 84.5,
+        "diferencaPct": 9.5,
+        "leitura": "subvalorizado em 9,5% vs preço justo — janela atrativa em horizonte 12 meses condicionada à execução Patria"
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio HG",
+          "peso": 0.45,
+          "preco": 95.4,
+          "calculo": "DPS sustentável anual R$ 9,00 ÷ (Selic 14,75% + prêmio HG 2,5% — premioRiscoSegmento de pares_subsegmento.json) - ajuste downside ÷ 1,025 = R$ 95,40",
+          "racional": "DPS sustentável anual R$ 9,00 reflete carrego IPCA+9,2% pós-redução compromissadas. Premio HG 2,5% conforme tabela canônica."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.2,
+          "preco": 95.5,
+          "calculo": "VP/cota R$ 97,47 × P/VP mediano pares (0,98) = R$ 95,52 → arredondado",
+          "racional": "Pares: KNCR11, KNIP11, AFHI11, HGCR11, CLIN11, CVBI11, BTCR11."
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.25,
+          "preco": 71.0,
+          "calculo": "DPS R$ 9,00/ano ÷ DY mediano pares (12,67%) = R$ 71,03",
+          "racional": "Calibração mais conservadora — pares mais maduros (KNIP11) negociam DY menor por menor risco percebido."
+        },
+        {
+          "nome": "Camada qualitativa",
+          "peso": 0.1,
+          "preco": 88.0,
+          "calculo": "Aplicar fator qualidade 0,97 sobre média ponderada A1-A3",
+          "racional": "Score qualitativo: Patria como gestora top-3 (gestora 0,90); inadimplência 0,5% (0,95); alavancagem 10% (0,80); estabilidade DPS CV 11% (0,70); dividendoStatus sustentavel_ate_horizonte (0,85). Score final 0,86 → fator 0,85 + 0,86×0,30 = 1,11 — mas reduzido para 0,97 por ruído da transição Patria."
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 0.97,
+        "score": 0.86,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.9,
+            "racional": "Patria — top-3 em FIIs, mas em fase de absorção da RBR"
+          },
+          {
+            "nome": "Inadimplência",
+            "peso": 0.15,
+            "score": 0.95,
+            "racional": "0,5% — apenas Landsol (0,5% PL) renegociado"
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 0.8,
+            "racional": "10,6% via compromissadas — Patria sinalizou redução"
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.15,
+            "score": 0.7,
+            "racional": "CV24m de 11% — DPS oscilou de R$ 0,68 a R$ 1,00"
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.1,
+            "score": 0.85,
+            "racional": "sustentavel_ate_horizonte (reserva R$ 0,17/cota fina)"
+          },
+          {
+            "nome": "Liquidez",
+            "peso": 0.2,
+            "score": 0.95,
+            "racional": "ADTV R$ 8,6 mi — entre as melhores do papel HG"
+          }
+        ]
+      },
+      "explicacao": "<p>Preço justo de <strong>R$ 92,50</strong> (faixa R$ 88–97) reflete um meio-termo entre o teto patrimonial (R$ 97,47) e o piso de pares-DY (R$ 71). Com o ruído da transição Patria, a faixa larga é apropriada. <strong>Cotação atual de R$ 84,50 está abaixo da faixa</strong> em 4%, sugerindo janela de entrada com horizonte 12+ meses, condicionada à execução do Patria e à definição da AGE de consolidação.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 86.5,
+        "faixa": [
+          82.0,
+          90.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Definição do cronograma de redução das compromissadas pelo Patria",
+            "data": "2026-06",
+            "impactoEsperado": "Visibilidade reduz desconto vs pares em 2-3%",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+            "docId": "1152303"
+          },
+          {
+            "evento": "Encerramento do semestre fiscal jul-dez/2025 com extra em jul/2026",
+            "data": "2026-07",
+            "impactoEsperado": "Distribuição extra de R$ 0,10–0,15/cota",
+            "fonte": "Informe Trimestral 4T2025 (ID 1111896)",
+            "docId": "1111896"
+          }
+        ],
+        "racional": "<p>Curto prazo dominado por dois eventos: definição da redução de compromissadas (jun/26) e extraordinária semestral (jul/26). Sem rupturas, preço deve subir 2–6% para R$ 86–90.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 95.0,
+        "faixa": [
+          88.0,
+          102.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "AGE de consolidação Patria (RBRR + PCIP + VCJR + RPRI)",
+            "data": "2026-12",
+            "impactoEsperado": "Se aprovada com relação favorável, prêmio de 5-10% sobre P/VP atual",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+            "docId": "1152303"
+          },
+          {
+            "evento": "Início do ciclo de corte de Selic (Focus mediano: -375bps em 12m)",
+            "data": "2026-04",
+            "impactoEsperado": "Reprecificação para cima do papel HG IPCA+",
+            "fonte": "BCB Focus (data/macro_snapshot.json)",
+            "docId": null
+          }
+        ],
+        "racional": "<p>Médio prazo dominado pelo ciclo de Selic + execução Patria. Cenário-base: P/VP volta para 0,95-1,00 (preço R$ 92–98). Otimista (consolidação favorável + queda forte de Selic): R$ 100–105.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 100.0,
+        "faixa": [
+          85.0,
+          115.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Estabilização do ciclo macro brasileiro pós-Selic",
+            "data": "2028-01",
+            "impactoEsperado": "Papel HG IPCA+ tende a P/VP ~1,00 em ambiente de Selic estável 8-10%",
+            "fonte": "BCB Focus (data/macro_snapshot.json)",
+            "docId": null
+          },
+          {
+            "evento": "Vencimentos de CRIs de longa duração (2030–2036)",
+            "data": "2030-12",
+            "impactoEsperado": "Reciclagem de carteira a taxas vigentes na época",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1152303)",
+            "docId": "1152303"
+          }
+        ],
+        "racional": "<p>Longo prazo é função do ciclo macro. Faixa larga (R$ 85-115) reflete amplitude de cenários: Selic 6% + IPCA 3% leva a queda real de DPS; Selic 11% + IPCA 5% mantém DPS atual e P/VP ~1,00.</p>"
+      }
+    },
+    "recomendacoes": null
+  },
+  "relacoes": [
+    {
+      "id": "RBRR11-PCIP11-VCJR11-RPRI11-2026-02",
+      "contraparte": {
+        "ticker": "RPRI11",
+        "tipo": "fii",
+        "nome": "RBR Properties Renda I",
+        "gestora": "Patria Real Estate"
+      },
+      "tipo": "outro_vinculo",
+      "data": "2026-02-03",
+      "valor": null,
+      "fluxo": "neutro",
+      "favorAberto": true,
+      "agioSobreMercado": {
+        "presente": false,
+        "valorPercent": 0,
+        "leituraMercado": "Apenas sinalização — sem valoração ainda"
+      },
+      "mesmaGestora": true,
+      "severidadeConflito": "media",
+      "descricao": "<p>Patria assumiu controle da RBR em 03/02/2026 e sinalizou possível consolidação de RBRR11 + PCIP + VCJR + RPRI11 em veículo único. Operação dependerá de AGE com quórum >25%.</p>",
+      "leituraInterpretativa": "<p>Quatro fundos da mesma gestora podem se fundir. Risco principal: relação de troca pós-remarcações pode prejudicar cotistas do fundo com VP mais conservador.</p>",
+      "fontes": [
+        {
+          "documento": "Relatório Gerencial fev/2026",
+          "docId": "1152303",
+          "trecho": "Uma eventual consolidação entre os fundos PCIP, VCJR, RBRR e RPRI será feita de forma transparente, com comunicações com a devida antecedência"
+        }
+      ]
+    },
+    {
+      "id": "RBRR11-RPRI11-2026-02",
+      "contraparte": {
+        "ticker": "RPRI11",
+        "tipo": "fii",
+        "nome": "RBR Properties Renda I",
+        "gestora": "Patria Real Estate"
+      },
+      "tipo": "mesma_gestora_transacao",
+      "data": "2026-02-27",
+      "valor": 23800000,
+      "fluxo": "neutro",
+      "favorAberto": false,
+      "agioSobreMercado": {
+        "presente": false,
+        "valorPercent": 0,
+        "leituraMercado": "Posição em cotas (1,5% PL)"
+      },
+      "mesmaGestora": true,
+      "severidadeConflito": "baixa",
+      "descricao": "<p>RBRR11 detém R$ 23,8 mi (1,5% do PL) em cotas do RPRI11 — fundo da mesma família Patria/RBR. Posição reportada em fev/2026.</p>",
+      "leituraInterpretativa": "<p>Pequena posição cruzada típica de família de fundos. Severidade baixa pelo tamanho.</p>",
+      "fontes": [
+        {
+          "documento": "Relatório Gerencial fev/2026 — Carteira FII",
+          "docId": "1152303",
+          "trecho": "RPRI11 1,5% — alocação em FII"
+        }
+      ]
+    }
+  ],
+  "conclusao": {
+    "paragrafos": [
+      "<p>RBRR11 é um <strong>FII de papel high grade clássico</strong>: 110 CRIs IPCA+ pulverizados (HHI 0,034), com carrego de IPCA+9,2% sustentando DPS de R$ 0,70–0,80/cota. P/VP 0,87 oferece desconto de 13% vs VP, e a tese central é <strong>sustentação de renda + tese de consolidação Patria</strong>.</p>",
+      "<p>O ponto crítico é a <strong>transição de gestão</strong> em 03/02/2026: Patria assumiu controle da RBR e sinalizou possível fusão com PCIP + VCJR + RPRI. AGE com quórum qualificado é necessária — sem data definida ainda. Reserva acumulada caiu de R$ 0,99 para R$ 0,17/cota em fev/2026, principalmente pela falha cadastral do CRI Plano e Plano (-R$ 0,11/cota), evidenciando fragilidade pontual de controles na transição.</p>",
+      "<p>Cenário-base: DPS lateral em R$ 0,70–0,80 com extras semestrais previsíveis em jul e jan; P/VP convergindo gradualmente para 0,95-1,00 conforme execução Patria avança. Ciclo de queda de Selic ajuda preço, mas comprime spread MTM. Para investidor que quer núcleo de renda HG com hedge inflacionário, RBRR11 é uma das opções mais diluídas e líquidas do segmento — recomendação <span class=\"text-amber-400\">MANTER</span> para quem já tem; entrada nova faz sentido após visibilidade da AGE.</p>"
+    ],
+    "pontosFortes": [
+      "Carteira de 110 CRIs com HHI 0,034 — diversificação real do segmento",
+      "99% IPCA+ — hedge inflacionário direto e quase puro",
+      "Carrego IPCA+9,2% (~14,9% nominal) competitivo com Selic 14,75%",
+      "Patria como gestora — top-3 em FIIs, profissionalização e escala",
+      "Liquidez alta (ADTV R$ 8,6 mi) — entre as melhores do papel HG"
+    ],
+    "pontosDeAtencao": [
+      "Reserva caiu para R$ 0,17/cota — colchão fino para 2026",
+      "Compromissadas em -10,6% do PL — Patria sinalizou redução",
+      "AGE de consolidação Patria sem data + risco de remarcações",
+      "CV24m de DPS em 11% — oscila R$ 0,68 a R$ 1,00",
+      "Exposição indireta ao GPA (5,5% PL combinados via Tellus Brigadeiro II)"
+    ],
+    "conclusaoFinal": "<p><strong>MANTER</strong> com nota 7,2/10. RBRR11 é um veículo legítimo de renda HG IPCA+ com tese de consolidação Patria como wildcard positivo. Para quem busca DY > 14%, papel HY entrega mais; para quem quer núcleo conservador com hedge inflacionário, RBRR11 cumpre o papel. Entrada nova: aguardar visibilidade da AGE de consolidação ou desconto adicional para P/VP < 0,82.</p>"
+  },
+  "footer": {
+    "dataAnalise": "2026-04-26",
+    "totalDocumentos": 385,
+    "disclaimer": "Análise técnica baseada em documentos públicos (FundosNet, B3, BCB) e dados de mercado de yfinance. Não constitui recomendação de investimento. Decisões de compra ou venda devem ser tomadas após análise individual e, quando apropriado, com orientação de profissional autorizado pela CVM."
+  }
+}

@@ -5,7 +5,43 @@
 .article-container {
   max-width: 800px;
   margin: 0 auto;
-  padding: 40px 20px;
+  /* padding-top: 0 — encosta direto no chrome fixo (já há o offset do page-wrapper) */
+  padding: 0 20px 40px;
+}
+
+/* Mobile */
+@media (max-width: 720px) {
+  .article-container {
+    padding: 0 12px 32px;
+  }
+  .article-content h2 { margin: 28px 0 14px; }
+  .article-header h1 { font-size: 1.6rem; }
+  .article-header .subtitle { font-size: 1rem; }
+}
+@media (max-width: 400px) {
+  .article-container { padding: 0 10px 28px; }
+}
+
+/* Capa do artigo: aparece ANTES do título */
+.article-cover {
+  margin: 0 0 28px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+.article-cover img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+@media (max-width: 720px) {
+  /* Em mobile a capa vira full-bleed (negativa o padding lateral do container) */
+  .article-cover {
+    margin: 0 -12px 20px;
+    border-radius: 0;
+  }
+}
+@media (max-width: 400px) {
+  .article-cover { margin: 0 -10px 18px; }
 }
 
 .article-header {
@@ -320,13 +356,26 @@ html, body, .page-wrapper { overflow-x: hidden; }
 
 /* ── Topbar padrão dos artigos (injetada via js/article-layout.js) ── */
 /* Usa position: fixed porque `overflow-x: hidden` em html/body/.page-wrapper
-   quebra position: sticky nos descendentes. */
+   quebra position: sticky nos descendentes.
+   Altura controlada por --topbar-h e --tabbar-h pra manter consistência. */
+:root {
+  --topbar-h: 56px;
+  --tabbar-h: 68px;
+}
+@media (max-width: 600px) {
+  :root {
+    --topbar-h: 52px;
+    --tabbar-h: 64px;
+  }
+}
+
 .article-topbar-wrap {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 50;
+  height: var(--topbar-h);
   background: var(--bg-secondary);
   border-bottom: 1px solid var(--border-color);
   backdrop-filter: saturate(180%) blur(8px);
@@ -334,19 +383,39 @@ html, body, .page-wrapper { overflow-x: hidden; }
 
 /* Compensa a altura do topbar fixo para o conteúdo não ficar por baixo. */
 body[data-ticker] .page-wrapper,
-body.article-page .page-wrapper {
-  padding-top: 64px;
+body.article-page .page-wrapper,
+body.has-fixed-topbar .page-wrapper,
+body.has-fixed-topbar > main,
+body.has-fixed-topbar > .main-content {
+  padding-top: var(--topbar-h);
+}
+
+/* Quando há tab-bar de "Modo de visualização" abaixo do topbar,
+   o padding precisa cobrir os dois elementos fixos. */
+body.has-view-modes .page-wrapper,
+body.has-view-modes > main,
+body.has-view-modes > .main-content {
+  padding-top: calc(var(--topbar-h) + var(--tabbar-h));
 }
 
 .article-topbar {
   max-width: 1280px; /* alinhado ao max-w-7xl (Tailwind) usado no <main> das páginas FII */
   margin: 0 auto;
+  height: 100%;
   display: flex;
   align-items: center;
-  gap: 12px;
-  padding: 12px 16px;
+  gap: 10px;
+  padding: 0 14px;
   position: relative;
 }
+
+.article-topbar .topbar-back,
+.article-topbar .topbar-search-btn,
+.article-topbar .topbar-menu-btn {
+  width: 36px;
+  height: 36px;
+}
+.article-topbar .topbar-logo svg { width: 32px; height: 32px; }
 
 .topbar-back {
   display: inline-flex;
@@ -389,8 +458,12 @@ body.article-page .page-wrapper {
 
 .topbar-brand-text strong {
   font-size: 1rem;
-  color: var(--text-primary);
-  font-weight: 600;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--primary-light) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  letter-spacing: 0.2px;
 }
 
 .topbar-brand-text small {
@@ -398,6 +471,7 @@ body.article-page .page-wrapper {
   color: var(--text-muted);
 }
 
+.topbar-search-btn,
 .topbar-menu-btn {
   display: inline-flex;
   align-items: center;
@@ -410,8 +484,11 @@ body.article-page .page-wrapper {
   border-radius: 10px;
   cursor: pointer;
   transition: background 0.15s;
+  text-decoration: none;
+  flex-shrink: 0;
 }
 
+.topbar-search-btn:hover,
 .topbar-menu-btn:hover { background: rgba(255, 255, 255, 0.10); }
 
 .topbar-menu {
@@ -445,6 +522,12 @@ body.article-page .page-wrapper {
 }
 
 .topbar-menu-item:hover { background: rgba(255, 255, 255, 0.06); }
+
+.topbar-menu-item.is-active {
+  background: rgba(34, 211, 238, 0.10);
+  color: var(--primary-light, #22d3ee);
+  font-weight: 600;
+}
 
 .topbar-menu-icon {
   font-size: 1.1rem;

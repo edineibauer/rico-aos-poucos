@@ -62,20 +62,20 @@ const GestoraTemplate = {
         root.innerHTML = html;
         root.style.display = 'block';
         if (loading) loading.style.display = 'none';
+
+        // Após o render, peça ao site-header.js para preencher o placeholder
+        // (SiteHeader já rodou no DOMContentLoaded mas não achou o placeholder
+        // ainda — agora ele existe).
+        if (window.SiteHeader) window.SiteHeader.init();
     },
 
     renderHeader() {
-        return `
-        <header class="app-header">
-            <a href="../" class="header-back">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
-            </a>
-            <div class="app-logo">${this.logoSVG}</div>
-            <div class="app-title-group">
-                <h1 class="app-name">Rico aos Poucos</h1>
-                <span class="app-subtitle">${this.data.nome}</span>
-            </div>
-        </header>`;
+        // Placeholder do site-header.js — preenchido após o render via SiteHeader.init()
+        return `<header id="site-header" data-subtitle="${this.escape(this.data.nome)}"></header>`;
+    },
+
+    escape(s) {
+        return String(s || '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
     },
 
     renderHero() {

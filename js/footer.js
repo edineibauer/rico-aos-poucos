@@ -45,28 +45,27 @@ const Footer = {
     }
   },
 
-  // Get the correct relative path for links based on current page depth
+  // Get the correct relative path for links based on current page depth.
+  // Calcula a partir de onde o próprio footer.js está hospedado
+  // (… /js/footer.js) — funciona em raiz e em subdiretório (ex: /rico-aos-poucos/).
   getBasePath() {
-    const path = window.location.pathname;
-    let relativePath = path;
-
-    // Remove base path
-    if (window.I18n && window.I18n.basePath) {
-      relativePath = path.replace(window.I18n.basePath, '');
+    const myScript = document.currentScript
+      || [...document.scripts].find(s => /(\/|^)js\/footer\.js(\?|$)/.test(s.src));
+    if (myScript) {
+      const scriptUrl = new URL(myScript.src);
+      const projectBase = scriptUrl.pathname.replace(/js\/footer\.js[^/]*$/, '');
+      const pageDir = location.pathname.endsWith('/')
+        ? location.pathname
+        : location.pathname.replace(/[^/]+$/, '');
+      if (pageDir.startsWith(projectBase)) {
+        const subPath = pageDir.slice(projectBase.length);
+        const depth = subPath.split('/').filter(Boolean).length;
+        return depth === 0 ? './' : '../'.repeat(depth);
+      }
     }
-
-    // Count depth (number of directories)
-    const parts = relativePath.split('/').filter(p => p && !p.includes('.html'));
-
-    if (parts.length === 0) {
-      return './';
-    } else if (parts.length === 1) {
-      return '../';
-    } else if (parts.length === 2) {
-      return '../../';
-    } else if (parts.length === 3) {
-      return '../../../';
-    }
+    // Fallback antigo (raiz) caso não consiga localizar o script
+    const parts = location.pathname.split('/').filter(p => p && !p.includes('.html'));
+    if (parts.length === 0) return './';
     return '../'.repeat(parts.length);
   },
 

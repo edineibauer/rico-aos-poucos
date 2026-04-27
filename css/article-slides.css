@@ -540,22 +540,59 @@
 .slide { scroll-snap-align: start; scroll-snap-stop: always; }
 
 /* ===========================================================
-   View Modes Bar — barra fixa no topo, ACIMA do título/capa
+   View Modes Bar — fixa logo abaixo do topbar (sticky não funciona
+   por causa de overflow-x: hidden em html/body/.page-wrapper).
+   Layout: label à esquerda, tabs alinhadas à direita.
    =========================================================== */
 .view-modes-bar {
-  position: sticky;
-  top: 0;
-  z-index: 50;
-  background: rgba(13, 17, 23, 0.92);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(255,255,255,0.06);
-  padding: 10px 16px;
+  position: fixed;
+  top: var(--topbar-h, 56px);
+  left: 0;
+  right: 0;
+  height: var(--tabbar-h, 68px);
+  z-index: 49;
+  background: var(--bg-secondary);
+  backdrop-filter: saturate(180%) blur(8px);
+  -webkit-backdrop-filter: saturate(180%) blur(8px);
+  border-top: none;
+  border-bottom: 1px solid var(--border-color);
+  /* Padding lateral cresce em desktop pra alinhar conteúdo com o header (max 1280) */
+  padding: 14px max(16px, calc((100vw - 1280px) / 2));
   display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0;
+}
+
+.view-modes-bar .view-modes-label {
+  flex: 0 0 auto;
+}
+.view-modes-bar .view-modes {
+  margin-left: auto;
+}
+
+.view-modes-bar .view-modes-label {
+  font-size: 0.6rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted, #8b949e);
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  white-space: nowrap;
+}
+
+/* Tira a borda inferior do topbar quando a tab-bar segue logo abaixo
+   (juntos formam um bloco único de chrome) */
+.article-topbar-wrap:has(+ .view-modes-bar) {
+  border-bottom: none;
+}
+/* Fallback pra browsers sem :has() — remove via classe explícita
+   (article-tabs.js adiciona quando detecta o par) */
+body.has-view-modes .article-topbar-wrap {
+  border-bottom: none;
 }
 .view-modes {
   display: inline-flex;
@@ -592,6 +629,67 @@
   box-shadow: 0 4px 12px rgba(34,211,238,0.25);
 }
 .view-modes .ico { font-size: 1em; }
+
+/* ===========================================================
+   Share Block — bloco "Gostou? Compartilhe." no FIM do artigo,
+   ANTES de "Continue lendo". Tem Instagram (carrossel) + WhatsApp.
+   =========================================================== */
+.share-block {
+  margin: 40px auto 32px;
+  max-width: 720px;
+  padding: 28px 24px;
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(34,211,238,0.05), rgba(253,29,29,0.05));
+  text-align: center;
+}
+.share-block .share-eyebrow {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted, #8b949e);
+  margin: 0 0 8px;
+}
+.share-block .share-headline {
+  font-size: clamp(1.1rem, 2.4vw, 1.35rem);
+  font-weight: 700;
+  color: var(--text-primary, #e6edf3);
+  margin: 0 0 18px;
+  line-height: 1.3;
+}
+.share-block .share-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+/* Botão WhatsApp — verde oficial */
+.share-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 18px;
+  background: #25d366;
+  color: #fff;
+  border: none;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s;
+  text-decoration: none;
+  white-space: nowrap;
+  box-shadow: 0 2px 8px rgba(37, 211, 102, 0.20);
+}
+.share-whatsapp-btn:hover {
+  transform: translateY(-1px);
+  background: #20bd5a;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.32);
+}
+.share-whatsapp-btn:active { transform: translateY(0); }
 
 /* Botão "Compartilhar no Instagram" separado — destaque secundário */
 .share-instagram-btn {
@@ -631,9 +729,209 @@
 }
 @keyframes spin { to { transform: rotate(360deg); } }
 
-/* Mobile — barra mais compacta */
+/* Mobile — barra mais compacta lateralmente, padding vertical generoso */
 @media (max-width: 600px) {
-  .view-modes-bar { padding: 8px 12px; gap: 8px; }
-  .view-modes a, .view-modes button { padding: 7px 12px; font-size: 0.8rem; }
-  .share-instagram-btn { padding: 7px 12px; font-size: 0.78rem; }
+  .view-modes-bar { padding: 14px 12px; gap: 8px; }
+  .view-modes-bar .view-modes-label { font-size: 0.6rem; letter-spacing: 0.12em; }
+  .view-modes a, .view-modes button { padding: 6px 14px; font-size: 0.82rem; }
+  .share-block { padding: 22px 18px 24px; margin: 32px auto 24px; }
+  .share-whatsapp-btn { padding: 9px 16px; font-size: 0.85rem; }
+  .share-instagram-btn { padding: 8px 14px; font-size: 0.82rem; }
+}
+
+/* ===========================================================
+   View Panels — área que troca entre Artigo e Slides
+   =========================================================== */
+.view-panel { display: block; }
+.view-panel[hidden] { display: none !important; }
+
+/* Painel de slides: SAI do contexto do .page-wrapper via position: fixed,
+   cobrindo TODA a viewport abaixo do chrome (topbar + tabbar). Assim não
+   herda nenhuma constraint de container, padding ou max-width. */
+.view-panel[data-panel="slides"] {
+  position: fixed;
+  top: calc(var(--topbar-h, 56px) + var(--tabbar-h, 68px));
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 30;
+  background: var(--bg-primary);
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  max-width: none;
+  overflow: hidden;
+}
+/* hidden ([hidden]) já força display:none — sobrepõe o position:fixed */
+.view-panel[data-panel="slides"][hidden] { display: none; }
+.deck.deck--inline {
+  min-height: 0;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+/* deck-topbar (progress + counter) vira overlay no topo do slide
+   pra não roubar altura do conteúdo */
+.deck.deck--inline .deck-topbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+  padding: 6px 12px;
+  background: linear-gradient(180deg, rgba(13,17,23,0.7) 0%, transparent 100%);
+  pointer-events: none;
+}
+.deck.deck--inline .deck-topbar .deck-counter,
+.deck.deck--inline .deck-topbar .deck-progress { pointer-events: auto; }
+.deck.deck--inline .deck-back { display: none; }
+.deck.deck--inline .deck-footer { display: none; }
+.deck.deck--inline .deck-hint { display: none; }
+
+.deck.deck--inline .deck-track {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+}
+.deck.deck--inline .slide {
+  flex: 0 0 100%;
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  margin: 0;
+  /* Padding generoso desktop, controlado mobile (mobile override abaixo) */
+  padding: 56px 64px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  gap: 18px;
+}
+/* Desktop tipografia */
+.deck.deck--inline .slide .slide-eyebrow { margin-bottom: 4px; font-size: 0.78rem; }
+.deck.deck--inline .slide h1 { font-size: 3rem; margin: 0; line-height: 1.1; }
+.deck.deck--inline .slide h2 { font-size: 2rem; margin: 0; line-height: 1.2; }
+.deck.deck--inline .slide h3 { font-size: 1.2rem; margin: 0; }
+.deck.deck--inline .slide p  { font-size: 1.1rem; margin: 0; line-height: 1.5; max-width: 60ch; }
+.deck.deck--inline .slide p.lead { font-size: 1.25rem; }
+.deck.deck--inline .slide .big-number { font-size: 5rem; }
+.deck.deck--inline .slide .big-number small { font-size: 1rem; margin-top: 6px; }
+.deck.deck--inline .deck-nav {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  pointer-events: none;
+}
+.deck.deck--inline .deck-nav button { pointer-events: auto; }
+
+@media (max-width: 720px) {
+  .deck.deck--inline .slide {
+    padding: 56px 22px 32px;  /* top extra pra não colar no deck-topbar overlay */
+    gap: 14px;
+  }
+  /* Tipografia BEM MAIOR no mobile */
+  .deck.deck--inline .slide .slide-eyebrow { font-size: 0.78rem; margin-bottom: 2px; letter-spacing: 0.14em; }
+  .deck.deck--inline .slide h1 { font-size: 2.2rem; line-height: 1.1; }
+  .deck.deck--inline .slide h2 { font-size: 1.7rem; line-height: 1.15; }
+  .deck.deck--inline .slide h3 { font-size: 1.15rem; }
+  .deck.deck--inline .slide p  { font-size: 1.05rem; line-height: 1.5; }
+  .deck.deck--inline .slide p.lead { font-size: 1.2rem; line-height: 1.4; }
+  .deck.deck--inline .slide .big-number { font-size: 3.4rem; line-height: 1; }
+  .deck.deck--inline .slide .big-number small { font-size: 0.9rem; margin-top: 6px; }
+  /* slide-cols vira coluna única */
+  .deck.deck--inline .slide-cols { grid-template-columns: 1fr !important; gap: 14px !important; }
+  /* slide-kpis: 2 colunas */
+  .deck.deck--inline .slide-kpis { grid-template-columns: 1fr 1fr !important; gap: 10px !important; }
+  .deck.deck--inline .slide-kpi { padding: 14px 12px !important; }
+  .deck.deck--inline .slide-kpi .v { font-size: 1.4rem !important; line-height: 1.1; }
+  .deck.deck--inline .slide-kpi .l { font-size: 0.85rem !important; margin-top: 4px; }
+  /* pros-cons grid 1 coluna */
+  .deck.deck--inline .pros-cons-grid { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .deck.deck--inline .pc-col { padding: 14px 16px !important; }
+  .deck.deck--inline .pc-col h3 { font-size: 1.05rem !important; margin-bottom: 8px !important; }
+  .deck.deck--inline .pc-col li { font-size: 1rem !important; padding: 6px 0 !important; line-height: 1.4; }
+  /* slide-bullets 1 coluna no mobile */
+  .deck.deck--inline .slide-bullets { grid-template-columns: 1fr !important; gap: 10px !important; }
+  .deck.deck--inline .slide-bullets li { font-size: 1rem !important; padding: 10px 12px !important; line-height: 1.4; }
+  .deck.deck--inline .slide-bullets li strong { font-size: 1.05rem !important; }
+  /* bar-row maior */
+  .deck.deck--inline .bar-row { gap: 12px !important; }
+  .deck.deck--inline .bar-line { font-size: 1rem !important; }
+  .deck.deck--inline .bar-line .label { font-size: 1rem !important; }
+  .deck.deck--inline .bar-line .pct { font-size: 1.1rem !important; font-weight: 700; }
+  .deck.deck--inline .bar-line .track { height: 14px; }
+  /* slide-table maior */
+  .deck.deck--inline .slide-table { font-size: 1rem !important; }
+  .deck.deck--inline .slide-table th,
+  .deck.deck--inline .slide-table td { padding: 10px 8px !important; }
+  /* deck-topbar overlay um pouco maior */
+  .deck.deck--inline .deck-topbar { padding: 6px 12px; font-size: 0.85rem; }
+  .deck.deck--inline .deck-topbar .deck-counter { font-size: 0.85rem !important; font-weight: 600; }
+}
+@media (max-width: 400px) {
+  .deck.deck--inline .slide { padding: 52px 18px 28px; gap: 12px; }
+  .deck.deck--inline .slide-kpis { grid-template-columns: 1fr 1fr !important; }
+  .deck.deck--inline .slide h1 { font-size: 1.95rem; }
+  .deck.deck--inline .slide h2 { font-size: 1.5rem; }
+  .deck.deck--inline .slide p { font-size: 1rem; }
+  .deck.deck--inline .slide .big-number { font-size: 2.9rem; }
+  .deck.deck--inline .slide-kpi .v { font-size: 1.25rem !important; }
+  .deck.deck--inline .pc-col li,
+  .deck.deck--inline .slide-bullets li { font-size: 0.95rem !important; }
+}
+
+/* ===========================================================
+   Slide final "Compartilhe / Continue" — usa view-modes em escala maior
+   =========================================================== */
+.slide.share-final {
+  background: radial-gradient(ellipse at top, rgba(99,102,241,0.18) 0%, transparent 55%),
+              radial-gradient(ellipse at bottom right, rgba(253,29,29,0.14) 0%, transparent 50%),
+              var(--bg-primary);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.slide.share-final .share-final-eyebrow {
+  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-muted, #8b949e);
+  margin-bottom: 14px;
+}
+.slide.share-final h2 {
+  font-size: clamp(1.6rem, 3.2vw, 2.4rem);
+  margin: 0 0 12px;
+  line-height: 1.2;
+}
+.slide.share-final p.share-final-lead {
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  color: var(--text-secondary, #b0b8c1);
+  max-width: 60ch;
+  margin: 0 auto 28px;
+}
+.slide.share-final .share-final-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+.slide.share-final .share-final-actions .share-instagram-btn,
+.slide.share-final .share-final-actions .share-whatsapp-btn {
+  padding: 14px 26px;
+  font-size: 1.05rem;
+}
+@media (max-width: 600px) {
+  .slide.share-final h2 { font-size: 1.5rem; }
+  .slide.share-final p.share-final-lead { font-size: 0.95rem; margin-bottom: 22px; }
+  .slide.share-final .share-final-actions .share-instagram-btn,
+  .slide.share-final .share-final-actions .share-whatsapp-btn { padding: 11px 20px; font-size: 0.92rem; }
 }

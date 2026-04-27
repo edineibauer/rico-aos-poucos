@@ -1182,14 +1182,40 @@
 
     const veredictoMap = {
       'COMPRA': 'COMPRA',
+      'COMPRA_FORTE': 'COMPRA',
+      'COMPRA FORTE': 'COMPRA',
+      'COMPRA_COM_RESSALVAS': 'COMPRA',
+      'COMPRA COM RESSALVAS': 'COMPRA',
+      'ACUMULAR': 'COMPRA',
       'MANTER': 'MANTER',
+      'MANTER_COM_CAUTELA': 'MANTER',
+      'MANTER COM CAUTELA': 'MANTER',
+      'CAUTELA': 'MANTER',
       'CAUTELOSO': 'MANTER',
+      'NEUTRO': 'MANTER',
+      'EM_ANALISE': 'MANTER',
+      'EM ANALISE': 'MANTER',
+      'EM ANÁLISE': 'MANTER',
+      'AGUARDAR': 'MANTER',
       'VENDA': 'VENDA',
+      'EVITAR': 'VENDA',
       'LIQUIDADO': 'OUTRO',
       'EM LIQUIDACAO': 'OUTRO',
+      'EM LIQUIDAÇÃO': 'OUTRO',
       'ENCERRADO': 'OUTRO',
       'N/A': 'OUTRO'
     };
+    // Normaliza veredicto: caixa alta + sem acentos → chave do map
+    function normalizarVeredicto(v) {
+      if (!v) return null;
+      return String(v).toUpperCase()
+        .normalize('NFD').replace(/[̀-ͯ]/g, '')
+        .trim();
+    }
+    function grupoVeredicto(f) {
+      const k = normalizarVeredicto(f && f.veredicto);
+      return (k && veredictoMap[k]) || 'OUTRO';
+    }
 
     async function carregarFiis() {
       try {
@@ -1228,7 +1254,7 @@
       let resultado = [...fiis];
 
       if (filtros.segmento !== 'todos') {
-        resultado = resultado.filter(f => f.segmento === filtros.segmento);
+        resultado = resultado.filter(f => resolverTipoFundo(f) === filtros.segmento);
       }
 
       if (filtros.sentimento !== 'todos') {
@@ -1266,10 +1292,7 @@
       }
 
       if (filtros.veredictos.length > 0) {
-        resultado = resultado.filter(f => {
-          const grupo = veredictoMap[f.veredicto] || 'OUTRO';
-          return filtros.veredictos.includes(grupo);
-        });
+        resultado = resultado.filter(f => filtros.veredictos.includes(grupoVeredicto(f)));
       }
 
       if (filtros.gestora && filtros.gestora !== 'todas') {
@@ -1284,7 +1307,7 @@
           if (quick.has('dy10') && !(f.indicadores.dividendYield >= 10)) return false;
           if (quick.has('dy12') && !(f.indicadores.dividendYield >= 12)) return false;
           if (quick.has('nota7') && !((f.nota || 0) >= 7)) return false;
-          if (quick.has('compra') && (veredictoMap[f.veredicto] || 'OUTRO') !== 'COMPRA') return false;
+          if (quick.has('compra') && grupoVeredicto(f) !== 'COMPRA') return false;
           if (quick.has('papel')  && resolverTipoFundo(f) !== 'papel')  return false;
           if (quick.has('tijolo') && resolverTipoFundo(f) !== 'tijolo') return false;
           if (quick.has('grandes') && !((f.indicadores.patrimonioLiquido || 0) >= 500_000_000)) return false;

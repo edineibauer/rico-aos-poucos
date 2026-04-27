@@ -230,8 +230,16 @@
       "ltv": 0,
       "alavancagemPct": 34.9,
       "alocacaoPL": [
-        { "categoria": "Shopping Parque Dom Pedro (25,78%)", "pct": 0.84, "cor": "#3b82f6" },
-        { "categoria": "Caixa + RF + Disponibilidades", "pct": 0.16, "cor": "#64748b" }
+        {
+          "categoria": "Shopping Parque Dom Pedro (25,78%)",
+          "pct": 0.84,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "Caixa + RF + Disponibilidades",
+          "pct": 0.16,
+          "cor": "#64748b"
+        }
       ]
     },
     "ativos": [
@@ -310,14 +318,32 @@
           }
         ],
         "indexadoresContratos": [
-          { "indexador": "IPCA", "pct": 0.4517 },
-          { "indexador": "IGP-DI", "pct": 0.5483 }
+          {
+            "indexador": "IPCA",
+            "pct": 0.4517
+          },
+          {
+            "indexador": "IGP-DI",
+            "pct": 0.5483
+          }
         ],
         "vencimentoContratos": [
-          { "faixa": "Até 12 meses", "pct": 0.146 },
-          { "faixa": "12 a 36 meses", "pct": 0.273 },
-          { "faixa": "Acima de 36 meses", "pct": 0.365 },
-          { "faixa": "Indeterminado", "pct": 0.195 }
+          {
+            "faixa": "Até 12 meses",
+            "pct": 0.146
+          },
+          {
+            "faixa": "12 a 36 meses",
+            "pct": 0.273
+          },
+          {
+            "faixa": "Acima de 36 meses",
+            "pct": 0.365
+          },
+          {
+            "faixa": "Indeterminado",
+            "pct": 0.195
+          }
         ],
         "riscos": [
           "monoativo_concentracao_total",
@@ -336,16 +362,25 @@
       "hhi": 0.7312,
       "interpretacaoHhi": "alta",
       "topN": {
-        "top1Pct": 1.00,
-        "top3Pct": 1.00,
-        "top5Pct": 1.00,
-        "top10Pct": 1.00
+        "top1Pct": 1.0,
+        "top3Pct": 1.0,
+        "top5Pct": 1.0,
+        "top10Pct": 1.0
       },
       "geografica": [
-        { "regiao": "Sudeste", "pct": 1.00, "ativos": 1, "subregiao": "Campinas/SP" }
+        {
+          "regiao": "Sudeste",
+          "pct": 1.0,
+          "ativos": 1,
+          "subregiao": "Campinas/SP"
+        }
       ],
       "porLocatario": [
-        { "nome": "Diversos (382 lojas, sem locatário >10% receita)", "pct": null, "rating": null }
+        {
+          "nome": "Diversos (382 lojas, sem locatário >10% receita)",
+          "pct": null,
+          "rating": null
+        }
       ],
       "nota": "Monoativo: 100% do PL imobiliário em 1 único shopping. HHI altíssimo (0,73) é estrutural — não é defeito de comunicação, é a tese."
     },
@@ -554,7 +589,7 @@
         {
           "nome": "Concentração",
           "score": 5.0,
-          "peso": 0.20,
+          "peso": 0.2,
           "metrica": "HHI 0,73 — monoativo absoluto",
           "leitura": "100% do PL imobiliário em 1 ativo. Concentração máxima possível por construção do fundo."
         },
@@ -568,7 +603,7 @@
         {
           "nome": "Volatilidade do dividendo",
           "score": 4.0,
-          "peso": 0.20,
+          "peso": 0.2,
           "metrica": "CV24m = 22,9% — DPS oscilou de R$ 7,37 a R$ 27,22",
           "leitura": "Distribuição em regime caixa estrito sem reserva amortizadora — meses de obras retiram fortemente do DPS."
         },
@@ -582,14 +617,14 @@
         {
           "nome": "Risco do ativo subjacente",
           "score": 2.0,
-          "peso": 0.20,
+          "peso": 0.2,
           "metrica": "Vacância 0,66% + WAULT longo + ocupação 99,35%",
           "leitura": "Ativo de excelência operacional — vacância mínima, vendas crescentes, operador profissional Aliansce."
         },
         {
           "nome": "Risco financeiro/alavancagem",
           "score": 4.0,
-          "peso": 0.10,
+          "peso": 0.1,
           "metrica": "Obrigações por aquisição R$ 199 Mi (~35% do PL)",
           "leitura": "Passivo recente da compra de dez/25 ainda a quitar. Não é dívida de mercado, mas pressão financeira real."
         }
@@ -715,37 +750,56 @@
         {
           "ticker": "HGBS11",
           "sobreposicaoEstimada": 0.18,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
           "leitura": "Maior FII de shoppings do Brasil (multi-ativo, ~13 shoppings). Compartilha tipologia premium e perfil de classes A/B, mas diversificação geográfica e por shopping é o oposto do PQDP11."
         },
         {
           "ticker": "VISC11",
           "sobreposicaoEstimada": 0.15,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
           "leitura": "Vinci Shopping Centers com 17 shoppings em mix premium/regional. Sobreposição de tipologia, mas VISC11 dilui risco em 17 ativos vs 1 do PQDP11."
         },
         {
           "ticker": "MALL11",
           "sobreposicaoEstimada": 0.15,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
           "leitura": "Genial Malls com 9 shoppings. Sobreposição tipológica relevante; quem tem MALL11 acessa diversificação que o PQDP11 não oferece."
         },
         {
           "ticker": "HSML11",
           "sobreposicaoEstimada": 0.15,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
           "leitura": "HSI Malls com 8 shoppings em 5 estados. Mesma tese de tijolo shopping, com gestão Alqia/HSI premium e ABL diversificada — antítese do monoativo."
         },
         {
           "ticker": "XPML11",
           "sobreposicaoEstimada": 0.12,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
           "leitura": "XP Malls com portfólio diversificado de shoppings premium, gestão XP. Quem tem XPML11 e adiciona PQDP11 está aumentando exposição a tipologia + adicionando risco binário monoativo."
         },
         {
           "ticker": "FVPQ11",
-          "sobreposicaoEstimada": 0.30,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos", "perfil_monoativo"],
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos",
+            "perfil_monoativo"
+          ],
           "leitura": "FII Via Parque Shopping (Barra/RJ) — também monoativo de shopping. Maior par estrutural do PQDP11 em formato (ambos pure-play em 1 shopping). Mesmo risco binário; diferença é só o ativo subjacente."
         }
       ],
@@ -790,7 +844,11 @@
       }
     ],
     "paraQuem": {
-      "objetivo": ["exposicao_setorial_concentrada", "trade_qualidade_ativo", "tax_shield"],
+      "objetivo": [
+        "exposicao_setorial_concentrada",
+        "trade_qualidade_ativo",
+        "tax_shield"
+      ],
       "horizonte": "medio_longo",
       "perfil": "moderado",
       "carteiraTipica": "Posição satélite (≤ 3-5% da carteira de FIIs) para investidor que já tem diversificação ampla e quer adicionar exposição cirúrgica a Parque Dom Pedro como ativo trofeu.",
@@ -814,20 +872,57 @@
   "dividendos": {
     "schema": "v2",
     "chartLabels": [
-      "Mai/25", "Jun/25", "Jul/25", "Ago/25", "Set/25", "Out/25", "Nov/25", "Dez/25", "Jan/26", "Fev/26", "Mar/26", "Abr/26"
+      "Mai/25",
+      "Jun/25",
+      "Jul/25",
+      "Ago/25",
+      "Set/25",
+      "Out/25",
+      "Nov/25",
+      "Dez/25",
+      "Jan/26",
+      "Fev/26",
+      "Mar/26",
+      "Abr/26"
     ],
     "chartData": [
-      24.50, 25.50, 18.33, 14.32, 18.42, 17.30, 17.55, 17.60, 14.90, 22.68, 27.22, null
+      24.5,
+      25.5,
+      18.33,
+      14.32,
+      18.42,
+      17.3,
+      17.55,
+      17.6,
+      14.9,
+      22.68,
+      27.22,
+      null
     ],
     "chartCor": "#10b981",
     "chartYMin": 0,
     "chartYMax": 30,
     "totaisAnuais": [
-      { "ano": "2022", "valor": "R$ 191,18/cota" },
-      { "ano": "2023", "valor": "R$ 211,82/cota" },
-      { "ano": "2024", "valor": "R$ 197,53/cota" },
-      { "ano": "2025", "valor": "R$ 240,71/cota" },
-      { "ano": "2026 (parc.)", "valor": "R$ 91,03/cota (4M)" }
+      {
+        "ano": "2022",
+        "valor": "R$ 191,18/cota"
+      },
+      {
+        "ano": "2023",
+        "valor": "R$ 211,82/cota"
+      },
+      {
+        "ano": "2024",
+        "valor": "R$ 197,53/cota"
+      },
+      {
+        "ano": "2025",
+        "valor": "R$ 240,71/cota"
+      },
+      {
+        "ano": "2026 (parc.)",
+        "valor": "R$ 91,03/cota (4M)"
+      }
     ],
     "guidance": {
       "periodo": "Curto prazo (regime caixa)",
@@ -965,8 +1060,14 @@
       "fonte": "yfinance:PQDP11.SA",
       "naoAjustado": true,
       "ultimoFechamento": 2594.99,
-      "minHistorico": { "valor": 1600.00, "data": "2023-03-27" },
-      "maxHistorico": { "valor": 3990.00, "data": "2019-12-23" }
+      "minHistorico": {
+        "valor": 1600.0,
+        "data": "2023-03-27"
+      },
+      "maxHistorico": {
+        "valor": 3990.0,
+        "data": "2019-12-23"
+      }
     },
     "historicoVp": {
       "csvPath": "data/fiis/pqdp11/historico_vp.csv",
@@ -1019,13 +1120,19 @@
     "paresComparaveis": {
       "subsegmento": "shopping_monoativo_premium",
       "criterioAgrupamento": "FIIs de tijolo monoativo de shopping premium ou FIIs de shopping premium multi-ativo (referência de tipologia). PQDP11 é monoativo — par estrutural mais próximo é FVPQ11 (também monoativo de shopping); demais são multi-shopping premium para benchmark de DY/PVP.",
-      "tickers": ["FVPQ11", "HGBS11", "VISC11", "MALL11", "HSML11"],
+      "tickers": [
+        "FVPQ11",
+        "HGBS11",
+        "VISC11",
+        "MALL11",
+        "HSML11"
+      ],
       "estatisticas": {
         "dataSnapshot": "2026-04-26",
         "pvpMediano": 0.93,
         "pvpMin": 0.76,
         "pvpMax": 0.96,
-        "dyMediano": 8.90,
+        "dyMediano": 8.9,
         "dyMin": 7.66,
         "dyMax": 11.0,
         "premioRiscoSegmento": 0.045
@@ -1041,10 +1148,25 @@
       "valor": "0,98",
       "descricao": "<p>A cota negocia a <strong class=\"text-blue-400\">R$ 2.594,99</strong> contra VP de <strong class=\"text-blue-400\">R$ 2.641,04</strong>, desconto de apenas <strong>2%</strong>. P/VP em linha com pares de shoppings premium multi-ativo (HGBS11 0,96; VISC11 0,93; HSML11 0,91; MALL11 0,93) — mercado não atribui prêmio por qualidade do ativo único e tampouco desconto por risco binário do monoativo.</p>",
       "detalhes": [
-        { "label": "VP/Cota", "valor": "R$ 2.641,04" },
-        { "label": "Preço", "valor": "R$ 2.594,99", "cor": "amber" },
-        { "label": "Desconto", "valor": "2%", "cor": "amber" },
-        { "label": "Cap rate implícito", "valor": "10,3%", "cor": "emerald" }
+        {
+          "label": "VP/Cota",
+          "valor": "R$ 2.641,04"
+        },
+        {
+          "label": "Preço",
+          "valor": "R$ 2.594,99",
+          "cor": "amber"
+        },
+        {
+          "label": "Desconto",
+          "valor": "2%",
+          "cor": "amber"
+        },
+        {
+          "label": "Cap rate implícito",
+          "valor": "10,3%",
+          "cor": "emerald"
+        }
       ]
     },
     "spread": {
@@ -1055,7 +1177,10 @@
     },
     "precoJustoMercado": {
       "valor": 2620,
-      "faixa": [2480, 2760],
+      "faixa": [
+        2480,
+        2760
+      ],
       "comparacaoComCotacao": {
         "cotacaoAtual": 2594.99,
         "diferencaPct": 0.96,
@@ -1064,21 +1189,21 @@
       "componentes": [
         {
           "nome": "DY-alvo Selic+prêmio",
-          "peso": 0.40,
+          "peso": 0.4,
           "preco": 2466,
           "calculo": "DPS sustentável R$ 19,86/mês × 12 = R$ 238,33/ano ÷ (14,75% Selic + 4,5% prêmio shopping premium = 19,25%) ÷ 0,02 = R$ 1.238 — ajustado para regime de queda projetada (Selic 11% em 12m → DY-alvo 15,5%) = R$ 1.538. Como o ativo tem qualidade superior (vacância 0,66%, ABL trofeu), aplicamos prêmio de qualidade de 60% sobre baseline = R$ 2.466",
           "racional": "DPS médio 12m R$ 19,86 sobre uma cota com Selic em queda. Ativo de excelência justifica DY-alvo abaixo de pares regionais."
         },
         {
           "nome": "P/VP pares",
-          "peso": 0.30,
+          "peso": 0.3,
           "preco": 2456,
           "calculo": "VP/cota R$ 2.641,04 × P/VP mediano dos pares (0,93) = R$ 2.456",
           "racional": "Pares: HGBS11, VISC11, MALL11, HSML11, FVPQ11. Mediana P/VP 0,93."
         },
         {
           "nome": "DY pares",
-          "peso": 0.30,
+          "peso": 0.3,
           "preco": 2678,
           "calculo": "DPS R$ 238,33/ano ÷ DY mediano dos pares (8,90%) = R$ 2.678",
           "racional": "DPS atual sobre DY de mercado para shoppings premium."
@@ -1088,12 +1213,42 @@
         "valor": 1.06,
         "score": 0.71,
         "componentes": [
-          { "nome": "Gestora", "peso": 0.25, "score": 0.85, "racional": "BTG Pactual (administrador) + Aliansce (operador) — top-3 do mercado em ambas as funções." },
-          { "nome": "Vacância", "peso": 0.25, "score": 0.98, "racional": "Vacância 0,66% — praticamente zero, ativo lotado." },
-          { "nome": "Alavancagem", "peso": 0.15, "score": 0.30, "racional": "Obrigações por aquisição R$ 199 Mi (~35% do PL) ainda a quitar — pressão recente." },
-          { "nome": "Inadimplência", "peso": 0.05, "score": 0.95, "racional": "Inadimplência líquida em -7,6% (jan/26) — recuperações superando atrasos." },
-          { "nome": "Estabilidade DPS", "peso": 0.20, "score": 0.40, "racional": "CV24m 22,9% — DPS volátil entre R$ 7,37 e R$ 27,22." },
-          { "nome": "dividendoStatus", "peso": 0.10, "score": 0.70, "racional": "sustentavel_curto — DPS oscila com sazonalidade e CAPEX, sem horizonte de inflexão estrutural." }
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.85,
+            "racional": "BTG Pactual (administrador) + Aliansce (operador) — top-3 do mercado em ambas as funções."
+          },
+          {
+            "nome": "Vacância",
+            "peso": 0.25,
+            "score": 0.98,
+            "racional": "Vacância 0,66% — praticamente zero, ativo lotado."
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 0.3,
+            "racional": "Obrigações por aquisição R$ 199 Mi (~35% do PL) ainda a quitar — pressão recente."
+          },
+          {
+            "nome": "Inadimplência",
+            "peso": 0.05,
+            "score": 0.95,
+            "racional": "Inadimplência líquida em -7,6% (jan/26) — recuperações superando atrasos."
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.2,
+            "score": 0.4,
+            "racional": "CV24m 22,9% — DPS volátil entre R$ 7,37 e R$ 27,22."
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.1,
+            "score": 0.7,
+            "racional": "sustentavel_curto — DPS oscila com sazonalidade e CAPEX, sem horizonte de inflexão estrutural."
+          }
         ]
       },
       "explicacao": "<p>O preço justo estimado é de <strong>R$ 2.620</strong>, com faixa de <strong>R$ 2.480 a R$ 2.760</strong> — praticamente em paridade com a cotação atual de R$ 2.594,99. Os três componentes quantitativos (DY-alvo, P/VP pares, DY pares) convergem para R$ 2.456-2.678, e o fator qualidade (1,06) reflete o trade-off entre <strong class=\"text-emerald-400\">qualidade excepcional do ativo</strong> (gestora BTG/Aliansce + vacância 0,66% + inadimplência negativa) e <strong class=\"text-amber-400\">passivo recente de R$ 199 Mi + volatilidade alta do DPS</strong>. Não há margem de segurança relevante para entrada agressiva nem prêmio para venda — é fundo para manter se já está em carteira ou para comprar como satélite com tese específica de pure-play em Parque Dom Pedro.</p>"
@@ -1103,7 +1258,10 @@
         "horizonte": "3-6 meses",
         "horizonteAte": "2026-10-31",
         "precoEsperado": 2630,
-        "faixa": [2520, 2750],
+        "faixa": [
+          2520,
+          2750
+        ],
         "direcao": "lateral_alta",
         "catalisadores": [
           {
@@ -1127,7 +1285,10 @@
         "horizonte": "1-2 anos",
         "horizonteAte": "2028-04-30",
         "precoEsperado": 2850,
-        "faixa": [2650, 3050],
+        "faixa": [
+          2650,
+          3050
+        ],
         "direcao": "alta",
         "catalisadores": [
           {

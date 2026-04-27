@@ -130,6 +130,13 @@ const FIITemplate = {
         html += this.renderTese();
         html += '</div>';
 
+        // Relações (vínculos com outros FIIs / conflitos de interesse)
+        if (Array.isArray(d.relacoes)) {
+            html += '<div class="fii-tab-pane" data-tab-pane="relacoes" hidden>';
+            html += this.renderRelacoes();
+            html += '</div>';
+        }
+
         // Conclusao
         html += '<div class="fii-tab-pane" data-tab-pane="conclusao" hidden>';
         html += this.renderConclusao();
@@ -155,6 +162,7 @@ const FIITemplate = {
             { id: 'valuation',   label: 'Valuation',           icon: 'chart'  },
             { id: 'gestora',     label: 'Gestora',             icon: 'users'  },
             { id: 'historia',    label: 'História',            icon: 'clock'  },
+            { id: 'relacoes',    label: 'Relações',            icon: 'network'},
             { id: 'conclusao',   label: 'Conclusão',           icon: 'flag'   }
         ];
         // Filtra tabs sem conteudo
@@ -165,6 +173,7 @@ const FIITemplate = {
             if (id === 'valuation')  return !!(d.valuation && d.valuation.pvp);
             if (id === 'gestora')    return !!(d.gestora || d.taxas);
             if (id === 'historia')   return !!(d.timeline || d.tese);
+            if (id === 'relacoes')   return Array.isArray(d.relacoes);
             if (id === 'conclusao')  return !!(d.conclusao);
             return true;
         };
@@ -176,7 +185,8 @@ const FIITemplate = {
             chart:  '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18M7 14l4-4 4 4 6-6"/></svg>',
             users:  '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2M9 11a4 4 0 100-8 4 4 0 000 8zM23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>',
             clock:  '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>',
-            flag:   '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>'
+            flag:   '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1zM4 22v-7"/></svg>',
+            network:'<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="6" r="2.5"/><circle cx="6" cy="18" r="2.5"/><circle cx="18" cy="18" r="2.5"/><circle cx="12" cy="12" r="2.5"/><path d="M8 7l3 4M16 7l-3 4M8 17l3-4M16 17l-3-4"/></svg>'
         };
         const items = tabs.filter(t => has(t.id)).map((t, i) => `
             <button type="button" class="fii-tab-btn ${i === 0 ? 'is-active' : ''}" data-tab="${t.id}" role="tab" aria-selected="${i === 0}">
@@ -3323,16 +3333,28 @@ const FIITemplate = {
         // Card 3 — Pontos de atenção (alertas)
         let cardAlertasHtml = '';
         if (Array.isArray(div.alertas) && div.alertas.length > 0) {
-            const items = div.alertas.map(a => `
-                <li class="divid-v2-topcard-alert-item sev-${a.severidade || 'blue'}">
-                    <span class="divid-v2-topcard-alert-dot"></span>
-                    <span>${a.mensagem}</span>
-                </li>`).join('');
-            cardAlertasHtml = `
-            <div class="divid-v2-topcard divid-v2-topcard-alerts">
-                <div class="divid-v2-topcard-tag">PONTOS DE ATENÇÃO</div>
-                <ul class="divid-v2-topcard-alert-list">${items}</ul>
-            </div>`;
+            // Normaliza: aceita {mensagem|texto|descricao} e severidade com ou sem prefixo "sev-"
+            const itens = div.alertas
+                .map(a => {
+                    const txt = a && (a.mensagem || a.texto || a.descricao || a.titulo);
+                    if (!txt) return null;
+                    let sev = String(a.severidade || 'blue').replace(/^sev-/, '');
+                    return { txt, sev };
+                })
+                .filter(Boolean);
+
+            if (itens.length > 0) {
+                const items = itens.map(a => `
+                    <li class="divid-v2-topcard-alert-item sev-${a.sev}">
+                        <span class="divid-v2-topcard-alert-dot"></span>
+                        <span>${a.txt}</span>
+                    </li>`).join('');
+                cardAlertasHtml = `
+                <div class="divid-v2-topcard divid-v2-topcard-alerts">
+                    <div class="divid-v2-topcard-tag">PONTOS DE ATENÇÃO</div>
+                    <ul class="divid-v2-topcard-alert-list">${items}</ul>
+                </div>`;
+            }
         }
 
         const topRowHtml = (cardUltimoHtml || cardProxHtml || cardAlertasHtml)
@@ -3990,8 +4012,24 @@ const FIITemplate = {
 
     _renderValuationV2(v) {
         v = this._normalizeValuationV2(v);
+        // Bloco 0 — gráfico UNIFICADO (preço × VP/cota × P/VP) para análise correlacionada
+        const chartComboHtml = `
+            <div class="bg-white/5 rounded-xl p-4 mb-6">
+                <div class="flex items-center justify-between mb-2 flex-wrap gap-2">
+                    <div>
+                        <h3 class="text-base font-semibold text-white">Visão correlacionada · preço × VP × P/VP</h3>
+                        <div class="text-[11px] text-slate-500">Eixo Y esquerdo (R$): preço da cota e VP/cota — quanto maior o gap entre as linhas, maior o desconto. Eixo Y direito (decimal): P/VP. Quando P/VP cai abaixo de 1, a cota está descontada vs patrimônio.</div>
+                    </div>
+                </div>
+                <div class="relative" style="height: 320px;">
+                    <canvas id="val-chart-combo"></canvas>
+                </div>
+            </div>
+        `;
+
         // Bloco 1 — gráficos históricos (preço, P/VP, VP/cota)
         const chartsHtml = `
+            ${chartComboHtml}
             <div class="grid lg:grid-cols-3 gap-4 mb-8">
                 <div class="bg-white/5 rounded-xl p-4">
                     <div class="flex items-center justify-between mb-2">
@@ -4420,6 +4458,64 @@ const FIITemplate = {
             }
             const metaEl = document.getElementById('val-pvp-meta');
             if (metaEl && pvpMedio) metaEl.textContent = `média ${pvpMedio.toFixed(2)}`;
+
+            // ── Gráfico COMBO (preço + VP + P/VP em duplo eixo Y) ──
+            const canvasC = document.getElementById('val-chart-combo');
+            if (canvasC && window.Chart) {
+                // Para preço usa a série completa; para VP, expande mês a mês usando o último VP conhecido
+                const labels = precoRows.map(r => r.data);
+                const precoVals = precoRows.map(r => parseFloat(r.fechamento));
+                const vpVals = precoRows.map(r => vpDoMes(r.data));
+                new Chart(canvasC, {
+                    type: 'line',
+                    data: {
+                        labels,
+                        datasets: [
+                            { label: 'Preço da cota (R$)', yAxisID: 'y', data: precoVals,
+                              borderColor: '#22c55e', backgroundColor: 'rgba(34,197,94,0.06)',
+                              fill: false, pointRadius: 0, borderWidth: 2, tension: 0.2 },
+                            { label: 'VP/cota (R$)', yAxisID: 'y', data: vpVals,
+                              borderColor: '#a78bfa', backgroundColor: 'rgba(167,139,250,0.06)',
+                              borderDash: [5, 3], fill: false, pointRadius: 0, borderWidth: 2, tension: 0.2 },
+                            { label: 'P/VP', yAxisID: 'y2', data: pvpVals,
+                              borderColor: '#fbbf24', backgroundColor: 'rgba(251,191,36,0.10)',
+                              fill: true, pointRadius: 0, borderWidth: 1.5, tension: 0.25 }
+                        ]
+                    },
+                    options: {
+                        responsive: true, maintainAspectRatio: false,
+                        interaction: { mode: 'index', intersect: false },
+                        plugins: {
+                            legend: { display: true, position: 'top', labels: { color: '#cbd5e1', font: { size: 11 }, boxWidth: 14, usePointStyle: true } },
+                            tooltip: {
+                                callbacks: {
+                                    label: (item) => {
+                                        const v = item.raw;
+                                        if (v == null) return '';
+                                        if (item.dataset.yAxisID === 'y2') return `P/VP: ${Number(v).toFixed(3)}`;
+                                        return `${item.dataset.label}: R$ ${Number(v).toFixed(2)}`;
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: { ticks: { color: '#64748b', maxRotation: 0, autoSkip: true, maxTicksLimit: 10 }, grid: { color: 'rgba(255,255,255,0.04)' } },
+                            y:  {
+                                position: 'left',
+                                ticks: { color: '#94a3b8', callback: v => 'R$ ' + Number(v).toFixed(0) },
+                                grid: { color: 'rgba(255,255,255,0.06)' },
+                                title: { display: true, text: 'Preço / VP (R$)', color: '#94a3b8', font: { size: 10 } }
+                            },
+                            y2: {
+                                position: 'right',
+                                ticks: { color: '#fbbf24', callback: v => Number(v).toFixed(2) },
+                                grid: { drawOnChartArea: false },
+                                title: { display: true, text: 'P/VP', color: '#fbbf24', font: { size: 10 } }
+                            }
+                        }
+                    }
+                });
+            }
         }
     },
 
@@ -4447,6 +4543,151 @@ const FIITemplate = {
     // ──────────────────────────────────────────────────
     // CONCLUSAO
     // ──────────────────────────────────────────────────
+    // ──────────────────────────────────────────────────
+    // RELAÇÕES — vínculos com outros FIIs / conflito de interesse
+    // ──────────────────────────────────────────────────
+    renderRelacoes() {
+        const rel = this.data.relacoes;
+        if (!Array.isArray(rel)) return '';
+
+        if (rel.length === 0) {
+            return `
+            <section class="mb-12 fade-in">
+                <div class="dark-card rounded-3xl p-8">
+                    <h2 class="text-2xl font-bold text-white mb-3">Relações com outros fundos</h2>
+                    <p class="text-slate-400 text-sm">
+                        <strong class="text-emerald-400">Nenhum vínculo material identificado</strong> nos documentos analisados.
+                        Buscamos: subscrição em emissão com ágio, troca de cotas, contraprestações, contrapartes recorrentes em CRIs,
+                        locatários compartilhados, transações intra-casa (mesma gestora) e aportes de caixa entre fundos.
+                    </p>
+                </div>
+            </section>`;
+        }
+
+        const esc = (s) => (s == null ? '' : String(s));
+        const fmtMoney = (v) => v == null ? '—' : this.formatMoney(v);
+        const fmtDate = (s) => {
+            if (!s) return '—';
+            const m = String(s).match(/^(\d{4})-(\d{2})(?:-(\d{2}))?/);
+            if (!m) return s;
+            const meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+            return m[3] ? `${m[3]}/${meses[parseInt(m[2])-1]}/${m[1]}` : `${meses[parseInt(m[2])-1]}/${m[1]}`;
+        };
+
+        const sevMap = {
+            alta:        { cor: 'red',     label: 'Alta · revisar',          icone: '⚠' },
+            media:       { cor: 'amber',   label: 'Média · observar',        icone: '◐' },
+            baixa:       { cor: 'emerald', label: 'Baixa · vínculo legítimo',icone: '✓' },
+            inexistente: { cor: 'slate',   label: 'Sem conflito · informativo', icone: '·' }
+        };
+        const fluxoMap = {
+            deu_favor:    { cor: 'red',     label: 'PRESTOU FAVOR',  desc: 'Este fundo transferiu valor para a contraparte.' },
+            recebeu_favor:{ cor: 'emerald', label: 'RECEBEU FAVOR',  desc: 'Este fundo recebeu valor da contraparte.' },
+            reciproco:    { cor: 'blue',    label: 'RECÍPROCO',      desc: 'Houve operação de mão dupla.' },
+            neutro:       { cor: 'slate',   label: 'NEUTRO',         desc: 'Vínculo sem direção de favor.' }
+        };
+        const tipoMap = {
+            subscricao_emissao_acima: 'Subscrição com ágio',
+            troca_de_cotas: 'Troca de cotas',
+            venda_paga_em_cotas: 'Venda paga em cotas',
+            aquisicao_paga_em_cotas: 'Aquisição paga em cotas',
+            contraprestacao_contratada: 'Contraprestação contratada',
+            cri_devedor_comum: 'CRI · devedor comum',
+            locatario_compartilhado: 'Locatário compartilhado',
+            mesma_gestora_transacao: 'Transação intra-casa',
+            transferencia_portfolio: 'Transferência de portfólio',
+            aporte_de_caixa: 'Aporte de caixa',
+            emprestimo_cri_intra: 'CRI subscrito intra-casa',
+            outro_vinculo: 'Outro vínculo'
+        };
+
+        // Resumo
+        const counts = { alta: 0, media: 0, baixa: 0, inexistente: 0 };
+        let abertos = 0, mesmaGestora = 0;
+        rel.forEach(r => {
+            counts[r.severidadeConflito] = (counts[r.severidadeConflito] || 0) + 1;
+            if (r.favorAberto) abertos++;
+            if (r.mesmaGestora) mesmaGestora++;
+        });
+
+        const cards = rel.slice().sort((a, b) => {
+            const rank = { alta: 0, media: 1, baixa: 2, inexistente: 3 };
+            return (rank[a.severidadeConflito] ?? 9) - (rank[b.severidadeConflito] ?? 9);
+        }).map(r => {
+            const sev = sevMap[r.severidadeConflito] || sevMap.inexistente;
+            const flu = fluxoMap[r.fluxo] || fluxoMap.neutro;
+            const cp = r.contraparte || {};
+            const tipoLabel = tipoMap[r.tipo] || r.tipo;
+            const cpLink = cp.ticker
+                ? `<a href="../${cp.ticker.toLowerCase()}/" class="rel-cp-link">${esc(cp.ticker)}</a>`
+                : `<span class="rel-cp-ext">${esc(cp.nome || '?')}</span>`;
+            const cpExtra = cp.gestora ? `<span class="rel-cp-gest">${esc(cp.gestora)}</span>` : '';
+            const agioHtml = (r.agioSobreMercado && r.agioSobreMercado.presente) ? `
+                <div class="rel-agio">
+                    <span class="rel-agio-pct">+${Number(r.agioSobreMercado.valorPercent || 0).toFixed(1)}%</span>
+                    <span class="rel-agio-tag">ÁGIO SOBRE MERCADO</span>
+                    ${r.agioSobreMercado.leituraMercado ? `<span class="rel-agio-leitura">${esc(r.agioSobreMercado.leituraMercado)}</span>` : ''}
+                </div>` : '';
+            const fontesHtml = (r.fontes || []).map(f => `
+                <li>
+                    <strong>${esc(f.documento)}</strong>${f.docId ? ` <span class="rel-doc-id">ID ${f.docId}</span>` : ''}
+                    ${f.trecho ? `<div class="rel-fonte-trecho">"${esc(f.trecho)}"</div>` : ''}
+                </li>`).join('');
+            const flagsHtml = `
+                ${r.mesmaGestora ? '<span class="rel-flag rel-flag-gest">MESMA GESTORA</span>' : ''}
+                ${r.favorAberto ? '<span class="rel-flag rel-flag-aberto">FAVOR EM ABERTO</span>' : ''}
+            `;
+            return `
+            <article class="rel-card rel-sev-${sev.cor}">
+                <header class="rel-card-head">
+                    <div class="rel-card-titulo">
+                        <span class="rel-tipo-pill">${tipoLabel}</span>
+                        <span class="rel-cp-wrap">com ${cpLink}${cpExtra}</span>
+                    </div>
+                    <div class="rel-card-sev rel-sev-pill-${sev.cor}">${sev.icone} ${sev.label}</div>
+                </header>
+                <div class="rel-card-meta">
+                    <span class="rel-fluxo rel-fluxo-${flu.cor}" title="${flu.desc}">${flu.label}</span>
+                    ${r.data ? `<span class="rel-data">${fmtDate(r.data)}</span>` : ''}
+                    ${r.valor ? `<span class="rel-valor">${fmtMoney(r.valor)}</span>` : ''}
+                    ${flagsHtml}
+                </div>
+                ${agioHtml}
+                ${r.descricao ? `<div class="rel-desc">${r.descricao}</div>` : ''}
+                ${r.leituraInterpretativa ? `<div class="rel-leitura"><strong>Leitura:</strong> ${r.leituraInterpretativa}</div>` : ''}
+                ${fontesHtml ? `<details class="rel-fontes-wrap"><summary>Fontes (${(r.fontes||[]).length})</summary><ul class="rel-fontes">${fontesHtml}</ul></details>` : ''}
+            </article>`;
+        }).join('');
+
+        return `
+        <section class="mb-12 fade-in">
+            <div class="dark-card rounded-3xl p-6 md:p-8">
+                <h2 class="text-2xl font-bold text-white mb-2">Relações com outros fundos</h2>
+                <p class="text-sm text-slate-400 mb-5">
+                    Vínculos materiais identificados nos documentos: subscrição com ágio, troca de cotas, contrapartes recorrentes,
+                    transações intra-casa. <strong>A presença de relação não é veredicto de fraude</strong> — é informação para o cotista
+                    formar opinião sobre transparência e potenciais conflitos de interesse.
+                </p>
+
+                <div class="rel-resumo">
+                    <div class="rel-resumo-stat"><span class="rel-resumo-val">${rel.length}</span><span class="rel-resumo-lbl">vínculos identificados</span></div>
+                    <div class="rel-resumo-stat"><span class="rel-resumo-val text-red-400">${counts.alta || 0}</span><span class="rel-resumo-lbl">alta severidade</span></div>
+                    <div class="rel-resumo-stat"><span class="rel-resumo-val text-amber-400">${counts.media || 0}</span><span class="rel-resumo-lbl">média severidade</span></div>
+                    <div class="rel-resumo-stat"><span class="rel-resumo-val text-amber-400">${abertos}</span><span class="rel-resumo-lbl">favor em aberto</span></div>
+                    <div class="rel-resumo-stat"><span class="rel-resumo-val">${mesmaGestora}</span><span class="rel-resumo-lbl">mesma gestora</span></div>
+                </div>
+
+                <div class="rel-cards">${cards}</div>
+
+                <div class="rel-link-mapa">
+                    <a href="../conexoes/" class="rel-link-mapa-btn">
+                        Ver mapa global de conexões entre todos os FIIs →
+                    </a>
+                </div>
+            </div>
+        </section>`;
+    },
+
     renderConclusao() {
         const c = this.data.conclusao;
         if (!c) return '';
@@ -4513,15 +4754,21 @@ const FIITemplate = {
         const f = this.data.footer;
         if (!f) return '';
 
-        // Estimativa de custo da análise — baseada nos tokens consumidos
-        // tipicamente por uma análise profunda no Claude Opus 4.7 1M:
-        //   ~200K tokens input × $15/MTok = $3.00
-        //   ~50K tokens output × $75/MTok = $3.75
-        //   Total ~$6.75 = R$ 35-40 (USD/BRL ~5.5).
-        // Para fundos com mais documentos (>400), o custo escala um pouco.
-        const ndocs  = f.totalDocumentos || 0;
-        const custoUsd = ndocs > 400 ? 7.0 : (ndocs > 200 ? 5.5 : 4.0);
-        const custoBrl = Math.round(custoUsd * 5.5);
+        // Custo da análise: prioriza o ACUMULADO real (meta.custoAnalise.totalUsd),
+        // que soma cada chamada Opus desde a primeira análise. Fallback para
+        // estimativa quando o fundo não foi reanalisado pelo pipeline novo ainda.
+        const ndocs = f.totalDocumentos || 0;
+        const custoMeta = (this.data.meta && this.data.meta.custoAnalise) || null;
+        const custoReal = custoMeta && Number(custoMeta.totalUsd) > 0;
+        const numExec = (custoMeta && custoMeta.numeroExecucoes) || 1;
+        const custoUsd = custoReal
+            ? Number(custoMeta.totalUsd)
+            : (ndocs > 400 ? 7.0 : (ndocs > 200 ? 5.5 : 4.0));
+        const custoBrl = (custoUsd * 5.5).toFixed(custoUsd > 100 ? 0 : 2);
+        const custoLabel = custoReal ? 'Custo acumulado' : 'Custo estimado';
+        const custoSub = custoReal
+            ? `≈ US$ ${custoUsd.toFixed(2)} em ${numExec} ${numExec === 1 ? 'análise' : 'análises'}`
+            : `≈ US$ ${custoUsd.toFixed(2)} em tokens Anthropic`;
 
         return `
     <section class="max-w-7xl mx-auto px-4 mb-8">
@@ -4553,9 +4800,9 @@ const FIITemplate = {
                     <div class="footer-ai-stat-sub">Reanalisada periodicamente</div>
                 </div>
                 <div class="footer-ai-stat">
-                    <div class="footer-ai-stat-lbl">Custo estimado</div>
-                    <div class="footer-ai-stat-val">~R$ ${custoBrl}</div>
-                    <div class="footer-ai-stat-sub">≈ US$ ${custoUsd.toFixed(2)} em tokens Anthropic</div>
+                    <div class="footer-ai-stat-lbl">${custoLabel}</div>
+                    <div class="footer-ai-stat-val">R$ ${custoBrl}</div>
+                    <div class="footer-ai-stat-sub">${custoSub}</div>
                 </div>
             </div>
 

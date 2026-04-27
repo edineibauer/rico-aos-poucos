@@ -1,0 +1,542 @@
+/* ===========================================================
+   Home — Hero de Artigos (grid editorial magazine-style)
+   ===========================================================
+   6 artigos no topo da home:
+   - 1 HERO grande (capa em destaque)
+   - 3 cards verticais empilhados ao lado (stack lateral)
+   - 2 cards horizontais largos abaixo
+   =========================================================== */
+
+.articles-hero {
+  margin: 0 0 32px;
+}
+
+.articles-hero-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  margin: 0 0 18px;
+  flex-wrap: wrap;
+}
+
+.articles-hero-header h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0;
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.articles-hero-header h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 22px;
+  background: linear-gradient(180deg, #3fb950 0%, #2ea043 100%);
+  border-radius: 2px;
+}
+
+.articles-hero-eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: #3fb950;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  margin-bottom: 4px;
+}
+
+.articles-hero-all {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.articles-hero-all:hover {
+  color: var(--text-primary);
+}
+
+.articles-hero-all svg {
+  width: 14px;
+  height: 14px;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  transition: transform 0.2s ease;
+}
+
+.articles-hero-all:hover svg {
+  transform: translateX(3px);
+}
+
+/* === Grid principal === */
+.articles-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.articles-hero-grid-bottom {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+/* === Card base === */
+.article-card {
+  position: relative;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  isolation: isolate;
+}
+
+.article-card:hover {
+  transform: translateY(-2px);
+  border-color: rgba(63, 185, 80, 0.4);
+  box-shadow: 0 12px 32px -12px rgba(63, 185, 80, 0.25);
+}
+
+.article-card-image {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(135deg, #1a1f29, #0d1117);
+  overflow: hidden;
+}
+
+.article-card-image::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, transparent 50%, rgba(13, 17, 23, 0.65) 100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.article-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+.article-card:hover .article-card-image img {
+  transform: scale(1.04);
+}
+
+.article-card-image-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2.5rem;
+  color: rgba(255, 255, 255, 0.15);
+  background: linear-gradient(135deg, #1a1f29, #0d1117);
+}
+
+.article-card-body {
+  padding: 16px 18px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex: 1;
+  min-width: 0;
+}
+
+.article-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.article-card-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 10px;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.article-card-badge.bullish {
+  background: rgba(63, 185, 80, 0.14);
+  color: #3fb950;
+  border: 1px solid rgba(63, 185, 80, 0.3);
+}
+
+.article-card-badge.bearish {
+  background: rgba(248, 81, 73, 0.14);
+  color: #f85149;
+  border: 1px solid rgba(248, 81, 73, 0.3);
+}
+
+.article-card-badge.neutral {
+  background: rgba(240, 193, 75, 0.14);
+  color: #f0c14b;
+  border: 1px solid rgba(240, 193, 75, 0.3);
+}
+
+.article-card-date {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  letter-spacing: 0.02em;
+}
+
+.article-card-title {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text-primary);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card-excerpt {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.article-card-cta {
+  margin-top: auto;
+  padding-top: 4px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #3fb950;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  letter-spacing: 0.02em;
+}
+
+.article-card-cta svg {
+  width: 12px;
+  height: 12px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+  transition: transform 0.25s ease;
+}
+
+.article-card:hover .article-card-cta svg {
+  transform: translateX(3px);
+}
+
+/* === HERO Card (posição 0) === */
+.article-card--hero .article-card-image {
+  aspect-ratio: 16 / 9;
+}
+
+.article-card--hero .article-card-body {
+  padding: 18px 22px 22px;
+  gap: 12px;
+}
+
+.article-card--hero .article-card-title {
+  font-size: 1.35rem;
+  line-height: 1.25;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.article-card--hero .article-card-excerpt {
+  font-size: 0.92rem;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+/* === Stack lateral (cards 2,3,4) — mobile horizontal === */
+.article-card-stack {
+  display: grid;
+  gap: 12px;
+}
+
+.article-card--compact {
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 110px;
+}
+
+.article-card--compact .article-card-image {
+  flex: 0 0 38%;
+  max-width: 150px;
+  aspect-ratio: 1 / 1;
+}
+
+.article-card--compact .article-card-body {
+  padding: 12px 14px;
+  gap: 6px;
+}
+
+.article-card--compact .article-card-title {
+  font-size: 0.88rem;
+  line-height: 1.3;
+  -webkit-line-clamp: 3;
+  line-clamp: 3;
+}
+
+.article-card--compact .article-card-excerpt {
+  display: none;
+}
+
+.article-card--compact .article-card-cta {
+  display: none;
+}
+
+/* === Cards largos (linha de baixo, 5 e 6) === */
+.article-card--wide {
+  flex-direction: row;
+  align-items: stretch;
+  min-height: 140px;
+}
+
+.article-card--wide .article-card-image {
+  flex: 0 0 40%;
+  max-width: 220px;
+  aspect-ratio: auto;
+}
+
+.article-card--wide .article-card-body {
+  padding: 14px 18px;
+  gap: 8px;
+}
+
+.article-card--wide .article-card-title {
+  font-size: 0.95rem;
+  line-height: 1.3;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+.article-card--wide .article-card-excerpt {
+  font-size: 0.8rem;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+}
+
+/* === Estado de loading === */
+.articles-hero-loading {
+  grid-column: 1 / -1;
+  padding: 60px 20px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  background: var(--bg-secondary);
+  border: 1px dashed var(--border-color);
+  border-radius: 14px;
+}
+
+.articles-hero-loading-spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-top-color: #3fb950;
+  border-radius: 50%;
+  animation: heroSpin 0.7s linear infinite;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
+@keyframes heroSpin {
+  to { transform: rotate(360deg); }
+}
+
+/* ===========================================================
+   Tablet (≥640px)
+   =========================================================== */
+@media (min-width: 640px) {
+  .articles-hero-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .article-card-stack {
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+
+  .articles-hero-grid-bottom {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .article-card--hero .article-card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===========================================================
+   Desktop (≥1024px)
+   =========================================================== */
+@media (min-width: 1024px) {
+  .articles-hero-header h2 {
+    font-size: 1.75rem;
+  }
+
+  .articles-hero-grid {
+    grid-template-columns: 1.55fr 1fr;
+    gap: 20px;
+  }
+
+  .article-card-stack {
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 14px;
+  }
+
+  .article-card--hero .article-card-image {
+    aspect-ratio: 16 / 9;
+  }
+
+  .article-card--hero .article-card-body {
+    padding: 22px 26px 24px;
+  }
+
+  .article-card--hero .article-card-title {
+    font-size: 1.55rem;
+  }
+
+  .article-card--hero .article-card-excerpt {
+    font-size: 0.95rem;
+  }
+
+  /* Cards do stack: voltam a ficar verticais no desktop (mais bonito ao lado do hero) */
+  .article-card--compact {
+    flex-direction: row;
+    min-height: 0;
+  }
+
+  .article-card--compact .article-card-image {
+    flex: 0 0 130px;
+    max-width: 130px;
+    aspect-ratio: 1 / 1;
+  }
+
+  .article-card--compact .article-card-title {
+    font-size: 0.92rem;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+  }
+
+  .articles-hero-grid-bottom {
+    gap: 20px;
+  }
+
+  .article-card--wide .article-card-image {
+    flex: 0 0 230px;
+    max-width: 230px;
+  }
+
+  .article-card--wide .article-card-title {
+    font-size: 1.05rem;
+  }
+}
+
+/* ===========================================================
+   Variante secundária do home-content-grid
+   (sem o card de publicações principal — agora vai só Expectativas + FIIs)
+   =========================================================== */
+.home-content-grid--secondary {
+  margin-top: 28px;
+}
+
+.home-content-grid--secondary .home-sidebar {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .home-content-grid--secondary {
+    /* Anula o grid de 2 colunas do layout antigo */
+    display: block;
+  }
+
+  .home-content-grid--secondary .home-sidebar {
+    grid-template-columns: 1.4fr 1fr;
+    gap: 20px;
+    align-items: stretch;
+  }
+
+  .home-content-grid--secondary .card-fiis-sidebar {
+    flex-direction: column;
+    align-self: stretch;
+  }
+}
+
+@media (min-width: 1024px) {
+  .home-content-grid--secondary .home-sidebar {
+    grid-template-columns: 1.6fr 1fr;
+    gap: 24px;
+  }
+}
+
+/* ===========================================================
+   Subtítulo da seção de ferramentas (rebaixadas)
+   =========================================================== */
+.tools-section-header {
+  margin: 32px 0 16px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.tools-section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.tools-section-header h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 18px;
+  background: linear-gradient(180deg, #f0c14b 0%, #d29922 100%);
+  border-radius: 2px;
+}
+
+.tools-section-header p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin: 0;
+}
+
+@media (min-width: 1024px) {
+  .tools-section-header h2 {
+    font-size: 1.5rem;
+  }
+}

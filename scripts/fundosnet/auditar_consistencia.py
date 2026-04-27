@@ -340,6 +340,78 @@ def auditar(ticker: str) -> dict:
             except Exception:
                 pass
 
+    # ===== C21..C25 RELACOES =====
+    relacoes = d.get("relacoes")
+    if isinstance(relacoes, list):
+        for i, rel in enumerate(relacoes):
+            if not isinstance(rel, dict):
+                continue
+            cp = rel.get("contraparte") or {}
+            cp_ticker = (cp.get("ticker") or "").upper()
+            tipoRel = rel.get("tipo")
+            sev = rel.get("severidadeConflito")
+            fluxo = rel.get("fluxo")
+            agio = rel.get("agioSobreMercado") or {}
+            mesma_gestora = bool(rel.get("mesmaGestora"))
+            valor = _num(rel.get("valor"))
+            fontes = rel.get("fontes") or []
+
+            # C21 — cada relação tem fonte com docId válido
+            tem_fonte_valida = False
+            for f in fontes:
+                if not isinstance(f, dict):
+                    continue
+                doc_id = f.get("docId")
+                if not doc_id:
+                    continue
+                if pasta_optimized.exists():
+                    if (pasta_optimized / f"{doc_id}.meta.json").exists():
+                        tem_fonte_valida = True
+                        break
+                else:
+                    tem_fonte_valida = True
+                    break
+            if not tem_fonte_valida:
+                viol.append(_violacao("C21", "alta",
+                    f"relacoes[{i}] ({tipoRel}) sem fonte com docId válido — relações precisam de documento",
+                    f"relacoes[{i}].fontes"))
+
+            # C22 — contraparte ticker existe na base ou marcada externa
+            if cp_ticker and cp.get("tipo") == "fii":
+                tk_path = FIIS_DIR / f"{cp_ticker.lower()}.json"
+                if not tk_path.exists() and not cp.get("externo"):
+                    # warning leve — pode ser fundo ainda não analisado
+                    viol.append(_violacao("C22", "media",
+                        f"relacoes[{i}] aponta para {cp_ticker} (fii) que não está em data/fiis/ — marque contraparte.tipo='externo' se for fundo não analisado",
+                        f"relacoes[{i}].contraparte.ticker"))
+
+            # C23 — ágio declarado quando tipo envolve subscrição/troca
+            tipos_que_exigem_agio = {"subscricao_emissao_acima", "troca_de_cotas",
+                                      "venda_paga_em_cotas", "aquisicao_paga_em_cotas"}
+            if tipoRel in tipos_que_exigem_agio:
+                if not agio or agio.get("presente") is None:
+                    viol.append(_violacao("C23", "media",
+                        f"relacoes[{i}] ({tipoRel}) não declara agioSobreMercado — para esse tipo é obrigatório indicar se houve ou não ágio",
+                        f"relacoes[{i}].agioSobreMercado"))
+
+            # C24 — fluxo coerente com tipo + ágio
+            if agio.get("presente") is True and (agio.get("valorPercent") or 0) > 3 and fluxo == "neutro":
+                viol.append(_violacao("C24", "media",
+                    f"relacoes[{i}] tem ágio +{agio.get('valorPercent')}% mas fluxo='neutro' — com ágio relevante o fluxo deveria ser deu_favor ou recebeu_favor",
+                    f"relacoes[{i}].fluxo"))
+
+            # C25 — severidade alta exige justificativa objetiva
+            if sev == "alta":
+                tem_criterio = (
+                    (mesma_gestora and (agio.get("valorPercent") or 0) > 5) or
+                    (tipoRel == "aporte_de_caixa") or
+                    (tipoRel == "transferencia_portfolio" and mesma_gestora)
+                )
+                if not tem_criterio:
+                    viol.append(_violacao("C25", "alta",
+                        f"relacoes[{i}] severidade=alta mas não satisfaz critério objetivo (mesma gestora + ágio>5%, aporte de caixa, ou transferência intra-casa)",
+                        f"relacoes[{i}].severidadeConflito"))
+
     return {
         "ticker": ticker,
         "ok": len([v for v in viol if v["severidade"] == "alta"]) == 0,

@@ -24,6 +24,7 @@ aqui, nessa estrutura, com a aba `dividendos` no schema v2 completo.
 | **`encaixe`** | **sim (schema v1)** | **ver seção "Aba Encaixe v1" abaixo** — identidade, perfilRisco (score 1-5 + componentes), estrategias[], riscosOcultos[], liquidez, volatilidade, sobreposicaoPares, cenarios[], paraQuem, paraQuemNao |
 | **`dividendos`** | **sim (schema v2)** | **ver `docs/schema-dividendos-v2.md`** |
 | **`valuation`** | **sim (schema v2)** | **ver seção "Aba Valuation v2" abaixo** — pvp, spread, historicoPrecos, historicoVp, eventosValuation, paresComparaveis, precoJustoMercado, expectativa (curto/medio/longo) |
+| **`relacoes`** | **sim quando aplicável (schema v1)** | **ver seção "Aba Relações v1" abaixo** — array com vínculos do fundo (subscrição com ágio, troca de cotas, mesma gestora, contrapartes recorrentes), severidade do conflito e fluxo (deu/recebeu favor). Pode ser array vazio se nenhuma relação foi identificada. |
 | `conclusao` | sim | paragrafos, pontosFortes, pontosDeAtencao, conclusaoFinal |
 | `footer` | sim | dataAnalise, totalDocumentos, disclaimer |
 
@@ -1515,6 +1516,121 @@ Lista de até 6 cenários (favoráveis e desfavoráveis), com probabilidade rela
 | `riscosOcultos[]` | Síntese qualitativa do worker — base é `pontosAtencao` + análise de `portfolio.ativos[]` |
 | `sobreposicaoPares.pares[].look_through_direto` | `portfolio.ativos[]` filtrado por `tipo: "fii"` |
 | `cenarios[]` | Combinação de `dividendos.eventosFuturos[]` + `valuation.expectativa.*` + macro |
+
+## Aba Relações v1 — checklist obrigatório
+
+A aba Relações registra **vínculos do fundo com outros FIIs, gestoras ou contrapartes recorrentes** que possam configurar conflito de interesse. O leitor que clica nessa aba quer saber: *este fundo deve favores para alguém? está sendo usado para "salvar" outro fundo da mesma gestora? está com o portfólio inflado por subscrição artificial?*
+
+A presença de uma relação NÃO é veredicto automático de "fraude" — muitas relações são legítimas (CRIs com mesmo originador, locatário comum, FoF que opera dentro do ecossistema da gestora). Mas o cotista precisa ver e tirar suas conclusões.
+
+### 0. Quando preencher
+
+**OBRIGATÓRIO** registrar uma relação quando, durante a análise dos documentos do fundo, qualquer uma dessas situações for identificada:
+
+1. **Subscrição em emissão acima de mercado** — o fundo subscreveu cotas de outro FII num preço claramente acima da cotação de mercado na data, ou vice-versa.
+2. **Troca de cotas / dação em pagamento** — pagamento de aquisição/venda total ou parcial em cotas do outro fundo.
+3. **Mesma gestora em ambos os lados** com transação bilateral relevante (compra/venda, contrato, contraprestação).
+4. **CRI/CRA com mesmo devedor** que aparece em ≥ 3 outros FIIs do mercado — devedor "comum" cria correlação oculta.
+5. **Locatário compartilhado** quando representa > 10% da receita de cada um dos lados.
+6. **Contraprestação contratada por X anos** entre dois FIIs (caso clássico GGRC11→BLMG11 em SBC).
+7. **Mudança de gestor** que envolveu transferência de cotas/portfólio para outro FII da nova gestora.
+8. **Empréstimo ou aporte de caixa** entre fundos da mesma casa (raro, mas existe).
+
+### 1. Schema `relacoes[]` — top-level
+
+```jsonc
+"relacoes": [
+  {
+    "id": "BLMG11-GGRC11-2024-06",
+    "contraparte": {
+      "ticker": "GGRC11",                 // ticker do outro lado; null se "externo"
+      "tipo": "fii",                       // fii | gestora | locatario | devedor_cri | spe | externo
+      "nome": "GGR Covepi Renda",
+      "gestora": "TC Gestora"             // nome da gestora da contraparte (para detectar conflito)
+    },
+    "tipo": "venda_paga_em_cotas",        // ver tabela de tipos abaixo
+    "data": "2024-06-15",
+    "valor": 130000000,                    // R$ — valor envolvido na transação
+    "fluxo": "deu_favor",                  // deu_favor | recebeu_favor | reciproco | neutro
+    "favorAberto": false,                  // true se a contrapartida ainda não foi prestada
+    "agioSobreMercado": {
+      "presente": true,
+      "valorPercent": 8.5,                 // % acima da cotação de mercado na data
+      "leituraMercado": "BLMG11 negociava R$ 30 em jun/2024; cotas pagas a R$ 32,55"
+    },
+    "mesmaGestora": false,                // true quando ambos os lados têm a mesma gestora
+    "severidadeConflito": "media",        // alta | media | baixa | inexistente
+    "descricao": "<p>HTML 1-3 frases descrevendo o vínculo de forma factual, sem opinião.</p>",
+    "leituraInterpretativa": "<p>HTML 1-2 frases — o que o cotista deve observar nessa relação. Pode ser neutro.</p>",
+    "fontes": [
+      { "documento": "Fato Relevante 14/06/2024", "docId": "947799", "trecho": "BLMG11 vende galpão SBC ao GGRC11 por R$ 130 Mi, recebendo R$ 91 Mi à vista e R$ 39 Mi em 4.674.548 cotas do GGRC11" }
+    ]
+  }
+]
+```
+
+### 2. Tipos canônicos de relação
+
+| Tipo | Descrição | Quando severidade é alta |
+|---|---|---|
+| `subscricao_emissao_acima` | Fundo A subscreveu emissão de B com ágio sobre cotação | Mesma gestora + ágio > 5% |
+| `troca_de_cotas` | Pagamento de transação em cotas (não em caixa) | Mesma gestora + sem laudo de avaliação independente |
+| `venda_paga_em_cotas` | Vendeu ativo recebendo cotas como contrapartida | Cotas com ágio relevante |
+| `aquisicao_paga_em_cotas` | Comprou ativo emitindo cotas próprias com ágio | Sempre flag se > 5% acima |
+| `contraprestacao_contratada` | Pagamento periódico (X anos) entre fundos | Independente — só registrar |
+| `cri_devedor_comum` | Mesmo devedor em CRIs detidos por vários FIIs | Devedor com problema (default, atraso) |
+| `locatario_compartilhado` | Mesmo inquilino em vários FIIs (concentração sistêmica) | Locatário > 15% de cada fundo |
+| `mesma_gestora_transacao` | Transação bilateral entre dois fundos da mesma casa | Sempre flag |
+| `transferencia_portfolio` | Mudança de gestor levou ativos de A para B (mesma nova gestora) | Sempre flag |
+| `aporte_de_caixa` | Empréstimo direto entre fundos | Sempre alta severidade |
+| `emprestimo_cri_intra` | Emissão de CRI tendo outro FII da casa como subscritor | Sempre flag |
+| `outro_vinculo` | Vínculo material que não cabe nos tipos acima | A julgar pelo LLM |
+
+### 3. Critérios para detectar "favor"
+
+O LLM marca `fluxo: "deu_favor"` ou `recebeu_favor` quando algum desses sinais aparecer:
+
+1. **Ágio sobre mercado:** o subscritor pagou > 3% acima da cotação média dos 30 dias anteriores. Quanto maior o ágio, mais clara a transferência de valor.
+2. **Unilateralidade da operação:** A subscreveu B (favor de A para B) sem que B tenha subscrito A no mesmo intervalo de tempo (12 meses).
+3. **Disponibilidade alternativa:** o subscritor tinha caixa para comprar a cota em mercado e mesmo assim escolheu a emissão com ágio.
+4. **Contexto da contraparte:** o fundo que recebeu o favor estava em situação de pressão (vacância, queima de caixa, vencimento de CRI).
+
+`favorAberto: true` quando a transação foi unilateral e nenhuma operação recíproca foi documentada nos 12 meses seguintes — fica como "dívida moral" pendente.
+
+### 4. Severidade do conflito
+
+- **`alta`** — mesma gestora dos dois lados + ágio > 5% + ausência de laudo independente; OU aporte de caixa direto entre fundos; OU aquisição que alivia caixa de outro fundo da casa.
+- **`media`** — mesma gestora dos dois lados em transação bilateral material, mas com laudo / preço justificável; OU contraparte recorrente sem afinidade societária (CRI mesmo devedor em ≥ 3 fundos sem evidência de coordenação).
+- **`baixa`** — vínculo legítimo já público (FoF que detém cotas dentro do mandato declarado, locatário comum não-âncora).
+- **`inexistente`** — relação informativa só (ex: contraprestação contratada com prazo definido sem ágio nem mesmo gestor).
+
+### 5. Onde achar nos `.md` de `data/fiis-optimized/{TICKER}/`
+
+| Sinal | Documento típico |
+|---|---|
+| Subscrição em emissão | Comunicado ao Cotista de Subscrição / Fato Relevante de Aprovação de Emissão |
+| Troca de cotas / dação | Fato Relevante de Aquisição/Venda + tabela de pagamento no Relatório Gerencial seguinte |
+| Contraprestação | Fato Relevante de Venda + Demonstrações Financeiras (nota explicativa "Contas a receber de partes relacionadas") |
+| Mesma gestora | comparar `gestora.nome` do fundo analisado com `gestora.nome` do JSON da contraparte |
+| Devedor comum em CRI | `portfolio.ativos[]` tipo `cri` com mesmo `devedor` em outros fundos |
+| Locatário compartilhado | `portfolio.ativos[].locatarios[]` cruzado com outros fundos |
+| Aporte/empréstimo | DEMONSTRAÇÕES FINANCEIRAS — nota explicativa "Operações com partes relacionadas" |
+
+**Regra dura:** cada item de `relacoes[]` precisa de pelo menos UMA `fontes[]` com `docId` válido. Se não tem fonte documentada, NÃO REGISTRAR.
+
+### 6. Schema agregado `data/conexoes-fiis.json`
+
+Após cada análise, o pipeline executa `scripts/fundosnet/construir_grafo_relacoes.py` que varre todos os `data/fiis/*.json`, extrai os arrays `relacoes[]`, deduplica e produz `nodes[]` e `edges[]` para a tela visual `/fiis/conexoes/`.
+
+### 7. Regras duras (Relações)
+
+1. **NÃO inventar relação.** Sem fonte documental (`docId`), não registra.
+2. **NÃO classificar como "favor" sem critério objetivo.** Use a tabela da seção 3.
+3. **NÃO classificar severidade `alta`** sem que pelo menos UM dos critérios da seção 4 seja satisfeito.
+4. **`fluxo` é direcional do ponto de vista DESTE fundo.** Se este fundo subscreveu emissão de outro com ágio, marcar `deu_favor`. Se este fundo recebeu subscrição com ágio, `recebeu_favor`.
+5. **`mesmaGestora`** sempre verificar comparando `gestora.nome` (normalizar acentos e abreviações).
+6. **Não confundir relações com `eventosValuation[]`.** Relações falam de **vínculos persistentes ou potencial conflito**; eventos falam de **fatos pontuais**. Mesma operação pode aparecer em ambos.
+7. **Reanálise:** relações passadas permanecem, apenas adiciona-se as novas. Atualizar `favorAberto` para `false` quando uma operação recíproca for identificada nos 12 meses subsequentes.
 
 ## Consistência cruzada — REGRA-MÃE
 

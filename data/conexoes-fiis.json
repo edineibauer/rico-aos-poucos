@@ -1,0 +1,3113 @@
+{
+  "schema": "v1",
+  "atualizadoEm": "2026-04-27T03:24:08Z",
+  "totalFundos": 143,
+  "totalFundosExternos": 0,
+  "totalGestoras": 101,
+  "totalRelacoes": 0,
+  "totalArestas": 0,
+  "estatisticas": {
+    "porTipo": {},
+    "porSeveridade": {},
+    "favoresAbertos": 0,
+    "gestorasComConflito": {}
+  },
+  "nodes": [
+    {
+      "id": "AAZQ11",
+      "tipo": "fii",
+      "label": "AAZQ11",
+      "nome": "AZ Quest Sole Fiagro Imobiliário",
+      "segmento": "Fiagro - Papel (CRA/FIDC Agro)",
+      "gestora": "AZ Quest Investimentos (AZ Quest Agro Ltda.)",
+      "gestoraNorm": "az quest (az quest agro .)",
+      "nota": 6.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 8.26,
+      "dy": 12.69,
+      "pvp": 0.96,
+      "url": "/fiis/aazq11/"
+    },
+    {
+      "id": "ABCP11",
+      "tipo": "fii",
+      "label": "ABCP11",
+      "nome": "Grand Plaza Shopping FII",
+      "segmento": "Shopping Center",
+      "gestora": "Rio Bravo Investimentos DTVM Ltda.",
+      "gestoraNorm": "rio bravo .",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 80.37,
+      "dy": 9.7,
+      "pvp": 0.73,
+      "url": "/fiis/abcp11/"
+    },
+    {
+      "id": "AFHF11",
+      "tipo": "fii",
+      "label": "AFHF11",
+      "nome": "AF Invest Real Estate Multiestratégia FII",
+      "segmento": "Papel (CRI) - Hedge Fund Imobiliário Multiestratégia",
+      "gestora": "AF Invest Real Estate",
+      "gestoraNorm": "af invest real estate",
+      "nota": 7.3,
+      "veredicto": "ACUMULAR",
+      "cotacao": 9.99,
+      "dy": 12.49,
+      "pvp": 0.98,
+      "url": "/fiis/afhf11/"
+    },
+    {
+      "id": "AFHI11",
+      "tipo": "fii",
+      "label": "AFHI11",
+      "nome": "AF Invest CRI FII",
+      "segmento": "Crédito (CRI)",
+      "gestora": "AF Invest Real Estate",
+      "gestoraNorm": "af invest real estate",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 95.05,
+      "dy": 12.67,
+      "pvp": 1.01,
+      "url": "/fiis/afhi11/"
+    },
+    {
+      "id": "AGRX11",
+      "tipo": "fii",
+      "label": "AGRX11",
+      "nome": "Fundo de Investimento nas Cadeias Produtivas Agroindustriais Exes Araguaia",
+      "segmento": "Fiagro Híbrido (Crédito do Agronegócio - CRA)",
+      "gestora": "Éxes Gestora de Recursos Ltda.",
+      "gestoraNorm": "exes de recursos .",
+      "nota": 6.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 8.88,
+      "dy": 14.4,
+      "pvp": 0.84,
+      "url": "/fiis/agrx11/"
+    },
+    {
+      "id": "AIEC11",
+      "tipo": "fii",
+      "label": "AIEC11",
+      "nome": "Arch Edifícios Corporativos FII",
+      "segmento": "Escritórios (Lajes Corporativas)",
+      "gestora": "Arch Capital (ex-Autonomy Investimentos)",
+      "gestoraNorm": "arch (ex-autonomy )",
+      "nota": 7.0,
+      "veredicto": "ACUMULAR",
+      "cotacao": 61.78,
+      "dy": 6.6,
+      "pvp": 0.81,
+      "url": "/fiis/aiec11/"
+    },
+    {
+      "id": "AJFI11",
+      "tipo": "fii",
+      "label": "AJFI11",
+      "nome": "AJ Malls Fundo de Investimento Imobiliário",
+      "segmento": "Shoppings",
+      "gestora": "Capitânia Capital S.A.",
+      "gestoraNorm": "capitania s.a.",
+      "nota": 6.0,
+      "veredicto": "MANTER",
+      "cotacao": 8.34,
+      "dy": 7.52,
+      "pvp": 0.75,
+      "url": "/fiis/ajfi11/"
+    },
+    {
+      "id": "ALMI11",
+      "tipo": "fii",
+      "label": "ALMI11",
+      "nome": "Torre Almirante FII",
+      "segmento": "Lajes Corporativas",
+      "gestora": "BTG Pactual (Gestão Passiva)",
+      "gestoraNorm": "btg pactual ( passiva)",
+      "nota": 4.0,
+      "veredicto": "VENDA",
+      "cotacao": 675,
+      "dy": 6.8,
+      "pvp": 0.33,
+      "url": "/fiis/almi11/"
+    },
+    {
+      "id": "ALZC11",
+      "tipo": "fii",
+      "label": "ALZC11",
+      "nome": "Alianza Crédito Imobiliário FII",
+      "segmento": "Papel (CRI) - High Yield",
+      "gestora": "Alianza Gestão de Recursos",
+      "gestoraNorm": "alianza de recursos",
+      "nota": 7.5,
+      "veredicto": "ACUMULAR",
+      "cotacao": 7.74,
+      "dy": 14.54,
+      "pvp": 0.83,
+      "url": "/fiis/alzc11/"
+    },
+    {
+      "id": "ALZM11",
+      "tipo": "fii",
+      "label": "ALZM11",
+      "nome": "Alianza Multiestratégia FII",
+      "segmento": "Multiestratégia (FoF + CRI)",
+      "gestora": "Alianza Gestão de Recursos",
+      "gestoraNorm": "alianza de recursos",
+      "nota": 5,
+      "veredicto": "ENCERRADO",
+      "cotacao": 6.4,
+      "dy": 15,
+      "pvp": 0.85,
+      "url": "/fiis/alzm11/"
+    },
+    {
+      "id": "ALZR11",
+      "tipo": "fii",
+      "label": "ALZR11",
+      "nome": "Alianza Trust Renda Imobiliária FII",
+      "segmento": "Híbrido — Renda urbana com contratos atípicos (BTS/SLB)",
+      "gestora": "Alianza Gestão de Recursos",
+      "gestoraNorm": "alianza de recursos",
+      "nota": 8.1,
+      "veredicto": "COMPRA",
+      "cotacao": 10.62,
+      "dy": 9.42,
+      "pvp": 1.0,
+      "url": "/fiis/alzr11/"
+    },
+    {
+      "id": "APTO11",
+      "tipo": "fii",
+      "label": "APTO11",
+      "nome": "NAVI Residencial FII",
+      "segmento": "Híbrido - Residencial / CRIs",
+      "gestora": "NAVI Capital Administradora e Gestora de Recursos Financeiros",
+      "gestoraNorm": "navi e de recursos financeiros",
+      "nota": 5.0,
+      "veredicto": "MANTER",
+      "cotacao": 8.4,
+      "dy": 12.57,
+      "pvp": 0.86,
+      "url": "/fiis/apto11/"
+    },
+    {
+      "id": "APXM11",
+      "tipo": "fii",
+      "label": "APXM11",
+      "nome": "Apex Malls Fundo de Investimento Imobiliário",
+      "segmento": "Shoppings",
+      "gestora": "BRM Carbyne Gestão de Recursos",
+      "gestoraNorm": "brm carbyne de recursos",
+      "nota": 5.2,
+      "veredicto": "MANTER",
+      "cotacao": 78.99,
+      "dy": 5.48,
+      "pvp": 0.75,
+      "url": "/fiis/apxm11/"
+    },
+    {
+      "id": "ARRI11",
+      "tipo": "fii",
+      "label": "ARRI11",
+      "nome": "Open K Ativos e Recebíveis Imobiliários FII",
+      "segmento": "Papel - Híbrido / Recebíveis",
+      "gestora": "Open Capital Gestão de Ativos (Open Kapital)",
+      "gestoraNorm": "open de ativos (open kapital)",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 6.8,
+      "dy": 15.77,
+      "pvp": 0.81,
+      "url": "/fiis/arri11/"
+    },
+    {
+      "id": "ARXD11",
+      "tipo": "fii",
+      "label": "ARXD11",
+      "nome": "ARX Dover Recebíveis FII (Responsabilidade Limitada)",
+      "segmento": "Papel (CRI) - Multicategoria",
+      "gestora": "ARX Investimentos",
+      "gestoraNorm": "arx",
+      "nota": 6.2,
+      "veredicto": "MANTER",
+      "cotacao": 8.0,
+      "dy": 13.64,
+      "pvp": 0.88,
+      "url": "/fiis/arxd11/"
+    },
+    {
+      "id": "AURB11",
+      "tipo": "fii",
+      "label": "AURB11",
+      "nome": "Alianza Urban Hub Renda Fundo de Investimento Imobiliário",
+      "segmento": "Logística (Last Mile / Urban Hub)",
+      "gestora": "Alianza Gestão de Recursos Ltda.",
+      "gestoraNorm": "alianza de recursos .",
+      "nota": 4.0,
+      "veredicto": "CAUTELA",
+      "cotacao": 72.92,
+      "dy": 5.16,
+      "pvp": 0.9,
+      "url": "/fiis/aurb11/"
+    },
+    {
+      "id": "AZPL11",
+      "tipo": "fii",
+      "label": "AZPL11",
+      "nome": "AZ Quest Panorama Logística FII",
+      "segmento": "Logística / Híbrido (Tijolo + CRI)",
+      "gestora": "AZ Quest Panorama",
+      "gestoraNorm": "az quest panorama",
+      "nota": 7.0,
+      "veredicto": "ACUMULAR",
+      "cotacao": 7.7,
+      "dy": 11.69,
+      "pvp": 0.9,
+      "url": "/fiis/azpl11/"
+    },
+    {
+      "id": "BARI11",
+      "tipo": "fii",
+      "label": "BARI11",
+      "nome": "Barigui Recebíveis Imobiliários FII",
+      "segmento": "Papel - CRI (Gestão Ativa)",
+      "gestora": "Patria - VBI Securities",
+      "gestoraNorm": "patria - vbi securities",
+      "nota": 0,
+      "veredicto": "LIQUIDADO",
+      "cotacao": 79.2,
+      "dy": 12.9,
+      "pvp": 0.89,
+      "url": "/fiis/bari11/"
+    },
+    {
+      "id": "BBFO11",
+      "tipo": "fii",
+      "label": "BBFO11",
+      "nome": "BB Fundo de Fundos - Fundo de Investimento Imobiliário",
+      "segmento": "Fundo de Fundos (Multicategoria)",
+      "gestora": "BB Asset Management (BB Gestão de Recursos DTVM)",
+      "gestoraNorm": "bb (bb de recursos )",
+      "nota": 7.5,
+      "veredicto": "ACUMULAR",
+      "cotacao": 72.95,
+      "dy": 12.52,
+      "pvp": 0.97,
+      "url": "/fiis/bbfo11/"
+    },
+    {
+      "id": "BBGO11",
+      "tipo": "fii",
+      "label": "BBGO11",
+      "nome": "BB Fundo de Investimento de Crédito FIAGRO Imobiliário Responsabilidade Limitada",
+      "segmento": "Fiagro (Crédito - CRAs do Agronegócio)",
+      "gestora": "BB Asset Management (BB Gestão de Recursos DTVM)",
+      "gestoraNorm": "bb (bb de recursos )",
+      "nota": 7.0,
+      "veredicto": "ACUMULAR",
+      "cotacao": 75.89,
+      "dy": 13.44,
+      "pvp": 0.81,
+      "url": "/fiis/bbgo11/"
+    },
+    {
+      "id": "BBIG11",
+      "tipo": "fii",
+      "label": "BBIG11",
+      "nome": "BB Premium Malls Fundo de Investimento Imobiliário de Responsabilidade Limitada",
+      "segmento": "Shoppings (Tijolo - Renda - Gestão Ativa)",
+      "gestora": "BB Asset (BB Gestão de Recursos DTVM) | Consultoria Iguatemi",
+      "gestoraNorm": "bb asset (bb de recursos ) | consultoria iguatemi",
+      "nota": 6.5,
+      "veredicto": "ACUMULAR",
+      "cotacao": 7.06,
+      "dy": 13.34,
+      "pvp": 0.74,
+      "url": "/fiis/bbig11/"
+    },
+    {
+      "id": "BBRC11",
+      "tipo": "fii",
+      "label": "BBRC11",
+      "nome": "BB Renda Corporativa Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "segmento": "Renda Urbana / Agências Bancárias (BTS Banco do Brasil)",
+      "gestora": "Tivio Capital DTVM (gestão) | BEM DTVM/Bradesco (administração)",
+      "gestoraNorm": "tivio () | bem /bradesco (administracao)",
+      "nota": 6.3,
+      "veredicto": "MANTER",
+      "cotacao": 105.6,
+      "dy": 11.94,
+      "pvp": 1.01,
+      "url": "/fiis/bbrc11/"
+    },
+    {
+      "id": "BCFF11",
+      "tipo": "fii",
+      "label": "BCFF11",
+      "nome": "BTG Pactual Fundo de Fundos FII",
+      "segmento": "Fundo de Fundos",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 5.5,
+      "veredicto": "LIQUIDADO",
+      "cotacao": 8.07,
+      "dy": 10.41,
+      "pvp": 0.88,
+      "url": "/fiis/bcff11/"
+    },
+    {
+      "id": "BCIA11",
+      "tipo": "fii",
+      "label": "BCIA11",
+      "nome": "Bradesco Carteira Imobiliária Ativa",
+      "segmento": "Fundo de Fundos (FoF) Híbrido - Tijolo + CRI",
+      "gestora": "Bradesco Asset Management (BRAM)",
+      "gestoraNorm": "bradesco (bram)",
+      "nota": 7.2,
+      "veredicto": "ACUMULAR",
+      "cotacao": 94.35,
+      "dy": 11.72,
+      "pvp": 0.91,
+      "url": "/fiis/bcia11/"
+    },
+    {
+      "id": "BCRI11",
+      "tipo": "fii",
+      "label": "BCRI11",
+      "nome": "Banestes Recebíveis Imobiliários FII - Responsabilidade Limitada",
+      "segmento": "Papel (CRI) - High Yield",
+      "gestora": "Banestes DTVM S.A.",
+      "gestoraNorm": "banestes s.a.",
+      "nota": 6.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 64.3,
+      "dy": 15.33,
+      "pvp": 0.75,
+      "url": "/fiis/bcri11/"
+    },
+    {
+      "id": "BIME11",
+      "tipo": "fii",
+      "label": "BIME11",
+      "nome": "Brio Multiestratégia - Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "segmento": "Híbrido (CRI + Cotas de FII + Permutas Residenciais)",
+      "gestora": "Brio Investimentos",
+      "gestoraNorm": "brio",
+      "nota": 5.8,
+      "veredicto": "MANTER",
+      "cotacao": 6.12,
+      "dy": 15.01,
+      "pvp": 0.72,
+      "url": "/fiis/bime11/"
+    },
+    {
+      "id": "BIPD11",
+      "tipo": "fii",
+      "label": "BIPD11",
+      "nome": "Brio Real Estate IV - Fundo de Investimento Imobiliário - Responsabilidade Limitada",
+      "segmento": "Desenvolvimento Residencial (Permutas) - Alto Padrão SP",
+      "gestora": "Brio Investimentos Ltda.",
+      "gestoraNorm": "brio .",
+      "nota": 4.0,
+      "veredicto": "CAUTELA",
+      "cotacao": 989.33,
+      "dy": 6.67,
+      "pvp": 1.04,
+      "url": "/fiis/bipd11/"
+    },
+    {
+      "id": "BLCA11",
+      "tipo": "fii",
+      "label": "BLCA11",
+      "nome": "Catuaí VBI Triple A Fundo de Investimento Imobiliário",
+      "segmento": "Escritórios Triple A (Lajes Corporativas)",
+      "gestora": "Pátria Investimentos / VBI Real Estate (cogestão Catuaí Asset)",
+      "gestoraNorm": "patria / vbi real estate (cogestao catuai asset)",
+      "nota": 6.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 96.56,
+      "dy": 6.59,
+      "pvp": 0.76,
+      "url": "/fiis/blca11/"
+    },
+    {
+      "id": "BLMG11",
+      "tipo": "fii",
+      "label": "BLMG11",
+      "nome": "Bluemacaw FII",
+      "segmento": "Híbrido / Multiestratégia (em transição)",
+      "gestora": "BlueMacaw Gestora de Recursos",
+      "gestoraNorm": "bluemacaw de recursos",
+      "nota": 5.8,
+      "veredicto": "MANTER",
+      "cotacao": 32.65,
+      "dy": 13.7,
+      "pvp": 0.69,
+      "url": "/fiis/blmg11/"
+    },
+    {
+      "id": "BLMO11",
+      "tipo": "fii",
+      "label": "BLMO11",
+      "nome": "VBI Office Fund II FII",
+      "segmento": "Escritórios (Lajes Corporativas)",
+      "gestora": "Pátria Investimentos (VBI Real Estate)",
+      "gestoraNorm": "patria (vbi real estate)",
+      "nota": 4.5,
+      "veredicto": "CAUTELA",
+      "cotacao": 87.99,
+      "dy": 7.2,
+      "pvp": 0.89,
+      "url": "/fiis/blmo11/"
+    },
+    {
+      "id": "BLMR11",
+      "tipo": "fii",
+      "label": "BLMR11",
+      "nome": "VBI Renda+ FOF FII",
+      "segmento": "Fundo de Fundos",
+      "gestora": "VBI Real Estate",
+      "gestoraNorm": "vbi real estate",
+      "nota": 0,
+      "veredicto": "LIQUIDADO",
+      "cotacao": 6.64,
+      "dy": 0,
+      "pvp": 0.87,
+      "url": "/fiis/blmr11/"
+    },
+    {
+      "id": "BMLC11",
+      "tipo": "fii",
+      "label": "BMLC11",
+      "nome": "BM Brascan Lajes Corporativas FII",
+      "segmento": "Lajes Corporativas (Tijolo)",
+      "gestora": "Argucia Capital Management",
+      "gestoraNorm": "argucia management",
+      "nota": 5.8,
+      "veredicto": "MANTER",
+      "cotacao": 101.0,
+      "dy": 8.29,
+      "pvp": 0.92,
+      "url": "/fiis/bmlc11/"
+    },
+    {
+      "id": "BNFS11",
+      "tipo": "fii",
+      "label": "BNFS11",
+      "nome": "Banrisul Novas Fronteiras Fundo de Investimento Imobiliário",
+      "segmento": "Tijolo - Varejo (Agências Bancárias)",
+      "gestora": "Oliveira Trust DTVM",
+      "gestoraNorm": "oliveira trust",
+      "nota": 4.2,
+      "veredicto": "CAUTELA",
+      "cotacao": 53.98,
+      "dy": 18.52,
+      "pvp": 0.77,
+      "url": "/fiis/bnfs11/"
+    },
+    {
+      "id": "BPFF11",
+      "tipo": "fii",
+      "label": "BPFF11",
+      "nome": "Brasil Plural Absoluto FoF FII",
+      "segmento": "Fundo de Fundos",
+      "gestora": "Plural Gestão de Recursos",
+      "gestoraNorm": "plural de recursos",
+      "nota": 3,
+      "veredicto": "VENDA",
+      "cotacao": 54.52,
+      "dy": 16.54,
+      "pvp": 0.78,
+      "url": "/fiis/bpff11/"
+    },
+    {
+      "id": "BPML11",
+      "tipo": "fii",
+      "label": "BPML11",
+      "nome": "FII BTG Pactual Shoppings",
+      "segmento": "Shoppings",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 7.4,
+      "veredicto": "ACUMULAR",
+      "cotacao": 94.87,
+      "dy": 11.79,
+      "pvp": 0.77,
+      "url": "/fiis/bpml11/"
+    },
+    {
+      "id": "BRCO11",
+      "tipo": "fii",
+      "label": "BRCO11",
+      "nome": "Bresco Logística FII",
+      "segmento": "Logística",
+      "gestora": "Bresco Investimentos e Gestão Ltda.",
+      "gestoraNorm": "bresco e .",
+      "nota": 7.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 117.0,
+      "dy": 9.4,
+      "pvp": 1.0,
+      "url": "/fiis/brco11/"
+    },
+    {
+      "id": "BRCR11",
+      "tipo": "fii",
+      "label": "BRCR11",
+      "nome": "BTG Pactual Corporate Office Fund",
+      "segmento": "Escritórios (Lajes Corporativas)",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 7.3,
+      "veredicto": "ACUMULAR",
+      "cotacao": 47.97,
+      "dy": 10.24,
+      "pvp": 0.56,
+      "url": "/fiis/brcr11/"
+    },
+    {
+      "id": "BROF11",
+      "tipo": "fii",
+      "label": "BROF11",
+      "nome": "BRPR Corporate Offices Fundo de Investimento Imobiliário",
+      "segmento": "Lajes Corporativas (Escritórios AAA)",
+      "gestora": "BGR Asset Management Ltda.",
+      "gestoraNorm": "bgr .",
+      "nota": 6.5,
+      "veredicto": "ACUMULAR",
+      "cotacao": 60.87,
+      "dy": 10.53,
+      "pvp": 0.55,
+      "url": "/fiis/brof11/"
+    },
+    {
+      "id": "BTAL11",
+      "tipo": "fii",
+      "label": "BTAL11",
+      "nome": "BTG Pactual Agro Logística FIAGRO",
+      "segmento": "FIAGRO - Logística do Agronegócio",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 7.2,
+      "veredicto": "COMPRA COM RESSALVAS",
+      "cotacao": 90.5,
+      "dy": 13.26,
+      "pvp": 0.78,
+      "url": "/fiis/btal11/"
+    },
+    {
+      "id": "BTCI11",
+      "tipo": "fii",
+      "label": "BTCI11",
+      "nome": "FII BTG Pactual Crédito Imobiliário",
+      "segmento": "Papel (CRI) - Híbrido",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 7.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 9.43,
+      "dy": 12.18,
+      "pvp": 0.93,
+      "url": "/fiis/btci11/"
+    },
+    {
+      "id": "BTCR11",
+      "tipo": "fii",
+      "label": "BTCR11",
+      "nome": "BTG Pactual Crédito Imobiliário FII",
+      "segmento": "Papel - CRI",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 6,
+      "veredicto": "MANTER",
+      "cotacao": 91.69,
+      "dy": 11.8,
+      "pvp": 0.96,
+      "url": "/fiis/btcr11/"
+    },
+    {
+      "id": "BTHF11",
+      "tipo": "fii",
+      "label": "BTHF11",
+      "nome": "BTG Pactual Real Estate Hedge Fund FII",
+      "segmento": "Híbrido (Hedge Fund Imobiliário)",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 8.0,
+      "veredicto": "COMPRA",
+      "cotacao": 9.39,
+      "dy": 12.05,
+      "pvp": 0.95,
+      "url": "/fiis/bthf11/"
+    },
+    {
+      "id": "BTHI11",
+      "tipo": "fii",
+      "label": "BTHI11",
+      "nome": "BTG Hotéis Fundo de Investimento Imobiliário",
+      "segmento": "Hotel",
+      "gestora": "BTG Pactual (com HotelInvest)",
+      "gestoraNorm": "btg pactual (com hotelinvest)",
+      "nota": 5.8,
+      "veredicto": "MANTER",
+      "cotacao": 44.99,
+      "dy": 10.54,
+      "pvp": 0.69,
+      "url": "/fiis/bthi11/"
+    },
+    {
+      "id": "BTLG11",
+      "tipo": "fii",
+      "label": "BTLG11",
+      "nome": "BTG Pactual Logística Fundo de Investimento Imobiliário",
+      "segmento": "Logística",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 8.7,
+      "veredicto": "COMPRA",
+      "cotacao": 104.0,
+      "dy": 9.04,
+      "pvp": 1.01,
+      "url": "/fiis/btlg11/"
+    },
+    {
+      "id": "BTRA11",
+      "tipo": "fii",
+      "label": "BTRA11",
+      "nome": "BTG Pactual Terras Agrícolas FIAGRO",
+      "segmento": "Fiagro — Terras Agrícolas",
+      "gestora": "BTG Pactual Gestora de Recursos Ltda.",
+      "gestoraNorm": "btg pactual de recursos .",
+      "nota": 7.5,
+      "veredicto": "ACUMULAR",
+      "cotacao": 67.45,
+      "dy": 15.42,
+      "pvp": 0.6,
+      "url": "/fiis/btra11/"
+    },
+    {
+      "id": "CACR11",
+      "tipo": "fii",
+      "label": "CACR11",
+      "nome": "Cartesia Recebíveis Imobiliários FII",
+      "segmento": "Papel (CRI) — Recebíveis Imobiliários",
+      "gestora": "Cartesia Investimentos e Gestão de Recursos",
+      "gestoraNorm": "cartesia e de recursos",
+      "nota": 5.8,
+      "veredicto": "MANTER",
+      "cotacao": 81.24,
+      "dy": 19.18,
+      "pvp": 0.86,
+      "url": "/fiis/cacr11/"
+    },
+    {
+      "id": "CARE11",
+      "tipo": "fii",
+      "label": "CARE11",
+      "nome": "Brazilian Graveyard & Death Care Services FII",
+      "segmento": "Tijolo - Cemitérios e Serviços Funerários",
+      "gestora": "Zion Gestão de Recursos (Gestor) / Master S/A (Admin desde jul/2025)",
+      "gestoraNorm": "zion de recursos (gestor) / master s/a (admin desde jul/2025)",
+      "nota": 3,
+      "veredicto": "VENDA",
+      "cotacao": 1.39,
+      "dy": 0,
+      "pvp": 0.2,
+      "url": "/fiis/care11/"
+    },
+    {
+      "id": "CBOP11",
+      "tipo": "fii",
+      "label": "CBOP11",
+      "nome": "Castello Branco Office Park FII",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "gestora": "Pátria Investimentos",
+      "gestoraNorm": "patria",
+      "nota": 5.5,
+      "veredicto": "MANTER",
+      "cotacao": 33.17,
+      "dy": 18.1,
+      "pvp": 0.46,
+      "url": "/fiis/cbop11/"
+    },
+    {
+      "id": "CCME11",
+      "tipo": "fii",
+      "label": "CCME11",
+      "nome": "Canuma Capital Multiestratégia FII",
+      "segmento": "Multiestratégia (CRIs, Imóveis, FIIs, Ações)",
+      "gestora": "Canuma Capital",
+      "gestoraNorm": "canuma",
+      "nota": 7.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 9.14,
+      "dy": 11.01,
+      "pvp": 0.86,
+      "url": "/fiis/ccme11/"
+    },
+    {
+      "id": "CEOC11",
+      "tipo": "fii",
+      "label": "CEOC11",
+      "nome": "FII CEO Cyrela Commercial Properties",
+      "segmento": "Escritórios (Mono-imóvel / Mono-inquilino)",
+      "gestora": "BTG Pactual Serviços Financeiros DTVM (Administrador) | Cyrela Commercial Properties (Consultor)",
+      "gestoraNorm": "btg pactual servicos financeiros (administrador) | cyrela commercial properties (consultor)",
+      "nota": 5.5,
+      "veredicto": "MANTER",
+      "cotacao": 42.98,
+      "dy": 12.99,
+      "pvp": 0.63,
+      "url": "/fiis/ceoc11/"
+    },
+    {
+      "id": "CJCT11",
+      "tipo": "fii",
+      "label": "CJCT11",
+      "nome": "Cidade Jardim Continental Tower FII",
+      "segmento": "Escritórios (Lajes Corporativas)",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 5.2,
+      "veredicto": "MANTER",
+      "cotacao": 64.26,
+      "dy": 4.46,
+      "pvp": 0.87,
+      "url": "/fiis/cjct11/"
+    },
+    {
+      "id": "CLIN11",
+      "tipo": "fii",
+      "label": "CLIN11",
+      "nome": "Clave Índices de Preços FII",
+      "segmento": "Papel (CRI) — FII de Crédito High Grade",
+      "gestora": "BTG Pactual Asset Management (ex-Clave Alternativos)",
+      "gestoraNorm": "btg pactual (ex-clave alternativos)",
+      "nota": 7.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 93.77,
+      "dy": 12.69,
+      "pvp": 0.96,
+      "url": "/fiis/clin11/"
+    },
+    {
+      "id": "CNES11",
+      "tipo": "fii",
+      "label": "CNES11",
+      "nome": "Cenesp Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "segmento": "Escritórios (Lajes Corporativas)",
+      "gestora": "BTG Pactual Gestora de Recursos",
+      "gestoraNorm": "btg pactual de recursos",
+      "nota": 3.0,
+      "veredicto": "CAUTELA",
+      "cotacao": 1.56,
+      "dy": 5.74,
+      "pvp": 0.24,
+      "url": "/fiis/cnes11/"
+    },
+    {
+      "id": "CPFF11",
+      "tipo": "fii",
+      "label": "CPFF11",
+      "nome": "Capitânia Reit FOF FII",
+      "segmento": "Fundo de Fundos",
+      "gestora": "Capitânia Investimentos",
+      "gestoraNorm": "capitania",
+      "nota": 0,
+      "veredicto": "LIQUIDADO",
+      "cotacao": 70,
+      "dy": 8.81,
+      "pvp": 0.96,
+      "url": "/fiis/cpff11/"
+    },
+    {
+      "id": "CPLG11",
+      "tipo": "fii",
+      "label": "CPLG11",
+      "nome": "Capitânia Logística Fundo de Investimento Imobiliário",
+      "segmento": "Logística (Tijolo com fase híbrida ativa)",
+      "gestora": "Capitânia Investimentos",
+      "gestoraNorm": "capitania",
+      "nota": 6.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 11.71,
+      "dy": 11.41,
+      "pvp": 1.09,
+      "url": "/fiis/cplg11/"
+    },
+    {
+      "id": "CPOF11",
+      "tipo": "fii",
+      "label": "CPOF11",
+      "nome": "Capitânia Office FII",
+      "segmento": "Lajes Corporativas (Escritórios)",
+      "gestora": "Capitânia Alternatives S.A.",
+      "gestoraNorm": "capitania alternatives s.a.",
+      "nota": 7.0,
+      "veredicto": "ACUMULAR",
+      "cotacao": 103.99,
+      "dy": 6.04,
+      "pvp": 0.98,
+      "url": "/fiis/cpof11/"
+    },
+    {
+      "id": "CPSH11",
+      "tipo": "fii",
+      "label": "CPSH11",
+      "nome": "Capitânia Shoppings Fundo de Investimento Imobiliário",
+      "segmento": "Shoppings",
+      "gestora": "Capitânia Investimentos",
+      "gestoraNorm": "capitania",
+      "nota": 7.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 10.65,
+      "dy": 12.16,
+      "pvp": 0.92,
+      "url": "/fiis/cpsh11/"
+    },
+    {
+      "id": "CPTR11",
+      "tipo": "fii",
+      "label": "CPTR11",
+      "nome": "Capitânia Agro Strategies FIAGRO-Imobiliário",
+      "segmento": "Fiagro - Crédito Agro (CRA/CRI/FIDC)",
+      "gestora": "Capitânia Investimentos",
+      "gestoraNorm": "capitania",
+      "nota": 6.8,
+      "veredicto": "ACUMULAR",
+      "cotacao": 8.45,
+      "dy": 15.2,
+      "pvp": 0.84,
+      "url": "/fiis/cptr11/"
+    },
+    {
+      "id": "CPTS11",
+      "tipo": "fii",
+      "label": "CPTS11",
+      "nome": "Capitânia Securities II FII",
+      "segmento": "Híbrido (CRI + FII) — Papel/Tijolo Gestão Ativa",
+      "gestora": "Capitânia Investimentos",
+      "gestoraNorm": "capitania",
+      "nota": 8.0,
+      "veredicto": "COMPRA",
+      "cotacao": 8.02,
+      "dy": 13.06,
+      "pvp": 0.89,
+      "url": "/fiis/cpts11/"
+    },
+    {
+      "id": "CPUR11",
+      "tipo": "fii",
+      "label": "CPUR11",
+      "nome": "Capitânia HBC Renda Urbana FII",
+      "segmento": "Híbrido - Renda Urbana (Varejo, Saúde e Logística)",
+      "gestora": "Capitânia HBC",
+      "gestoraNorm": "capitania hbc",
+      "nota": 6.5,
+      "veredicto": null,
+      "cotacao": 10.33,
+      "dy": 10.64,
+      "pvp": 1.05,
+      "url": "/fiis/cpur11/"
+    },
+    {
+      "id": "CRAA11",
+      "tipo": "fii",
+      "label": "CRAA11",
+      "nome": "Sparta Fiagro Fundo de Investimento nas Cadeias Produtivas Agroindustriais",
+      "segmento": "Fiagro - CRA (Agronegócio)",
+      "gestora": "Sparta Administradora de Recursos",
+      "gestoraNorm": "sparta de recursos",
+      "nota": 8.2,
+      "veredicto": null,
+      "cotacao": 101.78,
+      "dy": 14.74,
+      "pvp": 1.0,
+      "url": "/fiis/craa11/"
+    },
+    {
+      "id": "CRFF11",
+      "tipo": "fii",
+      "label": "CRFF11",
+      "nome": "Caixa Rio Bravo Fundo de Fundos de Investimento Imobiliário II",
+      "segmento": "Fundo de Fundos (FOF) - Multicategoria",
+      "gestora": "CAIXA Asset + Rio Bravo Investimentos",
+      "gestoraNorm": "caixa asset + rio bravo",
+      "nota": 7.2,
+      "veredicto": null,
+      "cotacao": 76.28,
+      "dy": 10.48,
+      "pvp": 0.89,
+      "url": "/fiis/crff11/"
+    },
+    {
+      "id": "CVBI11",
+      "tipo": "fii",
+      "label": "CVBI11",
+      "nome": "Patria Crédito Imobiliário Índice de Preços FII",
+      "segmento": "Papel (CRI High Grade indexado ao IPCA)",
+      "gestora": "Pátria - VBI Securities",
+      "gestoraNorm": "patria - vbi securities",
+      "nota": 8.0,
+      "veredicto": null,
+      "cotacao": 82.78,
+      "dy": 14.35,
+      "pvp": 0.89,
+      "url": "/fiis/cvbi11/"
+    },
+    {
+      "id": "CXAG11",
+      "tipo": "fii",
+      "label": "CXAG11",
+      "nome": "Fundo de Investimento Imobiliário Caixa Agências",
+      "segmento": "Agências Bancárias (Tijolo - Renda)",
+      "gestora": "RB Asset Management (ex-RB Capital)",
+      "gestoraNorm": "rb (ex-rb )",
+      "nota": 6.0,
+      "veredicto": null,
+      "cotacao": 76.11,
+      "dy": 11.84,
+      "pvp": 0.69,
+      "url": "/fiis/cxag11/"
+    },
+    {
+      "id": "CXCI11",
+      "tipo": "fii",
+      "label": "CXCI11",
+      "nome": "FII Caixa Carteira Imobiliária",
+      "segmento": "Fundo de Fundos (FoF) - Multicategoria",
+      "gestora": "Caixa Asset",
+      "gestoraNorm": "caixa asset",
+      "nota": 6.8,
+      "veredicto": null,
+      "cotacao": 73.62,
+      "dy": 12.55,
+      "pvp": 0.85,
+      "url": "/fiis/cxci11/"
+    },
+    {
+      "id": "CXCO11",
+      "tipo": "fii",
+      "label": "CXCO11",
+      "nome": "Caixa Imóveis Corporativos Fundo de Investimento Imobiliário",
+      "segmento": "Lajes Corporativas (Sale and Leaseback - Caixa Econômica Federal)",
+      "gestora": "Patagônia Capital Gestora de Recursos Ltda.",
+      "gestoraNorm": "patagonia de recursos .",
+      "nota": 6.2,
+      "veredicto": null,
+      "cotacao": 75.98,
+      "dy": 11.59,
+      "pvp": 0.8,
+      "url": "/fiis/cxco11/"
+    },
+    {
+      "id": "CXRI11",
+      "tipo": "fii",
+      "label": "CXRI11",
+      "nome": "Caixa Rio Bravo Fundo de Fundos de Investimento Imobiliário",
+      "segmento": "Fundo de Fundos (FOF) - Multicategoria",
+      "gestora": "Caixa Asset & Rio Bravo Investimentos",
+      "gestoraNorm": "caixa asset & rio bravo",
+      "nota": 7.6,
+      "veredicto": null,
+      "cotacao": 65.35,
+      "dy": 11.82,
+      "pvp": 0.75,
+      "url": "/fiis/cxri11/"
+    },
+    {
+      "id": "CXTL11",
+      "tipo": "fii",
+      "label": "CXTL11",
+      "nome": "Caixa Seq Logistica Renda FII",
+      "segmento": "Tijolo - Logistica/Industrial",
+      "gestora": "Caixa Economica Federal / Sequoia Properties",
+      "gestoraNorm": "caixa economica federal / sequoia properties",
+      "nota": 4,
+      "veredicto": "VENDA",
+      "cotacao": 310.14,
+      "dy": 4.81,
+      "pvp": 0.75,
+      "url": "/fiis/cxtl11/"
+    },
+    {
+      "id": "CYCR11",
+      "tipo": "fii",
+      "label": "CYCR11",
+      "nome": "Cyrela Crédito Imobiliário FII",
+      "segmento": "Papel - CRI",
+      "gestora": "CY.Capital",
+      "gestoraNorm": "cy.",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 8.85,
+      "dy": 15.36,
+      "pvp": 0.94,
+      "url": "/fiis/cycr11/"
+    },
+    {
+      "id": "DCRA11",
+      "tipo": "fii",
+      "label": "DCRA11",
+      "nome": "Devant FIAGRO Imobiliário de Responsabilidade Limitada",
+      "segmento": "Fiagro — Crédito (CRA e cotas de Fiagros)",
+      "gestora": "Devant Asset Investimentos",
+      "gestoraNorm": "devant asset",
+      "nota": 6.8,
+      "veredicto": null,
+      "cotacao": 7.27,
+      "dy": 14.85,
+      "pvp": 0.74,
+      "url": "/fiis/dcra11/"
+    },
+    {
+      "id": "DEVA11",
+      "tipo": "fii",
+      "label": "DEVA11",
+      "nome": "Devant Recebíveis Imobiliários FII",
+      "segmento": "Papel (CRI) — Multicategoria / High Yield",
+      "gestora": "Devant Asset Investimentos",
+      "gestoraNorm": "devant asset",
+      "nota": 3.8,
+      "veredicto": null,
+      "cotacao": 23.49,
+      "dy": 18.66,
+      "pvp": 0.24,
+      "url": "/fiis/deva11/"
+    },
+    {
+      "id": "DVFF11",
+      "tipo": "fii",
+      "label": "DVFF11",
+      "nome": "FII Devant Fundo de Fundos Imobiliários de Responsabilidade Limitada",
+      "segmento": "Fundo de Fundos (FoF)",
+      "gestora": "Devant Asset Investimentos",
+      "gestoraNorm": "devant asset",
+      "nota": 6.2,
+      "veredicto": null,
+      "cotacao": 5.78,
+      "dy": 13.34,
+      "pvp": 0.67,
+      "url": "/fiis/dvff11/"
+    },
+    {
+      "id": "EDGA11",
+      "tipo": "fii",
+      "label": "EDGA11",
+      "nome": "FII Edifício Galeria Responsabilidade Limitada",
+      "segmento": "Lajes Corporativas (Monoativo - Centro RJ)",
+      "gestora": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "gestoraNorm": "btg pactual servicos financeiros s.a.",
+      "nota": 3.5,
+      "veredicto": null,
+      "cotacao": 14.35,
+      "dy": 3.23,
+      "pvp": 0.34,
+      "url": "/fiis/edga11/"
+    },
+    {
+      "id": "EGAF11",
+      "tipo": "fii",
+      "label": "EGAF11",
+      "nome": "Ecoagro I Fiagro - Responsabilidade Limitada",
+      "segmento": "FIAGRO - Recebíveis do Agronegócio (CRA High Grade)",
+      "gestora": "Eco Gestão de Ativos + Multiplica (co-gestora)",
+      "gestoraNorm": "eco de ativos + multiplica (co-)",
+      "nota": 7.8,
+      "veredicto": null,
+      "cotacao": 100.08,
+      "dy": 17.03,
+      "pvp": 1.01,
+      "url": "/fiis/egaf11/"
+    },
+    {
+      "id": "EIRA11",
+      "tipo": "fii",
+      "label": "EIRA11",
+      "nome": "Aroeira Fundo de Investimento Imobiliário",
+      "segmento": "Papel (CRI) - Híbrido Multicategoria",
+      "gestora": "Aroeira Asset Gestão de Recursos",
+      "gestoraNorm": "aroeira asset de recursos",
+      "nota": 6.2,
+      "veredicto": null,
+      "cotacao": 104.55,
+      "dy": 12.35,
+      "pvp": 1.01,
+      "url": "/fiis/eira11/"
+    },
+    {
+      "id": "EMET11",
+      "tipo": "fii",
+      "label": "EMET11",
+      "nome": "EMET Multiestratégia Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "segmento": "Multiestratégia (FOF / Multicategoria)",
+      "gestora": "V2 Investimentos Ltda.",
+      "gestoraNorm": "v2 .",
+      "nota": 4.5,
+      "veredicto": null,
+      "cotacao": 9.35,
+      "dy": 13.12,
+      "pvp": 0.94,
+      "url": "/fiis/emet11/"
+    },
+    {
+      "id": "EQIR11",
+      "tipo": "fii",
+      "label": "EQIR11",
+      "nome": "EQI Recebíveis Imobiliários FII",
+      "segmento": "Papel (CRI) — Multicategoria",
+      "gestora": "EQI Asset (Euqueroinvestir Gestão de Recursos)",
+      "gestoraNorm": "eqi asset (euqueroinvestir de recursos)",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 8.84,
+      "dy": 13.45,
+      "pvp": 0.91,
+      "url": "/fiis/eqir11/"
+    },
+    {
+      "id": "ERPA11",
+      "tipo": "fii",
+      "label": "ERPA11",
+      "nome": "Europa 105 Fundo de Investimento Imobiliário",
+      "segmento": "Lajes Corporativas (Monoativo)",
+      "gestora": "Angá Administração de Recursos",
+      "gestoraNorm": "anga administracao de recursos",
+      "nota": 5.5,
+      "veredicto": null,
+      "cotacao": 126.97,
+      "dy": 8.78,
+      "pvp": 0.77,
+      "url": "/fiis/erpa11/"
+    },
+    {
+      "id": "EURO11",
+      "tipo": "fii",
+      "label": "EURO11",
+      "nome": "FII Europar",
+      "segmento": "Tijolo - Logistica/Industrial",
+      "gestora": "Coinvalores CCVM",
+      "gestoraNorm": "coinvalores ccvm",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 302.93,
+      "dy": 7.77,
+      "pvp": 0.76,
+      "url": "/fiis/euro11/"
+    },
+    {
+      "id": "EXES11",
+      "tipo": "fii",
+      "label": "EXES11",
+      "nome": "Éxes Fundo de Investimento Imobiliário Responsabilidade Limitada",
+      "segmento": "Títulos e Valores Mobiliários (Papel/Híbrido)",
+      "gestora": "Éxes Gestora de Recursos Ltda.",
+      "gestoraNorm": "exes de recursos .",
+      "nota": 6.8,
+      "veredicto": null,
+      "cotacao": 9.44,
+      "dy": 16.8,
+      "pvp": 0.95,
+      "url": "/fiis/exes11/"
+    },
+    {
+      "id": "FAED11",
+      "tipo": "fii",
+      "label": "FAED11",
+      "nome": "Anhanguera Educacional FII",
+      "segmento": "Tijolo - Educacional (mono-inquilino)",
+      "gestora": "BTG Pactual Serviços Financeiros DTVM",
+      "gestoraNorm": "btg pactual servicos financeiros",
+      "nota": 6.0,
+      "veredicto": "MANTER COM CAUTELA",
+      "cotacao": 147.7,
+      "dy": 13.48,
+      "pvp": 0.66,
+      "url": "/fiis/faed11/"
+    },
+    {
+      "id": "FAMB11",
+      "tipo": "fii",
+      "label": "FAMB11",
+      "nome": "FII Edifício Almirante Barroso",
+      "segmento": "Lajes Corporativas (Monoativo) - em reposicionamento",
+      "gestora": "Áfira Gestão de Recursos",
+      "gestoraNorm": "afira de recursos",
+      "nota": 3.0,
+      "veredicto": null,
+      "cotacao": 1068.94,
+      "dy": 0.0,
+      "pvp": 1.08,
+      "url": "/fiis/famb11/"
+    },
+    {
+      "id": "FATN11",
+      "tipo": "fii",
+      "label": "FATN11",
+      "nome": "BRC Renda Corporativa Fundo de Investimento Imobiliário",
+      "segmento": "Lajes Corporativas (Plug & Play / Built-to-Suit)",
+      "gestora": "BR-Capital DTVM + Unitas Real Estate (consultor imobiliário)",
+      "gestoraNorm": "br- + unitas real estate (consultor imobiliario)",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 85.59,
+      "dy": 11.22,
+      "pvp": 0.89,
+      "url": "/fiis/fatn11/"
+    },
+    {
+      "id": "FCFL11",
+      "tipo": "fii",
+      "label": "FCFL11",
+      "nome": "FII Campus Faria Lima Responsabilidade Limitada",
+      "segmento": "Tijolo - Educacional (Laje BTS)",
+      "gestora": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "gestoraNorm": "btg pactual servicos financeiros s.a.",
+      "nota": 7.2,
+      "veredicto": "MANTER",
+      "cotacao": 126.4,
+      "dy": 8.83,
+      "pvp": 1.01,
+      "url": "/fiis/fcfl11/"
+    },
+    {
+      "id": "FGAA11",
+      "tipo": "fii",
+      "label": "FGAA11",
+      "nome": "FG/Agro Fundo de Investimento nas Cadeias Produtivas Agroindustriais",
+      "segmento": "FIAGRO - Papel (CRAs agroindustriais)",
+      "gestora": "FG/A Gestora de Recursos Ltda.",
+      "gestoraNorm": "fg/a de recursos .",
+      "nota": 5.5,
+      "veredicto": null,
+      "cotacao": 8.65,
+      "dy": 15.95,
+      "pvp": 0.92,
+      "url": "/fiis/fgaa11/"
+    },
+    {
+      "id": "FIGS11",
+      "tipo": "fii",
+      "label": "FIGS11",
+      "nome": "General Shopping Ativo e Renda FII",
+      "segmento": "Tijolo - Shopping Centers",
+      "gestora": "Hedge Investments (Administradora e Gestora)",
+      "gestoraNorm": "hedge investments ( e )",
+      "nota": 5.0,
+      "veredicto": "MANTER",
+      "cotacao": 47.02,
+      "dy": 12.25,
+      "pvp": 0.67,
+      "url": "/fiis/figs11/"
+    },
+    {
+      "id": "FIIB11",
+      "tipo": "fii",
+      "label": "FIIB11",
+      "nome": "Industrial do Brasil FII",
+      "segmento": "Tijolo - Industrial/Logística",
+      "gestora": "Coinvalores CCVM",
+      "gestoraNorm": "coinvalores ccvm",
+      "nota": 5.5,
+      "veredicto": "VENDA",
+      "cotacao": 479,
+      "dy": 8.97,
+      "pvp": 0.81,
+      "url": "/fiis/fiib11/"
+    },
+    {
+      "id": "FIIP11",
+      "tipo": "fii",
+      "label": "FIIP11",
+      "nome": "RB Capital Renda I Fundo de Investimento Imobiliário - FII - Responsabilidade Limitada",
+      "segmento": "Híbrido (Logística, Centro de Distribuição e Varejo)",
+      "gestora": "RB Asset (consultora imobiliária) / Oliveira Trust (administradora)",
+      "gestoraNorm": "rb asset (consultora imobiliaria) / oliveira trust ()",
+      "nota": 7.0,
+      "veredicto": null,
+      "cotacao": 135.0,
+      "dy": 12.44,
+      "pvp": 0.68,
+      "url": "/fiis/fiip11/"
+    },
+    {
+      "id": "FLCR11",
+      "tipo": "fii",
+      "label": "FLCR11",
+      "nome": "Faria Lima Capital Recebíveis Imobiliários I FII",
+      "segmento": "FII de Papel (CRI High Yield)",
+      "gestora": "Faria Lima Capital Ltda.",
+      "gestoraNorm": "faria lima .",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 96.7,
+      "dy": 13.8,
+      "pvp": 1.02,
+      "url": "/fiis/flcr11/"
+    },
+    {
+      "id": "FLMA11",
+      "tipo": "fii",
+      "label": "FLMA11",
+      "nome": "FII Continental Square Faria Lima - Responsabilidade Limitada",
+      "segmento": "Híbrido — Hotel + Lajes Corporativas (mesmo edifício)",
+      "gestora": "BR-Capital DTVM (admin/gestor) + Unitas Real Estate (consultor imobiliário)",
+      "gestoraNorm": "br- (admin/gestor) + unitas real estate (consultor imobiliario)",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 159.0,
+      "dy": 8.02,
+      "pvp": 0.64,
+      "url": "/fiis/flma11/"
+    },
+    {
+      "id": "FLRP11",
+      "tipo": "fii",
+      "label": "FLRP11",
+      "nome": "Hedge Floripa Shopping FII",
+      "segmento": "Tijolo - Shopping Center (Mono-ativo)",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 6.0,
+      "veredicto": "MANTER",
+      "cotacao": 21.48,
+      "dy": 8.66,
+      "pvp": 1.02,
+      "url": "/fiis/flrp11/"
+    },
+    {
+      "id": "FPAB11",
+      "tipo": "fii",
+      "label": "FPAB11",
+      "nome": "Projeto Água Branca FII Responsabilidade Limitada",
+      "segmento": "Lajes Corporativas (Centro Empresarial Água Branca, Barra Funda – SP)",
+      "gestora": "BTG Pactual Gestora de Recursos / BTG Pactual DTVM",
+      "gestoraNorm": "btg pactual de recursos / btg pactual",
+      "nota": 5.5,
+      "veredicto": null,
+      "cotacao": 211.0,
+      "dy": 9.27,
+      "pvp": 0.58,
+      "url": "/fiis/fpab11/"
+    },
+    {
+      "id": "FTCA11",
+      "tipo": "fii",
+      "label": "FTCA11",
+      "nome": "Fyto Recebíveis do Agronegócio - Fiagro Imobiliário",
+      "segmento": "Fiagro de Papel (CRAs e CRIs do Agro)",
+      "gestora": "Fyto Capital Administradora de Recursos",
+      "gestoraNorm": "fyto de recursos",
+      "nota": 4.0,
+      "veredicto": null,
+      "cotacao": 9.57,
+      "dy": 15.05,
+      "pvp": 0.91,
+      "url": "/fiis/ftca11/"
+    },
+    {
+      "id": "FVPQ11",
+      "tipo": "fii",
+      "label": "FVPQ11",
+      "nome": "Via Parque Shopping FII",
+      "segmento": "Tijolo - Shopping Center",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 5.5,
+      "veredicto": "VENDA",
+      "cotacao": 70.5,
+      "dy": 7.66,
+      "pvp": 0.76,
+      "url": "/fiis/fvpq11/"
+    },
+    {
+      "id": "GAME11",
+      "tipo": "fii",
+      "label": "GAME11",
+      "nome": "Guardian Multiestratégia Imobiliária I FII",
+      "segmento": "Papel - Híbrido (CRI + FII)",
+      "gestora": "Guardian Gestora",
+      "gestoraNorm": "guardian",
+      "nota": 7,
+      "veredicto": "MANTER",
+      "cotacao": 8.82,
+      "dy": 13.32,
+      "pvp": 0.94,
+      "url": "/fiis/game11/"
+    },
+    {
+      "id": "GARE11",
+      "tipo": "fii",
+      "label": "GARE11",
+      "nome": "Guardian Real Estate FII",
+      "segmento": "Híbrido",
+      "gestora": "Guardian Gestora",
+      "gestoraNorm": "guardian",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 8.77,
+      "dy": 10.78,
+      "pvp": 0.94,
+      "url": "/fiis/gare11/"
+    },
+    {
+      "id": "GCFF11",
+      "tipo": "fii",
+      "label": "GCFF11",
+      "nome": "Galapagos Fundo de Fundos FII",
+      "segmento": "Fundo de Fundos (FOF)",
+      "gestora": "Galapagos Capital",
+      "gestoraNorm": "galapagos",
+      "nota": 0,
+      "veredicto": "VENDA",
+      "cotacao": 0,
+      "dy": 0,
+      "pvp": 0,
+      "url": "/fiis/gcff11/"
+    },
+    {
+      "id": "GCRI11",
+      "tipo": "fii",
+      "label": "GCRI11",
+      "nome": "Galapagos Recebíveis Imobiliários FII",
+      "segmento": "Papel - CRI Híbrido (Multicategoria)",
+      "gestora": "Galapagos Capital",
+      "gestoraNorm": "galapagos",
+      "nota": 6.2,
+      "veredicto": null,
+      "cotacao": 66.79,
+      "dy": 15.27,
+      "pvp": 0.73,
+      "url": "/fiis/gcri11/"
+    },
+    {
+      "id": "GGRC11",
+      "tipo": "fii",
+      "label": "GGRC11",
+      "nome": "GGR Covepi Renda FII",
+      "segmento": "Logístico/Industrial",
+      "gestora": "Zagros Capital (GGR Gestão de Recursos)",
+      "gestoraNorm": "zagros (ggr de recursos)",
+      "nota": 8,
+      "veredicto": "COMPRA",
+      "cotacao": 9.9,
+      "dy": 12.12,
+      "pvp": 0.88,
+      "url": "/fiis/ggrc11/"
+    },
+    {
+      "id": "GLOG11",
+      "tipo": "fii",
+      "label": "GLOG11",
+      "nome": "Genial Logística FII",
+      "segmento": "Tijolo - Logística",
+      "gestora": "Genial Gestão",
+      "gestoraNorm": "genial",
+      "nota": 5.5,
+      "veredicto": "VENDA",
+      "cotacao": 65.42,
+      "dy": 7.52,
+      "pvp": 0.6,
+      "url": "/fiis/glog11/"
+    },
+    {
+      "id": "GTWR11",
+      "tipo": "fii",
+      "label": "GTWR11",
+      "nome": "FII Green Towers",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "gestora": "Tivio Capital",
+      "gestoraNorm": "tivio",
+      "nota": 7,
+      "veredicto": "MANTER",
+      "cotacao": 83,
+      "dy": 13.01,
+      "pvp": 0.82,
+      "url": "/fiis/gtwr11/"
+    },
+    {
+      "id": "HABT11",
+      "tipo": "fii",
+      "label": "HABT11",
+      "nome": "Habitat Recebíveis Pulverizados FII",
+      "segmento": "Papel - CRI Pulverizado",
+      "gestora": "XP Vista Asset Management",
+      "gestoraNorm": "xp vista",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 71.07,
+      "dy": 17.27,
+      "pvp": 0.75,
+      "url": "/fiis/habt11/"
+    },
+    {
+      "id": "HBRH11",
+      "tipo": "fii",
+      "label": "HBRH11",
+      "nome": "V2 Multi Renda FII",
+      "segmento": "Tijolo - Multicategoria",
+      "gestora": "V2 Investimentos",
+      "gestoraNorm": "v2",
+      "nota": 4.5,
+      "veredicto": "VENDA",
+      "cotacao": 85,
+      "dy": 2.82,
+      "pvp": 0.96,
+      "url": "/fiis/hbrh11/"
+    },
+    {
+      "id": "HCHG11",
+      "tipo": "fii",
+      "label": "HCHG11",
+      "nome": "Hectare Recebíveis High Grade FII",
+      "segmento": "Papel - CRI",
+      "gestora": "Hectare Capital",
+      "gestoraNorm": "hectare",
+      "nota": 5.5,
+      "veredicto": "VENDA",
+      "cotacao": 78.29,
+      "dy": 11.72,
+      "pvp": 0.82,
+      "url": "/fiis/hchg11/"
+    },
+    {
+      "id": "HCRI11",
+      "tipo": "fii",
+      "label": "HCRI11",
+      "nome": "FII Hospital da Criança",
+      "segmento": "Tijolo - Hospital",
+      "gestora": "BTG Pactual (Administradora)",
+      "gestoraNorm": "btg pactual ()",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 279.99,
+      "dy": 11.7,
+      "pvp": 1.01,
+      "url": "/fiis/hcri11/"
+    },
+    {
+      "id": "HCTR11",
+      "tipo": "fii",
+      "label": "HCTR11",
+      "nome": "Hectare CE FII",
+      "segmento": "Papel - CRI High Yield",
+      "gestora": "Hectare Capital Gestora de Recursos",
+      "gestoraNorm": "hectare de recursos",
+      "nota": 4,
+      "veredicto": "VENDA",
+      "cotacao": 20.7,
+      "dy": 18.17,
+      "pvp": 0.2,
+      "url": "/fiis/hctr11/"
+    },
+    {
+      "id": "HFOF11",
+      "tipo": "fii",
+      "label": "HFOF11",
+      "nome": "Hedge TOP FOFII 3 FII",
+      "segmento": "Fundo de Fundos (FoF)",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 7.5,
+      "veredicto": "MANTER",
+      "cotacao": 6.63,
+      "dy": 10.14,
+      "pvp": 0.85,
+      "url": "/fiis/hfof11/"
+    },
+    {
+      "id": "HGBS11",
+      "tipo": "fii",
+      "label": "HGBS11",
+      "nome": "Hedge Brasil Shopping FII",
+      "segmento": "Tijolo - Shopping Centers",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 8,
+      "veredicto": "COMPRA",
+      "cotacao": 20,
+      "dy": 9,
+      "pvp": 0.96,
+      "url": "/fiis/hgbs11/"
+    },
+    {
+      "id": "HGCR11",
+      "tipo": "fii",
+      "label": "HGCR11",
+      "nome": "Pátria Recebíveis Imobiliários FII",
+      "segmento": "Crédito (CRI)",
+      "gestora": "Pátria Investimentos",
+      "gestoraNorm": "patria",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 98.01,
+      "dy": 12.2,
+      "pvp": 1,
+      "url": "/fiis/hgcr11/"
+    },
+    {
+      "id": "HGFF11",
+      "tipo": "fii",
+      "label": "HGFF11",
+      "nome": "Patria Multi FoF FII",
+      "segmento": "Fundo de Fundos",
+      "gestora": "Patria Investimentos",
+      "gestoraNorm": "patria",
+      "nota": 5,
+      "veredicto": "LIQUIDADO",
+      "cotacao": 62.38,
+      "dy": 10.1,
+      "pvp": 0.77,
+      "url": "/fiis/hgff11/"
+    },
+    {
+      "id": "HGLG11",
+      "tipo": "fii",
+      "label": "HGLG11",
+      "nome": "Pátria Log - Fundo de Investimento Imobiliário",
+      "segmento": "Tijolo — Logística e Industrial (Renda Gestão Ativa)",
+      "gestora": "Pátria Investimentos Ltda.",
+      "gestoraNorm": "patria .",
+      "nota": 8.0,
+      "veredicto": "COMPRA",
+      "cotacao": 158.97,
+      "dy": 8.3,
+      "pvp": 0.96,
+      "url": "/fiis/hglg11/"
+    },
+    {
+      "id": "HGPO11",
+      "tipo": "fii",
+      "label": "HGPO11",
+      "nome": "Patria Edifícios Corporativos FII",
+      "segmento": "Tijolo - Lajes Corporativas (em liquidação)",
+      "gestora": "Patria Investimentos",
+      "gestoraNorm": "patria",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 146,
+      "dy": 0,
+      "pvp": 0.98,
+      "url": "/fiis/hgpo11/"
+    },
+    {
+      "id": "HGRE11",
+      "tipo": "fii",
+      "label": "HGRE11",
+      "nome": "Patria Escritórios FII",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "gestora": "Patria Investimentos",
+      "gestoraNorm": "patria",
+      "nota": 7,
+      "veredicto": "MANTER",
+      "cotacao": 124.01,
+      "dy": 14.5,
+      "pvp": 0.84,
+      "url": "/fiis/hgre11/"
+    },
+    {
+      "id": "HGRU11",
+      "tipo": "fii",
+      "label": "HGRU11",
+      "nome": "Patria Renda Urbana FII",
+      "segmento": "Tijolo - Renda Urbana",
+      "gestora": "Patria Investimentos",
+      "gestoraNorm": "patria",
+      "nota": 8,
+      "veredicto": "COMPRA",
+      "cotacao": 126.11,
+      "dy": 13.8,
+      "pvp": 0.97,
+      "url": "/fiis/hgru11/"
+    },
+    {
+      "id": "HLOG11",
+      "tipo": "fii",
+      "label": "HLOG11",
+      "nome": "Hedge Logística FII",
+      "segmento": "Tijolo - Logística",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 6,
+      "veredicto": "MANTER",
+      "cotacao": 9.25,
+      "dy": 9.5,
+      "pvp": 0.77,
+      "url": "/fiis/hlog11/"
+    },
+    {
+      "id": "HOFC11",
+      "tipo": "fii",
+      "label": "HOFC11",
+      "nome": "Hedge Office Income FII",
+      "segmento": "Tijolo - Lajes Corporativas",
+      "gestora": "Hedge Investments",
+      "gestoraNorm": "hedge investments",
+      "nota": 3.5,
+      "veredicto": "VENDA",
+      "cotacao": 30.08,
+      "dy": 0,
+      "pvp": 0.52,
+      "url": "/fiis/hofc11/"
+    },
+    {
+      "id": "HOSI11",
+      "tipo": "fii",
+      "label": "HOSI11",
+      "nome": "Housi FII",
+      "segmento": "Tijolo - Desenvolvimento Residencial",
+      "gestora": "Housi / Vortx",
+      "gestoraNorm": "housi / vortx",
+      "nota": 6,
+      "veredicto": "MANTER",
+      "cotacao": 85.35,
+      "dy": 8.9,
+      "pvp": 0.8,
+      "url": "/fiis/hosi11/"
+    },
+    {
+      "id": "HSML11",
+      "tipo": "fii",
+      "label": "HSML11",
+      "nome": "HSI Malls Fundo de Investimento Imobiliário",
+      "segmento": "FII de Renda Gestão Ativa - Shopping Centers",
+      "gestora": "HSI - Hemisfério Sul Investimentos",
+      "gestoraNorm": "hsi - hemisferio sul",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 95.07,
+      "dy": 8.8,
+      "pvp": 0.91,
+      "url": "/fiis/hsml11/"
+    },
+    {
+      "id": "JSRE11",
+      "tipo": "fii",
+      "label": "JSRE11",
+      "nome": "JS Real Estate Multigestão FII",
+      "segmento": "Tijolo - Lajes Corporativas AAA",
+      "gestora": "Safra Asset Management Ltda.",
+      "gestoraNorm": "safra .",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 65.89,
+      "dy": 8.74,
+      "pvp": 0.65,
+      "url": "/fiis/jsre11/"
+    },
+    {
+      "id": "KFOF11",
+      "tipo": "fii",
+      "label": "KFOF11",
+      "nome": "Kinea FOF FII",
+      "segmento": "Fundo de Fundos",
+      "gestora": null,
+      "gestoraNorm": "",
+      "nota": null,
+      "veredicto": "EM ANÁLISE",
+      "cotacao": null,
+      "dy": null,
+      "pvp": null,
+      "url": "/fiis/kfof11/"
+    },
+    {
+      "id": "KISU11",
+      "tipo": "fii",
+      "label": "KISU11",
+      "nome": "Kilima Fundo de Investimento em Cotas de Fundos Imobiliários Suno 30",
+      "segmento": "Fundo de Fundos (FoF) — Híbrido diversificado",
+      "gestora": "Monte Bravo Asset Management Ltda. (ex-Kilima Gestão de Recursos)",
+      "gestoraNorm": "monte bravo . (ex-kilima de recursos)",
+      "nota": 6.5,
+      "veredicto": "NEUTRO COM VIÉS POSITIVO",
+      "cotacao": 7.11,
+      "dy": 0.1149,
+      "pvp": 0.86,
+      "url": "/fiis/kisu11/"
+    },
+    {
+      "id": "KNCR11",
+      "tipo": "fii",
+      "label": "KNCR11",
+      "nome": "Kinea Rendimentos Imobiliários FII Resp. Limitada",
+      "segmento": "FII de Papel — CRI pós-fixados (CDI+)",
+      "gestora": "Kinea Investimentos (Grupo Itaú Unibanco)",
+      "gestoraNorm": "kinea (grupo itau unibanco)",
+      "nota": 8.3,
+      "veredicto": null,
+      "cotacao": 106.01,
+      "dy": 13.8,
+      "pvp": 1.04,
+      "url": "/fiis/kncr11/"
+    },
+    {
+      "id": "KNIP11",
+      "tipo": "fii",
+      "label": "KNIP11",
+      "nome": "Kinea Índices de Preços Fundo de Investimento Imobiliário",
+      "segmento": "FII de Papel (CRIs IPCA+)",
+      "gestora": "Kinea Investimentos Ltda.",
+      "gestoraNorm": "kinea .",
+      "nota": 7.8,
+      "veredicto": null,
+      "cotacao": 91.65,
+      "dy": 8.8,
+      "pvp": 0.98,
+      "url": "/fiis/knip11/"
+    },
+    {
+      "id": "KNRI11",
+      "tipo": "fii",
+      "label": "KNRI11",
+      "nome": "Kinea Renda Imobiliária - FII",
+      "segmento": "Híbrido — Escritórios Corporativos + Logística",
+      "gestora": "Kinea Investimentos Ltda. (Grupo Itaú Unibanco)",
+      "gestoraNorm": "kinea . (grupo itau unibanco)",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 167.98,
+      "dy": 7.34,
+      "pvp": 1.03,
+      "url": "/fiis/knri11/"
+    },
+    {
+      "id": "LVBI11",
+      "tipo": "fii",
+      "label": "LVBI11",
+      "nome": "VBI Logístico - Fundo de Investimento Imobiliário",
+      "segmento": "Tijolo - Logística (Galpões AAA Last Mile e Industrial)",
+      "gestora": "Patria - VBI Asset Management Ltda.",
+      "gestoraNorm": "patria - vbi .",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 111.31,
+      "dy": 8.1,
+      "pvp": 0.93,
+      "url": "/fiis/lvbi11/"
+    },
+    {
+      "id": "MALL11",
+      "tipo": "fii",
+      "label": "MALL11",
+      "nome": "Patria Malls FII",
+      "segmento": "Tijolo - Shoppings (Renda Gestão Ativa)",
+      "gestora": "Patria - VBI Asset Management Ltda.",
+      "gestoraNorm": "patria - vbi .",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 108.94,
+      "dy": 11.0,
+      "pvp": 0.93,
+      "url": "/fiis/mall11/"
+    },
+    {
+      "id": "MFII11",
+      "tipo": "fii",
+      "label": "MFII11",
+      "nome": "Mérito Desenvolvimento Imobiliário I FII",
+      "segmento": "Desenvolvimento - Residencial",
+      "gestora": "Mérito Investimentos",
+      "gestoraNorm": "merito",
+      "nota": 7,
+      "veredicto": "MANTER",
+      "cotacao": 71.73,
+      "dy": 17.9,
+      "pvp": 0.7544,
+      "url": "/fiis/mfii11/"
+    },
+    {
+      "id": "MXRF11",
+      "tipo": "fii",
+      "label": "MXRF11",
+      "nome": "Maxi Renda Fundo de Investimento Imobiliário - FII",
+      "segmento": "FII Híbrido (CRIs + FIIs + Permutas Financeiras)",
+      "gestora": "XP Vista Asset Management Ltda.",
+      "gestoraNorm": "xp vista .",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 9.99,
+      "dy": 12.7,
+      "pvp": 1.04,
+      "url": "/fiis/mxrf11/"
+    },
+    {
+      "id": "OUJP11",
+      "tipo": "fii",
+      "label": "OUJP11",
+      "nome": "Ourinvest JPP FII",
+      "segmento": "Papel - CRI",
+      "gestora": "JPP Capital / Fator ORE Asset",
+      "gestoraNorm": "jpp / fator ore asset",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 76.49,
+      "dy": 15.7,
+      "pvp": 0.75,
+      "url": "/fiis/oujp11/"
+    },
+    {
+      "id": "RBVA11",
+      "tipo": "fii",
+      "label": "RBVA11",
+      "nome": "Rio Bravo Renda Varejo - Fundo de Investimento Imobiliário de Responsabilidade Limitada",
+      "segmento": "Tijolo — Renda Urbana / Varejo de Rua (Gestão Ativa)",
+      "gestora": "Rio Bravo Investimentos",
+      "gestoraNorm": "rio bravo",
+      "nota": 7.0,
+      "veredicto": "MANTER",
+      "cotacao": 9.99,
+      "dy": 10.81,
+      "pvp": 0.935,
+      "url": "/fiis/rbva11/"
+    },
+    {
+      "id": "RCRB11",
+      "tipo": "fii",
+      "label": "RCRB11",
+      "nome": "Rio Bravo Renda Corporativa",
+      "segmento": "Tijolo — Escritórios Corporativos",
+      "gestora": "Rio Bravo Investimentos",
+      "gestoraNorm": "rio bravo",
+      "nota": 7.0,
+      "veredicto": "MANTER",
+      "cotacao": 142.32,
+      "dy": "9,0%",
+      "pvp": "0,71",
+      "url": "/fiis/rcrb11/"
+    },
+    {
+      "id": "RECR11",
+      "tipo": "fii",
+      "label": "RECR11",
+      "nome": "FII REC Recebíveis Imobiliários",
+      "segmento": "Papel (CRI) — Multicategoria",
+      "gestora": "REC Gestão de Recursos S.A.",
+      "gestoraNorm": "rec de recursos s.a.",
+      "nota": 7.5,
+      "veredicto": "MANTER",
+      "cotacao": 80.76,
+      "dy": 13.53,
+      "pvp": 0.9081,
+      "url": "/fiis/recr11/"
+    },
+    {
+      "id": "TGAR11",
+      "tipo": "fii",
+      "label": "TGAR11",
+      "nome": "TG Ativo Real FII",
+      "segmento": "Híbrido / Desenvolvimento Imobiliário",
+      "gestora": "TG Core Asset Ltda.",
+      "gestoraNorm": "tg core asset .",
+      "nota": 5.5,
+      "veredicto": "MANTER",
+      "cotacao": 70.0,
+      "dy": 12.34,
+      "pvp": 0.63,
+      "url": "/fiis/tgar11/"
+    },
+    {
+      "id": "TRXF11",
+      "tipo": "fii",
+      "label": "TRXF11",
+      "nome": "TRX Real Estate",
+      "segmento": "Tijolo / Renda Urbana — Multicategoria (varejo, atacado, logística, educação, saúde, agências, shoppings)",
+      "gestora": "TRX Gestora de Recursos Ltda.",
+      "gestoraNorm": "trx de recursos .",
+      "nota": 8.5,
+      "veredicto": "COMPRA",
+      "cotacao": 91.83,
+      "dy": 12.15,
+      "pvp": 0.92,
+      "url": "/fiis/trxf11/"
+    },
+    {
+      "id": "VGIP11",
+      "tipo": "fii",
+      "label": "VGIP11",
+      "nome": "Valora CRI Índice de Preços FII",
+      "segmento": "Papel - CRI IPCA+",
+      "gestora": "Valora Gestão de Investimentos",
+      "gestoraNorm": "valora de",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 82.5,
+      "dy": 12.7,
+      "pvp": 0.92,
+      "url": "/fiis/vgip11/"
+    },
+    {
+      "id": "VGIR11",
+      "tipo": "fii",
+      "label": "VGIR11",
+      "nome": "Valora CRI CDI",
+      "segmento": "Recebíveis Imobiliários (Papel CRI — gestão ativa, indexação CDI predominante)",
+      "gestora": "Valora Gestão de Investimentos",
+      "gestoraNorm": "valora de",
+      "nota": 7.8,
+      "veredicto": "COMPRA",
+      "cotacao": 9.79,
+      "dy": 15.63,
+      "pvp": 0.999,
+      "url": "/fiis/vgir11/"
+    },
+    {
+      "id": "VILG11",
+      "tipo": "fii",
+      "label": "VILG11",
+      "nome": "Vinci Logística — Fundo de Investimento Imobiliário",
+      "segmento": "Tijolo — Logística (Renda Gestão Ativa)",
+      "gestora": "Vinci Real Estate / Vinci Compass",
+      "gestoraNorm": "vinci real estate / vinci compass",
+      "nota": 7.5,
+      "veredicto": "COMPRA",
+      "cotacao": 101.29,
+      "dy": 9.71,
+      "pvp": 0.9,
+      "url": "/fiis/vilg11/"
+    },
+    {
+      "id": "VINO11",
+      "tipo": "fii",
+      "label": "VINO11",
+      "nome": "Vinci Offices FII",
+      "segmento": "Tijolo — Escritórios (Lajes Corporativas)",
+      "gestora": "Vinci Real Estate Gestora de Recursos (grupo Vinci Compass)",
+      "gestoraNorm": "vinci real estate de recursos (grupo vinci compass)",
+      "nota": 5.5,
+      "veredicto": "MANTER",
+      "cotacao": 5.01,
+      "dy": 12.18,
+      "pvp": 0.51,
+      "url": "/fiis/vino11/"
+    },
+    {
+      "id": "VISC11",
+      "tipo": "fii",
+      "label": "VISC11",
+      "nome": "Vinci Shopping Centers FII",
+      "segmento": "FII de Tijolo — Shopping Centers (Renda Gestão Ativa)",
+      "gestora": "Vinci Real Estate Gestora de Recursos",
+      "gestoraNorm": "vinci real estate de recursos",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 108.56,
+      "dy": 9.36,
+      "pvp": 0.93,
+      "url": "/fiis/visc11/"
+    },
+    {
+      "id": "VRTA11",
+      "tipo": "fii",
+      "label": "VRTA11",
+      "nome": "Fator Verità FII",
+      "segmento": "Papel — CRI multicategoria (HG/HY misto)",
+      "gestora": "Fator Administração de Recursos",
+      "gestoraNorm": "fator administracao de recursos",
+      "nota": 7.4,
+      "veredicto": "Comprar com moderação",
+      "cotacao": 79.0,
+      "dy": 12.91,
+      "pvp": 0.94,
+      "url": "/fiis/vrta11/"
+    },
+    {
+      "id": "VSHO11",
+      "tipo": "fii",
+      "label": "VSHO11",
+      "nome": "Votorantim Shopping FII",
+      "segmento": "Tijolo - Shopping Centers",
+      "gestora": "Tivio Capital",
+      "gestoraNorm": "tivio",
+      "nota": 6.5,
+      "veredicto": "MANTER",
+      "cotacao": 77.5,
+      "dy": 10.53,
+      "pvp": 0.68,
+      "url": "/fiis/vsho11/"
+    },
+    {
+      "id": "XPLG11",
+      "tipo": "fii",
+      "label": "XPLG11",
+      "nome": "XP Log - Fundo de Investimento Imobiliário",
+      "segmento": "FII de Tijolo - Logístico (Renda Gestão Ativa)",
+      "gestora": "XP Vista Asset Management Ltda.",
+      "gestoraNorm": "xp vista .",
+      "nota": 7.5,
+      "veredicto": null,
+      "cotacao": 100.59,
+      "dy": 9.78,
+      "pvp": 0.95,
+      "url": "/fiis/xplg11/"
+    },
+    {
+      "id": "XPML11",
+      "tipo": "fii",
+      "label": "XPML11",
+      "nome": "XP Malls FII",
+      "segmento": "Tijolo / Shoppings",
+      "gestora": "XP Vista Asset Management",
+      "gestoraNorm": "xp vista",
+      "nota": 8.4,
+      "veredicto": "COMPRA",
+      "cotacao": 111.0,
+      "dy": 9.95,
+      "pvp": 1.0049,
+      "url": "/fiis/xpml11/"
+    },
+    {
+      "id": "GESTORA::az quest (az quest agro .)",
+      "tipo": "gestora",
+      "label": "AZ Quest Investimentos (AZ Quest Agro Ltda.)",
+      "nome": "AZ Quest Investimentos (AZ Quest Agro Ltda.)",
+      "fundos": [
+        "AAZQ11"
+      ]
+    },
+    {
+      "id": "GESTORA::rio bravo .",
+      "tipo": "gestora",
+      "label": "Rio Bravo Investimentos DTVM Ltda.",
+      "nome": "Rio Bravo Investimentos DTVM Ltda.",
+      "fundos": [
+        "ABCP11"
+      ]
+    },
+    {
+      "id": "GESTORA::af invest real estate",
+      "tipo": "gestora",
+      "label": "AF Invest Real Estate",
+      "nome": "AF Invest Real Estate",
+      "fundos": [
+        "AFHF11",
+        "AFHI11"
+      ]
+    },
+    {
+      "id": "GESTORA::exes de recursos .",
+      "tipo": "gestora",
+      "label": "Éxes Gestora de Recursos Ltda.",
+      "nome": "Éxes Gestora de Recursos Ltda.",
+      "fundos": [
+        "AGRX11",
+        "EXES11"
+      ]
+    },
+    {
+      "id": "GESTORA::arch (ex-autonomy )",
+      "tipo": "gestora",
+      "label": "Arch Capital (ex-Autonomy Investimentos)",
+      "nome": "Arch Capital (ex-Autonomy Investimentos)",
+      "fundos": [
+        "AIEC11"
+      ]
+    },
+    {
+      "id": "GESTORA::capitania s.a.",
+      "tipo": "gestora",
+      "label": "Capitânia Capital S.A.",
+      "nome": "Capitânia Capital S.A.",
+      "fundos": [
+        "AJFI11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual ( passiva)",
+      "tipo": "gestora",
+      "label": "BTG Pactual (Gestão Passiva)",
+      "nome": "BTG Pactual (Gestão Passiva)",
+      "fundos": [
+        "ALMI11"
+      ]
+    },
+    {
+      "id": "GESTORA::alianza de recursos",
+      "tipo": "gestora",
+      "label": "Alianza Gestão de Recursos",
+      "nome": "Alianza Gestão de Recursos",
+      "fundos": [
+        "ALZC11",
+        "ALZM11",
+        "ALZR11"
+      ]
+    },
+    {
+      "id": "GESTORA::navi e de recursos financeiros",
+      "tipo": "gestora",
+      "label": "NAVI Capital Administradora e Gestora de Recursos Financeiros",
+      "nome": "NAVI Capital Administradora e Gestora de Recursos Financeiros",
+      "fundos": [
+        "APTO11"
+      ]
+    },
+    {
+      "id": "GESTORA::brm carbyne de recursos",
+      "tipo": "gestora",
+      "label": "BRM Carbyne Gestão de Recursos",
+      "nome": "BRM Carbyne Gestão de Recursos",
+      "fundos": [
+        "APXM11"
+      ]
+    },
+    {
+      "id": "GESTORA::open de ativos (open kapital)",
+      "tipo": "gestora",
+      "label": "Open Capital Gestão de Ativos (Open Kapital)",
+      "nome": "Open Capital Gestão de Ativos (Open Kapital)",
+      "fundos": [
+        "ARRI11"
+      ]
+    },
+    {
+      "id": "GESTORA::arx",
+      "tipo": "gestora",
+      "label": "ARX Investimentos",
+      "nome": "ARX Investimentos",
+      "fundos": [
+        "ARXD11"
+      ]
+    },
+    {
+      "id": "GESTORA::alianza de recursos .",
+      "tipo": "gestora",
+      "label": "Alianza Gestão de Recursos Ltda.",
+      "nome": "Alianza Gestão de Recursos Ltda.",
+      "fundos": [
+        "AURB11"
+      ]
+    },
+    {
+      "id": "GESTORA::az quest panorama",
+      "tipo": "gestora",
+      "label": "AZ Quest Panorama",
+      "nome": "AZ Quest Panorama",
+      "fundos": [
+        "AZPL11"
+      ]
+    },
+    {
+      "id": "GESTORA::patria - vbi securities",
+      "tipo": "gestora",
+      "label": "Patria - VBI Securities",
+      "nome": "Patria - VBI Securities",
+      "fundos": [
+        "BARI11",
+        "CVBI11"
+      ]
+    },
+    {
+      "id": "GESTORA::bb (bb de recursos )",
+      "tipo": "gestora",
+      "label": "BB Asset Management (BB Gestão de Recursos DTVM)",
+      "nome": "BB Asset Management (BB Gestão de Recursos DTVM)",
+      "fundos": [
+        "BBFO11",
+        "BBGO11"
+      ]
+    },
+    {
+      "id": "GESTORA::bb asset (bb de recursos ) | consultoria iguatemi",
+      "tipo": "gestora",
+      "label": "BB Asset (BB Gestão de Recursos DTVM) | Consultoria Iguatemi",
+      "nome": "BB Asset (BB Gestão de Recursos DTVM) | Consultoria Iguatemi",
+      "fundos": [
+        "BBIG11"
+      ]
+    },
+    {
+      "id": "GESTORA::tivio () | bem /bradesco (administracao)",
+      "tipo": "gestora",
+      "label": "Tivio Capital DTVM (gestão) | BEM DTVM/Bradesco (administração)",
+      "nome": "Tivio Capital DTVM (gestão) | BEM DTVM/Bradesco (administração)",
+      "fundos": [
+        "BBRC11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual de recursos",
+      "tipo": "gestora",
+      "label": "BTG Pactual Gestora de Recursos",
+      "nome": "BTG Pactual Gestora de Recursos",
+      "fundos": [
+        "BCFF11",
+        "BPML11",
+        "BRCR11",
+        "BTAL11",
+        "BTCI11",
+        "BTCR11",
+        "BTHF11",
+        "BTLG11",
+        "CNES11"
+      ]
+    },
+    {
+      "id": "GESTORA::bradesco (bram)",
+      "tipo": "gestora",
+      "label": "Bradesco Asset Management (BRAM)",
+      "nome": "Bradesco Asset Management (BRAM)",
+      "fundos": [
+        "BCIA11"
+      ]
+    },
+    {
+      "id": "GESTORA::banestes s.a.",
+      "tipo": "gestora",
+      "label": "Banestes DTVM S.A.",
+      "nome": "Banestes DTVM S.A.",
+      "fundos": [
+        "BCRI11"
+      ]
+    },
+    {
+      "id": "GESTORA::brio",
+      "tipo": "gestora",
+      "label": "Brio Investimentos",
+      "nome": "Brio Investimentos",
+      "fundos": [
+        "BIME11"
+      ]
+    },
+    {
+      "id": "GESTORA::brio .",
+      "tipo": "gestora",
+      "label": "Brio Investimentos Ltda.",
+      "nome": "Brio Investimentos Ltda.",
+      "fundos": [
+        "BIPD11"
+      ]
+    },
+    {
+      "id": "GESTORA::patria / vbi real estate (cogestao catuai asset)",
+      "tipo": "gestora",
+      "label": "Pátria Investimentos / VBI Real Estate (cogestão Catuaí Asset)",
+      "nome": "Pátria Investimentos / VBI Real Estate (cogestão Catuaí Asset)",
+      "fundos": [
+        "BLCA11"
+      ]
+    },
+    {
+      "id": "GESTORA::bluemacaw de recursos",
+      "tipo": "gestora",
+      "label": "BlueMacaw Gestora de Recursos",
+      "nome": "BlueMacaw Gestora de Recursos",
+      "fundos": [
+        "BLMG11"
+      ]
+    },
+    {
+      "id": "GESTORA::patria (vbi real estate)",
+      "tipo": "gestora",
+      "label": "Pátria Investimentos (VBI Real Estate)",
+      "nome": "Pátria Investimentos (VBI Real Estate)",
+      "fundos": [
+        "BLMO11"
+      ]
+    },
+    {
+      "id": "GESTORA::vbi real estate",
+      "tipo": "gestora",
+      "label": "VBI Real Estate",
+      "nome": "VBI Real Estate",
+      "fundos": [
+        "BLMR11"
+      ]
+    },
+    {
+      "id": "GESTORA::argucia management",
+      "tipo": "gestora",
+      "label": "Argucia Capital Management",
+      "nome": "Argucia Capital Management",
+      "fundos": [
+        "BMLC11"
+      ]
+    },
+    {
+      "id": "GESTORA::oliveira trust",
+      "tipo": "gestora",
+      "label": "Oliveira Trust DTVM",
+      "nome": "Oliveira Trust DTVM",
+      "fundos": [
+        "BNFS11"
+      ]
+    },
+    {
+      "id": "GESTORA::plural de recursos",
+      "tipo": "gestora",
+      "label": "Plural Gestão de Recursos",
+      "nome": "Plural Gestão de Recursos",
+      "fundos": [
+        "BPFF11"
+      ]
+    },
+    {
+      "id": "GESTORA::bresco e .",
+      "tipo": "gestora",
+      "label": "Bresco Investimentos e Gestão Ltda.",
+      "nome": "Bresco Investimentos e Gestão Ltda.",
+      "fundos": [
+        "BRCO11"
+      ]
+    },
+    {
+      "id": "GESTORA::bgr .",
+      "tipo": "gestora",
+      "label": "BGR Asset Management Ltda.",
+      "nome": "BGR Asset Management Ltda.",
+      "fundos": [
+        "BROF11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual (com hotelinvest)",
+      "tipo": "gestora",
+      "label": "BTG Pactual (com HotelInvest)",
+      "nome": "BTG Pactual (com HotelInvest)",
+      "fundos": [
+        "BTHI11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual de recursos .",
+      "tipo": "gestora",
+      "label": "BTG Pactual Gestora de Recursos Ltda.",
+      "nome": "BTG Pactual Gestora de Recursos Ltda.",
+      "fundos": [
+        "BTRA11"
+      ]
+    },
+    {
+      "id": "GESTORA::cartesia e de recursos",
+      "tipo": "gestora",
+      "label": "Cartesia Investimentos e Gestão de Recursos",
+      "nome": "Cartesia Investimentos e Gestão de Recursos",
+      "fundos": [
+        "CACR11"
+      ]
+    },
+    {
+      "id": "GESTORA::zion de recursos (gestor) / master s/a (admin desde jul/2025)",
+      "tipo": "gestora",
+      "label": "Zion Gestão de Recursos (Gestor) / Master S/A (Admin desde jul/2025)",
+      "nome": "Zion Gestão de Recursos (Gestor) / Master S/A (Admin desde jul/2025)",
+      "fundos": [
+        "CARE11"
+      ]
+    },
+    {
+      "id": "GESTORA::patria",
+      "tipo": "gestora",
+      "label": "Pátria Investimentos",
+      "nome": "Pátria Investimentos",
+      "fundos": [
+        "CBOP11",
+        "HGCR11",
+        "HGFF11",
+        "HGPO11",
+        "HGRE11",
+        "HGRU11"
+      ]
+    },
+    {
+      "id": "GESTORA::canuma",
+      "tipo": "gestora",
+      "label": "Canuma Capital",
+      "nome": "Canuma Capital",
+      "fundos": [
+        "CCME11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual servicos financeiros (administrador) | cyrela commercial properties (consultor)",
+      "tipo": "gestora",
+      "label": "BTG Pactual Serviços Financeiros DTVM (Administrador) | Cyrela Commercial Properties (Consultor)",
+      "nome": "BTG Pactual Serviços Financeiros DTVM (Administrador) | Cyrela Commercial Properties (Consultor)",
+      "fundos": [
+        "CEOC11"
+      ]
+    },
+    {
+      "id": "GESTORA::hedge investments",
+      "tipo": "gestora",
+      "label": "Hedge Investments",
+      "nome": "Hedge Investments",
+      "fundos": [
+        "CJCT11",
+        "FLRP11",
+        "FVPQ11",
+        "HFOF11",
+        "HGBS11",
+        "HLOG11",
+        "HOFC11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual (ex-clave alternativos)",
+      "tipo": "gestora",
+      "label": "BTG Pactual Asset Management (ex-Clave Alternativos)",
+      "nome": "BTG Pactual Asset Management (ex-Clave Alternativos)",
+      "fundos": [
+        "CLIN11"
+      ]
+    },
+    {
+      "id": "GESTORA::capitania",
+      "tipo": "gestora",
+      "label": "Capitânia Investimentos",
+      "nome": "Capitânia Investimentos",
+      "fundos": [
+        "CPFF11",
+        "CPLG11",
+        "CPSH11",
+        "CPTR11",
+        "CPTS11"
+      ]
+    },
+    {
+      "id": "GESTORA::capitania alternatives s.a.",
+      "tipo": "gestora",
+      "label": "Capitânia Alternatives S.A.",
+      "nome": "Capitânia Alternatives S.A.",
+      "fundos": [
+        "CPOF11"
+      ]
+    },
+    {
+      "id": "GESTORA::capitania hbc",
+      "tipo": "gestora",
+      "label": "Capitânia HBC",
+      "nome": "Capitânia HBC",
+      "fundos": [
+        "CPUR11"
+      ]
+    },
+    {
+      "id": "GESTORA::sparta de recursos",
+      "tipo": "gestora",
+      "label": "Sparta Administradora de Recursos",
+      "nome": "Sparta Administradora de Recursos",
+      "fundos": [
+        "CRAA11"
+      ]
+    },
+    {
+      "id": "GESTORA::caixa asset + rio bravo",
+      "tipo": "gestora",
+      "label": "CAIXA Asset + Rio Bravo Investimentos",
+      "nome": "CAIXA Asset + Rio Bravo Investimentos",
+      "fundos": [
+        "CRFF11"
+      ]
+    },
+    {
+      "id": "GESTORA::rb (ex-rb )",
+      "tipo": "gestora",
+      "label": "RB Asset Management (ex-RB Capital)",
+      "nome": "RB Asset Management (ex-RB Capital)",
+      "fundos": [
+        "CXAG11"
+      ]
+    },
+    {
+      "id": "GESTORA::caixa asset",
+      "tipo": "gestora",
+      "label": "Caixa Asset",
+      "nome": "Caixa Asset",
+      "fundos": [
+        "CXCI11"
+      ]
+    },
+    {
+      "id": "GESTORA::patagonia de recursos .",
+      "tipo": "gestora",
+      "label": "Patagônia Capital Gestora de Recursos Ltda.",
+      "nome": "Patagônia Capital Gestora de Recursos Ltda.",
+      "fundos": [
+        "CXCO11"
+      ]
+    },
+    {
+      "id": "GESTORA::caixa asset & rio bravo",
+      "tipo": "gestora",
+      "label": "Caixa Asset & Rio Bravo Investimentos",
+      "nome": "Caixa Asset & Rio Bravo Investimentos",
+      "fundos": [
+        "CXRI11"
+      ]
+    },
+    {
+      "id": "GESTORA::caixa economica federal / sequoia properties",
+      "tipo": "gestora",
+      "label": "Caixa Economica Federal / Sequoia Properties",
+      "nome": "Caixa Economica Federal / Sequoia Properties",
+      "fundos": [
+        "CXTL11"
+      ]
+    },
+    {
+      "id": "GESTORA::cy.",
+      "tipo": "gestora",
+      "label": "CY.Capital",
+      "nome": "CY.Capital",
+      "fundos": [
+        "CYCR11"
+      ]
+    },
+    {
+      "id": "GESTORA::devant asset",
+      "tipo": "gestora",
+      "label": "Devant Asset Investimentos",
+      "nome": "Devant Asset Investimentos",
+      "fundos": [
+        "DCRA11",
+        "DEVA11",
+        "DVFF11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual servicos financeiros s.a.",
+      "tipo": "gestora",
+      "label": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "nome": "BTG Pactual Serviços Financeiros S.A. DTVM",
+      "fundos": [
+        "EDGA11",
+        "FCFL11"
+      ]
+    },
+    {
+      "id": "GESTORA::eco de ativos + multiplica (co-)",
+      "tipo": "gestora",
+      "label": "Eco Gestão de Ativos + Multiplica (co-gestora)",
+      "nome": "Eco Gestão de Ativos + Multiplica (co-gestora)",
+      "fundos": [
+        "EGAF11"
+      ]
+    },
+    {
+      "id": "GESTORA::aroeira asset de recursos",
+      "tipo": "gestora",
+      "label": "Aroeira Asset Gestão de Recursos",
+      "nome": "Aroeira Asset Gestão de Recursos",
+      "fundos": [
+        "EIRA11"
+      ]
+    },
+    {
+      "id": "GESTORA::v2 .",
+      "tipo": "gestora",
+      "label": "V2 Investimentos Ltda.",
+      "nome": "V2 Investimentos Ltda.",
+      "fundos": [
+        "EMET11"
+      ]
+    },
+    {
+      "id": "GESTORA::eqi asset (euqueroinvestir de recursos)",
+      "tipo": "gestora",
+      "label": "EQI Asset (Euqueroinvestir Gestão de Recursos)",
+      "nome": "EQI Asset (Euqueroinvestir Gestão de Recursos)",
+      "fundos": [
+        "EQIR11"
+      ]
+    },
+    {
+      "id": "GESTORA::anga administracao de recursos",
+      "tipo": "gestora",
+      "label": "Angá Administração de Recursos",
+      "nome": "Angá Administração de Recursos",
+      "fundos": [
+        "ERPA11"
+      ]
+    },
+    {
+      "id": "GESTORA::coinvalores ccvm",
+      "tipo": "gestora",
+      "label": "Coinvalores CCVM",
+      "nome": "Coinvalores CCVM",
+      "fundos": [
+        "EURO11",
+        "FIIB11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual servicos financeiros",
+      "tipo": "gestora",
+      "label": "BTG Pactual Serviços Financeiros DTVM",
+      "nome": "BTG Pactual Serviços Financeiros DTVM",
+      "fundos": [
+        "FAED11"
+      ]
+    },
+    {
+      "id": "GESTORA::afira de recursos",
+      "tipo": "gestora",
+      "label": "Áfira Gestão de Recursos",
+      "nome": "Áfira Gestão de Recursos",
+      "fundos": [
+        "FAMB11"
+      ]
+    },
+    {
+      "id": "GESTORA::br- + unitas real estate (consultor imobiliario)",
+      "tipo": "gestora",
+      "label": "BR-Capital DTVM + Unitas Real Estate (consultor imobiliário)",
+      "nome": "BR-Capital DTVM + Unitas Real Estate (consultor imobiliário)",
+      "fundos": [
+        "FATN11"
+      ]
+    },
+    {
+      "id": "GESTORA::fg/a de recursos .",
+      "tipo": "gestora",
+      "label": "FG/A Gestora de Recursos Ltda.",
+      "nome": "FG/A Gestora de Recursos Ltda.",
+      "fundos": [
+        "FGAA11"
+      ]
+    },
+    {
+      "id": "GESTORA::hedge investments ( e )",
+      "tipo": "gestora",
+      "label": "Hedge Investments (Administradora e Gestora)",
+      "nome": "Hedge Investments (Administradora e Gestora)",
+      "fundos": [
+        "FIGS11"
+      ]
+    },
+    {
+      "id": "GESTORA::rb asset (consultora imobiliaria) / oliveira trust ()",
+      "tipo": "gestora",
+      "label": "RB Asset (consultora imobiliária) / Oliveira Trust (administradora)",
+      "nome": "RB Asset (consultora imobiliária) / Oliveira Trust (administradora)",
+      "fundos": [
+        "FIIP11"
+      ]
+    },
+    {
+      "id": "GESTORA::faria lima .",
+      "tipo": "gestora",
+      "label": "Faria Lima Capital Ltda.",
+      "nome": "Faria Lima Capital Ltda.",
+      "fundos": [
+        "FLCR11"
+      ]
+    },
+    {
+      "id": "GESTORA::br- (admin/gestor) + unitas real estate (consultor imobiliario)",
+      "tipo": "gestora",
+      "label": "BR-Capital DTVM (admin/gestor) + Unitas Real Estate (consultor imobiliário)",
+      "nome": "BR-Capital DTVM (admin/gestor) + Unitas Real Estate (consultor imobiliário)",
+      "fundos": [
+        "FLMA11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual de recursos / btg pactual",
+      "tipo": "gestora",
+      "label": "BTG Pactual Gestora de Recursos / BTG Pactual DTVM",
+      "nome": "BTG Pactual Gestora de Recursos / BTG Pactual DTVM",
+      "fundos": [
+        "FPAB11"
+      ]
+    },
+    {
+      "id": "GESTORA::fyto de recursos",
+      "tipo": "gestora",
+      "label": "Fyto Capital Administradora de Recursos",
+      "nome": "Fyto Capital Administradora de Recursos",
+      "fundos": [
+        "FTCA11"
+      ]
+    },
+    {
+      "id": "GESTORA::guardian",
+      "tipo": "gestora",
+      "label": "Guardian Gestora",
+      "nome": "Guardian Gestora",
+      "fundos": [
+        "GAME11",
+        "GARE11"
+      ]
+    },
+    {
+      "id": "GESTORA::galapagos",
+      "tipo": "gestora",
+      "label": "Galapagos Capital",
+      "nome": "Galapagos Capital",
+      "fundos": [
+        "GCFF11",
+        "GCRI11"
+      ]
+    },
+    {
+      "id": "GESTORA::zagros (ggr de recursos)",
+      "tipo": "gestora",
+      "label": "Zagros Capital (GGR Gestão de Recursos)",
+      "nome": "Zagros Capital (GGR Gestão de Recursos)",
+      "fundos": [
+        "GGRC11"
+      ]
+    },
+    {
+      "id": "GESTORA::genial",
+      "tipo": "gestora",
+      "label": "Genial Gestão",
+      "nome": "Genial Gestão",
+      "fundos": [
+        "GLOG11"
+      ]
+    },
+    {
+      "id": "GESTORA::tivio",
+      "tipo": "gestora",
+      "label": "Tivio Capital",
+      "nome": "Tivio Capital",
+      "fundos": [
+        "GTWR11",
+        "VSHO11"
+      ]
+    },
+    {
+      "id": "GESTORA::xp vista",
+      "tipo": "gestora",
+      "label": "XP Vista Asset Management",
+      "nome": "XP Vista Asset Management",
+      "fundos": [
+        "HABT11",
+        "XPML11"
+      ]
+    },
+    {
+      "id": "GESTORA::v2",
+      "tipo": "gestora",
+      "label": "V2 Investimentos",
+      "nome": "V2 Investimentos",
+      "fundos": [
+        "HBRH11"
+      ]
+    },
+    {
+      "id": "GESTORA::hectare",
+      "tipo": "gestora",
+      "label": "Hectare Capital",
+      "nome": "Hectare Capital",
+      "fundos": [
+        "HCHG11"
+      ]
+    },
+    {
+      "id": "GESTORA::btg pactual ()",
+      "tipo": "gestora",
+      "label": "BTG Pactual (Administradora)",
+      "nome": "BTG Pactual (Administradora)",
+      "fundos": [
+        "HCRI11"
+      ]
+    },
+    {
+      "id": "GESTORA::hectare de recursos",
+      "tipo": "gestora",
+      "label": "Hectare Capital Gestora de Recursos",
+      "nome": "Hectare Capital Gestora de Recursos",
+      "fundos": [
+        "HCTR11"
+      ]
+    },
+    {
+      "id": "GESTORA::patria .",
+      "tipo": "gestora",
+      "label": "Pátria Investimentos Ltda.",
+      "nome": "Pátria Investimentos Ltda.",
+      "fundos": [
+        "HGLG11"
+      ]
+    },
+    {
+      "id": "GESTORA::housi / vortx",
+      "tipo": "gestora",
+      "label": "Housi / Vortx",
+      "nome": "Housi / Vortx",
+      "fundos": [
+        "HOSI11"
+      ]
+    },
+    {
+      "id": "GESTORA::hsi - hemisferio sul",
+      "tipo": "gestora",
+      "label": "HSI - Hemisfério Sul Investimentos",
+      "nome": "HSI - Hemisfério Sul Investimentos",
+      "fundos": [
+        "HSML11"
+      ]
+    },
+    {
+      "id": "GESTORA::safra .",
+      "tipo": "gestora",
+      "label": "Safra Asset Management Ltda.",
+      "nome": "Safra Asset Management Ltda.",
+      "fundos": [
+        "JSRE11"
+      ]
+    },
+    {
+      "id": "GESTORA::monte bravo . (ex-kilima de recursos)",
+      "tipo": "gestora",
+      "label": "Monte Bravo Asset Management Ltda. (ex-Kilima Gestão de Recursos)",
+      "nome": "Monte Bravo Asset Management Ltda. (ex-Kilima Gestão de Recursos)",
+      "fundos": [
+        "KISU11"
+      ]
+    },
+    {
+      "id": "GESTORA::kinea (grupo itau unibanco)",
+      "tipo": "gestora",
+      "label": "Kinea Investimentos (Grupo Itaú Unibanco)",
+      "nome": "Kinea Investimentos (Grupo Itaú Unibanco)",
+      "fundos": [
+        "KNCR11"
+      ]
+    },
+    {
+      "id": "GESTORA::kinea .",
+      "tipo": "gestora",
+      "label": "Kinea Investimentos Ltda.",
+      "nome": "Kinea Investimentos Ltda.",
+      "fundos": [
+        "KNIP11"
+      ]
+    },
+    {
+      "id": "GESTORA::kinea . (grupo itau unibanco)",
+      "tipo": "gestora",
+      "label": "Kinea Investimentos Ltda. (Grupo Itaú Unibanco)",
+      "nome": "Kinea Investimentos Ltda. (Grupo Itaú Unibanco)",
+      "fundos": [
+        "KNRI11"
+      ]
+    },
+    {
+      "id": "GESTORA::patria - vbi .",
+      "tipo": "gestora",
+      "label": "Patria - VBI Asset Management Ltda.",
+      "nome": "Patria - VBI Asset Management Ltda.",
+      "fundos": [
+        "LVBI11",
+        "MALL11"
+      ]
+    },
+    {
+      "id": "GESTORA::merito",
+      "tipo": "gestora",
+      "label": "Mérito Investimentos",
+      "nome": "Mérito Investimentos",
+      "fundos": [
+        "MFII11"
+      ]
+    },
+    {
+      "id": "GESTORA::xp vista .",
+      "tipo": "gestora",
+      "label": "XP Vista Asset Management Ltda.",
+      "nome": "XP Vista Asset Management Ltda.",
+      "fundos": [
+        "MXRF11",
+        "XPLG11"
+      ]
+    },
+    {
+      "id": "GESTORA::jpp / fator ore asset",
+      "tipo": "gestora",
+      "label": "JPP Capital / Fator ORE Asset",
+      "nome": "JPP Capital / Fator ORE Asset",
+      "fundos": [
+        "OUJP11"
+      ]
+    },
+    {
+      "id": "GESTORA::rio bravo",
+      "tipo": "gestora",
+      "label": "Rio Bravo Investimentos",
+      "nome": "Rio Bravo Investimentos",
+      "fundos": [
+        "RBVA11",
+        "RCRB11"
+      ]
+    },
+    {
+      "id": "GESTORA::rec de recursos s.a.",
+      "tipo": "gestora",
+      "label": "REC Gestão de Recursos S.A.",
+      "nome": "REC Gestão de Recursos S.A.",
+      "fundos": [
+        "RECR11"
+      ]
+    },
+    {
+      "id": "GESTORA::tg core asset .",
+      "tipo": "gestora",
+      "label": "TG Core Asset Ltda.",
+      "nome": "TG Core Asset Ltda.",
+      "fundos": [
+        "TGAR11"
+      ]
+    },
+    {
+      "id": "GESTORA::trx de recursos .",
+      "tipo": "gestora",
+      "label": "TRX Gestora de Recursos Ltda.",
+      "nome": "TRX Gestora de Recursos Ltda.",
+      "fundos": [
+        "TRXF11"
+      ]
+    },
+    {
+      "id": "GESTORA::valora de",
+      "tipo": "gestora",
+      "label": "Valora Gestão de Investimentos",
+      "nome": "Valora Gestão de Investimentos",
+      "fundos": [
+        "VGIP11",
+        "VGIR11"
+      ]
+    },
+    {
+      "id": "GESTORA::vinci real estate / vinci compass",
+      "tipo": "gestora",
+      "label": "Vinci Real Estate / Vinci Compass",
+      "nome": "Vinci Real Estate / Vinci Compass",
+      "fundos": [
+        "VILG11"
+      ]
+    },
+    {
+      "id": "GESTORA::vinci real estate de recursos (grupo vinci compass)",
+      "tipo": "gestora",
+      "label": "Vinci Real Estate Gestora de Recursos (grupo Vinci Compass)",
+      "nome": "Vinci Real Estate Gestora de Recursos (grupo Vinci Compass)",
+      "fundos": [
+        "VINO11"
+      ]
+    },
+    {
+      "id": "GESTORA::vinci real estate de recursos",
+      "tipo": "gestora",
+      "label": "Vinci Real Estate Gestora de Recursos",
+      "nome": "Vinci Real Estate Gestora de Recursos",
+      "fundos": [
+        "VISC11"
+      ]
+    },
+    {
+      "id": "GESTORA::fator administracao de recursos",
+      "tipo": "gestora",
+      "label": "Fator Administração de Recursos",
+      "nome": "Fator Administração de Recursos",
+      "fundos": [
+        "VRTA11"
+      ]
+    }
+  ],
+  "edges": []
+}

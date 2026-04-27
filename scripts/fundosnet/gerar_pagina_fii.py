@@ -138,6 +138,24 @@ Campos opcionais (preenche só se aplicável): aquisicoes, ativos, ativosDetalha
    - `expectativa` deve ser COERENTE com `dividendos.sintese.tendencia` — se Dividendos diz queda projetada, Valuation curto/médio NÃO pode ser `alta_forte` sem racional explícito.
    - `recomendacoes` (legado) → `null`.
 
+**relacoes (schema v1) — DETECTAR CONFLITOS DE INTERESSE.** Top-level array `relacoes[]`. Para cada vínculo material com outros FIIs, gestoras ou contrapartes recorrentes, registre item com:
+   - `id`: chave única `{TICKER}-{CONTRAPARTE}-{YYYY-MM}`.
+   - `contraparte`: `{ticker, tipo, nome, gestora}`. Tipo ∈ {fii, gestora, locatario, devedor_cri, spe, externo}.
+   - `tipo` da relação ∈ {subscricao_emissao_acima, troca_de_cotas, venda_paga_em_cotas, aquisicao_paga_em_cotas, contraprestacao_contratada, cri_devedor_comum, locatario_compartilhado, mesma_gestora_transacao, transferencia_portfolio, aporte_de_caixa, emprestimo_cri_intra, outro_vinculo}.
+   - `data`, `valor` (R$), `fluxo` ∈ {deu_favor, recebeu_favor, reciproco, neutro}.
+   - `favorAberto`: true se a operação foi unilateral e nenhuma recíproca foi documentada nos 12 meses seguintes.
+   - `agioSobreMercado`: `{presente, valorPercent, leituraMercado}` quando o tipo envolve subscrição/troca de cotas.
+   - `mesmaGestora`: true quando ambos os lados têm a mesma gestora (compare `gestora.nome` normalizado).
+   - `severidadeConflito` ∈ {alta, media, baixa, inexistente}. Alta quando: mesma gestora + ágio > 5%; OU aporte de caixa direto; OU aquisição que alivia outro fundo da casa.
+   - `descricao` (HTML factual) e `leituraInterpretativa` (HTML curto sobre o que o cotista deve observar).
+   - `fontes[]`: cada fonte tem `documento`, `docId` real do dossiê, `trecho` (frase curta extraída).
+
+   **REGRAS DURAS para `relacoes[]`:**
+   - Se não há fonte documental (docId), NÃO registra. Vibe não conta.
+   - Severidade ALTA exige pelo menos UM critério objetivo (ágio quantificado, mesma gestora, aporte de caixa).
+   - Pelo menos sempre verificar: subscrição em emissão de outro FII; pagamento de transação em cotas; contraparte recorrente em CRI/locatário; transação intra-casa (mesma gestora).
+   - Se nada foi identificado, devolver `"relacoes": []` (array vazio) — NÃO omitir o campo.
+
 **conclusao** — `paragrafos` (3-5), `pontosFortes` (3-5), `pontosDeAtencao` (3-5),
    `conclusaoFinal` (1 parágrafo de fecho).
 
@@ -442,7 +460,16 @@ def _chamar_opus(ticker: str, dossie: dict, exemplo: dict) -> dict:
     m = re.search(r"\{.*\}", raw, re.DOTALL)
     if not m:
         raise RuntimeError(f"sem JSON na resposta. Início: {raw[:300]!r}")
-    return json.loads(m.group(0))
+    parsed = json.loads(m.group(0))
+
+    # Acumula custo: o claude CLI retorna `total_cost_usd` no envelope (modo --output-format json)
+    custo_usd = envelope.get("total_cost_usd") or envelope.get("cost_usd") or 0.0
+    if custo_usd:
+        try:
+            parsed.setdefault("_chamadaCustoUsd", float(custo_usd))
+        except Exception:
+            pass
+    return parsed
 
 
 SYSTEM_CORRIGIR_PATCHES = """Você é o autor da análise JSON do FII. Foram encontradas inconsistências internas que precisam ser corrigidas SEM reescrever a análise inteira — só patches pontuais.
@@ -804,6 +831,31 @@ def _processar(ticker: str, exemplo: dict) -> dict:
         fii_json["meta"]["ticker"] = ticker
         fii_json["meta"]["totalDocumentos"] = len(dossie["documentos"])
 
+    # Custo acumulado de análise (USD): preserva total das execuções anteriores
+    # somando o custo desta execução (extraído do envelope CLI).
+    custo_chamada = float(fii_json.pop("_chamadaCustoUsd", 0) or 0)
+    custo_anterior = 0.0
+    if json_path_existente := (FIIS_DIR / f"{ticker.lower()}.json"):
+        if json_path_existente.exists():
+            try:
+                ant = json.loads(json_path_existente.read_text(encoding="utf-8"))
+                custo_anterior = float(((ant.get("meta") or {}).get("custoAnalise") or {}).get("totalUsd") or 0)
+            except Exception:
+                custo_anterior = 0.0
+    custo_total = round(custo_anterior + custo_chamada, 6)
+    n_execucoes_ant = 0
+    try:
+        n_execucoes_ant = int(((ant.get("meta") or {}).get("custoAnalise") or {}).get("numeroExecucoes") or 0) if 'ant' in dir() else 0
+    except Exception:
+        pass
+    fii_json.setdefault("meta", {})["custoAnalise"] = {
+        "totalUsd": custo_total,
+        "ultimaChamadaUsd": round(custo_chamada, 6),
+        "numeroExecucoes": n_execucoes_ant + (1 if custo_chamada > 0 else 0),
+        "ultimaExecucao": datetime.now().strftime("%Y-%m-%dT%H:%M:%S"),
+        "modelo": MODELO,
+    }
+
     # salva JSON
     json_path = FIIS_DIR / f"{ticker.lower()}.json"
     json_path.write_text(json.dumps(fii_json, indent=2, ensure_ascii=False), encoding="utf-8")
@@ -811,6 +863,15 @@ def _processar(ticker: str, exemplo: dict) -> dict:
 
     # auditor de consistência + correção via patches (se houver violações altas)
     fii_json = _auditar_e_corrigir(ticker, fii_json, json_path)
+
+    # rebuild do grafo agregado de relações (para tela /fiis/conexoes/)
+    try:
+        subprocess.run(
+            ["python3", str(ROOT / "scripts" / "fundosnet" / "construir_grafo_relacoes.py")],
+            check=False, timeout=120,
+        )
+    except Exception as e:
+        print(f"  [warn] construir_grafo_relacoes falhou: {e}")
 
     # garante página HTML
     html_path = _garantir_pagina_html(ticker, fii_json)

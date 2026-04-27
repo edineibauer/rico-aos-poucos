@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapa de Conexões entre FIIs — Rico aos Poucos</title>
+    <meta name="description" content="Mapa interativo de relações entre fundos imobiliários: subscrições com ágio, trocas de cotas, transações intra-casa, conflitos de interesse documentados.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/conexoes/">
+    <meta name="keywords" content="conexões FII, conflito de interesse FII, mapa fundos imobiliários, gestoras FII, troca de cotas FII">
+    <meta name="author" content="Rico aos Poucos">
+
+    <meta property="og:title" content="Mapa de Conexões entre FIIs | Rico aos Poucos">
+    <meta property="og:description" content="Vínculos materiais entre FIIs identificados nos documentos oficiais — favores, ágios, contrapartes recorrentes.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/conexoes/">
+    <meta property="og:image" content="https://ricoaospoucos.com.br/icon-512.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rico aos Poucos">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mapa de Conexões entre FIIs | Rico aos Poucos">
+    <meta name="twitter:description" content="Vínculos materiais entre FIIs — favores, ágios, contrapartes.">
+    <meta name="twitter:image" content="https://ricoaospoucos.com.br/icon-512.png">
+
+    <meta name="theme-color" content="#0d1117">
+    <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/article-fii.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: rgba(255,255,255,0.04);
+            --border: rgba(255,255,255,0.10);
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --dim: #64748b;
+            --accent: #c4b5fd;
+        }
+        body { background: var(--bg); color: var(--text); font-family: 'Inter', sans-serif; margin: 0; }
+        .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+        main.cn-main { flex: 1; max-width: 1400px; width: 100%; margin: 0 auto; padding: 24px 16px 60px; box-sizing: border-box; }
+
+        /* HERO */
+        .cn-hero {
+            position: relative; padding: 28px 24px 24px; margin-bottom: 22px;
+            border-radius: 24px; overflow: hidden;
+            background: linear-gradient(135deg, rgba(239,68,68,0.10) 0%, rgba(15,23,42,0.92) 55%, rgba(15,23,42,0.96) 100%);
+            border: 1px solid rgba(239,68,68,0.30);
+        }
+        .cn-hero::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(circle at 100% 0%, rgba(239,68,68,0.20) 0%, transparent 60%);
+        }
+        .cn-hero > * { position: relative; z-index: 1; }
+        .cn-hero-tag { font-size: 0.62rem; letter-spacing: 0.18em; color: #fca5a5; font-weight: 700; margin-bottom: 8px; }
+        .cn-hero h1 { font-size: clamp(1.5rem, 3.4vw, 2.2rem); font-weight: 800; color: #fff; line-height: 1.15; margin: 0 0 8px; letter-spacing: -0.02em; }
+        .cn-hero p { font-size: 0.9rem; color: rgb(203 213 225); line-height: 1.55; max-width: 800px; margin: 0; }
+        .cn-hero-stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 10px; margin-top: 18px;
+        }
+        .cn-stat { background: rgba(255,255,255,0.04); padding: 10px 14px; border-radius: 12px; }
+        .cn-stat-val { font-size: 1.5rem; font-weight: 800; color: #fff; line-height: 1; font-variant-numeric: tabular-nums; }
+        .cn-stat-lbl { font-size: 0.62rem; letter-spacing: 0.10em; color: var(--muted); text-transform: uppercase; font-weight: 700; margin-top: 4px; }
+        .cn-stat-val.alta { color: #fca5a5; }
+        .cn-stat-val.media { color: #fcd34d; }
+        .cn-stat-val.aberto { color: #fcd34d; }
+
+        /* FILTROS */
+        .cn-filtros {
+            display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 14px;
+            background: var(--card); border: 1px solid var(--border);
+            padding: 12px 14px; border-radius: 14px;
+            align-items: center;
+        }
+        .cn-filtro-tag { font-size: 0.62rem; letter-spacing: 0.14em; color: var(--muted); font-weight: 700; margin-right: 6px; }
+        .cn-filtro-btn {
+            background: rgba(255,255,255,0.04);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 5px 11px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 0.78rem;
+            cursor: pointer;
+            transition: all .15s;
+        }
+        .cn-filtro-btn:hover { background: rgba(255,255,255,0.10); }
+        .cn-filtro-btn.is-active {
+            background: rgba(139,92,246,0.20);
+            border-color: rgba(139,92,246,0.50);
+            color: #fff;
+        }
+
+        /* MAPA */
+        .cn-mapa-wrap {
+            display: grid;
+            grid-template-columns: 1fr 320px;
+            gap: 14px;
+            min-height: 70vh;
+        }
+        @media (max-width: 980px) {
+            .cn-mapa-wrap { grid-template-columns: 1fr; }
+        }
+        .cn-canvas-wrap {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 18px; overflow: hidden; position: relative;
+            min-height: 70vh;
+        }
+        #cn-canvas { width: 100%; height: 70vh; display: block; cursor: grab; }
+        #cn-canvas:active { cursor: grabbing; }
+        .cn-canvas-info {
+            position: absolute; top: 12px; left: 12px;
+            font-size: 0.7rem; color: var(--muted);
+            background: rgba(15,23,42,0.85); padding: 6px 10px; border-radius: 8px;
+            pointer-events: none;
+        }
+
+        /* PAINEL LATERAL */
+        .cn-painel {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 18px; padding: 18px;
+            overflow-y: auto; max-height: 70vh;
+        }
+        .cn-painel-empty { color: var(--muted); font-size: 0.85rem; text-align: center; padding: 30px 0; line-height: 1.6; }
+        .cn-painel h3 { font-size: 1.1rem; font-weight: 800; color: #fff; margin: 0 0 4px; }
+        .cn-painel-sub { font-size: 0.78rem; color: var(--muted); margin-bottom: 12px; }
+        .cn-painel-link {
+            display: inline-block; margin-bottom: 12px;
+            font-size: 0.75rem; color: var(--accent);
+            text-decoration: none; padding: 4px 10px;
+            background: rgba(139,92,246,0.12);
+            border-radius: 6px;
+        }
+        .cn-painel-link:hover { background: rgba(139,92,246,0.22); }
+        .cn-painel-rel {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid var(--border);
+            border-left: 3px solid var(--rel-cor, #64748b);
+            border-radius: 10px;
+            padding: 10px 12px; margin-bottom: 8px;
+            font-size: 0.78rem;
+        }
+        .cn-painel-rel.alta   { --rel-cor: #ef4444; }
+        .cn-painel-rel.media  { --rel-cor: #f59e0b; }
+        .cn-painel-rel.baixa  { --rel-cor: #10b981; }
+        .cn-painel-rel.inexistente { --rel-cor: #64748b; }
+        .cn-painel-rel-tipo { font-weight: 700; color: #fff; margin-bottom: 2px; }
+        .cn-painel-rel-meta { font-size: 0.7rem; color: var(--muted); margin-bottom: 6px; }
+        .cn-painel-rel-desc { color: #cbd5e1; line-height: 1.4; }
+
+        /* LEGENDA */
+        .cn-legenda {
+            display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px;
+            padding: 10px 14px; background: var(--card);
+            border: 1px solid var(--border); border-radius: 12px;
+            font-size: 0.72rem; color: var(--muted);
+        }
+        .cn-leg-item { display: inline-flex; align-items: center; gap: 5px; }
+        .cn-leg-dot { width: 10px; height: 10px; border-radius: 50%; }
+        .cn-leg-line { width: 18px; height: 2px; }
+
+        .cn-empty {
+            text-align: center; padding: 80px 20px; color: var(--muted);
+            background: var(--card); border: 1px solid var(--border); border-radius: 18px;
+            font-size: 0.95rem; line-height: 1.6;
+        }
+        .cn-empty p { max-width: 560px; margin: 0 auto 8px; }
+    </style>
+</head>
+<body data-ticker="CONEXOES">
+    <div class="page-wrapper">
+        <header id="site-header"></header>
+
+        <main class="cn-main">
+            <section class="cn-hero">
+                <div class="cn-hero-tag">CONEXÕES · CONFLITO DE INTERESSE · TRANSPARÊNCIA</div>
+                <h1>Mapa de relações entre FIIs</h1>
+                <p>Vínculos materiais identificados nos documentos oficiais: subscrições com ágio sobre mercado, trocas de cotas, contrapartes recorrentes e transações entre fundos da mesma gestora. <strong>Presença de relação não é veredicto de fraude</strong> — é informação para o cotista.</p>
+                <div class="cn-hero-stats" id="cn-stats">
+                    <div class="cn-stat"><div class="cn-stat-val">—</div><div class="cn-stat-lbl">Carregando…</div></div>
+                </div>
+            </section>
+
+            <div id="cn-conteudo">
+                <div class="cn-empty">Carregando grafo…</div>
+            </div>
+        </main>
+
+        <footer id="site-footer"></footer>
+    </div>
+
+    <!-- d3-force via CDN para layout do grafo -->
+    <script src="https://cdn.jsdelivr.net/npm/d3-force@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-selection@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-drag@3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/d3-zoom@3"></script>
+
+    <script>
+    (function () {
+        const SEV_COR = { alta: '#ef4444', media: '#f59e0b', baixa: '#10b981', inexistente: '#64748b' };
+        const TIPO_LABEL = {
+            subscricao_emissao_acima: 'Subscrição com ágio',
+            troca_de_cotas: 'Troca de cotas',
+            venda_paga_em_cotas: 'Venda paga em cotas',
+            aquisicao_paga_em_cotas: 'Aquisição paga em cotas',
+            contraprestacao_contratada: 'Contraprestação',
+            cri_devedor_comum: 'CRI · devedor comum',
+            locatario_compartilhado: 'Locatário compartilhado',
+            mesma_gestora_transacao: 'Transação intra-casa',
+            transferencia_portfolio: 'Transferência de portfólio',
+            aporte_de_caixa: 'Aporte de caixa',
+            emprestimo_cri_intra: 'CRI subscrito intra-casa',
+            outro_vinculo: 'Outro vínculo'
+        };
+
+        let graphData = null;
+        let filtros = { severidade: 'todas', tipo: 'todos', mostrarFundosSemRelacao: false };
+
+        function fmtMoney(v) {
+            if (v == null || isNaN(v)) return '—';
+            const n = Number(v);
+            if (Math.abs(n) >= 1e6) return 'R$ ' + (n/1e6).toFixed(1).replace('.', ',') + ' Mi';
+            if (Math.abs(n) >= 1e3) return 'R$ ' + (n/1e3).toFixed(0) + ' mil';
+            return 'R$ ' + n.toFixed(0);
+        }
+
+        function aplicarFiltros(data) {
+            // Filtra arestas
+            let edges = data.edges.slice();
+            if (filtros.severidade !== 'todas') {
+                edges = edges.filter(e => e.severidadeMax === filtros.severidade);
+            }
+            if (filtros.tipo !== 'todos') {
+                edges = edges.filter(e => e.tipo === filtros.tipo);
+            }
+            const tickersConectados = new Set();
+            edges.forEach(e => { tickersConectados.add(e.from); tickersConectados.add(e.to); });
+            const nodes = data.nodes.filter(n => {
+                if (n.tipo === 'gestora') return false; // gestoras não vão pro mapa por enquanto
+                if (filtros.mostrarFundosSemRelacao) return true;
+                return tickersConectados.has(n.id);
+            });
+            return { nodes: nodes.map(n => ({...n})), edges: edges.map(e => ({...e})) };
+        }
+
+        function renderGrafo(data) {
+            const { nodes, edges } = aplicarFiltros(data);
+            const wrap = document.getElementById('cn-conteudo');
+            if (nodes.length === 0 || edges.length === 0) {
+                wrap.innerHTML = `
+                    <div class="cn-empty">
+                        <p>Nenhuma relação entre FIIs foi registrada com os filtros atuais.</p>
+                        <p style="font-size: 0.82rem; opacity: 0.7;">Conforme novas análises forem rodadas, vínculos identificados vão alimentar este mapa automaticamente. O playbook foi atualizado em 27/04/2026 — fundos analisados antes dessa data ainda não têm o campo <code>relacoes[]</code> populado.</p>
+                    </div>`;
+                return;
+            }
+
+            wrap.innerHTML = `
+                <div class="cn-filtros">
+                    <span class="cn-filtro-tag">SEVERIDADE</span>
+                    <button class="cn-filtro-btn ${filtros.severidade==='todas'?'is-active':''}" data-fil="sev" data-val="todas">Todas</button>
+                    <button class="cn-filtro-btn ${filtros.severidade==='alta'?'is-active':''}" data-fil="sev" data-val="alta">Alta</button>
+                    <button class="cn-filtro-btn ${filtros.severidade==='media'?'is-active':''}" data-fil="sev" data-val="media">Média</button>
+                    <button class="cn-filtro-btn ${filtros.severidade==='baixa'?'is-active':''}" data-fil="sev" data-val="baixa">Baixa</button>
+                    <span style="flex: 1"></span>
+                    <button class="cn-filtro-btn ${filtros.mostrarFundosSemRelacao?'is-active':''}" data-fil="orph">Mostrar fundos sem relação</button>
+                </div>
+                <div class="cn-mapa-wrap">
+                    <div class="cn-canvas-wrap">
+                        <canvas id="cn-canvas"></canvas>
+                        <div class="cn-canvas-info">Arraste para mover · scroll para dar zoom · clique num nó para detalhes</div>
+                    </div>
+                    <aside class="cn-painel" id="cn-painel">
+                        <div class="cn-painel-empty">
+                            Clique em qualquer nó (FII) ou aresta (relação) do mapa para ver detalhes aqui.
+                        </div>
+                    </aside>
+                </div>
+                <div class="cn-legenda">
+                    <span class="cn-leg-item"><span class="cn-leg-line" style="background:#ef4444"></span> Severidade alta</span>
+                    <span class="cn-leg-item"><span class="cn-leg-line" style="background:#f59e0b"></span> Média</span>
+                    <span class="cn-leg-item"><span class="cn-leg-line" style="background:#10b981"></span> Baixa</span>
+                    <span class="cn-leg-item"><span class="cn-leg-line" style="background:#64748b"></span> Informativa</span>
+                    <span class="cn-leg-item"><span class="cn-leg-dot" style="background:#c4b5fd"></span> FII analisado</span>
+                    <span class="cn-leg-item"><span class="cn-leg-dot" style="background:#475569"></span> Externo (não analisado)</span>
+                    <span class="cn-leg-item">Tamanho do nó ∝ nº de relações</span>
+                </div>
+            `;
+
+            // Bind dos filtros
+            document.querySelectorAll('.cn-filtro-btn').forEach(b => {
+                b.addEventListener('click', () => {
+                    const fil = b.dataset.fil;
+                    if (fil === 'sev') filtros.severidade = b.dataset.val;
+                    if (fil === 'orph') filtros.mostrarFundosSemRelacao = !filtros.mostrarFundosSemRelacao;
+                    renderGrafo(graphData);
+                });
+            });
+
+            // Layout d3-force
+            const canvas = document.getElementById('cn-canvas');
+            const ctx = canvas.getContext('2d');
+            const wrapEl = canvas.parentElement;
+            const dpr = window.devicePixelRatio || 1;
+
+            const resize = () => {
+                const w = wrapEl.clientWidth, h = wrapEl.clientHeight || 520;
+                canvas.width = w * dpr; canvas.height = h * dpr;
+                canvas.style.width = w + 'px'; canvas.style.height = h + 'px';
+                ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+                return { w, h };
+            };
+            let { w, h } = resize();
+
+            // Computa grau (nº de arestas) para tamanho do nó
+            const grau = {};
+            edges.forEach(e => {
+                grau[e.from] = (grau[e.from] || 0) + 1;
+                grau[e.to]   = (grau[e.to]   || 0) + 1;
+            });
+
+            const links = edges.map(e => ({ source: e.from, target: e.to, edge: e }));
+
+            const sim = d3.forceSimulation(nodes)
+                .force('link', d3.forceLink(links).id(d => d.id).distance(d => d.edge.severidadeMax === 'alta' ? 80 : 130).strength(0.5))
+                .force('charge', d3.forceManyBody().strength(-220))
+                .force('center', d3.forceCenter(w/2, h/2))
+                .force('collide', d3.forceCollide().radius(d => 14 + (grau[d.id] || 0) * 1.2));
+
+            // Zoom & pan
+            let transform = d3.zoomIdentity;
+            const zoom = d3.zoom().scaleExtent([0.3, 3]).on('zoom', (e) => { transform = e.transform; });
+            d3.select(canvas).call(zoom);
+
+            // Hover/click
+            let hoveredNode = null;
+            let selectedNode = null;
+
+            const findNode = (px, py) => {
+                const x = (px - transform.x) / transform.k;
+                const y = (py - transform.y) / transform.k;
+                for (let i = nodes.length - 1; i >= 0; i--) {
+                    const n = nodes[i];
+                    const r = 6 + Math.min(14, (grau[n.id] || 0) * 1.2);
+                    const dx = n.x - x, dy = n.y - y;
+                    if (dx*dx + dy*dy <= (r+3)*(r+3)) return n;
+                }
+                return null;
+            };
+
+            canvas.addEventListener('mousemove', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                hoveredNode = findNode(e.clientX - rect.left, e.clientY - rect.top);
+                canvas.style.cursor = hoveredNode ? 'pointer' : 'grab';
+            });
+
+            canvas.addEventListener('click', (e) => {
+                const rect = canvas.getBoundingClientRect();
+                const n = findNode(e.clientX - rect.left, e.clientY - rect.top);
+                if (n) {
+                    selectedNode = n;
+                    renderPainel(n, edges);
+                }
+            });
+
+            // Drag
+            d3.select(canvas).call(d3.drag()
+                .subject((event) => {
+                    const rect = canvas.getBoundingClientRect();
+                    return findNode(event.x, event.y);
+                })
+                .on('start', (event) => {
+                    if (!event.active) sim.alphaTarget(0.3).restart();
+                    event.subject.fx = event.subject.x;
+                    event.subject.fy = event.subject.y;
+                })
+                .on('drag', (event) => {
+                    event.subject.fx = (event.x - transform.x) / transform.k;
+                    event.subject.fy = (event.y - transform.y) / transform.k;
+                })
+                .on('end', (event) => {
+                    if (!event.active) sim.alphaTarget(0);
+                    event.subject.fx = null;
+                    event.subject.fy = null;
+                })
+            );
+
+            window.addEventListener('resize', () => { ({ w, h } = resize()); sim.force('center', d3.forceCenter(w/2, h/2)); sim.alpha(0.3).restart(); });
+
+            // Render loop
+            const isHighlighted = (node) => {
+                const focus = hoveredNode || selectedNode;
+                if (!focus) return true;
+                if (node === focus) return true;
+                return links.some(l => (l.source === focus && l.target === node) || (l.target === focus && l.source === node));
+            };
+
+            const draw = () => {
+                ctx.clearRect(0, 0, w, h);
+                ctx.save();
+                ctx.translate(transform.x, transform.y);
+                ctx.scale(transform.k, transform.k);
+
+                // Edges
+                links.forEach(l => {
+                    const focus = hoveredNode || selectedNode;
+                    const high = !focus || l.source === focus || l.target === focus;
+                    const cor = SEV_COR[l.edge.severidadeMax] || '#64748b';
+                    ctx.strokeStyle = cor;
+                    ctx.globalAlpha = high ? (l.edge.severidadeMax === 'alta' ? 0.95 : 0.65) : 0.10;
+                    ctx.lineWidth = (l.edge.ocorrencias > 1 ? 2.2 : 1.4) + (l.edge.severidadeMax === 'alta' ? 0.8 : 0);
+                    ctx.beginPath();
+                    ctx.moveTo(l.source.x, l.source.y);
+                    ctx.lineTo(l.target.x, l.target.y);
+                    ctx.stroke();
+                });
+
+                // Nodes
+                ctx.globalAlpha = 1;
+                nodes.forEach(n => {
+                    const r = 6 + Math.min(14, (grau[n.id] || 0) * 1.2);
+                    const high = isHighlighted(n);
+                    const cor = n.external ? '#475569' : '#c4b5fd';
+                    ctx.fillStyle = cor;
+                    ctx.globalAlpha = high ? 1 : 0.18;
+                    ctx.beginPath();
+                    ctx.arc(n.x, n.y, r, 0, Math.PI * 2);
+                    ctx.fill();
+                    if (n === (hoveredNode || selectedNode)) {
+                        ctx.strokeStyle = '#fff'; ctx.lineWidth = 2;
+                        ctx.stroke();
+                    }
+                    // label
+                    if (high && (transform.k > 0.6 || (grau[n.id] || 0) >= 2)) {
+                        ctx.fillStyle = high ? '#fff' : '#94a3b8';
+                        ctx.font = 'bold 10px Inter, sans-serif';
+                        ctx.textAlign = 'center';
+                        ctx.fillText(n.label || n.id, n.x, n.y + r + 11);
+                    }
+                });
+                ctx.globalAlpha = 1;
+                ctx.restore();
+            };
+
+            sim.on('tick', draw);
+            // animation loop para hover ainda quando sim está parado
+            const loop = () => { draw(); requestAnimationFrame(loop); };
+            requestAnimationFrame(loop);
+        }
+
+        function renderPainel(node, edges) {
+            const painel = document.getElementById('cn-painel');
+            const conexoes = edges.filter(e => e.from === node.id || e.to === node.id);
+
+            const linkHtml = node.url
+                ? `<a class="cn-painel-link" href="${node.url}">Abrir análise de ${node.id} →</a>`
+                : '<span style="font-size:0.7rem; color:var(--dim)">Fundo externo · não analisado no site</span>';
+
+            const relsHtml = conexoes.map(e => {
+                const outro = e.from === node.id ? e.to : e.from;
+                const ev = e.evidencias[0] || {};
+                return `
+                <div class="cn-painel-rel ${e.severidadeMax}">
+                    <div class="cn-painel-rel-tipo">${TIPO_LABEL[e.tipo] || e.tipo}</div>
+                    <div class="cn-painel-rel-meta">
+                        com <strong>${outro}</strong> · ${e.ultimaData || ''}
+                        ${e.valorTotal ? '· ' + fmtMoney(e.valorTotal) : ''}
+                        ${e.agioMaxPct != null ? ' · ágio +' + e.agioMaxPct.toFixed(1) + '%' : ''}
+                        ${e.mesmaGestora ? ' · MESMA GESTORA' : ''}
+                        ${e.favorAberto ? ' · FAVOR EM ABERTO' : ''}
+                    </div>
+                    ${ev.descricao ? `<div class="cn-painel-rel-desc">${ev.descricao}</div>` : ''}
+                </div>`;
+            }).join('');
+
+            painel.innerHTML = `
+                <h3>${node.label || node.id}</h3>
+                <div class="cn-painel-sub">
+                    ${node.nome ? node.nome + ' · ' : ''}
+                    ${node.gestora ? node.gestora : (node.external ? 'Externo' : '')}
+                </div>
+                ${linkHtml}
+                <div style="margin-top: 10px; font-size: 0.72rem; color: var(--muted); margin-bottom: 8px;">
+                    ${conexoes.length} ${conexoes.length === 1 ? 'relação' : 'relações'}
+                </div>
+                ${relsHtml || '<div class="cn-painel-empty">Sem relações com os filtros atuais.</div>'}
+            `;
+        }
+
+        function popularStats(data) {
+            const est = data.estatisticas || {};
+            const sevs = est.porSeveridade || {};
+            const html = `
+                <div class="cn-stat"><div class="cn-stat-val">${data.totalFundos}</div><div class="cn-stat-lbl">FIIs analisados</div></div>
+                <div class="cn-stat"><div class="cn-stat-val">${data.totalArestas}</div><div class="cn-stat-lbl">Vínculos únicos</div></div>
+                <div class="cn-stat"><div class="cn-stat-val alta">${sevs.alta || 0}</div><div class="cn-stat-lbl">Severidade alta</div></div>
+                <div class="cn-stat"><div class="cn-stat-val media">${sevs.media || 0}</div><div class="cn-stat-lbl">Severidade média</div></div>
+                <div class="cn-stat"><div class="cn-stat-val aberto">${est.favoresAbertos || 0}</div><div class="cn-stat-lbl">Favores em aberto</div></div>
+            `;
+            document.getElementById('cn-stats').innerHTML = html;
+        }
+
+        async function carregar() {
+            try {
+                const r = await fetch('../../data/conexoes-fiis.json', { cache: 'no-cache' });
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                graphData = await r.json();
+                popularStats(graphData);
+                renderGrafo(graphData);
+            } catch (e) {
+                console.error(e);
+                document.getElementById('cn-conteudo').innerHTML = `
+                    <div class="cn-empty">Não foi possível carregar o grafo: ${e.message}</div>`;
+            }
+        }
+        document.addEventListener('DOMContentLoaded', carregar);
+    })();
+    </script>
+
+    <script defer src="../../js/fii-layout.js"></script>
+</body>
+</html>

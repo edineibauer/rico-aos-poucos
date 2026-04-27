@@ -1,0 +1,272 @@
+/* Versão Instagram: lista vertical de cards exportáveis em PNG.
+   Cada card 1080x1350 (4:5) — formato carrossel padrão IG. */
+
+.ig-page {
+  background: var(--bg-secondary);
+  min-height: 100vh;
+  padding: 24px 16px 80px;
+}
+
+.ig-toolbar {
+  max-width: 540px;
+  margin: 0 auto 20px;
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-lg);
+  padding: 16px 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+.ig-toolbar .info { font-size: 0.85rem; color: var(--text-secondary); line-height: 1.4; max-width: 60ch; }
+.ig-toolbar .info strong { color: var(--text-primary); }
+
+.ig-toolbar .actions { display: flex; gap: 8px; flex-wrap: wrap; }
+.ig-toolbar button {
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: var(--transition);
+}
+.ig-toolbar button:hover { background: var(--primary-light); }
+.ig-toolbar button.ghost { background: transparent; border: 1px solid var(--border-color); color: var(--text-secondary); }
+.ig-toolbar button.ghost:hover { color: var(--text-primary); border-color: var(--primary-light); }
+.ig-toolbar button:disabled { opacity: 0.5; cursor: wait; }
+
+.ig-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ig-card {
+  width: 100%;
+  max-width: 540px;
+  aspect-ratio: 4 / 5;
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 36px 32px;
+  color: #fff;
+  font-family: inherit;
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-lg);
+}
+
+/* Variantes de fundo */
+.ig-card.cover {
+  background:
+    radial-gradient(ellipse at top right, rgba(248,81,73,0.45) 0%, transparent 60%),
+    radial-gradient(ellipse at bottom left, rgba(45,138,110,0.45) 0%, transparent 55%),
+    #0d1117;
+}
+.ig-card.alert {
+  background:
+    radial-gradient(ellipse at center, rgba(248,81,73,0.30) 0%, transparent 70%),
+    linear-gradient(180deg, #1a0a0a 0%, #0d1117 100%);
+}
+.ig-card.data {
+  background: linear-gradient(160deg, #0f3d2f 0%, #0d1117 60%, #0d1117 100%);
+}
+.ig-card.scenario {
+  background: linear-gradient(160deg, #1a1a2e 0%, #0d1117 100%);
+}
+.ig-card.verdict {
+  background:
+    radial-gradient(ellipse at center, rgba(45,138,110,0.40) 0%, transparent 70%),
+    linear-gradient(180deg, #0a2018 0%, #0d1117 100%);
+}
+
+.ig-card .ig-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.7);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.ig-card .ig-brand .logo {
+  width: 28px; height: 28px; border-radius: 8px;
+  background: var(--primary-gradient);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 800; font-size: 0.85rem;
+}
+
+.ig-card .ig-eyebrow {
+  margin-top: 18px;
+  font-size: 0.8rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--neutral);
+  font-weight: 600;
+}
+.ig-card.alert .ig-eyebrow { color: #ff8a80; }
+.ig-card.verdict .ig-eyebrow { color: #6ee7b7; }
+.ig-card.data .ig-eyebrow { color: #6ee7b7; }
+
+.ig-card h2 {
+  font-size: 2rem;
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  margin: 12px 0 14px;
+  color: #fff;
+}
+.ig-card.cover h2 { font-size: 2.4rem; }
+.ig-card p {
+  font-size: 1.05rem;
+  line-height: 1.45;
+  color: rgba(255,255,255,0.85);
+  margin: 0 0 12px;
+}
+.ig-card strong { color: #fff; }
+.ig-card .accent-bear { color: #ff6b6b; }
+.ig-card .accent-bull { color: #6ee7b7; }
+.ig-card .accent-warn { color: #fcd34d; }
+
+.ig-card .big-num {
+  font-size: 4.6rem;
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: #fff;
+  margin: 12px 0 6px;
+}
+.ig-card .big-num small {
+  display: block;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgba(255,255,255,0.7);
+  margin-top: 8px;
+  letter-spacing: 0.04em;
+}
+
+.ig-card .stat-pair {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 14px 0;
+}
+.ig-card .stat {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px 16px;
+}
+.ig-card .stat .v { font-size: 1.5rem; font-weight: 800; line-height: 1; }
+.ig-card .stat .v.bull { color: #6ee7b7; }
+.ig-card .stat .v.bear { color: #ff8a80; }
+.ig-card .stat .l { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+.ig-card .ig-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 8px 0;
+}
+.ig-card .ig-bullets li {
+  font-size: 1rem;
+  line-height: 1.45;
+  padding: 8px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  color: rgba(255,255,255,0.9);
+}
+.ig-card .ig-bullets li:last-child { border-bottom: none; }
+.ig-card .ig-bullets li strong { color: #fff; }
+
+.ig-card .ig-bar {
+  display: grid;
+  grid-template-columns: 110px 1fr 48px;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.85rem;
+  margin-bottom: 10px;
+}
+.ig-card .ig-bar .lbl { color: rgba(255,255,255,0.85); }
+.ig-card .ig-bar .lbl strong { color: #fff; }
+.ig-card .ig-bar .trk { background: rgba(255,255,255,0.10); border-radius: 999px; height: 10px; overflow: hidden; }
+.ig-card .ig-bar .fil { height: 100%; border-radius: 999px; }
+.ig-card .ig-bar .fil.warn { background: linear-gradient(90deg, #f85149 0%, #f0c14b 100%); }
+.ig-card .ig-bar .fil.neutral { background: linear-gradient(90deg, #6e7681 0%, #94a1ad 100%); }
+.ig-card .ig-bar .fil.bull { background: linear-gradient(90deg, #1a5f4a 0%, #6ee7b7 100%); }
+.ig-card .ig-bar .pct { color: #fff; font-weight: 700; text-align: right; font-variant-numeric: tabular-nums; }
+
+.ig-card .ig-spacer { flex: 1; }
+
+.ig-card .ig-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.6);
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  letter-spacing: 0.04em;
+}
+.ig-card .ig-footer .swipe { display: flex; align-items: center; gap: 6px; }
+.ig-card .ig-footer .swipe::after {
+  content: '→';
+  display: inline-block;
+  animation: ig-swipe 1.2s ease-in-out infinite;
+}
+@keyframes ig-swipe { 0%, 100% { transform: translateX(0); } 50% { transform: translateX(4px); } }
+
+.ig-card.cta-final {
+  background:
+    radial-gradient(ellipse at top, rgba(45,138,110,0.40) 0%, transparent 60%),
+    linear-gradient(180deg, #0a2018 0%, #0d1117 100%);
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding: 56px 32px;
+}
+.ig-card.cta-final h2 { font-size: 2rem; margin-bottom: 16px; }
+.ig-card.cta-final .cta-domain {
+  margin-top: 24px;
+  font-size: 1.05rem;
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+.ig-card.cta-final .cta-domain small {
+  display: block;
+  font-weight: 400;
+  color: rgba(255,255,255,0.7);
+  font-size: 0.85rem;
+  margin-top: 6px;
+}
+
+/* Slot de imagem para preencher com geração externa */
+.ig-card .ig-img-slot {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border-radius: 12px;
+  border: 1.5px dashed rgba(255,255,255,0.18);
+  background: rgba(255,255,255,0.04);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  margin: 8px 0 14px;
+  text-align: center;
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-style: italic;
+  line-height: 1.4;
+}
+.ig-card .ig-img-slot::before { content: '🖼️'; font-size: 1.3rem; margin-bottom: 6px; font-style: normal; }

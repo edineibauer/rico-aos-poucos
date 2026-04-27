@@ -168,7 +168,26 @@ Adicione o novo artigo no array `artigos`:
 2. Crie o artigo em espanhol: `es/artigos/meu-novo-artigo.html`
 3. Adicione as entradas nos JSONs de cada idioma
 
-### Passo 4: Commit e Push
+### Passo 4: Gerar versoes Slides e Instagram (a partir de 27/04/2026)
+
+Todo artigo de FII passa a ser entregue em **tres formatos**, com o mesmo slug:
+
+- `artigos/{slug}.html` — artigo padrao (atual)
+- `artigos/{slug}-slides.html` — apresentacao navegavel
+- `artigos/{slug}-instagram.html` — carrossel exportavel em PNG
+
+Ler `SLIDES_PADRAO.md` na raiz para a estrutura de cada deck (12-14 slides para o
+deck, 5 cards 4:5 para o Instagram). Usar o trio do TRXF11 como template:
+
+- `artigos/trxf11-gpa-recuperacao-24-pct-dividendo-2026.html`
+- `artigos/trxf11-gpa-recuperacao-24-pct-dividendo-2026-slides.html`
+- `artigos/trxf11-gpa-recuperacao-24-pct-dividendo-2026-instagram.html`
+
+A barra `view-modes` no topo do artigo conecta as tres versoes. Adicionar a versao
+slides ao `sitemap.xml` (priority 0.6, changefreq monthly). A versao Instagram fica
+`noindex` (e ferramenta interna do autor para gerar PNGs).
+
+### Passo 5: Commit e Push
 
 ```bash
 git add .

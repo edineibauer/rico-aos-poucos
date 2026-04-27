@@ -117,7 +117,7 @@ const Publicacoes = {
   },
 
   renderGrid(rootGrid, rootBottom, artigos) {
-    // Top grid: hero (0) + stack [1, 2, 3]
+    // Hero (posição 0) + stack lateral [1, 2, 3]
     const hero = artigos[0] ? this.buildCard(artigos[0], 0) : '';
     const stack = [1, 2, 3]
       .map(i => artigos[i] ? this.buildCard(artigos[i], i) : '')
@@ -131,13 +131,9 @@ const Publicacoes = {
       </div>
     `;
 
-    // Bottom row: cards 4 e 5
+    // Linha inferior não é mais usada — limpa qualquer conteúdo legado
     if (rootBottom) {
-      const bottom = [4, 5]
-        .map(i => artigos[i] ? this.buildCard(artigos[i], i) : '')
-        .filter(Boolean)
-        .join('');
-      rootBottom.innerHTML = bottom;
+      rootBottom.innerHTML = '';
     }
   },
 
@@ -154,7 +150,7 @@ const Publicacoes = {
       const destaques = data.artigos
         .filter(a => a.destaque === true)
         .sort((a, b) => new Date(b.dataPublicacao) - new Date(a.dataPublicacao))
-        .slice(0, 6);
+        .slice(0, 4);
 
       if (destaques.length === 0) {
         grid.innerHTML = '<div class="articles-hero-loading">Nenhum artigo em destaque</div>';

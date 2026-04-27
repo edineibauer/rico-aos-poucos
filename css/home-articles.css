@@ -108,7 +108,7 @@ body.home-page #footer-container {
 }
 
 body.home-page .app-footer {
-  padding: 32px max(16px, calc((100vw - 1200px) / 2 + 16px)) 20px;
+  padding: 32px max(16px, calc((100% - 1200px) / 2 + 16px)) 20px;
 }
 
 body.home-page .app-footer .footer-columns,
@@ -119,7 +119,7 @@ body.home-page .app-footer .footer-bottom {
 
 @media (min-width: 768px) {
   body.home-page .app-footer {
-    padding: 36px max(24px, calc((100vw - 1200px) / 2 + 24px)) 24px;
+    padding: 36px max(24px, calc((100% - 1200px) / 2 + 24px)) 24px;
   }
 }
 

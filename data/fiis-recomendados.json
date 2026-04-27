@@ -1,17 +1,685 @@
 {
-  "ultimaAtualizacao": "2026-04-02",
-  "descricao": "Lista de FIIs recomendados com faixas de preço. Atualizada periodicamente.",
-  "disclaimer": "Esta lista não constitui recomendação de investimento. Faça sua própria análise.",
-  "mensagem": "No momento, não temos nenhuma recomendação de FII a ser feita. Com a Selic a 14,75% e o cenário macro desfavorável para fundos imobiliários, preferimos manter o capital em renda fixa (CDI/Tesouro Selic) enquanto o cenário não sinalizar melhora. Acompanhe nossas análises individuais de cada fundo para se manter informado.",
-  "fiis": [],
-  "segmentos": {
-    "desenvolvimento": { "nome": "Desenvolvimento", "icon": "🏗️" },
-    "tijolo": { "nome": "Tijolo", "icon": "🏢" },
-    "papel": { "nome": "Papel", "icon": "📄" },
-    "hibrido": { "nome": "Híbrido", "icon": "🔀" },
-    "fof": { "nome": "FoF", "icon": "📊" },
-    "logistica": { "nome": "Logística", "icon": "📦" },
-    "shoppings": { "nome": "Shoppings", "icon": "🛒" },
-    "lajes": { "nome": "Lajes Corporativas", "icon": "🏙️" }
-  }
+  "schema": "v2",
+  "ultimaAtualizacao": "2026-04-26",
+  "metodologia": "<p>Carteiras teóricas construídas a partir de 137 FIIs analisados, combinando <strong>nota qualitativa</strong>, <strong>veredicto</strong>, <strong>P/VP</strong>, <strong>DY</strong>, <strong>sustentabilidade do dividendo</strong> e <strong>expectativa de direção</strong>. Cada carteira tem 12 ativos com pesos diferenciados (3-18%) e respeita teto de 35% por subsegmento canônico. Fundos com veredicto VENDA, LIQUIDADO, ENCERRADO ou CAUTELA pessimista são excluídos. Eixo Renda Passiva considera erosão inflacionária do principal em fundos de papel — daí a presença obrigatória de tijolo de qualidade mesmo nos perfis agressivos.</p>",
+  "macroSnapshot": {
+    "selic": 14.75,
+    "selicProjetada12m": 11.0,
+    "ipca12m": null
+  },
+  "carteiras": [
+    {
+      "id": "ganho_capital_agressivo",
+      "objetivo": "ganho_capital",
+      "perfil": "agressivo",
+      "nome": "Ganho de Capital — Agressivo",
+      "subtitulo": "Deep value puro: comprar tijolo a 60-80 centavos do real patrimonial",
+      "tese": "<p>Carteira concentrada em FIIs negociados com <strong>desconto patrimonial expressivo (P/VP médio 0,67)</strong>, em segmentos cíclicos (escritórios, shoppings regionais, agências) que tendem a reprecificar fortemente em ciclo de queda da Selic. Aceita exposição a vacância, alavancagem e ativos de turnaround em troca de máxima assimetria positiva. Para investidor com horizonte de 24-36 meses e tolerância alta a volatilidade.</p>",
+      "metricasPonderadas": {
+        "dyMedioPonderado": 11.54,
+        "pvpMedioPonderado": 0.67,
+        "exposicaoSegmento": [
+          {
+            "segmento": "tijolo_escritorios_aaa",
+            "pct": 31
+          },
+          {
+            "segmento": "tijolo_escritorios_b",
+            "pct": 30
+          },
+          {
+            "segmento": "tijolo_shoppings_regional",
+            "pct": 21
+          },
+          {
+            "segmento": "tijolo_renda_urbana",
+            "pct": 6
+          },
+          {
+            "segmento": "tijolo_residencial",
+            "pct": 6
+          },
+          {
+            "segmento": "fiagro_terras",
+            "pct": 6
+          }
+        ]
+      },
+      "ativos": [
+        {
+          "ticker": "BRCR11",
+          "peso": 18,
+          "papel": "âncora",
+          "racional": "P/VP 0,56 sobre portfólio AAA do BTG (Faria Lima/Pinheiros) com DY já em 10,2%. Maior assimetria do segmento de escritórios — cada 10% de redução de vacância no Almirante adiciona R$ 0,02-0,03 ao DPS."
+        },
+        {
+          "ticker": "BBIG11",
+          "peso": 12,
+          "papel": "satélite",
+          "racional": "Shoppings premium (Pátio Higienópolis, Paulista, RioSul) operados pela Iguatemi a P/VP 0,74. Vendas de R$ 463 Mi destravam ciclo de redução de alavancagem."
+        },
+        {
+          "ticker": "BROF11",
+          "peso": 10,
+          "papel": "satélite",
+          "racional": "P/VP 0,55 — um dos maiores descontos do mercado. Catalisador concreto na alienação direta dos imóveis pela nova política de gestão (BGR)."
+        },
+        {
+          "ticker": "BPML11",
+          "peso": 9,
+          "papel": "satélite",
+          "racional": "Entrada no Parque Dom Pedro qualifica portfólio. P/VP 0,77 com DY 11,8% e gestão BTG fazendo reciclagem ativa."
+        },
+        {
+          "ticker": "HGRE11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Pátria reduziu vacância de 14% para 5,9% em 2025. P/VP 0,84 com DY 14,5% — escritórios AAA em SP em momento de virada operacional."
+        },
+        {
+          "ticker": "AIEC11",
+          "peso": 7,
+          "papel": "oportunístico",
+          "racional": "Standard 100% locado para Rede D'Or, pipeline de 14.960 m² no Rochaverá. P/VP 0,81 com DPS em recuperação dos atuais R$ 0,34 para R$ 0,45-0,55."
+        },
+        {
+          "ticker": "CXAG11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "P/VP 0,69 sobre contratos atípicos com a Caixa (AAA soberano) até 2031. DY 11,8% e venda de Frederico Westphalen com ágio de 36% comprova valor dos ativos."
+        },
+        {
+          "ticker": "CXCO11",
+          "peso": 6,
+          "papel": "oportunístico",
+          "racional": "Estudo CBRE indica potencial de up de 85% no aluguel via revisional aberta com a Caixa. P/VP 0,80 com risco soberano de contraparte."
+        },
+        {
+          "ticker": "TGAR11",
+          "peso": 6,
+          "papel": "oportunístico",
+          "racional": "P/VP 0,63 sobre 174 ativos de desenvolvimento em 20 estados. Geração de caixa cobre distribuição (payout caixa 99%) e Selic em queda destrava repasses bancários."
+        },
+        {
+          "ticker": "BTRA11",
+          "peso": 6,
+          "papel": "oportunístico",
+          "racional": "P/VP 0,60 com R$ 122 Mi em contas a receber já contratadas. Conversão em Fiagro amplia universo de alocação e gestão BTG executando vendas com lucro."
+        },
+        {
+          "ticker": "VINO11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "P/VP 0,51 com âncora Globo (60% receita) em contrato atípico até 2030. Recompra antecipada do CRI reduziu despesa financeira em 15%."
+        },
+        {
+          "ticker": "FPAB11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "P/VP 0,58 sobre Centro Empresarial Água Branca (LEED + Well). Ocupação saiu de 37% para 89% sob gestão BTG e lucro líquido virou positivo em 2024."
+        }
+      ]
+    },
+    {
+      "id": "ganho_capital_moderado",
+      "objetivo": "ganho_capital",
+      "perfil": "moderado",
+      "nome": "Ganho de Capital — Moderado",
+      "subtitulo": "Reprecificação com gestoras top e setores de qualidade",
+      "tese": "<p>Mesma tese de upside via fechamento de desconto patrimonial, porém em <strong>FIIs com gestoras consagradas</strong> (Pátria, Hedge, Vinci, BTG, Bradesco) e segmentos com fundamentos operacionais sólidos (shoppings premium, FoFs com duplo desconto, escritórios AAA). Evita alavancagem extrema, monoativos vagos e turnarounds binários. Horizonte 18-30 meses.</p>",
+      "metricasPonderadas": {
+        "dyMedioPonderado": 11.0,
+        "pvpMedioPonderado": 0.86,
+        "exposicaoSegmento": [
+          {
+            "segmento": "tijolo_shoppings_premium",
+            "pct": 30
+          },
+          {
+            "segmento": "fof",
+            "pct": 25
+          },
+          {
+            "segmento": "tijolo_escritorios_aaa",
+            "pct": 21
+          },
+          {
+            "segmento": "tijolo_shoppings_regional",
+            "pct": 18
+          },
+          {
+            "segmento": "hibrido_multiestrategia",
+            "pct": 6
+          }
+        ]
+      },
+      "ativos": [
+        {
+          "ticker": "HGRE11",
+          "peso": 14,
+          "papel": "âncora",
+          "racional": "Pátria executando turnaround comprovado (vacância 14% → 5,9%). P/VP 0,84 com DY 14,5% — qualidade institucional + desconto + DY que sustenta a espera."
+        },
+        {
+          "ticker": "BPML11",
+          "peso": 12,
+          "papel": "âncora",
+          "racional": "Shoppings BTG com entrada no Parque Dom Pedro. P/VP 0,77 e DY 11,8% capturam ciclo de queda de juros sem dependência de evento único."
+        },
+        {
+          "ticker": "HGBS11",
+          "peso": 10,
+          "papel": "satélite",
+          "racional": "19 anos de track record (TIR 15,3% a.a.), rating brAA+, taxa 0,60% sem performance. 21 shoppings com NOI +8,4% — qualidade pura no segmento."
+        },
+        {
+          "ticker": "BCIA11",
+          "peso": 9,
+          "papel": "satélite",
+          "racional": "Duplo desconto de 19,7% via FoF Bradesco com 55+ ativos. Taxa 0,50% a.a. e DY 11,7% — captura fechamento do desconto sem stock-picking individual."
+        },
+        {
+          "ticker": "HFOF11",
+          "peso": 9,
+          "papel": "satélite",
+          "racional": "Duplo desconto 27,6% com gestão Hedge. Rentabilidade patrimonial 26,96% em 2025 (acima do IFIX) e pioneiro em recompra de cotas."
+        },
+        {
+          "ticker": "MALL11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "14 shoppings dominantes em 7 estados sob Patria-VBI. Reciclagem comprovada (Bauru TIR 14% a.a.) e ocupação em máxima histórica de 96,6%."
+        },
+        {
+          "ticker": "BLCA11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "Trophy asset Faria Lima 100% locado para Google + Casa dos Ventos. P/VP 0,76 com WALE 4,8 anos e potencial venda do ativo até 2032."
+        },
+        {
+          "ticker": "CXRI11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "FoF Caixa+Rio Bravo com P/VP 0,75 — duplo desconto pelos cálculos da gestão de 46,2%. Track record de 12 anos com gestoras top-tier no portfólio."
+        },
+        {
+          "ticker": "HSML11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "8 shoppings dominantes da HSI/Alqia. Cap rate implícito 10,8%, NOI +9% YTD e desalavancagem em curso (LTV de 30% para 19,7%)."
+        },
+        {
+          "ticker": "VISC11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "32 shoppings em 15 estados pela Vinci. SSS +6,9%, ocupação 94,8% e NOI/m² +7,2% — fundamentos sólidos com cota a P/VP 0,93."
+        },
+        {
+          "ticker": "CPSH11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "TIR de 22,5% a.a. comprovada no 1º ciclo da Capitânia. Portfólio de 7 shoppings com Iguatemi/Allos/Ancar e DY 12,16% sustentado por guidance público."
+        },
+        {
+          "ticker": "AZPL11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Híbrido tijolo + crédito a P/VP 0,90 com 100% ocupação e leasing spreads de +20-22%. Estrutura defensiva via CRIs durante Selic alta."
+        }
+      ]
+    },
+    {
+      "id": "ganho_capital_conservador",
+      "objetivo": "ganho_capital",
+      "perfil": "conservador",
+      "nome": "Ganho de Capital — Conservador",
+      "subtitulo": "Reprecificação com colchão de DY e ativos blue chip",
+      "tese": "<p>Busca reprecificação patrimonial via ciclo de queda da Selic, mas com <strong>proteção de capital robusta</strong>: FIIs com vacância baixa, contratos longos, gestão institucional consolidada e DY corrente que sustenta o investidor durante a espera. Se a tese de ganho não se materializar plenamente, o portfólio segue gerando renda real. Horizonte 24+ meses.</p>",
+      "metricasPonderadas": {
+        "dyMedioPonderado": 10.1,
+        "pvpMedioPonderado": 0.97,
+        "exposicaoSegmento": [
+          {
+            "segmento": "tijolo_logistica_aaa",
+            "pct": 32
+          },
+          {
+            "segmento": "tijolo_renda_urbana",
+            "pct": 28
+          },
+          {
+            "segmento": "tijolo_shoppings_premium",
+            "pct": 18
+          },
+          {
+            "segmento": "hibrido_multiestrategia",
+            "pct": 8
+          },
+          {
+            "segmento": "fof",
+            "pct": 7
+          },
+          {
+            "segmento": "papel_high_grade",
+            "pct": 7
+          }
+        ]
+      },
+      "ativos": [
+        {
+          "ticker": "BTLG11",
+          "peso": 13,
+          "papel": "âncora",
+          "racional": "Logística premium 92% em SP, 72 locatários AAA (Assaí, DHL, Unilever, Amazon). Vacância 2,9%, LTV 3,2% e CAGR de dividendos de 16% a.a. — núcleo defensivo."
+        },
+        {
+          "ticker": "HGLG11",
+          "peso": 11,
+          "papel": "âncora",
+          "racional": "Maior FII logístico do Brasil sob Pátria. 37 imóveis, vacância 3%, retorno de 14,3% a.a. desde IPO. Consolidação com LVBI+PATL+Brookfield criará o maior FII do país."
+        },
+        {
+          "ticker": "ALZR11",
+          "peso": 11,
+          "papel": "âncora",
+          "racional": "Vacância 0% com 26 imóveis BTS/SLB. WALE 8,9 anos, 100% IPCA, locatários Mercado Livre/Coca-Cola/Bauducco. P/VP 1,0 historicamente sobe em queda de juros."
+        },
+        {
+          "ticker": "HGRU11",
+          "peso": 9,
+          "papel": "âncora",
+          "racional": "Maior FII de renda urbana do Brasil. 100 imóveis, 16 estados, vacância 0,8% e DY 13,8%. 81% atípicos e 99% IPCA — proteção real."
+        },
+        {
+          "ticker": "GARE11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "31 imóveis com 100% ocupação desde IPO e zero inadimplência. Inquilinos AAA (Carrefour, BAT, Mateus). Gestão Guardian com TIR 25% em vendas."
+        },
+        {
+          "ticker": "KNRI11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Blue chip Kinea com 19 imóveis AAA e 150+ inquilinos. Reciclagem ativa (Athenas/Jundiaí com R$ 121 Mi de lucro) e Biosquare 100% pré-locado entrando 1S26."
+        },
+        {
+          "ticker": "BRCO11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "13 de 14 imóveis A+, 71% last mile, locatários investment grade. Rating brAA+, +104% desde IPO vs +34% IFIX. Qualidade institucional pura."
+        },
+        {
+          "ticker": "BCIA11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "FoF Bradesco com duplo desconto 19,7% e taxa 0,50%. Captura fechamento do desconto via 55+ ativos com pulverização e gestão profissional."
+        },
+        {
+          "ticker": "KNCR11",
+          "peso": 7,
+          "papel": "hedge",
+          "racional": "Papel HG Kinea, 100% adimplente desde 2012, R$ 11 Bi de PL. Carrega o yield enquanto a tese de tijolo se desenrola — DY 13,8% sustenta o portfólio."
+        },
+        {
+          "ticker": "HSML11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Shoppings dominantes da HSI/Alqia com NOI em alta. Reavaliação patrimonial +13,6% e pré-pagamento de R$ 333 Mi reduz alavancagem para 19,7%."
+        },
+        {
+          "ticker": "MALL11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Patria-VBI com 14 shoppings dominantes. Ocupação máxima histórica (96,6%), SSS +6,9% e guidance R$ 1,00/cota mantido — qualidade com desconto leve."
+        },
+        {
+          "ticker": "VISC11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Vinci Shopping com 32 ativos, 11 administradoras parceiras. Aquisições recentes (Midway, BH Shopping) com cap rate 11,3% qualificam o portfólio."
+        }
+      ]
+    },
+    {
+      "id": "renda_passiva_agressivo",
+      "objetivo": "renda_passiva",
+      "perfil": "agressivo",
+      "nome": "Renda Passiva — Agressivo",
+      "subtitulo": "Yield isento de IR maximizado via papel HY e Fiagro",
+      "tese": "<p>Carteira focada em <strong>maximização do yield mensal isento de IR</strong> via FIIs de papel high yield/middle, Fiagros de crédito e híbridos com carrego elevado. Aceita volatilidade mensal de DPS, eventos de crédito pontuais e sensibilidade ao IPCA. DY ponderado próximo a 16% — aproximadamente 145% do CDI gross-up. Para investidor que vive de fluxo e tolera ciclos.</p>",
+      "metricasPonderadas": {
+        "dyMedioPonderado": 15.93,
+        "pvpMedioPonderado": 0.86,
+        "exposicaoSegmento": [
+          {
+            "segmento": "papel_misto",
+            "pct": 25
+          },
+          {
+            "segmento": "fiagro_credito",
+            "pct": 24
+          },
+          {
+            "segmento": "papel_high_yield",
+            "pct": 30
+          },
+          {
+            "segmento": "hibrido_multiestrategia",
+            "pct": 15
+          },
+          {
+            "segmento": "fiagro_terras",
+            "pct": 6
+          }
+        ]
+      },
+      "ativos": [
+        {
+          "ticker": "CACR11",
+          "peso": 14,
+          "papel": "âncora",
+          "racional": "DY 19,2% (143% do CDI gross-up) com carteira IPCA+12,75% e razão de garantias média de 225%. Cartesia com 40+ anos em crédito imobiliário."
+        },
+        {
+          "ticker": "EGAF11",
+          "peso": 11,
+          "papel": "âncora",
+          "racional": "Fiagro CRA com DY 17% e 100% adimplência desde IPO. Cadeia de insumos (88%) — historicamente mais resiliente que produtor rural direto. Isenção IR para PF."
+        },
+        {
+          "ticker": "GCRI11",
+          "peso": 10,
+          "papel": "satélite",
+          "racional": "DY 15,27% com P/VP 0,73 (27% desconto). Gestão Galapagos transparente, IPCA+10,55% em 81% da carteira e reserva de R$ 0,99/cota suaviza distribuição."
+        },
+        {
+          "ticker": "ALZC11",
+          "peso": 9,
+          "papel": "satélite",
+          "racional": "DY 14,5% com IPCA+12,1% em carteira pulverizada (27 CRIs, 49 devedores). Programa de recompra ativo a 17% de desconto sobre VP."
+        },
+        {
+          "ticker": "EXES11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "DY 17,2% LTM com 14 meses consecutivos de R$ 0,13/cota. Originação proprietária de 85% dos ativos — diferencial estrutural de spread."
+        },
+        {
+          "ticker": "CYCR11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "DY 15,4% com 28 CRIs (81% originação Cyrela). 160% do CDI líquido desde IPO, inadimplência zero e renúncia voluntária à taxa de performance."
+        },
+        {
+          "ticker": "CPTR11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "Fiagro Capitânia com DY 15,2% (CDI+12% líquido) e duration curta de 1,7 anos. 41 tomadores diversificados e devedores AAA (Minerva, SLC)."
+        },
+        {
+          "ticker": "BCRI11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "DY 15,33% com P/VP 0,75. Carteira de 51 CRIs com gestão ativa Banestes — IPCA + spreads elevados, 137% do CDI líquido em 2025."
+        },
+        {
+          "ticker": "ARRI11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "DY 15,77% com IPCA+11,60% e 24 meses de R$ 0,09/cota. Lucro líquido 2025 +121% vs 2024. P/VP 0,81 oferece margem patrimonial."
+        },
+        {
+          "ticker": "CPTS11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "DY 13,06% com track record de +274,9% desde IPO (12,1% a.a.). Híbrido Capitânia 100% adimplente com duplo catalisador (CRIs + FIIs descontados)."
+        },
+        {
+          "ticker": "BTRA11",
+          "peso": 6,
+          "papel": "oportunístico",
+          "racional": "Fiagro terras com DY 15,4% sustentado por R$ 14,78/cota de reserva e R$ 122 Mi de contas a receber. P/VP 0,60 cria alavancagem extra ao yield."
+        },
+        {
+          "ticker": "CRAA11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Sparta Fiagro CDI+1,6% com 123 CRAs em 22 segmentos. Zero inadimplência desde IPO atravessando Agrogalaxy/Raízen, devedores high grade (SLC, Camil, 3Tentos)."
+        }
+      ]
+    },
+    {
+      "id": "renda_passiva_moderado",
+      "objetivo": "renda_passiva",
+      "perfil": "moderado",
+      "nome": "Renda Passiva — Moderado",
+      "subtitulo": "Yield acima da mediana com mistura papel HG + tijolo de qualidade",
+      "tese": "<p>DY ponderado de ~11,5% via combinação de <strong>papel high grade institucional</strong> (Kinea, Pátria, BTG) com <strong>tijolo de qualidade indexado a IPCA</strong> (renda urbana, logística AAA, shoppings premium). Mistura protege contra erosão inflacionária do principal — tijolo aprecia, papel paga o cupom mensal. Sem fundos com pressão de dividendo ou alavancagem perigosa.</p>",
+      "metricasPonderadas": {
+        "dyMedioPonderado": 11.51,
+        "pvpMedioPonderado": 0.99,
+        "exposicaoSegmento": [
+          {
+            "segmento": "papel_high_grade",
+            "pct": 32
+          },
+          {
+            "segmento": "tijolo_renda_urbana",
+            "pct": 17
+          },
+          {
+            "segmento": "hibrido_multiestrategia",
+            "pct": 15
+          },
+          {
+            "segmento": "tijolo_logistica_aaa",
+            "pct": 15
+          },
+          {
+            "segmento": "papel_misto",
+            "pct": 8
+          },
+          {
+            "segmento": "tijolo_shoppings_premium",
+            "pct": 7
+          },
+          {
+            "segmento": "fiagro_credito",
+            "pct": 6
+          }
+        ]
+      },
+      "ativos": [
+        {
+          "ticker": "KNCR11",
+          "peso": 14,
+          "papel": "âncora",
+          "racional": "Maior FII papel CDI+ do Brasil. 13 anos sem default, R$ 11 Bi de PL, devedores AAA (Brookfield, JHSF, Allos). DY 13,8% com liquidez de R$ 22 Mi/dia."
+        },
+        {
+          "ticker": "KNIP11",
+          "peso": 10,
+          "papel": "âncora",
+          "racional": "Maior FII papel IPCA+ do Brasil. Kinea com 9,5 anos sem inadimplência reportada. Carrego MTM IPCA+10,10% — proteção real com prêmio sobre NTN-B."
+        },
+        {
+          "ticker": "HGRU11",
+          "peso": 9,
+          "papel": "âncora",
+          "racional": "Renda urbana Pátria com vacância 0,8%, 100 imóveis em 16 estados. 81% atípicos e 99% IPCA — DY 13,8% sustentável e crescente."
+        },
+        {
+          "ticker": "BTCI11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Papel BTG com 100% adimplência em mar/2026. IPCA+9,68% em 35 CRIs com LTV médio 56%. R$ 1 Bi de PL e ADTV R$ 2,7 Mi."
+        },
+        {
+          "ticker": "HGCR11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "15 anos de histórico (505% retorno acumulado). Pátria com 41 CRIs IPCA+9% e LTV 45%. DY 12,2% sustentável com reserva de R$ 1,56/cota."
+        },
+        {
+          "ticker": "ALZR11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Vacância 0%, WALE 8,9 anos, 100% IPCA com Mercado Livre/Coca-Cola/DASA/Fleury. DY 9,4% com proteção inflacionária implícita no aluguel."
+        },
+        {
+          "ticker": "BTLG11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Logística top-tier BTG. Vacância 2,9%, 72 locatários investment grade, CAGR 16% em dividendos. Tijolo de qualidade preserva valor real."
+        },
+        {
+          "ticker": "MXRF11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "DY 12,7% com previsibilidade extrema (R$ 0,095-0,10 há 5+ anos). 1,4 milhão de cotistas e R$ 14 Mi/dia de liquidez — papel híbrido institucional."
+        },
+        {
+          "ticker": "HGBS11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "Shoppings premium Hedge com 19 anos de TIR 15,3% a.a. Vendas/m² +7,7% e NOI +8,4% — tijolo de qualidade que cresce real."
+        },
+        {
+          "ticker": "CPTS11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "Híbrido Capitânia com 11 anos de gestão. 100% adimplente, IPCA+8,29% em CRIs e FIIs descontados. DY 13% com duplo catalisador."
+        },
+        {
+          "ticker": "HGLG11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "Maior FII logístico Pátria. 37 imóveis, distribuição estável em R$ 1,10/cota há 13 meses. Inquilinos blue chip com IPCA — preserva poder de compra."
+        },
+        {
+          "ticker": "CRAA11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Fiagro Sparta com 122% do CDI acumulado e zero inadimplência desde 2023. 123 CRAs com devedores high grade (SLC AA, Camil AA+) — adiciona isenção IR no agro."
+        }
+      ]
+    },
+    {
+      "id": "renda_passiva_conservador",
+      "objetivo": "renda_passiva",
+      "perfil": "conservador",
+      "nome": "Renda Passiva — Conservador",
+      "subtitulo": "Aposentadoria: yield estável e previsível, sustentado no longo prazo",
+      "tese": "<p>Carteira pensada para o cotista que <strong>vive do dividendo</strong>. Apenas FIIs com gestoras top-tier (Kinea, Pátria, BTG, Bradesco), <strong>histórico longo (10+ anos)</strong>, baixa alavancagem, <strong>dividendo sustentável de longo prazo</strong> e DY mínimo de 0,7%/mês. Combina papel HG (CDI+ e IPCA+) que paga o cupom com tijolo blue chip que protege o principal contra inflação. DY ~10,7% ao ano com volatilidade mínima.</p>",
+      "metricasPonderadas": {
+        "dyMedioPonderado": 10.73,
+        "pvpMedioPonderado": 0.99,
+        "exposicaoSegmento": [
+          {
+            "segmento": "papel_high_grade",
+            "pct": 30
+          },
+          {
+            "segmento": "tijolo_logistica_aaa",
+            "pct": 27
+          },
+          {
+            "segmento": "tijolo_renda_urbana",
+            "pct": 17
+          },
+          {
+            "segmento": "hibrido_multiestrategia",
+            "pct": 9
+          },
+          {
+            "segmento": "papel_misto",
+            "pct": 6
+          },
+          {
+            "segmento": "fiagro_credito",
+            "pct": 6
+          },
+          {
+            "segmento": "fof",
+            "pct": 5
+          }
+        ]
+      },
+      "ativos": [
+        {
+          "ticker": "KNCR11",
+          "peso": 14,
+          "papel": "âncora",
+          "racional": "100% adimplente desde 2012 atravessando pandemia, Selic 13,75% e Selic 15% sem defaults. Devedores AAA com gestão Kinea (Itaú). Cupom mensal sem volatilidade significativa."
+        },
+        {
+          "ticker": "HGLG11",
+          "peso": 12,
+          "papel": "âncora",
+          "racional": "Maior FII logístico do Brasil há 14 anos. R$ 1,10/cota há 13 meses consecutivos, vacância 3%, locatários blue chip (Mercado Livre, VW, Shopee) com contratos longos."
+        },
+        {
+          "ticker": "KNIP11",
+          "peso": 10,
+          "papel": "âncora",
+          "racional": "Maior FII papel IPCA+ do Brasil. Kinea com 9,5 anos sem inadimplência. Reserva de R$ 0,72/cota para suavizar meses de IPCA baixo. Proteção inflacionária real."
+        },
+        {
+          "ticker": "ALZR11",
+          "peso": 9,
+          "papel": "âncora",
+          "racional": "Vacância 0% com 26 imóveis BTS/SLB. WALE 8,9 anos com Mercado Livre, Coca-Cola, DuPont, Bauducco. 100% IPCA — DPS estável e poder de compra preservado."
+        },
+        {
+          "ticker": "KNRI11",
+          "peso": 9,
+          "papel": "âncora",
+          "racional": "Blue chip Kinea há 15+ anos. Híbrido escritórios + logística com 150+ inquilinos AAA. R$ 4,6 Bi de PL, 308 mil cotistas — fundo defensivo por excelência."
+        },
+        {
+          "ticker": "HGRU11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Renda urbana Pátria com vacância 0,8%, 100 imóveis em 16 estados. 99% IPCA garante poder de compra. Maior fundo do segmento, gestão institucional."
+        },
+        {
+          "ticker": "BTLG11",
+          "peso": 8,
+          "papel": "satélite",
+          "racional": "Logística BTG com vacância 2,9%, LTV 3,2% (alavancagem mínima), 72 locatários investment grade. CAGR 16% em dividendos — crescimento real do cupom."
+        },
+        {
+          "ticker": "BRCO11",
+          "peso": 7,
+          "papel": "satélite",
+          "racional": "Bresco com 13 de 14 imóveis A+, rating S&P brAA+. 67% locatários investment grade. Lucro caixa acumulado de R$ 1,95/cota como amortecedor."
+        },
+        {
+          "ticker": "HGCR11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Pátria com 15 anos de histórico (505% retorno). 41 CRIs IPCA+9% e LTV 45%. DY 12,2% sustentável com reserva acruada — papel veterano."
+        },
+        {
+          "ticker": "BTCI11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "100% adimplente em mar/2026. BTG Pactual com 35 CRIs IPCA+9,68% e LTV médio 56%. 206 mil cotistas — papel institucional sem sustos."
+        },
+        {
+          "ticker": "CRAA11",
+          "peso": 6,
+          "papel": "satélite",
+          "racional": "Sparta Fiagro CDI+1,6% com 123 CRAs e zero inadimplência. Devedores high grade (SLC, Camil, 3Tentos, GTFoods). Adiciona renda isenta de IR."
+        },
+        {
+          "ticker": "BCIA11",
+          "peso": 5,
+          "papel": "hedge",
+          "racional": "FoF Bradesco com 11 anos, taxa 0,50% e DY estável de 11,6%. 55+ ativos pulverizados — diversificação de gestores delegada à Bradesco Asset."
+        }
+      ]
+    }
+  ],
+  "totalFundosAnalisados": 137
 }

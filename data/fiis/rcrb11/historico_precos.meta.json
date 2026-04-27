@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/rcrb11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2019-11-04",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:RCRB11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 141.04,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 108.51,
+    "data": "2023-04-10"
+  },
+  "maxHistorico": {
+    "valor": 289.99,
+    "data": "2019-12-23"
+  },
+  "totalPontos": 339,
+  "coletadoEm": "2026-04-27T02:36:27Z"
+}

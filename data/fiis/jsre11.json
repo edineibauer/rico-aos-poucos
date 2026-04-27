@@ -1,0 +1,3101 @@
+{
+  "meta": {
+    "ticker": "JSRE11",
+    "nome": "JS Real Estate Multigestão FII",
+    "nomeExtra": "(JSRE)",
+    "segmento": "Tijolo - Lajes Corporativas AAA",
+    "badges": [
+      "6 Edifícios SP/RJ",
+      "IPO 06/06/2011",
+      "Gestão Safra Asset",
+      "Tower Bridge AAA",
+      "Rochaverá AAA"
+    ],
+    "sentimento": "otimista",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 386,
+    "versaoSchema": "v3"
+  },
+  "seo": {
+    "title": "JSRE11 - JS Real Estate Multigestão FII | Análise Completa",
+    "description": "Análise profunda do JSRE11: portfólio com 6 edifícios AAA em São Paulo (Tower Bridge, Rochaverá, WTNU III, Ed. Paulista), DPS estável de R$ 0,48/cota há 24+ meses, P/VP 0,65, gestão Safra Asset.",
+    "keywords": "JSRE11, JS Real Estate, FII tijolo, lajes corporativas, escritórios AAA, Safra Asset, Tower Bridge, Rochaverá, Faria Lima, Berrini",
+    "ogTitle": "JSRE11 - Análise do JS Real Estate Multigestão",
+    "ogDescription": "FII híbrido de escritórios AAA com 6 edifícios premium em SP/RJ. P/VP 0,65, DPS estável R$ 0,48 e DY 8,7%.",
+    "twitterTitle": "JSRE11 - JS Real Estate Multigestão",
+    "twitterDescription": "Análise completa do FII de lajes corporativas AAA com gestão Safra Asset."
+  },
+  "indicadores": {
+    "cotacao": 65.89,
+    "cotacaoData": "2026-04-20",
+    "pvp": 0.65,
+    "pvpDesconto": "35.5% de desconto sobre VP",
+    "dividendYield": 8.74,
+    "dividendoMensal": 0.48,
+    "dividendoAnual": 5.76,
+    "patrimonioLiquido": "R$ 2,12 Bi",
+    "vpCota": 102.1,
+    "cotistas": 91473,
+    "cotistasDetalhe": "20,77 milhões de cotas emitidas",
+    "ocupacao": 91.7,
+    "wault": 3.0,
+    "numImoveis": 6,
+    "ablTotal": "161.705 m²",
+    "numEstados": 2,
+    "numInquilinos": 94
+  },
+  "recomendacao": {
+    "nota": 7.5,
+    "veredicto": "COMPRA",
+    "cor": "emerald",
+    "resumo": "<p>JSRE11 é um FII de <strong class=\"text-emerald-400\">escritórios AAA premium em São Paulo</strong>, com 6 edifícios top-tier (Tower Bridge, Rochaverá, WTNU III, Ed. Paulista, Work Bela Cintra, WT Morumbi-Ala B), gestão Safra Asset e <strong class=\"text-emerald-400\">DPS de R$ 0,48/cota mantido há 24 meses consecutivos</strong>. Negocia com <strong class=\"text-emerald-400\">P/VP 0,65 (35% de desconto sobre VP de R$ 102/cota)</strong>, refletindo o ciclo restritivo de Selic 14,75% mais que problemas operacionais. Vacância física 8,3% (consolidada com JSRI 11,6%), em recuperação após pico de 8,4% em fev/2024. <strong class=\"text-amber-400\">Pré-pagamento integral do CRI Rochaverá em fev/2026 zerou alavancagem do fundo</strong>. Tese: laje AAA com gestão competente comprada a desconto patrimonial relevante, com convergência ao VP esperada em ciclo de queda da Selic.</p>"
+  },
+  "quickStats": [
+    {
+      "label": "P/VP",
+      "valor": "0,65",
+      "detalhe": "35% de desconto vs VP R$ 102",
+      "detalheHtml": "<span class=\"text-emerald-400 font-medium\">Comprar abaixo de R$ 71</span>",
+      "icone": "percent",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "DY 12m",
+      "valor": "8,74%",
+      "detalhe": "R$ 0,48/cota mantido há 24 meses",
+      "detalheHtml": "<span class=\"text-amber-400 font-medium\">Abaixo da Selic (14.75%)</span>",
+      "icone": "trending-up",
+      "corIcone": "amber"
+    },
+    {
+      "label": "ABL",
+      "valor": "161,7 mil m²",
+      "detalhe": "6 edifícios AAA SP/RJ",
+      "detalheHtml": "<span class=\"text-emerald-400 font-medium\">Tower Bridge + Rochaverá ⩾ 60% PL</span>",
+      "icone": "building",
+      "corIcone": "emerald"
+    },
+    {
+      "label": "Vacância",
+      "valor": "8,3%",
+      "detalhe": "Física consolidada (11,6% c/ JSRI)",
+      "detalheHtml": "<span class=\"text-amber-400 font-medium\">Mercado SP CBD em ~10% vacância</span>",
+      "icone": "alert-triangle",
+      "corIcone": "amber"
+    }
+  ],
+  "pontosAtencao": [
+    {
+      "titulo": "Vacância Tower Bridge 10,2% (incluindo saída NCR fev/2026)",
+      "descricao": "Após saída de NCR (que pagou multa equivalente a 1 ano de aluguel) e devolução parcial Medtronic, vacância física do Tower Bridge subiu para 10,2%. Compensada parcialmente pela locação de 6.660 m² para Novartis no WT Morumbi.",
+      "severidade": "media",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1130999)"
+    },
+    {
+      "titulo": "WT Morumbi com 19,8% de vacância física",
+      "descricao": "Aquisição recente (dez/2025 via JSRI) com vacância elevada na Ala B. A locação parcial para Novartis em fev/2026 reduziu, mas ainda representa upside (e risco) relevante.",
+      "severidade": "media",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1130999)"
+    },
+    {
+      "titulo": "DY 8,7% abaixo da Selic 14,75%",
+      "descricao": "Tese é hold patrimonial: cota a R$ 65,89 com VP R$ 102 oferece desconto patrimonial de 35%, mas o DY corrente isolado é dominado por LFT/CDI no curto prazo. Tese funciona em ciclo de queda da Selic.",
+      "severidade": "alta",
+      "fonte": "Macro: Selic atual BCB SGS + DPS atual"
+    },
+    {
+      "titulo": "WAULT de 3,0 anos",
+      "descricao": "Prazo médio ponderado de vencimentos contratuais é curto. 47% dos contratos têm vencimento ou revisional em 2026-2027, gerando ciclo intenso de renegociações que pode pressionar receita em mercado de SP CBD ainda com 10% de vacância.",
+      "severidade": "media",
+      "fonte": "Relatório Gerencial fev/2026 (ID 1130999)"
+    },
+    {
+      "titulo": "Reavaliação patrimonial -6,6% em dez/2024",
+      "descricao": "Avaliação a mercado pela Colliers reduziu valor contábil dos imóveis de R$ 2.230 mi (set/2024) para R$ 2.083 mi (dez/2024). VP por cota caiu de R$ 109,53 para R$ 101,73 — efeito de preços de mercado cap rate em alta no fim do ciclo Selic.",
+      "severidade": "baixa",
+      "fonte": "Informe Anual 2024 (ID 869383) + Relatório Gerencial dez/2024 (ID 817092)"
+    },
+    {
+      "titulo": "Cota negociou a R$ 51,66 em fev/2025 (mínima histórica)",
+      "descricao": "Drawdown de -27% nos últimos 24 meses, reflexo do ciclo Selic. Cota se recuperou para R$ 65,89 em abr/2026 (+27% desde mínima), mas ainda 28% abaixo do VP histórico R$ 109 pré-reavaliação.",
+      "severidade": "baixa",
+      "fonte": "Histórico de preços yfinance"
+    }
+  ],
+  "gestora": {
+    "nome": "Safra Asset Management Ltda.",
+    "nota": 8.5,
+    "notaLabel": "Top-3 entre gestoras de Asset Brasil",
+    "stats": [
+      {
+        "label": "CNPJ Gestor",
+        "valor": "62.180.047/0001-31"
+      },
+      {
+        "label": "Administrador",
+        "valor": "Banco J. Safra S.A."
+      },
+      {
+        "label": "Auditor",
+        "valor": "PwC"
+      },
+      {
+        "label": "Início do Fundo",
+        "valor": "06/06/2011"
+      },
+      {
+        "label": "Tempo de gestão",
+        "valor": "15 anos"
+      },
+      {
+        "label": "Diretor responsável",
+        "valor": "Marcio Aurelio de Nobrega"
+      }
+    ],
+    "resumo": "<p>O Banco J. Safra S.A. é o administrador e a Safra Asset Management é a gestora do JSRE11 desde o IPO em 2011. O Grupo Safra é uma das instituições financeiras privadas mais tradicionais do Brasil, com mais de 180 anos de história global e atuação consolidada em wealth management, banco de investimento e gestão de fundos. Em dez/2024 a Safra Asset Management foi incorporada à Guide Investimentos (em transição para \"Safra Asset Corretora de Títulos e Valores Mobiliários S.A.\"), reorganização societária dentro do mesmo conglomerado. <strong class=\"text-emerald-400\">Track record sólido de gestão ativa</strong>: trocou portfólio em 2017-2021 (vendeu CSHG Brasil Shopping, comprou Tower Bridge, Rochaverá, WTNU III, Ed. Paulista) e em 2024-2025 fez emissão CRI Rochaverá (R$ 135 mi) que foi pré-paga em fev/2026, mantendo o fundo desalavancado.</p>",
+    "link": "https://www.safra.com.br/sobre/safra-asset/js-real-estate.htm"
+  },
+  "taxas": {
+    "subtitulo": "Estrutura de remuneração da gestão e administração",
+    "glowCor": "amber",
+    "itens": [
+      {
+        "label": "Taxa de Administração",
+        "valor": "1,00% a.a.",
+        "detalhe": "sobre valor de mercado do fundo"
+      },
+      {
+        "label": "Taxa de Performance",
+        "valor": "20%",
+        "detalhe": "sobre o que exceder 6% a.a. atualizado pelo IGP-M (benchmark)"
+      },
+      {
+        "label": "Taxa de Custódia",
+        "valor": "Banco J. Safra",
+        "detalhe": "inclusa na taxa de administração"
+      }
+    ],
+    "comparativoTitulo": "Comparativo com pares (escritórios AAA)",
+    "comparativo": [
+      {
+        "fundo": "JSRE11 (Safra)",
+        "taxaAdmin": "1,00%",
+        "taxaPerf": "20% s/ 6% IGP-M"
+      },
+      {
+        "fundo": "HGRE11 (Pátria)",
+        "taxaAdmin": "~0,95%",
+        "taxaPerf": "sem"
+      },
+      {
+        "fundo": "BLCA11 (BTG Pactual)",
+        "taxaAdmin": "1,30%",
+        "taxaPerf": "sem"
+      },
+      {
+        "fundo": "BROF11 (BTG Pactual)",
+        "taxaAdmin": "1,15%",
+        "taxaPerf": "sem"
+      },
+      {
+        "fundo": "GTWR11 (CSHG)",
+        "taxaAdmin": "1,00%",
+        "taxaPerf": "sem"
+      }
+    ],
+    "detalhes": "<p>A taxa total efetiva (admin + custódia) do JSRE11 ficou em <strong class=\"text-amber-400\">0,57% sobre patrimônio contábil em 2025</strong> (R$ 12,58 mi pagos), equivalente a <strong>0,91% sobre valor de mercado</strong>. O benchmark de performance (IGP-M + 6%) é tradicional mas pouco impactante no atual ciclo de IPCA descolando do IGP-M. Em 2025, dado que o retorno patrimonial ficou abaixo do benchmark, não houve cobrança de taxa de performance.</p>"
+  },
+  "portfolio": {
+    "schema": "v2",
+    "schemaVersion": "v2.0",
+    "tipoFundo": "tijolo",
+    "dataReferencia": "2026-02-27",
+    "subtituloAnalise": "Carteira de 6 edifícios AAA em São Paulo (mais 1 em Rio), gestão Safra Asset",
+    "stats": {
+      "totalAtivos": 6,
+      "abl": 161705,
+      "ocupacaoFisica": 91.7,
+      "ocupacaoFinanceira": 88.4,
+      "vacanciaFisica": 8.3,
+      "vacanciaFinanceira": 11.6,
+      "wault": 3.0,
+      "ltv": 0.0,
+      "alavancagemPct": 0.0,
+      "alocacaoPL": [
+        {
+          "categoria": "Imóveis diretos",
+          "pct": 0.867,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "Cotas Subordinadas JSRI (look-through tijolo)",
+          "pct": 0.088,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "Carteira CRI (Atacadão)",
+          "pct": 0.028,
+          "cor": "#f59e0b"
+        },
+        {
+          "categoria": "Títulos Públicos (LFT)",
+          "pct": 0.013,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "Cotas FIIs",
+          "pct": 0.006,
+          "cor": "#a78bfa"
+        },
+        {
+          "categoria": "Caixa e Contas a Receber",
+          "pct": 0.007,
+          "cor": "#64748b"
+        },
+        {
+          "categoria": "Passivo (rendimentos a pagar)",
+          "pct": -0.005,
+          "cor": "#475569"
+        }
+      ]
+    },
+    "ativos": [
+      {
+        "tipo": "imovel",
+        "id": "tower-bridge-corporate",
+        "nome": "Edifício Tower Bridge Corporate",
+        "endereco": "Av. Jornalista Roberto Marinho, 85 — Berrini, São Paulo, SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Berrini/Chucri Zaidan",
+          "lat": -23.6125,
+          "lng": -46.6976
+        },
+        "abl": 56448,
+        "padrao": "AAA",
+        "tipologia": "escritorio_aaa",
+        "certificacoes": [
+          "LEED Gold"
+        ],
+        "anoConstrucao": 2013,
+        "participacao": 1.0,
+        "participacaoNota": "61% direto + 39% indireto via JSRI (subordinada). Total 100% econômico.",
+        "valorContabil": 666310201,
+        "capRateAtual": null,
+        "ocupacao": 0.898,
+        "vacanciaFisica": 0.102,
+        "aquisicao": "Março/2020 (compra) e Dezembro/2025 (re-estruturação JSRI)",
+        "locatarios": [
+          {
+            "nome": "Zurich Minas",
+            "setor": "Seguros",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Medtronic",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Devolveu ~700 m² em fev/2026"
+          },
+          {
+            "nome": "Salesforce",
+            "setor": "Tecnologia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Abbvie",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "EMAE",
+            "setor": "Energia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Fleury",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Banco Toyota",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Seb (educacional)",
+            "setor": "Educação",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Zurich Santander",
+            "setor": "Seguros",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Panalpina",
+            "setor": "Logística",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Docusign",
+            "setor": "Tecnologia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Bridgestone",
+            "setor": "Indústria",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Kroll & AA",
+            "setor": "Consultoria",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Green4T",
+            "setor": "Tecnologia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "B4A, Dassault, Lindt, Onfly, Welucci, Puro Digital",
+            "setor": "Diversos",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Conjunto de inquilinos menores"
+          }
+        ],
+        "eventosRecentes": "Saída da NCR em fev/2026 com pagamento de multa equivalente a 1 ano de aluguel; devolução parcial Medtronic ~700 m². Pré-pagamento integral do CRI Rochaverá (R$ 135 mi) em fev/2026 zerou alavancagem.",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999) + Informe Anual 2025 (ID 1150755)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "rochavera-marble-ebony",
+        "nome": "Torres Marble e Ebony — Complexo Rochaverá",
+        "endereco": "Av. das Nações Unidas, 14.171 — Brooklin, São Paulo, SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Chucri Zaidan/Brooklin",
+          "lat": -23.6238,
+          "lng": -46.6975
+        },
+        "abl": 22697,
+        "padrao": "AAA",
+        "tipologia": "escritorio_aaa",
+        "certificacoes": [
+          "LEED Platinum"
+        ],
+        "anoConstrucao": 2008,
+        "participacao": 0.4,
+        "participacaoNota": "40% das torres Marble e Ebony",
+        "valorContabil": 408200000,
+        "capRateAtual": null,
+        "ocupacao": 0.967,
+        "vacanciaFisica": 0.033,
+        "aquisicao": "Fevereiro/2021",
+        "locatarios": [
+          {
+            "nome": "Banco BV",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Entrou em fev/2026 (substituiu Avaya)"
+          },
+          {
+            "nome": "AG Capital",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Entrou em fev/2026"
+          },
+          {
+            "nome": "SAP Brasil",
+            "setor": "Tecnologia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Boehringer Ingelheim",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico",
+              "vencimento": "2029-12-31"
+            },
+            "observacao": "Renovação em dez/2024 — vencimento agora dez/2029"
+          },
+          {
+            "nome": "Banco do Brasil",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Banco da Amazônia",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Banco Caterpillar",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Banco Votorantim",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Boston Scientific, Fleury, Genomma Lab, Care Plus, Livanova",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Cluster healthcare"
+          },
+          {
+            "nome": "First Data, Akzo Nobel, Echoenergia, Triumph Motorcycles, Zebra, Power China, American Express, Cognizant, GEP",
+            "setor": "Diversos",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "eventosRecentes": "Saídas de Avaya e Vifor compensadas pelas entradas de Banco BV e AG Capital. Locação de 418 m² para Care Plus em nov/2025. Vacância caiu de 8,8% (dez/2024) para 3,3% (fev/2026).",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999) + nov/2025 (ID 1075360)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "ed-paulista",
+        "nome": "Edifício Paulista",
+        "endereco": "Av. Paulista, 2064 e 2086 — Bela Vista, São Paulo, SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Av. Paulista",
+          "lat": -23.5611,
+          "lng": -46.6566
+        },
+        "abl": 26206,
+        "padrao": "AA",
+        "tipologia": "escritorio_aaa",
+        "certificacoes": [
+          "LEED Gold"
+        ],
+        "anoConstrucao": "Retrofit 2012",
+        "participacao": 1.0,
+        "valorContabil": 465000000,
+        "capRateAtual": null,
+        "ocupacao": 1.0,
+        "vacanciaFisica": 0.0,
+        "aquisicao": "Dezembro/2018",
+        "locatarios": [
+          {
+            "nome": "TRT (Tribunal Regional do Trabalho)",
+            "setor": "Setor Público",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Entrou em fev/2026 com ganho real de 50% vs contrato anterior"
+          },
+          {
+            "nome": "ISCP (Cruzeiro do Sul)",
+            "setor": "Educação",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Hospital Albert Einstein",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Equinix",
+            "setor": "Tecnologia/Data Center",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "CCEE",
+            "setor": "Energia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Moffatt",
+            "setor": "Consultoria",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Regus",
+            "setor": "Coworking",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Livance",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Arthrex",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Petrobras",
+            "setor": "Energia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Amicci, Targetware, Teletech, InfoJobs, Expedia, Keeggo",
+            "setor": "Tecnologia",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Cluster tech"
+          }
+        ],
+        "eventosRecentes": "Entrada do TRT em fev/2026 com ganho real de 50% vs contrato anterior. 100% ocupado.",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "wtnu-iii",
+        "nome": "Edifício W Torre Nações Unidas III",
+        "endereco": "Rua Eugênio de Medeiros, 303 — Pinheiros, São Paulo, SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Pinheiros/Faria Lima",
+          "lat": -23.5731,
+          "lng": -46.7028
+        },
+        "abl": 15867,
+        "padrao": "AAA",
+        "tipologia": "escritorio_aaa",
+        "certificacoes": [
+          "LEED Platinum"
+        ],
+        "anoConstrucao": 2013,
+        "participacao": 0.643,
+        "participacaoNota": "64,3% direto",
+        "valorContabil": 320000000,
+        "capRateAtual": null,
+        "ocupacao": 1.0,
+        "vacanciaFisica": 0.0,
+        "aquisicao": "Outubro/2017",
+        "locatarios": [
+          {
+            "nome": "Allianz",
+            "setor": "Seguros",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "CloudWalk",
+            "setor": "Tecnologia/Pagamentos",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "eventosRecentes": "100% ocupado com 2 inquilinos premium (Allianz e CloudWalk).",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "wt-morumbi-ala-b",
+        "nome": "WT Morumbi - Ala B",
+        "endereco": "Av. das Nações Unidas, 14.261 — Brooklin, São Paulo, SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Chucri Zaidan/Brooklin",
+          "lat": -23.6254,
+          "lng": -46.6985
+        },
+        "abl": 35110,
+        "padrao": "AAA",
+        "tipologia": "escritorio_aaa",
+        "certificacoes": [
+          "LEED Silver"
+        ],
+        "anoConstrucao": 2015,
+        "participacao": 0.75,
+        "participacaoNota": "Detido indiretamente via cotas subordinadas do JSRI (75% da Ala B)",
+        "valorContabil": null,
+        "valorContabilNota": "Contabilizado via cotas subordinadas JSRI: R$ 188,8 mi (8,8% do PL)",
+        "capRateAtual": null,
+        "ocupacao": 0.802,
+        "vacanciaFisica": 0.198,
+        "aquisicao": "Dezembro/2025 (via JSRI)",
+        "locatarios": [
+          {
+            "nome": "Unilever",
+            "setor": "Indústria/Consumo",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "WeWork",
+            "setor": "Coworking",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Novartis",
+            "setor": "Saúde",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Locação 6.660 m² assinada em fev/2026"
+          },
+          {
+            "nome": "Stellantis",
+            "setor": "Automotivo",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Cheil",
+            "setor": "Marketing",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Creditas",
+            "setor": "Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Grupo Edson Queiroz, NEEOH, Adium, Alcoa, ZMES, Hapag/Lloyd, Veritas",
+            "setor": "Diversos",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "eventosRecentes": "Aquisição em dez/2025 via integralização de fração do Tower Bridge no JSRI. Locação de 6.660 m² para Novartis em fev/2026 reduziu vacância significativamente.",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999) + Fato Relevante dez/2025"
+      },
+      {
+        "tipo": "imovel",
+        "id": "work-bela-cintra",
+        "nome": "Work Bela Cintra",
+        "endereco": "Rua Bela Cintra, 755 — Consolação, São Paulo, SP",
+        "geo": {
+          "cidade": "São Paulo",
+          "uf": "SP",
+          "regiao": "Sudeste",
+          "subregiao": "Av. Paulista/Consolação",
+          "lat": -23.5538,
+          "lng": -46.6566
+        },
+        "abl": 4657,
+        "padrao": "A",
+        "tipologia": "escritorio_aaa",
+        "certificacoes": [],
+        "anoConstrucao": 2016,
+        "participacao": 1.0,
+        "participacaoNota": "Detido indiretamente via cotas subordinadas do JSRI",
+        "valorContabil": null,
+        "valorContabilNota": "Contabilizado via cotas subordinadas JSRI",
+        "capRateAtual": null,
+        "ocupacao": 1.0,
+        "vacanciaFisica": 0.0,
+        "aquisicao": "Dezembro/2025 (via JSRI)",
+        "locatarios": [
+          {
+            "nome": "Sinqia",
+            "setor": "Tecnologia/Financeiro",
+            "contrato": {
+              "tipo": "tipico"
+            },
+            "observacao": "Ocupa 17 dos 18 conjuntos"
+          },
+          {
+            "nome": "ITA Airways",
+            "setor": "Aviação",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "eventosRecentes": "100% ocupado desde 2018, classificação A.",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)"
+      },
+      {
+        "tipo": "imovel",
+        "id": "praia-botafogo-440",
+        "nome": "Edifício Praia de Botafogo 440",
+        "endereco": "Praia de Botafogo, 440 (sl 501 e 2101) — Botafogo, Rio de Janeiro, RJ",
+        "geo": {
+          "cidade": "Rio de Janeiro",
+          "uf": "RJ",
+          "regiao": "Sudeste",
+          "subregiao": "Botafogo",
+          "lat": -22.9505,
+          "lng": -43.1818
+        },
+        "abl": 717,
+        "padrao": "B",
+        "tipologia": "escritorio_back_office",
+        "certificacoes": [],
+        "participacao": 1.0,
+        "valorContabil": 7700000,
+        "capRateAtual": null,
+        "ocupacao": 1.0,
+        "vacanciaFisica": 0.0,
+        "aquisicao": "Anterior (~2014-2018)",
+        "locatarios": [
+          {
+            "nome": "Intelsat",
+            "setor": "Telecom",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          },
+          {
+            "nome": "Moraes Pitombo",
+            "setor": "Advocacia",
+            "contrato": {
+              "tipo": "tipico"
+            }
+          }
+        ],
+        "eventosRecentes": "Reavaliação -9,1% em dez/2024 (Colliers). Imóvel residual representando 0,4% do PL.",
+        "fonte": "Informe Anual 2025 (ID 1150755) + Relatório Gerencial fev/2026 (ID 1130999)"
+      }
+    ],
+    "concentracao": {
+      "hhi": 0.205,
+      "interpretacaoHhi": "moderada",
+      "topN": {
+        "top1Pct": 0.397,
+        "top3Pct": 0.804,
+        "top5Pct": 0.953,
+        "top10Pct": 1.0
+      },
+      "geografica": [
+        {
+          "regiao": "São Paulo - Berrini/Chucri Zaidan",
+          "pct": 0.685,
+          "ativos": 3,
+          "nota": "Tower Bridge + Rochaverá + WT Morumbi"
+        },
+        {
+          "regiao": "São Paulo - Av. Paulista/Consolação",
+          "pct": 0.22,
+          "ativos": 2,
+          "nota": "Ed. Paulista + Work Bela Cintra"
+        },
+        {
+          "regiao": "São Paulo - Pinheiros",
+          "pct": 0.091,
+          "ativos": 1,
+          "nota": "WTNU III"
+        },
+        {
+          "regiao": "Rio de Janeiro - Botafogo",
+          "pct": 0.004,
+          "ativos": 1,
+          "nota": "Praia de Botafogo 440 (residual)"
+        }
+      ],
+      "porLocatario": [
+        {
+          "nome": "Carteira pulverizada (94 inquilinos)",
+          "pct": 0.95,
+          "rating": null,
+          "nota": "Sem locatário > 10% da receita imobiliária"
+        },
+        {
+          "nome": "TRT (entrou fev/2026)",
+          "pct": null,
+          "rating": "Setor público",
+          "nota": "Substituiu inquilino anterior no Ed. Paulista com ganho 50%"
+        },
+        {
+          "nome": "Allianz + CloudWalk",
+          "pct": null,
+          "rating": null,
+          "nota": "Únicos do WTNU III, alta qualidade"
+        },
+        {
+          "nome": "Boehringer Ingelheim",
+          "pct": null,
+          "rating": null,
+          "nota": "Renovou contrato Rochaverá até dez/2029"
+        },
+        {
+          "nome": "Sinqia",
+          "pct": null,
+          "rating": null,
+          "nota": "Ocupa 17 de 18 conjuntos do Work Bela Cintra (concentração no ativo)"
+        }
+      ],
+      "porIndexador": [
+        {
+          "indexador": "IPCA",
+          "pct": 0.73,
+          "nota": "Maioria dos contratos da carteira consolidada"
+        },
+        {
+          "indexador": "IGP-M",
+          "pct": 0.27,
+          "nota": "Contratos antigos ainda em IGP-M"
+        }
+      ],
+      "porSetorInquilino": [
+        {
+          "setor": "Tecnologia",
+          "pct": 0.23
+        },
+        {
+          "setor": "Seguros",
+          "pct": 0.23
+        },
+        {
+          "setor": "Saúde",
+          "pct": 0.21
+        },
+        {
+          "setor": "Financeiro",
+          "pct": 0.18
+        },
+        {
+          "setor": "Energia",
+          "pct": 0.06
+        },
+        {
+          "setor": "Transportes",
+          "pct": 0.06
+        },
+        {
+          "setor": "Outros",
+          "pct": 0.03
+        }
+      ]
+    },
+    "analise": {
+      "rotulo": "Carteira AAA prime SP — qualidade 1ª linha em recuperação cíclica",
+      "cor": "emerald",
+      "tags": [
+        "6 edifícios SP/RJ",
+        "161,7 mil m² ABL",
+        "94 inquilinos pulverizados",
+        "Tower Bridge + Rochaverá > 60% PL",
+        "Sem alavancagem (CRI Rochaverá pré-pago fev/2026)"
+      ],
+      "veredicto": "<p>Portfólio de qualidade 1ª linha do mercado brasileiro de escritórios — Tower Bridge AAA na Berrini, Rochaverá AAA no Chucri Zaidan, WTNU III AAA em Pinheiros, Ed. Paulista AA em endereço icônico. Concentração geográfica em SP é alta mas em <strong class=\"text-emerald-400\">subregiões CBD premium com vacância sistêmica em queda</strong>. A reestruturação via JSRI em dez/2025 trouxe diversificação adicional (WT Morumbi e Work Bela Cintra) sem diluição relevante. Vacância consolidada de 11,6% financeira está alinhada à média de SP CBD (10,3%) — patamar normal pós-ciclo, com tendência de queda. Pré-pagamento integral do CRI Rochaverá em fev/2026 zerou alavancagem do fundo, fortalecendo balanço para próximo ciclo de aquisições.</p>",
+      "pontosFortes": [
+        "Qualidade dos ativos: 100% lajes corporativas AAA/AA em SP CBD",
+        "Endereços premium: Berrini, Chucri Zaidan, Av. Paulista, Pinheiros",
+        "Pulverização: 94 inquilinos, sem concentração > 10% em um só",
+        "Mix setorial defensivo: tecnologia (23%) + seguros (23%) + saúde (21%)",
+        "Sem alavancagem (CRI Rochaverá pré-pago em fev/2026)",
+        "WAULT 3,0 anos com 47% de vencimentos/revisionais até 2027 — otimização ativa de receita",
+        "Track record de gestão: já fez 2 ciclos completos de portfólio (2017-2021 e 2024-2025)"
+      ],
+      "pontosFracos": [
+        "Concentração geográfica em SP (>99% do PL)",
+        "Vacância Tower Bridge subiu para 10,2% (saída NCR/Medtronic em fev/2026)",
+        "WT Morumbi (aquisição recente) com 19,8% de vacância",
+        "WAULT curto: 3,0 anos exige renegociação intensa em 2026-2027",
+        "Reavaliação patrimonial -6,6% em dez/2024 sinaliza que cap rates do mercado subiram",
+        "Cluster Rochaverá com risco de competição (Marble e Ebony, mas só 40% do complexo)"
+      ],
+      "perfilInvestidor": "Investidor tijolo premium que aceita ciclo de escritórios com horizonte 2-4 anos. NÃO é fundo de renda imediata pura (DY 8,7% < Selic 14,75%) — a tese é convergência ao VP em ciclo de queda da Selic + estabilidade do DPS de R$ 0,48."
+    }
+  },
+  "timeline": {
+    "subtitulo": "Marcos do JSRE11 desde o IPO (jun/2011) — 15 anos de história",
+    "periodos": [
+      {
+        "fase": "IPO e portfólio inicial",
+        "periodo": "Jun/2011 - 2016",
+        "cor": "slate",
+        "descricao": "<p>Constituição do fundo em fev/2011 e IPO em 06/06/2011 com administração do Banco J. Safra e gestão Safra Asset Management. Portfólio inicial híbrido com cotas de outros FIIs (CSHG Brasil Shopping era posição relevante na origem) e gestão ativa.</p>"
+      },
+      {
+        "fase": "Transformação para tijolo direto (5ª Emissão)",
+        "periodo": "2017 - 2018",
+        "cor": "blue",
+        "descricao": "<p>Em out/2017 o fundo adquiriu participação no <strong>Edifício W Torre Nações Unidas III</strong> (R$ 320 mi). Em 2018 realizou a 5ª Emissão (R$ 377,8 mi) precificada em R$ 109,91/cota, captando recursos para nova fase de aquisições. Em dez/2018 comprou 100% do <strong>Edifício Paulista</strong> na Av. Paulista (R$ 465 mi).</p>"
+      },
+      {
+        "fase": "Aquisições prime — Tower Bridge e Rochaverá",
+        "periodo": "2020 - 2021",
+        "cor": "emerald",
+        "descricao": "<p>Em mar/2020 (pandemia) o fundo adquiriu 100% do <strong>Tower Bridge Corporate</strong> na Berrini (R$ 666 mi), AAA com LEED Gold. Em fev/2021 adquiriu 40% das torres Marble e Ebony do <strong>Complexo Rochaverá</strong> (R$ 408 mi), AAA com LEED Platinum. Posição prime consolidada com 4 edifícios AAA em SP CBD.</p>"
+      },
+      {
+        "fase": "Pico de cotação",
+        "periodo": "2019 - 2020",
+        "cor": "emerald",
+        "descricao": "<p>Cota atingiu pico histórico de <strong>R$ 123,00 em dez/2019</strong>, com VP/cota próximo de R$ 110. P/VP rondava 1,12 — prêmio típico de fundo AAA em ciclo de Selic baixa.</p>"
+      },
+      {
+        "fase": "Ciclo de Selic alta — drawdown da cota",
+        "periodo": "2022 - 2025",
+        "cor": "red",
+        "descricao": "<p>Selic subiu de 2% (2020) para 13,75% (ago/2022) e depois 15% (jan/2026). Cota despencou de R$ 123 (2019) para mínima histórica de <strong>R$ 51,66 em fev/2025</strong> (-58% do pico). Vacância chegou a 8,4% em fev/2024 e foi reduzida para 3,7% em dez/2024 com gestão ativa de locação.</p>"
+      },
+      {
+        "fase": "Reavaliação patrimonial e CRI Rochaverá",
+        "periodo": "2024",
+        "cor": "amber",
+        "descricao": "<p>Em fev/2024 o fundo emitiu o <strong>CRI Rochaverá (R$ 135 mi, CDI+2,6%, prazo 5 anos)</strong> com lastro nos contratos de locação para reforçar caixa. Em dez/2024 a Colliers fez reavaliação a mercado dos imóveis com <strong>desvalorização de 6,61%</strong>, reduzindo VP/cota de R$ 109,53 para R$ 101,73.</p>"
+      },
+      {
+        "fase": "Reestruturação JSRI e desalavancagem",
+        "periodo": "Dez/2025 - Fev/2026",
+        "cor": "blue",
+        "descricao": "<p>Em dez/2025 o fundo subscreveu cotas subordinadas do <strong>JS Renda Imobiliária FII (JSRI)</strong> integralizando 46% do Tower Bridge, recebendo em troca exposição a WT Morumbi (75% da Ala B) e Work Bela Cintra (100%). Em fev/2026 o fundo realizou <strong>pré-pagamento integral do CRI Rochaverá (R$ 135 mi)</strong>, zerando alavancagem.</p>"
+      },
+      {
+        "fase": "DPS estável + recuperação da cota",
+        "periodo": "2024 - 2026 (atual)",
+        "cor": "emerald",
+        "descricao": "<p>Apesar do estresse macro, o fundo mantém <strong>DPS de R$ 0,48/cota há 24 meses consecutivos</strong> (abr/2024 - mar/2026). Cota subiu de R$ 51,66 (mín fev/2025) para R$ 65,89 (abr/2026), recuperação de +27% mas ainda 36% abaixo do VP atual de R$ 102. Resultado por cota em fev/2026 foi <strong>R$ 0,86</strong> (impulsionado pela multa NCR e ganho do pré-pagamento CRI).</p>"
+      }
+    ],
+    "resumoTrajetoria": "Fundo maduro de 15 anos com gestão Safra Asset, transformou-se de FoF em FII tijolo puro entre 2017-2021. Hoje 86,7% do PL em 6 edifícios AAA/AA em SP CBD. Ciclo recente de Selic alta derrubou cota a R$ 51 (mín fev/2025), recuperação parcial até R$ 66 com DPS R$ 0,48 estável.",
+    "crescimento": "+R$ 1,87 Bi em imóveis adquiridos entre 2017-2025 (Tower Bridge + Rochaverá + WTNU III + Ed. Paulista + Botafogo + via JSRI WT Morumbi/Work Bela Cintra)"
+  },
+  "tese": {
+    "resumo": "<p>JSRE11 é uma <strong class=\"text-emerald-400\">posição core de tijolo AAA premium</strong> para investidor de tese patrimonial. Negocia com P/VP 0,65 (35% de desconto sobre VP de R$ 102), refletindo ciclo de Selic em 14,75% — não problema operacional dos imóveis. Quando a Selic cair (curva DI projeta queda para ~11% em 12m), fundos de tijolo descontados como JSRE11 tendem a <strong>reprecificar primeiro</strong>. Com ABL de 162 mil m² em endereços icônicos (Berrini, Av. Paulista, Chucri Zaidan, Pinheiros), 94 inquilinos pulverizados (sem concentração > 10%), gestão Safra com 15 anos de track record e fundo desalavancado, é veículo de qualidade para hold patrimonial 2-4 anos.</p><p>Risco principal: <strong class=\"text-amber-400\">vacância em SP CBD ainda em ~10%</strong> — recuperação setorial existe mas é gradual. WAULT curto (3,0 anos) com 47% de vencimentos/revisionais até 2027 expõe o fundo a renegociações em mercado fraco. Saída de NCR (com multa equivalente a 1 ano de aluguel — entrada de caixa pontual) em fev/2026 e devolução parcial Medtronic ilustram esse fluxo natural. Locação para Novartis (6.660 m² em fev/2026 no WT Morumbi) e entrada do TRT no Ed. Paulista (com ganho real de 50%) mostram que o pipeline de absorção continua.</p>",
+    "paraQuem": [
+      "<strong class=\"text-emerald-400\">Investidor tijolo premium</strong> que quer exposição a lajes corporativas AAA SP a desconto patrimonial relevante.",
+      "<strong class=\"text-emerald-400\">Especulador de queda de Selic</strong> — fundos descontados de tijolo reprecificam mais que a média em ciclo de afrouxamento monetário.",
+      "<strong class=\"text-emerald-400\">Diversificação geográfica/setorial</strong> em quem já tem papel ou logística e quer adicionar tijolo escritório de qualidade.",
+      "<strong>Hold de 2-4 anos</strong> aceitando volatilidade em troca de assimetria (cota R$ 66 vs VP R$ 102).",
+      "<strong>Carteira balanceada</strong> com posição satélite/núcleo (5-15% da carteira de FIIs)."
+    ],
+    "naoParaQuem": [
+      "<strong class=\"text-red-400\">Quem busca renda imediata</strong> — DY 8,7% está abaixo da Selic 14,75% e LFT remunera melhor no curto prazo.",
+      "<strong class=\"text-red-400\">Aposentado puro</strong> que não pode esperar reprecificação patrimonial.",
+      "<strong>Investidor com horizonte < 1 ano</strong> — tese exige tempo para Selic cair e mercado de escritórios SP recuperar vacância.",
+      "<strong>Quem já tem exposição grande a HGRE11, BLCA11, BROF11, GTWR11</strong> (escritórios AAA SP) — sobreposição alta de tese e geografia.",
+      "<strong>Investidor que quer crescimento de DPS</strong> — JSRE11 manteve R$ 0,48 estável, sem catalisadores claros para aumento no curto prazo."
+    ]
+  },
+  "dividendos": {
+    "historico": [
+      {
+        "data": "2017-03",
+        "dividendo": 0.83,
+        "dataPagamento": "2017-04-25",
+        "fonte": "Rendimentos e Amortizações (ID 11083)",
+        "docId": "11083",
+        "cotas": 6452944,
+        "caixaLiquidoFimMes": 158365723.83,
+        "distribuicao": 5355943.52
+      },
+      {
+        "data": "2017-04",
+        "dividendo": 0.66,
+        "dataPagamento": "2017-05-22",
+        "fonte": "Rendimentos e Amortizações (ID 12289)",
+        "docId": "12289"
+      },
+      {
+        "data": "2017-05",
+        "dividendo": 0.72,
+        "dataPagamento": "2017-06-22",
+        "fonte": "Rendimentos e Amortizações (ID 13688)",
+        "docId": "13688"
+      },
+      {
+        "data": "2017-06",
+        "dividendo": 1.05,
+        "dataPagamento": "2017-07-22",
+        "fonte": "Rendimentos e Amortizações (ID 14492)",
+        "docId": "14492",
+        "cotas": 6452944,
+        "caixaLiquidoFimMes": 196354243.77,
+        "distribuicao": 6775591.2
+      },
+      {
+        "data": "2017-07",
+        "dividendo": 0.7,
+        "dataPagamento": "2017-08-21",
+        "fonte": "Rendimentos e Amortizações (ID 15301)",
+        "docId": "15301"
+      },
+      {
+        "data": "2017-08",
+        "dividendo": 0.7,
+        "dataPagamento": "2017-09-22",
+        "fonte": "Rendimentos e Amortizações (ID 16435)",
+        "docId": "16435"
+      },
+      {
+        "data": "2017-09",
+        "dividendo": 0.65,
+        "dataPagamento": "2017-10-23",
+        "fonte": "Rendimentos e Amortizações (ID 17357)",
+        "docId": "17357",
+        "cotas": 6452944,
+        "caixaLiquidoFimMes": 249806531.57,
+        "distribuicao": 4194413.6
+      },
+      {
+        "data": "2017-10",
+        "dividendo": 0.56,
+        "dataPagamento": "2017-11-24",
+        "fonte": "Rendimentos e Amortizações (ID 18524)",
+        "docId": "18524"
+      },
+      {
+        "data": "2017-11",
+        "dividendo": 0.58,
+        "dataPagamento": "2017-12-21",
+        "fonte": "Rendimentos e Amortizações (ID 19745)",
+        "docId": "19745"
+      },
+      {
+        "data": "2017-12",
+        "dividendo": 0.62,
+        "dataPagamento": "2018-01-22",
+        "fonte": "Rendimentos e Amortizações (ID 20856)",
+        "docId": "20856",
+        "cotas": 6452944,
+        "caixaLiquidoFimMes": 134801061.24,
+        "distribuicao": 4000825.28
+      },
+      {
+        "data": "2018-01",
+        "dividendo": 0.6,
+        "dataPagamento": "2018-02-23",
+        "fonte": "Rendimentos e Amortizações (ID 21913)",
+        "docId": "21913"
+      },
+      {
+        "data": "2018-02",
+        "dividendo": 0.55,
+        "dataPagamento": "2018-03-21",
+        "fonte": "Rendimentos e Amortizações (ID 23139)",
+        "docId": "23139"
+      },
+      {
+        "data": "2018-03",
+        "dividendo": 0.54,
+        "dataPagamento": "2018-04-20",
+        "fonte": "Rendimentos e Amortizações (ID 24557)",
+        "docId": "24557",
+        "cotas": 6452944,
+        "caixaLiquidoFimMes": 151787234.61,
+        "distribuicao": 3484589.76
+      },
+      {
+        "data": "2018-04",
+        "dividendo": 0.52,
+        "dataPagamento": "2018-05-22",
+        "fonte": "Rendimentos e Amortizações (ID 26025)",
+        "docId": "26025"
+      },
+      {
+        "data": "2018-05",
+        "dividendo": 0.54,
+        "dataPagamento": "2018-06-21",
+        "fonte": "Rendimentos e Amortizações (ID 27558)",
+        "docId": "27558"
+      },
+      {
+        "data": "2018-06",
+        "dividendo": 0.54,
+        "dataPagamento": "2018-07-20",
+        "fonte": "Rendimentos e Amortizações (ID 28587)",
+        "docId": "28587",
+        "cotas": 6452944,
+        "caixaLiquidoFimMes": 327674852.26,
+        "distribuicao": 3484589.76
+      },
+      {
+        "data": "2018-07",
+        "dividendo": 0.55,
+        "dataPagamento": "2018-08-21",
+        "fonte": "Rendimentos e Amortizações (ID 29868)",
+        "docId": "29868"
+      },
+      {
+        "data": "2018-08",
+        "dividendo": 0.51,
+        "dataPagamento": "2018-09-24",
+        "fonte": "Rendimentos e Amortizações (ID 31529)",
+        "docId": "31529"
+      },
+      {
+        "data": "2018-09",
+        "dividendo": 0.5,
+        "dataPagamento": "2018-10-22",
+        "fonte": "Rendimentos e Amortizações (ID 33030)",
+        "docId": "33030",
+        "cotas": 8081791,
+        "caixaLiquidoFimMes": 230041111.95,
+        "distribuicao": 4040895.5
+      },
+      {
+        "data": "2018-10",
+        "dividendo": 0.53,
+        "dataPagamento": "2018-11-23",
+        "fonte": "Rendimentos e Amortizações (ID 34769)",
+        "docId": "34769"
+      },
+      {
+        "data": "2018-11",
+        "dividendo": 0.6,
+        "dataPagamento": "2018-12-21",
+        "fonte": "Rendimentos e Amortizações (ID 36509)",
+        "docId": "36509"
+      },
+      {
+        "data": "2018-12",
+        "dividendo": 0.56,
+        "dataPagamento": "2019-01-22",
+        "fonte": "Rendimentos e Amortizações (ID 38229)",
+        "docId": "38229",
+        "cotas": 8081791,
+        "caixaLiquidoFimMes": 113033407.47,
+        "distribuicao": 4525802.96
+      },
+      {
+        "data": "2019-01",
+        "dividendo": 0.57,
+        "dataPagamento": "2019-02-20",
+        "fonte": "Rendimentos e Amortizações (ID 40326)",
+        "docId": "40326"
+      },
+      {
+        "data": "2019-02",
+        "dividendo": 0.57,
+        "dataPagamento": "2019-03-25",
+        "fonte": "Rendimentos e Amortizações (ID 42677)",
+        "docId": "42677"
+      },
+      {
+        "data": "2019-03",
+        "dividendo": 0.57,
+        "dataPagamento": "2019-04-22",
+        "fonte": "Rendimentos e Amortizações (ID 44903)",
+        "docId": "44903",
+        "cotas": 8081791,
+        "caixaLiquidoFimMes": 223142672.15,
+        "distribuicao": 4606620.87
+      },
+      {
+        "data": "2019-04",
+        "dividendo": 0.58,
+        "dataPagamento": "2019-05-22",
+        "fonte": "Rendimentos e Amortizações (ID 47587)",
+        "docId": "47587"
+      },
+      {
+        "data": "2019-05",
+        "dividendo": 0.6,
+        "dataPagamento": "2019-06-24",
+        "fonte": "Rendimentos e Amortizações (ID 50360)",
+        "docId": "50360"
+      },
+      {
+        "data": "2019-06",
+        "dividendo": 0.62,
+        "dataPagamento": "2019-07-22",
+        "fonte": "Rendimentos e Amortizações (ID 52496)",
+        "docId": "52496",
+        "cotas": 8081791,
+        "caixaLiquidoFimMes": 37303471.84,
+        "distribuicao": 5010710.42
+      },
+      {
+        "data": "2019-07",
+        "dividendo": 0.62,
+        "dataPagamento": "2019-08-21",
+        "fonte": "Rendimentos e Amortizações (ID 55083)",
+        "docId": "55083"
+      },
+      {
+        "data": "2019-08",
+        "dividendo": 0.62,
+        "dataPagamento": "2019-09-20",
+        "fonte": "Rendimentos e Amortizações (ID 57986)",
+        "docId": "57986"
+      },
+      {
+        "data": "2019-09",
+        "dividendo": 0.62,
+        "dataPagamento": "2019-10-21",
+        "fonte": "Rendimentos e Amortizações (ID 60372)",
+        "docId": "60372",
+        "cotas": 8081791,
+        "caixaLiquidoFimMes": 564132641.83,
+        "distribuicao": 5010710.42
+      },
+      {
+        "data": "2019-10",
+        "dividendo": 0.57,
+        "dataPagamento": "2019-11-22",
+        "fonte": "Rendimentos e Amortizações (ID 64665)",
+        "docId": "64665"
+      },
+      {
+        "data": "2019-11",
+        "dividendo": 0.53,
+        "dataPagamento": "2019-12-20",
+        "fonte": "Rendimentos e Amortizações (ID 69432)",
+        "docId": "69432"
+      },
+      {
+        "data": "2019-12",
+        "dividendo": 0.47,
+        "dataPagamento": "2020-01-22",
+        "fonte": "Rendimentos e Amortizações (ID 74173)",
+        "docId": "74173",
+        "cotas": 13844885,
+        "caixaLiquidoFimMes": 490623376.88,
+        "distribuicao": 6507095.95
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 0.47,
+        "dataPagamento": "2020-02-21",
+        "fonte": "Rendimentos e Amortizações (ID 79227)",
+        "docId": "79227"
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 0.44,
+        "dataPagamento": "2020-03-20",
+        "fonte": "Rendimentos e Amortizações (ID 83583)",
+        "docId": "83583"
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.37,
+        "dataPagamento": "2020-04-23",
+        "fonte": "Rendimentos e Amortizações (ID 88851)",
+        "docId": "88851",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 333542891.75,
+        "distribuicao": 7683911.36
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 0.38,
+        "dataPagamento": "2020-04-22",
+        "fonte": "Rendimentos e Amortizações (ID 93378)",
+        "docId": "93378"
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 0.46,
+        "dataPagamento": "2020-06-22",
+        "fonte": "Rendimentos e Amortizações (ID 98404)",
+        "docId": "98404"
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 0.46,
+        "dataPagamento": "2020-07-21",
+        "fonte": "Rendimentos e Amortizações (ID 103915)",
+        "docId": "103915",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 287702280.02,
+        "distribuicao": 9552970.88
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 0.5,
+        "dataPagamento": "2020-08-21",
+        "fonte": "Rendimentos e Amortizações (ID 109451)",
+        "docId": "109451"
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 0.52,
+        "dataPagamento": "2020-09-22",
+        "fonte": "Rendimentos e Amortizações (ID 114524)",
+        "docId": "114524"
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 0.53,
+        "dataPagamento": "2020-10-22",
+        "fonte": "Rendimentos e Amortizações (ID 119227)",
+        "docId": "119227",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 183055768.49,
+        "distribuicao": 11006683.84
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 0.53,
+        "dataPagamento": "2020-11-23",
+        "fonte": "Rendimentos e Amortizações (ID 124331)",
+        "docId": "124331"
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 0.53,
+        "dataPagamento": "2020-12-21",
+        "fonte": "Rendimentos e Amortizações (ID 129155)",
+        "docId": "129155"
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 0.56,
+        "dataPagamento": "2021-01-22",
+        "fonte": "Rendimentos e Amortizações (ID 136240)",
+        "docId": "136240",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 261113164.78,
+        "distribuicao": 11629703.68
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-02-23",
+        "fonte": "Rendimentos e Amortizações (ID 142845)",
+        "docId": "142845"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-03-19",
+        "fonte": "Rendimentos e Amortizações (ID 151515)",
+        "docId": "151515"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-04-23",
+        "fonte": "Rendimentos e Amortizações (ID 160141)",
+        "docId": "160141",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 30402950.43,
+        "distribuicao": 11006683.84
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-05-21",
+        "fonte": "Rendimentos e Amortizações (ID 169451)",
+        "docId": "169451"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-06-22",
+        "fonte": "Rendimentos e Amortizações (ID 180696)",
+        "docId": "180696"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-07-21",
+        "fonte": "Rendimentos e Amortizações (ID 190125)",
+        "docId": "190125",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 26133864.7,
+        "distribuicao": 11006683.84
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-08-20",
+        "fonte": "Rendimentos e Amortizações (ID 199091)",
+        "docId": "199091"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-09-22",
+        "fonte": "Rendimentos e Amortizações (ID 210641)",
+        "docId": "210641"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-10-22",
+        "fonte": "Rendimentos e Amortizações (ID 219950)",
+        "docId": "219950",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 14860238.51,
+        "distribuicao": 11006683.84
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-11-23",
+        "fonte": "Rendimentos e Amortizações (ID 230030)",
+        "docId": "230030"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 0.53,
+        "dataPagamento": "2021-12-21",
+        "fonte": "Rendimentos e Amortizações (ID 241647)",
+        "docId": "241647"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 0.53,
+        "dataPagamento": "2022-01-21",
+        "fonte": "Rendimentos e Amortizações (ID 251888)",
+        "docId": "251888",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 3556913.1,
+        "distribuicao": 11006683.84
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 0.53,
+        "dataPagamento": "2022-02-21",
+        "fonte": "Rendimentos e Amortizações (ID 261350)",
+        "docId": "261350"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 0.53,
+        "dataPagamento": "2022-03-22",
+        "fonte": "Rendimentos e Amortizações (ID 272717)",
+        "docId": "272717"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 0.489,
+        "dataPagamento": "2022-04-25",
+        "fonte": "Rendimentos e Amortizações (ID 283909)",
+        "docId": "283909",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 1790327.21,
+        "distribuicao": 10155223.39
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-05-20",
+        "fonte": "Rendimentos e Amortizações (ID 296659)",
+        "docId": "296659"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-06-22",
+        "fonte": "Rendimentos e Amortizações (ID 310677)",
+        "docId": "310677"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-07-14",
+        "fonte": "Rendimentos e Amortizações (ID 320835)",
+        "docId": "320835",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 4673735.6,
+        "distribuicao": 10175990.72
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-08-12",
+        "fonte": "Rendimentos e Amortizações (ID 331986)",
+        "docId": "331986"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-09-15",
+        "fonte": "Rendimentos e Amortizações (ID 346594)",
+        "docId": "346594"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-10-17",
+        "fonte": "Rendimentos e Amortizações (ID 358962)",
+        "docId": "358962",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 1703066.07,
+        "distribuicao": 10175990.72
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-11-16",
+        "fonte": "Rendimentos e Amortizações (ID 370492)",
+        "docId": "370492"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.49,
+        "dataPagamento": "2022-12-14",
+        "fonte": "Rendimentos e Amortizações (ID 383875)",
+        "docId": "383875"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.49,
+        "dataPagamento": "2023-01-13",
+        "fonte": "Rendimentos e Amortizações (ID 396263)",
+        "docId": "396263",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 1959445.55,
+        "distribuicao": 10175990.72
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.49,
+        "dataPagamento": "2023-02-14",
+        "fonte": "Rendimentos e Amortizações (ID 408043)",
+        "docId": "408043"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-03-14",
+        "fonte": "Rendimentos e Amortizações (ID 423021)",
+        "docId": "423021"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-04-17",
+        "fonte": "Rendimentos e Amortizações (ID 438319)",
+        "docId": "438319",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 5802740.82,
+        "distribuicao": 9552970.88
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-05-15",
+        "fonte": "Rendimentos e Amortizações (ID 453691)",
+        "docId": "453691"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-06-15",
+        "fonte": "Rendimentos e Amortizações (ID 472316)",
+        "docId": "472316"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-07-14",
+        "fonte": "Rendimentos e Amortizações (ID 485792)",
+        "docId": "485792",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 7105181.05,
+        "distribuicao": 9552970.88
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 499077)",
+        "docId": "499077"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-09-15",
+        "fonte": "Rendimentos e Amortizações (ID 515677)",
+        "docId": "515677"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-10-16",
+        "fonte": "Rendimentos e Amortizações (ID 529661)",
+        "docId": "529661",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 9477658.55,
+        "distribuicao": 9552970.88
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-11-16",
+        "fonte": "Rendimentos e Amortizações (ID 544329)",
+        "docId": "544329"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.46,
+        "dataPagamento": "2023-12-14",
+        "fonte": "Rendimentos e Amortizações (ID 562091)",
+        "docId": "562091"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.46,
+        "dataPagamento": "2024-01-15",
+        "fonte": "Rendimentos e Amortizações (ID 577247)",
+        "docId": "577247",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 3289687.18,
+        "distribuicao": 9552970.88
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.46,
+        "dataPagamento": "2024-02-16",
+        "fonte": "Rendimentos e Amortizações (ID 593507)",
+        "docId": "593507"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.46,
+        "dataPagamento": "2024-03-14",
+        "fonte": "Rendimentos e Amortizações (ID 612144)",
+        "docId": "612144"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-04-12",
+        "fonte": "Rendimentos e Amortizações (ID 630415)",
+        "docId": "630415",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 3130727.62,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-05-15",
+        "fonte": "Rendimentos e Amortizações (ID 650527)",
+        "docId": "650527"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-06-14",
+        "fonte": "Rendimentos e Amortizações (ID 672994)",
+        "docId": "672994"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-07-12",
+        "fonte": "Rendimentos e Amortizações (ID 689499)",
+        "docId": "689499",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 2197748.99,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 709208)",
+        "docId": "709208"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-09-13",
+        "fonte": "Rendimentos e Amortizações (ID 730370)",
+        "docId": "730370"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-10-14",
+        "fonte": "Rendimentos e Amortizações (ID 749243)",
+        "docId": "749243",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 4580282.59,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-11-14",
+        "fonte": "Rendimentos e Amortizações (ID 769659)",
+        "docId": "769659"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.48,
+        "dataPagamento": "2024-12-13",
+        "fonte": "Rendimentos e Amortizações (ID 792127)",
+        "docId": "792127"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-01-15",
+        "fonte": "Rendimentos e Amortizações (ID 810849)",
+        "docId": "810849",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 17256132.06,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-02-14",
+        "fonte": "Rendimentos e Amortizações (ID 829692)",
+        "docId": "829692"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-03-18",
+        "fonte": "Rendimentos e Amortizações (ID 850986)",
+        "docId": "850986"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-04-14",
+        "fonte": "Rendimentos e Amortizações (ID 869075)",
+        "docId": "869075",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 8542019.61,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-05-15",
+        "fonte": "Rendimentos e Amortizações (ID 890437)",
+        "docId": "890437"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-06-13",
+        "fonte": "Rendimentos e Amortizações (ID 914883)",
+        "docId": "914883"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-07-14",
+        "fonte": "Rendimentos e Amortizações (ID 935928)",
+        "docId": "935928",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 18665614.1,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-08-14",
+        "fonte": "Rendimentos e Amortizações (ID 957585)",
+        "docId": "957585"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-09-12",
+        "fonte": "Rendimentos e Amortizações (ID 980602)",
+        "docId": "980602"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-10-14",
+        "fonte": "Rendimentos e Amortizações (ID 1002714)",
+        "docId": "1002714",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 32550850.8,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-11-14",
+        "fonte": "Rendimentos e Amortizações (ID 1025784)",
+        "docId": "1025784"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.48,
+        "dataPagamento": "2025-12-12",
+        "fonte": "Rendimentos e Amortizações (ID 1049931)",
+        "docId": "1049931"
+      },
+      {
+        "data": "2025-12",
+        "dividendo": 0.48,
+        "dataPagamento": "2026-01-15",
+        "fonte": "Rendimentos e Amortizações (ID 1073255)",
+        "docId": "1073255",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 16128066.98,
+        "distribuicao": 9968317.44
+      },
+      {
+        "data": "2026-01",
+        "dividendo": 0.48,
+        "dataPagamento": "2026-02-13",
+        "fonte": "Rendimentos e Amortizações (ID 1097755)",
+        "docId": "1097755"
+      },
+      {
+        "data": "2026-02",
+        "dividendo": 0.48,
+        "dataPagamento": "2026-03-13",
+        "fonte": "Rendimentos e Amortizações (ID 1124116)",
+        "docId": "1124116"
+      },
+      {
+        "data": "2026-03",
+        "dividendo": 0.48,
+        "dataPagamento": "2026-04-15",
+        "fonte": "Rendimentos e Amortizações (ID 1150470)",
+        "docId": "1150470",
+        "cotas": 20767328,
+        "caixaLiquidoFimMes": 27397291.48,
+        "distribuicao": 9968317.44
+      }
+    ],
+    "acumuladoSemestral": [
+      {
+        "semestre": "2017-1",
+        "label": "1º Sem 2017",
+        "ano": 2017,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 4,
+        "distribuicao": 12131534.72,
+        "somaDPS": 3.26
+      },
+      {
+        "semestre": "2017-2",
+        "label": "2º Sem 2017",
+        "ano": 2017,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 8195238.88,
+        "somaDPS": 3.81
+      },
+      {
+        "semestre": "2018-1",
+        "label": "1º Sem 2018",
+        "ano": 2018,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 6969179.52,
+        "somaDPS": 3.29
+      },
+      {
+        "semestre": "2018-2",
+        "label": "2º Sem 2018",
+        "ano": 2018,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 8566698.46,
+        "somaDPS": 3.25
+      },
+      {
+        "semestre": "2019-1",
+        "label": "1º Sem 2019",
+        "ano": 2019,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 9617331.29,
+        "somaDPS": 3.51
+      },
+      {
+        "semestre": "2019-2",
+        "label": "2º Sem 2019",
+        "ano": 2019,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 11517806.37,
+        "somaDPS": 3.43
+      },
+      {
+        "semestre": "2020-1",
+        "label": "1º Sem 2020",
+        "ano": 2020,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 17236882.24,
+        "somaDPS": 2.58
+      },
+      {
+        "semestre": "2020-2",
+        "label": "2º Sem 2020",
+        "ano": 2020,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 22636387.52,
+        "somaDPS": 3.17
+      },
+      {
+        "semestre": "2021-1",
+        "label": "1º Sem 2021",
+        "ano": 2021,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 22013367.68,
+        "somaDPS": 3.18
+      },
+      {
+        "semestre": "2021-2",
+        "label": "2º Sem 2021",
+        "ano": 2021,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 22013367.68,
+        "somaDPS": 3.18
+      },
+      {
+        "semestre": "2022-1",
+        "label": "1º Sem 2022",
+        "ano": 2022,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 20331214.11,
+        "somaDPS": 3.02
+      },
+      {
+        "semestre": "2022-2",
+        "label": "2º Sem 2022",
+        "ano": 2022,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 20351981.44,
+        "somaDPS": 2.94
+      },
+      {
+        "semestre": "2023-1",
+        "label": "1º Sem 2023",
+        "ano": 2023,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 19105941.76,
+        "somaDPS": 2.79
+      },
+      {
+        "semestre": "2023-2",
+        "label": "2º Sem 2023",
+        "ano": 2023,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 19105941.76,
+        "somaDPS": 2.76
+      },
+      {
+        "semestre": "2024-1",
+        "label": "1º Sem 2024",
+        "ano": 2024,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 19936634.88,
+        "somaDPS": 2.84
+      },
+      {
+        "semestre": "2024-2",
+        "label": "2º Sem 2024",
+        "ano": 2024,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 19936634.88,
+        "somaDPS": 2.88
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 19936634.88,
+        "somaDPS": 2.88
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "distribuicao": 19936634.88,
+        "somaDPS": 2.88
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 3,
+        "distribuicao": 9968317.44,
+        "somaDPS": 1.44
+      }
+    ],
+    "sustentabilidade": {
+      "dividendoStatus": "sustentavel_longo",
+      "dividendoLabel": "DPS R$ 0,48 sustentável (24 meses consecutivos)",
+      "dividendoCor": "emerald",
+      "horizonte": "Sem ponto de inflexão visível em 24+ meses",
+      "status": "estavel",
+      "cor": "emerald",
+      "payoutMedio12m": 0.98,
+      "caixaLiquido": 27397291,
+      "caixaLiquidoData": "2026-03",
+      "caixaLiquidoComposicao": "R$ 10 mil em Disponibilidades + R$ 27,39 mi em Títulos Públicos LFT (item 9 do Informe Mensal mar/2026)",
+      "resultadoAcumuladoRetido": null,
+      "resultadoAcumuladoNota": "Lucro contábil retido não detalhado nos relatórios públicos. Informe Mensal informa apenas posição de caixa líquido (item 9).",
+      "queimaMediaMensal": 0,
+      "queimaPorCota": 0,
+      "coberturaMeses": null,
+      "tendencia": "DPS R$ 0,48 mantido há 24 meses consecutivos com payout próximo de 100%. Resultado por cota oscila entre R$ 0,41-0,86 (dependendo de eventos pontuais). Em fev/2026 resultado foi R$ 0,86/cota, beneficiado pela multa NCR e ganho do pré-pagamento CRI.",
+      "leitura": "<p>JSRE11 mantém <strong class=\"text-emerald-400\">DPS de R$ 0,48/cota há 24 meses consecutivos</strong>. Geração de caixa próxima de 100% do que distribui — em meses com eventos pontuais (multa rescisória, ganhos extraordinários) o resultado supera o DPS, criando margem para sustentabilidade. Caixa líquido de R$ 27,4 mi (1,3% do PL) em mar/2026 é confortável. Pré-pagamento integral do CRI Rochaverá em fev/2026 (R$ 135 mi) zerou despesas financeiras de ~R$ 2 mi/mês — efeito positivo recorrente sobre o resultado.</p>"
+    },
+    "eventosPassados": [
+      {
+        "data": "2017-10",
+        "dataExata": "2017-10-15",
+        "titulo": "Aquisição WTNU III (R$ 320 mi)",
+        "tipo": "aquisicao",
+        "descricao": "<p>Aquisição de 64,3% do Edifício W Torre Nações Unidas III (Pinheiros, AAA, LEED Platinum, 15.867 m²). Marco da transformação para tijolo direto.</p>",
+        "impactoDividendo": "Iniciou contribuição de receita imobiliária recorrente",
+        "severidade": "positivo",
+        "fonte": "Informe Anual e Relatórios Gerenciais 2017",
+        "docId": "19544"
+      },
+      {
+        "data": "2018-05",
+        "dataExata": "2018-05-03",
+        "titulo": "5ª Emissão de Cotas (R$ 377,8 mi)",
+        "tipo": "emissao",
+        "descricao": "<p>5ª Emissão a R$ 109,91/cota (incluindo R$ 3,46 de custo unitário). Captação para aquisições subsequentes (Ed. Paulista em dez/2018).</p>",
+        "impactoDividendo": "Diluição temporária; viabilizou pipeline de aquisições",
+        "severidade": "neutro",
+        "fonte": "Prospecto Definitivo 5ª Emissão (ID 26160)",
+        "docId": "26160"
+      },
+      {
+        "data": "2018-12",
+        "dataExata": "2018-12-15",
+        "titulo": "Aquisição Edifício Paulista (R$ 465 mi)",
+        "tipo": "aquisicao",
+        "descricao": "<p>Aquisição de 100% do Ed. Paulista (Av. Paulista 2064/2086, AA com retrofit 2012, LEED Gold, 26.206 m²). Endereço icônico SP.</p>",
+        "impactoDividendo": "Receita recorrente de aluguéis adicionou ~R$ 0,10/cota",
+        "severidade": "positivo",
+        "fonte": "Informe Anual 2018 (ID 51047)",
+        "docId": "51047"
+      },
+      {
+        "data": "2020-03",
+        "dataExata": "2020-03-15",
+        "titulo": "Aquisição Tower Bridge Corporate (R$ 666 mi)",
+        "tipo": "aquisicao",
+        "descricao": "<p>Aquisição de 100% do Tower Bridge Corporate (Berrini, AAA, LEED Gold, 56.448 m²). Maior aquisição da história do fundo, em plena pandemia. Tornou-se principal ativo (47% do PL).</p>",
+        "impactoDividendo": "Aumento de receita imobiliária; financiamento parcial via 7ª Emissão",
+        "severidade": "positivo",
+        "fonte": "Informe Anual 2020 (ID 160151)",
+        "docId": "160151"
+      },
+      {
+        "data": "2021-02",
+        "dataExata": "2021-02-15",
+        "titulo": "Aquisição Rochaverá Marble e Ebony (R$ 408 mi, 40%)",
+        "tipo": "aquisicao",
+        "descricao": "<p>Aquisição de 40% das torres Marble e Ebony do Complexo Rochaverá (Chucri Zaidan, AAA, LEED Platinum, 22.697 m² na fração detida).</p>",
+        "impactoDividendo": "Adição de receita imobiliária recorrente",
+        "severidade": "positivo",
+        "fonte": "Informe Anual 2021 (ID 282423)",
+        "docId": "282423"
+      },
+      {
+        "data": "2024-02",
+        "dataExata": "2024-02-15",
+        "titulo": "Emissão CRI Rochaverá (R$ 135 mi, CDI+2,6%)",
+        "tipo": "evento_credito",
+        "descricao": "<p>Emissão de CRI com lastro nos contratos de locação Rochaverá. CDI+2,6% a.a., prazo 5 anos, amortização no vencimento. Geração de caixa para gestão ativa de portfólio.</p>",
+        "impactoDividendo": "-R$ 0,07/cota mensal em despesas financeiras (R$ 1,5-1,7 mi/mês)",
+        "severidade": "negativo",
+        "fonte": "Relatório Gerencial fev/2024 (ID 624951)",
+        "docId": "624951"
+      },
+      {
+        "data": "2024-12",
+        "dataExata": "2024-12-30",
+        "titulo": "Reavaliação patrimonial -6,6% (Colliers)",
+        "tipo": "outro",
+        "descricao": "<p>Avaliação a mercado pela Colliers Technical Services LTDA reduziu valor contábil dos imóveis em 6,61%. VP/cota caiu de R$ 109,53 para R$ 101,73. Reflexo do aumento de cap rates do mercado de escritórios em ciclo de Selic alta.</p>",
+        "impactoDividendo": "Sem efeito direto sobre DPS (não-caixa)",
+        "severidade": "neutro",
+        "fonte": "Relatório Gerencial dez/2024 (ID 817092) + Informe Anual 2024 (ID 869383)",
+        "docId": "817092"
+      },
+      {
+        "data": "2025-12",
+        "dataExata": "2025-12-18",
+        "titulo": "Reestruturação JSRI (subscrição cotas subordinadas)",
+        "tipo": "aquisicao",
+        "descricao": "<p>JSRE subscreveu cotas subordinadas do JS Renda Imobiliária FII (JSRI), integralizando a fração de 46% de algumas unidades do Tower Bridge. Em troca passou a deter exposição econômica a 75% do WT Morumbi (Ala B) e 100% do Work Bela Cintra. Tower Bridge passou a ser detido em condomínio (61% direto JSRE + 39% JSRI).</p>",
+        "impactoDividendo": "Diversificação adicional de portfólio; receita do JSRI flui via cotas subordinadas",
+        "severidade": "positivo",
+        "fonte": "Fato Relevante dez/2025 + Relatório Gerencial nov/2025 (ID 1075360)",
+        "docId": "1075360"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-02-15",
+        "titulo": "Pré-pagamento integral CRI Rochaverá (R$ 135 mi)",
+        "tipo": "amortizacao",
+        "descricao": "<p>Fundo realizou pré-pagamento integral do CRI Rochaverá, abatendo R$ 135 mi do passivo. Eliminou despesas financeiras de ~R$ 1,7-2,0 mi/mês. Operação gerou resultado adicional para o fundo no mês.</p>",
+        "impactoDividendo": "+R$ 0,08/cota mensal em economia de despesas financeiras (recorrente)",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-02-15",
+        "titulo": "Locação Novartis 6.660 m² no WT Morumbi",
+        "tipo": "outro",
+        "descricao": "<p>Locação de 6.660 m² para Novartis no WT Morumbi - Ala B reduziu vacância significativamente desse ativo (que estava com 19,8% de vacância física).</p>",
+        "impactoDividendo": "+receita imobiliária no JSRI (efeito sobre cotas subordinadas)",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999"
+      },
+      {
+        "data": "2026-02",
+        "dataExata": "2026-02-15",
+        "titulo": "Saída NCR + entrada TRT (Ed. Paulista, +50% real)",
+        "tipo": "outro",
+        "descricao": "<p>Saída da NCR como locatária do Tower Bridge com pagamento de multa equivalente a ~1 ano de aluguel (impacto positivo pontual no resultado de fev/2026). Entrada do TRT (Tribunal Regional do Trabalho) no Ed. Paulista com valor de aluguel 50% maior em termos reais que o contrato anterior.</p>",
+        "impactoDividendo": "Resultado de fev/26 saltou para R$ 0,86/cota (vs ~R$ 0,55 média) por evento pontual NCR",
+        "severidade": "positivo",
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999"
+      }
+    ],
+    "eventosFuturos": [
+      {
+        "data": "2026-12",
+        "titulo": "Renovação Boehringer Ingelheim (Rochaverá) — sem mudança",
+        "tipo": "contrato_revisional",
+        "descricao": "<p>Contrato Boehringer renovado em dez/2024 com vencimento agora em dez/2029. Sem evento revisional próximo.</p>",
+        "severidade": "neutro",
+        "certeza": "confirmado",
+        "impactoValor": 0,
+        "duracaoMeses": null,
+        "fonte": "Relatório Gerencial dez/2024 (ID 817092)",
+        "docId": "817092",
+        "premissa": "Renovação já efetivada em dez/2024"
+      },
+      {
+        "data": "2026-09",
+        "titulo": "Continuidade do ciclo de revisionais 2026 (47% do ABL)",
+        "tipo": "contrato_revisional",
+        "descricao": "<p>47% do ABL têm vencimento ou revisional ao longo de 2026 (per Relatório Gerencial fev/2026). Em mercado SP CBD com vacância em ~10%, gestão Safra historicamente consegue reajustar contratos próximos ao IPCA/IGP-M, mas há risco de revisional para baixo em casos pontuais.</p>",
+        "severidade": "neutro",
+        "certeza": "projetado",
+        "impactoValor": 0,
+        "duracaoMeses": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999",
+        "premissa": "Histórico recente do fundo mostra renegociações próximas ao indexador"
+      },
+      {
+        "data": "2026-06",
+        "titulo": "Absorção da vacância WT Morumbi (Ala B)",
+        "tipo": "outro",
+        "descricao": "<p>Após locação Novartis em fev/2026, vacância do WT Morumbi reduziu da posição inicial de 19,8%. Pipeline de absorção continua — mercado de Chucri Zaidan tem boa demanda.</p>",
+        "severidade": "positivo",
+        "certeza": "projetado",
+        "impactoValor": 0.01,
+        "duracaoMeses": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999",
+        "premissa": "Mercado de Chucri Zaidan/Brooklin com tendência de absorção observada em 2024-2025"
+      },
+      {
+        "data": "2026-04",
+        "titulo": "Economia recorrente de despesas financeiras (CRI pré-pago)",
+        "tipo": "outro",
+        "descricao": "<p>Pré-pagamento do CRI Rochaverá em fev/2026 elimina despesas financeiras de ~R$ 1,7 mi/mês (R$ 0,08/cota). Já contemplado no DPS atual de R$ 0,48 — efeito recorrente sobre o resultado, dando folga adicional para sustentabilidade.</p>",
+        "severidade": "positivo",
+        "certeza": "confirmado",
+        "impactoValor": 0,
+        "duracaoMeses": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999",
+        "premissa": "Pré-pagamento já realizado; efeito já em andamento desde fev/2026"
+      }
+    ],
+    "guidance": {
+      "fonte": "gestor",
+      "periodo": "mar/2026 - jun/2026",
+      "cobreMeses": 4,
+      "faixaMin": 0.48,
+      "faixaMax": 0.48,
+      "unidade": "R$/cota/mês",
+      "validade": "2026-06-30",
+      "documento": "Relatório Gerencial fev/2026 (ID 1130999)",
+      "cronogramaAnuncio": {
+        "fonte": "gestor",
+        "regraTexto": "Anúncio: último dia útil do mês. Pagamento: 10º dia útil do mês seguinte.",
+        "dataAnuncioEstimada": "2026-04-30",
+        "dataPagamentoEstimada": "2026-05-15"
+      }
+    },
+    "sintese": {
+      "tendencia": "estavel_longo",
+      "tendenciaLabel": "DPS estável em R$ 0,48 — mantido há 24 meses, com folga adicional pós-pagamento CRI",
+      "cor": "emerald",
+      "direcao": "O DPS está estabilizado em R$ 0,48/cota. Pré-pagamento do CRI Rochaverá em fev/2026 deu folga adicional ao caixa, e absorção da vacância WT Morumbi pode gerar pequeno upside.",
+      "pontosPositivos": [
+        {
+          "texto": "DPS R$ 0,48/cota mantido há 24 meses consecutivos",
+          "peso": "alto"
+        },
+        {
+          "texto": "Pré-pagamento CRI Rochaverá zerou alavancagem (economia ~R$ 0,08/cota/mês)",
+          "peso": "alto"
+        },
+        {
+          "texto": "Locação Novartis no WT Morumbi reduz vacância",
+          "peso": "medio"
+        },
+        {
+          "texto": "TRT entrou no Ed. Paulista com ganho real de 50% vs contrato anterior",
+          "peso": "medio"
+        },
+        {
+          "texto": "Caixa líquido R$ 27,4 mi confortável (1,3% PL)",
+          "peso": "baixo"
+        }
+      ],
+      "pontosNegativos": [
+        {
+          "texto": "Saída NCR Tower Bridge eleva vacância para 10,2%",
+          "peso": "medio"
+        },
+        {
+          "texto": "47% dos contratos com vencimento/revisional em 2026 — risco de revisional para baixo",
+          "peso": "medio"
+        },
+        {
+          "texto": "Mercado SP CBD ainda em ~10% de vacância — limitação para reajustes além do IPCA",
+          "peso": "baixo"
+        },
+        {
+          "texto": "WT Morumbi (recente, via JSRI) com 19,8% vacância — absorção lenta",
+          "peso": "baixo"
+        }
+      ],
+      "veredicto": "<p>O DPS de R$ 0,48 deve permanecer estável nos próximos 12 meses. Pré-pagamento do CRI Rochaverá compensa parcialmente as pressões pontuais (saída NCR, ciclo de revisionais 2026). Em ciclo de queda da Selic projetada para 11% em 12m, há espaço para gestão considerar pequeno aumento (R$ 0,50-0,52) se vacância continuar caindo, mas o cenário-base é manutenção em R$ 0,48 com possível extraordinária pontual em jun/2026 (semestre fiscal).</p>"
+    },
+    "projecaoDy": {
+      "precoReferencia": 65.89,
+      "dyAtual12m": 8.74,
+      "dyProjetado12m": 8.74,
+      "cenarios": [
+        {
+          "rotulo": "Base",
+          "dy12m": 8.74,
+          "dividendoMes": 0.48,
+          "descricao": "DPS R$ 0,48 mantido. Vacância oscilando entre 8-12% conforme ciclo de revisionais."
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 9.5,
+          "dividendoMes": 0.52,
+          "descricao": "Vacância cai para 5%, novos inquilinos no WT Morumbi e Tower Bridge, gestão eleva DPS para R$ 0,52 com extraordinária semestral."
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 7.83,
+          "dividendoMes": 0.43,
+          "descricao": "Cenário com vacância subindo para 15%, revisionais para baixo em 2026-2027, DPS reduzido para R$ 0,43-0,45."
+        }
+      ],
+      "retornoTotal12m": 22.0,
+      "premissas": [
+        "Cota R$ 65,89 (20/04/2026)",
+        "Selic projetada cai para 11% em 12m (Focus BCB)",
+        "Vacância SP CBD em recuperação gradual (10,3% atual → 8% em 12m)",
+        "Cenário-base: convergência parcial ao VP (R$ 102) → +20-30% de retorno de capital potencial em 12-24m",
+        "DPS ancorado em R$ 0,48 — reajustes contratuais por IPCA/IGP-M compensam efeitos da vacância"
+      ]
+    },
+    "alertas": [
+      {
+        "texto": "Saída NCR eleva vacância Tower Bridge para 10,2%",
+        "severidade": "amber"
+      },
+      {
+        "texto": "47% dos contratos com revisional/vencimento em 2026",
+        "severidade": "amber"
+      },
+      {
+        "texto": "Pré-pagamento CRI zerou alavancagem (fev/26)",
+        "severidade": "emerald"
+      }
+    ],
+    "padraoSazonal": {
+      "tem": false,
+      "observacao": "DPS flat em R$ 0,48 nos últimos 24 meses — sem sazonalidade observada. Variância em meses anteriores reflete eventos pontuais (multas, vendas) sem padrão temporal repetido."
+    }
+  },
+  "encaixe": {
+    "schema": "v1",
+    "dataAnalise": "2026-04-26",
+    "identidade": {
+      "rotulo": "FII tijolo AAA premium SP — desconto patrimonial",
+      "subrotulo": "Lajes corporativas AAA em SP CBD a R$ 0,65/R$ 1,00 de VP — tese de convergência em ciclo de queda da Selic",
+      "cor": "emerald"
+    },
+    "perfilRisco": {
+      "nivel": "medio",
+      "score": 2.2,
+      "componentes": [
+        {
+          "nome": "Concentração",
+          "score": 2.5,
+          "peso": 0.2,
+          "metrica": "HHI 0,205 (top1=39,7% Tower Bridge inc. via JSRI)",
+          "leitura": "Concentração moderada — Tower Bridge soma 39,7% do PL econômico (direto + via JSRI). Top-3 imóveis cobrem 80% do PL. Geografia 99% em SP CBD aumenta risco sistêmico."
+        },
+        {
+          "nome": "Volatilidade do preço",
+          "score": 3.0,
+          "peso": 0.15,
+          "metrica": "σ12m anualizado: 11,3%; σ24m: 15,8%; drawdown 24m -26,5%",
+          "leitura": "Volatilidade significativa — fundo mostrou drawdown de -27% em 24m (pico R$ 70 → mín R$ 51,66 em fev/2025), recuperação parcial em curso. Característica do segmento cíclico de escritórios."
+        },
+        {
+          "nome": "Volatilidade do dividendo",
+          "score": 1.0,
+          "peso": 0.2,
+          "metrica": "CV24m = 0% (DPS R$ 0,48 fixo há 24m)",
+          "leitura": "Excelente previsibilidade — DPS estável em R$ 0,48 desde abr/2024, sem variação. Pré-pagamento CRI dá folga adicional."
+        },
+        {
+          "nome": "Liquidez",
+          "score": 1.5,
+          "peso": 0.15,
+          "metrica": "Volume médio R$ 2,92 mi/dia (12m: R$ 2,16 mi/dia)",
+          "leitura": "Boa liquidez — posição de R$ 1 mi sai em 1,7 dias úteis sem mover preço; R$ 10 mi em ~17 dias. Um dos mais líquidos entre escritórios AAA."
+        },
+        {
+          "nome": "Risco do ativo subjacente",
+          "score": 3.5,
+          "peso": 0.2,
+          "metrica": "Vacância 8,3% física (11,6% c/ JSRI), WAULT 3,0 anos",
+          "leitura": "Vacância moderada (alinhada com média SP CBD em ~10%), mas WAULT curto exige renegociação intensa em ciclo desfavorável. 47% dos contratos com vencimento/revisional até 2027."
+        },
+        {
+          "nome": "Risco financeiro/alavancagem",
+          "score": 1.0,
+          "peso": 0.1,
+          "metrica": "LTV 0% (CRI Rochaverá R$ 135 mi pré-pago em fev/2026)",
+          "leitura": "Sem alavancagem após pré-pagamento integral do CRI Rochaverá. Balanço limpo, fortalecido para próximo ciclo."
+        }
+      ]
+    },
+    "estrategias": [
+      {
+        "nome": "Renda mensal previsível",
+        "encaixa": "parcial",
+        "racional": "DPS R$ 0,48 mantido há 24 meses traz previsibilidade. Mas DY 8,7% < Selic 14,75% — para renda pura, LFT remunera melhor no curto prazo."
+      },
+      {
+        "nome": "Hedge inflacionário (IPCA)",
+        "encaixa": true,
+        "racional": "Receita imobiliária reajustada principalmente por IPCA (73% dos contratos consolidados). Cota tende a se beneficiar da inflação acumulada via VP."
+      },
+      {
+        "nome": "Hedge cambial / dolarização",
+        "encaixa": false,
+        "racional": "Sem exposição direta ao dólar — receitas em BRL."
+      },
+      {
+        "nome": "Swing por desconto patrimonial",
+        "encaixa": true,
+        "racional": "P/VP 0,65 com VP de R$ 102 cria assimetria clara: cota R$ 65,89 vs valor patrimonial R$ 102 = 35% de desconto. Convergência em queda de Selic é a tese central."
+      },
+      {
+        "nome": "Especulação em queda de Selic",
+        "encaixa": true,
+        "racional": "Fundos de tijolo descontados costumam reprecificar primeiro em ciclo de queda. Selic projetada 14,75%→11% em 12m abre espaço para reprecificação."
+      },
+      {
+        "nome": "Especulação em alta de Selic",
+        "encaixa": false,
+        "racional": "Tese exatamente oposta — alta de Selic pressiona preço de tijolo (cap rate efeito)."
+      },
+      {
+        "nome": "Exposição setorial concentrada (escritórios AAA SP)",
+        "encaixa": true,
+        "racional": "JSRE11 é forma direta de exposição a lajes corporativas AAA SP CBD com qualidade premium e gestão estabelecida."
+      },
+      {
+        "nome": "Núcleo de carteira para aposentado",
+        "encaixa": "parcial",
+        "racional": "DPS estável traz previsibilidade, mas DY abaixo da Selic limita uso como núcleo de renda hoje. Pode virar núcleo após queda da Selic."
+      },
+      {
+        "nome": "Diversificação setorial",
+        "encaixa": true,
+        "racional": "Para investidor com posições em logística (XPLG11, HGLG11) e papel (KNCR11, KNIP11), JSRE11 adiciona exposição direta a tijolo escritório AAA — diversificação setorial real."
+      },
+      {
+        "nome": "Tax-shield (rendimento isento)",
+        "encaixa": true,
+        "racional": "Rendimento isento de IR para PF como todo FII brasileiro. Não é a razão principal aqui, mas é benefício adicional."
+      }
+    ],
+    "riscosOcultos": [
+      {
+        "titulo": "Concentração em SP CBD (>99% do PL)",
+        "severidade": "media",
+        "descricao": "Quase todo o PL está em SP CBD (Berrini, Chucri Zaidan, Av. Paulista, Pinheiros). Choque sistêmico no mercado de escritórios paulistano (ex: nova onda de home office, evento macro local) impactaria 99% do fundo simultaneamente. Único ativo em outra região é o Praia de Botafogo 440 (0,4% do PL).",
+        "mitigacao": "Endereços são CBD com vacância sistêmica em queda. Pulverização de 94 inquilinos de setores diversos atenua risco de inquilino único."
+      },
+      {
+        "titulo": "WAULT 3,0 anos com 47% vencendo até 2027",
+        "severidade": "alta",
+        "descricao": "Quase metade do ABL tem vencimento ou revisional contratual em 2026-2027. Em mercado SP CBD com vacância ~10%, há risco de revisional para baixo (inquilino renegocia para se aproveitar do mercado fraco). WAULT mais curto que pares (HGRE11 3,7; BLCA11 ~5).",
+        "mitigacao": "Gestão Safra historicamente conduz renegociações próximas ao indexador. TRT entrou em fev/2026 com ganho real de 50% — exemplo de upside possível."
+      },
+      {
+        "titulo": "Aquisição WT Morumbi (dez/2025) com 19,8% de vacância",
+        "severidade": "media",
+        "descricao": "Aquisição recente via reestruturação JSRI integralizou ativo com vacância elevada. Pode demorar 12-18 meses para absorver, pressionando o resultado consolidado nesse período.",
+        "mitigacao": "Locação Novartis 6.660 m² em fev/2026 já reduziu a vacância. Pipeline de prospecção é ativo."
+      },
+      {
+        "titulo": "Reavaliação patrimonial recente (-6,6% em dez/2024)",
+        "severidade": "media",
+        "descricao": "A Colliers reavaliou imóveis com desvalorização de 6,61% em dez/2024 — sinal de que cap rates do mercado subiram (efeito ciclo Selic). Próxima reavaliação (dez/2025) pode novamente ajustar para baixo se Selic seguir alta no fim de 2025/início 2026.",
+        "mitigacao": "Em dez/2025 PL/cota foi R$ 105,88 — sem queda adicional após dez/2024. Mar/2026 voltou a R$ 102,10 (efeito do pré-pagamento CRI)."
+      },
+      {
+        "titulo": "Concentração no Tower Bridge (39,7% do PL via direto + JSRI)",
+        "severidade": "media",
+        "descricao": "Tower Bridge é responsável por 39,7% do PL econômico (30,9% direto + 8,8% indireto via JSRI). Vacância subindo para 10,2% após saída NCR concentra impacto. Eventos negativos no ativo afetam fortemente o fundo.",
+        "mitigacao": "Ativo é AAA com LEED Gold em endereço prime; saída NCR foi compensada por multa equivalente a 1 ano de aluguel. Pulverização de 20+ inquilinos no edifício atenua."
+      }
+    ],
+    "liquidez": {
+      "volumeMedio21d": 2917854,
+      "volumeMedio252d": 2160784,
+      "diasParaSair": {
+        "10mil": 0.02,
+        "100mil": 0.17,
+        "500mil": 0.86,
+        "1milhao": 1.71,
+        "10milhoes": 17.14
+      },
+      "spread": null,
+      "leitura": "Boa liquidez — fundo top entre lajes corporativas. Posição de R$ 1 milhão sai em ~1,7 dias úteis sem mover preço; R$ 10 mi em ~17 dias. Adequado para investidor médio (R$ 100k-1M) com saída rápida; investidor institucional precisa programar movimentação."
+    },
+    "volatilidade": {
+      "preco": {
+        "sigma12m": 0.113,
+        "sigma24m": 0.158,
+        "drawdownMax24m": -0.265,
+        "drawdownMaxData": "2025-02-03",
+        "tempoRecuperacao": null,
+        "tempoRecuperacaoNota": "Mínima R$ 51,66 em fev/2025; em abr/2026 cota está em R$ 65,89 (+27% da mínima, ainda 35% abaixo do VP atual)"
+      },
+      "dividendo": {
+        "cv12m": 0.0,
+        "cv24m": 0.0,
+        "minDps24m": 0.48,
+        "maxDps24m": 0.48,
+        "amplitudeRelativa": 0.0
+      }
+    },
+    "sobreposicaoPares": {
+      "subsegmento": "tijolo_escritorios_aaa",
+      "pares": [
+        {
+          "ticker": "HGRE11",
+          "sobreposicaoEstimada": 0.45,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica",
+            "perfil_inquilinos"
+          ],
+          "leitura": "HGRE11 (Pátria, ex-CSHG Real Estate) é o par mais direto — 13 edifícios majoritariamente em SP CBD, mesmo perfil de tipologia AAA/AA. Quem tem HGRE11 já cobre exposição similar."
+        },
+        {
+          "ticker": "BLCA11",
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica",
+            "perfil_inquilinos"
+          ],
+          "leitura": "BLCA11 (BTG) tem foco AAA SP em Faria Lima/Berrini — sobreposição alta de tipologia e geografia."
+        },
+        {
+          "ticker": "BROF11",
+          "sobreposicaoEstimada": 0.35,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "BROF11 (BTG) também escritórios AAA SP — sobreposição de tipologia mas portfólio diferente."
+        },
+        {
+          "ticker": "GTWR11",
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "GTWR11 (CSHG) tem mono-imóvel premium — sobreposição parcial em tipologia AAA SP."
+        },
+        {
+          "ticker": "BMLC11",
+          "sobreposicaoEstimada": 0.25,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "BMLC11 (BTG) — sobreposição parcial em escritórios SP."
+        },
+        {
+          "ticker": "HGPO11",
+          "sobreposicaoEstimada": 0.3,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
+          "leitura": "HGPO11 (Pátria, em liquidação) tem ou tinha lajes premium SP — sobreposição parcial em tipologia. JSRE detém posição residual em HGPO."
+        }
+      ],
+      "diversificacaoReal": "Para investidor com posição em HGRE11 ou BLCA11, JSRE11 NÃO é diversificação — é duplicação de tese. Diversificação real exige misturar com FII de logística (HGLG11, XPLG11), papel (KNCR11, KNIP11) ou shoppings (XPML11, HSML11). Para quem quer só \"uma posição em escritórios AAA SP\", JSRE11 é candidato natural pelo desconto patrimonial atual."
+    },
+    "cenarios": [
+      {
+        "tipo": "favoravel",
+        "titulo": "Selic cai para 11% em 12m + IFIX em alta",
+        "descricao": "Cenário Focus BCB: queda de Selic libera prêmio de tijolo descontado. JSRE11 com P/VP 0,65 tem grande margem para reprecificação — convergência ao VP de R$ 102 representa upside de +55%.",
+        "probabilidadeRelativa": "alta"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Vacância SP CBD cai para 7% em 18m",
+        "descricao": "Mercado SP CBD em recuperação. Fundo absorve vacância no WT Morumbi e Tower Bridge, eleva DPS gradualmente para R$ 0,52. Reprecificação sustentada.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "favoravel",
+        "titulo": "Próxima reavaliação patrimonial positiva (dez/2026)",
+        "descricao": "Se Selic cai e cap rates do mercado caem, a próxima reavaliação Colliers pode reverter parte da queda de dez/2024 — VP volta a subir.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Selic permanece > 14% por mais 12-18 meses",
+        "descricao": "Cenário de inflação persistente forçaria BCB a manter Selic alta. Tijolo descontado fica stuck com cota lateralizando — efeito tese tardia.",
+        "probabilidadeRelativa": "media"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Renegociação 2026-2027 com revisional para baixo",
+        "descricao": "47% dos contratos vencendo até 2027 em mercado com vacância ~10%. Inquilinos podem pressionar redução de 5-10% nos aluguéis nominais — DPS cai para R$ 0,43-0,45.",
+        "probabilidadeRelativa": "baixa"
+      },
+      {
+        "tipo": "desfavoravel",
+        "titulo": "Saída de inquilino-âncora não substituída em 12m",
+        "descricao": "Risco específico: Allianz no WTNU III ocupa parte significativa, contrato indeterminado. Saída sem substituto rápido criaria buraco de receita por 6-12 meses.",
+        "probabilidadeRelativa": "baixa"
+      }
+    ],
+    "paraQuem": {
+      "objetivo": [
+        "swing_desconto",
+        "diversificacao_setorial",
+        "hedge_inflacao",
+        "tax_shield"
+      ],
+      "horizonte": "medio",
+      "perfil": "moderado",
+      "carteiraTipica": "Posição satélite/núcleo (5-15% da carteira de FIIs) para investidor moderado que aceita ciclo de 2-4 anos para reprecificação patrimonial. Combina bem com FIIs de logística, papel e shoppings para diversificação setorial real.",
+      "perfisExemplo": [
+        "Investidor que tem carteira diversificada em FIIs e quer adicionar tijolo escritório AAA com desconto patrimonial relevante",
+        "Investidor de tese cíclica que aposta em queda de Selic e reprecificação de tijolo descontado",
+        "Investidor pacient que está disposto a esperar 2-4 anos para realizar a tese de convergência ao VP",
+        "Posição complementar para quem já tem logística (HGLG11, XPLG11), papel (KNCR11) e quer escritórios prime"
+      ]
+    },
+    "paraQuemNao": {
+      "perfilExclusao": [
+        "Aposentado que precisa de DPS estável e DY > Selic — DY 8,7% < Selic 14,75% torna LFT mais atrativa no curto prazo",
+        "Investidor com horizonte < 1 ano — tese exige tempo para Selic cair e mercado de escritórios SP recuperar vacância",
+        "Quem já tem posição grande em HGRE11, BLCA11, BROF11 ou GTWR11 — sobreposição alta de tese e geografia",
+        "Investidor iniciante sem outras posições em FIIs — JSRE11 é melhor como posição complementar de carteira balanceada",
+        "Quem quer crescimento de DPS no curto prazo — fundo mantém R$ 0,48 estável; aumento provável só com queda de Selic + recuperação de vacância completa"
+      ]
+    }
+  },
+  "valuation": {
+    "schema": "v2",
+    "dataAnalise": "2026-04-26",
+    "historicoPrecos": {
+      "csvPath": "data/fiis/jsre11/historico_precos.csv",
+      "frequencia": "semanal",
+      "dataInicio": "2016-04-25",
+      "dataFim": "2026-04-24",
+      "fonte": "yfinance:JSRE11.SA",
+      "naoAjustado": true,
+      "ultimoFechamento": 65.89,
+      "minHistorico": {
+        "valor": 51.66,
+        "data": "2025-02-03"
+      },
+      "maxHistorico": {
+        "valor": 123.0,
+        "data": "2019-12-16"
+      }
+    },
+    "historicoVp": {
+      "csvPath": "data/fiis/jsre11/historico_vp.csv",
+      "fonte": "Informes Mensais Estruturados + Relatórios Gerenciais",
+      "ultimoVpCota": 102.1,
+      "ultimoVpData": "2026-03"
+    },
+    "eventosValuation": [
+      {
+        "data": "2018-05-03",
+        "tipo": "emissao",
+        "titulo": "5ª Emissão (R$ 377,8 mi, R$ 109,91/cota)",
+        "descricao": "<p>Emissão a R$ 109,91/cota (definida com base no valor de mercado das cotas já emitidas — média 90 dias). Captação para aquisições subsequentes.</p>",
+        "impactoVp": null,
+        "impactoPreco": null,
+        "fonte": "Prospecto Definitivo (ID 26160)",
+        "docId": "26160"
+      },
+      {
+        "data": "2020-03-15",
+        "tipo": "aquisicao_relevante",
+        "titulo": "Aquisição Tower Bridge Corporate (R$ 666 mi)",
+        "descricao": "<p>Maior aquisição da história do fundo. Tower Bridge tornou-se o principal ativo (~47% do PL).</p>",
+        "impactoVp": 0,
+        "impactoPreco": null,
+        "fonte": "Informe Anual 2020 (ID 160151)",
+        "docId": "160151"
+      },
+      {
+        "data": "2024-02-15",
+        "tipo": "evento_credito",
+        "titulo": "Emissão CRI Rochaverá (R$ 135 mi)",
+        "descricao": "<p>Emissão de CRI lastreado em recebíveis Rochaverá. CDI+2,6% a.a., prazo 5 anos. Geração de caixa para gestão ativa.</p>",
+        "impactoVp": 0,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial fev/2024 (ID 624951)",
+        "docId": "624951"
+      },
+      {
+        "data": "2024-12-30",
+        "tipo": "reavaliacao_negativa",
+        "titulo": "Reavaliação patrimonial -6,6% (Colliers)",
+        "descricao": "<p>Reavaliação a mercado pela Colliers reduziu valor contábil dos imóveis em 6,61%. VP/cota caiu de R$ 109,53 (set/2024) para R$ 101,73 (dez/2024). Reflexo do aumento de cap rates do mercado em ciclo de Selic alta.</p>",
+        "impactoVp": -7.8,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial dez/2024 (ID 817092) + Informe Anual 2024 (ID 869383)",
+        "docId": "817092"
+      },
+      {
+        "data": "2025-02-03",
+        "tipo": "outro",
+        "titulo": "Mínima histórica da cota (R$ 51,66)",
+        "descricao": "<p>Cota atingiu mínima histórica em fev/2025, refletindo Selic 13,75%-15% e expectativa de mais reavaliações negativas.</p>",
+        "impactoVp": null,
+        "impactoPreco": null,
+        "fonte": "Histórico de preços yfinance",
+        "docId": null
+      },
+      {
+        "data": "2025-12-18",
+        "tipo": "aquisicao_relevante",
+        "titulo": "Reestruturação JSRI (subscrição cotas subordinadas)",
+        "descricao": "<p>JSRE subscreveu cotas subordinadas do JSRI integralizando 46% do Tower Bridge. Em troca passou a deter exposição econômica a 75% do WT Morumbi e 100% do Work Bela Cintra.</p>",
+        "impactoVp": 0,
+        "impactoPreco": null,
+        "fonte": "Fato Relevante dez/2025 + Relatório Gerencial nov/2025 (ID 1075360)",
+        "docId": "1075360"
+      },
+      {
+        "data": "2026-02-15",
+        "tipo": "amortizacao_extraordinaria",
+        "titulo": "Pré-pagamento integral CRI Rochaverá (R$ 135 mi)",
+        "descricao": "<p>Pré-pagamento total do passivo CRI Rochaverá. Eliminou despesas financeiras de ~R$ 1,7 mi/mês. Operação gerou resultado adicional ao fundo no mês.</p>",
+        "impactoVp": 0,
+        "impactoPreco": null,
+        "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+        "docId": "1130999"
+      }
+    ],
+    "paresComparaveis": {
+      "subsegmento": "tijolo_escritorios_aaa",
+      "criterioAgrupamento": "FIIs com >70% do PL em lajes corporativas A+/AAA em SP CBD ou RJ Centro, gestoras estabelecidas, vacância < 12%.",
+      "tickers": [
+        "HGRE11",
+        "BLCA11",
+        "BROF11",
+        "GTWR11",
+        "BMLC11"
+      ],
+      "estatisticas": {
+        "dataSnapshot": "2026-04-26",
+        "pvpMediano": 0.82,
+        "pvpMin": 0.55,
+        "pvpMax": 0.92,
+        "dyMediano": 10.53,
+        "dyMin": 6.59,
+        "dyMax": 14.5,
+        "premioRiscoSegmento": 0.045
+      },
+      "posicaoFundo": {
+        "pvpRanking": "6° de 6 — abaixo da mediana em ~21% (P/VP 0,65 vs mediana 0,82)",
+        "dyRanking": "4° de 6 — abaixo da mediana em ~17% (DY 8,7% vs mediana 10,5%)",
+        "leitura": "<p>JSRE11 negocia abaixo da mediana de pares tanto em P/VP (0,65 vs 0,82) quanto em DY (8,7% vs 10,5%). O desconto P/VP é parcialmente justificado pela reavaliação patrimonial recente (-6,6% em dez/2024) e WAULT mais curto. O DY abaixo é reflexo do DPS conservador (R$ 0,48 mantido sem aumentos) — a tese aqui é de retorno via reprecificação patrimonial, não DY corrente.</p>"
+      },
+      "statusClassificacao": "validado"
+    },
+    "pvp": {
+      "valor": "0,65",
+      "descricao": "<p>JSRE11 negocia a R$ 65,89 com VP/cota de R$ 102,10 (dado mar/2026). <strong class=\"text-emerald-400\">35% de desconto patrimonial</strong> — entre os maiores descontos do segmento de escritórios AAA. Reflete o ciclo de Selic alta + reavaliação patrimonial recente, não problemas operacionais. Em ciclo de queda da Selic, fundos com este perfil tendem a reprecificar primeiro.</p>",
+      "detalhes": [
+        {
+          "rotulo": "P/VP atual",
+          "valor": "0,65",
+          "cor": "emerald"
+        },
+        {
+          "rotulo": "P/VP mediano pares",
+          "valor": "0,82",
+          "cor": "amber"
+        },
+        {
+          "rotulo": "Desconto vs pares",
+          "valor": "21% abaixo",
+          "cor": "emerald"
+        },
+        {
+          "rotulo": "P/VP histórico médio (5 anos)",
+          "valor": "~0,80",
+          "cor": "slate"
+        }
+      ]
+    },
+    "spread": {
+      "valor": "8.74%",
+      "label": "DY 12m anualizado",
+      "cor": "amber",
+      "descricao": "<p>DY de 8,74% (R$ 0,48/mês × 12 ÷ R$ 65,89) está <strong class=\"text-amber-400\">605 bps abaixo da Selic atual de 14,75%</strong>. Fundo não compete com renda fixa no curto prazo — tese é convergência ao VP em ciclo de queda.</p>",
+      "detalhe": "Spread vs Selic: -6,01 p.p. (DY < Selic)"
+    },
+    "precoJustoMercado": {
+      "valor": 66.43,
+      "faixa": [
+        63.1,
+        69.75
+      ],
+      "comparacaoComCotacao": {
+        "cotacaoAtual": 65.89,
+        "diferencaPct": 0.81,
+        "leitura": "Preço justo R$ 66.43 vs cota atual R$ 65.89 — fairvalue. Cota negocia em torno do preço justo modelado, com upside via reprecificação para o VP em ciclo de queda da Selic."
+      },
+      "componentes": [
+        {
+          "nome": "DY-alvo Selic+prêmio",
+          "peso": 0.3,
+          "preco": 29.92,
+          "calculo": "DPS sustentável R$ 5,76/ano ÷ (Selic 14,75% + prêmio AAA 4,5%) = R$ 29.92",
+          "racional": "Selic alta atual penaliza este componente. Em 12m com Selic projetada 11%, A1 sobe para R$ 37,16. Componente útil mas com peso reduzido por ser sensível à curva de juros de curto prazo."
+        },
+        {
+          "nome": "P/VP pares",
+          "peso": 0.45,
+          "preco": 83.72,
+          "calculo": "VP/cota R$ 102,10 × P/VP mediano pares (0,82) = R$ 83.72",
+          "racional": "Componente principal — escritórios AAA são precificados pelo P/VP relativo ao segmento. Pares: HGRE11, BLCA11, BROF11, GTWR11, BMLC11."
+        },
+        {
+          "nome": "DY pares",
+          "peso": 0.25,
+          "preco": 54.7,
+          "calculo": "DPS R$ 5,76/ano ÷ DY mediano pares (10,53%) = R$ 54.70",
+          "racional": "Pares têm DY mediano de 10,5% — o JSRE11 está com DPS conservador (8,7%). Componente intermediário."
+        }
+      ],
+      "fatorQualidade": {
+        "valor": 1.101,
+        "score": 0.837,
+        "componentes": [
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.75,
+            "racional": "Safra Asset top-3 entre gestoras de FII no Brasil. 15 anos de track record no JSRE."
+          },
+          {
+            "nome": "Vacância",
+            "peso": 0.2,
+            "score": 0.61,
+            "racional": "8,3% física (11,6% c/ JSRI). Em recuperação após pico de 8,4% em fev/2024. Alinhada com média SP CBD ~10%."
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 1.0,
+            "racional": "LTV 0% após pré-pagamento integral do CRI Rochaverá em fev/2026."
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.15,
+            "score": 1.0,
+            "racional": "CV24m = 0% — DPS R$ 0,48 mantido há 24 meses."
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.1,
+            "score": 1.0,
+            "racional": "sustentavel_longo — sem ponto de inflexão visível."
+          },
+          {
+            "nome": "Inadimplência",
+            "peso": 0.15,
+            "score": 0.85,
+            "racional": "Carteira de inquilinos em dia. CRI Atacadão (2,8% PL) também em dia."
+          }
+        ]
+      },
+      "explicacao": "<p>O preço justo de <strong class=\"text-emerald-400\">R$ 66,43</strong> coloca a cota atual de R$ 65,89 em <strong>fairvalue</strong> — não há grande desconto vs preço justo modelado, mas há upside relevante vs valor patrimonial (R$ 102). A tese é dupla: (1) DPS estável de R$ 0,48 ancora o preço perto do A2 (P/VP pares), (2) ciclo de queda da Selic libera reprecificação para algo entre A2 (R$ 84) e VP cheio (R$ 102), implicando upside de 25-55%. Faixa estreita de R$ 63,10 - R$ 69,75 reflete previsibilidade do DPS, mas o cenário macro (Selic) introduz incerteza relevante para o componente A1 — em 12m esse intervalo pode subir significativamente se Focus BCB se materializar.</p>"
+    },
+    "expectativa": {
+      "curto": {
+        "horizonte": "3-6 meses",
+        "horizonteAte": "2026-10-31",
+        "precoEsperado": 67.0,
+        "faixa": [
+          63.0,
+          71.0
+        ],
+        "direcao": "lateral_alta",
+        "catalisadores": [
+          {
+            "evento": "Continuidade do DPS R$ 0,48 + economia recorrente do CRI pré-pago",
+            "data": "2026-04 a 2026-10",
+            "impactoEsperado": "+R$ 2,88 em distribuição acumulada (6 × R$ 0,48)",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+            "docId": "1130999"
+          },
+          {
+            "evento": "Possível extraordinária semestral em jun/2026 (resultado fev/2026 R$ 0,86 cota gerou folga)",
+            "data": "2026-06",
+            "impactoEsperado": "+R$ 0,05 a R$ 0,10 (não confirmado)",
+            "fonte": "Relatório Gerencial fev/2026 (ID 1130999)",
+            "docId": "1130999"
+          }
+        ],
+        "racional": "<p>Cota deve oscilar lateralmente para alta nos próximos 3-6 meses. Selic ainda alta limita reprecificação acelerada. Eventos de fundo são positivos (pré-pagamento CRI, locação Novartis, entrada TRT) e podem suportar pequena valorização.</p>"
+      },
+      "medio": {
+        "horizonte": "1-2 anos",
+        "horizonteAte": "2028-04-30",
+        "precoEsperado": 80.0,
+        "faixa": [
+          73.0,
+          92.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Selic projetada cai para 11% (Focus BCB jan/2027)",
+            "data": "2026-12 a 2027-12",
+            "impactoEsperado": "+R$ 7-15/cota via expansão do P/VP (de 0,65 para 0,80)",
+            "fonte": "Focus BCB (mediana, fim de ano alvo)",
+            "docId": null
+          },
+          {
+            "evento": "Vacância SP CBD reduz para 7% (mercado em recuperação)",
+            "data": "2026-12 a 2027-12",
+            "impactoEsperado": "+R$ 3-5/cota via melhora de DPS para R$ 0,52 e premium de qualidade",
+            "fonte": "Tendência setorial Buildings + Colliers",
+            "docId": null
+          },
+          {
+            "evento": "Próxima reavaliação patrimonial pode reverter parte da queda 2024",
+            "data": "2026-12",
+            "impactoEsperado": "VP/cota volta para R$ 105-108 — efeito direto sobre P/VP",
+            "fonte": "Calendário anual de avaliação Colliers",
+            "docId": "869383"
+          }
+        ],
+        "racional": "<p>Com Selic em queda e vacância SP CBD em recuperação gradual, JSRE11 tem espaço relevante para reprecificar. Tese central concentra-se neste horizonte: expansão de P/VP de 0,65 para 0,80-0,90 implica preço entre R$ 80-90 em 18-24 meses.</p>"
+      },
+      "longo": {
+        "horizonte": "3-5 anos",
+        "horizonteAte": "2031-04-30",
+        "precoEsperado": 95.0,
+        "faixa": [
+          85.0,
+          110.0
+        ],
+        "direcao": "alta",
+        "catalisadores": [
+          {
+            "evento": "Ciclo completo de Selic baixa (10-11%) consolidado",
+            "data": "2027-2030",
+            "impactoEsperado": "Convergência ao VP histórico (R$ 100-110/cota)",
+            "fonte": "Curva DI + ciclo macro projetado",
+            "docId": null
+          },
+          {
+            "evento": "Ciclo imobiliário de SP CBD em alta (vacância < 5%)",
+            "data": "2028-2030",
+            "impactoEsperado": "DPS pode evoluir para R$ 0,60-0,70 com reajustes contratuais reais positivos",
+            "fonte": "Histórico ciclo imobiliário SP (2014-2018 e 2017-2019)",
+            "docId": null
+          },
+          {
+            "evento": "Possíveis aquisições adicionais via reciclagem de portfólio",
+            "data": "2027-2031",
+            "impactoEsperado": "Crescimento de PL e DPS via novas aquisições com cap rate atrativo em mercado mais barato",
+            "fonte": "Tese gestão Safra Asset",
+            "docId": null
+          }
+        ],
+        "racional": "<p>No horizonte de 3-5 anos, a combinação de ciclo macro favorável (Selic baixa) + ciclo imobiliário (vacância SP em mínima) + gestão Safra com track record de reciclagem de portfólio sustenta tese de cota em R$ 90-110, ou seja, convergência ao VP atual + crescimento gradual do VP via aquisições.</p>"
+      }
+    },
+    "recomendacoes": null
+  },
+  "conclusao": {
+    "paragrafos": [
+      "<p>JSRE11 é um <strong class=\"text-emerald-400\">FII de tijolo AAA premium em São Paulo</strong> com 15 anos de gestão Safra Asset. Sua carteira de 6 edifícios (Tower Bridge na Berrini, Rochaverá Marble e Ebony no Chucri Zaidan, Ed. Paulista na Av. Paulista, WTNU III em Pinheiros, WT Morumbi e Work Bela Cintra via JSRI) representa qualidade de 1ª linha no mercado brasileiro de escritórios.</p>",
+      "<p>O <strong>P/VP de 0,65 (35% de desconto sobre VP de R$ 102)</strong> reflete o ciclo restritivo de Selic 14,75% mais que problemas operacionais — a vacância de 8,3% física está alinhada com a média de SP CBD (10,3%) e em recuperação após pico de 8,4% em fev/2024. O DPS de R$ 0,48 mantido há 24 meses consecutivos traz previsibilidade — embora abaixo da Selic atual, fica ancorado pelo pré-pagamento integral do CRI Rochaverá em fev/2026 (que zerou alavancagem e eliminou ~R$ 1,7 mi/mês de despesas financeiras).</p>",
+      "<p>A tese central é <strong>convergência ao VP em ciclo de queda da Selic</strong>: com Focus BCB projetando Selic em 11% em 12 meses, fundos de tijolo descontados como JSRE11 tendem a reprecificar primeiro. O modelo de preço justo aponta R$ 66,43 (fairvalue vs cota de R$ 65,89), mas o upside relevante está em horizonte de 12-24 meses — preço pode evoluir para a faixa R$ 73-92 (cenário-base de 1-2 anos) e R$ 85-110 em 3-5 anos.</p>",
+      "<p>Ponto crítico de atenção: <strong>WAULT de 3,0 anos com 47% dos contratos vencendo até 2027</strong>. Em mercado SP CBD ainda com ~10% de vacância, há risco de revisional para baixo em casos pontuais — embora gestão Safra tenha histórico de manter renegociações próximas ao indexador (TRT entrando no Ed. Paulista em fev/2026 com ganho real de 50% é exemplo de upside possível).</p>"
+    ],
+    "pontosFortes": [
+      "Carteira de 6 edifícios AAA/AA em endereços icônicos SP CBD (Berrini, Av. Paulista, Chucri Zaidan, Pinheiros)",
+      "Pulverização: 94 inquilinos sem concentração > 10%, mix setorial defensivo (tech 23%, seguros 23%, saúde 21%)",
+      "Sem alavancagem (CRI Rochaverá pré-pago em fev/2026 — economia de ~R$ 1,7 mi/mês)",
+      "DPS R$ 0,48 mantido há 24 meses consecutivos (CV24m = 0% — máxima previsibilidade)",
+      "P/VP 0,65 — entre os maiores descontos do segmento de escritórios AAA",
+      "Boa liquidez: R$ 2,9 mi/dia (R$ 1 mi sai em 1,7 dias úteis)",
+      "Gestão Safra com 15 anos de track record (já fez 2 ciclos de portfólio: 2017-2021 e 2024-2025)",
+      "Reestruturação JSRI (dez/2025) trouxe diversificação adicional (WT Morumbi e Work Bela Cintra)",
+      "Cluster Av. Paulista 100% ocupado (Ed. Paulista + Work Bela Cintra)",
+      "WTNU III 100% ocupado com inquilinos premium (Allianz e CloudWalk)"
+    ],
+    "pontosDeAtencao": [
+      "DY 8,7% < Selic 14,75% — fundo não compete com renda fixa no curto prazo (tese é de retorno via reprecificação, não DY corrente)",
+      "Vacância Tower Bridge subiu para 10,2% após saídas NCR/Medtronic em fev/2026",
+      "WT Morumbi (aquisição recente) com 19,8% de vacância — absorção é gradual",
+      "WAULT 3,0 anos com 47% dos contratos com vencimento/revisional até 2027",
+      "Concentração geográfica: >99% do PL em SP (risco sistêmico paulistano)",
+      "Reavaliação patrimonial -6,6% em dez/2024 mostra que cap rates do mercado subiram",
+      "Cota está 36% abaixo do VP atual — reprecificação depende de ciclo macro (Selic) que pode demorar",
+      "Tower Bridge concentra 39,7% do PL econômico (direto + via JSRI)"
+    ],
+    "conclusaoFinal": "<p><strong class=\"text-emerald-400\">Recomendação: COMPRA</strong> com nota 7,5 para investidor moderado/arrojado com horizonte 2-4 anos buscando exposição a tijolo AAA premium SP a desconto patrimonial relevante. <strong>Não é fundo de renda imediata</strong> — DY 8,7% perde para Selic — mas combina DPS estável com upside cíclico via reprecificação patrimonial. Posição ideal: 5-15% da carteira de FIIs como satélite/núcleo. Combina mal com investidor que já tem HGRE11, BLCA11 ou BROF11 (sobreposição alta de tese e geografia). Combina bem com investidor que já tem logística (HGLG11, XPLG11) e papel (KNCR11, KNIP11) e quer adicionar tijolo escritório de qualidade.</p>"
+  },
+  "footer": {
+    "fonteDados": "FundosNet (CVM) + yfinance + Banco J. Safra (Relatórios Gerenciais e Informes Mensais)",
+    "atualizacao": "26/04/2026",
+    "disclaimer": "Esta análise não constitui recomendação de investimento. É um esforço de pesquisa para fins educacionais. Cada investidor deve fazer sua própria avaliação considerando seu perfil de risco, horizonte de investimento e diversificação de carteira. Investimentos em FIIs envolvem riscos (vacância, inadimplência, mercado, liquidez, regulatório). Rentabilidade passada não garante resultados futuros.",
+    "metodologia": "Análise baseada em 386 documentos do FundosNet de JSRE11 (Prospectos, Regulamentos, Informes Mensais Estruturados, Informes Anuais, Relatórios Gerenciais, Rendimentos), histórico semanal de cotações de yfinance (523 pontos 2016-2026), modelo de preço justo de 4 componentes (DY-alvo Selic+prêmio + P/VP pares + DY pares + fator qualidade), e dados macro do BCB (Selic atual e projetada).",
+    "dataAnalise": "26/04/2026",
+    "totalDocumentos": 386
+  }
+}

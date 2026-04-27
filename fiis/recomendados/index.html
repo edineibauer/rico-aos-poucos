@@ -1,575 +1,526 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <!-- Performance: Preconnect -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="dns-prefetch" href="https://www.youtube.com">
-  <link rel="dns-prefetch" href="https://www.google-analytics.com">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="FIIs Recomendados 2026: lista de fundos imobiliários com faixas de preço de compra atualizadas. Melhores FIIs para renda passiva.">
-  <meta name="keywords" content="FIIs recomendados, melhores FIIs 2026, lista FIIs, faixa de preço FII, FII para comprar">
-  <meta name="author" content="Rico aos Poucos">
-  <meta name="theme-color" content="#0d1117">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/recomendados/">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="FIIs Recomendados 2026: Lista com Faixas de Preço | Rico aos Poucos">
-  <meta property="og:description" content="Lista de FIIs recomendados com faixas de preço de compra. Melhores fundos imobiliários para renda passiva.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/recomendados/">
-  <meta property="og:image" content="https://ricoaospoucos.com.br/icon-512.png">
-  <meta property="og:locale" content="pt_BR">
-  <meta property="og:site_name" content="Rico aos Poucos">
-
-  <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:site" content="@ricoaospoucos">
-  <meta name="twitter:title" content="FIIs Recomendados 2026 | Rico aos Poucos">
-  <meta name="twitter:description" content="Lista de FIIs recomendados com faixas de preço de compra.">
-  <meta name="twitter:image" content="https://ricoaospoucos.com.br/icon-512.png">
-
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
-  <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
-  <link rel="shortcut icon" href="../../icon-192.png">
-  <title>FIIs Recomendados - Rico aos Poucos</title>
-  <link rel="stylesheet" href="../../css/style.css">
-  <style>
-    .page-wrapper {
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-
-    /* Header */
-    .app-header {
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 14px 20px;
-      background: var(--bg-secondary);
-      border-bottom: 1px solid var(--border-color);
-    }
-
-    .header-back {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      width: 36px;
-      height: 36px;
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 10px;
-      color: var(--text-primary);
-      text-decoration: none;
-      transition: all 0.3s ease;
-      flex-shrink: 0;
-    }
-
-    .header-back:hover {
-      background: rgba(255, 255, 255, 0.1);
-    }
-
-    .header-back svg {
-      width: 18px;
-      height: 18px;
-      stroke: currentColor;
-      stroke-width: 2;
-      fill: none;
-    }
-
-    .app-logo {
-      width: 36px;
-      height: 36px;
-      flex-shrink: 0;
-    }
-
-    .app-title-group {
-      flex: 1;
-      min-width: 0;
-    }
-
-    .app-name {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--text-primary);
-      margin: 0;
-    }
-
-    .app-subtitle {
-      font-size: 0.7rem;
-      color: var(--text-muted);
-    }
-
-    /* Main content */
-    .main-content {
-      flex: 1;
-      padding: 16px 20px;
-      max-width: 900px;
-      margin: 0 auto;
-      width: 100%;
-    }
-
-    /* Hero section - compacto */
-    .hero-section {
-      text-align: center;
-      margin-bottom: 24px;
-      padding: 24px 20px;
-      background: linear-gradient(145deg, rgba(26, 95, 74, 0.15) 0%, rgba(13, 17, 23, 0.95) 100%);
-      border-radius: 16px;
-      border: 1px solid rgba(26, 95, 74, 0.2);
-    }
-
-    .hero-section h2 {
-      font-size: 1.4rem;
-      margin: 0 0 8px;
-      color: var(--text-primary);
-    }
-
-    .hero-section p {
-      font-size: 0.9rem;
-      color: var(--text-secondary);
-      margin: 0 0 16px;
-    }
-
-    .last-update {
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .last-update .date {
-      color: var(--primary-light);
-      font-weight: 600;
-    }
-
-    /* Legenda de preços */
-    .price-legend {
-      display: flex;
-      justify-content: center;
-      gap: 24px;
-      margin-bottom: 24px;
-      padding: 16px;
-      background: var(--bg-card);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-      flex-wrap: wrap;
-    }
-
-    .legend-item {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 0.85rem;
-    }
-
-    .legend-dot {
-      width: 12px;
-      height: 12px;
-      border-radius: 3px;
-    }
-
-    .legend-dot.barato { background: var(--bullish); }
-    .legend-dot.bom { background: var(--neutral); }
-    .legend-dot.caro { background: var(--bearish); }
-
-    /* Lista de FIIs - compacta */
-    .fiis-list {
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .fii-row {
-      display: grid;
-      grid-template-columns: 120px 1fr auto;
-      gap: 16px;
-      align-items: center;
-      padding: 16px 20px;
-      background: var(--bg-card);
-      border: 1px solid var(--border-color);
-      border-radius: 12px;
-      transition: all 0.3s ease;
-    }
-
-    .fii-row:hover {
-      border-color: var(--primary-light);
-    }
-
-    .fii-info {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-    }
-
-    .fii-ticker {
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: var(--text-primary);
-    }
-
-    .fii-nome {
-      font-size: 0.75rem;
-      color: var(--text-muted);
-    }
-
-    .fii-alocacao {
-      display: inline-flex;
-      align-items: center;
-      gap: 4px;
-      margin-top: 4px;
-      padding: 3px 8px;
-      background: rgba(88, 166, 255, 0.15);
-      border-radius: 4px;
-      font-size: 0.65rem;
-      color: #58a6ff;
-    }
-
-    .fii-motivo {
-      font-size: 0.85rem;
-      color: var(--text-secondary);
-      line-height: 1.4;
-    }
-
-    .fii-precos {
-      display: flex;
-      gap: 8px;
-      flex-shrink: 0;
-    }
-
-    .preco-tag {
-      padding: 8px 12px;
-      border-radius: 8px;
-      text-align: center;
-      min-width: 70px;
-    }
-
-    .preco-tag .label {
-      font-size: 0.6rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      opacity: 0.8;
-      margin-bottom: 2px;
-    }
-
-    .preco-tag .valor {
-      font-size: 0.95rem;
-      font-weight: 700;
-    }
-
-    .preco-tag.barato {
-      background: rgba(63, 185, 80, 0.15);
-      color: var(--bullish);
-    }
-
-    .preco-tag.bom {
-      background: rgba(240, 193, 75, 0.15);
-      color: var(--neutral);
-    }
-
-    .preco-tag.caro {
-      background: rgba(248, 81, 73, 0.15);
-      color: var(--bearish);
-    }
-
-    /* Empty state */
-    .empty-state {
-      text-align: center;
-      padding: 48px 20px;
-      background: var(--bg-card);
-      border-radius: 12px;
-      border: 1px solid var(--border-color);
-    }
-
-    .empty-state .icon {
-      font-size: 3rem;
-      margin-bottom: 12px;
-    }
-
-    .empty-state h3 {
-      font-size: 1.1rem;
-      margin-bottom: 6px;
-      color: var(--text-primary);
-    }
-
-    .empty-state p {
-      color: var(--text-secondary);
-      font-size: 0.9rem;
-    }
-
-    /* Disclaimer */
-    .disclaimer-box {
-      margin-top: 24px;
-      padding: 16px;
-      background: var(--bg-tertiary);
-      border-left: 3px solid var(--secondary);
-      border-radius: 0 8px 8px 0;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-
-    /* Responsivo */
-    @media (max-width: 700px) {
-      .fii-row {
-        grid-template-columns: 1fr;
-        gap: 12px;
-      }
-
-      .fii-info {
-        flex-direction: row;
-        align-items: center;
-        gap: 12px;
-      }
-
-      .fii-precos {
-        justify-content: space-between;
-      }
-
-      .preco-tag {
-        flex: 1;
-      }
-
-      .price-legend {
-        gap: 16px;
-      }
-    }
-
-    /* MOBILE OPTIMIZATIONS - Correcoes de UX/UI para mobile */
-    @media (max-width: 767px) {
-      /* Prevenir overflow horizontal */
-      body { overflow-x: hidden; }
-
-      /* Otimizar padding do container principal */
-      .main-content {
-        padding: 12px 16px !important;
-      }
-
-      /* Intro section */
-      .intro-section {
-        padding: 16px !important;
-        margin-bottom: 20px !important;
-      }
-
-      .intro-section h2 {
-        font-size: 1.1rem !important;
-      }
-
-      .intro-section p {
-        font-size: 0.8rem !important;
-      }
-
-      /* Warning alert */
-      .warning-alert {
-        padding: 14px !important;
-        margin-bottom: 20px !important;
-      }
-
-      /* FII Cards */
-      .fii-card {
-        padding: 14px !important;
-      }
-
-      .fii-ticker {
-        font-size: 1rem !important;
-      }
-
-      .fii-nome {
-        font-size: 0.8rem !important;
-      }
-
-      /* Price info */
-      .price-info {
-        padding: 12px !important;
-        gap: 8px !important;
-      }
-
-      .price-current {
-        font-size: 1.1rem !important;
-      }
-
-      .price-range {
-        padding: 10px !important;
-      }
-
-      .price-label {
-        font-size: 0.65rem !important;
-      }
-
-      .price-value {
-        font-size: 0.85rem !important;
-      }
-
-      /* Indicadores */
-      .fii-indicadores {
-        gap: 8px !important;
-      }
-
-      .indicador-item {
-        padding: 8px !important;
-      }
-
-      .indicador-label {
-        font-size: 0.6rem !important;
-      }
-
-      .indicador-valor {
-        font-size: 0.8rem !important;
-      }
-
-      /* Price legend */
-      .price-legend {
-        gap: 10px !important;
-        padding: 14px !important;
-      }
-
-      .legend-item {
-        font-size: 0.75rem !important;
-      }
-    }
-
-    @media (min-width: 768px) {
-      .main-content {
-        padding: 24px 32px;
-      }
-    }
-  </style>
-</head>
-<body data-ticker="RECOMENDADOS">
-  <div class="page-wrapper">
-    <!-- Header -->
-    <header id="site-header"></header>
-
-    <!-- Main -->
-    <main class="main-content">
-      <!-- Hero - compacto -->
-      <section class="hero-section">
-        <h2>🎯 FIIs Recomendados</h2>
-        <p>Fundos com faixas de preço definidas. Compre no <strong>barato</strong>, evite no <strong>caro</strong>.</p>
-        <div class="last-update">
-          Atualizado em <span class="date" id="lastUpdate">--</span>
-        </div>
-      </section>
-
-      <!-- Legenda -->
-      <div class="price-legend">
-        <div class="legend-item">
-          <span class="legend-dot barato"></span>
-          <span><strong>Barato</strong> = Oportunidade</span>
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot bom"></span>
-          <span><strong>Bom</strong> = Preço justo</span>
-        </div>
-        <div class="legend-item">
-          <span class="legend-dot caro"></span>
-          <span><strong>Caro</strong> = Evitar</span>
-        </div>
-      </div>
-
-      <!-- Lista de FIIs -->
-      <div class="fiis-list" id="fiisList">
-        <div class="empty-state">
-          <div class="icon">⏳</div>
-          <h3>Carregando...</h3>
-        </div>
-      </div>
-
-      <!-- Disclaimer -->
-      <div class="disclaimer-box">
-        ⚠️ Esta lista representa a opinião do canal e não constitui recomendação de investimento. Faça sua própria análise antes de investir.
-      </div>
-    </main>
-
-    <!-- Footer -->
-    <div id="footer-container"></div>
-  </div>
-
-  <script>
-    function formatDate(dateStr) {
-      const date = new Date(dateStr + 'T12:00:00');
-      return date.toLocaleDateString('pt-BR', {
-        day: '2-digit',
-        month: '2-digit',
-        year: 'numeric'
-      });
-    }
-
-    function formatCurrency(value) {
-      return 'R$ ' + value.toFixed(2).replace('.', ',');
-    }
-
-    async function carregarFiis() {
-      const container = document.getElementById('fiisList');
-      
-      try {
-        const response = await fetch('../../data/fiis-recomendados.json');
-        if (!response.ok) throw new Error('Erro ao carregar dados');
-        const data = await response.json();
-
-        // Atualizar data
-        document.getElementById('lastUpdate').textContent = formatDate(data.ultimaAtualizacao);
-
-        // Verificar se há FIIs
-        if (!data.fiis || data.fiis.length === 0) {
-          const msg = data.mensagem || 'A lista será atualizada em breve.';
-          container.innerHTML = `
-            <div class="empty-state">
-              <div class="icon">📋</div>
-              <h3>Nenhuma recomendação no momento</h3>
-              <p>${msg}</p>
-            </div>
-          `;
-          return;
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carteiras Recomendadas de FIIs — Rico aos Poucos</title>
+    <meta name="description" content="6 carteiras teóricas de FIIs por objetivo (ganho de capital, renda passiva) e perfil (agressivo, moderado, conservador). Cada carteira com 12 fundos e racional individual.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://ricoaospoucos.com.br/fiis/recomendados/">
+    <meta name="keywords" content="carteiras recomendadas FII, FIIs ganho de capital, FIIs renda passiva, melhor FII conservador, carteira agressiva FII">
+    <meta name="author" content="Rico aos Poucos">
+
+    <meta property="og:title" content="Carteiras Recomendadas de FIIs | Rico aos Poucos">
+    <meta property="og:description" content="6 carteiras teóricas de FIIs com 12 ativos cada — ganho de capital × renda passiva, em 3 perfis de risco.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://ricoaospoucos.com.br/fiis/recomendados/">
+    <meta property="og:image" content="https://ricoaospoucos.com.br/icon-512.png">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Rico aos Poucos">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Carteiras Recomendadas de FIIs | Rico aos Poucos">
+    <meta name="twitter:description" content="6 carteiras teóricas com 12 fundos cada e racional por ativo.">
+    <meta name="twitter:image" content="https://ricoaospoucos.com.br/icon-512.png">
+
+    <meta name="theme-color" content="#0d1117">
+
+    <link rel="icon" type="image/png" sizes="192x192" href="../../icon-192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="../../icon-512.png">
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg">
+    <link rel="shortcut icon" href="../../icon-192.png">
+
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/article-fii.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #0d1117;
+            --card: rgba(255,255,255,0.04);
+            --card-hover: rgba(255,255,255,0.08);
+            --border: rgba(255,255,255,0.10);
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --dim: #64748b;
+            --accent: #c4b5fd;
+            --emerald: #10b981;
+            --amber: #f59e0b;
+            --red: #ef4444;
+            --blue: #3b82f6;
+        }
+        body {
+            background: var(--bg);
+            color: var(--text);
+            font-family: 'Inter', sans-serif;
+            font-feature-settings: "ss01", "cv11";
+            -webkit-font-smoothing: antialiased;
+            margin: 0;
+        }
+        .page-wrapper { min-height: 100vh; display: flex; flex-direction: column; }
+        main.cr-main { flex: 1; max-width: 1200px; width: 100%; margin: 0 auto; padding: 28px 18px 80px; box-sizing: border-box; }
+
+        /* HERO */
+        .cr-hero {
+            position: relative;
+            padding: 36px 28px 30px;
+            margin-bottom: 26px;
+            border-radius: 28px;
+            overflow: hidden;
+            background: linear-gradient(135deg,
+                rgba(139,92,246,0.18) 0%,
+                rgba(15,23,42,0.92) 55%,
+                rgba(15,23,42,0.96) 100%);
+            border: 1px solid rgba(139,92,246,0.35);
+        }
+        .cr-hero::before {
+            content: ''; position: absolute; inset: 0; pointer-events: none;
+            background: radial-gradient(circle at 100% 0%, rgba(139,92,246,0.25) 0%, transparent 60%);
+        }
+        .cr-hero > * { position: relative; z-index: 1; }
+        .cr-hero-tag {
+            font-size: 0.65rem; letter-spacing: 0.18em; color: var(--accent);
+            font-weight: 700; margin-bottom: 12px;
+        }
+        .cr-hero h1 {
+            font-size: clamp(1.6rem, 3.6vw, 2.4rem);
+            font-weight: 800; color: #fff; line-height: 1.15;
+            margin: 0 0 10px; letter-spacing: -0.02em;
+        }
+        .cr-hero p {
+            font-size: 0.95rem; color: rgb(203 213 225); line-height: 1.6;
+            max-width: 780px; margin: 0;
+        }
+        .cr-hero-meta {
+            display: flex; flex-wrap: wrap; gap: 14px; margin-top: 18px;
+            font-size: 0.78rem; color: var(--muted);
+        }
+        .cr-hero-meta strong { color: #fff; }
+
+        /* MENU HORIZONTAL DE CARTEIRAS */
+        .cr-menu-wrap {
+            margin-bottom: 22px;
+            position: sticky;
+            top: 0;
+            z-index: 20;
+            padding: 14px 0 6px;
+            background: linear-gradient(180deg, var(--bg) 70%, transparent);
+        }
+        .cr-menu-titulo {
+            font-size: 0.62rem; letter-spacing: 0.16em; color: var(--muted);
+            font-weight: 700; margin-bottom: 10px;
+        }
+        .cr-menu {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .cr-menu-btn {
+            cursor: pointer;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 10px 14px;
+            color: var(--text);
+            font-family: inherit;
+            text-align: left;
+            min-width: 170px;
+            flex: 1 1 170px;
+            transition: all .18s ease;
+            display: flex; flex-direction: column; gap: 3px;
+        }
+        .cr-menu-btn:hover {
+            background: var(--card-hover);
+            border-color: rgba(255,255,255,0.18);
+            transform: translateY(-1px);
+        }
+        .cr-menu-btn-obj {
+            font-size: 0.6rem; letter-spacing: 0.1em; color: var(--muted);
+            text-transform: uppercase; font-weight: 700;
+        }
+        .cr-menu-btn-perfil {
+            font-size: 0.95rem; font-weight: 700; color: #fff;
+        }
+        .cr-menu-btn[data-objetivo="ganho_capital"] .cr-menu-btn-obj { color: #93c5fd; }
+        .cr-menu-btn[data-objetivo="renda_passiva"] .cr-menu-btn-obj { color: #6ee7b7; }
+        .cr-menu-btn.is-active {
+            background: linear-gradient(135deg, rgba(139,92,246,0.25), rgba(59,130,246,0.18));
+            border-color: rgba(139,92,246,0.55);
+            box-shadow: 0 0 0 1px rgba(139,92,246,0.45) inset;
+        }
+        .cr-menu-btn.is-active .cr-menu-btn-perfil { color: #fff; }
+
+        /* CARTEIRA SELECIONADA */
+        .cr-carteira-head {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 22px;
+            padding: 24px 22px 20px;
+            margin-bottom: 18px;
+        }
+        .cr-carteira-titulo {
+            display: flex; align-items: baseline; gap: 12px; flex-wrap: wrap;
+            margin-bottom: 6px;
+        }
+        .cr-carteira-titulo h2 {
+            font-size: 1.5rem; font-weight: 800; color: #fff; margin: 0;
+            letter-spacing: -0.015em;
+        }
+        .cr-carteira-perfil-pill {
+            display: inline-block; padding: 4px 10px;
+            border-radius: 999px; font-size: 0.68rem; font-weight: 700;
+            letter-spacing: 0.08em; text-transform: uppercase;
+        }
+        .cr-perfil-agressivo  { background: rgba(239,68,68,0.18); color: #fca5a5; border: 1px solid rgba(239,68,68,0.35); }
+        .cr-perfil-moderado   { background: rgba(245,158,11,0.18); color: #fcd34d; border: 1px solid rgba(245,158,11,0.35); }
+        .cr-perfil-conservador{ background: rgba(16,185,129,0.18); color: #6ee7b7; border: 1px solid rgba(16,185,129,0.35); }
+        .cr-carteira-sub {
+            font-size: 0.85rem; color: var(--muted); margin-bottom: 14px;
+        }
+        .cr-carteira-tese {
+            font-size: 0.92rem; line-height: 1.6; color: rgb(203 213 225);
+        }
+        .cr-carteira-tese p { margin: 0 0 10px; }
+        .cr-carteira-tese p:last-child { margin-bottom: 0; }
+
+        /* MÉTRICAS PONDERADAS */
+        .cr-metricas {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 10px;
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 1px dashed rgba(255,255,255,0.08);
+        }
+        .cr-metrica {
+            background: rgba(255,255,255,0.03); border-radius: 12px;
+            padding: 10px 14px;
+        }
+        .cr-metrica-tag {
+            font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted);
+            font-weight: 700; text-transform: uppercase;
+        }
+        .cr-metrica-val {
+            font-size: 1.4rem; font-weight: 800; color: #fff;
+            font-variant-numeric: tabular-nums;
+            line-height: 1.1; margin-top: 4px;
+        }
+        .cr-segs {
+            grid-column: 1 / -1;
+            background: rgba(255,255,255,0.025); border-radius: 12px;
+            padding: 12px 14px;
+        }
+        .cr-segs-tag {
+            font-size: 0.6rem; letter-spacing: 0.12em; color: var(--muted);
+            font-weight: 700; text-transform: uppercase; margin-bottom: 8px;
+        }
+        .cr-segs-list {
+            display: flex; flex-wrap: wrap; gap: 8px;
+        }
+        .cr-seg-pill {
+            padding: 4px 10px; border-radius: 999px;
+            background: rgba(59,130,246,0.12); color: #93c5fd;
+            font-size: 0.72rem; font-weight: 600;
+            border: 1px solid rgba(59,130,246,0.25);
+        }
+        .cr-seg-pill strong { color: #fff; margin-right: 4px; }
+
+        /* LISTA DE ATIVOS */
+        .cr-ativos {
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .cr-ativo {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 16px 18px;
+            display: grid;
+            grid-template-columns: minmax(120px, 1fr) minmax(120px, 1.6fr) auto;
+            gap: 16px;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            transition: all .15s ease;
+        }
+        .cr-ativo:hover {
+            background: var(--card-hover);
+            border-color: rgba(255,255,255,0.20);
+        }
+        .cr-ativo::before {
+            content: ''; position: absolute; left: 0; top: 0; bottom: 0;
+            width: var(--peso-pct, 0%); background: linear-gradient(90deg, rgba(139,92,246,0.18), rgba(139,92,246,0.04));
+            pointer-events: none; transition: width .35s ease;
+            z-index: 0;
+        }
+        .cr-ativo > * { position: relative; z-index: 1; }
+        .cr-ativo-id {
+            display: flex; flex-direction: column; gap: 2px;
+        }
+        .cr-ativo-ticker {
+            font-size: 1.05rem; font-weight: 800; color: #fff;
+            letter-spacing: 0.01em; text-decoration: none;
+        }
+        .cr-ativo-ticker:hover { color: var(--accent); }
+        .cr-ativo-papel {
+            font-size: 0.65rem; letter-spacing: 0.1em; color: var(--muted);
+            text-transform: uppercase; font-weight: 600;
+        }
+        .cr-ativo-rac {
+            font-size: 0.85rem; line-height: 1.5; color: rgb(203 213 225);
+        }
+        .cr-ativo-peso-wrap {
+            display: flex; flex-direction: column; align-items: flex-end; gap: 2px;
+            min-width: 80px;
+        }
+        .cr-ativo-peso {
+            font-size: 1.3rem; font-weight: 800; color: var(--accent);
+            font-variant-numeric: tabular-nums;
+            line-height: 1;
+        }
+        .cr-ativo-peso-tag {
+            font-size: 0.62rem; color: var(--muted);
+            text-transform: uppercase; letter-spacing: 0.08em;
         }
 
-        // Renderizar FIIs - lista compacta
-        container.innerHTML = data.fiis.map(fii => `
-          <div class="fii-row">
-            <div class="fii-info">
-              <span class="fii-ticker">${fii.ticker}</span>
-              <span class="fii-nome">${fii.nome}</span>
-              <span class="fii-alocacao">📊 Máx ${fii.alocacaoMax}%</span>
-            </div>
-            <div class="fii-motivo">${fii.motivo}</div>
-            <div class="fii-precos">
-              <div class="preco-tag barato">
-                <div class="label">Barato</div>
-                <div class="valor">${formatCurrency(fii.precoBarato)}</div>
-              </div>
-              <div class="preco-tag bom">
-                <div class="label">Bom</div>
-                <div class="valor">${formatCurrency(fii.precoBom)}</div>
-              </div>
-              <div class="preco-tag caro">
-                <div class="label">Caro</div>
-                <div class="valor">${formatCurrency(fii.precoCaro)}</div>
-              </div>
-            </div>
-          </div>
-        `).join('');
+        @media (max-width: 720px) {
+            .cr-ativo {
+                grid-template-columns: 1fr auto;
+                grid-template-areas: "id peso" "rac rac";
+                gap: 10px 14px;
+            }
+            .cr-ativo-id { grid-area: id; }
+            .cr-ativo-peso-wrap { grid-area: peso; }
+            .cr-ativo-rac { grid-area: rac; }
+        }
 
-      } catch (error) {
-        container.innerHTML = `
-          <div class="empty-state">
-            <div class="icon">⚠️</div>
-            <h3>Erro ao carregar</h3>
-            <p>Tente recarregar a página.</p>
-          </div>
-        `;
-        console.error('Erro:', error);
-      }
-    }
+        /* DISCLAIMER */
+        .cr-disclaimer {
+            margin-top: 30px;
+            padding: 16px 20px;
+            background: rgba(245,158,11,0.08);
+            border: 1px solid rgba(245,158,11,0.25);
+            border-radius: 14px;
+            font-size: 0.82rem;
+            color: rgb(252 211 77);
+            line-height: 1.55;
+        }
 
-    document.addEventListener('DOMContentLoaded', carregarFiis);
-  </script>
-  <script defer src="../../js/footer.js"></script>
+        /* EMPTY/LOADING */
+        .cr-empty {
+            text-align: center; padding: 60px 20px;
+            color: var(--muted); font-size: 0.95rem;
+        }
+        .cr-loading-skel {
+            background: var(--card); border: 1px solid var(--border);
+            border-radius: 16px; padding: 18px; height: 80px;
+            position: relative; overflow: hidden;
+        }
+        .cr-loading-skel::after {
+            content: ''; position: absolute; inset: 0;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);
+            animation: skel 1.5s infinite;
+        }
+        @keyframes skel { from { transform: translateX(-100%); } to { transform: translateX(100%); } }
+    </style>
+</head>
+<body data-ticker="RECOMENDADOS">
+    <div class="page-wrapper">
+        <header id="site-header"></header>
+
+        <main class="cr-main">
+            <!-- Hero -->
+            <section class="cr-hero">
+                <div class="cr-hero-tag">CARTEIRAS TEÓRICAS · RICO AOS POUCOS</div>
+                <h1>Carteiras recomendadas de FIIs</h1>
+                <p>Seis combinações de objetivo × perfil de risco. Cada uma com 12 fundos, pesos diferenciados e racional individual — montadas a partir da nossa base de análises profundas.</p>
+                <div class="cr-hero-meta">
+                    <span>Atualizado em <strong id="cr-last-update">—</strong></span>
+                    <span>·</span>
+                    <span><strong id="cr-total-fundos">—</strong> fundos analisados na base</span>
+                    <span>·</span>
+                    <span>Selic atual <strong id="cr-selic">—</strong></span>
+                </div>
+            </section>
+
+            <!-- Menu de carteiras -->
+            <div class="cr-menu-wrap">
+                <div class="cr-menu-titulo">SELECIONE A CARTEIRA</div>
+                <div class="cr-menu" id="cr-menu"></div>
+            </div>
+
+            <!-- Carteira ativa -->
+            <div id="cr-carteira"></div>
+
+            <!-- Disclaimer -->
+            <div class="cr-disclaimer">
+                ⚠ Estas carteiras são teóricas e didáticas. NÃO constituem recomendação personalizada de investimento.
+                Pesos e tickers refletem nossa leitura no momento da última análise — situações de mercado mudam.
+                Antes de aplicar, leia a análise individual de cada fundo e considere seu perfil pessoal.
+            </div>
+        </main>
+    </div>
+
     <footer id="site-footer"></footer>
+
+    <script>
+    (function () {
+        const PERFIL_LABEL = {
+            agressivo: 'Agressivo',
+            moderado: 'Moderado',
+            conservador: 'Conservador'
+        };
+        const OBJ_LABEL = {
+            ganho_capital: 'Ganho de Capital',
+            renda_passiva: 'Renda Passiva'
+        };
+        const ORDEM = [
+            'ganho_capital_agressivo', 'ganho_capital_moderado', 'ganho_capital_conservador',
+            'renda_passiva_agressivo', 'renda_passiva_moderado', 'renda_passiva_conservador'
+        ];
+
+        function fmtDate(s) {
+            if (!s) return '—';
+            const m = String(s).match(/^(\d{4})-(\d{2})-(\d{2})/);
+            if (!m) return s;
+            const meses = ['jan','fev','mar','abr','mai','jun','jul','ago','set','out','nov','dez'];
+            return `${m[3]}/${meses[parseInt(m[2])-1]}/${m[1]}`;
+        }
+
+        function fmtPct(v) {
+            if (v == null || isNaN(v)) return '—';
+            return Number(v).toFixed(1) + '%';
+        }
+
+        function fmtNum(v, d = 2) {
+            if (v == null || isNaN(v)) return '—';
+            return Number(v).toFixed(d).replace('.', ',');
+        }
+
+        function renderMenu(carteiras) {
+            const menu = document.getElementById('cr-menu');
+            menu.innerHTML = '';
+            const sorted = ORDEM
+                .map(id => carteiras.find(c => c.id === id))
+                .filter(Boolean);
+            sorted.forEach((c, i) => {
+                const btn = document.createElement('button');
+                btn.type = 'button';
+                btn.className = 'cr-menu-btn' + (i === 0 ? ' is-active' : '');
+                btn.dataset.objetivo = c.objetivo;
+                btn.dataset.id = c.id;
+                btn.innerHTML = `
+                    <span class="cr-menu-btn-obj">${OBJ_LABEL[c.objetivo] || c.objetivo}</span>
+                    <span class="cr-menu-btn-perfil">${PERFIL_LABEL[c.perfil] || c.perfil}</span>
+                `;
+                btn.addEventListener('click', () => {
+                    document.querySelectorAll('.cr-menu-btn').forEach(b => b.classList.remove('is-active'));
+                    btn.classList.add('is-active');
+                    renderCarteira(c);
+                });
+                menu.appendChild(btn);
+            });
+            if (sorted.length) renderCarteira(sorted[0]);
+        }
+
+        function renderCarteira(c) {
+            const root = document.getElementById('cr-carteira');
+            if (!c) { root.innerHTML = '<div class="cr-empty">Carteira não encontrada.</div>'; return; }
+
+            const mp = c.metricasPonderadas || {};
+            const segs = (mp.exposicaoSegmento || []).slice().sort((a,b) => b.pct - a.pct);
+            const segHtml = segs.map(s => `
+                <span class="cr-seg-pill"><strong>${fmtPct(s.pct)}</strong>${s.segmento.replace(/_/g, ' ')}</span>
+            `).join('');
+
+            const ativos = (c.ativos || []).slice().sort((a, b) => (b.peso || 0) - (a.peso || 0));
+            const maxPeso = Math.max(1, ...ativos.map(a => a.peso || 0));
+            const ativosHtml = ativos.map(a => {
+                const pct = ((a.peso || 0) / maxPeso) * 100;
+                return `
+                <div class="cr-ativo" style="--peso-pct: ${pct}%">
+                    <div class="cr-ativo-id">
+                        <a class="cr-ativo-ticker" href="../${(a.ticker || '').toLowerCase()}/">${a.ticker || '—'}</a>
+                        <span class="cr-ativo-papel">${a.papel || ''}</span>
+                    </div>
+                    <div class="cr-ativo-rac">${a.racional || ''}</div>
+                    <div class="cr-ativo-peso-wrap">
+                        <span class="cr-ativo-peso">${fmtNum(a.peso, 1)}%</span>
+                        <span class="cr-ativo-peso-tag">peso</span>
+                    </div>
+                </div>`;
+            }).join('');
+
+            root.innerHTML = `
+                <section class="cr-carteira-head">
+                    <div class="cr-carteira-titulo">
+                        <h2>${c.nome || ''}</h2>
+                        <span class="cr-carteira-perfil-pill cr-perfil-${c.perfil}">${PERFIL_LABEL[c.perfil] || c.perfil}</span>
+                    </div>
+                    ${c.subtitulo ? `<div class="cr-carteira-sub">${c.subtitulo}</div>` : ''}
+                    <div class="cr-carteira-tese">${c.tese || ''}</div>
+
+                    <div class="cr-metricas">
+                        <div class="cr-metrica">
+                            <div class="cr-metrica-tag">DY ponderado</div>
+                            <div class="cr-metrica-val">${fmtPct(mp.dyMedioPonderado)}</div>
+                        </div>
+                        <div class="cr-metrica">
+                            <div class="cr-metrica-tag">P/VP ponderado</div>
+                            <div class="cr-metrica-val">${fmtNum(mp.pvpMedioPonderado, 2)}</div>
+                        </div>
+                        <div class="cr-metrica">
+                            <div class="cr-metrica-tag">Ativos</div>
+                            <div class="cr-metrica-val">${ativos.length}</div>
+                        </div>
+                        ${segHtml ? `
+                        <div class="cr-segs">
+                            <div class="cr-segs-tag">EXPOSIÇÃO POR SEGMENTO</div>
+                            <div class="cr-segs-list">${segHtml}</div>
+                        </div>` : ''}
+                    </div>
+                </section>
+
+                <div class="cr-ativos">${ativosHtml}</div>
+            `;
+        }
+
+        async function carregar() {
+            const root = document.getElementById('cr-carteira');
+            root.innerHTML = '<div class="cr-loading-skel"></div><div class="cr-loading-skel" style="margin-top:10px"></div>';
+            try {
+                const r = await fetch('../../data/fiis-recomendados.json', { cache: 'no-cache' });
+                if (!r.ok) throw new Error('HTTP ' + r.status);
+                const data = await r.json();
+
+                document.getElementById('cr-last-update').textContent = fmtDate(data.ultimaAtualizacao);
+                document.getElementById('cr-total-fundos').textContent = data.totalFundosAnalisados || '—';
+                const selic = data.macroSnapshot && data.macroSnapshot.selic;
+                document.getElementById('cr-selic').textContent = selic != null ? Number(selic).toFixed(2).replace('.', ',') + '%' : '—';
+
+                if (data.schema !== 'v2' || !Array.isArray(data.carteiras) || data.carteiras.length === 0) {
+                    root.innerHTML = `
+                        <div class="cr-empty">
+                            <p>As carteiras recomendadas ainda não foram geradas para esta versão.</p>
+                            <p style="font-size: 0.85rem; opacity: 0.7;">Rode <code style="background: rgba(255,255,255,0.05); padding: 2px 6px; border-radius: 4px;">python3 scripts/fundosnet/gerar_carteiras_recomendadas.py</code> para popular.</p>
+                            ${data.mensagem ? `<p style="margin-top: 18px; max-width: 600px; margin-left: auto; margin-right: auto;">${data.mensagem}</p>` : ''}
+                        </div>`;
+                    document.getElementById('cr-menu').innerHTML = '';
+                    return;
+                }
+                renderMenu(data.carteiras);
+            } catch (e) {
+                console.error(e);
+                root.innerHTML = `<div class="cr-empty">Erro ao carregar carteiras: ${e.message}</div>`;
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', carregar);
+    })();
+    </script>
+
     <script defer src="../../js/fii-layout.js"></script>
 </body>
 </html>

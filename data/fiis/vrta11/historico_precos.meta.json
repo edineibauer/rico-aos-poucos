@@ -1,0 +1,20 @@
+{
+  "csvPath": "data/fiis/vrta11/historico_precos.csv",
+  "frequencia": "semanal",
+  "dataInicio": "2016-04-25",
+  "dataFim": "2026-04-24",
+  "fonte": "yahoo:VRTA11.SA",
+  "naoAjustado": true,
+  "ultimoFechamento": 79.0,
+  "ultimoFechamentoData": "2026-04-24",
+  "minHistorico": {
+    "valor": 72.12,
+    "data": "2024-12-09"
+  },
+  "maxHistorico": {
+    "valor": 150.3,
+    "data": "2019-07-29"
+  },
+  "totalPontos": 523,
+  "coletadoEm": "2026-04-27T02:36:33Z"
+}

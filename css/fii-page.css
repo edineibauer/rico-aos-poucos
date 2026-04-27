@@ -2661,3 +2661,91 @@ section { padding: 0; }
     color: #fff;
     line-height: 1.5;
 }
+
+/* ===========================================================
+   FOOTER — Card de transparência da análise por IA
+   =========================================================== */
+.footer-ai-card {
+    border: 1px solid rgba(34, 211, 238, 0.18);
+    background: linear-gradient(135deg, rgba(34,211,238,0.04), rgba(139,92,246,0.04));
+}
+.footer-ai-head {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    margin-bottom: 18px;
+    padding-bottom: 14px;
+    border-bottom: 1px dashed rgba(255,255,255,0.08);
+}
+.footer-ai-icon {
+    width: 42px; height: 42px;
+    display: flex; align-items: center; justify-content: center;
+    background: linear-gradient(135deg, rgba(34,211,238,0.15), rgba(139,92,246,0.15));
+    border-radius: 12px;
+    color: #22d3ee;
+    flex-shrink: 0;
+}
+.footer-ai-tag {
+    font-size: 0.7rem; letter-spacing: 0.12em;
+    color: #22d3ee; font-weight: 700;
+    margin-bottom: 4px;
+}
+.footer-ai-title {
+    font-size: 1.05rem; font-weight: 600;
+    color: #fff;
+    line-height: 1.35;
+}
+.footer-ai-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 12px;
+    margin-bottom: 18px;
+}
+.footer-ai-stat {
+    background: rgba(15, 23, 42, 0.5);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 12px;
+    padding: 12px 14px;
+    text-align: center;
+}
+.footer-ai-stat-lbl {
+    font-size: 0.7rem; letter-spacing: 0.06em;
+    color: #94a3b8; font-weight: 600;
+    margin-bottom: 4px;
+}
+.footer-ai-stat-val {
+    font-size: 1.15rem; font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+}
+.footer-ai-stat-sub {
+    font-size: 0.7rem;
+    color: #64748b;
+    margin-top: 4px;
+}
+.footer-ai-disclaimer {
+    font-size: 0.82rem;
+    color: #cbd5e1;
+    line-height: 1.55;
+    padding: 12px 14px;
+    background: rgba(0,0,0,0.20);
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+.footer-ai-sub {
+    font-size: 0.78rem;
+    color: #64748b;
+    line-height: 1.55;
+    text-align: center;
+    font-style: italic;
+}
+
+/* Legend note (texto descritivo abaixo das cores na Visão Geral) */
+.vg-legend-note {
+    flex-basis: 100%;
+    text-align: center;
+    margin-top: 6px;
+    color: #64748b;
+    font-style: italic;
+    font-size: 0.72rem;
+}

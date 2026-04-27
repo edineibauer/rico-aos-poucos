@@ -526,8 +526,8 @@ const FIITemplate = {
                 <span class="vg-legend-item"><span class="vg-legend-dot" style="background:#3b82f6"></span>Estrutural</span>
                 <span class="vg-legend-item"><span class="vg-legend-dot" style="background:#8b5cf6"></span>Mudança/Mandato</span>
                 <span class="vg-legend-item"><span class="vg-legend-dot" style="background:#f59e0b"></span>Fato Relevante</span>
-                <span class="vg-legend-item"><span class="vg-legend-dot" style="background:#ef4444"></span>Risco / Evento Futuro</span>
-                <span class="vg-legend-item"><span class="vg-legend-dot vg-legend-future"></span>Evento futuro (linha tracejada)</span>
+                <span class="vg-legend-item"><span class="vg-legend-dot" style="background:#ef4444"></span>Evento de Crédito/Risco</span>
+                <span class="vg-legend-note">Marcações apenas de eventos passados — futuros estão nas abas Dividendos/Valuation/Portfólio.</span>
             </div>
         </section>
 
@@ -808,16 +808,17 @@ const FIITemplate = {
         const today = new Date();
 
         const filterByPeriod = (meses) => {
+            // Gráfico de preço só mostra eventos do PASSADO — eventos futuros não impactam
+            // o preço histórico e quebravam o layout do card ao serem extrapolados à direita.
+            // Eventos futuros continuam visíveis nas outras abas (Dividendos/Valuation/Portfolio).
+            const eventsPassados = allEvents.filter(e => !e.futuro && e.dt <= today);
             if (meses === 'all' || meses == null) {
-                return { prices: prices.slice(), events: allEvents.slice() };
+                return { prices: prices.slice(), events: eventsPassados };
             }
             const cutoff = new Date(today);
             cutoff.setMonth(cutoff.getMonth() - parseInt(meses, 10));
-            // Para o gráfico, mostra preços do passado dentro do período + futuro até último evento futuro
-            const futureLimit = new Date(today);
-            futureLimit.setMonth(futureLimit.getMonth() + parseInt(meses, 10));
             const pricesIn = prices.filter(p => p.dt >= cutoff);
-            const eventsIn = allEvents.filter(e => e.dt >= cutoff && e.dt <= futureLimit);
+            const eventsIn = eventsPassados.filter(e => e.dt >= cutoff);
             return { prices: pricesIn, events: eventsIn };
         };
 
@@ -1159,20 +1160,16 @@ const FIITemplate = {
         const clusters = {};
         events.forEach(ev => {
             const t = ev.dt.getTime();
+            // Eventos passados a) antes do range visível ficam na borda esquerda;
+            //                  b) dentro do range usam o pixel exato da label.
+            // Eventos futuros não chegam aqui (filtrados em filterByPeriod).
             let x;
             if (t < minTime) {
-                // Antes do range visível — coloca na borda esquerda com pequeno offset
                 x = Math.max(cArea.left - 8, xFirst - 12);
             } else if (t > maxTime) {
-                // Após o range visível (eventos futuros) — extrapola à direita do chartArea
-                // proporcional ao "quanto" no futuro está em relação ao range total
-                const totalRange = (maxTime - minTime) || 1;
-                const extra = Math.min(0.30, (t - maxTime) / totalRange * 0.5);
-                x = xLast + xWidthChart * extra;
-                // não ultrapassa muito o canvas
-                x = Math.min(x, cArea.right + xWidthChart * 0.30);
+                // Defesa redundante (filterByPeriod já remove): clip no último pixel
+                x = xLast;
             } else {
-                // Dentro do range — usa o pixel exato da label correspondente
                 const idx = findClosestIdx(t);
                 x = xScale.getPixelForValue(labels[idx]);
             }
@@ -4506,13 +4503,64 @@ const FIITemplate = {
         const f = this.data.footer;
         if (!f) return '';
 
+        // Estimativa de custo da análise — baseada nos tokens consumidos
+        // tipicamente por uma análise profunda no Claude Opus 4.7 1M:
+        //   ~200K tokens input × $15/MTok = $3.00
+        //   ~50K tokens output × $75/MTok = $3.75
+        //   Total ~$6.75 = R$ 35-40 (USD/BRL ~5.5).
+        // Para fundos com mais documentos (>400), o custo escala um pouco.
+        const ndocs  = f.totalDocumentos || 0;
+        const custoUsd = ndocs > 400 ? 7.0 : (ndocs > 200 ? 5.5 : 4.0);
+        const custoBrl = Math.round(custoUsd * 5.5);
+
         return `
-    <footer class="border-t border-white/10 py-8 px-4 text-center">
-        <p class="text-slate-400 text-sm mb-2">Análise gerada em ${f.dataAnalise} com base em ${f.totalDocumentos} documentos oficiais do fundo</p>
-        <p class="text-slate-500 text-xs">
-            ${f.disclaimer}
-        </p>
-    </footer>`;
+    <section class="max-w-7xl mx-auto px-4 mb-8">
+        <div class="dark-card rounded-3xl p-6 md:p-8 footer-ai-card">
+            <div class="footer-ai-head">
+                <div class="footer-ai-icon" aria-hidden="true">
+                    <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/><circle cx="12" cy="12" r="4"/></svg>
+                </div>
+                <div>
+                    <div class="footer-ai-tag">ANÁLISE GERADA POR INTELIGÊNCIA ARTIFICIAL</div>
+                    <div class="footer-ai-title">Não é opinião humana — é leitura automatizada dos documentos oficiais</div>
+                </div>
+            </div>
+
+            <div class="footer-ai-grid">
+                <div class="footer-ai-stat">
+                    <div class="footer-ai-stat-lbl">Modelo</div>
+                    <div class="footer-ai-stat-val">Claude Opus 4.7</div>
+                    <div class="footer-ai-stat-sub">1 milhão de tokens de contexto</div>
+                </div>
+                <div class="footer-ai-stat">
+                    <div class="footer-ai-stat-lbl">Documentos lidos</div>
+                    <div class="footer-ai-stat-val">${ndocs.toLocaleString('pt-BR')}</div>
+                    <div class="footer-ai-stat-sub">Fontes oficiais (B3/CVM/FundosNet)</div>
+                </div>
+                <div class="footer-ai-stat">
+                    <div class="footer-ai-stat-lbl">Data da análise</div>
+                    <div class="footer-ai-stat-val">${f.dataAnalise}</div>
+                    <div class="footer-ai-stat-sub">Reanalisada periodicamente</div>
+                </div>
+                <div class="footer-ai-stat">
+                    <div class="footer-ai-stat-lbl">Custo estimado</div>
+                    <div class="footer-ai-stat-val">~R$ ${custoBrl}</div>
+                    <div class="footer-ai-stat-sub">≈ US$ ${custoUsd.toFixed(2)} em tokens Anthropic</div>
+                </div>
+            </div>
+
+            <p class="footer-ai-disclaimer">
+                ${f.disclaimer}
+            </p>
+
+            <p class="footer-ai-sub">
+                Por que importa: análises desse tipo no Opus 4.7 com contexto de 1M
+                custam alguns reais por fundo em tokens — quando você usa essa página, está
+                usando trabalho computacional que tem custo real. Se as análises te
+                ajudaram, considere apoiar o projeto.
+            </p>
+        </div>
+    </section>`;
     },
 
     // ──────────────────────────────────────────────────

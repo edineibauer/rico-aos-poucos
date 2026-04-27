@@ -563,7 +563,7 @@
       grid-template-columns: 1fr auto;
       grid-template-rows: auto auto auto;
       gap: 4px 14px;
-      padding: 16px 18px 14px;
+      padding: 16px 18px 14px 24px;   /* +6px à esquerda para dar espaço à faixa texturizada */
       background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 14px;
@@ -572,9 +572,15 @@
       transition: transform .15s ease, border-color .15s ease, background .15s ease;
       overflow: hidden;
     }
+    /* Faixa lateral com TEXTURA do material — mais larga (10px) e maior (toda a altura) */
     .fii-card::before {
       content: ''; position: absolute; left: 0; top: 0; bottom: 0;
-      width: 4px; background: var(--tipo-cor, #64748b);
+      width: 10px;
+      background-color: var(--tipo-cor, #64748b);
+      background-image: var(--tipo-textura, none);
+      background-repeat: var(--tipo-textura-repeat, repeat);
+      background-size: var(--tipo-textura-size, auto);
+      box-shadow: inset -1px 0 0 rgba(0,0,0,0.20), inset 1px 0 0 rgba(255,255,255,0.06);
       transition: width .15s ease;
     }
     .fii-card:hover {
@@ -582,14 +588,47 @@
       background: var(--bg-tertiary);
       transform: translateY(-2px);
     }
-    .fii-card:hover::before { width: 6px; }
+    .fii-card:hover::before { width: 14px; }
 
-    /* Cores por tipo (label lateral) */
-    .fii-card.tipo-tijolo         { --tipo-cor: #10b981; }
-    .fii-card.tipo-papel          { --tipo-cor: #3b82f6; }
-    .fii-card.tipo-hibrido        { --tipo-cor: #f59e0b; }
-    .fii-card.tipo-fof            { --tipo-cor: #a78bfa; }
-    .fii-card.tipo-desenvolvimento{ --tipo-cor: #f97316; }
+    /* === TEXTURAS POR TIPO (SVG inline, sutis) === */
+
+    /* TIJOLO — terracota com pequeno padrão de tijolinhos deslocados */
+    .fii-card.tipo-tijolo {
+      --tipo-cor: #b45c3a;
+      --tipo-textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='14' viewBox='0 0 10 14'><rect width='10' height='14' fill='%23a8542f'/><rect x='0' y='0' width='10' height='6' fill='none' stroke='%237a3d22' stroke-width='0.6' opacity='0.6'/><rect x='-5' y='7' width='10' height='6' fill='none' stroke='%237a3d22' stroke-width='0.6' opacity='0.6'/><rect x='5' y='7' width='10' height='6' fill='none' stroke='%237a3d22' stroke-width='0.6' opacity='0.6'/><line x1='0' y1='6.5' x2='10' y2='6.5' stroke='%237a3d22' stroke-width='0.5' opacity='0.5'/></svg>");
+      --tipo-textura-size: 10px 14px;
+    }
+
+    /* PAPEL — bege com finas linhas horizontais (folha pautada / certificado) */
+    .fii-card.tipo-papel {
+      --tipo-cor: #d8c896;
+      --tipo-textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='8' viewBox='0 0 10 8'><rect width='10' height='8' fill='%23d8c896'/><line x1='0' y1='2' x2='10' y2='2' stroke='%2398855a' stroke-width='0.4' opacity='0.55'/><line x1='0' y1='5' x2='10' y2='5' stroke='%2398855a' stroke-width='0.4' opacity='0.55'/></svg>");
+      --tipo-textura-size: 10px 8px;
+    }
+
+    /* HÍBRIDO — listras diagonais alternando os dois materiais (terracota+papel) */
+    .fii-card.tipo-hibrido {
+      --tipo-cor: #b89060;
+      --tipo-textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23b89060'/><path d='M-2,4 l4,-4 M2,8 l4,-4 M6,12 l4,-4' stroke='%23a8542f' stroke-width='2' opacity='0.7'/></svg>");
+      --tipo-textura-size: 10px 10px;
+    }
+
+    /* FoF — círculos pequenos (cotas de outros fundos sobrepostas) sobre roxo */
+    .fii-card.tipo-fof {
+      --tipo-cor: #8b5cf6;
+      --tipo-textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='12' viewBox='0 0 10 12'><rect width='10' height='12' fill='%238b5cf6'/><circle cx='3' cy='3' r='1.6' fill='none' stroke='%23ddd6fe' stroke-width='0.7' opacity='0.8'/><circle cx='7' cy='9' r='1.6' fill='none' stroke='%23ddd6fe' stroke-width='0.7' opacity='0.8'/></svg>");
+      --tipo-textura-size: 10px 12px;
+    }
+
+    /* DESENVOLVIMENTO — andaime / hachura cruzada (obra) */
+    .fii-card.tipo-desenvolvimento {
+      --tipo-cor: #d97706;
+      --tipo-textura: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='10' viewBox='0 0 10 10'><rect width='10' height='10' fill='%23d97706'/><path d='M-1,3 l12,0 M-1,7 l12,0 M3,-1 l0,12 M7,-1 l0,12' stroke='%237a4400' stroke-width='0.6' opacity='0.6'/></svg>");
+      --tipo-textura-size: 10px 10px;
+    }
+
+    /* OUTROS — neutro */
+    .fii-card.tipo-outros { --tipo-cor: #64748b; }
 
     /* Linha 1: ticker + nota */
     .fii-card-l1 {

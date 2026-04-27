@@ -4,7 +4,12 @@
     "nome": "RBR Properties FII",
     "nomeExtra": "Patria Real Estate (ex-RBR Asset)",
     "segmento": "Tijolo — Escritórios + Logística (via FII)",
-    "badges": ["Tijolo", "Escritórios A/AAA", "Patria gestão", "Trade reestruturação"],
+    "badges": [
+      "Tijolo",
+      "Escritórios A/AAA",
+      "Patria gestão",
+      "Trade reestruturação"
+    ],
     "sentimento": "neutro_otimista",
     "dataAnalise": "2026-04-26",
     "totalDocumentos": 436
@@ -32,8 +37,8 @@
     "cotacaoData": "2026-04-24",
     "pvp": 0.62,
     "dividendYield": 9.17,
-    "dividendoMensal": 0.40,
-    "dividendoAnual": 4.80,
+    "dividendoMensal": 0.4,
+    "dividendoAnual": 4.8,
     "patrimonioLiquido": 999500000,
     "vpCota": 84.57,
     "cotistas": 56500,
@@ -98,10 +103,22 @@
     "nome": "Patria Real Estate (ex-RBR Asset Management)",
     "nota": 8.5,
     "stats": [
-      { "rotulo": "AuM Patria Real Estate", "valor": "R$ 38 bi" },
-      { "rotulo": "FIIs listados B3", "valor": "+30" },
-      { "rotulo": "FIIs em CETIP", "valor": "3" },
-      { "rotulo": "Tempo de mercado", "valor": "37+ anos" }
+      {
+        "rotulo": "AuM Patria Real Estate",
+        "valor": "R$ 38 bi"
+      },
+      {
+        "rotulo": "FIIs listados B3",
+        "valor": "+30"
+      },
+      {
+        "rotulo": "FIIs em CETIP",
+        "valor": "3"
+      },
+      {
+        "rotulo": "Tempo de mercado",
+        "valor": "37+ anos"
+      }
     ],
     "resumo": "<p>Em 03/02/2026, Patria Investments passou a controlar diretamente a RBR Gestão de Recursos, assumindo a gestão do RBRP11. Patria é a maior gestora independente de FIIs do Brasil (+ R$ 38 bi sob gestão), com 30+ FIIs listados e equipe de 50+ profissionais focados na vertical imobiliária. A consolidação dá <strong>plataforma maior de originação</strong> e capacidade de reciclagem de ativos. <em>Risco:</em> processo de integração e potencial mudança de estratégia comparado à gestão RBR original.</p>",
     "link": "https://realestate.patria.com"
@@ -110,10 +127,26 @@
     "subtitulo": "Taxa total competitiva para tijolo de gestão ativa",
     "glowCor": "emerald",
     "itens": [
-      { "rotulo": "Administração + Gestão", "valor": "1,15% a.a.", "cor": "blue" },
-      { "rotulo": "Performance", "valor": "20% sobre IPCA + 6%", "cor": "amber" },
-      { "rotulo": "Base de cálculo", "valor": "Valor de Mercado", "cor": "blue" },
-      { "rotulo": "Total efetivo (2025)", "valor": "~0,55% a.a.", "cor": "emerald" }
+      {
+        "rotulo": "Administração + Gestão",
+        "valor": "1,15% a.a.",
+        "cor": "blue"
+      },
+      {
+        "rotulo": "Performance",
+        "valor": "20% sobre IPCA + 6%",
+        "cor": "amber"
+      },
+      {
+        "rotulo": "Base de cálculo",
+        "valor": "Valor de Mercado",
+        "cor": "blue"
+      },
+      {
+        "rotulo": "Total efetivo (2025)",
+        "valor": "~0,55% a.a.",
+        "cor": "emerald"
+      }
     ],
     "detalhes": [
       "Taxa administração paga ao BRL Trust: 0,18% a.a. (sob gestão original RBR)",
@@ -136,12 +169,36 @@
       "ltv": 0.0,
       "alavancagemPct": 0.0,
       "alocacaoPL": [
-        { "categoria": "Imóveis (escritórios)",        "pct": 0.65, "cor": "#3b82f6" },
-        { "categoria": "RBRL11 (logística)",            "pct": 0.18, "cor": "#10b981" },
-        { "categoria": "JC589 — desenvolvimento (SPE)", "pct": 0.08, "cor": "#8b5cf6" },
-        { "categoria": "FIIs diversos",                  "pct": 0.02, "cor": "#f59e0b" },
-        { "categoria": "CRI / LCI",                      "pct": 0.04, "cor": "#ec4899" },
-        { "categoria": "Caixa / Renda Fixa",             "pct": 0.03, "cor": "#64748b" }
+        {
+          "categoria": "Imóveis (escritórios)",
+          "pct": 0.65,
+          "cor": "#3b82f6"
+        },
+        {
+          "categoria": "RBRL11 (logística)",
+          "pct": 0.18,
+          "cor": "#10b981"
+        },
+        {
+          "categoria": "JC589 — desenvolvimento (SPE)",
+          "pct": 0.08,
+          "cor": "#8b5cf6"
+        },
+        {
+          "categoria": "FIIs diversos",
+          "pct": 0.02,
+          "cor": "#f59e0b"
+        },
+        {
+          "categoria": "CRI / LCI",
+          "pct": 0.04,
+          "cor": "#ec4899"
+        },
+        {
+          "categoria": "Caixa / Renda Fixa",
+          "pct": 0.03,
+          "cor": "#64748b"
+        }
       ]
     },
     "ativos": [
@@ -200,7 +257,7 @@
             "nome": "Side Brazil (Desenvolvimento de Games)",
             "setor": "Tecnologia / Games",
             "abl": null,
-            "percAbl": 0.10,
+            "percAbl": 0.1,
             "contrato": {
               "tipo": "tipico",
               "inicio": "2024-08-01",
@@ -212,7 +269,11 @@
             }
           }
         ],
-        "riscos": ["concentracao_imovel", "wault_medio", "novas_locacoes_recentes"],
+        "riscos": [
+          "concentracao_imovel",
+          "wault_medio",
+          "novas_locacoes_recentes"
+        ],
         "fonte": "Relatório Gerencial fev/2026 (ID 1151295)"
       },
       {
@@ -257,7 +318,10 @@
             }
           }
         ],
-        "riscos": ["mono_inquilino", "concentracao_setor_saude"],
+        "riscos": [
+          "mono_inquilino",
+          "concentracao_setor_saude"
+        ],
         "fonte": "Relatório Gerencial fev/2026 (ID 1151295)"
       },
       {
@@ -285,7 +349,7 @@
             "nome": "CVM (extensão parcial 6 meses)",
             "setor": "Setor Público — Regulação",
             "abl": null,
-            "percAbl": 0.30,
+            "percAbl": 0.3,
             "contrato": {
               "tipo": "tipico",
               "inicio": "2024-01-01",
@@ -302,7 +366,11 @@
             }
           }
         ],
-        "riscos": ["vacancia_parcial", "saida_cvm_2026", "padrao_BB"],
+        "riscos": [
+          "vacancia_parcial",
+          "saida_cvm_2026",
+          "padrao_BB"
+        ],
         "fonte": "Relatório Gerencial fev/2026 (ID 1151295)"
       },
       {
@@ -326,7 +394,11 @@
         "capRateAtual": null,
         "ocupacao": 0.0,
         "locatarios": [],
-        "riscos": ["vacancia_total", "regiao_RJ_central_pressionada", "antiga_estacio"],
+        "riscos": [
+          "vacancia_total",
+          "regiao_RJ_central_pressionada",
+          "antiga_estacio"
+        ],
         "fonte": "Relatório Gerencial fev/2026 (ID 1151295)"
       },
       {
@@ -345,12 +417,16 @@
         "abl": 2865,
         "padrao": "AAA",
         "tipologia": "escritorio_aaa",
-        "participacao": 0.60,
+        "participacao": 0.6,
         "valorContabil": 85536000,
         "capRateAtual": null,
         "ocupacao": 0.0,
         "locatarios": [],
-        "riscos": ["vacancia_total_recem_entregue", "yield_on_cost_dependente_locacao", "obra_recente"],
+        "riscos": [
+          "vacancia_total_recem_entregue",
+          "yield_on_cost_dependente_locacao",
+          "obra_recente"
+        ],
         "fonte": "Relatório Gerencial fev/2026 + Informe Trimestral 4T2025 (ID 1104916)"
       },
       {
@@ -364,7 +440,7 @@
           "regiao": "Sudeste",
           "subregiao": "Faria Lima",
           "lat": -23.5734,
-          "lng": -46.6920
+          "lng": -46.692
         },
         "abl": 1293,
         "padrao": "A",
@@ -390,7 +466,9 @@
             }
           }
         ],
-        "riscos": ["participacao_minoritaria"],
+        "riscos": [
+          "participacao_minoritaria"
+        ],
         "fonte": "Relatório Gerencial fev/2026 (ID 1151295)"
       },
       {
@@ -430,7 +508,10 @@
             }
           }
         ],
-        "riscos": ["participacao_marginal", "padrao_C"],
+        "riscos": [
+          "participacao_marginal",
+          "padrao_C"
+        ],
         "fonte": "Relatório Gerencial fev/2026 (ID 1151295)"
       },
       {
@@ -439,7 +520,7 @@
         "nome": "RBR Log FII",
         "segmentoFinal": "tijolo_logistica_aaa",
         "qtdCotas": 1924086,
-        "precoMedio": 92.50,
+        "precoMedio": 92.5,
         "valorPresente": 177959000,
         "percPL": 0.178,
         "fonte": "Informe Trimestral 4T2025 (ID 1104916) + RG fev/2026"
@@ -450,7 +531,7 @@
         "nome": "XP Malls",
         "segmentoFinal": "tijolo_shoppings_premium",
         "qtdCotas": 81645,
-        "precoMedio": 108.00,
+        "precoMedio": 108.0,
         "valorPresente": 8822559,
         "percPL": 0.009,
         "fonte": "Informe Trimestral 4T2025 (ID 1104916)"
@@ -461,7 +542,7 @@
         "nome": "FII Torre Norte",
         "segmentoFinal": "tijolo_escritorios_aaa",
         "qtdCotas": 56649,
-        "precoMedio": 95.00,
+        "precoMedio": 95.0,
         "valorPresente": 5381655,
         "percPL": 0.005,
         "fonte": "Informe Trimestral 4T2025 (ID 1104916)"
@@ -472,7 +553,7 @@
         "nome": "FII CENU",
         "segmentoFinal": "tijolo_escritorios_aaa",
         "qtdCotas": 38526,
-        "precoMedio": 100.00,
+        "precoMedio": 100.0,
         "valorPresente": 3852600,
         "percPL": 0.004,
         "fonte": "Informe Trimestral 4T2025 (ID 1104916)"
@@ -483,7 +564,7 @@
         "nome": "CSHG Prime Offices",
         "segmentoFinal": "tijolo_escritorios_aaa",
         "qtdCotas": 13101,
-        "precoMedio": 146.00,
+        "precoMedio": 146.0,
         "valorPresente": 1912746,
         "percPL": 0.002,
         "fonte": "Informe Trimestral 4T2025 (ID 1104916)"
@@ -505,7 +586,9 @@
         "devedor": "OPEA Securitizadora",
         "setorDevedor": "Outros",
         "lastro": "Recebíveis imobiliários diversos",
-        "garantias": ["alienacao_fiduciaria_imovel"],
+        "garantias": [
+          "alienacao_fiduciaria_imovel"
+        ],
         "indexador": "IPCA",
         "spread": null,
         "taxaTotal": null,
@@ -524,7 +607,9 @@
         "devedor": "VERTICIA Securitizadora",
         "setorDevedor": "Outros",
         "lastro": "Recebíveis imobiliários",
-        "garantias": ["alienacao_fiduciaria_imovel"],
+        "garantias": [
+          "alienacao_fiduciaria_imovel"
+        ],
         "indexador": "IPCA",
         "spread": null,
         "taxaTotal": null,
@@ -543,7 +628,9 @@
         "devedor": "VIRGO Securitizadora",
         "setorDevedor": "Outros",
         "lastro": "Recebíveis imobiliários",
-        "garantias": ["alienacao_fiduciaria_imovel"],
+        "garantias": [
+          "alienacao_fiduciaria_imovel"
+        ],
         "indexador": "IPCA",
         "spread": null,
         "taxaTotal": null,
@@ -557,7 +644,7 @@
       }
     ],
     "concentracao": {
-      "hhi": 0.10,
+      "hhi": 0.1,
       "interpretacaoHhi": "baixa",
       "topN": {
         "top1Pct": 0.42,
@@ -566,20 +653,58 @@
         "top10Pct": 0.97
       },
       "geografica": [
-        { "regiao": "Sudeste — São Paulo (capital)", "pct": 0.92, "ativos": 5 },
-        { "regiao": "Sudeste — Rio de Janeiro",      "pct": 0.04, "ativos": 2 },
-        { "regiao": "Outros estados (via RBRL11)",   "pct": 0.04, "ativos": 1 }
+        {
+          "regiao": "Sudeste — São Paulo (capital)",
+          "pct": 0.92,
+          "ativos": 5
+        },
+        {
+          "regiao": "Sudeste — Rio de Janeiro",
+          "pct": 0.04,
+          "ativos": 2
+        },
+        {
+          "regiao": "Outros estados (via RBRL11)",
+          "pct": 0.04,
+          "ativos": 1
+        }
       ],
       "porLocatario": [
-        { "nome": "Globo (River One)",       "pct": 0.20, "rating": null },
-        { "nome": "Prevent Senior (Celebration)", "pct": 0.14, "rating": null },
-        { "nome": "Plano&Plano (River One)", "pct": 0.09, "rating": null },
-        { "nome": "Side Brazil (River One)", "pct": 0.10, "rating": null },
-        { "nome": "Iron Mountain (Castello Branco)", "pct": 0.06, "rating": null }
+        {
+          "nome": "Globo (River One)",
+          "pct": 0.2,
+          "rating": null
+        },
+        {
+          "nome": "Prevent Senior (Celebration)",
+          "pct": 0.14,
+          "rating": null
+        },
+        {
+          "nome": "Plano&Plano (River One)",
+          "pct": 0.09,
+          "rating": null
+        },
+        {
+          "nome": "Side Brazil (River One)",
+          "pct": 0.1,
+          "rating": null
+        },
+        {
+          "nome": "Iron Mountain (Castello Branco)",
+          "pct": 0.06,
+          "rating": null
+        }
       ],
       "porIndexador": [
-        { "indexador": "IPCA", "pct": 0.94 },
-        { "indexador": "IGP-M", "pct": 0.06 }
+        {
+          "indexador": "IPCA",
+          "pct": 0.94
+        },
+        {
+          "indexador": "IGP-M",
+          "pct": 0.06
+        }
       ]
     },
     "analise": {
@@ -700,8 +825,12 @@
   },
   "tese": {
     "resumo": "<p>RBRP11 é tese de <strong>trade de turnaround</strong> em escritórios premium SP/RJ pós-mudança de gestão para Patria. Cota negocia a 0,62× VP com vacância 23,8%, mas portfólio carrega ativos AAA (JR, Celebration) e River One ocupado a 94%. Reocupar Venezuela (RJ) e JR (Faria Lima) destrava +R$ 0,12/cota mensais e fecha desconto patrimonial.</p>",
-    "paraQuem": "<p>Investidor que aceita volatilidade e <strong>trade de fechamento de desconto patrimonial</strong> com horizonte de 12-24 meses. Carteira tipicamente como posição satélite (≤ 5%). Quem topa monitorar trimestralmente a evolução de locações e a integração Patria.</p>",
-    "naoParaQuem": "<p>Aposentado que precisa de DPS estável crescente (DPS já caiu de R$ 0,67 em 2022 para R$ 0,40 atual). Quem busca tese pura de logística (RBRL11 direto é mais limpo). Quem já tem exposição relevante a HGRE11/BLCA11/JSRE11 — sobreposição setorial alta. Investidor iniciante ou que não acompanha turnarounds operacionais.</p>"
+    "paraQuem": [
+      "<p>Investidor que aceita volatilidade e <strong>trade de fechamento de desconto patrimonial</strong> com horizonte de 12-24 meses. Carteira tipicamente como posição satélite (≤ 5%). Quem topa monitorar trimestralmente a evolução de locações e a integração Patria.</p>"
+    ],
+    "naoParaQuem": [
+      "<p>Aposentado que precisa de DPS estável crescente (DPS já caiu de R$ 0,67 em 2022 para R$ 0,40 atual). Quem busca tese pura de logística (RBRL11 direto é mais limpo). Quem já tem exposição relevante a HGRE11/BLCA11/JSRE11 — sobreposição setorial alta. Investidor iniciante ou que não acompanha turnarounds operacionais.</p>"
+    ]
   },
   "encaixe": {
     "schema": "v1",
@@ -718,7 +847,7 @@
         {
           "nome": "Concentração",
           "score": 3.5,
-          "peso": 0.20,
+          "peso": 0.2,
           "metrica": "HHI 0,10 (baixa) mas Top1 = River One 42% do PL",
           "leitura": "Diversificação razoável no agregado, mas dependência alta de um único imóvel principal"
         },
@@ -732,7 +861,7 @@
         {
           "nome": "Volatilidade do dividendo",
           "score": 3.0,
-          "peso": 0.20,
+          "peso": 0.2,
           "metrica": "DPS estável em R$ 0,40 há 12m, mas histórico variou de R$ 0,25 a R$ 0,67",
           "leitura": "Estabilidade recente boa, mas histórico amplo de oscilação preocupa quem busca renda previsível"
         },
@@ -746,14 +875,14 @@
         {
           "nome": "Risco do ativo subjacente",
           "score": 4.0,
-          "peso": 0.20,
+          "peso": 0.2,
           "metrica": "Vacância 23,8% física + WAULT 5,9 anos",
           "leitura": "Vacância elevada é o vetor crítico — 2 ativos integralmente vagos (Venezuela + JR) representam 15,6% PL"
         },
         {
           "nome": "Risco financeiro/alavancagem",
           "score": 1.0,
-          "peso": 0.10,
+          "peso": 0.1,
           "metrica": "LTV 0% — sem alavancagem ou obrigações por aquisição",
           "leitura": "Estrutura financeira limpa — caixa R$ 10,8 mi, sem dívida"
         }
@@ -865,9 +994,9 @@
         "tempoRecuperacao": null
       },
       "dividendo": {
-        "cv12m": 0.00,
+        "cv12m": 0.0,
         "cv24m": 0.05,
-        "minDps24m": 0.40,
+        "minDps24m": 0.4,
         "maxDps24m": 0.41,
         "amplitudeRelativa": 0.025
       }
@@ -877,38 +1006,56 @@
       "pares": [
         {
           "ticker": "HGRE11",
-          "sobreposicaoEstimada": 0.60,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos", "geografica"],
+          "sobreposicaoEstimada": 0.6,
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos",
+            "geografica"
+          ],
           "leitura": "Mesma tipologia (escritórios A/AAA SP), inquilinos similares. Quem tem HGRE11 está duplicando 60% da tese RBRP11"
         },
         {
           "ticker": "JSRE11",
-          "sobreposicaoEstimada": 0.50,
-          "tipoSobreposicao": ["tipologia", "geografica"],
+          "sobreposicaoEstimada": 0.5,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
           "leitura": "Lajes corporativas AAA SP — mesma classe de ativo, mas JSRE11 tem mix mais premium e menor desconto"
         },
         {
           "ticker": "BRCR11",
           "sobreposicaoEstimada": 0.45,
-          "tipoSobreposicao": ["tipologia", "perfil_inquilinos"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "perfil_inquilinos"
+          ],
           "leitura": "BRCR11 tem mix similar de escritórios A/AAA SP — concorrência direta na alocação setorial"
         },
         {
           "ticker": "RBRL11",
           "sobreposicaoEstimada": 0.18,
-          "tipoSobreposicao": ["look_through_direto"],
+          "tipoSobreposicao": [
+            "look_through_direto"
+          ],
           "leitura": "RBRP11 detém 18% do PL em cotas RBRL11 — quem tem RBRL11 direto está duplicando integralmente essa fatia"
         },
         {
           "ticker": "BLCA11",
           "sobreposicaoEstimada": 0.55,
-          "tipoSobreposicao": ["tipologia", "geografica"],
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
           "leitura": "Escritórios premium SP com perfil similar — BLCA11 está em fase mais consolidada"
         },
         {
           "ticker": "GTWR11",
-          "sobreposicaoEstimada": 0.40,
-          "tipoSobreposicao": ["tipologia", "geografica"],
+          "sobreposicaoEstimada": 0.4,
+          "tipoSobreposicao": [
+            "tipologia",
+            "geografica"
+          ],
           "leitura": "Lajes corporativas premium SP — sobreposição geográfica e tipológica forte"
         }
       ],
@@ -953,7 +1100,12 @@
       }
     ],
     "paraQuem": {
-      "objetivo": ["swing_desconto", "trade_turnaround", "hedge_inflacao", "tax_shield"],
+      "objetivo": [
+        "swing_desconto",
+        "trade_turnaround",
+        "hedge_inflacao",
+        "tax_shield"
+      ],
       "horizonte": "medio",
       "perfil": "moderado",
       "carteiraTipica": "Posição satélite (≤ 5% da carteira de FIIs) para investidor que aceita volatilidade em troca de desconto patrimonial e exposição a turnaround. Tamanho ideal R$ 50k-200k devido à liquidez média.",
@@ -975,103 +1127,532 @@
   },
   "dividendos": {
     "schema": "v2",
-    "ultimoDPS": 0.40,
+    "ultimoDPS": 0.4,
     "ultimoMes": "2026-03",
     "dataPagamentoUltimo": "2026-04-15",
-    "dpsMedio12m": 0.40,
+    "dpsMedio12m": 0.4,
     "dpsMedio24m": 0.41,
     "historico": [
-      { "data": "2018-08", "dividendo": 0.30, "dataPagamento": "2018-09-15", "fonte": "Rendimento ID 31588", "docId": "31588" },
-      { "data": "2018-09", "dividendo": 0.30, "dataPagamento": "2018-10-15", "fonte": "Rendimento ID 33017", "docId": "33017" },
-      { "data": "2018-10", "dividendo": 0.30, "dataPagamento": "2018-11-15", "fonte": "Rendimento ID 34697", "docId": "34697" },
-      { "data": "2018-11", "dividendo": 0.30, "dataPagamento": "2018-12-15", "fonte": "Rendimento ID 36498", "docId": "36498" },
-      { "data": "2018-12", "dividendo": 0.50, "dataPagamento": "2019-01-15", "fonte": "Rendimento ID 38334 (extra)", "docId": "38334" },
-      { "data": "2019-01", "dividendo": 0.30, "dataPagamento": "2019-02-15", "fonte": "Rendimento ID 40404", "docId": "40404" },
-      { "data": "2019-02", "dividendo": 0.30, "dataPagamento": "2019-03-15", "fonte": "Rendimento ID 42747", "docId": "42747" },
-      { "data": "2019-03", "dividendo": 0.30, "dataPagamento": "2019-04-15", "fonte": "Rendimento ID 44999", "docId": "44999" },
-      { "data": "2019-04", "dividendo": 0.30, "dataPagamento": "2019-05-15", "fonte": "Rendimento ID 47595", "docId": "47595" },
-      { "data": "2019-05", "dividendo": 0.30, "dataPagamento": "2019-06-15", "fonte": "Rendimento ID 50425", "docId": "50425" },
-      { "data": "2019-06", "dividendo": 0.32, "dataPagamento": "2019-07-15", "fonte": "Rendimento ID 53107", "docId": "53107" },
-      { "data": "2019-07", "dividendo": 0.32, "dataPagamento": "2019-08-15", "fonte": "Rendimento ID 55059", "docId": "55059" },
-      { "data": "2019-08", "dividendo": 0.32, "dataPagamento": "2019-09-15", "fonte": "Rendimento ID 57674", "docId": "57674" },
-      { "data": "2019-09", "dividendo": 0.32, "dataPagamento": "2019-10-15" },
-      { "data": "2019-10", "dividendo": 0.32, "dataPagamento": "2019-11-15" },
-      { "data": "2019-11", "dividendo": 0.32, "dataPagamento": "2019-12-15" },
-      { "data": "2019-12", "dividendo": 0.40, "dataPagamento": "2020-01-15", "fonte": "Rendimento (extra dez/19)" },
-      { "data": "2020-01", "dividendo": 0.35, "dataPagamento": "2020-02-15" },
-      { "data": "2020-02", "dividendo": 0.35, "dataPagamento": "2020-03-15" },
-      { "data": "2020-03", "dividendo": 0.30, "dataPagamento": "2020-04-15" },
-      { "data": "2020-04", "dividendo": 0.30, "dataPagamento": "2020-05-15" },
-      { "data": "2020-05", "dividendo": 0.30, "dataPagamento": "2020-06-15" },
-      { "data": "2020-06", "dividendo": 0.30, "dataPagamento": "2020-07-15" },
-      { "data": "2020-07", "dividendo": 0.30, "dataPagamento": "2020-08-15" },
-      { "data": "2020-08", "dividendo": 0.30, "dataPagamento": "2020-09-15" },
-      { "data": "2020-09", "dividendo": 0.30, "dataPagamento": "2020-10-15" },
-      { "data": "2020-10", "dividendo": 0.30, "dataPagamento": "2020-11-15" },
-      { "data": "2020-11", "dividendo": 0.30, "dataPagamento": "2020-12-15" },
-      { "data": "2020-12", "dividendo": 0.40, "dataPagamento": "2021-01-15", "fonte": "Extra fim de ano" },
-      { "data": "2021-01", "dividendo": 0.30, "dataPagamento": "2021-02-15" },
-      { "data": "2021-02", "dividendo": 0.30, "dataPagamento": "2021-03-15" },
-      { "data": "2021-03", "dividendo": 0.30, "dataPagamento": "2021-04-15" },
-      { "data": "2021-04", "dividendo": 0.30, "dataPagamento": "2021-05-15" },
-      { "data": "2021-05", "dividendo": 0.30, "dataPagamento": "2021-06-15" },
-      { "data": "2021-06", "dividendo": 0.30, "dataPagamento": "2021-07-15" },
-      { "data": "2021-07", "dividendo": 0.30, "dataPagamento": "2021-08-15" },
-      { "data": "2021-08", "dividendo": 0.30, "dataPagamento": "2021-09-15", "fonte": "Rendimento ID 216225" },
-      { "data": "2021-09", "dividendo": 0.30, "dataPagamento": "2021-10-15" },
-      { "data": "2021-10", "dividendo": 0.30, "dataPagamento": "2021-11-15" },
-      { "data": "2021-11", "dividendo": 0.30, "dataPagamento": "2021-12-15" },
-      { "data": "2021-12", "dividendo": 0.40, "dataPagamento": "2022-01-15", "fonte": "Rendimento ID 259564 + extra" },
-      { "data": "2022-01", "dividendo": 0.27, "dataPagamento": "2022-02-15", "fonte": "Rendimento ID 270908", "docId": "270908" },
-      { "data": "2022-02", "dividendo": 0.27, "dataPagamento": "2022-03-15", "fonte": "Rendimento ID 285530" },
-      { "data": "2022-03", "dividendo": 0.27, "dataPagamento": "2022-04-15", "fonte": "Rendimento ID 297720" },
-      { "data": "2022-04", "dividendo": 0.27, "dataPagamento": "2022-05-15", "fonte": "Rendimento ID 312150" },
-      { "data": "2022-05", "dividendo": 0.27, "dataPagamento": "2022-06-15", "fonte": "Rendimento ID 323323" },
-      { "data": "2022-06", "dividendo": 0.27, "dataPagamento": "2022-07-15", "fonte": "Rendimento ID 333907" },
-      { "data": "2022-07", "dividendo": 0.27, "dataPagamento": "2022-08-15" },
-      { "data": "2022-08", "dividendo": 0.27, "dataPagamento": "2022-09-15", "fonte": "Rendimento ID 349256" },
-      { "data": "2022-09", "dividendo": 0.27, "dataPagamento": "2022-10-15", "fonte": "Rendimento ID 361299" },
-      { "data": "2022-10", "dividendo": 0.27, "dataPagamento": "2022-11-15", "fonte": "Rendimento ID 373532" },
-      { "data": "2022-11", "dividendo": 0.27, "dataPagamento": "2022-12-15", "fonte": "Rendimento ID 386698" },
-      { "data": "2022-12", "dividendo": 0.27, "dataPagamento": "2023-01-15", "fonte": "Rendimento ID 398778" },
-      { "data": "2023-01", "dividendo": 0.27, "dataPagamento": "2023-02-15", "fonte": "Rendimento ID 411443" },
-      { "data": "2023-02", "dividendo": 0.27, "dataPagamento": "2023-03-15", "fonte": "Rendimento ID 426490" },
-      { "data": "2023-03", "dividendo": 0.27, "dataPagamento": "2023-04-15", "fonte": "Rendimento ID 442595" },
-      { "data": "2023-04", "dividendo": 0.27, "dataPagamento": "2023-05-15", "fonte": "Rendimento ID 457677" },
-      { "data": "2023-05", "dividendo": 0.27, "dataPagamento": "2023-06-15", "fonte": "Rendimento ID 475134" },
-      { "data": "2023-06", "dividendo": 0.27, "dataPagamento": "2023-07-15", "fonte": "Rendimento ID 487975" },
-      { "data": "2023-07", "dividendo": 0.27, "dataPagamento": "2023-08-15", "fonte": "Rendimento ID 502087" },
-      { "data": "2023-08", "dividendo": 0.25, "dataPagamento": "2023-09-15", "fonte": "Rendimento ID 517759" },
-      { "data": "2023-09", "dividendo": 0.25, "dataPagamento": "2023-10-15", "fonte": "Rendimento ID 532338" },
-      { "data": "2023-10", "dividendo": 0.28, "dataPagamento": "2023-11-15", "fonte": "Rendimento ID 547842" },
-      { "data": "2023-11", "dividendo": 0.28, "dataPagamento": "2023-12-15", "fonte": "Rendimento ID 565954" },
-      { "data": "2023-12", "dividendo": 0.28, "dataPagamento": "2024-01-15", "fonte": "Rendimento ID 580954" },
-      { "data": "2024-01", "dividendo": 0.33, "dataPagamento": "2024-02-15", "fonte": "Rendimento ID 597937" },
-      { "data": "2024-02", "dividendo": 0.35, "dataPagamento": "2024-03-15", "fonte": "Rendimento ID 616175" },
-      { "data": "2024-03", "dividendo": 0.35, "dataPagamento": "2024-04-15", "fonte": "Rendimento ID 634598" },
-      { "data": "2024-04", "dividendo": 0.66, "dataPagamento": "2024-05-15", "fonte": "Rendimento ID 655369 (extra venda imóvel)" },
-      { "data": "2024-05", "dividendo": 0.66, "dataPagamento": "2024-06-15", "fonte": "Rendimento ID 675643 (extra)" },
-      { "data": "2024-06", "dividendo": 0.67, "dataPagamento": "2024-07-15", "fonte": "Rendimento ID 692817 (extra)" },
-      { "data": "2024-07", "dividendo": 0.55, "dataPagamento": "2024-08-15", "fonte": "Rendimento ID 713090" },
-      { "data": "2024-08", "dividendo": 0.54, "dataPagamento": "2024-09-15", "fonte": "Rendimento ID 733168" },
-      { "data": "2024-09", "dividendo": 0.52, "dataPagamento": "2024-10-15", "fonte": "Rendimento ID 752866" },
-      { "data": "2024-10", "dividendo": 0.54, "dataPagamento": "2024-11-15", "fonte": "Rendimento ID 773791" },
-      { "data": "2024-11", "dividendo": 0.54, "dataPagamento": "2024-12-15", "fonte": "Rendimento ID 795686" },
-      { "data": "2024-12", "dividendo": 0.54, "dataPagamento": "2025-01-15", "fonte": "Rendimento ID 814867" },
-      { "data": "2025-01", "dividendo": 0.41, "dataPagamento": "2025-02-15", "fonte": "Rendimento ID 833354" },
-      { "data": "2025-02", "dividendo": 0.41, "dataPagamento": "2025-03-15", "fonte": "Rendimento ID 855266" },
-      { "data": "2025-03", "dividendo": 0.40, "dataPagamento": "2025-04-15", "fonte": "Rendimento ID 874839" },
-      { "data": "2025-04", "dividendo": 0.40, "dataPagamento": "2025-05-15", "fonte": "Rendimento ID 897274" },
-      { "data": "2025-05", "dividendo": 0.40, "dataPagamento": "2025-06-15", "fonte": "Rendimento ID 918729" },
-      { "data": "2025-06", "dividendo": 0.40, "dataPagamento": "2025-07-15", "fonte": "Rendimento ID 941042" },
-      { "data": "2025-07", "dividendo": 0.40, "dataPagamento": "2025-08-15", "fonte": "Rendimento ID 961662" },
-      { "data": "2025-08", "dividendo": 0.40, "dataPagamento": "2025-09-15", "fonte": "Rendimento ID 984946" },
-      { "data": "2025-09", "dividendo": 0.40, "dataPagamento": "2025-10-15", "fonte": "Rendimento ID 1007896" },
-      { "data": "2025-10", "dividendo": 0.40, "dataPagamento": "2025-11-15", "fonte": "Rendimento ID 1030564" },
-      { "data": "2025-11", "dividendo": 0.40, "dataPagamento": "2025-12-15", "fonte": "Rendimento ID 1055172" },
+      {
+        "data": "2018-08",
+        "dividendo": 0.3,
+        "dataPagamento": "2018-09-15",
+        "fonte": "Rendimento ID 31588",
+        "docId": "31588"
+      },
+      {
+        "data": "2018-09",
+        "dividendo": 0.3,
+        "dataPagamento": "2018-10-15",
+        "fonte": "Rendimento ID 33017",
+        "docId": "33017"
+      },
+      {
+        "data": "2018-10",
+        "dividendo": 0.3,
+        "dataPagamento": "2018-11-15",
+        "fonte": "Rendimento ID 34697",
+        "docId": "34697"
+      },
+      {
+        "data": "2018-11",
+        "dividendo": 0.3,
+        "dataPagamento": "2018-12-15",
+        "fonte": "Rendimento ID 36498",
+        "docId": "36498"
+      },
+      {
+        "data": "2018-12",
+        "dividendo": 0.5,
+        "dataPagamento": "2019-01-15",
+        "fonte": "Rendimento ID 38334 (extra)",
+        "docId": "38334"
+      },
+      {
+        "data": "2019-01",
+        "dividendo": 0.3,
+        "dataPagamento": "2019-02-15",
+        "fonte": "Rendimento ID 40404",
+        "docId": "40404"
+      },
+      {
+        "data": "2019-02",
+        "dividendo": 0.3,
+        "dataPagamento": "2019-03-15",
+        "fonte": "Rendimento ID 42747",
+        "docId": "42747"
+      },
+      {
+        "data": "2019-03",
+        "dividendo": 0.3,
+        "dataPagamento": "2019-04-15",
+        "fonte": "Rendimento ID 44999",
+        "docId": "44999"
+      },
+      {
+        "data": "2019-04",
+        "dividendo": 0.3,
+        "dataPagamento": "2019-05-15",
+        "fonte": "Rendimento ID 47595",
+        "docId": "47595"
+      },
+      {
+        "data": "2019-05",
+        "dividendo": 0.3,
+        "dataPagamento": "2019-06-15",
+        "fonte": "Rendimento ID 50425",
+        "docId": "50425"
+      },
+      {
+        "data": "2019-06",
+        "dividendo": 0.32,
+        "dataPagamento": "2019-07-15",
+        "fonte": "Rendimento ID 53107",
+        "docId": "53107"
+      },
+      {
+        "data": "2019-07",
+        "dividendo": 0.32,
+        "dataPagamento": "2019-08-15",
+        "fonte": "Rendimento ID 55059",
+        "docId": "55059"
+      },
+      {
+        "data": "2019-08",
+        "dividendo": 0.32,
+        "dataPagamento": "2019-09-15",
+        "fonte": "Rendimento ID 57674",
+        "docId": "57674"
+      },
+      {
+        "data": "2019-09",
+        "dividendo": 0.32,
+        "dataPagamento": "2019-10-15"
+      },
+      {
+        "data": "2019-10",
+        "dividendo": 0.32,
+        "dataPagamento": "2019-11-15"
+      },
+      {
+        "data": "2019-11",
+        "dividendo": 0.32,
+        "dataPagamento": "2019-12-15"
+      },
+      {
+        "data": "2019-12",
+        "dividendo": 0.4,
+        "dataPagamento": "2020-01-15",
+        "fonte": "Rendimento (extra dez/19)"
+      },
+      {
+        "data": "2020-01",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-02-15"
+      },
+      {
+        "data": "2020-02",
+        "dividendo": 0.35,
+        "dataPagamento": "2020-03-15"
+      },
+      {
+        "data": "2020-03",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-04-15"
+      },
+      {
+        "data": "2020-04",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-05-15"
+      },
+      {
+        "data": "2020-05",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-06-15"
+      },
+      {
+        "data": "2020-06",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-07-15"
+      },
+      {
+        "data": "2020-07",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-08-15"
+      },
+      {
+        "data": "2020-08",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-09-15"
+      },
+      {
+        "data": "2020-09",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-10-15"
+      },
+      {
+        "data": "2020-10",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-11-15"
+      },
+      {
+        "data": "2020-11",
+        "dividendo": 0.3,
+        "dataPagamento": "2020-12-15"
+      },
+      {
+        "data": "2020-12",
+        "dividendo": 0.4,
+        "dataPagamento": "2021-01-15",
+        "fonte": "Extra fim de ano"
+      },
+      {
+        "data": "2021-01",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-02-15"
+      },
+      {
+        "data": "2021-02",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-03-15"
+      },
+      {
+        "data": "2021-03",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-04-15"
+      },
+      {
+        "data": "2021-04",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-05-15"
+      },
+      {
+        "data": "2021-05",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-06-15"
+      },
+      {
+        "data": "2021-06",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-07-15"
+      },
+      {
+        "data": "2021-07",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-08-15"
+      },
+      {
+        "data": "2021-08",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-09-15",
+        "fonte": "Rendimento ID 216225"
+      },
+      {
+        "data": "2021-09",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-10-15"
+      },
+      {
+        "data": "2021-10",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-11-15"
+      },
+      {
+        "data": "2021-11",
+        "dividendo": 0.3,
+        "dataPagamento": "2021-12-15"
+      },
+      {
+        "data": "2021-12",
+        "dividendo": 0.4,
+        "dataPagamento": "2022-01-15",
+        "fonte": "Rendimento ID 259564 + extra"
+      },
+      {
+        "data": "2022-01",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-02-15",
+        "fonte": "Rendimento ID 270908",
+        "docId": "270908"
+      },
+      {
+        "data": "2022-02",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-03-15",
+        "fonte": "Rendimento ID 285530"
+      },
+      {
+        "data": "2022-03",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-04-15",
+        "fonte": "Rendimento ID 297720"
+      },
+      {
+        "data": "2022-04",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-05-15",
+        "fonte": "Rendimento ID 312150"
+      },
+      {
+        "data": "2022-05",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-06-15",
+        "fonte": "Rendimento ID 323323"
+      },
+      {
+        "data": "2022-06",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-07-15",
+        "fonte": "Rendimento ID 333907"
+      },
+      {
+        "data": "2022-07",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-08-15"
+      },
+      {
+        "data": "2022-08",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-09-15",
+        "fonte": "Rendimento ID 349256"
+      },
+      {
+        "data": "2022-09",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-10-15",
+        "fonte": "Rendimento ID 361299"
+      },
+      {
+        "data": "2022-10",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-11-15",
+        "fonte": "Rendimento ID 373532"
+      },
+      {
+        "data": "2022-11",
+        "dividendo": 0.27,
+        "dataPagamento": "2022-12-15",
+        "fonte": "Rendimento ID 386698"
+      },
+      {
+        "data": "2022-12",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-01-15",
+        "fonte": "Rendimento ID 398778"
+      },
+      {
+        "data": "2023-01",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-02-15",
+        "fonte": "Rendimento ID 411443"
+      },
+      {
+        "data": "2023-02",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-03-15",
+        "fonte": "Rendimento ID 426490"
+      },
+      {
+        "data": "2023-03",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-04-15",
+        "fonte": "Rendimento ID 442595"
+      },
+      {
+        "data": "2023-04",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-05-15",
+        "fonte": "Rendimento ID 457677"
+      },
+      {
+        "data": "2023-05",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-06-15",
+        "fonte": "Rendimento ID 475134"
+      },
+      {
+        "data": "2023-06",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-07-15",
+        "fonte": "Rendimento ID 487975"
+      },
+      {
+        "data": "2023-07",
+        "dividendo": 0.27,
+        "dataPagamento": "2023-08-15",
+        "fonte": "Rendimento ID 502087"
+      },
+      {
+        "data": "2023-08",
+        "dividendo": 0.25,
+        "dataPagamento": "2023-09-15",
+        "fonte": "Rendimento ID 517759"
+      },
+      {
+        "data": "2023-09",
+        "dividendo": 0.25,
+        "dataPagamento": "2023-10-15",
+        "fonte": "Rendimento ID 532338"
+      },
+      {
+        "data": "2023-10",
+        "dividendo": 0.28,
+        "dataPagamento": "2023-11-15",
+        "fonte": "Rendimento ID 547842"
+      },
+      {
+        "data": "2023-11",
+        "dividendo": 0.28,
+        "dataPagamento": "2023-12-15",
+        "fonte": "Rendimento ID 565954"
+      },
+      {
+        "data": "2023-12",
+        "dividendo": 0.28,
+        "dataPagamento": "2024-01-15",
+        "fonte": "Rendimento ID 580954"
+      },
+      {
+        "data": "2024-01",
+        "dividendo": 0.33,
+        "dataPagamento": "2024-02-15",
+        "fonte": "Rendimento ID 597937"
+      },
+      {
+        "data": "2024-02",
+        "dividendo": 0.35,
+        "dataPagamento": "2024-03-15",
+        "fonte": "Rendimento ID 616175"
+      },
+      {
+        "data": "2024-03",
+        "dividendo": 0.35,
+        "dataPagamento": "2024-04-15",
+        "fonte": "Rendimento ID 634598"
+      },
+      {
+        "data": "2024-04",
+        "dividendo": 0.66,
+        "dataPagamento": "2024-05-15",
+        "fonte": "Rendimento ID 655369 (extra venda imóvel)"
+      },
+      {
+        "data": "2024-05",
+        "dividendo": 0.66,
+        "dataPagamento": "2024-06-15",
+        "fonte": "Rendimento ID 675643 (extra)"
+      },
+      {
+        "data": "2024-06",
+        "dividendo": 0.67,
+        "dataPagamento": "2024-07-15",
+        "fonte": "Rendimento ID 692817 (extra)"
+      },
+      {
+        "data": "2024-07",
+        "dividendo": 0.55,
+        "dataPagamento": "2024-08-15",
+        "fonte": "Rendimento ID 713090"
+      },
+      {
+        "data": "2024-08",
+        "dividendo": 0.54,
+        "dataPagamento": "2024-09-15",
+        "fonte": "Rendimento ID 733168"
+      },
+      {
+        "data": "2024-09",
+        "dividendo": 0.52,
+        "dataPagamento": "2024-10-15",
+        "fonte": "Rendimento ID 752866"
+      },
+      {
+        "data": "2024-10",
+        "dividendo": 0.54,
+        "dataPagamento": "2024-11-15",
+        "fonte": "Rendimento ID 773791"
+      },
+      {
+        "data": "2024-11",
+        "dividendo": 0.54,
+        "dataPagamento": "2024-12-15",
+        "fonte": "Rendimento ID 795686"
+      },
+      {
+        "data": "2024-12",
+        "dividendo": 0.54,
+        "dataPagamento": "2025-01-15",
+        "fonte": "Rendimento ID 814867"
+      },
+      {
+        "data": "2025-01",
+        "dividendo": 0.41,
+        "dataPagamento": "2025-02-15",
+        "fonte": "Rendimento ID 833354"
+      },
+      {
+        "data": "2025-02",
+        "dividendo": 0.41,
+        "dataPagamento": "2025-03-15",
+        "fonte": "Rendimento ID 855266"
+      },
+      {
+        "data": "2025-03",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-04-15",
+        "fonte": "Rendimento ID 874839"
+      },
+      {
+        "data": "2025-04",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-05-15",
+        "fonte": "Rendimento ID 897274"
+      },
+      {
+        "data": "2025-05",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-06-15",
+        "fonte": "Rendimento ID 918729"
+      },
+      {
+        "data": "2025-06",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-07-15",
+        "fonte": "Rendimento ID 941042"
+      },
+      {
+        "data": "2025-07",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-08-15",
+        "fonte": "Rendimento ID 961662"
+      },
+      {
+        "data": "2025-08",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-09-15",
+        "fonte": "Rendimento ID 984946"
+      },
+      {
+        "data": "2025-09",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-10-15",
+        "fonte": "Rendimento ID 1007896"
+      },
+      {
+        "data": "2025-10",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-11-15",
+        "fonte": "Rendimento ID 1030564"
+      },
+      {
+        "data": "2025-11",
+        "dividendo": 0.4,
+        "dataPagamento": "2025-12-15",
+        "fonte": "Rendimento ID 1055172"
+      },
       {
         "data": "2025-12",
-        "dividendo": 0.40,
+        "dividendo": 0.4,
         "dataPagamento": "2026-01-15",
         "cotas": 12179187,
         "lucroCaixa": 6080472,
@@ -1085,7 +1666,7 @@
       },
       {
         "data": "2026-01",
-        "dividendo": 0.40,
+        "dividendo": 0.4,
         "dataPagamento": "2026-02-13",
         "cotas": 12179187,
         "lucroCaixa": 4079670,
@@ -1098,7 +1679,7 @@
       },
       {
         "data": "2026-02",
-        "dividendo": 0.40,
+        "dividendo": 0.4,
         "dataPagamento": "2026-03-13",
         "cotas": 12179187,
         "lucroCaixa": 4705051,
@@ -1111,7 +1692,7 @@
       },
       {
         "data": "2026-03",
-        "dividendo": 0.40,
+        "dividendo": 0.4,
         "dataPagamento": "2026-04-15",
         "cotas": 12179187,
         "fonte": "Rendimento ID 1156959",
@@ -1119,32 +1700,160 @@
       }
     ],
     "acumuladoSemestral": [
-      { "semestre": "2018-2", "label": "2º Sem 2018", "ano": 2018, "metade": 2, "completo": true, "mesesContados": 5, "interpretacao": "fez_caixa" },
-      { "semestre": "2019-1", "label": "1º Sem 2019", "ano": 2019, "metade": 1, "completo": true, "mesesContados": 6, "interpretacao": "fez_caixa" },
-      { "semestre": "2019-2", "label": "2º Sem 2019", "ano": 2019, "metade": 2, "completo": true, "mesesContados": 6, "interpretacao": "fez_caixa" },
-      { "semestre": "2020-1", "label": "1º Sem 2020", "ano": 2020, "metade": 1, "completo": true, "mesesContados": 6, "interpretacao": "equilibrio" },
-      { "semestre": "2020-2", "label": "2º Sem 2020", "ano": 2020, "metade": 2, "completo": true, "mesesContados": 6, "interpretacao": "fez_caixa" },
-      { "semestre": "2021-1", "label": "1º Sem 2021", "ano": 2021, "metade": 1, "completo": true, "mesesContados": 6, "interpretacao": "equilibrio" },
-      { "semestre": "2021-2", "label": "2º Sem 2021", "ano": 2021, "metade": 2, "completo": true, "mesesContados": 6, "interpretacao": "fez_caixa" },
-      { "semestre": "2022-1", "label": "1º Sem 2022", "ano": 2022, "metade": 1, "completo": true, "mesesContados": 6, "interpretacao": "queimou_caixa" },
-      { "semestre": "2022-2", "label": "2º Sem 2022", "ano": 2022, "metade": 2, "completo": true, "mesesContados": 6, "interpretacao": "queimou_caixa" },
-      { "semestre": "2023-1", "label": "1º Sem 2023", "ano": 2023, "metade": 1, "completo": true, "mesesContados": 6, "interpretacao": "equilibrio" },
-      { "semestre": "2023-2", "label": "2º Sem 2023", "ano": 2023, "metade": 2, "completo": true, "mesesContados": 6, "interpretacao": "equilibrio" },
-      { "semestre": "2024-1", "label": "1º Sem 2024", "ano": 2024, "metade": 1, "completo": true, "mesesContados": 6, "interpretacao": "fez_caixa" },
-      { "semestre": "2024-2", "label": "2º Sem 2024", "ano": 2024, "metade": 2, "completo": true, "mesesContados": 6, "interpretacao": "fez_caixa" },
       {
-        "semestre": "2025-1", "label": "1º Sem 2025", "ano": 2025, "metade": 1, "completo": true, "mesesContados": 6,
-        "lucroCaixa": 24500000, "distribuicao": 29230049, "resultadoCaixa": -4730049, "payout": 1.193,
-        "interpretacao": "queimou_caixa"
+        "semestre": "2018-2",
+        "label": "2º Sem 2018",
+        "ano": 2018,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 5,
+        "interpretacao": "fez_caixa"
       },
       {
-        "semestre": "2025-2", "label": "2º Sem 2025", "ano": 2025, "metade": 2, "completo": true, "mesesContados": 6,
-        "lucroCaixa": 30143616, "distribuicao": 29230048, "resultadoCaixa": 913568, "payout": 0.970,
+        "semestre": "2019-1",
+        "label": "1º Sem 2019",
+        "ano": 2019,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2019-2",
+        "label": "2º Sem 2019",
+        "ano": 2019,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2020-1",
+        "label": "1º Sem 2020",
+        "ano": 2020,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
         "interpretacao": "equilibrio"
       },
       {
-        "semestre": "2026-1", "label": "1º Sem 2026", "ano": 2026, "metade": 1, "completo": false, "mesesContados": 2,
-        "lucroCaixa": 8784721, "distribuicao": 9743350, "resultadoCaixa": -958629, "payout": 1.109,
+        "semestre": "2020-2",
+        "label": "2º Sem 2020",
+        "ano": 2020,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2021-1",
+        "label": "1º Sem 2021",
+        "ano": 2021,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2021-2",
+        "label": "2º Sem 2021",
+        "ano": 2021,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2022-1",
+        "label": "1º Sem 2022",
+        "ano": 2022,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "queimou_caixa"
+      },
+      {
+        "semestre": "2022-2",
+        "label": "2º Sem 2022",
+        "ano": 2022,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "queimou_caixa"
+      },
+      {
+        "semestre": "2023-1",
+        "label": "1º Sem 2023",
+        "ano": 2023,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2023-2",
+        "label": "2º Sem 2023",
+        "ano": 2023,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2024-1",
+        "label": "1º Sem 2024",
+        "ano": 2024,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2024-2",
+        "label": "2º Sem 2024",
+        "ano": 2024,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "interpretacao": "fez_caixa"
+      },
+      {
+        "semestre": "2025-1",
+        "label": "1º Sem 2025",
+        "ano": 2025,
+        "metade": 1,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 24500000,
+        "distribuicao": 29230049,
+        "resultadoCaixa": -4730049,
+        "payout": 1.193,
+        "interpretacao": "queimou_caixa"
+      },
+      {
+        "semestre": "2025-2",
+        "label": "2º Sem 2025",
+        "ano": 2025,
+        "metade": 2,
+        "completo": true,
+        "mesesContados": 6,
+        "lucroCaixa": 30143616,
+        "distribuicao": 29230048,
+        "resultadoCaixa": 913568,
+        "payout": 0.97,
+        "interpretacao": "equilibrio"
+      },
+      {
+        "semestre": "2026-1",
+        "label": "1º Sem 2026",
+        "ano": 2026,
+        "metade": 1,
+        "completo": false,
+        "mesesContados": 2,
+        "lucroCaixa": 8784721,
+        "distribuicao": 9743350,
+        "resultadoCaixa": -958629,
+        "payout": 1.109,
         "interpretacao": "queimou_caixa"
       }
     ],
@@ -1162,7 +1871,7 @@
       "resultadoAcumuladoRetido": 2801681,
       "resultadoAcumuladoNota": "Reserva acumulada de R$ 2,8 mi sobre 12,18 mi cotas = R$ 0,23/cota. Margem reduzida — em ritmo atual de queima cobre ~3-4 meses",
       "queimaMediaMensal": 250000,
-      "queimaPorCota": 0.020,
+      "queimaPorCota": 0.02,
       "coberturaMeses": 43.3,
       "tendencia": "Caixa líquido em platô; queima leve mas sustentável até reocupação de Venezuela e JR",
       "leitura": "<p>RBRP11 está distribuindo R$ 0,40/cota mensais com payout de ~105% em jan-fev/2026 (queima ~R$ 0,02/cota). Reserva acumulada R$ 2,8 mi + caixa líquido R$ 10,8 mi cobrem queima por 30+ meses sem ajustar DPS. Quando o JR e Venezuela reocuparem (cenário base 12-18m), payout volta para 85-90% e DPS pode até subir.</p>"
@@ -1274,7 +1983,7 @@
       "fonte": "gestor",
       "periodo": "1S2026",
       "cobreMeses": 6,
-      "faixaMin": 0.40,
+      "faixaMin": 0.4,
       "faixaMax": 0.42,
       "unidade": "R$/cota/mês",
       "validade": "2026-06-30",
@@ -1288,11 +1997,26 @@
     "projecaoDy": {
       "precoReferencia": 52.35,
       "dyAtual12m": 9.17,
-      "dyProjetado12m": 9.40,
+      "dyProjetado12m": 9.4,
       "cenarios": [
-        { "rotulo": "Base",       "dy12m": 9.17, "dividendoMes": 0.40, "descricao": "DPS R$ 0,40 mantido (cenário-base do gestor)" },
-        { "rotulo": "Otimista",   "dy12m": 10.55, "dividendoMes": 0.46, "descricao": "Locações JR + Venezuela reduzem vacância para 12% e DPS sobe gradualmente" },
-        { "rotulo": "Pessimista", "dy12m": 7.79, "dividendoMes": 0.34, "descricao": "Se nada locar, Patria corta DPS para R$ 0,34 preservando reserva" }
+        {
+          "rotulo": "Base",
+          "dy12m": 9.17,
+          "dividendoMes": 0.4,
+          "descricao": "DPS R$ 0,40 mantido (cenário-base do gestor)"
+        },
+        {
+          "rotulo": "Otimista",
+          "dy12m": 10.55,
+          "dividendoMes": 0.46,
+          "descricao": "Locações JR + Venezuela reduzem vacância para 12% e DPS sobe gradualmente"
+        },
+        {
+          "rotulo": "Pessimista",
+          "dy12m": 7.79,
+          "dividendoMes": 0.34,
+          "descricao": "Se nada locar, Patria corta DPS para R$ 0,34 preservando reserva"
+        }
       ],
       "retornoTotal12m": 13.5,
       "premissas": [
@@ -1308,37 +2032,125 @@
       "cor": "amber",
       "direcao": "DPS de R$ 0,40/cota é defensável até 3T2026 com a reserva existente. Reocupação de JR + Venezuela é o catalisador principal — se concretizar, DPS volta a R$ 0,42-0,46.",
       "pontosPositivos": [
-        { "texto": "Guidance gestor R$ 0,42 (incremento 5%) para 1S2026", "peso": "medio" },
-        { "texto": "Caixa R$ 10,8 mi + reserva R$ 2,8 mi cobrem queima por 30+ meses", "peso": "alto" },
-        { "texto": "Locação JR (Faria Lima AAA) é alta probabilidade — propostas iniciais já em negociação", "peso": "alto" },
-        { "texto": "Receita 94% IPCA — repasse inflacionário garantido", "peso": "medio" },
-        { "texto": "Sem alavancagem — sem pressão de dívida", "peso": "medio" }
+        {
+          "texto": "Guidance gestor R$ 0,42 (incremento 5%) para 1S2026",
+          "peso": "medio"
+        },
+        {
+          "texto": "Caixa R$ 10,8 mi + reserva R$ 2,8 mi cobrem queima por 30+ meses",
+          "peso": "alto"
+        },
+        {
+          "texto": "Locação JR (Faria Lima AAA) é alta probabilidade — propostas iniciais já em negociação",
+          "peso": "alto"
+        },
+        {
+          "texto": "Receita 94% IPCA — repasse inflacionário garantido",
+          "peso": "medio"
+        },
+        {
+          "texto": "Sem alavancagem — sem pressão de dívida",
+          "peso": "medio"
+        }
       ],
       "pontosNegativos": [
-        { "texto": "Vacância 23,8% física é elevada e custosa", "peso": "alto" },
-        { "texto": "Saída CVM Delta Plaza em jun/2026 piora marginalmente", "peso": "baixo" },
-        { "texto": "Patria pode mudar política de distribuição na integração", "peso": "medio" },
-        { "texto": "Venezuela (RJ) tem reocupação difícil estruturalmente", "peso": "medio" }
+        {
+          "texto": "Vacância 23,8% física é elevada e custosa",
+          "peso": "alto"
+        },
+        {
+          "texto": "Saída CVM Delta Plaza em jun/2026 piora marginalmente",
+          "peso": "baixo"
+        },
+        {
+          "texto": "Patria pode mudar política de distribuição na integração",
+          "peso": "medio"
+        },
+        {
+          "texto": "Venezuela (RJ) tem reocupação difícil estruturalmente",
+          "peso": "medio"
+        }
       ],
       "veredicto": "<p>O DPS de R$ 0,40 é <strong>sustentável no curto prazo</strong> (9-12 meses) graças à reserva acumulada e ao caixa líquido. O ponto de inflexão é a <strong>locação do JR + Venezuela</strong>: se o time Patria conseguir tração até 3T2026, DPS sobe para R$ 0,42-0,46 e a tese de turnaround se valida. Se não locar, há risco de ajuste preventivo para R$ 0,34-0,38 preservando liquidez. <strong>Cenário base: estável em R$ 0,40 nos próximos 6 meses</strong>, com convergência ao guidance R$ 0,42 no 2S2026.</p>"
     },
     "alertas": [
-      { "texto": "Payout 12m em ~105% — queima leve mas sustentável", "sev": "amber" },
-      { "texto": "JR e Venezuela 100% vagos — 15,6% PL parado", "sev": "red" },
-      { "texto": "Patria assumindo gestão — período de adaptação", "sev": "amber" }
+      {
+        "texto": "Payout 12m em ~105% — queima leve mas sustentável",
+        "sev": "amber"
+      },
+      {
+        "texto": "JR e Venezuela 100% vagos — 15,6% PL parado",
+        "sev": "red"
+      },
+      {
+        "texto": "Patria assumindo gestão — período de adaptação",
+        "sev": "amber"
+      }
     ],
-    "chartLabels": ["dez/24","jan/25","fev/25","mar/25","abr/25","mai/25","jun/25","jul/25","ago/25","set/25","out/25","nov/25","dez/25","jan/26","fev/26","mar/26"],
-    "chartData":   [0.54,0.41,0.41,0.40,0.40,0.40,0.40,0.40,0.40,0.40,0.40,0.40,0.40,0.40,0.40,0.40],
-    "chartCor":    "#10b981",
-    "chartYMin":   0.30,
-    "chartYMax":   0.60,
+    "chartLabels": [
+      "dez/24",
+      "jan/25",
+      "fev/25",
+      "mar/25",
+      "abr/25",
+      "mai/25",
+      "jun/25",
+      "jul/25",
+      "ago/25",
+      "set/25",
+      "out/25",
+      "nov/25",
+      "dez/25",
+      "jan/26",
+      "fev/26",
+      "mar/26"
+    ],
+    "chartData": [
+      0.54,
+      0.41,
+      0.41,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4,
+      0.4
+    ],
+    "chartCor": "#10b981",
+    "chartYMin": 0.3,
+    "chartYMax": 0.6,
     "stats": [
-      { "rotulo": "DPS atual", "valor": "R$ 0,40" },
-      { "rotulo": "DPS médio 12m", "valor": "R$ 0,40" },
-      { "rotulo": "DY 12m", "valor": "9,17%" },
-      { "rotulo": "Payout 12m", "valor": "~105%" },
-      { "rotulo": "Reserva acumulada", "valor": "R$ 0,23/cota" },
-      { "rotulo": "Caixa líquido", "valor": "R$ 10,8 mi" }
+      {
+        "rotulo": "DPS atual",
+        "valor": "R$ 0,40"
+      },
+      {
+        "rotulo": "DPS médio 12m",
+        "valor": "R$ 0,40"
+      },
+      {
+        "rotulo": "DY 12m",
+        "valor": "9,17%"
+      },
+      {
+        "rotulo": "Payout 12m",
+        "valor": "~105%"
+      },
+      {
+        "rotulo": "Reserva acumulada",
+        "valor": "R$ 0,23/cota"
+      },
+      {
+        "rotulo": "Caixa líquido",
+        "valor": "R$ 10,8 mi"
+      }
     ]
   },
   "valuation": {
@@ -1352,8 +2164,14 @@
       "fonte": "yfinance:RBRP11.SA",
       "naoAjustado": true,
       "ultimoFechamento": 52.35,
-      "minHistorico": { "valor": 28.10, "data": "2024-09-09" },
-      "maxHistorico": { "valor": 95.00, "data": "2019-10-21" }
+      "minHistorico": {
+        "valor": 28.1,
+        "data": "2024-09-09"
+      },
+      "maxHistorico": {
+        "valor": 95.0,
+        "data": "2019-10-21"
+      }
     },
     "historicoVp": {
       "csvPath": "data/fiis/rbrp11/historico_vp.csv",
@@ -1405,7 +2223,14 @@
     "paresComparaveis": {
       "subsegmento": "tijolo_escritorios_aaa",
       "criterioAgrupamento": "FIIs de escritórios A/AAA com endereço prime SP/RJ, vacância variando entre 5-30%, gestoras independentes com mandato de gestão ativa.",
-      "tickers": ["BLCA11", "HGRE11", "BROF11", "BMLC11", "GTWR11", "JSRE11"],
+      "tickers": [
+        "BLCA11",
+        "HGRE11",
+        "BROF11",
+        "BMLC11",
+        "GTWR11",
+        "JSRE11"
+      ],
       "estatisticas": {
         "dataSnapshot": "2026-04-26",
         "pvpMediano": 0.82,
@@ -1413,7 +2238,7 @@
         "pvpMax": 0.92,
         "dyMediano": 10.53,
         "dyMin": 6.59,
-        "dyMax": 14.50,
+        "dyMax": 14.5,
         "premioRiscoSegmento": 0.045
       },
       "posicaoFundo": {
@@ -1440,8 +2265,11 @@
       "detalhe": "DY abaixo da mediana de pares reflete vacância elevada e DPS comprimido pós-2024. Se locar JR/Venezuela, spread expande para +250bps."
     },
     "precoJustoMercado": {
-      "valor": 60.00,
-      "faixa": [55.00, 66.00],
+      "valor": 60.0,
+      "faixa": [
+        55.0,
+        66.0
+      ],
       "comparacaoComCotacao": {
         "cotacaoAtual": 52.35,
         "diferencaPct": 14.6,
@@ -1450,21 +2278,21 @@
       "componentes": [
         {
           "nome": "DY-alvo Selic+prêmio",
-          "peso": 0.40,
+          "peso": 0.4,
           "preco": 51.06,
           "calculo": "DPS sustentável R$ 4,80/ano ÷ (Selic 14,75% × 0,80 + 4,5% prêmio escritórios AAA) = R$ 4,80 / 0,1640 = R$ 29,27 ajustado por expectativa Selic 11%/12m → R$ 51,06",
           "racional": "DPS de R$ 0,40/mês considerado sustentável. Ajustado pela Selic projetada Focus 11%/12m + prêmio escritórios AAA 4,5%."
         },
         {
           "nome": "P/VP pares",
-          "peso": 0.30,
+          "peso": 0.3,
           "preco": 69.34,
           "calculo": "VP/cota R$ 84,57 × P/VP mediano dos pares (0,82) = R$ 69,35",
           "racional": "Pares: BLCA11, HGRE11, BROF11, BMLC11, GTWR11, JSRE11. RBRP11 deveria convergir para o múltiplo mediano com tempo."
         },
         {
           "nome": "DY pares",
-          "peso": 0.30,
+          "peso": 0.3,
           "preco": 45.59,
           "calculo": "DPS R$ 4,80/ano ÷ DY mediano dos pares (10,53%) = R$ 45,59",
           "racional": "Pelo DY mediano dos pares, RBRP11 estaria precificado em R$ 45,59. Reflete que o DPS atual já está pressionado por vacância."
@@ -1474,11 +2302,36 @@
         "valor": 1.05,
         "score": 0.66,
         "componentes": [
-          { "nome": "Gestora", "peso": 0.25, "score": 0.85, "racional": "Patria é maior gestora independente de FIIs do Brasil — top-3" },
-          { "nome": "Vacância", "peso": 0.30, "score": 0.21, "racional": "23,8% física vs benchmark 5% = score baixo" },
-          { "nome": "Alavancagem", "peso": 0.15, "score": 1.0, "racional": "LTV 0% — sem alavancagem" },
-          { "nome": "Estabilidade DPS", "peso": 0.15, "score": 0.85, "racional": "DPS R$ 0,40 estável há 12m — CV < 5%" },
-          { "nome": "dividendoStatus", "peso": 0.15, "score": 0.70, "racional": "sustentavel_curto — risco de ajuste em 12m" }
+          {
+            "nome": "Gestora",
+            "peso": 0.25,
+            "score": 0.85,
+            "racional": "Patria é maior gestora independente de FIIs do Brasil — top-3"
+          },
+          {
+            "nome": "Vacância",
+            "peso": 0.3,
+            "score": 0.21,
+            "racional": "23,8% física vs benchmark 5% = score baixo"
+          },
+          {
+            "nome": "Alavancagem",
+            "peso": 0.15,
+            "score": 1.0,
+            "racional": "LTV 0% — sem alavancagem"
+          },
+          {
+            "nome": "Estabilidade DPS",
+            "peso": 0.15,
+            "score": 0.85,
+            "racional": "DPS R$ 0,40 estável há 12m — CV < 5%"
+          },
+          {
+            "nome": "dividendoStatus",
+            "peso": 0.15,
+            "score": 0.7,
+            "racional": "sustentavel_curto — risco de ajuste em 12m"
+          }
         ]
       },
       "explicacao": "<p>Preço justo central R$ 60,00 (faixa R$ 55-66) reflete a média ponderada dos componentes A1 (DY-alvo Selic), A2 (P/VP pares) e A3 (DY pares), com fator qualidade levemente positivo (+5%) pela qualidade da gestão Patria e ausência de alavancagem. <strong>O preço quantitativo aponta upside de ~15% vs cotação atual</strong>, com faixa refletindo a divergência entre os modelos: A1 e A3 deprimem (DPS pressionado pela vacância), A2 puxa para cima (VP elevado pós-reavaliação). Se a vacância normalizar para 12% em 18m, A1 e A3 convergem para A2 e o preço justo central avança para R$ 70-75.</p>"
@@ -1487,8 +2340,11 @@
       "curto": {
         "horizonte": "3-6 meses",
         "horizonteAte": "2026-10-31",
-        "precoEsperado": 56.00,
-        "faixa": [50.00, 62.00],
+        "precoEsperado": 56.0,
+        "faixa": [
+          50.0,
+          62.0
+        ],
         "direcao": "lateral_alta",
         "catalisadores": [
           {
@@ -1510,8 +2366,11 @@
       "medio": {
         "horizonte": "1-2 anos",
         "horizonteAte": "2028-04-30",
-        "precoEsperado": 68.00,
-        "faixa": [60.00, 75.00],
+        "precoEsperado": 68.0,
+        "faixa": [
+          60.0,
+          75.0
+        ],
         "direcao": "alta",
         "catalisadores": [
           {
@@ -1539,8 +2398,11 @@
       "longo": {
         "horizonte": "3-5 anos",
         "horizonteAte": "2031-04-30",
-        "precoEsperado": 82.00,
-        "faixa": [70.00, 95.00],
+        "precoEsperado": 82.0,
+        "faixa": [
+          70.0,
+          95.0
+        ],
         "direcao": "alta",
         "catalisadores": [
           {

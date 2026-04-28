@@ -64,7 +64,7 @@
     "nota": 8.5,
     "veredicto": "COMPRA",
     "cor": "emerald",
-    "resumo": "<p>O TRXF11 entrega uma das melhores combinações de previsibilidade e qualidade do segmento de tijolo: <strong class=\"text-emerald-400\">122 imóveis</strong>, <strong class=\"text-emerald-400\">69,8% da receita em contratos atípicos</strong>, WAULT de <strong class=\"text-emerald-400\">12 anos</strong> e vacância física de <strong class=\"text-emerald-400\">0,46%</strong>. Em mar/2026 a cota era negociada a <strong class=\"text-amber-400\">P/VP 0,92</strong> com DY de <strong class=\"text-emerald-400\">12,15%</strong>, patamar atrativo para um veículo dessa qualidade. A 12ª emissão concluída em mar/26 dobrou o tamanho do fundo (62,4 mi cotas) absorvendo o TRXB11 e adicionando o Hospital Sírio-Libanês como locatário-troféu (cap rate 8% a.a., contrato BTS até 2054). Riscos a monitorar: <strong class=\"text-amber-400\">concentração em GPA</strong> (24,2% da receita, em recuperação extrajudicial mas com aluguéis pagos em dia), execução das obras hospitalares Albert Einstein/Medical Center previstas para jul-set/26 e diluição da emissão recém-concluída.</p>"
+    "resumo": "<p>O TRXF11 entrega uma das melhores combinações de previsibilidade e qualidade do segmento de tijolo: <strong class=\"text-emerald-400\">122 imóveis</strong>, <strong class=\"text-emerald-400\">69,8% da receita em contratos atípicos</strong>, WAULT de <strong class=\"text-emerald-400\">12 anos</strong> e vacância física de <strong class=\"text-emerald-400\">0,46%</strong>. Em mar/2026 a cota era negociada a <strong class=\"text-amber-400\">P/VP 0,92</strong> com DY de <strong class=\"text-emerald-400\">12,15%</strong>, patamar atrativo para um veículo dessa qualidade. A 12ª emissão concluída em mar/26 dobrou o tamanho do fundo (62,4 mi cotas) absorvendo o TRXB11 e adicionando o Hospital Sírio-Libanês como locatário-troféu (cap rate 8% a.a., contrato BTS até 2054). Riscos a monitorar: <strong class=\"text-amber-400\">exposição ao bloco GPA histórico (24,24% da receita)</strong> — desse total, apenas <strong class=\"text-amber-400\">7,8% está em PCAR3 (em recuperação extrajudicial)</strong> e <strong class=\"text-emerald-400\">16,4% está em Assaí (ASAI3, cindida em 2021, investment grade, fora da RE)</strong>; execução das obras hospitalares Albert Einstein/Medical Center previstas para jul-set/26 e diluição da emissão recém-concluída.</p>"
   },
   "quickStats": [
     {
@@ -103,10 +103,10 @@
   ],
   "pontosAtencao": [
     {
-      "titulo": "Concentração em GPA (24,24% da receita)",
+      "titulo": "Exposição ao bloco GPA histórico (24,24%) — sendo apenas 7,8% em PCAR3 sob RE",
       "severidade": "media",
-      "descricao": "O Grupo Pão de Açúcar (GPA) responde por 24,24% da receita. O GPA entrou em recuperação extrajudicial em mar/26 (R$ 4,5 Bi de dívida financeira), mas o gestor confirmou que aluguéis seguem pagos em dia e o processo NÃO abrange obrigações operacionais. Risco a monitorar.",
-      "fonte": "Relatório Gerencial mar/2026 (ID 1154932) + Comunicado 10/03/2026 (ID 1131996)"
+      "descricao": "O Relatório Gerencial agrega sob \"Pão de Açúcar (GPA)\" 24,24% da receita, mas esse número engloba contratos cujo inquilino HISTORICAMENTE pertencia ao bloco GPA. Após a cisão da Assaí (ASAI3) em 2021, o gestor TRX reportou (Seu Dinheiro, 11/03/2026) que apenas 7,8% da receita está com PCAR3 (a entidade hoje em recuperação extrajudicial sobre R$ 4,5 Bi de dívida financeira). Os outros ~16,4% estão com Assaí — companhia financeiramente independente, com investment grade e fora da RE. Aluguéis seguem pagos em dia em ambos. Risco real da RE é, portanto, ~7,8%, não 24%.",
+      "fonte": "Relatório Gerencial mar/2026 (ID 1154932, tabela \"Receita de Aluguel por Inquilino\") + Comunicado 10/03/2026 (ID 1131996) + Seu Dinheiro 11/03/2026 (gestor TRX)"
     },
     {
       "titulo": "Diluição da 12ª emissão (cotas dobraram em 6 meses)",
@@ -577,11 +577,23 @@
         "top5Pct": 0.6803,
         "top10Pct": 0.8595
       },
+      "top1Nome": "Bloco GPA histórico (PCAR3 + Assaí pré-cisão)",
+      "top1_breakdown": {
+        "bloco_historico_pct": 0.2424,
+        "pcar3_em_re_pct": 0.078,
+        "assai_independente_pct": 0.1644,
+        "observacao": "O Relatório Gerencial mar/2026 agrega sob 'Pão de Açúcar (GPA)' contratos cujo inquilino histórico pertencia ao bloco GPA antes da cisão da Assaí (ASAI3) em 2021. Apenas 7,8% da receita está hoje com PCAR3 (entidade em recuperação extrajudicial mar/2026). Os 16,4% restantes estão com Assaí — companhia independente, com investment grade, fora da RE.",
+        "fonte_breakdown": "Seu Dinheiro 11/03/2026, gestor TRX — \"19 contratos de aluguel ligados ao GPA com uma exposição que gira em torno de 7,8% da sua receita\""
+      },
       "porLocatario": [
         {
-          "nome": "Pão de Açúcar (GPA)",
+          "nome": "Pão de Açúcar (GPA) — bloco histórico (PCAR3 + Assaí)",
           "pct": 0.2424,
-          "rating": null
+          "rating": null,
+          "subdivisao": {
+            "PCAR3 (em RE mar/2026)": 0.078,
+            "Assaí (ASAI3, IG, fora da RE)": 0.1644
+          }
         },
         {
           "nome": "Caixa Econômica Federal",
@@ -725,7 +737,7 @@
         "Receita 78% IPCA",
         "382 locatários"
       ],
-      "veredicto": "<p>O portfólio do TRXF11 é uma referência em <strong>BTS varejo no Brasil</strong>. A combinação de 122 imóveis essenciais (varejo alimentar, atacado, agências, educação, saúde) com 69,8% da receita em <strong>contratos atípicos longos</strong> e WAULT de 12 anos é raríssima. A vacância de 0,46% reflete imóveis estratégicos para os locatários — não há substituição barata para uma loja Atacadão ou um centro logístico Mercado Livre BTS.</p><p>O risco principal vem da <strong>concentração no GPA (24,24%)</strong>, mitigado por: (i) aluguéis em dia mesmo na recuperação extrajudicial (mar/2026); (ii) qualidade construtiva dos imóveis (todos no eixo SP-RJ-BH em pontos com alta densidade); (iii) garantias robustas nos contratos. A entrada do Sírio-Libanês (mar/2026) eleva a qualidade do portfólio — inquilino-troféu até 2054 com cap rate 8% a.a. e multa rescisória inicial de R$ 180 Mi.</p>",
+      "veredicto": "<p>O portfólio do TRXF11 é uma referência em <strong>BTS varejo no Brasil</strong>. A combinação de 122 imóveis essenciais (varejo alimentar, atacado, agências, educação, saúde) com 69,8% da receita em <strong>contratos atípicos longos</strong> e WAULT de 12 anos é raríssima. A vacância de 0,46% reflete imóveis estratégicos para os locatários — não há substituição barata para uma loja Atacadão ou um centro logístico Mercado Livre BTS.</p><p>O risco principal aparece nominalmente como <strong>concentração no \"GPA\" (24,24%)</strong>, mas precisa ser lido com cuidado: o Relatório Gerencial agrega sob \"Pão de Açúcar (GPA)\" o bloco histórico antes da cisão da Assaí (2021). Em receita de fato exposta a <strong>PCAR3 — a entidade em recuperação extrajudicial mar/26 — são apenas 7,8%</strong>; os <strong>16,4% restantes estão com Assaí (ASAI3), que é financeiramente independente, com investment grade e fora da RE</strong>. Mitigantes adicionais: (i) aluguéis em dia em ambos; (ii) qualidade construtiva dos imóveis (eixo SP-RJ-BH); (iii) garantias robustas nos contratos. A entrada do Sírio-Libanês (mar/2026) eleva ainda mais a qualidade do portfólio — inquilino-troféu até 2054, cap rate 8% a.a., multa rescisória inicial de R$ 180 Mi.</p>",
       "pontosFortes": [
         "WAULT de 12 anos é o maior entre os pares de renda urbana",
         "69,8% da receita em contratos atípicos com multas pesadas — proteção real do DPS",
@@ -736,7 +748,8 @@
         "Top 5 dos FIIs em volume diário (R$ 22,9 Mi/dia) — saída fácil para qualquer porte"
       ],
       "pontosFracos": [
-        "Concentração em GPA (24,24%) com risco de crédito ativo (recuperação extrajudicial)",
+        "Bloco GPA histórico responde por 24,24% da receita, mas apenas 7,8% (PCAR3) está em recuperação extrajudicial; 16,4% é Assaí (ASAI3, IG, fora de qualquer recuperação)",
+        "1 imóvel com Americanas+Dasa (Rio de Janeiro) — Americanas (AMER3) está em recuperação JUDICIAL desde 19/01/2023; peso estimado <0,8% da receita; aluguéis em dia",
         "Shoppings ViaBrasil e ViaBarreiro com vacância 9-13% — único setor com pressão",
         "Posse de 17% no Shopping São Luís (minoritária) limita controle estratégico",
         "12ª emissão dobrou cotas em 6 meses — mercado ainda digerindo a diluição"
@@ -827,7 +840,7 @@
     ]
   },
   "tese": {
-    "resumo": "<p>O TRXF11 é a tese clássica de <strong class=\"text-emerald-400\">renda urbana premium</strong>: comprar imóveis comerciais essenciais (varejo alimentar, atacado, agências, educação, saúde, logística) e alugá-los para grandes redes em <strong>contratos atípicos de longo prazo</strong> com correção pelo IPCA. É um veículo desenhado para <strong>previsibilidade de DPS por uma década inteira</strong> — WAULT de 12 anos significa que mais da metade dos contratos só vencem após 2036, com indexação inflacionária integral.</p><p>A diversificação é multidimensional: <strong>122 imóveis</strong> em <strong>17 estados</strong>, <strong>382 inquilinos</strong> em 7 segmentos (varejo, atacado, logística, educação, saúde, shoppings, agências), com nenhum locatário concentrando mais de 24,24% da receita. A vacância de 0,46% é estrutural (apenas 2 unidades vagas em todo o portfólio).</p>",
+    "resumo": "<p>O TRXF11 é a tese clássica de <strong class=\"text-emerald-400\">renda urbana premium</strong>: comprar imóveis comerciais essenciais (varejo alimentar, atacado, agências, educação, saúde, logística) e alugá-los para grandes redes em <strong>contratos atípicos de longo prazo</strong> com correção pelo IPCA. É um veículo desenhado para <strong>previsibilidade de DPS por uma década inteira</strong> — WAULT de 12 anos significa que mais da metade dos contratos só vencem após 2036, com indexação inflacionária integral.</p><p>A diversificação é multidimensional: <strong>122 imóveis</strong> em <strong>17 estados</strong>, <strong>382 inquilinos</strong> em 7 segmentos (varejo, atacado, logística, educação, saúde, shoppings, agências). O único locatário que aparece como concentração relevante no Relatório Gerencial é o <strong>bloco GPA histórico (24,24%)</strong>, mas após a cisão da Assaí em 2021 a exposição se divide em <strong>7,8% PCAR3 (em RE)</strong> e <strong>16,4% Assaí (ASAI3, IG, fora de RE)</strong>. A vacância de 0,46% é estrutural (apenas 2 unidades vagas em todo o portfólio).</p>",
     "paraQuem": [
       "Investidor focado em <strong>renda mensal estável</strong> com DPS protegido por IPCA",
       "Quem busca <strong>núcleo de carteira</strong> de FIIs de tijolo de qualidade institucional",
@@ -839,7 +852,7 @@
       "Quem busca crescimento agressivo de DPS (atípicos limitam upside além do IPCA)",
       "Especulador puro de queda de Selic (entre os pares de renda urbana, há FIIs com mais alavancagem operacional)",
       "Investidor com posição grande em ALZR11/HGRU11/GARE11/BBRC11 (há sobreposição de tese)",
-      "Quem precisa fugir de exposição ao GPA (24% da receita atual)"
+      "Quem precisa fugir de qualquer exposição a varejo brasileiro em recuperação (PCAR3 RE 7,8% + Americanas RJ <1% no portfólio)"
     ]
   },
   "encaixe": {
@@ -858,8 +871,8 @@
           "nome": "Concentração",
           "score": 2.5,
           "peso": 0.2,
-          "metrica": "HHI 0,142 — top1=24,2% (GPA), top5=68%",
-          "leitura": "Concentração baixa-moderada: GPA é 1/4 da receita, mas próximos 4 locatários (Caixa, Atacadão, Mateus, Assaí) somam 38%, espalhando bem. 122 imóveis em 17 estados."
+          "metrica": "HHI 0,142 — top1=24,2% (bloco GPA histórico, sendo 7,8% PCAR3 + 16,4% Assaí), top5=68%",
+          "leitura": "Concentração baixa-moderada. O bloco GPA histórico é 1/4 da receita, mas após a cisão da Assaí em 2021 só 7,8% está com PCAR3 (em RE); o restante (16,4%) é Assaí, IG. Próximos 4 locatários (Caixa, Atacadão, Mateus, Assaí) somam 38%, espalhando bem. 122 imóveis em 17 estados."
         },
         {
           "nome": "Volatilidade do preço",
@@ -887,7 +900,7 @@
           "score": 2.0,
           "peso": 0.2,
           "metrica": "Vacância 0,46%, WAULT 12 anos, 69,8% atípica",
-          "leitura": "Excelente. Apenas vacância em shoppings ViaBrasil/ViaBarreiro. Risco específico do GPA em recuperação extrajudicial puxa o score para 2 (não 1)."
+          "leitura": "Excelente. Apenas vacância em shoppings ViaBrasil/ViaBarreiro. Risco específico de PCAR3 em recuperação extrajudicial (7,8% da receita) e Americanas em recuperação judicial (<0,8%) puxam o score para 2 (não 1) — aluguéis em dia em ambos."
         },
         {
           "nome": "Risco financeiro/alavancagem",
@@ -952,10 +965,16 @@
     ],
     "riscosOcultos": [
       {
-        "titulo": "Concentração em GPA (24,24% receita) em recuperação extrajudicial",
-        "severidade": "alta",
-        "descricao": "O GPA tem R$ 4,5 Bi de dívida financeira em renegociação (mar/26). Embora aluguéis estejam em dia e o processo NÃO abranja obrigações operacionais, default operacional do GPA reduziria a receita do TRXF11 em até 24%. Mitigantes: garantias robustas nos contratos, qualidade construtiva dos imóveis (re-leasing rápido) e contratos com partes operacionais distintas das holdings em recuperação.",
-        "mitigacao": "Diversificar entre redes de varejo é crítico. Imóveis em pontos premium permitem re-leasing em 6-12 meses caso GPA opere algum despejo."
+        "titulo": "Bloco GPA histórico (24,24% receita): 7,8% PCAR3 em RE + 16,4% Assaí independente",
+        "severidade": "media",
+        "descricao": "O Relatório Gerencial agrega 24,24% sob \"Pão de Açúcar (GPA)\", mas o que está em recuperação extrajudicial é APENAS o PCAR3 (7,8% da receita, R$ 4,5 Bi de dívida financeira em renegociação). Os outros 16,4% são Assaí (ASAI3) — companhia cindida do GPA em 2021, financeiramente independente, com investment grade, fora da RE. Risco real exposto à RE é portanto ~7,8%, não 24%. Como a RE cobre apenas dívidas financeiras (Lei 11.101/2005, cap. VI-A), aluguéis seguem pagos em dia. Default operacional do PCAR3 reduziria a receita do TRXF11 em até 7,8% (cenário extremo). Mitigantes: garantias robustas nos contratos, qualidade construtiva dos imóveis (re-leasing rápido) e contratos com partes operacionais distintas das holdings em recuperação.",
+        "mitigacao": "Imóveis ocupados por PCAR3 estão em pontos premium e permitem re-leasing em 6-12 meses caso ocorra despejo. Assaí, por ser independente, IG e fora de RE, não compõe risco de RE."
+      },
+      {
+        "titulo": "Americanas (AMER3) em recuperação judicial — 1 imóvel compartilhado com Dasa (RJ)",
+        "severidade": "baixa",
+        "descricao": "TRXF11 tem 1 imóvel no Rio de Janeiro/RJ com locatários Lojas Americanas e Dasa em contrato típico (vencimento parcial out/2026). Americanas (AMER3) está em recuperação JUDICIAL desde 19/01/2023 (após escândalo de fraude contábil de R$ 25 Bi). Plano de RJ aprovado em dez/2023, em fase de cumprimento. Diferente do GPA (que está em RE — só dívida financeira), a RJ da Americanas pode atingir obrigações operacionais (aluguéis), mas o TRXF11 segue recebendo em dia. Peso estimado <0,8% da receita.",
+        "mitigacao": "Peso baixo (<1% receita); imóvel compartilhado com Dasa (saúde) reduz dependência de uma única bandeira; vencimento de parte do contrato em out/2026 permite renegociação ativa."
       },
       {
         "titulo": "Diluição da 12ª emissão (cotas dobraram em 6 meses)",
@@ -1032,7 +1051,7 @@
             "tipologia",
             "perfil_inquilinos"
           ],
-          "leitura": "GARE11 também é renda urbana, mais concentrado em Pão de Açúcar (sobreposição com 24% do TRXF). Diferente em escala — TRXF é 4x maior."
+          "leitura": "GARE11 também é renda urbana, mais concentrado em Pão de Açúcar (sobreposição com bloco GPA do TRXF — 24,24% no RG, 7,8% efetivo em PCAR3). Diferente em escala — TRXF é 4x maior."
         },
         {
           "ticker": "ALZR11",
@@ -1093,8 +1112,8 @@
       },
       {
         "tipo": "desfavoravel",
-        "titulo": "GPA escala recuperação para judicial e atrasa aluguéis",
-        "descricao": "Hipótese de o processo extrajudicial não fechar, GPA entrar em recuperação judicial e estender prazos sobre operacionais. Perda potencial de até 24% da receita por 6-12 meses.",
+        "titulo": "PCAR3 escala recuperação extrajudicial para judicial e atrasa aluguéis",
+        "descricao": "Hipótese de o processo extrajudicial do PCAR3 não fechar, escalar para recuperação JUDICIAL e atingir obrigações operacionais. Perda potencial de até 7,8% da receita por 6-12 meses (apenas a fatia PCAR3; os 16,4% da Assaí seguem fora). Mesmo nesse cenário, imóveis em pontos premium permitem re-leasing em 6-12 meses.",
         "probabilidadeRelativa": "baixa"
       },
       {
@@ -1133,7 +1152,7 @@
         "Quem busca dobra de DPS no curto prazo — contratos atípicos limitam o teto a IPCA",
         "Especulador puro de queda de Selic — há FIIs descontados (GARE11, BLMG11) com mais beta",
         "Investidor com >5% da carteira em HGRU11 — sobreposição direta de tese",
-        "Quem precisa fugir do GPA — 24% da receita TRXF é Pão de Açúcar/Extra"
+        "Quem precisa fugir de QUALQUER varejo em recuperação — TRXF tem 7,8% PCAR3 em RE + Assaí 16,4% fora de RE + 1 imóvel Americanas em RJ (~0,8%)"
       ]
     }
   },
@@ -2070,7 +2089,7 @@
           "rotulo": "Pessimista",
           "dy12m": 11.2,
           "dividendoMes": 0.85,
-          "descricao": "GPA escala recuperação para judicial, atrasa aluguéis. DPS-base recua para R$ 0,85, sem extras. Total 12m ~R$ 10,3."
+          "descricao": "PCAR3 escala da RE para RJ, atinge aluguéis (~7,8% receita) e Americanas piora simultaneamente. DPS-base recua para R$ 0,85, sem extras. Total 12m ~R$ 10,3. Cenário de cauda."
         }
       ],
       "retornoTotal12m": 21.0,
@@ -2114,8 +2133,12 @@
       ],
       "pontosNegativos": [
         {
-          "texto": "GPA em recuperação extrajudicial (24% receita)",
+          "texto": "PCAR3 em recuperação extrajudicial (7,8% da receita; bloco GPA histórico aparece como 24,24% mas inclui 16,4% de Assaí, fora da RE)",
           "peso": "medio"
+        },
+        {
+          "texto": "Americanas (AMER3) em recuperação judicial desde 2023 — 1 imóvel <0,8% receita",
+          "peso": "baixo"
         },
         {
           "texto": "Diluição da 12ª emissão pode pressionar DPS no curto prazo",
@@ -2126,11 +2149,11 @@
           "peso": "baixo"
         }
       ],
-      "veredicto": "<p>O DPS-base de R$ 0,93/cota é <strong class=\"text-emerald-400\">sustentável a longo prazo</strong>. Guidance gestor + WAULT 12 anos + 78% IPCA dão tripla proteção. O ponto de inflexão positivo é a conclusão da venda R$ 672 Mi (lucro R$ 7,08/cota esperado). O risco de cauda é o GPA escalar para recuperação judicial — nesse cenário, perda de até 24% da receita por 6-12 meses até re-leasing. Cenário-base: estável com extras semestrais.</p>"
+      "veredicto": "<p>O DPS-base de R$ 0,93/cota é <strong class=\"text-emerald-400\">sustentável a longo prazo</strong>. Guidance gestor + WAULT 12 anos + 78% IPCA dão tripla proteção. O ponto de inflexão positivo é a conclusão da venda R$ 672 Mi (lucro R$ 7,08/cota esperado). O risco de cauda é o PCAR3 escalar da RE para RJ — nesse cenário, perda de até 7,8% da receita por 6-12 meses até re-leasing (não 24%, porque os outros 16,4% do bloco GPA estão com Assaí, fora da RE). Cenário-base: estável com extras semestrais.</p>"
     },
     "alertas": [
       {
-        "texto": "GPA em recuperação extrajudicial (24% receita) — monitorar",
+        "texto": "PCAR3 em recuperação extrajudicial (7,8% receita real; 24,24% é bloco GPA histórico inclui Assaí IG fora da RE) — monitorar",
         "cor": "sev-amber"
       },
       {
@@ -2416,7 +2439,7 @@
           }
         ]
       },
-      "explicacao": "<p>O preço justo calculado de <strong class=\"text-emerald-400\">R$ 99.17</strong> está apenas 1-3% acima da cotação atual de R$ 91,83 — TRXF11 é um fundo de qualidade institucional negociado próximo ao seu fair value. Margem de segurança modesta, mas o cotista paga o preço pela previsibilidade de DPS R$ 0,93 ancorado em WAULT 12 anos. Em ciclo de queda de Selic (Focus 11%), o preço justo deve subir para R$ 105+, gerando upside relevante. Risco de cauda: GPA em recuperação extrajudicial pressionar receita em 6-12 meses.</p>"
+      "explicacao": "<p>O preço justo calculado de <strong class=\"text-emerald-400\">R$ 99.17</strong> está apenas 1-3% acima da cotação atual de R$ 91,83 — TRXF11 é um fundo de qualidade institucional negociado próximo ao seu fair value. Margem de segurança modesta, mas o cotista paga o preço pela previsibilidade de DPS R$ 0,93 ancorado em WAULT 12 anos. Em ciclo de queda de Selic (Focus 11%), o preço justo deve subir para R$ 105+, gerando upside relevante. Risco de cauda: PCAR3 escalar da RE para RJ e atrasar 7,8% da receita por 6-12 meses (não 24%, porque o bloco GPA histórico inclui 16,4% de Assaí, IG, fora da RE).</p>"
     },
     "expectativa": {
       "curto": {
@@ -2471,9 +2494,9 @@
             "docId": null
           },
           {
-            "evento": "Estabilização do GPA e início da receita Sírio-Libanês cheia",
+            "evento": "Estabilização da RE do PCAR3 e início da receita Sírio-Libanês cheia",
             "data": "2027-01",
-            "impactoEsperado": "Saída do risco GPA + entrada plena Sírio-Libanês reforça previsibilidade do DPS.",
+            "impactoEsperado": "Saída do risco RE PCAR3 (7,8%) + entrada plena Sírio-Libanês reforça previsibilidade do DPS.",
             "fonte": "Relatório Gerencial mar/2026 (ID 1154932)",
             "docId": "1154932"
           },
@@ -2485,7 +2508,7 @@
             "docId": null
           }
         ],
-        "racional": "<p>Cenário positivo — Selic em queda + IPCA repassando para receita + estabilização GPA. P/VP deve voltar a 1,0-1,1, levando preço a R$ 105-115. Risco principal é a frustração do ciclo de queda de Selic ou um agravamento do GPA além do processo extrajudicial.</p>"
+        "racional": "<p>Cenário positivo — Selic em queda + IPCA repassando para receita + estabilização da RE do PCAR3. P/VP deve voltar a 1,0-1,1, levando preço a R$ 105-115. Risco principal é a frustração do ciclo de queda de Selic ou um agravamento do PCAR3 da RE para RJ (que atingiria ~7,8% da receita, não os 24% do bloco GPA histórico).</p>"
       },
       "longo": {
         "horizonte": "3-5 anos",
@@ -2528,7 +2551,7 @@
     "paragrafos": [
       "<p>O TRXF11 representa um dos veículos mais maduros e diversificados de tijolo varejo no Brasil. Os números falam por si: 122 imóveis, 382 inquilinos, vacância de 0,46%, WAULT de 12 anos e 69,8% da receita em contratos atípicos. A gestão da TRX (R$ 10 Bi sob administração) tem track record consistente desde o IPO em 2019.</p>",
       "<p>O cenário em abr/2026 combina três vetores positivos: <strong>(i) cota a P/VP 0,92</strong> (8% de desconto patrimonial); <strong>(ii) DY de 12,15%</strong> com Selic em 14,75% (spread de -260 bps, mas sustentável dada a qualidade); <strong>(iii) catalisadores claros</strong> nos próximos 12 meses (entrega Albert Einstein jul/26, conclusão MOU Atacadão R$ 297 Mi, venda R$ 672 Mi com ganho de R$ 230 Mi estimado). O guidance do gestor de R$ 0,90-0,93/cota até dez/26 ancora a expectativa.</p>",
-      "<p>O risco principal é a <strong>concentração no GPA (24,24%)</strong> em recuperação extrajudicial. Mitigantes: aluguéis em dia, contratos com garantias robustas, qualidade construtiva dos imóveis (que permite re-leasing rápido se necessário) e diversificação geográfica. A 12ª emissão diluiu temporariamente, mas adicionou o Sírio-Libanês como inquilino-troféu — qualidade superior ao que estava no portfólio.</p>"
+      "<p>O risco principal aparece no Relatório Gerencial como <strong>concentração no \"GPA\" (24,24%)</strong>, mas precisa ser lido com nuance: desse total, apenas <strong>7,8% está em PCAR3 (em recuperação extrajudicial mar/26)</strong> e <strong>16,4% está em Assaí (ASAI3, cindida em 2021, com investment grade, fora de qualquer recuperação)</strong>. Há ainda 1 imóvel pequeno (<0,8% receita) com Lojas Americanas (em recuperação judicial desde 2023) compartilhado com Dasa. <strong>Total exposto a inquilino em recuperação ≈ 8,5%, não 24%.</strong> Mitigantes: aluguéis em dia em todos os casos, contratos com garantias robustas, qualidade construtiva dos imóveis (que permite re-leasing rápido se necessário) e diversificação geográfica. A 12ª emissão diluiu temporariamente, mas adicionou o Sírio-Libanês como inquilino-troféu — qualidade superior ao que estava no portfólio.</p>"
     ],
     "pontosFortes": [
       "WAULT de <strong class=\"text-emerald-400\">12,01 anos</strong> — entre os maiores do mercado",
@@ -2542,7 +2565,8 @@
       "Inquilino-troféu Sírio-Libanês adicionado (BTS até 2054, cap rate 8%)"
     ],
     "pontosDeAtencao": [
-      "GPA em recuperação extrajudicial (24,24% da receita) — monitorar mensalmente",
+      "PCAR3 em recuperação extrajudicial (7,8% da receita; bloco GPA histórico no RG aparece como 24,24% mas inclui Assaí independente, fora da RE) — monitorar mensalmente",
+      "Lojas Americanas (AMER3) em recuperação judicial desde 19/01/2023 — 1 imóvel compartilhado com Dasa no RJ, peso <0,8% da receita",
       "Diluição da 12ª emissão (cotas dobraram em 6 meses) ainda em digestão pelo mercado",
       "Obras em andamento (Albert Einstein, Medical Center, lojas Cametá/Imperatriz) sem receita ainda",
       "Espaço para upside no DY limitado pela Selic alta (14,75%)",
@@ -2554,5 +2578,58 @@
     "dataAnalise": "2026-04-26",
     "totalDocumentos": 395,
     "disclaimer": "Análise baseada em 395 documentos públicos do FundosNet (Rendimentos, Relatórios Gerenciais, Informes Anuais/Mensais/Trimestrais, Demonstrações Financeiras, Comunicados, Prospecto). Documento mais recente: 14/04/2026. Não constitui recomendação de investimento — é análise técnica para apoio à decisão. Consulte seu assessor."
+  },
+  "notas_metodologicas": {
+    "atualizadoEm": "2026-04-28",
+    "blocoGpaVsPcar3": {
+      "titulo": "Por que '24,24% GPA' no Relatório Gerencial não é o mesmo que '24,24% sob recuperação'",
+      "explicacao": "O Relatório Gerencial mar/2026 (ID 1154932) reporta na tabela 'Receita de Aluguel por Inquilino' uma linha 'Pão de Açúcar (GPA)' com 24,24% da receita. Esse rótulo agrega contratos cujo inquilino HISTORICAMENTE pertencia ao bloco GPA, anteriormente à cisão da Assaí (ASAI3) em 2021. Hoje, o gestor TRX confirma (Seu Dinheiro, 11/03/2026) que o TRXF11 tem 19 contratos ligados ao GPA com 'exposição que gira em torno de 7,8% da sua receita' — esses 7,8% correspondem à entidade jurídica PCAR3 (em recuperação extrajudicial mar/2026 sobre R$ 4,5 Bi de dívida financeira). Os ~16,4 pontos percentuais restantes do bloco histórico estão com Assaí — companhia independente, com investment grade, fora de qualquer recuperação. Conclusão: dizer '24% sob risco da RE do GPA' superestima o risco real em ~3x. O risco real da RE é 7,8%.",
+      "fontes": [
+        "Relatório Gerencial mar/2026 (ID 1154932) — tabela 'Receita de Aluguel por Inquilino'",
+        "Seu Dinheiro 11/03/2026 — entrevista com gestor TRX (https://www.seudinheiro.com/2026/bolsa-dolar/recuperacao-extrajudicial-do-gpa-pcar3-acende-alerta-em-fundo-imobiliario-varejista-responde-por-22-da-receita-do-fii-kaes/)",
+        "InvestNews — confirma cisão Assaí (https://investnews.com.br/financas/trxf11-recicla-portfolio-para-reduzir-concentracao-em-pao-de-acucar/)"
+      ]
+    },
+    "reVsRj": {
+      "titulo": "Recuperação EXTRAjudicial (RE) ≠ Recuperação JUDICIAL (RJ)",
+      "explicacao": "A recuperação do GPA é EXTRAJUDICIAL (Lei 11.101/2005, capítulo VI-A), não judicial. Diferenças essenciais:",
+      "comparativo": [
+        {
+          "aspecto": "Lei",
+          "RE": "11.101/2005, cap. VI-A",
+          "RJ": "11.101/2005, caps. II-IV"
+        },
+        {
+          "aspecto": "Escopo",
+          "RE": "Apenas dívidas financeiras renegociadas privadamente e homologadas",
+          "RJ": "Todas as obrigações (financeiras + operacionais + trabalhistas)"
+        },
+        {
+          "aspecto": "Aluguéis",
+          "RE": "NÃO suspendem (continuam pagos em dia)",
+          "RJ": "Podem ser renegociados; stay period de 180 dias"
+        },
+        {
+          "aspecto": "Quórum",
+          "RE": "Mínimo 1/3 dos créditos afetados",
+          "RJ": "Aprovação assembleia geral de credores"
+        },
+        {
+          "aspecto": "Severidade",
+          "RE": "Mais leve, negociação privada homologada",
+          "RJ": "Mais grave, processo judicial completo"
+        }
+      ],
+      "noTrxf11": {
+        "PCAR3 (GPA)": "Recuperação EXTRAjudicial — homologada na 3ª Vara de Falências e Recuperações Judiciais de SP (mar/2026). Atinge R$ 4,5 Bi de dívida financeira; aluguéis seguem pagos em dia. Peso: 7,8% receita.",
+        "AMER3 (Lojas Americanas)": "Recuperação JUDICIAL desde 19/01/2023, plano aprovado em dez/2023. Peso: <0,8% receita (1 imóvel no RJ compartilhado com Dasa)."
+      }
+    },
+    "exposicaoTotalEmRecuperacao": {
+      "PCAR3_RE_pct": 0.078,
+      "AMER3_RJ_pct": 0.008,
+      "totalEmRecuperacao_pct": 0.086,
+      "observacao": "Total de receita exposta a inquilino em qualquer tipo de recuperação ≈ 8,5%, NÃO 24%. Os 16,4% adicionais do bloco GPA histórico são Assaí (ASAI3), companhia financeiramente independente desde 2021 com investment grade, fora de qualquer recuperação."
+    }
   }
 }
